@@ -176,6 +176,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private double hpUpdateDecCheck;
     private double hpUpdateInterval;
     private boolean lethalable = true;
+    private boolean cursorKeyMovementActive = true;
     private boolean allSkillsDisabled;
     private boolean isDead;
     private boolean isImmobilized;
@@ -186,7 +187,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private boolean isFlying;
     private boolean blockActions;
     private boolean cursorKeyMovement;
-    private boolean cursorKeyMovementActive;
     private boolean aiDisabled;
 
     /**
@@ -440,7 +440,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         World.getInstance().forEachPlayerInRange(this, radius, packet::sendTo, this::isVisibleFor);
     }
 
-    private void checkBroadcast(ServerPacket packet) {
+    protected void checkBroadcast(ServerPacket packet) {
         if(World.getInstance().getPlayersCountInSurroundRegions(this) > 100) { // need to profile to find out the best amount
             packet.sendInBroadcast(true);
         }
@@ -705,7 +705,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     return;
                 }
 
-                // Ranged weapon checks.
                 if (weaponItem.getItemType().isRanged() && !checkRangedAttackCondition(weaponItem, target)) {
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -3131,12 +3130,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void doAttack(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
-        // Start attack stance and notify being attacked.
-        if (target.hasAI()) {
-            target.getAI().clientStartAutoAttack();
-            target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
-        }
-
         getAI().clientStartAutoAttack();
 
         if (!reflect && !isDOT) {
@@ -3145,25 +3138,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 damage *= stats.getValue(Stat.REAR_DAMAGE_RATE, 1);
             }
 
-            // Counterattacks happen before damage received.
-            if (!target.isDead() && (skill != null)) {
-                Formulas.calcCounterAttack(this, target, skill, true);
+            if (target.isImmobilized()) {
+                damage *= stats.getValue(Stat.DAMAGE_IMMOBILIZED, 1);
+                damage *= target.stats.getValue(Stat.DAMAGE_TAKEN_IMMOBILIZED, 1);
+            }
 
-                // Shield Deflect Magic: Reflect all damage on caster.
-                if (skill.isMagic() && (target.getStats().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100))) {
-                    reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true, DamageType.REFLECT);
-                    return;
+            if (counterAttackReflect(damage, target, skill, isDOT, directlyToHp, critical)) {
+                if (target.hasAI()) {
+                    target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
                 }
+                return;
             }
         }
 
-        if (target.isImmobilized()) {
-            damage *= stats.getValue(Stat.DAMAGE_IMMOBILIZED, 1);
-            damage *= target.stats.getValue(Stat.DAMAGE_TAKEN_IMMOBILIZED, 1);
-        }
-
-        // Target receives the damage.
         target.reduceCurrentHp(damage, this, skill, isDOT, directlyToHp, critical, reflect, DamageType.ATTACK);
+
+        if (target.hasAI()) {
+            target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
+        }
 
         // Check if damage should be reflected or absorbed. When killing blow is made, the target doesn't reflect (vamp too?).
         if (!reflect && !isDOT && !target.isDead()) {
@@ -3227,6 +3219,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             target.breakAttack();
             target.breakCast();
         }
+    }
+
+    private boolean counterAttackReflect(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical) {
+        if (!target.isDead() && nonNull(skill)) {
+            Formulas.calcCounterAttack(this, target, skill, true);
+
+            if (skill.isMagic() && Rnd.chance(target.getStats().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0))) {
+                reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true, DamageType.REFLECT);
+                return true;
+            }
+        }
+        return false;
     }
 
     public void reduceCurrentHp(double value, Creature attacker, Skill skill, DamageType damageType) {
@@ -3975,3 +3979,4 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         public int geoPathGty;
     }
 }
+

@@ -1870,7 +1870,6 @@ public final class Player extends Playable {
 
     public void registerShortCut(Shortcut shortcut) {
         shortcuts.registerShortCut(shortcut);
-        sendPacket(new ShortCutRegister(shortcut));
     }
 
     /**
@@ -1878,10 +1877,9 @@ public final class Player extends Playable {
      *
      * @param skillId       the skill Id to search and update.
      * @param skillLevel    the skill level to update.
-     * @param skillSubLevel the skill sub level to update.
      */
-    public void updateShortCuts(int skillId, int skillLevel, int skillSubLevel) {
-        shortcuts.updateShortCuts(skillId, skillLevel, skillSubLevel);
+    public void updateShortCuts(int skillId, int skillLevel) {
+        shortcuts.updateShortCuts(skillId, skillLevel);
     }
 
     public void deleteShortcut(int room) {
@@ -1956,46 +1954,38 @@ public final class Player extends Playable {
         computeStatusUpdate(su, StatusUpdateType.PVP_FLAG);
         if (su.hasUpdates()) {
             broadcastPacket(su);
-            sendPacket(su);
+        }
+        updateRelations();
+    }
+
+    private void updateRelations() {
+        World.getInstance().forEachVisibleObject(this, Player.class, this::updateRelation);
+    }
+
+    public void updateRelation(Player player) {
+        if (!isVisibleFor(player)) {
+            return;
+        }
+        int relation = getRelation(player);
+        int oldRelation = getKnownRelations().getOrDefault(player.getObjectId(), -1);
+        if (oldRelation == -1 || oldRelation != relation) {
+            sendRelationChanged(player, relation);
+            getKnownRelations().put(player.getObjectId(), relation);
+        }
+    }
+
+    private void sendRelationChanged(Player player, int relation) {
+        var relationChanged = new RelationChanged();
+        relationChanged.addRelation(this, relation, isAutoAttackable(player));
+
+        if (nonNull(pet)) {
+            relationChanged.addRelation(pet, relation, isAutoAttackable(player));
         }
 
-        // If this player has a pet update the pets pvp flag as well
-        if (hasSummon()) {
-            final RelationChanged rc = new RelationChanged();
-            final Summon pet = this.pet;
-            if (pet != null) {
-                rc.addRelation(pet, getRelation(this), false);
-            }
-            if (hasServitors()) {
-                getServitors().values().forEach(s -> rc.addRelation(s, getRelation(this), false));
-            }
-            sendPacket(rc);
+        for (Summon s : getServitors().values()) {
+            relationChanged.addRelation(s, relation, isAutoAttackable(player));
         }
-
-        World.getInstance().forEachVisibleObject(this, Player.class, player ->
-        {
-            if (!isVisibleFor(player)) {
-                return;
-            }
-
-            final int relation = getRelation(player);
-            final int oldrelation = getKnownRelations().get(player.getObjectId());
-            if (oldrelation != relation) {
-                final RelationChanged rc = new RelationChanged();
-                rc.addRelation(this, relation, isAutoAttackable(player));
-                if (hasSummon()) {
-                    final Summon pet = this.pet;
-                    if (pet != null) {
-                        rc.addRelation(pet, relation, isAutoAttackable(player));
-                    }
-                    if (hasServitors()) {
-                        getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
-                    }
-                }
-                player.sendPacket(rc);
-                getKnownRelations().put(player.getObjectId(), relation);
-            }
-        });
+        player.sendPacket(relationChanged);
     }
 
     @Override
@@ -3556,51 +3546,23 @@ public final class Player extends Playable {
     }
 
     public final void broadcastUserInfo(UserInfoType... types) {
-        // Send user info to the current player
         sendPacket(new UserInfo(this, types));
-        // Broadcast char info to all known players
         broadcastCharInfo();
     }
 
     public final void broadcastCharInfo() {
         var charInfo = new ExCharInfo(this);
-        var world = World.getInstance();
-        var playersCount = world.getPlayersCountInSurroundRegions(this);
-        charInfo.sendInBroadcast(playersCount > 2);
-        world.forEachVisibleObject(this, Player.class, player ->
-        {
-            if (isVisibleFor(player)) {
-                if (!isInvisible() || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
-                    player.sendPacket(charInfo);
-                }
+        checkBroadcast(charInfo);
+        World.getInstance().forEachVisibleObject(this, Player.class, player -> sendPacketAndUpdateRelation(charInfo, player), this::isVisibleFor);
+    }
 
-                // Update relation.
-                final int relation = getRelation(player);
-                int oldRelation = getKnownRelations().get(player.getObjectId());
-                if ( (oldRelation != relation)) {
-                    final RelationChanged rc = new RelationChanged();
-                    rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
-                    if (hasSummon()) {
-                        final Summon pet = getPet();
-                        if (pet != null) {
-                            rc.addRelation(pet, relation, !isInsideZone(ZoneType.PEACE));
-                        }
-                        if (hasServitors()) {
-                            getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneType.PEACE)));
-                        }
-                    }
-                    player.sendPacket(rc);
-                    getKnownRelations().put(player.getObjectId(), relation);
-                }
-            }
-        });
+    private void sendPacketAndUpdateRelation(ServerPacket packet, Player player) {
+        player.sendPacket(packet);
+        updateRelation(player);
     }
 
     public final void broadcastTitleInfo() {
-        // Send a Server->Client packet UserInfo to this Player
         broadcastUserInfo(UserInfoType.CLAN);
-
-        // Send a Server->Client packet TitleUpdate to all Player in _KnownPlayers of the Player
         broadcastPacket(new NicknameChanged(this));
     }
 
@@ -5139,35 +5101,8 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * Send a Server->Client StatusUpdate packet with Karma to the Player and all Player to inform (broadcast).
-     */
     public void broadcastReputation() {
         broadcastUserInfo(UserInfoType.SOCIAL);
-
-        World.getInstance().forEachVisibleObject(this, Player.class, player ->
-        {
-            if (!isVisibleFor(player)) {
-                return;
-            }
-
-            final int relation = getRelation(player);
-            final int oldrelation = getKnownRelations().get(player.getObjectId());
-            if (oldrelation != relation) {
-                final RelationChanged rc = new RelationChanged();
-                rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
-                if (hasSummon()) {
-                    if (pet != null) {
-                        rc.addRelation(pet, relation, !isInsideZone(ZoneType.PEACE));
-                    }
-                    if (hasServitors()) {
-                        getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneType.PEACE)));
-                    }
-                }
-                player.sendPacket(rc);
-                getKnownRelations().put(player.getObjectId(), relation);
-            }
-        });
     }
 
     public void setOnlineStatus(boolean isOnline, boolean updateInDb) {
@@ -5292,6 +5227,7 @@ public final class Player extends Playable {
                 _warehouse.updateDatabase();
             }
         }
+        shortcuts.storeMe();
     }
 
     private void storeElementalSpirits() {
@@ -5526,7 +5462,7 @@ public final class Player extends Playable {
         if (store) {
             storeSkill(newSkill, oldSkill);
         }
-        updateShortCuts(newSkill.getId(), newSkill.getLevel(), 0);
+        updateShortCuts(newSkill.getId(), newSkill.getLevel());
         return oldSkill;
     }
 
@@ -8425,31 +8361,8 @@ public final class Player extends Playable {
             player.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), _inVehiclePosition));
         }
 
-        final int relation1 = getRelation(player);
-        final RelationChanged rc1 = new RelationChanged();
-        rc1.addRelation(this, relation1, !isInsideZone(ZoneType.PEACE));
-        if (hasSummon()) {
-            if (pet != null) {
-                rc1.addRelation(pet, relation1, !isInsideZone(ZoneType.PEACE));
-            }
-            if (hasServitors()) {
-                getServitors().values().forEach(s -> rc1.addRelation(s, relation1, !isInsideZone(ZoneType.PEACE)));
-            }
-        }
-        player.sendPacket(rc1);
-
-        final int relation2 = player.getRelation(this);
-        final RelationChanged rc2 = new RelationChanged();
-        rc2.addRelation(player, relation2, !player.isInsideZone(ZoneType.PEACE));
-        if (player.hasSummon()) {
-            if (pet != null) {
-                rc2.addRelation(pet, relation2, !player.isInsideZone(ZoneType.PEACE));
-            }
-            if (hasServitors()) {
-                getServitors().values().forEach(s -> rc2.addRelation(s, relation2, !player.isInsideZone(ZoneType.PEACE)));
-            }
-        }
-        sendPacket(rc2);
+        updateRelation(player);
+        player.updateRelation(this);
 
         switch (privateStoreType) {
             case SELL: {
@@ -9383,7 +9296,7 @@ public final class Player extends Playable {
 
     @Override
     public boolean isVisibleFor(Player player) {
-        return (super.isVisibleFor(player) || ((player.getParty() != null) && (player.getParty() == getParty())));
+        return super.isVisibleFor(player) || (isInParty() && (player.getParty() == getParty()));
     }
 
     /**

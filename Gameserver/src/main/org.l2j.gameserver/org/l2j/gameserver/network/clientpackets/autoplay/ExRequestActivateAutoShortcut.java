@@ -21,13 +21,14 @@ package org.l2j.gameserver.network.clientpackets.autoplay;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.taskmanager.AutoUseTaskManager;
+
+import static java.util.Objects.isNull;
+import static org.l2j.gameserver.enums.ShortcutType.ITEM;
+import static org.l2j.gameserver.enums.ShortcutType.SKILL;
 
 /**
  * @author JoeAlisson
@@ -46,54 +47,42 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
     @Override
     protected void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null)
-        {
-            return;
-        }
-        final Shortcut shortcut = player.getShortcut(room);
-        if (shortcut == null)
-        {
-            return;
-        }
-        final Item item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
-        Skill skill = null;
-        if (item == null)
-        {
-            skill = player.getKnownSkill(shortcut.getShortcutId());
-        }
-        if(AutoPlayEngine.getInstance().setActiveAutoShortcut(client.getPlayer(), room, activate)) {
-            client.sendPacket(new ExActivateAutoShortcut(room, activate));
-        } else {
+
+        var shortcut = AutoPlayEngine.getInstance().setActiveAutoShortcut(player, room, activate);
+
+        if (isNull(shortcut)) {
             client.sendPacket(new ExActivateAutoShortcut(room, false));
+            return;
         }
-        if (!activate)
-        {
-            if (skill != null)
-            {
+
+        var type = shortcut.getType();
+        if(type == ITEM) {
+            handleRequestAutoUseItem(player, shortcut);
+        } else if(type == SKILL) {
+            handleRequestAutoUseSkill(player, shortcut);
+        }
+    }
+
+    private void handleRequestAutoUseSkill(Player player, Shortcut shortcut) {
+        var skill = player.getKnownSkill(shortcut.getShortcutId());
+
+        if(Config.AUTO_USE_BUFF && skill.isActive()) {
+            if (activate) {
+                AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
+            } else {
                 AutoUseTaskManager.getInstance().removeAutoSkill(player, skill.getId());
             }
-            if (item != null) {
-                if (!item.isPotion()) {
-                    AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, item.getId());
-                }
-            }
         }
-        else {
-            if ((item != null) && !item.isPotion())
-            {
-                // auto supply
-                if (Config.AUTO_USE_ITEM)
-                {
-                    AutoUseTaskManager.getInstance().addAutoSupplyItem(player, item.getId());
-                }
-            }
-            else {
-                if (Config.AUTO_USE_BUFF && (shortcut.getType() == ShortcutType.SKILL)) {
-                    assert skill != null;
-                    if (skill.isAutoUse() && skill.isAutoBuff()) {
-                        AutoUseTaskManager.getInstance().addAutoSkill(player, skill.getId());
-                    }
-                }
+    }
+
+    private void handleRequestAutoUseItem(Player player, Shortcut shortcut) {
+        var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
+
+        if(Config.AUTO_USE_ITEM && !item.isPotion()) {
+            if(activate) {
+                AutoUseTaskManager.getInstance().addAutoSupplyItem(player, item.getId());
+            } else {
+                AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, item.getId());
             }
         }
     }

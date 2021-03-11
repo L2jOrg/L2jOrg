@@ -352,7 +352,6 @@ public final class RequestAcquireSkill extends ClientPacket {
         player.addSkill(skill, store);
 
         player.sendItemList();
-        player.sendPacket(new ShortCutInit());
         player.sendPacket(new ExBasicActionList(ExBasicActionList.DEFAULT_ACTION_LIST));
         player.sendSkillList(skill.getId());
 
