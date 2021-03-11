@@ -22,10 +22,11 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.Shortcut;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
+import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
 import java.util.BitSet;
 import java.util.function.Consumer;
@@ -59,6 +60,7 @@ public class Shortcuts {
             shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
         }
         registerShortCutInDb(shortcut, shortcuts.put(shortcut.getClientId(), shortcut));
+        owner.sendPacket(new ShortCutRegister(shortcut));
     }
 
     private void registerShortCutInDb(Shortcut shortcut, Shortcut oldShortCut) {
@@ -80,6 +82,7 @@ public class Shortcuts {
                     activeShortcuts.clear(room);
                 }
             }
+            owner.sendPacket(new ExActivateAutoShortcut(room, active));
         });
     }
 
@@ -178,8 +181,7 @@ public class Shortcuts {
     }
 
     public void storeMe() {
-        var dao = getDAO(ShortcutDAO.class);
-        shortcuts.values().forEach(dao::save);
+        getDAO(ShortcutDAO.class).save(shortcuts.values());
     }
 
     /**
@@ -187,15 +189,13 @@ public class Shortcuts {
      *
      * @param skillId       the skill Id to search and update.
      * @param skillLevel    the skill level to update.
-     * @param skillSubLevel the skill sub level to update.
      */
-    public void updateShortCuts(int skillId, int skillLevel, int skillSubLevel) {
-        // Update all the shortcuts for this skill
+    public void updateShortCuts(int skillId, int skillLevel) {
         for (Shortcut sc : shortcuts.values()) {
             if ((sc.getShortcutId() == skillId) && (sc.getType() == ShortcutType.SKILL)) {
-                final Shortcut newsc = new Shortcut(sc.getClientId(), sc.getType(), sc.getShortcutId(), skillLevel, skillSubLevel, 1);
-                owner.sendPacket(new ShortCutRegister(newsc));
-                owner.registerShortCut(newsc);
+                sc.setLevel(skillLevel);
+                owner.sendPacket(new ShortCutRegister(sc));
+                getDAO(ShortcutDAO.class).save(sc);
             }
         }
     }
