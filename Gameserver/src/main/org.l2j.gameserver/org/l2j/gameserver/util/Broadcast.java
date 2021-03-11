@@ -34,25 +34,6 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public final class Broadcast {
 
     /**
-     * Send a packet to all Player in the _KnownPlayers of the Creature that have the Character targeted.<BR>
-     * <B><U> Concept</U> :</B><BR>
-     * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
-     * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
-     *
-     * @param character
-     * @param mov
-     */
-    public static void toPlayersTargettingMyself(Creature character, ServerPacket mov) {
-        World.getInstance().forEachVisibleObject(character, Player.class, player ->
-        {
-            if (player.getTarget() == character) {
-                player.sendPacket(mov);
-            }
-        });
-    }
-
-    /**
      * Send a packet to all Player in the _KnownPlayers of the Creature.<BR>
      * <B><U> Concept</U> :</B><BR>
      * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>

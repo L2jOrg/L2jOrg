@@ -27,6 +27,8 @@ import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.taskmanager.AutoUseTaskManager;
 
 import static java.util.Objects.isNull;
+import static org.l2j.gameserver.enums.ShortcutType.ITEM;
+import static org.l2j.gameserver.enums.ShortcutType.SKILL;
 
 /**
  * @author JoeAlisson
@@ -53,9 +55,11 @@ public class ExRequestActivateAutoShortcut extends ClientPacket {
             return;
         }
 
-        switch (shortcut.getType()) {
-            case ITEM -> handleRequestAutoUseItem(player, shortcut);
-            case SKILL -> handleRequestAutoUseSkill(player, shortcut);
+        var type = shortcut.getType();
+        if(type == ITEM) {
+            handleRequestAutoUseItem(player, shortcut);
+        } else if(type == SKILL) {
+            handleRequestAutoUseSkill(player, shortcut);
         }
     }
 
