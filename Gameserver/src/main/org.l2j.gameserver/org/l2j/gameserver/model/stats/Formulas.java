@@ -30,6 +30,7 @@ import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
@@ -728,7 +729,24 @@ public final class Formulas {
         return restorePercent;
     }
 
+    public static boolean calcPhysicalFailure(Creature activeChar, Creature target, Skill skill ) {
+        if (target instanceof Player || target instanceof Summon)
+            return false;
+        if ((target.getLevel() - activeChar.getActingPlayer().getLevel()) >= 11 ) {
+            if (isPlayer(activeChar)) {
+                final SystemMessage sm = getSystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
+                sm.addString(target.getName());
+                sm.addString(activeChar.getName());
+                activeChar.sendPacket(sm);
+            }
+            return true;
+        }
+        return false;
+    }
+
     public static boolean calcPhysicalSkillEvasion(Creature activeChar, Creature target, Skill skill) {
+        if (calcPhysicalFailure(activeChar, target, skill))
+            return true;
         if (Rnd.get(100) < target.getStats().getSkillEvasionTypeValue(skill.getSkillType())) {
             if (isPlayer(activeChar)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
