@@ -1870,7 +1870,6 @@ public final class Player extends Playable {
 
     public void registerShortCut(Shortcut shortcut) {
         shortcuts.registerShortCut(shortcut);
-        sendPacket(new ShortCutRegister(shortcut));
     }
 
     /**
@@ -1878,10 +1877,9 @@ public final class Player extends Playable {
      *
      * @param skillId       the skill Id to search and update.
      * @param skillLevel    the skill level to update.
-     * @param skillSubLevel the skill sub level to update.
      */
-    public void updateShortCuts(int skillId, int skillLevel, int skillSubLevel) {
-        shortcuts.updateShortCuts(skillId, skillLevel, skillSubLevel);
+    public void updateShortCuts(int skillId, int skillLevel) {
+        shortcuts.updateShortCuts(skillId, skillLevel);
     }
 
     public void deleteShortcut(int room) {
@@ -5229,6 +5227,7 @@ public final class Player extends Playable {
                 _warehouse.updateDatabase();
             }
         }
+        shortcuts.storeMe();
     }
 
     private void storeElementalSpirits() {
@@ -5463,7 +5462,7 @@ public final class Player extends Playable {
         if (store) {
             storeSkill(newSkill, oldSkill);
         }
-        updateShortCuts(newSkill.getId(), newSkill.getLevel(), 0);
+        updateShortCuts(newSkill.getId(), newSkill.getLevel());
         return oldSkill;
     }
 

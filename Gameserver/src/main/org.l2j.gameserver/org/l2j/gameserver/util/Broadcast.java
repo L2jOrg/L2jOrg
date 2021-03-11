@@ -20,19 +20,18 @@ package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.network.serverpackets.ExCharInfo;
+import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.function.Predicate;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public final class Broadcast {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Broadcast.class);
 
     /**
      * Send a packet to all Player in the _KnownPlayers of the Creature that have the Character targeted.<BR>
