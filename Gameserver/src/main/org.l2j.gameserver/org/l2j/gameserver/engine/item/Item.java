@@ -1019,6 +1019,10 @@ public final class Item extends WorldObject {
         return template instanceof EtcItem etcItem && etcItem.isInfinite();
     }
 
+    public int getConsumeShotsCount() {
+        return template instanceof Weapon weapon ? weapon.getConsumeShotsCount() : 0;
+    }
+
     /**
      * Init a dropped Item and add it in the world as a visible object.<BR>
      * <BR>

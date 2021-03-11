@@ -829,6 +829,24 @@ public final class Player extends Playable {
         getDAO(PlayerDAO.class).save(statsData);
     }
 
+    public boolean tryEnableActualAutoShot(ShotType type) {
+        var itemId = activeSoulShots.get(type);
+        var weapon = getActiveWeaponInstance();
+        if(isNull(itemId) || isNull(weapon)) {
+            return false;
+        }
+
+        var shotsCount = weapon.getConsumeShotsCount();
+        var item = inventory.getItemByItemId(itemId);
+
+        if(shotsCount > item.getCount()) {
+            return false;
+        }
+
+        sendPacket(new ExAutoSoulShot(itemId, true, type.getClientType()));
+        return true;
+    }
+
     public void enableAutoSoulShot(ShotType type, int itemId) {
         activeSoulShots.put(type, itemId);
         sendPackets(new ExAutoSoulShot(itemId, true, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
@@ -867,14 +885,6 @@ public final class Player extends Playable {
                 getServitors().values().forEach(s -> s.unchargeShot(shotType));
             }
         }
-    }
-
-    public void disableAutoShots() {
-        activeSoulShots.forEach(this::sendDisableShotPackets);
-        activeSoulShots.clear();
-        unchargeAllShots();
-        doIfNonNull(getPet(), Creature::unchargeAllShots);
-        getServitors().values().forEach(Creature::unchargeAllShots);
     }
 
     private void sendDisableShotPackets(ShotType type, int itemId) {
