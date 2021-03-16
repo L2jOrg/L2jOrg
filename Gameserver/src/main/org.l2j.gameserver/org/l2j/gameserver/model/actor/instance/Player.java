@@ -843,14 +843,15 @@ public final class Player extends Playable {
             return false;
         }
 
-        sendPacket(new ExAutoSoulShot(itemId, true, type.getClientType()));
+        sendPacket(new ExAutoSoulShot(itemId, true, type));
         return true;
     }
 
     public void enableAutoSoulShot(ShotType type, int itemId) {
         activeSoulShots.put(type, itemId);
-        sendPackets(new ExAutoSoulShot(itemId, true, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
+        sendPackets(new ExAutoSoulShot(itemId, true, type), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
         rechargeShot(type);
+        variables.updateActiveShot(type, itemId);
     }
 
     public boolean rechargeShot(ShotType type) {
@@ -885,10 +886,11 @@ public final class Player extends Playable {
                 getServitors().values().forEach(s -> s.unchargeShot(shotType));
             }
         }
+        variables.updateActiveShot(type, 0);
     }
 
     private void sendDisableShotPackets(ShotType type, int itemId) {
-        sendPackets(new ExAutoSoulShot(itemId, false, type.getClientType()), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(itemId));
+        sendPackets(new ExAutoSoulShot(itemId, false, type), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(itemId));
     }
 
     @Override
@@ -946,6 +948,14 @@ public final class Player extends Playable {
 
     public int getAdditionalSoulshot() {
         return additionalSoulshot;
+    }
+
+    public int getSavedSoulshot() {
+        return variables.getSoulshot();
+    }
+
+    public int getSavedSpiritshot() {
+        return variables.getSpiritshot();
     }
 
     public void setShineSouls(byte souls) {
@@ -2219,7 +2229,7 @@ public final class Player extends Playable {
     public void refreshOverloaded(boolean broadcast) {
         final int maxLoad = getMaxLoad();
         if (maxLoad > 0) {
-            final long weightproc = (((getCurrentLoad() - getBonusWeightPenalty()) * 1000) / getMaxLoad());
+            final long weightproc = (((getCurrentLoad() - getBonusWeightPenalty()) * 1000L) / getMaxLoad());
             int newWeightPenalty;
             if ((weightproc < 500) || _dietMode) {
                 newWeightPenalty = 0;

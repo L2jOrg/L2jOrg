@@ -20,6 +20,7 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.gameserver.enums.ShotType;
 
 /**
  * @author JoeAlisson
@@ -28,8 +29,6 @@ import org.l2j.commons.database.annotation.Table;
 public class PlayerVariableData {
 
     public static final int REVENGE_USABLE_FUNCTIONS = 5;
-    public static final String MAGIC_LAMP_EXP = "MAGIC_LAMP_EXP";
-    public static final String MAGIC_LAMP_COUNT = "MAGIC_LAMP_COUNT";
 
     @Column("player_id")
     private int playerId;
@@ -135,6 +134,9 @@ public class PlayerVariableData {
 
     @Column("lamp_count")
     private int lampCount;
+
+    private int soulshot;
+    private int spiritshot;
 
     public boolean isHairAccessoryEnabled() {
         return hairAccessoryEnabled;
@@ -292,10 +294,6 @@ public class PlayerVariableData {
         this.revelationSkillDualClass1 = revelationSkillDualClass1;
     }
 
-    public void setRevelationSkillDualClass2(int revelationSkillDualClass2) {
-        this.revelationSkillDualClass2 = revelationSkillDualClass2;
-    }
-
     public void setExtendDrop(String extendDrop) {
         this.extendDrop = extendDrop;
     }
@@ -419,6 +417,22 @@ public class PlayerVariableData {
 
     public void setLampCount(int count) {
         this.lampCount = count;
+    }
+
+    public int getSoulshot() {
+        return soulshot;
+    }
+
+    public int getSpiritshot() {
+        return spiritshot;
+    }
+
+    public void updateActiveShot(ShotType type, int shotId) {
+        if(type == ShotType.SOULSHOTS) {
+            soulshot = shotId;
+        } else if(type == ShotType.SPIRITSHOTS) {
+            spiritshot = shotId;
+        }
     }
 
     public static PlayerVariableData init(int playerId, byte face, byte hairStyle, byte hairColor) {
