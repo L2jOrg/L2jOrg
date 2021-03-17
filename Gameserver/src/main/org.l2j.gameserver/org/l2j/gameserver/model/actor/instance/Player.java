@@ -1274,7 +1274,7 @@ public final class Player extends Playable {
     private long notMoveUntil;
 
     private IntMap<Skill> customSkills;
-    private volatile int actionMask;
+    private int actionMask;
     private int questZoneId = -1;
 
     private String lastPetitionGmName;
@@ -1353,95 +1353,14 @@ public final class Player extends Playable {
     }
 
     public int getRelation(Player target) {
-        final Clan clan = getClan();
-        final Party party = getParty();
-        final Clan targetClan = target.getClan();
+        int result = clanRelation(target);
+        result |= partyRelation(target);
+        result |= siegeRelation(target);
+        return result | handysBlockRelation();
+    }
 
+    private int handysBlockRelation() {
         int result = 0;
-
-        if (clan != null) {
-            result |= RelationChanged.RELATION_CLAN_MEMBER;
-            if (clan == target.getClan()) {
-                result |= RelationChanged.RELATION_CLAN_MATE;
-            }
-            if (getAllyId() != 0) {
-                result |= RelationChanged.RELATION_ALLY_MEMBER;
-            }
-        }
-        if (isClanLeader()) {
-            result |= RelationChanged.RELATION_LEADER;
-        }
-        if ((party != null) && (party == target.getParty())) {
-            result |= RelationChanged.RELATION_HAS_PARTY;
-            for (int i = 0; i < party.getMembers().size(); i++) {
-                if (party.getMembers().get(i) != this) {
-                    continue;
-                }
-                switch (i) {
-                    case 0: {
-                        result |= RelationChanged.RELATION_PARTYLEADER; // 0x10
-                        break;
-                    }
-                    case 1: {
-                        result |= RelationChanged.RELATION_PARTY4; // 0x8
-                        break;
-                    }
-                    case 2: {
-                        result |= RelationChanged.RELATION_PARTY3 + RelationChanged.RELATION_PARTY2 + RelationChanged.RELATION_PARTY1; // 0x7
-                        break;
-                    }
-                    case 3: {
-                        result |= RelationChanged.RELATION_PARTY3 + RelationChanged.RELATION_PARTY2; // 0x6
-                        break;
-                    }
-                    case 4: {
-                        result |= RelationChanged.RELATION_PARTY3 + RelationChanged.RELATION_PARTY1; // 0x5
-                        break;
-                    }
-                    case 5: {
-                        result |= RelationChanged.RELATION_PARTY3; // 0x4
-                        break;
-                    }
-                    case 6: {
-                        result |= RelationChanged.RELATION_PARTY2 + RelationChanged.RELATION_PARTY1; // 0x3
-                        break;
-                    }
-                    case 7: {
-                        result |= RelationChanged.RELATION_PARTY2; // 0x2
-                        break;
-                    }
-                    case 8: {
-                        result |= RelationChanged.RELATION_PARTY1; // 0x1
-                        break;
-                    }
-                }
-            }
-        }
-        if (siegeState != 0) {
-            result |= RelationChanged.RELATION_INSIEGE;
-            if (getSiegeState() != target.getSiegeState()) {
-                result |= RelationChanged.RELATION_ENEMY;
-            } else {
-                result |= RelationChanged.RELATION_ALLY;
-            }
-            if (siegeState == 1) {
-                result |= RelationChanged.RELATION_ATTACKER;
-            }
-        }
-        if ((clan != null) && (targetClan != null)) {
-            if ((target.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY)) {
-                ClanWar war = clan.getWarWith(target.getClan().getId());
-                if (war != null) {
-                    switch (war.getState()) {
-                        case DECLARATION, BLOOD_DECLARATION -> result |= RelationChanged.RELATION_DECLARED_WAR;
-                        case MUTUAL -> {
-                            result |= RelationChanged.RELATION_DECLARED_WAR;
-                            result |= RelationChanged.RELATION_MUTUAL_WAR;
-                        }
-                    }
-                }
-            }
-        }
         if (handysBlockCheckerEventArena != -1) {
             result |= RelationChanged.RELATION_INSIEGE;
             final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(getBlockCheckerArena());
@@ -1451,6 +1370,89 @@ public final class Player extends Playable {
                 result |= RelationChanged.RELATION_ALLY;
             }
             result |= RelationChanged.RELATION_ATTACKER;
+        }
+        return result;
+    }
+
+    private int siegeRelation(Player target) {
+        int result = 0;
+        if (siegeState != 0) {
+            result |= RelationChanged.RELATION_INSIEGE;
+
+            if (getSiegeState() != target.getSiegeState()) {
+                result |= RelationChanged.RELATION_ENEMY;
+            } else {
+                result |= RelationChanged.RELATION_ALLY;
+            }
+
+            if (siegeState == 1) {
+                result |= RelationChanged.RELATION_ATTACKER;
+            }
+        }
+        return result;
+    }
+
+    private int partyRelation(Player target) {
+        int result = 0;
+        if (nonNull(party) && party == target.getParty()) {
+
+            result |= RelationChanged.RELATION_HAS_PARTY;
+
+            int partyIndex = party.getMembers().indexOf(this);
+
+            result |= switch (partyIndex) {
+                case 0 -> RelationChanged.RELATION_PARTYLEADER;
+                case 1 -> RelationChanged.RELATION_PARTY4;
+                case 2 -> RelationChanged.RELATION_PARTY3 + RelationChanged.RELATION_PARTY2 + RelationChanged.RELATION_PARTY1;
+                case 3 -> RelationChanged.RELATION_PARTY3 + RelationChanged.RELATION_PARTY2;
+                case 4 -> RelationChanged.RELATION_PARTY3 + RelationChanged.RELATION_PARTY1;
+                case 5 -> RelationChanged.RELATION_PARTY3;
+                case 6 -> RelationChanged.RELATION_PARTY2 + RelationChanged.RELATION_PARTY1;
+                case 7 -> RelationChanged.RELATION_PARTY2;
+                case 8 -> RelationChanged.RELATION_PARTY1;
+                default -> 0;
+            };
+        }
+        return result;
+    }
+
+    private int clanRelation(Player target) {
+        int result = 0;
+        if (nonNull(clan)) {
+            result |= RelationChanged.RELATION_CLAN_MEMBER;
+
+            if (getAllyId() != 0) {
+                result |= RelationChanged.RELATION_ALLY_MEMBER;
+            }
+
+            if (isClanLeader()) {
+                result |= RelationChanged.RELATION_LEADER;
+            }
+
+            final Clan targetClan = target.getClan();
+            if (clan == targetClan) {
+                result |= RelationChanged.RELATION_CLAN_MATE;
+            }
+
+            result |= warRelation(target, targetClan);
+        }
+
+        return result;
+    }
+
+    private int warRelation(Player target, Clan targetClan) {
+        int result = 0;
+        if(nonNull(targetClan) && target.getPledgeType() != Clan.SUBUNIT_ACADEMY && getPledgeType() != Clan.SUBUNIT_ACADEMY) {
+            ClanWar war = clan.getWarWith(target.getClan().getId());
+            if (nonNull(war)) {
+                switch (war.getState()) {
+                    case DECLARATION, BLOOD_DECLARATION -> result |= RelationChanged.RELATION_DECLARED_WAR;
+                    case MUTUAL -> {
+                        result |= RelationChanged.RELATION_DECLARED_WAR;
+                        result |= RelationChanged.RELATION_MUTUAL_WAR;
+                    }
+                }
+            }
         }
         return result;
     }
@@ -2671,7 +2673,7 @@ public final class Player extends Playable {
 
             // If over capacity, drop the item
             if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != ItemChangeType.MODIFIED))) {
-                dropItem("InvDrop", newitem, null, true, true);
+                dropItem("InvDrop", newitem, null, true);
             }
         }
     }
@@ -2899,7 +2901,7 @@ public final class Player extends Playable {
      * @param process   : String Identifier of process triggering this action
      * @param objectId  : int Item Identifier of the item to be transfered
      * @param count     : long Quantity of items to be transfered
-     * @param target
+     * @param target    : the Inventory which the item will be transfer to
      * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the new item or the updated item in inventory
      */
@@ -2955,18 +2957,14 @@ public final class Player extends Playable {
      * @param process     String Identifier of process triggering this action
      * @param item        Item to be dropped
      * @param reference   WorldObject Object referencing current action like NPC selling item or previous item in transformation
-     * @param sendMessage boolean Specifies whether to send message to Client about this action
      * @param protectItem whether or not dropped item must be protected temporary against other players
-     * @return boolean informing if the action was successful
      */
-    private boolean dropItem(String process, Item item, WorldObject reference, boolean sendMessage, boolean protectItem) {
+    private void dropItem(String process, Item item, WorldObject reference, boolean protectItem) {
         item = inventory.dropItem(process, item, this, reference);
 
         if (item == null) {
-            if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
-            }
-            return false;
+            sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
+            return;
         }
 
         item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
@@ -2999,17 +2997,13 @@ public final class Player extends Playable {
         }
 
         // Sends message to client if requested
-        if (sendMessage) {
-            final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-            sm.addItemName(item);
-            sendPacket(sm);
-        }
-
-        return true;
+        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
+        sm.addItemName(item);
+        sendPacket(sm);
     }
 
-    private boolean dropItem(String process, Item item, WorldObject reference) {
-        return dropItem(process, item, reference, true, false);
+    private void dropItem(String process, Item item, WorldObject reference) {
+        dropItem(process, item, reference, false);
     }
 
     /**
@@ -3023,7 +3017,7 @@ public final class Player extends Playable {
      * @param z           : int coordinate for drop Z
      * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
-     * @param protectItem
+     * @param protectItem : apply dropped item protection
      * @return Item corresponding to the new item or the updated item in inventory
      *
      * TODO extract method and remove duplication
@@ -3522,20 +3516,17 @@ public final class Player extends Playable {
             }
             ItemEngine.getInstance().destroyItem("Consume", target, this, null);
         } else {
-            // if item is instance of L2ArmorType or L2WeaponType broadcast an "Attention" system message
             if ((target.getItemType() instanceof ArmorType) || (target.getItemType() instanceof WeaponType)) {
                 if (target.getEnchantLevel() > 0) {
                     smsg = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3);
                     smsg.addPcName(this);
                     smsg.addInt(target.getEnchantLevel());
-                    smsg.addItemName(target.getId());
-                    broadcastPacket(smsg, 1400);
                 } else {
                     smsg = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2);
                     smsg.addPcName(this);
-                    smsg.addItemName(target.getId());
-                    broadcastPacket(smsg, 1400);
                 }
+                smsg.addItemName(target.getId());
+                broadcastPacket(smsg, 1400);
             }
 
             // Check if a Party is in progress
@@ -3890,7 +3881,6 @@ public final class Player extends Playable {
             if (Rnd.chance(dropPercent)) {
                 int dropCount = 0;
                 int itemDropPercent;
-                List<Item> droppedItems =  new ArrayList<>(dropLimit);
 
                 for (Item itemDrop : inventory.getItems()) {
                     // Don't drop
@@ -3915,7 +3905,6 @@ public final class Player extends Playable {
                     // NOTE: Each time an item is dropped, the chance of another item being dropped gets lesser (dropCount * 2)
                     if (Rnd.chance(itemDropPercent)) {
                         dropItem("DieDrop", itemDrop, killer);
-                        droppedItems.add(itemDrop);
                         if (isKarmaDrop) {
                             LOGGER.warn("{} has karma and dropped {} {}", this, itemDrop.getCount(), itemDrop);
                         } else {
@@ -4063,11 +4052,10 @@ public final class Player extends Playable {
     /**
      * Restore the specified % of experience this Player has lost and sends a Server->Client StatusUpdate packet.
      *
-     * @param restorePercent
+     * @param restorePercent the exp percentage that will be restored
      */
     public void restoreExp(double restorePercent) {
         if (data.getExpBeforeDeath() > 0) {
-            // Restore the specified % of lost experience.
             getStats().addExp(Math.round(((data.getExpBeforeDeath() - getExp()) * restorePercent) / 100));
             data.setExpBeforeDeath(0);
         }
@@ -4081,7 +4069,7 @@ public final class Player extends Playable {
      * <li>Set the new Experience value of the Player and Decrease its level if necessary</li>
      * <li>Send a Server->Client StatusUpdate packet with its new Experience</li>
      *
-     * @param killer
+     * @param killer the killer
      */
     public void calculateDeathExpPenalty(Creature killer) {
         final int lvl = getLevel();
@@ -4236,7 +4224,7 @@ public final class Player extends Playable {
     /**
      * Set the Player requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...).
      *
-     * @param requester
+     * @param requester the player that did the requester
      */
     public void setActiveRequester(Player requester) {
         activeRequester = requester;
@@ -4259,7 +4247,7 @@ public final class Player extends Playable {
     /**
      * Select the Warehouse to be used in next activity.
      *
-     * @param partner
+     * @param partner the Player that will participate in the transaction
      */
     public void onTransactionRequest(Player partner) {
         requestExpireTime = WorldTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * WorldTimeController.TICKS_PER_SECOND);
@@ -4749,14 +4737,9 @@ public final class Player extends Playable {
         return accessLevel;
     }
 
-    private void updateAndBroadcastStatus(int broadcastType) {
+    private void updateAndBroadcastStatus() {
         refreshOverloaded(true);
-        // Send a Server->Client packet UserInfo to this Player and CharInfo to all Player in its _KnownPlayers (broadcast)
-        if (broadcastType == 1) {
-            sendPacket(new UserInfo(this));
-        } else if (broadcastType == 2) {
-            broadcastUserInfo();
-        }
+        broadcastUserInfo();
     }
 
     public void broadcastReputation() {
@@ -4840,7 +4823,7 @@ public final class Player extends Playable {
     /**
      * Update Player stats in the characters table of the database.
      *
-     * @param storeActiveEffects
+     * @param storeActiveEffects if true the current effects will be stored
      */
     public synchronized void store(boolean storeActiveEffects) {
         storeCharBase();
@@ -5104,7 +5087,7 @@ public final class Player extends Playable {
      * <li>Add Func objects of newSkill to the calculator set of the Creature</li>
      *
      * @param newSkill The L2Skill to add to the Creature
-     * @param store
+     * @param store true if the skill should be stored
      * @return The L2Skill replaced or null if just added a new L2Skill
      */
     public Skill addSkill(Skill newSkill, boolean store) {
@@ -5902,27 +5885,16 @@ public final class Player extends Playable {
         return isInsideZone(ZoneType.SIEGE) && !((getClan() != null) && (CastleManager.getInstance().getCastle(this) == CastleManager.getInstance().getCastleByOwner(getClan())) && (this == getClan().getLeader().getPlayerInstance()));
     }
 
-    // returns false if the change of mount type fails.
     private void setMount(int npcId, int npcLevel) {
         final MountType type = MountType.findByNpcId(npcId);
         switch (type) {
-            case NONE: // None
-            {
-                setIsFlying(false);
-                break;
-            }
-            case STRIDER: // Strider
-            {
+            case NONE -> setIsFlying(false);
+            case STRIDER -> {
                 if (isNoble()) {
                     addSkill(CommonSkill.STRIDER_SIEGE_ASSAULT.getSkill(), false);
                 }
-                break;
             }
-            case WYVERN: // Wyvern
-            {
-                setIsFlying(true);
-                break;
-            }
+            case WYVERN -> setIsFlying(true);
         }
 
         mountType = type;
@@ -5940,13 +5912,13 @@ public final class Player extends Playable {
     @Override
     public final void stopAllEffects() {
         super.stopAllEffects();
-        updateAndBroadcastStatus(2);
+        updateAndBroadcastStatus();
     }
 
     @Override
     public final void stopAllEffectsExceptThoseThatLastThroughDeath() {
         super.stopAllEffectsExceptThoseThatLastThroughDeath();
-        updateAndBroadcastStatus(2);
+        updateAndBroadcastStatus();
     }
 
     private void stopCubics() {
@@ -7935,22 +7907,10 @@ public final class Player extends Playable {
         player.updateRelation(this);
 
         switch (privateStoreType) {
-            case SELL: {
-                player.sendPacket(new PrivateStoreMsgSell(this));
-                break;
-            }
-            case PACKAGE_SELL: {
-                player.sendPacket(new ExPrivateStoreSetWholeMsg(this));
-                break;
-            }
-            case BUY: {
-                player.sendPacket(new PrivateStoreMsgBuy(this));
-                break;
-            }
-            case MANUFACTURE: {
-                player.sendPacket(new RecipeShopMsg(this));
-                break;
-            }
+            case BUY -> player.sendPacket(new PrivateStoreMsgBuy(this));
+            case SELL -> player.sendPacket(new PrivateStoreMsgSell(this));
+            case MANUFACTURE -> player.sendPacket(new RecipeShopMsg(this));
+            case PACKAGE_SELL -> player.sendPacket(new ExPrivateStoreSetWholeMsg(this));
         }
     }
 
