@@ -82,7 +82,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        if ((Config.PLAYER_SPAWN_PROTECTION > 0) && player.isInvul() && !player.isGM()) {
+        if ((Config.PLAYER_SPAWN_PROTECTION > 0) && player.isInvulnerable() && !player.isGM()) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             return;
         }

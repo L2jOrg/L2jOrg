@@ -110,7 +110,7 @@ public class ResidenceOfKingPetram extends AbstractInstance
             case "INVUL_MODE":
             {
                 _petram.useMagic(EARTh_FURY.getSkill());
-                if (_petram.isInvul())
+                if (_petram.isInvulnerable())
                 {
                     _petram.setIsInvul(false);
                     _petram.broadcastSay(ChatType.NPC_SHOUT, "Nooooo... Nooooo...");

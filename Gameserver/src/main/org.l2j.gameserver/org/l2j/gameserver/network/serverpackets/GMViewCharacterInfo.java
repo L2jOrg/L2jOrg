@@ -144,8 +144,8 @@ public class GMViewCharacterInfo extends ServerPacket {
         buffer.writeInt(_activeChar.getPkKills());
         buffer.writeInt(_activeChar.getPvpKills());
 
-        buffer.writeShort(_activeChar.getRecomLeft());
-        buffer.writeShort(_activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
+        buffer.writeShort(_activeChar.getRecommendLeft());
+        buffer.writeShort(_activeChar.getRecommend()); // Blue value for name (0 = white, 255 = pure blue)
         buffer.writeInt(_activeChar.getClassId().getId());
         buffer.writeInt(0x00); // special effects? circles around player...
         buffer.writeInt(_activeChar.getMaxCp());

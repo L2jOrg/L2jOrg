@@ -327,7 +327,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				if (isPlayer(target))
 				{
 					final Player player = (Player) target;
-					player.setRecomHave(recVal);
+					player.setRecommend(recVal);
 					player.broadcastUserInfo();
 					player.sendMessage("A GM changed your Recommend points to " + recVal);
 					activeChar.sendMessage(player.getName() + "'s Recommend changed to " + recVal);

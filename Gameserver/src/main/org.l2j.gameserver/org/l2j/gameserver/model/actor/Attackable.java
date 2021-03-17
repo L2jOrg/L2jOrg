@@ -52,7 +52,6 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -800,7 +799,7 @@ public class Attackable extends Npc {
 
         if (GameUtils.isPlayer(ai.getAttacker())) {
             final Player act = (Player) ai.getAttacker();
-            if (act.isInvisible() || act.isInvul() || act.isSpawnProtected()) {
+            if (act.isInvisible() || act.isInvulnerable() || act.isSpawnProtected()) {
                 // Remove Object Should Use This Method and Can be Blocked While Interacting
                 _aggroList.remove(target);
                 return 0;

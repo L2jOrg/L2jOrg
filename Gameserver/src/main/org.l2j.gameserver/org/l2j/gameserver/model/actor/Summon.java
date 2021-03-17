@@ -434,8 +434,8 @@ public abstract class Summon extends Playable {
      * Return True if the Summon is invulnerable or if the summoner is in spawn protection.
      */
     @Override
-    public boolean isInvul() {
-        return super.isInvul() || owner.isSpawnProtected();
+    public boolean isInvulnerable() {
+        return super.isInvulnerable() || owner.isSpawnProtected();
     }
 
     /**

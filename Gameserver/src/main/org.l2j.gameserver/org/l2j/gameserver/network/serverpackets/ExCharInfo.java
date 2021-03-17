@@ -139,7 +139,7 @@ public class ExCharInfo extends ServerPacket {
 
         buffer.writeByte(player.isInMatchingRoom());
         buffer.writeByte(player.isInsideZone(ZoneType.WATER) ? 1 : player.isFlyingMounted() ? 2 : 0);
-        buffer.writeShort(player.getRecomHave());
+        buffer.writeShort(player.getRecommend());
         buffer.writeInt(player.getMountNpcId() == 0 ? 0 : player.getMountNpcId() + 1000000);
         buffer.writeInt(player.getActiveClass());
         buffer.writeInt(0x00); // foot effect

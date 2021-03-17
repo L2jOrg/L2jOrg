@@ -58,7 +58,7 @@ public class ControllableMob extends Monster {
     }
 
     @Override
-    public boolean isInvul() {
+    public boolean isInvulnerable() {
         return _isInvul;
     }
 
