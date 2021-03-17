@@ -1371,8 +1371,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     /**
      * @return the summon
      */
-    public Map<Integer, Summon> getServitors() {
-        return Collections.emptyMap();
+    public IntMap<Summon> getServitors() {
+        return Containers.emptyIntMap();
     }
 
     public Summon getServitor(int objectId) {
@@ -3518,9 +3518,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public boolean canRevive() {
         return true;
-    }
-
-    public void setCanRevive(boolean val) {
     }
 
     /**
