@@ -21,6 +21,7 @@ package org.l2j.commons.util;
 
 
 import io.github.joealisson.primitive.IntCollection;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.configuration.CommonSettings;
 
 import java.lang.reflect.Field;
@@ -65,6 +66,10 @@ public class Util {
     }
 
     public static <K, V> boolean isNotEmpty(Map<K, V> map) {
+        return nonNull(map) && !map.isEmpty();
+    }
+
+    public static <T> boolean isNotEmpty(IntMap<T> map) {
         return nonNull(map) && !map.isEmpty();
     }
 

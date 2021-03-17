@@ -529,7 +529,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param player player who wants to enter
      * @return group type which can enter if any can enter, otherwise {@code null}
      */
-    private final GroupType getEnterGroupType(Player player) {
+    private GroupType getEnterGroupType(Player player) {
         // If mask doesn't contain any group
         if (groupMask == 0) {
             return null;
