@@ -74,7 +74,6 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
-import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.*;
 import org.l2j.gameserver.model.holders.*;
@@ -1234,7 +1233,6 @@ public final class Player extends Playable {
     private long teleportProtectEndTime;
     private volatile IntMap<ExResponseCommissionInfo> lastCommissionInfos;
 
-    private volatile Map<Class<? extends AbstractEvent>, AbstractEvent> events;
     private boolean isOnCustomEvent;
 
     private Weapon fistsWeaponItem;
@@ -1246,8 +1244,6 @@ public final class Player extends Playable {
     private ScheduledFuture<?> taskRentPet;
     private ScheduledFuture<?> taskWater;
     private ScheduledFuture<?> skillListRefreshTask;
-
-    private int lastHtmlActionOriginObjId;
 
     private SkillUseHolder queuedSkill;
     private int reviveRequested;
@@ -1263,11 +1259,7 @@ public final class Player extends Playable {
     private double originalHp;
     private double originalMp;
 
-    private int clientX;
-    private int clientY;
     private int clientZ;
-    private int clientHeading;
-
     private Future<?> fallingDamageTask;
     private volatile long fallingTimestamp;
     private volatile int fallingDamage;
@@ -2049,7 +2041,7 @@ public final class Player extends Playable {
 
             if (weightPenalty != newWeightPenalty) {
                 weightPenalty = newWeightPenalty;
-                if ((newWeightPenalty > 0) && !dietMode) {
+                if (newWeightPenalty > 0) {
                     addSkill(SkillEngine.getInstance().getSkill(CommonSkill.WEIGHT_PENALTY.getId(), newWeightPenalty));
                     setIsOverloaded(getCurrentLoad() > maxLoad);
                 } else {
@@ -2728,7 +2720,7 @@ public final class Player extends Playable {
                 if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, template.isQuestItem()) && item.isDropable()
                         && (!item.isStackable() || (item.getLastChange() != ItemChangeType.MODIFIED))) {
 
-                    dropItem("InvDrop", item, null, true);
+                    dropItem("InvDrop", item, null);
                 }
             }
 
@@ -2851,7 +2843,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        return destroyItem(null, item, count, reference, sendMessage);
+        return destroyItem(process, item, count, reference, sendMessage);
     }
 
     /**
@@ -3016,8 +3008,8 @@ public final class Player extends Playable {
         return true;
     }
 
-    private boolean dropItem(String process, Item item, WorldObject reference, boolean sendMessage) {
-        return dropItem(process, item, reference, sendMessage, false);
+    private boolean dropItem(String process, Item item, WorldObject reference) {
+        return dropItem(process, item, reference, true, false);
     }
 
     /**
@@ -3922,7 +3914,7 @@ public final class Player extends Playable {
 
                     // NOTE: Each time an item is dropped, the chance of another item being dropped gets lesser (dropCount * 2)
                     if (Rnd.chance(itemDropPercent)) {
-                        dropItem("DieDrop", itemDrop, killer, true);
+                        dropItem("DieDrop", itemDrop, killer);
                         droppedItems.add(itemDrop);
                         if (isKarmaDrop) {
                             LOGGER.warn("{} has karma and dropped {} {}", this, itemDrop.getCount(), itemDrop);
@@ -5447,14 +5439,14 @@ public final class Player extends Playable {
      * Remove a Henna of the Player, save update in the character_hennas table of the database and send Server->Client HennaInfo/UserInfo packet to this Player.
      *
      */
-    public boolean removeHenna(int slot) {
+    public void removeHenna(int slot) {
         if ((slot < 1) || (slot > 3)) {
-            return false;
+            return;
         }
 
         final Henna henna = hennas[slot - 1];
         if (henna == null) {
-            return false;
+            return;
         }
 
         hennas[slot - 1] = null;
@@ -5504,7 +5496,6 @@ public final class Player extends Playable {
 
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaRemove(this, henna), this);
-        return true;
     }
 
     /**
@@ -6001,11 +5992,8 @@ public final class Player extends Playable {
         return inventoryDisable;
     }
 
-    /**
-     * @return the old cubic for this cubic ID if any, otherwise {@code null}
-     */
-    public CubicInstance addCubic(CubicInstance cubic) {
-        return cubics.put(cubic.getTemplate().getId(), cubic);
+    public void addCubic(CubicInstance cubic) {
+        cubics.put(cubic.getTemplate().getId(), cubic);
     }
 
     /**
@@ -6890,8 +6878,7 @@ public final class Player extends Playable {
     public int validateHtmlAction(String action) {
         for (int i = 0; i < htmlActionCaches.length; ++i) {
             if (validateHtmlAction(htmlActionCaches[i], action)) {
-                lastHtmlActionOriginObjId = htmlActionOriginObjectIds[i];
-                return lastHtmlActionOriginObjId;
+                return htmlActionOriginObjectIds[i];
             }
         }
 
@@ -8113,24 +8100,12 @@ public final class Player extends Playable {
         return getTransformation().map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
     }
 
-    public final void setClientX(int val) {
-        clientX = val;
-    }
-
-    public final void setClientY(int val) {
-        clientY = val;
-    }
-
     public final int getClientZ() {
         return clientZ;
     }
 
     public final void setClientZ(int val) {
         clientZ = val;
-    }
-
-    public final void setClientHeading(int val) {
-        clientHeading = val;
     }
 
     /**
@@ -8458,22 +8433,6 @@ public final class Player extends Playable {
         }
     }
 
-    /**
-     * @return {@code true} if current player can revive and shows 'To Village' button upon death, {@code false} otherwise.
-     */
-    @Override
-    public boolean canRevive() {
-        if (events != null) {
-            for (AbstractEvent listener : events.values()) {
-                if (listener.isOnEvent(this) && !listener.canRevive(this)) {
-                    return false;
-                }
-            }
-        }
-        return super.canRevive();
-    }
-
-
     public boolean isOnCustomEvent() {
         return isOnCustomEvent;
     }
@@ -8487,31 +8446,11 @@ public final class Player extends Playable {
      */
     @Override
     public boolean isOnEvent() {
-        if (isOnCustomEvent) {
-            return true;
-        }
-        if (events != null) {
-            for (AbstractEvent listener : events.values()) {
-                if (listener.isOnEvent(this)) {
-                    return true;
-                }
-            }
-        }
-        return super.isOnEvent();
+        return isOnCustomEvent || super.isOnEvent();
     }
 
     public boolean isBlockedFromExit() {
-        if (isOnCustomEvent) {
-            return true;
-        }
-        if (nonNull(events)) {
-            for (var event : events.values()) {
-                if (event.isOnEvent(this) && event.isBlockingExit(this)) {
-                    return true;
-                }
-            }
-        }
-        return false;
+        return isOnCustomEvent;
     }
 
     void setOriginalCpHpMp(double cp, double hp, double mp) {

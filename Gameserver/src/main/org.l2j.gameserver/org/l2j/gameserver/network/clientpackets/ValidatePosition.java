@@ -158,10 +158,7 @@ public class ValidatePosition extends ClientPacket {
             }
         }
 
-        player.setClientX(_x);
-        player.setClientY(_y);
         player.setClientZ(_z);
-        player.setClientHeading(_heading); // No real need to validate heading.
 
         // Mobius: Check for possible door logout and move over exploit. Also checked at MoveBackwardToLocation.
         if (!DoorDataManager.getInstance().checkIfDoorsBetween(realX, realY, realZ, _x, _y, _z, player.getInstanceWorld(), false)) {
