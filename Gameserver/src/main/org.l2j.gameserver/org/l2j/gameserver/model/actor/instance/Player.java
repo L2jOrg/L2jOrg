@@ -1125,7 +1125,7 @@ public final class Player extends Playable {
     @SuppressWarnings("unchecked")
     private final LinkedList<String>[] htmlActionCaches = new LinkedList[HtmlActionScope.values().length];
     private final Fishing fishing = new Fishing(this);
-    private final IntSet _whisperers = CHashIntMap.newKeySet();
+    private final IntSet whispers = CHashIntMap.newKeySet();
     private final IntSet friends = CHashIntMap.newKeySet();
 
     protected Future<?> mountFeedTask;
@@ -1196,10 +1196,10 @@ public final class Player extends Playable {
     private PlayerWarehouse warehouse;
     private PrivateStoreType privateStoreType = PrivateStoreType.NONE;
     private ScheduledFuture<?> onlineTimeUpdateTask;
-    private volatile IntMap<ManufactureItem> manufactureItems;
-    private volatile IntMap<Summon> servitors;
-    private volatile Set<TamedBeast> tamedBeast;
-    private volatile EnumIntBitmask<ClanPrivilege> clanPrivileges = new EnumIntBitmask<>(ClanPrivilege.class, false);
+    private IntMap<ManufactureItem> manufactureItems;
+    private IntMap<Summon> servitors;
+    private Set<TamedBeast> tamedBeast;
+    private EnumIntBitmask<ClanPrivilege> clanPrivileges = new EnumIntBitmask<>(ClanPrivilege.class, false);
 
     private Pet pet;
     private Npc lastFolkNpc;
@@ -1230,7 +1230,7 @@ public final class Player extends Playable {
 
     private long spawnProtectEndTime;
     private long teleportProtectEndTime;
-    private volatile IntMap<ExResponseCommissionInfo> lastCommissionInfos;
+    private IntMap<ExResponseCommissionInfo> lastCommissionInfos;
 
     private boolean isOnCustomEvent;
 
@@ -1265,7 +1265,7 @@ public final class Player extends Playable {
 
     private String adminConfirmCmd;
     private MovieHolder movieHolder;
-    private Future<?> PvPRegTask;
+    private Future<?> pvPRegTask;
     private int multiSocialTarget;
     private int multiSocialAction;
     private volatile long lastItemAuctionInfoRequest;
@@ -1281,7 +1281,7 @@ public final class Player extends Playable {
 
     private boolean isSellingBuffs;
     private List<SellBuffHolder> sellingBuffs;
-    private volatile Set<QuestState> notifyQuestOfDeathList;
+    private Set<QuestState> notifyQuestOfDeathList;
     private ScheduledFuture<?> taskWarnUserTakeBreak;
 
     @Override
@@ -1308,15 +1308,15 @@ public final class Player extends Playable {
     public void startPvPFlag() {
         updatePvPFlag(1);
 
-        if (PvPRegTask == null) {
-            PvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
+        if (pvPRegTask == null) {
+            pvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
         }
     }
 
     private void stopPvpRegTask() {
-        if (PvPRegTask != null) {
-            PvPRegTask.cancel(true);
-            PvPRegTask = null;
+        if (pvPRegTask != null) {
+            pvPRegTask.cancel(true);
+            pvPRegTask = null;
         }
     }
 
@@ -1325,7 +1325,7 @@ public final class Player extends Playable {
 
         updatePvPFlag(0);
 
-        PvPRegTask = null;
+        pvPRegTask = null;
     }
 
     public boolean isSellingBuffs() {
@@ -1666,14 +1666,16 @@ public final class Player extends Playable {
      */
     public final Set<QuestState> getNotifyQuestOfDeath() {
         if (notifyQuestOfDeathList == null) {
-            synchronized (this) {
-                if (notifyQuestOfDeathList == null) {
-                    notifyQuestOfDeathList = ConcurrentHashMap.newKeySet();
-                }
-            }
+            initNotifyQuestOfDeathList();
         }
 
         return notifyQuestOfDeathList;
+    }
+
+    private synchronized void initNotifyQuestOfDeathList() {
+        if (notifyQuestOfDeathList == null) {
+            notifyQuestOfDeathList = ConcurrentHashMap.newKeySet();
+        }
     }
 
     public final boolean isNotifyQuestOfDeathEmpty() {
@@ -4144,13 +4146,15 @@ public final class Player extends Playable {
 
     public void addServitor(Summon servitor) {
         if (servitors == null) {
-            synchronized (this) {
-                if (servitors == null) {
-                    servitors = new CHashIntMap<>(1);
-                }
-            }
+            initServitors();
         }
         servitors.put(servitor.getObjectId(), servitor);
+    }
+
+    private synchronized void initServitors() {
+        if (servitors == null) {
+            servitors = new CHashIntMap<>(1);
+        }
     }
 
     /**
@@ -4162,13 +4166,15 @@ public final class Player extends Playable {
 
     public void addTrainedBeast(TamedBeast tamedBeast) {
         if (this.tamedBeast == null) {
-            synchronized (this) {
-                if (this.tamedBeast == null) {
-                    this.tamedBeast = ConcurrentHashMap.newKeySet();
-                }
-            }
+            initTamedBeasts();
         }
         this.tamedBeast.add(tamedBeast);
+    }
+
+    private synchronized void initTamedBeasts() {
+        if (this.tamedBeast == null) {
+            this.tamedBeast = ConcurrentHashMap.newKeySet();
+        }
     }
 
     /**
@@ -4310,13 +4316,15 @@ public final class Player extends Playable {
      */
     public IntMap<ManufactureItem> getManufactureItems() {
         if (manufactureItems == null) {
-            synchronized (this) {
-                if (manufactureItems == null) {
-                    manufactureItems = new CHashIntMap<>();
-                }
-            }
+            initManufactureItems();
         }
         return manufactureItems;
+    }
+
+    private synchronized void initManufactureItems() {
+        if (manufactureItems == null) {
+            manufactureItems = new CHashIntMap<>();
+        }
     }
 
     /**
@@ -4737,7 +4745,7 @@ public final class Player extends Playable {
     void restoreCharData() {
         restoreSkills();
         macros.restoreMe();
-        restoreHenna();
+        restoreHennas();
         restoreTeleportBookmark();
         restoreRecipeBook();
 
@@ -5200,30 +5208,7 @@ public final class Player extends Playable {
             try (ResultSet resultSet = statement.executeQuery()) {
                 final long currentTime = System.currentTimeMillis();
                 while (resultSet.next()) {
-                    final int remainingTime = resultSet.getInt("remaining_time");
-                    final long reuseDelay = resultSet.getLong("reuse_delay");
-                    final long sysTime = resultSet.getLong("systime");
-                    final int restoreType = resultSet.getInt("restore_type");
-
-                    final Skill skill = SkillEngine.getInstance().getSkill(resultSet.getInt("skill_id"), resultSet.getInt("skill_level"));
-                    if (skill == null) {
-                        continue;
-                    }
-
-                    final long time = sysTime - currentTime;
-                    if (time > 10) {
-                        disableSkill(skill, time);
-                        addTimeStamp(skill, reuseDelay, sysTime);
-                    }
-
-                    // Restore Type 1 The remaining skills lost effect upon logout but were still under a high reuse delay.
-                    if (restoreType > 0) {
-                        continue;
-                    }
-
-                    // Restore Type 0 These skill were still in effect on the character upon logout.
-                    // Some of which were self casted and might still have had a long reuse delay which also is restored.
-                    skill.applyEffects(this, this, false, remainingTime);
+                    restoreEffect(resultSet, currentTime);
                 }
             }
             // Remove previously restored skills
@@ -5232,68 +5217,89 @@ public final class Player extends Playable {
                 delete.executeUpdate();
             }
         } catch (Exception e) {
-            LOGGER.warn("Could not restore {} active effect data: {}", this, e.getMessage(), e);
+            LOGGER.warn("Could not restore {} active effect data ", this, e);
         }
     }
 
-    /**
-     * Retrieve from the database all Item Reuse Time of this Player and add them to the player.
-     */
+    private void restoreEffect(ResultSet resultSet, long currentTime) throws SQLException {
+        final int remainingTime = resultSet.getInt("remaining_time");
+        final long reuseDelay = resultSet.getLong("reuse_delay");
+        final long sysTime = resultSet.getLong("systime");
+        final int restoreType = resultSet.getInt("restore_type");
+
+        final Skill skill = SkillEngine.getInstance().getSkill(resultSet.getInt("skill_id"), resultSet.getInt("skill_level"));
+        if (skill == null) {
+            return;
+        }
+
+        final long time = sysTime - currentTime;
+        if (time > 10) {
+            disableSkill(skill, time);
+            addTimeStamp(skill, reuseDelay, sysTime);
+        }
+
+        // Restore Type 1 The remaining skills lost effect upon logout but were still under a high reuse delay.
+        if (restoreType > 0) {
+            return;
+        }
+
+        skill.applyEffects(this, this, false, remainingTime);
+    }
+
     private void restoreItemReuse() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(RESTORE_ITEM_REUSE_SAVE);
              PreparedStatement delete = con.prepareStatement(DELETE_ITEM_REUSE_SAVE)) {
+
             statement.setInt(1, getObjectId());
+
             try (ResultSet resultSet = statement.executeQuery()) {
-                int itemId;
-                long reuseDelay;
-                long sysTime;
-                boolean isInInventory;
-                long remainingTime;
                 final long currentTime = System.currentTimeMillis();
 
                 while (resultSet.next()) {
-                    itemId = resultSet.getInt("itemId");
-                    reuseDelay = resultSet.getLong("reuseDelay");
-                    sysTime = resultSet.getLong("systime");
-                    isInInventory = true;
-
-                    // Using item Id
-                    Item item = inventory.getItemByItemId(itemId);
-                    if (item == null) {
-                        item = getWarehouse().getItemByItemId(itemId);
-                        isInInventory = false;
-                    }
-
-                    if ((item != null) && (item.getId() == itemId) && (item.getReuseDelay() > 0)) {
-                        remainingTime = sysTime - currentTime;
-                        // Hardcoded to 10 seconds.
-                        if (remainingTime > 10) {
-                            addTimeStampItem(item, reuseDelay, sysTime);
-
-                            if (isInInventory && item.isEtcItem()) {
-                                final int group = item.getSharedReuseGroup();
-                                if (group > 0) {
-                                    sendPacket(new ExUseSharedGroupItem(itemId, group, (int) remainingTime, (int) reuseDelay));
-                                }
-                            }
-                        }
-                    }
+                    restoreItemReuse(resultSet, currentTime);
                 }
             }
 
-            // Delete item reuse.
             delete.setInt(1, getObjectId());
             delete.executeUpdate();
         } catch (Exception e) {
-            LOGGER.warn("Could not restore " + this + " Item Reuse data: " + e.getMessage(), e);
+            LOGGER.warn("Could not restore {} Item Reuse data: ", this, e);
         }
     }
 
-    /**
-     * Retrieve from the database all Henna of this Player, add them to _henna and calculate stats of the Player.
-     */
-    private void restoreHenna() {
+    private void restoreItemReuse(ResultSet resultSet, long currentTime) throws SQLException {
+        int itemId = resultSet.getInt("itemId");
+        long reuseDelay = resultSet.getLong("reuseDelay");
+        long sysTime = resultSet.getLong("systime");
+        boolean isInInventory = true;
+
+        Item item = inventory.getItemByItemId(itemId);
+        if (item == null) {
+            item = getWarehouse().getItemByItemId(itemId);
+            isInInventory = false;
+        }
+
+        if ((item != null) && (item.getId() == itemId) && (item.getReuseDelay() > 0)) {
+            long remainingTime = sysTime - currentTime;
+            if (remainingTime > 10) {
+                addTimeStamp((int) remainingTime, itemId, isInInventory, reuseDelay, sysTime, item);
+            }
+        }
+    }
+
+    private void addTimeStamp(int remainingTime, int itemId, boolean isInInventory, long reuseDelay, long sysTime, Item item) {
+        addTimeStampItem(item, reuseDelay, sysTime);
+
+        if (isInInventory && item.isEtcItem()) {
+            final int group = item.getSharedReuseGroup();
+            if (group > 0) {
+                sendPacket(new ExUseSharedGroupItem(itemId, group, remainingTime, (int) reuseDelay));
+            }
+        }
+    }
+
+    private void restoreHennas() {
         for (int i = 1; i < 4; i++) {
             hennas[i - 1] = null;
         }
@@ -5312,44 +5318,44 @@ public final class Player extends Playable {
              PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNAS)) {
             statement.setInt(1, getObjectId());
             try (ResultSet resultSet = statement.executeQuery()) {
-                int slot;
-                int symbolId;
                 final long currentTime = System.currentTimeMillis();
                 while (resultSet.next()) {
-                    slot = resultSet.getInt("slot");
-                    if ((slot < 1) || (slot > 3)) {
-                        continue;
-                    }
-
-                    symbolId = resultSet.getInt("symbol_id");
-                    if (symbolId == 0) {
-                        continue;
-                    }
-
-                    final Henna henna = HennaData.getInstance().getHenna(symbolId);
-
-                    // Task for henna duration
-                    if (henna.getDuration() > 0) {
-                        final long remainingTime = getHennaDuration(slot)  - currentTime;
-                        if (remainingTime < 0) {
-                            removeHenna(slot);
-                            continue;
-                        }
-                        hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), currentTime + remainingTime));
-                    }
-
-                    hennas[slot - 1] = henna;
-
-                    // Reward henna skills
-                    for (Skill skill : henna.getSkills()) {
-                        addSkill(skill, false);
-                    }
+                    restoreHenna(resultSet, currentTime);
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("Failed restoring character " + this + " hennas.", e);
+            LOGGER.error("Failed restoring {}'s hennas.", this, e);
         }
         recalculateHennaStats();
+    }
+
+    private void restoreHenna(ResultSet resultSet, long currentTime) throws SQLException {
+        int slot = resultSet.getInt("slot");
+        if ((slot < 1) || (slot > 3)) {
+            return;
+        }
+
+        int symbolId = resultSet.getInt("symbol_id");
+        if (symbolId == 0) {
+            return;
+        }
+
+        final Henna henna = HennaData.getInstance().getHenna(symbolId);
+
+        if (henna.getDuration() > 0) {
+            final long remainingTime = getHennaDuration(slot)  - currentTime;
+            if (remainingTime < 0) {
+                removeHenna(slot);
+                return;
+            }
+            hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), currentTime + remainingTime));
+        }
+
+        hennas[slot - 1] = henna;
+
+        for (Skill skill : henna.getSkills()) {
+            addSkill(skill, false);
+        }
     }
 
     /**
@@ -5844,17 +5850,19 @@ public final class Player extends Playable {
         final MountType type = MountType.findByNpcId(npcId);
         switch (type) {
             case NONE -> setIsFlying(false);
-            case STRIDER -> {
-                if (isNoble()) {
-                    addSkill(CommonSkill.STRIDER_SIEGE_ASSAULT.getSkill(), false);
-                }
-            }
+            case STRIDER -> addStriderAssaultSkill();
             case WYVERN -> setIsFlying(true);
         }
 
         mountType = type;
         mountNpcId = npcId;
         mountLevel = npcLevel;
+    }
+
+    private void addStriderAssaultSkill() {
+        if (isNoble()) {
+            addSkill(CommonSkill.STRIDER_SIEGE_ASSAULT.getSkill(), false);
+        }
     }
 
     /**
@@ -7304,62 +7312,84 @@ public final class Player extends Playable {
 
     @Override
     public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean critic, boolean miss) {
-        // Check if hit is missed
         if (miss) {
-            if (skill == null) {
-                if (GameUtils.isPlayer(target)) {
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
-                    sm.addPcName(target.getActingPlayer());
-                    sm.addString(getName());
-                    target.sendPacket(sm);
-                }
-                final SystemMessage sm = getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
-                sm.addPcName(this);
-                sendPacket(sm);
-            } else {
-                sendPacket(new ExMagicAttackInfo(getObjectId(), target.getObjectId(), ExMagicAttackInfo.EVADED));
-            }
+            sendMissMessage(target, skill);
             return;
         }
 
-        // Check if hit is critical
         if (critic) {
-            if ((skill == null) || !skill.isMagic()) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.C1_LANDED_A_CRITICAL_HIT);
-                sm.addPcName(this);
-                sendPacket(sm);
-            } else {
-                sendPacket(SystemMessageId.M_CRITICAL);
-            }
-
-            if (skill != null) {
-                sendPacket(new ExMagicAttackInfo(getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL));
-            }
+            sendCriticalMessage(target, skill);
         }
 
+        SystemMessage sm = getDamageMessage(target, damage, elementalDamage);
+        if(sm != null) {
+            sendPacket(sm);
+        }
+    }
+
+    private SystemMessage getDamageMessage(Creature target, int damage, double elementalDamage) {
         SystemMessage sm = null;
 
         if ((target.isHpBlocked() && !GameUtils.isNpc(target)) || (GameUtils.isPlayer(target) && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF))) {
             sm = getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
+
         } else if (GameUtils.isDoor(target) || target instanceof ControlTower) {
             sm = getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
             sm.addInt(damage);
+
         } else if (this != target){
-            if(elementalDamage != 0) {
-                sm = getSystemMessage(S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2);
-            } else {
-                sm = getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
-            }
-            sm.addPcName(this);
-            sm.addString(target.getName());
-            sm.addInt(damage);
-            if(elementalDamage != 0) {
-                sm.addInt((int) elementalDamage);
-            }
-            sm.addPopup(target.getObjectId(), getObjectId(), -damage);
+            sm = creatureDamageMessage(target, damage, elementalDamage);
+
         }
-        if(sm != null) {
+        return sm;
+    }
+
+    private SystemMessage creatureDamageMessage(Creature target, int damage, double elementalDamage) {
+        SystemMessage sm;
+        if(elementalDamage != 0) {
+            sm = getSystemMessage(S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2);
+        } else {
+            sm = getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+        }
+        sm.addPcName(this);
+        sm.addString(target.getName());
+        sm.addInt(damage);
+
+        if(elementalDamage != 0) {
+            sm.addInt((int) elementalDamage);
+        }
+
+        sm.addPopup(target.getObjectId(), getObjectId(), -damage);
+        return sm;
+    }
+
+    private void sendCriticalMessage(Creature target, Skill skill) {
+        if ((skill == null) || !skill.isMagic()) {
+            final SystemMessage sm = getSystemMessage(SystemMessageId.C1_LANDED_A_CRITICAL_HIT);
+            sm.addPcName(this);
             sendPacket(sm);
+        } else {
+            sendPacket(SystemMessageId.M_CRITICAL);
+        }
+
+        if (skill != null) {
+            sendPacket(new ExMagicAttackInfo(getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL));
+        }
+    }
+
+    private void sendMissMessage(Creature target, Skill skill) {
+        if (skill == null) {
+            if (GameUtils.isPlayer(target)) {
+                final SystemMessage sm = getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
+                sm.addPcName(target.getActingPlayer());
+                sm.addString(getName());
+                target.sendPacket(sm);
+            }
+            final SystemMessage sm = getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
+            sm.addPcName(this);
+            sendPacket(sm);
+        } else {
+            sendPacket(new ExMagicAttackInfo(getObjectId(), target.getObjectId(), ExMagicAttackInfo.EVADED));
         }
     }
 
@@ -7683,47 +7713,63 @@ public final class Player extends Playable {
     }
 
     private boolean teleportBookmarkCondition(int type) {
-        if (isInCombat()) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_BATTLE);
-            return false;
-        } else if (isInSiege || (siegeState != 0)) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_A_LARGE_SCALE_BATTLE_SUCH_AS_A_CASTLE_SIEGE_FORTRESS_SIEGE_OR_CLAN_HALL_SIEGE);
-            return false;
-        } else if (isInDuel || startingDuel) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_DUEL);
-            return false;
-        } else if (isFlying()) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_FLYING);
-            return false;
-        } else if (isInOlympiadMode()) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_IN_AN_OLYMPIAD_MATCH);
-            return false;
-        } else if (hasBlockActions() && hasAbnormalType(AbnormalType.PARALYZE)) {
+        return checkCombatCondition() && checkEnvironmentCondition(type) && checkStatusCondition();
+        /*
+         * TODO: Instant Zone still not implemented else if (isInsideZone(ZoneId.INSTANT)) { sendPacket(SystemMessage.getSystemMessage(2357)); return; }
+         */
+    }
+
+    private boolean checkStatusCondition() {
+        boolean valid = true;
+        if (hasBlockActions() && hasAbnormalType(AbnormalType.PARALYZE)) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_IN_A_PETRIFIED_OR_PARALYZED_STATE);
-            return false;
+            valid =  false;
         } else if (isDead()) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_DEAD);
-            return false;
+            valid = false;
+        }
+        return valid;
+    }
+
+    private boolean checkEnvironmentCondition(int type) {
+        boolean valid = true;
+        if (isFlying()) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_FLYING);
+            valid =  false;
         } else if (isInWater()) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_UNDERWATER);
-            return false;
+            valid = false;
         } else if ((type == 1) && (isInsideZone(ZoneType.SIEGE) || isInsideZone(ZoneType.CLAN_HALL) || isInsideZone(ZoneType.JAIL) || isInsideZone(ZoneType.CASTLE) || isInsideZone(ZoneType.NO_SUMMON_FRIEND) || isInsideZone(ZoneType.FORT))) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
-            return false;
+            valid = false;
         } else if (isInsideZone(ZoneType.NO_BOOKMARK) || isInBoat()) {
             if (type == 0) {
                 sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_THIS_AREA);
             } else if (type == 1) {
                 sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
             }
-            return false;
+            valid =  false;
         }
-        /*
-         * TODO: Instant Zone still not implemented else if (isInsideZone(ZoneId.INSTANT)) { sendPacket(SystemMessage.getSystemMessage(2357)); return; }
-         */
-        else {
-            return true;
+
+        return valid;
+    }
+
+    private boolean checkCombatCondition() {
+        boolean valid = true;
+        if (isInCombat()) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_BATTLE);
+            valid = false;
+        } else if (isInSiege || (siegeState != 0)) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_A_LARGE_SCALE_BATTLE_SUCH_AS_A_CASTLE_SIEGE_FORTRESS_SIEGE_OR_CLAN_HALL_SIEGE);
+            valid =  false;
+        } else if (isInDuel || startingDuel) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_DUEL);
+            valid =  false;
+        } else if (isInOlympiadMode()) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_IN_AN_OLYMPIAD_MATCH);
+            valid =  false;
         }
+        return valid;
     }
 
     public void teleportBookmarkAdd(int x, int y, int z, int icon, String tag, String name) {
@@ -8303,10 +8349,6 @@ public final class Player extends Playable {
         return isOnCustomEvent || super.isOnEvent();
     }
 
-    public boolean isBlockedFromExit() {
-        return isOnCustomEvent;
-    }
-
     void setOriginalCpHpMp(double cp, double hp, double mp) {
         originalCp = cp;
         originalHp = hp;
@@ -8517,13 +8559,15 @@ public final class Player extends Playable {
      */
     public IntMap<ExResponseCommissionInfo> getLastCommissionInfos() {
         if (lastCommissionInfos == null) {
-            synchronized (this) {
-                if (lastCommissionInfos == null) {
-                    lastCommissionInfos = new CHashIntMap<>();
-                }
-            }
+            initLastCommissionInfos();
         }
         return lastCommissionInfos;
+    }
+
+    private synchronized void initLastCommissionInfos() {
+        if (lastCommissionInfos == null) {
+            lastCommissionInfos = new CHashIntMap<>();
+        }
     }
 
     /**
@@ -8532,7 +8576,7 @@ public final class Player extends Playable {
      * @return the whisperers
      */
     public IntSet getWhisperers() {
-        return _whisperers;
+        return whispers;
     }
 
     public MatchingRoom getMatchingRoom() {
@@ -8604,7 +8648,7 @@ public final class Player extends Playable {
             stopOnlineTimeUpdateTask();
         }
 
-        onlineTimeUpdateTask = ThreadPool.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000, 60 * 1000);
+        onlineTimeUpdateTask = ThreadPool.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000L, 60 * 1000L);
     }
 
     private void updateOnlineTime() {
@@ -8621,7 +8665,10 @@ public final class Player extends Playable {
     }
 
     public GroupType getGroupType() {
-        return isInParty() ? (party.isInCommandChannel() ? GroupType.COMMAND_CHANNEL : GroupType.PARTY) : GroupType.NONE;
+        if(!isInParty()) {
+            return  GroupType.NONE;
+        }
+        return party.isInCommandChannel() ? GroupType.COMMAND_CHANNEL : GroupType.PARTY;
     }
 
     @Override
