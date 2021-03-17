@@ -234,7 +234,7 @@ public final class SocialAction implements IPlayerActionHandler
 			return;
 		}
 		
-		if (partner.getMultiSociaAction() > 0)
+		if (partner.getMultiSocialAction() > 0)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_PARTICIPATING_IN_A_COUPLE_ACTION_AND_CANNOT_BE_REQUESTED_FOR_ANOTHER_COUPLE_ACTION);
 			sm.addPcName(partner);

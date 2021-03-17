@@ -1476,12 +1476,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     @Override
-    public boolean isInvul() {
+    public boolean isInvulnerable() {
         return isInvul || isTeleporting;
     }
 
     public boolean isUndying() {
-        return isUndying || isInvul() || isAffected(EffectFlag.IGNORE_DEATH) || isInsideZone(ZoneType.UNDYING);
+        return isUndying || isInvulnerable() || isAffected(EffectFlag.IGNORE_DEATH) || isInsideZone(ZoneType.UNDYING);
     }
 
     public void setUndying(boolean undying) {
@@ -1489,11 +1489,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public boolean isHpBlocked() {
-        return isInvul() || isAffected(EffectFlag.HP_BLOCK);
+        return isInvulnerable() || isAffected(EffectFlag.HP_BLOCK);
     }
 
     public boolean isMpBlocked() {
-        return isInvul() || isAffected(EffectFlag.MP_BLOCK);
+        return isInvulnerable() || isAffected(EffectFlag.MP_BLOCK);
     }
 
     public boolean isBuffBlocked() {
@@ -1501,7 +1501,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public boolean isDebuffBlocked() {
-        return isInvul() || isAffected(EffectFlag.DEBUFF_BLOCK);
+        return isInvulnerable() || isAffected(EffectFlag.DEBUFF_BLOCK);
     }
 
     public boolean isUndead() {
@@ -3463,7 +3463,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    public void removeOverridedCond(PcCondOverride... excs) {
+    public void removeOverriddenCond(PcCondOverride... excs) {
         for (PcCondOverride exc : excs) {
             exceptions &= ~exc.getMask();
         }

@@ -173,7 +173,6 @@ public final class Config {
 
     public static boolean ENABLE_KEYBOARD_MOVEMENT;
     public static int UNSTUCK_INTERVAL;
-    public static int TELEPORT_WATCHDOG_TIMEOUT;
     public static int PLAYER_SPAWN_PROTECTION;
     public static int PLAYER_TELEPORT_PROTECTION;
     public static boolean RANDOM_RESPAWN_IN_TOWN_ENABLED;
@@ -965,7 +964,6 @@ public final class Config {
 
         ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
         UNSTUCK_INTERVAL = Character.getInt("UnstuckInterval", 300);
-        TELEPORT_WATCHDOG_TIMEOUT = Character.getInt("TeleportWatchdogTimeout", 0);
         PLAYER_SPAWN_PROTECTION = Character.getInt("PlayerSpawnProtection", 0);
         PLAYER_TELEPORT_PROTECTION = Character.getInt("PlayerTeleportProtection", 0);
         RANDOM_RESPAWN_IN_TOWN_ENABLED = Character.getBoolean("RandomRespawnInTownEnabled", true);

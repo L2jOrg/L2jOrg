@@ -24,7 +24,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.AISkillScope;
-import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.model.Location;
@@ -101,7 +100,7 @@ public class AttackableAI extends CreatureAI {
         }
 
         // Check if the target isn't invulnerable
-        if (isDoor(target) || target.isInvul() || target.isAlikeDead()) {
+        if (isDoor(target) || target.isInvulnerable() || target.isAlikeDead()) {
             return false;
         }
 
