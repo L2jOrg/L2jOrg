@@ -784,9 +784,14 @@ public final class Player extends Playable {
     }
 
     public void enableAutoSoulShot(ShotType type, int itemId) {
-        activeSoulShots.put(type, itemId);
-        sendPackets(new ExAutoSoulShot(itemId, true, type), getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
-        rechargeShot(type);
+        if(itemId > 0) {
+            activeSoulShots.put(type, itemId);
+            rechargeShot(type);
+            sendPackets(getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addItemName(itemId));
+        } else {
+            activeSoulShots.remove(type);
+        }
+        sendPacket(new ExAutoSoulShot(itemId, true, type));
         variables.updateActiveShot(type, itemId);
     }
 
