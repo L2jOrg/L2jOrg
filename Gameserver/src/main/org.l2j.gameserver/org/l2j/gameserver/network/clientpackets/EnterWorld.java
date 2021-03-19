@@ -350,12 +350,10 @@ public class EnterWorld extends ClientPacket {
     }
 
     private void activeAutoShots(Player player) {
-        if(player.getSavedSoulshot() > 0) {
-            player.enableAutoSoulShot(ShotType.SOULSHOTS, player.getSavedSoulshot());
-        }
-        if(player.getSavedSpiritshot() > 0) {
-            player.enableAutoSoulShot(ShotType.SPIRITSHOTS, player.getSavedSpiritshot());
-        }
+        player.enableAutoSoulShot(ShotType.SOULSHOTS, player.getSavedSoulshot());
+        player.enableAutoSoulShot(ShotType.SPIRITSHOTS, player.getSavedSpiritshot());
+        player.enableAutoSoulShot(ShotType.BEAST_SOULSHOTS, 0);
+        player.enableAutoSoulShot(ShotType.BEAST_SPIRITSHOTS, 0);
     }
 
     private void sendAttendanceInfo(Player player) {
