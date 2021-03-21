@@ -574,7 +574,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.error(e.getMessage(), e);
 			}
 		}
 		else if (command.startsWith("admin_find_dualbox"))

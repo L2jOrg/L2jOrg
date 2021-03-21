@@ -18,6 +18,9 @@
  */
 package org.l2j.gameserver.util.cron4j;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -32,6 +35,8 @@ import java.util.ArrayList;
  * @since 2.0
  */
 class StreamBridge {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(StreamBridge.class);
     /**
      * Used to trace alive instances.
      */
@@ -145,7 +150,7 @@ class StreamBridge {
                     b = in.read();
                 } catch (IOException e) {
                     if (!Thread.interrupted()) {
-                        e.printStackTrace();
+                        LOGGER.error(e.getMessage(), e);
                     }
                     break;
                 }
@@ -157,7 +162,7 @@ class StreamBridge {
                         out.write(b);
                     } catch (IOException e) {
                         if (!Thread.interrupted()) {
-                            e.printStackTrace();
+                            LOGGER.error(e.getMessage(), e);
                         }
                         skipout = true;
                     }

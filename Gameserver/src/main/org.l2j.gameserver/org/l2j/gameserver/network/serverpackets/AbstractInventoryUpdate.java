@@ -53,7 +53,7 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
         this.items = streamToMap(items.stream().map(ItemInfo::new));
     }
 
-    private static IntMap<ItemInfo> streamToMap(Stream<ItemInfo>stream) {
+    private static IntMap<ItemInfo> streamToMap(Stream<ItemInfo> stream) {
         return stream.collect(CHashIntMap::new, (map, item) -> map.put(item.getObjectId(), item), IntMap::putAll);
     }
 
