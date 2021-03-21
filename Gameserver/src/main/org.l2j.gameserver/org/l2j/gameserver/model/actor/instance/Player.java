@@ -4424,13 +4424,15 @@ public final class Player extends Playable {
      * @return {@code true} if the player was disarmed or doesn't have a weapon to disarm, {@code false} otherwise.
      */
     public boolean disarmWeapons() {
-        // If there is no weapon to disarm then return true.
         final Item wpn = inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
         if (wpn == null) {
             return true;
         }
 
         var modified = inventory.unEquipItemInBodySlotAndRecord(wpn.getBodyPart());
+        if(modified.isEmpty()) {
+            return false;
+        }
         final InventoryUpdate iu = new InventoryUpdate();
         for (Item itm : modified) {
             iu.addModifiedItem(itm);

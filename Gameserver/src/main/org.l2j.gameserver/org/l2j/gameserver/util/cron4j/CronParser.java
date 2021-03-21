@@ -18,6 +18,9 @@
  */
 package org.l2j.gameserver.util.cron4j;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
@@ -123,6 +126,9 @@ import java.util.ArrayList;
  * @since 2.0
  */
 public class CronParser {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(CronParser.class);
+
     /**
      * Instantiation prohibited.
      */
@@ -229,7 +235,7 @@ public class CronParser {
                 try {
                     parseLine(table, line);
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    LOGGER.error(e.getMessage(), e);
                     continue;
                 }
             }

@@ -504,7 +504,7 @@ public final class ReportTable {
                         sysMessage = Integer.parseInt(systemMessageId);
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    LOGGER.error(e.getMessage(), e);
                 }
 
                 addPunishment(reportCount, skillId, skillLevel, sysMessage);
