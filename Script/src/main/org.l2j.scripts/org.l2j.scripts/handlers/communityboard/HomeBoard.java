@@ -29,7 +29,6 @@ import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.LevelData;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -37,7 +36,6 @@ import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
-import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
@@ -50,10 +48,8 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExShowCommission;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.scripts.handlers.admincommandhandlers.AdminHtml;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -417,7 +413,7 @@ public final class HomeBoard implements IParseBoardHandler {
             // command = command.replace("_bbseditscheme ", "_bbseditscheme;");
 
             final StringTokenizer st = new StringTokenizer(command, " ");
-            final String currentCommand = st.nextToken();
+            st.nextToken(); // skip command
 
             final String groupType = st.nextToken();
             final String schemeName = st.nextToken();
@@ -457,7 +453,7 @@ public final class HomeBoard implements IParseBoardHandler {
         }
         else if (command.startsWith("_bbsgivebuffs")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
-            final String currentCommand = st.nextToken();
+            st.nextToken(); // skip command
 
             final String schemeName = st.nextToken();
             final long cost = Integer.parseInt(st.nextToken());
@@ -492,7 +488,7 @@ public final class HomeBoard implements IParseBoardHandler {
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
         } else if (command.startsWith("_bbsdeletescheme")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
-            final String currentCommand = st.nextToken();
+            st.nextToken(); // skip command
 
             final String schemeName = st.nextToken();
             final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
@@ -669,7 +665,7 @@ public final class HomeBoard implements IParseBoardHandler {
         player.sendPacket(new AcquireSkillList(player));
     }
 
-    private String setHtmlSchemeBuffList(Player player, String groupType, String schemeName, IntList skills, int page,  String returnHtml) {
+    private String setHtmlSchemeBuffList(String groupType, String schemeName, IntList skills, int page, String returnHtml) {
         int skillCount = 0;
         int buffCount = 1;
         int danceCount = 1;
@@ -713,7 +709,7 @@ public final class HomeBoard implements IParseBoardHandler {
         returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
         final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
-        returnHtml = setHtmlSchemeBuffList(player, groupType, schemeName, schemeSkills, page, returnHtml);
+        returnHtml = setHtmlSchemeBuffList(groupType, schemeName, schemeSkills, page, returnHtml);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
         var characterSettings = getSettings(CharacterSettings.class);
         returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + characterSettings.maxBuffs() + " buffs, " + getCountOf(schemeSkills, true) + " / " + characterSettings.maxDances() + " dances/songs");

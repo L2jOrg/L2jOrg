@@ -66,7 +66,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	{
 		if (command.equals("admin_mobmenu"))
 		{
-			showMainPage(activeChar, command);
+			showMainPage(activeChar);
 			return true;
 		}
 		else if (command.equals("admin_mobgroup_list"))
@@ -137,15 +137,15 @@ public class AdminMobGroup implements IAdminCommandHandler
 		{
 			teleportGroup(command, activeChar);
 		}
-		showMainPage(activeChar, command);
+		showMainPage(activeChar);
 		return true;
 	}
 	
 	/**
 	 * @param activeChar
-	 * @param command
+	 *
 	 */
-	private void showMainPage(Player activeChar, String command)
+	private void showMainPage(Player activeChar)
 	{
 		final String filename = "mobgroup.htm";
 		AdminHtml.showAdminHtml(activeChar, filename);

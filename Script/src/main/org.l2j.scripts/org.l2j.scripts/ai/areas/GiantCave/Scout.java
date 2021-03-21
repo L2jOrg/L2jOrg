@@ -31,8 +31,6 @@ import org.slf4j.LoggerFactory;
 import static org.l2j.gameserver.util.GameUtils.isMonster;
 
 public class Scout extends AbstractNpcAI {
-    private static Logger LOGGER = LoggerFactory.getLogger(Scout.class);
-
 
     private static final int SPAWN_DELAY = 10000; // milliseconds
     private static final int GAMLIN = 20651;
