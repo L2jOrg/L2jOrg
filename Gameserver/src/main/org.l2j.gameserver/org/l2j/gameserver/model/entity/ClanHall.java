@@ -93,8 +93,7 @@ public final class ClanHall extends AbstractResidence {
         initFunctions();
     }
 
-    @Override
-    protected void load() {
+    private void load() {
         var clanHallDao = getDAO(ClanHallDAO.class);
         clanHallDao.findById(getId(), result -> {
             try {
@@ -110,8 +109,7 @@ public final class ClanHall extends AbstractResidence {
         });
     }
 
-    @Override
-    protected void initResidenceZone() {
+    private void initResidenceZone() {
         ZoneManager.getInstance().getAllZones(ClanHallZone.class).stream().filter(z -> z.getResidenceId() == getId()).findFirst().ifPresent(this::setResidenceZone);
     }
 

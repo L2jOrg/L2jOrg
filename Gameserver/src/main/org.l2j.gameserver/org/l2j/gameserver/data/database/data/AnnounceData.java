@@ -53,10 +53,6 @@ public class AnnounceData implements Announce {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public AnnouncementType getType() {
         return type;
     }

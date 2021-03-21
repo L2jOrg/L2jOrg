@@ -30,14 +30,6 @@ public class BlockComplex extends ABlock {
     protected byte[] _buffer;
 
     /**
-     * Implicit constructor for children class.
-     */
-    protected BlockComplex() {
-        // buffer is initialized in children class
-        _buffer = null;
-    }
-
-    /**
      * Creates ComplexBlock.
      *
      * @param bb     : Input byte buffer.

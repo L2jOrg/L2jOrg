@@ -65,10 +65,6 @@ public class Util {
         return nonNull(value) && !value.isBlank();
     }
 
-    public static <K, V> boolean isNotEmpty(Map<K, V> map) {
-        return nonNull(map) && !map.isEmpty();
-    }
-
     public static <T> boolean isNotEmpty(IntMap<T> map) {
         return nonNull(map) && !map.isEmpty();
     }
@@ -89,15 +85,7 @@ public class Util {
         return nonNull(obj) && predicate.test(obj);
     }
 
-    public static <T, R> Set<R> emptySetIfNullOrElse(T obj, Function<T, Set<R>> function) {
-        return isNull(obj) ? Collections.emptySet() : function.apply(obj);
-    }
-
-    public static <T, R> Collection<R> emptyListIfNullOrElse(T obj, Function<T, Collection<R>> function) {
-        return isNull(obj) ?  Collections.emptyList() : function.apply(obj);
-    }
-
-   public static <T> String emptyIfNullOrElse(T obj, Function<T, String> function) {
+    public static <T> String emptyIfNullOrElse(T obj, Function<T, String> function) {
         return isNull(obj) ? STRING_EMPTY : function.apply(obj);
     }
 
@@ -278,14 +266,6 @@ public class Util {
             return LocalDateTime.parse(dateTimeString, DEFAULT_DATE_TIME_FORMATTER);
         } else {
             return LocalDate.parse(dateTimeString, DateTimeFormatter.ISO_LOCAL_DATE).atStartOfDay();
-        }
-    }
-
-    public static LocalDateTime parseLocalDate(String dateString) {
-        if(dateString.length() > 10) {
-            return LocalDateTime.parse(dateString, DEFAULT_DATE_TIME_FORMATTER);
-        } else {
-            return LocalDate.parse(dateString, DateTimeFormatter.ISO_LOCAL_DATE).atStartOfDay();
         }
     }
 

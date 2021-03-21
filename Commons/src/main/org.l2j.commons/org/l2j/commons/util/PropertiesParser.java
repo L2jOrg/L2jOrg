@@ -119,27 +119,7 @@ public final class PropertiesParser
 			return defaultValue;
 		}
 	}
-	
-	public short getShort(String key, short defaultValue)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
-			return defaultValue;
-		}
-		
-		try
-		{
-			return Short.parseShort(value);
-		}
-		catch (NumberFormatException e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be \"short\" using default value: " + defaultValue);
-			return defaultValue;
-		}
-	}
-	
+
 	public int getInt(String key, int defaultValue)
 	{
 		final String value = getValue(key);
@@ -230,27 +210,7 @@ public final class PropertiesParser
 		}
 		return value;
 	}
-	
-	public <T extends Enum<T>> T getEnum(String key, Class<T> clazz, T defaultValue)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
-			return defaultValue;
-		}
-		
-		try
-		{
-			return Enum.valueOf(clazz, value);
-		}
-		catch (IllegalArgumentException e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be enum value of \"" + clazz.getSimpleName() + "\" using default value: " + defaultValue);
-			return defaultValue;
-		}
-	}
-	
+
 	/**
 	 * @param durationPattern
 	 * @param defaultValue
@@ -280,107 +240,5 @@ public final class PropertiesParser
 		}
 		return defaultDuration;
 	}
-	
-	/**
-	 * @param key
-	 * @param separator
-	 * @param defaultValues
-	 * @return int array
-	 */
-	public int[] getIntArray(String key, String separator, int... defaultValues)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValues);
-			return defaultValues;
-		}
-		
-		try
-		{
-			final String[] data = value.trim().split(separator);
-			final int[] result = new int[data.length];
-			for (int i = 0; i < data.length; i++)
-			{
-				result[i] = Integer.decode(data[i].trim());
-			}
-			return result;
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("[+_file.getName()+] Invalid value specified for key: " + key + " specified value: " + value + " should be array using default value: " + defaultValues);
-			return defaultValues;
-		}
-	}
-	
-	/**
-	 * @param <T>
-	 * @param key
-	 * @param separator
-	 * @param clazz
-	 * @param defaultValues
-	 * @return enum array
-	 */
-	@SafeVarargs
-	public final <T extends Enum<T>> T[] getEnumArray(String key, String separator, Class<T> clazz, T... defaultValues)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValues);
-			return defaultValues;
-		}
-		
-		try
-		{
-			final String[] data = value.trim().split(separator);
-			@SuppressWarnings("unchecked")
-			final T[] result = (T[]) Array.newInstance(clazz, data.length);
-			for (int i = 0; i < data.length; i++)
-			{
-				result[i] = Enum.valueOf(clazz, data[i]);
-			}
-			return result;
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be array using default value: " + defaultValues);
-			return defaultValues;
-		}
-	}
-	
-	/**
-	 * @param <T>
-	 * @param key
-	 * @param separator
-	 * @param clazz
-	 * @param defaultValues
-	 * @return list
-	 */
-	@SafeVarargs
-	public final <T extends Enum<T>> List<T> getEnumList(String key, String separator, Class<T> clazz, T... defaultValues)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValues);
-			return Arrays.asList(defaultValues);
-		}
-		
-		try
-		{
-			final String[] data = value.trim().split(separator);
-			final List<T> result = new ArrayList<>(data.length);
-			for (String element : data)
-			{
-				result.add(Enum.valueOf(clazz, element));
-			}
-			return result;
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be array using default value: " + defaultValues);
-			return Arrays.asList(defaultValues);
-		}
-	}
+
 }

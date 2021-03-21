@@ -575,21 +575,6 @@ public enum AbnormalVisualEffect {
     }
 
     /**
-     * Finds abnormal visual effect by name.
-     *
-     * @param name the name
-     * @return The abnormal visual effect if its found, {@code null} otherwise
-     */
-    public static AbnormalVisualEffect findByName(String name) {
-        for (AbnormalVisualEffect abnormalVisualEffect : values()) {
-            if (abnormalVisualEffect.name().equalsIgnoreCase(name)) {
-                return abnormalVisualEffect;
-            }
-        }
-        return null;
-    }
-
-    /**
      * Gets the client id.
      *
      * @return the client id

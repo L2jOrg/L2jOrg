@@ -60,7 +60,4 @@ public class BotReportData {
         return type;
     }
 
-    public LocalDateTime getReportDate() {
-        return reportDate;
-    }
 }

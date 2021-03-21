@@ -18,9 +18,6 @@
  */
 package org.l2j.gameserver.model.skills;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * Abnormal type enumerate.
  *
@@ -575,26 +572,10 @@ public enum AbnormalType {
 	ISHKA_EFFECT(-1),
 	TRANSFORM_EFFECT(-1);
 
-    protected static final Logger LOGGER = LoggerFactory.getLogger(AbnormalType.class);
     private int _clientId;
 
     AbnormalType(int clientId) {
         _clientId = clientId;
-    }
-
-    /**
-     * Get the enumerate for the given String.
-     *
-     * @param type the abnormal type to get
-     * @return the abnormal type
-     */
-    public static AbnormalType getAbnormalType(String type) {
-        try {
-            return Enum.valueOf(AbnormalType.class, type);
-        } catch (Exception e) {
-            LOGGER.warn("Unknown AbnormalType requested : " + type);
-            return NONE;
-        }
     }
 
     public int getClientId() {

@@ -143,14 +143,6 @@ public final class ArmorSetsData extends GameXmlReader {
     }
 
     /**
-     * @param setId the set id that is attached to a set
-     * @return the armor set associated to the given item id
-     */
-    public ArmorSet getSet(int setId) {
-        return _armorSets.get(setId);
-    }
-
-    /**
      * @param itemId the item id that is attached to a set
      * @return the armor set associated to the given item id
      */

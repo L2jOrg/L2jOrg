@@ -57,22 +57,11 @@ public final class ArmorSet {
         this.isVisual = isVisual;
     }
 
-    public int getId() {
-        return id;
-    }
-
     /**
      * @return the minimum amount of pieces equipped to form a set
      */
     public int getMinimumPieces() {
         return minimumPieces;
-    }
-
-    /**
-     * @return {@code true} if the set is visual only, {@code} otherwise
-     */
-    public boolean isVisual() {
-        return isVisual;
     }
 
     /**

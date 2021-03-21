@@ -55,8 +55,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
  */
 public final class Antharas extends AbstractNpcAI
 {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Antharas.class);
-	// NPC
+    // NPC
 	private static final int ANTHARAS = 29068; // Antharas
 	private static final int BEHEMOTH = 29069; // Behemoth Dragon
 	private static final int TERASQUE = 29190; // Tarask Dragon

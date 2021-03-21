@@ -146,10 +146,6 @@ public class Attackable extends Npc {
         return _aggroList;
     }
 
-    public final boolean isReturningToSpawnPoint() {
-        return _isReturningToSpawnPoint;
-    }
-
     public final void setisReturningToSpawnPoint(boolean value) {
         _isReturningToSpawnPoint = value;
     }
@@ -736,54 +732,6 @@ public class Attackable extends Npc {
     }
 
     /**
-     * @return the 2 most hated Creature of the Attackable _aggroList.
-     */
-    public List<Creature> get2MostHated() {
-        if (_aggroList.isEmpty() || isAlikeDead()) {
-            return null;
-        }
-
-        Creature mostHated = null;
-        Creature secondMostHated = null;
-        int maxHate = 0;
-        final List<Creature> result = new ArrayList<>();
-
-        // While iterating over this map removing objects is not allowed
-        // Go through the aggroList of the Attackable
-        for (AggroInfo ai : _aggroList.values()) {
-            if (ai.checkHate(this) > maxHate) {
-                secondMostHated = mostHated;
-                mostHated = ai.getAttacker();
-                maxHate = ai.getHate();
-            }
-        }
-
-        result.add(mostHated);
-
-        final Creature secondMostHatedFinal = secondMostHated;
-        if (getAttackByList().stream().anyMatch(o -> o.get() == secondMostHatedFinal)) {
-            result.add(secondMostHated);
-        } else {
-            result.add(null);
-        }
-        return result;
-    }
-
-    public List<Creature> getHateList() {
-        if (_aggroList.isEmpty() || isAlikeDead()) {
-            return null;
-        }
-
-        final List<Creature> result = new ArrayList<>();
-        for (AggroInfo ai : _aggroList.values()) {
-            ai.checkHate(this);
-
-            result.add(ai.getAttacker());
-        }
-        return result;
-    }
-
-    /**
      * @param target The Creature whose hate level must be returned
      * @return the hate level of the Attackable against this Creature contained in _aggroList.
      */
@@ -929,13 +877,6 @@ public class Attackable extends Npc {
     }
 
     /**
-     * @return the active weapon of this Attackable (= null).
-     */
-    public Item getActiveWeapon() {
-        return null;
-    }
-
-    /**
      * @param player The Creature searched in the _aggroList of the Attackable
      * @return True if the _aggroList of this Attackable contains the Creature.
      */
@@ -982,13 +923,6 @@ public class Attackable extends Npc {
      */
     public Collection<ItemHolder> takeSweep() {
         return _sweepItems.getAndSet(null);
-    }
-
-    /**
-     * @return table containing all Item that can be harvested.
-     */
-    public ItemHolder takeHarvest() {
-        return _harvestItem.getAndSet(null);
     }
 
     /**
@@ -1054,24 +988,6 @@ public class Attackable extends Npc {
         overhitEnabled(true);
         _overhitDamage = overhitDmg;
         _overhitAttacker = attacker;
-    }
-
-    /**
-     * Return the Creature who hit on the Attackable using an over-hit enabled skill.
-     *
-     * @return Creature attacker
-     */
-    public Creature getOverhitAttacker() {
-        return _overhitAttacker;
-    }
-
-    /**
-     * Return the amount of damage done on the Attackable using an over-hit enabled skill.
-     *
-     * @return double damage
-     */
-    public double getOverhitDamage() {
-        return _overhitDamage;
     }
 
     /**
@@ -1227,32 +1143,12 @@ public class Attackable extends Npc {
     }
 
     /**
-     * Gets the spoiler object ID.
-     *
-     * @return the spoiler object ID if its spoiled, 0 otherwise
-     */
-    public final int getSpoilerObjectId() {
-        return _spoilerObjectId;
-    }
-
-    /**
      * Sets the spoiler object ID.
      *
      * @param spoilerObjectId spoilerObjectId the spoiler object ID
      */
     public final void setSpoilerObjectId(int spoilerObjectId) {
         _spoilerObjectId = spoilerObjectId;
-    }
-
-    /**
-     * Sets state of the mob to plundered.
-     * @param player
-     */
-    public void setPlundered(Player player)
-    {
-        _plundered = true;
-        _spoilerObjectId = player.getObjectId();
-        _sweepItems.set(getTemplate().calculateDrops(DropType.SPOIL, this, player));
     }
 
     /**
@@ -1268,80 +1164,8 @@ public class Attackable extends Npc {
         }
     }
 
-    public final int getSeederId() {
-        return _seederObjId;
-    }
-
-    public final Seed getSeed() {
-        return _seed;
-    }
-
     public final boolean isSeeded() {
         return _seeded;
-    }
-
-    /**
-     * Sets state of the mob to seeded. Parameters needed to be set before.
-     *
-     * @param seeder
-     */
-    public final void setSeeded(Player seeder) {
-        if ((_seed != null) && (_seederObjId == seeder.getObjectId())) {
-            _seeded = true;
-
-            int count = 1;
-            for (int skillId : getTemplate().getSkills().keySet()) {
-                switch (skillId) {
-                    case 4303: // Strong type x2
-                    {
-                        count *= 2;
-                        break;
-                    }
-                    case 4304: // Strong type x3
-                    {
-                        count *= 3;
-                        break;
-                    }
-                    case 4305: // Strong type x4
-                    {
-                        count *= 4;
-                        break;
-                    }
-                    case 4306: // Strong type x5
-                    {
-                        count *= 5;
-                        break;
-                    }
-                    case 4307: // Strong type x6
-                    {
-                        count *= 6;
-                        break;
-                    }
-                    case 4308: // Strong type x7
-                    {
-                        count *= 7;
-                        break;
-                    }
-                    case 4309: // Strong type x8
-                    {
-                        count *= 8;
-                        break;
-                    }
-                    case 4310: // Strong type x9
-                    {
-                        count *= 9;
-                        break;
-                    }
-                }
-            }
-
-            // hi-lvl mobs bonus
-            final int diff = getLevel() - _seed.getLevel() - 5;
-            if (diff > 0) {
-                count += diff;
-            }
-            _harvestItem.set(new ItemHolder(_seed.getCropId(), count * Config.RATE_DROP_MANOR));
-        }
     }
 
     /**
@@ -1351,10 +1175,6 @@ public class Attackable extends Npc {
     @Override
     public boolean hasRandomAnimation() {
         return ((Config.MAX_MONSTER_ANIMATION > 0) && isRandomAnimationEnabled() && !(this instanceof GrandBoss));
-    }
-
-    public CommandChannelTimer getCommandChannelTimer() {
-        return _commandChannelTimer;
     }
 
     public void setCommandChannelTimer(CommandChannelTimer commandChannelTimer) {

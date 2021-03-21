@@ -34,10 +34,6 @@ public class BannedSpawnTerritory {
         this.area = area;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public boolean isInsideZone(int x, int y, int z) {
         return area.isInsideZone(x, y, z);
     }

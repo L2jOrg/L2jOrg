@@ -38,10 +38,10 @@ public class AuthGameGuard extends AuthClientPacket {
     protected boolean readImpl() {
         if (available() >= 20) {
             _sessionId = readInt();
-            int _data1 = readInt();
-            int _data2 = readInt();
-            int _data3 = readInt();
-            int _data4 = readInt();
+            readInt();
+            readInt();
+            readInt();
+            readInt();
             return true;
         }
         return false;

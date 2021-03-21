@@ -68,12 +68,5 @@ public abstract class AbstractNpcAI extends Quest
 		addAggroRangeEnterId(mobs);
 		addFactionCallId(mobs);
 	}
-	
-	public void spawnMinions(Npc npc, String spawnName)
-	{
-		for (MinionHolder is : npc.getParameters().getMinionList(spawnName))
-		{
-			addMinion((Monster) npc, is.getId());
-		}
-	}
+
 }

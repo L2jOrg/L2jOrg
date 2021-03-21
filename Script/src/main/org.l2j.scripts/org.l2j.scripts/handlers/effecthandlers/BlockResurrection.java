@@ -40,9 +40,10 @@ public final class BlockResurrection extends AbstractEffect {
 
 	public static final class Factory implements SkillEffectFactory {
 		private static final BlockResurrection INSTANCE = new BlockResurrection();
+
 		@Override
 		public AbstractEffect create(StatsSet data) {
-			return null;
+			return INSTANCE;
 		}
 
 		@Override
