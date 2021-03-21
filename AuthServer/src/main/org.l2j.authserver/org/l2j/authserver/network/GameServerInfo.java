@@ -171,16 +171,8 @@ public class GameServerInfo {
         _isTestServer = val;
     }
 
-    public boolean isTestServer() {
-        return _isTestServer;
-    }
-
     public void setShowingClock(boolean clock) {
         _isShowingClock = clock;
-    }
-
-    public boolean isShowingClock() {
-        return _isShowingClock;
     }
 
     public void setShowingBrackets(boolean val) {

@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.NpcSay;
 import org.l2j.scripts.ai.AbstractNpcAI;
+import org.l2j.scripts.ai.areas.DragonValley.LordIshka;
 
 /**
  * @author RobikBobik
@@ -91,5 +92,10 @@ public class Fellow extends AbstractNpcAI
     {
         startQuestTimer("CHAT_TIMER", 5000, npc, null);
         return super.onSpawn(npc);
+    }
+
+    public static AbstractNpcAI provider()
+    {
+        return new Fellow();
     }
 }

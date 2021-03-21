@@ -542,12 +542,12 @@ public class WatermelonNinja extends LongTimeEvent
 			{
 				case 13271: // Watermelon Seed
 				{
-					randomSpawn(13274, 13273, 13272, npc, true);
+					randomSpawn(13274, 13273, 13272, npc);
 					break;
 				}
 				case 13275: // Honey Watermelon Seed
 				{
-					randomSpawn(13278, 13277, 13276, npc, true);
+					randomSpawn(13278, 13277, 13276, npc);
 					break;
 				}
 			}
@@ -599,7 +599,7 @@ public class WatermelonNinja extends LongTimeEvent
 		}
 	}
 	
-	private void randomSpawn(int low, int medium, int high, Npc npc, boolean delete)
+	private void randomSpawn(int low, int medium, int high, Npc npc)
 	{
 		final int _random = Rnd.get(100);
 		if (_random < 5)

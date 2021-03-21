@@ -545,12 +545,12 @@ public class MerrySquashmas extends LongTimeEvent
 			{
 				case 13399: // Snowy Squash Seed
 				{
-					randomSpawn(13402, 13401, 13400, npc, true);
+					randomSpawn(13402, 13401, 13400, npc);
 					break;
 				}
 				case 13403: // Large Snowy Squash Seed
 				{
-					randomSpawn(13406, 13405, 13404, npc, true);
+					randomSpawn(13406, 13405, 13404, npc);
 					break;
 				}
 			}
@@ -602,7 +602,7 @@ public class MerrySquashmas extends LongTimeEvent
 		}
 	}
 	
-	private void randomSpawn(int low, int medium, int high, Npc npc, boolean delete)
+	private void randomSpawn(int low, int medium, int high, Npc npc)
 	{
 		final int _random = Rnd.get(100);
 		if (_random < 5)

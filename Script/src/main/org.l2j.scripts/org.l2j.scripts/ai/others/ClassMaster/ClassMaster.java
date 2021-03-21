@@ -728,7 +728,6 @@ public final class ClassMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		final Player player = event.getPlayer();
 		showPopupWindow(event.getPlayer());
 	}
 	

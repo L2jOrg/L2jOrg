@@ -105,10 +105,6 @@ public class GameServerManager {
         return gameservers.get(id);
     }
 
-    public boolean hasRegisteredGameServerOnId(int id) {
-        return gameservers.containsKey(id);
-    }
-
     public boolean registerWithFirstAvaliableId(GameServerInfo gsi) {
         // avoid two servers registering with the same "free" id
         synchronized (gameservers) {
@@ -119,14 +115,6 @@ public class GameServerManager {
                     return true;
                 }
             }
-        }
-        return false;
-    }
-
-    public boolean register(int id, GameServerInfo gsi) {
-        if(isNull(gameservers.putIfAbsent(id, gsi))) {
-            gsi.setId(id);
-            return true;
         }
         return false;
     }
@@ -145,10 +133,6 @@ public class GameServerManager {
 
     public static GameServerManager getInstance() {
         return Singleton.INSTANCE;
-    }
-
-    public KeyPair getKeyPair() {
-        return _keyPairs[Rnd.get(10)];
     }
 
     private static class Singleton {

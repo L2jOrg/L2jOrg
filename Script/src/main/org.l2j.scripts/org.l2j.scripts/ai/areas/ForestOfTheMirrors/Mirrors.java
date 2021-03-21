@@ -33,7 +33,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Thoss
  */
 public class Mirrors extends AbstractNpcAI {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Mirrors.class);
 
     private static final int MIRROR_NPC_ID = 20639;
     private static final int DESPAWN_TIME = 600000;

@@ -101,16 +101,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		return true;
 	}
-	
-	private void scheduleDeny(Player player)
-	{
-		if (player != null)
-		{
-			player.sendPacket(SystemMessageId.THE_COUPLE_ACTION_WAS_DENIED);
-			player.onTransactionResponse();
-		}
-	}
-	
+
 	private void useCoupleSocial(Player player, int id)
 	{
 		if (player == null)

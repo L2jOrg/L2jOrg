@@ -544,12 +544,12 @@ public class SquashEvent extends LongTimeEvent
 			{
 				case 12774: // Young Squash
 				{
-					randomSpawn(13016, 12775, 12776, npc, true);
+					randomSpawn(13016, 12775, 12776, npc);
 					break;
 				}
 				case 12777: // Large Young Squash
 				{
-					randomSpawn(13017, 12778, 12779, npc, true);
+					randomSpawn(13017, 12778, 12779, npc);
 					break;
 				}
 			}
@@ -601,7 +601,7 @@ public class SquashEvent extends LongTimeEvent
 		}
 	}
 	
-	private void randomSpawn(int low, int medium, int high, Npc npc, boolean delete)
+	private void randomSpawn(int low, int medium, int high, Npc npc)
 	{
 		final int _random = Rnd.get(100);
 		if (_random < 5)

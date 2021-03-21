@@ -57,8 +57,6 @@ public class Q10990_PoisonExtraction extends Quest
 	private static final int GERALD = 30650;
 	private static final int CAPTAIN_BATHIS = 30332;
 	// Monsters
-	private static final int HUNTER_TARANTULA = 20403;
-	private static final int PLUNDER_TARANTULA = 20508;
 	private static final int TARANTULA = 91653;
 	private static final IntIntMap MONSTER_DROP_CHANCES = new HashIntIntMap();
 	static
@@ -87,8 +85,6 @@ public class Q10990_PoisonExtraction extends Quest
 	private static final ItemHolder MOON_CAPE = new ItemHolder(7857, 1);
 	private static final ItemHolder MOON_SILK = new ItemHolder(7858, 1);
 	private static final ItemHolder MOON_SANDALS = new ItemHolder(7859, 1);
-	// Misc
-	private static final int MAX_LEVEL = 20;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10990_PoisonExtraction()

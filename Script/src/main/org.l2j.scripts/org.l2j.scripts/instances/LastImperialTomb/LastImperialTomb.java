@@ -46,7 +46,6 @@ import java.util.*;
  */
 public class LastImperialTomb extends AbstractInstance
 {
-	private static Logger LOGGER = LoggerFactory.getLogger(LastImperialTomb.class);
 	// NPCs
 	private static final int GUIDE = 32011;
 	private static final int CUBE = 29061;
