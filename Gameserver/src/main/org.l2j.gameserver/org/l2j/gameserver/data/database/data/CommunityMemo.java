@@ -41,39 +41,16 @@ public class CommunityMemo {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getPlayerId() {
-        return playerId;
-    }
-
-    public void setPlayerId(int playerId) {
-        this.playerId = playerId;
-    }
-
     public LocalDateTime getDate() {
         return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getText() {
         return text;
     }
 
-    public void setText(String text) {
-        this.text = text;
-    }
 }

@@ -98,13 +98,6 @@ public class ResidenceFunctionData {
     }
 
     /**
-     * @return the owner (clan) of this function instance
-     */
-    public int getOwnerId() {
-        return residence.getOwnerId();
-    }
-
-    /**
      * @return value of the function
      */
     public double getValue() {
