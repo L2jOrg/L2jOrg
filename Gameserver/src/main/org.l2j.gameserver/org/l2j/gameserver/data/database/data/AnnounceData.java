@@ -106,8 +106,4 @@ public class AnnounceData implements Announce {
         return true;
     }
 
-    @Override
-    public boolean canBeStored() {
-        return true;
-    }
 }

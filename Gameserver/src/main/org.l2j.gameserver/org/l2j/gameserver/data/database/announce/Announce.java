@@ -26,8 +26,6 @@ public interface Announce {
 
     String getContent();
 
-    boolean canBeStored();
-
     int getId();
 
     String getAuthor();

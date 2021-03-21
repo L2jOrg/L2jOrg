@@ -28,10 +28,6 @@ public class RankHistoryData {
     private int rank;
     private int date;
 
-    public int getPlayerId() {
-        return playerId;
-    }
-
     public long getExp() {
         return exp;
     }

@@ -48,10 +48,6 @@ public class CommissionItemData {
         return commissionId;
     }
 
-    public int getObjectId() {
-        return objectId;
-    }
-
     public long getPrice() {
         return price;
     }
