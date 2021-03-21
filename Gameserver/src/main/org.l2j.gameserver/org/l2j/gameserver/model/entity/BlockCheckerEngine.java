@@ -155,15 +155,6 @@ public final class BlockCheckerEngine {
     }
 
     /**
-     * Will return the id of the arena used by this event
-     *
-     * @return false;
-     */
-    public int getArena() {
-        return _arena;
-    }
-
-    /**
      * Returns the time when the event started
      *
      * @return long

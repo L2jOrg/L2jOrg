@@ -64,14 +64,6 @@ public final class AuctionItem {
         return _auctionInitBid;
     }
 
-    public final int getItemId() {
-        return _itemId;
-    }
-
-    public final long getItemCount() {
-        return _itemCount;
-    }
-
     public final Item createNewItemInstance() {
         return ItemEngine.getInstance().createItem("Auction", _itemId, _itemCount, null, null);
     }

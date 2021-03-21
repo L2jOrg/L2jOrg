@@ -54,15 +54,6 @@ public class Attachment extends ItemContainer {
         return ItemLocation.MAIL;
     }
 
-    public void setNewMailId(int mailId) {
-        this.mailId = mailId;
-        for (Item item : items.values()) {
-            item.changeItemLocation(getBaseLocation(), mailId);
-        }
-
-        updateDatabase();
-    }
-
     public void returnToWh(ItemContainer wh) {
         for (Item item : items.values()) {
             if (wh == null) {

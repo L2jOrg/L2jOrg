@@ -51,8 +51,6 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class AdminAdmin implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = LoggerFactory.getLogger(AdminAdmin.class);
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_admin",

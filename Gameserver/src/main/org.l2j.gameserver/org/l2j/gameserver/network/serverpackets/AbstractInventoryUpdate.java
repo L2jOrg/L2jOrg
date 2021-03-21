@@ -73,10 +73,6 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
         items.put(item.getObjectId(), new ItemInfo(item, ItemChangeType.REMOVED));
     }
 
-    public final boolean isEmpty() {
-        return items.isEmpty();
-    }
-
     protected final void writeItems(WritableBuffer buffer) {
         buffer.writeByte( 0); // 140
         buffer.writeInt(items.size()); // 140

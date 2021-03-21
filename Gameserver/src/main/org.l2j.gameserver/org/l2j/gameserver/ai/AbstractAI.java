@@ -93,14 +93,6 @@ public abstract class AbstractAI implements Ctrl {
     private NextAction _nextAction;
 
     /**
-     * @return the _nextAction
-     */
-    public NextAction getNextAction()
-    {
-        return _nextAction;
-    }
-
-    /**
      * @param nextAction the next action to set.
      */
     public void setNextAction(NextAction nextAction)

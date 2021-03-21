@@ -59,10 +59,6 @@ public class DateRange {
         return STARTED_DAY;
     }
 
-    public boolean isValid() {
-        return startDate.isBefore(endDate);
-    }
-
     public boolean isWithinRange(LocalDateTime date) {
         return startDate.isEqual(date) || endDate.isEqual(date) || (startDate.isBefore(date) && endDate.isAfter(date));
     }

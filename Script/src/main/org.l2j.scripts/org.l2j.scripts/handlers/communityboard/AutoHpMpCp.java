@@ -63,8 +63,6 @@ public class AutoHpMpCp extends AbstractScript implements IParseBoardHandler {
     private static final ForkJoinPool autoPotionPool = new ForkJoinPool();
     private static final Map<Integer, List<String>> listenedPlayer = new ConcurrentHashMap<>();
 
-    private static final AbstractEventListener listener = null;
-
     private static final DoAutoPotion doAutoPotion = new DoAutoPotion();
     private static ScheduledFuture<?> autoPotionTask;
 

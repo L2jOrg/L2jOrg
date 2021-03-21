@@ -704,7 +704,6 @@ public class Party extends AbstractPlayerGroup {
         return (membersCount < 2) ? (getBaseExpSpBonus(membersCount)) : (getBaseExpSpBonus(membersCount) * rateMul);
     }
 
-    @Override
     public int getLevel() {
         return partyLvl;
     }
@@ -733,8 +732,7 @@ public class Party extends AbstractPlayerGroup {
         return members.get(0);
     }
 
-    @Override
-    public void setLeader(Player player) {
+    private void setLeader(Player player) {
         if ((player != null) && !player.isInDuel()) {
             if (members.contains(player)) {
                 if (isLeader(player)) {

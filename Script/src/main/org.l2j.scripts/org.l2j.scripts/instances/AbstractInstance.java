@@ -54,17 +54,7 @@ public abstract class AbstractInstance extends AbstractNpcAI {
 		}
 		_templateIds = templateId;
 	}
-	
-	public int[] getTemplateId()
-	{
-		return _templateIds;
-	}
-	
-	public boolean isInInstance(Instance instance)
-	{
-		return (instance != null) && Util.contains(_templateIds, instance.getTemplateId());
-	}
-	
+
 	/**
 	 * Get instance world associated with {@code player}.<br>
 	 * @param player player who wants get instance world
@@ -73,34 +63,7 @@ public abstract class AbstractInstance extends AbstractNpcAI {
 	public Instance getPlayerInstance(Player player) {
 		return InstanceManager.getInstance().getPlayerInstance(player, false);
 	}
-	
-	/**
-	 * Show an on screen message to each player inside instance.
-	 * @param instance instance where message should be broadcasted
-	 * @param npcStringId the NPC string to display
-	 * @param position the position of the message on the screen
-	 * @param time the duration of the message in milliseconds
-	 * @param params values of parameters to replace in the NPC String (like S1, C1 etc.)
-	 */
-	public void showOnScreenMsg(Instance instance, NpcStringId npcStringId, int position, int time, String... params)
-	{
-		instance.sendPacket(new ExShowScreenMessage(npcStringId, position, time, params));
-	}
-	
-	/**
-	 * Show an on screen message to each player inside instance.
-	 * @param instance instance where message should be broadcasted
-	 * @param npcStringId the NPC string to display
-	 * @param position the position of the message on the screen
-	 * @param time the duration of the message in milliseconds
-	 * @param showEffect show visual effect near text
-	 * @param params values of parameters to replace in the NPC String (like S1, C1 etc.)
-	 */
-	public void showOnScreenMsg(Instance instance, NpcStringId npcStringId, int position, int time, boolean showEffect, String... params)
-	{
-		instance.sendPacket(new ExShowScreenMessage(npcStringId, position, time, showEffect, params));
-	}
-	
+
 	/**
 	 * Put player into instance world.<br>
 	 * If instance world doesn't found for player then try to create new one.
@@ -217,36 +180,7 @@ public abstract class AbstractInstance extends AbstractNpcAI {
 	{
 		instance.ejectPlayer(player);
 	}
-	
-	/**
-	 * Sets instance to finish state. <br>
-	 * See {@link Instance#finishInstance()} for more details.
-	 * @param player player used for determine current instance world
-	 */
-	protected void finishInstance(Player player)
-	{
-		final Instance inst = player.getInstanceWorld();
-		if (inst != null)
-		{
-			inst.finishInstance();
-		}
-	}
-	
-	/**
-	 * Sets instance to finish state.<br>
-	 * See {@link Instance#finishInstance(int)} for more details.
-	 * @param player player used for determine current instance world
-	 * @param delay finish delay in minutes
-	 */
-	protected void finishInstance(Player player, int delay)
-	{
-		final Instance inst = player.getInstanceWorld();
-		if (inst != null)
-		{
-			inst.finishInstance(delay);
-		}
-	}
-	
+
 	/**
 	 * This method is supposed to be used for validation of additional conditions that are too much specific to instance world (to avoid useless core conditions).<br>
 	 * These conditions are validated after conditions defined in XML template.

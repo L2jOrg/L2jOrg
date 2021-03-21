@@ -55,10 +55,6 @@ public class Configurator {
         }
     }
 
-    public void addSettingsClass(String className, String fileConfigurationPath) {
-        loader.addSettingsClass(className, fileConfigurationPath);
-    }
-
     public static <T extends Settings> T getSettings(Class<T> settingsClass) {
         return getSettings(settingsClass, false);
     }

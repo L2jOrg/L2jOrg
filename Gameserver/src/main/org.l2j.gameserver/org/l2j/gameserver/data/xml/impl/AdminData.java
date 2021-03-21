@@ -152,25 +152,6 @@ public final class AdminData extends GameXmlReader {
 
 
     /**
-     * Gets the master access level.
-     *
-     * @return the master access level
-     */
-    public AccessLevel getMasterAccessLevel() {
-        return _accessLevels.get(_highestLevel);
-    }
-
-    /**
-     * Checks for access level.
-     *
-     * @param id the id
-     * @return {@code true}, if successful, {@code false} otherwise
-     */
-    public boolean hasAccessLevel(int id) {
-        return _accessLevels.containsKey(id);
-    }
-
-    /**
      * Checks for access.
      *
      * @param adminCommand the admin command

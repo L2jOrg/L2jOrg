@@ -43,18 +43,6 @@ public class ArmorsetSkillHolder extends SkillHolder {
         _artifactBookSlot = artifactBookSlot;
     }
 
-    public int getMinimumPieces() {
-        return _minimumPieces;
-    }
-
-    public int getMinEnchant() {
-        return _minEnchant;
-    }
-
-    public boolean isOptional() {
-        return _isOptional;
-    }
-
     public boolean validateConditions(Player player, ArmorSet armorSet, ToIntFunction<Item> idProvider) {
         // Player's doesn't have full busy (1 of 3) artifact real slot
         if (_artifactSlotMask > armorSet.getArtifactSlotMask(player, _artifactBookSlot)) {

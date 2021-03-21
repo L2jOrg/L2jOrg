@@ -77,31 +77,6 @@ public abstract class AbstractVariables extends StatsSet implements IRestorable,
     }
 
     /**
-     * Put's entry to the variables and marks as changed if required (<i>Useful when restoring to do not save them again</i>).
-     *
-     * @param name
-     * @param value
-     * @param markAsChanged
-     * @return
-     */
-    public final StatsSet set(String name, String value, boolean markAsChanged) {
-        if (markAsChanged) {
-            _hasChanges.compareAndSet(false, true);
-        }
-        return super.set(name, value);
-    }
-
-    /**
-     * Return true if there exists a record for the variable name.
-     *
-     * @param name
-     * @return
-     */
-    public boolean hasVariable(String name) {
-        return getSet().keySet().contains(name);
-    }
-
-    /**
      * @return {@code true} if changes are made since last load/save.
      */
     public final boolean hasChanges() {

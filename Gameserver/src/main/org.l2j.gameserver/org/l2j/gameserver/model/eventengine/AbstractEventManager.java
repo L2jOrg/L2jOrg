@@ -51,20 +51,12 @@ public abstract class AbstractEventManager<T extends AbstractEvent> extends Abst
         this.schedulers = Collections.unmodifiableSet(schedulers);
     }
 
-    public Set<IConditionalEventScheduler> getConditionalSchedulers() {
-        return conditionalSchedulers;
-    }
-
     public void setConditionalSchedulers(Set<IConditionalEventScheduler> schedulers) {
         conditionalSchedulers = Collections.unmodifiableSet(schedulers);
     }
 
     public void startScheduler() {
         schedulers.forEach(EventScheduler::startScheduler);
-    }
-
-    public void stopScheduler() {
-        schedulers.forEach(EventScheduler::stopScheduler);
     }
 
     public void startConditionalSchedulers() {

@@ -871,7 +871,6 @@ public class AttackableAI extends CreatureAI {
         // Check current target first.
         final int range = insideCastRange ? skill.getCastRange() + getActiveChar().getTemplate().getCollisionRadius() : 2000; // TODO need some forget range
 
-        Stream<Creature> stream;
         if (isBad) {
 
             //@formatter:off

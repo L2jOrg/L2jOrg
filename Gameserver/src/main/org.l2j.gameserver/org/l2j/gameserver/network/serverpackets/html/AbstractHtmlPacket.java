@@ -99,10 +99,6 @@ public abstract class AbstractHtmlPacket extends ServerPacket {
         replace(pattern, String.valueOf(val));
     }
 
-    public final void replace(String pattern, double val) {
-        replace(pattern, String.valueOf(val));
-    }
-
     @Override
     public final void runImpl(Player player) {
         if (player != null) {
