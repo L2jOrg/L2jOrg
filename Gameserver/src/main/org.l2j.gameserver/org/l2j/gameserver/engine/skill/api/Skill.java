@@ -480,14 +480,6 @@ public final class Skill implements IIdentifiable, Cloneable {
         return false;
     }
 
-    public boolean hasAnyEffectType(EffectScope effectScope, EffectType... effectTypes) {
-        if (hasEffects(effectScope) || isNull(effectTypes)) {
-            return false;
-        }
-
-        return effects.get(effectScope).stream().anyMatch(e -> contains(effectTypes, e.getEffectType()));
-    }
-
     public void addEffect(EffectScope effectScope, AbstractEffect effect) {
         effects.computeIfAbsent(effectScope, k -> new ArrayList<>()).add(effect);
     }

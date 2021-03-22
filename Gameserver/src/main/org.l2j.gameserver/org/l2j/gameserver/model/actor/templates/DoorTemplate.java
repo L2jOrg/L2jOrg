@@ -212,10 +212,6 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable {
         return _isAttackableDoor;
     }
 
-    public boolean isStealth() {
-        return _stealth;
-    }
-
     public boolean isInverted() {
         return _isInverted;
     }

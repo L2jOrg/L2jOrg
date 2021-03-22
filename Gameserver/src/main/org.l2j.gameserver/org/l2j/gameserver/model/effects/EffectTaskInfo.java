@@ -35,10 +35,6 @@ public class EffectTaskInfo {
         _scheduledFuture = scheduledFuture;
     }
 
-    public EffectTickTask getEffectTask() {
-        return _effectTask;
-    }
-
     public ScheduledFuture<?> getScheduledFuture() {
         return _scheduledFuture;
     }

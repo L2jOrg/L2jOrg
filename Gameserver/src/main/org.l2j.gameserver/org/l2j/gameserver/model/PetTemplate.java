@@ -86,13 +86,6 @@ public class PetTemplate {
     }
 
     /**
-     * @return the pet's weight load.
-     */
-    public int getLoad() {
-        return _load;
-    }
-
-    /**
      * @param load the weight load to set.
      */
     public void setLoad(int load) {
@@ -207,13 +200,6 @@ public class PetTemplate {
             return 1;
         }
         return lvl;
-    }
-
-    /**
-     * @return the list with the pet's skill data.
-     */
-    public List<PetSkillLearn> getAvailableSkills() {
-        return _skills;
     }
 
     public static final class PetSkillLearn extends SkillHolder {

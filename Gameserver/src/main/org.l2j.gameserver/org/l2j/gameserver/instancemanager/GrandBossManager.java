@@ -78,10 +78,6 @@ public final class GrandBossManager implements IStorable {
         }
     }
 
-    public GrandBoss getBoss(int bossId) {
-        return bosses.get(bossId);
-    }
-
     public boolean isDefined(int bossId) {
         return grandBossesData.containsKey(bossId);
     }

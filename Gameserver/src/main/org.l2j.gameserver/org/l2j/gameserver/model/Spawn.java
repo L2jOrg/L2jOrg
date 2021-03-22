@@ -183,15 +183,6 @@ public class Spawn extends Location implements IIdentifiable, INamable {
     }
 
     /**
-     * Set the String Identifier of this spawn.
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        _name = name;
-    }
-
-    /**
      * @return the Identifier of the location area where Folk can be spawned.
      */
     public int getLocationId() {
@@ -508,14 +499,6 @@ public class Spawn extends Location implements IIdentifiable, INamable {
         return null;
     }
 
-    public boolean deleteLastNpc() {
-        return !_spawnedNpcs.isEmpty() && _spawnedNpcs.getLast().deleteMe();
-    }
-
-    public final Deque<Npc> getSpawnedNpcs() {
-        return _spawnedNpcs;
-    }
-
     public NpcTemplate getTemplate() {
         return _template;
     }
@@ -526,10 +509,6 @@ public class Spawn extends Location implements IIdentifiable, INamable {
 
     public void setInstanceId(int instanceId) {
         _instanceId = instanceId;
-    }
-
-    public final boolean getRandomWalking() {
-        return _randomWalk;
     }
 
     public final void setRandomWalking(boolean value) {

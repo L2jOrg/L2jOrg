@@ -165,13 +165,6 @@ public class RecipeList {
     }
 
     /**
-     * @return the name of the RecipeList.
-     */
-    public String getRecipeName() {
-        return _recipeName;
-    }
-
-    /**
      * @return the crafting success rate when using the RecipeList.
      */
     public int getSuccessRate() {

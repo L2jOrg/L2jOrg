@@ -91,10 +91,6 @@ public class PreparedMultisellList {
         return inventoryOnly;
     }
 
-    public final boolean checkNpcObjectId(int npcObjectId) {
-        return (merchantId == 0) || (merchantId == npcObjectId);
-    }
-    
     public long getIngredientCount(MultisellIngredient ingredient) {
         return (ingredient.id() == CommonItem.ADENA) ? Math.round(ingredient.count() * getIngredientMultiplier() * (1 + getTaxRate())) : Math.round(ingredient.count() * getIngredientMultiplier());
     }

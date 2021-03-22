@@ -34,7 +34,6 @@ public final class EtcItem extends ItemTemplate {
     private String handler;
     private EtcItemType type;
     private List<ExtractableProduct> _extractableItems;
-    private int _extractableCountMin;
     private int maxExtractable;
     private boolean isInfinite;
     private boolean selfResurrection;
@@ -85,13 +84,6 @@ public final class EtcItem extends ItemTemplate {
      */
     public List<ExtractableProduct> getExtractableItems() {
         return _extractableItems;
-    }
-
-    /**
-     * @return the minimum count of extractable items
-     */
-    public int getExtractableCountMin() {
-        return _extractableCountMin;
     }
 
     /**

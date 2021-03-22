@@ -32,15 +32,6 @@ public enum MissionStatus {
         _clientId = clientId;
     }
 
-    public static MissionStatus valueOf(int clientId) {
-        for (MissionStatus type : values()) {
-            if (type.getClientId() == clientId) {
-                return type;
-            }
-        }
-        return null;
-    }
-
     public int getClientId() {
         return _clientId;
     }

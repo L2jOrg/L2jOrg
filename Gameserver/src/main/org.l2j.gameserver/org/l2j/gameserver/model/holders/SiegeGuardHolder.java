@@ -48,10 +48,6 @@ public class SiegeGuardHolder {
         return _itemId;
     }
 
-    public final SiegeGuardType getType() {
-        return _type;
-    }
-
     public final boolean isStationary() {
         return _stationary;
     }

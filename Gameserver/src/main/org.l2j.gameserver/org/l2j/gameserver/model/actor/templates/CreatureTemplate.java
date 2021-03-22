@@ -143,38 +143,10 @@ public class CreatureTemplate extends ListenersContainer {
     }
 
     /**
-     * @return the baseSTR
-     */
-    public int getBaseSTR() {
-        return _baseValues.getOrDefault(Stat.STAT_STR, 0d).intValue();
-    }
-
-    /**
      * @return the baseCON
      */
     public int getBaseCON() {
         return _baseValues.getOrDefault(Stat.STAT_CON, 0d).intValue();
-    }
-
-    /**
-     * @return the baseDEX
-     */
-    public int getBaseDEX() {
-        return _baseValues.getOrDefault(Stat.STAT_DEX, 0d).intValue();
-    }
-
-    /**
-     * @return the baseINT
-     */
-    public int getBaseINT() {
-        return _baseValues.getOrDefault(Stat.STAT_INT, 0d).intValue();
-    }
-
-    /**
-     * @return the baseWIT
-     */
-    public int getBaseWIT() {
-        return _baseValues.getOrDefault(Stat.STAT_WIT, 0d).intValue();
     }
 
     /**
@@ -189,13 +161,6 @@ public class CreatureTemplate extends ListenersContainer {
      */
     public float getBaseHpMax() {
         return _baseValues.getOrDefault(Stat.MAX_HP, 0d).floatValue();
-    }
-
-    /**
-     * @return the baseCpMax
-     */
-    public float getBaseCpMax() {
-        return _baseValues.getOrDefault(Stat.MAX_CP, 0d).floatValue();
     }
 
     /**
@@ -217,97 +182,6 @@ public class CreatureTemplate extends ListenersContainer {
      */
     public float getBaseMpReg() {
         return _baseValues.getOrDefault(Stat.REGENERATE_MP_RATE, 0d).floatValue();
-    }
-
-    /**
-     * @return the _baseFire
-     */
-    public int getBaseFire() {
-        return _baseValues.getOrDefault(Stat.FIRE_POWER, 0d).intValue();
-    }
-
-    /**
-     * @return the _baseWind
-     */
-    public int getBaseWind() {
-        return _baseValues.getOrDefault(Stat.WIND_POWER, 0d).intValue();
-    }
-
-    /**
-     * @return the _baseWater
-     */
-    public int getBaseWater() {
-        return _baseValues.getOrDefault(Stat.WATER_POWER, 0d).intValue();
-    }
-
-    /**
-     * @return the _baseEarth
-     */
-    public int getBaseEarth() {
-        return _baseValues.getOrDefault(Stat.EARTH_POWER, 0d).intValue();
-    }
-
-    /**
-     * @return the _baseHoly
-     */
-    public int getBaseHoly() {
-        return _baseValues.getOrDefault(Stat.HOLY_POWER, 0d).intValue();
-    }
-
-    /**
-     * @return the _baseDark
-     */
-    public int getBaseDark() {
-        return _baseValues.getOrDefault(Stat.DARK_POWER, 0d).intValue();
-    }
-
-    /**
-     * @return the _baseFireRes
-     */
-    public double getBaseFireRes() {
-        return _baseValues.getOrDefault(Stat.FIRE_RES, 0d);
-    }
-
-    /**
-     * @return the _baseWindRes
-     */
-    public double getBaseWindRes() {
-        return _baseValues.getOrDefault(Stat.WIND_RES, 0d);
-    }
-
-    /**
-     * @return the _baseWaterRes
-     */
-    public double getBaseWaterRes() {
-        return _baseValues.getOrDefault(Stat.WATER_RES, 0d);
-    }
-
-    /**
-     * @return the _baseEarthRes
-     */
-    public double getBaseEarthRes() {
-        return _baseValues.getOrDefault(Stat.EARTH_RES, 0d);
-    }
-
-    /**
-     * @return the _baseHolyRes
-     */
-    public double getBaseHolyRes() {
-        return _baseValues.getOrDefault(Stat.HOLY_RES, 0d);
-    }
-
-    /**
-     * @return the _baseDarkRes
-     */
-    public double getBaseDarkRes() {
-        return _baseValues.getOrDefault(Stat.DARK_RES, 0d);
-    }
-
-    /**
-     * @return the _baseElementRes
-     */
-    public double getBaseElementRes() {
-        return _baseValues.getOrDefault(Stat.BASE_ATTRIBUTE_RES, 0d);
     }
 
     /**
@@ -339,73 +213,10 @@ public class CreatureTemplate extends ListenersContainer {
     }
 
     /**
-     * @return the basePAtkSpd
-     */
-    public int getBasePAtkSpd() {
-        return _baseValues.getOrDefault(Stat.PHYSICAL_ATTACK_SPEED, 0d).intValue();
-    }
-
-    /**
-     * @return the baseMAtkSpd
-     */
-    public int getBaseMAtkSpd() {
-        return _baseValues.getOrDefault(Stat.MAGIC_ATTACK_SPEED, 0d).intValue();
-    }
-
-    /**
-     * @return the random damage
-     */
-    public int getRandomDamage() {
-        return _baseValues.getOrDefault(Stat.RANDOM_DAMAGE, 0d).intValue();
-    }
-
-    /**
-     * @return the baseShldDef
-     */
-    public int getBaseShldDef() {
-        return _baseValues.getOrDefault(Stat.SHIELD_DEFENCE, 0d).intValue();
-    }
-
-    /**
-     * @return the baseShldRate
-     */
-    public int getBaseShldRate() {
-        return _baseValues.getOrDefault(Stat.SHIELD_DEFENCE_RATE, 0d).intValue();
-    }
-
-    /**
      * @return the baseCritRate
      */
     public int getBaseCritRate() {
         return _baseValues.getOrDefault(Stat.CRITICAL_RATE, 0d).intValue();
-    }
-
-    /**
-     * @return the baseMCritRate
-     */
-    public int getBaseMCritRate() {
-        return _baseValues.getOrDefault(Stat.MAGIC_CRITICAL_RATE, 0d).intValue();
-    }
-
-    /**
-     * @return the baseBreath
-     */
-    public int getBaseBreath() {
-        return _baseValues.getOrDefault(Stat.BREATH, 0d).intValue();
-    }
-
-    /**
-     * @return base abnormal resist by basic property type.
-     */
-    public int getBaseAbnormalResistPhysical() {
-        return _baseValues.getOrDefault(Stat.ABNORMAL_RESIST_PHYSICAL, 0d).intValue();
-    }
-
-    /**
-     * @return base abnormal resist by basic property type.
-     */
-    public int getBaseAbnormalResistMagical() {
-        return _baseValues.getOrDefault(Stat.ABNORMAL_RESIST_MAGICAL, 0d).intValue();
     }
 
     /**
@@ -441,15 +252,6 @@ public class CreatureTemplate extends ListenersContainer {
      */
     public WeaponType getBaseAttackType() {
         return _baseAttackType;
-    }
-
-    /**
-     * Sets base attack type.
-     *
-     * @param type
-     */
-    public void setBaseAttackType(WeaponType type) {
-        _baseAttackType = type;
     }
 
     /**

@@ -132,15 +132,6 @@ public final class FloodProtectors {
     }
 
     /**
-     * Returns {@link #_firework}.
-     *
-     * @return {@link #_firework}
-     */
-    public FloodProtectorAction getFirework() {
-        return _firework;
-    }
-
-    /**
      * Returns {@link #_itemPetSummon}.
      *
      * @return {@link #_itemPetSummon}

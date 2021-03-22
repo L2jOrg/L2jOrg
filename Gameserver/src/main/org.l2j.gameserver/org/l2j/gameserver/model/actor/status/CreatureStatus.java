@@ -38,7 +38,6 @@ import static java.util.Objects.isNull;
 
 
 public class CreatureStatus {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(CreatureStatus.class);
 
     protected static final byte REGEN_FLAG_CP = 4;
     private static final byte REGEN_FLAG_HP = 1;

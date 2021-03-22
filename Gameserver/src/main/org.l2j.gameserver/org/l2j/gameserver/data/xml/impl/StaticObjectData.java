@@ -98,15 +98,6 @@ public final class StaticObjectData extends GameXmlReader {
         _staticObjects.put(obj.getObjectId(), obj);
     }
 
-    /**
-     * Gets the static objects.
-     *
-     * @return a collection of static objects.
-     */
-    public Collection<StaticWorldObject> getStaticObjects() {
-        return _staticObjects.values();
-    }
-
     public static StaticObjectData getInstance() {
         return Singleton.INSTANCE;
     }

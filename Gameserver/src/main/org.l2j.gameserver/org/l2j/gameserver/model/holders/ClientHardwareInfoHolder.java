@@ -101,20 +101,6 @@ public class ClientHardwareInfoHolder {
     }
 
     /**
-     * @return the directxVersion
-     */
-    public int getDirectxVersion() {
-        return _directxVersion;
-    }
-
-    /**
-     * @return the directxRevision
-     */
-    public int getDirectxRevision() {
-        return _directxRevision;
-    }
-
-    /**
      * @return the cpuName
      */
     public String getCpuName() {
@@ -133,55 +119,6 @@ public class ClientHardwareInfoHolder {
      */
     public int getCpuCoreCount() {
         return _cpuCoreCount;
-    }
-
-    /**
-     * @return the vgaCount
-     */
-    public int getVgaCount() {
-        return _vgaCount;
-    }
-
-    /**
-     * @return the vgaPcxSpeed
-     */
-    public int getVgaPcxSpeed() {
-        return _vgaPcxSpeed;
-    }
-
-    /**
-     * @return the physMemorySlot1
-     */
-    public int getPhysMemorySlot1() {
-        return _physMemorySlot1;
-    }
-
-    /**
-     * @return the physMemorySlot2
-     */
-    public int getPhysMemorySlot2() {
-        return _physMemorySlot2;
-    }
-
-    /**
-     * @return the physMemorySlot3
-     */
-    public int getPhysMemorySlot3() {
-        return _physMemorySlot3;
-    }
-
-    /**
-     * @return the videoMemory
-     */
-    public int getVideoMemory() {
-        return _videoMemory;
-    }
-
-    /**
-     * @return the vgaVersion
-     */
-    public int getVgaVersion() {
-        return _vgaVersion;
     }
 
     /**

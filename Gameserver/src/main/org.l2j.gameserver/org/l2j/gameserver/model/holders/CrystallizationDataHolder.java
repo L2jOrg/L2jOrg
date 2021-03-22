@@ -34,11 +34,7 @@ public class CrystallizationDataHolder {
         _items = Collections.unmodifiableList(items);
     }
 
-    public int getId() {
-        return _id;
-    }
-
     public List<ItemChanceHolder> getItems() {
-        return Collections.unmodifiableList(_items);
+        return _items;
     }
 }

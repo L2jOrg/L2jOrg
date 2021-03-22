@@ -327,20 +327,6 @@ public final class WalkingManager extends GameXmlReader {
     }
 
     /**
-     * Resumes previously stopped moving
-     *
-     * @param npc NPC to resume
-     */
-    public void resumeMoving(Npc npc) {
-        final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-        if (walk != null) {
-            walk.setSuspended(false);
-            walk.setStoppedByAttack(false);
-            startMoving(npc, walk.getRoute().getName());
-        }
-    }
-
-    /**
      * Pause NPC moving until it will be resumed
      *
      * @param npc             NPC to pause moving

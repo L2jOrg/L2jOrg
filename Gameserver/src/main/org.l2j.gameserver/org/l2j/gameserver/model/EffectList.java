@@ -320,26 +320,6 @@ public final class EffectList {
     }
 
     /**
-     * Gets the triggered buffs count.<br>
-     * Prevents initialization.
-     *
-     * @return the number of triggered buffs in this creature effect list
-     */
-    public int getTriggeredBuffCount() {
-        return triggerBuffCount.get();
-    }
-
-    /**
-     * Gets the toggled skills count.<br>
-     * Prevents initialization.
-     *
-     * @return the number of toggle skills in this creature effect list
-     */
-    public int getToggleCount() {
-        return toggleCount.get();
-    }
-
-    /**
      * Gets the debuff skills count.<br>
      * Prevents initialization.
      *
@@ -347,15 +327,6 @@ public final class EffectList {
      */
     public int getDebuffCount() {
         return debuffCount.get();
-    }
-
-    /**
-     * Gets the hidden buff count.
-     *
-     * @return the number of hidden buffs
-     */
-    public int getHiddenBuffsCount() {
-        return hiddenBuffs.get();
     }
 
     /**
@@ -402,12 +373,6 @@ public final class EffectList {
         if (toggleCount.get() > 0) {
             // Ignore necessary toggles.
             stopEffects(b -> b.getSkill().isToggle() &&  !b.getSkill().isIrreplacableBuff(), true, true);
-        }
-    }
-
-    public void stopAllTogglesOfGroup(int toggleGroup) {
-        if (toggleCount.get() > 0) {
-            stopEffects(b -> b.getSkill().isToggle(), true, true);
         }
     }
 
@@ -499,21 +464,6 @@ public final class EffectList {
     public boolean stopEffects(AbnormalType type) {
         if (hasAbnormalType(type)) {
             stopEffects(i -> i.isAbnormalType(type), true, true);
-            return true;
-        }
-
-        return false;
-    }
-
-    /**
-     * Exits all effects created by a specific skill {@code AbnormalType}s.<br>
-     *
-     * @param types the skill {@code AbnormalType}s to be checked and removed.
-     * @return {@code true} if there was any {@code BuffInfo} with one of the given {@code AbnormalType}s, {@code false} otherwise
-     */
-    public boolean stopEffects(Collection<AbnormalType> types) {
-        if (hasAbnormalType(types)) {
-            stopEffects(i -> types.contains(i.getSkill().getAbnormalType()), true, true);
             return true;
         }
 

@@ -76,8 +76,6 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     public static final int TYPE2_MONEY = 4;
     public static final int TYPE2_OTHER = 5;
 
-    protected static final Logger LOGGER = LoggerFactory.getLogger(ItemTemplate.class);
-
     private final int id;
     private final String name;
 
@@ -410,14 +408,6 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
      */
     public final List<ItemSkillHolder> getAllSkills() {
         return skills;
-    }
-
-    /**
-     * @param condition
-     * @return {@code List} of {@link ItemSkillHolder} if item has skills and matches the condition, {@code null} otherwise
-     */
-    public final List<ItemSkillHolder> getSkills(Predicate<ItemSkillHolder> condition) {
-        return skills != null ? skills.stream().filter(condition).collect(Collectors.toList()) : null;
     }
 
     /**

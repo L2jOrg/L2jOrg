@@ -170,10 +170,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         return id;
     }
 
-    public int getCount() {
-        return _count;
-    }
-
     public Duration getRespawnTime() {
         return respawnTime;
     }
@@ -184,10 +180,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
 
     public List<ChanceLocation> getLocation() {
         return locations;
-    }
-
-    public SpawnTerritory getZone() {
-        return zone;
     }
 
     @Override
@@ -204,20 +196,8 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         }
     }
 
-    public boolean hasSpawnAnimation() {
-        return _spawnAnimation;
-    }
-
     public boolean hasDBSave() {
         return saveInDB;
-    }
-
-    public String getDBName() {
-        return _dbName;
-    }
-
-    public List<MinionHolder> getMinions() {
-        return _minions != null ? _minions : Collections.emptyList();
     }
 
     public void addMinion(MinionHolder minion) {
@@ -265,10 +245,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
             }
         }
         return null;
-    }
-
-    public void spawn() {
-        spawn(null);
     }
 
     public void spawn(Instance instance) {

@@ -689,19 +689,6 @@ public abstract class Inventory extends ItemContainer {
         return getOwner().getActingPlayer().getStats().canEquipCloak();
     }
 
-    /**
-     * Re-notify to paperdoll listeners every equipped item
-     */
-    public void reloadEquippedItems() {
-        paperdoll.forEach((slot, item) -> listeners.forEach(l -> {
-            l.notifyUnequipped(slot, item, this);
-            l.notifyEquipped(slot, item, this);
-        }));
-        if (isPlayer(getOwner())) {
-            getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));
-        }
-    }
-
     public void reloadEquippedItem(Item item) {
         paperdoll.entrySet().stream()
             .filter(entry -> entry.getValue()== item).findFirst()
@@ -766,10 +753,6 @@ public abstract class Inventory extends ItemContainer {
 
     public void forEachEquippedItem(Consumer<Item> action) {
         paperdoll.values().forEach(action);
-    }
-
-    public void forEachEquippedItem(Consumer<Item> action, Predicate<Item> predicate) {
-        paperdoll.values().stream().filter(predicate).forEach(action);
     }
 
     public int countEquippedItems(Predicate<Item> predicate) {

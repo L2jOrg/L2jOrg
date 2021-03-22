@@ -392,15 +392,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     }
 
     /**
-     * Get instance template parameters.
-     *
-     * @return parameters of template
-     */
-    public StatsSet getParameters() {
-        return parameters;
-    }
-
-    /**
      * Set parameters shared between instances with same template id.
      *
      * @param set map containing parameters

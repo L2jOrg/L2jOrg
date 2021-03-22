@@ -283,14 +283,6 @@ public class MinionList {
 
     // Statistics part
 
-    public final int countSpawnedMinions() {
-        return _spawnedMinions.size();
-    }
-
-    public final long lazyCountSpawnedMinionsGroups() {
-        return _spawnedMinions.stream().distinct().count();
-    }
-
     private final class MinionRespawnTask implements Runnable {
         private final Monster _minion;
 

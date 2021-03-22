@@ -280,24 +280,6 @@ public final class TeleportHolder {
     }
 
     /**
-     * Gets all teleport locations registered in current holder.
-     *
-     * @return collection of {@link TeleportLocation}
-     */
-    public List<TeleportLocation> getLocations() {
-        return teleportData;
-    }
-
-    /**
-     * Gets list identification (name).
-     *
-     * @return list name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
      * Check if teleport list is for noblesse or not.
      *
      * @return {@code true} if is for noblesse otherwise {@code false}
@@ -306,12 +288,4 @@ public final class TeleportHolder {
         return (type == TeleportType.NOBLES_ADENA) || (type == TeleportType.NOBLES_TOKEN);
     }
 
-    /**
-     * Gets type of teleport list.
-     *
-     * @return type of list
-     */
-    public TeleportType getType() {
-        return type;
-    }
 }

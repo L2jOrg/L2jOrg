@@ -584,10 +584,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         teleToLocation(x, y, z, heading, getInstanceWorld());
     }
 
-    public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset) {
-        teleToLocation(x, y, z, heading, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, getInstanceWorld());
-    }
-
     public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset, Instance instance) {
         teleToLocation(x, y, z, heading, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, instance);
     }
@@ -1341,16 +1337,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return hasBlockActions() || isRooted() || isOverloaded || isImmobilized || isAlikeDead() || isTeleporting;
     }
 
-    public final boolean isOverloaded() {
-        return isOverloaded;
-    }
-
     public final void setIsOverloaded(boolean value) {
         isOverloaded = value;
-    }
-
-    public final boolean isPendingRevive() {
-        return isDead && isPendingRevive;
     }
 
     public final void setIsPendingRevive(boolean value) {
@@ -1693,17 +1681,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!isPlayer(this)) {
             getAI().notifyEvent(CtrlEvent.EVT_THINK);
         }
-    }
-
-    public final void startStunning() {
-        abortAttack();
-        abortCast();
-        stopMove(null);
-        getAI().notifyEvent(CtrlEvent.EVT_ACTION_BLOCKED);
-        if (!GameUtils.isSummon(this)) {
-            getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-        }
-        updateAbnormalVisualEffects();
     }
 
     public final void stopTransformation(boolean removeEffects) {
@@ -2601,14 +2578,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * <B><U> Overridden in </U> :</B>
      * <li>Player</li>
      *
-     * @return the secondary weapon instance (always equiped in the left hand).
-     */
-    public abstract Item getSecondaryWeaponInstance();
-
-    /**
-     * <B><U> Overridden in </U> :</B>
-     * <li>Player</li>
-     *
      * @return the secondary {@link ItemTemplate} item (always equiped in the left hand).
      */
     public abstract ItemTemplate getSecondaryWeaponItem();
@@ -2976,10 +2945,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public final long getAttackEndTime() {
         return attackEndTime;
-    }
-
-    protected long getRangedAttackEndTime() {
-        return disableRangedAttackEndTime;
     }
 
     public abstract int getLevel();
@@ -3471,10 +3436,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public boolean canOverrideCond(PcCondOverride excs) {
         return (exceptions & excs.getMask()) == excs.getMask();
-    }
-
-    public long getOverrideCond() {
-        return exceptions;
     }
 
     public void setOverrideCond(long masks) {

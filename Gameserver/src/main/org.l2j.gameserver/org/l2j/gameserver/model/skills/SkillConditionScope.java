@@ -43,10 +43,6 @@ public enum SkillConditionScope {
         _xmlNodeName = xmlNodeName;
     }
 
-    public static SkillConditionScope findByXmlNodeName(String xmlNodeName) {
-        return XML_NODE_NAME_TO_SKILL_CONDITION_SCOPE.get(xmlNodeName);
-    }
-
     public String getXmlNodeName() {
         return _xmlNodeName;
     }

@@ -466,10 +466,6 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         return Year.now().getValue();
     }
 
-    public Collection<OlympiadMatch> getMatches() {
-        return matches.values();
-    }
-
     public void showRecord(Player player) {
         if(player.isInOlympiadMode()) {
             player.sendPacket(DURING_BATTLE_OR_VIEWING_OLYMPIAD_WINDOW_CANNOT_BE_OPENED);

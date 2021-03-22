@@ -34,22 +34,6 @@ public final class EnchantItemAttributeRequest extends AbstractRequest {
         _enchantingStoneObjectId = enchantingStoneObjectId;
     }
 
-    public Item getEnchantingItem() {
-        return getPlayer().getInventory().getItemByObjectId(_enchantingItemObjectId);
-    }
-
-    public void setEnchantingItem(int objectId) {
-        _enchantingItemObjectId = objectId;
-    }
-
-    public Item getEnchantingStone() {
-        return getPlayer().getInventory().getItemByObjectId(_enchantingStoneObjectId);
-    }
-
-    public void setEnchantingStone(int objectId) {
-        _enchantingStoneObjectId = objectId;
-    }
-
     @Override
     public boolean isItemRequest() {
         return true;

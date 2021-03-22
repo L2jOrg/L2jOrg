@@ -77,10 +77,6 @@ public class ServerRestartManager {
         }
     }
 
-    public String getNextRestartTime() {
-        return nextRestartTime;
-    }
-
     public static ServerRestartManager getInstance() {
         return Singleton.INSTANCE;
     }

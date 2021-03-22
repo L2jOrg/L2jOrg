@@ -43,7 +43,4 @@ public class ExtendDropItemHolder extends ItemHolder {
         return _chance;
     }
 
-    public double getAdditionalChance() {
-        return _additionalChance;
-    }
 }

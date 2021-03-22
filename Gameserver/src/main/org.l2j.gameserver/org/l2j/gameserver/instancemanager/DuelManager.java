@@ -117,22 +117,6 @@ public final class DuelManager {
     }
 
     /**
-     * Registers a buff which will be removed if the duel ends
-     *
-     * @param player
-     * @param buff
-     */
-    public void onBuff(Player player, Skill buff) {
-        if ((player == null) || !player.isInDuel() || (buff == null)) {
-            return;
-        }
-        final Duel duel = getDuel(player.getDuelId());
-        if (duel != null) {
-            duel.onBuff(player, buff);
-        }
-    }
-
-    /**
      * Removes player from duel.
      *
      * @param player - the removed player

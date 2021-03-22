@@ -103,10 +103,6 @@ public class Duel {
         ThreadPool.schedule(new ScheduleStartDuelTask(this), 3000);
     }
 
-    public Instance getDueldInstance() {
-        return _duelInstance;
-    }
-
     /**
      * Stops all players from attacking. Used for duel timeout / interrupt.
      */
@@ -350,10 +346,6 @@ public class Duel {
         return _partyDuel;
     }
 
-    public boolean getFinished() {
-        return _finished;
-    }
-
     public void setFinished(boolean mode) {
         _finished = mode;
     }
@@ -424,24 +416,6 @@ public class Duel {
         } else {
             _playerB.sendPacket(packet);
         }
-    }
-
-    /**
-     * Get the duel winner
-     *
-     * @return winner
-     */
-    public Player getWinner() {
-        if (!_finished || (_playerA == null) || (_playerB == null)) {
-            return null;
-        }
-        if (_playerA.getDuelState() == DUELSTATE_WINNER) {
-            return _playerA;
-        }
-        if (_playerB.getDuelState() == DUELSTATE_WINNER) {
-            return _playerB;
-        }
-        return null;
     }
 
     /**

@@ -3676,14 +3676,6 @@ public final class Player extends Playable {
 
 
     /**
-     * Return the secondary weapon instance (always equipped in the left hand).
-     */
-    @Override
-    public Item getSecondaryWeaponInstance() {
-        return inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
-    }
-
-    /**
      * Return the secondary ItemTemplate item (always equipped in the left hand).<BR>
      * Arrows, Shield..<BR>
      */

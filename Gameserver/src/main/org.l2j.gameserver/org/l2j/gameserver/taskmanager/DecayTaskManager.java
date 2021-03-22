@@ -37,7 +37,6 @@ import static org.l2j.gameserver.util.GameUtils.isAttackable;
  * @author NosBit
  */
 public final class DecayTaskManager {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(DecayTaskManager.class);
 
     private static final Map<Creature, Long> DECAY_SCHEDULES = new ConcurrentHashMap<>();
 

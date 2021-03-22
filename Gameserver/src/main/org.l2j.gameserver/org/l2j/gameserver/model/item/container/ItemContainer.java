@@ -583,28 +583,6 @@ public abstract class ItemContainer {
         return true;
     }
 
-    /**
-     * If the item is stackable validates 1 slot, if the item isn't stackable validates the item count.
-     *
-     * @param itemId the item Id to verify
-     * @param count  amount of item's weight to validate
-     * @return {@code true} if the item doesn't exists or it validates its slot count
-     */
-    public boolean validateCapacityByItemId(int itemId, long count) {
-        final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
-        return (template == null) || (template.isStackable() ? validateCapacity(1) : validateCapacity(count));
-    }
-
-    /**
-     * @param itemId the item Id to verify
-     * @param count  amount of item's weight to validate
-     * @return {@code true} if the item doesn't exists or it validates its weight
-     */
-    public boolean validateWeightByItemId(int itemId, long count) {
-        final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
-        return (template == null) || validateWeight(template.getWeight() * count);
-    }
-
     public String getName() {
         return "ItemContainer";
     }

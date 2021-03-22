@@ -64,10 +64,6 @@ public class SkillHolder {
         return _skillSubLevel;
     }
 
-    public final int getMaxLevel() {
-        return SkillEngine.getInstance().getMaxLevel(_skillId);
-    }
-
     public final Skill getSkill() {
         if(isNull(skill)) {
             skill = SkillEngine.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1));

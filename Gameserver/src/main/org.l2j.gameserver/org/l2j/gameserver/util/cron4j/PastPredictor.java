@@ -56,17 +56,6 @@ public class PastPredictor {
     }
 
     /**
-     * It builds a predictor with the given scheduling pattern and start time.
-     *
-     * @param schedulingPattern The pattern on which the prediction will be based.
-     * @param start             The start time of the prediction.
-     * @throws InvalidPatternException In the given scheduling pattern isn't valid.
-     */
-    public PastPredictor(String schedulingPattern, Date start) throws InvalidPatternException {
-        this(schedulingPattern, start.getTime());
-    }
-
-    /**
      * It builds a predictor with the given scheduling pattern and the current system time as the prediction start time.
      *
      * @param schedulingPattern The pattern on which the prediction will be based.
@@ -86,27 +75,6 @@ public class PastPredictor {
     public PastPredictor(SchedulingPattern schedulingPattern, long start) {
         _schedulingPattern = schedulingPattern;
         _time = (start / (1000 * 60)) * 1000 * 60;
-    }
-
-    /**
-     * It builds a predictor with the given scheduling pattern and start time.
-     *
-     * @param schedulingPattern The pattern on which the prediction will be based.
-     * @param start             The start time of the prediction.
-     * @since 2.0
-     */
-    public PastPredictor(SchedulingPattern schedulingPattern, Date start) {
-        this(schedulingPattern, start.getTime());
-    }
-
-    /**
-     * It builds a predictor with the given scheduling pattern and the current system time as the prediction start time.
-     *
-     * @param schedulingPattern The pattern on which the prediction will be based.
-     * @since 2.0
-     */
-    public PastPredictor(SchedulingPattern schedulingPattern) {
-        this(schedulingPattern, System.currentTimeMillis());
     }
 
     /**
@@ -279,12 +247,4 @@ public class PastPredictor {
         return _time;
     }
 
-    /**
-     * It returns the previous matching moment as a {@link Date} object.
-     *
-     * @return The previous matching moment as a {@link Date} object.
-     */
-    public synchronized Date prevMatchingDate() {
-        return new Date(prevMatchingTime());
-    }
 }

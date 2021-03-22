@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TrapAction;
@@ -182,11 +181,6 @@ public final class Trap extends Npc {
     }
 
     @Override
-    public Item getSecondaryWeaponInstance() {
-        return null;
-    }
-
-    @Override
     public Weapon getSecondaryWeaponItem() {
         return null;
     }
@@ -247,32 +241,6 @@ public final class Trap extends Npc {
         }
     }
 
-    public void setDetected(Creature detector) {
-        if (_isInArena) {
-            if (GameUtils.isPlayable(detector)) {
-                sendInfo(detector.getActingPlayer());
-            }
-            return;
-        }
-
-        if ((_owner != null) && (_owner.getPvpFlag() == 0) && (_owner.getReputation() >= 0)) {
-            return;
-        }
-
-        _playersWhoDetectedMe.add(detector.getObjectId());
-
-        // Notify to scripts
-        EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, detector, TrapAction.TRAP_DETECTED), this);
-
-        if (GameUtils.isPlayable(detector)) {
-            sendInfo(detector.getActingPlayer());
-        }
-    }
-
-    public void stopDecay() {
-        DecayTaskManager.getInstance().cancel(this);
-    }
-
     /**
      * Trigger the trap.
      *
@@ -309,10 +277,6 @@ public final class Trap extends Npc {
 
     public boolean hasLifeTime() {
         return _hasLifeTime;
-    }
-
-    public void setHasLifeTime(boolean val) {
-        _hasLifeTime = val;
     }
 
     public int getRemainingTime() {

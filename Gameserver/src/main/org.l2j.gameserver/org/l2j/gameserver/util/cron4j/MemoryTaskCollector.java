@@ -29,10 +29,6 @@ import java.util.ArrayList;
  * @since 2.0
  */
 class MemoryTaskCollector implements TaskCollector {
-    /**
-     * Size.
-     */
-    private final int size = 0;
 
     /**
      * The inner scheduling pattern list.
@@ -48,15 +44,6 @@ class MemoryTaskCollector implements TaskCollector {
      * IDs for task-pattern couples.
      */
     private final ArrayList<String> ids = new ArrayList<>();
-
-    /**
-     * Counts how many task are currently collected by this collector.
-     *
-     * @return The size of the currently collected task list.
-     */
-    public synchronized int size() {
-        return size;
-    }
 
     /**
      * Adds a pattern and a task to the collector.

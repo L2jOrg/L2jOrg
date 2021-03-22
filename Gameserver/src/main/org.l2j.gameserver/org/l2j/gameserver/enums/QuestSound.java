@@ -123,14 +123,7 @@ public enum QuestSound {
     QuestSound(String playSound) {
         sound = playSound;
     }
-    
 
-    /**
-     * @return the name of the sound of this QuestSound object
-     */
-    public String getSoundName() {
-        return sound;
-    }
 
     /**
      * @return the {@link PlaySound} packet of this QuestSound object

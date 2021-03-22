@@ -19,7 +19,6 @@
 package org.l2j.gameserver.util.cron4j;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
@@ -72,17 +71,6 @@ public class Predictor {
     }
 
     /**
-     * It builds a predictor with the given scheduling pattern and start time.
-     *
-     * @param schedulingPattern The pattern on which the prediction will be based.
-     * @param start             The start time of the prediction.
-     * @throws InvalidPatternException In the given scheduling pattern isn't valid.
-     */
-    public Predictor(String schedulingPattern, Date start) throws InvalidPatternException {
-        this(schedulingPattern, start.getTime());
-    }
-
-    /**
      * It builds a predictor with the given scheduling pattern and the current system time as the prediction start time.
      *
      * @param schedulingPattern The pattern on which the prediction will be based.
@@ -102,27 +90,6 @@ public class Predictor {
     public Predictor(SchedulingPattern schedulingPattern, long start) {
         this.schedulingPattern = schedulingPattern;
         this.time = (start / (1000 * 60)) * 1000 * 60;
-    }
-
-    /**
-     * It builds a predictor with the given scheduling pattern and start time.
-     *
-     * @param schedulingPattern The pattern on which the prediction will be based.
-     * @param start             The start time of the prediction.
-     * @since 2.0
-     */
-    public Predictor(SchedulingPattern schedulingPattern, Date start) {
-        this(schedulingPattern, start.getTime());
-    }
-
-    /**
-     * It builds a predictor with the given scheduling pattern and the current system time as the prediction start time.
-     *
-     * @param schedulingPattern The pattern on which the prediction will be based.
-     * @since 2.0
-     */
-    public Predictor(SchedulingPattern schedulingPattern) {
-        this(schedulingPattern, System.currentTimeMillis());
     }
 
     /**
@@ -274,12 +241,4 @@ public class Predictor {
         return time;
     }
 
-    /**
-     * It returns the next matching moment as a {@link Date} object.
-     *
-     * @return The next matching moment as a {@link Date} object.
-     */
-    public synchronized Date nextMatchingDate() {
-        return new Date(nextMatchingTime());
-    }
 }

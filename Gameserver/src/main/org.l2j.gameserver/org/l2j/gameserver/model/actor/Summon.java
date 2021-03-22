@@ -421,11 +421,6 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public Item getSecondaryWeaponInstance() {
-        return null;
-    }
-
-    @Override
     public Weapon getSecondaryWeaponItem() {
         return null;
     }
@@ -856,10 +851,6 @@ public abstract class Summon extends Playable {
 
     public int getSummonPoints() {
         return _summonPoints;
-    }
-
-    public void setSummonPoints(int summonPoints) {
-        _summonPoints = summonPoints;
     }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
