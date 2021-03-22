@@ -72,17 +72,4 @@ public class MinionHolder implements IIdentifiable {
         return _count;
     }
 
-    /**
-     * @return the respawn time of the Minions.
-     */
-    public long getRespawnTime() {
-        return _respawnTime;
-    }
-
-    /**
-     * @return the weight point of the Minion.
-     */
-    public int getWeightPoint() {
-        return _weightPoint;
-    }
 }

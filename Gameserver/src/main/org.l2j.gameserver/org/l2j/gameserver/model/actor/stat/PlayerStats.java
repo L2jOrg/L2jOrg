@@ -288,12 +288,6 @@ public class PlayerStats extends PlayableStats {
         return _startingXp;
     }
 
-    public void setStartingExp(long value) {
-        if (Config.BOTREPORT_ENABLE) {
-            _startingXp = value;
-        }
-    }
-
     /**
      * Gets the maximum talisman count.
      *
@@ -309,10 +303,6 @@ public class PlayerStats extends PlayableStats {
 
     public boolean canEquipCloak() {
         return _cloakSlot;
-    }
-
-    public void setCloakSlotStatus(boolean cloakSlot) {
-        _cloakSlot = cloakSlot;
     }
 
     @Override

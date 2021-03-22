@@ -44,10 +44,6 @@ public final class SkillConditionHandler {
         return skillConditionHandlerFactories.get(name);
     }
 
-    public int size() {
-        return skillConditionHandlerFactories.size();
-    }
-
     public static SkillConditionHandler getInstance() {
         return Singleton.INSTANCE;
     }

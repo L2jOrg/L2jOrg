@@ -877,7 +877,7 @@ public class CreatureStats {
     }
 
     public void mergeMoveTypeValue(Stat stat, MoveType type, double value) {
-        _moveTypeStats.computeIfAbsent(stat, key -> new ConcurrentHashMap<>()).merge(type, value, MathUtil::add);
+        _moveTypeStats.computeIfAbsent(stat, key -> new ConcurrentHashMap<>()).merge(type, value, Double::sum);
     }
 
     public double getReuseTypeValue(SkillType magicType) {
@@ -940,18 +940,6 @@ public class CreatureStats {
      *
      * @param stat
      * @param value
-     * @param condition
-     * @return
-     */
-    public boolean addAdditionalStat(Stat stat, double value, BiPredicate<Creature, StatsHolder> condition) {
-        return _additionalAdd.add(new StatsHolder(stat, value, condition));
-    }
-
-    /**
-     * Adds static value to the 'add' map of the stat everytime recalculation happens
-     *
-     * @param stat
-     * @param value
      * @return
      */
     public boolean addAdditionalStat(Stat stat, double value) {
@@ -965,46 +953,6 @@ public class CreatureStats {
      */
     public boolean removeAddAdditionalStat(Stat stat, double value) {
         final Iterator<StatsHolder> it = _additionalAdd.iterator();
-        while (it.hasNext()) {
-            final StatsHolder holder = it.next();
-            if ((holder.getStat() == stat) && (holder.getValue() == value)) {
-                it.remove();
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
-     * Adds static multiplier to the 'mul' map of the stat everytime recalculation happens
-     *
-     * @param stat
-     * @param value
-     * @param condition
-     * @return
-     */
-    public boolean mulAdditionalStat(Stat stat, double value, BiPredicate<Creature, StatsHolder> condition) {
-        return _additionalMul.add(new StatsHolder(stat, value, condition));
-    }
-
-    /**
-     * Adds static multiplier to the 'mul' map of the stat everytime recalculation happens
-     *
-     * @param stat
-     * @param value
-     * @return {@code true}
-     */
-    public boolean mulAdditionalStat(Stat stat, double value) {
-        return _additionalMul.add(new StatsHolder(stat, value));
-    }
-
-    /**
-     * @param stat
-     * @param value
-     * @return {@code true} if 'mul' was removed, {@code false} in case there wasn't such stat and value
-     */
-    public boolean removeMulAdditionalStat(Stat stat, double value) {
-        final Iterator<StatsHolder> it = _additionalMul.iterator();
         while (it.hasNext()) {
             final StatsHolder holder = it.next();
             if ((holder.getStat() == stat) && (holder.getValue() == value)) {

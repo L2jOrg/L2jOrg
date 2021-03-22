@@ -43,10 +43,6 @@ public final class ConditionHandler {
         return factories.get(name);
     }
 
-    public int size() {
-        return factories.size();
-    }
-
     public static ConditionHandler getInstance() {
         return Singleton.INSTANCE;
     }

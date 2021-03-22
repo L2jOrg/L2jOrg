@@ -658,16 +658,6 @@ public class NpcData extends GameXmlReader {
         return getTemplates(template -> template.isType("Npc") && template.getName().startsWith(text));
     }
 
-    /**
-     * Gets the all npc of class type.
-     *
-     * @param classTypes of all the templates to get.
-     * @return the template list for the given class type.
-     */
-    public List<NpcTemplate> getAllNpcOfClassType(String... classTypes) {
-        return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
-    }
-
     public boolean existsNpc(int npcId) {
         return nonNull(npcs.get(npcId));
     }

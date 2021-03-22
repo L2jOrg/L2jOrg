@@ -95,14 +95,6 @@ public final class ResidenceFunctionsData extends GameXmlReader {
         return _functions.getOrDefault(id, Collections.emptyList()).stream().filter(template -> template.getLevel() == level).findAny().orElse(null);
     }
 
-    /**
-     * @param id
-     * @return function template by id, null if not available
-     */
-    public List<ResidenceFunctionTemplate> getFunctions(int id) {
-        return _functions.get(id);
-    }
-
     public static ResidenceFunctionsData getInstance() {
         return Singleton.INSTANCE;
     }

@@ -30,10 +30,6 @@ public final class EventShrineManager {
         return Singleton.INSTANCE;
     }
 
-    public boolean areShrinesEnabled() {
-        return ENABLE_SHRINES;
-    }
-
     public void setEnabled(boolean enabled) {
         ENABLE_SHRINES = enabled;
     }

@@ -26,11 +26,6 @@ package org.l2j.gameserver.util.cron4j;
  * @author Carlo Pelliccia
  */
 public class InvalidPatternException extends RuntimeException {
-    /**
-     * Package-reserved construction.
-     */
-    InvalidPatternException() {
-    }
 
     /**
      * Package-reserved construction.

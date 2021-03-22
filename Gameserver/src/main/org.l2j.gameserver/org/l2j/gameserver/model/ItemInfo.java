@@ -44,7 +44,6 @@ public class ItemInfo {
     private EnsoulOption soulCrystalSpecialOption;
     private int[] enchantOption;
     private int time;
-    private int price;
 
     private ItemChangeType change;
     private boolean _available = true;
@@ -171,14 +170,6 @@ public class ItemInfo {
         return count;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public int getCustomType1() {
-        return type1;
-    }
-
     public int getEquipped() {
         return _equipped;
     }
@@ -234,10 +225,6 @@ public class ItemInfo {
 
     public boolean isQuestItem() {
         return template.isQuestItem();
-    }
-
-    public void setReuse(int reuse) {
-        this.reuse = reuse;
     }
 
     public int getReuse() {

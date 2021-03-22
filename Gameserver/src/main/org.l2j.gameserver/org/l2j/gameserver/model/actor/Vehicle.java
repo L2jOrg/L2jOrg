@@ -30,11 +30,7 @@ import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.world.MapRegionManager;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneRegion;
@@ -55,7 +51,6 @@ public abstract class Vehicle extends Creature {
     private static final Logger LOGGER = LoggerFactory.getLogger(Vehicle.class);
 
     protected final Set<Player> _passengers = ConcurrentHashMap.newKeySet();
-    protected int _dockId = 0;
     protected Location _oustLoc = null;
     protected VehiclePathPoint[] _currentPath = null;
     protected int _runState = 0;
@@ -69,10 +64,6 @@ public abstract class Vehicle extends Creature {
 
     public boolean isBoat() {
         return false;
-    }
-
-    public boolean canBeControlled() {
-        return _engine == null;
     }
 
     public void registerEngine(Runnable r) {
@@ -164,24 +155,8 @@ public abstract class Vehicle extends Creature {
         setStat(new VehicleStats(this));
     }
 
-    public boolean isInDock() {
-        return _dockId > 0;
-    }
-
-    public void setInDock(int d) {
-        _dockId = d;
-    }
-
-    public int getDockId() {
-        return _dockId;
-    }
-
     public Location getOustLoc() {
         return _oustLoc != null ? _oustLoc : MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN);
-    }
-
-    public void setOustLoc(Location loc) {
-        _oustLoc = loc;
     }
 
     public void oustPlayers() {
@@ -223,51 +198,6 @@ public abstract class Vehicle extends Creature {
             _passengers.remove(player);
         } catch (Exception e) {
         }
-    }
-
-    public boolean isEmpty() {
-        return _passengers.isEmpty();
-    }
-
-    public Set<Player> getPassengers() {
-        return _passengers;
-    }
-
-    public void broadcastToPassengers(ServerPacket sm) {
-        for (Player player : _passengers) {
-            if (player != null) {
-                player.sendPacket(sm);
-            }
-        }
-    }
-
-    /**
-     * Consume ticket(s) and teleport player from boat if no correct ticket
-     *
-     * @param itemId Ticket itemId
-     * @param count  Ticket count
-     * @param oustX
-     * @param oustY
-     * @param oustZ
-     */
-    public void payForRide(int itemId, int count, int oustX, int oustY, int oustZ) {
-        World.getInstance().forEachVisibleObjectInRange(this, Player.class, 1000, player ->
-        {
-            if (player.isInBoat() && (player.getBoat() == this)) {
-                if (itemId > 0) {
-                    final Item ticket = player.getInventory().getItemByItemId(itemId);
-                    if ((ticket == null) || (player.getInventory().destroyItem("Boat", ticket, count, player, this) == null)) {
-                        player.sendPacket(SystemMessageId.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT);
-                        player.teleToLocation(new Location(oustX, oustY, oustZ), true);
-                        return;
-                    }
-                    final InventoryUpdate iu = new InventoryUpdate();
-                    iu.addModifiedItem(ticket);
-                    player.sendInventoryUpdate(iu);
-                }
-                addPassenger(player);
-            }
-        });
     }
 
     @Override
@@ -361,11 +291,6 @@ public abstract class Vehicle extends Creature {
 
     @Override
     public Weapon getActiveWeaponItem() {
-        return null;
-    }
-
-    @Override
-    public Item getSecondaryWeaponInstance() {
         return null;
     }
 

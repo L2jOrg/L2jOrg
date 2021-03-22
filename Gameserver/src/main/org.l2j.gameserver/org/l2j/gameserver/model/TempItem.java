@@ -59,10 +59,6 @@ public final class TempItem {
         _quantity = quantity;
     }
 
-    public long getReferencePrice() {
-        return _referencePrice;
-    }
-
     /**
      * @return the itemId.
      */

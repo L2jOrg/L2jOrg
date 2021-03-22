@@ -43,7 +43,6 @@ import org.slf4j.LoggerFactory;
  * @author Nik
  */
 public class Doppelganger extends Npc {
-    protected static final Logger log = LoggerFactory.getLogger(Doppelganger.class.getName());
 
     private boolean _copySummonerEffects = true;
 
@@ -88,10 +87,6 @@ public class Doppelganger extends Npc {
         } else if (getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW) {
             getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
         }
-    }
-
-    public void setCopySummonerEffects(boolean copySummonerEffects) {
-        _copySummonerEffects = copySummonerEffects;
     }
 
     @Override

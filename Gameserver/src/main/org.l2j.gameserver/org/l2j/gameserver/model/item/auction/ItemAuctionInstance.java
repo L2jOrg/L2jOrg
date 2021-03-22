@@ -271,10 +271,6 @@ public final class ItemAuctionInstance {
         }
     }
 
-    public final ItemAuction getAuction(int auctionId) {
-        return _auctions.get(auctionId);
-    }
-
     public final ItemAuction[] getAuctionsByBidder(int bidderObjId) {
         final Collection<ItemAuction> auctions = getAuctions();
         final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());

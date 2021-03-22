@@ -93,21 +93,4 @@ public class PlayerAuthResponse extends ReceivablePacket {
         }
     }
 
-    private boolean hasMoreClientThanLimit(GameClient client, int limit, List<GameClient> clients) {
-        int activeWindows = clients.size();
-
-        if(activeWindows >= limit) {
-            String html = HtmCache.getInstance().getHtm(null,"windows_limit_ip.htm");
-            if(nonNull(html)) {
-                html = html.replace("<?active_windows?>", String.valueOf(activeWindows));
-                html = html.replace("<?windows_limit?>", String.valueOf(limit));
-                client.close(new TutorialShowHtml(html));
-            }
-            else {
-                client.close(new LoginFail(LoginFail.ACCESS_FAILED_TRY_LATER));
-            }
-            return true;
-        }
-        return false;
-    }
 }

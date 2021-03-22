@@ -39,7 +39,6 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author UnAfraid
  */
 public class PunishmentTask implements Runnable {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(PunishmentTask.class);
 
     private final PunishmentData data;
     private boolean _isStored;
@@ -100,13 +99,6 @@ public class PunishmentTask implements Runnable {
      */
     public String getPunishedBy() {
         return data.getPunisher();
-    }
-
-    /**
-     * @return {@code true} if current punishment task is stored in database, {@code false} otherwise.
-     */
-    public boolean isStored() {
-        return _isStored;
     }
 
     /**

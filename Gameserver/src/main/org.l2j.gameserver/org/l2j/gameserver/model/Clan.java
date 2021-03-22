@@ -1119,10 +1119,6 @@ public class Clan implements IIdentifiable, INamable {
         return _rank;
     }
 
-    public void setRank(int rank) {
-        _rank = rank;
-    }
-
     /**
      * @param activeChar the clan inviting player.
      * @param target     the invited player.

@@ -56,10 +56,6 @@ public abstract class ManagedScript {
         }
     }
 
-    public boolean isActive() {
-        return _isActive;
-    }
-
     public void setActive(boolean status) {
         _isActive = status;
     }
@@ -69,20 +65,6 @@ public abstract class ManagedScript {
      */
     public Path getScriptFile() {
         return _scriptFile;
-    }
-
-    /**
-     * @return Returns the lastLoadTime.
-     */
-    protected long getLastLoadTime() {
-        return _lastLoadTime;
-    }
-
-    /**
-     * @param lastLoadTime The lastLoadTime to set.
-     */
-    protected void setLastLoadTime(long lastLoadTime) {
-        _lastLoadTime = lastLoadTime;
     }
 
     public abstract Path getScriptPath();

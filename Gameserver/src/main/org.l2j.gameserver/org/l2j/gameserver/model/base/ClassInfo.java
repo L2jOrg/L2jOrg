@@ -45,13 +45,6 @@ public final class ClassInfo {
     }
 
     /**
-     * @return the class Id.
-     */
-    public ClassId getClassId() {
-        return _classId;
-    }
-
-    /**
      * @return the hardcoded in-game class name.
      */
     public String getClassName() {
@@ -90,17 +83,4 @@ public final class ClassInfo {
         return "&$" + getClassClientId() + ";";
     }
 
-    /**
-     * @return the escaped class client Id formatted to be displayed on a HTML.
-     */
-    public String getEscapedClientCode() {
-        return Matcher.quoteReplacement(getClientCode());
-    }
-
-    /**
-     * @return the parent class Id.
-     */
-    public ClassId getParentClassId() {
-        return _parentClassId;
-    }
 }

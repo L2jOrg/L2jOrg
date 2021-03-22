@@ -81,11 +81,4 @@ public class LuckyGameDataHolder {
         _maxModifyRewardGame = maxModifyRewardGame;
     }
 
-    public int getIndex() {
-        return _index;
-    }
-
-    public int getTurningPoints() {
-        return _turningPoints;
-    }
 }

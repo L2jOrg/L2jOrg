@@ -124,11 +124,6 @@ public final class StaticWorldObject extends Creature {
     }
 
     @Override
-    public Item getSecondaryWeaponInstance() {
-        return null;
-    }
-
-    @Override
     public Weapon getSecondaryWeaponItem() {
         return null;
     }
@@ -149,21 +144,6 @@ public final class StaticWorldObject extends Creature {
      */
     public int getMeshIndex() {
         return _meshIndex;
-    }
-
-    /**
-     * Set the meshIndex of the object.<br>
-     * <B><U> Values </U> :</B>
-     * <ul>
-     * <li>default textures : 0</li>
-     * <li>alternate textures : 1</li>
-     * </ul>
-     *
-     * @param meshIndex
-     */
-    public void setMeshIndex(int meshIndex) {
-        _meshIndex = meshIndex;
-        broadcastPacket(new StaticObject(this));
     }
 
     @Override

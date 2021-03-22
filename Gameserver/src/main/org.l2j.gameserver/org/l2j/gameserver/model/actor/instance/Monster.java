@@ -43,7 +43,6 @@ import static java.util.Objects.nonNull;
  */
 public class Monster extends Attackable {
     private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
-    protected boolean _enableMinions = true;
     protected ScheduledFuture<?> _maintenanceTask = null;
     private Monster _master = null;
     private volatile MinionList _minionList = null;
@@ -186,10 +185,6 @@ public class Monster extends Attackable {
 
     public void setLeader(Monster leader) {
         _master = leader;
-    }
-
-    public void enableMinions(boolean b) {
-        _enableMinions = b;
     }
 
     public boolean hasMinions() {

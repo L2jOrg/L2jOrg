@@ -504,16 +504,6 @@ public final class ZoneManager extends GameXmlReader {
     }
 
     /**
-     * Gets the olympiad stadium.
-     *
-     * @param creature the character
-     * @return the olympiad stadium
-     */
-    public final OlympiadStadiumZone getOlympiadStadium(Creature creature) {
-        return isNull(creature) ? null : getZones(creature).stream().filter(z -> z instanceof OlympiadStadiumZone && z.isCreatureInZone(creature)).map(OlympiadStadiumZone.class::cast).findAny().orElse(null);
-    }
-
-    /**
      * General storage for debug items used for visualizing zones.
      *
      * @return list of items

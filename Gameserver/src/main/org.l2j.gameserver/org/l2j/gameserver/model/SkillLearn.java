@@ -78,13 +78,6 @@ public final class SkillLearn {
     }
 
     /**
-     * @return the name of this skill.
-     */
-    public String getName() {
-        return _skillName;
-    }
-
-    /**
      * @return the ID of this skill.
      */
     public int getSkillId() {
@@ -228,22 +221,6 @@ public final class SkillLearn {
 
     public Set<Integer> getRemoveSkills() {
         return _removeSkills;
-    }
-
-    public int getTreeId() {
-        return _treeId;
-    }
-
-    public int getRow() {
-        return _row;
-    }
-
-    public int getColumn() {
-        return _column;
-    }
-
-    public int getPointsRequired() {
-        return _pointsRequired;
     }
 
     public Skill getSkill() {

@@ -118,11 +118,6 @@ public class Shortcuts {
         shortcuts.values().stream().filter(filter).forEach(s -> deleteShortcut(s.getClientId()));
     }
 
-    public void deleteShortcuts() {
-        shortcuts.clear();
-        getDAO(ShortcutDAO.class).deleteFromPlayer(owner.getObjectId());
-    }
-
     public void forEachShortcut(Consumer<Shortcut> action) {
         shortcuts.values().forEach(action);
     }

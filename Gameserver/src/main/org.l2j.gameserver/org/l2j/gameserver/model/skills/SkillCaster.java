@@ -785,32 +785,10 @@ public class SkillCaster implements Runnable {
     }
 
     /**
-     * @return the item that has been used in this casting.
-     */
-    public Item getItem() {
-        return item;
-    }
-
-    /**
      * @return {@code true} if casting can be aborted through regular means such as cast break while being attacked or while cancelling target, {@code false} otherwise.
      */
     public boolean canAbortCast() {
         return getCaster().getTarget() == null; // When targets are allocated, that means skill is already launched, therefore cannot be aborted.
-    }
-
-    /**
-     * @return the type of this caster, which also defines the casting display bar on the player.
-     */
-    public SkillCastingType getCastingType() {
-        return castingType;
-    }
-
-    public boolean isNormalFirstType() {
-        return castingType == SkillCastingType.NORMAL;
-    }
-
-    public boolean isNormalSecondType() {
-        return castingType == SkillCastingType.NORMAL_SECOND;
     }
 
     public boolean isAnyNormalType() {

@@ -85,10 +85,6 @@ public final class Product {
         return baseTax;
     }
 
-    public long getMaxCount() {
-        return maxCount;
-    }
-
     public long getCount() {
         if (count == null) {
             return 0;
@@ -148,10 +144,6 @@ public final class Product {
 
     public long getWeight() {
         return template.getWeight();
-    }
-
-    public CrystalType getCrystalType() {
-        return template.getCrystalType();
     }
 
     public boolean isEquipable() {

@@ -123,40 +123,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         super(set);
     }
 
-    public static boolean isAssignableTo(Class<?> sub, Class<?> clazz) {
-        // If clazz represents an interface
-        if (clazz.isInterface()) {
-            // check if obj implements the clazz interface
-            for (Class<?> interface1 : sub.getInterfaces()) {
-                if (clazz.getName().equals(interface1.getName())) {
-                    return true;
-                }
-            }
-        } else {
-            do {
-                if (sub.getName().equals(clazz.getName())) {
-                    return true;
-                }
-
-                sub = sub.getSuperclass();
-            }
-            while (sub != null);
-        }
-        return false;
-    }
-
-    /**
-     * Checks if obj can be assigned to the Class represented by clazz.<br>
-     * This is true if, and only if, obj is the same class represented by clazz, or a subclass of it or obj implements the interface represented by clazz.
-     *
-     * @param obj
-     * @param clazz
-     * @return {@code true} if the object can be assigned to the class, {@code false} otherwise
-     */
-    public static boolean isAssignableTo(Object obj, Class<?> clazz) {
-        return isAssignableTo(obj.getClass(), clazz);
-    }
-
     @Override
     public void set(StatsSet set) {
         super.set(set);
@@ -332,10 +298,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         return _sex;
     }
 
-    public int getChestId() {
-        return _chestId;
-    }
-
     public int getRHandId() {
         return _rhandId;
     }
@@ -367,14 +329,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
     public double getRaidPoints() {
         return _raidPoints;
-    }
-
-    public boolean isUnique() {
-        return _unique;
-    }
-
-    public boolean isAttackable() {
-        return _attackable;
     }
 
     public boolean isTargetable() {
@@ -413,28 +367,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         return _canMove;
     }
 
-    public boolean isNoSleepMode() {
-        return _noSleepMode;
-    }
-
-    public boolean isPassableDoor() {
-        return _passableDoor;
-    }
-
-    public boolean hasSummoner() {
-        return _hasSummoner;
-    }
-
-    public boolean canBeSown() {
-        return _canBeSown;
-    }
-
     public boolean canBeCrt() {
         return _canBeCrt;
-    }
-
-    public boolean isDeathPenalty() {
-        return _isDeathPenalty;
     }
 
     public int getCorpseTime() {
@@ -489,10 +423,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         return _maxSkillChance;
     }
 
-    public double getHitTimeFactor() {
-        return _hitTimeFactor;
-    }
-
     public double getHitTimeFactorSkill() {
         return _hitTimeFactorSkill;
     }
@@ -539,38 +469,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
     public MpRewardAffectType getMpRewardAffectType() {
         return _mpRewardAffectType;
-    }
-
-    /**
-     * @param clanName  clan name to check if it belongs to this NPC template clans.
-     * @param clanNames clan names to check if they belong to this NPC template clans.
-     * @return {@code true} if at least one of the clan names belong to this NPC template clans, {@code false} otherwise.
-     */
-    public boolean isClan(String clanName, String... clanNames) {
-        // Using local variable for the sake of reloading since it can be turned to null.
-        final Set<Integer> clans = _clans;
-
-        if (clans == null) {
-            return false;
-        }
-
-        int clanId = NpcData.getInstance().getClanId("ALL");
-        if (clans.contains(clanId)) {
-            return true;
-        }
-
-        clanId = NpcData.getInstance().getClanId(clanName);
-        if (clans.contains(clanId)) {
-            return true;
-        }
-
-        for (String name : clanNames) {
-            clanId = NpcData.getInstance().getClanId(name);
-            if (clans.contains(clanId)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     /**

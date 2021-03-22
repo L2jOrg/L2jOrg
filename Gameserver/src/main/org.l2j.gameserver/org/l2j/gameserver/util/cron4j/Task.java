@@ -38,24 +38,11 @@ package org.l2j.gameserver.util.cron4j;
  * @since 2.0
  */
 public abstract class Task {
-    /**
-     * The ID for this task. Also used as an instance synchronization lock.
-     */
-    private final Object id = GUIDGenerator.generate();
 
     /**
      * Empty constructor, does nothing.
      */
     public Task() {
-    }
-
-    /**
-     * It returns the ID for this task.
-     *
-     * @return The ID for this task.
-     */
-    Object getId() {
-        return id;
     }
 
     /**

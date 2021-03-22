@@ -208,20 +208,6 @@ public class RecipeData extends GameXmlReader {
     }
 
     /**
-     * Gets the all item ids.
-     *
-     * @return the all item ids
-     */
-    public int[] getAllItemIds() {
-        final int[] idList = new int[_recipes.size()];
-        int i = 0;
-        for (RecipeList rec : _recipes.values()) {
-            idList[i++] = rec.getRecipeId();
-        }
-        return idList;
-    }
-
-    /**
      * Gets the valid recipe list.
      *
      * @param player the player

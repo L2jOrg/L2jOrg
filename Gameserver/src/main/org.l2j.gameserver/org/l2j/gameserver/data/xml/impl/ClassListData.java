@@ -88,15 +88,6 @@ public final class ClassListData extends GameXmlReader {
     }
 
     /**
-     * Gets the class list.
-     *
-     * @return the complete class list.
-     */
-    public Map<ClassId, ClassInfo> getClassList() {
-        return _classData;
-    }
-
-    /**
      * Gets the class info.
      *
      * @param classId the class Id.

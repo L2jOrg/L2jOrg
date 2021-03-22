@@ -67,12 +67,6 @@ public class StatsSet implements IParserAdvUtils {
         merge(other);
     }
 
-    public static StatsSet valueOf(String key, Object value) {
-        final StatsSet set = new StatsSet();
-        set.set(key, value);
-        return set;
-    }
-
     /**
      * Returns the set of values
      *
@@ -186,54 +180,6 @@ public class StatsSet implements IParserAdvUtils {
         }
     }
 
-    public short increaseByte(String key, byte increaseWith) {
-        final byte newValue = (byte) (getByte(key) + increaseWith);
-        set(key, newValue);
-        return newValue;
-    }
-
-    public short increaseByte(String key, byte defaultValue, byte increaseWith) {
-        final byte newValue = (byte) (getByte(key, defaultValue) + increaseWith);
-        set(key, newValue);
-        return newValue;
-    }
-
-    public byte[] getByteArray(String key, String splitOn) {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(splitOn);
-        final Object val = _set.get(key);
-        if (val == null) {
-            throw new IllegalArgumentException("Byte value required, but not specified");
-        }
-        if (val instanceof Number) {
-            return new byte[]
-                    {
-                            ((Number) val).byteValue()
-                    };
-        }
-        int c = 0;
-        final String[] vals = ((String) val).split(splitOn);
-        final byte[] result = new byte[vals.length];
-        for (String v : vals) {
-            try {
-                result[c++] = Byte.parseByte(v);
-            } catch (Exception e) {
-                throw new IllegalArgumentException("Byte value required, but found: " + val);
-            }
-        }
-        return result;
-    }
-
-    public List<Byte> getByteList(String key, String splitOn) {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(splitOn);
-        final List<Byte> result = new ArrayList<>();
-        for (Byte i : getByteArray(key, splitOn)) {
-            result.add(i);
-        }
-        return result;
-    }
-
     @Override
     public short getShort(String key) {
         Objects.requireNonNull(key);
@@ -271,18 +217,6 @@ public class StatsSet implements IParserAdvUtils {
         } catch (Exception e) {
             throw new IllegalArgumentException("Short value required, but found: " + val);
         }
-    }
-
-    public short increaseShort(String key, short increaseWith) {
-        final short newValue = (short) (getShort(key) + increaseWith);
-        set(key, newValue);
-        return newValue;
-    }
-
-    public short increaseShort(String key, short defaultValue, short increaseWith) {
-        final short newValue = (short) (getShort(key, defaultValue) + increaseWith);
-        set(key, newValue);
-        return newValue;
     }
 
     @Override
@@ -330,12 +264,6 @@ public class StatsSet implements IParserAdvUtils {
         return newValue;
     }
 
-    public int increaseInt(String key, int defaultValue, int increaseWith) {
-        final int newValue = getInt(key, defaultValue) + increaseWith;
-        set(key, newValue);
-        return newValue;
-    }
-
     public int[] getIntArray(String key, String splitOn) {
         Objects.requireNonNull(key);
         Objects.requireNonNull(splitOn);
@@ -358,16 +286,6 @@ public class StatsSet implements IParserAdvUtils {
             } catch (Exception e) {
                 throw new IllegalArgumentException("Integer value required, but found: " + val);
             }
-        }
-        return result;
-    }
-
-    public List<Integer> getIntegerList(String key, String splitOn) {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(splitOn);
-        final List<Integer> result = new ArrayList<>();
-        for (int i : getIntArray(key, splitOn)) {
-            result.add(i);
         }
         return result;
     }
@@ -406,18 +324,6 @@ public class StatsSet implements IParserAdvUtils {
         }
     }
 
-    public long increaseLong(String key, long increaseWith) {
-        final long newValue = getLong(key) + increaseWith;
-        set(key, newValue);
-        return newValue;
-    }
-
-    public long increaseLong(String key, long defaultValue, long increaseWith) {
-        final long newValue = getLong(key, defaultValue) + increaseWith;
-        set(key, newValue);
-        return newValue;
-    }
-
     @Override
     public float getFloat(String key) {
         Objects.requireNonNull(key);
@@ -452,18 +358,6 @@ public class StatsSet implements IParserAdvUtils {
         }
     }
 
-    public float increaseFloat(String key, float increaseWith) {
-        final float newValue = getFloat(key) + increaseWith;
-        set(key, newValue);
-        return newValue;
-    }
-
-    public float increaseFloat(String key, float defaultValue, float increaseWith) {
-        final float newValue = getFloat(key, defaultValue) + increaseWith;
-        set(key, newValue);
-        return newValue;
-    }
-
     @Override
     public double getDouble(String key) {
         Objects.requireNonNull(key);
@@ -496,18 +390,6 @@ public class StatsSet implements IParserAdvUtils {
         } catch (Exception e) {
             throw new IllegalArgumentException("Double value required, but found: " + val);
         }
-    }
-
-    public double increaseDouble(String key, double increaseWith) {
-        final double newValue = getDouble(key) + increaseWith;
-        set(key, newValue);
-        return newValue;
-    }
-
-    public double increaseDouble(String key, double defaultValue, double increaseWith) {
-        final double newValue = getDouble(key, defaultValue) + increaseWith;
-        set(key, newValue);
-        return newValue;
     }
 
     @Override
@@ -600,18 +482,6 @@ public class StatsSet implements IParserAdvUtils {
         return (A) obj;
     }
 
-    @SuppressWarnings("unchecked")
-    public final <A> A getObject(String name, Class<A> type, A defaultValue) {
-        Objects.requireNonNull(name);
-        Objects.requireNonNull(type);
-        final Object obj = _set.get(name);
-        if ((obj == null) || !type.isAssignableFrom(obj.getClass())) {
-            return defaultValue;
-        }
-
-        return (A) obj;
-    }
-
     public SkillHolder getSkillHolder(String key) {
         Objects.requireNonNull(key);
         final Object obj = _set.get(key);
@@ -669,11 +539,6 @@ public class StatsSet implements IParserAdvUtils {
             return convertedList;
         }
         return (List<T>) obj;
-    }
-
-    public <T> List<T> getList(String key, Class<T> clazz, List<T> defaultValue) {
-        final List<T> list = getList(key, clazz);
-        return list == null ? defaultValue : list;
     }
 
     public <T extends Enum<T>> EnumSet<T> getStringAsEnumSet(String key, Class<T> enumClass) {
@@ -763,11 +628,6 @@ public class StatsSet implements IParserAdvUtils {
     }
 
     public StatsSet set(String key, byte value) {
-        _set.put(key, value);
-        return this;
-    }
-
-    public StatsSet set(String key, short value) {
         _set.put(key, value);
         return this;
     }

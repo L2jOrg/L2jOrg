@@ -38,32 +38,12 @@ public class EnchantSkillHolder {
         _enchantFailLevel = set.getInt("enchantFailLevel");
     }
 
-    public int getLevel() {
-        return _level;
-    }
-
-    public int getEnchantFailLevel() {
-        return _enchantFailLevel;
-    }
-
-    public void addSp(SkillEnchantType type, long sp) {
-        _sp.put(type, sp);
-    }
-
     public long getSp(SkillEnchantType type) {
         return _sp.getOrDefault(type, 0L);
     }
 
-    public void addChance(SkillEnchantType type, int chance) {
-        _chance.put(type, chance);
-    }
-
     public int getChance(SkillEnchantType type) {
         return _chance.getOrDefault(type, 100);
-    }
-
-    public void addRequiredItem(SkillEnchantType type, ItemHolder item) {
-        _requiredItems.computeIfAbsent(type, k -> new HashSet<>()).add(item);
     }
 
     public Set<ItemHolder> getRequiredItems(SkillEnchantType type) {

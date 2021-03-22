@@ -64,10 +64,6 @@ public final class GrandBoss extends Monster {
         return false;
     }
 
-    public void setUseRaidCurse(boolean val) {
-        _useRaidCurse = val;
-    }
-
     @Override
     public boolean giveRaidCurse() {
         return _useRaidCurse;

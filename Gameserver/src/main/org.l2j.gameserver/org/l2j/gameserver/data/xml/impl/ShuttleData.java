@@ -159,16 +159,6 @@ public final class ShuttleData extends GameXmlReader {
         }
     }
 
-    public Shuttle getShuttle(int id) {
-        for (Shuttle shuttle : _shuttleInstances.values()) {
-            if ((shuttle.getObjectId() == id) || (shuttle.getId() == id)) {
-                return shuttle;
-            }
-        }
-
-        return null;
-    }
-
     public static ShuttleData getInstance() {
         return Singleton.INSTANCE;
     }

@@ -357,39 +357,6 @@ public final class SellBuffsManager extends GameXmlReader {
         return player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skill.getId())).findFirst().orElse(null) != null;
     }
 
-    public boolean canStartSellBuffs(Player player) {
-        if (player.isAlikeDead()) {
-            player.sendMessage("You can't sell buffs in fake death!");
-            return false;
-        } else if (Olympiad.getInstance().isRegistered(player)) {
-            player.sendMessage("You can't sell buffs with Olympiad status!");
-            return false;
-        } else if (player.isOnEvent()) // custom event message
-        {
-            player.sendMessage("You can't sell buffs while registered in an event!");
-            return false;
-        } else if (player.getReputation() < 0) {
-            player.sendMessage("You can't sell buffs in Chaotic state!");
-            return false;
-        } else if (player.isInDuel()) {
-            player.sendMessage("You can't sell buffs in Duel state!");
-            return false;
-        } else if (player.isFishing()) {
-            player.sendMessage("You can't sell buffs while fishing.");
-            return false;
-        } else if (player.isMounted() || player.isFlyingMounted() || player.isFlying()) {
-            player.sendMessage("You can't sell buffs in Mount state!");
-            return false;
-        } else if (player.isTransformed()) {
-            player.sendMessage("You can't sell buffs in Transform state!");
-            return false;
-        } else if (player.isInsideZone(ZoneType.NO_STORE) || !player.isInsideZone(ZoneType.PEACE) || player.isJailed()) {
-            player.sendMessage("You can't sell buffs here!");
-            return false;
-        }
-        return true;
-    }
-
     public static SellBuffsManager getInstance() {
         return Singleton.INSTANCE;
     }

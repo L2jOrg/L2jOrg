@@ -41,10 +41,6 @@ public class SummonRequest extends AbstractRequest {
         return _target;
     }
 
-    public Skill getSkill() {
-        return _skill;
-    }
-
     @Override
     public boolean isUsingItem(int objectId) {
         return false;

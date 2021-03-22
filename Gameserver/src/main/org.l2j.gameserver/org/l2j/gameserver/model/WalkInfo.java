@@ -165,20 +165,6 @@ public class WalkInfo {
     }
 
     /**
-     * @return {@code long} last action time used only for debugging.
-     */
-    public long getLastAction() {
-        return _lastActionTime;
-    }
-
-    /**
-     * @param val
-     */
-    public void setLastAction(long val) {
-        _lastActionTime = val;
-    }
-
-    /**
      * @return walking check task.
      */
     public ScheduledFuture<?> getWalkCheckTask() {

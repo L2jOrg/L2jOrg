@@ -261,10 +261,6 @@ public final class ClanHall extends AbstractResidence {
         return lease;
     }
 
-    public int getDeposit() {
-        return deposit;
-    }
-
     @Override
     public String toString() {
         return (getClass().getSimpleName() + ":" + getName() + "[" + getId() + "]");

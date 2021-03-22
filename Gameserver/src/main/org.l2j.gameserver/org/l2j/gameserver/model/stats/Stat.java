@@ -300,12 +300,12 @@ public enum Stat {
     private boolean hasDefaultFinalizer ;
 
     Stat() {
-        this(Stat::defaultValue, MathUtil::add, MathUtil::add);
+        this(Stat::defaultValue, Double::sum, Double::sum);
         hasDefaultFinalizer = true;
     }
 
     Stat(IStatsFunction valueFinalizer) {
-        this(valueFinalizer, MathUtil::add, MathUtil::add);
+        this(valueFinalizer, Double::sum, Double::sum);
 
     }
 

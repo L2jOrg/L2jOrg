@@ -41,10 +41,6 @@ public class DropProtection implements Runnable {
         _task = null;
     }
 
-    public boolean isProtected() {
-        return _isProtected;
-    }
-
     public Creature getOwner() {
         return _owner;
     }

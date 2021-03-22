@@ -90,10 +90,6 @@ public class MatchingRoomManager {
         _rooms.getOrDefault(room.getRoomType(), Collections.emptyMap()).remove(room.getId());
     }
 
-    public Map<Integer, MatchingRoom> getPartyMathchingRooms() {
-        return _rooms.get(MatchingRoomType.PARTY);
-    }
-
     public List<MatchingRoom> getPartyMathchingRooms(int location, PartyMatchingRoomLevelType type, int requestorLevel) {
         //@formatter:off
         return _rooms.getOrDefault(MatchingRoomType.PARTY, Collections.emptyMap()).values().stream()
@@ -101,10 +97,6 @@ public class MatchingRoomManager {
                 .filter(room -> (type == PartyMatchingRoomLevelType.ALL) || ((room.getMinLvl() >= requestorLevel) && (room.getMaxLvl() <= requestorLevel)))
                 .collect(Collectors.toList());
         //@formatter:on
-    }
-
-    public Map<Integer, MatchingRoom> getCCMathchingRooms() {
-        return _rooms.get(MatchingRoomType.COMMAND_CHANNEL);
     }
 
     public List<MatchingRoom> getCCMathchingRooms(int location, int level) {

@@ -109,10 +109,6 @@ public class RaidBoss extends Monster {
         return getSettings(CharacterSettings.class).raidBossUseVitality();
     }
 
-    public void setUseRaidCurse(boolean val) {
-        _useRaidCurse = val;
-    }
-
     @Override
     public boolean giveRaidCurse() {
         return _useRaidCurse;

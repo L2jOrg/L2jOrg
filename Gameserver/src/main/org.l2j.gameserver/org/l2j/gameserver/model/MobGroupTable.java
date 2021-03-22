@@ -43,20 +43,6 @@ public class MobGroupTable {
         return _groupMap.get(groupKey);
     }
 
-    public int getGroupCount() {
-        return _groupMap.size();
-    }
-
-    public MobGroup getGroupForMob(ControllableMob mobInst) {
-        for (MobGroup mobGroup : _groupMap.values()) {
-            if (mobGroup.isGroupMember(mobInst)) {
-                return mobGroup;
-            }
-        }
-
-        return null;
-    }
-
     public MobGroup[] getGroups() {
         return _groupMap.values().toArray(new MobGroup[_groupMap.size()]);
     }

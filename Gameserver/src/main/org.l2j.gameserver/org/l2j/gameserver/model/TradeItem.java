@@ -145,10 +145,6 @@ public class TradeItem {
         return _price;
     }
 
-    public void setPrice(long price) {
-        _price = price;
-    }
-
     public int[] getEnchantOptions() {
         return enchantOptions;
     }
