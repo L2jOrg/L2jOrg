@@ -24,9 +24,9 @@ import org.l2j.gameserver.network.authcomm.SendablePacket;
 
 public class ChangeAccessLevel extends SendablePacket
 {
-	private String account;
-	private int level;
-	private int banExpire;
+	private final String account;
+	private final int level;
+	private final int banExpire;
 
 	public ChangeAccessLevel(String account, int level, int banExpire)
 	{

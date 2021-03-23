@@ -39,7 +39,7 @@ public final class DispelBySlotMyself extends AbstractEffect {
 	private final Set<AbnormalType> dispelAbnormals;
 	
 	private DispelBySlotMyself(StatsSet params) {
-		dispelAbnormals = Arrays.stream(params.getString("abnormals").split(" ")).map(AbnormalType::valueOf).collect(Collectors.toSet());;
+		dispelAbnormals = Arrays.stream(params.getString("abnormals").split(" ")).map(AbnormalType::valueOf).collect(Collectors.toSet());
 	}
 	
 	@Override

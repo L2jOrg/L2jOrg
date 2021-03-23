@@ -44,7 +44,7 @@ public class RequestPackageSend extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPackageSend.class);
     private static final int BATCH_LENGTH = 12; // length of the one item
 
-    private ItemHolder _items[] = null;
+    private ItemHolder[] _items = null;
     private int _objectId;
 
     @Override

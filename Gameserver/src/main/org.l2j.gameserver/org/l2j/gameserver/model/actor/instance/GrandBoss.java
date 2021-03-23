@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
  */
 public final class GrandBoss extends Monster {
     private static final int BOSS_MAINTENANCE_INTERVAL = 10000;
-    private boolean _useRaidCurse = true;
+    private final boolean _useRaidCurse = true;
 
     /**
      * Constructor for GrandBoss. This represent all grandbosses.

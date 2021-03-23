@@ -57,7 +57,7 @@ public class VitalStatModify extends AbstractStatEffect {
             case MAX_CP -> effected.setCurrentCp(effected.getCurrentCp() + power);
             case MAX_HP -> effected.setCurrentHp(effected.getCurrentHp() + power);
             case MAX_MP -> effected.setCurrentMp(effected.getCurrentMp() + power);
-        };
+        }
     }
 
     private void instantPercent(Creature effected) {

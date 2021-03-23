@@ -71,7 +71,7 @@ public abstract class Summon extends Playable {
     private Player owner;
     private boolean _follow = true;
     private boolean _previousFollowStatus = true;
-    private int _summonPoints = 0;
+    private final int _summonPoints = 0;
     // @formatter:on
 
     public Summon(NpcTemplate template, Player owner) {

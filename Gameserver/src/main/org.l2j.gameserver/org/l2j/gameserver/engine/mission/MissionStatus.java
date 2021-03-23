@@ -26,7 +26,7 @@ public enum MissionStatus {
     NOT_AVAILABLE(2),
     COMPLETED(3);
 
-    private int _clientId;
+    private final int _clientId;
 
     MissionStatus(int clientId) {
         _clientId = clientId;

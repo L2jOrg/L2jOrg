@@ -583,11 +583,11 @@ public class WatermelonNinja extends LongTimeEvent
 				{
 					if (drop[1] > 6000)
 					{
-						((Monster) mob).dropItem(player, drop[1], 1);
+						mob.dropItem(player, drop[1], 1);
 					}
 					else
 					{
-						((Monster) mob).dropItem(player, drop[1], 1);
+						mob.dropItem(player, drop[1], 1);
 					}
 					continue;
 				}

@@ -35,8 +35,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 /**
@@ -44,7 +42,7 @@ import org.slf4j.LoggerFactory;
  */
 public class Doppelganger extends Npc {
 
-    private boolean _copySummonerEffects = true;
+    private final boolean _copySummonerEffects = true;
 
     public Doppelganger(NpcTemplate template, Player owner) {
         super(template);

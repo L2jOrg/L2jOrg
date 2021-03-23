@@ -30,7 +30,7 @@ public enum SpecialItemType {
     RAIDBOSS_POINTS(-500, "Raid Points");
 
     private final String description;
-    private int clientId;
+    private final int clientId;
 
     SpecialItemType(int clientId, String description) {
         this.clientId = clientId;

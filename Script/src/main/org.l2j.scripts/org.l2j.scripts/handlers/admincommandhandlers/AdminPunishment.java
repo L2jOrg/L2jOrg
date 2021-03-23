@@ -68,7 +68,7 @@ public class AdminPunishment implements IAdminCommandHandler
 		"admin_unjail"
 	};
 	
-	private static SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+	private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 	
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar)

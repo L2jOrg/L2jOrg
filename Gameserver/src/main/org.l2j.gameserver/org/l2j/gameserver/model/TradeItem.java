@@ -40,7 +40,7 @@ public class TradeItem {
     private EnsoulOption soulCrystalSpecialOption;
     private final int[] enchantOptions;
 
-    private long _price;
+    private final long _price;
 
     private long _storeCount;
     private int _augmentationOption1 = -1;

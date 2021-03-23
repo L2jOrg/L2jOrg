@@ -32,7 +32,7 @@ public abstract class ManagedScript {
     private static final Logger LOGGER = LoggerFactory.getLogger(ManagedScript.class);
 
     private final Path _scriptFile;
-    private long _lastLoadTime;
+    private final long _lastLoadTime;
     private boolean _isActive;
 
     public ManagedScript() {

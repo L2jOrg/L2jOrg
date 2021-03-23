@@ -446,7 +446,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      */
     private boolean hasRemoveBuffException(Skill skill) {
         final boolean containsSkill = removeBuffExceptions.contains(skill.getId());
-        return (removeBuffType == InstanceRemoveBuffType.BLACKLIST) ? containsSkill : !containsSkill;
+        return (removeBuffType == InstanceRemoveBuffType.BLACKLIST) == containsSkill;
     }
 
     /**

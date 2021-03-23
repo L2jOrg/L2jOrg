@@ -132,7 +132,7 @@ public class FourSepulchers extends AbstractNpcAI
 		MANAGER_ZONES.put(JUDGE_MANAGER, JUDGE_ZONE);
 	}
 	// Spawns
-	private static List<int[]> ROOM_SPAWN_DATA = new ArrayList<>();
+	private static final List<int[]> ROOM_SPAWN_DATA = new ArrayList<>();
 	private static final Map<Integer, List<Npc>> STORED_MONSTER_SPAWNS = new HashMap<>();
 	static
 	{
@@ -537,7 +537,7 @@ public class FourSepulchers extends AbstractNpcAI
 		
 		// Delete any existing spawns
 		ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).forEachCreature(creature -> {
-			if (GameUtils.isMonster(creature) || creature.isRaid() || (GameUtils.isNpc(creature) && ((((Npc) creature).getId() == MYSTERIOUS_CHEST) || (((Npc) creature).getId() == KEY_CHEST) || (((Npc) creature).getId() == TELEPORTER))))
+			if (GameUtils.isMonster(creature) || creature.isRaid() || (GameUtils.isNpc(creature) && ((creature.getId() == MYSTERIOUS_CHEST) || (creature.getId() == KEY_CHEST) || (creature.getId() == TELEPORTER))))
 			{
 				creature.deleteMe();
 			}

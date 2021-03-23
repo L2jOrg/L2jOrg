@@ -32,7 +32,7 @@ import org.l2j.scripts.ai.AbstractNpcAI;
 public final class ElfHumanClericChange2 extends AbstractNpcAI
 {
 	// NPCs
-	private static int[] NPCS =
+	private static final int[] NPCS =
 	{
 		30120, // Maximilian
 		30191, // Hollint

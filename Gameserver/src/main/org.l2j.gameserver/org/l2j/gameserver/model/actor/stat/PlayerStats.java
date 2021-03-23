@@ -60,7 +60,7 @@ public class PlayerStats extends PlayableStats {
      */
     private final AtomicInteger _talismanSlots = new AtomicInteger();
     private long _startingXp;
-    private boolean _cloakSlot = false;
+    private final boolean _cloakSlot = false;
     private int _vitalityPoints = 0;
 
     public PlayerStats(Player activeChar) {

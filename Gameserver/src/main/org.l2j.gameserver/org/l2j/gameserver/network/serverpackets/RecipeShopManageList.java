@@ -30,7 +30,7 @@ import java.util.Iterator;
 public class RecipeShopManageList extends ServerPacket {
     private final Player _seller;
     private final boolean _isDwarven;
-    private RecipeList[] _recipes;
+    private final RecipeList[] _recipes;
 
     public RecipeShopManageList(Player seller, boolean isDwarven) {
         _seller = seller;

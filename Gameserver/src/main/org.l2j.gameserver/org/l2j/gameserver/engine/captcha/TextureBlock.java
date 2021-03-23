@@ -23,8 +23,8 @@ package org.l2j.gameserver.engine.captcha;
  */
 class TextureBlock {
 
-    private ARGB[] colors = new ARGB[16];
-    private ARGB[] palette = new ARGB[4];
+    private final ARGB[] colors = new ARGB[16];
+    private final ARGB[] palette = new ARGB[4];
     private int minColorIndex;
     private int maxColorIndex;
     private short minColor;

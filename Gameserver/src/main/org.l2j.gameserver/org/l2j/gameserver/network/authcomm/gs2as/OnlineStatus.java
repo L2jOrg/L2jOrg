@@ -24,7 +24,7 @@ import org.l2j.gameserver.network.authcomm.SendablePacket;
 
 public class OnlineStatus extends SendablePacket
 {
-	private boolean _online;
+	private final boolean _online;
 
 	public OnlineStatus(boolean online)
 	{

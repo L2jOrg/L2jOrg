@@ -412,7 +412,7 @@ public class CreatureStats {
     public AttributeType getAttackElement() {
         // temp fix starts
         int tempVal = 0;
-        final int stats[] =
+        final int[] stats =
                 {
                         getAttackElementValue(AttributeType.FIRE),
                         getAttackElementValue(AttributeType.WATER),

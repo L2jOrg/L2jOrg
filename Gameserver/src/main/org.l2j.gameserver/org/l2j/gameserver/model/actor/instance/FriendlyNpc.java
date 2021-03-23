@@ -39,7 +39,7 @@ import org.l2j.gameserver.util.GameUtils;
  */
 public class FriendlyNpc extends Attackable {
     private boolean _isAutoAttackable = true;
-    private int _baseHateAmount = 1;
+    private final int _baseHateAmount = 1;
 
     public FriendlyNpc(NpcTemplate template) {
         super(template);

@@ -35,7 +35,7 @@ import static org.l2j.commons.util.Util.isInteger;
 public final class DarkElfChange2 extends AbstractNpcAI
 {
 	// NPCs
-	private static int[] NPCS =
+	private static final int[] NPCS =
 	{
 		30195, // Brecson
 		30699, // Medown
@@ -45,21 +45,21 @@ public final class DarkElfChange2 extends AbstractNpcAI
 		31285, // Samael
 	};
 	// Items
-	private static int MARK_OF_CHALLENGER = 2627;
-	private static int MARK_OF_DUTY = 2633;
-	private static int MARK_OF_SEEKER = 2673;
-	private static int MARK_OF_SCHOLAR = 2674;
-	private static int MARK_OF_PILGRIM = 2721;
-	private static int MARK_OF_DUELIST = 2762;
-	private static int MARK_OF_SEARCHER = 2809;
-	private static int MARK_OF_REFORMER = 2821;
-	private static int MARK_OF_MAGUS = 2840;
-	private static int MARK_OF_FATE = 3172;
-	private static int MARK_OF_SAGITTARIUS = 3293;
-	private static int MARK_OF_WITCHCRAFT = 3307;
-	private static int MARK_OF_SUMMONER = 3336;
+	private static final int MARK_OF_CHALLENGER = 2627;
+	private static final int MARK_OF_DUTY = 2633;
+	private static final int MARK_OF_SEEKER = 2673;
+	private static final int MARK_OF_SCHOLAR = 2674;
+	private static final int MARK_OF_PILGRIM = 2721;
+	private static final int MARK_OF_DUELIST = 2762;
+	private static final int MARK_OF_SEARCHER = 2809;
+	private static final int MARK_OF_REFORMER = 2821;
+	private static final int MARK_OF_MAGUS = 2840;
+	private static final int MARK_OF_FATE = 3172;
+	private static final int MARK_OF_SAGITTARIUS = 3293;
+	private static final int MARK_OF_WITCHCRAFT = 3307;
+	private static final int MARK_OF_SUMMONER = 3336;
 	// @formatter:off
-	private static int[][] CLASSES = 
+	private static final int[][] CLASSES =
 	{
 		{ 33, 32, 26, 27, 28, 29, MARK_OF_DUTY, MARK_OF_FATE, MARK_OF_WITCHCRAFT }, // SK
 		{ 34, 32, 30, 31, 32, 33, MARK_OF_CHALLENGER, MARK_OF_FATE, MARK_OF_DUELIST }, // BD

@@ -25,8 +25,8 @@ import org.l2j.gameserver.model.base.PlayerState;
  */
 public class ConditionPlayerChaotic extends ConditionPlayerState {
 
-    private static ConditionPlayerChaotic CHAOTIC = new ConditionPlayerChaotic(true);
-    private static ConditionPlayerChaotic NO_CHAOTIC = new ConditionPlayerChaotic(false);
+    private static final ConditionPlayerChaotic CHAOTIC = new ConditionPlayerChaotic(true);
+    private static final ConditionPlayerChaotic NO_CHAOTIC = new ConditionPlayerChaotic(false);
 
     /**
      * Instantiates a new condition player state.

@@ -65,10 +65,6 @@ public class ArmorsetSkillHolder extends SkillHolder {
         }
 
         // Player already knows that skill
-        if (player.getSkillLevel(getSkillId()) == getLevel()) {
-            return false;
-        }
-
-        return true;
+        return player.getSkillLevel(getSkillId()) != getLevel();
     }
 }

@@ -43,7 +43,7 @@ import static org.l2j.gameserver.util.GameUtils.isDoor;
 public class AdminDoorControl implements IAdminCommandHandler
 {
 	private static final Logger LOGGER = LoggerFactory.getLogger(AdminDoorControl.class);
-	private static DoorDataManager _doorTable = DoorDataManager.getInstance();
+	private static final DoorDataManager _doorTable = DoorDataManager.getInstance();
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_open",

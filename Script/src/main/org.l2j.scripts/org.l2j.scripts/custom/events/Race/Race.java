@@ -313,10 +313,7 @@ public final class Race extends Event
 		else if (event.equalsIgnoreCase("quit"))
 		{
 			player.untransform();
-			if (_players.contains(player))
-			{
-				_players.remove(player);
-			}
+			_players.remove(player);
 			return "900103-quit.htm";
 		}
 		else if (event.equalsIgnoreCase("finish"))

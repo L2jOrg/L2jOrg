@@ -99,7 +99,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int hitTime;
     private double hitCancelTime;
 
-    private int reuseDelayGroup = -1;
+    private final int reuseDelayGroup = -1;
     private boolean staticReuse;
     private long reuseHashCode;
     private int reuseDelay;

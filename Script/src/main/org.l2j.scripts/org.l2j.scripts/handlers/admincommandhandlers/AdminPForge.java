@@ -99,12 +99,7 @@ public final class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				if (i > 0)
-				{
-					return true;
-				}
-				
-				return false;
+				return i > 0;
 			}
 			
 			if (opCodeLong < 0)

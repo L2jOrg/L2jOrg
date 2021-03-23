@@ -589,10 +589,10 @@ public class MerrySquashmas extends LongTimeEvent
 				{
 					if (ItemEngine.getInstance().getTemplate(drop[1]).getCrystalType() != CrystalType.NONE)
 					{
-						((Monster) mob).dropItem(player, drop[1], 1);
+						mob.dropItem(player, drop[1], 1);
 						break;
 					}
-					((Monster) mob).dropItem(player, drop[1], (Rnd.get(1, 3)));
+					mob.dropItem(player, drop[1], (Rnd.get(1, 3)));
 					if (Rnd.nextBoolean())
 					{
 						break;

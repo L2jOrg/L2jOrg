@@ -58,7 +58,6 @@ public final class TamedBeast extends FeedableBeast {
     private int _homeZ;
     private Future<?> _buffTask = null;
     private Future<?> _durationCheckTask = null;
-    private Collection<Skill> _beastSkills = null;
 
     public TamedBeast(int npcTemplateId) {
         super(NpcData.getInstance().getTemplate(npcTemplateId));
