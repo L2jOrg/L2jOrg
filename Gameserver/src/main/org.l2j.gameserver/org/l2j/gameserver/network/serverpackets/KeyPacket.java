@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.ServerType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -48,7 +49,7 @@ public final class KeyPacket extends ServerPacket {
         buffer.writeInt(serverSettings.serverId());
         buffer.writeByte(false); // merged server
         buffer.writeInt(0x00); // obfuscation key
-        buffer.writeByte((serverSettings.type() & CLASSIC.getMask()) != 0); // isClassic
+        buffer.writeByte(ServerType.getClientType(serverSettings.type()));
         buffer.writeByte(0x00); // queued ?
     }
 
