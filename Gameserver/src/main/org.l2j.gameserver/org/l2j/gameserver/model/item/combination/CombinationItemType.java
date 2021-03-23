@@ -24,5 +24,5 @@ package org.l2j.gameserver.model.item.combination;
  */
 public enum CombinationItemType {
     ON_SUCCESS,
-    ON_FAILURE;
+    ON_FAILURE
 }

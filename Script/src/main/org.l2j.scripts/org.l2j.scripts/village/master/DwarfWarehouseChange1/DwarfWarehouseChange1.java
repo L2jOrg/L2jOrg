@@ -32,7 +32,7 @@ import org.l2j.scripts.ai.AbstractNpcAI;
 public final class DwarfWarehouseChange1 extends AbstractNpcAI
 {
 	// NPCs
-	private static int[] NPCS =
+	private static final int[] NPCS =
 	{
 		30498, // Moke
 		30503, // Rikadio

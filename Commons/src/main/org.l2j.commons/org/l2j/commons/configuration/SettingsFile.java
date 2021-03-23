@@ -84,11 +84,6 @@ public final class SettingsFile extends Properties {
         return Boolean.parseBoolean(value);
     }
 
-    public List<String> getStringList(String key, String defaultValue, String delimiter) {
-        String[] values = getProperty(key, defaultValue).split(delimiter);
-        return Stream.of(values).filter(Util::isNotEmpty).collect(Collectors.toList());
-    }
-
     public String[] getStringArray(String key) {
         String value = getProperty(key);
         if(isNullOrEmpty(value)) {
@@ -99,39 +94,6 @@ public final class SettingsFile extends Properties {
             values[i] = values[i].trim();
         }
         return values;
-    }
-
-    public Map<Integer, Integer> getIntegerMap(String key, String entryDelimiter, String valueDelimiter) {
-        String[] values = getProperty(key, "").split(entryDelimiter);
-        Map<Integer, Integer> map = new HashMap<>();
-
-        Stream.of(values).filter(Util::isNotEmpty).forEach(v -> putInMap(key, valueDelimiter, map, v));
-        return map;
-    }
-
-    private void putInMap(String key, String valueDelimiter, Map<Integer, Integer> map, String entry) {
-        try {
-            String[] value = entry.split(valueDelimiter);
-            int mapKey = Integer.parseInt(value[0].trim());
-            int mapValue = Integer.parseInt(value[1].trim());
-            map.put(mapKey, mapValue);
-        } catch (Exception e) {
-            LOGGER.warn("Error getting property {} on entry {}: {}", key, entry, e.getMessage());
-        }
-    }
-
-    public List<Integer> getIntegerList(String key, String delimiter) {
-        String[] values = getProperty(key).split(delimiter);
-        List<Integer> list = new ArrayList<>(values.length);
-        Stream.of(values).filter(Util::isNotEmpty).forEach(v -> {
-            try {
-                int value = Integer.parseInt(v.trim());
-                list.add(value);
-            } catch (Exception e) {
-                LOGGER.warn("Error getting property {} on value {} : {}", key, v, e.getMessage());
-            }
-        });
-        return list;
     }
 
     public IntSet getIntSet(String key, String delimiter) {

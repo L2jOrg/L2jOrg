@@ -32,7 +32,7 @@ import org.l2j.scripts.ai.AbstractNpcAI;
 public final class ElfHumanWizardChange2 extends AbstractNpcAI
 {
 	// NPCs
-	private static int[] NPCS =
+	private static final int[] NPCS =
 	{
 		30115, // Jurek
 		30174, // Arkenias

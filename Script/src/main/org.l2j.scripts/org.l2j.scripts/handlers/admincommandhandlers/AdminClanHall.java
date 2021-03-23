@@ -59,7 +59,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
 		
-		if (actualCommand.toLowerCase().equals("admin_clanhall"))
+		if (actualCommand.equalsIgnoreCase("admin_clanhall"))
 		{
 			processBypass(activeChar, new BypassParser(command));
 		}

@@ -492,7 +492,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
             final String schemeName = st.nextToken();
             final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
-            if ((schemes != null) && schemes.containsKey(schemeName)) {
+            if ((schemes != null)) {
                 schemes.remove(schemeName);
             }
 

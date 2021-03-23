@@ -55,7 +55,7 @@ public final class Trap extends Npc {
     private final int _lifeTime;
     private final List<Integer> _playersWhoDetectedMe = new ArrayList<>();
     private final SkillHolder _skill;
-    private boolean _hasLifeTime;
+    private final boolean _hasLifeTime;
     private boolean _isInArena = false;
     private boolean _isTriggered;
     private Player _owner;
@@ -139,10 +139,7 @@ public final class Trap extends Npc {
             return true;
         }
 
-        if (_owner.isInParty() && cha.isInParty() && (_owner.getParty().getLeaderObjectId() == cha.getParty().getLeaderObjectId())) {
-            return true;
-        }
-        return false;
+        return _owner.isInParty() && cha.isInParty() && (_owner.getParty().getLeaderObjectId() == cha.getParty().getLeaderObjectId());
     }
 
     @Override

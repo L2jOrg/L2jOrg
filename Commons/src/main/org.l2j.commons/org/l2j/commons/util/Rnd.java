@@ -129,15 +129,6 @@ public final class Rnd {
 
 
     /**
-     * Generates random bytes and places them into a user-supplied byte array. The number of random bytes produced is equal to the length of the byte array.
-     *
-     * @param bytes the byte array to fill with random bytes.
-     */
-    public static void nextBytes(byte[] bytes) {
-        rnd().nextBytes(bytes);
-    }
-
-    /**
      * get a random chance <br>
      *
      * @param chance in percent from 0 to 100

@@ -43,7 +43,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class BlockAction extends AbstractEffect {
 
-	private IntSet blockedActions;
+	private final IntSet blockedActions;
 	
 	private BlockAction(StatsSet params) {
 		blockedActions = StreamUtil.collectToSet(Arrays.stream(params.getString("actions").split(" ")).mapToInt(Integer::parseInt));

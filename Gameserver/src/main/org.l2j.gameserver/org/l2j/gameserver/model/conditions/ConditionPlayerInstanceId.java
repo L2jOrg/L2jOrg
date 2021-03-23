@@ -50,6 +50,6 @@ public class ConditionPlayerInstanceId extends Condition {
         }
 
         final Instance instance = player.getInstanceWorld();
-        return (instance == null) ? false : _instanceIds.contains(instance.getTemplateId());
+        return instance != null && _instanceIds.contains(instance.getTemplateId());
     }
 }

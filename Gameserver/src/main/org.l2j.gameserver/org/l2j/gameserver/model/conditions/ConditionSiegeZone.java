@@ -73,22 +73,14 @@ public final class ConditionSiegeZone extends Condition {
         final Player player = (Player) activeChar;
 
         if (((castle == null) || (castle.getId() <= 0))) {
-            if ((value & COND_NOT_ZONE) != 0) {
-                return true;
-            }
+            return (value & COND_NOT_ZONE) != 0;
         } else if (!castle.getZone().isActive()) {
-            if ((value & COND_NOT_ZONE) != 0) {
-                return true;
-            }
+            return (value & COND_NOT_ZONE) != 0;
         } else if (((value & COND_CAST_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(castle.getId()) && (player.getSiegeState() == 1)) {
             return true;
         } else if (((value & COND_CAST_DEFEND) != 0) && player.isRegisteredOnThisSiegeField(castle.getId()) && (player.getSiegeState() == 2)) {
             return true;
-        } else if (((value & COND_CAST_NEUTRAL) != 0) && (player.getSiegeState() == 0)) {
-            return true;
-        }
-
-        return false;
+        } else return ((value & COND_CAST_NEUTRAL) != 0) && (player.getSiegeState() == 0);
     }
 
     @Override

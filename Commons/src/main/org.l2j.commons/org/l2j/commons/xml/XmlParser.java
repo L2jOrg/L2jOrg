@@ -48,12 +48,6 @@ public class XmlParser {
         return node.getNodeType() == Node.ELEMENT_NODE;
     }
 
-    /**
-     * @return {@code true} if the node is an element type, {@code false} otherwise
-     */
-    protected static boolean isText(Node node) {
-        return node.getNodeType() == Node.TEXT_NODE;
-    }
 
     /**
      * Parses a boolean value.
@@ -171,18 +165,6 @@ public class XmlParser {
     public short parseShort(NamedNodeMap attrs, String name)
     {
         return parseShort(attrs.getNamedItem(name));
-    }
-
-    /**
-     * Parses a short value.
-     * @param attrs the attributes
-     * @param name the name of the attribute to parse
-     * @param defaultValue the default value
-     * @return if the node is not null, the value of the parsed node, otherwise the default value
-     */
-    public short parseShort(NamedNodeMap attrs, String name, Short defaultValue)
-    {
-        return parseShort(attrs.getNamedItem(name), defaultValue);
     }
 
     /**

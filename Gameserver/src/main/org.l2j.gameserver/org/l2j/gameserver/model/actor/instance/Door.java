@@ -58,9 +58,9 @@ import static org.l2j.commons.util.Util.falseIfNullOrElse;
 public final class Door extends Creature {
     private static final Logger LOGGER = LoggerFactory.getLogger(Door.class);
     boolean open;
-    private boolean _isAttackableDoor;
-    private boolean inverted;
-    private int _meshindex = 1;
+    private final boolean _isAttackableDoor;
+    private final boolean inverted;
+    private final int _meshindex = 1;
     private Future<?> _autoCloseTask;
 
     public Door(DoorTemplate template) {

@@ -224,7 +224,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 						continue;
 					}
 					
-					if (((((Creature) obj).getZ() < (npc.getZ() - 100)) && (((Creature) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+					if (((obj.getZ() < (npc.getZ() - 100)) && (obj.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
 					{
 						continue;
 					}

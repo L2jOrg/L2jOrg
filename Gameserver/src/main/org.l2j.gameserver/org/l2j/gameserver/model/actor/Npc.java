@@ -120,10 +120,10 @@ public class Npc extends Creature {
      */
     private boolean _isRandomAnimationEnabled = true;
     private boolean _isRandomWalkingEnabled = true;
-    private boolean _isTalkable = getTemplate().isTalkable();
+    private final boolean _isTalkable = getTemplate().isTalkable();
     private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
     private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
-    private int _currentEnchant; // normally this shouldn't change from the template, but there exist exceptions
+    private final int _currentEnchant; // normally this shouldn't change from the template, but there exist exceptions
     private double _currentCollisionHeight; // used for npc grow effect skills
     private double _currentCollisionRadius; // used for npc grow effect skills
 
@@ -428,10 +428,7 @@ public class Npc extends Creature {
             return false;
         } else if (player.getInstanceWorld() != getInstanceWorld()) {
             return false;
-        } else if (_isBusy) {
-            return false;
-        }
-        return true;
+        } else return !_isBusy;
     }
 
     /**

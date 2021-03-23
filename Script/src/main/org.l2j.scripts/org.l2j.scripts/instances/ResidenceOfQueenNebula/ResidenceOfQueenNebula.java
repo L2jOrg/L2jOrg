@@ -46,12 +46,12 @@ public class ResidenceOfQueenNebula extends AbstractInstance
     private static final int TEMPLATE_ID = 196;
     // Skills
     private static final int AQUA_RAGE = 50036;
-    private static SkillHolder AQUA_RAGE_1 = new SkillHolder(AQUA_RAGE, 1);
-    private static SkillHolder AQUA_RAGE_2 = new SkillHolder(AQUA_RAGE, 2);
-    private static SkillHolder AQUA_RAGE_3 = new SkillHolder(AQUA_RAGE, 3);
-    private static SkillHolder AQUA_RAGE_4 = new SkillHolder(AQUA_RAGE, 4);
-    private static SkillHolder AQUA_RAGE_5 = new SkillHolder(AQUA_RAGE, 5);
-    private static SkillHolder AQUA_SUMMON = new SkillHolder(50037, 1);
+    private static final SkillHolder AQUA_RAGE_1 = new SkillHolder(AQUA_RAGE, 1);
+    private static final SkillHolder AQUA_RAGE_2 = new SkillHolder(AQUA_RAGE, 2);
+    private static final SkillHolder AQUA_RAGE_3 = new SkillHolder(AQUA_RAGE, 3);
+    private static final SkillHolder AQUA_RAGE_4 = new SkillHolder(AQUA_RAGE, 4);
+    private static final SkillHolder AQUA_RAGE_5 = new SkillHolder(AQUA_RAGE, 5);
+    private static final SkillHolder AQUA_SUMMON = new SkillHolder(50037, 1);
 
     private ResidenceOfQueenNebula()
     {

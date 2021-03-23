@@ -32,7 +32,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  */
 public class Attachment extends ItemContainer {
     private final int _ownerId;
-    private int mailId;
+    private final int mailId;
 
     public Attachment(int objectId, int mailId) {
         _ownerId = objectId;

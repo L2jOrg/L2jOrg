@@ -572,7 +572,7 @@ public enum AbnormalType {
 	ISHKA_EFFECT(-1),
 	TRANSFORM_EFFECT(-1);
 
-    private int _clientId;
+    private final int _clientId;
 
     AbnormalType(int clientId) {
         _clientId = clientId;

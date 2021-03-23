@@ -186,7 +186,7 @@ public enum ClassId implements IIdentifiable {
      **/
     private final Set<ClassId> _nextClassIds = new HashSet<>(1);
 
-    private static IntMap<ClassId> classIdMap = new HashIntMap<>();
+    private static final IntMap<ClassId> classIdMap = new HashIntMap<>();
 
     static {
         for (ClassId classId : ClassId.values()) {

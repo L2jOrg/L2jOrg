@@ -28,6 +28,6 @@ public enum IllegalActionPunishmentType {
     BROADCAST,
     KICK,
     KICKBAN,
-    JAIL;
+    JAIL
 
 }

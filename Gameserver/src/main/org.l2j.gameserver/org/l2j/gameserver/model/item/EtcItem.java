@@ -32,7 +32,7 @@ import java.util.List;
  */
 public final class EtcItem extends ItemTemplate {
     private String handler;
-    private EtcItemType type;
+    private final EtcItemType type;
     private List<ExtractableProduct> _extractableItems;
     private int maxExtractable;
     private boolean isInfinite;

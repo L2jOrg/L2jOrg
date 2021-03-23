@@ -84,7 +84,6 @@ public abstract class AbstractAI implements Ctrl {
      * Different targets this AI maintains
      */
     private WorldObject _target;
-    private Future<?> _followTask = null;
 
     protected AbstractAI(Creature creature) {
         actor = creature;

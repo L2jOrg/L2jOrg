@@ -56,7 +56,7 @@ public class ElementalSpirit {
 
     private final Player owner;
     private ElementalSpiritTemplate template;
-    private ElementalSpiritData data;
+    private final ElementalSpiritData data;
 
     public ElementalSpirit(ElementalType type, Player owner) {
         data = new ElementalSpiritData(type.getId(), owner.getObjectId());

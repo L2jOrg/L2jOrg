@@ -33,27 +33,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Althars extends AbstractNpcAI {
-    private static Logger LOGGER = LoggerFactory.getLogger(Althars.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Althars.class);
 
     private final int _DELAY = 30000; // Loop time for checking Althars state
     private final int altharsID = 18926;
 
-    private boolean[] althars_state = new boolean[12];
-    private Map<String, Npc> althars = new HashMap<String, Npc>();
+    private final boolean[] althars_state = new boolean[12];
+    private final Map<String, Npc> althars = new HashMap<String, Npc>();
 
     // TODO: set heading of Althars
-    private int[] ALTHARS_1_LOCATION = new int[] {124809, -43595, 3221, 0};
-    private int[] ALTHARS_2_LOCATION = new int[] {119008, -42127, -3213, 52282};
-    private int[] ALTHARS_3_LOCATION = new int[] {123355, -47015, -2867, 11547};
-    private int[] ALTHARS_4_LOCATION = new int[] {119906, -45557, -2805, 53685};
-    private int[] ALTHARS_5_LOCATION = new int[] {124543, -52061, -2456, 47971};
-    private int[] ALTHARS_6_LOCATION = new int[] {121611, -57169, -2174, 30437};
-    private int[] ALTHARS_7_LOCATION = new int[] {114120, -46272, -2582, 2425};
-    private int[] ALTHARS_8_LOCATION = new int[] {106936, -47288, -1888, 0};
-    private int[] ALTHARS_9_LOCATION = new int[] {112536, -55496, -2832, 0};
-    private int[] ALTHARS_10_LOCATION = new int[] {115256, -39144, -2488, 43325};
-    private int[] ALTHARS_11_LOCATION = new int[] {105736, -41768, -1776, 0};
-    private int[] ALTHARS_12_LOCATION = new int[] {109176, -36024, -896, 0};
+    private final int[] ALTHARS_1_LOCATION = new int[] {124809, -43595, 3221, 0};
+    private final int[] ALTHARS_2_LOCATION = new int[] {119008, -42127, -3213, 52282};
+    private final int[] ALTHARS_3_LOCATION = new int[] {123355, -47015, -2867, 11547};
+    private final int[] ALTHARS_4_LOCATION = new int[] {119906, -45557, -2805, 53685};
+    private final int[] ALTHARS_5_LOCATION = new int[] {124543, -52061, -2456, 47971};
+    private final int[] ALTHARS_6_LOCATION = new int[] {121611, -57169, -2174, 30437};
+    private final int[] ALTHARS_7_LOCATION = new int[] {114120, -46272, -2582, 2425};
+    private final int[] ALTHARS_8_LOCATION = new int[] {106936, -47288, -1888, 0};
+    private final int[] ALTHARS_9_LOCATION = new int[] {112536, -55496, -2832, 0};
+    private final int[] ALTHARS_10_LOCATION = new int[] {115256, -39144, -2488, 43325};
+    private final int[] ALTHARS_11_LOCATION = new int[] {105736, -41768, -1776, 0};
+    private final int[] ALTHARS_12_LOCATION = new int[] {109176, -36024, -896, 0};
 
 
     private Althars() {

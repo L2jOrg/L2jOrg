@@ -67,7 +67,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
     /**
      * The link on the NpcTemplate object containing generic and static properties of this spawn (ex : RewardExp, RewardSP, AggroRange...)
      */
-    private NpcTemplate _template;
+    private final NpcTemplate _template;
     /**
      * The maximum number of Folk that can manage this Spawn
      */

@@ -94,7 +94,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
     private final int questId;
 
-    private boolean isCustom = false;
+    private final boolean isCustom = false;
     private int[] questItemIds = null;
 
     public Quest(int questId) {

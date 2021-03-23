@@ -444,7 +444,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			
 			if (getSettings(GeneralSettings.class).auditGM())
 			{
-				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "viewblockedeffects", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");
+				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "viewblockedeffects", target.getName() + " (" + target.getObjectId() + ")", "");
 			}
 		}
 	}

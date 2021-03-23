@@ -75,7 +75,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 	
 	private static String tempBuffer = "";
 	private static String tempName = "";
-	private static boolean npcsDeleted = false;
+	private static final boolean npcsDeleted = false;
 	
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar)

@@ -146,7 +146,7 @@ public class Clan implements IIdentifiable, INamable {
     private ClanMember leader;
     private IntMap<SubPledgeData> subPledges = new CHashIntMap<>();
     private int _hideoutId;
-    private int _rank = 0;
+    private final int _rank = 0;
     private String notice;
     private boolean noticeEnabled = false;
     private ClanRewardBonus _lastMembersOnlineBonus = null;

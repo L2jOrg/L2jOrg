@@ -428,11 +428,7 @@ public final class BlockCheckerEngine {
                     spawn.init();
                     final Block block = (Block) spawn.getLastSpawn();
                     // switch color
-                    if ((random % 2) == 0) {
-                        block.setRed(true);
-                    } else {
-                        block.setRed(false);
-                    }
+                    block.setRed((random % 2) == 0);
 
                     block.disableCoreAI(true);
                     _spawns.add(spawn);

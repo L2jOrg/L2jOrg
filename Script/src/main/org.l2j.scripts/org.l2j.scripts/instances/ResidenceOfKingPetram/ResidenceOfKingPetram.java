@@ -42,9 +42,9 @@ public class ResidenceOfKingPetram extends AbstractInstance
     private static final int PETRAM_PIECE = 29116;
     private static final int PETRAM_FRAGMENT = 29117;
     // Skills
-    private static SkillHolder EARTh_ENERGY = new SkillHolder(50066, 1); // When spawn Minion.
-    private static SkillHolder EARTh_FURY = new SkillHolder(50059, 1); // When change invul state.
-    private static SkillHolder TEST = new SkillHolder(5712, 1); // TODO: This test skill is only for visual effect, but need to find correct skill ID.
+    private static final SkillHolder EARTh_ENERGY = new SkillHolder(50066, 1); // When spawn Minion.
+    private static final SkillHolder EARTh_FURY = new SkillHolder(50059, 1); // When change invul state.
+    private static final SkillHolder TEST = new SkillHolder(5712, 1); // TODO: This test skill is only for visual effect, but need to find correct skill ID.
     // Misc
     private static final int TEMPLATE_ID = 198;
     private RaidBoss _petram = null;

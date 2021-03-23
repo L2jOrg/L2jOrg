@@ -39,7 +39,7 @@ import static java.util.Objects.nonNull;
 public class SiegeFlag extends Npc {
     private final Clan _clan;
     private final boolean _isAdvanced;
-    private Siegable _siege;
+    private final Siegable _siege;
     private boolean _canTalk;
 
     public SiegeFlag(Player player, NpcTemplate template, boolean advanced) {

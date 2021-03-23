@@ -20,14 +20,13 @@
 package org.l2j.gameserver.model.actor.request;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
 
 /**
  * @author UnAfraid
  */
 public final class EnchantItemAttributeRequest extends AbstractRequest {
     private volatile int _enchantingItemObjectId;
-    private volatile int _enchantingStoneObjectId;
+    private final int _enchantingStoneObjectId;
 
     public EnchantItemAttributeRequest(Player activeChar, int enchantingStoneObjectId) {
         super(activeChar);

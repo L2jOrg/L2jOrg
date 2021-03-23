@@ -209,10 +209,7 @@ public final class WalkingManager extends GameXmlReader {
         }
 
         final WalkInfo walk = monster != null ? _activeRoutes.get(monster.getObjectId()) : _activeRoutes.get(npc.getObjectId());
-        if (walk.isStoppedByAttack() || walk.isSuspended()) {
-            return false;
-        }
-        return true;
+        return !walk.isStoppedByAttack() && !walk.isSuspended();
     }
 
     public WalkRoute getRoute(String route) {

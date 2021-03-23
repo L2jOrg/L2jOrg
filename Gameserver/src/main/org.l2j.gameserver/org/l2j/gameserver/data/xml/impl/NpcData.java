@@ -396,7 +396,7 @@ public class NpcData extends GameXmlReader {
 
                                             for (Node drop_node = drop_lists_node.getFirstChild(); drop_node != null; drop_node = drop_node.getNextSibling()) {
                                                 final NamedNodeMap drop_attrs = drop_node.getAttributes();
-                                                if ("item".equals(drop_node.getNodeName().toLowerCase())) {
+                                                if ("item".equalsIgnoreCase(drop_node.getNodeName())) {
                                                     final double chance = parseDouble(drop_attrs, "chance");
                                                     final DropHolder dropItem = new DropHolder(dropType, parseInt(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY ? chance / 100 : chance);
                                                     if (ItemEngine.getInstance().getTemplate(parseInt(drop_attrs, "id")) == null) {

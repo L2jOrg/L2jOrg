@@ -30,7 +30,7 @@ public class ExElementalSpiritInfo extends ClientPacket {
     }
 
     public void runImpl() {
-        client.sendPacket(new ElementalSpiritInfo((byte) client.getPlayer().getActiveElementalSpiritType(), type));
+        client.sendPacket(new ElementalSpiritInfo(client.getPlayer().getActiveElementalSpiritType(), type));
     }
 
 }
