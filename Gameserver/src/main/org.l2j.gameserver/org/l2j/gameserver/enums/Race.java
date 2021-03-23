@@ -30,6 +30,7 @@ public enum Race {
     ORC,
     DWARF,
     JIN_KAMAEL,
+    SYLPH,
     ANIMAL,
     BEAST,
     BUG,
