@@ -66,7 +66,6 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author BiggBoss
@@ -96,7 +95,7 @@ public final class ReportTable {
             _punishments = new ConcurrentHashMap<>();
 
             try {
-                final File punishments = new File("./config/BotReportPunishments.xml");
+                final File punishments = new File(Config.BOT_REPORT_PUNISHMENTS_FILE);
                 if (!punishments.exists()) {
                     throw new FileNotFoundException(punishments.getName());
                 }

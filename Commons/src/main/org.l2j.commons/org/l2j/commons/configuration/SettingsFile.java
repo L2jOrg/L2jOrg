@@ -49,7 +49,7 @@ public final class SettingsFile extends Properties {
     public static final String ERROR_GETTING_PROPERTY = "Error getting property {} : {}";
 
     SettingsFile(String filePath) {
-        try (var reader = newBufferedReader(Paths.get(filePath))) {
+        try (var reader = newBufferedReader(Paths.get(getCurrentPath(filePath)).normalize())) {
             load(reader);
         } catch (IOException e) {
             LOGGER.error(e.getLocalizedMessage(), e);
@@ -57,6 +57,12 @@ public final class SettingsFile extends Properties {
     }
 
     public SettingsFile() {
+    }
+
+    public static String getCurrentPath(String path) {
+        boolean isDebug = java.lang.management.ManagementFactory.getRuntimeMXBean().
+                getInputArguments().toString().contains("jdwp");
+        return (isDebug ? "src/main/resources/" : path) + path;
     }
 
     public String getString(String key, String defaultValue) {

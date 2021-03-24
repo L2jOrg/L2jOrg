@@ -91,15 +91,15 @@ public class AuthServer {
     }
 
     private static void configureCaches() {
-        CacheFactory.getInstance().initialize("config/ehcache.xml");
+        CacheFactory.getInstance().initialize(Config.HECACHE_FILE);
     }
 
     private static void configureNetworkPackets() {
-        System.setProperty("async-mmocore.configurationFile", "config/async-mmocore.properties");
+        System.setProperty("async-mmocore.configurationFile", Config.ASYNC_MMOCORE_FILE);
     }
 
     private static void configureDatabase() throws Exception {
-        System.setProperty(HIKARICP_CONFIGURATION_FILE, "config/database.properties");
+        System.setProperty(HIKARICP_CONFIGURATION_FILE, Config.DATABASE_FILE);
         if (!DatabaseAccess.initialize()) {
             throw new Exception("Database Access could not be initialized");
         }

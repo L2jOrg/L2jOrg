@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.AccessLevel;
 import org.l2j.gameserver.model.AdminCommandAccessRight;
 import org.l2j.gameserver.model.StatsSet;
@@ -65,14 +66,14 @@ public final class AdminData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return Path.of("config/xsd/AccessLevels.xsd");
+        return Path.of(Config.ACCESS_LEVELS_SCHEMA_FILE);
     }
 
     @Override
     public synchronized void load() {
         _accessLevels.clear();
         _adminCommandAccessRights.clear();
-        parseFile(new File("config/AccessLevels.xml"));
+        parseFile(new File(Config.ACCESS_LEVELS_FILE));
         LOGGER.info("Loaded: {} Access Levels.", _accessLevels.size());
         LOGGER.info("Loaded: {} Access Commands.", _adminCommandAccessRights.size());
         releaseResources();
@@ -147,7 +148,7 @@ public final class AdminData extends GameXmlReader {
                 generalSettings.setDefaultAccessLevel(0);
             }
         }
-        return  accessLevel;
+        return accessLevel;
     }
 
 
