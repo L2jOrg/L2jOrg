@@ -177,7 +177,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		if (Util.contains(MASS_TELEPORTERS, npc.getId()))
 		{
 			final Siege siege = npc.getCastle().getSiege();

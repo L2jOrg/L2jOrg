@@ -181,7 +181,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 				Event._npcId = Integer.parseInt(st.nextToken());
 				Event._teamsNumber = Integer.parseInt(st.nextToken());
 				String temp = " ";
-				String temp2 = "";
+				String temp2;
 				while (st.hasMoreElements())
 				{
 					temp += st.nextToken() + " ";
@@ -527,7 +527,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 	
 	private void rewardTeam(Player activeChar, int team, int n, int id, String type)
 	{
-		int num = n;
+		int num;
 		for (Player player : Event._teams.get(team))
 		{
 			if (type.equalsIgnoreCase("level"))

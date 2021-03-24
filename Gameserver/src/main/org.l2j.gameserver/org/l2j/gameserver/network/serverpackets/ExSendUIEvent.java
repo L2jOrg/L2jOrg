@@ -47,7 +47,7 @@ public class ExSendUIEvent extends ServerPacket {
     private final int _endTime;
     private final int _endTime2;
     private final int _npcstringId;
-    private List<String> _params = null;
+    private List<String> _params;
 
     /**
      * Remove UI

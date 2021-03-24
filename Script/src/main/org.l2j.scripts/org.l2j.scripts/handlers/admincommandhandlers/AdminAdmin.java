@@ -377,7 +377,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	private void showMainPage(Player activeChar, String command)
 	{
 		int mode = 0;
-		String filename = null;
+		String filename;
 		try
 		{
 			mode = Integer.parseInt(command.substring(11));

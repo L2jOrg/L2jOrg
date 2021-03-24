@@ -529,7 +529,7 @@ public class LastImperialTomb extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				final Location scarletLocation = activeScarlet.getLocation();
-				int newHeading = 0;
+				int newHeading;
 				if (scarletLocation.getHeading() < 32768)
 				{
 					newHeading = Math.abs(180 - (int) (scarletLocation.getHeading() / 182.044444444));

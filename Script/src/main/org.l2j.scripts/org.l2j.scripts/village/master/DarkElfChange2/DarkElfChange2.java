@@ -120,7 +120,7 @@ public final class DarkElfChange2 extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = getNoQuestMsg(player);
+		String htmltext;
 		final ClassId cid = player.getClassId();
 		if (cid.getRace() == Race.DARK_ELF)
 		{

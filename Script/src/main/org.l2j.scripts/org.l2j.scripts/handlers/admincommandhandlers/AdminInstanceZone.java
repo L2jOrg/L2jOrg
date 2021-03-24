@@ -70,7 +70,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		else if (command.startsWith("admin_instancezone"))
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
-			command = st.nextToken();
+			st.nextToken(); // skip command
 			
 			if (st.hasMoreTokens())
 			{

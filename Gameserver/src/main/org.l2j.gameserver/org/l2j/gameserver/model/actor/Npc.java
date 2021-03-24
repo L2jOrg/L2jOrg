@@ -542,7 +542,7 @@ public class Npc extends Creature {
      * @return the pathfile of the selected HTML file in function of the npcId and of the page number.
      */
     public String getHtmlPath(int npcId, int val) {
-        String pom = "";
+        String pom;
 
         if (val == 0) {
             pom = Integer.toString(npcId);

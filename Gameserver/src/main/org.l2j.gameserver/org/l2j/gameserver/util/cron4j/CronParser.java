@@ -285,7 +285,6 @@ public class CronParser {
                 str = escape(str);
             }
             splitted.add(str);
-            current = null;
         }
         // Analyzing
         size = splitted.size();

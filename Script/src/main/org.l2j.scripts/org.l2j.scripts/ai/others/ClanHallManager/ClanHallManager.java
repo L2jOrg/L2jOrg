@@ -429,7 +429,7 @@ public final class ClanHallManager extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		final ClanHall clanHall = npc.getClanHall();
 		
 		if (isOwningClan(player, npc))

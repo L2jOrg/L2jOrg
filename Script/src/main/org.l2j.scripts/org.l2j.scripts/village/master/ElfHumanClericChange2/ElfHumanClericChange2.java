@@ -187,7 +187,7 @@ public final class ElfHumanClericChange2 extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		if (player.isInCategory(CategoryType.CLERIC_GROUP) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.isInCategory(CategoryType.HUMAN_CALL_CLASS) || player.isInCategory(CategoryType.ELF_CALL_CLASS)))
 		{
 			htmltext = "30120-01.htm"; // fnYouAreFourthClass

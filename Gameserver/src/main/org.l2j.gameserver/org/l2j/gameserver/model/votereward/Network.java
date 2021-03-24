@@ -42,8 +42,8 @@ public class Network extends VoteSystem {
 
     @Override
     public int getVotes() {
-        InputStreamReader isr = null;
-        BufferedReader br = null;
+        InputStreamReader isr;
+        BufferedReader br;
 
         try {
             URLConnection con = new URL(Config.NETWORK_SERVER_LINK).openConnection();

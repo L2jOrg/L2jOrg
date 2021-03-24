@@ -389,7 +389,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(15);
 				final WorldObject target = activeChar.getTarget();
-				Player player = null;
+				Player player;
 				if ((target != null) && isPlayer(target))
 				{
 					player = (Player) target;
@@ -413,7 +413,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(17);
 				final WorldObject target = activeChar.getTarget();
-				Player player = null;
+				Player player;
 				if ((target != null) && isPlayer(target))
 				{
 					player = (Player) target;
@@ -464,7 +464,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_setsex"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			Player player = null;
+			Player player;
 			if ((target != null) && isPlayer(target))
 			{
 				player = (Player) target;
@@ -483,7 +483,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(15);
 				final WorldObject target = activeChar.getTarget();
-				Player player = null;
+				Player player;
 				if ((target != null) && isPlayer(target))
 				{
 					player = (Player) target;
@@ -507,7 +507,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(16);
 				final WorldObject target = activeChar.getTarget();
-				Player player = null;
+				Player player;
 				if ((target != null) && isPlayer(target))
 				{
 					player = (Player) target;
@@ -555,7 +555,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
 				
 				final String playerName = st.nextToken();
-				Player player = null;
+				Player player;
 				player = World.getInstance().findPlayer(playerName);
 				
 				if (player == null) {
@@ -1064,7 +1064,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void setTargetReputation(Player activeChar, int newReputation)
 	{
 		final WorldObject target = activeChar.getTarget();
-		Player player = null;
+		Player player;
 		if (isPlayer(target))
 		{
 			player = (Player) target;
@@ -1089,7 +1089,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void editCharacter(Player activeChar, String targetName)
 	{
-		WorldObject target = null;
+		WorldObject target;
 		if (targetName != null)
 		{
 			target = World.getInstance().findPlayer(targetName);
@@ -1189,7 +1189,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		int CharactersFound = 0;
 		GameClient client;
-		String ip = "0.0.0.0";
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/ipfind.htm");
@@ -1209,7 +1208,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				continue;
 			}
 
-			ip = client.getHostAddress();
+			String ip = client.getHostAddress();
 			if (!ip.equals(IpAdress))
 			{
 				continue;
@@ -1282,7 +1281,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void findDualbox(Player activeChar, int multibox)
 	{
 		final Map<String, List<Player>> ipMap = new HashMap<>();
-		String ip = "0.0.0.0";
+		String ip;
 		GameClient client;
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
 		

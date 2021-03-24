@@ -217,7 +217,7 @@ public final class AdminPForge implements IAdminCommandHandler
 	
 	private void showValuesPage(Player activeChar, String[] opCodes, String format)
 	{
-		String sendBypass = null;
+		String sendBypass;
 		String valuesHtml = HtmCache.getInstance().getHtmForce(activeChar, "data/html/admin/pforge/values.htm");
 		if (opCodes.length == 3)
 		{
@@ -411,8 +411,8 @@ public final class AdminPForge implements IAdminCommandHandler
 							return false;
 						}
 						
-						WorldObject target = null;
-						Boat boat = null;
+						WorldObject target;
+						Boat boat;
 						String value = st.nextToken();
 						switch (value)
 						{

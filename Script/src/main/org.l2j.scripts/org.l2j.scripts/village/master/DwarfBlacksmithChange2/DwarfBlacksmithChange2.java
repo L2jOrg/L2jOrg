@@ -119,7 +119,7 @@ public final class DwarfBlacksmithChange2 extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
 		{
 			htmltext = "30512-01.htm"; // fnYouAreFourthClass

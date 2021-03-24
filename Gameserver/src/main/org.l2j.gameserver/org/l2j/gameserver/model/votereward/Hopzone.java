@@ -42,8 +42,8 @@ public class Hopzone extends VoteSystem {
 
     @Override
     public int getVotes() {
-        InputStreamReader isr = null;
-        BufferedReader br = null;
+        InputStreamReader isr;
+        BufferedReader br;
 
         try {
             URLConnection con = new URL(Config.HOPZONE_SERVER_LINK).openConnection();
