@@ -19,9 +19,7 @@
 package org.l2j.scripts.ai;
 
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.quest.Quest;
 
 

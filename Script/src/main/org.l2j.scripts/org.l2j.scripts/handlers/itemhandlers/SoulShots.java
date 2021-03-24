@@ -23,7 +23,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 /**

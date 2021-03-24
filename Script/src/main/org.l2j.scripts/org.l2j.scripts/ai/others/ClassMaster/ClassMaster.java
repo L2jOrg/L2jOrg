@@ -19,7 +19,6 @@
 package org.l2j.scripts.ai.others.ClassMaster;
 
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.engine.item.ItemEngine;

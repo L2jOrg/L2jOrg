@@ -41,7 +41,6 @@ import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
