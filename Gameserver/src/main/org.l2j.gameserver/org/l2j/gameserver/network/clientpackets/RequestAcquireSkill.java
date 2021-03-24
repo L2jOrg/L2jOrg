@@ -283,7 +283,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                 // Check for required items.
                 if (!skillLearn.getRequiredItems().isEmpty()) {
                     // Then checks that the player has all the items
-                    long reqItemCount = 0;
+                    long reqItemCount;
                     for (ItemHolder item : skillLearn.getRequiredItems()) {
                         reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
                         if (reqItemCount < item.getCount()) {

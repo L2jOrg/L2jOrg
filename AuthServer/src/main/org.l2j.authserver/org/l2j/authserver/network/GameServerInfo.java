@@ -246,7 +246,7 @@ public class GameServerInfo {
         }
 
         private boolean applyMask(byte[] addr) {
-            boolean applied = false;
+            boolean applied;
             // V4 vs V4 or V6 vs V6 checks
             if (_isIPv4 == (addr.length == 4)) {
                 applied= applyIPV4(addr);

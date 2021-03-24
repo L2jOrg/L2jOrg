@@ -74,7 +74,7 @@ public final class RequestPledgeSetAcademyMaster extends ClientPacket {
         final Player apprentice = apprenticeMember.getPlayerInstance();
         final Player sponsor = sponsorMember.getPlayerInstance();
 
-        SystemMessage sm = null;
+        SystemMessage sm;
         if (_set == 0) {
             // test: do we get the current sponsor & apprentice from this packet or no?
             if (apprentice != null) {

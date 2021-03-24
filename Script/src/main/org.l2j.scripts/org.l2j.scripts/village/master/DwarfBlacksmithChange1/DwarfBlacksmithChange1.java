@@ -135,7 +135,7 @@ public final class DwarfBlacksmithChange1 extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		if (player.isInCategory(CategoryType.WARSMITH_GROUP))
 		{
 			htmltext = npc.getId() + "-01.htm"; // fnClassList1

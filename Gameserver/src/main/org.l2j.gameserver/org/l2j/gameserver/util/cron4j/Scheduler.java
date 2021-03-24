@@ -487,7 +487,7 @@ public class Scheduler {
             timer = null;
             // Interrupts any running launcher and waits for its death.
             for (; ; ) {
-                LauncherThread launcher = null;
+                LauncherThread launcher;
                 synchronized (launchers) {
                     if (launchers.size() == 0) {
                         break;
@@ -501,7 +501,7 @@ public class Scheduler {
             // Interrupts any running executor and waits for its death.
             // Before exiting wait for all the active tasks end.
             for (; ; ) {
-                TaskExecutor executor = null;
+                TaskExecutor executor;
                 synchronized (executors) {
                     if (executors.size() == 0) {
                         break;

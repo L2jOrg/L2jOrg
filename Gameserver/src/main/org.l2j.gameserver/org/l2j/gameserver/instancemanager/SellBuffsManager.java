@@ -141,7 +141,7 @@ public final class SellBuffsManager extends GameXmlReader {
         final int ceiling = 10;
         int nextIndex = -1;
         int previousIndex = -1;
-        int emptyFields = 0;
+        int emptyFields;
         final StringBuilder sb = new StringBuilder();
         final List<SellBuffHolder> sellList = new ArrayList<>();
 

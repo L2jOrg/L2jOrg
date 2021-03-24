@@ -955,12 +955,10 @@ public final class ClassMaster extends AbstractNpcAI
 									final String optionName = parseString(attrs, "name", "");
 									for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
 									{
-										attrs = b.getAttributes();
 										if ("appliesTo".equals(b.getNodeName()))
 										{
 											for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
 											{
-												attrs = r.getAttributes();
 												if ("category".equals(r.getNodeName()))
 												{
 													final CategoryType category = CategoryType.findByName(r.getTextContent().trim());

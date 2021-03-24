@@ -309,7 +309,7 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				Creature player = null;
+				Creature player;
 				if (isCreature(target))
 				{
 					player = (Creature) target;
@@ -334,7 +334,7 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				Creature player = null;
+				Creature player;
 				if (isCreature(target))
 				{
 					player = (Creature) target;
@@ -350,7 +350,7 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				Creature player = null;
+				Creature player;
 				if (isCreature(target))
 				{
 					player = (Creature) target;
@@ -393,7 +393,7 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				final Team team = Team.valueOf(st.nextToken().toUpperCase());
-				Creature target = null;
+				Creature target;
 				if (isCreature(activeChar.getTarget()))
 				{
 					target = (Creature) activeChar.getTarget();
@@ -413,7 +413,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			try
 			{
-				String target = null;
+				String target;
 				WorldObject obj = activeChar.getTarget();
 				if (st.countTokens() == 2)
 				{

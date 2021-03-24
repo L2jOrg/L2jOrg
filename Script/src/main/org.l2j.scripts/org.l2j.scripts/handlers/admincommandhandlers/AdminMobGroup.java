@@ -580,7 +580,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void teleportGroup(String command, Player activeChar)
 	{
 		int groupId;
-		String targetPlayerStr = null;
+		String targetPlayerStr;
 		Player targetPlayer = null;
 		
 		try
@@ -595,7 +595,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 			
 			if (targetPlayer == null)
 			{
-				targetPlayer = activeChar;
 			}
 		}
 		catch (Exception e)

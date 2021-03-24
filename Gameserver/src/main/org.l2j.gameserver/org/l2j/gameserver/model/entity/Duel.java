@@ -467,7 +467,7 @@ public class Duel {
         }
 
         // Broadcast countdown to duelists
-        SystemMessage sm = null;
+        SystemMessage sm;
         if (_countdown > 0) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_WILL_BEGIN_IN_S1_SECOND_S);
             sm.addInt(_countdown);
@@ -495,7 +495,7 @@ public class Duel {
         }
 
         // inform players of the result
-        SystemMessage sm = null;
+        SystemMessage sm;
         switch (result) {
             case TEAM_1_WIN:
             case TEAM_2_SURRENDER: {

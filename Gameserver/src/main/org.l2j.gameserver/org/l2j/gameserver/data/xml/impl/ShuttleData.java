@@ -118,7 +118,6 @@ public final class ShuttleData extends GameXmlReader {
                             } else if ("routes".equalsIgnoreCase(b.getNodeName())) {
                                 for (Node a = b.getFirstChild(); a != null; a = a.getNextSibling()) {
                                     if ("route".equalsIgnoreCase(a.getNodeName())) {
-                                        attrs = a.getAttributes();
                                         final List<Location> locs = new ArrayList<>();
                                         for (Node z = a.getFirstChild(); z != null; z = z.getNextSibling()) {
                                             if ("loc".equalsIgnoreCase(z.getNodeName())) {

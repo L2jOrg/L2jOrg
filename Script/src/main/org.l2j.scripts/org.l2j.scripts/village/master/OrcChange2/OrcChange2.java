@@ -223,7 +223,7 @@ public final class OrcChange2 extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.isInCategory(CategoryType.ORC_MALL_CLASS) || player.isInCategory(CategoryType.ORC_FALL_CLASS)))
 		{
 			htmltext = "30513-01.htm"; // fnYouAreFourthClass

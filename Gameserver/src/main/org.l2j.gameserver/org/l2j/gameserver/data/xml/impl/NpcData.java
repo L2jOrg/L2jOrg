@@ -356,7 +356,6 @@ public class NpcData extends GameXmlReader {
                                             }
                                             case "clanlist": {
                                                 for (Node clanListNode = aiNode.getFirstChild(); clanListNode != null; clanListNode = clanListNode.getNextSibling()) {
-                                                    attrs = clanListNode.getAttributes();
                                                     switch (clanListNode.getNodeName().toLowerCase()) {
                                                         case "clan": {
                                                             if (clans == null) {

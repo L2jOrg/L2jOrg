@@ -283,7 +283,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		final Race playerRace = player.getRace();
 		if (player.isInCategory(CategoryType.MAGE_GROUP) && ((playerRace == Race.HUMAN) || (playerRace == Race.ELF)))
 		{

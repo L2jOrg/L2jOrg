@@ -589,7 +589,7 @@ public class Party extends AbstractPlayerGroup {
 
     private double calculateExpSpPartyCutoff(Player player, int topLvl, double addExp, double addSp, boolean vit) {
         double xp = addExp;
-        double sp = addSp;
+        double sp;
         if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive")) {
             int i = 0;
             final int lvlDiff = topLvl - player.getLevel();
@@ -658,9 +658,6 @@ public class Party extends AbstractPlayerGroup {
                 int i = members.size() - 1;
                 if (i < 1) {
                     return members;
-                }
-                if (i >= BONUS_EXP_SP.length) {
-                    i = BONUS_EXP_SP.length - 1;
                 }
                 for (Player member : members) {
                     final int sqLevel = member.getLevel() * member.getLevel();

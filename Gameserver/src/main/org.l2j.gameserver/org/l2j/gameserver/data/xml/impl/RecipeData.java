@@ -83,7 +83,7 @@ public class RecipeData extends GameXmlReader {
                         recipeAltStatChangeList.clear();
                         final NamedNodeMap attrs = d.getAttributes();
                         Node att;
-                        int id = -1;
+                        int id;
                         boolean haveRare = false;
                         final StatsSet set = new StatsSet();
 

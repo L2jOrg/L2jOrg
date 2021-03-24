@@ -430,7 +430,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		if (player.isInCategory(CategoryType.FIGHTER_GROUP) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.isInCategory(CategoryType.HUMAN_FALL_CLASS) || player.isInCategory(CategoryType.ELF_FALL_CLASS)))
 		{
 			htmltext = "30109-01.htm"; // fnYouAreFourthClass
