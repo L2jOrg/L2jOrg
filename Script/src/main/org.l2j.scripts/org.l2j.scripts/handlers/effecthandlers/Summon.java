@@ -20,6 +20,7 @@ package org.l2j.scripts.handlers.effecthandlers;
 
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.enums.Race;
@@ -31,7 +32,6 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.BuffInfo;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;

@@ -26,7 +26,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.NpcSay;
 import org.l2j.scripts.ai.AbstractNpcAI;
-import org.l2j.scripts.ai.areas.DragonValley.LordIshka;
 
 /**
  * @author RobikBobik
