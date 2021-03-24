@@ -41,8 +41,6 @@ import org.l2j.gameserver.model.stats.functions.FuncSet;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;

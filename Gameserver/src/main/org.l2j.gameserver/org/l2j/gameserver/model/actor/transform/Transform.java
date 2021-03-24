@@ -39,8 +39,6 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;

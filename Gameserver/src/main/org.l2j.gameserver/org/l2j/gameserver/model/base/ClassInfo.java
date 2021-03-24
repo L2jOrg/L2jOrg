@@ -19,8 +19,6 @@
  */
 package org.l2j.gameserver.model.base;
 
-import java.util.regex.Matcher;
-
 /**
  * This class will hold the information of the player classes.
  *

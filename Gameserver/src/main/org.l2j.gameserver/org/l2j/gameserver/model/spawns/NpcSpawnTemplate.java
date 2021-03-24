@@ -41,7 +41,6 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -51,7 +50,6 @@ import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.util.GameUtils.isMonster;
-
 
 /**
  * @author UnAfraid

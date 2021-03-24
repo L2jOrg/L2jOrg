@@ -19,8 +19,6 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.actor.instance.ControllableMob;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

@@ -43,8 +43,6 @@ import org.l2j.gameserver.network.serverpackets.SetSummonRemainTime;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;

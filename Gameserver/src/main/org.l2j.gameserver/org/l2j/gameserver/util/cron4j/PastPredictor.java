@@ -20,7 +20,6 @@
 package org.l2j.gameserver.util.cron4j;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 

@@ -22,13 +22,13 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
@@ -36,7 +36,6 @@ import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.StopMove;
 import org.l2j.gameserver.util.MathUtil;
 
-import java.util.Collection;
 import java.util.concurrent.Future;
 
 // While a tamed beast behaves a lot like a pet (ingame) and does have

@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
 import org.l2j.commons.network.SessionKey;
-import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
@@ -31,9 +30,6 @@ import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.serverpackets.LoginFail;
 import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
-import org.l2j.gameserver.network.serverpackets.html.TutorialShowHtml;
-
-import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
