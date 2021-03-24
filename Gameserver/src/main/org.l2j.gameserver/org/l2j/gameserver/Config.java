@@ -59,7 +59,7 @@ public final class Config {
     public static String getCurrentPath(String path) {
         boolean isDebug = java.lang.management.ManagementFactory.getRuntimeMXBean().
                 getInputArguments().toString().contains("jdwp");
-        return (isDebug ? "src/main/resources/" : path) + path;
+        return (isDebug ? "src/main/resources/" + path : path);
     }
 
     // --------------------------------------------------
@@ -77,11 +77,10 @@ public final class Config {
     public static final String CLASS_MASTER_SCHEMA_FILE = getCurrentPath("config/xsd/classMaster.xsd");
     public static final String SECONDARY_AUTH_FILE = getCurrentPath("config/secondary-auth.xml");
     public static final String SECONDARY_AUTH_SCHEMA_FILE = getCurrentPath("config/xsd/secondary-auth.xsd");
-    public static final String ACCESS_LEVELS_FILE = getCurrentPath("config/AccessLevels.xml" );
+    public static final String ACCESS_LEVELS_FILE = getCurrentPath("config/AccessLevels.xml");
     public static final String ACCESS_LEVELS_SCHEMA_FILE = getCurrentPath("config/xsd/AccessLevels.xsd");
-    public static final String SIEGE_SCHEDULE_FILE = getCurrentPath("config/siege-schedule.xml" );
+    public static final String SIEGE_SCHEDULE_FILE = getCurrentPath("config/siege-schedule.xml");
     public static final String SIEGE_SCHEDULE_SCHEMA_FILE = getCurrentPath("config/xsd/siege-schedule.xsd");
-
 
 
     private static final String CHARACTER_CONFIG_FILE = getCurrentPath("config/character.properties");

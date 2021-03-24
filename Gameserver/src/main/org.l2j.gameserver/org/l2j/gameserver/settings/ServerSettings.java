@@ -111,11 +111,16 @@ public class ServerSettings implements Settings {
         maxPlayerPerHWID = settingsFile.getInteger("MaxPlayersPerHWID", 0);
     }
 
-    private static Path resolverdataPackDirectory(SettingsFile settingsFile)  {
-        Path datapackRootpath = Path.of(settingsFile.getString("DatapackRoot", ".")).toAbsolutePath().normalize();
-        return Paths.get(datapackRootpath.toString(),"../Datapack").normalize();
+    private static Path resolverdataPackDirectory(SettingsFile settingsFile) {
+        String datapackRootString = settingsFile.getString("DatapackRoot", isDebug() ? "../Datapack" : ".");
+        Path datapackRootpath = Path.of(datapackRootString).toAbsolutePath().normalize();
+        return Paths.get(datapackRootpath.toString(), datapackRootString).normalize();
     }
 
+    private static boolean isDebug() {
+        return java.lang.management.ManagementFactory.getRuntimeMXBean().
+                getInputArguments().toString().contains("jdwp");
+    }
 
     private Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
         try {

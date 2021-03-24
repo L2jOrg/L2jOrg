@@ -12,7 +12,7 @@ public final class Config {
     public static String getCurrentPath(String path) {
         boolean isDebug = java.lang.management.ManagementFactory.getRuntimeMXBean().
                 getInputArguments().toString().contains("jdwp");
-        return (isDebug ? "src/main/resources/" : path) + path;
+        return (isDebug ? "src/main/resources/" + path : path);
 
 
     }

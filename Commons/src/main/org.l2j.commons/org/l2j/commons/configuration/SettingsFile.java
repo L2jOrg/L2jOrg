@@ -62,7 +62,7 @@ public final class SettingsFile extends Properties {
     public static String getCurrentPath(String path) {
         boolean isDebug = java.lang.management.ManagementFactory.getRuntimeMXBean().
                 getInputArguments().toString().contains("jdwp");
-        return (isDebug ? "src/main/resources/" : path) + path;
+        return (isDebug ? "src/main/resources/" + path : path);
     }
 
     public String getString(String key, String defaultValue) {
@@ -97,7 +97,7 @@ public final class SettingsFile extends Properties {
 
     public String[] getStringArray(String key) {
         String value = getProperty(key);
-        if(isNullOrEmpty(value)) {
+        if (isNullOrEmpty(value)) {
             return STRING_ARRAY_EMPTY;
         }
         var values = value.split(DEFAULT_DELIMITER);
@@ -164,7 +164,7 @@ public final class SettingsFile extends Properties {
 
     public int[] getIntegerArray(String key, String delimiter) {
         var property = getProperty(key);
-        if(isNullOrEmpty(property)) {
+        if (isNullOrEmpty(property)) {
             return INT_ARRAY_EMPTY;
         }
         var values = property.split(delimiter);
@@ -208,7 +208,7 @@ public final class SettingsFile extends Properties {
 
     public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass, T defaultValue) {
         String value;
-        if(isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
+        if (isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
             return defaultValue;
         }
         try {
@@ -221,13 +221,13 @@ public final class SettingsFile extends Properties {
 
     public <T extends Enum<T>> Set<T> getEnumSet(String key, Class<T> enumClass, Set<T> defaultValue) {
         String value;
-        if(isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
+        if (isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
             return defaultValue;
         }
         var enums = value.split(DEFAULT_DELIMITER);
         var result = EnumSet.noneOf(enumClass);
         for (String enumName : enums) {
-            try{
+            try {
                 result.add(Enum.valueOf(enumClass, enumName.trim()));
             } catch (Exception e) {
                 LOGGER.warn("Unknown enum constant {} of type {}", enumName, enumClass);
