@@ -27,8 +27,6 @@ import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ScheduledFuture;
 

@@ -30,7 +30,6 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.model.stats.*;
 import org.l2j.gameserver.settings.CharacterSettings;
-import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.*;
@@ -38,7 +37,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.BiFunction;
-import java.util.function.BiPredicate;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;

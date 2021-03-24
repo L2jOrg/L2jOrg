@@ -21,7 +21,6 @@ package org.l2j.gameserver;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.FloodProtectorConfig;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -45,7 +44,6 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * This class loads all the game server related configurations from files.<br>

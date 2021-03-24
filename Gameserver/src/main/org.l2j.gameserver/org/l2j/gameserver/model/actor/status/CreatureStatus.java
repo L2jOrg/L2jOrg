@@ -27,8 +27,6 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;

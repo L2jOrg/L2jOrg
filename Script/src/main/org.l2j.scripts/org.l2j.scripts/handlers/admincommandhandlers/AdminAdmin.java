@@ -34,8 +34,6 @@ import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 

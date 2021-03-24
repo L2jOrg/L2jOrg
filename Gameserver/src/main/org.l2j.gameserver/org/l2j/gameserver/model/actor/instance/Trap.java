@@ -35,7 +35,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneManager;

@@ -25,7 +25,6 @@ import org.l2j.gameserver.data.database.data.BuyListInfo;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EquipableItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 
 import java.util.Objects;

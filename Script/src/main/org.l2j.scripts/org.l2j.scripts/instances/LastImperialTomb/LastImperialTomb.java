@@ -33,8 +33,6 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.scripts.instances.AbstractInstance;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.*;
 

@@ -19,15 +19,12 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**

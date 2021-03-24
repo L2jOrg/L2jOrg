@@ -21,17 +21,13 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExCubeGameAddPlayer;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameChangeTeam;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.*;

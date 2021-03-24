@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.ArrayIntList;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.engine.item.ItemEngine;

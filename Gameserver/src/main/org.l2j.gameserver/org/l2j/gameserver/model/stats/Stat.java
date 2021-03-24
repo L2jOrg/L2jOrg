@@ -20,13 +20,11 @@ package org.l2j.gameserver.model.stats;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.finalizers.*;
-import org.l2j.gameserver.util.MathUtil;
 
 import java.util.EnumSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.BiFunction;
-import java.util.stream.Stream;
 
 /**
  * Enum of basic stats.
