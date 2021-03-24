@@ -22,8 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.nio.ByteBuffer;
-import java.util.*;
+import java.util.StringJoiner;
 
 public final class CommonUtil
 {
@@ -45,7 +44,7 @@ public final class CommonUtil
 		'\"',
 		':'
 	};
-	
+
 	/**
 	 * Method to generate the hexadecimal representation of a byte array.<br>
 	 * 16 bytes per row, while ascii chars or "." is shown at the end of the line.
@@ -60,7 +59,7 @@ public final class CommonUtil
 		}
 		return new String(HexUtils.bArr2HexEdChars(data, len));
 	}
-	
+
 	/**
 	 * This call is equivalent to Util.printData(data, data.length)
 	 * @see CommonUtil#printData(byte[],int)
@@ -86,7 +85,7 @@ public final class CommonUtil
 		}
 		return valid;
 	}
-	
+
 	/**
 	 * Verify if a file name is valid.
 	 * @param name the name of the file
@@ -105,7 +104,7 @@ public final class CommonUtil
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Split words with a space.
 	 * @param input the string to split
@@ -127,7 +126,7 @@ public final class CommonUtil
 		t.printStackTrace(new PrintWriter(sw));
 		return sw.toString();
 	}
-	
+
 	public static String getTraceString(StackTraceElement[] stackTraceElements)
 	{
 		final StringJoiner sj = new StringJoiner("\n");
@@ -137,7 +136,7 @@ public final class CommonUtil
 		}
 		return sj.toString();
 	}
-	
+
 	public static int min(int value1, int value2, int... values)
 	{
 		int min = Math.min(value1, value2);
@@ -163,7 +162,7 @@ public final class CommonUtil
 		}
 		return index;
 	}
-	
+
 	public static int getIndexOfMinValue(int... array)
 	{
 		int index = 0;
@@ -203,7 +202,7 @@ public final class CommonUtil
 	{
 		return (input < min) ? min : (input > max) ? max : input;
 	}
-	
+
 	/**
 	 * Constrains a number to be within a range.
 	 * @param input the number to constrain, all data types
@@ -215,7 +214,7 @@ public final class CommonUtil
 	{
 		return (input < min) ? min : (input > max) ? max : input;
 	}
-	
+
 	/**
 	 * Constrains a number to be within a range.
 	 * @param input the number to constrain, all data types
@@ -257,7 +256,7 @@ public final class CommonUtil
 			return defaultValue;
 		}
 	}
-	
+
 	/**
 	 * @param str - the string whose first letter to capitalize
 	 * @return a string with the first letter of the {@code str} capitalized
@@ -270,14 +269,14 @@ public final class CommonUtil
 		}
 		final char[] arr = str.toCharArray();
 		final char c = arr[0];
-		
+
 		if (Character.isLetter(c))
 		{
 			arr[0] = Character.toUpperCase(c);
 		}
 		return new String(arr);
 	}
-	
+
 	/**
 	 * Based on implode() in PHP
 	 * @param <T>
@@ -291,7 +290,7 @@ public final class CommonUtil
 		iteratable.forEach(o -> sj.add(o.toString()));
 		return sj.toString();
 	}
-	
+
 	/**
 	 * Based on implode() in PHP
 	 * @param <T>

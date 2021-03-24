@@ -29,9 +29,9 @@ import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.EnumSet;
+import java.util.Properties;
+import java.util.Set;
 
 import static java.nio.file.Files.newBufferedReader;
 import static java.util.Arrays.stream;
@@ -43,7 +43,6 @@ import static org.l2j.commons.util.Util.*;
  */
 public final class SettingsFile extends Properties {
 
-    private static final long serialVersionUID = -4599023842346938325L;
     private static final Logger LOGGER = LoggerFactory.getLogger(SettingsFile.class);
     private static final String DEFAULT_DELIMITER = "[,;]";
     public static final String ERROR_GETTING_PROPERTY = "Error getting property {} : {}";

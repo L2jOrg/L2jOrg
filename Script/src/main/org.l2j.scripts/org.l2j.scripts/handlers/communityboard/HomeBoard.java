@@ -400,7 +400,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
                 if (canCreateScheme) {
                     SchemeBufferTable.getInstance().setScheme(activeChar.getObjectId(), schemeName.trim(), new ArrayIntList());
-                    returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1, returnHtml);
+                    returnHtml = showEditSchemeWindow(activeChar,"Buffs", schemeName, 1);
                 } else {
                     returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/new/services-buffer.html");
                 }
@@ -419,7 +419,7 @@ public final class HomeBoard implements IParseBoardHandler {
             final String schemeName = st.nextToken();
             final int page = Integer.parseInt(st.nextToken());
 
-            returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page, returnHtml);
+            returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page);
         } else if (command.startsWith("_bbsskill")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
             final String currentCommand = st.nextToken();
@@ -449,7 +449,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 skills.remove(skillId);
             }
 
-            returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page, returnHtml);
+            returnHtml = showEditSchemeWindow(activeChar, groupType, schemeName, page);
         }
         else if (command.startsWith("_bbsgivebuffs")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
@@ -704,9 +704,9 @@ public final class HomeBoard implements IParseBoardHandler {
         return returnHtml;
     }
 
-    private String showEditSchemeWindow(Player player, String groupType, String schemeName, int page, String returnHtml)
+    private String showEditSchemeWindow(Player player, String groupType, String schemeName, int page)
     {
-        returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
+        String returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/new/services-buffer-editscheme.html");
 
         final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         returnHtml = setHtmlSchemeBuffList(groupType, schemeName, schemeSkills, page, returnHtml);
