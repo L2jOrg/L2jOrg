@@ -98,6 +98,9 @@ public class GameServer {
         printSection("Skills");
         SkillEngine.init();
 
+        /*printSection("Skills Parser");
+        SkillCheckerWithEffects.doCheck();*/
+
         printSection("Items");
         ItemEngine.init();
 
