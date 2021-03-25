@@ -914,7 +914,7 @@ public final class ClassMaster extends AbstractNpcAI
 		public void load()
 		{
 			_classChangeData.clear();
-			parseFile(new File("config/ClassMaster.xml"));
+			parseFile("config/ClassMaster.xml");
 
 			LOGGER.info("Loaded {} class change options.", _classChangeData.size());
 			releaseResources();

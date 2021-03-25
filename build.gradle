@@ -49,10 +49,6 @@ distZip {
     subprojects.each { dependsOn("${it.name}:build") }
 }
 
-distTar {
-    subprojects.each { dependsOn("${it.name}:build") }
-}
-
 distributions {
     subprojects.each { distTar.enabled = false}
     main {

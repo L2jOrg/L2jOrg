@@ -51,7 +51,7 @@ public class SiegeScheduleData extends GameXmlReader {
     @Override
     public synchronized void load() {
         scheduleData.clear();
-        parseFile(new File("config/siege-schedule.xml"));
+        parseFile("config/siege-schedule.xml");
         LOGGER.info("Loaded: {}  siege schedulers.", scheduleData.size());
         if (scheduleData.isEmpty()) {
             scheduleData.add(new SiegeScheduleDate());
