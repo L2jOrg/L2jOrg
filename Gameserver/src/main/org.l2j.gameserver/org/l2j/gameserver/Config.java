@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver;
 
+import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
 import org.l2j.gameserver.model.Location;
@@ -1319,7 +1320,7 @@ public final class Config {
         ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 168);
         ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 48);
 
-        try(var lines = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
+        try(var lines = Files.lines(FileUtil.resolvePath(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
             //@formatter:off
             FILTER_LIST = lines.map(String::trim)
                     .filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
@@ -1756,10 +1757,9 @@ public final class Config {
 
         @Override
         public void load() {
-            final File f = new File(IPCONFIG_FILE);
-            if (f.exists()) {
+            if (Files.isRegularFile(Path.of(IPCONFIG_FILE))) {
                 LOGGER.info("Network Config: ipconfig.xml exists using manual configuration...");
-                parseFile(new File(IPCONFIG_FILE));
+                parseFile(IPCONFIG_FILE);
             } else
             // Auto configuration...
             {

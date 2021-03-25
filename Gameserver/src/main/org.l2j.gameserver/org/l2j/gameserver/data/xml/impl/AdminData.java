@@ -72,7 +72,7 @@ public final class AdminData extends GameXmlReader {
     public synchronized void load() {
         _accessLevels.clear();
         _adminCommandAccessRights.clear();
-        parseFile(new File("config/AccessLevels.xml"));
+        parseFile("config/AccessLevels.xml");
         LOGGER.info("Loaded: {} Access Levels.", _accessLevels.size());
         LOGGER.info("Loaded: {} Access Commands.", _adminCommandAccessRights.size());
         releaseResources();

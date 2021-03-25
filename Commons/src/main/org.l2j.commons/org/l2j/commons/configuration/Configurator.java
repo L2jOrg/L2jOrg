@@ -33,7 +33,7 @@ import static java.util.Objects.nonNull;
 public class Configurator {
 
     private static final Logger logger = LoggerFactory.getLogger(Configurator.class);
-    private static final String CONFIGURATOR_PROPERTIES = "./config/configurator.properties";
+    private static final String CONFIGURATOR_PROPERTIES = "config/configurator.properties";
     private static Configurator configurator;
     private final LazyConfiguratorLoader loader;
 

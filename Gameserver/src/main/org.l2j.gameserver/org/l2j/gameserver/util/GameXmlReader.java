@@ -45,12 +45,12 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public abstract class GameXmlReader extends XmlReader {
 
     /**
-     * Wrapper for {@link #parseFile(File)} method.
+     * Wrapper for {@link #parseFile(String)} method.
      *
      * @param path the relative path to the datapack root of the XML file to parse.
      */
     protected void parseDatapackFile(String path) {
-        parseFile(getSettings(ServerSettings.class).dataPackDirectory().resolve(path).toFile());
+        parseFile(getSettings(ServerSettings.class).dataPackDirectory().resolve(path).toString());
     }
 
     /**

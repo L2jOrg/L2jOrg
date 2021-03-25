@@ -18,6 +18,7 @@
  */
 package org.l2j.commons.xml;
 
+import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.FilterUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -88,13 +89,24 @@ public abstract class XmlReader extends XmlParser {
         try {
             var schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
             var path = getSchemaFilePath();
+
             if(nonNull(path) && Files.isRegularFile(path)) {
                 return schemaFactory.newSchema(path.toFile());
             } else {
-                LOGGER.warn("Schema Validation disabled, the path {} is not a file", path);
+                return loadFromResources(schemaFactory, path.toString());
             }
         } catch (SAXException e) {
             LOGGER.error(e.getMessage(), e);
+        }
+        return null;
+    }
+
+    private Schema loadFromResources(SchemaFactory schemaFactory, String path) throws SAXException {
+        var url = FileUtil.readToURL(path);
+        if(nonNull(url)) {
+            return schemaFactory.newSchema(url);
+        } else {
+            LOGGER.warn("Schema Validation disabled, the path {} is not a file", path);
         }
         return null;
     }
@@ -103,31 +115,24 @@ public abstract class XmlReader extends XmlParser {
      * Parses a single XML file.<br>
      * If the file was successfully parsed, call {@link #parseDocument(Document, File)} for the parsed document.<br>
      * <b>Validation is enforced.</b>
-     * @param file the XML file to parse.
+     * @param filePath the XML the file path to parse.
      */
-    protected void parseFile(File file) {
-        if (!FilterUtil.xmlFile(file)) {
-            LOGGER.warn("Could not parse {} is not a file or it doesn't exist!", file);
-            return;
-        }
-
+    protected void parseFile(String filePath) {
         try {
             if(isNull(documentBuilder)){
                 createDocumentBuilder();
             }
-            parseDocument(documentBuilder.parse(file), file);
-        }
-        catch (SAXParseException e) {
-            LOGGER.warn("Could not parse file: {} at line: {}, column: {} ", file.getName(), e.getLineNumber(), e.getColumnNumber(), e);
-        }
-        catch (Exception e)
-        {
-            LOGGER.warn("Could not parse file {}", file.getName(), e);
+            var fileStream = FileUtil.stream(filePath);
+            parseDocument(documentBuilder.parse(fileStream), new File(filePath));
+        } catch (SAXParseException e) {
+            LOGGER.warn("Could not parse file: {} at line: {}, column: {} ", filePath, e.getLineNumber(), e.getColumnNumber(), e);
+        } catch (Exception e) {
+            LOGGER.warn("Could not parse file {}", filePath, e);
         }
     }
 
     /**
-     * Loads all XML files from {@code path} and calls {@link #parseFile(File)} for each one of them.
+     * Loads all XML files from {@code path} and calls {@link #parseFile(String)} for each one of them.
      * @param dir the directory object to scan.
      * @param recursive parses all sub folders if there is.
      * @return {@code false} if it fails to find the directory, {@code true} otherwise.
@@ -144,7 +149,7 @@ public abstract class XmlReader extends XmlParser {
                 if (recursive && f.isDirectory()) {
                     parseDirectory(f, recursive);
                 } else if (FilterUtil.xmlFile(f.toPath())) {
-                    parseFile(f);
+                    parseFile(f.toString());
                 }
             }
         }
@@ -190,7 +195,7 @@ public abstract class XmlReader extends XmlParser {
 
     /**
      * Abstract method that when implemented will parse the current document.<br>
-     * Is expected to be call from {@link #parseFile(File)}.
+     * Is expected to be call from {@link #parseFile(String)}.
      * @param doc the current document to parse
      * @param f the current file
      */

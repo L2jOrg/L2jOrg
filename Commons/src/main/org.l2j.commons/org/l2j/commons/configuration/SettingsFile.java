@@ -19,13 +19,13 @@
 package org.l2j.commons.configuration;
 
 import io.github.joealisson.primitive.IntSet;
+import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
@@ -48,10 +48,10 @@ public final class SettingsFile extends Properties {
     public static final String ERROR_GETTING_PROPERTY = "Error getting property {} : {}";
 
     SettingsFile(String filePath) {
-        try (var reader = newBufferedReader(Paths.get(filePath))) {
+        try (var reader = FileUtil.reader(filePath)) {
             load(reader);
         } catch (IOException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
