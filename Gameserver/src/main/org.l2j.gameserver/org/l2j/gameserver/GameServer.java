@@ -247,6 +247,8 @@ public class GameServer {
         connectionHandler.start();
     }
 
+
+
     public static void main(String[] args) throws Exception {
         configureLogger();
         configureCache();
@@ -255,6 +257,7 @@ public class GameServer {
         configureNetworkPackets();
 
         printSection("Server Configuration");
+
         Config.load(); // TODO remove this
 
         var settings = getSettings(ServerSettings.class);
@@ -293,11 +296,11 @@ public class GameServer {
     }
 
     private static void configureCache() {
-        CacheFactory.getInstance().initialize("config/ehcache.xml");
+        CacheFactory.getInstance().initialize(Config.HECACHE_FILE);
     }
 
     private static void configureNetworkPackets() {
-        System.setProperty("async-mmocore.configurationFile", "config/async-mmocore.properties");
+        System.setProperty("async-mmocore.configurationFile", Config.ASYNC_MMOCORE_FILE);
     }
 
     private static void configureLogger() {
@@ -310,7 +313,7 @@ public class GameServer {
 
     private static void configureDatabase() throws Exception {
         printSection("Datasource Settings");
-        System.setProperty("hikaricp.configurationFile", "config/database.properties");
+        System.setProperty("hikaricp.configurationFile", Config.DATABASE_FILE);
         if (!DatabaseAccess.initialize()) {
             throw new Exception("Database Access could not be initialized");
         }

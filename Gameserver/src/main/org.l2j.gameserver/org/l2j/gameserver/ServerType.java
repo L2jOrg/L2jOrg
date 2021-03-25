@@ -40,7 +40,7 @@ public enum ServerType
 	CLASSIC,
 	ARENA,
 	BLOODY,
-	CLASSICADEN(BLOODY.getMask() | CLASSIC.getMask());
+	ESSENCE(BLOODY.getMask() | CLASSIC.getMask());
 
 
 	private int mask;
@@ -74,7 +74,7 @@ public enum ServerType
 
 	public static int getClientType(int type) {
 		int clientType = 0;
-		if ((type & ServerType.CLASSICADEN.getMask()) > 0) {
+		if ((type & ServerType.ESSENCE.getMask()) > 0) {
 			clientType = 4;
 		} else if ((type & ServerType.CLASSIC.getMask()) > 0) {
 			clientType = 1;

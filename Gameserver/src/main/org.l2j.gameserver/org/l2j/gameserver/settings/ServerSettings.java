@@ -23,7 +23,12 @@ import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ServerType;
 
+import java.io.IOException;
+import java.net.URI;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -63,6 +68,7 @@ public class ServerSettings implements Settings {
     private int maxThreadPoolSize;
     private int parallelismThreshold;
 
+
     @Override
     public void load(SettingsFile settingsFile) {
         serverId = settingsFile.getInteger("RequestServerID", 1);
@@ -78,7 +84,8 @@ public class ServerSettings implements Settings {
         showBrackets = settingsFile.getBoolean("ServerListBrackets", false);
         isPvP = settingsFile.getBoolean("PvPServer", false);
 
-        dataPackDirectory = Path.of(settingsFile.getString("DatapackRoot", "."));
+        dataPackDirectory = resolverdataPackDirectory(settingsFile);
+
 
         var processors = Runtime.getRuntime().availableProcessors();
 
@@ -86,7 +93,7 @@ public class ServerSettings implements Settings {
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
         maxThreadPoolSize = determinePoolSize(settingsFile, "MaxThreadPoolSize", threadPoolSize * 10);
         parallelismThreshold = settingsFile.getInteger("ParallelismThreshold", 1000);
-        acceptedProtocols =  settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
+        acceptedProtocols = settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
 
         scheduleRestart = settingsFile.getBoolean("ServerRestartScheduleEnabled", false);
         scheduleRestartHours = settingsFile.getStringArray("ServerRestartSchedule");
@@ -104,6 +111,17 @@ public class ServerSettings implements Settings {
         maxPlayerPerHWID = settingsFile.getInteger("MaxPlayersPerHWID", 0);
     }
 
+    private static Path resolverdataPackDirectory(SettingsFile settingsFile) {
+        String datapackRootString = settingsFile.getString("DatapackRoot", isDebug() ? "../Datapack" : ".");
+        Path datapackRootpath = Path.of(datapackRootString).toAbsolutePath().normalize();
+        return Paths.get(datapackRootpath.toString(), datapackRootString).normalize();
+    }
+
+    private static boolean isDebug() {
+        return java.lang.management.ManagementFactory.getRuntimeMXBean().
+                getInputArguments().toString().contains("jdwp");
+    }
+
     private Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
         try {
             return Pattern.compile(settingsFile.getString(key, ".*")).asMatchPredicate();
@@ -115,7 +133,7 @@ public class ServerSettings implements Settings {
     private int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
         var size = settingsFile.getInteger(property, processors);
 
-        if(size < 2) {
+        if (size < 2) {
             return processors;
         }
         return size;
