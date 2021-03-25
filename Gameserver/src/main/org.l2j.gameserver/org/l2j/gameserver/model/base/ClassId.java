@@ -171,7 +171,10 @@ public enum ClassId implements IIdentifiable {
     DEATH_MESSENGER_DARK_ELF(206, false, Race.DARK_ELF, DEATH_BLADE_DARK_ELF),
     DEATH_KIGHT_DARK_ELF(207, false, Race.DARK_ELF, DEATH_MESSENGER_DARK_ELF),
 
-    SYLPH(208, false, Race.SYLPH, null);
+    SYLPH(208, false, Race.SYLPH, null),
+    FREE_SHOOTER(209, false, Race.SYLPH, SYLPH),
+    FREE_HUNTER(210, false, Race.SYLPH, FREE_SHOOTER),
+    SHOOTING_MASTER(211, false, Race.SYLPH, FREE_HUNTER);
 
 
     /**
