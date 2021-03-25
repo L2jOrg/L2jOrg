@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.controller;
 
+import org.l2j.authserver.Config;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,7 +42,7 @@ class BanManager {
     }
 
     private void loadBanFile() {
-        Path path = Paths.get("banned_ip.cfg");
+        Path path = Paths.get(Config.BANNED_IP_FILE);
         if (Files.isRegularFile(path)) {
             try {
                 Files.readAllLines(path).stream().filter(Util::isNotEmpty).forEach(this::addBannedAddress);

@@ -56,54 +56,75 @@ public final class Config {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
 
+    public static String getCurrentPath(String path) {
+        boolean isDebug = java.lang.management.ManagementFactory.getRuntimeMXBean().
+                getInputArguments().toString().contains("jdwp");
+        return (isDebug ? "src/main/resources/" + path : path);
+    }
+
     // --------------------------------------------------
     // Config File Definitions
     // --------------------------------------------------
 
-    public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
-    private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
-    private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
-    private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-    private static final String GENERAL_CONFIG_FILE = "config/general.properties";
 
-    private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
+    public static final String HECACHE_FILE = getCurrentPath("config/ehcache.xml");
+    public static final String ASYNC_MMOCORE_FILE = getCurrentPath("config/async-mmocore.properties");
+    public static final String DATABASE_FILE = getCurrentPath("config/database.properties");
+    public static final String ScriptEngine_FILE = getCurrentPath("config/ScriptEngine.properties");
+    public static final String SIEGE_CONFIG_FILE = getCurrentPath("config/Siege.ini");
+    public static final String BOT_REPORT_PUNISHMENTS_FILE = getCurrentPath("./config/BotReportPunishments.xml");
+    public static final String CLASS_MASTER_FILE = getCurrentPath("config/ClassMaster.xml");
+    public static final String CLASS_MASTER_SCHEMA_FILE = getCurrentPath("config/xsd/classMaster.xsd");
+    public static final String SECONDARY_AUTH_FILE = getCurrentPath("config/secondary-auth.xml");
+    public static final String SECONDARY_AUTH_SCHEMA_FILE = getCurrentPath("config/xsd/secondary-auth.xsd");
+    public static final String ACCESS_LEVELS_FILE = getCurrentPath("config/AccessLevels.xml");
+    public static final String ACCESS_LEVELS_SCHEMA_FILE = getCurrentPath("config/xsd/AccessLevels.xsd");
+    public static final String SIEGE_SCHEDULE_FILE = getCurrentPath("config/siege-schedule.xml");
+    public static final String SIEGE_SCHEDULE_SCHEMA_FILE = getCurrentPath("config/xsd/siege-schedule.xsd");
 
-    private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
-    private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
-    private static final String RATES_CONFIG_FILE = "config/rates.properties";
-    private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
 
-    private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-    private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
+    private static final String CHARACTER_CONFIG_FILE = getCurrentPath("config/character.properties");
+    private static final String FEATURE_CONFIG_FILE = getCurrentPath("config/feature.properties");
+    private static final String FLOOD_PROTECTOR_CONFIG_FILE = getCurrentPath("./config/FloodProtector.ini");
+    private static final String GENERAL_CONFIG_FILE = getCurrentPath("config/general.properties");
+
+    private static final String GRANDBOSS_CONFIG_FILE = getCurrentPath("./config/GrandBoss.ini");
+
+    private static final String NPC_CONFIG_FILE = getCurrentPath("./config/NPC.ini");
+    private static final String PVP_CONFIG_FILE = getCurrentPath("./config/PVP.ini");
+    private static final String RATES_CONFIG_FILE = getCurrentPath("config/rates.properties");
+    private static final String ALTHARS_CONFIG_FILE = getCurrentPath("config/althars.ini");
+
+    private static final String CHAT_FILTER_FILE = getCurrentPath("./config/chatfilter.txt");
+    private static final String IPCONFIG_FILE = getCurrentPath("./config/ipconfig.xml");
 
     // --------------------------------------------------
     // Custom Config File Definitions
     // --------------------------------------------------
-    private static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
-    private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
-    private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
-    private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
-    private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
-    private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
-    private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
-    private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
-    private static final String  CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
+    private static final String CUSTOM_BANKING_CONFIG_FILE = getCurrentPath("./config/Custom/Banking.ini");
+    private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = getCurrentPath("./config/Custom/ChampionMonsters.ini");
+    private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = getCurrentPath("./config/Custom/CommunityBoard.ini");
+    private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = getCurrentPath("./config/Custom/DualboxCheck.ini");
+    private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = getCurrentPath("./config/Custom/MultilingualSupport.ini");
+    private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = getCurrentPath("./config/Custom/NpcStatMultipliers.ini");
+    private static final String CUSTOM_PC_CAFE_CONFIG_FILE = getCurrentPath("./config/Custom/PcCafe.ini");
+    private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = getCurrentPath("./config/Custom/AutoPotions.ini");
+    private static final String CUSTOM_DONATION_CONFIG_FILE = getCurrentPath("./config/Custom/Donate.ini");
 
 
-    private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
-    private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
-    private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
-    private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
-    private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
-    private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
-    private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
-    private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
-    private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
-    private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
-    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
-    private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
-    private static final String RANDOM_CRAFT_CONFIG_FILE = "./config/random-craft.properties";
-
+    private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = getCurrentPath("./config/Custom/PvpAnnounce.ini");
+    private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = getCurrentPath("./config/Custom/PvpRewardItem.ini");
+    private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = getCurrentPath("./config/Custom/PvpTitleColor.ini");
+    private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = getCurrentPath("./config/Custom/RandomSpawns.ini");
+    private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = getCurrentPath("./config/Custom/ScreenWelcomeMessage.ini");
+    private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = getCurrentPath("./config/Custom/SellBuffs.ini");
+    private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = getCurrentPath("./config/Custom/ServerTime.ini");
+    private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = getCurrentPath("./config/Custom/ShemeBuffer.ini");
+    private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = getCurrentPath("./config/Custom/StartingLocation.ini");
+    private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = getCurrentPath("./config/Custom/VoteReward.ini");
+    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = getCurrentPath("./config/time-limited-zones.properties");
+    private static final String MAGIC_LAMP_CONFIG_FILE = getCurrentPath("./config/magic-lamp.properties");
+    private static final String RANDOM_CRAFT_CONFIG_FILE = getCurrentPath("./config/random-craft.properties");
 
 
     public static boolean ENABLE_MODIFY_SKILL_DURATION;
@@ -1220,8 +1241,7 @@ public final class Config {
         RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 3);
         RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
         VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
-        if (VITALITY_MAX_ITEMS_ALLOWED == 0)
-        {
+        if (VITALITY_MAX_ITEMS_ALLOWED == 0) {
             VITALITY_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
         }
         RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
@@ -1376,7 +1396,7 @@ public final class Config {
         ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 168);
         ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 48);
 
-        try(var lines = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
+        try (var lines = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
             //@formatter:off
             FILTER_LIST = lines.map(String::trim)
                     .filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
@@ -1567,18 +1587,15 @@ public final class Config {
         AUTO_HP_PERCENTAGE = AutoPotions.getInt("AutoHpPercentage", 70);
         AUTO_MP_PERCENTAGE = AutoPotions.getInt("AutoMpPercentage", 70);
         AUTO_CP_ITEM_IDS = new ArrayList<>();
-        for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(","))
-        {
+        for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(",")) {
             AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
         }
         AUTO_HP_ITEM_IDS = new ArrayList<>();
-        for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(","))
-        {
+        for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(",")) {
             AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
         }
         AUTO_MP_ITEM_IDS = new ArrayList<>();
-        for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(","))
-        {
+        for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(",")) {
             AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
 
@@ -1812,7 +1829,7 @@ public final class Config {
      * @return the parsed list or {@code null} if nothing was parsed
      */
     private static List<ItemHolder> parseItemsList(String line) {
-        if(isNullOrEmpty(line)) {
+        if (isNullOrEmpty(line)) {
             return null;
         }
         final String[] propertySplit = line.split(";");
@@ -1862,7 +1879,7 @@ public final class Config {
 
         @Override
         protected Path getSchemaFilePath() {
-            return Path.of("./config/xsd/ipconfig.xsd");
+            return Path.of(getCurrentPath("./config/xsd/ipconfig.xsd"));
         }
 
         @Override
