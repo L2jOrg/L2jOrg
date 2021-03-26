@@ -31,7 +31,7 @@ import java.io.*;
  * @author Carlo Pelliccia
  * @since 2.1
  */
-public class ProcessTask extends Task {
+public class ProcessTask implements Task {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ProcessTask.class);
 
