@@ -28,39 +28,21 @@ public class ClientHardwareInfoHolder {
     private final int _windowsMajorVersion;
     private final int _windowsMinorVersion;
     private final int _windowsBuildNumber;
-    private final int _directxVersion;
-    private final int _directxRevision;
     private final String _cpuName;
     private final int _cpuSpeed;
     private final int _cpuCoreCount;
-    private final int _vgaCount;
-    private final int _vgaPcxSpeed;
-    private final int _physMemorySlot1;
-    private final int _physMemorySlot2;
-    private final int _physMemorySlot3;
-    private final int _videoMemory;
-    private final int _vgaVersion;
     private final String _vgaName;
     private final String _vgaDriverVersion;
 
-    public ClientHardwareInfoHolder(String macAddress, int windowsPlatformId, int windowsMajorVersion, int windowsMinorVersion, int windowsBuildNumber, int directxVersion, int directxRevision, String cpuName, int cpuSpeed, int cpuCoreCount, int vgaCount, int vgaPcxSpeed, int physMemorySlot1, int physMemorySlot2, int physMemorySlot3, int videoMemory, int vgaVersion, String vgaName, String vgaDriverVersion) {
+    public ClientHardwareInfoHolder(String macAddress, int windowsPlatformId, int windowsMajorVersion, int windowsMinorVersion, int windowsBuildNumber, String cpuName, int cpuSpeed, int cpuCoreCount, String vgaName, String vgaDriverVersion) {
         _macAddress = macAddress;
         _windowsPlatformId = windowsPlatformId;
         _windowsMajorVersion = windowsMajorVersion;
         _windowsMinorVersion = windowsMinorVersion;
         _windowsBuildNumber = windowsBuildNumber;
-        _directxVersion = directxVersion;
-        _directxRevision = directxRevision;
         _cpuName = cpuName;
         _cpuSpeed = cpuSpeed;
         _cpuCoreCount = cpuCoreCount;
-        _vgaCount = vgaCount;
-        _vgaPcxSpeed = vgaPcxSpeed;
-        _physMemorySlot1 = physMemorySlot1;
-        _physMemorySlot2 = physMemorySlot2;
-        _physMemorySlot3 = physMemorySlot3;
-        _videoMemory = videoMemory;
-        _vgaVersion = vgaVersion;
         _vgaName = vgaName;
         _vgaDriverVersion = vgaDriverVersion;
     }

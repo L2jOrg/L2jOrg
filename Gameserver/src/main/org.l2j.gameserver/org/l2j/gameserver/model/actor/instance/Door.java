@@ -362,10 +362,6 @@ public final class Door extends Creature {
         return getTemplate().getNodeZ() + getTemplate().getHeight();
     }
 
-    public int getMeshIndex() {
-        return 1;
-    }
-
     public int getEmitter() {
         return getTemplate().getEmmiter();
     }

@@ -848,9 +848,6 @@ public abstract class Summon extends Playable {
         return formId;
     }
 
-    public int getSummonPoints() {
-        return 0;
-    }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
         final Player owner = this.owner;

@@ -178,12 +178,6 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
         this.magic = magic;
     }
 
-    public void setSoulshots(int soulshots) {
-    }
-
-    public void setSpiritshots(int spiritshots) {
-    }
-
     public void setManaConsume(int mana) {
         this.manaConsume = mana;
     }

@@ -171,7 +171,7 @@ public class PetInfo extends ServerPacket {
         buffer.writeInt(0x00); // TODO: Find me
         buffer.writeInt(summon.getFormId());
 
-        buffer.writeByte( summon.getOwner().getSummonPoints());
+        buffer.writeByte( 0 ); // summon points;
         buffer.writeByte( summon.getOwner().getMaxSummonPoints());
 
         final Set<AbnormalVisualEffect> aves = summon.getEffectList().getCurrentAbnormalVisualEffects();

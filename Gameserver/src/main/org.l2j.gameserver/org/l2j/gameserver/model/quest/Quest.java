@@ -94,7 +94,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
     private final int questId;
 
-    private final boolean isCustom = false;
+    private boolean isCustom = false;
     private int[] questItemIds = null;
 
     public Quest(int questId) {
@@ -1496,6 +1496,10 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     public boolean isCustomQuest() {
         return isCustom;
+    }
+
+    public void setCustom(boolean custom) {
+        isCustom = custom;
     }
 
     public Set<NpcLogListHolder> getNpcLogList(Player activeChar) {

@@ -76,7 +76,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     private float spRate = Config.RATE_INSTANCE_SP;
     private float expPartyRate = Config.RATE_INSTANCE_PARTY_XP;
     private float spPartyRate = Config.RATE_INSTANCE_PARTY_SP;
-    private StatsSet parameters = StatsSet.EMPTY_STATSET;
 
     private InstanceTeleportType enterLocationType = InstanceTeleportType.NONE;
     private List<Location> enterLocations = null;
@@ -392,17 +391,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     }
 
     /**
-     * Set parameters shared between instances with same template id.
-     *
-     * @param set map containing parameters
-     */
-    public void setParameters(Map<String, Object> set) {
-        if (!set.isEmpty()) {
-            parameters = new StatsSet(Collections.unmodifiableMap(set));
-        }
-    }
-
-    /**
      * Check if buffs are removed upon instance enter.
      *
      * @return {@code true} if any buffs should be removed, otherwise {@code false}
@@ -420,7 +408,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
         // Make list of affected playable objects
         final List<Playable> affected = new ArrayList<>();
         affected.add(player);
-        player.getServitors().values().forEach(affected::add);
+        affected.addAll(player.getServitors().values());
         if (player.hasPet()) {
             affected.add(player.getPet());
         }

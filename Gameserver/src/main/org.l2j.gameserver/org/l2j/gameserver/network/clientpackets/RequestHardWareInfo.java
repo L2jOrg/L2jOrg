@@ -35,18 +35,9 @@ public final class RequestHardWareInfo extends ClientPacket {
     private int _windowsMajorVersion;
     private int _windowsMinorVersion;
     private int _windowsBuildNumber;
-    private int _directxVersion;
-    private int _directxRevision;
     private String _cpuName;
     private int _cpuSpeed;
     private int _cpuCoreCount;
-    private int _vgaCount;
-    private int _vgaPcxSpeed;
-    private int _physMemorySlot1;
-    private int _physMemorySlot2;
-    private int _physMemorySlot3;
-    private int _videoMemory;
-    private int _vgaVersion;
     private String _vgaName;
     private String _vgaDriverVersion;
 
@@ -57,29 +48,29 @@ public final class RequestHardWareInfo extends ClientPacket {
         _windowsMajorVersion = readInt();
         _windowsMinorVersion = readInt();
         _windowsBuildNumber = readInt();
-        _directxVersion = readInt();
-        _directxRevision = readInt();
+        readInt(); // directx Version
+        readInt(); // directxRevision
         readBytes(new byte[16]);
         _cpuName = readString();
         _cpuSpeed = readInt();
         _cpuCoreCount = readByte();
         readInt();
-        _vgaCount = readInt();
-        _vgaPcxSpeed = readInt();
-        _physMemorySlot1 = readInt();
-        _physMemorySlot2 = readInt();
-        _physMemorySlot3 = readInt();
+        readInt(); // vga count
+        readInt(); // _vgaPcxSpeed
+        readInt(); // _physMemorySlot1
+        readInt(); // _physMemorySlot2
+        readInt(); // _physMemorySlot3
         readByte();
-        _videoMemory = readInt();
+        readInt(); // _videoMemory
         readInt();
-        _vgaVersion = readShort();
+        readShort(); // _vgaVersion
         _vgaName = readString();
         _vgaDriverVersion = readString();
     }
 
     @Override
     public void runImpl() {
-        client.setHardwareInfo(new ClientHardwareInfoHolder(_macAddress, _windowsPlatformId, _windowsMajorVersion, _windowsMinorVersion, _windowsBuildNumber, _directxVersion, _directxRevision, _cpuName, _cpuSpeed, _cpuCoreCount, _vgaCount, _vgaPcxSpeed, _physMemorySlot1, _physMemorySlot2, _physMemorySlot3, _videoMemory, _vgaVersion, _vgaName, _vgaDriverVersion));
+        client.setHardwareInfo(new ClientHardwareInfoHolder(_macAddress, _windowsPlatformId, _windowsMajorVersion, _windowsMinorVersion, _windowsBuildNumber, _cpuName, _cpuSpeed, _cpuCoreCount, _vgaName, _vgaDriverVersion));
         var serverSettings = getSettings(ServerSettings.class);
 
         if (serverSettings.isHardwareInfoEnabled() && serverSettings.maxPlayerPerHWID() > 0) {

@@ -25,14 +25,12 @@ package org.l2j.gameserver.model.holders;
 public class ExtendDropItemHolder extends ItemHolder {
     private final long _maxCount;
     private final double _chance;
-    private final double _additionalChance;
 
-    public ExtendDropItemHolder(int id, long count, long maxCount, double chance, double additionalChance) {
+    public ExtendDropItemHolder(int id, long count, long maxCount, double chance) {
         super(id, count);
 
         _maxCount = maxCount;
         _chance = chance;
-        _additionalChance = additionalChance;
     }
 
     public long getMaxCount() {

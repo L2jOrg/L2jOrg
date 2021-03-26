@@ -27,15 +27,11 @@ import java.util.*;
  * @author Sdw
  */
 public class EnchantSkillHolder {
-    private final int _level;
-    private final int _enchantFailLevel;
     private final Map<SkillEnchantType, Long> _sp = new EnumMap<>(SkillEnchantType.class);
     private final Map<SkillEnchantType, Integer> _chance = new EnumMap<>(SkillEnchantType.class);
     private final Map<SkillEnchantType, Set<ItemHolder>> _requiredItems = new EnumMap<>(SkillEnchantType.class);
 
     public EnchantSkillHolder(StatsSet set) {
-        _level = set.getInt("level");
-        _enchantFailLevel = set.getInt("enchantFailLevel");
     }
 
     public long getSp(SkillEnchantType type) {

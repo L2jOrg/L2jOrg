@@ -45,7 +45,7 @@ public class StaticObject extends ServerPacket {
         _objectId = staticObject.getObjectId();
         _type = 0;
         _isTargetable = true;
-        _meshIndex = staticObject.getMeshIndex();
+        _meshIndex = StaticWorldObject.MESH_INDEX;
         _isClosed = false;
         _isEnemy = false;
         _maxHp = 0;
@@ -59,7 +59,7 @@ public class StaticObject extends ServerPacket {
         _objectId = door.getObjectId();
         _type = 1;
         _isTargetable = door.isTargetable() || targetable;
-        _meshIndex = door.getMeshIndex();
+        _meshIndex = 1;
         _isClosed = !door.isOpen();
         _isEnemy = door.isEnemy();
         _maxHp = door.getMaxHp();

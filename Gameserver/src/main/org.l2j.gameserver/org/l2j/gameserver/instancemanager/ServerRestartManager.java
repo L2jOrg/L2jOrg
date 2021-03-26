@@ -33,9 +33,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author Gigi
  */
 public class ServerRestartManager {
-    static final Logger LOGGER = LoggerFactory.getLogger(ServerRestartManager.class.getName());
-
-    private String nextRestartTime = "unknown";
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServerRestartManager.class);
 
     private ServerRestartManager() {
         try {

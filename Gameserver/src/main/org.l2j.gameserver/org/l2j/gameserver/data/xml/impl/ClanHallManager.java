@@ -128,9 +128,7 @@ public final class ClanHallManager extends GameXmlReader {
                                             final int x = parseInt(np, "x");
                                             final int y = parseInt(np, "y");
                                             final int z = parseInt(np, "z");
-                                            final int minFunctionLevel = parseInt(np, "minFunctionLevel");
-                                            final int cost = parseInt(np, "cost");
-                                            teleports.add(new ClanHallTeleportHolder(x, y, z, minFunctionLevel, cost));
+                                            teleports.add(new ClanHallTeleportHolder(x, y, z));
                                         }
                                     }
                                     params.set("teleportList", teleports);

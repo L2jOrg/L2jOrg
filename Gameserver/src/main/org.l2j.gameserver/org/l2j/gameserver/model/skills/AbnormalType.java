@@ -572,14 +572,14 @@ public enum AbnormalType {
 	ISHKA_EFFECT(-1),
 	TRANSFORM_EFFECT(-1);
 
-    private final int _clientId;
+    private final int clientId;
 
     AbnormalType(int clientId) {
-        _clientId = clientId;
+        this.clientId = clientId;
     }
 
     public int getClientId() {
-        return _clientId;
+        return clientId;
     }
 
     /**
