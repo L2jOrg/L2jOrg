@@ -19,8 +19,6 @@
  */
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.model.StatsSet;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,9 +31,6 @@ public class LuckyGameDataHolder {
     private final List<ItemChanceHolder> _modifyRewards = new ArrayList<>();
     private int _minModifyRewardGame;
     private int _maxModifyRewardGame;
-
-    public LuckyGameDataHolder() {
-    }
 
     public void addCommonReward(ItemChanceHolder item) {
         _commonRewards.add(item);

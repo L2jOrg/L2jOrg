@@ -24,27 +24,39 @@ package org.l2j.gameserver.model.holders;
  */
 public class ClientHardwareInfoHolder {
     private final String _macAddress;
-    private final int _windowsPlatformId;
-    private final int _windowsMajorVersion;
-    private final int _windowsMinorVersion;
-    private final int _windowsBuildNumber;
-    private final String _cpuName;
-    private final int _cpuSpeed;
-    private final int _cpuCoreCount;
-    private final String _vgaName;
-    private final String _vgaDriverVersion;
+    private int windowsPlatformId;
+    private int windowsMajorVersion;
+    private int windowsMinorVersion;
+    private int windowsBuildNumber;
+    private String cpuName;
+    private int cpuSpeed;
+    private int cpuCoreCount;
+    private String vgaName;
+    private String vgaDriverVersion;
 
-    public ClientHardwareInfoHolder(String macAddress, int windowsPlatformId, int windowsMajorVersion, int windowsMinorVersion, int windowsBuildNumber, String cpuName, int cpuSpeed, int cpuCoreCount, String vgaName, String vgaDriverVersion) {
+    public ClientHardwareInfoHolder(String macAddress) {
         _macAddress = macAddress;
-        _windowsPlatformId = windowsPlatformId;
-        _windowsMajorVersion = windowsMajorVersion;
-        _windowsMinorVersion = windowsMinorVersion;
-        _windowsBuildNumber = windowsBuildNumber;
-        _cpuName = cpuName;
-        _cpuSpeed = cpuSpeed;
-        _cpuCoreCount = cpuCoreCount;
-        _vgaName = vgaName;
-        _vgaDriverVersion = vgaDriverVersion;
+    }
+
+    public ClientHardwareInfoHolder withWindows(int platform, int majorVersion, int minorVersion, int build) {
+        windowsPlatformId = platform;
+        windowsMajorVersion = majorVersion;
+        windowsMinorVersion = minorVersion;
+        windowsBuildNumber = build;
+        return this;
+    }
+
+    public ClientHardwareInfoHolder withCPU(String name, int speed, int cores) {
+        cpuName = name;
+        cpuSpeed = speed;
+        cpuCoreCount = cores;
+        return this;
+    }
+
+    public ClientHardwareInfoHolder withVideo(String name, String version ) {
+        vgaName = name;
+        vgaDriverVersion = version;
+        return this;
     }
 
     /**
@@ -58,62 +70,62 @@ public class ClientHardwareInfoHolder {
      * @return the windowsPlatformId
      */
     public int getWindowsPlatformId() {
-        return _windowsPlatformId;
+        return windowsPlatformId;
     }
 
     /**
      * @return the windowsMajorVersion
      */
     public int getWindowsMajorVersion() {
-        return _windowsMajorVersion;
+        return windowsMajorVersion;
     }
 
     /**
      * @return the windowsMinorVersion
      */
     public int getWindowsMinorVersion() {
-        return _windowsMinorVersion;
+        return windowsMinorVersion;
     }
 
     /**
      * @return the windowsBuildNumber
      */
     public int getWindowsBuildNumber() {
-        return _windowsBuildNumber;
+        return windowsBuildNumber;
     }
 
     /**
      * @return the cpuName
      */
     public String getCpuName() {
-        return _cpuName;
+        return cpuName;
     }
 
     /**
      * @return the cpuSpeed
      */
     public int getCpuSpeed() {
-        return _cpuSpeed;
+        return cpuSpeed;
     }
 
     /**
      * @return the cpuCoreCount
      */
     public int getCpuCoreCount() {
-        return _cpuCoreCount;
+        return cpuCoreCount;
     }
 
     /**
      * @return the vgaName
      */
     public String getVgaName() {
-        return _vgaName;
+        return vgaName;
     }
 
     /**
      * @return the vgaDriverVersion
      */
     public String getVgaDriverVersion() {
-        return _vgaDriverVersion;
+        return vgaDriverVersion;
     }
 }
