@@ -200,7 +200,6 @@ public final class Player extends Playable {
     private int rank;
     private int rankRace;
     private int additionalSoulshot;
-    private byte vipTier;
     private byte shineSouls;
     private byte shadowSouls;
 
