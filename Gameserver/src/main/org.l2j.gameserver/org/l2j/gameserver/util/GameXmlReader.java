@@ -78,10 +78,10 @@ public abstract class GameXmlReader extends XmlReader {
         return parameters;
     }
 
-    private void parseMinions(Map<String, Object> parameters, Node parameters_node) {
+    private void parseMinions(Map<String, Object> parameters, Node node) {
         NamedNodeMap attrs;
         final List<MinionHolder> minions = new ArrayList<>(1);
-        for (Node minions_node = parameters_node.getFirstChild(); minions_node != null; minions_node = minions_node.getNextSibling()) {
+        for (Node minions_node = node.getFirstChild(); minions_node != null; minions_node = minions_node.getNextSibling()) {
             if (minions_node.getNodeName().equalsIgnoreCase("npc")) {
                 attrs = minions_node.getAttributes();
                 minions.add(new MinionHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
@@ -89,7 +89,7 @@ public abstract class GameXmlReader extends XmlReader {
         }
 
         if (!minions.isEmpty()) {
-            parameters.put(parseString(parameters_node.getAttributes(), "name"), minions);
+            parameters.put(parseString(node.getAttributes(), "name"), minions);
         }
     }
 

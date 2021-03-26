@@ -235,7 +235,7 @@ public class GameServer {
 
         var serverSettings = getSettings(ServerSettings.class);
         if (serverSettings.scheduleRestart()) {
-            ServerRestartManager.getInstance();
+            ServerRestartManager.init();
         }
 
         LOGGER.info("Maximum number of connected players is configured to {}", serverSettings.maximumOnlineUsers());

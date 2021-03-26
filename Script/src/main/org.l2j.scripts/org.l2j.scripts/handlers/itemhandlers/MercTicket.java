@@ -74,7 +74,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 		
 		final int castleId = castle.getId();
 		final SiegeGuardHolder holder = SiegeGuardManager.getInstance().getSiegeGuardByItem(castleId, item.getId());
-		if ((holder == null) || (castleId != holder.getCastleId()))
+		if ((holder == null) || (castleId != holder.castleId()))
 		{
 			activeChar.sendPacket(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE);
 			return false;
@@ -98,7 +98,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 		_items.put(activeChar.getObjectId(), item);
 		final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
 		dlg.addTime(15000);
-		dlg.addNpcName(holder.getNpcId());
+		dlg.addNpcName(holder.npcId());
 		activeChar.sendPacket(dlg);
 		activeChar.addAction(PlayerAction.MERCENARY_CONFIRM);
 		return true;

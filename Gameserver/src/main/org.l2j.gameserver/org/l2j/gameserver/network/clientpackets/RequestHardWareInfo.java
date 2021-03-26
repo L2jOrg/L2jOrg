@@ -30,30 +30,30 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author Mobius
  */
 public final class RequestHardWareInfo extends ClientPacket {
-    private String _macAddress;
-    private int _windowsPlatformId;
-    private int _windowsMajorVersion;
-    private int _windowsMinorVersion;
-    private int _windowsBuildNumber;
-    private String _cpuName;
-    private int _cpuSpeed;
-    private int _cpuCoreCount;
-    private String _vgaName;
-    private String _vgaDriverVersion;
+    private String macAddress;
+    private int windowsPlatformId;
+    private int windowsMajorVersion;
+    private int windowsMinorVersion;
+    private int windowsBuildNumber;
+    private String cpuName;
+    private int cpuSpeed;
+    private int cpuCoreCount;
+    private String vgaName;
+    private String vgaDriverVersion;
 
     @Override
     public void readImpl() {
-        _macAddress = readString();
-        _windowsPlatformId = readInt();
-        _windowsMajorVersion = readInt();
-        _windowsMinorVersion = readInt();
-        _windowsBuildNumber = readInt();
+        macAddress = readString();
+        windowsPlatformId = readInt();
+        windowsMajorVersion = readInt();
+        windowsMinorVersion = readInt();
+        windowsBuildNumber = readInt();
         readInt(); // directx Version
         readInt(); // directxRevision
         readBytes(new byte[16]);
-        _cpuName = readString();
-        _cpuSpeed = readInt();
-        _cpuCoreCount = readByte();
+        cpuName = readString();
+        cpuSpeed = readInt();
+        cpuCoreCount = readByte();
         readInt();
         readInt(); // vga count
         readInt(); // _vgaPcxSpeed
@@ -64,13 +64,19 @@ public final class RequestHardWareInfo extends ClientPacket {
         readInt(); // _videoMemory
         readInt();
         readShort(); // _vgaVersion
-        _vgaName = readString();
-        _vgaDriverVersion = readString();
+        vgaName = readString();
+        vgaDriverVersion = readString();
     }
 
     @Override
     public void runImpl() {
-        client.setHardwareInfo(new ClientHardwareInfoHolder(_macAddress, _windowsPlatformId, _windowsMajorVersion, _windowsMinorVersion, _windowsBuildNumber, _cpuName, _cpuSpeed, _cpuCoreCount, _vgaName, _vgaDriverVersion));
+        var hardwareInfo = new ClientHardwareInfoHolder(macAddress)
+                .withWindows(windowsPlatformId, windowsMajorVersion, windowsMinorVersion, windowsBuildNumber)
+                .withCPU(cpuName, cpuSpeed, cpuCoreCount)
+                .withVideo(vgaName, vgaDriverVersion);
+
+        client.setHardwareInfo(hardwareInfo);
+
         var serverSettings = getSettings(ServerSettings.class);
 
         if (serverSettings.isHardwareInfoEnabled() && serverSettings.maxPlayerPerHWID() > 0) {
