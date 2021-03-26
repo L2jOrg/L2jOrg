@@ -51,7 +51,6 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAttack;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -90,14 +89,12 @@ public class Attackable extends Npc {
     //
     private boolean _champion = false;
     private final Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
-    private boolean _isReturningToSpawnPoint = false;
+
     private boolean _canReturnToSpawnPoint = true;
     private boolean _seeThroughSilentMove = false;
-    // Manor
+
     private boolean _seeded = false;
-    private Seed _seed = null;
-    private int _seederObjId = 0;
-    // Spoil
+
     private int _spoilerObjectId;
     private boolean _plundered = false;
     // Over-hit
@@ -144,10 +141,6 @@ public class Attackable extends Npc {
 
     public final Map<Creature, AggroInfo> getAggroList() {
         return _aggroList;
-    }
-
-    public final void setisReturningToSpawnPoint(boolean value) {
-        _isReturningToSpawnPoint = value;
     }
 
     public final boolean canReturnToSpawnPoint() {
@@ -1100,8 +1093,6 @@ public class Attackable extends Npc {
 
         // Clear mod Seeded stat
         _seeded = false;
-        _seed = null;
-        _seederObjId = 0;
 
         // check the region where this mob is, do not activate the AI if region is inactive.
          if (hasAI() && !isInActiveRegion()) {
@@ -1151,17 +1142,8 @@ public class Attackable extends Npc {
         _spoilerObjectId = spoilerObjectId;
     }
 
-    /**
-     * Sets the seed parameters, but not the seed state
-     *
-     * @param seed   - instance {@link Seed} of used seed
-     * @param seeder - player who sows the seed
-     */
-    public final void setSeeded(Seed seed, Player seeder) {
-        if (!_seeded) {
-            _seed = seed;
-            _seederObjId = seeder.getObjectId();
-        }
+    public final void setSeeded() {
+        _seeded = true;
     }
 
     public final boolean isSeeded() {

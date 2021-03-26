@@ -570,9 +570,6 @@ public class CreatureAI extends AbstractAI {
             return;
         }
 
-        if (isAttackable(getActor())) {
-            ((Attackable) getActor()).setisReturningToSpawnPoint(false);
-        }
         clientStoppedMoving();
 
         // If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE

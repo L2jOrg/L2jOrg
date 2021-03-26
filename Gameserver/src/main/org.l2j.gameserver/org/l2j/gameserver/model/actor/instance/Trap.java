@@ -54,7 +54,7 @@ public final class Trap extends Npc {
     private final int _lifeTime;
     private final List<Integer> _playersWhoDetectedMe = new ArrayList<>();
     private final SkillHolder _skill;
-    private final boolean _hasLifeTime;
+    private final boolean hasLifeTime;
     private boolean _isInArena = false;
     private boolean _isTriggered;
     private Player _owner;
@@ -71,7 +71,7 @@ public final class Trap extends Npc {
         _owner = null;
         _isTriggered = false;
         _skill = getParameters().getObject("trap_skill", SkillHolder.class);
-        _hasLifeTime = lifeTime >= 0;
+        hasLifeTime = lifeTime >= 0;
         _lifeTime = lifeTime != 0 ? lifeTime : 30000;
         _remainingTime = _lifeTime;
         if (_skill != null) {
@@ -272,7 +272,7 @@ public final class Trap extends Npc {
     }
 
     public boolean hasLifeTime() {
-        return _hasLifeTime;
+        return hasLifeTime;
     }
 
     public int getRemainingTime() {

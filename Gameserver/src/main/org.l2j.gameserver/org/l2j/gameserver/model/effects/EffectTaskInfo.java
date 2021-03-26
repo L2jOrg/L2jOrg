@@ -27,11 +27,9 @@ import java.util.concurrent.ScheduledFuture;
  * @author Zoey76
  */
 public class EffectTaskInfo {
-    private final EffectTickTask _effectTask;
     private final ScheduledFuture<?> _scheduledFuture;
 
-    public EffectTaskInfo(EffectTickTask effectTask, ScheduledFuture<?> scheduledFuture) {
-        _effectTask = effectTask;
+    public EffectTaskInfo(ScheduledFuture<?> scheduledFuture) {
         _scheduledFuture = scheduledFuture;
     }
 

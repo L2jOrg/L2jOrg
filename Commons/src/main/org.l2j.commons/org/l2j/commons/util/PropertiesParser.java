@@ -33,7 +33,9 @@ import java.util.Properties;
 public final class PropertiesParser
 {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PropertiesParser.class);
-	
+	public static final String MISSING_KEY_MSG = "[{}] missing property for key: {} using default value: {}";
+	public static final String INVALID_VALUE_MSG = "[{}] Invalid value specified for key: {} specified value: {} should be \"{}\" using default value: {}";
+
 	private final Properties properties = new Properties();
 	private final String filePath;
 
@@ -62,7 +64,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[{}] missing property for key: {} using default value: {}", filePath, key, defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -76,7 +78,7 @@ public final class PropertiesParser
 		}
 		else
 		{
-			LOGGER.warn("[{}] Invalid value specified for key: {} specified value: {} should be \"boolean\" using default value: ", filePath, key, defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "boolean", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -86,7 +88,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[{}] missing property for key: {} using default value: {}", filePath, key, defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -96,7 +98,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[{}] Invalid value specified for key: {} specified value: {} should be \"byte\" using default value: {}", filePath, key, value, defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "byte", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -106,7 +108,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[{}] missing property for key: {} using default value: {}", filePath, key, defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -116,7 +118,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[{}] Invalid value specified for key: {} specified value: {} should be \"int\" using default value: {}", filePath, key, value, defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "int", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -126,7 +128,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[{}] missing property for key: {} using default value: {}", filePath, key, defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -136,7 +138,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[{}] Invalid value specified for key: {} specified value: {} should be \"long\" using default value: {}", filePath, key, value, defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "long", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -146,7 +148,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[{}] missing property for key: {} using default value: {}", filePath, key, defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -156,7 +158,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[{}] Invalid value specified for key: {} specified value: {} should be \"float\" using default value: {}", filePath, key, value, defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "float", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -166,7 +168,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[{}] missing property for key: {} using default value: {}", filePath, key, defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -176,7 +178,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[{}] Invalid value specified for key: {} specified value: {} should be \"double\" using default value: {}", filePath, key, value, defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "double", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -186,7 +188,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[{}] missing property for key: {} using default value: {}", filePath, key, defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		return value;

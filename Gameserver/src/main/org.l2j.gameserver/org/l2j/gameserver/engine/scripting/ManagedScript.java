@@ -32,12 +32,9 @@ public abstract class ManagedScript {
     private static final Logger LOGGER = LoggerFactory.getLogger(ManagedScript.class);
 
     private final Path _scriptFile;
-    private final long _lastLoadTime;
-    private boolean _isActive;
 
     public ManagedScript() {
         _scriptFile = getScriptPath();
-        _lastLoadTime = System.currentTimeMillis();
     }
 
     /**
@@ -54,10 +51,6 @@ public abstract class ManagedScript {
             LOGGER.warn("Failed to reload script!", e);
             return false;
         }
-    }
-
-    public void setActive(boolean status) {
-        _isActive = status;
     }
 
     /**

@@ -34,10 +34,7 @@ public class RecipeList {
      * The Identifier of the RecipeList
      */
     private final int _recipeId;
-    /**
-     * The name of the RecipeList
-     */
-    private final String _recipeName;
+
     /**
      * The crafting success rate when using the RecipeList
      */
@@ -92,7 +89,6 @@ public class RecipeList {
         _id = set.getInt("id");
         _level = set.getInt("craftLevel");
         _recipeId = set.getInt("recipeId");
-        _recipeName = set.getString("recipeName");
         _successRate = set.getInt("successRate");
         _itemId = set.getInt("itemId");
         _count = set.getInt("count");

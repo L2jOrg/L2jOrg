@@ -31,7 +31,6 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SetupGauge;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.world.World;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 
@@ -580,22 +579,9 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void teleportGroup(String command, Player activeChar)
 	{
 		int groupId;
-		String targetPlayerStr;
-		Player targetPlayer = null;
 		
-		try
-		{
+		try {
 			groupId = Integer.parseInt(command.split(" ")[1]);
-			targetPlayerStr = command.split(" ")[2];
-			
-			if (targetPlayerStr != null)
-			{
-				targetPlayer = World.getInstance().findPlayer(targetPlayerStr);
-			}
-			
-			if (targetPlayer == null)
-			{
-			}
 		}
 		catch (Exception e)
 		{

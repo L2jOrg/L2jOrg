@@ -94,7 +94,9 @@ public class Npc extends Creature {
      * Minimum interval between social packets
      */
     private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
+
     private final boolean _isQuestMonster = getTemplate().isQuestMonster();
+    private final int currentEnchant;
     /**
      * The Spawn object that manage this Folk
      */
@@ -120,18 +122,15 @@ public class Npc extends Creature {
      */
     private boolean _isRandomAnimationEnabled = true;
     private boolean _isRandomWalkingEnabled = true;
-    private final boolean _isTalkable = getTemplate().isTalkable();
+
     private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
     private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
-    private final int _currentEnchant; // normally this shouldn't change from the template, but there exist exceptions
     private double _currentCollisionHeight; // used for npc grow effect skills
     private double _currentCollisionRadius; // used for npc grow effect skills
 
     private int _soulshotamount = 0;
     private int _spiritshotamount = 0;
     private int _displayEffect = 0;
-
-    private int _killingBlowWeaponId;
 
     private int _cloneObjId; // Used in NpcInfo packet to clone the specified player.
     private int _clanId; // Used in NpcInfo packet to show the specified clan.
@@ -171,7 +170,7 @@ public class Npc extends Creature {
         // initialize the "current" equipment
         _currentLHandId = getTemplate().getLHandId();
         _currentRHandId = getTemplate().getRHandId();
-        _currentEnchant = Config.ENABLE_RANDOM_ENCHANT_EFFECT ? Rnd.get(4, 21) : getTemplate().getWeaponEnchant();
+        currentEnchant = Config.ENABLE_RANDOM_ENCHANT_EFFECT ? Rnd.get(4, 21) : getTemplate().getWeaponEnchant();
 
         // initialize the "current" collisions
         _currentCollisionHeight = getTemplate().getfCollisionHeight();
@@ -376,7 +375,7 @@ public class Npc extends Creature {
     }
 
     public int getEnchantEffect() {
-        return _currentEnchant;
+        return currentEnchant;
     }
 
     /**
@@ -590,7 +589,7 @@ public class Npc extends Creature {
      * @param val    The number of the page of the Folk to display
      */
     public void showChatWindow(Player player, int val) {
-        if (!_isTalkable) {
+        if (!isTalkable()) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -691,9 +690,6 @@ public class Npc extends Creature {
         _currentCollisionHeight = getTemplate().getfCollisionHeight();
         _currentCollisionRadius = getTemplate().getfCollisionRadius();
 
-        final Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
-        _killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
-
         DecayTaskManager.getInstance().add(this);
 
         if (_spawn != null) {
@@ -742,7 +738,6 @@ public class Npc extends Creature {
         // Recharge shots
         _soulshotamount = getTemplate().getSoulShot();
         _spiritshotamount = getTemplate().getSpiritShot();
-        _killingBlowWeaponId = 0;
         _isRandomAnimationEnabled = getTemplate().isRandomAnimationEnabled();
         _isRandomWalkingEnabled = getTemplate().isRandomWalkEnabled();
 
@@ -1138,7 +1133,7 @@ public class Npc extends Creature {
      * @return {@code true} if the players can talk, {@code false} otherwise.
      */
     public boolean isTalkable() {
-        return _isTalkable;
+        return getTemplate().isTalkable();
     }
 
     /**

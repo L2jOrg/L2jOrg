@@ -34,7 +34,6 @@ import java.util.Set;
  * @author Zoey76
  */
 public final class SkillLearn {
-    private final String _skillName;
     private final int _skillId;
     private final int _skillLvl;
     private final int _getLevel;
@@ -61,7 +60,6 @@ public final class SkillLearn {
      * @param set the set with the SkillLearn data.
      */
     public SkillLearn(StatsSet set) {
-        _skillName = set.getString("skillName");
         _skillId = set.getInt("skillId");
         _skillLvl = set.getInt("skillLvl");
         _getLevel = set.getInt("getLevel");

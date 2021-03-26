@@ -37,13 +37,7 @@ package org.l2j.gameserver.util.cron4j;
  * @author Carlo Pelliccia
  * @since 2.0
  */
-public abstract class Task {
-
-    /**
-     * Empty constructor, does nothing.
-     */
-    public Task() {
-    }
+public interface Task {
 
     /**
      * <p>
@@ -59,7 +53,7 @@ public abstract class Task {
      *
      * @return true if this task can be paused; false otherwise.
      */
-    public boolean canBePaused() {
+    default boolean canBePaused() {
         return false;
     }
 
@@ -77,7 +71,7 @@ public abstract class Task {
      *
      * @return true if this task can be stopped; false otherwise.
      */
-    public boolean canBeStopped() {
+    default boolean canBeStopped() {
         return false;
     }
 
@@ -94,7 +88,7 @@ public abstract class Task {
      *
      * @return true if this task, during its execution, provides status message regularly.
      */
-    public boolean supportsStatusTracking() {
+    default boolean supportsStatusTracking() {
         return false;
     }
 
@@ -111,7 +105,7 @@ public abstract class Task {
      *
      * @return true if this task, during its execution, provides a completeness value regularly.
      */
-    public boolean supportsCompletenessTracking() {
+    default boolean supportsCompletenessTracking() {
         return false;
     }
 
@@ -127,5 +121,5 @@ public abstract class Task {
      * @param context The execution context.
      * @throws RuntimeException Task execution has somehow failed.
      */
-    public abstract void execute(TaskExecutionContext context) throws RuntimeException;
+    void execute(TaskExecutionContext context) throws RuntimeException;
 }

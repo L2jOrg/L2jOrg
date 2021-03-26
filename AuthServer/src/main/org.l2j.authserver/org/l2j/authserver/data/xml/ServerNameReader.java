@@ -20,7 +20,6 @@ package org.l2j.authserver.data.xml;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.xml.XmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;

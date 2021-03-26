@@ -27,11 +27,15 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 public class StaticWorldObjectAction implements IActionHandler
 {
+	private static final Logger LOGGER = LoggerFactory.getLogger(StaticWorldObjectAction.class);
+
 	@Override
 	public boolean action(Player activeChar, WorldObject target, boolean interact)
 	{

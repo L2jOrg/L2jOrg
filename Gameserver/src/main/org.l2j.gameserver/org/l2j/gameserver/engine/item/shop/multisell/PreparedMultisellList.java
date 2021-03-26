@@ -43,7 +43,6 @@ public class PreparedMultisellList {
 
     private List<ItemInfo> itemInfos;
     private List<MultisellItem> filteredItems;
-    private int merchantId;
     private double taxRate;
 
     public PreparedMultisellList(MultisellList template, boolean inventoryOnly, ItemContainer inventory, Npc npc, double ingredientMultiplier, double productMultiplier) {
@@ -53,7 +52,6 @@ public class PreparedMultisellList {
         this.productMultiplier = productMultiplier;
 
         if (nonNull(npc)) {
-            merchantId = npc.getObjectId();
             taxRate = npc.getCastleTaxRate(TaxType.BUY);
         }
         

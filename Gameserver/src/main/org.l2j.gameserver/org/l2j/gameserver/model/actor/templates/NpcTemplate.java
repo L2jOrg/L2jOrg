@@ -60,15 +60,12 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private boolean _usingServerSideTitle;
     private StatsSet _parameters;
     private Sex _sex;
-    private int _chestId;
     private int _rhandId;
     private int _lhandId;
     private int _weaponEnchant;
     private double _exp;
     private double _sp;
     private double _raidPoints;
-    private boolean _unique;
-    private boolean _attackable;
     private boolean _targetable;
     private boolean _talkable;
     private boolean _isQuestMonster;
@@ -78,12 +75,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private boolean _randomAnimation;
     private boolean _flying;
     private boolean _canMove;
-    private boolean _noSleepMode;
-    private boolean _passableDoor;
-    private boolean _hasSummoner;
-    private boolean _canBeSown;
     private boolean _canBeCrt;
-    private boolean _isDeathPenalty;
     private int _corpseTime;
     private AIType _aiType;
     private int _aggroRange;
@@ -97,7 +89,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private int _spiritShotChance;
     private int _minSkillChance;
     private int _maxSkillChance;
-    private double _hitTimeFactor;
     private double _hitTimeFactorSkill;
     private Map<Integer, Skill> _skills;
     private Map<AISkillScope, List<Skill>> _aiSkillLists;
@@ -139,7 +130,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
         elementalType = set.getEnum("elementalType", ElementalType.class);
 
-        _chestId = set.getInt("chestId", 0);
         _rhandId = set.getInt("rhandId", 0);
         _lhandId = set.getInt("lhandId", 0);
         _weaponEnchant = set.getInt("weaponEnchant", 0);
@@ -149,8 +139,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _raidPoints = set.getDouble("raidPoints", 0);
         attributeExp = set.getLong("attribute_exp", 0);
 
-        _unique = set.getBoolean("unique", !_type.equals("Monster") && !_type.equals("RaidBoss") && !_type.equals("GrandBoss"));
-        _attackable = set.getBoolean("attackable", true);
         _targetable = set.getBoolean("targetable", true);
         _talkable = set.getBoolean("talkable", true);
         _isQuestMonster = _title.contains("Quest");
@@ -160,12 +148,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _randomAnimation = set.getBoolean("randomAnimation", true);
         _flying = set.getBoolean("flying", false);
         _canMove = set.getBoolean("canMove", true);
-        _noSleepMode = set.getBoolean("noSleepMode", false);
-        _passableDoor = set.getBoolean("passableDoor", false);
-        _hasSummoner = set.getBoolean("hasSummoner", false);
-        _canBeSown = set.getBoolean("canBeSown", false);
         _canBeCrt = set.getBoolean("exCrtEffect", true);
-        _isDeathPenalty = set.getBoolean("isDeathPenalty", false);
 
         _corpseTime = set.getInt("corpseTime", Config.DEFAULT_CORPSE_TIME);
 
@@ -184,7 +167,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _minSkillChance = set.getInt("minSkillChance", 7);
         _maxSkillChance = set.getInt("maxSkillChance", 15);
 
-        _hitTimeFactor = set.getInt("hitTime", 100) / 100d;
         _hitTimeFactorSkill = set.getInt("hitTimeSkill", 100) / 100d;
 
         _collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);

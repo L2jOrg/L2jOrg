@@ -125,13 +125,12 @@ public final class ClanHallManager extends GameXmlReader {
                                     for (Node npcNode = tpNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling()) {
                                         if ("teleport".equals(npcNode.getNodeName())) {
                                             final NamedNodeMap np = npcNode.getAttributes();
-                                            final int npcStringId = parseInt(np, "npcStringId");
                                             final int x = parseInt(np, "x");
                                             final int y = parseInt(np, "y");
                                             final int z = parseInt(np, "z");
                                             final int minFunctionLevel = parseInt(np, "minFunctionLevel");
                                             final int cost = parseInt(np, "cost");
-                                            teleports.add(new ClanHallTeleportHolder(npcStringId, x, y, z, minFunctionLevel, cost));
+                                            teleports.add(new ClanHallTeleportHolder(x, y, z, minFunctionLevel, cost));
                                         }
                                     }
                                     params.set("teleportList", teleports);

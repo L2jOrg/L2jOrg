@@ -686,7 +686,7 @@ public abstract class Inventory extends ItemContainer {
     }
 
     public boolean canEquipCloak() {
-        return getOwner().getActingPlayer().getStats().canEquipCloak();
+        return true;
     }
 
     public void reloadEquippedItem(Item item) {

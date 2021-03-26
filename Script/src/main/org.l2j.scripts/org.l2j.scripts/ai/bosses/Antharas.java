@@ -78,8 +78,6 @@ public final class Antharas extends AbstractNpcAI
 	private static long _lastAttack = 0;
 	private static int _minionCount = 0;
 	private static int minionMultipler = 0;
-	private static final int moveChance = 0;
-	private static final int sandStorm = 0;
 	private static Player attacker_1 = null;
 	private static Player attacker_2 = null;
 	private static Player attacker_3 = null;

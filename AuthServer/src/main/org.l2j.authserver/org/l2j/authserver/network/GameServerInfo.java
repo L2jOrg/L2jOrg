@@ -51,10 +51,7 @@ public class GameServerInfo {
     private IPAddress[] hosts;
     private int _port;
 
-    // config
     private boolean isPvp;
-    private boolean _isTestServer;
-    private boolean _isShowingClock;
     private boolean _isShowingBrackets;
     private int _maxPlayers;
     private int serverType;
@@ -165,14 +162,6 @@ public class GameServerInfo {
 
     public boolean isPvp() {
         return isPvp;
-    }
-
-    public void setTestServer(boolean val) {
-        _isTestServer = val;
-    }
-
-    public void setShowingClock(boolean clock) {
-        _isShowingClock = clock;
     }
 
     public void setShowingBrackets(boolean val) {

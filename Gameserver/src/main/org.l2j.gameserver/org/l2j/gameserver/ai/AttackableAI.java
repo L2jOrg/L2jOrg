@@ -430,9 +430,7 @@ public class AttackableAI extends CreatureAI {
             y1 = npc.getSpawn().getY();
             z1 = npc.getSpawn().getZ();
 
-            if (!isInsideRadius2D(npc, x1, y1, range)) {
-                npc.setisReturningToSpawnPoint(true);
-            } else {
+            if (isInsideRadius2D(npc, x1, y1, range)) {
                 final int deltaX = Rnd.get(range * 2); // x
                 int deltaY = Rnd.get(deltaX, range * 2); // distance
                 deltaY = (int) Math.sqrt((deltaY * deltaY) - (deltaX * deltaX)); // y
