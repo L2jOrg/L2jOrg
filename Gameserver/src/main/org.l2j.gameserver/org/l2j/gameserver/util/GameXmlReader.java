@@ -64,44 +64,33 @@ public abstract class GameXmlReader extends XmlReader {
         return parseDirectory(new File(getSettings(ServerSettings.class).dataPackDirectory().toFile(), path), recursive);
     }
 
-    /**
-     * @param n
-     * @return a map of parameters
-     */
     protected Map<String, Object> parseParameters(Node n) {
         final Map<String, Object> parameters = new HashMap<>();
         for (Node parameters_node = n.getFirstChild(); parameters_node != null; parameters_node = parameters_node.getNextSibling()) {
             NamedNodeMap attrs = parameters_node.getAttributes();
             switch (parameters_node.getNodeName().toLowerCase()) {
-                case "param": {
-                    parameters.put(parseString(attrs, "name"), parseString(attrs, "value"));
-                    break;
-                }
-                case "skill": {
-                    parameters.put(parseString(attrs, "name"), new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "level")));
-                    break;
-                }
-                case "location": {
-                    parameters.put(parseString(attrs, "name"), new Location(parseInt(attrs, "x"), parseInt(attrs, "y"), parseInt(attrs, "z"), parseInt(attrs, "heading", 0)));
-                    break;
-                }
-                case "minions": {
-                    final List<MinionHolder> minions = new ArrayList<>(1);
-                    for (Node minions_node = parameters_node.getFirstChild(); minions_node != null; minions_node = minions_node.getNextSibling()) {
-                        if (minions_node.getNodeName().equalsIgnoreCase("npc")) {
-                            attrs = minions_node.getAttributes();
-                            minions.add(new MinionHolder(parseInt(attrs, "id"), parseInt(attrs, "count"));
-                        }
-                    }
-
-                    if (!minions.isEmpty()) {
-                        parameters.put(parseString(parameters_node.getAttributes(), "name"), minions);
-                    }
-                    break;
-                }
+                case "param" -> parameters.put(parseString(attrs, "name"), parseString(attrs, "value"));
+                case "skill" -> parameters.put(parseString(attrs, "name"), new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "level")));
+                case "location" -> parameters.put(parseString(attrs, "name"), new Location(parseInt(attrs, "x"), parseInt(attrs, "y"), parseInt(attrs, "z"), parseInt(attrs, "heading", 0)));
+                case "minions" -> parseMinions(parameters, parameters_node);
             }
         }
         return parameters;
+    }
+
+    private void parseMinions(Map<String, Object> parameters, Node parameters_node) {
+        NamedNodeMap attrs;
+        final List<MinionHolder> minions = new ArrayList<>(1);
+        for (Node minions_node = parameters_node.getFirstChild(); minions_node != null; minions_node = minions_node.getNextSibling()) {
+            if (minions_node.getNodeName().equalsIgnoreCase("npc")) {
+                attrs = minions_node.getAttributes();
+                minions.add(new MinionHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
+            }
+        }
+
+        if (!minions.isEmpty()) {
+            parameters.put(parseString(parameters_node.getAttributes(), "name"), minions);
+        }
     }
 
     public Location parseLocation(Node n) {
