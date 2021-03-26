@@ -23,7 +23,7 @@ import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 
 public class PlayerInGame extends SendablePacket {
-    private String[] accounts;
+    private final String[] accounts;
 
     public PlayerInGame(String... accounts) {
         this.accounts = accounts;

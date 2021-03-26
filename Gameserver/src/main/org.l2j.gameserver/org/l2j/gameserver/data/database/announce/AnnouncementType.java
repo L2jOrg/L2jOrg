@@ -32,16 +32,6 @@ public enum AnnouncementType {
     AUTO_CRITICAL;
     private static final Logger LOGGER = LoggerFactory.getLogger(AnnouncementType.class);
 
-    public static AnnouncementType findById(int id) {
-        for (AnnouncementType type : values()) {
-            if (type.ordinal() == id) {
-                return type;
-            }
-        }
-        LOGGER.warn(AnnouncementType.class.getSimpleName() + ": Unexistent id specified: " + id + "!", new IllegalStateException());
-        return NORMAL;
-    }
-
     public static AnnouncementType findByName(String name) {
         for (AnnouncementType type : values()) {
             if (type.name().equalsIgnoreCase(name)) {
@@ -57,7 +47,4 @@ public enum AnnouncementType {
         return  type == AUTO_CRITICAL || type == AUTO_NORMAL;
     }
 
-    public boolean isAutoAnnounce() {
-        return this == AUTO_CRITICAL || this == AUTO_NORMAL;
-    }
 }

@@ -92,43 +92,6 @@ public class NextAction {
     }
 
     /**
-     * @param event the event to set.
-     */
-    public void setEvents(ArrayList<CtrlEvent> event) {
-        _events = event;
-    }
-
-    /**
-     * @param event
-     */
-    public void addEvent(CtrlEvent event) {
-        if (_events == null) {
-            _events = new ArrayList<>();
-        }
-
-        if (event != null) {
-            _events.add(event);
-        }
-    }
-
-    /**
-     * @param event
-     */
-    public void removeEvent(CtrlEvent event) {
-        if (_events == null) {
-            return;
-        }
-        _events.remove(event);
-    }
-
-    /**
-     * @return the _callback
-     */
-    public NextActionCallback getCallback() {
-        return _callback;
-    }
-
-    /**
      * @param callback the callback to set.
      */
     public void setCallback(NextActionCallback callback) {
@@ -144,36 +107,6 @@ public class NextAction {
             _intentions = new ArrayList<>();
         }
         return _intentions;
-    }
-
-    /**
-     * @param intentions the intention to set.
-     */
-    public void setIntentions(ArrayList<CtrlIntention> intentions) {
-        _intentions = intentions;
-    }
-
-    /**
-     * @param intention
-     */
-    public void addIntention(CtrlIntention intention) {
-        if (_intentions == null) {
-            _intentions = new ArrayList<>();
-        }
-
-        if (intention != null) {
-            _intentions.add(intention);
-        }
-    }
-
-    /**
-     * @param intention
-     */
-    public void removeIntention(CtrlIntention intention) {
-        if (_intentions == null) {
-            return;
-        }
-        _intentions.remove(intention);
     }
 
     public interface NextActionCallback {

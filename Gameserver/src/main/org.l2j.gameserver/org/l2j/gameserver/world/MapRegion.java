@@ -119,8 +119,8 @@ public class MapRegion {
     }
 
     private static class Tile {
-        private byte x;
-        private byte y;
+        private final byte x;
+        private final byte y;
 
         private Tile(byte x, byte y) {
             this.x = x;

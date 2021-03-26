@@ -30,15 +30,6 @@ public class PetStats extends SummonStats {
         super(activeChar);
     }
 
-    public boolean addExp(int value) {
-        if (getCreature().isUncontrollable() || !super.addExp(value)) {
-            return false;
-        }
-
-        getCreature().updateAndBroadcastStatus(1);
-        return true;
-    }
-
     public boolean addExpAndSp(double addToExp, double addToSp) {
         final long finalExp = Math.round(addToExp);
         if (getCreature().isUncontrollable() || !addExp(finalExp)) {
@@ -89,14 +80,6 @@ public class PetStats extends SummonStats {
     @Override
     public Pet getCreature() {
         return (Pet) super.getCreature();
-    }
-
-    public final int getFeedBattle() {
-        return getCreature().getPetLevelData().getPetFeedBattle();
-    }
-
-    public final int getFeedNormal() {
-        return getCreature().getPetLevelData().getPetFeedNormal();
     }
 
     @Override

@@ -47,10 +47,6 @@ public class Bidder {
         return _clan.getName();
     }
 
-    public String getLeaderName() {
-        return _clan.getLeaderName();
-    }
-
     public long getBid() {
         return _bid;
     }

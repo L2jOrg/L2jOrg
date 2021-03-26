@@ -49,10 +49,6 @@ public class OlympiadHeroData {
     private int battlesLost;
     private int points;
 
-    public int getPlayerId() {
-        return playerId;
-    }
-
     public int getServer() {
         return server;
     }
@@ -65,10 +61,6 @@ public class OlympiadHeroData {
         return legend;
     }
 
-    public boolean isClaimed() {
-        return claimed;
-    }
-
     public String getName() {
         return name;
     }
@@ -79,18 +71,6 @@ public class OlympiadHeroData {
 
     public int getClanLevel() {
         return clanLevel;
-    }
-
-    public String getAllyName() {
-        return allyName;
-    }
-
-    public int getCrest() {
-        return crest;
-    }
-
-    public int getAllyCrest() {
-        return allyCrest;
     }
 
     public byte getSex() {

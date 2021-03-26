@@ -56,20 +56,8 @@ public class ElementalSpiritData {
     }
 
 
-    public int getCharId() {
-        return charId;
-    }
-
-    public void setCharId(int charId) {
-        this.charId = charId;
-    }
-
     public byte getType() {
         return type;
-    }
-
-    public void setType(byte type) {
-        this.type = type;
     }
 
     public byte getLevel() {
@@ -82,10 +70,6 @@ public class ElementalSpiritData {
 
     public byte getStage() {
         return stage;
-    }
-
-    public void setStage(byte stage) {
-        this.stage = stage;
     }
 
     public long getExperience() {

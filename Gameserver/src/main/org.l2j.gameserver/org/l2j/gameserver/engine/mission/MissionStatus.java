@@ -26,19 +26,10 @@ public enum MissionStatus {
     NOT_AVAILABLE(2),
     COMPLETED(3);
 
-    private int _clientId;
+    private final int _clientId;
 
     MissionStatus(int clientId) {
         _clientId = clientId;
-    }
-
-    public static MissionStatus valueOf(int clientId) {
-        for (MissionStatus type : values()) {
-            if (type.getClientId() == clientId) {
-                return type;
-            }
-        }
-        return null;
     }
 
     public int getClientId() {

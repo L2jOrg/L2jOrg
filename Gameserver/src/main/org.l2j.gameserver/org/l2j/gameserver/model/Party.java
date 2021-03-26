@@ -589,7 +589,7 @@ public class Party extends AbstractPlayerGroup {
 
     private double calculateExpSpPartyCutoff(Player player, int topLvl, double addExp, double addSp, boolean vit) {
         double xp = addExp;
-        double sp = addSp;
+        double sp;
         if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive")) {
             int i = 0;
             final int lvlDiff = topLvl - player.getLevel();
@@ -659,9 +659,6 @@ public class Party extends AbstractPlayerGroup {
                 if (i < 1) {
                     return members;
                 }
-                if (i >= BONUS_EXP_SP.length) {
-                    i = BONUS_EXP_SP.length - 1;
-                }
                 for (Player member : members) {
                     final int sqLevel = member.getLevel() * member.getLevel();
                     if (sqLevel >= (sqLevelSum / (members.size() * members.size()))) {
@@ -704,7 +701,6 @@ public class Party extends AbstractPlayerGroup {
         return (membersCount < 2) ? (getBaseExpSpBonus(membersCount)) : (getBaseExpSpBonus(membersCount) * rateMul);
     }
 
-    @Override
     public int getLevel() {
         return partyLvl;
     }
@@ -733,8 +729,7 @@ public class Party extends AbstractPlayerGroup {
         return members.get(0);
     }
 
-    @Override
-    public void setLeader(Player player) {
+    private void setLeader(Player player) {
         if ((player != null) && !player.isInDuel()) {
             if (members.contains(player)) {
                 if (isLeader(player)) {

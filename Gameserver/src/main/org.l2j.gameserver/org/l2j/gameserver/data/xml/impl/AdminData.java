@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.AccessLevel;
 import org.l2j.gameserver.model.AdminCommandAccessRight;
 import org.l2j.gameserver.model.StatsSet;
@@ -66,14 +65,14 @@ public final class AdminData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return Path.of(Config.ACCESS_LEVELS_SCHEMA_FILE);
+        return Path.of("config/xsd/AccessLevels.xsd");
     }
 
     @Override
     public synchronized void load() {
         _accessLevels.clear();
         _adminCommandAccessRights.clear();
-        parseFile(new File(Config.ACCESS_LEVELS_FILE));
+        parseFile("config/AccessLevels.xml");
         LOGGER.info("Loaded: {} Access Levels.", _accessLevels.size());
         LOGGER.info("Loaded: {} Access Commands.", _adminCommandAccessRights.size());
         releaseResources();
@@ -148,28 +147,9 @@ public final class AdminData extends GameXmlReader {
                 generalSettings.setDefaultAccessLevel(0);
             }
         }
-        return accessLevel;
+        return  accessLevel;
     }
 
-
-    /**
-     * Gets the master access level.
-     *
-     * @return the master access level
-     */
-    public AccessLevel getMasterAccessLevel() {
-        return _accessLevels.get(_highestLevel);
-    }
-
-    /**
-     * Checks for access level.
-     *
-     * @param id the id
-     * @return {@code true}, if successful, {@code false} otherwise
-     */
-    public boolean hasAccessLevel(int id) {
-        return _accessLevels.containsKey(id);
-    }
 
     /**
      * Checks for access.

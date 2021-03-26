@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TrapAction;
@@ -36,7 +35,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneManager;
@@ -56,7 +54,7 @@ public final class Trap extends Npc {
     private final int _lifeTime;
     private final List<Integer> _playersWhoDetectedMe = new ArrayList<>();
     private final SkillHolder _skill;
-    private boolean _hasLifeTime;
+    private final boolean hasLifeTime;
     private boolean _isInArena = false;
     private boolean _isTriggered;
     private Player _owner;
@@ -73,7 +71,7 @@ public final class Trap extends Npc {
         _owner = null;
         _isTriggered = false;
         _skill = getParameters().getObject("trap_skill", SkillHolder.class);
-        _hasLifeTime = lifeTime >= 0;
+        hasLifeTime = lifeTime >= 0;
         _lifeTime = lifeTime != 0 ? lifeTime : 30000;
         _remainingTime = _lifeTime;
         if (_skill != null) {
@@ -140,10 +138,7 @@ public final class Trap extends Npc {
             return true;
         }
 
-        if (_owner.isInParty() && cha.isInParty() && (_owner.getParty().getLeaderObjectId() == cha.getParty().getLeaderObjectId())) {
-            return true;
-        }
-        return false;
+        return _owner.isInParty() && cha.isInParty() && (_owner.getParty().getLeaderObjectId() == cha.getParty().getLeaderObjectId());
     }
 
     @Override
@@ -179,11 +174,6 @@ public final class Trap extends Npc {
     @Override
     public byte getPvpFlag() {
         return _owner != null ? _owner.getPvpFlag() : 0;
-    }
-
-    @Override
-    public Item getSecondaryWeaponInstance() {
-        return null;
     }
 
     @Override
@@ -247,32 +237,6 @@ public final class Trap extends Npc {
         }
     }
 
-    public void setDetected(Creature detector) {
-        if (_isInArena) {
-            if (GameUtils.isPlayable(detector)) {
-                sendInfo(detector.getActingPlayer());
-            }
-            return;
-        }
-
-        if ((_owner != null) && (_owner.getPvpFlag() == 0) && (_owner.getReputation() >= 0)) {
-            return;
-        }
-
-        _playersWhoDetectedMe.add(detector.getObjectId());
-
-        // Notify to scripts
-        EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, detector, TrapAction.TRAP_DETECTED), this);
-
-        if (GameUtils.isPlayable(detector)) {
-            sendInfo(detector.getActingPlayer());
-        }
-    }
-
-    public void stopDecay() {
-        DecayTaskManager.getInstance().cancel(this);
-    }
-
     /**
      * Trigger the trap.
      *
@@ -308,11 +272,7 @@ public final class Trap extends Npc {
     }
 
     public boolean hasLifeTime() {
-        return _hasLifeTime;
-    }
-
-    public void setHasLifeTime(boolean val) {
-        _hasLifeTime = val;
+        return hasLifeTime;
     }
 
     public int getRemainingTime() {

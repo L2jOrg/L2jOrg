@@ -83,7 +83,7 @@ public class RecipeData extends GameXmlReader {
                         recipeAltStatChangeList.clear();
                         final NamedNodeMap attrs = d.getAttributes();
                         Node att;
-                        int id = -1;
+                        int id;
                         boolean haveRare = false;
                         final StatsSet set = new StatsSet();
 
@@ -205,20 +205,6 @@ public class RecipeData extends GameXmlReader {
             }
         }
         return null;
-    }
-
-    /**
-     * Gets the all item ids.
-     *
-     * @return the all item ids
-     */
-    public int[] getAllItemIds() {
-        final int[] idList = new int[_recipes.size()];
-        int i = 0;
-        for (RecipeList rec : _recipes.values()) {
-            idList[i++] = rec.getRecipeId();
-        }
-        return idList;
     }
 
     /**

@@ -18,6 +18,9 @@
  */
 package org.l2j.gameserver.util.cron4j;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.*;
 
 /**
@@ -28,7 +31,10 @@ import java.io.*;
  * @author Carlo Pelliccia
  * @since 2.1
  */
-public class ProcessTask extends Task {
+public class ProcessTask implements Task {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ProcessTask.class);
+
     /**
      * The command to launch.
      */
@@ -328,7 +334,7 @@ public class ProcessTask extends Task {
             try {
                 return new FileInputStream(file);
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                LOGGER.error(e.getMessage(), e);
                 return null;
             }
         }
@@ -346,7 +352,7 @@ public class ProcessTask extends Task {
             try {
                 return new FileOutputStream(file);
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                LOGGER.error(e.getMessage(), e);
                 return null;
             }
         }

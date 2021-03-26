@@ -21,15 +21,8 @@ package org.l2j.commons.util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.nio.charset.Charset;
+import java.io.IOException;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Properties;
 
 
@@ -40,39 +33,29 @@ import java.util.Properties;
 public final class PropertiesParser
 {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PropertiesParser.class);
-	
-	private final Properties _properties = new Properties();
-	private final File _file;
-	
-	public PropertiesParser(String name)
-	{
-		this(new File(name));
-	}
-	
-	public PropertiesParser(File file)
-	{
-		_file = file;
-		try (FileInputStream fileInputStream = new FileInputStream(file))
-		{
-			try (InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, Charset.defaultCharset()))
-			{
-				_properties.load(inputStreamReader);
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] There was an error loading config reason: " + e.getMessage());
+	public static final String MISSING_KEY_MSG = "[{}] missing property for key: {} using default value: {}";
+	public static final String INVALID_VALUE_MSG = "[{}] Invalid value specified for key: {} specified value: {} should be \"{}\" using default value: {}";
+
+	private final Properties properties = new Properties();
+	private final String filePath;
+
+	public PropertiesParser(String filePath) {
+		this.filePath = filePath;
+		try(var reader = FileUtil.reader(filePath)) {
+			properties.load(reader);
+		} catch (IOException e) {
+			LOGGER.warn("[{}] There was an error loading config reason: ", filePath, e);
 		}
 	}
 	
 	public boolean containskey(String key)
 	{
-		return _properties.containsKey(key);
+		return properties.containsKey(key);
 	}
 	
 	private String getValue(String key)
 	{
-		final String value = _properties.getProperty(key);
+		final String value = properties.getProperty(key);
 		return value != null ? value.trim() : null;
 	}
 	
@@ -81,7 +64,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -95,7 +78,7 @@ public final class PropertiesParser
 		}
 		else
 		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be \"boolean\" using default value: " + defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "boolean", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -105,7 +88,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -115,37 +98,17 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be \"byte\" using default value: " + defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "byte", defaultValue);
 			return defaultValue;
 		}
 	}
-	
-	public short getShort(String key, short defaultValue)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
-			return defaultValue;
-		}
-		
-		try
-		{
-			return Short.parseShort(value);
-		}
-		catch (NumberFormatException e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be \"short\" using default value: " + defaultValue);
-			return defaultValue;
-		}
-	}
-	
+
 	public int getInt(String key, int defaultValue)
 	{
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -155,7 +118,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be \"int\" using default value: " + defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "int", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -165,7 +128,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -175,7 +138,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be \"long\" using default value: " + defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "long", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -185,7 +148,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -195,7 +158,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be \"float\" using default value: " + defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "float", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -205,7 +168,7 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		
@@ -215,7 +178,7 @@ public final class PropertiesParser
 		}
 		catch (NumberFormatException e)
 		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be \"double\" using default value: " + defaultValue);
+			LOGGER.warn(INVALID_VALUE_MSG, filePath, key, value, "double", defaultValue);
 			return defaultValue;
 		}
 	}
@@ -225,32 +188,12 @@ public final class PropertiesParser
 		final String value = getValue(key);
 		if (value == null)
 		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
+			LOGGER.warn(MISSING_KEY_MSG, filePath, key, defaultValue);
 			return defaultValue;
 		}
 		return value;
 	}
-	
-	public <T extends Enum<T>> T getEnum(String key, Class<T> clazz, T defaultValue)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
-			return defaultValue;
-		}
-		
-		try
-		{
-			return Enum.valueOf(clazz, value);
-		}
-		catch (IllegalArgumentException e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be enum value of \"" + clazz.getSimpleName() + "\" using default value: " + defaultValue);
-			return defaultValue;
-		}
-	}
-	
+
 	/**
 	 * @param durationPattern
 	 * @param defaultValue
@@ -276,111 +219,9 @@ public final class PropertiesParser
 		}
 		catch (IllegalStateException e)
 		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + durationPattern + " specified value: " + value + " should be time patttern using default value: " + defaultValue);
+			LOGGER.warn("[{}] Invalid value specified for key: {} specified value: {} should be time patttern using default value: {}", filePath, durationPattern, value, defaultValue);
 		}
 		return defaultDuration;
 	}
-	
-	/**
-	 * @param key
-	 * @param separator
-	 * @param defaultValues
-	 * @return int array
-	 */
-	public int[] getIntArray(String key, String separator, int... defaultValues)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValues);
-			return defaultValues;
-		}
-		
-		try
-		{
-			final String[] data = value.trim().split(separator);
-			final int[] result = new int[data.length];
-			for (int i = 0; i < data.length; i++)
-			{
-				result[i] = Integer.decode(data[i].trim());
-			}
-			return result;
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("[+_file.getName()+] Invalid value specified for key: " + key + " specified value: " + value + " should be array using default value: " + defaultValues);
-			return defaultValues;
-		}
-	}
-	
-	/**
-	 * @param <T>
-	 * @param key
-	 * @param separator
-	 * @param clazz
-	 * @param defaultValues
-	 * @return enum array
-	 */
-	@SafeVarargs
-	public final <T extends Enum<T>> T[] getEnumArray(String key, String separator, Class<T> clazz, T... defaultValues)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValues);
-			return defaultValues;
-		}
-		
-		try
-		{
-			final String[] data = value.trim().split(separator);
-			@SuppressWarnings("unchecked")
-			final T[] result = (T[]) Array.newInstance(clazz, data.length);
-			for (int i = 0; i < data.length; i++)
-			{
-				result[i] = Enum.valueOf(clazz, data[i]);
-			}
-			return result;
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be array using default value: " + defaultValues);
-			return defaultValues;
-		}
-	}
-	
-	/**
-	 * @param <T>
-	 * @param key
-	 * @param separator
-	 * @param clazz
-	 * @param defaultValues
-	 * @return list
-	 */
-	@SafeVarargs
-	public final <T extends Enum<T>> List<T> getEnumList(String key, String separator, Class<T> clazz, T... defaultValues)
-	{
-		final String value = getValue(key);
-		if (value == null)
-		{
-			LOGGER.warn("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValues);
-			return Arrays.asList(defaultValues);
-		}
-		
-		try
-		{
-			final String[] data = value.trim().split(separator);
-			final List<T> result = new ArrayList<>(data.length);
-			for (String element : data)
-			{
-				result.add(Enum.valueOf(clazz, element));
-			}
-			return result;
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("[" + _file.getName() + "] Invalid value specified for key: " + key + " specified value: " + value + " should be array using default value: " + defaultValues);
-			return Arrays.asList(defaultValues);
-		}
-	}
+
 }

@@ -213,20 +213,6 @@ public class CubicInstance {
     }
 
     /**
-     * @return the {@link Creature} that casted this cubic
-     */
-    public Creature getCaster() {
-        return _caster;
-    }
-
-    /**
-     * @return {@code true} if cubic is casted from someone else but the owner, {@code false}
-     */
-    public boolean isGivenByOther() {
-        return _caster != _owner;
-    }
-
-    /**
      * @return the {@link CubicTemplate} of this cubic
      */
     public CubicTemplate getTemplate() {

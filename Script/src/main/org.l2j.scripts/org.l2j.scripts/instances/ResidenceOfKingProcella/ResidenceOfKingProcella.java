@@ -48,7 +48,7 @@ public class ResidenceOfKingProcella extends AbstractInstance {
     private static final SkillHolder HURRICANE_BOLT_LV_1 = new SkillHolder(50043, 1); // When player in Radius + para
     // Misc
     private static final int TEMPLATE_ID = 197;
-    private static int STORM_MAX_COUNT = 16; // TODO: Max is limit ?
+    private static final int STORM_MAX_COUNT = 16; // TODO: Max is limit ?
     private int _procellaStormCount;
     private RaidBoss _procella;
     private Monster _minion1;

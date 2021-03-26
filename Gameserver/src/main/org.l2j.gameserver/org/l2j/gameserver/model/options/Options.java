@@ -56,20 +56,12 @@ public class Options {
         _effects.add(effect);
     }
 
-    public List<AbstractEffect> getEffects() {
-        return _effects;
-    }
-
     public boolean hasEffects() {
         return _effects != null;
     }
 
     public boolean hasActiveSkills() {
         return _activeSkill != null;
-    }
-
-    public List<SkillHolder> getActiveSkills() {
-        return _activeSkill;
     }
 
     public void addActiveSkill(SkillHolder holder) {
@@ -83,10 +75,6 @@ public class Options {
         return _passiveSkill != null;
     }
 
-    public List<SkillHolder> getPassiveSkills() {
-        return _passiveSkill;
-    }
-
     public void addPassiveSkill(SkillHolder holder) {
         if (_passiveSkill == null) {
             _passiveSkill = new ArrayList<>();
@@ -96,33 +84,6 @@ public class Options {
 
     public boolean hasActivationSkills() {
         return _activationSkills != null;
-    }
-
-    public boolean hasActivationSkills(OptionsSkillType type) {
-        if (_activationSkills != null) {
-            for (OptionsSkillHolder holder : _activationSkills) {
-                if (holder.getSkillType() == type) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    public List<OptionsSkillHolder> getActivationsSkills() {
-        return _activationSkills;
-    }
-
-    public List<OptionsSkillHolder> getActivationsSkills(OptionsSkillType type) {
-        List<OptionsSkillHolder> temp = new ArrayList<>();
-        if (_activationSkills != null) {
-            for (OptionsSkillHolder holder : _activationSkills) {
-                if (holder.getSkillType() == type) {
-                    temp.add(holder);
-                }
-            }
-        }
-        return temp;
     }
 
     public void addActivationSkill(OptionsSkillHolder holder) {

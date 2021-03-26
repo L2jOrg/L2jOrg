@@ -41,7 +41,7 @@ public class Expression {
     Expression(final Token[] tokens) {
         this.tokens = tokens;
         variables = createDefaultVariables();
-        userFunctionNames = Collections.<String>emptySet();
+        userFunctionNames = Collections.emptySet();
     }
 
     Expression(final Token[] tokens, Set<String> userFunctionNames) {

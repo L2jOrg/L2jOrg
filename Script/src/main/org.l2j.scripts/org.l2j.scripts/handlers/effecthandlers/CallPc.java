@@ -74,7 +74,7 @@ public final class CallPc extends AbstractEffect {
                 target.sendPacket( getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(itemId));
             }
 
-            target.addRequest(new SummonRequest(player, skill));
+            target.addRequest(new SummonRequest(player));
             target.sendPacket(new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT).addString(player.getName()).addZoneName(player.getX(), player.getY(), player.getZ())
                     .addTime(30000).addRequesterId(player.getObjectId()));
         }

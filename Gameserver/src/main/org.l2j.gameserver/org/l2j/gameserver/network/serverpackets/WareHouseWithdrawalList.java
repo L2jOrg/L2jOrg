@@ -40,8 +40,8 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
     private final int _sendType;
     private final int _invSize;
     private final List<Integer> _itemsStackable = new ArrayList<>();
-    private Player _activeChar;
-    private long _playerAdena;
+    private final Player _activeChar;
+    private final long _playerAdena;
     private Collection<Item> _items;
     /**
      * <ul>
@@ -51,7 +51,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket {
      * <li>0x04-Warehouse</li>
      * </ul>
      */
-    private int _whType;
+    private final int _whType;
 
     public WareHouseWithdrawalList(int sendType, Player player, int type) {
         _sendType = sendType;

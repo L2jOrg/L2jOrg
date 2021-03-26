@@ -21,7 +21,6 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.PrivateStoreType;
@@ -34,7 +33,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.util.HtmlUtil;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -141,7 +139,7 @@ public final class SellBuffsManager extends GameXmlReader {
         final int ceiling = 10;
         int nextIndex = -1;
         int previousIndex = -1;
-        int emptyFields = 0;
+        int emptyFields;
         final StringBuilder sb = new StringBuilder();
         final List<SellBuffHolder> sellList = new ArrayList<>();
 
@@ -355,39 +353,6 @@ public final class SellBuffsManager extends GameXmlReader {
 
     public boolean isInSellList(Player player, Skill skill) {
         return player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skill.getId())).findFirst().orElse(null) != null;
-    }
-
-    public boolean canStartSellBuffs(Player player) {
-        if (player.isAlikeDead()) {
-            player.sendMessage("You can't sell buffs in fake death!");
-            return false;
-        } else if (Olympiad.getInstance().isRegistered(player)) {
-            player.sendMessage("You can't sell buffs with Olympiad status!");
-            return false;
-        } else if (player.isOnEvent()) // custom event message
-        {
-            player.sendMessage("You can't sell buffs while registered in an event!");
-            return false;
-        } else if (player.getReputation() < 0) {
-            player.sendMessage("You can't sell buffs in Chaotic state!");
-            return false;
-        } else if (player.isInDuel()) {
-            player.sendMessage("You can't sell buffs in Duel state!");
-            return false;
-        } else if (player.isFishing()) {
-            player.sendMessage("You can't sell buffs while fishing.");
-            return false;
-        } else if (player.isMounted() || player.isFlyingMounted() || player.isFlying()) {
-            player.sendMessage("You can't sell buffs in Mount state!");
-            return false;
-        } else if (player.isTransformed()) {
-            player.sendMessage("You can't sell buffs in Transform state!");
-            return false;
-        } else if (player.isInsideZone(ZoneType.NO_STORE) || !player.isInsideZone(ZoneType.PEACE) || player.isJailed()) {
-            player.sendMessage("You can't sell buffs here!");
-            return false;
-        }
-        return true;
     }
 
     public static SellBuffsManager getInstance() {

@@ -46,10 +46,6 @@ public enum EffectScope {
         _xmlNodeName = xmlNodeName;
     }
 
-    public static EffectScope findByXmlNodeName(String xmlNodeName) {
-        return XML_NODE_NAME_TO_EFFECT_SCOPE.get(xmlNodeName);
-    }
-
     public String getXmlNodeName() {
         return _xmlNodeName;
     }

@@ -20,7 +20,6 @@ package org.l2j.authserver.data.xml;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.authserver.Config;
 import org.l2j.commons.xml.XmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -43,12 +42,12 @@ public class ServerNameReader extends XmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return Path.of(Config.SERVERNAME_SCHEMA_FILE);
+        return Path.of("servername.xsd");
     }
 
     @Override
     public void load() {
-        parseFile(new File(Config.SERVERNAME_FILE));
+        parseFile("servername.xml");
         releaseResources();
     }
 

@@ -62,15 +62,6 @@ class LauncherThread extends Thread {
     }
 
     /**
-     * Returns the GUID for this object.
-     *
-     * @return The GUID for this object.
-     */
-    public Object getGuid() {
-        return guid;
-    }
-
-    /**
      * Overrides {@link Thread#run()}.
      */
     @Override

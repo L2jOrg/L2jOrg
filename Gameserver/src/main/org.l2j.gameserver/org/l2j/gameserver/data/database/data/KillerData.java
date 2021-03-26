@@ -39,10 +39,6 @@ public class KillerData {
     private int killTime;
     private boolean online;
 
-    public int getKilleId() {
-        return killeId;
-    }
-
     public String getName() {
         return name;
     }

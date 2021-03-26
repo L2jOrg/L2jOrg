@@ -35,10 +35,7 @@ public final class FloodProtectors {
      * Roll-dice flood protector.
      */
     private final FloodProtectorAction _rollDice;
-    /**
-     * Firework flood protector.
-     */
-    private final FloodProtectorAction _firework;
+
     /**
      * Item-pet-summon flood protector.
      */
@@ -98,7 +95,6 @@ public final class FloodProtectors {
         super();
         _useItem = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_USE_ITEM);
         _rollDice = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_ROLL_DICE);
-        _firework = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_FIREWORK);
         _itemPetSummon = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_ITEM_PET_SUMMON);
         _heroVoice = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_HERO_VOICE);
         _globalChat = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_GLOBAL_CHAT);
@@ -129,15 +125,6 @@ public final class FloodProtectors {
      */
     public FloodProtectorAction getRollDice() {
         return _rollDice;
-    }
-
-    /**
-     * Returns {@link #_firework}.
-     *
-     * @return {@link #_firework}
-     */
-    public FloodProtectorAction getFirework() {
-        return _firework;
     }
 
     /**

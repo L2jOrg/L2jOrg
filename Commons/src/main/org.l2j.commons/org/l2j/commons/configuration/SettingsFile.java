@@ -19,19 +19,19 @@
 package org.l2j.commons.configuration;
 
 import io.github.joealisson.primitive.IntSet;
+import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.EnumSet;
+import java.util.Properties;
+import java.util.Set;
 
 import static java.nio.file.Files.newBufferedReader;
 import static java.util.Arrays.stream;
@@ -43,26 +43,19 @@ import static org.l2j.commons.util.Util.*;
  */
 public final class SettingsFile extends Properties {
 
-    private static final long serialVersionUID = -4599023842346938325L;
     private static final Logger LOGGER = LoggerFactory.getLogger(SettingsFile.class);
     private static final String DEFAULT_DELIMITER = "[,;]";
     public static final String ERROR_GETTING_PROPERTY = "Error getting property {} : {}";
 
     SettingsFile(String filePath) {
-        try (var reader = newBufferedReader(Paths.get(getCurrentPath(filePath)).normalize())) {
+        try (var reader = FileUtil.reader(filePath)) {
             load(reader);
         } catch (IOException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
     public SettingsFile() {
-    }
-
-    public static String getCurrentPath(String path) {
-        boolean isDebug = java.lang.management.ManagementFactory.getRuntimeMXBean().
-                getInputArguments().toString().contains("jdwp");
-        return (isDebug ? "src/main/resources/" + path : path);
     }
 
     public String getString(String key, String defaultValue) {
@@ -90,14 +83,9 @@ public final class SettingsFile extends Properties {
         return Boolean.parseBoolean(value);
     }
 
-    public List<String> getStringList(String key, String defaultValue, String delimiter) {
-        String[] values = getProperty(key, defaultValue).split(delimiter);
-        return Stream.of(values).filter(Util::isNotEmpty).collect(Collectors.toList());
-    }
-
     public String[] getStringArray(String key) {
         String value = getProperty(key);
-        if (isNullOrEmpty(value)) {
+        if(isNullOrEmpty(value)) {
             return STRING_ARRAY_EMPTY;
         }
         var values = value.split(DEFAULT_DELIMITER);
@@ -105,39 +93,6 @@ public final class SettingsFile extends Properties {
             values[i] = values[i].trim();
         }
         return values;
-    }
-
-    public Map<Integer, Integer> getIntegerMap(String key, String entryDelimiter, String valueDelimiter) {
-        String[] values = getProperty(key, "").split(entryDelimiter);
-        Map<Integer, Integer> map = new HashMap<>();
-
-        Stream.of(values).filter(Util::isNotEmpty).forEach(v -> putInMap(key, valueDelimiter, map, v));
-        return map;
-    }
-
-    private void putInMap(String key, String valueDelimiter, Map<Integer, Integer> map, String entry) {
-        try {
-            String[] value = entry.split(valueDelimiter);
-            int mapKey = Integer.parseInt(value[0].trim());
-            int mapValue = Integer.parseInt(value[1].trim());
-            map.put(mapKey, mapValue);
-        } catch (Exception e) {
-            LOGGER.warn("Error getting property {} on entry {}: {}", key, entry, e.getMessage());
-        }
-    }
-
-    public List<Integer> getIntegerList(String key, String delimiter) {
-        String[] values = getProperty(key).split(delimiter);
-        List<Integer> list = new ArrayList<>(values.length);
-        Stream.of(values).filter(Util::isNotEmpty).forEach(v -> {
-            try {
-                int value = Integer.parseInt(v.trim());
-                list.add(value);
-            } catch (Exception e) {
-                LOGGER.warn("Error getting property {} on value {} : {}", key, v, e.getMessage());
-            }
-        });
-        return list;
     }
 
     public IntSet getIntSet(String key, String delimiter) {
@@ -164,7 +119,7 @@ public final class SettingsFile extends Properties {
 
     public int[] getIntegerArray(String key, String delimiter) {
         var property = getProperty(key);
-        if (isNullOrEmpty(property)) {
+        if(isNullOrEmpty(property)) {
             return INT_ARRAY_EMPTY;
         }
         var values = property.split(delimiter);
@@ -208,7 +163,7 @@ public final class SettingsFile extends Properties {
 
     public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass, T defaultValue) {
         String value;
-        if (isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
+        if(isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
             return defaultValue;
         }
         try {
@@ -221,13 +176,13 @@ public final class SettingsFile extends Properties {
 
     public <T extends Enum<T>> Set<T> getEnumSet(String key, Class<T> enumClass, Set<T> defaultValue) {
         String value;
-        if (isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
+        if(isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
             return defaultValue;
         }
         var enums = value.split(DEFAULT_DELIMITER);
         var result = EnumSet.noneOf(enumClass);
         for (String enumName : enums) {
-            try {
+            try{
                 result.add(Enum.valueOf(enumClass, enumName.trim()));
             } catch (Exception e) {
                 LOGGER.warn("Unknown enum constant {} of type {}", enumName, enumClass);

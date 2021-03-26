@@ -32,12 +32,9 @@ public abstract class ManagedScript {
     private static final Logger LOGGER = LoggerFactory.getLogger(ManagedScript.class);
 
     private final Path _scriptFile;
-    private long _lastLoadTime;
-    private boolean _isActive;
 
     public ManagedScript() {
         _scriptFile = getScriptPath();
-        _lastLoadTime = System.currentTimeMillis();
     }
 
     /**
@@ -56,33 +53,11 @@ public abstract class ManagedScript {
         }
     }
 
-    public boolean isActive() {
-        return _isActive;
-    }
-
-    public void setActive(boolean status) {
-        _isActive = status;
-    }
-
     /**
      * @return Returns the scriptFile.
      */
     public Path getScriptFile() {
         return _scriptFile;
-    }
-
-    /**
-     * @return Returns the lastLoadTime.
-     */
-    protected long getLastLoadTime() {
-        return _lastLoadTime;
-    }
-
-    /**
-     * @param lastLoadTime The lastLoadTime to set.
-     */
-    protected void setLastLoadTime(long lastLoadTime) {
-        _lastLoadTime = lastLoadTime;
     }
 
     public abstract Path getScriptPath();

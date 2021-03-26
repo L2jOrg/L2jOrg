@@ -128,10 +128,6 @@ public class PlayerNameTable {
         return getDAO(PlayerDAO.class).existsByName(name);
     }
 
-    public int getAccountCharacterCount(String account) {
-        return getDAO(PlayerDAO.class).playerCountByAccount(account);
-    }
-
     public int getClassIdById(int objectId) {
         return getDAO(PlayerDAO.class).findClassIdById(objectId);
     }

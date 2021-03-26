@@ -35,13 +35,6 @@ public class BlockMultilayer extends ABlock {
     protected byte[] _buffer;
 
     /**
-     * Implicit constructor for children class.
-     */
-    protected BlockMultilayer() {
-        _buffer = null;
-    }
-
-    /**
      * Creates MultilayerBlock.
      *
      * @param bb     : Input byte buffer.

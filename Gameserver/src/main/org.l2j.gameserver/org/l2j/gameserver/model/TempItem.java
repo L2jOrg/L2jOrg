@@ -29,7 +29,6 @@ import org.l2j.gameserver.engine.item.Item;
  */
 public final class TempItem {
     private final int _itemId;
-    private final long _referencePrice;
     private final String _itemName;
     private int _quantity;
 
@@ -42,7 +41,6 @@ public final class TempItem {
         _itemId = item.getId();
         _quantity = quantity;
         _itemName = item.getName();
-        _referencePrice = item.getReferencePrice();
     }
 
     /**
@@ -57,10 +55,6 @@ public final class TempItem {
      */
     public void setQuantity(int quantity) {
         _quantity = quantity;
-    }
-
-    public long getReferencePrice() {
-        return _referencePrice;
     }
 
     /**

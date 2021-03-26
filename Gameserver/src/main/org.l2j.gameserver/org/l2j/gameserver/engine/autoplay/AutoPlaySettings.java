@@ -35,13 +35,14 @@ public class AutoPlaySettings {
     private final AtomicBoolean autoPlaying = new AtomicBoolean(false);
     private int usableHpPetPotionPercent;
 
-    public AutoPlaySettings(short size, boolean active, boolean pickUp, short nextTargetMode, boolean isNearTarget, int hpPotionPercent, int usableHpPotionPercent, boolean respectFulHunt) {
+    public AutoPlaySettings(short size, boolean active, boolean pickUp, short nextTargetMode, boolean isNearTarget, int usableHpPotionPercent, int usableHpPetPotionPercent, boolean respectFulHunt) {
         this.size = size;
         this.active = active;
         this.pickUp = pickUp;
         this.nextTargetMode = nextTargetMode;
         this.isNearTarget = isNearTarget;
         this.usableHpPotionPercent =  usableHpPotionPercent;
+        this.usableHpPetPotionPercent = usableHpPetPotionPercent;
         this.respectFulHunt = respectFulHunt;
     }
 

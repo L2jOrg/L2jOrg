@@ -43,9 +43,9 @@ public class GroupSpawn extends Spawn {
                 return null;
             }
 
-            int newlocx = 0;
-            int newlocy = 0;
-            int newlocz = 0;
+            int newlocx;
+            int newlocy;
+            int newlocz;
 
             if ((getX() == 0) && (getY() == 0)) {
                 if (getLocationId() == 0) {

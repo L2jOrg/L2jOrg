@@ -39,10 +39,6 @@ public class PartyRequest extends AbstractRequest {
         _party = party;
     }
 
-    public Player getTargetPlayer() {
-        return _targetPlayer;
-    }
-
     public Party getParty() {
         return _party;
     }

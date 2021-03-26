@@ -31,7 +31,6 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -96,15 +95,6 @@ public final class StaticObjectData extends GameXmlReader {
         obj.setMap(set.getString("texture", "none"), set.getInt("map_x", 0), set.getInt("map_y", 0));
         obj.spawnMe(set.getInt("x"), set.getInt("y"), set.getInt("z"));
         _staticObjects.put(obj.getObjectId(), obj);
-    }
-
-    /**
-     * Gets the static objects.
-     *
-     * @return a collection of static objects.
-     */
-    public Collection<StaticWorldObject> getStaticObjects() {
-        return _staticObjects.values();
     }
 
     public static StaticObjectData getInstance() {

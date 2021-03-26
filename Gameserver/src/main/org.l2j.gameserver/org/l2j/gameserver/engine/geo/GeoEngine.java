@@ -547,12 +547,6 @@ public class GeoEngine {
                 // get layer nswe
                 nswet = block.getNswe(index);
             }
-
-            // update coords
-            gox = nox;
-            goy = noy;
-            gtx = ntx;
-            gty = nty;
         }
 
         // when iteration is completed, compare final Z coordinates

@@ -100,13 +100,6 @@ public final class AntiFeedManager {
     }
 
     /**
-     * Clears all timestamps
-     */
-    public void clear() {
-        _lastDeathTimes.clear();
-    }
-
-    /**
      * Register new event for dualbox check. Should be called only once.
      */
     public void registerEvent(int eventId) {
@@ -160,13 +153,6 @@ public final class AntiFeedManager {
         return false;
     }
 
-    /**
-     * Decreasing number of active connection from player's IP address
-     */
-    public boolean removePlayer(int eventId, Player player) {
-        return removeClient(eventId, player.getClient());
-    }
-
     private boolean removeClient(int eventId, GameClient client) {
         if (isNull(client)) {
             return false;
@@ -204,13 +190,6 @@ public final class AntiFeedManager {
         if (event != null) {
             event.clear();
         }
-    }
-
-    /**
-     * @return maximum number of allowed connections (whitelist + max)
-     */
-    public int getLimit(Player player, int max) {
-        return getLimit(player.getClient(), max);
     }
 
     /**

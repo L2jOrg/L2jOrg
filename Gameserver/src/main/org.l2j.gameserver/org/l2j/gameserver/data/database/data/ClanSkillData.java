@@ -39,10 +39,6 @@ public class ClanSkillData {
     @Column("sub_pledge_id")
     private int subPledge;
 
-    public int getClanId() {
-        return clanId;
-    }
-
     public int getId() {
         return id;
     }

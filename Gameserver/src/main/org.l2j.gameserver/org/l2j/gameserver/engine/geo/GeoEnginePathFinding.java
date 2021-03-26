@@ -122,7 +122,7 @@ final class GeoEnginePathFinding extends GeoEngine {
         }
 
         // find path
-        List<Location> path = null;
+        List<Location> path;
         try {
             Node result = buffer.findPath(gox, goy, goz, gtx, gty, gtz);
 

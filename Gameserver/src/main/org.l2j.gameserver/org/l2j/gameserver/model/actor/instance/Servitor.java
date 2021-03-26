@@ -43,8 +43,6 @@ import org.l2j.gameserver.network.serverpackets.SetSummonRemainTime;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -62,7 +60,6 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
  * @author UnAfraid
  */
 public class Servitor extends Summon implements Runnable {
-    protected static final Logger log = LoggerFactory.getLogger(Servitor.class);
 
     protected Future<?> _summonLifeTask;
     private float _expMultiplier = 0;
@@ -106,16 +103,8 @@ public class Servitor extends Summon implements Runnable {
         _expMultiplier = expMultiplier;
     }
 
-    public ItemHolder getItemConsume() {
-        return _itemConsume;
-    }
-
     public void setItemConsume(ItemHolder item) {
         _itemConsume = item;
-    }
-
-    public int getItemConsumeInterval() {
-        return _consumeItemInterval;
     }
 
     public void setItemConsumeInterval(int interval) {

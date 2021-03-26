@@ -25,7 +25,7 @@ import org.l2j.gameserver.engine.item.Item;
  * @author KenM, Gnacik
  */
 public class RequestChangeNicknameColor extends ClientPacket {
-    private static final int COLORS[] =
+    private static final int[] COLORS =
             {
                     0x9393FF, // Pink
                     0x7C49FC, // Rose Pink

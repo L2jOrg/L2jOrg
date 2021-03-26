@@ -76,10 +76,6 @@ public class PetData {
         return ownerId;
     }
 
-    public boolean isRestore() {
-        return restore;
-    }
-
     public static PetData of(Pet pet, boolean restore) {
         var data = new PetData();
         data.name = pet.getName();

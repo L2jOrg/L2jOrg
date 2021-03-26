@@ -33,8 +33,6 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.scripts.instances.AbstractInstance;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
@@ -46,7 +44,6 @@ import java.util.*;
  */
 public class LastImperialTomb extends AbstractInstance
 {
-	private static Logger LOGGER = LoggerFactory.getLogger(LastImperialTomb.class);
 	// NPCs
 	private static final int GUIDE = 32011;
 	private static final int CUBE = 29061;
@@ -530,7 +527,7 @@ public class LastImperialTomb extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				final Location scarletLocation = activeScarlet.getLocation();
-				int newHeading = 0;
+				int newHeading;
 				if (scarletLocation.getHeading() < 32768)
 				{
 					newHeading = Math.abs(180 - (int) (scarletLocation.getHeading() / 182.044444444));

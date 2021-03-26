@@ -154,28 +154,7 @@ public enum ClassId implements IIdentifiable {
 
     DOOMBRINGER(131, false, Race.JIN_KAMAEL, BERSERKER),
     SOUL_HOUND(195, false, Race.JIN_KAMAEL, SOUL_BREAKER),
-    TRICKSTER(134, false, Race.JIN_KAMAEL, SOUL_RANGER),
-
-    DEATH_PILGRIM_HUMAN(196, false, Race.HUMAN, null),
-    DEATH_BLADE_HUMAN(197, false, Race.HUMAN, DEATH_PILGRIM_HUMAN),
-    DEATH_MESSENGER_HUMAN(198, false, Race.HUMAN, DEATH_BLADE_HUMAN),
-    DEATH_KIGHT_HUMAN(199, false, Race.HUMAN, DEATH_MESSENGER_HUMAN),
-
-    DEATH_PILGRIM_ELF(200, false, Race.ELF, null),
-    DEATH_BLADE_ELF(201, false, Race.ELF, DEATH_PILGRIM_ELF),
-    DEATH_MESSENGER_ELF(202, false, Race.ELF, DEATH_BLADE_ELF),
-    DEATH_KIGHT_ELF(203, false, Race.ELF, DEATH_MESSENGER_ELF),
-
-    DEATH_PILGRIM_DARK_ELF(204, false, Race.DARK_ELF, null),
-    DEATH_BLADE_DARK_ELF(205, false, Race.DARK_ELF, DEATH_PILGRIM_DARK_ELF),
-    DEATH_MESSENGER_DARK_ELF(206, false, Race.DARK_ELF, DEATH_BLADE_DARK_ELF),
-    DEATH_KIGHT_DARK_ELF(207, false, Race.DARK_ELF, DEATH_MESSENGER_DARK_ELF),
-
-    SYLPH(208, false, Race.SYLPH, null),
-    FREE_SHOOTER(209, false, Race.SYLPH, SYLPH),
-    FREE_HUNTER(210, false, Race.SYLPH, FREE_SHOOTER),
-    SHOOTING_MASTER(211, false, Race.SYLPH, FREE_HUNTER);
-
+    TRICKSTER(134, false, Race.JIN_KAMAEL, SOUL_RANGER);
 
     /**
      * The Identifier of the Class
@@ -207,7 +186,7 @@ public enum ClassId implements IIdentifiable {
      **/
     private final Set<ClassId> _nextClassIds = new HashSet<>(1);
 
-    private static IntMap<ClassId> classIdMap = new HashIntMap<>();
+    private static final IntMap<ClassId> classIdMap = new HashIntMap<>();
 
     static {
         for (ClassId classId : ClassId.values()) {
@@ -278,42 +257,10 @@ public enum ClassId implements IIdentifiable {
     }
 
     /**
-     * @return {code true} if the class is a summoner class.
-     */
-    public final boolean isSummoner() {
-        return _isSummoner;
-    }
-
-    /**
      * @return the Race object of the class.
      */
     public final Race getRace() {
         return _race;
-    }
-
-    /**
-     * @param cid the parent ClassId to check.
-     * @return {code true} if this Class is a child of the selected ClassId.
-     */
-    public final boolean childOf(ClassId cid) {
-        if (_parent == null) {
-            return false;
-        }
-
-        if (_parent == cid) {
-            return true;
-        }
-
-        return _parent.childOf(cid);
-
-    }
-
-    /**
-     * @param cid the parent ClassId to check.
-     * @return {code true} if this Class is equal to the selected ClassId or a child of the selected ClassId.
-     */
-    public final boolean equalsOrChildOf(ClassId cid) {
-        return (this == cid) || childOf(cid);
     }
 
     /**

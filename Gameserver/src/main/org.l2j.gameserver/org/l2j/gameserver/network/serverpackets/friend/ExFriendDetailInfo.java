@@ -38,7 +38,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  */
 public class ExFriendDetailInfo extends ServerPacket {
     private final int _objectId;
-    private Player friend;
+    private final Player friend;
     private FriendInfo info;
     private final String _name;
 

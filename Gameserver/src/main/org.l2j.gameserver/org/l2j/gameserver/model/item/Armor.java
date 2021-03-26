@@ -29,7 +29,7 @@ import static org.l2j.gameserver.model.item.BodyPart.*;
  * @author JoeAlisson
  */
 public final class Armor extends ItemTemplate implements EquipableItem {
-    private ArmorType type;
+    private final ArmorType type;
 
     public Armor(int id, String name, ArmorType type, BodyPart bodyPart) {
         super(id, name);

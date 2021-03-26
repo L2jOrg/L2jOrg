@@ -28,15 +28,14 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AuthClientPacket extends ReadablePacket<AuthClient> {
 
-	private static Logger _log = LoggerFactory.getLogger(AuthClientPacket.class.getName());
+	private static final Logger LOGGER = LoggerFactory.getLogger(AuthClientPacket.class.getName());
 	
 	@Override
 	protected final boolean read() {
 		try {
 			return readImpl();
 		} catch (Exception e) {
-			_log.error("ERROR READING: " + this.getClass().getSimpleName());
-			e.printStackTrace();
+			LOGGER.error("Reading: {}", this.getClass().getSimpleName(), e);
 			return false;
 		}
 	}

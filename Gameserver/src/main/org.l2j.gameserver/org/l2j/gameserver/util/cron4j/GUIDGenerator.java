@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.util.cron4j;
 
+import org.l2j.commons.util.Rnd;
+
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.UnknownHostException;
@@ -33,7 +35,7 @@ class GUIDGenerator {
     /**
      * The machine descriptor, which is used to identified the underlying hardware machine.
      */
-    private static String MACHINE_DESCRIPTOR = getMachineDescriptor();
+    private static final String MACHINE_DESCRIPTOR = getMachineDescriptor();
 
     /**
      * Generates a GUID (48 chars).
@@ -46,7 +48,7 @@ class GUIDGenerator {
         encode(id, Runtime.getRuntime());
         encode(id, Thread.currentThread());
         encode(id, System.currentTimeMillis());
-        encode(id, getRandomInt());
+        encode(id, Rnd.nextInt());
         return id.toString();
     }
 
@@ -56,7 +58,7 @@ class GUIDGenerator {
      * @return The calculated machine id.
      */
     private static String getMachineDescriptor() {
-        StringBuffer descriptor = new StringBuffer();
+        StringBuilder descriptor = new StringBuilder();
         descriptor.append(System.getProperty("os.name"));
         descriptor.append("::");
         descriptor.append(System.getProperty("os.arch"));
@@ -165,15 +167,6 @@ class GUIDGenerator {
             b.append(addr.getHostAddress());
         }
         return b;
-    }
-
-    /**
-     * Returns a random integer value.
-     *
-     * @return A random integer value.
-     */
-    private static int getRandomInt() {
-        return (int) Math.round((Math.random() * Integer.MAX_VALUE));
     }
 
     /**

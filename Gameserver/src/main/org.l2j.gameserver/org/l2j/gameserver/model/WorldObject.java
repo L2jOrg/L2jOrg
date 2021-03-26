@@ -522,7 +522,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         });
     }
 
-    public boolean isInvul() {
+    public boolean isInvulnerable() {
         return false;
     }
 

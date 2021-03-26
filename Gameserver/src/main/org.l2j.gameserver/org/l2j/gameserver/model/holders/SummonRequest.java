@@ -19,7 +19,6 @@
  */
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.AbstractRequest;
 
@@ -29,20 +28,14 @@ import org.l2j.gameserver.model.actor.request.AbstractRequest;
  */
 public class SummonRequest extends AbstractRequest {
     private final Player _target;
-    private final Skill _skill;
 
-    public SummonRequest(Player destination, Skill skill) {
+    public SummonRequest(Player destination) {
         super(destination);
         _target = destination;
-        _skill = skill;
     }
 
     public Player getTarget() {
         return _target;
-    }
-
-    public Skill getSkill() {
-        return _skill;
     }
 
     @Override

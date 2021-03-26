@@ -34,7 +34,6 @@ import java.util.Set;
  * @author Zoey76
  */
 public final class SkillLearn {
-    private final String _skillName;
     private final int _skillId;
     private final int _skillLvl;
     private final int _getLevel;
@@ -61,7 +60,6 @@ public final class SkillLearn {
      * @param set the set with the SkillLearn data.
      */
     public SkillLearn(StatsSet set) {
-        _skillName = set.getString("skillName");
         _skillId = set.getInt("skillId");
         _skillLvl = set.getInt("skillLvl");
         _getLevel = set.getInt("getLevel");
@@ -75,13 +73,6 @@ public final class SkillLearn {
         _row = set.getInt("row", 0);
         _column = set.getInt("row", 0);
         _pointsRequired = set.getInt("pointsRequired", 0);
-    }
-
-    /**
-     * @return the name of this skill.
-     */
-    public String getName() {
-        return _skillName;
     }
 
     /**
@@ -228,22 +219,6 @@ public final class SkillLearn {
 
     public Set<Integer> getRemoveSkills() {
         return _removeSkills;
-    }
-
-    public int getTreeId() {
-        return _treeId;
-    }
-
-    public int getRow() {
-        return _row;
-    }
-
-    public int getColumn() {
-        return _column;
-    }
-
-    public int getPointsRequired() {
-        return _pointsRequired;
     }
 
     public Skill getSkill() {

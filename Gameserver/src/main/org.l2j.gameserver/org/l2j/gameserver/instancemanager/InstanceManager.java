@@ -130,7 +130,6 @@ public final class InstanceManager extends GameXmlReader {
                 case "doorlist" -> parseDoors(template, innerNode);
                 case "removeBuffs" -> parseRemoveBuffs(template, innerNode);
                 case "reenter" -> parseReenter(template, innerNode);
-                case "parameters" -> template.setParameters(parseParameters(innerNode));
                 case "conditions" -> parseConditions(id, template, innerNode);
             }
         }

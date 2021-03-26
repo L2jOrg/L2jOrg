@@ -31,55 +31,55 @@ public class AccessLevel {
     /**
      * The access level.
      */
-    private int _accessLevel = 0;
+    private int _accessLevel;
     /**
      * The access level name.
      */
-    private String _name = null;
+    private String _name;
     /**
      * Child access levels.
      */
-    private int _child = 0;
+    private int _child;
     /**
      * The name color for the access level.
      */
-    private int _nameColor = 0;
+    private int _nameColor;
     /**
      * The title color for the access level.
      */
-    private int _titleColor = 0;
+    private int _titleColor;
     /**
      * Flag to determine if the access level has GM access.
      */
-    private boolean _isGm = false;
+    private boolean _isGm;
     /**
      * Flag for peace zone attack
      */
-    private boolean _allowPeaceAttack = false;
+    private boolean _allowPeaceAttack;
     /**
      * Flag for fixed res
      */
-    private boolean _allowFixedRes = false;
+    private boolean _allowFixedRes;
     /**
      * Flag for transactions
      */
-    private boolean _allowTransaction = false;
+    private boolean _allowTransaction;
     /**
      * Flag for AltG commands
      */
-    private boolean _allowAltG = false;
+    private boolean _allowAltG;
     /**
      * Flag to give damage
      */
-    private boolean _giveDamage = false;
+    private boolean _giveDamage;
     /**
      * Flag to take aggro
      */
-    private boolean _takeAggro = false;
+    private boolean _takeAggro;
     /**
      * Flag to gain exp in party
      */
-    private boolean _gainExp = false;
+    private boolean _gainExp;
 
     public AccessLevel(StatsSet set) {
         _accessLevel = set.getInt("level");

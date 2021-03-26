@@ -28,8 +28,8 @@ import org.l2j.gameserver.network.authcomm.SendablePacket;
  */
 public class SetAccountInfo extends SendablePacket
 {
-	private String _account;
-	private int _size;
+	private final String _account;
+	private final int _size;
 
 	public SetAccountInfo(String account, int size)
 	{

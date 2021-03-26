@@ -54,7 +54,6 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  */
 public final class CommissionManager {
 
-    private static final int INTERACTION_DISTANCE = 250;
     private static final int ITEMS_LIMIT_PER_REQUEST = 999;
     private static final int MAX_ITEMS_REGISTERED_PER_PLAYER = 10;
     private static final long MIN_REGISTRATION_AND_SALE_FEE = 1000;

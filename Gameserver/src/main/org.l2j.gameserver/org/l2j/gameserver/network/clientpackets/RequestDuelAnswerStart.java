@@ -54,8 +54,8 @@ public final class RequestDuelAnswerStart extends ClientPacket {
         }
 
         if (_response == 1) {
-            SystemMessage msg1 = null;
-            SystemMessage msg2 = null;
+            SystemMessage msg1;
+            SystemMessage msg2;
             if (requestor.isInDuel()) {
                 msg1 = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL);
                 msg1.addString(requestor.getName());
@@ -89,7 +89,7 @@ public final class RequestDuelAnswerStart extends ClientPacket {
             sm.addPcName(player);
             requestor.sendPacket(sm);
         } else {
-            SystemMessage msg = null;
+            SystemMessage msg;
             if (_partyDuel == 1) {
                 msg = SystemMessage.getSystemMessage(SystemMessageId.THE_OPPOSING_PARTY_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
             } else {

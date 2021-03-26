@@ -85,15 +85,6 @@ public class CommissionItem {
     }
 
     /**
-     * Gets the start time.
-     *
-     * @return the start time
-     */
-    public Instant getStartTime() {
-        return data.getStartTime();
-    }
-
-    /**
      * Gets the duration in days.
      *
      * @return the duration in days

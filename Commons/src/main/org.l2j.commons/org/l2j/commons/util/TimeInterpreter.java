@@ -60,17 +60,6 @@ public class TimeInterpreter {
     }
 
     /**
-     * Constructs an user-friendly description of the given amount of time, specifying the number of days (if any), hours (if any), minutes (if any), seconds (if any) and milliseconds (if any). Otherwise, returns the string value {@code 0}.
-     *
-     * @param timeAmount amount of time to be written
-     * @param timeUnit   unit of the given amount
-     * @return an user-friendly description of the given time amount
-     */
-    public static String consolidate(long timeAmount, TimeUnit timeUnit, TimeUnit minUnit) {
-        return consolidate(timeAmount, timeUnit, minUnit, DAYS, "0 " + timeUnit.name().toLowerCase(Locale.ENGLISH));
-    }
-
-    /**
      * Constructs an user-friendly description of the given amount of time.
      *
      * @param timeAmount           amount of time to be written

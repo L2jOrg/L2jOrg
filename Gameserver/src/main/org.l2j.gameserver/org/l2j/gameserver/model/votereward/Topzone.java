@@ -42,8 +42,8 @@ public class Topzone extends VoteSystem {
 
     @Override
     public int getVotes() {
-        InputStreamReader isr = null;
-        BufferedReader br = null;
+        InputStreamReader isr;
+        BufferedReader br;
 
         try {
             URLConnection con = new URL(Config.TOPZONE_SERVER_LINK).openConnection();
@@ -62,8 +62,7 @@ public class Topzone extends VoteSystem {
             br.close();
             isr.close();
         } catch (Exception e) {
-            e.printStackTrace();
-            LOGGER.warn("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
+            LOGGER.warn("VoteSystem: Error while getting server vote count from {}.", getSiteName(), e);
         }
 
         return -1;

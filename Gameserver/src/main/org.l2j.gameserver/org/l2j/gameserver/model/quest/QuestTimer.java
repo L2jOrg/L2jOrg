@@ -105,28 +105,12 @@ public class QuestTimer implements Runnable {
         return npc == this.npc && player == this.player;
     }
 
-    public final boolean getIsActive() {
-        return isActive;
-    }
-
-    public final boolean getIsRepeating() {
-        return repeating;
-    }
-
     public final Quest getQuest() {
         return quest;
     }
 
     public final String getName() {
         return name;
-    }
-
-    public final Npc getNpc() {
-        return npc;
-    }
-
-    public final Player getPlayer() {
-        return player;
     }
 
     @Override

@@ -24766,7 +24766,7 @@ public final class NpcStringId {
     public static NpcStringId GLORY_TO_THE_HEROES_WHO_HAVE_DEFEATED_LORD_ISHKA;
 
 
-    private static IntMap<NpcStringId> VALUES = new HashIntMap<>();
+    private static final IntMap<NpcStringId> VALUES = new HashIntMap<>();
 
     static {
         buildFastLookupTable();

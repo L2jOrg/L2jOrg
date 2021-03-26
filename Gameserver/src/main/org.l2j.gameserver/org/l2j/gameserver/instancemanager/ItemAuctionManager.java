@@ -111,10 +111,6 @@ public final class ItemAuctionManager extends GameXmlReader {
         return _managerInstances.get(instanceId);
     }
 
-    public final int getNextAuctionId() {
-        return _auctionIds.getAndIncrement();
-    }
-
     public static ItemAuctionManager getInstance() {
         return Singleton.INSTANCE;
     }

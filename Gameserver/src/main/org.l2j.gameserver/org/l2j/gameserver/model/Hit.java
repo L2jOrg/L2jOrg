@@ -96,7 +96,4 @@ public class Hit {
         return (AttackType.SHOT_USED.getMask() & flags) != 0;
     }
 
-    public boolean isBlocked() {
-        return (AttackType.BLOCKED.getMask() & flags) != 0;
-    }
 }

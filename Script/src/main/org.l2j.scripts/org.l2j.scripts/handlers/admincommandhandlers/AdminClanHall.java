@@ -59,7 +59,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
 		
-		if (actualCommand.toLowerCase().equals("admin_clanhall"))
+		if (actualCommand.equalsIgnoreCase("admin_clanhall"))
 		{
 			processBypass(activeChar, new BypassParser(command));
 		}
@@ -157,7 +157,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		useAdminCommand("admin_clanhall id=" + clanHallId, player);
 	}
 	
-	private void sendClanHallList(Player player, int page, BypassParser parser)
+	private void sendClanHallList(Player player, int page)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
@@ -274,7 +274,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		}
 		else
 		{
-			sendClanHallList(player, page, parser);
+			sendClanHallList(player, page);
 		}
 	}
 	

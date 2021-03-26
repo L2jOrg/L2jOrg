@@ -23,45 +23,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public final class Elementals {
-    public static final int FIRST_WEAPON_BONUS = 20;
-    public static final int NEXT_WEAPON_BONUS = 5;
-    public static final int ARMOR_BONUS = 6;
-    public static final int[] WEAPON_VALUES =
-            {
-                    0, // Level 1
-                    25, // Level 2
-                    75, // Level 3
-                    150, // Level 4
-                    175, // Level 5
-                    225, // Level 6
-                    300, // Level 7
-                    325, // Level 8
-                    375, // Level 9
-                    450, // Level 10
-                    475, // Level 11
-                    525, // Level 12
-                    600, // Level 13
-                    Integer.MAX_VALUE
-                    // TODO: Higher stones
-            };
-    public static final int[] ARMOR_VALUES =
-            {
-                    0, // Level 1
-                    12, // Level 2
-                    30, // Level 3
-                    60, // Level 4
-                    72, // Level 5
-                    90, // Level 6
-                    120, // Level 7
-                    132, // Level 8
-                    150, // Level 9
-                    180, // Level 10
-                    192, // Level 11
-                    210, // Level 12
-                    240, // Level 13
-                    Integer.MAX_VALUE
-                    // TODO: Higher stones
-            };
     protected static final byte NONE = -1;
     protected static final byte FIRE = 0;
     protected static final byte WATER = 1;
@@ -83,10 +44,6 @@ public final class Elementals {
             return item._element;
         }
         return NONE;
-    }
-
-    public static ElementalItems getItemElemental(int itemId) {
-        return TABLE.get(itemId);
     }
 
     public static int getMaxElementLevel(int itemId) {

@@ -77,8 +77,4 @@ public class EventAnnouncement implements Announce {
         throw new UnsupportedOperationException();
     }
 
-    @Override
-    public boolean canBeStored() {
-        return false;
-    }
 }

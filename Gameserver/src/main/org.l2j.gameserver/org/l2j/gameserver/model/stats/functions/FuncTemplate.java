@@ -93,10 +93,6 @@ public final class FuncTemplate {
             return false;
         }
 
-        if ((_applayCond != null) && !_applayCond.test(effected, effected, skill)) {
-            return false;
-        }
-
-        return true;
+        return (_applayCond == null) || _applayCond.test(effected, effected, skill);
     }
 }

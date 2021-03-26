@@ -96,10 +96,6 @@ public class PledgeApplicantData {
         return message;
     }
 
-    public int getKarma() {
-        return karma;
-    }
-
     public Player getPlayerInstance() {
         return World.getInstance().findPlayer(playerId);
     }

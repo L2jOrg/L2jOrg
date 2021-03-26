@@ -20,6 +20,7 @@ package org.l2j.scripts.handlers.effecthandlers;
 
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.engine.skill.api.SkillType;
@@ -31,7 +32,6 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillUse;
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.engine.item.Item;
 
 import java.util.EnumSet;
 import java.util.function.Function;

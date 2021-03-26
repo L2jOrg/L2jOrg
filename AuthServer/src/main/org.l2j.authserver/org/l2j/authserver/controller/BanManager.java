@@ -18,7 +18,7 @@
  */
 package org.l2j.authserver.controller;
 
-import org.l2j.authserver.Config;
+import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,15 +26,17 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static java.lang.System.currentTimeMillis;
 
+/**
+ * @author JoeAlisson
+ */
 class BanManager {
 
-    private static final Logger logger = LoggerFactory.getLogger(BanManager.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(BanManager.class);
     private final Map<String, Long> bannedAdresses = new ConcurrentHashMap<>();
 
     private BanManager() {
@@ -42,17 +44,17 @@ class BanManager {
     }
 
     private void loadBanFile() {
-        Path path = Paths.get(Config.BANNED_IP_FILE);
+
+        Path path = FileUtil.resolvePath("banned_ip.cfg");
         if (Files.isRegularFile(path)) {
             try {
                 Files.readAllLines(path).stream().filter(Util::isNotEmpty).forEach(this::addBannedAddress);
             } catch (IOException e) {
-                logger.warn("Error while reading the bans file ({}).", path.getFileName(), e);
+                LOGGER.warn("Error while reading the bans file ({}).", path.getFileName(), e);
             }
-
-            logger.info("Loaded {} IP Bans.", bannedAdresses.size());
+            LOGGER.info("Loaded {} IP Bans.", bannedAdresses.size());
         } else {
-            logger.info("IP Bans file {} is missing or is a directory, skipped.", path.toAbsolutePath());
+            LOGGER.warn("IP Bans file {} is missing or is a directory, skipped.", path.toAbsolutePath());
         }
     }
 
@@ -68,7 +70,7 @@ class BanManager {
             try {
                 expiration = Long.parseLong(infoParts[1]);
             } catch (NumberFormatException e) {
-                logger.warn("Skipped: Incorrect ban duration ({}) for address {}", infoParts[1], infoParts[0]);
+                LOGGER.warn("Skipped: Incorrect ban duration ({}) for address {}", infoParts[1], infoParts[0]);
             }
         }
         addBannedAdress(infoParts[0], expiration);

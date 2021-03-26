@@ -40,24 +40,6 @@ public class EffectTickTask implements Runnable {
         _effect = effect;
     }
 
-    /**
-     * Gets the buff info.
-     *
-     * @return the buff info
-     */
-    public BuffInfo getBuffInfo() {
-        return _info;
-    }
-
-    /**
-     * Gets the effect.
-     *
-     * @return the effect
-     */
-    public AbstractEffect getEffect() {
-        return _effect;
-    }
-
 
     @Override
     public void run() {

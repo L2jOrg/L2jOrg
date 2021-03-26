@@ -352,7 +352,7 @@ public final class ControllableMobAI extends AttackableAI {
         }
 
         // Check if the target isn't invulnerable
-        if (target.isInvul()) {
+        if (target.isInvulnerable()) {
             return false;
         }
 
@@ -425,16 +425,8 @@ public final class ControllableMobAI extends AttackableAI {
         setForcedTarget(target);
     }
 
-    public boolean isThinking() {
-        return _isThinking;
-    }
-
     public void setThinking(boolean isThinking) {
         _isThinking = isThinking;
-    }
-
-    public boolean isNotMoving() {
-        return _isNotMoving;
     }
 
     public void setNotMoving(boolean isNotMoving) {

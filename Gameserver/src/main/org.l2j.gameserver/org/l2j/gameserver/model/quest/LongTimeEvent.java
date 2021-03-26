@@ -28,7 +28,6 @@ import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.drop.EventDropHolder;
 import org.l2j.gameserver.datatables.drop.EventDropList;
-import org.l2j.gameserver.instancemanager.EventShrineManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
@@ -73,7 +72,6 @@ public class LongTimeEvent extends Quest {
     private String endMessage;
     private int enterAnnounceId = -1;
     private DateRange period = DateRange.STARTED_DAY;
-    private boolean enableShrines = false;
 
     protected LongTimeEvent() {
         super(-1);
@@ -99,10 +97,6 @@ public class LongTimeEvent extends Quest {
         final var eventEnd = period.millisToEnd();
 
         spawnList.forEach(spawn -> AbstractScript.addSpawn(spawn.npcId, spawn.loc.getX(), spawn.loc.getY(), spawn.loc.getZ(), spawn.loc.getHeading(), false, eventEnd, false));
-
-        if (enableShrines) {
-            EventShrineManager.getInstance().setEnabled(true);
-        }
 
         if(isNotEmpty(startMessage)) {
             Broadcast.toAllOnlinePlayers(startMessage);
@@ -155,7 +149,6 @@ public class LongTimeEvent extends Quest {
                 var attrs = eventNode.getAttributes();
                 name = parseString(attrs, "name");
                 period = DateRange.parse(parseString(attrs, "start-date"), parseString(attrs, "end-date"));
-                enableShrines = parseBoolean(attrs, "enable-shrines");
                 startMessage = parseString(attrs, "start-message");
                 endMessage = parseString(attrs, "end-message");
 
@@ -217,9 +210,6 @@ public class LongTimeEvent extends Quest {
     protected class ScheduleEnd implements Runnable {
         @Override
         public void run() {
-            if (enableShrines) {
-                EventShrineManager.getInstance().setEnabled(false);
-            }
 
             destroyItemsOnEnd();
 

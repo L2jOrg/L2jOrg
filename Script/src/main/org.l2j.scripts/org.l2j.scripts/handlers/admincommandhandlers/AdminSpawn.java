@@ -286,7 +286,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			// Reload.
-			SpawnsData.getInstance().init();
+			SpawnsData.init();
 			BossManager.init();
 			ZoneManager.getInstance().reload();
 			QuestManager.getInstance().reloadAllScripts();
@@ -356,14 +356,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(gm, "Command format is //list_spawns <npcId|npc_name> [tele_index]");
 			}
-			if (command.startsWith("admin_list_positions"))
-			{
-				findNPCInstances(gm, npcId, teleportIndex, true);
-			}
-			else
-			{
-				findNPCInstances(gm, npcId, teleportIndex, false);
-			}
+			findNPCInstances(gm, npcId, teleportIndex, command.startsWith("admin_list_positions"));
 		}
 		else if (command.startsWith("admin_topspawncount") || command.startsWith("admin_top_spawn_count"))
 		{

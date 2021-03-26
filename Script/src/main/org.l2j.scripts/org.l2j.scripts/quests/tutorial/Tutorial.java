@@ -46,7 +46,7 @@ import org.l2j.gameserver.network.serverpackets.html.TutorialWindowType;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.network.serverpackets.ShowTutorialMark.*;
+import static org.l2j.gameserver.network.serverpackets.ShowTutorialMark.Mark;
 
 /**
  * @author JoeAlisson

@@ -74,7 +74,7 @@ public class AuthCrypt {
         var encryptedSize = offset + encryptedSize(size);
         data.limit(encryptedSize);
 		if (_static) {
-			NewCrypt.encXORPass(data, offset, encryptedSize, Rnd.nextInt());
+			NewCrypt.encXORPass(data, offset, encryptedSize, Rnd.nextSecureInt());
 			staticCrypter.crypt(data, offset, encryptedSize);
 			_static = false;
 		} else {

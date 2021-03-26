@@ -35,8 +35,8 @@ public final class ShortCutRegister extends ServerPacket {
         writeId(ServerPacketId.SHORTCUT_REG, buffer );
 
         buffer.writeInt(shortcut.getType().ordinal());
-        buffer.writeInt(shortcut.getClientId()); // C4 Client
-        buffer.writeByte(0);
+        buffer.writeInt(shortcut.getClientId());
+        buffer.writeByte(shortcut.isActive());
         switch (shortcut.getType()) {
             case ITEM -> writeShortcutItem(buffer);
             case SKILL -> writeShortcutSkill(buffer);

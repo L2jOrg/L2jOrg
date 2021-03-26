@@ -56,10 +56,6 @@ public class Q10984_CollectSpiderweb extends Quest
 	// NPCs
 	private static final int HERBIEL = 30150;
 	private static final int CAPTAIN_BATHIS = 30332;
-	// Monsters
-	private static final int HOOK_SPIDER = 20308;
-	private static final int CRIMSON_SPIDER = 20460;
-	private static final int PINCER_SPIDER = 20466;
 	private static final int BIGSPIDERWEB = 91652;
 	private static final IntIntMap MONSTER_DROP_CHANCES = new HashIntIntMap();
 	static

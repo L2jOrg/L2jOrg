@@ -87,6 +87,7 @@ public final class Rabbits extends Event
 		addStartNpc(NPC_MANAGER);
 		addSkillSeeId(CHEST);
 		addAttackId(CHEST);
+		setCustom(true);
 	}
 	
 	@Override

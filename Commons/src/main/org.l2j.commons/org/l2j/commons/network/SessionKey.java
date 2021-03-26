@@ -28,10 +28,10 @@ import java.util.Objects;
  * @author -Wooden-
  */
 public class SessionKey {
-    private int gameServerSessionId;
-    private int gameServerAccountId;
-    private int authAccountId;
-    private int authKey;
+    private final int gameServerSessionId;
+    private final int gameServerAccountId;
+    private final int authAccountId;
+    private final int authKey;
 
     public SessionKey(int authAccountId, int authKey, int gameServerSession, int gameServerAccountId) {
         gameServerSessionId = gameServerSession;

@@ -56,18 +56,6 @@ public class OlympiadMatchResultData {
         return playerId;
     }
 
-    public int getServer() {
-        return server;
-    }
-
-    public int getClassId() {
-        return classId;
-    }
-
-    public int getOpponent() {
-        return opponent;
-    }
-
     public String getOpponentName() {
         return opponentName;
     }

@@ -35,7 +35,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class HeavenlyRift {
     public static class ClearZoneTask implements Runnable {
-        private Npc _npc;
+        private final Npc _npc;
 
         public ClearZoneTask(Npc npc)
         {

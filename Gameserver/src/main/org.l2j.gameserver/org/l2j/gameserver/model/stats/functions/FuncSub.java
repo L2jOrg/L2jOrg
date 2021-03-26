@@ -19,8 +19,6 @@
  */
 package org.l2j.gameserver.model.stats.functions;
 
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.stats.Stat;
 
@@ -34,11 +32,4 @@ public class FuncSub extends AbstractFunction {
         super(stat, order, owner, value, applayCond);
     }
 
-    @Override
-    public double calc(Creature effector, Creature effected, Skill skill, double initVal) {
-        if ((getApplayCond() == null) || getApplayCond().test(effector, effected, skill)) {
-            return initVal - getValue();
-        }
-        return initVal;
-    }
 }

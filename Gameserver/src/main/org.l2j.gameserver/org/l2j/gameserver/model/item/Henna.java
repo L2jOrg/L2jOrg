@@ -22,7 +22,6 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.stats.BaseStats;
-import org.l2j.gameserver.model.stats.Stat;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -78,10 +77,6 @@ public class Henna {
         return _dyeItemId;
     }
 
-    public int getBaseStats(Stat stat) {
-        return _baseStats.getOrDefault(stat, 0);
-    }
-
     public Map<BaseStats, Integer> getBaseStats() {
         return _baseStats;
     }
@@ -133,13 +128,6 @@ public class Henna {
      */
     public void setSkills(List<Skill> skillList) {
         _skills.addAll(skillList);
-    }
-
-    /**
-     * @return the list with the allowed classes to wear this dye.
-     */
-    public List<ClassId> getAllowedWearClass() {
-        return _wear_class;
     }
 
     /**

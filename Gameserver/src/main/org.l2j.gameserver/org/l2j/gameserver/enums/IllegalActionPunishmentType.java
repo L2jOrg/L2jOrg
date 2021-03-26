@@ -28,14 +28,6 @@ public enum IllegalActionPunishmentType {
     BROADCAST,
     KICK,
     KICKBAN,
-    JAIL;
+    JAIL
 
-    public static IllegalActionPunishmentType findByName(String name) {
-        for (IllegalActionPunishmentType type : values()) {
-            if (type.name().toLowerCase().equals(name.toLowerCase())) {
-                return type;
-            }
-        }
-        return NONE;
-    }
 }

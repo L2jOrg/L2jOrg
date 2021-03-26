@@ -22,6 +22,7 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.Shortcut;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -37,4 +38,6 @@ public interface ShortcutDAO extends DAO<Shortcut> {
 
     @Query("DELETE FROM character_shortcuts WHERE player_id=:playerId:")
     void deleteFromPlayer(int playerId);
+
+    void save(Collection<Shortcut> values);
 }

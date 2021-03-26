@@ -1376,9 +1376,9 @@ public final class Formulas {
                 return elementalDamage;
             }
 
-            var critRate = attackerPlayer.getElementalSpiritCritRate();
+            var critRate = attackerPlayer.getElementalSpiritCriticRate();
             var isCrit = Math.min(critRate * 10, 380) > Rnd.get(1000);
-            var critDamage = attackerPlayer.getElementalSpiritCritDamage();
+            var critDamage = attackerPlayer.getElementalSpiritCriticDamage();
             var attack = attackerPlayer.getActiveElementalSpiritAttack() - target.getElementalSpiritDefenseOf(type) + Rnd.get(-2, 6);
             if(isPlayer(target)) {
                 return calcSpiritElementalPvPDamage(attack, critDamage, isCrit, baseDamage);

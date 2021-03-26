@@ -28,7 +28,6 @@ import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -55,7 +54,6 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.ai.CtrlIntention.*;
 import static org.l2j.gameserver.util.GameUtils.*;
-
 
 /**
  * This class manages AI of Creature.<br>
@@ -570,9 +568,6 @@ public class CreatureAI extends AbstractAI {
             return;
         }
 
-        if (isAttackable(getActor())) {
-            ((Attackable) getActor()).setisReturningToSpawnPoint(false);
-        }
         clientStoppedMoving();
 
         // If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE

@@ -454,7 +454,6 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
         leaveOlympiadMode(player);
     }
 
-    @Override
     public void sendPacket(ServerPacket packet) {
         arena.sendPacket(packet);
     }

@@ -71,56 +71,28 @@ public class MailData {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getSender() {
         return sender;
-    }
-
-    public void setSender(int sender) {
-        this.sender = sender;
     }
 
     public int getReceiver() {
         return receiver;
     }
 
-    public void setReceiver(int receiver) {
-        this.receiver = receiver;
-    }
-
     public String getSubject() {
         return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
     }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     public long getExpiration() {
         return expiration;
     }
 
-    public void setExpiration(long expiration) {
-        this.expiration = expiration;
-    }
-
     public long getFee() {
         return fee;
-    }
-
-    public void setFee(long fee) {
-        this.fee = fee;
     }
 
     public boolean hasAttachments() {
@@ -131,64 +103,32 @@ public class MailData {
         return unread;
     }
 
-    public void setUnread(boolean unread) {
-        this.unread = unread;
-    }
-
     public boolean isDeletedBySender() {
         return deletedBySender;
-    }
-
-    public void setDeletedBySender(boolean deletedBySender) {
-        this.deletedBySender = deletedBySender;
     }
 
     public boolean isDeletedByReceiver() {
         return deletedByReceiver;
     }
 
-    public void setDeletedByReceiver(boolean deletedByReceiver) {
-        this.deletedByReceiver = deletedByReceiver;
-    }
-
     public boolean isLocked() {
         return locked;
-    }
-
-    public void setLocked(boolean locked) {
-        this.locked = locked;
     }
 
     public MailType getType() {
         return type;
     }
 
-    public void setType(MailType type) {
-        this.type = type;
-    }
-
     public boolean isReturned() {
         return returned;
-    }
-
-    public void setReturned(boolean returned) {
-        this.returned = returned;
     }
 
     public int getItem() {
         return item;
     }
 
-    public void setItem(int item) {
-        this.item = item;
-    }
-
     public int getEnchant() {
         return enchant;
-    }
-
-    public void setEnchant(int enchant) {
-        this.enchant = enchant;
     }
 
     public final synchronized Attachment getAttachment() {

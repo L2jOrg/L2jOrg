@@ -56,10 +56,6 @@ public class SiegeClanData {
         this.castleId = castleId;
     }
 
-    public int getCastleId() {
-        return castleId;
-    }
-
     public int getClanId() {
         return clanId;
     }

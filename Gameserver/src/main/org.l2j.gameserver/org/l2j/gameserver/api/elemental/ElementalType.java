@@ -42,10 +42,6 @@ public enum ElementalType {
         return this == superior(targetType);
     }
 
-    public boolean isInferior(ElementalType targetType) {
-        return targetType == superior(this);
-    }
-
     public ElementalType getSuperior() {
         return superior(this);
     }

@@ -39,13 +39,6 @@ public abstract class AbstractEventListener implements Comparable<AbstractEventL
     }
 
     /**
-     * @return the container on which this listener is being registered (Used to unregister when unloading scripts)
-     */
-    public ListenersContainer getContainer() {
-        return _container;
-    }
-
-    /**
      * @return the type of event which listener is listening for.
      */
     public EventType getType() {

@@ -36,7 +36,7 @@ import java.util.*;
 public abstract class VoteSystem implements Runnable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(VoteSystem.class);
 
-    private static List<VoteSystem> voteSystems = new ArrayList<>();
+    private static final List<VoteSystem> voteSystems = new ArrayList<>();
 
     private final int votesDiff;
     private final boolean allowReport;

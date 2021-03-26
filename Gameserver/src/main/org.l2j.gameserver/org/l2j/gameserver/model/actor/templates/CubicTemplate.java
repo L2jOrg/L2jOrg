@@ -66,28 +66,12 @@ public class CubicTemplate implements ICubicConditionHolder {
         return _level;
     }
 
-    public int getSlot() {
-        return _slot;
-    }
-
     public int getDuration() {
         return _duration;
     }
 
     public int getDelay() {
         return _delay;
-    }
-
-    public int getMaxCount() {
-        return _maxCount;
-    }
-
-    public int getUseUp() {
-        return _useUp;
-    }
-
-    public double getPower() {
-        return _power;
     }
 
     public CubicTargetType getTargetType() {

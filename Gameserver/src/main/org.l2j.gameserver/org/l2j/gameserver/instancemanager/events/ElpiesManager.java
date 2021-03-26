@@ -44,6 +44,7 @@ public class ElpiesManager extends AbstractEventManager<AbstractEvent> {
         }
     }
 
+    @ScheduleTarget
     public static ElpiesManager getInstance() {
         return Singleton.INSTANCE;
     }

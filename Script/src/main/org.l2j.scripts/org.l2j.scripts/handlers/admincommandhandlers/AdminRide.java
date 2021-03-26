@@ -134,7 +134,7 @@ public class AdminRide implements IAdminCommandHandler
 	
 	private Player getRideTarget(Player activeChar)
 	{
-		Player player = null;
+		Player player;
 		
 		if ((activeChar.getTarget() == null) || (activeChar.getTarget().getObjectId() == activeChar.getObjectId()) || !isPlayer(activeChar.getTarget()))
 		{

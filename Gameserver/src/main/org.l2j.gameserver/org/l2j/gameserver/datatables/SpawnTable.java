@@ -65,16 +65,6 @@ public final class SpawnTable {
     }
 
     /**
-     * Gets the spawn count for the given NPC ID.
-     *
-     * @param npcId the NPC Id
-     * @return the spawn count
-     */
-    public int getSpawnCount(int npcId) {
-        return getSpawns(npcId).size();
-    }
-
-    /**
      * Gets a spawn for the given NPC ID.
      *
      * @param npcId the NPC Id

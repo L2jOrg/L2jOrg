@@ -261,9 +261,9 @@ public class MonsterArena extends AbstractInstance {
 			case "extratime": {
 				final Instance world = player.getInstanceWorld();
 				int count = world.getParameters().getInt("extratime");
-				world.setParameter("extratime", count++);
+				world.setParameter("extratime", count);
 				long remainingTime = world.getRemainingTime();
-				int additionnalTime = 0;
+				int additionnalTime;
 				if(Rnd.get(100) < 10)
 					additionnalTime = 5;
 				else {

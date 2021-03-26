@@ -159,7 +159,6 @@ public class CommandChannel extends AbstractPlayerGroup {
     /**
      * @return the level of this command channel (equals the level of the highest-leveled character in this command channel)
      */
-    @Override
     public int getLevel() {
         return _channelLvl;
     }
@@ -183,28 +182,11 @@ public class CommandChannel extends AbstractPlayerGroup {
         return _commandLeader;
     }
 
-    @Override
     public void setLeader(Player leader) {
         _commandLeader = leader;
         if (leader.getLevel() > _channelLvl) {
             _channelLvl = leader.getLevel();
         }
-    }
-
-    /**
-     * Check if a given player is in this command channel.
-     *
-     * @param player the player to check
-     * @return {@code true} if he does, {@code false} otherwise
-     */
-    @Override
-    public boolean containsPlayer(Player player) {
-        for (Party party : _parties) {
-            if (party.isMember(player)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     /**

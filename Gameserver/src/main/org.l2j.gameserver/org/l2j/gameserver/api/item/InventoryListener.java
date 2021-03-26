@@ -24,7 +24,7 @@ import org.l2j.gameserver.engine.item.Item;
 
 public interface InventoryListener {
 
-    void notifyEquiped(InventorySlot slot, Item inst, Inventory inventory);
+    void notifyEquipped(InventorySlot slot, Item inst, Inventory inventory);
 
-    void notifyUnequiped(InventorySlot slot, Item inst, Inventory inventory);
+    void notifyUnequipped(InventorySlot slot, Item inst, Inventory inventory);
 }

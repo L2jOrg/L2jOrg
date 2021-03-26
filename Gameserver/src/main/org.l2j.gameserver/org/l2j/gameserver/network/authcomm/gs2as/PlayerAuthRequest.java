@@ -25,8 +25,11 @@ import org.l2j.gameserver.network.authcomm.SendablePacket;
 
 public class PlayerAuthRequest extends SendablePacket
 {
-	private String account;
-	private int playOkID1, playOkID2, loginOkID1, loginOkID2;
+	private final String account;
+	private final int playOkID1;
+    private final int playOkID2;
+    private final int loginOkID1;
+    private final int loginOkID2;
 
 	public PlayerAuthRequest(GameClient client)
 	{

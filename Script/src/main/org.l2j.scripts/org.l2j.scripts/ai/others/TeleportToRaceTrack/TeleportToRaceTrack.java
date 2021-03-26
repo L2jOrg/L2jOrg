@@ -50,9 +50,6 @@ public final class TeleportToRaceTrack extends AbstractNpcAI
 		TELEPORTER_LOCATIONS.put(31210, new Location(12882, 181053, -3560)); // Race Track Gatekeeper
 	}
 
-	// Player Variables
-	private static final String MONSTER_RETURN = "MONSTER_RETURN";
-	
 	private TeleportToRaceTrack() {
 		var teleporters =  TELEPORTER_LOCATIONS.keySet().toArray();
 		addStartNpc(RACE_MANAGER);

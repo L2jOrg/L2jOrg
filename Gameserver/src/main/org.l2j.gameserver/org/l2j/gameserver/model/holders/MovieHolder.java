@@ -56,7 +56,4 @@ public final class MovieHolder {
         }
     }
 
-    public List<Player> getPlayers() {
-        return _players;
-    }
 }

@@ -57,8 +57,8 @@ public enum StatusUpdateType {
     CUR_CP(0x21, creature -> (int) creature.getCurrentCp()),
     MAX_CP(0x22, Creature::getMaxCp);
 
-    private int _clientId;
-    private Function<Creature, Integer> _valueSupplier;
+    private final int _clientId;
+    private final Function<Creature, Integer> _valueSupplier;
 
     StatusUpdateType(int clientId, Function<Creature, Integer> valueSupplier) {
         _clientId = clientId;

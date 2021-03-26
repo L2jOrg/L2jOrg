@@ -116,12 +116,8 @@ public class NotFriendPc implements IAffectObjectHandler
 			if (target.isInsideZone(ZoneType.SIEGE))
 			{
 				// Players in the same siege side at the same castle are considered friends.
-				if (player.isSiegeFriend(targetPlayer)) {
-					return false;
-				}
-				
-				return true;
-			}
+                return !player.isSiegeFriend(targetPlayer);
+            }
 			
 			// By default any flagged/PK player is considered enemy.
 			return (target.getActingPlayer().getPvpFlag() > 0) || (target.getActingPlayer().getReputation() < 0);

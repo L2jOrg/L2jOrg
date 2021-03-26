@@ -245,7 +245,7 @@ public final class AdminInstance implements IAdminCommandHandler
         }
     }
 
-    private void sendTemplateList(Player player, int page, BypassParser parser)
+    private void sendTemplateList(Player player, int page)
     {
         final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
         html.setFile(player, "data/html/admin/instances_list.htm");
@@ -301,7 +301,7 @@ public final class AdminInstance implements IAdminCommandHandler
         }
         else
         {
-            sendTemplateList(player, page, parser);
+            sendTemplateList(player, page);
         }
     }
 

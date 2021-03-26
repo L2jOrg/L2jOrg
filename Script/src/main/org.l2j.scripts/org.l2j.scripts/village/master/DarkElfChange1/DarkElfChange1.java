@@ -35,21 +35,21 @@ import static org.l2j.commons.util.Util.isDigit;
 public final class DarkElfChange1 extends AbstractNpcAI
 {
 	// NPCs
-	private static int[] NPCS =
+	private static final int[] NPCS =
 	{
 		30290, // Xenos
 		30297, // Tobias
 		30462, // Tronix
 	};
 	// Items
-	private static int GAZE_OF_ABYSS = 1244;
-	private static int IRON_HEART = 1252;
-	private static int JEWEL_OF_DARKNESS = 1261;
-	private static int ORB_OF_ABYSS = 1270;
+	private static final int GAZE_OF_ABYSS = 1244;
+	private static final int IRON_HEART = 1252;
+	private static final int JEWEL_OF_DARKNESS = 1261;
+	private static final int ORB_OF_ABYSS = 1270;
 	// Rewards
-	private static int SHADOW_WEAPON_COUPON_DGRADE = 8869;
+	private static final int SHADOW_WEAPON_COUPON_DGRADE = 8869;
 	// @formatter:off
-	private static int[][] CLASSES = 
+	private static final int[][] CLASSES =
 	{
 		{ 32, 31, 15, 16, 17, 18, GAZE_OF_ABYSS }, // PK
 		{ 35, 31, 19, 20, 21, 22, IRON_HEART }, // AS

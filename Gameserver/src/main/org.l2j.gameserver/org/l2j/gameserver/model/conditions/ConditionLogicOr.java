@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.item.ItemTemplate;
  * @author mkizub
  */
 public class ConditionLogicOr extends Condition {
-    private static Condition[] _emptyConditions = new Condition[0];
+    private static final Condition[] _emptyConditions = new Condition[0];
     public Condition[] conditions = _emptyConditions;
 
     /**

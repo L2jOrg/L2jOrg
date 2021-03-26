@@ -19,8 +19,6 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.model.actor.instance.ControllableMob;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -41,20 +39,6 @@ public class MobGroupTable {
 
     public MobGroup getGroup(int groupKey) {
         return _groupMap.get(groupKey);
-    }
-
-    public int getGroupCount() {
-        return _groupMap.size();
-    }
-
-    public MobGroup getGroupForMob(ControllableMob mobInst) {
-        for (MobGroup mobGroup : _groupMap.values()) {
-            if (mobGroup.isGroupMember(mobInst)) {
-                return mobGroup;
-            }
-        }
-
-        return null;
     }
 
     public MobGroup[] getGroups() {

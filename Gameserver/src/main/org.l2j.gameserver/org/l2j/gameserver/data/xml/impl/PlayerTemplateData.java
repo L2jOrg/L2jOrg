@@ -176,10 +176,6 @@ public final class PlayerTemplateData extends GameXmlReader {
         }
     }
 
-    public PlayerTemplate getTemplate(ClassId classId) {
-        return _playerTemplates.get(classId);
-    }
-
     public PlayerTemplate getTemplate(int classId) {
         return _playerTemplates.get(ClassId.getClassId(classId));
     }

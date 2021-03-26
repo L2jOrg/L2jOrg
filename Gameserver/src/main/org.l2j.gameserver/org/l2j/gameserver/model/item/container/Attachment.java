@@ -32,7 +32,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  */
 public class Attachment extends ItemContainer {
     private final int _ownerId;
-    private int mailId;
+    private final int mailId;
 
     public Attachment(int objectId, int mailId) {
         _ownerId = objectId;
@@ -52,15 +52,6 @@ public class Attachment extends ItemContainer {
     @Override
     public ItemLocation getBaseLocation() {
         return ItemLocation.MAIL;
-    }
-
-    public void setNewMailId(int mailId) {
-        this.mailId = mailId;
-        for (Item item : items.values()) {
-            item.changeItemLocation(getBaseLocation(), mailId);
-        }
-
-        updateDatabase();
     }
 
     public void returnToWh(ItemContainer wh) {

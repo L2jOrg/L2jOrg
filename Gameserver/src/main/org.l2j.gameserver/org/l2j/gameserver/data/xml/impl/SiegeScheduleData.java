@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.SiegeScheduleDate;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -46,13 +45,13 @@ public class SiegeScheduleData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return Path.of(Config.SIEGE_SCHEDULE_SCHEMA_FILE);
+        return Path.of("config/xsd/siege-schedule.xsd");
     }
 
     @Override
     public synchronized void load() {
         scheduleData.clear();
-        parseFile(new File(Config.SIEGE_SCHEDULE_FILE));
+        parseFile("config/siege-schedule.xml");
         LOGGER.info("Loaded: {}  siege schedulers.", scheduleData.size());
         if (scheduleData.isEmpty()) {
             scheduleData.add(new SiegeScheduleDate());

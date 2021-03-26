@@ -168,7 +168,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	
 	private synchronized void getSkillAI(Npc npc)
 	{
-		if (npc.isInvul() || npc.isCastingNow())
+		if (npc.isInvulnerable() || npc.isCastingNow())
 		{
 			return;
 		}
@@ -224,7 +224,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 						continue;
 					}
 					
-					if (((((Creature) obj).getZ() < (npc.getZ() - 100)) && (((Creature) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+					if (((obj.getZ() < (npc.getZ() - 100)) && (obj.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
 					{
 						continue;
 					}

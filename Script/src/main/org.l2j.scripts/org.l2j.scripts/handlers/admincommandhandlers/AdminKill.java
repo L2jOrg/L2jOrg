@@ -147,7 +147,7 @@ public class AdminKill implements IAdminCommandHandler
 		else
 		{
 			boolean targetIsInvul = false;
-			if (target.isInvul())
+			if (target.isInvulnerable())
 			{
 				targetIsInvul = true;
 				target.setIsInvul(false);

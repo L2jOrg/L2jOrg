@@ -41,10 +41,6 @@ public final class MissionEngine {
         return handlerFactories.get(name);
     }
 
-    public int size() {
-        return handlerFactories.size();
-    }
-
     public static void init() {
         ServiceLoader.load(MissionHandlerFactory.class).forEach(MissionEngine.getInstance()::registerHandler);
         MissionData.init();

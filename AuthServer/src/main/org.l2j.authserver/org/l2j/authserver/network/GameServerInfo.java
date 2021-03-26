@@ -51,10 +51,7 @@ public class GameServerInfo {
     private IPAddress[] hosts;
     private int _port;
 
-    // config
     private boolean isPvp;
-    private boolean _isTestServer;
-    private boolean _isShowingClock;
     private boolean _isShowingBrackets;
     private int _maxPlayers;
     private int serverType;
@@ -167,22 +164,6 @@ public class GameServerInfo {
         return isPvp;
     }
 
-    public void setTestServer(boolean val) {
-        _isTestServer = val;
-    }
-
-    public boolean isTestServer() {
-        return _isTestServer;
-    }
-
-    public void setShowingClock(boolean clock) {
-        _isShowingClock = clock;
-    }
-
-    public boolean isShowingClock() {
-        return _isShowingClock;
-    }
-
     public void setShowingBrackets(boolean val) {
         _isShowingBrackets = val;
     }
@@ -254,7 +235,7 @@ public class GameServerInfo {
         }
 
         private boolean applyMask(byte[] addr) {
-            boolean applied = false;
+            boolean applied;
             // V4 vs V4 or V6 vs V6 checks
             if (_isIPv4 == (addr.length == 4)) {
                 applied= applyIPV4(addr);

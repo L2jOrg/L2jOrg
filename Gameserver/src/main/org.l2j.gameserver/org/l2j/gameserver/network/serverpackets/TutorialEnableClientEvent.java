@@ -23,7 +23,7 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public class TutorialEnableClientEvent extends ServerPacket {
-    private int _eventId = 0;
+    private int _eventId;
 
     public TutorialEnableClientEvent(int event) {
         _eventId = event;

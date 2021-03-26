@@ -200,12 +200,6 @@ public class Pet extends Summon {
     }
 
     @Override
-    public Item getSecondaryWeaponInstance() {
-        // temporary? unavailable
-        return null;
-    }
-
-    @Override
     public Weapon getSecondaryWeaponItem() {
         // temporary? unavailable
         return null;
@@ -547,32 +541,6 @@ public class Pet extends Summon {
         getDAO(PetDAO.class).deleteByItem(_controlObjectId);
     }
 
-    public void dropAllItems() {
-        try {
-            for (Item item : _inventory.getItems()) {
-                dropItemHere(item);
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Pet Drop Error: " + e.getMessage(), e);
-        }
-    }
-
-    public void dropItemHere(Item dropit, boolean protect) {
-        dropit = _inventory.dropItem("Drop", dropit.getObjectId(), dropit.getCount(), getOwner(), this);
-
-        if (dropit != null) {
-            if (protect) {
-                dropit.getDropProtection().protect(getOwner());
-            }
-            LOGGER.debug("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
-            dropit.dropMe(this, getX(), getY(), getZ() + 100);
-        }
-    }
-
-    public void dropItemHere(Item dropit) {
-        dropItemHere(dropit, false);
-    }
-
     /**
      * @return Returns the mount able.
      */
@@ -897,14 +865,6 @@ public class Pet extends Summon {
     @Override
     public final int getArmor() {
         final Item weapon = _inventory.getPaperdollItem(InventorySlot.CHEST);
-        if (weapon != null) {
-            return weapon.getId();
-        }
-        return 0;
-    }
-
-    public final int getJewel() {
-        final Item weapon = _inventory.getPaperdollItem(InventorySlot.NECK);
         if (weapon != null) {
             return weapon.getId();
         }

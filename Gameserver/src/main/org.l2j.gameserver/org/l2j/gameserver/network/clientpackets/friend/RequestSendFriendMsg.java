@@ -36,7 +36,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author Tempy
  */
 public final class RequestSendFriendMsg extends ClientPacket {
-    private static Logger LOGGER_CHAT = LoggerFactory.getLogger("chat");
+    private static final Logger LOGGER_CHAT = LoggerFactory.getLogger("chat");
 
     private String _message;
     private String _reciever;

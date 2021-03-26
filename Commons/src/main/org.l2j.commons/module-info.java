@@ -29,6 +29,7 @@ module org.l2j.commons {
              org.l2j.commons.database.handler.ByteArrayHandler,
              org.l2j.commons.database.handler.IntegerHandler,
              org.l2j.commons.database.handler.IntMapHandler,
+             org.l2j.commons.database.handler.IntKeyIntValueHandler,
              org.l2j.commons.database.handler.IntSetHandler,
              org.l2j.commons.database.handler.ConcurrentIntMapHandler,
              org.l2j.commons.database.handler.ListHandler,

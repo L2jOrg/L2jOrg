@@ -24,6 +24,7 @@ import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.DeadLockDetector;
+import org.l2j.commons.util.FileUtil;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
@@ -234,7 +235,7 @@ public class GameServer {
 
         var serverSettings = getSettings(ServerSettings.class);
         if (serverSettings.scheduleRestart()) {
-            ServerRestartManager.getInstance();
+            ServerRestartManager.init();
         }
 
         LOGGER.info("Maximum number of connected players is configured to {}", serverSettings.maximumOnlineUsers());
@@ -247,8 +248,6 @@ public class GameServer {
         connectionHandler.start();
     }
 
-
-
     public static void main(String[] args) throws Exception {
         configureLogger();
         configureCache();
@@ -257,7 +256,6 @@ public class GameServer {
         configureNetworkPackets();
 
         printSection("Server Configuration");
-
         Config.load(); // TODO remove this
 
         var settings = getSettings(ServerSettings.class);
@@ -296,11 +294,11 @@ public class GameServer {
     }
 
     private static void configureCache() {
-        CacheFactory.getInstance().initialize(Config.HECACHE_FILE);
+        CacheFactory.getInstance().initialize("config/ehcache.xml");
     }
 
     private static void configureNetworkPackets() {
-        System.setProperty("async-mmocore.configurationFile", Config.ASYNC_MMOCORE_FILE);
+        System.setProperty("async-mmocore.configurationFile", "config/async-mmocore.properties");
     }
 
     private static void configureLogger() {
@@ -313,7 +311,7 @@ public class GameServer {
 
     private static void configureDatabase() throws Exception {
         printSection("Datasource Settings");
-        System.setProperty("hikaricp.configurationFile", Config.DATABASE_FILE);
+        System.setProperty("hikaricp.configurationFile", FileUtil.resolveFilePath("config/database.properties"));
         if (!DatabaseAccess.initialize()) {
             throw new Exception("Database Access could not be initialized");
         }

@@ -52,7 +52,7 @@ public class SummonAction implements IActionHandler
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((Summon) target), (Summon) target);
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((Summon) target), target);
 		}
 		else if (activeChar.getTarget() != target)
 		{

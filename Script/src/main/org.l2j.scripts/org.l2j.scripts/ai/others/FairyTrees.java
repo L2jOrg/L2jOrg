@@ -44,7 +44,7 @@ public class FairyTrees extends AbstractNpcAI
 	};
 	
 	// Skill
-	private static SkillHolder VENOMOUS_POISON = new SkillHolder(4243, 1); // Venomous Poison
+	private static final SkillHolder VENOMOUS_POISON = new SkillHolder(4243, 1); // Venomous Poison
 	
 	// Misc
 	private static final int MIN_DISTANCE = 1500;

@@ -34,5 +34,5 @@ public enum ResidenceFunctionType {
     BUFF,
     OUTERFLAG,
     PLATFORM,
-    ITEM;
+    ITEM
 }

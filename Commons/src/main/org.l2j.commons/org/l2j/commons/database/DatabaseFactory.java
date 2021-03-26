@@ -37,7 +37,7 @@ public class DatabaseFactory {
     private static DatabaseFactory instance;
     private final HikariDataSource dataSource;
 
-    public DatabaseFactory() throws SQLException {
+    public  DatabaseFactory() throws SQLException {
         dataSource = new HikariDataSource(new HikariConfig());
         dataSource.getConnection().close();
     }

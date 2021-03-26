@@ -18,8 +18,6 @@
  */
 package org.l2j.gameserver.enums;
 
-import org.l2j.gameserver.model.stats.Stat;
-
 /**
  * An enum representing all attribute types.
  *
@@ -52,21 +50,6 @@ public enum AttributeType {
     }
 
     /**
-     * Finds an attribute type by its name.
-     *
-     * @param attributeName the attribute name
-     * @return An {@code AttributeType} if attribute type was found, {@code null} otherwise
-     */
-    public static AttributeType findByName(String attributeName) {
-        for (AttributeType attributeType : values()) {
-            if (attributeType.name().equalsIgnoreCase(attributeName)) {
-                return attributeType;
-            }
-        }
-        return null;
-    }
-
-    /**
      * Finds an attribute type by its client id.
      *
      * @param clientId the client id
@@ -90,34 +73,4 @@ public enum AttributeType {
         return _clientId;
     }
 
-    /**
-     * Gets the opposite.
-     *
-     * @return the opposite
-     */
-    public AttributeType getOpposite() {
-        return ATTRIBUTE_TYPES[((_clientId % 2) == 0) ? (_clientId + 1) : (_clientId - 1)];
-    }
-
-    public Stat toStat() {
-        return switch (this) {
-            case WATER -> Stat.WATER_POWER;
-            case WIND ->  Stat.WIND_POWER;
-            case EARTH -> Stat.EARTH_POWER;
-            case HOLY -> Stat.HOLY_POWER;
-            case DARK -> Stat.DARK_POWER;
-            default ->   Stat.FIRE_POWER;
-        };
-    }
-
-    public Stat toStatResist() {
-        return switch (this) {
-            case WATER -> Stat.WATER_RES;
-            case WIND ->  Stat.WIND_RES;
-            case EARTH -> Stat.EARTH_RES;
-            case HOLY ->  Stat.HOLY_RES;
-            case DARK ->  Stat.DARK_RES;
-            default -> Stat.FIRE_RES;
-        };
-    }
 }

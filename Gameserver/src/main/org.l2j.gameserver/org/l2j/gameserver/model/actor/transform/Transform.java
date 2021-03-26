@@ -39,8 +39,6 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -49,12 +47,10 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author UnAfraid
  */
 public final class Transform implements IIdentifiable {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(Transform.class);
     private final int _id;
     private final int _displayId;
     private final TransformType _type;
     private final boolean _canSwim;
-    private final int _spawnHeight;
     private final boolean _canAttack;
     private final String _name;
     private final String _title;
@@ -68,7 +64,6 @@ public final class Transform implements IIdentifiable {
         _type = set.getEnum("type", TransformType.class, TransformType.COMBAT);
         _canSwim = set.getInt("can_swim", 0) == 1;
         _canAttack = set.getInt("normal_attackable", 1) == 1;
-        _spawnHeight = set.getInt("spawn_height", 0);
         _name = set.getString("setName", null);
         _title = set.getString("setTitle", null);
     }
@@ -97,24 +92,6 @@ public final class Transform implements IIdentifiable {
 
     public boolean canAttack() {
         return _canAttack;
-    }
-
-    public int getSpawnHeight() {
-        return _spawnHeight;
-    }
-
-    /**
-     * @return name that's going to be set to the player while is transformed with current transformation
-     */
-    public String getName() {
-        return _name;
-    }
-
-    /**
-     * @return title that's going to be set to the player while is transformed with current transformation
-     */
-    public String getTitle() {
-        return _title;
     }
 
     private TransformTemplate getTemplate(Creature creature) {
@@ -150,13 +127,6 @@ public final class Transform implements IIdentifiable {
     }
 
     /**
-     * @return {@code true} if transform type is non combat, {@code false} otherwise
-     */
-    public boolean isNonCombat() {
-        return _type == TransformType.NON_COMBAT;
-    }
-
-    /**
      * @return {@code true} if transform type is flying, {@code false} otherwise
      */
     public boolean isFlying() {
@@ -164,24 +134,10 @@ public final class Transform implements IIdentifiable {
     }
 
     /**
-     * @return {@code true} if transform type is cursed, {@code false} otherwise
-     */
-    public boolean isCursed() {
-        return _type == TransformType.CURSED;
-    }
-
-    /**
      * @return {@code true} if transform type is raiding, {@code false} otherwise
      */
     public boolean isRiding() {
         return _type == TransformType.RIDING_MODE;
-    }
-
-    /**
-     * @return {@code true} if transform type is pure stat, {@code false} otherwise
-     */
-    public boolean isPureStats() {
-        return _type == TransformType.PURE_STAT;
     }
 
     public double getCollisionHeight(Creature creature, double defaultCollisionHeight) {

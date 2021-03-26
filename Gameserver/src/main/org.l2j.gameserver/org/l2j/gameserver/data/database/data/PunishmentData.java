@@ -48,48 +48,24 @@ public class PunishmentData {
         return key;
     }
 
-    public void setKey(String key) {
-        this.key = key;
-    }
-
     public PunishmentAffect getAffect() {
         return affect;
-    }
-
-    public void setAffect(PunishmentAffect affect) {
-        this.affect = affect;
     }
 
     public PunishmentType getType() {
         return type;
     }
 
-    public void setType(PunishmentType type) {
-        this.type = type;
-    }
-
     public long getExpiration() {
         return expiration;
-    }
-
-    public void setExpiration(long expiration) {
-        this.expiration = expiration;
     }
 
     public String getReason() {
         return reason;
     }
 
-    public void setReason(String reason) {
-        this.reason = reason;
-    }
-
     public String getPunisher() {
         return punisher;
-    }
-
-    public void setPunisher(String punisher) {
-        this.punisher = punisher;
     }
 
     public static PunishmentData of(String key, PunishmentAffect affect, PunishmentType type, long expiration, String reason, String punisher) {

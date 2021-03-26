@@ -37,16 +37,6 @@ public class EventDropHolder extends DropHolder {
 		this.maxLevel = maxLevel;
 		this.monsterIds = monsterIds;
 	}
-	
-	public int getMinLevel()
-	{
-		return minLevel;
-	}
-	
-	public int getMaxLevel()
-	{
-		return maxLevel;
-	}
 
 	public boolean hasMonster(int id) {
 		return monsterIds.contains(id);

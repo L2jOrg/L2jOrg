@@ -19,15 +19,12 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
@@ -43,13 +40,6 @@ public abstract class AbstractPlayerGroup {
      * @return the leader of this group
      */
     public abstract Player getLeader();
-
-    /**
-     * Change the leader of this group to the specified player.
-     *
-     * @param leader the player to set as the new leader of this group
-     */
-    public abstract void setLeader(Player leader);
 
     /**
      * @return the leader's object ID
@@ -74,11 +64,6 @@ public abstract class AbstractPlayerGroup {
     public int getMemberCount() {
         return getMembers().size();
     }
-
-    /**
-     * @return the level of this group
-     */
-    public abstract int getLevel();
 
     /**
      * Broadcast a packet to every member of this group.
@@ -115,16 +100,6 @@ public abstract class AbstractPlayerGroup {
     }
 
     /**
-     * Check if this group contains a given player.
-     *
-     * @param player the player to check
-     * @return {@code true} if this group contains the specified player, {@code false} otherwise
-     */
-    public boolean containsPlayer(Player player) {
-        return getMembers().contains(player);
-    }
-
-    /**
      * Iterates over the group and executes procedure on each member
      *
      * @param procedure the prodecure to be executed on each member.<br>
@@ -138,10 +113,6 @@ public abstract class AbstractPlayerGroup {
             }
         }
         return true;
-    }
-
-    public void forEachMemberInRange(ILocational loc, int range, Consumer<Player> action) {
-        getMembers().stream().filter(member -> MathUtil.isInsideRadius3D(loc, member, range)).forEach(action);
     }
 
     @Override

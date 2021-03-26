@@ -49,10 +49,6 @@ public class BypassBuilder {
         addParam(name, "=", value);
     }
 
-    public void addParam(String name) {
-        addParam(name, null, null);
-    }
-
     public StringBuilder toStringBuilder() {
         final StringBuilder sb = new StringBuilder(_bypass);
         for (BypassParam param : _params) {

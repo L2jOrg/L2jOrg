@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.ai;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
@@ -25,15 +26,10 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.CreatureFollowTaskManager;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.concurrent.Future;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
 import static org.l2j.gameserver.util.GameUtils.*;
@@ -84,21 +80,12 @@ public abstract class AbstractAI implements Ctrl {
      * Different targets this AI maintains
      */
     private WorldObject _target;
-    private Future<?> _followTask = null;
 
     protected AbstractAI(Creature creature) {
         actor = creature;
     }
 
     private NextAction _nextAction;
-
-    /**
-     * @return the _nextAction
-     */
-    public NextAction getNextAction()
-    {
-        return _nextAction;
-    }
 
     /**
      * @param nextAction the next action to set.

@@ -29,7 +29,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class RequestExEnchantSkill extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestExEnchantSkill.class);
-    private static final Logger LOGGER_ENCHANT = LoggerFactory.getLogger("enchant.skills");
 
     private SkillEnchantType _type;
     private int _skillId;

@@ -135,7 +135,7 @@ public class AdminRes implements IAdminCommandHandler
 		
 		try
 		{
-			int radius = 0;
+			int radius;
 			
 			if (!radiusStr.isEmpty())
 			{

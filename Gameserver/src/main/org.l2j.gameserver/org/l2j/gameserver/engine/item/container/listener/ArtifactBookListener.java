@@ -31,7 +31,7 @@ public final class ArtifactBookListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyUnequipped(InventorySlot slot, Item item, Inventory inventory) {
         if (item.getBodyPart() == BodyPart.ARTIFACT_BOOK) {
             InventorySlot.balanceArtifacts().forEach(inventory::unEquipItemInSlot);
             InventorySlot.spiritArtifacts().forEach(inventory::unEquipItemInSlot);
@@ -41,7 +41,7 @@ public final class ArtifactBookListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyEquipped(InventorySlot slot, Item item, Inventory inventory) {
     }
 
 

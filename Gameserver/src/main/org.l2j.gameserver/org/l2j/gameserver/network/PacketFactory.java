@@ -31,10 +31,6 @@ interface PacketFactory {
     DiscardPacket DISCARD_PACKET = new DiscardPacket();
     Supplier<ClientPacket> DISCARD = () -> DISCARD_PACKET;
 
-    default int getPacketId() {
-        return -1;
-    }
-
     ClientPacket newIncomingPacket();
 
     default EnumSet<ConnectionState> getConnectionStates() {

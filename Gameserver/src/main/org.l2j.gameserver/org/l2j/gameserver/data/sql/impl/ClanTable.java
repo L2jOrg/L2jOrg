@@ -198,11 +198,11 @@ public class ClanTable {
             hall.setOwner(null);
         }
 
-        final ClanMember leaderMember = clan.getLeader();
+        final var leaderMember = clan.getLeader();
         if (leaderMember == null) {
             clan.getWarehouse().destroyAllItems("ClanRemove", null, null);
         } else {
-            clan.getWarehouse().destroyAllItems("ClanRemove", clan.getLeader().getPlayerInstance(), null);
+            clan.getWarehouse().destroyAllItems("ClanRemove", leaderMember.getPlayerInstance(), null);
         }
 
         for (ClanMember member : clan.getMembers()) {

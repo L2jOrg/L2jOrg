@@ -30,6 +30,7 @@ import org.l2j.authserver.network.gameserver.ServerClient;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -91,15 +92,15 @@ public class AuthServer {
     }
 
     private static void configureCaches() {
-        CacheFactory.getInstance().initialize(Config.HECACHE_FILE);
+        CacheFactory.getInstance().initialize("config/ehcache.xml");
     }
 
     private static void configureNetworkPackets() {
-        System.setProperty("async-mmocore.configurationFile", Config.ASYNC_MMOCORE_FILE);
+        System.setProperty("async-mmocore.configurationFile", "config/async-mmocore.properties");
     }
 
     private static void configureDatabase() throws Exception {
-        System.setProperty(HIKARICP_CONFIGURATION_FILE, Config.DATABASE_FILE);
+        System.setProperty(HIKARICP_CONFIGURATION_FILE, FileUtil.resolveFilePath("config/database.properties"));
         if (!DatabaseAccess.initialize()) {
             throw new Exception("Database Access could not be initialized");
         }

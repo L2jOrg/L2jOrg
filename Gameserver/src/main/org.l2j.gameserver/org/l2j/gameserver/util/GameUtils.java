@@ -383,63 +383,9 @@ public final class GameUtils {
      * @param outputMax
      * @return The mapped value
      */
-    public static int map(int input, int inputMin, int inputMax, int outputMin, int outputMax) {
-        input = constrain(input, inputMin, inputMax);
-        return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
-    }
-
-    /**
-     * Re-Maps a value from one range to another.
-     *
-     * @param input
-     * @param inputMin
-     * @param inputMax
-     * @param outputMin
-     * @param outputMax
-     * @return The mapped value
-     */
-    public static long map(long input, long inputMin, long inputMax, long outputMin, long outputMax) {
-        input = constrain(input, inputMin, inputMax);
-        return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
-    }
-
-    /**
-     * Re-Maps a value from one range to another.
-     *
-     * @param input
-     * @param inputMin
-     * @param inputMax
-     * @param outputMin
-     * @param outputMax
-     * @return The mapped value
-     */
     public static double map(double input, double inputMin, double inputMax, double outputMin, double outputMax) {
         input = constrain(input, inputMin, inputMax);
         return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
-    }
-
-    /**
-     * Constrains a number to be within a range.
-     *
-     * @param input the number to constrain, all data types
-     * @param min   the lower end of the range, all data types
-     * @param max   the upper end of the range, all data types
-     * @return input: if input is between min and max, min: if input is less than min, max: if input is greater than max
-     */
-    public static int constrain(int input, int min, int max) {
-        return (input < min) ? min : (input > max) ? max : input;
-    }
-
-    /**
-     * Constrains a number to be within a range.
-     *
-     * @param input the number to constrain, all data types
-     * @param min   the lower end of the range, all data types
-     * @param max   the upper end of the range, all data types
-     * @return input: if input is between min and max, min: if input is less than min, max: if input is greater than max
-     */
-    public static long constrain(long input, long min, long max) {
-        return (input < min) ? min : (input > max) ? max : input;
     }
 
     /**
@@ -598,6 +544,6 @@ public final class GameUtils {
             return false;
         }
 
-        return !player.isBlockedFromExit();
+        return !player.isOnEvent();
     }
 }

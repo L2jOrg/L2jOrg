@@ -83,7 +83,7 @@ public class PetAction implements IActionHandler
 					activeChar.sendPacket(new PetStatusShow((Pet) target));
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((Summon) target), (Summon) target);
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((Summon) target), target);
 				}
 				activeChar.updateNotMoveUntil();
 			}

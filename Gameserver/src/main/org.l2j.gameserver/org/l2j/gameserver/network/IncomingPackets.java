@@ -260,11 +260,6 @@ public enum IncomingPackets implements PacketFactory {
     }
 
     @Override
-    public int getPacketId() {
-        return ordinal();
-    }
-
-    @Override
     public ClientPacket newIncomingPacket() {
         return incomingPacketFactory.get();
     }

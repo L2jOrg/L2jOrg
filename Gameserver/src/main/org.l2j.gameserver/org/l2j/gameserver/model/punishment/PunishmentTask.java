@@ -27,8 +27,6 @@ import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ScheduledFuture;
 
@@ -39,7 +37,6 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author UnAfraid
  */
 public class PunishmentTask implements Runnable {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(PunishmentTask.class);
 
     private final PunishmentData data;
     private boolean _isStored;
@@ -100,13 +97,6 @@ public class PunishmentTask implements Runnable {
      */
     public String getPunishedBy() {
         return data.getPunisher();
-    }
-
-    /**
-     * @return {@code true} if current punishment task is stored in database, {@code false} otherwise.
-     */
-    public boolean isStored() {
-        return _isStored;
     }
 
     /**

@@ -44,6 +44,7 @@ public class RabbitsManager extends AbstractEventManager<AbstractEvent> {
         }
     }
 
+    @ScheduleTarget
     public static RabbitsManager getInstance() {
         return Singleton.INSTANCE;
     }

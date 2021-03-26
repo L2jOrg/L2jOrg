@@ -174,17 +174,6 @@ public class SchemeBufferTable {
     }
 
     /**
-     * @param playerId   : The player objectId to check.
-     * @param schemeName : The scheme name to check.
-     * @param skillId    : The skill id to check.
-     * @return true if the skill is already registered on the scheme, or false otherwise.
-     */
-    public boolean getSchemeContainsSkill(int playerId, String schemeName, int skillId) {
-        final var skills = getScheme(playerId, schemeName);
-        return skills.contains(skillId);
-    }
-
-    /**
      * @param groupType : The type of skills to return.
      * @return a list of skills ids based on the given groupType.
      */

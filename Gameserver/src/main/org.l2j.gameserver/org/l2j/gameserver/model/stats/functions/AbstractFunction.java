@@ -19,8 +19,6 @@
  */
 package org.l2j.gameserver.model.stats.functions;
 
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.stats.Stat;
 import org.slf4j.Logger;
@@ -59,10 +57,7 @@ public abstract class AbstractFunction {
      * Used to remove all functions added by this owner.
      */
     private final Object _funcOwner;
-    /**
-     * Function may be disabled by attached condition.
-     */
-    private final Condition _applayCond;
+
     /**
      * The value.
      */
@@ -82,43 +77,6 @@ public abstract class AbstractFunction {
         _order = order;
         _funcOwner = owner;
         _value = value;
-        _applayCond = applayCond;
-    }
-
-    /**
-     * Gets the apply condition
-     *
-     * @return the apply condition
-     */
-    public Condition getApplayCond() {
-        return _applayCond;
-    }
-
-    /**
-     * Gets the fuction owner.
-     *
-     * @return the function owner
-     */
-    public final Object getFuncOwner() {
-        return _funcOwner;
-    }
-
-    /**
-     * Gets the function order.
-     *
-     * @return the order
-     */
-    public final int getOrder() {
-        return _order;
-    }
-
-    /**
-     * Gets the stat.
-     *
-     * @return the stat
-     */
-    public final Stat getStat() {
-        return _stat;
     }
 
     /**
@@ -130,14 +88,4 @@ public abstract class AbstractFunction {
         return _value;
     }
 
-    /**
-     * Run the mathematics function of the Func.
-     *
-     * @param effector the effector
-     * @param effected the effected
-     * @param skill    the skill
-     * @param initVal  the initial value
-     * @return the calculated value
-     */
-    public abstract double calc(Creature effector, Creature effected, Skill skill, double initVal);
 }

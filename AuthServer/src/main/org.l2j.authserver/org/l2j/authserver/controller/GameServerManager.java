@@ -25,17 +25,9 @@ import org.l2j.authserver.data.database.ServerInfo;
 import org.l2j.authserver.data.database.dao.GameserverDAO;
 import org.l2j.authserver.data.xml.ServerNameReader;
 import org.l2j.authserver.network.GameServerInfo;
-import org.l2j.commons.util.Rnd;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.security.InvalidAlgorithmParameterException;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.RSAKeyGenParameterSpec;
-
-import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -44,12 +36,10 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 public class GameServerManager {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GameServerManager.class);
-    private static final int KEYS_SIZE = 10;
-
-    private IntMap<String> serverNames = new HashIntMap<>();
 
     private final IntMap<GameServerInfo> gameservers = new CHashIntMap<>();
-    private KeyPair[] _keyPairs;
+
+    private IntMap<String> serverNames = new HashIntMap<>();
 
     private GameServerManager() {
         load();
@@ -58,12 +48,6 @@ public class GameServerManager {
     public void load()  {
         loadServerNames();
         loadRegisteredGameServers();
-
-        try {
-            loadRSAKeys();
-        }catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
-        }
     }
 
     private void loadServerNames() {
@@ -85,28 +69,12 @@ public class GameServerManager {
         LOGGER.info("Loaded {} registered Game Servers", gameservers.size());
     }
 
-    private void loadRSAKeys() throws NoSuchAlgorithmException, InvalidAlgorithmParameterException {
-        KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
-        RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(512, RSAKeyGenParameterSpec.F4);
-        keyGen.initialize(spec);
-
-        _keyPairs = new KeyPair[KEYS_SIZE];
-        for (int i = 0; i < KEYS_SIZE; i++) {
-            _keyPairs[i] = keyGen.genKeyPair();
-        }
-        LOGGER.info("Cached {} RSA keys for Game Server communication.", _keyPairs.length);
-    }
-
     public IntMap<GameServerInfo> getRegisteredGameServers() {
         return gameservers;
     }
 
     public GameServerInfo getRegisteredGameServerById(int id) {
         return gameservers.get(id);
-    }
-
-    public boolean hasRegisteredGameServerOnId(int id) {
-        return gameservers.containsKey(id);
     }
 
     public boolean registerWithFirstAvaliableId(GameServerInfo gsi) {
@@ -119,14 +87,6 @@ public class GameServerManager {
                     return true;
                 }
             }
-        }
-        return false;
-    }
-
-    public boolean register(int id, GameServerInfo gsi) {
-        if(isNull(gameservers.putIfAbsent(id, gsi))) {
-            gsi.setId(id);
-            return true;
         }
         return false;
     }
@@ -145,10 +105,6 @@ public class GameServerManager {
 
     public static GameServerManager getInstance() {
         return Singleton.INSTANCE;
-    }
-
-    public KeyPair getKeyPair() {
-        return _keyPairs[Rnd.get(10)];
     }
 
     private static class Singleton {

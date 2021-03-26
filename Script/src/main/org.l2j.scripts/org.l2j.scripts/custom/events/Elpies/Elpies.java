@@ -74,6 +74,7 @@ public final class Elpies extends Event
 	{
 		addSpawnId(ELPY);
 		addKillId(ELPY);
+		setCustom(true);
 	}
 	
 	@Override

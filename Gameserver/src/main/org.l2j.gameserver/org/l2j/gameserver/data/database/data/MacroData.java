@@ -36,10 +36,6 @@ public class MacroData {
     private String description;
     private String acronym;
 
-    public int getPlayerId() {
-        return playerId;
-    }
-
     public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }

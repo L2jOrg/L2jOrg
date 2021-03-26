@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.engine.item.Item;
 
+import java.util.Arrays;
+
 import static java.util.Objects.nonNull;
 
 /**
@@ -34,16 +36,26 @@ import static java.util.Objects.nonNull;
  */
 public final class BroochListener implements PlayerInventoryListener {
 
+    private static final int[] specialEffectJewels = {
+        70451, 70452, 70453, 70454, 70455, 70456, 70457, 70458, 70459, 70460, 71368, 71369, 71370, 71371, 71372, 71373, 71374, 71375, 71376, 71377,
+        90328, 90329, 90330, 90331, 90332, 90333, 90334, 90335, 90336, 90337, 91320, 91321, 91322, 91323, 91324, 91325, 91326, 91327, 91328, 91329,
+        91418, 91419, 91431, 91432, 91758, 91759, 92388, 92389
+    };
+
     private BroochListener() {
     }
 
     @Override
-    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyUnequipped(InventorySlot slot, Item item, Inventory inventory) {
         if (slot == InventorySlot.BROOCH) {
             InventorySlot.brochesJewel().forEach(inventory::unEquipItemInSlot);
-        } else if(item.getBodyPart() == BodyPart.BROOCH_JEWEL && inventory instanceof PlayerInventory inv) {
+        } else if(inventory instanceof PlayerInventory inv && hasSpecialEffect(item)) {
             updateAdditionalSoulshot(inv);
         }
+    }
+
+    private boolean hasSpecialEffect(Item item) {
+        return item.getBodyPart() == BodyPart.BROOCH_JEWEL && Arrays.binarySearch(specialEffectJewels, item.getId()) >= 0;
     }
 
     private void updateAdditionalSoulshot(PlayerInventory inventory) {
@@ -51,8 +63,7 @@ public final class BroochListener implements PlayerInventoryListener {
         int currentLevel = -1;
         for (InventorySlot slot : InventorySlot.brochesJewel()) {
             var item = inventory.getPaperdollItem(slot);
-
-            if(nonNull(item)) {
+            if(nonNull(item) && hasSpecialEffect(item)) {
                 var itemLevel = item.getSkills(ItemSkillType.NORMAL).stream().mapToInt(SkillHolder::getLevel).max().orElse(-1);
                 if(jewel == 0 || itemLevel > currentLevel) {
                     jewel = item.getId();
@@ -64,8 +75,8 @@ public final class BroochListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
-        if(item.getBodyPart() == BodyPart.BROOCH_JEWEL && inventory instanceof PlayerInventory inv) {
+    public void notifyEquipped(InventorySlot slot, Item item, Inventory inventory) {
+        if(inventory instanceof PlayerInventory inv && hasSpecialEffect(item)) {
             updateAdditionalSoulshot(inv);
         }
     }

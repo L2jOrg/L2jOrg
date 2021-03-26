@@ -40,7 +40,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author Mobius
  */
 public class PetSkillData extends GameXmlReader {
-    private static Logger LOGGER = LoggerFactory.getLogger(PetSkillData.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PetSkillData.class);
     private final Map<Integer, Map<Long, SkillHolder>> _skillTrees = new HashMap<>();
 
     private PetSkillData() {

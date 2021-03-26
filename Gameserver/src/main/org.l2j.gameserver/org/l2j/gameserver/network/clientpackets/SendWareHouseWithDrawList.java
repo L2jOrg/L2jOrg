@@ -43,7 +43,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(SendWareHouseWithDrawList.class);
     private static final int BATCH_LENGTH = 12; // length of the one item
 
-    private ItemHolder _items[] = null;
+    private ItemHolder[] _items = null;
 
     @Override
     public void readImpl() throws InvalidDataPacketException {

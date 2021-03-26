@@ -58,7 +58,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.html.pagehandlers;
     exports org.l2j.gameserver.model.residences;
     exports org.l2j.gameserver.model.item;
-    exports org.l2j.gameserver.model.item.enchant.attribute;
     exports org.l2j.gameserver.cache;
     exports org.l2j.gameserver.data.sql.impl;
     exports org.l2j.gameserver.model.events.listeners;

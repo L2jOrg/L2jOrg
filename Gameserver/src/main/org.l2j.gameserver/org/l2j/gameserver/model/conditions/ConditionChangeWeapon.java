@@ -62,9 +62,7 @@ public class ConditionChangeWeapon extends Condition {
                 return false;
             }
 
-            if (effector.getActingPlayer().hasItemRequest()) {
-                return false;
-            }
+            return !effector.getActingPlayer().hasItemRequest();
         }
         return true;
     }

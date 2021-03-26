@@ -226,7 +226,7 @@ public final class WyvernManager extends AbstractNpcAI {
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		if (!isOwnerClan(npc, player))
 		{
 			htmltext = "wyvernmanager-02.html";

@@ -26,7 +26,6 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.item.type.CrystalType;
@@ -545,12 +544,12 @@ public class MerrySquashmas extends LongTimeEvent
 			{
 				case 13399: // Snowy Squash Seed
 				{
-					randomSpawn(13402, 13401, 13400, npc, true);
+					randomSpawn(13402, 13401, 13400, npc);
 					break;
 				}
 				case 13403: // Large Snowy Squash Seed
 				{
-					randomSpawn(13406, 13405, 13404, npc, true);
+					randomSpawn(13406, 13405, 13404, npc);
 					break;
 				}
 			}
@@ -589,10 +588,10 @@ public class MerrySquashmas extends LongTimeEvent
 				{
 					if (ItemEngine.getInstance().getTemplate(drop[1]).getCrystalType() != CrystalType.NONE)
 					{
-						((Monster) mob).dropItem(player, drop[1], 1);
+						mob.dropItem(player, drop[1], 1);
 						break;
 					}
-					((Monster) mob).dropItem(player, drop[1], (Rnd.get(1, 3)));
+					mob.dropItem(player, drop[1], (Rnd.get(1, 3)));
 					if (Rnd.nextBoolean())
 					{
 						break;
@@ -602,7 +601,7 @@ public class MerrySquashmas extends LongTimeEvent
 		}
 	}
 	
-	private void randomSpawn(int low, int medium, int high, Npc npc, boolean delete)
+	private void randomSpawn(int low, int medium, int high, Npc npc)
 	{
 		final int _random = Rnd.get(100);
 		if (_random < 5)

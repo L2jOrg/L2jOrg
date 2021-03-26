@@ -91,12 +91,12 @@ public class SiegeGuards extends AbstractNpcAI
                 }
                 else {
                     final WorldObject target = guard.getTarget();
-                    if (!guard.isInCombat() || target == null || !MathUtil.isInsideRadius2D(guard, target, guard.getAggroRange()) || target.isInvul()) {
+                    if (!guard.isInCombat() || target == null || !MathUtil.isInsideRadius2D(guard, target, guard.getAggroRange()) || target.isInvulnerable()) {
 
                         World.getInstance().forAnyVisibleObjectInRange(guard, Playable.class, guard.getAggroRange(), playable -> addAttackDesire(guard, playable), playable -> {
                             var pl = playable.getActingPlayer();
                             return ( pl.getSiegeState() != 2 || pl.isRegisteredOnThisSiegeField(guard.getScriptValue()) ) && ( pl.getSiegeState() != 0 || guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE) &&
-                                    !pl.isInvisible() && !pl.isInvul() && GeoEngine.getInstance().canSeeTarget(guard, playable);
+                                    !pl.isInvisible() && !pl.isInvulnerable() && GeoEngine.getInstance().canSeeTarget(guard, playable);
                         });
                     }
                 }

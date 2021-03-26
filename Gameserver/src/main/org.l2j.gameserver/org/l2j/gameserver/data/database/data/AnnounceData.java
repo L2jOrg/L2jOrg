@@ -53,10 +53,6 @@ public class AnnounceData implements Announce {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public AnnouncementType getType() {
         return type;
     }
@@ -110,8 +106,4 @@ public class AnnounceData implements Announce {
         return true;
     }
 
-    @Override
-    public boolean canBeStored() {
-        return true;
-    }
 }

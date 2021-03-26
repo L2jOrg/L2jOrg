@@ -36,8 +36,8 @@ public class ExVoteSystemInfo extends ServerPacket {
     private final int _bonusType;
 
     public ExVoteSystemInfo(Player player) {
-        _recomLeft = player.getRecomLeft();
-        _recomHave = player.getRecomHave();
+        _recomLeft = player.getRecommendLeft();
+        _recomHave = player.getRecommend();
         _bonusTime = 0;
         _bonusVal = 0;
         _bonusType = 0;

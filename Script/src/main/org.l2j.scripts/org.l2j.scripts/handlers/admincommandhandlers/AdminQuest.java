@@ -199,7 +199,7 @@ public class AdminQuest implements IAdminCommandHandler
 			final String questName = command.substring("admin_quest_info ".length());
 			final Quest quest = QuestManager.getInstance().getQuest(questName);
 			String events = "";
-			String npcs = "";
+			String npcs;
 			String items = "";
 			int counter = 0;
 			if (quest == null)
@@ -244,7 +244,6 @@ public class AdminQuest implements IAdminCommandHandler
 					counter++;
 					if (counter > 20)
 					{
-						counter = 0;
 						break;
 					}
 				}
@@ -276,7 +275,7 @@ public class AdminQuest implements IAdminCommandHandler
 	
 	private void showDir(String dir, Player activeChar)
 	{
-		String replace = null;
+		String replace;
 		File path;
 		String currentPath = "/";
 		if ((dir == null) || dir.trim().isEmpty() || dir.contains(".."))

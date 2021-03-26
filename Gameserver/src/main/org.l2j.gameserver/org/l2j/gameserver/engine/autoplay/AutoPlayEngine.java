@@ -52,7 +52,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public final class AutoPlayEngine {
 
-    private static final int AUTO_PLAY_INTERVAL = 1000;
+    private static final int AUTO_PLAY_INTERVAL = 500;
     private static final int DEFAULT_ACTION = 2;
 
     private final ForkJoinPool autoPlayPool = new ForkJoinPool();
@@ -75,15 +75,14 @@ public final class AutoPlayEngine {
     private AutoPlayEngine() {
     }
 
-    public boolean setActiveAutoShortcut(Player player, int room, boolean activate) {
+    public Shortcut setActiveAutoShortcut(Player player, int room, boolean activate) {
         var shortcut = player.getShortcut(room);
 
         if(nonNull(shortcut) && handleShortcut(player, shortcut, activate)) {
             player.setActiveAutoShortcut(room, activate);
-            return true;
+            return shortcut;
         }
-
-        return false;
+        return null;
     }
 
     private boolean handleShortcut(Player player, Shortcut shortcut, boolean activate) {

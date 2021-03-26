@@ -67,13 +67,6 @@ public final class PunishmentManager {
         _tasks.get(task.getAffect()).addPunishment(task);
     }
 
-    public void stopPunishment(PunishmentAffect affect, PunishmentType type) {
-        final PunishmentHolder holder = _tasks.get(affect);
-        if (holder != null) {
-            holder.stopPunishment(type);
-        }
-    }
-
     public void stopPunishment(Object key, PunishmentAffect affect, PunishmentType type) {
         final PunishmentTask task = getPunishment(key, affect, type);
         if (task != null) {

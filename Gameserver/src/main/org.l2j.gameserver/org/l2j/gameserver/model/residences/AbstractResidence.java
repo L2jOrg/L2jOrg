@@ -193,9 +193,5 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
         return name + " (" + id + ")";
     }
 
-    protected abstract void load();
-
-    protected abstract void initResidenceZone();
-
     public abstract int getOwnerId();
 }

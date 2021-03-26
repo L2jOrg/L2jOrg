@@ -21,8 +21,6 @@ package org.l2j.scripts.ai.areas.ForestOfTheMirrors;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.scripts.ai.AbstractNpcAI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,15 +31,14 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Thoss
  */
 public class Mirrors extends AbstractNpcAI {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Mirrors.class);
 
     private static final int MIRROR_NPC_ID = 20639;
     private static final int DESPAWN_TIME = 600000;
     private static final int MIRROR_COUNT = 4;
 
-    private static Map<Integer, Integer> _Leaders_Stages = new ConcurrentHashMap<>(); // <Leader ObjectID, Leader Stage>
-    private static Map<Integer, List<Integer>> _Leader_Minions = new ConcurrentHashMap<>(); // <Leader ObjectID, Leader minions ObjectID>
-    private static Map<Integer, Boolean> _Minions_State = new ConcurrentHashMap<>(); // <Minion ObjectID, isAlive>
+    private static final Map<Integer, Integer> _Leaders_Stages = new ConcurrentHashMap<>(); // <Leader ObjectID, Leader Stage>
+    private static final Map<Integer, List<Integer>> _Leader_Minions = new ConcurrentHashMap<>(); // <Leader ObjectID, Leader minions ObjectID>
+    private static final Map<Integer, Boolean> _Minions_State = new ConcurrentHashMap<>(); // <Minion ObjectID, isAlive>
 
     public Mirrors()
     {

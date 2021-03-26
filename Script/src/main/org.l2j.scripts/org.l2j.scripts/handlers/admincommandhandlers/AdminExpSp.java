@@ -93,7 +93,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	private void addExpSp(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		Player player = null;
+		Player player;
 		if (isPlayer(target))
 		{
 			player = (Player) target;
@@ -116,7 +116,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	private boolean adminAddExpSp(Player activeChar, String ExpSp)
 	{
 		final WorldObject target = activeChar.getTarget();
-		Player player = null;
+		Player player;
 		if (isPlayer(target))
 		{
 			player = (Player) target;
@@ -134,8 +134,8 @@ public class AdminExpSp implements IAdminCommandHandler
 		
 		final String exp = st.nextToken();
 		final String sp = st.nextToken();
-		long expval = 0;
-		long spval = 0;
+		long expval;
+		long spval;
 		try
 		{
 			expval = Long.parseLong(exp);
@@ -159,7 +159,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	private boolean adminRemoveExpSP(Player activeChar, String ExpSp)
 	{
 		final WorldObject target = activeChar.getTarget();
-		Player player = null;
+		Player player;
 		if ((target != null) && isPlayer(target))
 		{
 			player = (Player) target;
@@ -177,8 +177,8 @@ public class AdminExpSp implements IAdminCommandHandler
 		
 		final String exp = st.nextToken();
 		final String sp = st.nextToken();
-		long expval = 0;
-		int spval = 0;
+		long expval;
+		int spval;
 		try
 		{
 			expval = Long.parseLong(exp);

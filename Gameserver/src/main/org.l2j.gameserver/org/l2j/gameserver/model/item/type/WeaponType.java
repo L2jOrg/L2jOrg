@@ -84,11 +84,4 @@ public enum WeaponType implements ItemType {
         return (this == BOW) || (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW);
     }
 
-    public boolean isCrossbow() {
-        return (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW);
-    }
-
-    public boolean isDual() {
-        return (this == FIST) || (this == DUAL) || (this == DUAL_DAGGER) || (this == DUAL_BLUNT);
-    }
 }

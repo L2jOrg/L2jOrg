@@ -176,10 +176,6 @@ public final class CastleManager implements InstanceListManager {
     }
 
     @Override
-    public void updateReferences() {
-    }
-
-    @Override
     public void activateInstances() {
         castles.values().forEach(Castle::activateInstance);
     }

@@ -176,7 +176,7 @@ public class AdminClan implements IAdminCommandHandler
 	private Player getPlayer(Player activeChar, StringTokenizer st)
 	{
 		String val;
-		Player player = null;
+		Player player;
 		if (st.hasMoreTokens())
 		{
 			val = st.nextToken();

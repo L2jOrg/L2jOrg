@@ -19,6 +19,7 @@
 package org.l2j.scripts.handlers.effecthandlers;
 
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
@@ -26,7 +27,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.engine.item.Item;
 
 import static java.util.Objects.isNull;
 

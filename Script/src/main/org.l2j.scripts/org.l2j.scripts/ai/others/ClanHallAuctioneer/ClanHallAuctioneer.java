@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.ai.others.ClanHallAuctioneer;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;

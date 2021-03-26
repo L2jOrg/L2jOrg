@@ -132,7 +132,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyEquipped(InventorySlot slot, Item item, Inventory inventory) {
         if (!isPlayer(inventory.getOwner())) {
             return;
         }
@@ -151,7 +151,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyUnequipped(InventorySlot slot, Item item, Inventory inventory) {
         if (!isPlayer(inventory.getOwner())) {
             return;
         }

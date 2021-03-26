@@ -27,7 +27,7 @@ import java.lang.reflect.Modifier;
  * @author Carlo Pelliccia
  * @since 2.2
  */
-class StaticMethodTask extends Task {
+class StaticMethodTask implements Task {
     /**
      * The Java class name.
      */

@@ -119,7 +119,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
     private void parseItem(Node node) {
         forEach(node, "item", itemNode -> {
             final int id = parseInt(itemNode.getAttributes(), "id");
-            items.put(id, new CrystallizationDataHolder(id, parseRewards(itemNode)));
+            items.put(id, new CrystallizationDataHolder(parseRewards(itemNode)));
         });
     }
 
@@ -157,7 +157,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
                     final List<ItemChanceHolder> holder = crystallizationTemplates.get(item.getCrystalType()).get(isWeapon(item) ? CrystallizationType.WEAPON : CrystallizationType.ARMOR);
 
                     if (nonNull(holder)) {
-                        items.put(item.getId(), new CrystallizationDataHolder(item.getId(), calculateCrystallizeRewards(item, holder)));
+                        items.put(item.getId(), new CrystallizationDataHolder(calculateCrystallizeRewards(item, holder)));
                     }
                 }
             }

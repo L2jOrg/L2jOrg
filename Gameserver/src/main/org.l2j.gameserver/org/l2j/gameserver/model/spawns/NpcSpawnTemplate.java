@@ -41,7 +41,6 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -51,7 +50,6 @@ import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.util.GameUtils.isMonster;
-
 
 /**
  * @author UnAfraid
@@ -170,10 +168,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         return id;
     }
 
-    public int getCount() {
-        return _count;
-    }
-
     public Duration getRespawnTime() {
         return respawnTime;
     }
@@ -184,10 +178,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
 
     public List<ChanceLocation> getLocation() {
         return locations;
-    }
-
-    public SpawnTerritory getZone() {
-        return zone;
     }
 
     @Override
@@ -204,20 +194,8 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         }
     }
 
-    public boolean hasSpawnAnimation() {
-        return _spawnAnimation;
-    }
-
     public boolean hasDBSave() {
         return saveInDB;
-    }
-
-    public String getDBName() {
-        return _dbName;
-    }
-
-    public List<MinionHolder> getMinions() {
-        return _minions != null ? _minions : Collections.emptyList();
     }
 
     public void addMinion(MinionHolder minion) {
@@ -265,10 +243,6 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
             }
         }
         return null;
-    }
-
-    public void spawn() {
-        spawn(null);
     }
 
     public void spawn(Instance instance) {

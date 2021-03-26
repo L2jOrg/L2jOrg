@@ -23,18 +23,16 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.configuration.Configurator;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.form.ZoneCubeArea;
 import org.l2j.gameserver.world.zone.form.ZoneCylinderArea;
 import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
-import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.world.zone.type.RespawnZone;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 import org.l2j.gameserver.world.zone.type.SpawnZone;
@@ -501,16 +499,6 @@ public final class ZoneManager extends GameXmlReader {
      */
     public List<SpawnTerritory> getSpawnTerritories(WorldObject object) {
         return spawnTerritories.values().stream().filter(t -> t.isInsideZone(object.getX(), object.getY(), object.getZ())).collect(Collectors.toList());
-    }
-
-    /**
-     * Gets the olympiad stadium.
-     *
-     * @param creature the character
-     * @return the olympiad stadium
-     */
-    public final OlympiadStadiumZone getOlympiadStadium(Creature creature) {
-        return isNull(creature) ? null : getZones(creature).stream().filter(z -> z instanceof OlympiadStadiumZone && z.isCreatureInZone(creature)).map(OlympiadStadiumZone.class::cast).findAny().orElse(null);
     }
 
     /**

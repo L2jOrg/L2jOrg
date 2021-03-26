@@ -92,4 +92,9 @@ public class Fellow extends AbstractNpcAI
         startQuestTimer("CHAT_TIMER", 5000, npc, null);
         return super.onSpawn(npc);
     }
+
+    public static AbstractNpcAI provider()
+    {
+        return new Fellow();
+    }
 }

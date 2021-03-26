@@ -26,7 +26,7 @@ package org.l2j.gameserver.util.cron4j;
  * @author Carlo Pelliccia
  * @since 2.0
  */
-class RunnableTask extends Task {
+class RunnableTask implements Task {
     /**
      * The wrapped runnable object.
      */

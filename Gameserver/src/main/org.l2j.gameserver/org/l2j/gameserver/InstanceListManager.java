@@ -31,11 +31,6 @@ public interface InstanceListManager {
     void loadInstances();
 
     /**
-     * For each loaded instance, updates references to related instances.
-     */
-    void updateReferences();
-
-    /**
      * Activates instances so their setup is performed.
      */
     void activateInstances();

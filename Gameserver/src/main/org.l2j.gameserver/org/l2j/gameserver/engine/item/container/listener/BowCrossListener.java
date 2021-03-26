@@ -34,11 +34,11 @@ public final class BowCrossListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inv) {
+    public void notifyUnequipped(InventorySlot slot, Item item, Inventory inv) {
     }
 
     @Override
-    public void notifyEquiped(InventorySlot slot, Item item, Inventory inv) {
+    public void notifyEquipped(InventorySlot slot, Item item, Inventory inv) {
         if (slot != InventorySlot.RIGHT_HAND && slot != InventorySlot.TWO_HAND  ) {
             return;
         }

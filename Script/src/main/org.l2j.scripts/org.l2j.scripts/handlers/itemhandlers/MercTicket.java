@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.handlers.itemhandlers;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.PlayerAction;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -33,7 +34,6 @@ import org.l2j.gameserver.model.events.annotations.RegisterEvent;
 import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.scripts.ai.AbstractNpcAI;
@@ -74,7 +74,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 		
 		final int castleId = castle.getId();
 		final SiegeGuardHolder holder = SiegeGuardManager.getInstance().getSiegeGuardByItem(castleId, item.getId());
-		if ((holder == null) || (castleId != holder.getCastleId()))
+		if ((holder == null) || (castleId != holder.castleId()))
 		{
 			activeChar.sendPacket(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE);
 			return false;
@@ -98,7 +98,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 		_items.put(activeChar.getObjectId(), item);
 		final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
 		dlg.addTime(15000);
-		dlg.addNpcName(holder.getNpcId());
+		dlg.addNpcName(holder.npcId());
 		activeChar.sendPacket(dlg);
 		activeChar.addAction(PlayerAction.MERCENARY_CONFIRM);
 		return true;

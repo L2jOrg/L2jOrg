@@ -32,7 +32,7 @@ public class PetManager extends Merchant {
 
     @Override
     public String getHtmlPath(int npcId, int val) {
-        String pom = "";
+        String pom;
 
         if (val == 0) {
             pom = Integer.toString(npcId);

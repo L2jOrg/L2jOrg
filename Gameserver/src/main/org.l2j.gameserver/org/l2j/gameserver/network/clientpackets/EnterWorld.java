@@ -27,6 +27,7 @@ import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.mail.MailEngine;
+import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.enums.StatusUpdateType;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -347,13 +348,18 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(new ExStorageMaxCount(player));
         player.getWarehouse().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
 
-        for (int i = 0; i < 4; i++) {
-            player.sendPacket(new ExAutoSoulShot(0, true, i));
-        }
+        activeAutoShots(player);
 
         if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType())) {
             player.sendPacket(new ExBeautyItemList(player));
         }
+    }
+
+    private void activeAutoShots(Player player) {
+        player.enableAutoSoulShot(ShotType.SOULSHOTS, player.getSavedSoulshot());
+        player.enableAutoSoulShot(ShotType.SPIRITSHOTS, player.getSavedSpiritshot());
+        player.enableAutoSoulShot(ShotType.BEAST_SOULSHOTS, 0);
+        player.enableAutoSoulShot(ShotType.BEAST_SPIRITSHOTS, 0);
     }
 
     private void sendAttendanceInfo(Player player) {

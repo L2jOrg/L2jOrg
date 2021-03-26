@@ -30,51 +30,11 @@ import static java.lang.Math.pow;
 public final class MathUtil {
 
     private MathUtil() {
-
     }
 
-    public static byte add(byte oldValue, byte value) {
-        return (byte) (oldValue + value);
-    }
-
-    public static short add(short oldValue, short value) {
-        return (short) (oldValue + value);
-    }
-
-    public static int add(int oldValue, int value) {
-        return oldValue + value;
-    }
-
-    public static double add(double oldValue, double value) {
-        return oldValue + value;
-    }
-
-    public static byte mul(byte oldValue, byte value) {
-        return (byte) (oldValue * value);
-    }
-
-    public static short mul(short oldValue, short value) {
-        return (short) (oldValue * value);
-    }
-
-    public static int mul(int oldValue, int value) {
-        return oldValue * value;
-    }
 
     public static double mul(double oldValue, double value) {
         return oldValue * value;
-    }
-
-    public static byte div(byte oldValue, byte value) {
-        return (byte) (oldValue / value);
-    }
-
-    public static short div(short oldValue, short value) {
-        return (short) (oldValue / value);
-    }
-
-    public static int div(int oldValue, int value) {
-        return oldValue / value;
     }
 
     public static double div(double oldValue, double value) {

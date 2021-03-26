@@ -39,7 +39,7 @@ public class ElementalSpiritTemplate {
     private final int maxCharacteristics;
     private final int extractItem;
 
-    private IntMap<SpiritLevel> levels;
+    private final IntMap<SpiritLevel> levels;
     private List<ItemHolder> itemsToEvolve;
     private List<AbsorbItem> absorbItems;
 

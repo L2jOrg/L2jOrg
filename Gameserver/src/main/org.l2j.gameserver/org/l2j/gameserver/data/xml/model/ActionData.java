@@ -35,10 +35,6 @@ public class ActionData {
         this.autoUse = autoUse;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public String getHandler() {
         return handler;
     }

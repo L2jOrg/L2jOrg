@@ -18,12 +18,11 @@
  */
 package org.l2j.gameserver.engine.scripting;
 
-import org.l2j.gameserver.Config;
+import org.l2j.commons.util.FileUtil;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
@@ -73,8 +72,8 @@ public final class ScriptEngineManager  {
 
     private Properties loadProperties() {
         var props = new Properties();
-        try (FileInputStream fis = new FileInputStream(Config.ScriptEngine_FILE)) {
-            props.load(fis);
+        try (var reader = FileUtil.reader("config/ScriptEngine.properties")) {
+            props.load(reader);
         } catch (Exception e) {
             LOGGER.warn("Couldn't load ScriptEngine.properties", e);
         }

@@ -29,7 +29,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class GGAuth extends AuthServerPacket {
     private static final Logger logger = LoggerFactory.getLogger(GGAuth.class);
-    public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
 
     private final int _response;
 

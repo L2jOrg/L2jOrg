@@ -91,7 +91,7 @@ public class AdminHtml implements IAdminCommandHandler
 	 */
 	private static void showHtml(Player activeChar, String path, boolean reload)
 	{
-		String content = null;
+		String content;
 		if (!reload)
 		{
 			content = HtmCache.getInstance().getHtm(activeChar, path);

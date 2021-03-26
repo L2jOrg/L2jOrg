@@ -27,7 +27,7 @@ import java.util.StringTokenizer;
  * @reworked by Thoss
  */
 public class Tower extends FriendlyNpc {
-	private static int[] ITEM_REWARD = {49764, 49765};
+	private static final int[] ITEM_REWARD = {49764, 49765};
 	private Player _talkingPlayer;
 
 	public Tower(NpcTemplate template) {

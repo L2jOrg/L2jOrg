@@ -18,10 +18,10 @@
  */
 package org.l2j.gameserver;
 
+import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.FloodProtectorConfig;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -39,13 +39,11 @@ import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -56,75 +54,54 @@ public final class Config {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
 
-    public static String getCurrentPath(String path) {
-        boolean isDebug = java.lang.management.ManagementFactory.getRuntimeMXBean().
-                getInputArguments().toString().contains("jdwp");
-        return (isDebug ? "src/main/resources/" + path : path);
-    }
-
     // --------------------------------------------------
     // Config File Definitions
     // --------------------------------------------------
 
+    public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
+    private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
+    private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
+    private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
+    private static final String GENERAL_CONFIG_FILE = "config/general.properties";
 
-    public static final String HECACHE_FILE = getCurrentPath("config/ehcache.xml");
-    public static final String ASYNC_MMOCORE_FILE = getCurrentPath("config/async-mmocore.properties");
-    public static final String DATABASE_FILE = getCurrentPath("config/database.properties");
-    public static final String ScriptEngine_FILE = getCurrentPath("config/ScriptEngine.properties");
-    public static final String SIEGE_CONFIG_FILE = getCurrentPath("config/Siege.ini");
-    public static final String BOT_REPORT_PUNISHMENTS_FILE = getCurrentPath("./config/BotReportPunishments.xml");
-    public static final String CLASS_MASTER_FILE = getCurrentPath("config/ClassMaster.xml");
-    public static final String CLASS_MASTER_SCHEMA_FILE = getCurrentPath("config/xsd/classMaster.xsd");
-    public static final String SECONDARY_AUTH_FILE = getCurrentPath("config/secondary-auth.xml");
-    public static final String SECONDARY_AUTH_SCHEMA_FILE = getCurrentPath("config/xsd/secondary-auth.xsd");
-    public static final String ACCESS_LEVELS_FILE = getCurrentPath("config/AccessLevels.xml");
-    public static final String ACCESS_LEVELS_SCHEMA_FILE = getCurrentPath("config/xsd/AccessLevels.xsd");
-    public static final String SIEGE_SCHEDULE_FILE = getCurrentPath("config/siege-schedule.xml");
-    public static final String SIEGE_SCHEDULE_SCHEMA_FILE = getCurrentPath("config/xsd/siege-schedule.xsd");
+    private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
+    private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
+    private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
+    private static final String RATES_CONFIG_FILE = "config/rates.properties";
+    private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
 
-    private static final String CHARACTER_CONFIG_FILE = getCurrentPath("config/character.properties");
-    private static final String FEATURE_CONFIG_FILE = getCurrentPath("config/feature.properties");
-    private static final String FLOOD_PROTECTOR_CONFIG_FILE = getCurrentPath("./config/FloodProtector.ini");
-    private static final String GENERAL_CONFIG_FILE = getCurrentPath("config/general.properties");
-
-    private static final String GRANDBOSS_CONFIG_FILE = getCurrentPath("./config/GrandBoss.ini");
-
-    private static final String NPC_CONFIG_FILE = getCurrentPath("./config/NPC.ini");
-    private static final String PVP_CONFIG_FILE = getCurrentPath("./config/PVP.ini");
-    private static final String RATES_CONFIG_FILE = getCurrentPath("config/rates.properties");
-    private static final String ALTHARS_CONFIG_FILE = getCurrentPath("config/althars.ini");
-
-    private static final String CHAT_FILTER_FILE = getCurrentPath("./config/chatfilter.txt");
-    private static final String IPCONFIG_FILE = getCurrentPath("./config/ipconfig.xml");
+    private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
+    private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 
     // --------------------------------------------------
     // Custom Config File Definitions
     // --------------------------------------------------
-    private static final String CUSTOM_BANKING_CONFIG_FILE = getCurrentPath("./config/Custom/Banking.ini");
-    private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = getCurrentPath("./config/Custom/ChampionMonsters.ini");
-    private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = getCurrentPath("./config/Custom/CommunityBoard.ini");
-    private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = getCurrentPath("./config/Custom/DualboxCheck.ini");
-    private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = getCurrentPath("./config/Custom/MultilingualSupport.ini");
-    private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = getCurrentPath("./config/Custom/NpcStatMultipliers.ini");
-    private static final String CUSTOM_PC_CAFE_CONFIG_FILE = getCurrentPath("./config/Custom/PcCafe.ini");
-    private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = getCurrentPath("./config/Custom/AutoPotions.ini");
-    private static final String CUSTOM_DONATION_CONFIG_FILE = getCurrentPath("./config/Custom/Donate.ini");
+    private static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
+    private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
+    private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
+    private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
+    private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
+    private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
+    private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
+    private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
+    private static final String  CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
 
 
-    private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = getCurrentPath("./config/Custom/PvpAnnounce.ini");
-    private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = getCurrentPath("./config/Custom/PvpRewardItem.ini");
-    private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = getCurrentPath("./config/Custom/PvpTitleColor.ini");
-    private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = getCurrentPath("./config/Custom/RandomSpawns.ini");
-    private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = getCurrentPath("./config/Custom/ScreenWelcomeMessage.ini");
-    private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = getCurrentPath("./config/Custom/SellBuffs.ini");
-    private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = getCurrentPath("./config/Custom/ServerTime.ini");
-    private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = getCurrentPath("./config/Custom/ShemeBuffer.ini");
-    private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = getCurrentPath("./config/Custom/StartingLocation.ini");
-    private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = getCurrentPath("./config/Custom/VoteReward.ini");
-    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = getCurrentPath("./config/time-limited-zones.properties");
-    private static final String MAGIC_LAMP_CONFIG_FILE = getCurrentPath("./config/magic-lamp.properties");
-    private static final String RANDOM_CRAFT_CONFIG_FILE = getCurrentPath("./config/random-craft.properties");
+    private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
+    private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
+    private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
+    private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
+    private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
+    private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
+    private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
+    private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
+    private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
+    private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
+    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
+    private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
+    private static final String RANDOM_CRAFT_CONFIG_FILE = "./config/random-craft.properties";
+
 
 
     public static boolean ENABLE_MODIFY_SKILL_DURATION;
@@ -135,7 +112,6 @@ public final class Config {
     public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
     public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
     public static long MAX_SP;
-    public static byte BASE_DUALCLASS_LEVEL;
     public static int MAX_PVTSTORESELL_SLOTS_DWARF;
     public static int MAX_PVTSTORESELL_SLOTS_OTHER;
     public static int MAX_PVTSTOREBUY_SLOTS_DWARF;
@@ -181,7 +157,6 @@ public final class Config {
     public static int ALT_CLAN_MEMBERS_FOR_WAR;
     public static boolean ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH;
     public static long ALT_CLAN_MEMBERS_TIME_FOR_BONUS;
-    public static boolean REMOVE_CASTLE_CIRCLETS;
     public static int ALT_PARTY_MAX_MEMBERS;
     public static int ALT_PARTY_RANGE;
 
@@ -195,7 +170,6 @@ public final class Config {
 
     public static boolean ENABLE_KEYBOARD_MOVEMENT;
     public static int UNSTUCK_INTERVAL;
-    public static int TELEPORT_WATCHDOG_TIMEOUT;
     public static int PLAYER_SPAWN_PROTECTION;
     public static int PLAYER_TELEPORT_PROTECTION;
     public static boolean RANDOM_RESPAWN_IN_TOWN_ENABLED;
@@ -286,7 +260,6 @@ public final class Config {
     public static boolean GM_STARTUP_DIET_MODE;
     public static boolean GM_ITEM_RESTRICTION;
     public static boolean GM_TRADE_RESTRICTED_ITEMS;
-    public static boolean GM_RESTART_FIGHTING;
     public static boolean GM_ANNOUNCER_NAME;
     public static boolean GM_GIVE_SPECIAL_SKILLS;
     public static boolean GM_GIVE_SPECIAL_AURA_SKILLS;
@@ -294,14 +267,12 @@ public final class Config {
     public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 
     public static boolean LOG_ITEM_ENCHANTS;
-    public static boolean LOG_SKILL_ENCHANTS;
 
     public static boolean SKILL_CHECK_ENABLE;
     public static boolean SKILL_CHECK_REMOVE;
     public static boolean SKILL_CHECK_GM;
     public static boolean HTML_ACTION_CACHE_DEBUG;
     public static boolean DEVELOPER;
-    public static boolean ALT_DEV_NO_QUESTS;
     public static boolean ALT_DEV_NO_SPAWNS;
     public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
     public static boolean ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS;
@@ -338,7 +309,6 @@ public final class Config {
     public static boolean ALLOW_WATER;
     public static boolean ALLOW_FISHING;
     public static boolean ALLOW_BOAT;
-    public static int BOAT_BROADCAST_RADIUS;
 
     public static boolean ALLOW_MANOR;
     public static boolean SERVER_NEWS;
@@ -362,8 +332,6 @@ public final class Config {
     public static boolean JAIL_IS_PVP;
     public static boolean JAIL_DISABLE_TRANSACTION;
     public static boolean CUSTOM_NPC_DATA;
-
-    public static boolean CUSTOM_ITEMS_LOAD;
 
     public static int ALT_BIRTHDAY_GIFT;
     public static String ALT_BIRTHDAY_MAIL_SUBJECT;
@@ -561,11 +529,7 @@ public final class Config {
     public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
     public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
     public static int[] ENCHANT_BLACKLIST;
-    public static boolean DISABLE_OVER_ENCHANTING;
     public static int[] AUGMENTATION_BLACKLIST;
-
-    // Antharas
-    public static int ANTHARAS_WAIT_TIME;
 
     // GrandBoss Settings
     public static int ANTHARAS_SPAWN_INTERVAL;
@@ -692,7 +656,6 @@ public final class Config {
     public static boolean MULTILANG_VOICED_ALLOW;
 
     public static int DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
-    public static int DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP;
     public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
     public static boolean DUALBOX_COUNT_OFFLINE_TRADERS;
     public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
@@ -926,7 +889,6 @@ public final class Config {
         MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
         MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);
         MAX_SP = Character.getLong("MaxSp", 50000000000L) >= 0 ? Character.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;
-        BASE_DUALCLASS_LEVEL = Character.getByte("BaseDualclassLevel", (byte) 85);
         MAX_PVTSTORESELL_SLOTS_DWARF = Character.getInt("MaxPvtStoreSellSlotsDwarf", 4);
         MAX_PVTSTORESELL_SLOTS_OTHER = Character.getInt("MaxPvtStoreSellSlotsOther", 3);
         MAX_PVTSTOREBUY_SLOTS_DWARF = Character.getInt("MaxPvtStoreBuySlotsDwarf", 5);
@@ -952,7 +914,6 @@ public final class Config {
             ENCHANT_BLACKLIST[i] = Integer.parseInt(notenchantable[i]);
         }
         Arrays.sort(ENCHANT_BLACKLIST);
-        DISABLE_OVER_ENCHANTING = Character.getBoolean("DisableOverEnchanting", true);
         String[] array = Character.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
         AUGMENTATION_BLACKLIST = new int[array.length];
 
@@ -992,7 +953,6 @@ public final class Config {
         ALT_CLAN_MEMBERS_FOR_WAR = Character.getInt("AltClanMembersForWar", 15);
         ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = Character.getBoolean("AltMembersCanWithdrawFromClanWH", false);
         ALT_CLAN_MEMBERS_TIME_FOR_BONUS = Character.getDuration("AltClanMembersTimeForBonus", "30mins").toMillis();
-        REMOVE_CASTLE_CIRCLETS = Character.getBoolean("RemoveCastleCirclets", true);
         ALT_PARTY_MAX_MEMBERS = Character.getInt("AltPartyMaxMembers", 7);
         ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
 
@@ -1006,7 +966,6 @@ public final class Config {
 
         ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
         UNSTUCK_INTERVAL = Character.getInt("UnstuckInterval", 300);
-        TELEPORT_WATCHDOG_TIMEOUT = Character.getInt("TeleportWatchdogTimeout", 0);
         PLAYER_SPAWN_PROTECTION = Character.getInt("PlayerSpawnProtection", 0);
         PLAYER_TELEPORT_PROTECTION = Character.getInt("PlayerTeleportProtection", 0);
         RANDOM_RESPAWN_IN_TOWN_ENABLED = Character.getBoolean("RandomRespawnInTownEnabled", true);
@@ -1061,14 +1020,12 @@ public final class Config {
         USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
 
         LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
-        LOG_SKILL_ENCHANTS = General.getBoolean("LogSkillEnchants", false);
 
         SKILL_CHECK_ENABLE = General.getBoolean("SkillCheckEnable", false);
         SKILL_CHECK_REMOVE = General.getBoolean("SkillCheckRemove", false);
         SKILL_CHECK_GM = General.getBoolean("SkillCheckGM", true);
         HTML_ACTION_CACHE_DEBUG = General.getBoolean("HtmlActionCacheDebug", false);
         DEVELOPER = General.getBoolean("Developer", false);
-        ALT_DEV_NO_QUESTS = General.getBoolean("AltDevNoQuests", false) || Boolean.getBoolean("noquests");
         ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
         ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
         ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
@@ -1104,7 +1061,6 @@ public final class Config {
         ALLOW_FISHING = General.getBoolean("AllowFishing", true);
         ALLOW_MANOR = General.getBoolean("AllowManor", true);
         ALLOW_BOAT = General.getBoolean("AllowBoat", true);
-        BOAT_BROADCAST_RADIUS = General.getInt("BoatBroadcastRadius", 20000);
         SERVER_NEWS = General.getBoolean("ShowServerNews", false);
         ENABLE_COMMUNITY_BOARD = General.getBoolean("EnableCommunityBoard", true);
         BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");
@@ -1118,7 +1074,7 @@ public final class Config {
         ALT_MANOR_SAVE_PERIOD_RATE = General.getInt("AltManorSavePeriodRate", 2);
         ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
         ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
-        ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;
+        ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
 
         DEFAULT_PUNISH_PARAM = General.getInt("DefaultPunishParam", 0);
         ONLY_GM_ITEMS_FREE = General.getBoolean("OnlyGMItemsFree", true);
@@ -1126,7 +1082,6 @@ public final class Config {
 
         JAIL_DISABLE_TRANSACTION = General.getBoolean("JailDisableTransaction", false);
         CUSTOM_NPC_DATA = General.getBoolean("CustomNpcData", false);
-        CUSTOM_ITEMS_LOAD = General.getBoolean("CustomItemsLoad", false);
 
         ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
         ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
@@ -1137,7 +1092,7 @@ public final class Config {
 
         BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
         BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
-        BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
+        BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000L;
         BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
         ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 
@@ -1241,7 +1196,8 @@ public final class Config {
         RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 3);
         RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
         VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
-        if (VITALITY_MAX_ITEMS_ALLOWED == 0) {
+        if (VITALITY_MAX_ITEMS_ALLOWED == 0)
+        {
             VITALITY_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
         }
         RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
@@ -1378,7 +1334,6 @@ public final class Config {
         // Grand bosses
         final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
 
-        ANTHARAS_WAIT_TIME = GrandBossSettings.getInt("AntharasWaitTime", 30);
         ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
         ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
 
@@ -1396,13 +1351,13 @@ public final class Config {
         ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 168);
         ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 48);
 
-        try (var lines = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
+        try(var lines = Files.lines(FileUtil.resolvePath(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
             //@formatter:off
             FILTER_LIST = lines.map(String::trim)
                     .filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
                     .collect(Collectors.toList());
             //@formatter:on
-            LOGGER.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
+            LOGGER.info("Loaded {} Filter Words.", FILTER_LIST.size());
         } catch (IOException e) {
             LOGGER.warn("Error while loading chat filter words!", e);
         }
@@ -1512,7 +1467,6 @@ public final class Config {
         final PropertiesParser DualboxCheck = new PropertiesParser(CUSTOM_DUALBOX_CHECK_CONFIG_FILE);
 
         DUALBOX_CHECK_MAX_PLAYERS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxPlayersPerIP", 0);
-        DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
         DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);
         DUALBOX_COUNT_OFFLINE_TRADERS = DualboxCheck.getBoolean("DualboxCountOfflineTraders", false);
         final String[] dualboxCheckWhiteList = DualboxCheck.getString("DualboxCheckWhitelist", "127.0.0.1,0").split(";");
@@ -1587,15 +1541,18 @@ public final class Config {
         AUTO_HP_PERCENTAGE = AutoPotions.getInt("AutoHpPercentage", 70);
         AUTO_MP_PERCENTAGE = AutoPotions.getInt("AutoMpPercentage", 70);
         AUTO_CP_ITEM_IDS = new ArrayList<>();
-        for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(",")) {
+        for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(","))
+        {
             AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
         }
         AUTO_HP_ITEM_IDS = new ArrayList<>();
-        for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(",")) {
+        for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(","))
+        {
             AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
         }
         AUTO_MP_ITEM_IDS = new ArrayList<>();
-        for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(",")) {
+        for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(","))
+        {
             AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
 
@@ -1804,7 +1761,7 @@ public final class Config {
         config.LOG_FLOODING = properties.getBoolean("FloodProtector" + configString + "LogFlooding", false);
         config.PUNISHMENT_LIMIT = properties.getInt("FloodProtector" + configString + "PunishmentLimit", 0);
         config.PUNISHMENT_TYPE = properties.getString("FloodProtector" + configString + "PunishmentType", "none");
-        config.PUNISHMENT_TIME = properties.getInt("FloodProtector" + configString + "PunishmentTime", 0) * 60000;
+        config.PUNISHMENT_TIME = properties.getInt("FloodProtector" + configString + "PunishmentTime", 0) * 60000L;
     }
 
     /**
@@ -1821,53 +1778,6 @@ public final class Config {
         return ret;
     }
 
-    /**
-     * Parse a config value from its string representation to a two-dimensional int array.<br>
-     * The format of the value to be parsed should be as follows: "item1Id,item1Amount;item2Id,item2Amount;...itemNId,itemNAmount".
-     *
-     * @param line the value of the parameter to parse
-     * @return the parsed list or {@code null} if nothing was parsed
-     */
-    private static List<ItemHolder> parseItemsList(String line) {
-        if (isNullOrEmpty(line)) {
-            return null;
-        }
-        final String[] propertySplit = line.split(";");
-        if (propertySplit.length == 0) {
-            // nothing to do here
-            return null;
-        }
-
-        String[] valueSplit;
-        final List<ItemHolder> result = new ArrayList<>(propertySplit.length);
-        for (String value : propertySplit) {
-            valueSplit = value.split(",");
-            if (valueSplit.length != 2) {
-                LOGGER.warn("parseItemsList[Config.load()]: invalid entry -> " + valueSplit[0] + ", should be itemId,itemNumber. Skipping to the next entry in the list.");
-                continue;
-            }
-
-            int itemId;
-            try {
-                itemId = Integer.parseInt(valueSplit[0]);
-            } catch (NumberFormatException e) {
-                LOGGER.warn("parseItemsList[Config.load()]: invalid itemId -> " + valueSplit[0] + ", value must be an integer. Skipping to the next entry in the list.");
-                continue;
-            }
-            int count;
-            try {
-                count = Integer.parseInt(valueSplit[1]);
-            } catch (NumberFormatException e) {
-                LOGGER.warn("parseItemsList[Config.load()]: invalid item number -> " + valueSplit[1] + ", value must be an integer. Skipping to the next entry in the list.");
-                continue;
-            }
-            if ((itemId > 0) && (count > 0)) {
-                result.add(new ItemHolder(itemId, count));
-            }
-        }
-        return result;
-    }
-
     private static class IPConfigData extends GameXmlReader {
         private static final List<String> _subnets = new ArrayList<>(5);
         private static final List<String>
@@ -1879,15 +1789,14 @@ public final class Config {
 
         @Override
         protected Path getSchemaFilePath() {
-            return Path.of(getCurrentPath("./config/xsd/ipconfig.xsd"));
+            return Path.of("./config/xsd/ipconfig.xsd");
         }
 
         @Override
         public void load() {
-            final File f = new File(IPCONFIG_FILE);
-            if (f.exists()) {
+            if (Files.isRegularFile(Path.of(IPCONFIG_FILE))) {
                 LOGGER.info("Network Config: ipconfig.xml exists using manual configuration...");
-                parseFile(new File(IPCONFIG_FILE));
+                parseFile(IPCONFIG_FILE);
             } else
             // Auto configuration...
             {

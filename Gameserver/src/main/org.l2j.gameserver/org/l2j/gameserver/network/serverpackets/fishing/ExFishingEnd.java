@@ -63,6 +63,6 @@ public class ExFishingEnd extends ServerPacket {
     public enum FishingEndType {
         PLAYER_STOP,
         PLAYER_CANCEL,
-        ERROR;
+        ERROR
     }
 }

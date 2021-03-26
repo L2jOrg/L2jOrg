@@ -56,10 +56,6 @@ public abstract class AbstractRequest {
         timeOutTask = ThreadPool.schedule(this::onTimeout, delay);
     }
 
-    public boolean isTimeout() {
-        return (timeOutTask != null) && !timeOutTask.isDone();
-    }
-
     public void cancelTimeout() {
         if(nonNull(timeOutTask)) {
             timeOutTask.cancel(false);

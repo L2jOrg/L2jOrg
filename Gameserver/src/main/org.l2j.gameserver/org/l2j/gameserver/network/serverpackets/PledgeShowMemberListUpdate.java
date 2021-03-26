@@ -37,7 +37,7 @@ public final class PledgeShowMemberListUpdate extends ServerPacket {
     private final int _onlineStatus;
     private final int _race;
     private final int _sex;
-    private int _hasSponsor;
+    private final int _hasSponsor;
 
     public PledgeShowMemberListUpdate(Player player) {
         this(player.getClan().getClanMember(player.getObjectId()));

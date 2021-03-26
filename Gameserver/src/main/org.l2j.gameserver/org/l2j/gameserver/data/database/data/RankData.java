@@ -67,10 +67,6 @@ import org.l2j.commons.database.annotation.Column;
         return playerName;
     }
 
-    public long getExp() {
-        return exp;
-    }
-
     public byte getLevel() {
         return level;
     }

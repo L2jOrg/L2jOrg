@@ -60,32 +60,16 @@ public class ClanWarData {
         return attacker;
     }
 
-    public void setAttacker(int attacker) {
-        this.attacker = attacker;
-    }
-
     public int getAttacked() {
         return attacked;
-    }
-
-    public void setAttacked(int attacked) {
-        this.attacked = attacked;
     }
 
     public int getAttackerKills() {
         return attackerKills;
     }
 
-    public void setAttackerKills(int attackerKills) {
-        this.attackerKills = attackerKills;
-    }
-
     public int getAttackedKills() {
         return attackedKills;
-    }
-
-    public void setAttackedKills(int attackedKills) {
-        this.attackedKills = attackedKills;
     }
 
     public int getWinnerClan() {
@@ -98,10 +82,6 @@ public class ClanWarData {
 
     public long getStartTime() {
         return startTime;
-    }
-
-    public void setStartTime(long startTime) {
-        this.startTime = startTime;
     }
 
     public long getEndTime() {

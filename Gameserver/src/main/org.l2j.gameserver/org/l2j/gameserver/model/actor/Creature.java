@@ -176,6 +176,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private double hpUpdateDecCheck;
     private double hpUpdateInterval;
     private boolean lethalable = true;
+    private boolean cursorKeyMovementActive = true;
     private boolean allSkillsDisabled;
     private boolean isDead;
     private boolean isImmobilized;
@@ -186,7 +187,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private boolean isFlying;
     private boolean blockActions;
     private boolean cursorKeyMovement;
-    private boolean cursorKeyMovementActive;
     private boolean aiDisabled;
 
     /**
@@ -440,7 +440,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         World.getInstance().forEachPlayerInRange(this, radius, packet::sendTo, this::isVisibleFor);
     }
 
-    private void checkBroadcast(ServerPacket packet) {
+    protected void checkBroadcast(ServerPacket packet) {
         if(World.getInstance().getPlayersCountInSurroundRegions(this) > 100) { // need to profile to find out the best amount
             packet.sendInBroadcast(true);
         }
@@ -584,10 +584,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         teleToLocation(x, y, z, heading, getInstanceWorld());
     }
 
-    public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset) {
-        teleToLocation(x, y, z, heading, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, getInstanceWorld());
-    }
-
     public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset, Instance instance) {
         teleToLocation(x, y, z, heading, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, instance);
     }
@@ -705,7 +701,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     return;
                 }
 
-                // Ranged weapon checks.
                 if (weaponItem.getItemType().isRanged() && !checkRangedAttackCondition(weaponItem, target)) {
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -1342,16 +1337,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return hasBlockActions() || isRooted() || isOverloaded || isImmobilized || isAlikeDead() || isTeleporting;
     }
 
-    public final boolean isOverloaded() {
-        return isOverloaded;
-    }
-
     public final void setIsOverloaded(boolean value) {
         isOverloaded = value;
-    }
-
-    public final boolean isPendingRevive() {
-        return isDead && isPendingRevive;
     }
 
     public final void setIsPendingRevive(boolean value) {
@@ -1372,8 +1359,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     /**
      * @return the summon
      */
-    public Map<Integer, Summon> getServitors() {
-        return Collections.emptyMap();
+    public IntMap<Summon> getServitors() {
+        return Containers.emptyIntMap();
     }
 
     public Summon getServitor(int objectId) {
@@ -1477,12 +1464,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     @Override
-    public boolean isInvul() {
+    public boolean isInvulnerable() {
         return isInvul || isTeleporting;
     }
 
     public boolean isUndying() {
-        return isUndying || isInvul() || isAffected(EffectFlag.IGNORE_DEATH) || isInsideZone(ZoneType.UNDYING);
+        return isUndying || isInvulnerable() || isAffected(EffectFlag.IGNORE_DEATH) || isInsideZone(ZoneType.UNDYING);
     }
 
     public void setUndying(boolean undying) {
@@ -1490,11 +1477,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public boolean isHpBlocked() {
-        return isInvul() || isAffected(EffectFlag.HP_BLOCK);
+        return isInvulnerable() || isAffected(EffectFlag.HP_BLOCK);
     }
 
     public boolean isMpBlocked() {
-        return isInvul() || isAffected(EffectFlag.MP_BLOCK);
+        return isInvulnerable() || isAffected(EffectFlag.MP_BLOCK);
     }
 
     public boolean isBuffBlocked() {
@@ -1502,7 +1489,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public boolean isDebuffBlocked() {
-        return isInvul() || isAffected(EffectFlag.DEBUFF_BLOCK);
+        return isInvulnerable() || isAffected(EffectFlag.DEBUFF_BLOCK);
     }
 
     public boolean isUndead() {
@@ -1694,17 +1681,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!isPlayer(this)) {
             getAI().notifyEvent(CtrlEvent.EVT_THINK);
         }
-    }
-
-    public final void startStunning() {
-        abortAttack();
-        abortCast();
-        stopMove(null);
-        getAI().notifyEvent(CtrlEvent.EVT_ACTION_BLOCKED);
-        if (!GameUtils.isSummon(this)) {
-            getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-        }
-        updateAbnormalVisualEffects();
     }
 
     public final void stopTransformation(boolean removeEffects) {
@@ -2602,14 +2578,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * <B><U> Overridden in </U> :</B>
      * <li>Player</li>
      *
-     * @return the secondary weapon instance (always equiped in the left hand).
-     */
-    public abstract Item getSecondaryWeaponInstance();
-
-    /**
-     * <B><U> Overridden in </U> :</B>
-     * <li>Player</li>
-     *
      * @return the secondary {@link ItemTemplate} item (always equiped in the left hand).
      */
     public abstract ItemTemplate getSecondaryWeaponItem();
@@ -2979,10 +2947,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return attackEndTime;
     }
 
-    protected long getRangedAttackEndTime() {
-        return disableRangedAttackEndTime;
-    }
-
     public abstract int getLevel();
 
     public int getAccuracy() {
@@ -3131,12 +3095,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void doAttack(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect) {
-        // Start attack stance and notify being attacked.
-        if (target.hasAI()) {
-            target.getAI().clientStartAutoAttack();
-            target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
-        }
-
         getAI().clientStartAutoAttack();
 
         if (!reflect && !isDOT) {
@@ -3145,25 +3103,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 damage *= stats.getValue(Stat.REAR_DAMAGE_RATE, 1);
             }
 
-            // Counterattacks happen before damage received.
-            if (!target.isDead() && (skill != null)) {
-                Formulas.calcCounterAttack(this, target, skill, true);
+            if (target.isImmobilized()) {
+                damage *= stats.getValue(Stat.DAMAGE_IMMOBILIZED, 1);
+                damage *= target.stats.getValue(Stat.DAMAGE_TAKEN_IMMOBILIZED, 1);
+            }
 
-                // Shield Deflect Magic: Reflect all damage on caster.
-                if (skill.isMagic() && (target.getStats().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100))) {
-                    reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true, DamageType.REFLECT);
-                    return;
+            if (counterAttackReflect(damage, target, skill, isDOT, directlyToHp, critical)) {
+                if (target.hasAI()) {
+                    target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
                 }
+                return;
             }
         }
 
-        if (target.isImmobilized()) {
-            damage *= stats.getValue(Stat.DAMAGE_IMMOBILIZED, 1);
-            damage *= target.stats.getValue(Stat.DAMAGE_TAKEN_IMMOBILIZED, 1);
-        }
-
-        // Target receives the damage.
         target.reduceCurrentHp(damage, this, skill, isDOT, directlyToHp, critical, reflect, DamageType.ATTACK);
+
+        if (target.hasAI()) {
+            target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
+        }
 
         // Check if damage should be reflected or absorbed. When killing blow is made, the target doesn't reflect (vamp too?).
         if (!reflect && !isDOT && !target.isDead()) {
@@ -3227,6 +3184,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             target.breakAttack();
             target.breakCast();
         }
+    }
+
+    private boolean counterAttackReflect(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical) {
+        if (!target.isDead() && nonNull(skill)) {
+            Formulas.calcCounterAttack(this, target, skill, true);
+
+            if (skill.isMagic() && Rnd.chance(target.getStats().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0))) {
+                reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true, DamageType.REFLECT);
+                return true;
+            }
+        }
+        return false;
     }
 
     public void reduceCurrentHp(double value, Creature attacker, Skill skill, DamageType damageType) {
@@ -3459,7 +3428,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    public void removeOverridedCond(PcCondOverride... excs) {
+    public void removeOverriddenCond(PcCondOverride... excs) {
         for (PcCondOverride exc : excs) {
             exceptions &= ~exc.getMask();
         }
@@ -3467,10 +3436,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public boolean canOverrideCond(PcCondOverride excs) {
         return (exceptions & excs.getMask()) == excs.getMask();
-    }
-
-    public long getOverrideCond() {
-        return exceptions;
     }
 
     public void setOverrideCond(long masks) {
@@ -3514,9 +3479,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public boolean canRevive() {
         return true;
-    }
-
-    public void setCanRevive(boolean val) {
     }
 
     /**
@@ -3975,3 +3937,4 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         public int geoPathGty;
     }
 }
+

@@ -149,14 +149,12 @@ public class Q00620_FourGoblets extends Quest
 					if (rnd == 0)
 					{
 						giveItems(player, 57, 10000);
-						reward = 1;
-					}
+                    }
 					else if (rnd == 1)
 					{
 						if (Rnd.get(1000) < 848)
 						{
-							reward = 1;
-							final int i = Rnd.get(1000);
+                            final int i = Rnd.get(1000);
 							if (i < 43)
 							{
 								giveItems(player, 1884, 42);
@@ -200,8 +198,7 @@ public class Q00620_FourGoblets extends Quest
 						}
 						else if (Rnd.get(1000) < 323)
 						{
-							reward = 1;
-							final int i = Rnd.get(1000);
+                            final int i = Rnd.get(1000);
 							if (i < 335)
 							{
 								giveItems(player, 1888, 1);
@@ -236,8 +233,7 @@ public class Q00620_FourGoblets extends Quest
 					{
 						if (Rnd.get(1000) < 847)
 						{
-							reward = 1;
-							final int i = Rnd.get(1000);
+                            final int i = Rnd.get(1000);
 							if (i < 148)
 							{
 								giveItems(player, 1878, 8);
@@ -281,8 +277,7 @@ public class Q00620_FourGoblets extends Quest
 						}
 						else if (Rnd.get(1000) < 251)
 						{
-							reward = 1;
-							final int i = Rnd.get(1000);
+                            final int i = Rnd.get(1000);
 							if (i < 350)
 							{
 								giveItems(player, 1887, 1);
@@ -317,8 +312,7 @@ public class Q00620_FourGoblets extends Quest
 					{
 						if (Rnd.get(1000) < 31)
 						{
-							reward = 1;
-							final int i = Rnd.get(1000);
+                            final int i = Rnd.get(1000);
 							if (i < 223)
 							{
 								giveItems(player, 730, 1);
@@ -334,8 +328,7 @@ public class Q00620_FourGoblets extends Quest
 						}
 						else if (Rnd.get(1000) < 50)
 						{
-							reward = 1;
-							final int i = Rnd.get(1000);
+                            final int i = Rnd.get(1000);
 							if (i < 202)
 							{
 								giveItems(player, 729, 1);
@@ -354,8 +347,7 @@ public class Q00620_FourGoblets extends Quest
 					{
 						if (Rnd.get(1000) < 329)
 						{
-							reward = 1;
-							final int i = Rnd.get(1000);
+                            final int i = Rnd.get(1000);
 							if (i < 88)
 							{
 								giveItems(player, 6698, 1);
@@ -427,8 +419,7 @@ public class Q00620_FourGoblets extends Quest
 						}
 						else if (Rnd.get(1000) < 54)
 						{
-							reward = 1;
-							final int i = Rnd.get(1000);
+                            final int i = Rnd.get(1000);
 							if (i < 100)
 							{
 								giveItems(player, 6688, 1);

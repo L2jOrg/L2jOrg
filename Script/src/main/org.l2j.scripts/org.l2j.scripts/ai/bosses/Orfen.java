@@ -76,7 +76,7 @@ public final class Orfen extends AbstractNpcAI
 	private static final int RIBA_IREN = 29018;
 	
 	private static boolean _IsTeleported;
-	private static Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
+	private static final Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	private static Zone ZONE;
 	
 	private static final SkillHolder PARALYSIS = new SkillHolder(4064, 1);

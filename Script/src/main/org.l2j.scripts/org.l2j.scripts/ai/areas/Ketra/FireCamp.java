@@ -77,7 +77,7 @@ public class FireCamp extends AbstractNpcAI {
                     addEnterZoneId(zoneId);
                     zoneIdNPC.put(zoneId, fireCampNpc);
                 } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
-                    e.printStackTrace();
+                    LOGGER.error(e.getMessage(), e);
                 }
 
                 index.getAndIncrement();

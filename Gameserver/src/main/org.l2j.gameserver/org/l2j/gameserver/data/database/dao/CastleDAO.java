@@ -34,11 +34,8 @@ import java.util.function.Consumer;
  */
 public interface CastleDAO extends DAO<CastleData> {
 
-    @Query("UPDATE castle SET side='NEUTRAL' WHERE castle.id NOT IN (SELECT hasCastle FROM clan_data);")
+    @Query("UPDATE castle SET side='NEUTRAL' WHERE castle.id NOT IN (SELECT hasCastle FROM clan_data)")
     void updateToNeutralWithoutOwner();
-
-    @Query("SELECT * FROM castle WHERE id = :id:")
-    CastleData findById(int id);
 
     @Query("UPDATE castle SET treasury = :treasury: WHERE id = :id:")
     void updateTreasury(int id, long treasury);

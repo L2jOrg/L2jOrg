@@ -45,7 +45,7 @@ public enum ShotType {
         return null;
     }
 
-    public int getClientType() {
+    public int getClientId() {
         return clientType;
     }
 }
