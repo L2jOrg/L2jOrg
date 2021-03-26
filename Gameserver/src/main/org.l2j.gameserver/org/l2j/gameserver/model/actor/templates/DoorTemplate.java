@@ -53,7 +53,6 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable {
     private final DoorOpenType _openType;
     private final boolean _checkCollision;
     private final boolean _isAttackableDoor;
-    private final boolean _stealth;
     private final boolean _isInverted;
     private int _openTime;
     private int _randomTime;
@@ -102,7 +101,6 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable {
             _randomTime = set.getInt("randomTime", -1);
         }
         _isAttackableDoor = set.getBoolean("attackable", false);
-        _stealth = set.getBoolean("stealth", false);
         _isInverted = set.getBoolean("isInverted", false);
     }
 

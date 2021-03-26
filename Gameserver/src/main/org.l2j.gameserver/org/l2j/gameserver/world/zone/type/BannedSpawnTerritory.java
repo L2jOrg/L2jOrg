@@ -26,11 +26,9 @@ import org.l2j.gameserver.world.zone.ZoneArea;
  * @author UnAfraid
  */
 public class BannedSpawnTerritory {
-    private final String name;
     private final ZoneArea area;
 
-    public BannedSpawnTerritory(String name, ZoneArea area) {
-        this.name = name;
+    public BannedSpawnTerritory(ZoneArea area) {
         this.area = area;
     }
 

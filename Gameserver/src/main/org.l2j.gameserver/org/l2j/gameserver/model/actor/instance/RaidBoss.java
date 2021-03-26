@@ -37,8 +37,6 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class RaidBoss extends Monster {
     private static final int RAIDBOSS_MAINTENANCE_INTERVAL = 30000; // 30 sec
 
-    private final boolean _useRaidCurse = true;
-
     /**
      * Constructor of RaidBoss (use Creature and Folk constructor).<br>
      * <B><U>Actions</U>:</B>
@@ -110,6 +108,6 @@ public class RaidBoss extends Monster {
 
     @Override
     public boolean giveRaidCurse() {
-        return _useRaidCurse;
+        return true;
     }
 }

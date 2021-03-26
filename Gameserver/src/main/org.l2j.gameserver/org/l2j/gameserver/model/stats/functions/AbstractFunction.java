@@ -57,10 +57,7 @@ public abstract class AbstractFunction {
      * Used to remove all functions added by this owner.
      */
     private final Object _funcOwner;
-    /**
-     * Function may be disabled by attached condition.
-     */
-    private final Condition _applayCond;
+
     /**
      * The value.
      */
@@ -80,7 +77,6 @@ public abstract class AbstractFunction {
         _order = order;
         _funcOwner = owner;
         _value = value;
-        _applayCond = applayCond;
     }
 
     /**

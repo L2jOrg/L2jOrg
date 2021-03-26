@@ -43,7 +43,6 @@ public final class StaticWorldObject extends Creature {
     public static final int INTERACTION_DISTANCE = 150;
 
     private final int _staticObjectId;
-    private final int _meshIndex = 0; // 0 - static objects, alternate static objects
     private int _type = -1; // 0 - map signs, 1 - throne , 2 - arena signs
     private ShowTownMap _map;
 
@@ -143,7 +142,7 @@ public final class StaticWorldObject extends Creature {
      * @return the meshIndex of the object
      */
     public int getMeshIndex() {
-        return _meshIndex;
+        return 0;
     }
 
     @Override

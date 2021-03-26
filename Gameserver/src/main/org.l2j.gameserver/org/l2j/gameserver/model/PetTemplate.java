@@ -38,7 +38,6 @@ public class PetTemplate {
     private final int _npcId;
     private final int _itemId;
     private final List<Integer> _food = new ArrayList<>();
-    private int _load = 20000;
     private int _hungryLimit = 1;
     private int _minlvl = Byte.MAX_VALUE;
     private int _maxlvl = 0;
@@ -83,13 +82,6 @@ public class PetTemplate {
      */
     public PetLevelData getPetLevelData(int petLevel) {
         return _levelStats.get(petLevel);
-    }
-
-    /**
-     * @param load the weight load to set.
-     */
-    public void setLoad(int load) {
-        _load = load;
     }
 
     /**

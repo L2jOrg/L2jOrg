@@ -52,16 +52,12 @@ public final class TamedBeast extends FeedableBeast {
     protected boolean _isFreyaBeast;
     private int _foodSkillId;
     private int _remainingTime = MAX_DURATION;
-    private int _homeX;
-    private int _homeY;
-    private int _homeZ;
     private Future<?> _buffTask = null;
     private Future<?> _durationCheckTask = null;
 
     public TamedBeast(int npcTemplateId) {
         super(NpcData.getInstance().getTemplate(npcTemplateId));
         setInstanceType(InstanceType.L2TamedBeastInstance);
-        setHome(this);
     }
 
     public TamedBeast(int npcTemplateId, Player owner, int foodSkillId, int x, int y, int z) {
@@ -72,7 +68,6 @@ public final class TamedBeast extends FeedableBeast {
         setCurrentMp(getMaxMp());
         setOwner(owner);
         setFoodType(foodSkillId);
-        setHome(x, y, z);
         spawnMe(x, y, z);
     }
 
@@ -83,22 +78,11 @@ public final class TamedBeast extends FeedableBeast {
         setCurrentHp(getMaxHp());
         setCurrentMp(getMaxMp());
         setFoodType(food);
-        setHome(x, y, z);
         spawnMe(x, y, z);
         setOwner(owner);
         if (isFreyaBeast) {
             getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
         }
-    }
-
-    public void setHome(Creature c) {
-        setHome(c.getX(), c.getY(), c.getZ());
-    }
-
-    public void setHome(int x, int y, int z) {
-        _homeX = x;
-        _homeY = y;
-        _homeZ = z;
     }
 
     public int getRemainingTime() {
@@ -365,23 +349,6 @@ public final class TamedBeast extends FeedableBeast {
                 if (_tamedBeast.getRemainingTime() <= 0) {
                     _tamedBeast.deleteMe();
                 }
-            }
-        }
-    }
-
-    private class buffCast implements Runnable {
-        private final Skill _skill;
-
-        public buffCast(Skill skill) {
-            _skill = skill;
-        }
-
-        @Override
-        public void run() {
-            if (_skill == null) {
-                getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
-            } else {
-                sitCastAndFollow(_skill, _owner);
             }
         }
     }

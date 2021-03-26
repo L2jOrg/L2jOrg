@@ -39,7 +39,6 @@ import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -1055,7 +1054,7 @@ public final class Config {
         ALT_MANOR_SAVE_PERIOD_RATE = General.getInt("AltManorSavePeriodRate", 2);
         ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
         ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
-        ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;
+        ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
 
         DEFAULT_PUNISH_PARAM = General.getInt("DefaultPunishParam", 0);
         ONLY_GM_ITEMS_FREE = General.getBoolean("OnlyGMItemsFree", true);
@@ -1073,7 +1072,7 @@ public final class Config {
 
         BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
         BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
-        BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
+        BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000L;
         BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
         ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 
@@ -1326,7 +1325,7 @@ public final class Config {
                     .filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
                     .collect(Collectors.toList());
             //@formatter:on
-            LOGGER.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
+            LOGGER.info("Loaded {} Filter Words.", FILTER_LIST.size());
         } catch (IOException e) {
             LOGGER.warn("Error while loading chat filter words!", e);
         }
@@ -1724,7 +1723,7 @@ public final class Config {
         config.LOG_FLOODING = properties.getBoolean("FloodProtector" + configString + "LogFlooding", false);
         config.PUNISHMENT_LIMIT = properties.getInt("FloodProtector" + configString + "PunishmentLimit", 0);
         config.PUNISHMENT_TYPE = properties.getString("FloodProtector" + configString + "PunishmentType", "none");
-        config.PUNISHMENT_TIME = properties.getInt("FloodProtector" + configString + "PunishmentTime", 0) * 60000;
+        config.PUNISHMENT_TIME = properties.getInt("FloodProtector" + configString + "PunishmentTime", 0) * 60000L;
     }
 
     /**

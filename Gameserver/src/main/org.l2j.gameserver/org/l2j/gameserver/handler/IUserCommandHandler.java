@@ -19,9 +19,6 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 
 public interface IUserCommandHandler {
 

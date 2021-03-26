@@ -44,6 +44,10 @@ public class FileUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FileUtil.class);
 
+    private FileUtil() {
+        // util class prevent initialization
+    }
+
     public static URL readToURL(String filePath) {
         URL url = pathToURL(filePath);
         return nonNull(url) ? url : readURLFromResources(filePath);
@@ -75,11 +79,11 @@ public class FileUtil {
     }
 
     private static URI readURIFromResources(String filePath) {
-        var resource = UrlToURI(ClassLoader.getSystemResource(filePath));
-        return nonNull(resource) ? resource :  UrlToURI(FileUtil.class.getResource(filePath));
+        var resource = urlToURI(ClassLoader.getSystemResource(filePath));
+        return nonNull(resource) ? resource :  urlToURI(FileUtil.class.getResource(filePath));
     }
 
-    private static URI UrlToURI(URL url) {
+    private static URI urlToURI(URL url) {
         try {
             return nonNull(url) ? url.toURI() : null;
         } catch (URISyntaxException e) {

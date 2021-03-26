@@ -1464,10 +1464,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
         return ScriptEngineManager.getInstance().getCurrentLoadingScript();
     }
 
-    @Override
-    public void setActive(boolean status) {
-        // TODO: Implement me.
-    }
 
     @Override
     public boolean reload() {

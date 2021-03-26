@@ -24,7 +24,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -68,7 +67,6 @@ public class ServerRestartManager {
             }
 
             if (lastRestart != null) {
-                nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
                 ThreadPool.schedule(new ServerRestartTask(), lastDelay - 600000);
                 LOGGER.info("Scheduled server restart at " + lastRestart.getTime() + ".");
             }

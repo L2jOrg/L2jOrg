@@ -51,7 +51,6 @@ public final class Transform implements IIdentifiable {
     private final int _displayId;
     private final TransformType _type;
     private final boolean _canSwim;
-    private final int _spawnHeight;
     private final boolean _canAttack;
     private final String _name;
     private final String _title;
@@ -65,7 +64,6 @@ public final class Transform implements IIdentifiable {
         _type = set.getEnum("type", TransformType.class, TransformType.COMBAT);
         _canSwim = set.getInt("can_swim", 0) == 1;
         _canAttack = set.getInt("normal_attackable", 1) == 1;
-        _spawnHeight = set.getInt("spawn_height", 0);
         _name = set.getString("setName", null);
         _title = set.getString("setTitle", null);
     }

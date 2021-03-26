@@ -26,11 +26,11 @@ import org.l2j.gameserver.model.actor.instance.Player;
  */
 public final class EnchantItemAttributeRequest extends AbstractRequest {
     private volatile int _enchantingItemObjectId;
-    private final int _enchantingStoneObjectId;
+    private final int enchantingStoneObjectId;
 
     public EnchantItemAttributeRequest(Player activeChar, int enchantingStoneObjectId) {
         super(activeChar);
-        _enchantingStoneObjectId = enchantingStoneObjectId;
+        this.enchantingStoneObjectId = enchantingStoneObjectId;
     }
 
     @Override
@@ -45,6 +45,6 @@ public final class EnchantItemAttributeRequest extends AbstractRequest {
 
     @Override
     public boolean isUsingItem(int objectId) {
-        return (objectId > 0) && ((objectId == _enchantingItemObjectId) || (objectId == _enchantingStoneObjectId));
+        return (objectId > 0) && ((objectId == _enchantingItemObjectId) || (objectId == enchantingStoneObjectId));
     }
 }

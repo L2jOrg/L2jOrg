@@ -311,7 +311,7 @@ public final class BuffInfo {
                 final EffectTickTask effectTask = new EffectTickTask(this, effect);
                 var effectTickRatio = getSettings(CharacterSettings.class).effectTickRatio() * effect.getTicks();
                 final ScheduledFuture<?> scheduledFuture = ThreadPool.scheduleAtFixedRate(effectTask, effectTickRatio, effectTickRatio);
-                addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
+                addTask(effect, new EffectTaskInfo(scheduledFuture));
             }
         }
     }

@@ -60,7 +60,6 @@ public class PlayerStats extends PlayableStats {
      */
     private final AtomicInteger _talismanSlots = new AtomicInteger();
     private long _startingXp;
-    private final boolean _cloakSlot = false;
     private int _vitalityPoints = 0;
 
     public PlayerStats(Player activeChar) {
@@ -299,10 +298,6 @@ public class PlayerStats extends PlayableStats {
 
     public void addTalismanSlots(int count) {
         _talismanSlots.addAndGet(count);
-    }
-
-    public boolean canEquipCloak() {
-        return _cloakSlot;
     }
 
     @Override

@@ -90,10 +90,12 @@ public abstract class XmlReader extends XmlParser {
             var schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
             var path = getSchemaFilePath();
 
-            if(nonNull(path) && Files.isRegularFile(path)) {
-                return schemaFactory.newSchema(path.toFile());
-            } else {
-                return loadFromResources(schemaFactory, path.toString());
+            if(nonNull(path)) {
+                if(Files.isRegularFile(path)) {
+                    return schemaFactory.newSchema(path.toFile());
+                } else {
+                    return loadFromResources(schemaFactory, path.toString());
+                }
             }
         } catch (SAXException e) {
             LOGGER.error(e.getMessage(), e);

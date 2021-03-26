@@ -63,7 +63,6 @@ public final class ClanHall extends AbstractResidence {
     private final ClanHallGrade grade;
     private final ClanHallType type;
     private final int minBid;
-    private final int deposit;
     private final List<Integer> npcs;
     private final List<Door> doors;
     private final List<ClanHallTeleportHolder> teleports;
@@ -81,7 +80,6 @@ public final class ClanHall extends AbstractResidence {
         type = params.getEnum("type", ClanHallType.class);
         minBid = params.getInt("minBid");
         lease = params.getInt("lease");
-        deposit = params.getInt("deposit");
         npcs = params.getList("npcList", Integer.class);
         doors = params.getList("doorList", Door.class);
         teleports = params.getList("teleportList", ClanHallTeleportHolder.class);

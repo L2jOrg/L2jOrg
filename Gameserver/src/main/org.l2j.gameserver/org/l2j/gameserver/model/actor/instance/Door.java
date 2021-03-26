@@ -60,7 +60,6 @@ public final class Door extends Creature {
     boolean open;
     private final boolean _isAttackableDoor;
     private final boolean inverted;
-    private final int _meshindex = 1;
     private Future<?> _autoCloseTask;
 
     public Door(DoorTemplate template) {
@@ -364,7 +363,7 @@ public final class Door extends Creature {
     }
 
     public int getMeshIndex() {
-        return _meshindex;
+        return 1;
     }
 
     public int getEmitter() {

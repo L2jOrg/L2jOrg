@@ -27,19 +27,16 @@ package org.l2j.gameserver.model.base;
 public final class ClassInfo {
     private final ClassId _classId;
     private final String _className;
-    private final ClassId _parentClassId;
 
     /**
      * Constructor for ClassInfo.
      *
      * @param classId       the class Id.
      * @param className     the in game class name.
-     * @param parentClassId the parent class for the given {@code classId}.
      */
-    public ClassInfo(ClassId classId, String className, ClassId parentClassId) {
+    public ClassInfo(ClassId classId, String className) {
         _classId = classId;
         _className = className;
-        _parentClassId = parentClassId;
     }
 
     /**

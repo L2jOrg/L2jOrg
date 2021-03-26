@@ -74,10 +74,9 @@ public final class ArmorSetsData extends GameXmlReader {
                     if ("set".equalsIgnoreCase(setNode.getNodeName())) {
                         final int id = parseInt(setNode.getAttributes(), "id");
                         final int minimumPieces = parseInt(setNode.getAttributes(), "minimumPieces", 0);
-                        final boolean isVisual = parseBoolean(setNode.getAttributes(), "visual", false);
-                        final ArmorSet set = new ArmorSet(id, minimumPieces, isVisual);
+                        final ArmorSet set = new ArmorSet(minimumPieces);
                         if (_armorSets.putIfAbsent(id, set) != null) {
-                            LOGGER.warn("Duplicate set entry with id: " + id + " in file: " + f.getName());
+                            LOGGER.warn("Duplicate set entry with id: {} in file: {}", id, f.getName());
                         }
                         for (Node innerSetNode = setNode.getFirstChild(); innerSetNode != null; innerSetNode = innerSetNode.getNextSibling()) {
                             switch (innerSetNode.getNodeName()) {
