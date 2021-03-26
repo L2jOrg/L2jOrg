@@ -31,7 +31,6 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SetupGauge;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.world.World;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 
@@ -66,7 +65,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	{
 		if (command.equals("admin_mobmenu"))
 		{
-			showMainPage(activeChar, command);
+			showMainPage(activeChar);
 			return true;
 		}
 		else if (command.equals("admin_mobgroup_list"))
@@ -137,15 +136,15 @@ public class AdminMobGroup implements IAdminCommandHandler
 		{
 			teleportGroup(command, activeChar);
 		}
-		showMainPage(activeChar, command);
+		showMainPage(activeChar);
 		return true;
 	}
 	
 	/**
 	 * @param activeChar
-	 * @param command
+	 *
 	 */
-	private void showMainPage(Player activeChar, String command)
+	private void showMainPage(Player activeChar)
 	{
 		final String filename = "mobgroup.htm";
 		AdminHtml.showAdminHtml(activeChar, filename);
@@ -580,23 +579,9 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void teleportGroup(String command, Player activeChar)
 	{
 		int groupId;
-		String targetPlayerStr = null;
-		Player targetPlayer = null;
 		
-		try
-		{
+		try {
 			groupId = Integer.parseInt(command.split(" ")[1]);
-			targetPlayerStr = command.split(" ")[2];
-			
-			if (targetPlayerStr != null)
-			{
-				targetPlayer = World.getInstance().findPlayer(targetPlayerStr);
-			}
-			
-			if (targetPlayer == null)
-			{
-				targetPlayer = activeChar;
-			}
 		}
 		catch (Exception e)
 		{

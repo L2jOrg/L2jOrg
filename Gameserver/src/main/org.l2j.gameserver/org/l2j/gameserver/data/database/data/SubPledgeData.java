@@ -47,10 +47,6 @@ public class SubPledgeData {
     @Column("leader_id")
     private int leaderId;
 
-    public int getClanId() {
-        return clanId;
-    }
-
     public int getId() {
         return id;
     }

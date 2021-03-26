@@ -111,7 +111,7 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 			case "FINISH":
 			{
 				final int value = Rnd.get(100);
-				int adena = 0;
+				int adena;
 				if (value < 20)
 				{
 					adena = 3000;

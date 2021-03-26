@@ -20,7 +20,6 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -113,22 +112,6 @@ public final class DuelManager {
         final Duel duel = getDuel(player.getDuelId());
         if (duel != null) {
             duel.onPlayerDefeat(player);
-        }
-    }
-
-    /**
-     * Registers a buff which will be removed if the duel ends
-     *
-     * @param player
-     * @param buff
-     */
-    public void onBuff(Player player, Skill buff) {
-        if ((player == null) || !player.isInDuel() || (buff == null)) {
-            return;
-        }
-        final Duel duel = getDuel(player.getDuelId());
-        if (duel != null) {
-            duel.onBuff(player, buff);
         }
     }
 

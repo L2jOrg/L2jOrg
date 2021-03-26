@@ -60,15 +60,12 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private boolean _usingServerSideTitle;
     private StatsSet _parameters;
     private Sex _sex;
-    private int _chestId;
     private int _rhandId;
     private int _lhandId;
     private int _weaponEnchant;
     private double _exp;
     private double _sp;
     private double _raidPoints;
-    private boolean _unique;
-    private boolean _attackable;
     private boolean _targetable;
     private boolean _talkable;
     private boolean _isQuestMonster;
@@ -78,12 +75,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private boolean _randomAnimation;
     private boolean _flying;
     private boolean _canMove;
-    private boolean _noSleepMode;
-    private boolean _passableDoor;
-    private boolean _hasSummoner;
-    private boolean _canBeSown;
     private boolean _canBeCrt;
-    private boolean _isDeathPenalty;
     private int _corpseTime;
     private AIType _aiType;
     private int _aggroRange;
@@ -97,7 +89,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private int _spiritShotChance;
     private int _minSkillChance;
     private int _maxSkillChance;
-    private double _hitTimeFactor;
     private double _hitTimeFactorSkill;
     private Map<Integer, Skill> _skills;
     private Map<AISkillScope, List<Skill>> _aiSkillLists;
@@ -123,40 +114,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         super(set);
     }
 
-    public static boolean isAssignableTo(Class<?> sub, Class<?> clazz) {
-        // If clazz represents an interface
-        if (clazz.isInterface()) {
-            // check if obj implements the clazz interface
-            for (Class<?> interface1 : sub.getInterfaces()) {
-                if (clazz.getName().equals(interface1.getName())) {
-                    return true;
-                }
-            }
-        } else {
-            do {
-                if (sub.getName().equals(clazz.getName())) {
-                    return true;
-                }
-
-                sub = sub.getSuperclass();
-            }
-            while (sub != null);
-        }
-        return false;
-    }
-
-    /**
-     * Checks if obj can be assigned to the Class represented by clazz.<br>
-     * This is true if, and only if, obj is the same class represented by clazz, or a subclass of it or obj implements the interface represented by clazz.
-     *
-     * @param obj
-     * @param clazz
-     * @return {@code true} if the object can be assigned to the class, {@code false} otherwise
-     */
-    public static boolean isAssignableTo(Object obj, Class<?> clazz) {
-        return isAssignableTo(obj.getClass(), clazz);
-    }
-
     @Override
     public void set(StatsSet set) {
         super.set(set);
@@ -173,7 +130,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
         elementalType = set.getEnum("elementalType", ElementalType.class);
 
-        _chestId = set.getInt("chestId", 0);
         _rhandId = set.getInt("rhandId", 0);
         _lhandId = set.getInt("lhandId", 0);
         _weaponEnchant = set.getInt("weaponEnchant", 0);
@@ -183,8 +139,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _raidPoints = set.getDouble("raidPoints", 0);
         attributeExp = set.getLong("attribute_exp", 0);
 
-        _unique = set.getBoolean("unique", !_type.equals("Monster") && !_type.equals("RaidBoss") && !_type.equals("GrandBoss"));
-        _attackable = set.getBoolean("attackable", true);
         _targetable = set.getBoolean("targetable", true);
         _talkable = set.getBoolean("talkable", true);
         _isQuestMonster = _title.contains("Quest");
@@ -194,12 +148,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _randomAnimation = set.getBoolean("randomAnimation", true);
         _flying = set.getBoolean("flying", false);
         _canMove = set.getBoolean("canMove", true);
-        _noSleepMode = set.getBoolean("noSleepMode", false);
-        _passableDoor = set.getBoolean("passableDoor", false);
-        _hasSummoner = set.getBoolean("hasSummoner", false);
-        _canBeSown = set.getBoolean("canBeSown", false);
         _canBeCrt = set.getBoolean("exCrtEffect", true);
-        _isDeathPenalty = set.getBoolean("isDeathPenalty", false);
 
         _corpseTime = set.getInt("corpseTime", Config.DEFAULT_CORPSE_TIME);
 
@@ -218,7 +167,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _minSkillChance = set.getInt("minSkillChance", 7);
         _maxSkillChance = set.getInt("maxSkillChance", 15);
 
-        _hitTimeFactor = set.getInt("hitTime", 100) / 100d;
         _hitTimeFactorSkill = set.getInt("hitTimeSkill", 100) / 100d;
 
         _collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
@@ -332,10 +280,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         return _sex;
     }
 
-    public int getChestId() {
-        return _chestId;
-    }
-
     public int getRHandId() {
         return _rhandId;
     }
@@ -367,14 +311,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
     public double getRaidPoints() {
         return _raidPoints;
-    }
-
-    public boolean isUnique() {
-        return _unique;
-    }
-
-    public boolean isAttackable() {
-        return _attackable;
     }
 
     public boolean isTargetable() {
@@ -413,28 +349,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         return _canMove;
     }
 
-    public boolean isNoSleepMode() {
-        return _noSleepMode;
-    }
-
-    public boolean isPassableDoor() {
-        return _passableDoor;
-    }
-
-    public boolean hasSummoner() {
-        return _hasSummoner;
-    }
-
-    public boolean canBeSown() {
-        return _canBeSown;
-    }
-
     public boolean canBeCrt() {
         return _canBeCrt;
-    }
-
-    public boolean isDeathPenalty() {
-        return _isDeathPenalty;
     }
 
     public int getCorpseTime() {
@@ -489,10 +405,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         return _maxSkillChance;
     }
 
-    public double getHitTimeFactor() {
-        return _hitTimeFactor;
-    }
-
     public double getHitTimeFactorSkill() {
         return _hitTimeFactorSkill;
     }
@@ -539,38 +451,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
     public MpRewardAffectType getMpRewardAffectType() {
         return _mpRewardAffectType;
-    }
-
-    /**
-     * @param clanName  clan name to check if it belongs to this NPC template clans.
-     * @param clanNames clan names to check if they belong to this NPC template clans.
-     * @return {@code true} if at least one of the clan names belong to this NPC template clans, {@code false} otherwise.
-     */
-    public boolean isClan(String clanName, String... clanNames) {
-        // Using local variable for the sake of reloading since it can be turned to null.
-        final Set<Integer> clans = _clans;
-
-        if (clans == null) {
-            return false;
-        }
-
-        int clanId = NpcData.getInstance().getClanId("ALL");
-        if (clans.contains(clanId)) {
-            return true;
-        }
-
-        clanId = NpcData.getInstance().getClanId(clanName);
-        if (clans.contains(clanId)) {
-            return true;
-        }
-
-        for (String name : clanNames) {
-            clanId = NpcData.getInstance().getClanId(name);
-            if (clans.contains(clanId)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     /**

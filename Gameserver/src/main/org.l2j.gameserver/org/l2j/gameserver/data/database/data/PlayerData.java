@@ -171,10 +171,6 @@ public class PlayerData {
         return classId;
     }
 
-    public void setClassId(int classId) {
-        this.classId = classId;
-    }
-
     public String getAccountName() {
         return accountName;
     }
@@ -305,10 +301,6 @@ public class PlayerData {
 
     public double getCurrentCp() {
         return currentCp;
-    }
-
-    public double getMaxtCp() {
-        return maxCp;
     }
 
     public double getMp() {

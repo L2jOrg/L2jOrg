@@ -45,7 +45,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -113,8 +112,7 @@ public final class Castle extends AbstractResidence {
         spawnSideNpcs();
     }
 
-    @Override
-    protected void load() {
+    private void load() {
         ownerId = getDAO(ClanDAO.class).findOwnerClanIdByCastle(getId());
         if (ownerId != 0) {
             loadFunctions();
@@ -122,8 +120,7 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    @Override
-    protected void initResidenceZone() {
+    private void initResidenceZone() {
         for (CastleZone zone : ZoneManager.getInstance().getAllZones(CastleZone.class)) {
             if (zone.getResidenceId() == getId()) {
                 setResidenceZone(zone);

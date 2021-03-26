@@ -85,9 +85,7 @@ public class ZoneCylinderArea extends ZoneArea {
             if (Math.abs(centerX - ax2) < radius) {
                 return true;
             }
-            if (Math.abs(centerX - ax1) < radius) {
-                return true;
-            }
+            return Math.abs(centerX - ax1) < radius;
         }
 
         return false;

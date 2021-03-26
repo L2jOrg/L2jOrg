@@ -21,13 +21,13 @@ package org.l2j.scripts.handlers.effecthandlers;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.gameserver.datatables.ReportTable;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
@@ -43,7 +43,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class BlockAction extends AbstractEffect {
 
-	private IntSet blockedActions;
+	private final IntSet blockedActions;
 	
 	private BlockAction(StatsSet params) {
 		blockedActions = StreamUtil.collectToSet(Arrays.stream(params.getString("actions").split(" ")).mapToInt(Integer::parseInt));

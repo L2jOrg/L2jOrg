@@ -57,7 +57,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 	private void disconnectCharacter(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		Player player = null;
+		Player player;
 		if (isPlayer(target))
 		{
 			player = (Player) target;

@@ -112,10 +112,6 @@ public final class ArenaParticipantsHolder {
         return _engine;
     }
 
-    public void updateEvent() {
-        _engine.updatePlayersOnStart(this);
-    }
-
     public void checkAndShuffle() {
         final int redSize = _redPlayers.size();
         final int blueSize = _bluePlayers.size();

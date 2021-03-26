@@ -88,7 +88,7 @@ public class AdminMessages implements IAdminCommandHandler
 					{
 						final int x = Integer.parseInt(val.substring(5, val.indexOf(",")));
 						final int y = Integer.parseInt(val.substring(val.indexOf(",") + 1, val.lastIndexOf(",")));
-						final int z = Integer.parseInt(val.substring(val.lastIndexOf(",") + 1, val.length()));
+						final int z = Integer.parseInt(val.substring(val.lastIndexOf(",") + 1));
 						sm.addZoneName(x, y, z);
 					}
 					else if (val.startsWith("castle:"))

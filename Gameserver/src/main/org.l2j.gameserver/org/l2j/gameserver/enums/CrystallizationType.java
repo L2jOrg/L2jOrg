@@ -25,5 +25,5 @@ public enum CrystallizationType {
     NONE,
     WEAPON,
     ARMOR,
-    ACCESORY;
+    ACCESORY
 }

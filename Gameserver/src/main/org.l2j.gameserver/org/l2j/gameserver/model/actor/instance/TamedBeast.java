@@ -22,14 +22,13 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
@@ -37,8 +36,6 @@ import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.StopMove;
 import org.l2j.gameserver.util.MathUtil;
 
-import java.util.Collection;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 // While a tamed beast behaves a lot like a pet (ingame) and does have
@@ -47,27 +44,20 @@ import java.util.concurrent.Future;
 // This class handles the running tasks, AI, and feed of the mob.
 // The (mostly optional) AI on feeding the spawn is handled by the datapack ai script
 public final class TamedBeast extends FeedableBeast {
-    private static final int MAX_DISTANCE_FROM_HOME = 30000;
     private static final int MAX_DISTANCE_FROM_OWNER = 2000;
     private static final int MAX_DURATION = 1200000; // 20 minutes
     private static final int DURATION_CHECK_INTERVAL = 60000; // 1 minute
-    private static final int DURATION_INCREASE_INTERVAL = 20000; // 20 secs (gained upon feeding)
     private static final int BUFF_INTERVAL = 5000; // 5 seconds
     protected Player _owner;
     protected boolean _isFreyaBeast;
     private int _foodSkillId;
     private int _remainingTime = MAX_DURATION;
-    private int _homeX;
-    private int _homeY;
-    private int _homeZ;
     private Future<?> _buffTask = null;
     private Future<?> _durationCheckTask = null;
-    private Collection<Skill> _beastSkills = null;
 
     public TamedBeast(int npcTemplateId) {
         super(NpcData.getInstance().getTemplate(npcTemplateId));
         setInstanceType(InstanceType.L2TamedBeastInstance);
-        setHome(this);
     }
 
     public TamedBeast(int npcTemplateId, Player owner, int foodSkillId, int x, int y, int z) {
@@ -78,7 +68,6 @@ public final class TamedBeast extends FeedableBeast {
         setCurrentMp(getMaxMp());
         setOwner(owner);
         setFoodType(foodSkillId);
-        setHome(x, y, z);
         spawnMe(x, y, z);
     }
 
@@ -89,34 +78,11 @@ public final class TamedBeast extends FeedableBeast {
         setCurrentHp(getMaxHp());
         setCurrentMp(getMaxMp());
         setFoodType(food);
-        setHome(x, y, z);
         spawnMe(x, y, z);
         setOwner(owner);
         if (isFreyaBeast) {
             getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
         }
-    }
-
-    public void onReceiveFood() {
-        // Eating food extends the duration by 20secs, to a max of 20minutes
-        _remainingTime += DURATION_INCREASE_INTERVAL;
-        if (_remainingTime > MAX_DURATION) {
-            _remainingTime = MAX_DURATION;
-        }
-    }
-
-    public Location getHome() {
-        return new Location(_homeX, _homeY, _homeZ);
-    }
-
-    public void setHome(Creature c) {
-        setHome(c.getX(), c.getY(), c.getZ());
-    }
-
-    public void setHome(int x, int y, int z) {
-        _homeX = x;
-        _homeY = y;
-        _homeZ = z;
     }
 
     public int getRemainingTime() {
@@ -175,29 +141,6 @@ public final class TamedBeast extends FeedableBeast {
         return !_isFreyaBeast;
     }
 
-    public boolean isFreyaBeast() {
-        return _isFreyaBeast;
-    }
-
-    public void addBeastSkill(Skill skill) {
-        if (_beastSkills == null) {
-            _beastSkills = ConcurrentHashMap.newKeySet();
-        }
-        _beastSkills.add(skill);
-    }
-
-    public void castBeastSkills() {
-        if ((_owner == null) || (_beastSkills == null)) {
-            return;
-        }
-        int delay = 100;
-        for (Skill skill : _beastSkills) {
-            ThreadPool.schedule(new buffCast(skill), delay);
-            delay += (100 + skill.getHitTime());
-        }
-        ThreadPool.schedule(new buffCast(null), delay);
-    }
-
     public Player getOwner() {
         return _owner;
     }
@@ -234,10 +177,6 @@ public final class TamedBeast extends FeedableBeast {
         } else {
             deleteMe(); // despawn if no owner
         }
-    }
-
-    public boolean isTooFarFromHome() {
-        return !MathUtil.isInsideRadius3D(this, _homeX, _homeY, _homeZ, MAX_DISTANCE_FROM_HOME);
     }
 
     @Override
@@ -410,23 +349,6 @@ public final class TamedBeast extends FeedableBeast {
                 if (_tamedBeast.getRemainingTime() <= 0) {
                     _tamedBeast.deleteMe();
                 }
-            }
-        }
-    }
-
-    private class buffCast implements Runnable {
-        private final Skill _skill;
-
-        public buffCast(Skill skill) {
-            _skill = skill;
-        }
-
-        @Override
-        public void run() {
-            if (_skill == null) {
-                getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
-            } else {
-                sitCastAndFollow(_skill, _owner);
             }
         }
     }

@@ -24,21 +24,25 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * @author Gigi
  */
 public class ServerRestartManager {
-    static final Logger LOGGER = LoggerFactory.getLogger(ServerRestartManager.class.getName());
-
-    private String nextRestartTime = "unknown";
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServerRestartManager.class);
+    private static boolean running = false;
 
     private ServerRestartManager() {
+
+    }
+
+    public static synchronized void init() {
+        if(running) {
+            return;
+        }
         try {
             final Calendar currentTime = Calendar.getInstance();
             final Calendar restartTime = Calendar.getInstance();
@@ -68,28 +72,17 @@ public class ServerRestartManager {
             }
 
             if (lastRestart != null) {
-                nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
                 ThreadPool.schedule(new ServerRestartTask(), lastDelay - 600000);
-                LOGGER.info("Scheduled server restart at " + lastRestart.getTime() + ".");
+                LOGGER.info("Scheduled server restart at {}.", lastRestart.getTime());
+                running = true;
             }
         } catch (Exception e) {
             LOGGER.info("The scheduled server restart config is not set properly, please correct it!");
+            running = false;
         }
     }
 
-    public String getNextRestartTime() {
-        return nextRestartTime;
-    }
-
-    public static ServerRestartManager getInstance() {
-        return Singleton.INSTANCE;
-    }
-
-    private static class Singleton {
-        private static final ServerRestartManager INSTANCE = new ServerRestartManager();
-    }
-
-    static class ServerRestartTask implements Runnable {
+    private static class ServerRestartTask implements Runnable {
         @Override
         public void run() {
             Shutdown.getInstance().startShutdown(null, 600, true);

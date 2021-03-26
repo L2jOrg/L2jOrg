@@ -75,8 +75,7 @@ public class ExtendDropData extends GameXmlReader {
                 final int itemCount = parseInt(itemNode.getAttributes(), "count");
                 final int itemMaxCount = parseInt(itemNode.getAttributes(), "maxCount");
                 final double itemChance = parseDouble(itemNode.getAttributes(), "chance");
-                final double itemAdditionalChance = parseDouble(itemNode.getAttributes(), "additionalChance");
-                items.add(new ExtendDropItemHolder(itemId, itemCount, itemMaxCount, itemChance, itemAdditionalChance));
+                items.add(new ExtendDropItemHolder(itemId, itemCount, itemMaxCount, itemChance));
             }));
             set.set("items", items);
 

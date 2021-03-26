@@ -455,7 +455,6 @@ public final class Q00662_AGameOfCards extends Quest
 									if (i4 == i5)
 									{
 										i6 = i6 + 10;
-										i8 = i8 + 1;
 									}
 								}
 							}
@@ -469,7 +468,6 @@ public final class Q00662_AGameOfCards extends Quest
 									if (i4 == i5)
 									{
 										i6 = i6 + 1;
-										i8 = i8 + 1;
 									}
 								}
 							}
@@ -725,7 +723,7 @@ public final class Q00662_AGameOfCards extends Quest
 	
 	private static String setHtml(String htmltext, int var, String regex)
 	{
-		String replacement = null;
+		String replacement;
 		switch (var)
 		{
 			case 1:

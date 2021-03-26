@@ -24,8 +24,8 @@ import org.l2j.gameserver.network.authcomm.SendablePacket;
 
 public class ReduceAccountPoints extends SendablePacket
 {
-	private String account;
-	private int count;
+	private final String account;
+	private final int count;
 
 	public ReduceAccountPoints(String account, int count)
 	{

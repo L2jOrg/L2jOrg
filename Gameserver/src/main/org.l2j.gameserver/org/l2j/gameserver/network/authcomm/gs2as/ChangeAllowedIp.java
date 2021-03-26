@@ -24,8 +24,8 @@ import org.l2j.gameserver.network.authcomm.SendablePacket;
 
 public class ChangeAllowedIp extends SendablePacket
 {
-	private String account;
-	private String ip;
+	private final String account;
+	private final String ip;
 
 	public ChangeAllowedIp(String account, String ip)
 	{

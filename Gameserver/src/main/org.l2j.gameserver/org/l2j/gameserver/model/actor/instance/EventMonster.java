@@ -53,7 +53,4 @@ public class EventMonster extends Monster {
         return drop_on_ground;
     }
 
-    public boolean eventSkillAttackBlocked() {
-        return block_skill_attack;
-    }
 }

@@ -21,11 +21,9 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
-import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchEnd;
 
@@ -42,8 +40,6 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author durgus, DS
  */
 public class OlympiadStadiumZone extends SpawnZone {
-    private final List<Door> doors = new ArrayList<>(2);
-    private final List<Spawn> buffers = new ArrayList<>(2);
     private final List<Location> spectatorLocations = new ArrayList<>(1);
 
     public OlympiadStadiumZone(int id) {
@@ -81,18 +77,6 @@ public class OlympiadStadiumZone extends SpawnZone {
         if (isPlayer(creature)) {
             creature.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
         }
-    }
-
-    public List<Door> getDoors() {
-        return doors;
-    }
-
-    public List<Spawn> getBuffers() {
-        return buffers;
-    }
-
-    public List<Location> getSpectatorSpawns() {
-        return spectatorLocations;
     }
 
     private static final class KickPlayer implements Runnable {

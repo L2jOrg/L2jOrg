@@ -67,7 +67,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
     /**
      * The link on the NpcTemplate object containing generic and static properties of this spawn (ex : RewardExp, RewardSP, AggroRange...)
      */
-    private NpcTemplate _template;
+    private final NpcTemplate _template;
     /**
      * The maximum number of Folk that can manage this Spawn
      */
@@ -180,15 +180,6 @@ public class Spawn extends Location implements IIdentifiable, INamable {
     @Override
     public String getName() {
         return _name;
-    }
-
-    /**
-     * Set the String Identifier of this spawn.
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        _name = name;
     }
 
     /**
@@ -508,14 +499,6 @@ public class Spawn extends Location implements IIdentifiable, INamable {
         return null;
     }
 
-    public boolean deleteLastNpc() {
-        return !_spawnedNpcs.isEmpty() && _spawnedNpcs.getLast().deleteMe();
-    }
-
-    public final Deque<Npc> getSpawnedNpcs() {
-        return _spawnedNpcs;
-    }
-
     public NpcTemplate getTemplate() {
         return _template;
     }
@@ -526,10 +509,6 @@ public class Spawn extends Location implements IIdentifiable, INamable {
 
     public void setInstanceId(int instanceId) {
         _instanceId = instanceId;
-    }
-
-    public final boolean getRandomWalking() {
-        return _randomWalk;
     }
 
     public final void setRandomWalking(boolean value) {

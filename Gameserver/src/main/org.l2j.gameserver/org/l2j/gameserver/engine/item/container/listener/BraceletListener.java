@@ -34,7 +34,7 @@ public final class BraceletListener implements PlayerInventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyUnequipped(InventorySlot slot, Item item, Inventory inventory) {
         if (item.getBodyPart() == BodyPart.RIGHT_BRACELET) {
             InventorySlot.talismans().forEach(inventory::unEquipItemInSlot);
         }
@@ -42,7 +42,7 @@ public final class BraceletListener implements PlayerInventoryListener {
 
     // Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
     @Override
-    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyEquipped(InventorySlot slot, Item item, Inventory inventory) {
     }
 
     public static BraceletListener provider() {

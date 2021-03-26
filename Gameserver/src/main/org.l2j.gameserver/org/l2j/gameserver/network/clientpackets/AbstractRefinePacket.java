@@ -67,11 +67,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
             return false;
         }
         // Count must be greater or equal of required number
-        if (fee.getItemCount() > feeItem.getCount()) {
-            return false;
-        }
-
-        return true;
+        return fee.getItemCount() <= feeItem.getCount();
     }
 
     /**
@@ -92,11 +88,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
             return false;
         }
         // Lifestone must be located in inventory
-        if (mineralItem.getItemLocation() != ItemLocation.INVENTORY) {
-            return false;
-        }
-
-        return true;
+        return mineralItem.getItemLocation() == ItemLocation.INVENTORY;
     }
 
     /**

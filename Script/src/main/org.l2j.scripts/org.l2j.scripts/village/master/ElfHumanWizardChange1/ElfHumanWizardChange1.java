@@ -33,7 +33,7 @@ import org.l2j.scripts.ai.AbstractNpcAI;
 public final class ElfHumanWizardChange1 extends AbstractNpcAI
 {
 	// NPCs
-	private static int[] NPCS =
+	private static final int[] NPCS =
 	{
 		30037, // Levian
 		30070, // Sylvain
@@ -283,7 +283,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
+		String htmltext;
 		final Race playerRace = player.getRace();
 		if (player.isInCategory(CategoryType.MAGE_GROUP) && ((playerRace == Race.HUMAN) || (playerRace == Race.ELF)))
 		{

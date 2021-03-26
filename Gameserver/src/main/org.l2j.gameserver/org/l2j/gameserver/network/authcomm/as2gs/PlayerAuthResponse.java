@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
 import org.l2j.commons.network.SessionKey;
-import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
@@ -31,9 +30,6 @@ import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.serverpackets.LoginFail;
 import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
-import org.l2j.gameserver.network.serverpackets.html.TutorialShowHtml;
-
-import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -93,21 +89,4 @@ public class PlayerAuthResponse extends ReceivablePacket {
         }
     }
 
-    private boolean hasMoreClientThanLimit(GameClient client, int limit, List<GameClient> clients) {
-        int activeWindows = clients.size();
-
-        if(activeWindows >= limit) {
-            String html = HtmCache.getInstance().getHtm(null,"windows_limit_ip.htm");
-            if(nonNull(html)) {
-                html = html.replace("<?active_windows?>", String.valueOf(activeWindows));
-                html = html.replace("<?windows_limit?>", String.valueOf(limit));
-                client.close(new TutorialShowHtml(html));
-            }
-            else {
-                client.close(new LoginFail(LoginFail.ACCESS_FAILED_TRY_LATER));
-            }
-            return true;
-        }
-        return false;
-    }
 }

@@ -19,11 +19,8 @@
  */
 package org.l2j.gameserver.model.eventengine;
 
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.nio.file.Path;
 
@@ -42,40 +39,6 @@ public abstract class AbstractEvent extends AbstractScript {
         return null;
     }
 
-    /**
-     * @param player
-     * @return {@code true} if player is on event, {@code false} otherwise.
-     */
-    public boolean isOnEvent(Player player) {
-        return false;
-    }
-
-    /**
-     * @param player
-     * @return {@code true} if player is blocked from leaving the game, {@code false} otherwise.
-     */
-    public boolean isBlockingExit(Player player) {
-        return false;
-    }
-
-    /**
-     * @param player
-     * @return {@code true} if player is blocked from receiving death penalty upon death, {@code false} otherwise.
-     */
-    public boolean isBlockingDeathPenalty(Player player) {
-        return false;
-    }
-
-    /**
-     * @param player
-     * @return {@code true} if player can revive after death, {@code false} otherwise.
-     */
-    public boolean canRevive(Player player) {
-        return true;
-    }
-
     public abstract void sendMessage(SystemMessageId messageId);
-
-    public abstract void sendPacket(ServerPacket packet);
 
 }

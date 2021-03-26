@@ -174,15 +174,6 @@ public final class BuffInfo {
     }
 
     /**
-     * Gets the period start ticks.
-     *
-     * @return the period start
-     */
-    public int getPeriodStartTicks() {
-        return _periodStartTicks;
-    }
-
-    /**
      * @return the item that triggered this skill
      */
     public Item getItem() {
@@ -203,15 +194,6 @@ public final class BuffInfo {
      */
     public int getTime() {
         return _abnormalTime - ((WorldTimeController.getInstance().getGameTicks() - _periodStartTicks) / WorldTimeController.TICKS_PER_SECOND);
-    }
-
-    /**
-     * Verify if this buff info has been cancelled.
-     *
-     * @return {@code true} if this buff info has been cancelled, {@code false} otherwise
-     */
-    public boolean isRemoved() {
-        return _isRemoved;
     }
 
     /**
@@ -329,7 +311,7 @@ public final class BuffInfo {
                 final EffectTickTask effectTask = new EffectTickTask(this, effect);
                 var effectTickRatio = getSettings(CharacterSettings.class).effectTickRatio() * effect.getTicks();
                 final ScheduledFuture<?> scheduledFuture = ThreadPool.scheduleAtFixedRate(effectTask, effectTickRatio, effectTickRatio);
-                addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
+                addTask(effect, new EffectTaskInfo(scheduledFuture));
             }
         }
     }

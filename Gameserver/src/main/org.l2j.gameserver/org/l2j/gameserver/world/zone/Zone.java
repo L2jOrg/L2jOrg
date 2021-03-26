@@ -359,10 +359,6 @@ public abstract class Zone extends ListenersContainer {
         enabled = state;
     }
 
-    public InstanceType getTargetType() {
-        return target;
-    }
-
     public void setTargetType(InstanceType type) {
         target = type;
         checkAffected = true;

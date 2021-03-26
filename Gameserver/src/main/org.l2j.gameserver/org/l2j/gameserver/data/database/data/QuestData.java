@@ -31,14 +31,6 @@ public class QuestData {
     private String var;
     private String value;
 
-    public int getPlayerId() {
-        return playerId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public String getVar() {
         return var;
     }

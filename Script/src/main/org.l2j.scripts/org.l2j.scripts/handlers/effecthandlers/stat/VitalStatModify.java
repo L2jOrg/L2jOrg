@@ -19,12 +19,12 @@
 package org.l2j.scripts.handlers.effecthandlers.stat;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.stats.Stat;
 
 /**
@@ -57,7 +57,7 @@ public class VitalStatModify extends AbstractStatEffect {
             case MAX_CP -> effected.setCurrentCp(effected.getCurrentCp() + power);
             case MAX_HP -> effected.setCurrentHp(effected.getCurrentHp() + power);
             case MAX_MP -> effected.setCurrentMp(effected.getCurrentMp() + power);
-        };
+        }
     }
 
     private void instantPercent(Creature effected) {

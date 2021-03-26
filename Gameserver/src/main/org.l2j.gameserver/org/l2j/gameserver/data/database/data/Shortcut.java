@@ -57,18 +57,6 @@ public class Shortcut {
     @Column("sub_level")
     private int subLevel;
 
-    /**
-     * Slot from 0 to 11.
-     */
-    @NonUpdatable
-    private int slot;
-
-    /**
-     * Page from 0 to 23.
-     */
-    @NonUpdatable
-    private int page;
-
     @NonUpdatable
     private int sharedReuseGroup = -1;
 
@@ -129,24 +117,6 @@ public class Shortcut {
      */
     public int getSubLevel() {
         return subLevel;
-    }
-
-    /**
-     * Gets the shortcut page.
-     *
-     * @return the page
-     */
-    public int getPage() {
-        return page;
-    }
-
-    /**
-     * Gets the shortcut slot.
-     *
-     * @return the slot
-     */
-    public int getSlot() {
-        return slot;
     }
 
     /**

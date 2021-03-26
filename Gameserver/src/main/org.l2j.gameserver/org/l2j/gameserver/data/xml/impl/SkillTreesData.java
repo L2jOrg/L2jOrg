@@ -688,17 +688,6 @@ public final class SkillTreesData extends GameXmlReader {
         return result;
     }
 
-    public void cleanSkillUponAwakening(Player player) {
-        for (Skill skill : player.getAllSkills()) {
-            final int maxLvl = SkillEngine.getInstance().getMaxLevel(skill.getId());
-            final long hashCode = SkillEngine.skillHashCode(skill.getId(), maxLvl);
-
-            if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId())) {
-                player.removeSkill(skill, true, true);
-            }
-        }
-    }
-
 
     /**
      * Checks if is hero skill.
@@ -737,10 +726,6 @@ public final class SkillTreesData extends GameXmlReader {
 
     public boolean isRemoveSkill(ClassId classId, int skillId) {
         return removeSkillCache.getOrDefault(classId, Containers.emptyIntSet()).contains(skillId);
-    }
-
-    private boolean isCurrentClassSkillNoParent(ClassId classId, Long hashCode) {
-        return classSkillTrees.getOrDefault(classId, Containers.emptyLongMap()).containsKey(hashCode);
     }
 
     /**

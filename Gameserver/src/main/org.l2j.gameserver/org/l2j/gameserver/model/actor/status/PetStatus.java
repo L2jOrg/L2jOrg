@@ -26,7 +26,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStatus extends SummonStatus {
-    private int _currentFed = 0; // Current Fed of the Pet
 
     public PetStatus(Pet activeChar) {
         super(activeChar);
@@ -54,14 +53,6 @@ public class PetStatus extends SummonStatus {
             }
             getOwner().getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
         }
-    }
-
-    public int getCurrentFed() {
-        return _currentFed;
-    }
-
-    public void setCurrentFed(int value) {
-        _currentFed = value;
     }
 
     @Override

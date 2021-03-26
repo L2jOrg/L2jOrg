@@ -38,13 +38,11 @@ public class ItemInfo {
     private int enchant;
     private VariationInstance augmentation;
     private int locationSlot;
-    private int type1;
     private int type2;
     private EnsoulOption soulCrystalOption;
     private EnsoulOption soulCrystalSpecialOption;
     private int[] enchantOption;
     private int time;
-    private int price;
 
     private ItemChangeType change;
     private boolean _available = true;
@@ -75,7 +73,6 @@ public class ItemInfo {
         count = item.getCount();
 
         // Get custom item types (used loto, race tickets)
-        type1 = item.getCustomType1();
         type2 = item.getType2();
 
         // Verify if the Item is equipped
@@ -120,7 +117,6 @@ public class ItemInfo {
         count = item.getCount();
 
         // Get custom item types (used loto, race tickets)
-        type1 = item.getCustomType1();
         type2 = item.getCustomType2();
 
         // Verify if the Item is equipped
@@ -145,7 +141,6 @@ public class ItemInfo {
 
         template = item.getTemplate();
         count = item.getCount();
-        type1 = template.getType1();
         type2 = template.getType2();
         change = ItemChangeType.MODIFIED;
         time = -9999;
@@ -169,14 +164,6 @@ public class ItemInfo {
 
     public long getCount() {
         return count;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public int getCustomType1() {
-        return type1;
     }
 
     public int getEquipped() {
@@ -234,10 +221,6 @@ public class ItemInfo {
 
     public boolean isQuestItem() {
         return template.isQuestItem();
-    }
-
-    public void setReuse(int reuse) {
-        this.reuse = reuse;
     }
 
     public int getReuse() {

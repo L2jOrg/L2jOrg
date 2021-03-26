@@ -344,10 +344,6 @@ public class BossManager {
         return npcs;
     }
 
-    public IntMap<Spawn> findNpcSpawnTemplate() {
-        return spawns;
-    }
-
     /**
      * Saves and clears the raid npces status, including all schedules.
      */

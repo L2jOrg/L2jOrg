@@ -94,8 +94,9 @@ public class Npc extends Creature {
      * Minimum interval between social packets
      */
     private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
-    private static final String OLYMPIAD_HTML_PATH = "data/html/olympiad/";
+
     private final boolean _isQuestMonster = getTemplate().isQuestMonster();
+    private final int currentEnchant;
     /**
      * The Spawn object that manage this Folk
      */
@@ -121,18 +122,15 @@ public class Npc extends Creature {
      */
     private boolean _isRandomAnimationEnabled = true;
     private boolean _isRandomWalkingEnabled = true;
-    private boolean _isTalkable = getTemplate().isTalkable();
+
     private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
     private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
-    private int _currentEnchant; // normally this shouldn't change from the template, but there exist exceptions
     private double _currentCollisionHeight; // used for npc grow effect skills
     private double _currentCollisionRadius; // used for npc grow effect skills
 
     private int _soulshotamount = 0;
     private int _spiritshotamount = 0;
     private int _displayEffect = 0;
-
-    private int _killingBlowWeaponId;
 
     private int _cloneObjId; // Used in NpcInfo packet to clone the specified player.
     private int _clanId; // Used in NpcInfo packet to show the specified clan.
@@ -172,7 +170,7 @@ public class Npc extends Creature {
         // initialize the "current" equipment
         _currentLHandId = getTemplate().getLHandId();
         _currentRHandId = getTemplate().getRHandId();
-        _currentEnchant = Config.ENABLE_RANDOM_ENCHANT_EFFECT ? Rnd.get(4, 21) : getTemplate().getWeaponEnchant();
+        currentEnchant = Config.ENABLE_RANDOM_ENCHANT_EFFECT ? Rnd.get(4, 21) : getTemplate().getWeaponEnchant();
 
         // initialize the "current" collisions
         _currentCollisionHeight = getTemplate().getfCollisionHeight();
@@ -377,7 +375,7 @@ public class Npc extends Creature {
     }
 
     public int getEnchantEffect() {
-        return _currentEnchant;
+        return currentEnchant;
     }
 
     /**
@@ -429,10 +427,7 @@ public class Npc extends Creature {
             return false;
         } else if (player.getInstanceWorld() != getInstanceWorld()) {
             return false;
-        } else if (_isBusy) {
-            return false;
-        }
-        return true;
+        } else return !_isBusy;
     }
 
     /**
@@ -488,16 +483,6 @@ public class Npc extends Creature {
     }
 
     /**
-     * Return closest castle in defined distance
-     *
-     * @param maxDistance long
-     * @return Castle
-     */
-    public final Castle getCastle(long maxDistance) {
-        return CastleManager.getInstance().findNearestCastle(this, maxDistance);
-    }
-
-    /**
      * Open a quest or chat window on client with the text of the Folk in function of the command.<br>
      * <B><U> Example of use </U> :</B>
      * <ul>
@@ -536,14 +521,6 @@ public class Npc extends Creature {
     }
 
     /**
-     * Return null (regular NPCs don't have weapons instances).
-     */
-    @Override
-    public Item getSecondaryWeaponInstance() {
-        return null;
-    }
-
-    /**
      * Return the weapon item equipped in the left hand of the Folk or null.
      */
     @Override
@@ -564,7 +541,7 @@ public class Npc extends Creature {
      * @return the pathfile of the selected HTML file in function of the npcId and of the page number.
      */
     public String getHtmlPath(int npcId, int val) {
-        String pom = "";
+        String pom;
 
         if (val == 0) {
             pom = Integer.toString(npcId);
@@ -612,7 +589,7 @@ public class Npc extends Creature {
      * @param val    The number of the page of the Folk to display
      */
     public void showChatWindow(Player player, int val) {
-        if (!_isTalkable) {
+        if (!isTalkable()) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -713,9 +690,6 @@ public class Npc extends Creature {
         _currentCollisionHeight = getTemplate().getfCollisionHeight();
         _currentCollisionRadius = getTemplate().getfCollisionRadius();
 
-        final Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
-        _killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
-
         DecayTaskManager.getInstance().add(this);
 
         if (_spawn != null) {
@@ -764,7 +738,6 @@ public class Npc extends Creature {
         // Recharge shots
         _soulshotamount = getTemplate().getSoulShot();
         _spiritshotamount = getTemplate().getSpiritShot();
-        _killingBlowWeaponId = 0;
         _isRandomAnimationEnabled = getTemplate().isRandomAnimationEnabled();
         _isRandomWalkingEnabled = getTemplate().isRandomWalkEnabled();
 
@@ -914,10 +887,6 @@ public class Npc extends Creature {
         return getClass().getSimpleName() + ":" + getName() + "(" + getId() + ")[" + getObjectId() + "]";
     }
 
-    public boolean isDecayed() {
-        return _isDecayed;
-    }
-
     public void setDecayed(boolean decayed) {
         _isDecayed = decayed;
     }
@@ -929,26 +898,8 @@ public class Npc extends Creature {
         }
     }
 
-    // Two functions to change the appearance of the equipped weapons on the NPC
-    // This is only useful for a few NPCs and is most likely going to be called from AI
-    public void setLHandId(int newWeaponId) {
-        _currentLHandId = newWeaponId;
-        broadcastInfo();
-    }
-
     public void setRHandId(int newWeaponId) {
         _currentRHandId = newWeaponId;
-        broadcastInfo();
-    }
-
-    public void setLRHandId(int newLWeaponId, int newRWeaponId) {
-        _currentRHandId = newRWeaponId;
-        _currentLHandId = newLWeaponId;
-        broadcastInfo();
-    }
-
-    public void setEnchant(int newEnchantValue) {
-        _currentEnchant = newEnchantValue;
         broadcastInfo();
     }
 
@@ -1007,10 +958,6 @@ public class Npc extends Creature {
 
     public AIType getAiType() {
         return getTemplate().getAIType();
-    }
-
-    public boolean hasDisplayEffect(int val) {
-        return _displayEffect == val;
     }
 
     public int getDisplayEffect() {
@@ -1092,21 +1039,6 @@ public class Npc extends Creature {
     }
 
     /**
-     * @param npc NPC to check
-     * @return {@code true} if both given NPC and this NPC is in the same spawn group, {@code false} otherwise
-     */
-    public boolean isInMySpawnGroup(Npc npc) {
-        return ((getSpawn() != null) && (npc.getSpawn() != null) && (getSpawn().getName() != null) && (getSpawn().getName().equals(npc.getSpawn().getName())));
-    }
-
-    /**
-     * @return {@code true} if NPC currently located in own spawn point, {@code false} otherwise
-     */
-    public boolean staysInSpawnLoc() {
-        return ((_spawn != null) && (_spawn.getX() == getX()) && (_spawn.getY() == getY()));
-    }
-
-    /**
      * @return {@code true} if {@link NpcVariables} instance is attached to current player's scripts, {@code false} otherwise.
      */
     public boolean hasVariables() {
@@ -1121,51 +1053,6 @@ public class Npc extends Creature {
             variables = new NpcVariables();
         }
         return variables;
-    }
-
-    /**
-     * Send an "event" to all NPCs within given radius
-     *
-     * @param eventName - name of event
-     * @param radius    - radius to send event
-     * @param reference - WorldObject to pass, if needed
-     */
-    public void broadcastEvent(String eventName, int radius, WorldObject reference) {
-        World.getInstance().forEachVisibleObjectInRange(this, Npc.class, radius, obj ->
-        {
-            if (obj.hasListener(EventType.ON_NPC_EVENT_RECEIVED)) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, obj, reference), obj);
-            }
-        });
-    }
-
-    /**
-     * Sends an event to a given object.
-     *
-     * @param eventName the event name
-     * @param receiver  the receiver
-     * @param reference the reference
-     */
-    public void sendScriptEvent(String eventName, WorldObject receiver, WorldObject reference) {
-        EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (Npc) receiver, reference), receiver);
-    }
-
-    /**
-     * Gets point in range between radiusMin and radiusMax from this NPC
-     *
-     * @param radiusMin miminal range from NPC (not closer than)
-     * @param radiusMax maximal range from NPC (not further than)
-     * @return Location in given range from this NPC
-     */
-    public Location getPointInRange(int radiusMin, int radiusMax) {
-        if ((radiusMax == 0) || (radiusMax < radiusMin)) {
-            return new Location(getX(), getY(), getZ());
-        }
-
-        final int radius = Rnd.get(radiusMin, radiusMax);
-        final double angle = Rnd.nextDouble() * 2 * Math.PI;
-
-        return new Location((int) (getX() + (radius * Math.cos(angle))), (int) (getY() + (radius * Math.sin(angle))), getZ());
     }
 
     /**
@@ -1241,21 +1128,12 @@ public class Npc extends Creature {
     }
 
     /**
-     * Sets if the players can talk with this npc or not
-     *
-     * @param val {@code true} if the players can talk, {@code false} otherwise
-     */
-    public void setIsTalkable(boolean val) {
-        _isTalkable = val;
-    }
-
-    /**
      * Checks if the players can talk to this npc.
      *
      * @return {@code true} if the players can talk, {@code false} otherwise.
      */
     public boolean isTalkable() {
-        return _isTalkable;
+        return getTemplate().isTalkable();
     }
 
     /**
@@ -1265,22 +1143,6 @@ public class Npc extends Creature {
      */
     public boolean isQuestMonster() {
         return _isQuestMonster;
-    }
-
-    /**
-     * @return the id of the weapon with which player killed this npc.
-     */
-    public int getKillingBlowWeapon() {
-        return _killingBlowWeaponId;
-    }
-
-    /**
-     * Sets the weapon id with which this npc was killed.
-     *
-     * @param weaponId
-     */
-    public void setKillingBlowWeapon(int weaponId) {
-        _killingBlowWeaponId = weaponId;
     }
 
     /**
@@ -1347,17 +1209,6 @@ public class Npc extends Creature {
     }
 
     /**
-     * Broadcasts NpcSay packet to all known players with custom string in specific radius.
-     *
-     * @param chatType the chat type
-     * @param text     the text
-     * @param radius   the radius
-     */
-    public void broadcastSay(ChatType chatType, String text, int radius) {
-        Broadcast.toKnownPlayersInRadius(this, new NpcSay(this, chatType, text), radius);
-    }
-
-    /**
      * Broadcasts NpcSay packet to all known players with NPC string id in specific radius.
      *
      * @param chatType    the chat type
@@ -1420,23 +1271,11 @@ public class Npc extends Creature {
         return _nameString;
     }
 
-    public void setNameString(NpcStringId nameString) {
-        _nameString = nameString;
-    }
-
     /**
      * @return the NpcStringId for title
      */
     public NpcStringId getTitleString() {
         return _titleString;
-    }
-
-    public void setTitleString(NpcStringId titleString) {
-        _titleString = titleString;
-    }
-
-    public void sendChannelingEffect(Creature target, int state) {
-        broadcastPacket(new ExShowChannelingEffect(this, target, state));
     }
 
     public BossStatus getRaidBossStatus() {

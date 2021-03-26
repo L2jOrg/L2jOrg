@@ -60,7 +60,6 @@ public class PlayerStats extends PlayableStats {
      */
     private final AtomicInteger _talismanSlots = new AtomicInteger();
     private long _startingXp;
-    private boolean _cloakSlot = false;
     private int _vitalityPoints = 0;
 
     public PlayerStats(Player activeChar) {
@@ -288,12 +287,6 @@ public class PlayerStats extends PlayableStats {
         return _startingXp;
     }
 
-    public void setStartingExp(long value) {
-        if (Config.BOTREPORT_ENABLE) {
-            _startingXp = value;
-        }
-    }
-
     /**
      * Gets the maximum talisman count.
      *
@@ -305,14 +298,6 @@ public class PlayerStats extends PlayableStats {
 
     public void addTalismanSlots(int count) {
         _talismanSlots.addAndGet(count);
-    }
-
-    public boolean canEquipCloak() {
-        return _cloakSlot;
-    }
-
-    public void setCloakSlotStatus(boolean cloakSlot) {
-        _cloakSlot = cloakSlot;
     }
 
     @Override

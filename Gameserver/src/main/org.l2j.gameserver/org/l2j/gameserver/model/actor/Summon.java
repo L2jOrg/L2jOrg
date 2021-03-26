@@ -71,7 +71,6 @@ public abstract class Summon extends Playable {
     private Player owner;
     private boolean _follow = true;
     private boolean _previousFollowStatus = true;
-    private int _summonPoints = 0;
     // @formatter:on
 
     public Summon(NpcTemplate template, Player owner) {
@@ -421,11 +420,6 @@ public abstract class Summon extends Playable {
     }
 
     @Override
-    public Item getSecondaryWeaponInstance() {
-        return null;
-    }
-
-    @Override
     public Weapon getSecondaryWeaponItem() {
         return null;
     }
@@ -434,8 +428,8 @@ public abstract class Summon extends Playable {
      * Return True if the Summon is invulnerable or if the summoner is in spawn protection.
      */
     @Override
-    public boolean isInvul() {
-        return super.isInvul() || owner.isSpawnProtected();
+    public boolean isInvulnerable() {
+        return super.isInvulnerable() || owner.isSpawnProtected();
     }
 
     /**
@@ -854,13 +848,6 @@ public abstract class Summon extends Playable {
         return formId;
     }
 
-    public int getSummonPoints() {
-        return _summonPoints;
-    }
-
-    public void setSummonPoints(int summonPoints) {
-        _summonPoints = summonPoints;
-    }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
         final Player owner = this.owner;

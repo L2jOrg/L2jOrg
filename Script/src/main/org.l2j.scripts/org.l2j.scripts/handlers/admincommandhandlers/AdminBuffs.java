@@ -75,7 +75,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			
 			final StringTokenizer st = new StringTokenizer(command, " ");
-			command = st.nextToken();
+			st.nextToken(); // skip command
 			if (!st.hasMoreTokens())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Skill Id and level are not specified.");
@@ -215,7 +215,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		else if (command.startsWith("admin_removereuse"))
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
-			command = st.nextToken();
+			st.nextToken(); // skip command
 			
 			Player player = null;
 			if (st.hasMoreTokens())
@@ -408,7 +408,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	
 	private static void viewBlockedEffects(Player activeChar, int objId)
 	{
-		Creature target = null;
+		Creature target;
 		try
 		{
 			target = (Creature) World.getInstance().findObject(objId);
@@ -444,7 +444,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			
 			if (getSettings(GeneralSettings.class).auditGM())
 			{
-				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "viewblockedeffects", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");
+				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "viewblockedeffects", target.getName() + " (" + target.getObjectId() + ")", "");
 			}
 		}
 	}

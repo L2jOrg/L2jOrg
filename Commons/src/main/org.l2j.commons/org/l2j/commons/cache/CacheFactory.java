@@ -18,6 +18,8 @@
  */
 package org.l2j.commons.cache;
 
+import org.l2j.commons.util.FileUtil;
+
 import javax.cache.Cache;
 import javax.cache.CacheManager;
 import javax.cache.Caching;
@@ -25,9 +27,9 @@ import javax.cache.configuration.MutableConfiguration;
 import javax.cache.expiry.Duration;
 import javax.cache.expiry.TouchedExpiryPolicy;
 import javax.cache.spi.CachingProvider;
-import java.nio.file.Path;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
@@ -42,7 +44,12 @@ public final class CacheFactory {
 
     public void initialize(String configurationFilePath) {
         CachingProvider cachingProvider = Caching.getCachingProvider();
-        manager = cachingProvider.getCacheManager(Path.of(configurationFilePath).toUri(), getClass().getClassLoader());
+        var config = FileUtil.readToURI(configurationFilePath);
+        if(nonNull(config)) {
+            manager = cachingProvider.getCacheManager(config, getClass().getClassLoader());
+        } else {
+            manager = cachingProvider.getCacheManager();
+        }
     }
 
     public <K, V> Cache<K, V> getCache(String alias) {

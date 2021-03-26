@@ -42,8 +42,8 @@ public class Hopzone extends VoteSystem {
 
     @Override
     public int getVotes() {
-        InputStreamReader isr = null;
-        BufferedReader br = null;
+        InputStreamReader isr;
+        BufferedReader br;
 
         try {
             URLConnection con = new URL(Config.HOPZONE_SERVER_LINK).openConnection();
@@ -54,7 +54,7 @@ public class Hopzone extends VoteSystem {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.contains("<li><span class=\"rank anonymous tooltip\" title")) {
-                    int votes = Integer.valueOf(line.split(">")[2].replace("</span", ""));
+                    int votes = Integer.parseInt(line.split(">")[2].replace("</span", ""));
                     return votes;
                 }
             }
@@ -62,8 +62,7 @@ public class Hopzone extends VoteSystem {
             br.close();
             isr.close();
         } catch (Exception e) {
-            e.printStackTrace();
-            LOGGER.warn("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
+            LOGGER.warn("VoteSystem: Error while getting server vote count from {}.", getSiteName(), e);
         }
 
         return -1;

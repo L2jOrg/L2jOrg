@@ -34,8 +34,6 @@ import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -51,8 +49,6 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class AdminAdmin implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = LoggerFactory.getLogger(AdminAdmin.class);
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_admin",
@@ -379,7 +375,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	private void showMainPage(Player activeChar, String command)
 	{
 		int mode = 0;
-		String filename = null;
+		String filename;
 		try
 		{
 			mode = Integer.parseInt(command.substring(11));

@@ -43,15 +43,6 @@ public class BasicPropertyResist {
     }
 
     /**
-     * Gets the remain time.
-     *
-     * @return the remain time
-     */
-    public Duration getRemainTime() {
-        return Duration.between(Instant.now(), _resistanceEndTime);
-    }
-
-    /**
      * Gets the resist level.
      *
      * @return the resist level

@@ -78,10 +78,6 @@ public final class Seed {
         return _level;
     }
 
-    public final boolean isAlternative() {
-        return _isAlternative;
-    }
-
     public final int getSeedLimit() {
         return _limitSeeds * Config.RATE_DROP_MANOR;
     }

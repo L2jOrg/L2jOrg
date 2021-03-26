@@ -32,7 +32,7 @@ public final class StatsListener implements InventoryListener {
     }
 
     @Override
-    public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyUnequipped(InventorySlot slot, Item item, Inventory inventory) {
         var charStat = inventory.getOwner().getStats();
         item.getTemplate().getFunctionTemplates().forEach(func -> {
             if(func.getStat().hasDefaultFinalizer()) {
@@ -43,7 +43,7 @@ public final class StatsListener implements InventoryListener {
     }
 
     @Override
-    public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
+    public void notifyEquipped(InventorySlot slot, Item item, Inventory inventory) {
         var charStat = inventory.getOwner().getStats();
         item.getTemplate().getFunctionTemplates().forEach(func -> {
             if(func.getStat().hasDefaultFinalizer()) {

@@ -33,11 +33,11 @@ import static java.util.Objects.nonNull;
 public class Configurator {
 
     private static final Logger logger = LoggerFactory.getLogger(Configurator.class);
-    private static final String CONFIGURATOR_PROPERTIES = "./config/configurator.properties";
+    private static final String CONFIGURATOR_PROPERTIES = "config/configurator.properties";
     private static Configurator configurator;
-    private LazyConfiguratorLoader loader;
+    private final LazyConfiguratorLoader loader;
 
-    private Map<Class<? extends Settings>, Settings> settingsMap;
+    private final Map<Class<? extends Settings>, Settings> settingsMap;
 
     private Configurator() {
         settingsMap = new HashMap<>();
@@ -53,10 +53,6 @@ public class Configurator {
         } else {
             loader.load(settings);
         }
-    }
-
-    public void addSettingsClass(String className, String fileConfigurationPath) {
-        loader.addSettingsClass(className, fileConfigurationPath);
     }
 
     public static <T extends Settings> T getSettings(Class<T> settingsClass) {

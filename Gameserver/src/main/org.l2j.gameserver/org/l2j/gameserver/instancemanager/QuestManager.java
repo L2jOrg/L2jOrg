@@ -209,15 +209,6 @@ public final class QuestManager {
         return false;
     }
 
-    public Map<String, Quest> getQuests() {
-        return _quests;
-    }
-
-    public boolean unload(Quest ms) {
-        ms.onSave();
-        return removeScript(ms);
-    }
-
     /**
      * Gets all the registered scripts.
      *

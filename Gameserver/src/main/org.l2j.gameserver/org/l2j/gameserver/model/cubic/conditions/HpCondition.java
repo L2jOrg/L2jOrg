@@ -61,6 +61,6 @@ public class HpCondition implements ICubicCondition {
 
     public enum HpConditionType {
         GREATER,
-        LESSER;
+        LESSER
     }
 }

@@ -132,10 +132,6 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         }
     }
 
-    public boolean isShutdown() {
-        return shutdown;
-    }
-
     public void restart() {
         restart(5);
     }

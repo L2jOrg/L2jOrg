@@ -38,6 +38,6 @@ public class ConditionPlayerInInstance extends Condition {
         if (effector.getActingPlayer() == null) {
             return false;
         }
-        return (effector.getInstanceId() == 0) ? !_inInstance : _inInstance;
+        return (effector.getInstanceId() == 0) != _inInstance;
     }
 }

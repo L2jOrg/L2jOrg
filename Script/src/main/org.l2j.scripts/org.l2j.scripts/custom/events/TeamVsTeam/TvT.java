@@ -132,6 +132,7 @@ public class TvT extends Event
 		addFirstTalkId(MANAGER);
 		addExitZoneId(BLUE_PEACE_ZONE.getId(), RED_PEACE_ZONE.getId());
 		addEnterZoneId(BLUE_PEACE_ZONE.getId(), RED_PEACE_ZONE.getId());
+		setCustom(true);
 	}
 	
 	@Override

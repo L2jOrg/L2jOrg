@@ -20,6 +20,7 @@ package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.gameserver.enums.ShotType;
 
 /**
  * @author JoeAlisson
@@ -28,8 +29,6 @@ import org.l2j.commons.database.annotation.Table;
 public class PlayerVariableData {
 
     public static final int REVENGE_USABLE_FUNCTIONS = 5;
-    public static final String MAGIC_LAMP_EXP = "MAGIC_LAMP_EXP";
-    public static final String MAGIC_LAMP_COUNT = "MAGIC_LAMP_COUNT";
 
     @Column("player_id")
     private int playerId;
@@ -52,20 +51,11 @@ public class PlayerVariableData {
     @Column("ability_points_main_class_used")
     private int abilityPointsMainClassUsed;
 
-    @Column("ability_points_dual_class_used")
-    private int abilityPointsDualClassUsed;
-
     @Column("revelation_skill_main_class_1")
     private int revelationSkillMainClass1;
 
     @Column("revelation_skill_main_class_2")
     private int revelationSkillMainClass2;
-
-    @Column("revelation_skill_dual_class_1")
-    private int revelationSkillDualClass1;
-
-    @Column("revelation_skill_dual_class_2")
-    private int revelationSkillDualClass2;
 
     @Column("extend_drop")
     private String extendDrop;
@@ -121,12 +111,6 @@ public class PlayerVariableData {
     @Column("ui_key_mapping")
     private String uiKeyMapping;
 
-    @Column("attendance_date")
-    private long attendanceDate;
-
-    @Column("attendance_index")
-    private int attendanceIndex;
-
     @Column("monster_return")
     private int monsterReturn;
 
@@ -135,6 +119,9 @@ public class PlayerVariableData {
 
     @Column("lamp_count")
     private int lampCount;
+
+    private int soulshot;
+    private int spiritshot;
 
     public boolean isHairAccessoryEnabled() {
         return hairAccessoryEnabled;
@@ -152,24 +139,12 @@ public class PlayerVariableData {
         return abilityPointsMainClassUsed;
     }
 
-    public int getAbilityPointsDualClassUsed() {
-        return abilityPointsDualClassUsed;
-    }
-
     public int getRevelationSkillMainClass1() {
         return revelationSkillMainClass1;
     }
 
     public int getRevelationSkillMainClass2() {
         return revelationSkillMainClass2;
-    }
-
-    public int getRevelationSkillDualClass1() {
-        return revelationSkillDualClass1;
-    }
-
-    public int getRevelationSkillDualClass2() {
-        return revelationSkillDualClass2;
     }
 
     public String getExtendDrop() {
@@ -248,14 +223,6 @@ public class PlayerVariableData {
         return uiKeyMapping;
     }
 
-    public long getAttendanceDate() {
-        return attendanceDate;
-    }
-
-    public int getAttendanceIndex() {
-        return attendanceIndex;
-    }
-
     public int getMonsterReturn() {
         return monsterReturn;
     }
@@ -266,34 +233,6 @@ public class PlayerVariableData {
 
     public void setWorldChatUsed(int worldChatUsed) {
         this.worldChatUsed = worldChatUsed;
-    }
-
-    public void setVitalityItemsUsed(int vitalityItemsUsed) {
-        this.vitalityItemsUsed = vitalityItemsUsed;
-    }
-
-    public void setAbilityPointsMainClassUsed(int abilityPointsMainClassUsed) {
-        this.abilityPointsMainClassUsed = abilityPointsMainClassUsed;
-    }
-
-    public void setAbilityPointsDualClassUsed(int abilityPointsDualClassUsed) {
-        this.abilityPointsDualClassUsed = abilityPointsDualClassUsed;
-    }
-
-    public void setRevelationSkillMainClass1(int revelationSkillMainClass1) {
-        this.revelationSkillMainClass1 = revelationSkillMainClass1;
-    }
-
-    public void setRevelationSkillMainClass2(int revelationSkillMainClass2) {
-        this.revelationSkillMainClass2 = revelationSkillMainClass2;
-    }
-
-    public void setRevelationSkillDualClass1(int revelationSkillDualClass1) {
-        this.revelationSkillDualClass1 = revelationSkillDualClass1;
-    }
-
-    public void setRevelationSkillDualClass2(int revelationSkillDualClass2) {
-        this.revelationSkillDualClass2 = revelationSkillDualClass2;
     }
 
     public void setExtendDrop(String extendDrop) {
@@ -368,14 +307,6 @@ public class PlayerVariableData {
         this.condOverrideKey = condOverrideKey;
     }
 
-    public void setAttendanceDate(long attendanceDate) {
-        this.attendanceDate = attendanceDate;
-    }
-
-    public void setAttendanceIndex(int attendanceIndex) {
-        this.attendanceIndex = attendanceIndex;
-    }
-
     public void setMonsterReturn(int monsterReturn) {
         this.monsterReturn = monsterReturn;
     }
@@ -419,6 +350,22 @@ public class PlayerVariableData {
 
     public void setLampCount(int count) {
         this.lampCount = count;
+    }
+
+    public int getSoulshot() {
+        return soulshot;
+    }
+
+    public int getSpiritshot() {
+        return spiritshot;
+    }
+
+    public void updateActiveShot(ShotType type, int shotId) {
+        if(type == ShotType.SOULSHOTS) {
+            soulshot = shotId;
+        } else if(type == ShotType.SPIRITSHOTS) {
+            spiritshot = shotId;
+        }
     }
 
     public static PlayerVariableData init(int playerId, byte face, byte hairStyle, byte hairColor) {

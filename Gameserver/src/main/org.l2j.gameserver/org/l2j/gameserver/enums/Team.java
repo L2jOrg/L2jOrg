@@ -27,7 +27,7 @@ public enum Team {
     BLUE(1),
     RED(2);
 
-    private int _id;
+    private final int _id;
 
     Team(int id) {
         _id = id;

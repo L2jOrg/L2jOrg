@@ -35,17 +35,14 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import static java.util.Objects.nonNull;
 
 
 /**
  * @author Nik
  */
 public class Doppelganger extends Npc {
-    protected static final Logger log = LoggerFactory.getLogger(Doppelganger.class.getName());
-
-    private boolean _copySummonerEffects = true;
 
     public Doppelganger(NpcTemplate template, Player owner) {
         super(template);
@@ -68,7 +65,7 @@ public class Doppelganger extends Npc {
     public void onSpawn() {
         super.onSpawn();
 
-        if (_copySummonerEffects && (getSummoner() != null)) {
+        if (nonNull(getSummoner())) {
             for (BuffInfo summonerInfo : getSummoner().getEffectList().getEffects()) {
                 if (summonerInfo.getAbnormalTime() > 0) {
                     final BuffInfo info = new BuffInfo(getSummoner(), this, summonerInfo.getSkill(), false, null, null);
@@ -88,10 +85,6 @@ public class Doppelganger extends Npc {
         } else if (getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW) {
             getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
         }
-    }
-
-    public void setCopySummonerEffects(boolean copySummonerEffects) {
-        _copySummonerEffects = copySummonerEffects;
     }
 
     @Override

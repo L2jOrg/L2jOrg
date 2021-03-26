@@ -19,7 +19,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.enums.CastleSide;
-import org.l2j.gameserver.enums.SiegeGuardType;
 import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.holders.SiegeGuardHolder;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -91,12 +90,11 @@ public final class CastleDataManager extends GameXmlReader {
                                     if ("guard".equals(npcNode.getNodeName())) {
                                         final NamedNodeMap np = npcNode.getAttributes();
                                         final int itemId = parseInt(np, "itemId");
-                                        final SiegeGuardType type = parseEnum(tpNode.getAttributes(), SiegeGuardType.class, "type");
                                         final boolean stationary = parseBoolean(np, "stationary", false);
                                         final int npcId = parseInt(np, "npcId");
                                         final int npcMaxAmount = parseInt(np, "npcMaxAmount");
 
-                                        guards.add(new SiegeGuardHolder(castleId, itemId, type, stationary, npcId, npcMaxAmount));
+                                        guards.add(new SiegeGuardHolder(castleId, itemId, stationary, npcId, npcMaxAmount));
                                     }
                                 }
                                 _siegeGuards.put(castleId, guards);

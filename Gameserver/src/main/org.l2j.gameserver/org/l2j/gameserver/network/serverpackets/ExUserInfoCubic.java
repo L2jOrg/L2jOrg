@@ -40,7 +40,7 @@ public class ExUserInfoCubic extends ServerPacket {
         buffer.writeInt(_activeChar.getObjectId());
         buffer.writeShort(_activeChar.getCubics().size());
 
-        _activeChar.getCubics().keySet().forEach(key -> buffer.writeShort(key.shortValue()));
+        _activeChar.getCubics().keySet().forEach(buffer::writeShort);
 
         buffer.writeInt(_activeChar.getAgathionId());
     }

@@ -565,7 +565,7 @@ public class RecipeController {
             _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
 
             // inform customer of earned item
-            SystemMessage sm = null;
+            SystemMessage sm;
             if (_target != _player) {
                 // inform manufacturer of earned profit
                 if (itemCount == 1) {

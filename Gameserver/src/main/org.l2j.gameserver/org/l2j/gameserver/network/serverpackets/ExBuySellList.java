@@ -33,7 +33,7 @@ import java.util.Collection;
 public class ExBuySellList extends AbstractItemPacket {
     private final boolean _done;
     private final int _inventorySlots;
-    private Collection<Item> _sellList;
+    private final Collection<Item> _sellList;
     private Collection<Item> _refundList = null;
     private double _castleTaxRate = 1;
 

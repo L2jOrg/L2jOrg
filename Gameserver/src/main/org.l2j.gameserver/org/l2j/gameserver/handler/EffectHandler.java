@@ -45,10 +45,6 @@ public final class EffectHandler {
         return factories.get(name);
     }
 
-    public int size() {
-        return factories.size();
-    }
-
 
     public static EffectHandler getInstance() {
         return Singleton.INSTANCE;

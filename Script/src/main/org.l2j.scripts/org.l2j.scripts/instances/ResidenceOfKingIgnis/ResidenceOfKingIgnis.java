@@ -47,17 +47,17 @@ public class ResidenceOfKingIgnis extends AbstractInstance
     private static final int IGNIS = 29105;
 
     // SKILLS
-    private static SkillHolder FIRE_RAG_1 = new SkillHolder(50050, 1);
-    private static SkillHolder FIRE_RAG_2 = new SkillHolder(50050, 2);
-    private static SkillHolder FIRE_RAG_3 = new SkillHolder(50050, 3);
-    private static SkillHolder FIRE_RAG_4 = new SkillHolder(50050, 4);
-    private static SkillHolder FIRE_RAG_5 = new SkillHolder(50050, 5);
-    private static SkillHolder FIRE_RAG_6 = new SkillHolder(50050, 6);
-    private static SkillHolder FIRE_RAG_7 = new SkillHolder(50050, 7);
-    private static SkillHolder FIRE_RAG_8 = new SkillHolder(50050, 8);
-    private static SkillHolder FIRE_RAG_9 = new SkillHolder(50050, 9);
-    private static SkillHolder FIRE_RAG_10 = new SkillHolder(50050, 10);
-    private static SkillHolder FREYA_SAFETY_ZONE = new SkillHolder(50052, 1); // Just for an effect
+    private static final SkillHolder FIRE_RAG_1 = new SkillHolder(50050, 1);
+    private static final SkillHolder FIRE_RAG_2 = new SkillHolder(50050, 2);
+    private static final SkillHolder FIRE_RAG_3 = new SkillHolder(50050, 3);
+    private static final SkillHolder FIRE_RAG_4 = new SkillHolder(50050, 4);
+    private static final SkillHolder FIRE_RAG_5 = new SkillHolder(50050, 5);
+    private static final SkillHolder FIRE_RAG_6 = new SkillHolder(50050, 6);
+    private static final SkillHolder FIRE_RAG_7 = new SkillHolder(50050, 7);
+    private static final SkillHolder FIRE_RAG_8 = new SkillHolder(50050, 8);
+    private static final SkillHolder FIRE_RAG_9 = new SkillHolder(50050, 9);
+    private static final SkillHolder FIRE_RAG_10 = new SkillHolder(50050, 10);
+    private static final SkillHolder FREYA_SAFETY_ZONE = new SkillHolder(50052, 1); // Just for an effect
     // Misc
     private static final Map<Player, Integer> _playerFireRage = new ConcurrentHashMap<>();
     private static final int TEMPLATE_ID = 195;

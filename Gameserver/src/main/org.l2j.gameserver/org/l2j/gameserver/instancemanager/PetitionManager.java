@@ -53,13 +53,6 @@ public final class PetitionManager {
         _completedPetitions = new HashMap<>();
     }
 
-    public void clearCompletedPetitions() {
-        final int numPetitions = _pendingPetitions.size();
-
-        _completedPetitions.clear();
-        LOGGER.info(getClass().getSimpleName() + ": Completed petition data cleared. " + numPetitions + " petition(s) removed.");
-    }
-
     public void clearPendingPetitions() {
         final int numPetitions = _pendingPetitions.size();
 
