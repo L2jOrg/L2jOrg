@@ -103,10 +103,6 @@ public class Duel {
         ThreadPool.schedule(new ScheduleStartDuelTask(this), 3000);
     }
 
-    public Instance getDueldInstance() {
-        return _duelInstance;
-    }
-
     /**
      * Stops all players from attacking. Used for duel timeout / interrupt.
      */
@@ -350,10 +346,6 @@ public class Duel {
         return _partyDuel;
     }
 
-    public boolean getFinished() {
-        return _finished;
-    }
-
     public void setFinished(boolean mode) {
         _finished = mode;
     }
@@ -427,24 +419,6 @@ public class Duel {
     }
 
     /**
-     * Get the duel winner
-     *
-     * @return winner
-     */
-    public Player getWinner() {
-        if (!_finished || (_playerA == null) || (_playerB == null)) {
-            return null;
-        }
-        if (_playerA.getDuelState() == DUELSTATE_WINNER) {
-            return _playerA;
-        }
-        if (_playerB.getDuelState() == DUELSTATE_WINNER) {
-            return _playerB;
-        }
-        return null;
-    }
-
-    /**
      * Get the duel looser
      *
      * @return looser
@@ -493,7 +467,7 @@ public class Duel {
         }
 
         // Broadcast countdown to duelists
-        SystemMessage sm = null;
+        SystemMessage sm;
         if (_countdown > 0) {
             sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_WILL_BEGIN_IN_S1_SECOND_S);
             sm.addInt(_countdown);
@@ -521,7 +495,7 @@ public class Duel {
         }
 
         // inform players of the result
-        SystemMessage sm = null;
+        SystemMessage sm;
         switch (result) {
             case TEAM_1_WIN:
             case TEAM_2_SURRENDER: {

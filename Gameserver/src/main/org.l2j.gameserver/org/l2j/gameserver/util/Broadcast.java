@@ -20,38 +20,18 @@ package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.CreatureSay;
+import org.l2j.gameserver.network.serverpackets.ExCharInfo;
+import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.world.World;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.function.Predicate;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public final class Broadcast {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Broadcast.class);
-
-    /**
-     * Send a packet to all Player in the _KnownPlayers of the Creature that have the Character targeted.<BR>
-     * <B><U> Concept</U> :</B><BR>
-     * Player in the detection area of the Creature are identified in <B>_knownPlayers</B>.<BR>
-     * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
-     * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
-     *
-     * @param character
-     * @param mov
-     */
-    public static void toPlayersTargettingMyself(Creature character, ServerPacket mov) {
-        World.getInstance().forEachVisibleObject(character, Player.class, player ->
-        {
-            if (player.getTarget() == character) {
-                player.sendPacket(mov);
-            }
-        });
-    }
 
     /**
      * Send a packet to all Player in the _KnownPlayers of the Creature.<BR>
@@ -64,31 +44,10 @@ public final class Broadcast {
      * @param mov
      */
     public static void toKnownPlayers(Creature character, ServerPacket mov) {
-        World.getInstance().forEachVisibleObject(character, Player.class, player ->
-        {
-            try {
-                player.sendPacket(mov);
-                if ((mov instanceof ExCharInfo) && (isPlayer(character))) {
-                    final int relation = ((Player) character).getRelation(player);
-                    final int oldrelation = character.getKnownRelations().get(player.getObjectId());
-                    if (oldrelation != relation) {
-                        final RelationChanged rc = new RelationChanged();
-                        rc.addRelation((Player) character, relation, character.isAutoAttackable(player));
-                        if (character.hasSummon()) {
-                            final Summon pet = character.getPet();
-                            if (pet != null) {
-                                rc.addRelation(pet, relation, character.isAutoAttackable(player));
-                            }
-                            if (character.hasServitors()) {
-                                character.getServitors().values().forEach(s -> rc.addRelation(s, relation, character.isAutoAttackable(player)));
-                            }
-                        }
-                        player.sendPacket(rc);
-                        character.getKnownRelations().put(player.getObjectId(), relation);
-                    }
-                }
-            } catch (NullPointerException e) {
-                LOGGER.warn(e.getMessage(), e);
+        World.getInstance().forEachVisibleObject(character, Player.class, player -> {
+            player.sendPacket(mov);
+            if (mov instanceof ExCharInfo && character instanceof Player broadcaster) {
+                broadcaster.updateRelation(player);
             }
         });
     }

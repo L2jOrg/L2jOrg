@@ -79,28 +79,6 @@ public class Event {
         return -1;
     }
 
-    public static List<Player> getTopNKillers(int n) {
-        final Map<Player, Integer> tmp = new HashMap<>();
-        for (Set<Player> teamList : _teams.values()) {
-            for (Player player : teamList) {
-                if (player.getEventStatus() == null) {
-                    continue;
-                }
-                tmp.put(player, player.getEventStatus().getKills().size());
-            }
-        }
-
-        sortByValue(tmp);
-
-        // If the map size is less than "n", n will be as much as the map size
-        if (tmp.size() <= n) {
-            return new ArrayList<>(tmp.keySet());
-        }
-
-        final List<Player> toReturn = new ArrayList<>(tmp.keySet());
-        return toReturn.subList(1, n);
-    }
-
     public static void showEventHtml(Player player, String objectid) {
         // TODO: work on this
         if (eventState == EventState.STANDBY) {
@@ -449,18 +427,6 @@ public class Event {
         }
 
         return "The event has been successfully finished.";
-    }
-
-    private static Map<Player, Integer> sortByValue(Map<Player, Integer> unsortMap) {
-        final List<Entry<Player, Integer>> list = new LinkedList<>(unsortMap.entrySet());
-
-        list.sort(Comparator.comparing(Entry::getValue));
-
-        final Map<Player, Integer> sortedMap = new LinkedHashMap<>();
-        for (Entry<Player, Integer> entry : list) {
-            sortedMap.put(entry.getKey(), entry.getValue());
-        }
-        return sortedMap;
     }
 
     public enum EventState {

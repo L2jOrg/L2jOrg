@@ -54,7 +54,6 @@ import java.util.function.Predicate;
 import static java.lang.String.format;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.contains;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
@@ -99,7 +98,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int hitTime;
     private double hitCancelTime;
 
-    private int reuseDelayGroup = -1;
     private boolean staticReuse;
     private long reuseHashCode;
     private int reuseDelay;
@@ -190,7 +188,7 @@ public final class Skill implements IIdentifiable, Cloneable {
             abnormalTime = Config.SKILL_DURATION_LIST.get(id);
         }
 
-        reuseHashCode = SkillEngine.skillHashCode(reuseDelayGroup > 0 ? reuseDelayGroup : id, level);
+        reuseHashCode = SkillEngine.skillHashCode(id, level);
 
         minChance = Config.MIN_ABNORMAL_STATE_SUCCESS_RATE;
         maxChance = Config.MAX_ABNORMAL_STATE_SUCCESS_RATE;
@@ -480,14 +478,6 @@ public final class Skill implements IIdentifiable, Cloneable {
         return false;
     }
 
-    public boolean hasAnyEffectType(EffectScope effectScope, EffectType... effectTypes) {
-        if (hasEffects(effectScope) || isNull(effectTypes)) {
-            return false;
-        }
-
-        return effects.get(effectScope).stream().anyMatch(e -> contains(effectTypes, e.getEffectType()));
-    }
-
     public void addEffect(EffectScope effectScope, AbstractEffect effect) {
         effects.computeIfAbsent(effectScope, k -> new ArrayList<>()).add(effect);
     }
@@ -730,7 +720,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public int getReuseDelayGroup() {
-        return reuseDelayGroup;
+        return -1;
     }
 
     public long getReuseHashCode() {

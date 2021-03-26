@@ -169,8 +169,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 	{
 		params = params.trim();
 		
-		Creature npc1 = null;
-		Creature npc2 = null;
+		Creature npc1;
+		Creature npc2;
 		if (params.isEmpty())
 		{
 			npc1 = activeChar;
@@ -183,8 +183,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		}
 		else
 		{
-			int mid1 = 0;
-			int mid2 = 0;
+			int mid1;
+			int mid2;
 			final StringTokenizer st = new StringTokenizer(params);
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());

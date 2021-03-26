@@ -41,7 +41,7 @@ public enum ServerType
 	ARENA,
 	BLOODY;
 
-	private int mask;
+	private final int mask;
 
 	ServerType()
 	{

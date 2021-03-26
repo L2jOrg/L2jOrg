@@ -30,8 +30,6 @@ public class ThreadPool {
     private ThreadPoolExecutor executor;
     private ForkJoinPool forkPool;
 
-    private boolean shutdown;
-
     private ThreadPool() {
 
     }
@@ -58,11 +56,6 @@ public class ThreadPool {
             return -1;
 
         return validatedDelay;
-    }
-
-    public boolean isShutdown()
-    {
-        return shutdown;
     }
 
     public static ScheduledFuture<?> schedule(Runnable r, Duration delay) {
@@ -123,7 +116,6 @@ public class ThreadPool {
     }
 
     public void shutdown() throws InterruptedException {
-        shutdown = true;
         try {
             scheduledExecutor.shutdown();
             scheduledExecutor.awaitTermination(15, TimeUnit.SECONDS);

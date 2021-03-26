@@ -19,8 +19,6 @@
  */
 package org.l2j.gameserver.model.base;
 
-import java.util.regex.Matcher;
-
 /**
  * This class will hold the information of the player classes.
  *
@@ -29,26 +27,16 @@ import java.util.regex.Matcher;
 public final class ClassInfo {
     private final ClassId _classId;
     private final String _className;
-    private final ClassId _parentClassId;
 
     /**
      * Constructor for ClassInfo.
      *
      * @param classId       the class Id.
      * @param className     the in game class name.
-     * @param parentClassId the parent class for the given {@code classId}.
      */
-    public ClassInfo(ClassId classId, String className, ClassId parentClassId) {
+    public ClassInfo(ClassId classId, String className) {
         _classId = classId;
         _className = className;
-        _parentClassId = parentClassId;
-    }
-
-    /**
-     * @return the class Id.
-     */
-    public ClassId getClassId() {
-        return _classId;
     }
 
     /**
@@ -90,17 +78,4 @@ public final class ClassInfo {
         return "&$" + getClassClientId() + ";";
     }
 
-    /**
-     * @return the escaped class client Id formatted to be displayed on a HTML.
-     */
-    public String getEscapedClientCode() {
-        return Matcher.quoteReplacement(getClientCode());
-    }
-
-    /**
-     * @return the parent class Id.
-     */
-    public ClassId getParentClassId() {
-        return _parentClassId;
-    }
 }

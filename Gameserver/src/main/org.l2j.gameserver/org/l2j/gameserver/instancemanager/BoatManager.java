@@ -20,13 +20,10 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.VehiclePathPoint;
 import org.l2j.gameserver.model.actor.instance.Boat;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.l2j.gameserver.world.World;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,9 +35,7 @@ public class BoatManager {
     private final boolean[] _docksBusy = new boolean[3];
 
     private BoatManager() {
-        for (int i = 0; i < _docksBusy.length; i++) {
-            _docksBusy[i] = false;
-        }
+        Arrays.fill(_docksBusy, false);
     }
 
     public Boat getNewBoat(int boatId, int x, int y, int z, int heading) {
@@ -106,69 +101,6 @@ public class BoatManager {
      */
     public Boat getBoat(int boatId) {
         return _boats.get(boatId);
-    }
-
-    /**
-     * Lock/unlock dock so only one ship can be docked
-     *
-     * @param h     Dock Id
-     * @param value True if dock is locked
-     */
-    public void dockShip(int h, boolean value) {
-        try {
-            _docksBusy[h] = value;
-        } catch (ArrayIndexOutOfBoundsException e) {
-        }
-    }
-
-    /**
-     * Check if dock is busy
-     *
-     * @param h Dock Id
-     * @return Trye if dock is locked
-     */
-    public boolean dockBusy(int h) {
-        try {
-            return _docksBusy[h];
-        } catch (ArrayIndexOutOfBoundsException e) {
-            return false;
-        }
-    }
-
-    /**
-     * Broadcast one packet in both path points
-     *
-     * @param point1
-     * @param point2
-     * @param packet
-     */
-    public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, ServerPacket packet) {
-        broadcastPacketsToPlayers(point1, point2, packet);
-    }
-
-    /**
-     * Broadcast several packets in both path points
-     *
-     * @param point1
-     * @param point2
-     * @param packets
-     */
-    public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, ServerPacket... packets) {
-        broadcastPacketsToPlayers(point1, point2, packets);
-    }
-
-    private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, ServerPacket... packets) {
-        for (Player player : World.getInstance().getPlayers()) {
-            if (Math.hypot(player.getX() - point1.getX(), player.getY() - point1.getY()) < Config.BOAT_BROADCAST_RADIUS) {
-                for (ServerPacket p : packets) {
-                    player.sendPacket(p);
-                }
-            } else if (Math.hypot(player.getX() - point2.getX(), player.getY() - point2.getY()) < Config.BOAT_BROADCAST_RADIUS) {
-                for (ServerPacket p : packets) {
-                    player.sendPacket(p);
-                }
-            }
-        }
     }
 
     public static BoatManager getInstance() {

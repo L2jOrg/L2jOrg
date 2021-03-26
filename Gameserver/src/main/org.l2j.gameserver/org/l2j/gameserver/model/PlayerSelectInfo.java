@@ -129,20 +129,12 @@ public class PlayerSelectInfo {
         return data.getName();
     }
 
-    public int getPaperdollObjectId(InventorySlot slot) {
-        return zeroIfNullOrElse(paperdoll.get(slot), ItemData::getObjectId);
-    }
-
     public int getPaperdollItemId(InventorySlot slot) {
         return zeroIfNullOrElse(paperdoll.get(slot), ItemData::getItemId);
     }
 
     public int getEnchantEffect(InventorySlot slot) {
         return zeroIfNullOrElse(paperdoll.get(slot), ItemData::getEnchantLevel);
-    }
-
-    public VariationInstance getAugmentation() {
-        return _augmentation;
     }
 
     public int getAugmentationOption1() {

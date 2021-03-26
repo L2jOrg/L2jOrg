@@ -74,7 +74,7 @@ public final class SiegeGuardManager {
 
         final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getId(), data.getNpcId());
         if (nonNull(holder) && !castle.getSiege().isInProgress()) {
-            final Item dropticket = ItemEngine.getInstance().createItem("SiegeGuard", holder.getItemId(),1,  null, null);
+            final Item dropticket = ItemEngine.getInstance().createItem("SiegeGuard", holder.itemId(),1,  null, null);
             dropticket.dropMe(null, data.getX(), data.getY(), data.getZ());
             _droppedTickets.add(dropticket);
         }
@@ -88,7 +88,7 @@ public final class SiegeGuardManager {
      * @return the {@code SiegeGuardHolder} for this castle ID and item ID if any, otherwise {@code null}
      */
     public SiegeGuardHolder getSiegeGuardByItem(int castleId, int itemId) {
-        return CastleDataManager.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getItemId() == itemId)).findFirst().orElse(null);
+        return CastleDataManager.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.itemId() == itemId)).findFirst().orElse(null);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class SiegeGuardManager {
      * @return the {@code SiegeGuardHolder} for this castle ID and npc ID if any, otherwise {@code null}
      */
     public SiegeGuardHolder getSiegeGuardByNpc(int castleId, int npcId) {
-        return CastleDataManager.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getNpcId() == npcId)).findFirst().orElse(null);
+        return CastleDataManager.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.npcId() == npcId)).findFirst().orElse(null);
     }
 
     /**
@@ -122,7 +122,7 @@ public final class SiegeGuardManager {
     public boolean isAtNpcLimit(int castleId, int itemId) {
         final long count = _droppedTickets.stream().filter(i -> i.getId() == itemId).count();
         final SiegeGuardHolder holder = getSiegeGuardByItem(castleId, itemId);
-        return count >= holder.getMaxNpcAmout();
+        return count >= holder.maxNpcAmount();
     }
 
     /**
@@ -143,7 +143,7 @@ public final class SiegeGuardManager {
 
         final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getId(), itemId);
         if (nonNull(holder)) {
-            CastleSiegeGuardData data = CastleSiegeGuardData.of(castle.getId(), holder.getNpcId(), player.getLocation(), 1);
+            CastleSiegeGuardData data = CastleSiegeGuardData.of(castle.getId(), holder.npcId(), player.getLocation(), 1);
             getDAO(SiegeDAO.class).save(data);
             spawnMercenary(player, holder);
             final Item dropticket = ItemEngine.getInstance().createItem("SiegeGuard", itemId, 1, null, player);
@@ -159,7 +159,7 @@ public final class SiegeGuardManager {
      * @param holder SiegeGuardHolder holder
      */
     private void spawnMercenary(IPositionable pos, SiegeGuardHolder holder) {
-        final NpcTemplate template = NpcData.getInstance().getTemplate(holder.getNpcId());
+        final NpcTemplate template = NpcData.getInstance().getTemplate(holder.npcId());
         if (template != null) {
             final Defender npc = new Defender(template);
             npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
@@ -167,7 +167,7 @@ public final class SiegeGuardManager {
             npc.setHeading(pos.getHeading());
             npc.spawnMe(pos.getX(), pos.getY(), (pos.getZ() + 20));
             npc.scheduleDespawn(3000);
-            npc.setIsImmobilized(holder.isStationary());
+            npc.setIsImmobilized(holder.stationary());
         }
     }
 
@@ -201,7 +201,7 @@ public final class SiegeGuardManager {
             return;
         }
 
-        removeSiegeGuard(holder.getNpcId(), item);
+        removeSiegeGuard(holder.npcId(), item);
         _droppedTickets.remove(item);
     }
 
@@ -269,7 +269,7 @@ public final class SiegeGuardManager {
                         continue;
                     }
 
-                    spawn.getLastSpawn().setIsImmobilized(holder.isStationary());
+                    spawn.getLastSpawn().setIsImmobilized(holder.stationary());
                 }
             }
         } catch (Exception e) {

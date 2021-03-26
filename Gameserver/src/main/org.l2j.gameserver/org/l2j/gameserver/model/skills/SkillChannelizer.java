@@ -97,10 +97,6 @@ public class SkillChannelizer implements Runnable {
         _skill = null;
     }
 
-    public Skill getSkill() {
-        return _skill;
-    }
-
     public boolean isChanneling() {
         return _task != null;
     }

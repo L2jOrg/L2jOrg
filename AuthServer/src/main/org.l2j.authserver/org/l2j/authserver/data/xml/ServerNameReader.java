@@ -47,7 +47,7 @@ public class ServerNameReader extends XmlReader {
 
     @Override
     public void load() {
-        parseFile(new File("servername.xml"));
+        parseFile("servername.xml");
         releaseResources();
     }
 

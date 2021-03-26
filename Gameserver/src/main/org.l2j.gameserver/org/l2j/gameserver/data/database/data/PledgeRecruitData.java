@@ -68,10 +68,6 @@ public class PledgeRecruitData {
         return clanId;
     }
 
-    public void setClanId(int clanId) {
-        this.clanId = clanId;
-    }
-
     public String getClanName() {
         return clan.getName();
     }
@@ -88,24 +84,12 @@ public class PledgeRecruitData {
         return karma;
     }
 
-    public void setKarma(int karma) {
-        this.karma = karma;
-    }
-
     public String getInformation() {
         return information;
     }
 
-    public void setInformation(String information) {
-        this.information = information;
-    }
-
     public String getDetailedInformation() {
         return detailedInformation;
-    }
-
-    public void setDetailedInformation(String detailedInformation) {
-        this.detailedInformation = detailedInformation;
     }
 
     public int getApplicationType() {

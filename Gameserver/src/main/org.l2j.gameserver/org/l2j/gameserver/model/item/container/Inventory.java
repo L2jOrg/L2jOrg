@@ -289,7 +289,7 @@ public abstract class Inventory extends ItemContainer {
                 old.setLastChange(ItemChangeType.MODIFIED);
 
                 wearedMask &= ~old.getItemMask();
-                listeners.forEach(l -> l.notifyUnequiped(slot, old, this));
+                listeners.forEach(l -> l.notifyUnequipped(slot, old, this));
                 old.updateDatabase();
             }
 
@@ -298,7 +298,7 @@ public abstract class Inventory extends ItemContainer {
                 item.changeItemLocation(getEquipLocation(), slot.getId());
                 item.setLastChange(ItemChangeType.MODIFIED);
                 wearedMask |= item.getItemMask();
-                listeners.forEach(l -> l.notifyEquiped(slot, item, this));
+                listeners.forEach(l -> l.notifyEquipped(slot, item, this));
                 item.updateDatabase();
             }
 
@@ -686,28 +686,15 @@ public abstract class Inventory extends ItemContainer {
     }
 
     public boolean canEquipCloak() {
-        return getOwner().getActingPlayer().getStats().canEquipCloak();
-    }
-
-    /**
-     * Re-notify to paperdoll listeners every equipped item
-     */
-    public void reloadEquippedItems() {
-        paperdoll.forEach((slot, item) -> listeners.forEach(l -> {
-            l.notifyUnequiped(slot, item, this);
-            l.notifyEquiped(slot, item, this);
-        }));
-        if (isPlayer(getOwner())) {
-            getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));
-        }
+        return true;
     }
 
     public void reloadEquippedItem(Item item) {
         paperdoll.entrySet().stream()
             .filter(entry -> entry.getValue()== item).findFirst()
             .ifPresent(e -> listeners.forEach(l -> {
-                l.notifyUnequiped(e.getKey(), e.getValue(), this);
-                l.notifyEquiped(e.getKey(), e.getValue(), this);
+                l.notifyUnequipped(e.getKey(), e.getValue(), this);
+                l.notifyEquipped(e.getKey(), e.getValue(), this);
             }));
     }
 
@@ -768,10 +755,6 @@ public abstract class Inventory extends ItemContainer {
         paperdoll.values().forEach(action);
     }
 
-    public void forEachEquippedItem(Consumer<Item> action, Predicate<Item> predicate) {
-        paperdoll.values().stream().filter(predicate).forEach(action);
-    }
-
     public int countEquippedItems(Predicate<Item> predicate) {
         return (int) paperdoll.values().stream().filter(predicate).count();
     }
@@ -788,12 +771,12 @@ public abstract class Inventory extends ItemContainer {
         }
 
         @Override
-        public void notifyEquiped(InventorySlot slot, Item item, Inventory inventory) {
+        public void notifyEquipped(InventorySlot slot, Item item, Inventory inventory) {
             changed.add(item);
         }
 
         @Override
-        public void notifyUnequiped(InventorySlot slot, Item item, Inventory inventory) {
+        public void notifyUnequipped(InventorySlot slot, Item item, Inventory inventory) {
             changed.add(item);
         }
 

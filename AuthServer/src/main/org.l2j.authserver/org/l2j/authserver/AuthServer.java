@@ -30,6 +30,7 @@ import org.l2j.authserver.network.gameserver.ServerClient;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -99,7 +100,7 @@ public class AuthServer {
     }
 
     private static void configureDatabase() throws Exception {
-        System.setProperty(HIKARICP_CONFIGURATION_FILE, "config/database.properties");
+        System.setProperty(HIKARICP_CONFIGURATION_FILE, FileUtil.resolveFilePath("config/database.properties"));
         if (!DatabaseAccess.initialize()) {
             throw new Exception("Database Access could not be initialized");
         }

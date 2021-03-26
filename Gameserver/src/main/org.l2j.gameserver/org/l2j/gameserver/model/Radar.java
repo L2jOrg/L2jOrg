@@ -62,13 +62,6 @@ public final class Radar {
         _markers.clear();
     }
 
-    public void loadMarkers() {
-        _player.sendPacket(new RadarControl(2, 2, _player.getX(), _player.getY(), _player.getZ()));
-        for (RadarMarker tempMarker : _markers) {
-            _player.sendPacket(new RadarControl(0, 1, tempMarker._x, tempMarker._y, tempMarker._z));
-        }
-    }
-
     public static class RadarMarker {
         // Simple class to model radar points.
         public int _type;

@@ -29,7 +29,7 @@ import org.l2j.commons.database.annotation.Table;
 public final class CropProcure extends SeedProduction {
 
     @Column("reward_type")
-    private int rewardType;
+    private final int rewardType;
 
     public CropProcure(int id, long amount, int type, long startAmount, long price, int castleId, boolean nextPeriod) {
         super(id, amount, price, startAmount, castleId, nextPeriod);

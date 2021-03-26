@@ -41,7 +41,7 @@ public class TradeItem {
     private final int[] enchantOptions;
     private int isBlessed;
 
-    private long _price;
+    private final long _price;
 
     private long _storeCount;
     private int _augmentationOption1 = -1;
@@ -146,10 +146,6 @@ public class TradeItem {
 
     public long getPrice() {
         return _price;
-    }
-
-    public void setPrice(long price) {
-        _price = price;
     }
 
     public int[] getEnchantOptions() {

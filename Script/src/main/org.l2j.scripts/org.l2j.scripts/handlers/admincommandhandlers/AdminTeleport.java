@@ -361,7 +361,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void showTeleportCharWindow(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		Player player = null;
+		Player player;
 		if ((target != null) && isPlayer(target))
 		{
 			player = (Player) target;
@@ -381,7 +381,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void teleportCharacter(Player activeChar, String Cords)
 	{
 		final WorldObject target = activeChar.getTarget();
-		Player player = null;
+		Player player;
 		if ((target != null) && isPlayer(target))
 		{
 			player = (Player) target;

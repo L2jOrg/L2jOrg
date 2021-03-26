@@ -33,7 +33,6 @@ import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.AbstractPlayerGroup;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PcCondOverride;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -48,7 +47,10 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
 
@@ -76,7 +78,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     private float spRate = Config.RATE_INSTANCE_SP;
     private float expPartyRate = Config.RATE_INSTANCE_PARTY_XP;
     private float spPartyRate = Config.RATE_INSTANCE_PARTY_SP;
-    private StatsSet parameters = StatsSet.EMPTY_STATSET;
 
     private InstanceTeleportType enterLocationType = InstanceTeleportType.NONE;
     private List<Location> enterLocations = null;
@@ -392,26 +393,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     }
 
     /**
-     * Get instance template parameters.
-     *
-     * @return parameters of template
-     */
-    public StatsSet getParameters() {
-        return parameters;
-    }
-
-    /**
-     * Set parameters shared between instances with same template id.
-     *
-     * @param set map containing parameters
-     */
-    public void setParameters(Map<String, Object> set) {
-        if (!set.isEmpty()) {
-            parameters = new StatsSet(Collections.unmodifiableMap(set));
-        }
-    }
-
-    /**
      * Check if buffs are removed upon instance enter.
      *
      * @return {@code true} if any buffs should be removed, otherwise {@code false}
@@ -429,7 +410,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
         // Make list of affected playable objects
         final List<Playable> affected = new ArrayList<>();
         affected.add(player);
-        player.getServitors().values().forEach(affected::add);
+        affected.addAll(player.getServitors().values());
         if (player.hasPet()) {
             affected.add(player.getPet());
         }
@@ -455,7 +436,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      */
     private boolean hasRemoveBuffException(Skill skill) {
         final boolean containsSkill = removeBuffExceptions.contains(skill.getId());
-        return (removeBuffType == InstanceRemoveBuffType.BLACKLIST) ? containsSkill : !containsSkill;
+        return (removeBuffType == InstanceRemoveBuffType.BLACKLIST) == containsSkill;
     }
 
     /**
@@ -529,7 +510,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param player player who wants to enter
      * @return group type which can enter if any can enter, otherwise {@code null}
      */
-    private final GroupType getEnterGroupType(Player player) {
+    private GroupType getEnterGroupType(Player player) {
         // If mask doesn't contain any group
         if (groupMask == 0) {
             return null;

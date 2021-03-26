@@ -271,10 +271,6 @@ public final class ItemAuctionInstance {
         }
     }
 
-    public final ItemAuction getAuction(int auctionId) {
-        return _auctions.get(auctionId);
-    }
-
     public final ItemAuction[] getAuctionsByBidder(int bidderObjId) {
         final Collection<ItemAuction> auctions = getAuctions();
         final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());
@@ -347,10 +343,10 @@ public final class ItemAuctionInstance {
 
     private ItemAuction loadAuction(int auctionId) throws SQLException {
         try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            int auctionItemId = 0;
-            long startingTime = 0;
-            long endingTime = 0;
-            byte auctionStateId = 0;
+            int auctionItemId;
+            long startingTime;
+            long endingTime;
+            byte auctionStateId;
             try (PreparedStatement ps = con.prepareStatement(SELECT_AUCTION_INFO)) {
                 ps.setInt(1, auctionId);
                 try (ResultSet rset = ps.executeQuery()) {

@@ -67,7 +67,7 @@ public class LuckyGameData extends GameXmlReader {
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "luckygame", rewardNode ->
         {
-            final LuckyGameDataHolder holder = new LuckyGameDataHolder(new StatsSet(parseAttributes(rewardNode)));
+            final LuckyGameDataHolder holder = new LuckyGameDataHolder();
 
             forEach(rewardNode, "common_reward", commonRewardNode -> forEach(commonRewardNode, "item", itemNode ->
             {

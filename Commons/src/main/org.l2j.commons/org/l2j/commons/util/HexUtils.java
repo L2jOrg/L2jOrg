@@ -46,18 +46,7 @@ public class HexUtils
 		'F'
 	};
 	private static final char[] NEW_LINE_CHARS = System.getProperty("line.separator").toCharArray();
-	
-	/**
-	 * Method to generate the hexadecimal character presentation of a byte<br>
-	 * This call is equivalent to {@link HexUtils#b2HexChars(byte, char[], int)} with parameters (data, null, 0)
-	 * @param data byte to generate the hexadecimal character presentation from
-	 * @return a new char array with exactly 2 elements
-	 */
-	public static char[] b2HexChars(byte data)
-	{
-		return b2HexChars(data, null, 0);
-	}
-	
+
 	/**
 	 * Method to generate the hexadecimal character presentation of a byte
 	 * @param data byte to generate the hexadecimal character presentation from
@@ -80,17 +69,7 @@ public class HexUtils
 		
 		return dstHexChars;
 	}
-	
-	/**
-	 * Method to generate the hexadecimal character presentation of an integer This call is equivalent to {@link HexUtils#int2HexChars(int, char[], int)} with parameters (data, null, 0)
-	 * @param data integer to generate the hexadecimal character presentation from
-	 * @return new char array with 8 elements
-	 */
-	public static char[] int2HexChars(int data)
-	{
-		return int2HexChars(data, new char[8], 0);
-	}
-	
+
 	/**
 	 * Method to generate the hexadecimal character presentation of an integer
 	 * @param data integer to generate the hexadecimal character presentation from
@@ -112,20 +91,7 @@ public class HexUtils
 		b2HexChars((byte) (data & 0x000000FF), dstHexChars, dstOffset + 6);
 		return dstHexChars;
 	}
-	
-	/**
-	 * Method to generate the hexadecimal character presentation of a byte array<br>
-	 * This call is equivalent to {@link HexUtils#bArr2HexChars(byte[], int, int, char[], int)} with parameters (data, offset, len, null, 0)
-	 * @param data byte array to generate the hexadecimal character presentation from
-	 * @param offset offset where to start in data array
-	 * @param len number of bytes to generate the hexadecimal character presentation from
-	 * @return a new char array with len*2 elements
-	 */
-	public static char[] bArr2HexChars(byte[] data, int offset, int len)
-	{
-		return bArr2HexChars(data, offset, len, null, 0);
-	}
-	
+
 	/**
 	 * Method to generate the hexadecimal character presentation of a byte array
 	 * @param data byte array to generate the hexadecimal character presentation from
@@ -153,12 +119,7 @@ public class HexUtils
 		
 		return dstHexChars;
 	}
-	
-	public static char[] bArr2AsciiChars(byte[] data, int offset, int len)
-	{
-		return bArr2AsciiChars(data, offset, len, new char[len], 0);
-	}
-	
+
 	public static char[] bArr2AsciiChars(byte[] data, int offset, int len, char[] dstAsciiChars, int dstOffset)
 	{
 		if (dstAsciiChars == null)

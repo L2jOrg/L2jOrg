@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.ArrayIntList;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -356,7 +355,6 @@ public class NpcData extends GameXmlReader {
                                             }
                                             case "clanlist": {
                                                 for (Node clanListNode = aiNode.getFirstChild(); clanListNode != null; clanListNode = clanListNode.getNextSibling()) {
-                                                    attrs = clanListNode.getAttributes();
                                                     switch (clanListNode.getNodeName().toLowerCase()) {
                                                         case "clan": {
                                                             if (clans == null) {
@@ -396,7 +394,7 @@ public class NpcData extends GameXmlReader {
 
                                             for (Node drop_node = drop_lists_node.getFirstChild(); drop_node != null; drop_node = drop_node.getNextSibling()) {
                                                 final NamedNodeMap drop_attrs = drop_node.getAttributes();
-                                                if ("item".equals(drop_node.getNodeName().toLowerCase())) {
+                                                if ("item".equalsIgnoreCase(drop_node.getNodeName())) {
                                                     final double chance = parseDouble(drop_attrs, "chance");
                                                     final DropHolder dropItem = new DropHolder(dropType, parseInt(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY ? chance / 100 : chance);
                                                     if (ItemEngine.getInstance().getTemplate(parseInt(drop_attrs, "id")) == null) {
@@ -663,16 +661,6 @@ public class NpcData extends GameXmlReader {
      */
     public List<NpcTemplate> getAllNpcStartingWith(String text) {
         return getTemplates(template -> template.isType("Npc") && template.getName().startsWith(text));
-    }
-
-    /**
-     * Gets the all npc of class type.
-     *
-     * @param classTypes of all the templates to get.
-     * @return the template list for the given class type.
-     */
-    public List<NpcTemplate> getAllNpcOfClassType(String... classTypes) {
-        return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
     }
 
     public boolean existsNpc(int npcId) {

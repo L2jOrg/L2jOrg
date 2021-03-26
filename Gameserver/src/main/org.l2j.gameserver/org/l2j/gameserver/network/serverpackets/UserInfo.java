@@ -281,8 +281,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeByte(player.getPledgeClass());
             buffer.writeInt(player.getPkKills());
             buffer.writeInt(player.getPvpKills());
-            buffer.writeShort(player.getRecomLeft());
-            buffer.writeShort(player.getRecomHave());
+            buffer.writeShort(player.getRecommendLeft());
+            buffer.writeShort(player.getRecommend());
             buffer.writeInt(0x00); // unk 196
             buffer.writeInt(0x00); // dislike
         }

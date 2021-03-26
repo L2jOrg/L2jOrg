@@ -24,8 +24,8 @@ import org.l2j.gameserver.network.authcomm.SendablePacket;
 
 public class ChangeAllowedHwid extends SendablePacket
 {
-	private String account;
-	private String hwid;
+	private final String account;
+	private final String hwid;
 
 	public ChangeAllowedHwid(String account, String hwid)
 	{

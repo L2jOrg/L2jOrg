@@ -53,7 +53,7 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
         this.items = streamToMap(items.stream().map(ItemInfo::new));
     }
 
-    private static IntMap<ItemInfo> streamToMap(Stream<ItemInfo>stream) {
+    private static IntMap<ItemInfo> streamToMap(Stream<ItemInfo> stream) {
         return stream.collect(CHashIntMap::new, (map, item) -> map.put(item.getObjectId(), item), IntMap::putAll);
     }
 
@@ -71,10 +71,6 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
 
     public final void addRemovedItem(Item item) {
         items.put(item.getObjectId(), new ItemInfo(item, ItemChangeType.REMOVED));
-    }
-
-    public final boolean isEmpty() {
-        return items.isEmpty();
     }
 
     protected final void writeItems(WritableBuffer buffer) {

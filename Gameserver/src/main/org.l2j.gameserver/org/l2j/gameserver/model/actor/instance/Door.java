@@ -58,9 +58,8 @@ import static org.l2j.commons.util.Util.falseIfNullOrElse;
 public final class Door extends Creature {
     private static final Logger LOGGER = LoggerFactory.getLogger(Door.class);
     boolean open;
-    private boolean _isAttackableDoor;
-    private boolean inverted;
-    private int _meshindex = 1;
+    private final boolean _isAttackableDoor;
+    private final boolean inverted;
     private Future<?> _autoCloseTask;
 
     public Door(DoorTemplate template) {
@@ -140,31 +139,10 @@ public final class Door extends Creature {
     }
 
     /**
-     * @return {@code true} if door is open-able by item.
-     */
-    public final boolean isOpenableByItem() {
-        return (getTemplate().getOpenType()) == DoorOpenType.BY_ITEM;
-    }
-
-    /**
-     * @return {@code true} if door is open-able by double-click.
-     */
-    public final boolean isOpenableByClick() {
-        return (getTemplate().getOpenType()) == DoorOpenType.BY_CLICK;
-    }
-
-    /**
      * @return {@code true} if door is open-able by time.
      */
     public final boolean isOpenableByTime() {
         return (getTemplate().getOpenType()) == DoorOpenType.BY_TIME;
-    }
-
-    /**
-     * @return {@code true} if door is open-able by Field Cycle system.
-     */
-    public final boolean isOpenableByCycle() {
-        return (getTemplate().getOpenType()) == DoorOpenType.BY_CYCLE;
     }
 
     @Override
@@ -196,18 +174,6 @@ public final class Door extends Creature {
                 LOGGER.warn(": cannot find child id: " + getChildId());
             }
         }
-    }
-
-    public boolean getIsAttackableDoor() {
-        return _isAttackableDoor;
-    }
-
-    public void setIsAttackableDoor(boolean val) {
-        _isAttackableDoor = val;
-    }
-
-    public boolean isInverted() {
-        return inverted;
     }
 
     public boolean getIsShowHp() {
@@ -271,11 +237,6 @@ public final class Door extends Creature {
 
     @Override
     public Weapon getActiveWeaponItem() {
-        return null;
-    }
-
-    @Override
-    public Item getSecondaryWeaponInstance() {
         return null;
     }
 
@@ -399,14 +360,6 @@ public final class Door extends Creature {
 
     public int getZMax() {
         return getTemplate().getNodeZ() + getTemplate().getHeight();
-    }
-
-    public int getMeshIndex() {
-        return _meshindex;
-    }
-
-    public void setMeshIndex(int mesh) {
-        _meshindex = mesh;
     }
 
     public int getEmitter() {

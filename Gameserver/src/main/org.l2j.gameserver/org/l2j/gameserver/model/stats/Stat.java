@@ -20,13 +20,11 @@ package org.l2j.gameserver.model.stats;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.finalizers.*;
-import org.l2j.gameserver.util.MathUtil;
 
 import java.util.EnumSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.BiFunction;
-import java.util.stream.Stream;
 
 /**
  * Enum of basic stats.
@@ -300,12 +298,12 @@ public enum Stat {
     private boolean hasDefaultFinalizer ;
 
     Stat() {
-        this(Stat::defaultValue, MathUtil::add, MathUtil::add);
+        this(Stat::defaultValue, Double::sum, Double::sum);
         hasDefaultFinalizer = true;
     }
 
     Stat(IStatsFunction valueFinalizer) {
-        this(valueFinalizer, MathUtil::add, MathUtil::add);
+        this(valueFinalizer, Double::sum, Double::sum);
 
     }
 

@@ -19,19 +19,19 @@
 package org.l2j.commons.configuration;
 
 import io.github.joealisson.primitive.IntSet;
+import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.EnumSet;
+import java.util.Properties;
+import java.util.Set;
 
 import static java.nio.file.Files.newBufferedReader;
 import static java.util.Arrays.stream;
@@ -43,16 +43,15 @@ import static org.l2j.commons.util.Util.*;
  */
 public final class SettingsFile extends Properties {
 
-    private static final long serialVersionUID = -4599023842346938325L;
     private static final Logger LOGGER = LoggerFactory.getLogger(SettingsFile.class);
     private static final String DEFAULT_DELIMITER = "[,;]";
     public static final String ERROR_GETTING_PROPERTY = "Error getting property {} : {}";
 
     SettingsFile(String filePath) {
-        try (var reader = newBufferedReader(Paths.get(filePath))) {
+        try (var reader = FileUtil.reader(filePath)) {
             load(reader);
         } catch (IOException e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -84,11 +83,6 @@ public final class SettingsFile extends Properties {
         return Boolean.parseBoolean(value);
     }
 
-    public List<String> getStringList(String key, String defaultValue, String delimiter) {
-        String[] values = getProperty(key, defaultValue).split(delimiter);
-        return Stream.of(values).filter(Util::isNotEmpty).collect(Collectors.toList());
-    }
-
     public String[] getStringArray(String key) {
         String value = getProperty(key);
         if(isNullOrEmpty(value)) {
@@ -99,39 +93,6 @@ public final class SettingsFile extends Properties {
             values[i] = values[i].trim();
         }
         return values;
-    }
-
-    public Map<Integer, Integer> getIntegerMap(String key, String entryDelimiter, String valueDelimiter) {
-        String[] values = getProperty(key, "").split(entryDelimiter);
-        Map<Integer, Integer> map = new HashMap<>();
-
-        Stream.of(values).filter(Util::isNotEmpty).forEach(v -> putInMap(key, valueDelimiter, map, v));
-        return map;
-    }
-
-    private void putInMap(String key, String valueDelimiter, Map<Integer, Integer> map, String entry) {
-        try {
-            String[] value = entry.split(valueDelimiter);
-            int mapKey = Integer.parseInt(value[0].trim());
-            int mapValue = Integer.parseInt(value[1].trim());
-            map.put(mapKey, mapValue);
-        } catch (Exception e) {
-            LOGGER.warn("Error getting property {} on entry {}: {}", key, entry, e.getMessage());
-        }
-    }
-
-    public List<Integer> getIntegerList(String key, String delimiter) {
-        String[] values = getProperty(key).split(delimiter);
-        List<Integer> list = new ArrayList<>(values.length);
-        Stream.of(values).filter(Util::isNotEmpty).forEach(v -> {
-            try {
-                int value = Integer.parseInt(v.trim());
-                list.add(value);
-            } catch (Exception e) {
-                LOGGER.warn("Error getting property {} on value {} : {}", key, v, e.getMessage());
-            }
-        });
-        return list;
     }
 
     public IntSet getIntSet(String key, String delimiter) {

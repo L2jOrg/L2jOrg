@@ -82,10 +82,6 @@ public class MissionPlayerData {
         this.recentlyCompleted = recentlyCompleted;
     }
 
-    public int getMissionId() {
-        return missionId;
-    }
-
     public boolean isAvailable() {
         return status == MissionStatus.AVAILABLE;
     }

@@ -18,6 +18,9 @@
  */
 package org.l2j.gameserver.util.cron4j;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.TimeZone;
@@ -30,6 +33,9 @@ import java.util.TimeZone;
  * @author Carlo Pelliccia
  */
 public class Scheduler {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Scheduler.class);
+
     /**
      * A GUID for this scheduler.
      */
@@ -481,7 +487,7 @@ public class Scheduler {
             timer = null;
             // Interrupts any running launcher and waits for its death.
             for (; ; ) {
-                LauncherThread launcher = null;
+                LauncherThread launcher;
                 synchronized (launchers) {
                     if (launchers.size() == 0) {
                         break;
@@ -495,7 +501,7 @@ public class Scheduler {
             // Interrupts any running executor and waits for its death.
             // Before exiting wait for all the active tasks end.
             for (; ; ) {
-                TaskExecutor executor = null;
+                TaskExecutor executor;
                 synchronized (executors) {
                     if (executors.size() == 0) {
                         break;
@@ -616,13 +622,11 @@ public class Scheduler {
         synchronized (listeners) {
             int size = listeners.size();
             if (size > 0) {
-                for (int i = 0; i < size; i++) {
-                    SchedulerListener l = listeners.get(i);
+                for (SchedulerListener l : listeners) {
                     l.taskFailed(executor, exception);
                 }
             } else {
-                // Logs on console if no one has been notified about it.
-                exception.printStackTrace();
+                LOGGER.error(exception.getMessage(), exception);
             }
         }
     }

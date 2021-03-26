@@ -146,7 +146,6 @@ public class Clan implements IIdentifiable, INamable {
     private ClanMember leader;
     private IntMap<SubPledgeData> subPledges = new CHashIntMap<>();
     private int _hideoutId;
-    private int _rank = 0;
     private String notice;
     private boolean noticeEnabled = false;
     private ClanRewardBonus _lastMembersOnlineBonus = null;
@@ -1115,14 +1114,6 @@ public class Clan implements IIdentifiable, INamable {
         return data.getReputation();
     }
 
-    public int getRank() {
-        return _rank;
-    }
-
-    public void setRank(int rank) {
-        _rank = rank;
-    }
-
     /**
      * @param activeChar the clan inviting player.
      * @param target     the invited player.
@@ -1361,7 +1352,7 @@ public class Clan implements IIdentifiable, INamable {
         setAllyId(0);
         setAllyName(null);
         changeAllyCrest(0, false);
-        setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000), PENALTY_TYPE_DISSOLVE_ALLY); // 24*60*60*1000 = 86400000
+        setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000L), PENALTY_TYPE_DISSOLVE_ALLY); // 24*60*60*1000 = 86400000
         updateClanInDB();
     }
 

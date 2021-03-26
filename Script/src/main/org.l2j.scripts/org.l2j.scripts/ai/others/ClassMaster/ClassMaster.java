@@ -19,7 +19,6 @@
 package org.l2j.scripts.ai.others.ClassMaster;
 
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -728,7 +727,6 @@ public final class ClassMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		final Player player = event.getPlayer();
 		showPopupWindow(event.getPlayer());
 	}
 	
@@ -916,7 +914,7 @@ public final class ClassMaster extends AbstractNpcAI
 		public void load()
 		{
 			_classChangeData.clear();
-			parseFile(new File("config/ClassMaster.xml"));
+			parseFile("config/ClassMaster.xml");
 
 			LOGGER.info("Loaded {} class change options.", _classChangeData.size());
 			releaseResources();
@@ -957,12 +955,10 @@ public final class ClassMaster extends AbstractNpcAI
 									final String optionName = parseString(attrs, "name", "");
 									for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
 									{
-										attrs = b.getAttributes();
 										if ("appliesTo".equals(b.getNodeName()))
 										{
 											for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
 											{
-												attrs = r.getAttributes();
 												if ("category".equals(r.getNodeName()))
 												{
 													final CategoryType category = CategoryType.findByName(r.getTextContent().trim());

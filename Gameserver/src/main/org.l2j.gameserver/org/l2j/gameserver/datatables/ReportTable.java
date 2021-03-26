@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.FileUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BotReportDAO;
 import org.l2j.gameserver.data.database.data.BotReportData;
@@ -96,7 +97,7 @@ public final class ReportTable {
             _punishments = new ConcurrentHashMap<>();
 
             try {
-                final File punishments = new File("./config/BotReportPunishments.xml");
+                final File punishments = new File(FileUtil.resolveFilePath("./config/BotReportPunishments.xml"));
                 if (!punishments.exists()) {
                     throw new FileNotFoundException(punishments.getName());
                 }
@@ -504,7 +505,7 @@ public final class ReportTable {
                         sysMessage = Integer.parseInt(systemMessageId);
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    LOGGER.error(e.getMessage(), e);
                 }
 
                 addPunishment(reportCount, skillId, skillLevel, sysMessage);

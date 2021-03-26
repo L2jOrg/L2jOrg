@@ -27,7 +27,7 @@ public enum InventoryBlockType {
     BLACKLIST(0),
     WHITELIST(1);
 
-    private int _clientId;
+    private final int _clientId;
 
     InventoryBlockType(int clientId) {
         _clientId = clientId;

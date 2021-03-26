@@ -58,14 +58,7 @@ public class AdminTest implements IAdminCommandHandler
 				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				final int id = Integer.parseInt(st.nextToken());
-				if (command.startsWith("admin_skill_test"))
-				{
-					adminTestSkill(activeChar, id, true);
-				}
-				else
-				{
-					adminTestSkill(activeChar, id, false);
-				}
+				adminTestSkill(activeChar, id, command.startsWith("admin_skill_test"));
 			}
 			catch (NumberFormatException e)
 			{

@@ -62,7 +62,7 @@ public final class Evolve {
             return false;
         }
 
-        Item item = null;
+        Item item;
         long petexp = currentPet.getStats().getExp();
         final String oldname = currentPet.getName();
         final int oldX = currentPet.getX();

@@ -75,7 +75,6 @@ public final class RelationChanged extends ServerPacket {
 
     public void addRelation(Playable activeChar, int relation, boolean autoattackable) {
         if (activeChar.isInvisible()) {
-            // throw new IllegalArgumentException("Cannot add invisible character to multi relation packet");
             return;
         }
         final Relation r = new Relation();

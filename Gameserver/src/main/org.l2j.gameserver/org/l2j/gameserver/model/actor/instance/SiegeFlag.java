@@ -39,7 +39,7 @@ import static java.util.Objects.nonNull;
 public class SiegeFlag extends Npc {
     private final Clan _clan;
     private final boolean _isAdvanced;
-    private Siegable _siege;
+    private final Siegable _siege;
     private boolean _canTalk;
 
     public SiegeFlag(Player player, NpcTemplate template, boolean advanced) {
@@ -66,12 +66,12 @@ public class SiegeFlag extends Npc {
 
     @Override
     public boolean canBeAttacked() {
-        return !isInvul();
+        return !isInvulnerable();
     }
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        return !isInvul();
+        return !isInvulnerable();
     }
 
     @Override

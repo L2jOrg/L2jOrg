@@ -72,7 +72,7 @@ public final class AdminData extends GameXmlReader {
     public synchronized void load() {
         _accessLevels.clear();
         _adminCommandAccessRights.clear();
-        parseFile(new File("config/AccessLevels.xml"));
+        parseFile("config/AccessLevels.xml");
         LOGGER.info("Loaded: {} Access Levels.", _accessLevels.size());
         LOGGER.info("Loaded: {} Access Commands.", _adminCommandAccessRights.size());
         releaseResources();
@@ -150,25 +150,6 @@ public final class AdminData extends GameXmlReader {
         return  accessLevel;
     }
 
-
-    /**
-     * Gets the master access level.
-     *
-     * @return the master access level
-     */
-    public AccessLevel getMasterAccessLevel() {
-        return _accessLevels.get(_highestLevel);
-    }
-
-    /**
-     * Checks for access level.
-     *
-     * @param id the id
-     * @return {@code true}, if successful, {@code false} otherwise
-     */
-    public boolean hasAccessLevel(int id) {
-        return _accessLevels.containsKey(id);
-    }
 
     /**
      * Checks for access.

@@ -210,34 +210,6 @@ public final class ClanWar {
         return data.getState();
     }
 
-    public int getAttackerClanId() {
-        return data.getAttacker();
-    }
-
-    public int getAttackedClanId() {
-        return data.getAttacked();
-    }
-
-    public int getAttackerKillCount() {
-        return data.getAttackerKills();
-    }
-
-    public int getAttackedKillCount() {
-        return data.getAttackedKills();
-    }
-
-    public int getWinnerClanId() {
-        return data.getWinnerClan();
-    }
-
-    public long getStartTime() {
-        return data.getStartTime();
-    }
-
-    public long getEndTime() {
-        return data.getEndTime();
-    }
-
     public ClanWarState getState() {
         return data.getState();
     }

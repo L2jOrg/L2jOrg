@@ -139,19 +139,6 @@ public class DoppelgangerAI extends CreatureAI {
         }
     }
 
-    public void notifyFollowStatusChange() {
-        _startFollow = !_startFollow;
-        switch (getIntention()) {
-            case AI_INTENTION_ACTIVE:
-            case AI_INTENTION_FOLLOW:
-            case AI_INTENTION_IDLE:
-            case AI_INTENTION_MOVE_TO:
-            case AI_INTENTION_PICK_UP: {
-                getActor().followSummoner(_startFollow);
-            }
-        }
-    }
-
     public void setStartFollowController(boolean val) {
         _startFollow = val;
     }

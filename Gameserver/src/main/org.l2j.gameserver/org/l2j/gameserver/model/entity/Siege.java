@@ -284,32 +284,8 @@ public class Siege implements Siegable {
     }
 
     private void broadcastMemberInfo(Player member) {
+        member.broadcastUserInfo();
         member.sendPacket(new UserInfo(member));
-
-        World.getInstance().forEachVisibleObject(member, Player.class, player -> {
-            if (!member.isVisibleFor(player)) {
-                return;
-            }
-
-            final int relation = member.getRelation(player);
-            final int oldRelation = member.getKnownRelations().get(player.getObjectId());
-
-            if (oldRelation != relation) {
-                final RelationChanged rc = new RelationChanged();
-                rc.addRelation(member, relation, member.isAutoAttackable(player));
-
-                if (member.hasSummon()) {
-
-                    doIfNonNull(member.getPet(), pet -> rc.addRelation(pet, relation, member.isAutoAttackable(player)));
-
-                    if (member.hasServitors()) {
-                        member.getServitors().values().forEach(s -> rc.addRelation(s, relation, member.isAutoAttackable(player)));
-                    }
-                }
-                player.sendPacket(rc);
-                member.getKnownRelations().put(player.getObjectId(), relation);
-            }
-        });
     }
 
     private void teleportPlayer(SiegeTeleportWhoType teleportWho, TeleportWhereType teleportWhere) {

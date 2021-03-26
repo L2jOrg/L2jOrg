@@ -42,7 +42,7 @@ public class Donate implements IVoicedCommandHandler {
             return true;
         } else if(command.startsWith("claim")) {
             StringTokenizer args = new StringTokenizer(params == null ? "" : params);
-            String email = "";
+            String email;
 
             if(args.hasMoreTokens()) {
                 email = args.nextToken();

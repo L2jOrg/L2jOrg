@@ -236,8 +236,6 @@ public final class ItemEngine extends GameXmlReader {
 
     private void parseWeaponConsume(Weapon weapon, Node node) {
         var attr = node.getAttributes();
-        weapon.setSoulshots(parseInt(attr, "soulshots"));
-        weapon.setSpiritshots(parseInt(attr, "spiritshots"));
         weapon.setManaConsume(parseInt(attr, "mana"));
     }
 

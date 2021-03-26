@@ -500,15 +500,6 @@ public final class Instance implements IIdentifiable, INamable {
     }
 
     /**
-     * Get instance destroy time.
-     *
-     * @return destroy time in milliseconds if duration is not equal to -1, otherwise -1
-     */
-    public long getEndTime() {
-        return endTime;
-    }
-
-    /**
      * Set reenter penalty for players associated with current instance.<br>
      * Penalty time is calculated from XML reenter data.
      */

@@ -43,7 +43,6 @@ public class PreparedMultisellList {
 
     private List<ItemInfo> itemInfos;
     private List<MultisellItem> filteredItems;
-    private int merchantId;
     private double taxRate;
 
     public PreparedMultisellList(MultisellList template, boolean inventoryOnly, ItemContainer inventory, Npc npc, double ingredientMultiplier, double productMultiplier) {
@@ -53,7 +52,6 @@ public class PreparedMultisellList {
         this.productMultiplier = productMultiplier;
 
         if (nonNull(npc)) {
-            merchantId = npc.getObjectId();
             taxRate = npc.getCastleTaxRate(TaxType.BUY);
         }
         
@@ -91,10 +89,6 @@ public class PreparedMultisellList {
         return inventoryOnly;
     }
 
-    public final boolean checkNpcObjectId(int npcObjectId) {
-        return (merchantId == 0) || (merchantId == npcObjectId);
-    }
-    
     public long getIngredientCount(MultisellIngredient ingredient) {
         return (ingredient.id() == CommonItem.ADENA) ? Math.round(ingredient.count() * getIngredientMultiplier() * (1 + getTaxRate())) : Math.round(ingredient.count() * getIngredientMultiplier());
     }

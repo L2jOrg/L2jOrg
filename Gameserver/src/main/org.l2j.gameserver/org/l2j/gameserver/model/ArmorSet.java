@@ -43,22 +43,14 @@ public final class ArmorSet {
     private static final EnumSet<InventorySlot> ARTIFACT_2_SLOTS = EnumSet.of(ARTIFACT5, ARTIFACT6, ARTIFACT7, ARTIFACT8, ARTIFACT14, ARTIFACT17, ARTIFACT20);
     private static final EnumSet<InventorySlot> ARTIFACT_3_SLOTS = EnumSet.of(ARTIFACT9, ARTIFACT10, ARTIFACT11, ARTIFACT12, ARTIFACT15, ARTIFACT18, ARTIFACT21);
 
-    private final int id;
     private final int minimumPieces;
-    private final boolean isVisual;
     private final IntSet requiredItems = new LinkedHashIntSet();
     private final IntSet optionalItems = new LinkedHashIntSet();
     private final List<ArmorsetSkillHolder> skills = new ArrayList<>();
     private final Map<BaseStats, Double> _stats = new LinkedHashMap<>();
 
-    public ArmorSet(int id, int minimumPieces, boolean isVisual) {
-        this.id = id;
+    public ArmorSet(int minimumPieces) {
         this.minimumPieces = minimumPieces;
-        this.isVisual = isVisual;
-    }
-
-    public int getId() {
-        return id;
     }
 
     /**
@@ -66,13 +58,6 @@ public final class ArmorSet {
      */
     public int getMinimumPieces() {
         return minimumPieces;
-    }
-
-    /**
-     * @return {@code true} if the set is visual only, {@code} otherwise
-     */
-    public boolean isVisual() {
-        return isVisual;
     }
 
     /**

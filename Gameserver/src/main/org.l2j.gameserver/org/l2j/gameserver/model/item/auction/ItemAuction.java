@@ -155,10 +155,6 @@ public final class ItemAuction {
         return _endingTime;
     }
 
-    public final long getStartingTimeRemaining() {
-        return Math.max(_endingTime - System.currentTimeMillis(), 0);
-    }
-
     public final long getFinishingTimeRemaining() {
         return Math.max(_endingTime - System.currentTimeMillis(), 0);
     }
@@ -426,17 +422,6 @@ public final class ItemAuction {
 
     private void increaseItemCount(Player player, long count) {
         player.addAdena("ItemAuction", count, player, true);
-    }
-
-    /**
-     * Returns the last bid for the given player or -1 if he did not made one yet.
-     *
-     * @param player The player that made the bid
-     * @return The last bid the player made or -1
-     */
-    public final long getLastBid(Player player) {
-        final ItemAuctionBid bid = getBidFor(player.getObjectId());
-        return bid != null ? bid.getLastBid() : -1L;
     }
 
     public final ItemAuctionBid getBidFor(int playerObjId) {

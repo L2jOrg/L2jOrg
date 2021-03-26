@@ -25,7 +25,6 @@ import org.l2j.gameserver.data.database.data.BuyListInfo;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EquipableItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 
 import java.util.Objects;
@@ -83,10 +82,6 @@ public final class Product {
 
     public double getBaseTaxRate() {
         return baseTax;
-    }
-
-    public long getMaxCount() {
-        return maxCount;
     }
 
     public long getCount() {
@@ -148,10 +143,6 @@ public final class Product {
 
     public long getWeight() {
         return template.getWeight();
-    }
-
-    public CrystalType getCrystalType() {
-        return template.getCrystalType();
     }
 
     public boolean isEquipable() {

@@ -50,7 +50,7 @@ public class AnswerCoupleAction extends ClientPacket {
         if ((activeChar == null) || (target == null)) {
             return;
         }
-        if ((target.getMultiSocialTarget() != activeChar.getObjectId()) || (target.getMultiSociaAction() != _actionId)) {
+        if ((target.getMultiSocialTarget() != activeChar.getObjectId()) || (target.getMultiSocialAction() != _actionId)) {
             return;
         }
         if (_answer == 0) // cancel

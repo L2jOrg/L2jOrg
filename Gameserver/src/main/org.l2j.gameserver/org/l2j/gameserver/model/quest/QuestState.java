@@ -57,19 +57,9 @@ public final class QuestState {
     private byte _state;
 
     /**
-     * Used for simulating Quest onTalk
-     */
-    private boolean _simulated = false;
-
-    /**
      * A map of key->value pairs containing the quest state variables and their values
      */
     private Map<String, String> _vars;
-
-    /**
-     * boolean flag letting QuestStateManager know to exit quest when cleaning up
-     */
-    private boolean _isExitQuestOnCleanUp = false;
 
     /**
      * Constructor of the QuestState. Creates the QuestState object and sets the player's progress of the quest to this QuestState.
@@ -485,56 +475,6 @@ public final class QuestState {
 
     public boolean isMemoState(int memoState) {
         return getInt("memoState") == memoState;
-    }
-
-    /**
-     * Gets the memo state ex.
-     *
-     * @param slot the slot where the value was saved
-     * @return the memo state ex
-     */
-    public int getMemoStateEx(int slot) {
-        if (isStarted()) {
-            return getInt("memoStateEx" + slot);
-        }
-        return 0;
-    }
-
-    /**
-     * Sets the memo state ex.
-     *
-     * @param slot  the slot where the value will be saved
-     * @param value the value
-     * @return this QuestState
-     */
-    public QuestState setMemoStateEx(int slot, int value) {
-        set("memoStateEx" + slot, String.valueOf(value));
-        return this;
-    }
-
-    /**
-     * Verifies if the given value is equal to the current memos state ex.
-     *
-     * @param slot        the slot where the value was saved
-     * @param memoStateEx the value to verify
-     * @return {@code true} if the values are equal, {@code false} otherwise
-     */
-    public boolean isMemoStateEx(int slot, int memoStateEx) {
-        return (getMemoStateEx(slot) == memoStateEx);
-    }
-
-    /**
-     * @return {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
-     */
-    public final boolean isExitQuestOnCleanUp() {
-        return _isExitQuestOnCleanUp;
-    }
-
-    /**
-     * @param isExitQuestOnCleanUp {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
-     */
-    public void setIsExitQuestOnCleanUp(boolean isExitQuestOnCleanUp) {
-        _isExitQuestOnCleanUp = isExitQuestOnCleanUp;
     }
 
     /**

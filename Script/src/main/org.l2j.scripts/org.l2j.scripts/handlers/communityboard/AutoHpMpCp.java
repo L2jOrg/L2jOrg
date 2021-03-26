@@ -27,13 +27,14 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.*;
+import org.l2j.gameserver.model.events.AbstractScript;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
 import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.model.events.impl.server.OnServerShutDown;
-import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -62,8 +63,6 @@ public class AutoHpMpCp extends AbstractScript implements IParseBoardHandler {
 
     private static final ForkJoinPool autoPotionPool = new ForkJoinPool();
     private static final Map<Integer, List<String>> listenedPlayer = new ConcurrentHashMap<>();
-
-    private static final AbstractEventListener listener = null;
 
     private static final DoAutoPotion doAutoPotion = new DoAutoPotion();
     private static ScheduledFuture<?> autoPotionTask;

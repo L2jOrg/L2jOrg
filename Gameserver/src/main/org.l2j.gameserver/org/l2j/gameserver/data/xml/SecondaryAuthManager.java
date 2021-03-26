@@ -52,7 +52,7 @@ public class SecondaryAuthManager extends GameXmlReader {
     @Override
     public synchronized void load() {
         forbiddenPasswords.clear();
-        parseFile(new File("config/secondary-auth.xml"));
+        parseFile("config/secondary-auth.xml");
         LOGGER.info("Loaded {} forbidden passwords.", forbiddenPasswords.size() );
         releaseResources();
     }

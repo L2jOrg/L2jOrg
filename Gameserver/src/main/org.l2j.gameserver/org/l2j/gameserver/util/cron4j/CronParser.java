@@ -18,8 +18,11 @@
  */
 package org.l2j.gameserver.util.cron4j;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.*;
-import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 /**
@@ -123,6 +126,9 @@ import java.util.ArrayList;
  * @since 2.0
  */
 public class CronParser {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(CronParser.class);
+
     /**
      * Instantiation prohibited.
      */
@@ -161,36 +167,6 @@ public class CronParser {
 
     /**
      * <p>
-     * Builds a task list reading it from an URL.
-     * </p>
-     * <p>
-     * Contents fetched from the URL are treated as UTF-8. If your source is not UTF-8 encoded establish by yourself a {@link Reader} using the right charset and pass it to the {@link CronParser#parse(Reader)} method.
-     * </p>
-     * <p>
-     * Syntax and semantics errors in the retrieved document are not blocking. Invalid lines are discarded, and they cause just a stack trace to be printed in the standard error channel as a notification.
-     * </p>
-     *
-     * @param url The URL.
-     * @return The task table parsed from the contents fetched from the given URL.
-     * @throws IOException I/O error.
-     */
-    public static TaskTable parse(URL url) throws IOException {
-        InputStream stream = null;
-        try {
-            stream = url.openStream();
-            return parse(stream);
-        } finally {
-            if (stream != null) {
-                try {
-                    stream.close();
-                } catch (Throwable t) {
-                }
-            }
-        }
-    }
-
-    /**
-     * <p>
      * Builds a task list reading it from an input stream.
      * </p>
      * <p>
@@ -205,7 +181,7 @@ public class CronParser {
      * @throws IOException I/O error.
      */
     public static TaskTable parse(InputStream stream) throws IOException {
-        return parse(new InputStreamReader(stream, "UTF-8"));
+        return parse(new InputStreamReader(stream, StandardCharsets.UTF_8));
     }
 
     /**
@@ -229,7 +205,7 @@ public class CronParser {
                 try {
                     parseLine(table, line);
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    LOGGER.error(e.getMessage(), e);
                     continue;
                 }
             }
@@ -308,7 +284,6 @@ public class CronParser {
                 str = escape(str);
             }
             splitted.add(str);
-            current = null;
         }
         // Analyzing
         size = splitted.size();

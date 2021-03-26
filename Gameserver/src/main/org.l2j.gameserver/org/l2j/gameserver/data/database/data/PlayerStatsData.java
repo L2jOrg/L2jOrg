@@ -45,14 +45,6 @@ public class PlayerStatsData {
         return data;
     }
 
-    public int getPlayerId() {
-        return playerId;
-    }
-
-    public void setPlayerId(int playerId) {
-        this.playerId = playerId;
-    }
-
     public short getPoints() {
         return (short) (points + elixirs);
     }

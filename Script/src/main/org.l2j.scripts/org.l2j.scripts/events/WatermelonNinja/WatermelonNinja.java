@@ -25,7 +25,6 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
-import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.quest.LongTimeEvent;
@@ -542,12 +541,12 @@ public class WatermelonNinja extends LongTimeEvent
 			{
 				case 13271: // Watermelon Seed
 				{
-					randomSpawn(13274, 13273, 13272, npc, true);
+					randomSpawn(13274, 13273, 13272, npc);
 					break;
 				}
 				case 13275: // Honey Watermelon Seed
 				{
-					randomSpawn(13278, 13277, 13276, npc, true);
+					randomSpawn(13278, 13277, 13276, npc);
 					break;
 				}
 			}
@@ -583,11 +582,11 @@ public class WatermelonNinja extends LongTimeEvent
 				{
 					if (drop[1] > 6000)
 					{
-						((Monster) mob).dropItem(player, drop[1], 1);
+						mob.dropItem(player, drop[1], 1);
 					}
 					else
 					{
-						((Monster) mob).dropItem(player, drop[1], 1);
+						mob.dropItem(player, drop[1], 1);
 					}
 					continue;
 				}
@@ -599,7 +598,7 @@ public class WatermelonNinja extends LongTimeEvent
 		}
 	}
 	
-	private void randomSpawn(int low, int medium, int high, Npc npc, boolean delete)
+	private void randomSpawn(int low, int medium, int high, Npc npc)
 	{
 		final int _random = Rnd.get(100);
 		if (_random < 5)

@@ -85,10 +85,6 @@ public class SpawnsData extends GameXmlReader {
         }
     }
 
-    public List<SpawnTemplate> getSpawns() {
-        return spawns;
-    }
-
     public List<NpcSpawnTemplate> getNpcSpawns(Predicate<NpcSpawnTemplate> condition) {
         return spawns.stream().flatMap(template -> template.getGroups().stream()).flatMap(group -> group.getSpawns().stream()).filter(condition).collect(Collectors.toList());
     }
@@ -139,7 +135,7 @@ public class SpawnsData extends GameXmlReader {
 
             switch (territoryNode.getNodeName()) {
                 case "territory" -> spawnTemplate.addTerritory(new SpawnTerritory(name, new ZonePolygonArea(x, y, minZ, maxZ)));
-                case "banned_territory" -> spawnTemplate.addBannedTerritory(new BannedSpawnTerritory(name, new ZonePolygonArea(x, y, minZ, maxZ)));
+                case "banned_territory" -> spawnTemplate.addBannedTerritory(new BannedSpawnTerritory(new ZonePolygonArea(x, y, minZ, maxZ)));
             }
         });
     }

@@ -98,8 +98,6 @@ public final class PetDataTable extends GameXmlReader {
                             for (String foodId : attrs.getNamedItem("val").getNodeValue().split(";")) {
                                 data.addFood(Integer.valueOf(foodId));
                             }
-                        } else if ("load".equals(type)) {
-                            data.setLoad(parseInt(attrs, "val"));
                         } else if ("hungry_limit".equals(type)) {
                             data.setHungryLimit(parseInt(attrs, "val"));
                         } else if ("sync_level".equals(type)) {

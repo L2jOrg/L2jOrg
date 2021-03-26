@@ -137,30 +137,12 @@ public final class BlockCheckerEngine {
     }
 
     /**
-     * Updates the player holder before the event starts to synchronize all info
-     *
-     * @param holder
-     */
-    public void updatePlayersOnStart(ArenaParticipantsHolder holder) {
-        _holder = holder;
-    }
-
-    /**
      * Returns the current holder object of this object engine
      *
      * @return HandysBlockCheckerManager.ArenaParticipantsHolder
      */
     public ArenaParticipantsHolder getHolder() {
         return _holder;
-    }
-
-    /**
-     * Will return the id of the arena used by this event
-     *
-     * @return false;
-     */
-    public int getArena() {
-        return _arena;
     }
 
     /**
@@ -446,11 +428,7 @@ public final class BlockCheckerEngine {
                     spawn.init();
                     final Block block = (Block) spawn.getLastSpawn();
                     // switch color
-                    if ((random % 2) == 0) {
-                        block.setRed(true);
-                    } else {
-                        block.setRed(false);
-                    }
+                    block.setRed((random % 2) == 0);
 
                     block.disableCoreAI(true);
                     _spawns.add(spawn);

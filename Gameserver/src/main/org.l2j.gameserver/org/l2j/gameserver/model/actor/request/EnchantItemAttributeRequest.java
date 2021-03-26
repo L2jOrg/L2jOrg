@@ -20,34 +20,17 @@
 package org.l2j.gameserver.model.actor.request;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
 
 /**
  * @author UnAfraid
  */
 public final class EnchantItemAttributeRequest extends AbstractRequest {
     private volatile int _enchantingItemObjectId;
-    private volatile int _enchantingStoneObjectId;
+    private final int enchantingStoneObjectId;
 
     public EnchantItemAttributeRequest(Player activeChar, int enchantingStoneObjectId) {
         super(activeChar);
-        _enchantingStoneObjectId = enchantingStoneObjectId;
-    }
-
-    public Item getEnchantingItem() {
-        return getPlayer().getInventory().getItemByObjectId(_enchantingItemObjectId);
-    }
-
-    public void setEnchantingItem(int objectId) {
-        _enchantingItemObjectId = objectId;
-    }
-
-    public Item getEnchantingStone() {
-        return getPlayer().getInventory().getItemByObjectId(_enchantingStoneObjectId);
-    }
-
-    public void setEnchantingStone(int objectId) {
-        _enchantingStoneObjectId = objectId;
+        this.enchantingStoneObjectId = enchantingStoneObjectId;
     }
 
     @Override
@@ -62,6 +45,6 @@ public final class EnchantItemAttributeRequest extends AbstractRequest {
 
     @Override
     public boolean isUsingItem(int objectId) {
-        return (objectId > 0) && ((objectId == _enchantingItemObjectId) || (objectId == _enchantingStoneObjectId));
+        return (objectId > 0) && ((objectId == _enchantingItemObjectId) || (objectId == enchantingStoneObjectId));
     }
 }

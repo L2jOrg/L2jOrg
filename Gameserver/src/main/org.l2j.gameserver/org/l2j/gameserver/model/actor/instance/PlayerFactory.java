@@ -145,7 +145,7 @@ public class PlayerFactory {
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
-        player._activeClass = playerData.getClassId();
+        player.activeClass = playerData.getClassId();
 
         player.setXYZInvisible(playerData.getX(), playerData.getY(), playerData.getZ());
         player.setLastServerPosition(playerData.getX(), playerData.getY(), playerData.getZ());

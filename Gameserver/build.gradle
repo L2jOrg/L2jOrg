@@ -10,6 +10,8 @@ ext.updateName = "Classic - Kamael [Dawn of Heroes]"
 ext.moduleName = 'org.l2j.gameserver'
 mainClassName = "org.l2j.gameserver.GameServer"
 
+ext.datapackRoot = "."
+
 sourceSets {
     main {
         java {
@@ -54,7 +56,6 @@ classes {
 }
 
 jar {
-
     exclude('config/**')
     exclude('*.cfg')
     
@@ -103,15 +104,36 @@ startScripts {
 }
 
 
-task dist(type: Copy) {
-    from([configurations.compileClasspath, configurations.runtimeClasspath, jar]) {
-        include "*.jar"
-    }
-    into ("$buildDir/gameserver/lib")
+task dist {
+    doLast {
+        copy {
+            from([configurations.compileClasspath, configurations.runtimeClasspath, jar]) {
+                include "*.jar"
+            }
+            into("$buildDir/gameserver/lib")
+        }
 
-    copy {
-        from([sourceSets.main.resources, 'bin'])
-        into("$buildDir/gameserver")
+        copy {
+            from(["$sourceSets.main.output.resourcesDir", 'bin'])
+            into("$buildDir/gameserver")
+        }
+    }
+}
+
+
+processResources {
+    doFirst {
+        filesMatching('**/server.properties') {
+            filter {
+                it.replace('${datapack_root}', project.ext.datapackRoot)
+            }
+        }
+    }
+}
+
+gradle.taskGraph.whenReady { taskGraph ->
+    if(gradle.taskGraph.hasTask(':Gameserver:run')) {
+        ext.datapackRoot = "../Datapack/"
     }
 }
 

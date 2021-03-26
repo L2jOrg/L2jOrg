@@ -209,10 +209,7 @@ public final class WalkingManager extends GameXmlReader {
         }
 
         final WalkInfo walk = monster != null ? _activeRoutes.get(monster.getObjectId()) : _activeRoutes.get(npc.getObjectId());
-        if (walk.isStoppedByAttack() || walk.isSuspended()) {
-            return false;
-        }
-        return true;
+        return !walk.isStoppedByAttack() && !walk.isSuspended();
     }
 
     public WalkRoute getRoute(String route) {
@@ -323,20 +320,6 @@ public final class WalkingManager extends GameXmlReader {
         final WalkInfo walk = _activeRoutes.remove(npc.getObjectId());
         if (walk != null) {
             walk.getWalkCheckTask().cancel(true);
-        }
-    }
-
-    /**
-     * Resumes previously stopped moving
-     *
-     * @param npc NPC to resume
-     */
-    public void resumeMoving(Npc npc) {
-        final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-        if (walk != null) {
-            walk.setSuspended(false);
-            walk.setStoppedByAttack(false);
-            startMoving(npc, walk.getRoute().getName());
         }
     }
 

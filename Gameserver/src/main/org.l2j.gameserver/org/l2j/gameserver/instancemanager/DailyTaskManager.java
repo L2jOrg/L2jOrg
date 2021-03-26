@@ -20,8 +20,6 @@ package org.l2j.gameserver.instancemanager;
 
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.dao.AccountDAO;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
@@ -37,7 +35,6 @@ import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.ScheduleTarget;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2j.gameserver.settings.CharacterSettings;
@@ -47,8 +44,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
-
-import java.util.Collections;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -95,8 +90,8 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
         World.getInstance().forEachPlayer(player -> {
             player.setExtendDrop("");
 
-            player.setRecomLeft(20);
-            player.setRecomHave(player.getRecomHave() - 20);
+            player.setRecommendLeft(20);
+            player.setRecommend(player.getRecommend() - 20);
             player.sendPacket(new ExVoteSystemInfo(player));
 
             if (getSettings(ChatSettings.class).worldChatEnabled()) {

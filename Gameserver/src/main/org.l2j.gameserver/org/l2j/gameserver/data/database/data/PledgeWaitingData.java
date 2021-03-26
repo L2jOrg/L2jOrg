@@ -63,10 +63,6 @@ public class PledgeWaitingData {
         return playerId;
     }
 
-    public void setPlayerId(int playerId) {
-        this.playerId = playerId;
-    }
-
     public int getPlayerClassId() {
         if (isOnline() && (getPlayerInstance().getBaseClass() != classId)) {
             classId = getPlayerInstance().getClassId().getId();

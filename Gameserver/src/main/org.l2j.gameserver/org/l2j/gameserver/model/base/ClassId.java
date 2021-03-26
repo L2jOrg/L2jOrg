@@ -186,7 +186,7 @@ public enum ClassId implements IIdentifiable {
      **/
     private final Set<ClassId> _nextClassIds = new HashSet<>(1);
 
-    private static IntMap<ClassId> classIdMap = new HashIntMap<>();
+    private static final IntMap<ClassId> classIdMap = new HashIntMap<>();
 
     static {
         for (ClassId classId : ClassId.values()) {
@@ -257,42 +257,10 @@ public enum ClassId implements IIdentifiable {
     }
 
     /**
-     * @return {code true} if the class is a summoner class.
-     */
-    public final boolean isSummoner() {
-        return _isSummoner;
-    }
-
-    /**
      * @return the Race object of the class.
      */
     public final Race getRace() {
         return _race;
-    }
-
-    /**
-     * @param cid the parent ClassId to check.
-     * @return {code true} if this Class is a child of the selected ClassId.
-     */
-    public final boolean childOf(ClassId cid) {
-        if (_parent == null) {
-            return false;
-        }
-
-        if (_parent == cid) {
-            return true;
-        }
-
-        return _parent.childOf(cid);
-
-    }
-
-    /**
-     * @param cid the parent ClassId to check.
-     * @return {code true} if this Class is equal to the selected ClassId or a child of the selected ClassId.
-     */
-    public final boolean equalsOrChildOf(ClassId cid) {
-        return (this == cid) || childOf(cid);
     }
 
     /**

@@ -107,7 +107,7 @@ public class AdminGmChat implements IAdminCommandHandler
 	{
 		try
 		{
-			int offset = 0;
+			int offset;
 			String text;
 			if (command.startsWith("admin_gmchat_menu"))
 			{

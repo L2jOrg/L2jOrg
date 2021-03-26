@@ -42,8 +42,6 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public final class Weapon extends ItemTemplate implements EquipableItem {
     private final WeaponType type;
     private boolean magic;
-    private int soulShot; // TODO Remove
-    private int spiritShot;
     private int manaConsume;
     private int damageRadius;
     private int attackAngle;
@@ -178,14 +176,6 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
 
     public void setMagic(boolean magic) {
         this.magic = magic;
-    }
-
-    public void setSoulshots(int soulshots) {
-        this.soulShot = soulshots;
-    }
-
-    public void setSpiritshots(int spiritshots) {
-        this.spiritShot = spiritshots;
     }
 
     public void setManaConsume(int mana) {

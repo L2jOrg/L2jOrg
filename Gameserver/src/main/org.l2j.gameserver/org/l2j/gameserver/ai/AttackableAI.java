@@ -24,7 +24,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.AISkillScope;
-import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.model.Location;
@@ -101,7 +100,7 @@ public class AttackableAI extends CreatureAI {
         }
 
         // Check if the target isn't invulnerable
-        if (isDoor(target) || target.isInvul() || target.isAlikeDead()) {
+        if (isDoor(target) || target.isInvulnerable() || target.isAlikeDead()) {
             return false;
         }
 
@@ -413,9 +412,9 @@ public class AttackableAI extends CreatureAI {
         }
         // Order to the Monster to random walk (1/100)
         else if (npc.getSpawn() != null && Rnd.chance(RANDOM_WALK_RATE) && npc.isRandomWalkingEnabled()) {
-            int x1 = 0;
-            int y1 = 0;
-            int z1 = 0;
+            int x1;
+            int y1;
+            int z1;
             final int range = Config.MAX_DRIFT_RANGE;
 
             for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF)) {
@@ -431,9 +430,7 @@ public class AttackableAI extends CreatureAI {
             y1 = npc.getSpawn().getY();
             z1 = npc.getSpawn().getZ();
 
-            if (!isInsideRadius2D(npc, x1, y1, range)) {
-                npc.setisReturningToSpawnPoint(true);
-            } else {
+            if (isInsideRadius2D(npc, x1, y1, range)) {
                 final int deltaX = Rnd.get(range * 2); // x
                 int deltaY = Rnd.get(deltaX, range * 2); // distance
                 deltaY = (int) Math.sqrt((deltaY * deltaY) - (deltaX * deltaX)); // y
@@ -872,7 +869,6 @@ public class AttackableAI extends CreatureAI {
         // Check current target first.
         final int range = insideCastRange ? skill.getCastRange() + getActiveChar().getTemplate().getCollisionRadius() : 2000; // TODO need some forget range
 
-        Stream<Creature> stream;
         if (isBad) {
 
             //@formatter:off

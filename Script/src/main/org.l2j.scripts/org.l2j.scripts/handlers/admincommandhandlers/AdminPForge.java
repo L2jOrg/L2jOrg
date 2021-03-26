@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.AdminForgePacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
@@ -44,6 +46,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
  */
 public final class AdminPForge implements IAdminCommandHandler
 {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminPForge.class);
+
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_forge",
@@ -94,12 +99,7 @@ public final class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				if (i > 0)
-				{
-					return true;
-				}
-				
-				return false;
+				return i > 0;
 			}
 			
 			if (opCodeLong < 0)
@@ -217,7 +217,7 @@ public final class AdminPForge implements IAdminCommandHandler
 	
 	private void showValuesPage(Player activeChar, String[] opCodes, String format)
 	{
-		String sendBypass = null;
+		String sendBypass;
 		String valuesHtml = HtmCache.getInstance().getHtmForce(activeChar, "data/html/admin/pforge/values.htm");
 		if (opCodes.length == 3)
 		{
@@ -319,7 +319,7 @@ public final class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.error(e.getMessage(), e);
 				showValuesUsage(activeChar);
 				return false;
 			}
@@ -411,8 +411,8 @@ public final class AdminPForge implements IAdminCommandHandler
 							return false;
 						}
 						
-						WorldObject target = null;
-						Boat boat = null;
+						WorldObject target;
+						Boat boat;
 						String value = st.nextToken();
 						switch (value)
 						{
@@ -610,7 +610,7 @@ public final class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.error(e.getMessage(), e);
 				showSendUsage(activeChar, null, null);
 				return false;
 			}

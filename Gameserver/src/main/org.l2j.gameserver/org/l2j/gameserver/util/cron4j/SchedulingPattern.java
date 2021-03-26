@@ -571,7 +571,7 @@ public class SchedulingPattern {
         /**
          * Months aliases.
          */
-        private static String[] ALIASES =
+        private static final String[] ALIASES =
                 {
                         "jan",
                         "feb",
@@ -613,7 +613,7 @@ public class SchedulingPattern {
         /**
          * Days of week aliases.
          */
-        private static String[] ALIASES =
+        private static final String[] ALIASES =
                 {
                         "sun",
                         "mon",

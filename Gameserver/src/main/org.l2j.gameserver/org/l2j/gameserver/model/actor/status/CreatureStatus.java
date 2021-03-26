@@ -27,8 +27,6 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMpChange;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -38,7 +36,6 @@ import static java.util.Objects.isNull;
 
 
 public class CreatureStatus {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(CreatureStatus.class);
 
     protected static final byte REGEN_FLAG_CP = 4;
     private static final byte REGEN_FLAG_HP = 1;

@@ -29,8 +29,8 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
  */
 public class DoorTemplate extends CreatureTemplate implements IIdentifiable {
     private final int _doorId;
-    private final int _nodeX[];
-    private final int _nodeY[];
+    private final int[] _nodeX;
+    private final int[] _nodeY;
     private final int _nodeZ;
     private final int _height;
     private final int _posX;
@@ -53,7 +53,6 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable {
     private final DoorOpenType _openType;
     private final boolean _checkCollision;
     private final boolean _isAttackableDoor;
-    private final boolean _stealth;
     private final boolean _isInverted;
     private int _openTime;
     private int _randomTime;
@@ -102,7 +101,6 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable {
             _randomTime = set.getInt("randomTime", -1);
         }
         _isAttackableDoor = set.getBoolean("attackable", false);
-        _stealth = set.getBoolean("stealth", false);
         _isInverted = set.getBoolean("isInverted", false);
     }
 
@@ -210,10 +208,6 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable {
 
     public boolean isAttackable() {
         return _isAttackableDoor;
-    }
-
-    public boolean isStealth() {
-        return _stealth;
     }
 
     public boolean isInverted() {
