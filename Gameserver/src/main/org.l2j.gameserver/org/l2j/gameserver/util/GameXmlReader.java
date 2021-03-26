@@ -90,7 +90,7 @@ public abstract class GameXmlReader extends XmlReader {
                     for (Node minions_node = parameters_node.getFirstChild(); minions_node != null; minions_node = minions_node.getNextSibling()) {
                         if (minions_node.getNodeName().equalsIgnoreCase("npc")) {
                             attrs = minions_node.getAttributes();
-                            minions.add(new MinionHolder(parseInt(attrs, "id"), parseInt(attrs, "count"), parseInt(attrs, "respawnTime"), parseInt(attrs, "weightPoint")));
+                            minions.add(new MinionHolder(parseInt(attrs, "id"), parseInt(attrs, "count"));
                         }
                     }
 

@@ -8480,13 +8480,6 @@ public final class Player extends Playable {
     }
 
     /**
-     * @return the amount of points that player used
-     */
-    public int getSummonPoints() {
-        return getServitors().values().stream().mapToInt(Summon::getSummonPoints).sum();
-    }
-
-    /**
      * @return {@code true} if the request was registered successfully, {@code false} otherwise.
      */
     public boolean addRequest(AbstractRequest request) {

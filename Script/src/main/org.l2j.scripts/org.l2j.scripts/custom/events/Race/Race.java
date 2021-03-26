@@ -115,6 +115,7 @@ public final class Race extends Event
 		addStartNpc(_stop_npc);
 		addFirstTalkId(_stop_npc);
 		addTalkId(_stop_npc);
+		setCustom(true);
 	}
 	
 	@Override

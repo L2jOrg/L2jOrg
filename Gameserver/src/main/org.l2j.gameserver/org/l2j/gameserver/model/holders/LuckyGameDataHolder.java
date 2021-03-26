@@ -28,17 +28,13 @@ import java.util.List;
  * @author Sdw
  */
 public class LuckyGameDataHolder {
-    private final int _index;
-    private final int _turningPoints;
     private final List<ItemChanceHolder> _commonRewards = new ArrayList<>();
     private final List<ItemPointHolder> _uniqueRewards = new ArrayList<>();
     private final List<ItemChanceHolder> _modifyRewards = new ArrayList<>();
     private int _minModifyRewardGame;
     private int _maxModifyRewardGame;
 
-    public LuckyGameDataHolder(StatsSet params) {
-        _index = params.getInt("index");
-        _turningPoints = params.getInt("turning_point");
+    public LuckyGameDataHolder() {
     }
 
     public void addCommonReward(ItemChanceHolder item) {

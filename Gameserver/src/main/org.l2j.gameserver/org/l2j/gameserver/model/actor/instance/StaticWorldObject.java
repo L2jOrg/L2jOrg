@@ -41,6 +41,7 @@ public final class StaticWorldObject extends Creature {
      * The interaction distance of the StaticWorldObject
      */
     public static final int INTERACTION_DISTANCE = 150;
+    public static final int MESH_INDEX = 0; // default textures : 0;  alternate textures : 1
 
     private final int _staticObjectId;
     private int _type = -1; // 0 - map signs, 1 - throne , 2 - arena signs
@@ -130,19 +131,6 @@ public final class StaticWorldObject extends Creature {
     @Override
     public boolean isAutoAttackable(Creature attacker) {
         return false;
-    }
-
-    /**
-     * <B><U> Values </U> :</B>
-     * <ul>
-     * <li>default textures : 0</li>
-     * <li>alternate textures : 1</li>
-     * </ul>
-     *
-     * @return the meshIndex of the object
-     */
-    public int getMeshIndex() {
-        return 0;
     }
 
     @Override

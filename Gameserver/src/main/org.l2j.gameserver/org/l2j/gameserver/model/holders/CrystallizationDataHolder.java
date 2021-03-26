@@ -26,11 +26,9 @@ import java.util.List;
  * @author UnAfraid
  */
 public class CrystallizationDataHolder {
-    private final int _id;
     private final List<ItemChanceHolder> _items;
 
-    public CrystallizationDataHolder(int id, List<ItemChanceHolder> items) {
-        _id = id;
+    public CrystallizationDataHolder(List<ItemChanceHolder> items) {
         _items = Collections.unmodifiableList(items);
     }
 

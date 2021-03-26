@@ -20,19 +20,14 @@
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.network.NpcStringId;
 
 /**
  * @author St3eT
  */
 public class ClanHallTeleportHolder extends Location {
-    private final int _minFunctionLevel;
-    private final int _cost;
 
-    public ClanHallTeleportHolder(int x, int y, int z, int minFunctionLevel, int cost) {
+    public ClanHallTeleportHolder(int x, int y, int z) {
         super(x, y, z);
-        _minFunctionLevel = minFunctionLevel;
-        _cost = cost;
     }
 
 }
