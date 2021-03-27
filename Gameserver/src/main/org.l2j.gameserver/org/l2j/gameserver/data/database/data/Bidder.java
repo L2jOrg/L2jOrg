@@ -17,45 +17,51 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.clanhallauction;
+package org.l2j.gameserver.data.database.data;
 
+import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.NonUpdatable;
+import org.l2j.commons.database.annotation.Table;
 import org.l2j.gameserver.model.Clan;
 
-import java.time.Instant;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-
 /**
- * @author Sdw
+ * @author JoeAlisson
  */
+@Table("clanhall_auctions_bidders")
 public class Bidder {
-    private final Clan _clan;
-    private final long _bid;
-    private final long _time;
+    private long bid;
+    private long bidTime;
+    @Column("clanId")
+    private int clanId;
+    @Column("clanHallId")
+    private int clanHallId;
 
-    public Bidder(Clan clan, long bid, long time) {
-        _clan = clan;
-        _bid = bid;
-        _time = time == 0 ? Instant.now().toEpochMilli() : time;
-    }
+    @NonUpdatable
+    private Clan clan;
 
     public Clan getClan() {
-        return _clan;
+        return clan;
     }
 
     public String getClanName() {
-        return _clan.getName();
+        return clan.getName();
     }
 
     public long getBid() {
-        return _bid;
+        return bid;
     }
 
-    public long getTime() {
-        return _time;
+    public long getBidTime() {
+        return bidTime;
     }
 
-    public String getFormattedTime() {
-        return DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").format(Instant.ofEpochMilli(_time).atZone(ZoneId.systemDefault()));
+    public static Bidder of(int clanHallId, Clan clan, long bid, long bidTime) {
+        var bidder = new Bidder();
+        bidder.clan = clan;
+        bidder.clanHallId = clanHallId;
+        bidder.clanId = clan.getId();
+        bidder.bid = bid;
+        bidder.bidTime = bidTime;
+        return bidder;
     }
 }
