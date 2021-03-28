@@ -17,44 +17,51 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.item.auction;
+package org.l2j.gameserver.data.database.data;
 
+import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.Table;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.World;
 
 /**
  * @author Forsaiken
  */
+@Table("item_auction_bid")
 public final class ItemAuctionBid {
-    private final int _playerObjId;
-    private long _lastBid;
+    @Column("auction")
+    private int auction;
+    @Column("player_id")
+    private int playerId;
+    private long bid;
 
-    public ItemAuctionBid(int playerObjId, long lastBid) {
-        _playerObjId = playerObjId;
-        _lastBid = lastBid;
+    public ItemAuctionBid(int auction, int playerObjId, long lastBid) {
+        this.auction = auction;
+        playerId = playerObjId;
+        bid = lastBid;
     }
 
     public final int getPlayerObjId() {
-        return _playerObjId;
+        return playerId;
     }
 
     public final long getLastBid() {
-        return _lastBid;
+        return bid;
     }
 
-    final void setLastBid(long lastBid) {
-        _lastBid = lastBid;
+    public final void setLastBid(long lastBid) {
+        bid = lastBid;
     }
 
-    final void cancelBid() {
-        _lastBid = -1;
+    public final void cancelBid() {
+        bid = -1;
     }
 
-    final boolean isCanceled() {
-        return _lastBid <= 0;
+    public final boolean isCanceled() {
+        return bid <= 0;
     }
 
-    final Player getPlayer() {
-        return World.getInstance().findPlayer(_playerObjId);
+    public final Player getPlayer() {
+        return World.getInstance().findPlayer(playerId);
     }
 }

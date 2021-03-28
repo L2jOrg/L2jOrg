@@ -1,10 +1,11 @@
 DROP TABLE IF EXISTS `item_auction`;
 CREATE TABLE IF NOT EXISTS `item_auction` (
-  `auctionId` int(11) NOT NULL,
-  `instanceId` int(11) NOT NULL,
-  `auctionItemId` int(11) NOT NULL,
-  `startingTime` bigint(13) unsigned NOT NULL DEFAULT '0',
-  `endingTime` bigint(13) unsigned NOT NULL DEFAULT '0',
-  `auctionStateId` tinyint(1) NOT NULL,
-  PRIMARY KEY (`auctionId`)
+  `auction` INT NOT NULL,
+  `instance` INT NOT NULL,
+  `auction_item` INT NOT NULL,
+  `starting_time` BIGINT UNSIGNED NOT NULL DEFAULT '0',
+  `ending_time`  BIGINT UNSIGNED NOT NULL DEFAULT '0',
+  `auction_state` ENUM('CREATED', 'STARTED', 'FINISHED') NOT NULL,
+  PRIMARY KEY (auction),
+  KEY (`instance`)
 )  ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

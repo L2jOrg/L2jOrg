@@ -22,7 +22,10 @@ package org.l2j.gameserver.data.database.data;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.Clan;
+
+import static java.util.Objects.isNull;
 
 /**
  * @author JoeAlisson
@@ -40,11 +43,14 @@ public class Bidder {
     private Clan clan;
 
     public Clan getClan() {
+        if(isNull(clan)) {
+            clan = ClanTable.getInstance().getClan(clanId);
+        }
         return clan;
     }
 
     public String getClanName() {
-        return clan.getName();
+        return getClan().getName();
     }
 
     public long getBid() {
