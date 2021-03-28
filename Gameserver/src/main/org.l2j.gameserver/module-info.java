@@ -1,3 +1,4 @@
+import org.l2j.gameserver.data.database.dao.ReuseInfoDAO;
 import org.l2j.gameserver.engine.item.container.listener.BowCrossListener;
 
 module org.l2j.gameserver {
@@ -144,7 +145,11 @@ module org.l2j.gameserver {
 
     provides org.l2j.commons.database.TypeHandler
             with org.l2j.gameserver.data.database.handler.CommissionItemHandler,
-                 org.l2j.gameserver.data.database.handler.MacroHandler;
+                 org.l2j.gameserver.data.database.handler.MacroHandler,
+                 org.l2j.gameserver.data.database.handler.SkillHandler;
+
+    provides org.l2j.commons.database.ProvidedDAO
+            with ReuseInfoDAO;
 
     uses org.l2j.gameserver.handler.IPunishmentHandler;
     uses org.l2j.gameserver.handler.IUserCommandHandler;

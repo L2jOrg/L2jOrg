@@ -150,7 +150,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeInt(playerInfo.getFace());
 
             buffer.writeDouble(data.getMaxtHp());
-            buffer.writeDouble(data.getMaxtMp());
+            buffer.writeDouble(data.getMaxMp());
 
             buffer.writeInt(data.getDeleteTime() > 0 ? (int) ((data.getDeleteTime() - System.currentTimeMillis()) / 1000) : 0);
             buffer.writeInt(data.getClassId());

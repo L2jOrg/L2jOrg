@@ -1285,4 +1285,9 @@ public class Npc extends Creature {
     public void setRaidBossStatus(BossStatus status) {
         _raidStatus = status;
     }
+
+    @Override
+    public int getReputation() {
+        return 0;
+    }
 }

@@ -57,7 +57,7 @@ public final class BuffInfo {
 
     private final Creature _effector;
     private final Creature _effected;
-    private final Skill _skill;
+    private final Skill skill;
     /**
      * The effects.
      */
@@ -92,7 +92,7 @@ public final class BuffInfo {
     public BuffInfo(Creature effector, Creature effected, Skill skill, boolean hideStartMessage, Item item, Options option) {
         _effector = effector;
         _effected = effected;
-        _skill = skill;
+        this.skill = skill;
         _abnormalTime = Formulas.calcEffectAbnormalTime(effector, effected, skill);
         _periodStartTicks = WorldTimeController.getInstance().getGameTicks();
         _hideStartMessage = hideStartMessage;
@@ -152,7 +152,7 @@ public final class BuffInfo {
      * @return the skill
      */
     public Skill getSkill() {
-        return _skill;
+        return skill;
     }
 
     /**
@@ -223,16 +223,16 @@ public final class BuffInfo {
         _isInUse = val;
 
         // Send message that the effect is applied or removed.
-        if ((_skill != null) && !_skill.isHidingMessages() && isPlayer(_effected)) {
+        if ((skill != null) && !skill.isHidingMessages() && isPlayer(_effected)) {
             if (val) {
-                if (!_hideStartMessage && !_skill.isAura()) {
+                if (!_hideStartMessage && !skill.isAura()) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
-                    sm.addSkillName(_skill);
+                    sm.addSkillName(skill);
                     _effected.sendPacket(sm);
                 }
             } else {
-                final SystemMessage sm = SystemMessage.getSystemMessage(_skill.isToggle() ? SystemMessageId.S1_HAS_BEEN_ABORTED : SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED);
-                sm.addSkillName(_skill);
+                final SystemMessage sm = SystemMessage.getSystemMessage(skill.isToggle() ? SystemMessageId.S1_HAS_BEEN_ABORTED : SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED);
+                sm.addSkillName(skill);
                 _effected.sendPacket(sm);
             }
         }
@@ -281,14 +281,14 @@ public final class BuffInfo {
     }
 
     public void initializeEffects() {
-        if ((_effected == null) || (_skill == null)) {
+        if ((_effected == null) || (skill == null)) {
             return;
         }
 
         // When effects are initialized, the successfully landed.
-        if (!_hideStartMessage && isPlayer(_effected) && !_skill.isHidingMessages() && !_skill.isAura()) {
+        if (!_hideStartMessage && isPlayer(_effected) && !skill.isHidingMessages() && !skill.isAura()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
-            sm.addSkillName(_skill);
+            sm.addSkillName(skill);
             _effected.sendPacket(sm);
         }
 
@@ -298,12 +298,12 @@ public final class BuffInfo {
         }
 
         for (AbstractEffect effect : _effects) {
-            if (effect.isInstant() || (_effected.isDead() && !_skill.isPassive())) {
+            if (effect.isInstant() || (_effected.isDead() && !skill.isPassive())) {
                 continue;
             }
 
             // Call on start.
-            effect.onStart(_effector, _effected, _skill, _item);
+            effect.onStart(_effector, _effected, skill, _item);
 
             // If it's a continuous effect, if has ticks schedule a task with period, otherwise schedule a simple task to end it.
             if (effect.getTicks() > 0) {
@@ -327,14 +327,14 @@ public final class BuffInfo {
         // If the effect is in use, allow it to affect the effected.
         if (_isInUse) {
             // Callback for on action time event.
-            continueForever = effect.onActionTime(_effector, _effected, _skill, _item);
+            continueForever = effect.onActionTime(_effector, _effected, skill, _item);
         }
 
-        if (!continueForever && _skill.isToggle()) {
+        if (!continueForever && skill.isToggle()) {
             final EffectTaskInfo task = getEffectTask(effect);
             if (task != null) {
                 task.getScheduledFuture().cancel(true); // Don't allow to finish current run.
-                _effected.getEffectList().stopSkillEffects(true, _skill); // Remove the buff from the effect list.
+                _effected.getEffectList().stopSkillEffects(true, skill); // Remove the buff from the effect list.
             }
         }
     }
@@ -352,24 +352,24 @@ public final class BuffInfo {
             // Instant effects shouldn't call onExit(..).
             // if (!effect.isInstant())
             // {
-            effect.onExit(_effector, _effected, _skill);
+            effect.onExit(_effector, _effected, skill);
             // }
         }
 
         // Set the proper system message.
-        if ((_skill != null) && !(isSummon(_effected) && !((Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages()) {
+        if ((skill != null) && !(isSummon(_effected) && !((Summon) _effected).getOwner().hasSummon()) && !skill.isHidingMessages()) {
             SystemMessageId smId = null;
-            if (_skill.isToggle()) {
+            if (skill.isToggle()) {
                 smId = SystemMessageId.S1_HAS_BEEN_ABORTED;
             } else if (_isRemoved) {
                 smId = SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED;
-            } else if (!_skill.isPassive()) {
+            } else if (!skill.isPassive()) {
                 smId = SystemMessageId.S1_HAS_WORN_OFF;
             }
 
             if ((smId != null) && (_effected.getActingPlayer() != null) && _effected.getActingPlayer().isOnline()) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(smId);
-                sm.addSkillName(_skill);
+                sm.addSkillName(skill);
                 _effected.sendPacket(sm);
             }
         }
@@ -385,10 +385,18 @@ public final class BuffInfo {
     }
 
     public boolean isAbnormalType(AbnormalType type) {
-        return _skill.getAbnormalType() == type;
+        return skill.getAbnormalType() == type;
     }
 
     public int getSkillId() {
-        return _skill.getId();
+        return skill.getId();
+    }
+
+    public boolean canBeSaved() {
+        if (skill.isDeleteAbnormalOnLeave() || skill.isToggle() || skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS) {
+            return false;
+        }
+
+        return !skill.isDance() || getSettings(CharacterSettings.class).storeDances();
     }
 }
