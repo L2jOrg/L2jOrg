@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemAuctionBid;
@@ -53,6 +54,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author JoeAlisson
  */
 public final class ItemAuctionInstance {
+    public static final String AUCTION_HAS_FINISHED_MSG = "Auction {} has finished. Highest bid by {} for instance {}";
     protected static final Logger LOGGER = LoggerFactory.getLogger(ItemAuctionInstance.class);
     private static final long START_TIME_SPACE = TimeUnit.MILLISECONDS.convert(1, TimeUnit.MINUTES);
     private static final long FINISH_TIME_SPACE = TimeUnit.MILLISECONDS.convert(10, TimeUnit.MINUTES);
@@ -187,34 +189,34 @@ public final class ItemAuctionInstance {
     }
 
     final void checkAndSetCurrentAndNextAuction() {
-        final ItemAuction[] auctions = this.auctions.values().toArray(new ItemAuction[this.auctions.size()]);
+        final ItemAuction[] itemAuctions = this.auctions.values().toArray(new ItemAuction[this.auctions.size()]);
 
         ItemAuction currentAuction = null;
         ItemAuction nextAuction = null;
 
-        switch (auctions.length) {
+        switch (itemAuctions.length) {
             case 0: {
                 nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
                 break;
             }
             case 1: {
-                switch (auctions[0].getAuctionState()) {
+                switch (itemAuctions[0].getAuctionState()) {
                     case CREATED: {
-                        if (auctions[0].getStartingTime() < (System.currentTimeMillis() + START_TIME_SPACE)) {
-                            currentAuction = auctions[0];
+                        if (itemAuctions[0].getStartingTime() < (System.currentTimeMillis() + START_TIME_SPACE)) {
+                            currentAuction = itemAuctions[0];
                             nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
                         } else {
-                            nextAuction = auctions[0];
+                            nextAuction = itemAuctions[0];
                         }
                         break;
                     }
                     case STARTED: {
-                        currentAuction = auctions[0];
+                        currentAuction = itemAuctions[0];
                         nextAuction = createAuction(Math.max(currentAuction.getEndingTime() + FINISH_TIME_SPACE, System.currentTimeMillis() + START_TIME_SPACE));
                         break;
                     }
                     case FINISHED: {
-                        currentAuction = auctions[0];
+                        currentAuction = itemAuctions[0];
                         nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
                         break;
                     }
@@ -226,10 +228,10 @@ public final class ItemAuctionInstance {
             }
 
             default: {
-                Arrays.sort(auctions, Comparator.comparingLong(ItemAuction::getStartingTime).reversed());
+                Arrays.sort(itemAuctions, Comparator.comparingLong(ItemAuction::getStartingTime).reversed());
                 // just to make sure we won't skip any auction because of little different times
                 final long currentTime = System.currentTimeMillis();
-                for (ItemAuction auction : auctions) {
+                for (ItemAuction auction : itemAuctions) {
                     if (auction.getAuctionState() == ItemAuctionState.STARTED) {
                         currentAuction = auction;
                         break;
@@ -238,7 +240,7 @@ public final class ItemAuctionInstance {
                         break; // only first
                     }
                 }
-                for (ItemAuction auction : auctions) {
+                for (ItemAuction auction : itemAuctions) {
                     if ((auction.getStartingTime() > currentTime) && (currentAuction != auction)) {
                         nextAuction = auction;
                         break;
@@ -262,16 +264,16 @@ public final class ItemAuctionInstance {
             } else {
                 setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(currentAuction), Math.max(currentAuction.getStartingTime() - System.currentTimeMillis(), 0)));
             }
-            LOGGER.info(getClass().getSimpleName() + ": Schedule current auction " + currentAuction.getAuctionId() + " for instance " + instanceId);
+            LOGGER.info("Schedule current auction {}  for instance {}", currentAuction.getAuctionId(), instanceId);
         } else {
             setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(nextAuction), Math.max(nextAuction.getStartingTime() - System.currentTimeMillis(), 0)));
-            LOGGER.info(getClass().getSimpleName() + ": Schedule next auction " + nextAuction.getAuctionId() + " on " + DATE_FORMAT.format(new Date(nextAuction.getStartingTime())) + " for instance " + instanceId);
+            LOGGER.info("Schedule next auction {}  on {} for instance {}", nextAuction.getAuctionId(), Util.formatDateTime(nextAuction.getStartingTime()),  instanceId);
         }
     }
 
     public final ItemAuction[] getAuctionsByBidder(int bidderObjId) {
-        final Collection<ItemAuction> auctions = getAuctions();
-        final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());
+        final var itemAuctions = getAuctions();
+        final ArrayList<ItemAuction> stack = new ArrayList<>(itemAuctions.size());
         for (ItemAuction auction : getAuctions()) {
             if (auction.getAuctionState() != ItemAuctionState.CREATED) {
                 final ItemAuctionBid bid = auction.getBidFor(bidderObjId);
@@ -284,13 +286,13 @@ public final class ItemAuctionInstance {
     }
 
     public final Collection<ItemAuction> getAuctions() {
-        final Collection<ItemAuction> auctions;
+        final Collection<ItemAuction> itemAuctions;
 
         synchronized (this.auctions) {
-            auctions = this.auctions.values();
+            itemAuctions = this.auctions.values();
         }
 
-        return auctions;
+        return itemAuctions;
     }
 
     final void onAuctionFinished(ItemAuction auction) {
@@ -304,20 +306,20 @@ public final class ItemAuctionInstance {
                 player.getWarehouse().addItem("ItemAuction", item, null, null);
                 player.sendPacket(SystemMessageId.YOU_HAVE_BID_THE_HIGHEST_PRICE_AND_HAVE_WON_THE_ITEM_THE_ITEM_CAN_BE_FOUND_IN_YOUR_PERSONAL_WAREHOUSE);
 
-                LOGGER.info(getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + player.getName() + " for instance " + instanceId);
+                LOGGER.info(AUCTION_HAS_FINISHED_MSG, auction.getAuctionId(), player, instanceId);
             } else {
                 item.changeOwner(bid.getPlayerObjId());
                 item.changeItemLocation(ItemLocation.WAREHOUSE);
                 item.updateDatabase();
                 World.getInstance().removeObject(item);
 
-                LOGGER.info(getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + PlayerNameTable.getInstance().getNameById(bid.getPlayerObjId()) + " for instance " + instanceId);
+                LOGGER.info(AUCTION_HAS_FINISHED_MSG, auction.getAuctionId(), PlayerNameTable.getInstance().getNameById(bid.getPlayerObjId()), instanceId);
             }
 
             // Clean all canceled bids
             auction.clearCanceledBids();
         } else {
-            LOGGER.info(getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. There have not been any bid for instance " + instanceId);
+            LOGGER.info("Auction {} has finished. There have not been any bid for instance {}", auction.getAuctionId(), instanceId);
         }
     }
 

@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.engine.elemental.AbsorbItem;
 import org.l2j.gameserver.engine.item.Item;
@@ -26,7 +27,6 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.network.ServerExPacketId.EX_ELEMENTAL_SPIRIT_ABSORB_INFO;
 
 public class ElementalSpiritAbsorbInfo extends ServerPacket {
@@ -64,7 +64,7 @@ public class ElementalSpiritAbsorbInfo extends ServerPacket {
         buffer.writeInt(absorbItems.size()); //AbsorbCount
         for (AbsorbItem absorbItem : absorbItems) {
             buffer.writeInt(absorbItem.getId());
-            buffer.writeInt((int) zeroIfNullOrElse( player.getInventory().getItemByItemId(absorbItem.getId()), Item::getCount));
+            buffer.writeInt((int) Util.zeroIfNullOrElseLong( player.getInventory().getItemByItemId(absorbItem.getId()), Item::getCount));
             buffer.writeInt(absorbItem.getExperience());
         }
     }

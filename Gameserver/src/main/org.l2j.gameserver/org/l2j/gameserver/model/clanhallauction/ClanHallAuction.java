@@ -73,7 +73,7 @@ public class ClanHallAuction {
     }
 
     public long getClanBid(Clan clan) {
-        return Util.zeroIfNullOrElse(bidders.get(clan.getId()), Bidder::getBid);
+        return Util.zeroIfNullOrElseLong(bidders.get(clan.getId()), Bidder::getBid);
     }
 
     public Optional<Bidder> getHighestBidder() {
