@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemAuctionBid;
@@ -40,9 +39,11 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -59,7 +60,6 @@ public final class ItemAuctionInstance {
     private static final long START_TIME_SPACE = TimeUnit.MILLISECONDS.convert(1, TimeUnit.MINUTES);
     private static final long FINISH_TIME_SPACE = TimeUnit.MILLISECONDS.convert(10, TimeUnit.MINUTES);
 
-    private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("HH:mm:ss dd.MM.yy");
     private final int instanceId;
     private final AtomicInteger _auctionIds;
     private final IntMap<ItemAuction> auctions;
@@ -266,8 +266,9 @@ public final class ItemAuctionInstance {
             }
             LOGGER.info("Schedule current auction {}  for instance {}", currentAuction.getAuctionId(), instanceId);
         } else {
-            setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(nextAuction), Math.max(nextAuction.getStartingTime() - System.currentTimeMillis(), 0)));
-            LOGGER.info("Schedule next auction {}  on {} for instance {}", nextAuction.getAuctionId(), Util.formatDateTime(nextAuction.getStartingTime()),  instanceId);
+            var nextTask =  Duration.ofMillis(Math.max(nextAuction.getStartingTime() - System.currentTimeMillis(), 0));
+            setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(nextAuction), nextTask));
+            LOGGER.info("Schedule next auction {} in {} for instance {}", nextAuction.getAuctionId(), nextTask, instanceId);
         }
     }
 
