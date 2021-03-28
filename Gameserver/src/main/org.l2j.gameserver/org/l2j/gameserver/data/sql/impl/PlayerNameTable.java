@@ -29,6 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
+import java.util.function.ToIntFunction;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -121,7 +122,7 @@ public class PlayerNameTable {
     }
 
     public final int getAccessLevelById(int objectId) {
-        return zeroIfNullOrElse(getNameById(objectId), name -> accessLevels.get(objectId));
+        return zeroIfNullOrElse(getNameById(objectId), (ToIntFunction<String>) name -> accessLevels.get(objectId));
     }
 
     public synchronized boolean doesCharNameExist(String name) {

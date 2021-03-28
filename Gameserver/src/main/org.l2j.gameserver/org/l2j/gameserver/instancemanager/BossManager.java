@@ -37,6 +37,7 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
@@ -102,7 +103,7 @@ public class BossManager {
             return null;
         }
 
-        int respawn = zeroIfNullOrElse(spawnTemplate.getRespawnTime(), d -> (int) d.getSeconds());
+        int respawn = (int) zeroIfNullOrElse(spawnTemplate.getRespawnTime(), Duration::getSeconds);
         if(respawn <= 0) {
             LOGGER.warn("Found database spawns without respawn for npc: {} - {} {}", template.getId(), template.getName(), spawnTemplate);
             return null;
@@ -120,7 +121,7 @@ public class BossManager {
             spawn.setHeading(bossData.getHeading());
             spawn.setSpawnTemplate(spawnTemplate);
 
-            int respawnRandom = zeroIfNullOrElse(spawnTemplate.getRespawnTimeRandom(), d -> (int) d.getSeconds());
+            int respawnRandom = (int) zeroIfNullOrElse(spawnTemplate.getRespawnTimeRandom(), Duration::getSeconds);
             spawn.setRespawnDelay(respawn, respawnRandom);
             spawn.startRespawn();
 
