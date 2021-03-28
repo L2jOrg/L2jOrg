@@ -84,7 +84,7 @@ public class Util {
         return isNull(obj) ? 0 : function.applyAsInt(obj);
     }
 
-    public static <T> long zeroIfNullOrElse(T obj, ToLongFunction<T> function) {
+    public static <T> long zeroIfNullOrElseLong(T obj, ToLongFunction<T> function) {
         return  isNull(obj) ? 0 : function.applyAsLong(obj);
     }
 
