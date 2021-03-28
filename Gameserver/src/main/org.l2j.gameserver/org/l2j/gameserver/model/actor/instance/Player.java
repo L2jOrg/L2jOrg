@@ -8607,16 +8607,16 @@ public final class Player extends Playable {
     }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
-        sendPackets(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(), new ExUserInfoInvenWeight());
+        sendPackets(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(getLCoins()), new ExUserInfoInvenWeight());
     }
 
     public void sendItemList() {
         ItemList.sendList(this);
-        sendPacket(new ExQuestItemList(1, this));
-        sendPacket(new ExQuestItemList(2, this));
-        sendPacket(new ExAdenaInvenCount());
-        sendPacket(new ExUserInfoInvenWeight());
-        sendPacket(new ExBloodyCoinCount());
+        sendPackets(new ExQuestItemList(1, this),
+                new ExQuestItemList(2, this),
+                new ExAdenaInvenCount(),
+                new ExUserInfoInvenWeight(),
+                new ExBloodyCoinCount(getLCoins()));
     }
 
     public Fishing getFishing() {
