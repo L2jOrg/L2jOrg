@@ -44,17 +44,10 @@ class BanManager {
     }
 
     private void loadBanFile() {
-
-        Path path = FileUtil.resolvePath("banned_ip.cfg");
-        if (Files.isRegularFile(path)) {
-            try {
-                Files.readAllLines(path).stream().filter(Util::isNotEmpty).forEach(this::addBannedAddress);
-            } catch (IOException e) {
-                LOGGER.warn("Error while reading the bans file ({}).", path.getFileName(), e);
-            }
-            LOGGER.info("Loaded {} IP Bans.", bannedAdresses.size());
-        } else {
-            LOGGER.warn("IP Bans file {} is missing or is a directory, skipped.", path.toAbsolutePath());
+        try(var reader = FileUtil.reader("banned_ip.cfg")) {
+            reader.lines().filter(Util::isNotEmpty).forEach(this::addBannedAddress);
+        } catch (IOException e) {
+            LOGGER.warn("Error while reading the bans file ({}).", "banned_ip.cfg", e);
         }
     }
 
