@@ -159,6 +159,7 @@ public class FileUtil {
     }
 
     private static Path pathFromResources(String filePath) {
-        return Path.of(resolveFilePath(filePath));
+        var uri = readToURI(filePath);
+        return nonNull(uri) ? Path.of(uri) : Path.of(filePath);
     }
 }
