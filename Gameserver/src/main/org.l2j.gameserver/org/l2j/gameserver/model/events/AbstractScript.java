@@ -1513,10 +1513,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             smsg.addItemName(item);
             player.sendPacket(smsg);
         }
-        // send packets
-        player.sendPacket(new ExUserInfoInvenWeight());
-        player.sendPacket(new ExAdenaInvenCount());
-        player.sendPacket(new ExBloodyCoinCount());
     }
 
     /**

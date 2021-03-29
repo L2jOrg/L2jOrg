@@ -26,6 +26,7 @@ import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.enums.StatusUpdateType;
@@ -43,7 +44,6 @@ import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.ConnectionState;
@@ -54,13 +54,11 @@ import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemLi
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
-import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
 import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeWaitingListAlarm;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
-import org.l2j.gameserver.network.serverpackets.randomcraft.ExCraftInfo;
 import org.l2j.gameserver.settings.*;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.MapRegionManager;
@@ -156,11 +154,6 @@ public class EnterWorld extends ClientPacket {
         if (Config.ENABLE_MAGIC_LAMP)
         {
             player.sendPacket(new ExMagicLampExpInfoUI(player));
-        }
-
-        if (Config.ENABLE_RANDOM_CRAFT)
-        {
-            player.sendPacket(new ExCraftInfo(player));
         }
 
         client.sendPacket(new ExEnterWorld());
@@ -341,10 +334,7 @@ public class EnterWorld extends ClientPacket {
 
     private void restoreItems(Player player) {
         player.getInventory().restore();
-        player.sendPackets(new ExUserInfoInvenWeight(), new ExAdenaInvenCount(), new ExBloodyCoinCount());
-        ItemList.sendList(player);
-        client.sendPacket(new ExQuestItemList(1, player));
-        client.sendPacket(new ExQuestItemList(2, player));
+        player.sendItemList();
         player.sendPacket(new ExStorageMaxCount(player));
         player.getWarehouse().forEachItem(Item::isTimeLimitedItem, Item::scheduleLifeTimeTask);
 

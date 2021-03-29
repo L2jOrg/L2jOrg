@@ -4655,7 +4655,7 @@ public final class Player extends Playable {
         uptime = time;
     }
 
-
+    
     @Override
     public boolean isInvulnerable() {
         return super.isInvulnerable() || isTeleportProtected();

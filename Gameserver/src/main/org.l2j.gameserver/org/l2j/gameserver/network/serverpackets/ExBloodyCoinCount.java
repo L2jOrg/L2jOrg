@@ -22,10 +22,20 @@ import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
+/**
+ * @author JoeAlisson
+ */
 public class ExBloodyCoinCount extends ServerPacket {
+
+    private final long count;
+
+    public ExBloodyCoinCount(long count) {
+        this.count = count;
+    }
+
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_BLOODY_COIN_COUNT, buffer );
-        buffer.writeLong(client.getPlayer().getLCoins());
+        buffer.writeLong(count);
     }
 }
