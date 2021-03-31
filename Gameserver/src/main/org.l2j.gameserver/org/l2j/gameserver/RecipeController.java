@@ -20,6 +20,7 @@ package org.l2j.gameserver;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -213,7 +214,7 @@ public class RecipeController {
             if (_player != _target) {
                 final ManufactureItem item = _player.getManufactureItems().get(_recipeList.getId());
                 if (item != null) {
-                    _price = item.getCost();
+                    _price = item.getPrice();
                     if (_target.getAdena() < _price) // check price
                     {
                         _target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);

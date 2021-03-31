@@ -3894,7 +3894,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return effectList.remainTimeBySkillIdOrAbnormalType(skill.getId(), skill.getAbnormalType());
     }
 
-    public abstract int getReputation();
+    public int getReputation() {
+        return 0;
+    }
 
     /**
      * This class group all movement data.<br>

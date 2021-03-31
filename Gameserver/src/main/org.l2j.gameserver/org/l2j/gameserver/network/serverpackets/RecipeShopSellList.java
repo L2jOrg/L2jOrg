@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.ManufactureItem;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -48,7 +48,7 @@ public class RecipeShopSellList extends ServerPacket {
             for (ManufactureItem temp : _manufacturer.getManufactureItems().values()) {
                 buffer.writeInt(temp.getRecipeId());
                 buffer.writeInt(0x00); // unknown
-                buffer.writeLong(temp.getCost());
+                buffer.writeLong(temp.getPrice());
 
                 buffer.writeLong(0x00); // Classic - 166
                 buffer.writeLong(0x00); // Classic - 166
