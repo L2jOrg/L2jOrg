@@ -417,10 +417,22 @@ public final class Config {
     public static int STARTING_VITALITY_POINTS;
     public static boolean RAIDBOSS_USE_VITALITY;
     public static float RATE_VITALITY_EXP_MULTIPLIER;
-    public static float RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
     public static int VITALITY_MAX_ITEMS_ALLOWED;
     public static float RATE_VITALITY_LOST;
     public static float RATE_VITALITY_GAIN;
+
+    // --------------------------------------------------
+    // Sayha's Grace Settings
+    // --------------------------------------------------
+    public static boolean ENABLE_SAYHA_GRACE;
+    public static int STARTING_SAYHA_GRACE_POINTS;
+    public static boolean RAIDBOSS_USE_SAYHA_GRACE;
+    public static float RATE_SAYHA_GRACE_EXP_MULTIPLIER;
+    public static float RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
+    public static int SAYHA_GRACE_MAX_ITEMS_ALLOWED;
+    public static float RATE_SAYHA_GRACE_LOST;
+    public static float RATE_SAYHA_GRACE_GAIN;
+
 
     // --------------------------------------------------
     // PvP Settings
@@ -1193,6 +1205,7 @@ public final class Config {
 
         ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
         STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
+        STARTING_SAYHA_GRACE_POINTS = Character.getInt("StartingVitalityPoints", 140000);
         RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 3);
         RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
         VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
@@ -1202,6 +1215,17 @@ public final class Config {
         }
         RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
         RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
+        RATE_RAIDBOSS_POINTS = RatesSettings.getFloat("RateRaidbossPointsReward", 1);
+        RATE_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateSayhaGraceExpMultiplier", 3);
+        RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
+        SAYHA_GRACE_MAX_ITEMS_ALLOWED = RatesSettings.getInt("SayhaGraceMaxItemsAllowed", 0);
+        if (SAYHA_GRACE_MAX_ITEMS_ALLOWED == 0)
+        {
+            SAYHA_GRACE_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
+        }
+        RATE_SAYHA_GRACE_LOST = RatesSettings.getFloat("RateSayhaGraceLost", 1);
+        RATE_SAYHA_GRACE_GAIN = RatesSettings.getFloat("RateSayhaGraceGain", 1);
+        RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
 
         RATE_EXTRACTABLE = RatesSettings.getFloat("RateExtractable", 1);
         RATE_DROP_MANOR = RatesSettings.getInt("RateDropManor", 1);
