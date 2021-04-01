@@ -725,7 +725,7 @@ public class CreatureStats {
      * @param baseValue
      * @return the final value of the stat
      */
-    public double getValue(Stat stat, double baseValue) {
+    public  double getValue(Stat stat, double baseValue) {
         final Double fixedValue = _fixedValue.get(stat);
         return fixedValue != null ? fixedValue : stat.finalize(creature, Optional.of(baseValue));
     }

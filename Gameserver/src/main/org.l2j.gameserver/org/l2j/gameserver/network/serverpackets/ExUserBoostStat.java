@@ -44,8 +44,8 @@ public class ExUserBoostStat extends ServerPacket{
     }
 
     public enum BoostStatType {
-        SERVER,
+        SAYHA,
         STAT,
-        OTHER,
+        PASSIVE,
     }
 }

@@ -30,13 +30,13 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author Sdw
  */
 public class ExVitalityEffectInfo extends ServerPacket {
-    private final int _vitalityBonus;
+   // private final int _vitalityBonus;
     private final int _vitalityItemsRemaining;
     private final int _points;
 
     public ExVitalityEffectInfo(Player cha) {
         _points = cha.getVitalityPoints();
-        _vitalityBonus = (int) cha.getStats().getVitalityExpBonus() * 100;
+       // _vitalityBonus = (int) cha.getStats().getVitalityExpBonus() * 100;
         _vitalityItemsRemaining = getSettings(RateSettings.class).maxItemsVitality() - cha.getVitalityItemsUsed();
 
     }

@@ -149,6 +149,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
+import static java.lang.Math.round;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -202,6 +203,10 @@ public final class Player extends Playable {
     private int additionalSoulshot;
     private byte shineSouls;
     private byte shadowSouls;
+
+    private long _sayhaGraceSupportEndTime = 0;
+    private long _limitedSayhaGraceEndTime = 0;
+    private ScheduledFuture<?> _expBoostInfoTask = null;
 
     Player(GameClient client, PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -4033,7 +4038,7 @@ public final class Player extends Playable {
      */
     public void restoreExp(double restorePercent) {
         if (data.getExpBeforeDeath() > 0) {
-            getStats().addExp(Math.round(((data.getExpBeforeDeath() - getExp()) * restorePercent) / 100));
+            getStats().addExp(round(((data.getExpBeforeDeath() - getExp()) * restorePercent) / 100));
             data.setExpBeforeDeath(0);
         }
     }
@@ -4073,9 +4078,9 @@ public final class Player extends Playable {
         long lostExp = 0;
         if (!Event.isParticipant(this)) {
             if (lvl < LevelData.getInstance().getMaxLevel()) {
-                lostExp = Math.round(((getStats().getExpForLevel(lvl + 1) - getStats().getExpForLevel(lvl)) * percentLost) / 100);
+                lostExp = round(((getStats().getExpForLevel(lvl + 1) - getStats().getExpForLevel(lvl)) * percentLost) / 100);
             } else {
-                lostExp = Math.round(((getStats().getExpForLevel(LevelData.getInstance().getMaxLevel()) - getStats().getExpForLevel(LevelData.getInstance().getMaxLevel() - 1)) * percentLost) / 100);
+                lostExp = round(((getStats().getExpForLevel(LevelData.getInstance().getMaxLevel()) - getStats().getExpForLevel(LevelData.getInstance().getMaxLevel() - 1)) * percentLost) / 100);
             }
         }
 
@@ -6557,7 +6562,7 @@ public final class Player extends Playable {
                 return;
             }
 
-            final long restoreExp = Math.round(((data.getExpBeforeDeath() - getExp()) * revivePower) / 100);
+            final long restoreExp = round(((data.getExpBeforeDeath() - getExp()) * revivePower) / 100);
             final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT);
             dlg.addPcName(reviver);
             dlg.addLong(restoreExp);
@@ -7425,29 +7430,42 @@ public final class Player extends Playable {
         getStats().updateVitalityPoints(points, useRates);
     }
 
+    public int getSayhaGracePoints()
+    {
+        return getStats().getSayhaGracePoints();
+    }
+
+    public void setSayhaGracePoints(int points, boolean quiet)
+    {
+        getStats().setSayhaGracePoints(points, quiet);
+    }
+
+    public void addSayhaGracePoints(int points, boolean quiet)
+    {
+        getStats().addSayhaGracePoints(points, quiet);
+    }
+
     public void setSayhaGraceSupportEndTime(long endTime)
     {
-        if (variables.getSayaGraceSupportEndTime() < System.currentTimeMillis())
+        if (_sayhaGraceSupportEndTime < System.currentTimeMillis())
         {
-            variables.setSayaGraceSupportEndTime(endTime);
-           // sendPacket(new ExUserBoostStat(this, ));
-            sendPacket(new ExVitalityEffectInfo(this));
+            _sayhaGraceSupportEndTime = endTime;
+            sendExpBoostInfo(true);
             sendPacket(new ExVitalExInfo(this));
         }
     }
 
     public long getSayhaGraceSupportEndTime()
     {
-        return variables.getSayaGraceSupportEndTime();
+        return _sayhaGraceSupportEndTime;
     }
 
     public boolean setLimitedSayhaGraceEndTime(long endTime)
     {
-        if (endTime > variables.getLimitedSayaGraceEndTime())
+        if (endTime > _limitedSayhaGraceEndTime)
         {
-            variables.setLimitedSayaGraceEndTime(endTime);
-            //sendPacket(new ExUserBoostStat(this));
-            sendPacket(new ExVitalityEffectInfo(this));
+            _limitedSayhaGraceEndTime = endTime;
+            sendExpBoostInfo(true);
             sendPacket(new ExVitalExInfo(this));
             return true;
         }
@@ -7456,7 +7474,32 @@ public final class Player extends Playable {
 
     public long getLimitedSayhaGraceEndTime()
     {
-        return variables.getLimitedSayaGraceEndTime();
+        return _limitedSayhaGraceEndTime;
+    }
+
+    public void updateSayhaGracePoints(int points, boolean useRates, boolean quiet)
+    {
+        getStats().updateSayhaGracePoints(points, useRates, quiet);
+    }
+
+    public void sendExpBoostInfo(boolean includeSayhaGraceInfo)
+    {
+        if (_expBoostInfoTask != null)
+        {
+            _expBoostInfoTask.cancel(true);
+            _expBoostInfoTask = null;
+        }
+        _expBoostInfoTask = ThreadPool.schedule(() ->
+        {
+           // sendPacket(new ExUserBoostStat(ExUserBoostStat.BoostStatType.SAYHA, (short) (round(PlayerStats.getExpBonusMultiplier() * 100) - 100)));
+           // sendPacket(new ExUserBoostStat(ExUserBoostStat.BoostStatType.STAT, (short) (round(PlayerStats.getExpBonusMultiplier() * 100) - 100)));
+            //sendPacket(new ExUserBoostStat(ExUserBoostStat.BoostStatType.PASSIVE, (short) (round(PlayerStats.getExpBonusMultiplier() * 100) - 100)));
+            if (includeSayhaGraceInfo)
+            {
+                sendPacket(new ExVitalityEffectInfo(this));
+            }
+        }, 500);
+
     }
 
     public void checkItemRestriction() {
@@ -8654,16 +8697,16 @@ public final class Player extends Playable {
     }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
-        sendPackets(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(), new ExUserInfoInvenWeight());
+        sendPackets(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(getLCoins()), new ExUserInfoInvenWeight());
     }
 
     public void sendItemList() {
         ItemList.sendList(this);
-        sendPacket(new ExQuestItemList(1, this));
-        sendPacket(new ExQuestItemList(2, this));
-        sendPacket(new ExAdenaInvenCount());
-        sendPacket(new ExUserInfoInvenWeight());
-        sendPacket(new ExBloodyCoinCount());
+        sendPackets(new ExQuestItemList(1, this),
+                new ExQuestItemList(2, this),
+                new ExAdenaInvenCount(),
+                new ExUserInfoInvenWeight(),
+                new ExBloodyCoinCount(getLCoins()));
     }
 
     public Fishing getFishing() {
