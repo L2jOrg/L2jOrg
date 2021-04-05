@@ -120,7 +120,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         buffer.writeInt(player.getObjectId());
         buffer.writeInt(initSize);
-        buffer.writeShort(0x1C);
+        buffer.writeShort(28);
         buffer.writeBytes(mask);
 
         if (containsMask(UserInfoType.RELATION)) {
@@ -136,7 +136,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeInt(player.getBaseTemplate().getClassId().getRootClassId().getId());
             buffer.writeInt(player.getClassId().getId());
             buffer.writeInt(player.getLevel());
-            buffer.writeInt(-1); // unk
+            buffer.writeByte(0x00); // 270
+            buffer.writeByte(0x00); // 270
+            buffer.writeByte(0x00); // 270
+            buffer.writeByte(0x00); // 286
         }
 
         if (containsMask(UserInfoType.BASE_STATS)) {

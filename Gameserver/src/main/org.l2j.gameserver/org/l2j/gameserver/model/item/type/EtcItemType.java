@@ -115,7 +115,8 @@ public enum EtcItemType implements ItemType {
     VITAL_LEGACY_ITEM_1D,
     VITAL_LEGACY_ITEM_7D,
     VITAL_LEGACY_ITEM_30D,
-    BLESSED_SCROLL;
+    BLESSED_SCROLL,
+    ELEMENTAL_ORB;
 
 
     @Override
