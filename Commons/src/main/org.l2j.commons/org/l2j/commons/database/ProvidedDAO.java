@@ -19,6 +19,7 @@
 package org.l2j.commons.database;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.function.Consumer;
 
@@ -27,13 +28,28 @@ import java.util.function.Consumer;
  */
 public abstract class ProvidedDAO<T> implements DAO<T> {
 
-
      protected void executeInBatch(String sql, Consumer<PreparedStatement> populateAction) throws SQLException {
-        try(var con  = DatabaseFactory.getInstance().getConnection();
+        try ( var con  = DatabaseFactory.getInstance().getConnection();
             var statement = con.prepareStatement(sql)) {
             populateAction.accept(statement);
             statement.executeBatch();
         }
     }
+
+    protected void query(String sql, Consumer<ResultSet> action) throws SQLException {
+         try (var con = DatabaseFactory.getInstance().getConnection();
+            var statement = con.createStatement()) {
+             statement.execute(sql);
+             action.accept(statement.getResultSet());
+         }
+    }
+
+    protected void execute(String sql) throws SQLException {
+         try (var con = DatabaseFactory.getInstance().getConnection();
+              var statement = con.createStatement()) {
+              statement.execute(sql);
+         }
+    }
+
 
 }
