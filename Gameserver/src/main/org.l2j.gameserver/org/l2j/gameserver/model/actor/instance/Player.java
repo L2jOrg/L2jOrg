@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
@@ -126,8 +125,6 @@ import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Instant;

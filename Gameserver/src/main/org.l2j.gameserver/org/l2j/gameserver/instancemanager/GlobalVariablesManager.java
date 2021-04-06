@@ -18,14 +18,10 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.data.database.dao.GlobalVariableDAO;
+import org.l2j.gameserver.data.database.dao.GlobalVariablesDAO;
 import org.l2j.gameserver.model.variables.AbstractVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.sql.*;
-import java.util.Map.Entry;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -38,27 +34,12 @@ public final class GlobalVariablesManager extends AbstractVariables {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GlobalVariablesManager.class);
 
-    private static final String SELECT_QUERY = "SELECT * FROM global_variables";
-    private static final String INSERT_QUERY = "INSERT INTO global_variables (var, value) VALUES (?, ?)";
-
     private GlobalVariablesManager() {
     }
 
     @Override
     public boolean restoreMe() {
-        // Restore previous variables.
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             Statement st = con.createStatement();
-             ResultSet rset = st.executeQuery(SELECT_QUERY)) {
-            while (rset.next()) {
-                set(rset.getString("var"), rset.getString("value"));
-            }
-        } catch (SQLException e) {
-            LOGGER.warn("Couldn't restore global variables");
-            return false;
-        } finally {
-            compareAndSetChanges(true, false);
-        }
+        merge(getDAO(GlobalVariablesDAO.class).findAll());
         LOGGER.info("Loaded {} variables", getSet().size());
         return true;
     }
@@ -71,30 +52,14 @@ public final class GlobalVariablesManager extends AbstractVariables {
         }
 
         deleteMe();
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement st = con.prepareStatement(INSERT_QUERY)) {
-
-            // Insert all variables.
-            for (Entry<String, Object> entry : getSet().entrySet()) {
-                st.setString(1, entry.getKey());
-                st.setString(2, String.valueOf(entry.getValue()));
-                st.addBatch();
-            }
-            st.executeBatch();
-        } catch (SQLException e) {
-            LOGGER.warn("Couldn't save global variables to database.", e);
-            return false;
-        } finally {
-            compareAndSetChanges(true, false);
-        }
+        getDAO(GlobalVariablesDAO.class).save(this);
         LOGGER.info("Stored {} variables", getSet().size());
         return true;
     }
 
     @Override
     public boolean deleteMe() {
-        return getDAO(GlobalVariableDAO.class).deleteAll();
+        return getDAO(GlobalVariablesDAO.class).deleteAll();
     }
 
     public static void init() {
