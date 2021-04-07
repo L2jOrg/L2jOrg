@@ -101,13 +101,6 @@ public final class Config {
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
-
-
-    public static boolean ENABLE_MODIFY_SKILL_DURATION;
-    public static Map<Integer, Integer> SKILL_DURATION_LIST;
-    public static boolean ENABLE_MODIFY_SKILL_REUSE;
-    public static Map<Integer, Integer> SKILL_REUSE_LIST;
-
     public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
     public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
     public static long MAX_SP;
@@ -822,49 +815,6 @@ public final class Config {
 
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
-
-        // TODO move to skill property or custom
-        ENABLE_MODIFY_SKILL_DURATION = Character.getBoolean("EnableModifySkillDuration", false);
-
-        // Create Map only if enabled
-        if (ENABLE_MODIFY_SKILL_DURATION) {
-            final String[] propertySplit = Character.getString("SkillDurationList", "").split(";");
-            SKILL_DURATION_LIST = new HashMap<>(propertySplit.length);
-            for (String skill : propertySplit) {
-                final String[] skillSplit = skill.split(",");
-                if (skillSplit.length != 2) {
-                    LOGGER.warn("[SkillDurationList]: invalid config property -> SkillDurationList " + skill);
-                } else {
-                    try {
-                        SKILL_DURATION_LIST.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
-                    } catch (NumberFormatException nfe) {
-                        if (!skill.isEmpty()) {
-                            LOGGER.warn(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
-                        }
-                    }
-                }
-            }
-        }
-        ENABLE_MODIFY_SKILL_REUSE = Character.getBoolean("EnableModifySkillReuse", false);
-        // Create Map only if enabled
-        if (ENABLE_MODIFY_SKILL_REUSE) {
-            final String[] propertySplit = Character.getString("SkillReuseList", "").split(";");
-            SKILL_REUSE_LIST = new HashMap<>(propertySplit.length);
-            for (String skill : propertySplit) {
-                final String[] skillSplit = skill.split(",");
-                if (skillSplit.length != 2) {
-                    LOGGER.warn(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillReuseList \"", skill, "\""));
-                } else {
-                    try {
-                        SKILL_REUSE_LIST.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
-                    } catch (NumberFormatException nfe) {
-                        if (!skill.isEmpty()) {
-                            LOGGER.warn(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
-                        }
-                    }
-                }
-            }
-        }
 
         MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
         MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);

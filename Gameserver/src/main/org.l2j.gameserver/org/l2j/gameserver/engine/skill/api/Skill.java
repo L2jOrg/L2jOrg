@@ -178,18 +178,7 @@ public final class Skill implements IIdentifiable, Cloneable {
             abnormalResists = Collections.emptySet();
         }
 
-        if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(id)) {
-            useCustomDelay = true;
-            reuseDelay = Config.SKILL_REUSE_LIST.get(id);
-        }
-
-        if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(id)) {
-            useCustomTime = true;
-            abnormalTime = Config.SKILL_DURATION_LIST.get(id);
-        }
-
         reuseHashCode = SkillEngine.skillHashCode(id, level);
-
         minChance = Config.MIN_ABNORMAL_STATE_SUCCESS_RATE;
         maxChance = Config.MAX_ABNORMAL_STATE_SUCCESS_RATE;
     }
@@ -1217,5 +1206,15 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public boolean isAutoBuff() {
         return skillAutoUseType == SkillAutoUseType.BUFF;
+    }
+
+    void setCustomDelay(int delay) {
+        useCustomDelay = true;
+        reuseDelay = delay;
+    }
+
+    void setCustomTime(int time) {
+        useCustomTime = true;
+        abnormalTime = time;
     }
 }
