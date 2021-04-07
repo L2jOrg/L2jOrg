@@ -41,6 +41,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class PlayableStats extends CreatureStats {
     protected static final Logger LOGGER = LoggerFactory.getLogger(PlayableStats.class);
+    private static final long MAX_SP = Long.MAX_VALUE;
 
     public PlayableStats(Playable activeChar) {
         super(activeChar);
@@ -181,12 +182,12 @@ public class PlayableStats extends CreatureStats {
             return false;
         }
         final long currentSp = getSp();
-        if (currentSp >= Config.MAX_SP) {
+        if (currentSp >= MAX_SP) {
             return false;
         }
 
-        if (currentSp > (Config.MAX_SP - value)) {
-            value = Config.MAX_SP - currentSp;
+        if (currentSp > (MAX_SP - value)) {
+            value = MAX_SP - currentSp;
         }
 
         setSp(currentSp + value);
