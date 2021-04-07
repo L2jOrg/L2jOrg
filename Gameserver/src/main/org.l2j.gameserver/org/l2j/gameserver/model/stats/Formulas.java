@@ -577,7 +577,7 @@ public final class Formulas {
         final double basicPropertyResist = getBasicPropertyResistBonus(skill.getBasicProperty(), target);
         final double buffDebuffMod = skill.isDebuff() ?  2d - target.getStats().getValue(Stat.RESIST_ABNORMAL_DEBUFF, 1) : 1;
         final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
-        final double finalRate = traitMod > 0 ? CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist : 0;
+        final double finalRate = traitMod > 0 ? rate * basicPropertyResist : 0;
 
         if (!Rnd.chance(finalRate)) {
             if(target != attacker) {
@@ -633,10 +633,9 @@ public final class Formulas {
 
         // Add Matk/Mdef Bonus (TODO: Pending)
 
-        // Check the Rate Limits.
-        final double finalRate = CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist;
+        final double finalRate = rate * basicPropertyResist;
 
-        return Rnd.get(100) < finalRate;
+        return Rnd.chance(finalRate);
     }
 
     public static boolean calcMagicSuccess(Creature attacker, Creature target, Skill skill) {

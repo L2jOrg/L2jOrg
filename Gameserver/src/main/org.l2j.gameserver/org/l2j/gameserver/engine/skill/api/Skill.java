@@ -173,14 +173,11 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     void computeSkillAttributes() {
         buffType = isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : debuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
+        reuseHashCode = SkillEngine.skillHashCode(id, level);
 
         if(isNull(abnormalResists)) {
             abnormalResists = Collections.emptySet();
         }
-
-        reuseHashCode = SkillEngine.skillHashCode(id, level);
-        minChance = Config.MIN_ABNORMAL_STATE_SUCCESS_RATE;
-        maxChance = Config.MAX_ABNORMAL_STATE_SUCCESS_RATE;
     }
 
     public boolean checkCondition(Creature creature, WorldObject object) {
@@ -574,14 +571,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     void setActivateRate(int rate) {
         activateRate = rate;
-    }
-
-    public int getMinChance() {
-        return minChance;
-    }
-
-    public int getMaxChance() {
-        return maxChance;
     }
 
     void setNextAction(NextActionType action) {
