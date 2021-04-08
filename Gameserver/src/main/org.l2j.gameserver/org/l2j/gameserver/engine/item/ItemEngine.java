@@ -406,12 +406,12 @@ public final class ItemEngine extends GameXmlReader {
             {
                 final Attackable raid = (Attackable) reference;
                 // if in CommandChannel and was killing a World/RaidBoss
-                if ((raid.getFirstCommandChannelAttacked() != null) && !characterSettings.autoLootRaid()) {
+                if ((raid.getFirstCommandChannelAttacked() != null) && !characterSettings.autoLootRaid) {
                     item.changeOwner(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), characterSettings.raidLootPrivilegeTime());
+                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), characterSettings.raidLootPrivilegeTime);
                     item.setItemLootShedule(itemLootShedule);
                 }
-            } else if (!characterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
+            } else if (!characterSettings.autoLoot || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
                 item.changeOwner(actor.getObjectId());
                 itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
                 item.setItemLootShedule(itemLootShedule);

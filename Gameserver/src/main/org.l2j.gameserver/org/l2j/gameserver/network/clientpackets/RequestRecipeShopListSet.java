@@ -90,7 +90,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
 
         player.getManufactureItems().clear();
 
-        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
+        var maxAdena = getSettings(CharacterSettings.class).maxAdena;
         for (ManufactureItem item : _items) {
             final RecipeList list = RecipeData.getInstance().getRecipeList(item.getRecipeId());
             if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {

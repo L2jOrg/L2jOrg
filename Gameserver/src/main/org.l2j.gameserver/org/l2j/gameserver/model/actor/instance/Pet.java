@@ -576,7 +576,7 @@ public class Pet extends Summon {
             return;
         }
 
-        if (!getSettings(CharacterSettings.class).restoreSummonOnReconnect()) {
+        if (!getSettings(CharacterSettings.class).restoreSummonOnReconnect) {
             _restoreSummon = false;
         }
 
@@ -622,7 +622,7 @@ public class Pet extends Summon {
 
 
                 // Dances and songs are not kept in retail.
-                if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances()) {
+                if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances) {
                     continue;
                 }
 

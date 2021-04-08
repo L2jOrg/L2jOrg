@@ -134,7 +134,7 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        if (!getSettings(CharacterSettings.class).allowPKTeleport() && player.getReputation() < 0) {
+        if (!getSettings(CharacterSettings.class).allowPKTeleport && player.getReputation() < 0) {
             final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
             if (nonNull(skills) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
                 return;

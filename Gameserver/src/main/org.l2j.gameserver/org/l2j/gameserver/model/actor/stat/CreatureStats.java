@@ -69,7 +69,7 @@ public class CreatureStats {
     /**
      * Creature's maximum buff count.
      */
-    private int _maxBuffCount = getSettings(CharacterSettings.class).maxBuffs();
+    private int _maxBuffCount = getSettings(CharacterSettings.class).maxBuffs;
     private double _vampiricSum = 0;
     /**
      * Values to be recalculated after every stat update

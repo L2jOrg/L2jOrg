@@ -213,7 +213,7 @@ public final class TeleportHolder {
      * @return {@code true} when all requirements are met otherwise {@code false}
      */
     private boolean shouldPayFee(Player player, TeleportLocation loc) {
-        return !isNormalTeleport() || ((player.getLevel() > getSettings(CharacterSettings.class).maxFreeTeleportLevel()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+        return !isNormalTeleport() || ((player.getLevel() > getSettings(CharacterSettings.class).maxFreeTeleportLevel) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
     }
 
     /**
@@ -227,7 +227,7 @@ public final class TeleportHolder {
      */
     private long calculateFee(Player player, TeleportLocation loc) {
         if (isNormalTeleport()) {
-            if (player.getLevel() <= getSettings(CharacterSettings.class).maxFreeTeleportLevel()) {
+            if (player.getLevel() <= getSettings(CharacterSettings.class).maxFreeTeleportLevel) {
                 return 0;
             }
 

@@ -166,7 +166,7 @@ public final class RequestBuyItem extends ClientPacket {
                 }
             }
 
-            var maxAdena = getSettings(CharacterSettings.class).maxAdena();
+            var maxAdena = getSettings(CharacterSettings.class).maxAdena;
             if (MathUtil.checkMulOverFlow(price, i.getCount(), maxAdena)) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + maxAdena + " adena worth of goods.");
                 return;

@@ -256,7 +256,7 @@ public class RecipeController {
 
         @Override
         public void run() {
-            if (!getSettings(CharacterSettings.class).isCraftEnabled()) {
+            if (!getSettings(CharacterSettings.class).craftEnabled) {
                 _target.sendMessage("Item creation is currently disabled.");
                 abort();
                 return;

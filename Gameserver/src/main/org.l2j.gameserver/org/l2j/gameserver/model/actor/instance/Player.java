@@ -414,7 +414,7 @@ public final class Player extends Playable {
     }
 
     public boolean teleportInBattle() {
-        return !isInBattle() && getSettings(CharacterSettings.class).teleportInBattle();
+        return !isInBattle() && getSettings(CharacterSettings.class).teleportInBattle;
     }
 
     public void setAutoPlaySettings(AutoPlaySettings autoPlaySettings) {
@@ -2225,8 +2225,8 @@ public final class Player extends Playable {
     public void rewardSkills() {
         // Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
         var characterSettings = getSettings(CharacterSettings.class);
-        if (characterSettings.isAutoLearnSkillEnabled()) {
-            giveAvailableSkills(characterSettings.isAutoLearnSkillFSEnabled(), true);
+        if (characterSettings.autoLearnSkillEnabled) {
+            giveAvailableSkills(characterSettings.autoLearnSkillFSEnabled, true);
         } else {
             giveAvailableAutoGetSkills();
         }
@@ -2275,7 +2275,7 @@ public final class Player extends Playable {
             skillsForStore.add(skill);
         }
         storeSkills(skillsForStore);
-        if (skillCounter > 0 && getSettings(CharacterSettings.class).isAutoLearnSkillEnabled()) {
+        if (skillCounter > 0 && getSettings(CharacterSettings.class).autoLearnSkillEnabled) {
             sendMessage("You have learned " + skillCounter + " new skills.");
         }
         return skillCounter;
@@ -5477,7 +5477,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (!getSettings(CharacterSettings.class).allowPKTeleport() && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
+        if (!getSettings(CharacterSettings.class).allowPKTeleport && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -6341,7 +6341,7 @@ public final class Player extends Playable {
                 sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
             }
 
-            if (getSettings(CharacterSettings.class).restoreSummonOnReconnect() && !hasSummon()) {
+            if (getSettings(CharacterSettings.class).restoreSummonOnReconnect && !hasSummon()) {
                 if(PlayerSummonTable.getInstance().getServitors().containsKey(getObjectId())) {
                     PlayerSummonTable.getInstance().restoreServitor(this);
                 } else if(PlayerSummonTable.getInstance().getPets().containsKey(getObjectId())) {
@@ -6906,12 +6906,12 @@ public final class Player extends Playable {
     }
 
     public int getPrivateSellStoreLimit() {
-        int limit = getRace() == Race.DWARF ?  Config.MAX_PVTSTORESELL_SLOTS_DWARF :  Config.MAX_PVTSTORESELL_SLOTS_OTHER;
+        int limit = getRace() == Race.DWARF ?  getSettings(CharacterSettings.class).dwarfMaxSlotStoreSell :  getSettings(CharacterSettings.class).maxSlotStoreSell;
         return limit + (int) getStats().getValue(Stat.TRADE_SELL, 0);
     }
 
     public int getPrivateBuyStoreLimit() {
-        int limit =  getRace() == Race.DWARF ? Config.MAX_PVTSTOREBUY_SLOTS_DWARF : Config.MAX_PVTSTOREBUY_SLOTS_OTHER;
+        int limit =  getRace() == Race.DWARF ? getSettings(CharacterSettings.class).dwarfMaxSlotStoreBuy : Config.MAX_PVTSTOREBUY_SLOTS_OTHER;
         return limit + (int) getStats().getValue(Stat.TRADE_BUY, 0);
     }
 

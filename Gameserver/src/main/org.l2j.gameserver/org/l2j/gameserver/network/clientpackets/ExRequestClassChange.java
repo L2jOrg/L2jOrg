@@ -85,8 +85,8 @@ public class ExRequestClassChange extends ClientPacket {
             player.setBaseClass(player.getActiveClass());
 
             var characterSettings = getSettings(CharacterSettings.class);
-            if (characterSettings.isAutoLearnSkillEnabled()) {
-                player.giveAvailableSkills(characterSettings.isAutoLearnSkillFSEnabled(), true);
+            if (characterSettings.autoLearnSkillEnabled) {
+                player.giveAvailableSkills(characterSettings.autoLearnSkillFSEnabled, true);
             }
             player.store(false); // Save player cause if server crashes before this char is saved, he will lose class.
             player.broadcastUserInfo();

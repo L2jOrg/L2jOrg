@@ -151,7 +151,7 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
         }
 
         long totalCost = 0;
-        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
+        var maxAdena = getSettings(CharacterSettings.class).maxAdena;
         for (TradeItem i : _items) {
             if (MathUtil.checkMulOverFlow(i.getPrice(), i.getCount(), maxAdena)) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + maxAdena + " adena in Private Store - Buy.");

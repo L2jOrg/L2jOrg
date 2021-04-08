@@ -61,7 +61,7 @@ public final class InitialEquipmentData extends GameXmlReader {
     @Override
     public void load() {
         _initialEquipmentList.clear();
-        parseDatapackFile(getSettings(CharacterSettings.class).initialEquipEvent()  ? EVENT : NORMAL);
+        parseDatapackFile(getSettings(CharacterSettings.class).initialEquipEvent  ? EVENT : NORMAL);
         LOGGER.info("Loaded {} Initial Equipment data.", _initialEquipmentList.size());
         releaseResources();
     }

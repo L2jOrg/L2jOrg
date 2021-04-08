@@ -361,7 +361,7 @@ public class Clan implements IIdentifiable, INamable {
             }
         }
         exMember.saveApprenticeAndSponsor(0, 0);
-        if (getSettings(CharacterSettings.class).removeCastleCirclets()) {
+        if (getSettings(CharacterSettings.class).removeCastleCirclets) {
             CastleManager.getInstance().removeCirclet(exMember, getCastleId());
         }
         if (exMember.isOnline()) {
@@ -374,7 +374,7 @@ public class Clan implements IIdentifiable, INamable {
 
             if (player.isClanLeader()) {
                 SiegeManager.getInstance().removeSiegeSkills(player);
-                player.setClanCreateExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+                player.setClanCreateExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000L)); // 24*60*60*1000 = 86400000
             }
 
             // remove Clan skills from Player

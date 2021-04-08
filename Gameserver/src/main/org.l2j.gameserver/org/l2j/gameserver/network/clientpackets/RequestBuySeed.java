@@ -109,7 +109,7 @@ public class RequestBuySeed extends ClientPacket {
         int totalWeight = 0;
 
         final IntMap<SeedProduction> _productInfo = new HashIntMap<>();
-        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
+        var maxAdena = getSettings(CharacterSettings.class).maxAdena;
         for (ItemHolder ih : _items) {
             final SeedProduction sp = manor.getSeedProduct(_manorId, ih.getId(), false);
             if ((sp == null) || (sp.getPrice() <= 0) || (sp.getAmount() < ih.getCount()) || MathUtil.checkMulOverFlow(sp.getPrice(), ih.getCount(), maxAdena)) {

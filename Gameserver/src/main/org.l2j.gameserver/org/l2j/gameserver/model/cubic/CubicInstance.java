@@ -151,7 +151,7 @@ public class CubicInstance {
                     Stream<Creature> stream;
 
                     if (party != null) {
-                        stream = party.getMembers().stream().filter(c -> MathUtil.isInsideRadius3D(_owner, c, getSettings(CharacterSettings.class).partyRange()) &&  _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).map(c -> c);
+                        stream = party.getMembers().stream().filter(c -> MathUtil.isInsideRadius3D(_owner, c, getSettings(CharacterSettings.class).partyRange) &&  _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).map(c -> c);
                     } else {
                         stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(Creature.class::cast);
                     }

@@ -370,7 +370,7 @@ public class PlayerStats extends PlayableStats {
     }
 
     public void updateVitalityPoints(int points, boolean useRates) {
-        if (points == 0 || !getSettings(CharacterSettings.class).isVitalityEnabled()) {
+        if (points == 0 || !getSettings(CharacterSettings.class).vitalityEnabled) {
             return;
         }
 

@@ -27,49 +27,52 @@ import org.l2j.commons.configuration.SettingsFile;
  */
 public class CharacterSettings implements Settings {
 
-    private int partyRange;
+    public int partyRange;
     private IntSet autoLootItems;
-    private boolean autoLootRaid;
-    private int raidLootPrivilegeTime;
-    private boolean autoLoot;
-    private boolean initialEquipEvent;
-    private boolean delevel;
-    private float weightLimitMultiplier;
-    private boolean removeCastleCirclets;
-    private boolean restoreSummonOnReconnect;
-    private int minEnchantAnnounceWeapon;
-    private int minEnchantAnnounceArmor;
-    private float restoreCPPercent;
-    private float restoreHPPercent;
-    private float restoreMPPercent;
-    private boolean autoLearnSkillEnabled;
-    private boolean autoLearnSkillFSEnabled;
-    private byte maxBuffs;
-    private byte maxTriggeredBuffs;
-    private byte maxDances;
-    private boolean dispelDanceAllowed;
-    private boolean storeDances;
-    private boolean breakCast;
-    private boolean breakBowAttack;
-    private boolean magicFailureAllowed;
-    private boolean breakStun;
-    private int effectTickRatio;
-    private boolean autoLootHerbs;
-    private boolean pledgeSkillsItemNeeded;
-    private boolean divineInspirationBookNeeded;
-    private boolean vitalityEnabled;
-    private boolean raidBossUseVitality;
-    private int maxRunSpeed;
-    private int maxPcritRate;
-    private int maxMcritRate;
-    private int maxPAtkSpeed;
-    private int maxMAtkSpeed;
-    private int maxEvasion;
-    private boolean teleportInBattle;
-    private boolean craftEnabled;
-    private long maxAdena;
-    private boolean allowPKTeleport;
-    private int maxFreeTeleportLevel;
+    public boolean autoLootRaid;
+    public int raidLootPrivilegeTime;
+    public boolean autoLoot;
+    public boolean initialEquipEvent;
+    public boolean delevel;
+    public float weightLimitMultiplier;
+    public boolean removeCastleCirclets;
+    public boolean restoreSummonOnReconnect;
+    public int minEnchantAnnounceWeapon;
+    public int minEnchantAnnounceArmor;
+    public float restoreCPPercent;
+    public float restoreHPPercent;
+    public float restoreMPPercent;
+    public boolean autoLearnSkillEnabled;
+    public boolean autoLearnSkillFSEnabled;
+    public byte maxBuffs;
+    public byte maxTriggeredBuffs;
+    public byte maxDances;
+    public boolean dispelDanceAllowed;
+    public boolean storeDances;
+    public boolean breakCast;
+    public boolean breakBowAttack;
+    public boolean magicFailureAllowed;
+    public boolean breakStun;
+    public int effectTickRatio;
+    public boolean autoLootHerbs;
+    public boolean pledgeSkillsItemNeeded;
+    public boolean divineInspirationBookNeeded;
+    public boolean vitalityEnabled;
+    public boolean raidBossUseVitality;
+    public int maxRunSpeed;
+    public int maxPcritRate;
+    public int maxMcritRate;
+    public int maxPAtkSpeed;
+    public int maxMAtkSpeed;
+    public int maxEvasion;
+    public boolean teleportInBattle;
+    public boolean craftEnabled;
+    public long maxAdena;
+    public boolean allowPKTeleport;
+    public int maxFreeTeleportLevel;
+    public int dwarfMaxSlotStoreSell;
+    public int maxSlotStoreSell;
+    public int dwarfMaxSlotStoreBuy;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -135,177 +138,14 @@ public class CharacterSettings implements Settings {
 
         craftEnabled = settingsFile.getBoolean("CraftingEnabled", true);
 
+        dwarfMaxSlotStoreSell = settingsFile.getInteger("MaxPvtStoreSellSlotsDwarf", 4);
+        maxSlotStoreSell = settingsFile.getInteger("MaxPvtStoreSellSlotsOther", 3);
+        dwarfMaxSlotStoreBuy = settingsFile.getInteger("MaxPvtStoreBuySlotsDwarf", 5);
+
     }
 
-    public int partyRange() {
-        return partyRange;
-    }
-
-    public boolean autoLoot() {
-        return autoLoot;
-    }
 
     public boolean isAutoLoot(int item) {
         return autoLootItems.contains(item);
-    }
-
-    public boolean autoLootRaid() {
-        return autoLootRaid;
-    }
-
-    public int raidLootPrivilegeTime() {
-        return raidLootPrivilegeTime;
-    }
-
-    public boolean autoLootHerbs() {
-        return autoLootHerbs;
-    }
-
-    public long maxAdena() {
-        return maxAdena;
-    }
-
-    public boolean initialEquipEvent() {
-        return initialEquipEvent;
-    }
-
-    public boolean delevel() {
-        return delevel;
-    }
-
-    public float weightLimitMultiplier() {
-        return weightLimitMultiplier;
-    }
-
-    public boolean removeCastleCirclets() {
-        return removeCastleCirclets;
-    }
-
-    public boolean restoreSummonOnReconnect() {
-        return restoreSummonOnReconnect;
-    }
-
-    public int minEnchantAnnounceWeapon() {
-        return minEnchantAnnounceWeapon;
-    }
-
-    public int minEnchantAnnounceArmor() {
-        return minEnchantAnnounceArmor;
-    }
-
-    public float restoreCPPercent() {
-        return restoreCPPercent;
-    }
-
-    public float restoreHPPercent() {
-        return restoreHPPercent;
-    }
-
-    public float restoreMPPercent() {
-        return restoreMPPercent;
-    }
-
-    public boolean isAutoLearnSkillEnabled() {
-        return autoLearnSkillEnabled;
-    }
-
-    public boolean isPledgeSkillsItemNeeded() {
-        return pledgeSkillsItemNeeded;
-    }
-
-    public boolean isDivineInspirationBookNeeded() {
-        return divineInspirationBookNeeded;
-    }
-
-    public boolean isAutoLearnSkillFSEnabled() {
-        return autoLearnSkillFSEnabled;
-    }
-
-    public byte maxBuffs() {
-        return maxBuffs;
-    }
-
-    public byte maxTriggeredBuffs() {
-        return maxTriggeredBuffs;
-    }
-
-    public byte maxDances() {
-        return maxDances;
-    }
-
-    public boolean isDispelDanceAllowed() {
-        return dispelDanceAllowed;
-    }
-
-    public boolean storeDances() {
-        return storeDances;
-    }
-
-    public boolean breakCast() {
-        return breakCast;
-    }
-
-    public boolean breakBowAttack() {
-        return breakBowAttack;
-    }
-
-    public boolean breakStun() {
-        return breakStun;
-    }
-
-    public boolean isMagicFailureAllowed() {
-        return magicFailureAllowed;
-    }
-
-    public int effectTickRatio() {
-        return effectTickRatio;
-    }
-
-    public boolean isVitalityEnabled() {
-        return vitalityEnabled;
-    }
-
-    public boolean raidBossUseVitality() {
-        return raidBossUseVitality;
-    }
-
-    public int maxRunSpeed() {
-        return maxRunSpeed;
-    }
-
-    public int maxPcritRate() {
-        return maxPcritRate;
-    }
-
-    public int maxMcritRate() {
-        return maxMcritRate;
-    }
-
-    public int maxPAtkSpeed() {
-        return maxPAtkSpeed;
-    }
-
-    public int maxMAtkSpeed() {
-        return maxMAtkSpeed;
-    }
-
-    public int maxEvasion() {
-        return maxEvasion;
-    }
-
-    public boolean teleportInBattle() {
-        return teleportInBattle;
-    }
-
-    public boolean isCraftEnabled() {
-        return craftEnabled;
-    }
-
-    public boolean allowPKTeleport() {
-        return allowPKTeleport;
-    }
-
-    public int maxFreeTeleportLevel() {
-        return maxFreeTeleportLevel;
     }
 }

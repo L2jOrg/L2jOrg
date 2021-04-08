@@ -63,7 +63,7 @@ public final class RandomizeHate extends AbstractEffect {
 
         final Attackable effectedMob = (Attackable) effected;
 
-        var target = World.getInstance().findAnyVisibleObject(effected, Creature.class, getSettings(CharacterSettings.class).partyRange() / 2, false,
+        var target = World.getInstance().findAnyVisibleObject(effected, Creature.class, getSettings(CharacterSettings.class).partyRange / 2, false,
                 creature -> creature != effector && (!isAttackable(creature) || !((Attackable)creature).isInMyClan(effectedMob)));
 
         final int hate = effectedMob.getHating(effector);

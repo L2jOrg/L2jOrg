@@ -340,8 +340,8 @@ public class Attackable extends Npc {
                     final CommandChannel command = party.getCommandChannel();
                     //@formatter:off
                     final List<Player> members = command != null ?
-                            command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange())).collect(Collectors.toList()) :
-                            player.getParty().getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange())).collect(Collectors.toList());
+                            command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange)).collect(Collectors.toList()) :
+                            player.getParty().getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange)).collect(Collectors.toList());
                     //@formatter:on
 
                     members.forEach(p ->
@@ -804,8 +804,8 @@ public class Attackable extends Npc {
             final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
             // Check if the autoLoot mode is active
             var characterSettings = getSettings(CharacterSettings.class);
-            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot())
-                    || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && characterSettings.autoLootHerbs())) {
+            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot)
+                    || (_isRaid && characterSettings.autoLootRaid))) || (item.hasExImmediateEffect() && characterSettings.autoLootHerbs)) {
                 player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
             } else {
                 dropItem(player, drop); // drop the item on the ground
@@ -860,7 +860,7 @@ public class Attackable extends Npc {
                 final var itemCount = Rnd.get(drop.getMin(), drop.getMax());
 
                 var characterSettings = getSettings(CharacterSettings.class);
-                if (characterSettings.autoLoot() || isFlying() || characterSettings.isAutoLoot(itemId)) {
+                if (characterSettings.autoLoot || isFlying() || characterSettings.isAutoLoot(itemId)) {
                     player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the Player that has killed the Attackable
                 } else {
                     dropItem(player, itemId, itemCount); // drop the item on the ground

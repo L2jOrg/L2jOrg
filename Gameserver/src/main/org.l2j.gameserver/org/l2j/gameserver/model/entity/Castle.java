@@ -214,8 +214,8 @@ public final class Castle extends AbstractResidence {
                 return;
             }
             data.updateTreasury(-amount);
-        } else if (data.getTreasury() + amount > getSettings(CharacterSettings.class).maxAdena()) {
-            data.setTreasury(getSettings(CharacterSettings.class).maxAdena());
+        } else if (data.getTreasury() + amount > getSettings(CharacterSettings.class).maxAdena) {
+            data.setTreasury(getSettings(CharacterSettings.class).maxAdena);
         } else {
             data.updateTreasury(amount);
         }
@@ -306,7 +306,7 @@ public final class Castle extends AbstractResidence {
     public void removeOwner(Clan clan) {
         if (nonNull(clan)) {
             formerOwner = clan;
-            if (getSettings(CharacterSettings.class).removeCastleCirclets()) {
+            if (getSettings(CharacterSettings.class).removeCastleCirclets) {
                 CastleManager.getInstance().removeCirclet(formerOwner, getId());
             }
             for (Player member : clan.getOnlineMembers(0)) {
@@ -478,7 +478,7 @@ public final class Castle extends AbstractResidence {
 
                 if (isNull(formerOwner)) {
                     formerOwner = oldOwner;
-                    if (getSettings(CharacterSettings.class).removeCastleCirclets()) {
+                    if (getSettings(CharacterSettings.class).removeCastleCirclets) {
                         CastleManager.getInstance().removeCirclet(formerOwner, getId());
                     }
                 }

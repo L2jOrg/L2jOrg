@@ -138,8 +138,8 @@ public final class RequestSellItem extends ClientPacket {
 
             long price = item.getReferencePrice() / 2;
             totalPrice += price * i.getCount();
-            if (MathUtil.checkMulOverFlow(price, i.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena() + " adena worth of goods.");
+            if (MathUtil.checkMulOverFlow(price, i.getCount(), getSettings(CharacterSettings.class).maxAdena)) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena + " adena worth of goods.");
                 return;
             }
 

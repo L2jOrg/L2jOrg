@@ -150,8 +150,8 @@ public final class RequestPreviewItem extends ClientPacket {
 
             items.put(slot, itemId);
             totalPrice += Config.WEAR_PRICE;
-            if (totalPrice > getSettings(CharacterSettings.class).maxAdena()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena() + " adena worth of goods.");
+            if (totalPrice > getSettings(CharacterSettings.class).maxAdena) {
+                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena + " adena worth of goods.");
                 return;
             }
         }
