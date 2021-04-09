@@ -7956,7 +7956,7 @@ public final class Player extends Playable {
      */
     void loadRecommendations() {
         IntKeyIntValue recommends = getDAO(PlayerDAO.class).findRecommends(objectId);
-        if(nonNull(recommends)) {d
+        if(nonNull(recommends)) {
             setRecommend(recommends.getKey());
             setRecommendLeft(recommends.getValue());
         }
