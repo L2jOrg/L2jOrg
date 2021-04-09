@@ -52,10 +52,10 @@ public class ExPurchaseLimitShopItemListNew extends ServerPacket {
             writeIngredients(product.ingredients(), buffer);
             buffer.writeInt(product.restrictionAmount() - LCoinShop.getInstance().boughtCount(client.getPlayer(), product));
             buffer.writeShort(0x00);
-            buffer.writeByte(-1);
-            buffer.writeByte(-1);
-            buffer.writeByte(-1);
-            buffer.writeByte(-1);
+            buffer.writeShort(0x00);
+            buffer.writeShort(0x00);
+            buffer.writeShort(0x00);
+            buffer.writeShort(0x00);
             buffer.writeInt(product.remainTime());
             buffer.writeInt(product.remainServerItemAmount());
 
@@ -63,7 +63,7 @@ public class ExPurchaseLimitShopItemListNew extends ServerPacket {
     }
 
     private void writeIngredients(List<ItemHolder> ingredients, WritableBuffer buffer) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             if(i < ingredients.size()) {
                 buffer.writeInt(ingredients.get(i).getId());
             } else {
@@ -71,7 +71,7 @@ public class ExPurchaseLimitShopItemListNew extends ServerPacket {
             }
         }
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             if(i < ingredients.size()) {
                 buffer.writeLong(ingredients.get(i).getCount());
             } else {

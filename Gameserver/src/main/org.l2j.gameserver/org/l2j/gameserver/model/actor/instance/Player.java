@@ -7932,7 +7932,7 @@ public final class Player extends Playable {
      * Restore Pet's inventory items from database.
      */
     private void restorePetInventoryItems() {
-        setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
+    //    setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
     }
 
     public String getAdminConfirmCmd() {
@@ -7955,9 +7955,11 @@ public final class Player extends Playable {
      * Load Player Recommendations data.
      */
     void loadRecommendations() {
-        IntKeyIntValue recomends =  getDAO(PlayerDAO.class).findRecommends(objectId);
-        setRecommend(recomends.getKey());
-        setRecommend(recomends.getValue());
+        IntKeyIntValue recommends = getDAO(PlayerDAO.class).findRecommends(objectId);
+        if(nonNull(recommends)) {d
+            setRecommend(recommends.getKey());
+            setRecommendLeft(recommends.getValue());
+        }
     }
 
     private void storeRecommendations() {
