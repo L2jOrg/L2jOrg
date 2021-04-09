@@ -1004,6 +1004,20 @@ public final class EffectList {
                 {
                     flags |= e.getEffectFlags();
                 }
+                // Add AbnormalVisualEffect flag.
+                final Skill skill = info.getSkill();
+                if (skill.hasAbnormalVisualEffect())
+                {
+                    for (AbnormalVisualEffect ave : skill.getAbnormalVisualEffect())
+                    {
+                        abnormalVisualEffects.add(ave);
+                        this.abnormalVisualEffects.add(ave);
+                    }
+                    if (broadcast)
+                    {
+                        owner.updateAbnormalVisualEffects();
+                    }
+                }
             }
         }
 

@@ -565,8 +565,9 @@ public enum AbnormalVisualEffect {
     CHANGESHAPE_MACH(10165),
     CHANGESHAPE_CHINESE(10166),
     CHANGESHAPE_FUT(10167),
-
-    ;
+    S_TRANS_DECO(10168),
+    BR_TRANS_LV2_DECO(10169),
+    BR_TRANS_LV3_DECO(10170);
 
     private final int _clientId;
 

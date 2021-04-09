@@ -64,9 +64,9 @@ public final class ClassInfo {
         } else if ((classClientId >= 182) && (classClientId <= 189)) {
             classClientId += 3121;
         }
-        else if ((classClientId >= 192) && (classClientId <= 207))
+        else if ((classClientId >= 192) && (classClientId <= 211))
         {
-            classClientId += 12817; // TODO: Find proper ids.
+            classClientId += 13022; // TODO: Find proper ids.
         }
         return classClientId;
     }

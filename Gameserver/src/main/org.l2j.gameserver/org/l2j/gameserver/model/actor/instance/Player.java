@@ -3539,7 +3539,7 @@ public final class Player extends Playable {
                     final EtcItem etcItem = target.getEtcItem();
                     if (etcItem != null) {
                         final EtcItemType itemType = etcItem.getItemType();
-                        if (((weapon.getItemType() == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) || (((weapon.getItemType() == WeaponType.CROSSBOW) || (weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) && (itemType == EtcItemType.BOLT))) {
+                        if (((weapon.getItemType() == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) || ((weapon.getItemType() == WeaponType.FIREARMS) && (itemType == EtcItemType.ELEMENTAL_ORB)) || (((weapon.getItemType() == WeaponType.CROSSBOW) || (weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) && (itemType == EtcItemType.BOLT))) {
                             inventory.findAmmunitionForCurrentWeapon();
                         }
                     }
