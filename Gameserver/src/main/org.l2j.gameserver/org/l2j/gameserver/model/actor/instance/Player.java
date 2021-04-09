@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
@@ -31,10 +30,7 @@ import org.l2j.gameserver.ai.*;
 import org.l2j.gameserver.api.elemental.ElementalSpirit;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.WarehouseCacheManager;
-import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
-import org.l2j.gameserver.data.database.dao.PetDAO;
-import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
+import org.l2j.gameserver.data.database.dao.*;
 import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
@@ -91,7 +87,6 @@ import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.AbnormalType;
-import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -131,8 +126,6 @@ import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Instant;
@@ -141,7 +134,10 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.concurrent.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
@@ -221,7 +217,6 @@ public final class Player extends Playable {
         Arrays.fill(htmlActionCaches, new LinkedList<>());
         running = true;
         setAccessLevel(playerData.getAccessLevel(), false, false);
-        super.setReputation(data.getReputation());
     }
 
     public void deleteShortcuts(Predicate<Shortcut> filter) {
@@ -1083,37 +1078,6 @@ public final class Player extends Playable {
     public static final int ID_NONE = -1;
     public static final int REQUEST_TIMEOUT = 15;
 
-
-    private static final String RESTORE_SKILLS_FOR_CHAR = "SELECT skill_id,skill_level,skill_sub_level FROM character_skills WHERE charId=?";
-    private static final String UPDATE_CHARACTER_SKILL_LEVEL = "UPDATE character_skills SET skill_level=?, skill_sub_level=?  WHERE skill_id=? AND charId=?";
-    private static final String ADD_NEW_SKILLS = "REPLACE INTO character_skills (charId,skill_id,skill_level,skill_sub_level) VALUES (?,?,?,?)";
-
-
-    private static final String ADD_SKILL_SAVE = "INSERT INTO character_skills_save (charId,skill_id,skill_level,skill_sub_level,remaining_time,reuse_delay,systime,restore_type,buff_index) VALUES (?,?,?,?,?,?,?,?,?)";
-    private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,skill_sub_level,remaining_time, reuse_delay, systime, restore_type FROM character_skills_save WHERE charId=? ORDER BY buff_index";
-    private static final String DELETE_SKILL_SAVE = "DELETE FROM character_skills_save WHERE charId=?";
-
-
-    private static final String ADD_ITEM_REUSE_SAVE = "INSERT INTO character_item_reuse_save (charId,itemId,itemObjId,reuseDelay,systime) VALUES (?,?,?,?,?)";
-    private static final String RESTORE_ITEM_REUSE_SAVE = "SELECT charId,itemId,itemObjId,reuseDelay,systime FROM character_item_reuse_save WHERE charId=?";
-    private static final String DELETE_ITEM_REUSE_SAVE = "DELETE FROM character_item_reuse_save WHERE charId=?";
-
-
-    private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,pccafe_points=? WHERE charId=?";
-
-
-    private static final String INSERT_TP_BOOKMARK = "INSERT INTO character_tpbookmark (charId,Id,x,y,z,icon,tag,name) values (?,?,?,?,?,?,?,?)";
-    private static final String RESTORE_TP_BOOKMARK = "SELECT Id,x,y,z,icon,tag,name FROM character_tpbookmark WHERE charId=?";
-
-
-    private static final String RESTORE_CHAR_HENNAS = "SELECT slot,symbol_id FROM character_hennas WHERE charId=?";
-    private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot) VALUES (?,?,?)";
-
-
-    private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
-    private static final String RESTORE_CHAR_RECIPE_SHOP = "SELECT * FROM character_recipeshoplist WHERE charId=? ORDER BY `index`";
-
-
     private static final int FALLING_VALIDATION_DELAY = 1000;
 
     private final Henna[] hennas = new Henna[3];
@@ -1142,7 +1106,6 @@ public final class Player extends Playable {
     private final IntSet friends = CHashIntMap.newKeySet();
 
     protected Future<?> mountFeedTask;
-
 
     protected int activeClass;
     protected boolean recommendTwoHoursGiven;
@@ -1966,10 +1929,6 @@ public final class Player extends Playable {
         decreaseRecommendLeft();
     }
 
-    /**
-     * Set the reputation of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).
-     */
-    @Override
     public void setReputation(int reputation) {
         // Notify to scripts.
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerReputationChanged(this, getReputation(), reputation), this);
@@ -2009,13 +1968,17 @@ public final class Player extends Playable {
             stopSkillEffects(CommonSkill.REPUTATION_3.getSkill());
         }
 
-
-
-        super.setReputation(reputation);
+        data.setReputation(reputation);
 
         sendPacket(getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1).addInt(getReputation()));
         broadcastReputation();
     }
+
+    @Override
+    public int getReputation() {
+        return data.getReputation();
+    }
+
 
     public int getWeightPenalty() {
         if (dietMode) {
@@ -4857,191 +4820,52 @@ public final class Player extends Playable {
     }
 
     private void storeCharBase() {
-        // Get the exp, level, and sp of base class to store in base table
-        final long exp = getStats().getBaseExp();
-        final int level = getStats().getBaseLevel();
-        final long sp = getStats().getBaseSp();
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(UPDATE_CHARACTER)) {
-            statement.setInt(1, level);
-            statement.setInt(2, getMaxHp());
-            statement.setDouble(3, getCurrentHp());
-            statement.setInt(4, getMaxCp());
-            statement.setDouble(5, getCurrentCp());
-            statement.setInt(6, getMaxMp());
-            statement.setDouble(7, getCurrentMp());
-            statement.setInt(8, appearance.getFace());
-            statement.setInt(9, appearance.getHairStyle());
-            statement.setInt(10, appearance.getHairColor());
-            statement.setInt(11, appearance.isFemale() ? 1 : 0);
-            statement.setInt(12, getHeading());
-            statement.setInt(13, lastLoc != null ? lastLoc.getX() : getX());
-            statement.setInt(14, lastLoc != null ? lastLoc.getY() : getY());
-            statement.setInt(15, lastLoc != null ? lastLoc.getZ() : getZ());
-            statement.setLong(16, exp);
-            statement.setLong(17, data.getExpBeforeDeath());
-            statement.setLong(18, sp);
-            statement.setInt(19, getReputation());
-            statement.setInt(20, data.getFame());
-            statement.setInt(21, getRaidbossPoints());
-            statement.setInt(22, data.getPvP());
-            statement.setInt(23, data.getPk());
-            statement.setInt(24, data.getClanId());
-            statement.setInt(25, getRace().ordinal());
-            statement.setInt(26, getClassId().getId());
-            statement.setString(27, getTitle());
-            statement.setInt(28, appearance.getTitleColor());
-            statement.setInt(29, isOnline() ? 1 : 0);
-            statement.setInt(30, clanPrivileges.getBitmask());
-            statement.setBoolean(31, data.wantsPeace());
-            statement.setInt(32, data.getBaseClass());
+        data.setExperience(getStats().getBaseExp());
+        data.setLevel(getStats().getBaseLevel());
+        data.setSp(getStats().getBaseSp());
 
-            if (uptime > 0) {
-                data.addOnlineTime((System.currentTimeMillis() - uptime) / 1000);
-            }
+        data.setMaxHp(getMaxHp());
+        data.setHp(getCurrentHp());
+        data.setMaxCp(getMaxCp());
+        data.setCp(getCurrentCp());
+        data.setMaxMp(getMaxMp());
+        data.setMp(getCurrentMp());
 
-            statement.setLong(33, data.getOnlineTime());
-            statement.setInt(34, isNoble() ? 1 : 0);
-            statement.setInt(35, getPowerGrade());
-            statement.setInt(36, getPledgeType());
-            statement.setInt(37, getLvlJoinedAcademy());
-            statement.setLong(38, getApprentice());
-            statement.setLong(39, getSponsor());
-            statement.setLong(40, getClanJoinExpiryTime());
-            statement.setLong(41, getClanJoinExpiryTime());
-            statement.setString(42, getName());
-            statement.setInt(43, bookmarkSlot);
-            statement.setInt(44, getStats().getBaseVitalityPoints());
-            statement.setString(45, lang);
+        Location loc =  isNull(lastLoc) ? getLocation() : lastLoc;
+        data.setX(loc.getX());
+        data.setY(loc.getY());
+        data.setZ(loc.getZ());
+        data.setHeading(getHeading());
 
-            statement.setInt(46, getPcCafePoints());
-            statement.setInt(47, getObjectId());
+        data.setRace(getRace().ordinal());
+        data.setBaseClass(getClassId().getId());
+        data.setTitle(getTitle());
+        data.setOnline(isOnline);
+        data.setClanPrivileges(clanPrivileges.getBitmask());
+        data.setName(getName());
+        data.setBookMarkSlot(bookmarkSlot);
+        data.setVitalityPoints(getStats().getBaseVitalityPoints());
+        data.setLanguage(lang);
 
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Could not store char base data: {}", this, e);
+        if (uptime > 0) {
+            data.addOnlineTime((System.currentTimeMillis() - uptime) / 1000);
         }
+
+        getDAO(PlayerDAO.class).save(data);
     }
 
     @Override
     public void storeEffect(boolean storeEffects) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
+        getDAO(PlayerDAO.class).deleteSavedSkills(objectId);
 
-            // Delete all current stored effects for char to avoid dupe
-            try (PreparedStatement delete = con.prepareStatement(DELETE_SKILL_SAVE)) {
-                delete.setInt(1, getObjectId());
-                delete.execute();
-            }
-
-            int buff_index = 0;
-            final LongSet storedSkills = new HashLongSet();
-            final long currentTime = System.currentTimeMillis();
-
-            try(PreparedStatement statement = con.prepareStatement(ADD_SKILL_SAVE)) {
-                // Store all effect data along with calculated remaining
-                // reuse delays for matching skills. 'restore_type'= 0.
-                if (storeEffects) {
-                    for (BuffInfo info : getEffectList().getEffects()) {
-                        if (info == null) {
-                            continue;
-                        }
-
-                        final Skill skill = info.getSkill();
-
-                        // Do not store those effects.
-                        if (skill.isDeleteAbnormalOnLeave()) {
-                            continue;
-                        }
-
-                        // Do not save heals.
-                        if (skill.getAbnormalType() == AbnormalType.LIFE_FORCE_OTHERS) {
-                            continue;
-                        }
-
-                        // Toggles are skipped, unless they are necessary to be always on.
-                        if (skill.isToggle()) {
-                            continue;
-                        }
-
-                        // Dances and songs are not kept in retail.
-                        if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances()) {
-                            continue;
-                        }
-
-                        if (storedSkills.contains(skill.getReuseHashCode())) {
-                            continue;
-                        }
-
-                        storedSkills.add(skill.getReuseHashCode());
-
-                        statement.setInt(1, getObjectId());
-                        statement.setInt(2, skill.getId());
-                        statement.setInt(3, skill.getLevel());
-                        statement.setInt(4, skill.getSubLevel());
-                        statement.setInt(5, info.getTime());
-
-                        final TimeStamp t = getSkillReuseTimeStamp(skill.getReuseHashCode());
-                        statement.setLong(6, (t != null) && (currentTime < t.getStamp()) ? t.getReuse() : 0);
-                        statement.setDouble(7, (t != null) && (currentTime < t.getStamp()) ? t.getStamp() : 0);
-
-                        statement.setInt(8, 0); // Store type 0, active buffs/debuffs.
-                        statement.setInt(9, ++buff_index);
-                        statement.addBatch();
-                    }
-                    statement.executeBatch();
-                }
-
-                // Skills under reuse.
-                for (var ts : getSkillReuseTimeStamps().entrySet()) {
-                    final long hash = ts.getKey();
-                    if (storedSkills.contains(hash)) {
-                        continue;
-                    }
-
-                    final TimeStamp t = ts.getValue();
-                    if ((t != null) && (currentTime < t.getStamp())) {
-                        storedSkills.add(hash);
-
-                        statement.setInt(1, getObjectId());
-                        statement.setInt(2, t.getSkillId());
-                        statement.setInt(3, t.getSkillLvl());
-                        statement.setInt(4, t.getSkillSubLvl());
-                        statement.setInt(5, -1);
-                        statement.setLong(6, t.getReuse());
-                        statement.setDouble(7, t.getStamp());
-                        statement.setInt(8, 1); // Restore type 1, skill reuse.
-                        statement.setInt(9, ++buff_index);
-                        statement.addBatch();
-                    }
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Could not store char effect data: ", e);
+        if(storeEffects) {
+            getDAO(ReuseInfoDAO.class).saveBuffInfoReuse(this, getEffectList().getEffects());
         }
     }
 
     private void storeItemReuseDelay() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps1 = con.prepareStatement(DELETE_ITEM_REUSE_SAVE);
-             PreparedStatement ps2 = con.prepareStatement(ADD_ITEM_REUSE_SAVE)) {
-            ps1.setInt(1, getObjectId());
-            ps1.execute();
-
-            final long currentTime = System.currentTimeMillis();
-            for (TimeStamp ts : getItemReuseTimeStamps().values()) {
-                if ((ts != null) && (currentTime < ts.getStamp())) {
-                    ps2.setInt(1, getObjectId());
-                    ps2.setInt(2, ts.getItemId());
-                    ps2.setInt(3, ts.getItemObjectId());
-                    ps2.setLong(4, ts.getReuse());
-                    ps2.setDouble(5, ts.getStamp());
-                    ps2.addBatch();
-                }
-            }
-            ps2.executeBatch();
-        } catch (Exception e) {
-            LOGGER.warn("Could not store char item reuse data: ", e);
-        }
+        getDAO(PlayerDAO.class).deleteSavedItemReuse(objectId);
+        getDAO(ReuseInfoDAO.class).saveItemReuse(objectId, getItemReuseTimeStamps().values());
     }
 
     public boolean isOnline() {
@@ -5072,7 +4896,7 @@ public final class Player extends Playable {
         final Skill oldSkill = addSkill(newSkill);
         // Add or update a Player skill in the character_skills table of the database
         if (store) {
-            storeSkill(newSkill, oldSkill);
+            storeSkill(newSkill);
         }
         updateShortCuts(newSkill.getId(), newSkill.getLevel());
         return oldSkill;
@@ -5123,27 +4947,9 @@ public final class Player extends Playable {
         return oldSkill;
     }
 
-    private void storeSkill(Skill newSkill, Skill oldSkill) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-            if ((oldSkill != null) && (newSkill != null)) {
-                try (PreparedStatement ps = con.prepareStatement(UPDATE_CHARACTER_SKILL_LEVEL)) {
-                    ps.setInt(1, newSkill.getLevel());
-                    ps.setInt(2, newSkill.getSubLevel());
-                    ps.setInt(3, oldSkill.getId());
-                    ps.setInt(4, getObjectId());
-                    ps.execute();
-                }
-            } else if (newSkill != null) {
-                try (PreparedStatement ps = con.prepareStatement(ADD_NEW_SKILLS)) {
-                    ps.setInt(1, getObjectId());
-                    ps.setInt(2, newSkill.getId());
-                    ps.setInt(3, newSkill.getLevel());
-                    ps.setInt(4, newSkill.getSubLevel());
-                    ps.execute();
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("Error could not store char skills: " + e.getMessage(), e);
+    private void storeSkill(Skill newSkill) {
+        if(nonNull(newSkill)) {
+            getDAO(PlayerDAO.class).saveSkill(objectId, newSkill.getId(), newSkill.getLevel());
         }
     }
 
@@ -5156,56 +4962,29 @@ public final class Player extends Playable {
         if (newSkills.isEmpty()) {
             return;
         }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement(ADD_NEW_SKILLS)) {
-            for (Skill addSkill : newSkills) {
-                ps.setInt(1, getObjectId());
-                ps.setInt(2, addSkill.getId());
-                ps.setInt(3, addSkill.getLevel());
-                ps.setInt(4, addSkill.getSubLevel());
-                ps.addBatch();
-            }
-            ps.executeBatch();
-        } catch (SQLException e) {
-            LOGGER.warn("Error could not store char skills: " + e.getMessage(), e);
-        }
+        getDAO(SkillsDAO.class).save(objectId, newSkills);
     }
 
     /**
      * Retrieve from the database all skills of this Player and add them to _skills.
      */
     private void restoreSkills() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(RESTORE_SKILLS_FOR_CHAR)) {
-            // Retrieve all skills of this Player from the database
-            statement.setInt(1, getObjectId());
-            try (ResultSet resultSet = statement.executeQuery()) {
-                while (resultSet.next()) {
-                    final int id = resultSet.getInt("skill_id");
-                    final int level = resultSet.getInt("skill_level");
+        for (Skill skill : getDAO(PlayerDAO.class).findSkills(objectId)) {
+            if (skill == null) {
+                LOGGER.warn("Skipped null skill while restoring player skills for player: {}", this);
+                continue;
+            }
 
-                    final Skill skill = SkillEngine.getInstance().getSkill(id, level);
+            addSkill(skill);
 
-                    if (skill == null) {
-                        LOGGER.warn("Skipped null skill id: {} level: {} while restoring player skills for player: {}", id, level, this);
-                        continue;
-                    }
-
-                    addSkill(skill);
-
-                    if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)) {
-                        if (!SkillTreesData.getInstance().isSkillAllowed(this, skill)) {
-                            GameUtils.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() + " (" + skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), IllegalActionPunishmentType.BROADCAST);
-                            if (Config.SKILL_CHECK_REMOVE) {
-                                removeSkill(skill);
-                            }
-                        }
+            if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)) {
+                if (!SkillTreesData.getInstance().isSkillAllowed(this, skill)) {
+                    GameUtils.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() + " (" + skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), IllegalActionPunishmentType.BROADCAST);
+                    if (Config.SKILL_CHECK_REMOVE) {
+                        removeSkill(skill);
                     }
                 }
             }
-        } catch (Exception e) {
-            LOGGER.warn("Could not restore character " + this + " skills: " + e.getMessage(), e);
         }
     }
 
@@ -5214,89 +4993,73 @@ public final class Player extends Playable {
      */
     @Override
     public void restoreEffects() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(RESTORE_SKILL_SAVE)) {
-            statement.setInt(1, getObjectId());
-            try (ResultSet resultSet = statement.executeQuery()) {
-                final long currentTime = System.currentTimeMillis();
-                while (resultSet.next()) {
-                    restoreEffect(resultSet, currentTime);
+        var playerDAO = getDAO(PlayerDAO.class);
+        playerDAO.findSavedSkill(objectId, this::restoreEffect);
+        playerDAO.deleteSavedSkills(objectId);
+    }
+
+    private void restoreEffect(ResultSet resultSet) {
+        try {
+            var currentTime = System.currentTimeMillis();
+            while (resultSet.next()) {
+                final int remainingTime = resultSet.getInt("remaining_time");
+                final long reuseDelay = resultSet.getLong("reuse_delay");
+                final long sysTime = resultSet.getLong("systime");
+                final int restoreType = resultSet.getInt("restore_type");
+
+                final Skill skill = SkillEngine.getInstance().getSkill(resultSet.getInt("skill_id"), resultSet.getInt("skill_level"));
+                if (skill == null) {
+                    return;
                 }
+
+                final long time = sysTime - currentTime;
+                if (time > 10) {
+                    disableSkill(skill, time);
+                    addTimeStamp(skill, reuseDelay, sysTime);
+                }
+
+                // Restore Type 1 The remaining skills lost effect upon logout but were still under a high reuse delay.
+                if (restoreType > 0) {
+                    return;
+                }
+
+                skill.applyEffects(this, this, false, remainingTime);
             }
-            // Remove previously restored skills
-            try (PreparedStatement delete = con.prepareStatement(DELETE_SKILL_SAVE)) {
-                delete.setInt(1, getObjectId());
-                delete.executeUpdate();
-            }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             LOGGER.warn("Could not restore {} active effect data ", this, e);
         }
     }
 
-    private void restoreEffect(ResultSet resultSet, long currentTime) throws SQLException {
-        final int remainingTime = resultSet.getInt("remaining_time");
-        final long reuseDelay = resultSet.getLong("reuse_delay");
-        final long sysTime = resultSet.getLong("systime");
-        final int restoreType = resultSet.getInt("restore_type");
-
-        final Skill skill = SkillEngine.getInstance().getSkill(resultSet.getInt("skill_id"), resultSet.getInt("skill_level"));
-        if (skill == null) {
-            return;
-        }
-
-        final long time = sysTime - currentTime;
-        if (time > 10) {
-            disableSkill(skill, time);
-            addTimeStamp(skill, reuseDelay, sysTime);
-        }
-
-        // Restore Type 1 The remaining skills lost effect upon logout but were still under a high reuse delay.
-        if (restoreType > 0) {
-            return;
-        }
-
-        skill.applyEffects(this, this, false, remainingTime);
+    private void restoreItemReuse() {
+        var playerDAO = getDAO(PlayerDAO.class);
+        playerDAO.findSavedItemReuse(objectId, this::restoreItemReuse);
+        playerDAO.deleteSavedItemReuse(objectId);
     }
 
-    private void restoreItemReuse() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(RESTORE_ITEM_REUSE_SAVE);
-             PreparedStatement delete = con.prepareStatement(DELETE_ITEM_REUSE_SAVE)) {
+    private void restoreItemReuse(ResultSet resultSet) {
+        try {
+            var currentTime = System.currentTimeMillis();
+            while (resultSet.next()) {
+                int itemId = resultSet.getInt("itemId");
+                long reuseDelay = resultSet.getLong("reuseDelay");
+                long sysTime = resultSet.getLong("systime");
+                boolean isInInventory = true;
 
-            statement.setInt(1, getObjectId());
+                Item item = inventory.getItemByItemId(itemId);
+                if (item == null) {
+                    item = getWarehouse().getItemByItemId(itemId);
+                    isInInventory = false;
+                }
 
-            try (ResultSet resultSet = statement.executeQuery()) {
-                final long currentTime = System.currentTimeMillis();
-
-                while (resultSet.next()) {
-                    restoreItemReuse(resultSet, currentTime);
+                if ((item != null) && (item.getId() == itemId) && (item.getReuseDelay() > 0)) {
+                    long remainingTime = sysTime - currentTime;
+                    if (remainingTime > 10) {
+                        addTimeStamp((int) remainingTime, itemId, isInInventory, reuseDelay, sysTime, item);
+                    }
                 }
             }
-
-            delete.setInt(1, getObjectId());
-            delete.executeUpdate();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             LOGGER.warn("Could not restore {} Item Reuse data: ", this, e);
-        }
-    }
-
-    private void restoreItemReuse(ResultSet resultSet, long currentTime) throws SQLException {
-        int itemId = resultSet.getInt("itemId");
-        long reuseDelay = resultSet.getLong("reuseDelay");
-        long sysTime = resultSet.getLong("systime");
-        boolean isInInventory = true;
-
-        Item item = inventory.getItemByItemId(itemId);
-        if (item == null) {
-            item = getWarehouse().getItemByItemId(itemId);
-            isInInventory = false;
-        }
-
-        if ((item != null) && (item.getId() == itemId) && (item.getReuseDelay() > 0)) {
-            long remainingTime = sysTime - currentTime;
-            if (remainingTime > 10) {
-                addTimeStamp((int) remainingTime, itemId, isInInventory, reuseDelay, sysTime, item);
-            }
         }
     }
 
@@ -5326,47 +5089,36 @@ public final class Player extends Playable {
             hennaRemoveSchedules.remove(entry.getKey());
         }
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNAS)) {
-            statement.setInt(1, getObjectId());
-            try (ResultSet resultSet = statement.executeQuery()) {
-                final long currentTime = System.currentTimeMillis();
-                while (resultSet.next()) {
-                    restoreHenna(resultSet, currentTime);
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error("Failed restoring {}'s hennas.", this, e);
-        }
+        getDAO(PlayerDAO.class).findHennas(objectId, this::restoreHenna);
         recalculateHennaStats();
     }
 
-    private void restoreHenna(ResultSet resultSet, long currentTime) throws SQLException {
-        int slot = resultSet.getInt("slot");
-        if ((slot < 1) || (slot > 3)) {
-            return;
-        }
+    private void restoreHenna(ResultSet resultSet) {
+        var currentTime = System.currentTimeMillis();
+        try {
+            while (resultSet.next()) {
+                int slot = resultSet.getInt("slot");
+                int symbolId = resultSet.getInt("symbol_id");
 
-        int symbolId = resultSet.getInt("symbol_id");
-        if (symbolId == 0) {
-            return;
-        }
+                final Henna henna = HennaData.getInstance().getHenna(symbolId);
 
-        final Henna henna = HennaData.getInstance().getHenna(symbolId);
+                if (henna.getDuration() > 0) {
+                    final long remainingTime = getHennaDuration(slot) - currentTime;
+                    if (remainingTime < 0) {
+                        removeHenna(slot);
+                        return;
+                    }
+                    hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), currentTime + remainingTime));
+                }
 
-        if (henna.getDuration() > 0) {
-            final long remainingTime = getHennaDuration(slot)  - currentTime;
-            if (remainingTime < 0) {
-                removeHenna(slot);
-                return;
+                hennas[slot - 1] = henna;
+
+                for (Skill skill : henna.getSkills()) {
+                    addSkill(skill, false);
+                }
             }
-            hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), currentTime + remainingTime));
-        }
-
-        hennas[slot - 1] = henna;
-
-        for (Skill skill : henna.getSkills()) {
-            addSkill(skill, false);
+        } catch (SQLException e) {
+            LOGGER.error("Failed restoring {}'s hennas.", this, e);
         }
     }
 
@@ -5461,27 +5213,18 @@ public final class Player extends Playable {
      * @return {@code true} if the henna is added to the player, {@code false} otherwise.
      */
     public boolean addHenna(Henna henna) {
-        for (int i = 1; i < 4; i++) {
-            if (hennas[i - 1] == null) {
-                hennas[i - 1] = henna;
+        for (int slot = 1; slot < 4; slot++) {
+            if (hennas[slot - 1] == null) {
+                hennas[slot - 1] = henna;
 
                 // Calculate Henna modifiers of this Player
                 recalculateHennaStats();
-
-                try (Connection con = DatabaseFactory.getInstance().getConnection();
-                     PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA)) {
-                    statement.setInt(1, getObjectId());
-                    statement.setInt(2, henna.getDyeId());
-                    statement.setInt(3, i);
-                    statement.execute();
-                } catch (Exception e) {
-                    LOGGER.error("Failed saving character henna.", e);
-                }
+                getDAO(PlayerDAO.class).saveHenna(objectId, henna.getDyeId(), slot);
 
                 // Task for henna duration
                 if (henna.getDuration() > 0) {
-                    setHennaDuration(System.currentTimeMillis() + (henna.getDuration() * 60000L), i);
-                    hennaRemoveSchedules.put(i, ThreadPool.schedule(new HennaDurationTask(this, i), System.currentTimeMillis() + (henna.getDuration() * 60000L)));
+                    setHennaDuration(System.currentTimeMillis() + (henna.getDuration() * 60000L), slot);
+                    hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + (henna.getDuration() * 60000L)));
                 }
 
                 // Reward henna skills
@@ -7839,7 +7582,8 @@ public final class Player extends Playable {
                 break;
             }
         }
-        teleportBookmarks.put(id, new TeleportBookmark(id, x, y, z, icon, tag, name));
+        var bookmark = TeleportBookmark.of(objectId, id, x, y, z, icon, tag, name);
+        teleportBookmarks.put(id, bookmark);
 
         destroyItem("Consume", inventory.getItemByItemId(20033).getObjectId(), 1, null, false);
 
@@ -7847,35 +7591,12 @@ public final class Player extends Playable {
         sm.addItemName(20033);
         sendPacket(sm);
 
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(INSERT_TP_BOOKMARK)) {
-            statement.setInt(1, getObjectId());
-            statement.setInt(2, id);
-            statement.setInt(3, x);
-            statement.setInt(4, y);
-            statement.setInt(5, z);
-            statement.setInt(6, icon);
-            statement.setString(7, tag);
-            statement.setString(8, name);
-            statement.execute();
-        } catch (Exception e) {
-            LOGGER.warn("Could not insert character teleport bookmark data: " + e.getMessage(), e);
-        }
+        getDAO(PlayerDAO.class).save(bookmark);
         sendPacket(new ExGetBookMarkInfoPacket(this));
     }
 
     private void restoreTeleportBookmark() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(RESTORE_TP_BOOKMARK)) {
-            statement.setInt(1, getObjectId());
-            try (ResultSet resultSet = statement.executeQuery()) {
-                while (resultSet.next()) {
-                    teleportBookmarks.put(resultSet.getInt("Id"), new TeleportBookmark(resultSet.getInt("Id"), resultSet.getInt("x"), resultSet.getInt("y"), resultSet.getInt("z"), resultSet.getInt("icon"), resultSet.getString("tag"), resultSet.getString("name")));
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error("Failed restoring character teleport bookmark.", e);
-        }
+        teleportBookmarks.putAll(getDAO(PlayerDAO.class).findTeleportBookmark(objectId));
     }
 
     @Override
@@ -7986,44 +7707,14 @@ public final class Player extends Playable {
 
     private void storeRecipeShopList() {
         if (hasManufactureShop()) {
-            getDAO(PlayerDAO.class).deleteRecipeShop(objectId);
-            try (Connection con = DatabaseFactory.getInstance().getConnection()) {
-
-                try (PreparedStatement st = con.prepareStatement(INSERT_CHAR_RECIPE_SHOP)) {
-                    final AtomicInteger slot = new AtomicInteger(1);
-                    con.setAutoCommit(false);
-                    for (ManufactureItem item : manufactureItems.values()) {
-                        st.setInt(1, getObjectId());
-                        st.setInt(2, item.getRecipeId());
-                        st.setLong(3, item.getCost());
-                        st.setInt(4, slot.getAndIncrement());
-                        st.addBatch();
-                    }
-                    st.executeBatch();
-                    con.commit();
-                }
-            } catch (Exception e) {
-                LOGGER.error("Could not store recipe shop for player {}", this  , e);
-            }
+            var recipeDAO = getDAO(RecipeDAO.class);
+            recipeDAO.deleteRecipeShop(objectId);
+            recipeDAO.save(manufactureItems.values());
         }
     }
 
     private void restoreRecipeShopList() {
-        if (manufactureItems != null) {
-            manufactureItems.clear();
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_RECIPE_SHOP)) {
-            statement.setInt(1, getObjectId());
-            try (ResultSet resultSet = statement.executeQuery()) {
-                while (resultSet.next()) {
-                    getManufactureItems().put(resultSet.getInt("recipeId"), new ManufactureItem(resultSet.getInt("recipeId"), resultSet.getLong("price")));
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error("Could not restore recipe shop list data for playerId: " + getObjectId(), e);
-        }
+        manufactureItems = getDAO(RecipeDAO.class).findByPlayer(objectId);
     }
 
     @Override
@@ -8241,15 +7932,7 @@ public final class Player extends Playable {
      * Restore Pet's inventory items from database.
      */
     private void restorePetInventoryItems() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("SELECT object_id FROM `items` WHERE `owner_id`=? AND (`loc`='PET' OR `loc`='PET_EQUIP') LIMIT 1;")) {
-            statement.setInt(1, getObjectId());
-            try (ResultSet resultSet = statement.executeQuery()) {
-                setPetInvItems(resultSet.next() && (resultSet.getInt("object_id") > 0));
-            }
-        } catch (Exception e) {
-            LOGGER.error("Could not check Items in Pet Inventory for playerId: " + getObjectId(), e);
-        }
+        setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
     }
 
     public String getAdminConfirmCmd() {
@@ -8272,31 +7955,13 @@ public final class Player extends Playable {
      * Load Player Recommendations data.
      */
     void loadRecommendations() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("SELECT rec_have, rec_left FROM character_reco_bonus WHERE charId = ?")) {
-            statement.setInt(1, getObjectId());
-            try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
-                    setRecommend(resultSet.getInt("rec_have"));
-                    setRecommendLeft(resultSet.getInt("rec_left"));
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.error("Could not restore Recommendations for player: " + getObjectId(), e);
-        }
+        IntKeyIntValue recomends =  getDAO(PlayerDAO.class).findRecommends(objectId);
+        setRecommend(recomends.getKey());
+        setRecommend(recomends.getValue());
     }
 
     private void storeRecommendations() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("REPLACE INTO character_reco_bonus (charId,rec_have,rec_left,time_left) VALUES (?,?,?,?)")) {
-            ps.setInt(1, getObjectId());
-            ps.setInt(2, recommend);
-            ps.setInt(3, recommendLeft);
-            ps.setLong(4, 0);
-            ps.execute();
-        } catch (Exception e) {
-            LOGGER.error("Could not update Recommendations for player: " + getObjectId(), e);
-        }
+        getDAO(PlayerDAO.class).saveRecommends(objectId, recommend, recommendLeft, 0);
     }
 
     public void startRecoGiveTask() {
@@ -8654,16 +8319,16 @@ public final class Player extends Playable {
     }
 
     public void sendInventoryUpdate(InventoryUpdate iu) {
-        sendPackets(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(), new ExUserInfoInvenWeight());
+        sendPackets(iu, new ExAdenaInvenCount(), new ExBloodyCoinCount(getLCoins()), new ExUserInfoInvenWeight());
     }
 
     public void sendItemList() {
         ItemList.sendList(this);
-        sendPacket(new ExQuestItemList(1, this));
-        sendPacket(new ExQuestItemList(2, this));
-        sendPacket(new ExAdenaInvenCount());
-        sendPacket(new ExUserInfoInvenWeight());
-        sendPacket(new ExBloodyCoinCount());
+        sendPackets(new ExQuestItemList(1, this),
+                new ExQuestItemList(2, this),
+                new ExAdenaInvenCount(),
+                new ExUserInfoInvenWeight(),
+                new ExBloodyCoinCount(getLCoins()));
     }
 
     public Fishing getFishing() {

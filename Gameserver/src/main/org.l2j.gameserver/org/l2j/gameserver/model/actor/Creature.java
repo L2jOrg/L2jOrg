@@ -171,7 +171,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private ScheduledFuture<?> hitTask;
     private IntMap<OptionsSkillHolder> triggerSkills;
 
-    private int reputation = 0;
     private double hpUpdateIncCheck;
     private double hpUpdateDecCheck;
     private double hpUpdateInterval;
@@ -3817,14 +3816,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return basicPropertyResists.computeIfAbsent(basicProperty, k -> new BasicPropertyResist());
     }
 
-    public int getReputation() {
-        return reputation;
-    }
-
-    public void setReputation(int reputation) {
-        this.reputation = reputation;
-    }
-
     public boolean isChargedShot(ShotType type) {
         return chargedShots.containsKey(type);
     }
@@ -3901,6 +3892,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public int getBuffRemainTimeBySkillOrAbormalType(Skill skill) {
         return effectList.remainTimeBySkillIdOrAbnormalType(skill.getId(), skill.getAbnormalType());
+    }
+
+    public int getReputation() {
+        return 0;
     }
 
     /**

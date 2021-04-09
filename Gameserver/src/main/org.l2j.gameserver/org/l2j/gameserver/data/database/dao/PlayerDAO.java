@@ -18,11 +18,13 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.IntKeyIntValue;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.*;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 import java.sql.ResultSet;
 import java.util.Collection;
@@ -51,6 +53,12 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= :timestamp:")
     void deleteExpiredSavedSkills(long timestamp);
+
+    @Query("DELETE FROM character_skills_save WHERE charId=:playerId:")
+    void deleteSavedSkills(int playerId);
+
+    @Query("SELECT * FROM character_skills_save WHERE charId=:playerId: ORDER BY buff_index")
+    void findSavedSkill(int playerId, Consumer<ResultSet> action);
 
     @Query("SELECT charId, createDate FROM characters WHERE DAYOFMONTH(createDate) = :day: AND MONTH(createDate) = :month: AND YEAR(createDate) < :year:")
     List<PlayerData> findBirthdayCharacters(int year, int month, int day);
@@ -172,6 +180,9 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("DELETE FROM character_skills_save WHERE skill_id=:skillId:")
     void deleteSkillSave(int skillId);
 
+    @Query("REPLACE INTO character_reco_bonus (charId,rec_have,rec_left,time_left) VALUES (:playerId:,:recommend:,:recommendLeft:,:timeLeft:)")
+    void saveRecommends(int playerId, int recommend, int recommendLeft, long timeLeft);
+
     @Query("UPDATE character_reco_bonus SET rec_left = 20, rec_have = GREATEST(CAST(rec_have AS SIGNED)  -20 , 0)")
     void resetRecommends();
 
@@ -202,9 +213,6 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("DELETE FROM character_tpbookmark WHERE charId=:playerId: AND Id=:id:")
     void deleteTeleportBookMark(int playerId, int id);
 
-    @Query("DELETE FROM character_recipeshoplist WHERE charId=:playerId:")
-    void deleteRecipeShop(int playerId);
-
     @Query("UPDATE characters SET subpledge=:pledgeType: WHERE charId=:playerId:")
     void updateSubpledge(int playerId, int pledgeType);
 
@@ -225,4 +233,30 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("DELETE FROM character_instance_time WHERE charId=:playerId: AND instanceId=:id:")
     void deleteInstanceTime(int playerId, int id);
+
+    @Query("DELETE FROM character_item_reuse_save WHERE charId=:playerId:")
+    void deleteSavedItemReuse(int playerId);
+
+    @Query("SELECT * FROM character_item_reuse_save WHERE charId=:playerId:")
+    void findSavedItemReuse(int playerId, Consumer<ResultSet> action);
+
+    @Query("REPLACE INTO character_skills (charId,skill_id,skill_level) VALUES (:playerId:,:skillId:,:skillLevel:)")
+    void saveSkill(int playerId, int skillId, int skillLevel);
+
+    @Query("SELECT skill_id,skill_level,skill_sub_level FROM character_skills WHERE charId=:playerId:")
+    List<Skill> findSkills(int playerId);
+
+    @Query("SELECT slot, symbol_id FROM character_hennas WHERE charId=:playerId:")
+    void findHennas(int playerId, Consumer<ResultSet> action);
+
+    @Query("INSERT INTO character_hennas (charId,symbol_id,slot) VALUES (:playerId:, :dyeId:, :slot:)")
+    void saveHenna(int playerId, int dyeId, int slot);
+
+    @Query("SELECT id,x,y,z,icon,tag,name,charId FROM character_tpbookmark WHERE charId=:playerId:")
+    IntMap<TeleportBookmark> findTeleportBookmark(int playerId);
+
+    void save(TeleportBookmark bookmark);
+
+    @Query("SELECT rec_have, rec_left FROM character_reco_bonus WHERE charId = :playerId:")
+    IntKeyIntValue findRecommends(int playerId);
 }

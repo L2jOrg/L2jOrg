@@ -20,11 +20,13 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.ItemAuctionData;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.database.data.ItemVariationData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.commission.CommissionItem;
+import org.l2j.gameserver.data.database.data.ItemAuctionBid;
 
 import java.util.Collection;
 import java.util.List;
@@ -98,13 +100,22 @@ public interface ItemDAO extends DAO<Object> {
     @Query("DELETE FROM `commission_items` WHERE `commission_id` = :commissionId:")
     boolean deleteCommission(long commissionId);
 
-    @Query("DELETE FROM item_auction WHERE auctionId=:auctionId:")
-    void deleteItemAuction(int auctionId);
+    @Query("DELETE FROM item_auction WHERE auction=:auction:")
+    void deleteItemAuction(int auction);
 
-    @Query("DELETE FROM item_auction_bid WHERE auctionId=:auctionId:")
-    void deleteItemAuctionBid(int auctionId);
+    @Query("DELETE FROM item_auction_bid WHERE auction=:auction:")
+    void deleteItemAuctionBid(int auction);
 
-    @Query("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 1")
+    @Query("SELECT * FROM item_auction_bid WHERE auction = :auction:")
+    List<ItemAuctionBid> findAuctionBids(int auctionId);
+
+    @Query("DELETE FROM item_auction_bid WHERE auction = :auction: AND player_id = :playerId:")
+    void deleteItemAuctionBid(int auction, int playerId);
+
+    @Query("SELECT * FROM item_auction WHERE instance = :instance:")
+    List<ItemAuctionData> findItemAuctionsByInstance(int instance);
+
+    @Query("SELECT auction FROM item_auction ORDER BY auction DESC LIMIT 1")
     int findLastAuctionId();
 
     @Query("""

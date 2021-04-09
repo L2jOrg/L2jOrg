@@ -158,9 +158,6 @@ public class PlayerFactory {
             player.setOverrideCond(masks);
         }
 
-        // Retrieve from the database all secondary data of this Player
-        // Note that Clan, Noblesse and Hero skills are given separately and not here.
-        // Retrieve from the database all skills of this Player and add them to _skills
         player.restoreCharData();
 
         // Reward auto-get skills and all available skills if auto-learn skills is true.
@@ -181,11 +178,11 @@ public class PlayerFactory {
         player.initStatusUpdateCache();
 
         // Restore current Cp, HP and MP values
-        player.setCurrentCp(playerData.getCurrentCp());
+        player.setCurrentCp(playerData.getCp());
         player.setCurrentHp(playerData.getHp());
         player.setCurrentMp(playerData.getMp());
 
-        player.setOriginalCpHpMp(playerData.getCurrentCp(), playerData.getHp(), playerData.getMp());
+        player.setOriginalCpHpMp(playerData.getCp(), playerData.getHp(), playerData.getMp());
 
         if (playerData.getHp() < 0.5) {
             player.setIsDead(true);

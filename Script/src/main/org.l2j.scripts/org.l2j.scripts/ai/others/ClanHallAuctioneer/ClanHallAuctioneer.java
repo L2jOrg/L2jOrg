@@ -18,13 +18,14 @@
  */
 package org.l2j.scripts.ai.others.ClanHallAuctioneer;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.clanhallauction.Bidder;
+import org.l2j.gameserver.data.database.data.Bidder;
 import org.l2j.gameserver.model.clanhallauction.ClanHallAuction;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.html.PageBuilder;
@@ -412,7 +413,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
             final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId(), getHtml(player, "ClanHallAuctioneer-bidderList.html"));
             //@formatter:off
-            final PageResult result = PageBuilder.newBuilder(clanHallAuction.getBids().values().stream().sorted(Comparator.comparingLong(Bidder::getTime).reversed()).collect(Collectors.toList()), 10, "bypass -h Quest ClanHallAuctioneer auctionList")
+            final PageResult result = PageBuilder.newBuilder(clanHallAuction.getBids().values().stream().sorted(Comparator.comparingLong(Bidder::getBidTime).reversed()).collect(Collectors.toList()), 10, "bypass -h Quest ClanHallAuctioneer auctionList")
                     .currentPage(page)
                     .pageHandler(NextPrevPageHandler.INSTANCE)
                     .formatter(BypassParserFormatter.INSTANCE)
@@ -424,7 +425,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                         sb.append("</td><td width=100>");
                         sb.append(bidder.getBid());
                         sb.append("</td><td width=70>");
-                        sb.append(bidder.getFormattedTime());
+                        sb.append(Util.formatDateTime(bidder.getBidTime()));
                         sb.append("</td></tr>");
                     }).build();
             //@formatter:on

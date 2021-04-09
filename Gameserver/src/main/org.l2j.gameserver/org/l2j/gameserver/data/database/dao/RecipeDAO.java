@@ -18,14 +18,23 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.ConcurrentIntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
+
+import java.util.Collection;
 
 /**
  * @author JoeAlisson
  */
-public interface GlobalVariableDAO extends DAO<Object> {
+public interface RecipeDAO extends DAO<ManufactureItem> {
 
-    @Query("TRUNCATE global_variables")
-    boolean deleteAll();
+    @Query("DELETE FROM character_recipeshoplist WHERE charId=:playerId:")
+    void deleteRecipeShop(int playerId);
+
+    @Query("SELECT * FROM character_recipeshoplist WHERE charId=:playerId:")
+    ConcurrentIntMap<ManufactureItem> findByPlayer(int playerId);
+
+    void save(Collection<ManufactureItem> values);
 }

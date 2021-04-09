@@ -19,13 +19,14 @@
 package org.l2j.gameserver.model.quest;
 
 import io.github.joealisson.primitive.IntCollection;
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.QuestDAO;
+import org.l2j.gameserver.data.database.data.QuestData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -45,7 +46,6 @@ import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExQuestNpcLogList;
@@ -58,10 +58,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.file.Path;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -1635,67 +1635,33 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param player the player who is entering the world
      */
     public static void playerEnter(Player player) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement invalidQuestData = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ?");
-             PreparedStatement invalidQuestDataVar = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ? AND var = ?");
-             PreparedStatement ps1 = con.prepareStatement("SELECT name, value FROM character_quests WHERE charId = ? AND var = ?")) {
-            // Get list of quests owned by the player from database
+        var questDAO = getDAO(QuestDAO.class);
+        for (QuestData data : questDAO.findPlayerQuestsByState(player.getObjectId())) {
+            final Quest quest = QuestManager.getInstance().getQuest(data.getName());
+            if (isNull(quest)) {
+                LOGGER.debug("Unknown quest {} for {}", data.getName(), player);
 
-            ps1.setInt(1, player.getObjectId());
-            ps1.setString(2, "<state>");
-            try (ResultSet rs = ps1.executeQuery()) {
-                while (rs.next()) {
-                    // Get the ID of the quest and its state
-                    final String questId = rs.getString("name");
-                    final String statename = rs.getString("value");
-
-                    // Search quest associated with the ID
-                    final Quest q = QuestManager.getInstance().getQuest(questId);
-                    if (q == null) {
-                        LOGGER.debug("Unknown quest " + questId + " for player " + player.getName());
-                        if (Config.AUTODELETE_INVALID_QUEST_DATA) {
-                            invalidQuestData.setInt(1, player.getObjectId());
-                            invalidQuestData.setString(2, questId);
-                            invalidQuestData.executeUpdate();
-                        }
-                        continue;
-                    }
-
-                    // Create a new QuestState for the player that will be added to the player's list of quests
-                    new QuestState(q, player, State.getStateId(statename));
+                if (Config.AUTODELETE_INVALID_QUEST_DATA) {
+                    questDAO.deleteQuest(player.getObjectId(), data.getName());
                 }
+                continue;
             }
+            new QuestState(quest, player, State.getStateId(data.getValue()));
 
-            // Get list of quests owned by the player from the DB in order to add variables used in the quest.
-            try (PreparedStatement ps2 = con.prepareStatement("SELECT name, var, value FROM character_quests WHERE charId = ? AND var <> ?")) {
-                ps2.setInt(1, player.getObjectId());
-                ps2.setString(2, "<state>");
-                try (ResultSet rs = ps2.executeQuery()) {
-                    while (rs.next()) {
-                        final String questId = rs.getString("name");
-                        final String var = rs.getString("var");
-                        final String value = rs.getString("value");
-                        // Get the QuestState saved in the loop before
-                        final QuestState qs = player.getQuestState(questId);
-                        if (qs == null) {
-                            LOGGER.debug("Lost variable " + var + " in quest " + questId + " for player " + player.getName());
-                            if (Config.AUTODELETE_INVALID_QUEST_DATA) {
-                                invalidQuestDataVar.setInt(1, player.getObjectId());
-                                invalidQuestDataVar.setString(2, questId);
-                                invalidQuestDataVar.setString(3, var);
-                                invalidQuestDataVar.executeUpdate();
-                            }
-                            continue;
-                        }
-                        // Add parameter to the quest
-                        qs.setInternal(var, value);
-                    }
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("could not insert char quest:", e);
         }
-        // Send Quest List
+
+        for (QuestData data : questDAO.findPlayerQuestsByNonState(player.getObjectId())) {
+            var questState = player.getQuestState(data.getName());
+            if(isNull(questState)) {
+                LOGGER.debug("Lost variable {} in quest {} for {}", data.getVar(), data.getName(), player);
+                if (Config.AUTODELETE_INVALID_QUEST_DATA) {
+                    questDAO.deleteQuestVar(player.getObjectId(), data.getName(), data.getVar());
+                }
+                continue;
+            }
+            questState.setInternal(data.getVar(), data.getValue());
+        }
+
         player.sendPacket(new QuestList(player));
     }
 
@@ -1707,17 +1673,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param value the value of the variable
      */
     static void createQuestVarInDb(QuestState qs, String var, String value) {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement statement = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE value=?")) {
-            statement.setInt(1, qs.getPlayer().getObjectId());
-            statement.setString(2, qs.getQuestName());
-            statement.setString(3, var);
-            statement.setString(4, value);
-            statement.setString(5, value);
-            statement.executeUpdate();
-        } catch (Exception e) {
-            LOGGER.warn("could not insert char quest:", e);
-        }
+        getDAO(QuestDAO.class).saveQuestVar(qs.getPlayer().getObjectId(), qs.getQuestName(), var, value);
     }
 
     /**
