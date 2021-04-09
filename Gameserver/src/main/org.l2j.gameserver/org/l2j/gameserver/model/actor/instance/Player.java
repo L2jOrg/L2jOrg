@@ -7896,13 +7896,12 @@ public final class Player extends Playable {
         handysBlockCheckerEventArena = arena;
     }
 
-    /**
-     * Load Player Recommendations data.
-     */
     void loadRecommendations() {
-        IntKeyIntValue recomends =  getDAO(PlayerDAO.class).findRecommends(objectId);
-        setRecommend(recomends.getKey());
-        setRecommend(recomends.getValue());
+        IntKeyIntValue recommends = getDAO(PlayerDAO.class).findRecommends(objectId);
+        if(nonNull(recommends)) {
+            setRecommend(recommends.getKey());
+            setRecommendLeft(recommends.getValue());
+        }
     }
 
     private void storeRecommendations() {
