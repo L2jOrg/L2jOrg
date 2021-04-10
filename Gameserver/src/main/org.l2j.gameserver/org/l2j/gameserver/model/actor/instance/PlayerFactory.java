@@ -37,7 +37,6 @@ import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
@@ -128,14 +127,14 @@ public class PlayerFactory {
                 player.getClanPrivileges().setAll();
                 player.setPowerGrade(1);
             }
-            player.setPledgeClass(ClanMember.calculatePledgeClass(player));
+            Clan.updateSocialStatus(player);
         } else {
             if (player.isNoble()) {
-                player.setPledgeClass(5);
+                player.setSocialStatus(5);
             }
 
             if (player.isHero()) {
-                player.setPledgeClass(8);
+                player.setSocialStatus(8);
             }
 
             player.getClanPrivileges().clear();

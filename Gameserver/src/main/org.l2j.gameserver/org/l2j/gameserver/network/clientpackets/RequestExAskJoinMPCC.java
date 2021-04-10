@@ -116,7 +116,7 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
             // 8871 Strategy Guide.
             // TODO: Should destroyed after successful invite?
             hasRight = true;
-        } else if ((requestor.getPledgeClass() >= 5) && (requestor.getKnownSkill(391) != null)) {
+        } else if ((requestor.getSocialStatus() >= 5) && (requestor.getKnownSkill(391) != null)) {
             // At least Baron or higher and the skill Clan Imperium
             hasRight = true;
         }

@@ -59,7 +59,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 
     public void giveResidentialSkills(Player player) {
         if (!isNullOrEmpty(residentialSkills)) {
-            var socialClass = player.getPledgeClass() + 1;
+            var socialClass = player.getSocialStatus() + 1;
             residentialSkills.stream().filter(s -> checkSocialClass(socialClass, s)).forEach(s ->  player.addSkill(s.getSkill()));
         }
     }

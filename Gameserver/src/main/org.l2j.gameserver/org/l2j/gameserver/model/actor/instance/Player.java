@@ -1177,7 +1177,7 @@ public final class Player extends Playable {
     private PreparedMultisellList currentMultiSell;
     private int questNpcObject;
     private int agathionId;
-    private int pledgeClass;
+    private int socialStatus;
     private boolean hero;
 
     private ScheduledFuture<?> soulTask;
@@ -5715,13 +5715,12 @@ public final class Player extends Playable {
         return clanPrivileges.has(privilege);
     }
 
-    public int getPledgeClass() {
-        return pledgeClass;
+    public int getSocialStatus() {
+        return socialStatus;
     }
 
-    // baron etc
-    public void setPledgeClass(int classId) {
-        pledgeClass = classId;
+    public void setSocialStatus(int status) {
+        socialStatus = status;
         checkItemRestriction();
     }
 

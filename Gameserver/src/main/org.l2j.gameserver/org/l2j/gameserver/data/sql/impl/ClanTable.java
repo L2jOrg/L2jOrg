@@ -164,7 +164,7 @@ public class ClanTable {
         leader.setPlayerInstance(player);
         clan.store();
         player.setClan(clan);
-        player.setPledgeClass(ClanMember.calculatePledgeClass(player));
+        Clan.updateSocialStatus(player);
         player.setClanPrivileges(new EnumIntBitmask<>(ClanPrivilege.class, true));
 
         clans.put(clan.getId(), clan);
