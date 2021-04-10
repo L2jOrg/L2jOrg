@@ -77,9 +77,6 @@ public class ClanRewardManager extends GameXmlReader {
                 case "hunting-bonus" -> parseHuntingBonus(node);
                 case "raid-bonus" -> parseRaidBonus(node);
                 case "reputation" -> parseReputation(node);
-                default -> {
-                    // unknown
-                }
             }
         }
     }
