@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `clan_member_reputation`;
+DROP TABLE IF EXISTS `clan_members`;
 DROP TABLE IF EXISTS `clan_subpledges`;
 DROP TABLE IF EXISTS `clan_privs`;
 DROP TABLE IF EXISTS `clan_skills`;
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `clan_notices`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
 
-CREATE TABLE IF NOT EXISTS `clan_member_reputation`
+CREATE TABLE IF NOT EXISTS `clan_members`
 (
     `clan_id`               INT          NOT NULL,
     `player_id`             INT UNSIGNED NOT NULL,

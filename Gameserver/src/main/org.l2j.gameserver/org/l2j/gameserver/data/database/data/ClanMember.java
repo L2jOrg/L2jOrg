@@ -54,6 +54,9 @@ public class ClanMember {
     @Column("subpledge")
     private int pledgeType;
 
+    @Column("last_reputation_level")
+    private int lastReputationLevel;
+
     private String title;
     private boolean sex;
     private int apprentice;
@@ -261,6 +264,14 @@ public class ClanMember {
 
     public int getOnlineStatus() {
         return !isOnline() ? 0 : onlineTime >= (Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS) ? 2 : 1;
+    }
+
+    public int getLastReputationLevel() {
+        return lastReputationLevel;
+    }
+
+    public void setLastReputationLevel(int lastReputationLevel) {
+        this.lastReputationLevel = lastReputationLevel;
     }
 
     public Player getPlayerInstance() {
