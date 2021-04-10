@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.data.xml;
 
-import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -26,6 +25,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.util.IntervalValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -50,6 +50,7 @@ public class ClanRewardManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanRewardManager.class);
 
     private final Map<ClanRewardType, List<ClanRewardBonus>> clanRewards = new EnumMap<>(ClanRewardType.class);
+    private List<IntervalValue> levelReputationBonus = new ArrayList<>();
     private int minRaidBonus;
 
     private ClanRewardManager() {
@@ -69,13 +70,25 @@ public class ClanRewardManager extends GameXmlReader {
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc.getFirstChild(), XmlReader::isNode, listNode -> {
-            switch (listNode.getNodeName()) {
-                case "members-online" -> parseMembersOnline(listNode);
-                case "hunting-bonus" -> parseHuntingBonus(listNode);
-                case "raid-bonus" -> parseRaidBonus(listNode);
+        var  listNode = doc.getFirstChild();
+        for(var node = listNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+            switch (node.getNodeName()) {
+                case "members-online" -> parseMembersOnline(node);
+                case "hunting-bonus" -> parseHuntingBonus(node);
+                case "raid-bonus" -> parseRaidBonus(node);
+                case "reputation" -> parseReputation(node);
             }
-        });
+        }
+    }
+
+    private void parseReputation(Node node) {
+        for(var levelNode = node.getFirstChild(); nonNull(levelNode); levelNode = levelNode.getNextSibling()) {
+            final var attrs = levelNode.getAttributes();
+            final var from = parseFloat(attrs, "from");
+            final var until = parseFloat(attrs, "until");
+            final var value = parseFloat(attrs, "value");
+            levelReputationBonus.add(new IntervalValue(from, until, value));
+        }
     }
 
     private void parseRaidBonus(Node node) {
@@ -156,6 +169,15 @@ public class ClanRewardManager extends GameXmlReader {
             final var rewards = clanRewards.get(ARENA);
             rewards.stream().map(reward -> reward.getSkillReward().getSkillId()).collect(Collectors.toSet()).forEach(clan::removeSkill);
         }
+    }
+
+    public int getReputationBonus(byte level) {
+        for (IntervalValue bonus : levelReputationBonus) {
+            if(bonus.contains(level)) {
+                return (int) bonus.value();
+            }
+        }
+        return 0;
     }
 
     public static void init() {
