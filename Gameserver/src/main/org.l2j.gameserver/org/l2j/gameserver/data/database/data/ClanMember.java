@@ -96,13 +96,13 @@ public class ClanMember {
             sponsor = player.getSponsor();
         }
 
-        String name = "";
+        String memberName = "";
         if (apprentice != 0) {
-            name = emptyIfNullOrElse(clan.getClanMember(apprentice), ClanMember::getName);
+            memberName = emptyIfNullOrElse(clan.getClanMember(apprentice), ClanMember::getName);
         } else if (sponsor != 0) {
-            name = emptyIfNullOrElse(clan.getClanMember(sponsor), ClanMember::getName);
+            memberName = emptyIfNullOrElse(clan.getClanMember(sponsor), ClanMember::getName);
         }
-        return name;
+        return memberName;
     }
 
     public void setPledgeType(int pledgeType) {
@@ -263,7 +263,10 @@ public class ClanMember {
     }
 
     public int getOnlineStatus() {
-        return !isOnline() ? 0 : onlineTime >= (Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS) ? 2 : 1;
+        if(!isOnline()) {
+            return 0;
+        }
+        return onlineTime >= Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS ? 2 : 1;
     }
 
     public int getLastReputationLevel() {
