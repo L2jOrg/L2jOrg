@@ -70,6 +70,7 @@ import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -324,9 +325,9 @@ public class GameServer {
                 versionProperties.load(versionFile);
                 var version = versionProperties.getProperty("version");
                 var updateName = versionProperties.getProperty("update");
-
-                fullVersion = String.format("%s: %s-%s (%s)", updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
                 var protocol = getSettings(ServerSettings.class).acceptedProtocols();
+
+                fullVersion = String.format("%s [%s]: %s-%s (%s)", Arrays.toString(protocol), updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
                 printSection("L2jOrg Server Info Version");
                 LOGGER.info("Update: .................. {}", updateName);
                 LOGGER.info("Protocol: ................ {}", protocol);
@@ -337,7 +338,7 @@ public class GameServer {
                 LOGGER.info("Report any bug at https://github.com/JoeAlisson/L2jOrg/issues");
             }
         } catch (IOException e) {
-            LOGGER.warn(e.getLocalizedMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
