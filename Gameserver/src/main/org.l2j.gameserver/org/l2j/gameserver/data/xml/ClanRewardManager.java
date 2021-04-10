@@ -50,7 +50,7 @@ public class ClanRewardManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClanRewardManager.class);
 
     private final Map<ClanRewardType, List<ClanRewardBonus>> clanRewards = new EnumMap<>(ClanRewardType.class);
-    private List<IntervalValue> levelReputationBonus = new ArrayList<>();
+    private final List<IntervalValue> levelReputationBonus = new ArrayList<>();
     private int minRaidBonus;
 
     private ClanRewardManager() {
@@ -77,6 +77,9 @@ public class ClanRewardManager extends GameXmlReader {
                 case "hunting-bonus" -> parseHuntingBonus(node);
                 case "raid-bonus" -> parseRaidBonus(node);
                 case "reputation" -> parseReputation(node);
+                default -> {
+                    // unknown
+                }
             }
         }
     }
