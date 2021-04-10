@@ -202,8 +202,6 @@ public class PlayerStats extends PlayableStats {
             return false;
         }
 
-
-
         Player player = getCreature();
         final boolean levelIncreased = super.addLevel(value);
         if (levelIncreased) {

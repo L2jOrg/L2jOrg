@@ -53,6 +53,6 @@ public final class ConditionPlayerPledgeClass extends Condition {
         if (isNull(player) || isNull(player.getClan())) {
             return false;
         }
-        return player.isClanLeader() || (_pledgeClass != -1 && player.getPledgeClass() >= _pledgeClass);
+        return player.isClanLeader() || (_pledgeClass != -1 && player.getSocialStatus() >= _pledgeClass);
     }
 }

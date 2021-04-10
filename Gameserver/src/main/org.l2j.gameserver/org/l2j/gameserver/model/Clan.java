@@ -176,7 +176,7 @@ public class Clan implements IIdentifiable, INamable {
             setAllyPenaltyExpiryTime(0, 0);
         }
 
-        if ((data.getCharPenaltyExpiryTime() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
+        if ((data.getCharPenaltyExpiryTime() + (Config.ALT_CLAN_JOIN_DAYS * 86400000L)) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
         {
             setCharPenaltyExpiryTime(0);
         }
@@ -273,7 +273,7 @@ public class Clan implements IIdentifiable, INamable {
         addClanMember(member);
         member.setPlayerInstance(player);
         player.setClan(this);
-        player.setPledgeClass(ClanMember.calculatePledgeClass(player));
+        updateSocialStatus(player);
         player.sendPacket(new PledgeShowMemberListUpdate(player));
         player.sendPacket(new PledgeSkillList(this));
 
@@ -394,7 +394,7 @@ public class Clan implements IIdentifiable, INamable {
                 player.setClanJoinExpiryTime(clanJoinExpiryTime);
             }
 
-            player.setPledgeClass(ClanMember.calculatePledgeClass(player));
+            updateSocialStatus(player);
             player.broadcastUserInfo();
             // disable clan tab
             player.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
@@ -765,7 +765,7 @@ public class Clan implements IIdentifiable, INamable {
             return;
         }
 
-        final int playerSocialClass = player.getPledgeClass() + 1;
+        final int playerSocialClass = player.getSocialStatus() + 1;
         for (Skill skill : _skills.values()) {
             final SkillLearn skillLearn = SkillTreesData.getInstance().getPledgeSkill(skill.getId(), skill.getLevel());
             if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal())) {
@@ -1660,13 +1660,13 @@ public class Clan implements IIdentifiable, INamable {
         updateClanInDB();
 
         if (exLeader != null) {
-            exLeader.setPledgeClass(ClanMember.calculatePledgeClass(exLeader));
+            updateSocialStatus(exLeader);
             exLeader.broadcastUserInfo();
             exLeader.checkItemRestriction();
         }
 
         if (newLeader != null) {
-            newLeader.setPledgeClass(ClanMember.calculatePledgeClass(newLeader));
+            updateSocialStatus(newLeader);
             newLeader.getClanPrivileges().setAll();
 
             if (getLevel() >= SiegeManager.getInstance().getSiegeClanMinLevel()) {
@@ -1808,6 +1808,22 @@ public class Clan implements IIdentifiable, INamable {
 
     public void setArenaProgress(int progress) {
         data.setArenaProgress((short) progress);
+    }
+
+    public static void updateSocialStatus(Player player) {
+        int status = 0;
+        var clan = player.getClan();
+
+        if(nonNull(clan)) {
+            int clanLevel = clan.getLevel();
+
+            if(clanLevel == 4) {
+                status = player.isClanLeader() ? 3 : 1;
+            } else if(clanLevel == 5) {
+                status = player.isClanLeader() ? 4 : 2;
+            }
+        }
+        player.setSocialStatus(status);
     }
 
     public static class RankPrivs {
