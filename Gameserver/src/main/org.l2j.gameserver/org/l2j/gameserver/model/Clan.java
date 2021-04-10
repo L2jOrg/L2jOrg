@@ -24,6 +24,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.ClanData;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.database.data.ClanSkillData;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -76,6 +77,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
+import static org.l2j.gameserver.network.SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -181,8 +183,8 @@ public class Clan implements IIdentifiable, INamable {
             setCharPenaltyExpiryTime(0);
         }
 
-        getDAO(PlayerDAO.class).findClanMembers(data.getId()).forEach(memberData -> {
-            var member = new ClanMember(this, memberData);
+        getDAO(PlayerDAO.class).findClanMembers(data.getId()).forEach(member -> {
+            member.setClan(this);
             if(member.getObjectId() == data.getLeaderId()) {
                 setLeader(member);
             } else {
@@ -268,10 +270,9 @@ public class Clan implements IIdentifiable, INamable {
      * @param player the clan member
      */
     public void addClanMember(Player player) {
-        final ClanMember member = new ClanMember(this, player);
+        final ClanMember member = ClanMember.of(this, player);
         // store in memory
         addClanMember(member);
-        member.setPlayerInstance(player);
         player.setClan(this);
         updateSocialStatus(player);
         player.sendPacket(new PledgeShowMemberListUpdate(player));
@@ -289,7 +290,7 @@ public class Clan implements IIdentifiable, INamable {
      * @param player the player to be updated.
      */
     public void updateClanMember(Player player) {
-        final ClanMember member = new ClanMember(player.getClan(), player);
+        final ClanMember member = ClanMember.of(player.getClan(), player);
         if (player.isClanLeader()) {
             setLeader(member);
         }
@@ -1788,8 +1789,11 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public boolean canClaimBonusReward(Player player, ClanRewardType type) {
-        final ClanMember clanMember = getClanMember(player.getObjectId());
-        return clanMember != null && type.getAvailableBonus(this) != null && !clanMember.isRewardClaimed(type);
+        if(!isMember(player.getObjectId()) || type.getAvailableBonus(this) == null) {
+            return false;
+        }
+        int claimedRewards = player.getClaimedClanRewards(ClanRewardType.getDefaultMask());
+        return (claimedRewards & type.getMask()) != type.getMask();
     }
 
     public void resetClanBonus() {
@@ -1808,6 +1812,34 @@ public class Clan implements IIdentifiable, INamable {
 
     public void setArenaProgress(int progress) {
         data.setArenaProgress((short) progress);
+    }
+
+    public void onMemberLogout(Player player) {
+        var member = members.get(player.getObjectId());
+        if(member != null) {
+            member.logout();
+        }
+    }
+
+    public void onMemberLogin(Player player) {
+        var member = members.get(player.getObjectId());
+        if(member != null) {
+            member.login(player);
+        }
+
+        addSkillEffects(player);
+        if (player.isClanLeader()) {
+            setLeader(member);
+
+            if(data.getLevel() > 3) {
+                SiegeManager.getInstance().addSiegeSkills(player);
+            }
+        }
+
+        var msg = getSystemMessage(CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME).addString(player.getName());
+        broadcastToOtherOnlineMembers(msg, player);
+        broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(player), player);
+
     }
 
     public static void updateSocialStatus(Player player) {

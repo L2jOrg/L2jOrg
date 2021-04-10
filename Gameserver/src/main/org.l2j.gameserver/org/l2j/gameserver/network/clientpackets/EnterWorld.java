@@ -175,7 +175,7 @@ public class EnterWorld extends ClientPacket {
         final Clan clan = player.getClan();
         // Clan packets
         if (clan != null) {
-            notifyClanMembers(player);
+            clan.onMemberLogin(player);
             notifySponsorOrApprentice(player);
 
             for (Siege siege : SiegeManager.getInstance().getSieges()) {
@@ -407,18 +407,6 @@ public class EnterWorld extends ClientPacket {
         if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", activeChar.getAccessLevel())) {
             activeChar.setDietMode(true);
             activeChar.refreshOverloaded(true);
-        }
-    }
-
-    private void notifyClanMembers(Player activeChar) {
-        final Clan clan = activeChar.getClan();
-        if (clan != null) {
-            clan.getClanMember(activeChar.getObjectId()).setPlayerInstance(activeChar);
-
-            final SystemMessage msg = getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
-            msg.addString(activeChar.getName());
-            clan.broadcastToOtherOnlineMembers(msg, activeChar);
-            clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(activeChar), activeChar);
         }
     }
 

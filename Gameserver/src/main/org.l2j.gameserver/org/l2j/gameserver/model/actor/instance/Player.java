@@ -6770,15 +6770,7 @@ public final class Player extends Playable {
         }
 
         if (clan != null) {
-            // set the status for pledge member list to OFFLINE
-            try {
-                final ClanMember clanMember = clan.getClanMember(getObjectId());
-                if (clanMember != null) {
-                    clanMember.setPlayerInstance(null);
-                }
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
+            clan.onMemberLogout(this);
         }
 
         if (getActiveRequester() != null) {

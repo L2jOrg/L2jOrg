@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.instance.Player;
 
@@ -48,17 +48,18 @@ public final class RequestPledgeReorganizeMember extends ClientPacket {
             return;
         }
 
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        var player = client.getPlayer();
+
+        if (player == null) {
             return;
         }
 
-        final Clan clan = activeChar.getClan();
+        var clan = player.getClan();
         if (clan == null) {
             return;
         }
 
-        if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_MANAGE_RANKS)) {
+        if (!player.hasClanPrivilege(ClanPrivilege.CL_MANAGE_RANKS)) {
             return;
         }
 
