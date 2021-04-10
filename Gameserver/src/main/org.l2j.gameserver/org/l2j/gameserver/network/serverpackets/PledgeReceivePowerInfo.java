@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 

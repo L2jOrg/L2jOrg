@@ -130,7 +130,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
     void withPlayersDataDo(Consumer<ResultSet> action);
 
     @Query("SELECT char_name,level,classid,charId,title,power_grade,subpledge,apprentice,sponsor,sex,race FROM characters WHERE clanid=:clanId:")
-    List<PlayerData> findClanMembers(int clanId);
+    List<ClanMember> findClanMembers(int clanId);
 
     @Query("UPDATE characters SET apprentice=0 WHERE apprentice=:playerId:")
     void deleteApprentice(int playerId);

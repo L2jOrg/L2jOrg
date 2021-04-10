@@ -30,7 +30,7 @@ import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;

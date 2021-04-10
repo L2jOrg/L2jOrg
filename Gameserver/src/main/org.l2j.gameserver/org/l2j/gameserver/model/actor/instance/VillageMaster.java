@@ -25,7 +25,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
