@@ -40,6 +40,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanJoin;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanLeaderChange;
@@ -752,17 +753,19 @@ public class Clan implements IIdentifiable, INamable {
             return;
         }
 
-        final int playerSocialClass = player.getSocialStatus() + 1;
+        var socialStatus = player.getSocialStatus();
+
         for (Skill skill : _skills.values()) {
-            final SkillLearn skillLearn = SkillTreesData.getInstance().getPledgeSkill(skill.getId(), skill.getLevel());
-            if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal())) {
+            var skillLearn = SkillTreesData.getInstance().getPledgeSkill(skill.getId(), skill.getLevel());
+            if (hasSocialStatusRequirements(socialStatus, skillLearn)) {
                 player.addSkill(skill, false); // Skill is not saved to player DB
             }
         }
+
         if (player.getPledgeType() == 0) {
             for (Skill skill : _subPledgeSkills.values()) {
                 final SkillLearn skillLearn = SkillTreesData.getInstance().getSubPledgeSkill(skill.getId(), skill.getLevel());
-                if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal())) {
+                if (hasSocialStatusRequirements(socialStatus, skillLearn)) {
                     player.addSkill(skill, false); // Skill is not saved to player DB
                 }
             }
@@ -779,6 +782,10 @@ public class Clan implements IIdentifiable, INamable {
         if (data.getReputation() < 0) {
             skillsStatus(player, true);
         }
+    }
+
+    private boolean hasSocialStatusRequirements(SocialStatus socialStatus, SkillLearn skillLearn) {
+        return skillLearn == null || skillLearn.getSocialClass() == null || socialStatus.compareTo(skillLearn.getSocialClass()) >= 0;
     }
 
     public void removeSkillEffects(Player player) {
@@ -1850,16 +1857,16 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public static void updateSocialStatus(Player player) {
-        int status = 0;
+        SocialStatus status = SocialStatus.VAGABOND;
         var clan = player.getClan();
 
         if(nonNull(clan)) {
             int clanLevel = clan.getLevel();
 
             if(clanLevel == 4) {
-                status = player.isClanLeader() ? 3 : 1;
+                status = player.isClanLeader() ? SocialStatus.ELITE_KNIGHT : SocialStatus.APPRENTICE;
             } else if(clanLevel == 5) {
-                status = player.isClanLeader() ? 4 : 2;
+                status = player.isClanLeader() ? SocialStatus.BARON : SocialStatus.KNIGHT;
             }
         }
         player.setSocialStatus(status);

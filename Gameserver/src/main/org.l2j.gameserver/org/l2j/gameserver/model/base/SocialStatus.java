@@ -19,23 +19,19 @@
 package org.l2j.gameserver.model.base;
 
 /**
- * Enumerated for Social Classes.
- *
- * @author Zoey76
+ * @author JoeAlisson
  */
-public enum SocialClass {
+public enum SocialStatus {
     VAGABOND,
-    VASSAL,
     APPRENTICE,
-    HEIR,
     KNIGHT,
-    ELDER,
+    ELITE_KNIGHT,
     BARON,
-    VISCOUNT,
     COUNT,
-    MARQUIS,
     DUKE,
+    KING,
+    EMPEROR,
+    DUKE_, // client shows duke twice
     GRAND_DUKE,
     DISTINGUISHED_KING,
-    EMPEROR
 }
