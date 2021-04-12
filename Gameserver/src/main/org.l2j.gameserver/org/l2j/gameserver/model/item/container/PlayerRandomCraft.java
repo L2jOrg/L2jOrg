@@ -1,16 +1,16 @@
 package org.l2j.gameserver.model.item.container;
 
-import org.l2j.commons.database.DatabaseFactory;
+
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.data.database.dao.RandomCraftDAO;
+import org.l2j.gameserver.data.database.data.RandomCraftDAOData;
 import org.l2j.gameserver.data.xml.RandomCraftData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.RandomCraftRequest;
 import org.l2j.gameserver.model.holders.RandomCraftRewardItemHolder;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.item.ExItemAnnounce;
-import org.l2j.gameserver.network.serverpackets.item.ItemAnnounceType;
 import org.l2j.gameserver.network.serverpackets.randomcraft.ExCraftInfo;
 import org.l2j.gameserver.network.serverpackets.randomcraft.ExCraftRandomInfo;
 import org.l2j.gameserver.network.serverpackets.randomcraft.ExCraftRandomMake;
@@ -18,14 +18,10 @@ import org.l2j.gameserver.network.serverpackets.randomcraft.ExCraftRandomRefresh
 import org.l2j.gameserver.util.Broadcast;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.network.serverpackets.item.ItemAnnounceType.RANDOM_CRAFT;
 
@@ -49,102 +45,48 @@ public class PlayerRandomCraft {
 
     public void restore()
     {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT * FROM character_random_craft WHERE charId=?"))
-        {
-            ps.setInt(1, _player.getObjectId());
-            try (ResultSet rs = ps.executeQuery())
-            {
-                if (rs.next())
-                {
-                    try
-                    {
-                        _fullCraftPoints = rs.getInt("random_craft_full_points");
-                        _craftPoints = rs.getInt("random_craft_points");
-                        _isSayhaRoll = rs.getBoolean("sayha_roll");
-                        for (int i = 1; i <= 5; i++)
-                        {
-                            final int itemId = rs.getInt("item_" + i + "_id");
-                            final long itemCount = rs.getLong("item_" + i + "_count");
-                            final boolean itemLocked = rs.getBoolean("item_" + i + "_locked");
-                            final int itemLockLeft = rs.getInt("item_" + i + "_lock_left");
-                            final RandomCraftRewardItemHolder holder = new RandomCraftRewardItemHolder(itemId, itemCount, itemLocked, itemLockLeft);
-                            _rewardList.add(i - 1, holder);
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        LOGGER.info("Could not restore random craft for " + _player);
-                    }
-                }
-                else
-                {
-                    storeNew();
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            LOGGER.info("Could not restore random craft for " + _player, e);
+        RandomCraftDAO dao = getDAO(RandomCraftDAO.class);
+        RandomCraftDAOData data = dao.findByCharId(_player.getObjectId());
+        if (data != null) {
+            _fullCraftPoints = data.getRandomCraftFullPoints();
+
+            _craftPoints = data.getRandomCraftPoints();
+            _isSayhaRoll = data.getSayhaRoll();
+
+            _rewardList.add(0, new RandomCraftRewardItemHolder(data.getItem1Id(), data.getItem1Count(), data.getItem1Locked(), data.getItem1LockLeft()));
+            _rewardList.add(1, new RandomCraftRewardItemHolder(data.getItem2Id(), data.getItem2Count(), data.getItem2Locked(), data.getItem2LockLeft()));
+            _rewardList.add(2, new RandomCraftRewardItemHolder(data.getItem3Id(), data.getItem3Count(), data.getItem3Locked(), data.getItem3LockLeft()));
+            _rewardList.add(3, new RandomCraftRewardItemHolder(data.getItem4Id(), data.getItem4Count(), data.getItem4Locked(), data.getItem4LockLeft()));
+            _rewardList.add(4, new RandomCraftRewardItemHolder(data.getItem5Id(), data.getItem5Count(), data.getItem5Locked(), data.getItem5LockLeft()));
+        } else {
+            dao.storeNew(_player.getObjectId(), _fullCraftPoints, _craftPoints, _isSayhaRoll, 0,0,false,0, 0,0,false,0,0,0,false,0,0,0,false,0,0,0,false,0);
         }
     }
 
     public void store()
     {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE character_random_craft SET random_craft_full_points=?,random_craft_points=?,sayha_roll=?,item_1_id=?,item_1_count=?,item_1_locked=?,item_1_lock_left=?,item_2_id=?,item_2_count=?,item_2_locked=?,item_2_lock_left=?,item_3_id=?,item_3_count=?,item_3_locked=?,item_3_lock_left=?,item_4_id=?,item_4_count=?,item_4_locked=?,item_4_lock_left=?,item_5_id=?,item_5_count=?,item_5_locked=?,item_5_lock_left=?"))
-        {
-            ps.setInt(1, _fullCraftPoints);
-            ps.setInt(2, _craftPoints);
-            ps.setBoolean(3, _isSayhaRoll);
-            for (int i = 0; i < 5; i++)
-            {
-                if (_rewardList.size() >= (i + 1))
-                {
-                    final RandomCraftRewardItemHolder holder = _rewardList.get(i);
-                    ps.setInt(4 + (i * 4), holder == null ? 0 : holder.getItemId());
-                    ps.setLong(5 + (i * 4), holder == null ? 0 : holder.getItemCount());
-                    ps.setBoolean(6 + (i * 4), holder == null ? false : holder.isLocked());
-                    ps.setInt(7 + (i * 4), holder == null ? 20 : holder.getLockLeft());
-                }
-                else
-                {
-                    ps.setInt(4 + (i * 4), 0);
-                    ps.setLong(5 + (i * 4), 0);
-                    ps.setBoolean(6 + (i * 4), false);
-                    ps.setInt(7 + (i * 4), 20);
-                }
-            }
-            ps.execute();
-        }
-        catch (Exception e)
-        {
-            LOGGER.info( "Could not store RandomCraft for: " + _player, e);
-        }
-    }
-
-    public void storeNew()
-    {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("INSERT INTO character_random_craft VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"))
-        {
-            ps.setInt(1, _player.getObjectId());
-            ps.setInt(2, _fullCraftPoints);
-            ps.setInt(3, _craftPoints);
-            ps.setBoolean(4, _isSayhaRoll);
-            for (int i = 0; i < 5; i++)
-            {
-                ps.setInt(5 + (i * 4), 0);
-                ps.setLong(6 + (i * 4), 0);
-                ps.setBoolean(7 + (i * 4), false);
-                ps.setInt(8 + (i * 4), 0);
-            }
-            ps.executeUpdate();
-        }
-        catch (Exception e)
-        {
-            LOGGER.info("Could not store new RandomCraft for: " + _player, e.getMessage());
-        }
+        RandomCraftDAO dao = getDAO(RandomCraftDAO.class);
+        final int item_1_id = _rewardList.size() >= 1 ? _rewardList.get(0) != null ? _rewardList.get(0).getItemId() : 0 : 0;
+        final long item_1_count = _rewardList.size() >= 1 ? _rewardList.get(0) != null ? _rewardList.get(0).getItemCount() : 0 : 0;
+        final boolean item_1_locked = _rewardList.size() >= 1 ? _rewardList.get(0) != null ? _rewardList.get(0).isLocked() : false : false;
+        final int item_1_lock_left = _rewardList.size() >= 1 ? _rewardList.get(0) != null ? _rewardList.get(0).getLockLeft() : 20 : 20;
+        final int item_2_id = _rewardList.size() >= 2 ? _rewardList.get(1) != null ? _rewardList.get(1).getItemId() : 0 : 0;
+        final long item_2_count = _rewardList.size() >= 2 ? _rewardList.get(1) != null ? _rewardList.get(1).getItemCount() : 0 : 0;
+        final boolean item_2_locked = _rewardList.size() >= 2 ? _rewardList.get(1) != null ? _rewardList.get(1).isLocked() : false : false;
+        final int item_2_lock_left = _rewardList.size() >= 2 ? _rewardList.get(1) != null ? _rewardList.get(1).getLockLeft() : 20 : 20;
+        final int item_3_id = _rewardList.size() >= 3 ? _rewardList.get(2) != null ? _rewardList.get(2).getItemId() : 0 : 0;
+        final long item_3_count = _rewardList.size() >= 3 ? _rewardList.get(2) != null ? _rewardList.get(2).getItemCount() : 0 : 0;
+        final boolean item_3_locked = _rewardList.size() >= 3 ? _rewardList.get(2) != null ? _rewardList.get(2).isLocked() : false : false;
+        final int item_3_lock_left = _rewardList.size() >= 3 ? _rewardList.get(2) != null ? _rewardList.get(2).getLockLeft() : 20 : 20;
+        final int item_4_id = _rewardList.size() >= 4 ? _rewardList.get(3) != null ? _rewardList.get(3).getItemId() : 0 : 0;
+        final long item_4_count = _rewardList.size() >= 4 ? _rewardList.get(3) != null ? _rewardList.get(3).getItemCount() : 0 : 0;
+        final boolean item_4_locked = _rewardList.size() >= 4 ? _rewardList.get(3) != null ? _rewardList.get(3).isLocked() : false : false;
+        final int item_4_lock_left = _rewardList.size() >= 4 ? _rewardList.get(3) != null ? _rewardList.get(3).getLockLeft() : 20 : 20;
+        final int item_5_id = _rewardList.size() == 5 ? _rewardList.get(4) != null ? _rewardList.get(4).getItemId() : 0 : 0;
+        final long item_5_count = _rewardList.size() == 5 ? _rewardList.get(4) != null ? _rewardList.get(4).getItemCount() : 0 : 0;
+        final boolean item_5_locked = _rewardList.size() == 5 ? _rewardList.get(4) != null ? _rewardList.get(4).isLocked() : false : false;
+        final int item_5_lock_left = _rewardList.size() == 5 ? _rewardList.get(4) != null ? _rewardList.get(4).getLockLeft() : 20 : 20;
+        dao.updateRandomCraft(_player.getObjectId(), _fullCraftPoints, _craftPoints, _isSayhaRoll, item_1_id, item_1_count, item_1_locked, item_1_lock_left, item_2_id, item_2_count, item_2_locked, item_2_lock_left, item_3_id,item_3_count, item_3_locked,item_3_lock_left,item_4_id,item_4_count,item_4_locked,item_4_lock_left,item_5_id,item_5_count,item_5_locked,item_5_lock_left);
     }
 
     public void refresh()
