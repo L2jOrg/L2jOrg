@@ -127,19 +127,9 @@ public class PlayerFactory {
                 player.getClanPrivileges().setAll();
                 player.setPowerGrade(1);
             }
-            Clan.updateSocialStatus(player);
-        } else {
-            if (player.isNoble()) {
-                player.setSocialStatus(5);
-            }
-
-            if (player.isHero()) {
-                player.setSocialStatus(8);
-            }
-
-            player.getClanPrivileges().clear();
         }
 
+        Clan.updateSocialStatus(player);
         player.setTitle(playerData.getTitle());
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());

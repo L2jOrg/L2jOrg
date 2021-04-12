@@ -20,6 +20,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAskJoinMPCC;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -116,7 +117,7 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
             // 8871 Strategy Guide.
             // TODO: Should destroyed after successful invite?
             hasRight = true;
-        } else if ((requestor.getSocialStatus() >= 5) && (requestor.getKnownSkill(391) != null)) {
+        } else if ((requestor.getSocialStatus().compareTo(SocialStatus.BARON) >= 0) && (requestor.getKnownSkill(391) != null)) {
             // At least Baron or higher and the skill Clan Imperium
             hasRight = true;
         }

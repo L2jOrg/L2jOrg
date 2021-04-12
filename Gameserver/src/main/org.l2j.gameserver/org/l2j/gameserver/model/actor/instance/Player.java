@@ -63,6 +63,7 @@ import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
@@ -1177,7 +1178,7 @@ public final class Player extends Playable {
     private PreparedMultisellList currentMultiSell;
     private int questNpcObject;
     private int agathionId;
-    private int socialStatus;
+    private SocialStatus socialStatus = SocialStatus.VAGABOND;
     private boolean hero;
 
     private ScheduledFuture<?> soulTask;
@@ -5715,11 +5716,11 @@ public final class Player extends Playable {
         return clanPrivileges.has(privilege);
     }
 
-    public int getSocialStatus() {
+    public SocialStatus getSocialStatus() {
         return socialStatus;
     }
 
-    public void setSocialStatus(int status) {
+    public void setSocialStatus(SocialStatus status) {
         socialStatus = status;
         checkItemRestriction();
     }

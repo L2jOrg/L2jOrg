@@ -20,6 +20,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
 import static java.util.Objects.isNull;
@@ -29,17 +30,17 @@ import static java.util.Objects.isNull;
  *
  * @author MrPoke
  */
-public final class ConditionPlayerPledgeClass extends Condition {
+public final class ConditionPlayerSocialStatus extends Condition {
 
-    public final int _pledgeClass;
+    public final SocialStatus socialStatus;
 
     /**
      * Instantiates a new condition player pledge class.
      *
      * @param pledgeClass the pledge class
      */
-    public ConditionPlayerPledgeClass(int pledgeClass) {
-        _pledgeClass = pledgeClass;
+    public ConditionPlayerSocialStatus(SocialStatus pledgeClass) {
+        socialStatus = pledgeClass;
     }
 
     /**
@@ -53,6 +54,6 @@ public final class ConditionPlayerPledgeClass extends Condition {
         if (isNull(player) || isNull(player.getClan())) {
             return false;
         }
-        return player.isClanLeader() || (_pledgeClass != -1 && player.getSocialStatus() >= _pledgeClass);
+        return player.getSocialStatus().compareTo(socialStatus) >= 0;
     }
 }
