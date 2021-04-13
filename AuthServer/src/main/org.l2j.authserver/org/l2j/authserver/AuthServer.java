@@ -45,7 +45,7 @@ public class AuthServer {
     private static final String LOG4J_CONFIGURATION = "log4j.configurationFile";
     private static final String HIKARICP_CONFIGURATION_FILE = "hikaricp.configurationFile";
 
-    public static final int PROTOCOL_REV = 0x0102;
+    public static final int PROTOCOL_REV = 0x0102; // 0xC621 auth token
 
     private static AuthServer _instance;
     private static Logger logger;
