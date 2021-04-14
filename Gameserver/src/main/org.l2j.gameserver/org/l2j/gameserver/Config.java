@@ -100,7 +100,10 @@ public final class Config {
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
+
     private static final String RANDOM_CRAFT_CONFIG_FILE = "./config/random-craft.properties";
+
+    private static final String SUBJUGATION_CONFIG_FILE = "./config/subjugation.properties";
 
 
 
@@ -512,6 +515,11 @@ public final class Config {
     // --------------------------------------------------
     public static boolean ENABLE_RANDOM_CRAFT;
     public static boolean DROP_RANDOM_CRAFT_MATERIALS;
+
+    // --------------------------------------------------
+    // Subjugation
+    // --------------------------------------------------
+    public static boolean ENABLE_SUBJUGATION;
 
     // --------------------------------------------------
     // No classification assigned to the following yet
@@ -1715,6 +1723,10 @@ public final class Config {
         final PropertiesParser randomCraftSettings = new PropertiesParser(RANDOM_CRAFT_CONFIG_FILE);
         ENABLE_RANDOM_CRAFT = randomCraftSettings.getBoolean("RandomCraftEnabled", false);
         DROP_RANDOM_CRAFT_MATERIALS = randomCraftSettings.getBoolean("DropRandomCraftMaterials", false);
+
+        //Subjugation
+        final PropertiesParser subjugationSettings = new PropertiesParser(SUBJUGATION_CONFIG_FILE);
+        ENABLE_SUBJUGATION = subjugationSettings.getBoolean("SubjugationEnabled", false);
 
         // Load althars config
         final PropertiesParser althars = new PropertiesParser(ALTHARS_CONFIG_FILE);
