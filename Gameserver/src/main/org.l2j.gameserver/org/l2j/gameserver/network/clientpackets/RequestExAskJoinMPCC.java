@@ -109,18 +109,7 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
     }
 
     private void askJoinMPCC(Player requestor, Player target) {
-        boolean hasRight = false;
-        if (requestor.isClanLeader() && (requestor.getClan().getLevel() >= 5)) {
-            // Clan leader of lvl5 Clan or higher.
-            hasRight = true;
-        } else if (requestor.getInventory().getItemByItemId(8871) != null) {
-            // 8871 Strategy Guide.
-            // TODO: Should destroyed after successful invite?
-            hasRight = true;
-        } else if ((requestor.getSocialStatus().compareTo(SocialStatus.BARON) >= 0) && (requestor.getKnownSkill(391) != null)) {
-            // At least Baron or higher and the skill Clan Imperium
-            hasRight = true;
-        }
+        boolean hasRight = canInviteToMPCC(requestor);
 
         if (!hasRight) {
             requestor.sendPacket(SystemMessageId.COMMAND_CHANNELS_CAN_ONLY_BE_FORMED_BY_A_PARTY_LEADER_WHO_IS_ALSO_THE_LEADER_OF_A_LEVEL_5_CLAN);
@@ -143,5 +132,11 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
             sm.addString(targetLeader.getName());
             requestor.sendPacket(sm);
         }
+    }
+
+    private boolean canInviteToMPCC(Player player) {
+        return (player.isClanLeader() && player.getClan().getLevel() >= 5) ||
+               (player.getSocialStatus().compareTo(SocialStatus.BARON) >= 0 && player.getKnownSkill(391) != null) ||
+               (player.getInventory().getItemByItemId(8871) != null); // TODO: Should destroyed after successful invite?
     }
 }

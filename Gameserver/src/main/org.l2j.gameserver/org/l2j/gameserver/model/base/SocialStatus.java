@@ -31,7 +31,7 @@ public enum SocialStatus {
     DUKE,
     KING,
     EMPEROR,
-    DUKE_, // client shows duke twice
+    DUKE_2, // client shows duke twice
     GRAND_DUKE,
     DISTINGUISHED_KING,
 }
