@@ -1099,8 +1099,6 @@ public final class Player extends Playable {
     private final IntSet friends = CHashIntMap.newKeySet();
 
     protected Future<?> mountFeedTask;
-
-    protected int activeClass;
     protected boolean recommendTwoHoursGiven;
     protected boolean inventoryDisable;
 
@@ -5903,7 +5901,7 @@ public final class Player extends Playable {
     }
 
     public void setHero(boolean hero) {
-        if (hero && (data.getBaseClass() == activeClass)) {
+        if (hero && (data.getBaseClass() == data.getClassId())) {
             for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
                 addSkill(skill, false); // Don't persist hero skills into database
             }
@@ -6098,11 +6096,11 @@ public final class Player extends Playable {
     }
 
     public int getActiveClass() {
-        return activeClass;
+        return data.getClassId();
     }
 
     private void setClassTemplate(int classId) {
-        activeClass = classId;
+        data.setClassId(classId);
 
         final PlayerTemplate pcTemplate = PlayerTemplateData.getInstance().getTemplate(classId);
         if (pcTemplate == null) {
