@@ -43,6 +43,8 @@ public enum ServerType
 	ESSENCE(BLOODY.getMask() | CLASSIC.getMask());
 
 
+
+
 	private int mask;
 
 	ServerType()
@@ -81,4 +83,5 @@ public enum ServerType
 		}
 		return clientType;
 	}
+
 }

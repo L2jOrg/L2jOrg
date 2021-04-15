@@ -51,7 +51,7 @@ public enum WeaponType implements ItemType {
     OWN_THING(TraitType.NONE),
     TWO_HAND_CROSSBOW(TraitType.TWO_HAND_CROSSBOW),
     DUAL_BLUNT(TraitType.DUAL_BLUNT),
-    FIREARMS(TraitType.FIREARMS);
+    SHOOTER(TraitType.SHOOTER);
 
     private final int _mask;
     private final TraitType _traitType;
@@ -82,7 +82,7 @@ public enum WeaponType implements ItemType {
     }
 
     public boolean isRanged() {
-        return (this == BOW) || (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW)  || (this == FIREARMS);
+        return (this == BOW) || (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW)  || (this == SHOOTER);
     }
 
     public boolean isCrossbow()
@@ -92,7 +92,7 @@ public enum WeaponType implements ItemType {
 
     public boolean isPistols()
     {
-        return (this == FIREARMS);
+        return (this == SHOOTER);
     }
 
 }

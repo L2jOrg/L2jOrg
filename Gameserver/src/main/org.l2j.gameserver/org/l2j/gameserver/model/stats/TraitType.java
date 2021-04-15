@@ -94,7 +94,7 @@ public enum TraitType {
     SPIRIT_WEAKNESS(2),
     ROD(1),
     STAFF(1),
-    FIREARMS(1);
+    SHOOTER(1);
 
     private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
 
