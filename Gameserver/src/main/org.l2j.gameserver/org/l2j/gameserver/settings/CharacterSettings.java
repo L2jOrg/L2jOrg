@@ -21,6 +21,10 @@ package org.l2j.gameserver.settings;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
+import org.l2j.gameserver.enums.Race;
+import org.l2j.gameserver.model.actor.instance.Player;
+
+import static java.lang.Math.max;
 
 /**
  * @author JoeAlisson
@@ -28,7 +32,6 @@ import org.l2j.commons.configuration.SettingsFile;
 public class CharacterSettings implements Settings {
 
     public int partyRange;
-    private IntSet autoLootItems;
     public boolean autoLootRaid;
     public int raidLootPrivilegeTime;
     public boolean autoLoot;
@@ -70,9 +73,24 @@ public class CharacterSettings implements Settings {
     public long maxAdena;
     public boolean allowPKTeleport;
     public int maxFreeTeleportLevel;
-    public int dwarfMaxSlotStoreSell;
-    public int maxSlotStoreSell;
-    public int dwarfMaxSlotStoreBuy;
+    public int maxItemInPacket;
+    public int maxSlotsQuestItem;
+    public int clanMaxWarehouseSlot;
+    public int maxSlotFreight;
+    public int freightPrice;
+
+    private IntSet autoLootItems;
+
+    private int dwarfMaxSlotStoreSell;
+    private int maxSlotStoreSell;
+    private int dwarfMaxSlotStoreBuy;
+    private int maxSlotStoreBuy;
+    private int maxSlots;
+    private int dwarfMaxSlots;
+    private int gmMaxSlots;
+    private int dwarfMaxSlotWarehouse;
+    private int maxSlotWarehouse;
+
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -141,11 +159,44 @@ public class CharacterSettings implements Settings {
         dwarfMaxSlotStoreSell = settingsFile.getInteger("MaxPvtStoreSellSlotsDwarf", 4);
         maxSlotStoreSell = settingsFile.getInteger("MaxPvtStoreSellSlotsOther", 3);
         dwarfMaxSlotStoreBuy = settingsFile.getInteger("MaxPvtStoreBuySlotsDwarf", 5);
+        maxSlotStoreBuy = settingsFile.getInteger("MaxPvtStoreBuySlotsOther",  4);
+
+        maxSlots = settingsFile.getInteger("MaximumSlotsForNoDwarf", 80);
+        dwarfMaxSlots = settingsFile.getInteger("MaximumSlotsForDwarf", 100);
+        gmMaxSlots = settingsFile.getInteger("MaximumSlotsForGMPlayer", 100);
+        maxSlotsQuestItem = settingsFile.getInteger("MaximumSlotsForQuestItems", 80);
+
+        dwarfMaxSlotWarehouse = settingsFile.getInteger("MaximumWarehouseSlotsForDwarf", 120);
+        maxSlotWarehouse = settingsFile.getInteger("MaximumWarehouseSlotsForNoDwarf", 100);
+        clanMaxWarehouseSlot = settingsFile.getInteger("MaximumWarehouseSlotsForClan", 150);
+
+        maxSlotFreight = settingsFile.getInteger("MaximumFreightSlots", 200);
+        freightPrice = settingsFile.getInteger("FreightPrice", 1000);
+
+        maxItemInPacket =  max(maxSlots, max(dwarfMaxSlots, gmMaxSlots));
 
     }
 
 
     public boolean isAutoLoot(int item) {
         return autoLootItems.contains(item);
+    }
+
+    public int maxSlotStoreBuy(Race race) {
+        return race == Race.DWARF ? dwarfMaxSlotStoreBuy : maxSlotStoreBuy;
+    }
+    public int maxSlotStoreSell(Race race) {
+        return race == Race.DWARF ? dwarfMaxSlotStoreSell : maxSlotStoreSell;
+    }
+
+    public int maxSlotInventory(Player player) {
+        if(player.isGM()) {
+            return gmMaxSlots;
+        }
+        return player.getRace() == Race.DWARF ? dwarfMaxSlots : maxSlots;
+    }
+
+    public int maxSlotWarehouse(Race race) {
+        return race == Race.DWARF ? dwarfMaxSlotWarehouse : maxSlotWarehouse;
     }
 }

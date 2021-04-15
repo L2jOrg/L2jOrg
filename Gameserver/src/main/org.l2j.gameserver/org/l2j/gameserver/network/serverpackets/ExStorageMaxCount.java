@@ -19,11 +19,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.settings.CharacterSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author -Wooden-, KenM
@@ -40,17 +42,20 @@ public class ExStorageMaxCount extends ServerPacket {
     private final int _inventoryExtraSlots;
     private final int _inventoryQuestItems;
 
-    public ExStorageMaxCount(Player activeChar) {
-        _inventory = activeChar.getInventoryLimit();
-        _warehouse = activeChar.getWareHouseLimit();
+    public ExStorageMaxCount(Player player) {
+        _inventory = player.getInventoryLimit();
+        _warehouse = player.getWareHouseLimit();
         // _freight = Config.ALT_FREIGHT_SLOTS; // Removed with 152.
-        _privateSell = activeChar.getPrivateSellStoreLimit();
-        _privateBuy = activeChar.getPrivateBuyStoreLimit();
-        _clan = Config.WAREHOUSE_SLOTS_CLAN;
-        _receipeD = activeChar.getDwarfRecipeLimit();
-        _recipe = activeChar.getCommonRecipeLimit();
-        _inventoryExtraSlots = (int) activeChar.getStats().getValue(Stat.INVENTORY_NORMAL, 0);
-        _inventoryQuestItems = Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
+        _privateSell = player.getPrivateSellStoreLimit();
+        _privateBuy = player.getPrivateBuyStoreLimit();
+
+        var settings = getSettings(CharacterSettings.class);
+
+        _clan = settings.clanMaxWarehouseSlot;
+        _receipeD = player.getDwarfRecipeLimit();
+        _recipe = player.getCommonRecipeLimit();
+        _inventoryExtraSlots = (int) player.getStats().getValue(Stat.INVENTORY_NORMAL, 0);
+        _inventoryQuestItems =  settings.maxSlotsQuestItem;
     }
 
     @Override

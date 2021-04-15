@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -57,7 +56,7 @@ public class RequestBuySeed extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _manorId = readInt();
         final int count = readInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 

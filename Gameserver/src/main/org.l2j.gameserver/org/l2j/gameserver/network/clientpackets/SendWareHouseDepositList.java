@@ -20,6 +20,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -27,11 +28,11 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.item.container.Warehouse;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.item.WarehouseDone;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,6 +41,7 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.handleIllegalPlayerAction;
 import static org.l2j.gameserver.util.GameUtils.isWarehouseManager;
@@ -53,7 +55,7 @@ public final class SendWareHouseDepositList extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int size = readInt();
-        if (size <= 0 || size > Config.MAX_ITEM_IN_PACKET || size * BATCH_LENGTH != available()) {
+        if (size <= 0 || size > getSettings(CharacterSettings.class).maxItemInPacket || size * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -146,7 +148,7 @@ public final class SendWareHouseDepositList extends ClientPacket {
     }
 
     private boolean checkItemsAndCharge(Warehouse warehouse, Player player, Npc manager) {
-        final long fee = items.size() * 30;
+        final long fee = items.size() * 30L;
         final var inventory = player.getInventory();
         long currentAdena = inventory.getAdena();
         int slots = 0;

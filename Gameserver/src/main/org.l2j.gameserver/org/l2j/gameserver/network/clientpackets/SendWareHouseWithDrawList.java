@@ -30,9 +30,12 @@ import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class ... 32 SendWareHouseWithDrawList cd (dd) WootenGil rox :P
@@ -48,7 +51,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.EnsoulOption;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.ItemEnsoulEngine;
@@ -46,7 +45,7 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET)) {
+        if (count < 1 || count > getSettings(CharacterSettings.class).maxItemInPacket) {
             throw new InvalidDataPacketException();
         }
 

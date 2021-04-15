@@ -87,7 +87,6 @@ public final class Config {
     private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
     private static final String  CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
 
-
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
     private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
@@ -100,17 +99,6 @@ public final class Config {
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
-
-    public static int MAX_PVTSTOREBUY_SLOTS_OTHER;
-    public static int INVENTORY_MAXIMUM_NO_DWARF;
-    public static int INVENTORY_MAXIMUM_DWARF;
-    public static int INVENTORY_MAXIMUM_GM;
-    public static int INVENTORY_MAXIMUM_QUEST_ITEMS;
-    public static int WAREHOUSE_SLOTS_DWARF;
-    public static int WAREHOUSE_SLOTS_NO_DWARF;
-    public static int WAREHOUSE_SLOTS_CLAN;
-    public static int ALT_FREIGHT_SLOTS;
-    public static int ALT_FREIGHT_PRICE;
 
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
@@ -483,7 +471,6 @@ public final class Config {
     // --------------------------------------------------
     // No classification assigned to the following yet
     // --------------------------------------------------
-    public static int MAX_ITEM_IN_PACKET;
     public static List<String> GAME_SERVER_SUBNETS;
     public static List<String> GAME_SERVER_HOSTS;
     public static int PVP_NORMAL_TIME;
@@ -809,18 +796,6 @@ public final class Config {
 
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
-
-        MAX_PVTSTOREBUY_SLOTS_OTHER = Character.getInt("MaxPvtStoreBuySlotsOther", 4);
-        INVENTORY_MAXIMUM_NO_DWARF = Character.getInt("MaximumSlotsForNoDwarf", 80);
-        INVENTORY_MAXIMUM_DWARF = Character.getInt("MaximumSlotsForDwarf", 100);
-        INVENTORY_MAXIMUM_GM = Character.getInt("MaximumSlotsForGMPlayer", 250);
-        INVENTORY_MAXIMUM_QUEST_ITEMS = Character.getInt("MaximumSlotsForQuestItems", 100);
-        MAX_ITEM_IN_PACKET = Math.max(INVENTORY_MAXIMUM_NO_DWARF, Math.max(INVENTORY_MAXIMUM_DWARF, INVENTORY_MAXIMUM_GM));
-        WAREHOUSE_SLOTS_DWARF = Character.getInt("MaximumWarehouseSlotsForDwarf", 120);
-        WAREHOUSE_SLOTS_NO_DWARF = Character.getInt("MaximumWarehouseSlotsForNoDwarf", 100);
-        WAREHOUSE_SLOTS_CLAN = Character.getInt("MaximumWarehouseSlotsForClan", 150);
-        ALT_FREIGHT_SLOTS = Character.getInt("MaximumFreightSlots", 200);
-        ALT_FREIGHT_PRICE = Character.getInt("FreightPrice", 1000);
 
         ENCHANT_CHANCE_ELEMENT_STONE = Character.getDouble("EnchantChanceElementStone", 50);
         ENCHANT_CHANCE_ELEMENT_CRYSTAL = Character.getDouble("EnchantChanceElementCrystal", 30);

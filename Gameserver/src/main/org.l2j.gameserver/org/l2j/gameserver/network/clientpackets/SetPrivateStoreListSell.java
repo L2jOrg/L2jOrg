@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -52,7 +51,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _packageSale = readIntAsBoolean();
         final int count = readInt();
-        if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count < 1 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 

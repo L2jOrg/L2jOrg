@@ -6891,27 +6891,22 @@ public final class Player extends Playable {
     }
 
     public int getInventoryLimit() {
-        int limit = Config.INVENTORY_MAXIMUM_NO_DWARF;
-        if (isGM()) {
-            limit = Config.INVENTORY_MAXIMUM_GM;
-        } else if (getRace() == Race.DWARF) {
-            limit = Config.INVENTORY_MAXIMUM_DWARF;
-        }
+        int limit = getSettings(CharacterSettings.class).maxSlotInventory(this);
         return limit + (int) getStats().getValue(Stat.INVENTORY_NORMAL, 0);
     }
 
     public int getWareHouseLimit() {
-        int limit = getRace() == Race.DWARF ? Config.WAREHOUSE_SLOTS_DWARF : Config.WAREHOUSE_SLOTS_NO_DWARF;
+        int limit = getSettings(CharacterSettings.class).maxSlotWarehouse(getRace());
         return limit + (int) getStats().getValue(Stat.STORAGE_PRIVATE, 0);
     }
 
     public int getPrivateSellStoreLimit() {
-        int limit = getRace() == Race.DWARF ?  getSettings(CharacterSettings.class).dwarfMaxSlotStoreSell :  getSettings(CharacterSettings.class).maxSlotStoreSell;
+        int limit = getSettings(CharacterSettings.class).maxSlotStoreSell(getRace());
         return limit + (int) getStats().getValue(Stat.TRADE_SELL, 0);
     }
 
     public int getPrivateBuyStoreLimit() {
-        int limit =  getRace() == Race.DWARF ? getSettings(CharacterSettings.class).dwarfMaxSlotStoreBuy : Config.MAX_PVTSTOREBUY_SLOTS_OTHER;
+        var limit =  getSettings(CharacterSettings.class).maxSlotStoreBuy(getRace());
         return limit + (int) getStats().getValue(Stat.TRADE_BUY, 0);
     }
 
@@ -7859,10 +7854,6 @@ public final class Player extends Playable {
 
     public Collection<TeleportBookmark> getTeleportBookmarks() {
         return teleportBookmarks.values();
-    }
-
-    public int getQuestInventoryLimit() {
-        return Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
     }
 
     public boolean isInventoryUnder90() {

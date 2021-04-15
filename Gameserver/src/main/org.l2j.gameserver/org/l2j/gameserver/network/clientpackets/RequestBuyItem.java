@@ -58,7 +58,7 @@ public final class RequestBuyItem extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _listId = readInt();
         final int size = readInt();
-        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != available())) {
+        if (size <= 0 || size > getSettings(CharacterSettings.class).maxItemInPacket || size * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 

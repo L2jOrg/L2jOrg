@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.base.ClassId;
