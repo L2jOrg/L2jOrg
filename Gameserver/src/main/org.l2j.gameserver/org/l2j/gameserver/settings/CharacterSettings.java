@@ -24,6 +24,8 @@ import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import java.util.Arrays;
+
 import static java.lang.Math.max;
 
 /**
@@ -78,6 +80,11 @@ public class CharacterSettings implements Settings {
     public int clanMaxWarehouseSlot;
     public int maxSlotFreight;
     public int freightPrice;
+    public boolean canAttackPkInPeaceZone;
+    public boolean canPkShop;
+    public boolean canPkTeleport;
+    public boolean canPkTrade;
+    public boolean canPkUseWareHouse;
 
     private IntSet autoLootItems;
 
@@ -90,6 +97,7 @@ public class CharacterSettings implements Settings {
     private int gmMaxSlots;
     private int dwarfMaxSlotWarehouse;
     private int maxSlotWarehouse;
+    private int[] nonAugmentedItems;
 
 
     @Override
@@ -173,8 +181,16 @@ public class CharacterSettings implements Settings {
         maxSlotFreight = settingsFile.getInteger("MaximumFreightSlots", 200);
         freightPrice = settingsFile.getInteger("FreightPrice", 1000);
 
-        maxItemInPacket =  max(maxSlots, max(dwarfMaxSlots, gmMaxSlots));
+        maxItemInPacket = max(maxSlots, max(dwarfMaxSlots, gmMaxSlots));
 
+        nonAugmentedItems = settingsFile.getIntArray("AugmentationBlackList", "6660,6661,6662");
+        Arrays.sort(nonAugmentedItems);
+
+        canAttackPkInPeaceZone = settingsFile.getBoolean("CanAttackPkInPeaceZone", false);
+        canPkShop = settingsFile.getBoolean("CanPkShop", true);
+        canPkTeleport = settingsFile.getBoolean("CanPkTeleport", false);
+        canPkTrade = settingsFile.getBoolean("CanPkTrade", true);
+        canPkUseWareHouse = settingsFile.getBoolean("CanPKUseWareHouse", true);
     }
 
 
@@ -198,5 +214,9 @@ public class CharacterSettings implements Settings {
 
     public int maxSlotWarehouse(Race race) {
         return race == Race.DWARF ? dwarfMaxSlotWarehouse : maxSlotWarehouse;
+    }
+
+    public boolean canBeAugmented(int itemId) {
+        return Arrays.binarySearch(nonAugmentedItems, itemId) < 0;
     }
 }

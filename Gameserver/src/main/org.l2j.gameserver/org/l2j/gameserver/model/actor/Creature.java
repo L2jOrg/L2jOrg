@@ -2775,7 +2775,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return false;
         }
 
-        if (Config.ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE) {
+        if (getSettings(CharacterSettings.class).canAttackPkInPeaceZone) {
             // allows red to be attacked and red to attack flagged players
             if ((target.getActingPlayer() != null) && (target.getActingPlayer().getReputation() < 0)) {
                 return false;

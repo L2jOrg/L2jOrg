@@ -117,7 +117,7 @@ public final class SettingsFile extends Properties {
         return defaultValue;
     }
 
-    public int[] getIntegerArray(String key, String delimiter) {
+    public int[] getIntArray(String key, String delimiter) {
         var property = getProperty(key);
         if(isNullOrEmpty(property)) {
             return INT_ARRAY_EMPTY;

@@ -98,8 +98,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        // Alt game - Karma punishment
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (player.getReputation() < 0)) {
+        if (player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkUseWareHouse) {
             return;
         }
 

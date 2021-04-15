@@ -30,7 +30,7 @@ public class FeatureSettings implements Settings {
 
     @Override
     public void load(SettingsFile settingsFile) {
-        siegeHours =  settingsFile.getIntegerArray("SiegeHourList", ",");
+        siegeHours =  settingsFile.getIntArray("SiegeHourList", ",");
     }
 
     public int[] siegeHours() {

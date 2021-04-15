@@ -95,7 +95,7 @@ public final class RequestPreviewItem extends ClientPacket {
         }
 
         // If Alternate rule Karma punishment is set to true, forbid Wear to player with Karma
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (activeChar.getReputation() < 0)) {
+        if (activeChar.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkShop) {
             return;
         }
 

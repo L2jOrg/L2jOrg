@@ -28,8 +28,11 @@ import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class Fisherman extends Merchant {
     public Fisherman(NpcTemplate template) {
@@ -78,7 +81,7 @@ public final class Fisherman extends Merchant {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && showPkDenyChatWindow(player, "fisherman")) {
+        if(player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkShop && showPkDenyChatWindow(player, "fisherman")) {
             return;
         }
         super.showChatWindow(player, val);

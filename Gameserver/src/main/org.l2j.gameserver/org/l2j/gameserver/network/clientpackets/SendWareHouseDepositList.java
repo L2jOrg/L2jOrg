@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.util.StreamUtil;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.model.actor.Npc;
@@ -131,7 +130,7 @@ public final class SendWareHouseDepositList extends ClientPacket {
             return false;
         }
 
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (player.getReputation() < 0)) {
+        if (player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkUseWareHouse) {
             return false;
         }
 

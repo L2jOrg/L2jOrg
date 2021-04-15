@@ -86,7 +86,7 @@ public class ServerSettings implements Settings {
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
         maxThreadPoolSize = determinePoolSize(settingsFile, "MaxThreadPoolSize", threadPoolSize * 10);
         parallelismThreshold = settingsFile.getInteger("ParallelismThreshold", 1000);
-        acceptedProtocols =  settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
+        acceptedProtocols =  settingsFile.getIntArray("AllowedProtocolRevisions", ";");
 
         scheduleRestart = settingsFile.getBoolean("ServerRestartScheduleEnabled", false);
         scheduleRestartHours = settingsFile.getStringArray("ServerRestartSchedule");

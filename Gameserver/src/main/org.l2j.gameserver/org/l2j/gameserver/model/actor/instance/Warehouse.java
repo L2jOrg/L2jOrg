@@ -22,7 +22,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class Warehouse extends Folk {
     public Warehouse(NpcTemplate template) {
@@ -59,7 +62,7 @@ public class Warehouse extends Folk {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && showPkDenyChatWindow(player, "warehouse")) {
+        if(player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkUseWareHouse && showPkDenyChatWindow(player, "warehouse")) {
             return;
         }
         super.showChatWindow(player, val);

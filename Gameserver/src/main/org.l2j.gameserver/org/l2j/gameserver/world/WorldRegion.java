@@ -73,7 +73,7 @@ public final class WorldRegion {
         if (isNull(objects.put(object.getObjectId(), object)) && isPlayer(object)) {
             // If this is the first player to enter the region, activate self and neighbors.
             playersInside.getAndIncrement();
-            if (!active && (!Config.GRIDS_ALWAYS_ON)) {
+            if (!active) {
                 startActivation();
             }
         }
@@ -162,7 +162,7 @@ public final class WorldRegion {
 
         if (nonNull(objects.remove(object.getObjectId())) && isPlayer(object)) {
             playersInside.getAndDecrement();
-            if (areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON) {
+            if (areNeighborsEmpty()) {
                 startDeactivation();
             }
         }

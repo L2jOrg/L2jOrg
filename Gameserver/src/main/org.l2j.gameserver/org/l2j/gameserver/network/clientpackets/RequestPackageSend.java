@@ -97,13 +97,15 @@ public class RequestPackageSend extends ClientPacket {
             return;
         }
 
+        var characterSettings = getSettings(CharacterSettings.class);
+
         // Alt game - Karma punishment
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (player.getReputation() < 0)) {
+        if (player.getReputation() < 0 && !characterSettings.canPkUseWareHouse) {
             return;
         }
 
         // Freight price from config per item slot.
-        final int fee = _items.length * getSettings(CharacterSettings.class).freightPrice;
+        final int fee = _items.length * characterSettings.freightPrice;
         long currentAdena = player.getAdena();
         int slots = 0;
 

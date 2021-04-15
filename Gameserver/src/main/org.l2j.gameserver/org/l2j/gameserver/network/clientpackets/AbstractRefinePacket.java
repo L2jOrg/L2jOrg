@@ -30,8 +30,11 @@ import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Arrays;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public abstract class AbstractRefinePacket extends ClientPacket {
     /**
@@ -115,11 +118,10 @@ public abstract class AbstractRefinePacket extends ClientPacket {
         }
 
         if (!(item.getTemplate() instanceof Weapon) && !(item.getTemplate() instanceof Armor)) {
-            return false; // neither weapon nor armor ?
+            return false;
         }
 
-        // blacklist check
-        return Arrays.binarySearch(Config.AUGMENTATION_BLACKLIST, item.getId()) < 0;
+        return getSettings(CharacterSettings.class).canBeAugmented(item.getId());
     }
 
     private static boolean isValidItem(Item item) {

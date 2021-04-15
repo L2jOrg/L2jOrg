@@ -30,10 +30,12 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SendTradeRequest;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
@@ -113,14 +115,16 @@ public final class TradeRequest extends ClientPacket {
         }
 
         // L2J Customs: Karma punishment
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TRADE && (player.getReputation() < 0)) {
-            player.sendMessage("You cannot trade while you are in a chaotic state.");
-            return;
-        }
+        if(!getSettings(CharacterSettings.class).canPkTrade) {
+            if(player.getReputation() < 0) {
+                player.sendMessage("You cannot trade while you are in a chaotic state.");
+                return;
+            }
 
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TRADE && (partner.getReputation() < 0)) {
-            player.sendMessage("You cannot request a trade while your target is in a chaotic state.");
-            return;
+            if(partner.getReputation() < 0) {
+                player.sendMessage("You cannot request a trade while your target is in a chaotic state.");
+                return;
+            }
         }
 
         if (Config.JAIL_DISABLE_TRANSACTION && (player.isJailed() || partner.isJailed())) {

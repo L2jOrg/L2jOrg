@@ -85,7 +85,7 @@ public final class Config {
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
     private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
-    private static final String  CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
+    private static final String CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
 
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
@@ -100,11 +100,6 @@ public final class Config {
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_GK;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_TRADE;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE;
     public static int MAX_PERSONAL_FAME_POINTS;
 
     public static int CASTLE_ZONE_FAME_TASK_FREQUENCY;
@@ -265,7 +260,7 @@ public final class Config {
     public static int MIN_MONSTER_ANIMATION;
     public static int MAX_MONSTER_ANIMATION;
     public static boolean ENABLE_FALLING_DAMAGE;
-    public static boolean GRIDS_ALWAYS_ON;
+
     public static int GRID_NEIGHBOR_TURNON_TIME;
     public static int GRID_NEIGHBOR_TURNOFF_TIME;
     public static int PEACE_ZONE_MODE;
@@ -478,11 +473,6 @@ public final class Config {
     public static int MAX_REPUTATION;
     public static int REPUTATION_INCREASE;
 
-    public static double ENCHANT_CHANCE_ELEMENT_STONE;
-    public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
-    public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
-    public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
-    public static int[] ENCHANT_BLACKLIST;
     public static int[] AUGMENTATION_BLACKLIST;
 
     // GrandBoss Settings
@@ -793,33 +783,9 @@ public final class Config {
         ENABLE_L2_STORE = Feature.getBoolean("EnableL2Store", false);
         ENABLE_LCOIN_STORE = Feature.getBoolean("EnableLCoinStore", false);
 
-
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 
-        ENCHANT_CHANCE_ELEMENT_STONE = Character.getDouble("EnchantChanceElementStone", 50);
-        ENCHANT_CHANCE_ELEMENT_CRYSTAL = Character.getDouble("EnchantChanceElementCrystal", 30);
-        ENCHANT_CHANCE_ELEMENT_JEWEL = Character.getDouble("EnchantChanceElementJewel", 20);
-        ENCHANT_CHANCE_ELEMENT_ENERGY = Character.getDouble("EnchantChanceElementEnergy", 10);
-        final String[] notenchantable = Character.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
-        ENCHANT_BLACKLIST = new int[notenchantable.length];
-        for (int i = 0; i < notenchantable.length; i++) {
-            ENCHANT_BLACKLIST[i] = Integer.parseInt(notenchantable[i]);
-        }
-        Arrays.sort(ENCHANT_BLACKLIST);
-        String[] array = Character.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
-        AUGMENTATION_BLACKLIST = new int[array.length];
-
-        for (int i = 0; i < array.length; i++) {
-            AUGMENTATION_BLACKLIST[i] = Integer.parseInt(array[i]);
-        }
-
-        Arrays.sort(AUGMENTATION_BLACKLIST);
-        ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = Character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
-        ALT_GAME_KARMA_PLAYER_CAN_SHOP = Character.getBoolean("AltKarmaPlayerCanShop", true);
-        ALT_GAME_KARMA_PLAYER_CAN_USE_GK = Character.getBoolean("AltKarmaPlayerCanUseGK", false);
-        ALT_GAME_KARMA_PLAYER_CAN_TRADE = Character.getBoolean("AltKarmaPlayerCanTrade", true);
-        ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = Character.getBoolean("AltKarmaPlayerCanUseWareHouse", true);
         MAX_PERSONAL_FAME_POINTS = Character.getInt("MaxPersonalFamePoints", 100000);
 
         CASTLE_ZONE_FAME_TASK_FREQUENCY = Character.getInt("CastleZoneFameTaskFrequency", 300);
@@ -935,7 +901,7 @@ public final class Config {
         MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
         MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
         MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
-        GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
+
         GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
         GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
         PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
