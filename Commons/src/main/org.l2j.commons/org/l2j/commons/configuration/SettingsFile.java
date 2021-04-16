@@ -62,11 +62,11 @@ public final class SettingsFile extends Properties {
         return getProperty(key, defaultValue);
     }
 
-    public int getInteger(String key, int defaultValue) {
-        return getInteger(key, 10, defaultValue);
+    public int getInt(String key, int defaultValue) {
+        return getInt(key, 10, defaultValue);
     }
 
-    public int getInteger(String key, int radix, int defaultValue) {
+    public int getInt(String key, int radix, int defaultValue) {
         try {
             return Integer.parseInt(getProperty(key), radix);
         } catch (Exception e) {

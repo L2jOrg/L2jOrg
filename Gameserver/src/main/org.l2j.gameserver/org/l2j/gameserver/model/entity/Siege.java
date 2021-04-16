@@ -48,6 +48,7 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.siege.ExMercenarySiegeHUDInfo;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
@@ -67,6 +68,7 @@ import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
@@ -276,7 +278,8 @@ public class Siege implements Siegable {
                 member.setSiegeSide(castle.getId());
                 if (checkIfInZone(member)) {
                     member.setIsInSiege(true);
-                    member.startFameTask(Config.CASTLE_ZONE_FAME_TASK_FREQUENCY * 1000, Config.CASTLE_ZONE_FAME_AQUIRE_POINTS);
+                    var characterSettings = getSettings(CharacterSettings.class);
+                    member.startFameTask(characterSettings.fameTaskDelay * 1000L, characterSettings.fameTaskPoints);
                 }
             }
             broadcastMemberInfo(member);
@@ -808,12 +811,12 @@ public class Siege implements Siegable {
 
     @Override
     public int getFameFrequency() {
-        return Config.CASTLE_ZONE_FAME_TASK_FREQUENCY;
+        return getSettings(CharacterSettings.class).fameTaskDelay;
     }
 
     @Override
     public int getFameAmount() {
-        return Config.CASTLE_ZONE_FAME_AQUIRE_POINTS;
+        return getSettings(CharacterSettings.class).fameTaskPoints;
     }
 
     @Override

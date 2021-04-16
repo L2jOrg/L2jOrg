@@ -65,7 +65,7 @@ public class ServerSettings implements Settings {
 
     @Override
     public void load(SettingsFile settingsFile) {
-        serverId = settingsFile.getInteger("RequestServerID", 1);
+        serverId = settingsFile.getInt("RequestServerID", 1);
         acceptAlternativeId = settingsFile.getBoolean("AcceptAlternateID", true);
 
         authServerAddress = settingsFile.getString("LoginHost", "127.0.0.1");
@@ -73,7 +73,7 @@ public class ServerSettings implements Settings {
         port = settingsFile.getShort("GameserverPort", (short) 7777);
         type = ServerType.maskOf(settingsFile.getStringArray("ServerListType"));
 
-        maximumOnlineUsers = Math.max(1, settingsFile.getInteger("MaximumOnlineUsers", 20));
+        maximumOnlineUsers = Math.max(1, settingsFile.getInt("MaximumOnlineUsers", 20));
         ageLimit = settingsFile.getByte("ServerListAge", (byte) 0);
         showBrackets = settingsFile.getBoolean("ServerListBrackets", false);
         isPvP = settingsFile.getBoolean("PvPServer", false);
@@ -85,23 +85,23 @@ public class ServerSettings implements Settings {
         scheduledPoolSize = determinePoolSize(settingsFile, "ScheduledThreadPoolSize", processors);
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
         maxThreadPoolSize = determinePoolSize(settingsFile, "MaxThreadPoolSize", threadPoolSize * 10);
-        parallelismThreshold = settingsFile.getInteger("ParallelismThreshold", 1000);
+        parallelismThreshold = settingsFile.getInt("ParallelismThreshold", 1000);
         acceptedProtocols =  settingsFile.getIntArray("AllowedProtocolRevisions", ";");
 
         scheduleRestart = settingsFile.getBoolean("ServerRestartScheduleEnabled", false);
         scheduleRestartHours = settingsFile.getStringArray("ServerRestartSchedule");
 
         useDeadLockDetector = settingsFile.getBoolean("DeadLockDetector", true);
-        deadLockDetectorInterval = settingsFile.getInteger("DeadLockCheckInterval", 1800);
+        deadLockDetectorInterval = settingsFile.getInt("DeadLockCheckInterval", 1800);
         restartOnDeadLock = settingsFile.getBoolean("RestartOnDeadlock", false);
 
         playerNamePattern = determineNamePattern(settingsFile, "CnameTemplate");
         petNamePattern = determineNamePattern(settingsFile, "PetNameTemplate");
         clanNamePattern = determineNamePattern(settingsFile, "ClanNameTemplate");
 
-        maxPlayers = settingsFile.getInteger("CharMaxNumber", 7);
+        maxPlayers = settingsFile.getInt("CharMaxNumber", 7);
         hardwareInfoEnabled = settingsFile.getBoolean("EnableHardwareInfo", false);
-        maxPlayerPerHWID = settingsFile.getInteger("MaxPlayersPerHWID", 0);
+        maxPlayerPerHWID = settingsFile.getInt("MaxPlayersPerHWID", 0);
     }
 
     private Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
@@ -113,7 +113,7 @@ public class ServerSettings implements Settings {
     }
 
     private int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
-        var size = settingsFile.getInteger(property, processors);
+        var size = settingsFile.getInt(property, processors);
 
         if(size < 2) {
             return processors;

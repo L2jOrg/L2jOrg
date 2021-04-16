@@ -49,16 +49,16 @@ public class ChatSettings implements Settings {
 
     @Override
     public void load(SettingsFile settingsFile) {
-        generalChatLevel = settingsFile.getInteger("MinimumGeneralChatLevel", 2);
-        whisperChatLevel = settingsFile.getInteger("MinimumWhisperChatLevel", 2);
-        shoutChatLevel = settingsFile.getInteger("MinimumShoutChatLevel", 10);
-        tradeChatLevel = settingsFile.getInteger("MinimumTradeChatLevel", 15);
+        generalChatLevel = settingsFile.getInt("MinimumGeneralChatLevel", 2);
+        whisperChatLevel = settingsFile.getInt("MinimumWhisperChatLevel", 2);
+        shoutChatLevel = settingsFile.getInt("MinimumShoutChatLevel", 10);
+        tradeChatLevel = settingsFile.getInt("MinimumTradeChatLevel", 15);
 
         defaultGlobalChat = settingsFile.getString("GlobalChat", "ON");
         defaultTradeChat = settingsFile.getString("TradeChat", "ON");
 
         worldChatEnabled = settingsFile.getBoolean("WorldChatEnabled", true);
-        worldChatMinLevel = settingsFile.getInteger("WorldChatMinLevel", 80);
+        worldChatMinLevel = settingsFile.getInt("WorldChatMinLevel", 80);
         worldChatInterval = settingsFile.getDuration("WorldChatInterval", 20);
 
         silenceModeExclude = settingsFile.getBoolean("SilenceModeExclude", false);

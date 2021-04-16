@@ -225,8 +225,8 @@ public class AuthController {
 
     private void createNewAccount(AuthClient client, String username, String password) {
         try {
-            getDAO(AccountDAO.class).save(username, hash(password), currentTimeMillis(), client.getHostAddress());
             var account = new Account(username, hash(password), currentTimeMillis(), client.getHostAddress());
+            getDAO(AccountDAO.class).save(account);
             processAuth(client, account);
         } catch (NoSuchAlgorithmException e) {
             LOGGER.error(e.getMessage(), e);

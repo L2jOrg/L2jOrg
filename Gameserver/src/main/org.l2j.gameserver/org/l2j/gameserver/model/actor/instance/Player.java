@@ -2094,7 +2094,7 @@ public final class Player extends Playable {
 
     public void setFame(int fame) {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, data.getFame(), fame), this);
-        data.setFame(Math.min(fame, Config.MAX_PERSONAL_FAME_POINTS));
+        data.setFame(Math.min(fame, getSettings(CharacterSettings.class).maxFame));
     }
 
     public int getRaidbossPoints() {
@@ -6911,11 +6911,11 @@ public final class Player extends Playable {
     }
 
     public int getDwarfRecipeLimit() {
-        return Config.DWARF_RECIPE_LIMIT + (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
+        return getSettings(CharacterSettings.class).dwarfRecipeLimit + (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
     }
 
     public int getCommonRecipeLimit() {
-        return Config.COMMON_RECIPE_LIMIT + (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
+        return getSettings(CharacterSettings.class).recipeLimit + (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
     }
 
     /**

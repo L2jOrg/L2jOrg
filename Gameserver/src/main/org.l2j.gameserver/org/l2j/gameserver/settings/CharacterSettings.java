@@ -85,6 +85,18 @@ public class CharacterSettings implements Settings {
     public boolean canPkTeleport;
     public boolean canPkTrade;
     public boolean canPkUseWareHouse;
+    public int maxFame;
+    public int fameTaskDelay;
+    public int fameTaskPoints;
+    public boolean fameForDeadPlayers;
+    public int criticalCraftRate;
+    public int dwarfRecipeLimit;
+    public int recipeLimit;
+    public boolean altGameCreation;
+    public double altGameCreationSpeed;
+    public double altGameCreationXpRate;
+    public double altGameCreationSpRate;
+    public double altGameCreationRareXpSpRate;
 
     private IntSet autoLootItems;
 
@@ -102,12 +114,12 @@ public class CharacterSettings implements Settings {
 
     @Override
     public void load(SettingsFile settingsFile) {
-        partyRange = settingsFile.getInteger("AltPartyRange", 1600);
+        partyRange = settingsFile.getInt("AltPartyRange", 1600);
 
         autoLoot = settingsFile.getBoolean("AutoLoot", false);
         autoLootItems = settingsFile.getIntSet("AutoLootItemIds", ",");
         autoLootRaid = settingsFile.getBoolean("AutoLootRaids", false);
-        raidLootPrivilegeTime = settingsFile.getInteger("RaidLootRightsInterval", 900) * 1000;
+        raidLootPrivilegeTime = settingsFile.getInt("RaidLootRightsInterval", 900) * 1000;
         autoLootHerbs = settingsFile.getBoolean("AutoLootHerbs", false);
         maxAdena = settingsFile.getLong("MaxAdena", Long.MAX_VALUE);
         if(maxAdena < 1) {
@@ -123,12 +135,12 @@ public class CharacterSettings implements Settings {
         removeCastleCirclets = settingsFile.getBoolean("RemoveCastleCirclets", true);
         restoreSummonOnReconnect = settingsFile.getBoolean("RestoreSummonOnReconnect", true);
 
-        minEnchantAnnounceWeapon = settingsFile.getInteger("MinimumEnchantAnnounceWeapon", 7);
-        minEnchantAnnounceArmor = settingsFile.getInteger("MinimumEnchantAnnounceArmor", 6);
+        minEnchantAnnounceWeapon = settingsFile.getInt("MinimumEnchantAnnounceWeapon", 7);
+        minEnchantAnnounceArmor = settingsFile.getInt("MinimumEnchantAnnounceArmor", 6);
 
-        restoreCPPercent = settingsFile.getInteger("RespawnRestoreCP", 0) / 100f;
-        restoreHPPercent = settingsFile.getInteger("RespawnRestoreHP", 65) / 100f;
-        restoreMPPercent = settingsFile.getInteger("RespawnRestoreMP", 0) / 100f;
+        restoreCPPercent = settingsFile.getInt("RespawnRestoreCP", 0) / 100f;
+        restoreHPPercent = settingsFile.getInt("RespawnRestoreHP", 65) / 100f;
+        restoreMPPercent = settingsFile.getInt("RespawnRestoreMP", 0) / 100f;
 
         autoLearnSkillEnabled = settingsFile.getBoolean("AutoLearnSkills", false);
         autoLearnSkillFSEnabled = settingsFile.getBoolean("AutoLearnForgottenScrollSkills", false);
@@ -140,7 +152,7 @@ public class CharacterSettings implements Settings {
         maxDances = settingsFile.getByte("MaxDanceAmount", (byte) 12);
         dispelDanceAllowed = settingsFile.getBoolean("DanceCancelBuff", false);
         storeDances = settingsFile.getBoolean("AltStoreDances", false);
-        effectTickRatio = settingsFile.getInteger("EffectTickRatio", 666);
+        effectTickRatio = settingsFile.getInt("EffectTickRatio", 666);
 
         var cancelAttackType = settingsFile.getString("AltGameCancelByHit", "Cast");
         breakCast = cancelAttackType.equalsIgnoreCase("Cast") || cancelAttackType.equalsIgnoreCase("all");
@@ -151,35 +163,35 @@ public class CharacterSettings implements Settings {
         vitalityEnabled = settingsFile.getBoolean("EnableVitality", false);
         raidBossUseVitality = settingsFile.getBoolean("RaidbossUseVitality", false);
 
-        maxRunSpeed = settingsFile.getInteger("MaxRunSpeed", 300);
-        maxPcritRate = settingsFile.getInteger("MaxPCritRate", 500);
-        maxMcritRate = settingsFile.getInteger("MaxMCritRate", 200);
-        maxPAtkSpeed = settingsFile.getInteger("MaxPAtkSpeed", 1500);
-        maxMAtkSpeed = settingsFile.getInteger("MaxMAtkSpeed", 1999);
-        maxEvasion = settingsFile.getInteger("MaxEvasion", 250);
+        maxRunSpeed = settingsFile.getInt("MaxRunSpeed", 300);
+        maxPcritRate = settingsFile.getInt("MaxPCritRate", 500);
+        maxMcritRate = settingsFile.getInt("MaxMCritRate", 200);
+        maxPAtkSpeed = settingsFile.getInt("MaxPAtkSpeed", 1500);
+        maxMAtkSpeed = settingsFile.getInt("MaxMAtkSpeed", 1999);
+        maxEvasion = settingsFile.getInt("MaxEvasion", 250);
 
         teleportInBattle = settingsFile.getBoolean("TeleportInBattle", true);
         allowPKTeleport = settingsFile.getBoolean("AltKarmaPlayerCanTeleport", true);
-        maxFreeTeleportLevel = settingsFile.getInteger("MaxFreeTeleportLevel", 40);
+        maxFreeTeleportLevel = settingsFile.getInt("MaxFreeTeleportLevel", 40);
 
         craftEnabled = settingsFile.getBoolean("CraftingEnabled", true);
 
-        dwarfMaxSlotStoreSell = settingsFile.getInteger("MaxPvtStoreSellSlotsDwarf", 4);
-        maxSlotStoreSell = settingsFile.getInteger("MaxPvtStoreSellSlotsOther", 3);
-        dwarfMaxSlotStoreBuy = settingsFile.getInteger("MaxPvtStoreBuySlotsDwarf", 5);
-        maxSlotStoreBuy = settingsFile.getInteger("MaxPvtStoreBuySlotsOther",  4);
+        dwarfMaxSlotStoreSell = settingsFile.getInt("MaxPvtStoreSellSlotsDwarf", 4);
+        maxSlotStoreSell = settingsFile.getInt("MaxPvtStoreSellSlotsOther", 3);
+        dwarfMaxSlotStoreBuy = settingsFile.getInt("MaxPvtStoreBuySlotsDwarf", 5);
+        maxSlotStoreBuy = settingsFile.getInt("MaxPvtStoreBuySlotsOther",  4);
 
-        maxSlots = settingsFile.getInteger("MaximumSlotsForNoDwarf", 80);
-        dwarfMaxSlots = settingsFile.getInteger("MaximumSlotsForDwarf", 100);
-        gmMaxSlots = settingsFile.getInteger("MaximumSlotsForGMPlayer", 100);
-        maxSlotsQuestItem = settingsFile.getInteger("MaximumSlotsForQuestItems", 80);
+        maxSlots = settingsFile.getInt("MaximumSlotsForNoDwarf", 80);
+        dwarfMaxSlots = settingsFile.getInt("MaximumSlotsForDwarf", 100);
+        gmMaxSlots = settingsFile.getInt("MaximumSlotsForGMPlayer", 100);
+        maxSlotsQuestItem = settingsFile.getInt("MaximumSlotsForQuestItems", 80);
 
-        dwarfMaxSlotWarehouse = settingsFile.getInteger("MaximumWarehouseSlotsForDwarf", 120);
-        maxSlotWarehouse = settingsFile.getInteger("MaximumWarehouseSlotsForNoDwarf", 100);
-        clanMaxWarehouseSlot = settingsFile.getInteger("MaximumWarehouseSlotsForClan", 150);
+        dwarfMaxSlotWarehouse = settingsFile.getInt("MaximumWarehouseSlotsForDwarf", 120);
+        maxSlotWarehouse = settingsFile.getInt("MaximumWarehouseSlotsForNoDwarf", 100);
+        clanMaxWarehouseSlot = settingsFile.getInt("MaximumWarehouseSlotsForClan", 150);
 
-        maxSlotFreight = settingsFile.getInteger("MaximumFreightSlots", 200);
-        freightPrice = settingsFile.getInteger("FreightPrice", 1000);
+        maxSlotFreight = settingsFile.getInt("MaximumFreightSlots", 200);
+        freightPrice = settingsFile.getInt("FreightPrice", 1000);
 
         maxItemInPacket = max(maxSlots, max(dwarfMaxSlots, gmMaxSlots));
 
@@ -191,6 +203,21 @@ public class CharacterSettings implements Settings {
         canPkTeleport = settingsFile.getBoolean("CanPkTeleport", false);
         canPkTrade = settingsFile.getBoolean("CanPkTrade", true);
         canPkUseWareHouse = settingsFile.getBoolean("CanPKUseWareHouse", true);
+
+        maxFame = settingsFile.getInt("MaxPersonalFamePoints", 100000);
+        fameTaskDelay = settingsFile.getInt("CastleZoneFameTaskFrequency", 300);
+        fameTaskPoints = settingsFile.getInt("CastleZoneFameAcquirePoints", 125);
+        fameForDeadPlayers = settingsFile.getBoolean("FameForDeadPlayers", true);
+
+        criticalCraftRate = settingsFile.getInt("BaseCriticalCraftRate", 3);
+        dwarfRecipeLimit = settingsFile.getInt("DwarfRecipeLimit", 100);
+        recipeLimit = settingsFile.getInt("CommonRecipeLimit", 50);
+
+        altGameCreation = settingsFile.getBoolean("AltGameCreation", false);
+        altGameCreationSpeed = settingsFile.getDouble("AltGameCreationSpeed", 1);
+        altGameCreationXpRate = settingsFile.getDouble("AltGameCreationXpRate", 1);
+        altGameCreationSpRate = settingsFile.getDouble("AltGameCreationSpRate", 1);
+        altGameCreationRareXpSpRate = settingsFile.getDouble("AltGameCreationRareXpSpRate", 2);
     }
 
 

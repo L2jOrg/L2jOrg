@@ -100,20 +100,6 @@ public final class Config {
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
-    public static int MAX_PERSONAL_FAME_POINTS;
-
-    public static int CASTLE_ZONE_FAME_TASK_FREQUENCY;
-    public static int CASTLE_ZONE_FAME_AQUIRE_POINTS;
-    public static boolean FAME_FOR_DEAD_PLAYERS;
-    public static boolean CRAFT_MASTERWORK;
-    public static int BASE_CRITICAL_CRAFT_RATE;
-    public static int DWARF_RECIPE_LIMIT;
-    public static int COMMON_RECIPE_LIMIT;
-    public static boolean ALT_GAME_CREATION;
-    public static double ALT_GAME_CREATION_SPEED;
-    public static double ALT_GAME_CREATION_XP_RATE;
-    public static double ALT_GAME_CREATION_RARE_XPSP_RATE;
-    public static double ALT_GAME_CREATION_SP_RATE;
     public static boolean ALT_CLAN_LEADER_INSTANT_ACTIVATION;
     public static int ALT_CLAN_JOIN_DAYS;
     public static int ALT_CLAN_CREATE_DAYS;
@@ -786,20 +772,6 @@ public final class Config {
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 
-        MAX_PERSONAL_FAME_POINTS = Character.getInt("MaxPersonalFamePoints", 100000);
-
-        CASTLE_ZONE_FAME_TASK_FREQUENCY = Character.getInt("CastleZoneFameTaskFrequency", 300);
-        CASTLE_ZONE_FAME_AQUIRE_POINTS = Character.getInt("CastleZoneFameAquirePoints", 125);
-        FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);
-        CRAFT_MASTERWORK = Character.getBoolean("CraftMasterwork", true);
-        BASE_CRITICAL_CRAFT_RATE = Character.getInt("BaseCriticalCraftRate", 3);
-        DWARF_RECIPE_LIMIT = Character.getInt("DwarfRecipeLimit", 50);
-        COMMON_RECIPE_LIMIT = Character.getInt("CommonRecipeLimit", 50);
-        ALT_GAME_CREATION = Character.getBoolean("AltGameCreation", false);
-        ALT_GAME_CREATION_SPEED = Character.getDouble("AltGameCreationSpeed", 1);
-        ALT_GAME_CREATION_XP_RATE = Character.getDouble("AltGameCreationXpRate", 1);
-        ALT_GAME_CREATION_SP_RATE = Character.getDouble("AltGameCreationSpRate", 1);
-        ALT_GAME_CREATION_RARE_XPSP_RATE = Character.getDouble("AltGameCreationRareXpSpRate", 2);
         ALT_CLAN_LEADER_INSTANT_ACTIVATION = Character.getBoolean("AltClanLeaderInstantActivation", false);
         ALT_CLAN_JOIN_DAYS = Character.getInt("DaysBeforeJoinAClan", 1);
         ALT_CLAN_CREATE_DAYS = Character.getInt("DaysBeforeCreateAClan", 10);
