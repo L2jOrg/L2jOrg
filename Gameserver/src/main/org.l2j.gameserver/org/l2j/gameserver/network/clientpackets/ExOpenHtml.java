@@ -38,7 +38,7 @@ public class ExOpenHtml extends ClientPacket {
     protected void runImpl(){
         switch (dialogId) {
             // case 1 -> pc points
-            case 5 -> client.sendPacket(new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm( client.getPlayer(), String.format(COMMON_HTML_PATH, dialogId))));
+            case 5 -> client.sendPacket(new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm( client.getPlayer(), "data/html/common/dimensional/index.htm")));
         }
     }
 }

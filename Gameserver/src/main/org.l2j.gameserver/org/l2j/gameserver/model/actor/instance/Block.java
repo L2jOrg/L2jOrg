@@ -109,7 +109,7 @@ public class Block extends Monster {
 
     @Override
     public void onAction(Player player, boolean interact) {
-        if (!canTarget(player)) {
+        if (!canBeTarget(player)) {
             return;
         }
 

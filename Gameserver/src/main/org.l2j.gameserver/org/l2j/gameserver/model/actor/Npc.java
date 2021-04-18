@@ -399,7 +399,7 @@ public class Npc extends Creature {
         return false;
     }
 
-    public boolean canTarget(Player player) {
+    public boolean canBeTarget(Player player) {
         if (player.isControlBlocked()) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -409,8 +409,6 @@ public class Npc extends Creature {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
-        // TODO: More checks...
-
         return true;
     }
 
