@@ -56,7 +56,9 @@ public class DimensionalMerchant extends AbstractNpcAI implements IBypassHandler
     public boolean useBypass(String bypass, Player player, Creature bypassOrigin) {
         var tokens = new StringTokenizer(bypass);
         tokens.nextToken(); // skip first
+        boolean used = false;
         if(tokens.hasMoreTokens()) {
+            used = true;
             switch (tokens.nextToken()) {
                 case "link" -> openHtml(player, tokens.nextToken());
                 case "attendance_rewards" ->  player.sendPacket(new ExVipAttendanceItemList(player));
@@ -64,12 +66,10 @@ public class DimensionalMerchant extends AbstractNpcAI implements IBypassHandler
                 case "market" -> player.sendMessage("There is no Dimensional Item"); // What is this supposed to do?
                 case "package_deposit" -> packageDeposit(player);
                 case "package_withdraw" -> packageWithdraw(player);
-                default -> {
-                    return false;
-                }
+                default -> used = false;
             }
         }
-        return true;
+        return used;
     }
 
     private void shop(Player player, int multiSell) {
