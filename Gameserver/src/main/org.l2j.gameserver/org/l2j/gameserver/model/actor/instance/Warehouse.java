@@ -22,9 +22,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.util.GameUtils;
 
 public class Warehouse extends Folk {
+
     public Warehouse(NpcTemplate template) {
         super(template);
         setInstanceType(InstanceType.L2WarehouseInstance);
@@ -32,11 +32,7 @@ public class Warehouse extends Folk {
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (GameUtils.isMonster(attacker)) {
-            return true;
-        }
-
-        return super.isAutoAttackable(attacker);
+        return false;
     }
 
     @Override
@@ -46,15 +42,15 @@ public class Warehouse extends Folk {
 
     @Override
     public String getHtmlPath(int npcId, int val) {
-        String pom;
+        String fileName;
 
         if (val == 0) {
-            pom = Integer.toString(npcId);
+            fileName = Integer.toString(npcId);
         } else {
-            pom = npcId + "-" + val;
+            fileName = npcId + "-" + val;
         }
 
-        return "data/html/warehouse/" + pom + ".htm";
+        return "data/html/warehouse/" + fileName + ".htm";
     }
 
     @Override

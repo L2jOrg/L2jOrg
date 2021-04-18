@@ -27,16 +27,16 @@ import org.l2j.gameserver.network.SystemMessageId;
 public class TrapAction implements IActionHandler
 {
 	@Override
-	public boolean action(Player activeChar, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
 		// Aggression target lock effect
-		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))
+		if (player.isLockedTarget() && (player.getLockedTarget() != target))
 		{
-			activeChar.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
+			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
 			return false;
 		}
 		
-		activeChar.setTarget(target);
+		player.setTarget(target);
 		return true;
 	}
 	

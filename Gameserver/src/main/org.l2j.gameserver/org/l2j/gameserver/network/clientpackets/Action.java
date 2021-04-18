@@ -21,6 +21,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
@@ -57,21 +58,9 @@ public final class Action extends ClientPacket {
     public void runImpl() {
         var player = client.getPlayer();
 
-        if (player.isInObserverMode()) {
-            player.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-            client.sendPacket(ActionFailed.STATIC_PACKET);
+        if (!canPlayerInteract(player)) {
+            player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
-        }
-
-        final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
-        if (nonNull(info)) {
-            for (AbstractEffect effect : info.getEffects()) {
-                if (!effect.checkCondition(-4)) {
-                    player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-                    player.sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                }
-            }
         }
 
         final WorldObject obj;
@@ -81,29 +70,8 @@ public final class Action extends ClientPacket {
             obj = World.getInstance().findObject(objectId);
         }
 
-        // If object requested does not exist, add warn msg into logs
-        // pressing e.g. pickup many times quickly would get you here
-        if (isNull(obj)) {
-            client.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        if ( (!obj.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PcCondOverride.TARGET_ALL)) {
-            client.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        // Players can't interact with objects in the other instances.
-        // Only GMs can directly interact with invisible characters
-        if (obj.getInstanceWorld() != player.getInstanceWorld() || !obj.isVisibleFor(player)) {
-            client.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        // Check if the target is valid, if the player haven't a shop or isn't the requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...)
-        if (player.getActiveRequester() != null) {
-            // Actions prohibited when in trade
-            client.sendPacket(ActionFailed.STATIC_PACKET);
+        if (!canPlayerInteractWith(player, obj)) {
+            player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
@@ -111,18 +79,51 @@ public final class Action extends ClientPacket {
 
         switch (actionId) {
             case 0 -> obj.onAction(player);
-            case 1 -> {
-                if (!player.isGM() && (!(isNpc(obj) && Config.ALT_GAME_VIEWNPC))) {
-                    obj.onAction(player, false);
-                } else {
-                    obj.onActionShift(player);
+            case 1 -> onShiftAction(player, obj);
+            default -> onUnknownAction(player);
+        }
+    }
+
+    private void onShiftAction(Player player, WorldObject obj) {
+        if (!player.isGM() && (!(isNpc(obj) && Config.ALT_GAME_VIEWNPC))) {
+            obj.onAction(player, false);
+        } else {
+            obj.onActionShift(player);
+        }
+    }
+
+    private void onUnknownAction(Player player) {
+        LOGGER.warn("{} requested invalid action: {}", player, actionId);
+        client.sendPacket(ActionFailed.STATIC_PACKET);
+    }
+
+    private boolean canPlayerInteractWith(Player player, WorldObject obj) {
+        if (isNull(obj) || (!obj.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PcCondOverride.TARGET_ALL)) {
+            return false;
+        }
+
+        return obj.getInstanceWorld() == player.getInstanceWorld() && obj.isVisibleFor(player);
+    }
+
+    private boolean canPlayerInteract(Player player) {
+        if (player.isInObserverMode()) {
+            player.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+            return false;
+        }
+
+        if (player.getActiveRequester() != null) {
+            return false;
+        }
+
+        final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+        if (nonNull(info)) {
+            for (AbstractEffect effect : info.getEffects()) {
+                if (!effect.checkCondition(-4)) {
+                    player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
+                    return false;
                 }
             }
-            default -> {
-                // Invalid action detected (probably client cheating), log this
-                LOGGER.warn("Character: {} requested invalid action: {}", player.getName(), actionId);
-                client.sendPacket(ActionFailed.STATIC_PACKET);
-            }
         }
+        return true;
     }
 }

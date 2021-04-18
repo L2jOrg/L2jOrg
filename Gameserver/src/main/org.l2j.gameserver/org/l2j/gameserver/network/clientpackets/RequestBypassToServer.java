@@ -68,7 +68,8 @@ public final class RequestBypassToServer extends ClientPacket {
         "_olympiad?command",
         "menu_select",
         "manor_menu_select",
-        "pccafe"
+        "pccafe",
+        "dimensional"
     };
 
     private String bypass;
