@@ -20,6 +20,7 @@ package org.l2j.scripts.ai.others.DimensionalMerchant;
 
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
+import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -36,13 +37,13 @@ import java.util.StringTokenizer;
 import static org.l2j.commons.util.Util.parseNextInt;
 
 /**
- * Dimensional Merchant AI.
- * @author Mobius
+ * @author JoeAlisson
  */
 public class DimensionalMerchant extends AbstractNpcAI implements IBypassHandler {
 
     private DimensionalMerchant() {
         addFirstTalkId(32478);
+        BypassHandler.getInstance().registerHandler(this);
     }
 
     @Override
@@ -57,7 +58,7 @@ public class DimensionalMerchant extends AbstractNpcAI implements IBypassHandler
         tokens.nextToken(); // skip first
         if(tokens.hasMoreTokens()) {
             switch (tokens.nextToken()) {
-                case "link"  -> openHtml(player, tokens.nextToken());
+                case "link" -> openHtml(player, tokens.nextToken());
                 case "attendance_rewards" ->  player.sendPacket(new ExVipAttendanceItemList(player));
                 case "shop" -> shop(player, parseNextInt(tokens, 0));
                 case "market" -> player.sendMessage("There is no Dimensional Item"); // What is this supposed to do?
@@ -102,7 +103,7 @@ public class DimensionalMerchant extends AbstractNpcAI implements IBypassHandler
     }
 
     private void openHtml(Player player, String html) {
-        player.sendPacket(new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm(player, "data/html/common/dimensional" + html)));
+        player.sendPacket(new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm(player, "data/html/common/dimensional/" + html)));
     }
 
     @Override

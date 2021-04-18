@@ -517,7 +517,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.bypasshandlers.UpgradeHandler,
             org.l2j.scripts.handlers.bypasshandlers.VoiceCommand,
             org.l2j.scripts.handlers.bypasshandlers.Wear,
-            org.l2j.scripts.ai.others.DimensionalMerchant.DimensionalMerchant,
 
             //custom
             org.l2j.scripts.custom.SellBuff.SellBuff;
