@@ -146,6 +146,9 @@ public final class ClanHallManager extends GameXmlReader {
                                 }
                             }
                         }
+                        doors.clear();
+                        npcs.clear();
+                        teleports.clear();
                     }
                 }
             }
