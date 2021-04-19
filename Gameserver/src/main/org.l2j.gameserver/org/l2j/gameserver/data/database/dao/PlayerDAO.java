@@ -129,8 +129,12 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("SELECT charId, char_name, accesslevel FROM characters")
     void withPlayersDataDo(Consumer<ResultSet> action);
 
-    @Query("SELECT char_name,level,classid,charId,title,power_grade,subpledge,apprentice,sponsor,sex,race FROM characters WHERE clanid=:clanId:")
-    List<PlayerData> findClanMembers(int clanId);
+    @Query("""
+          SELECT c.char_name, c.level, c.classid, c.charId, c.title, c.power_grade, c.subpledge, c.apprentice, c.sponsor, c.sex, c.race, cm.last_reputation_level
+          FROM characters c LEFT JOIN clan_members cm ON c.charId = cm.player_id AND c.clanid = cm.clan_id
+          WHERE clanid=:clanId:
+          """)
+    List<ClanMember> findClanMembers(int clanId);
 
     @Query("UPDATE characters SET apprentice=0 WHERE apprentice=:playerId:")
     void deleteApprentice(int playerId);
@@ -259,4 +263,7 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("SELECT rec_have, rec_left FROM character_reco_bonus WHERE charId = :playerId:")
     IntKeyIntValue findRecommends(int playerId);
+
+    @Query("INSERT INTO clan_members (clan_id, player_id, last_reputation_level) VALUES (:clanId:, :playerId:, :level:) AS v ON DUPLICATE KEY UPDATE last_reputation_level = v.last_reputation_level")
+    void saveLastReputationLevel(int clanId, int playerId, byte level);
 }

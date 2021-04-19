@@ -155,7 +155,7 @@ public class GMViewCharacterInfo extends ServerPacket {
 
         buffer.writeByte(321);
 
-        buffer.writeInt(_activeChar.getPledgeClass()); // changes the text above CP on Status Window
+        buffer.writeInt(_activeChar.getSocialStatus().ordinal()); // changes the text above CP on Status Window
 
         buffer.writeByte(_activeChar.isNoble());
         buffer.writeByte(_activeChar.isHero());

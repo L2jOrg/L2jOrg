@@ -35,6 +35,7 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.EventMonster;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.*;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -188,7 +189,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "level-max" -> and(playerCondition, new ConditionPlayerMaxLevel(parseInt(attr)));
                 case "chaotic" ->  and(playerCondition, ConditionPlayerChaotic.of(parseBoolean(attr)));
                 case "hero" -> and(playerCondition, ConditionPlayerIsHero.of(parseBoolean(attr)));
-                case "pledge-class" -> and(playerCondition, new ConditionPlayerPledgeClass(parseInt(attr)));
+                case "social-status" -> and(playerCondition, new ConditionPlayerSocialStatus(parseEnum(attr, SocialStatus.class)));
                 case "castle" -> and(playerCondition, new ConditionPlayerHasCastle(parseInt(attr)));
                 case "sex" -> and(playerCondition, ConditionPlayerSex.of(parseInt(attr)));
                 case "flying" -> and(playerCondition, ConditionPlayerFlyMounted.of(parseBoolean(attr)));

@@ -158,7 +158,7 @@ public class ExCharInfo extends ServerPacket {
 
         buffer.writeInt(appearence.getNameColor());
         buffer.writeInt(player.getHeading());
-        buffer.writeByte(player.getPledgeClass());
+        buffer.writeByte(player.getSocialStatus().ordinal());
         buffer.writeShort(player.getPledgeType());
 
         buffer.writeInt(appearence.getTitleColor());

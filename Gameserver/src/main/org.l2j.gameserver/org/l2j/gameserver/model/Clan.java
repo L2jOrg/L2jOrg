@@ -24,6 +24,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.ClanData;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.database.data.ClanSkillData;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -39,6 +40,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanJoin;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanLeaderChange;
@@ -76,6 +78,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
+import static org.l2j.gameserver.network.SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -176,13 +179,13 @@ public class Clan implements IIdentifiable, INamable {
             setAllyPenaltyExpiryTime(0, 0);
         }
 
-        if ((data.getCharPenaltyExpiryTime() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
+        if ((data.getCharPenaltyExpiryTime() + (Config.ALT_CLAN_JOIN_DAYS * 86400000L)) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
         {
             setCharPenaltyExpiryTime(0);
         }
 
-        getDAO(PlayerDAO.class).findClanMembers(data.getId()).forEach(memberData -> {
-            var member = new ClanMember(this, memberData);
+        getDAO(PlayerDAO.class).findClanMembers(data.getId()).forEach(member -> {
+            member.setClan(this);
             if(member.getObjectId() == data.getLeaderId()) {
                 setLeader(member);
             } else {
@@ -268,12 +271,11 @@ public class Clan implements IIdentifiable, INamable {
      * @param player the clan member
      */
     public void addClanMember(Player player) {
-        final ClanMember member = new ClanMember(this, player);
+        final ClanMember member = ClanMember.of(this, player);
         // store in memory
         addClanMember(member);
-        member.setPlayerInstance(player);
         player.setClan(this);
-        player.setPledgeClass(ClanMember.calculatePledgeClass(player));
+        updateSocialStatus(player);
         player.sendPacket(new PledgeShowMemberListUpdate(player));
         player.sendPacket(new PledgeSkillList(this));
 
@@ -281,20 +283,6 @@ public class Clan implements IIdentifiable, INamable {
 
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanJoin(member, this));
-    }
-
-    /**
-     * Updates player status in clan.
-     *
-     * @param player the player to be updated.
-     */
-    public void updateClanMember(Player player) {
-        final ClanMember member = new ClanMember(player.getClan(), player);
-        if (player.isClanLeader()) {
-            setLeader(member);
-        }
-
-        addClanMember(member);
     }
 
     /**
@@ -374,7 +362,7 @@ public class Clan implements IIdentifiable, INamable {
 
             if (player.isClanLeader()) {
                 SiegeManager.getInstance().removeSiegeSkills(player);
-                player.setClanCreateExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+                player.setClanCreateExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000L)); // 24*60*60*1000 = 86400000
             }
 
             // remove Clan skills from Player
@@ -394,12 +382,12 @@ public class Clan implements IIdentifiable, INamable {
                 player.setClanJoinExpiryTime(clanJoinExpiryTime);
             }
 
-            player.setPledgeClass(ClanMember.calculatePledgeClass(player));
+            updateSocialStatus(player);
             player.broadcastUserInfo();
             // disable clan tab
             player.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
         } else {
-            removeMemberInDatabase(exMember, clanJoinExpiryTime, getLeaderId() == objectId ? System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000) : 0);
+            removeMemberInDatabase(exMember, clanJoinExpiryTime, getLeaderId() == objectId ? System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000L) : 0);
         }
 
         // Notify to scripts
@@ -765,17 +753,19 @@ public class Clan implements IIdentifiable, INamable {
             return;
         }
 
-        final int playerSocialClass = player.getPledgeClass() + 1;
+        var socialStatus = player.getSocialStatus();
+
         for (Skill skill : _skills.values()) {
-            final SkillLearn skillLearn = SkillTreesData.getInstance().getPledgeSkill(skill.getId(), skill.getLevel());
-            if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal())) {
+            var skillLearn = SkillTreesData.getInstance().getPledgeSkill(skill.getId(), skill.getLevel());
+            if (hasSocialStatusRequirements(socialStatus, skillLearn)) {
                 player.addSkill(skill, false); // Skill is not saved to player DB
             }
         }
+
         if (player.getPledgeType() == 0) {
             for (Skill skill : _subPledgeSkills.values()) {
                 final SkillLearn skillLearn = SkillTreesData.getInstance().getSubPledgeSkill(skill.getId(), skill.getLevel());
-                if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal())) {
+                if (hasSocialStatusRequirements(socialStatus, skillLearn)) {
                     player.addSkill(skill, false); // Skill is not saved to player DB
                 }
             }
@@ -792,6 +782,10 @@ public class Clan implements IIdentifiable, INamable {
         if (data.getReputation() < 0) {
             skillsStatus(player, true);
         }
+    }
+
+    private boolean hasSocialStatusRequirements(SocialStatus socialStatus, SkillLearn skillLearn) {
+        return skillLearn == null || skillLearn.getSocialClass() == null || socialStatus.compareTo(skillLearn.getSocialClass()) >= 0;
     }
 
     public void removeSkillEffects(Player player) {
@@ -1660,13 +1654,13 @@ public class Clan implements IIdentifiable, INamable {
         updateClanInDB();
 
         if (exLeader != null) {
-            exLeader.setPledgeClass(ClanMember.calculatePledgeClass(exLeader));
+            updateSocialStatus(exLeader);
             exLeader.broadcastUserInfo();
             exLeader.checkItemRestriction();
         }
 
         if (newLeader != null) {
-            newLeader.setPledgeClass(ClanMember.calculatePledgeClass(newLeader));
+            updateSocialStatus(newLeader);
             newLeader.getClanPrivileges().setAll();
 
             if (getLevel() >= SiegeManager.getInstance().getSiegeClanMinLevel()) {
@@ -1788,8 +1782,11 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public boolean canClaimBonusReward(Player player, ClanRewardType type) {
-        final ClanMember clanMember = getClanMember(player.getObjectId());
-        return clanMember != null && type.getAvailableBonus(this) != null && !clanMember.isRewardClaimed(type);
+        if(!isMember(player.getObjectId()) || type.getAvailableBonus(this) == null) {
+            return false;
+        }
+        int claimedRewards = player.getClaimedClanRewards(ClanRewardType.getDefaultMask());
+        return (claimedRewards & type.getMask()) != type.getMask();
     }
 
     public void resetClanBonus() {
@@ -1808,6 +1805,71 @@ public class Clan implements IIdentifiable, INamable {
 
     public void setArenaProgress(int progress) {
         data.setArenaProgress((short) progress);
+    }
+
+    public void onMemberLogout(Player player) {
+        var member = members.get(player.getObjectId());
+        if(member != null) {
+            member.logout();
+        }
+    }
+
+    public void onMemberLogin(Player player) {
+        var member = members.get(player.getObjectId());
+        if(member != null) {
+            member.login(player);
+
+            addSkillEffects(player);
+            if (player.isClanLeader()) {
+                setLeader(member);
+
+                if(data.getLevel() > 3) {
+                    SiegeManager.getInstance().addSiegeSkills(player);
+                }
+            }
+
+            var msg = getSystemMessage(CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME).addString(player.getName());
+            broadcastToOtherOnlineMembers(msg, player);
+            broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(player), player);
+        }
+    }
+
+    public void onMemberLevelChanged(Player player, byte oldLevel, byte level) {
+        var member = members.get(player.getObjectId());
+        if(member != null) {
+            broadcastToOnlineMembers(new PledgeShowMemberListUpdate(member));
+            if(data.getLevel() >= 3 && oldLevel < level && member.getLastReputationLevel() < level) {
+                member.setLastReputationLevel(level);
+                getDAO(PlayerDAO.class).saveLastReputationLevel(data.getId(), player.getObjectId(), level);
+                addLevelUpReputation(oldLevel, level);
+            }
+        }
+    }
+
+    private void addLevelUpReputation(byte oldLevel, byte level) {
+        int reputation = 0;
+        while (oldLevel < level) {
+            reputation += ClanRewardManager.getInstance().getReputationBonus(++oldLevel);
+        }
+        if(reputation > 0) {
+            addReputationScore(reputation, true);
+        }
+    }
+
+    public static void updateSocialStatus(Player player) {
+        SocialStatus status = SocialStatus.VAGABOND;
+        var clan = player.getClan();
+
+        if(nonNull(clan)) {
+            int clanLevel = clan.getLevel();
+
+            if(clanLevel == 4) {
+                status = player.isClanLeader() ? SocialStatus.ELITE_KNIGHT : SocialStatus.APPRENTICE;
+            } else if(clanLevel == 5) {
+                status = player.isClanLeader() ? SocialStatus.BARON : SocialStatus.KNIGHT;
+            }
+        }
+        player.setSocialStatus(status);
     }
 
     public static class RankPrivs {

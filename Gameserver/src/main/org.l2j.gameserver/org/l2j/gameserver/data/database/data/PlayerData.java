@@ -513,5 +513,9 @@ public class PlayerData {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setClassId(int classId) {
+        this.classId = classId;
+    }
 }
 

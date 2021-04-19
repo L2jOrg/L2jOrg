@@ -63,6 +63,7 @@ import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
@@ -1106,8 +1107,6 @@ public final class Player extends Playable {
     private final IntSet friends = CHashIntMap.newKeySet();
 
     protected Future<?> mountFeedTask;
-
-    protected int activeClass;
     protected boolean recommendTwoHoursGiven;
     protected boolean inventoryDisable;
 
@@ -1185,7 +1184,7 @@ public final class Player extends Playable {
     private PreparedMultisellList currentMultiSell;
     private int questNpcObject;
     private int agathionId;
-    private int pledgeClass;
+    private SocialStatus socialStatus = SocialStatus.VAGABOND;
     private boolean hero;
 
     private ScheduledFuture<?> soulTask;
@@ -5728,13 +5727,12 @@ public final class Player extends Playable {
         return clanPrivileges.has(privilege);
     }
 
-    public int getPledgeClass() {
-        return pledgeClass;
+    public SocialStatus getSocialStatus() {
+        return socialStatus;
     }
 
-    // baron etc
-    public void setPledgeClass(int classId) {
-        pledgeClass = classId;
+    public void setSocialStatus(SocialStatus status) {
+        socialStatus = status;
         checkItemRestriction();
     }
 
@@ -5916,7 +5914,7 @@ public final class Player extends Playable {
     }
 
     public void setHero(boolean hero) {
-        if (hero && (data.getBaseClass() == activeClass)) {
+        if (hero && (data.getBaseClass() == data.getClassId())) {
             for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
                 addSkill(skill, false); // Don't persist hero skills into database
             }
@@ -6111,11 +6109,11 @@ public final class Player extends Playable {
     }
 
     public int getActiveClass() {
-        return activeClass;
+        return data.getClassId();
     }
 
     private void setClassTemplate(int classId) {
-        activeClass = classId;
+        data.setClassId(classId);
 
         final PlayerTemplate pcTemplate = PlayerTemplateData.getInstance().getTemplate(classId);
         if (pcTemplate == null) {
@@ -6784,15 +6782,7 @@ public final class Player extends Playable {
         }
 
         if (clan != null) {
-            // set the status for pledge member list to OFFLINE
-            try {
-                final ClanMember clanMember = clan.getClanMember(getObjectId());
-                if (clanMember != null) {
-                    clanMember.setPlayerInstance(null);
-                }
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
+            clan.onMemberLogout(this);
         }
 
         if (getActiveRequester() != null) {
@@ -7951,9 +7941,6 @@ public final class Player extends Playable {
         handysBlockCheckerEventArena = arena;
     }
 
-    /**
-     * Load Player Recommendations data.
-     */
     void loadRecommendations() {
         IntKeyIntValue recommends = getDAO(PlayerDAO.class).findRecommends(objectId);
         if(nonNull(recommends)) {
