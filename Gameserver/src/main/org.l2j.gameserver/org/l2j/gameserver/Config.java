@@ -410,21 +410,20 @@ public final class Config {
     public static int INVENTORY_MAXIMUM_PET;
     public static double PET_HP_REGEN_MULTIPLIER;
     public static double PET_MP_REGEN_MULTIPLIER;
-    public static int VITALITY_CONSUME_BY_MOB;
-    public static int VITALITY_CONSUME_BY_BOSS;
+    public static int SAYHA_GRACE_CONSUME_BY_MOB;
+    public static int SAYHA_GRACE_CONSUME_BY_BOSS;
 
     // --------------------------------------------------
-    // Vitality Settings
+    // Sayha's Grace Settings
     // --------------------------------------------------
-    public static boolean ENABLE_VITALITY;
-    public static int STARTING_VITALITY_POINTS;
-    public static boolean RAIDBOSS_USE_VITALITY;
-    public static float RATE_VITALITY_EXP_MULTIPLIER;
+    public static boolean ENABLE_SAYHA_GRACE;
+    public static int STARTING_SAYHA_GRACE_POINTS;
+    public static boolean RAIDBOSS_USE_SAYHA_GRACE;
+    public static float RATE_SAYHA_GRACE_EXP_MULTIPLIER;
     public static float RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
-    public static int VITALITY_MAX_ITEMS_ALLOWED;
-    public static float RATE_VITALITY_LOST;
-    public static float RATE_VITALITY_GAIN;
-
+    public static int SAYHA_GRACE_MAX_ITEMS_ALLOWED;
+    public static float RATE_SAYHA_GRACE_LOST;
+    public static float RATE_SAYHA_GRACE_GAIN;
     // --------------------------------------------------
     // PvP Settings
     // --------------------------------------------------
@@ -583,7 +582,7 @@ public final class Config {
     public static int CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE;
     public static int CHAMPION_REWARD_ID;
     public static int CHAMPION_REWARD_QTY;
-    public static boolean CHAMPION_ENABLE_VITALITY;
+    public static boolean CHAMPION_ENABLE_SAYHA_GRACE;
     public static boolean CHAMPION_ENABLE_IN_INSTANCES;
     public static int BANKING_SYSTEM_GOLDBARS;
     public static int BANKING_SYSTEM_ADENA;
@@ -1171,8 +1170,6 @@ public final class Config {
         PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
         PET_MP_REGEN_MULTIPLIER = NPC.getDouble("PetMpRegenMultiplier", 100) / 100;
 
-        VITALITY_CONSUME_BY_MOB = NPC.getInt("VitalityConsumeByMob", 2250);
-        VITALITY_CONSUME_BY_BOSS = NPC.getInt("VitalityConsumeByBoss", 1125);
 
         // Load Rates config file (if exists)
         final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);
@@ -1199,17 +1196,20 @@ public final class Config {
             RATE_INSTANCE_PARTY_SP = RATE_PARTY_SP;
         }
 
-        ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
-        STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
-        RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 3);
+        ENABLE_SAYHA_GRACE = Character.getBoolean("EnableSayhaGrace", true);
+        STARTING_SAYHA_GRACE_POINTS = Character.getInt("StartingSayhaGracePoints", 140000);
+        RAIDBOSS_USE_SAYHA_GRACE = Character.getBoolean("RaidbossUseSayhaGrace", true);
+        SAYHA_GRACE_CONSUME_BY_MOB = NPC.getInt("SayhaGraceConsumeByMob", 2250);
+        SAYHA_GRACE_CONSUME_BY_BOSS = NPC.getInt("SayhaGraceConsumeByBoss", 1125);
+        RATE_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateSayhaGraceExpMultiplier", 3);
         RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
-        VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
-        if (VITALITY_MAX_ITEMS_ALLOWED == 0)
+        SAYHA_GRACE_MAX_ITEMS_ALLOWED = RatesSettings.getInt("SayhaGraceMaxItemsAllowed", 0);
+        if (SAYHA_GRACE_MAX_ITEMS_ALLOWED == 0)
         {
-            VITALITY_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
+            SAYHA_GRACE_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
         }
-        RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
-        RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
+        RATE_SAYHA_GRACE_LOST = RatesSettings.getFloat("RateSayhaGraceLost", 1);
+        RATE_SAYHA_GRACE_GAIN = RatesSettings.getFloat("RateSayhaGraceGain", 1);
 
         RATE_EXTRACTABLE = RatesSettings.getFloat("RateExtractable", 1);
         RATE_DROP_MANOR = RatesSettings.getInt("RateDropManor", 1);
@@ -1436,7 +1436,7 @@ public final class Config {
         CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardHigherLvlItemChance", 0);
         CHAMPION_REWARD_ID = ChampionMonster.getInt("ChampionRewardItemID", 6393);
         CHAMPION_REWARD_QTY = ChampionMonster.getInt("ChampionRewardItemQty", 1);
-        CHAMPION_ENABLE_VITALITY = ChampionMonster.getBoolean("ChampionEnableVitality", false);
+        CHAMPION_ENABLE_SAYHA_GRACE = ChampionMonster.getBoolean("ChampionEnableSayhaGrace", false);
         CHAMPION_ENABLE_IN_INSTANCES = ChampionMonster.getBoolean("ChampionEnableInInstances", false);
 
 

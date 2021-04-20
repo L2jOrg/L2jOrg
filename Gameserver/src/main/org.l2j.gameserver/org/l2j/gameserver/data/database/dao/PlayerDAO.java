@@ -190,8 +190,8 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("UPDATE character_reco_bonus SET rec_left = 20, rec_have = GREATEST(CAST(rec_have AS SIGNED)  -20 , 0)")
     void resetRecommends();
 
-    @Query("UPDATE characters SET vitality_points = :points:")
-    void resetVitality(int points);
+    @Query("UPDATE characters SET sayha_grace_points = :points:")
+    void resetSayhaGrace(int points);
 
     @Query("DELETE FROM recipes WHERE player_id=:playerId: AND id=:recipeId:")
     void deleteRecipe(int playerId, int recipeId);

@@ -149,8 +149,8 @@ public class PlayerSelectInfo {
         return _vars.isHairAccessoryEnabled();
     }
 
-    public int getVitalityItemsUsed() {
-        return _vars.getVitalityItemsUsed();
+    public int getSayhaGraceItemsUsed() {
+        return _vars.getSayhaGraceItemsUsed();
     }
 
     public PlayerData getData() {

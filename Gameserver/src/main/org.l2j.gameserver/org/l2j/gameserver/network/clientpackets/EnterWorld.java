@@ -148,7 +148,7 @@ public class EnterWorld extends ClientPacket {
             player.setIsDead(true);
         }
 
-        if (getSettings(CharacterSettings.class).isVitalityEnabled()) {
+        if (getSettings(CharacterSettings.class).isSayhaGraceEnabled()) {
             player.sendPacket(new ExVitalityEffectInfo(player));
         }
 

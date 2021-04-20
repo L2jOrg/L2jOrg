@@ -45,8 +45,8 @@ public class PlayerVariableData {
     @Column("world_chat_used")
     private int worldChatUsed;
 
-    @Column("vitality_items_used")
-    private int vitalityItemsUsed;
+    @Column("sayha_grace_items_used")
+    private int sayhaGraceItemsUsed;
 
     @Column("ability_points_main_class_used")
     private int abilityPointsMainClassUsed;
@@ -137,8 +137,8 @@ public class PlayerVariableData {
         return worldChatUsed;
     }
 
-    public int getVitalityItemsUsed() {
-        return vitalityItemsUsed;
+    public int getSayhaGraceItemsUsed() {
+        return sayhaGraceItemsUsed;
     }
 
     public int getAbilityPointsMainClassUsed() {

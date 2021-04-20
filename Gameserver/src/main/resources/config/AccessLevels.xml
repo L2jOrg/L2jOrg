@@ -546,6 +546,8 @@
 	<admin command="admin_tvt_remove" accessLevel="100" />
 	<admin command="admin_tvt_advance" accessLevel="100" />
 
+
+
 	<!-- ADMIN UNBLOCK IP -->
 	<admin command="admin_unblockip" accessLevel="100" />
 
@@ -555,6 +557,13 @@
 	<admin command="admin_full_vitality" accessLevel="100" />
 	<admin command="admin_empty_vitality" accessLevel="100" />
 	<admin command="admin_get_vitality" accessLevel="100" />
+
+	<!-- ADMIN SAYHA'S GRACE -->
+	<admin command="admin_set_sayha_grace" accessLevel="100" />
+	<admin command="admin_set_sayha_grace_level" accessLevel="100" />
+	<admin command="admin_full_sayha_grace" accessLevel="100" />
+	<admin command="admin_empty_sayha_grace" accessLevel="100" />
+	<admin command="admin_get_sayha_grace" accessLevel="100" />
 
 	<!-- ADMIN ZONE -->
 	<admin command="admin_zone_check" accessLevel="100" />

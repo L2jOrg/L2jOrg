@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS `characters`
 CREATE TABLE IF NOT EXISTS `characters`(
     `charId`                  INT UNSIGNED       NOT NULL,
     `account_name`            VARCHAR(45)                 DEFAULT NULL,
@@ -50,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `characters`(
     `clan_join_expiry_time`   BIGINT UNSIGNED    NOT NULL DEFAULT '0',
     `clan_create_expiry_time` BIGINT UNSIGNED    NOT NULL DEFAULT '0',
     `bookmarkslot`            SMALLINT UNSIGNED  NOT NULL DEFAULT 0,
-    `vitality_points`         MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
+    `sayha_grace_points`         INT UNSIGNED NOT NULL DEFAULT 0,
     `createDate`              DATE               NOT NULL DEFAULT (CURRENT_DATE),
     `language`                VARCHAR(2)                  DEFAULT NULL,
     `pccafe_points`           INT                NOT NULL DEFAULT '0',

@@ -105,8 +105,8 @@ public class PlayerData {
     private long clanCreateExpiryTime;
 
     private int bookMarkSlot;
-    @Column("vitality_points")
-    private int vitalityPoints;
+    @Column("sayha_grace_points")
+    private int sayhaGracePoints;
 
     private LocalDate createDate;
     private String language;
@@ -282,12 +282,12 @@ public class PlayerData {
         return powerGrade;
     }
 
-    public int getVitalityPoints() {
-        return vitalityPoints;
+    public int getSayhaGracePoints() {
+        return sayhaGracePoints;
     }
 
-    public void setVitalityPoints(int vitalityPoints) {
-        this.vitalityPoints = vitalityPoints;
+    public void setSayhaGracePoints(int sayhaGracePoints) {
+        this.sayhaGracePoints = sayhaGracePoints;
     }
 
     public int getSubPledge() {

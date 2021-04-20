@@ -199,6 +199,8 @@ public final class Player extends Playable {
     private int additionalSoulshot;
     private byte shineSouls;
     private byte shadowSouls;
+    private long _sayhaGraceSupportEndTime = 0;
+    private long _limitedSayhaGraceEndTime = 0;
 
     Player(GameClient client, PlayerData playerData, PlayerTemplate template) {
         super(playerData.getCharId(), template);
@@ -472,8 +474,8 @@ public final class Player extends Playable {
         return variables.getWorldChatUsed();
     }
 
-    public int getVitalityItemsUsed() {
-        return variables.getVitalityItemsUsed();
+    public int getSayhaGraceItemsUsed() {
+        return variables.getSayhaGraceItemsUsed();
     }
 
     private int getAbilityPointsMainClassUsed() {
@@ -4843,7 +4845,7 @@ public final class Player extends Playable {
         data.setClanPrivileges(clanPrivileges.getBitmask());
         data.setName(getName());
         data.setBookMarkSlot(bookmarkSlot);
-        data.setVitalityPoints(getStats().getBaseVitalityPoints());
+        data.setSayhaGracePoints(getStats().getBaseSayhaGracePoints());
         data.setLanguage(lang);
 
         if (uptime > 0) {
@@ -6459,8 +6461,8 @@ public final class Player extends Playable {
         getStats().addExpAndSp(addToExp, addToSp, false);
     }
 
-    public void addExpAndSp(double addToExp, double addToSp, boolean useVitality) {
-        getStats().addExpAndSp(addToExp, addToSp, useVitality);
+    public void addExpAndSp(double addToExp, double addToSp, boolean useSayhaGrace) {
+        getStats().addExpAndSp(addToExp, addToSp, useSayhaGrace);
     }
 
     public void removeExpAndSp(long removeExp, long removeSp) {
@@ -7146,51 +7148,58 @@ public final class Player extends Playable {
         agathionId = npcId;
     }
 
-    public int getVitalityPoints() {
-        return getStats().getVitalityPoints();
+    public int getSayhaGracePoints() {
+        return getStats().getSayhaGracePoints();
     }
 
-    public void setVitalityPoints(int points, boolean quiet) {
-        getStats().setVitalityPoints(points, quiet);
+    public void setSayhaGracePoints(int points, boolean quiet) {
+        getStats().setSayhaGracePoints(points, quiet);
     }
 
-    public void updateVitalityPoints(int points, boolean useRates) {
-        getStats().updateVitalityPoints(points, useRates);
+    public void updateSayhaGracePoints(int points, boolean useRates, boolean quiet)
+    {
+        getStats().updateSayhaGracePoints(points, useRates, quiet);
     }
 
     public void setSayhaGraceSupportEndTime(long endTime)
     {
-        if (variables.getSayaGraceSupportEndTime() < System.currentTimeMillis())
+        if (_sayhaGraceSupportEndTime < System.currentTimeMillis())
         {
-            variables.setSayaGraceSupportEndTime(endTime);
-           // sendPacket(new ExUserBoostStat(this, ));
-            sendPacket(new ExVitalityEffectInfo(this));
+            _sayhaGraceSupportEndTime = endTime;
+            //sendExpBoostInfo(true);
             sendPacket(new ExVitalExInfo(this));
         }
     }
 
     public long getSayhaGraceSupportEndTime()
     {
-        return variables.getSayaGraceSupportEndTime();
+        return _sayhaGraceSupportEndTime;
     }
 
     public boolean setLimitedSayhaGraceEndTime(long endTime)
     {
-        if (endTime > variables.getLimitedSayaGraceEndTime())
+        if (endTime > _limitedSayhaGraceEndTime)
         {
-            variables.setLimitedSayaGraceEndTime(endTime);
-            //sendPacket(new ExUserBoostStat(this));
-            sendPacket(new ExVitalityEffectInfo(this));
+            _limitedSayhaGraceEndTime = endTime;
+            //sendExpBoostInfo(true);
             sendPacket(new ExVitalExInfo(this));
             return true;
         }
         return false;
     }
 
+
+
     public long getLimitedSayhaGraceEndTime()
     {
-        return variables.getLimitedSayaGraceEndTime();
+        return _limitedSayhaGraceEndTime;
     }
+
+    public void addSayhaGracePoints(int points, boolean quiet)
+    {
+        getStats().addSayhaGracePoints(points, quiet);
+    }
+
 
     public void checkItemRestriction() {
         for (InventorySlot slot : InventorySlot.values()) {

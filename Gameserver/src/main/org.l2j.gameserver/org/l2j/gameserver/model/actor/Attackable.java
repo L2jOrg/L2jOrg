@@ -424,16 +424,16 @@ public class Attackable extends Npc {
                                 exp = attacker.getStats().getValue(Stat.EXPSP_RATE, exp);
                                 sp = attacker.getStats().getValue(Stat.EXPSP_RATE, sp);
 
-                                attacker.addExpAndSp(exp, sp, useVitalityRate());
+                                attacker.addExpAndSp(exp, sp, useSayhaGraceRate());
                                 if (exp > 0) {
                                     final Clan clan = attacker.getClan();
                                     if (clan != null) {
                                         double finalExp = exp;
-                                        if (useVitalityRate()) {
-                                            finalExp *= attacker.getStats().getExpBonusMultiplier();
+                                        if (useSayhaGraceRate()) {
+                                            finalExp *= attacker.getStats().getSayhaGraceExpBonus();
                                             if (attacker.getSayhaGraceSupportEndTime() < System.currentTimeMillis())
                                             {
-                                                attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true);
+                                                attacker.updateSayhaGracePoints(getSayhaGracePoints(attacker.getLevel(), exp, _isRaid), true, false);
                                             }
                                             PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
                                             MagicLampData.getInstance().addLampExp(attacker, exp, true);
@@ -1196,9 +1196,9 @@ public class Attackable extends Npc {
     }
 
     /*
-     * Return vitality points decrease (if positive) or increase (if negative) based on damage. Maximum for damage = maxHp.
+     * Return getSayhaGracePoints points decrease (if positive) or increase (if negative) based on damage. Maximum for damage = maxHp.
      */
-    public int getVitalityPoints(int level, double exp, boolean isBoss) {
+    public int getSayhaGracePoints(int level, double exp, boolean isBoss) {
         if ((getLevel() <= 0) || (getExpReward() <= 0)) {
             return 0;
         }
@@ -1207,17 +1207,16 @@ public class Attackable extends Npc {
         if (level < 85) {
             points = Math.max((int) ((exp / 1000) * Math.max(level - getLevel(), 1)), 1);
         } else {
-            points = Math.max((int) ((exp / (isBoss ? Config.VITALITY_CONSUME_BY_BOSS : Config.VITALITY_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1)), 1);
-        }
+            points = Math.max((int) ((exp / (isBoss ? Config.SAYHA_GRACE_CONSUME_BY_BOSS : Config.SAYHA_GRACE_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1)), 1);        }
 
         return -points;
     }
 
     /*
-     * True if vitality rate for exp and sp should be applied
+     * True if Sayha's Grace rate for exp and sp should be applied
      */
-    public boolean useVitalityRate() {
-        return !_champion || Config.CHAMPION_ENABLE_VITALITY;
+    public boolean useSayhaGraceRate() {
+        return !_champion || Config.CHAMPION_ENABLE_SAYHA_GRACE;
     }
 
     /**

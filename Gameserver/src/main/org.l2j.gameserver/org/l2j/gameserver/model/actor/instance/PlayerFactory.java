@@ -41,6 +41,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.appearance.Appearance;
+import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
@@ -103,7 +104,7 @@ public class PlayerFactory {
         player.getStats().setLevel(playerData.getLevel());
         player.getStats().setSp(playerData.getSp());
         player.setNoble(playerData.isNobless());
-        player.getStats().setVitalityPoints(playerData.getVitalityPoints());
+        player.getStats().setSayhaGracePoints(playerData.getSayhaGracePoints());
 
         if(Olympiad.getInstance().isHero(playerId)) {
             player.setHero(true);
@@ -224,6 +225,10 @@ public class PlayerFactory {
 
         if (Config.STARTING_SP > 0) {
             data.setSp(Config.STARTING_SP);
+        }
+
+        if (Config.ENABLE_SAYHA_GRACE) {
+            data.setSayhaGracePoints(Math.min(Config.STARTING_SAYHA_GRACE_POINTS, PlayerStats.MAX_SAYHA_GRACE_POINTS));
         }
 
         var hp = template.getBaseHpMax(data.getLevel()) * BaseStats.CON.getValue(template.getBaseCON());

@@ -289,17 +289,13 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if (containsMask(UserInfoType.VITA_FAME)) {
             buffer.writeShort(UserInfoType.VITA_FAME.getBlockLength()); // 196
-            buffer.writeInt(player.getVitalityPoints());
+            buffer.writeInt(player.getSayhaGracePoints());
             buffer.writeByte(0x00); // Vita Bonus
             buffer.writeInt(player.getFame());
             buffer.writeInt(player.getRaidbossPoints());
             buffer.writeByte(0x00); // unk
             buffer.writeByte(0x00); // unk
             buffer.writeShort(0x00); // unk 196
-            // player.sendPacket(new ExUserBoostStat(player));
-            if (getSettings(CharacterSettings.class).isVitalityEnabled()) {
-                player.sendPacket(new ExVitalityEffectInfo(player));
-            }
         }
 
         if (containsMask(UserInfoType.SLOTS)) {

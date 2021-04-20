@@ -20,6 +20,7 @@ package org.l2j.gameserver.instancemanager;
 
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
@@ -81,6 +82,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
         resetDailySkills();
         RankEngine.getInstance().updateRankers();
         resetPlayersData();
+        onSayhaGraceReset();
         LCoinShop.getInstance().reloadShopHistory();
         LOGGER.info("Daily task has been reset.");
     }
@@ -146,15 +148,15 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
     }
 
     @ScheduleTarget
-    private void onVitalityReset() {
-        if (!getSettings(CharacterSettings.class).isVitalityEnabled()) {
+    private void onSayhaGraceReset() {
+        if (!getSettings(CharacterSettings.class).isSayhaGraceEnabled()) {
             return;
         }
 
-        World.getInstance().forEachPlayer(player -> player.setVitalityPoints(PlayerStats.MAX_VITALITY_POINTS, false));
+        World.getInstance().forEachPlayer(player -> player.addSayhaGracePoints(Config.STARTING_SAYHA_GRACE_POINTS, false));
 
-        getDAO(PlayerDAO.class).resetVitality(PlayerStats.MAX_VITALITY_POINTS);
-        LOGGER.info("Vitality has been reset");
+        getDAO(PlayerDAO.class).resetSayhaGrace(PlayerStats.MAX_SAYHA_GRACE_POINTS);
+        LOGGER.info("Sayha Grace has been reset");
     }
 
     private void resetDailySkills() {

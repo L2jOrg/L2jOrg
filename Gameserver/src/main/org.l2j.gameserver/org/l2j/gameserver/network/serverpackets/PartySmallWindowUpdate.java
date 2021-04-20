@@ -70,8 +70,8 @@ public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallW
         if (containsMask(PartySmallWindowUpdateType.PARTY_SUBSTITUTE)) {
             buffer.writeByte(0x00);
         }
-        if (containsMask(PartySmallWindowUpdateType.VITALITY_POINTS)) {
-            buffer.writeInt(_member.getVitalityPoints());
+        if (containsMask(PartySmallWindowUpdateType.SAYHA_GRACE_POINTS)) {
+            buffer.writeInt(_member.getSayhaGracePoints());
         }
     }
 

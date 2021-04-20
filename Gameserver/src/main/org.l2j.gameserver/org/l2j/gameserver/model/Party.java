@@ -567,17 +567,17 @@ public class Party extends AbstractPlayerGroup {
                 double exp = member.getStats().getValue(Stat.EXPSP_RATE, xpReward * preCalculation);
                 double sp = member.getStats().getValue(Stat.EXPSP_RATE, spReward * preCalculation);
 
-                exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
+                exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useSayhaGraceRate());
                 if (exp > 0) {
                     final Clan clan = member.getClan();
                     if (clan != null) {
                         double finalExp = exp;
-                        if (target.useVitalityRate()) {
+                        if (target.useSayhaGraceRate()) {
                             finalExp *= member.getStats().getExpBonusMultiplier();
                         }
                         clan.addHuntingPoints(member, target, finalExp);
                     }
-                    member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true);
+                    member.updateSayhaGracePoints(target.getSayhaGracePoints(member.getLevel(), exp, target.isRaid()), true, false);
                     PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
                     MagicLampData.getInstance().addLampExp(member, exp, true);
                 }

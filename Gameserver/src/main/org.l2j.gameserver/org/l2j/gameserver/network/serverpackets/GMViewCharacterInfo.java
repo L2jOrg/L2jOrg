@@ -170,7 +170,7 @@ public class GMViewCharacterInfo extends ServerPacket {
             buffer.writeShort(_activeChar.getDefenseElementValue(type));
         }
         buffer.writeInt(_activeChar.getFame());
-        buffer.writeInt(_activeChar.getVitalityPoints());
+        buffer.writeInt(_activeChar.getSayhaGracePoints());
         buffer.writeInt(0x00);
         buffer.writeInt(0x00);
     }

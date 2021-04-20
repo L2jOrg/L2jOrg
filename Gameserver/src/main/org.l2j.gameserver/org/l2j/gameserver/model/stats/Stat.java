@@ -221,10 +221,10 @@ public enum Stat {
     SKILL_CRITICAL,
     SKILL_CRITICAL_PROBABILITY,
 
-    // Vitality
-    VITALITY_CONSUME_RATE,
-    VITALITY_EXP_RATE,
-
+    // Sayha's Grace
+    SAYHA_GRACE_CONSUME_RATE,
+    SAYHA_GRACE_EXP_RATE,
+    SAYHA_GRACE_POINT_MOD,
     // Magic Lamp
     MAGIC_LAMP_EXP_RATE,
 
