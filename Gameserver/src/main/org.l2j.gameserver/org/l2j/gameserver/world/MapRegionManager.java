@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.world;
 
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -239,9 +239,9 @@ public final class MapRegionManager extends GameXmlReader {
             return null;
         }
 
-        var clanHall = ClanHallManager.getInstance().getClanHallByClan(player.getClan());
+        var clanHall = ClanHallEngine.getInstance().getClanHallByClan(player.getClan());
         if ((nonNull(clanHall))) {
-            return clanHall.getOwnerLocation();
+            return clanHall.getRestartPoint();
         }
         return null;
     }

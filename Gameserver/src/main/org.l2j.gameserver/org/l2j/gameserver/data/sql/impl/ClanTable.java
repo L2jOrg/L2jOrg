@@ -22,7 +22,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
@@ -32,7 +32,7 @@ import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanCreate;
@@ -192,7 +192,7 @@ public class ClanTable {
             }
         }
 
-        final ClanHall hall = ClanHallManager.getInstance().getClanHallByClan(clan);
+        final ClanHall hall = ClanHallEngine.getInstance().getClanHallByClan(clan);
         if (hall != null) {
             hall.setOwner(null);
         }

@@ -36,6 +36,7 @@ import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.engine.item.AttendanceEngine;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
@@ -176,7 +177,7 @@ public class GameServer {
         printSection("Clans");
         ClanTable.init();
         ResidenceFunctionsData.getInstance();
-        ClanHallManager.init();
+        ClanHallEngine.init();
         ClanHallAuctionManager.getInstance();
         ClanEntryManager.init();
         WalkingManager.getInstance();

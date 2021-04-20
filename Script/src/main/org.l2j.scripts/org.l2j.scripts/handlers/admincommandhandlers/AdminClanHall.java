@@ -20,12 +20,12 @@
 package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
@@ -68,7 +68,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	
 	private void doAction(Player player, int clanHallId, String action, String actionVal)
 	{
-		final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+		final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
 		{
 			switch (action)
@@ -90,12 +90,12 @@ public final class AdminClanHall implements IAdminCommandHandler
 						{
 							case "inside":
 							{
-								loc = clanHall.getOwnerLocation();
+								loc = clanHall.getRestartPoint();
 								break;
 							}
 							case "outside":
 							{
-								loc = clanHall.getBanishLocation();
+								loc = clanHall.getBanishPoint();
 								break;
 							}
 							default:
@@ -161,7 +161,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
-		final List<ClanHall> clanHallList = ClanHallManager.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getId)).collect(Collectors.toList());
+		final List<ClanHall> clanHallList = ClanHallEngine.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getId)).collect(Collectors.toList());
 		
 		//@formatter:off
 		final PageResult result = PageBuilder.newBuilder(clanHallList, 4, "bypass -h admin_clanhall")
@@ -207,7 +207,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	
 	private void sendClanHallDetails(Player player, int clanHallId)
 	{
-		final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+		final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);

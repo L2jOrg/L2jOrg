@@ -19,7 +19,7 @@
 package org.l2j.scripts.handlers.actionshifthandlers;
 
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -57,7 +57,7 @@ public class NpcActionShift implements IActionShiftHandler
 			
 			final Npc npc = (Npc) target;
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByNpcId(npc.getId());
+			final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallByNpcId(npc.getId());
 			html.setFile(player, "data/html/admin/npcinfo.htm");
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
