@@ -16,20 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.entity;
+package org.l2j.gameserver.engine.clan.clanhall;
 
+import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.ClanHallDAO;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.enums.ClanHallType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
-import org.l2j.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.residences.AbstractResidence;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,6 +40,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.SQLException;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -57,35 +56,29 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  */
 public final class ClanHall extends AbstractResidence {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallManager.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallEngine.class);
 
-    private final int lease;
+    private long lease;
     private final ClanHallGrade grade;
     private final ClanHallType type;
-    private final int minBid;
-    private final List<Integer> npcs;
-    private final List<Door> doors;
-    private final List<ClanHallTeleportHolder> teleports;
-    private final Location ownerLocation;
-    private final Location banishLocation;
+    private long minBid;
+    private IntList npcs;
+    private final List<Door> doors = new ArrayList<>();
+    private Location restartLocation;
+    private Location banishPoint;
     protected ScheduledFuture<?> checkPaymentTask = null;
 
     Clan owner = null;
     long paidUntil = 0;
 
-    public ClanHall(StatsSet params) {
-        super(params.getInt("id"));
-        setName(params.getString("name"));
-        grade = params.getEnum("grade", ClanHallGrade.class);
-        type = params.getEnum("type", ClanHallType.class);
-        minBid = params.getInt("minBid");
-        lease = params.getInt("lease");
-        npcs = params.getList("npcList", Integer.class);
-        doors = params.getList("doorList", Door.class);
-        teleports = params.getList("teleportList", ClanHallTeleportHolder.class);
-        ownerLocation = params.getLocation("owner_loc");
-        banishLocation = params.getLocation("banish_loc");
+    public ClanHall(int id, String name, ClanHallGrade grade, ClanHallType type) {
+        super(id);
+        setName(name);
+        this.grade = grade;
+        this.type = type;
+    }
 
+    void init() {
         load();
         initResidenceZone();
         initFunctions();
@@ -122,7 +115,7 @@ public final class ClanHall extends AbstractResidence {
     }
 
     /**
-     * Teleport all non-owner players from {@link ClanHallZone} to {@link ClanHall#getBanishLocation()}.
+     * Teleport all non-owner players from {@link ClanHallZone} to {@link ClanHall#getBanishPoint()}.
      */
     public void banishOthers() {
         getResidenceZone().banishForeigners(getOwnerId());
@@ -151,7 +144,7 @@ public final class ClanHall extends AbstractResidence {
      *
      * @return all {@link Door} related to this {@link ClanHall}
      */
-    public List<Door> getDoors() {
+    List<Door> getDoors() {
         return doors;
     }
 
@@ -160,7 +153,7 @@ public final class ClanHall extends AbstractResidence {
      *
      * @return all {@link Npc} related to this {@link ClanHall}
      */
-    public List<Integer> getNpcs() {
+    IntList getNpcs() {
         return npcs;
     }
 
@@ -243,20 +236,44 @@ public final class ClanHall extends AbstractResidence {
         return nonNull(checkPaymentTask) ? System.currentTimeMillis() + checkPaymentTask.getDelay(TimeUnit.MILLISECONDS) : 0;
     }
 
-    public Location getOwnerLocation() {
-        return ownerLocation;
+    public Location getRestartPoint() {
+        return restartLocation;
     }
 
-    public Location getBanishLocation() {
-        return banishLocation;
+    public Location getBanishPoint() {
+        return banishPoint;
     }
 
-    public int getMinBid() {
+    public long getMinBid() {
         return minBid;
     }
 
-    public int getLease() {
+    public long getLease() {
         return lease;
+    }
+
+    void setNpcs(IntList npcs) {
+        this.npcs = npcs;
+    }
+
+    void setRestartPoint(Location restartPoint) {
+        this.restartLocation = restartPoint;
+    }
+
+    void setBanishPoint(Location banishPoint) {
+        this.banishPoint = banishPoint;
+    }
+
+    void setMinBid(long minBid) {
+        this.minBid = minBid;
+    }
+
+    void setLease(long lease) {
+        this.lease = lease;
+    }
+
+    void addDoor(Door door) {
+        doors.add(door);
     }
 
     @Override
@@ -274,7 +291,7 @@ public final class ClanHall extends AbstractResidence {
                         setOwner(null);
                     } else {
                         checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), 1, TimeUnit.DAYS); // 1 day
-                        owner.broadcastToOnlineMembers(getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addInt(lease));
+                        owner.broadcastToOnlineMembers(getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(lease));
                     }
                 } else {
                     owner.getWarehouse().destroyItem("Clan Hall Lease", CommonItem.ADENA, lease, null, null);

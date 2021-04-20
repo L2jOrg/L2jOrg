@@ -24,7 +24,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.mail.MailEngine;
@@ -40,7 +40,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -203,10 +203,9 @@ public class EnterWorld extends ClientPacket {
             PledgeShowMemberListAll.sendAllTo(player);
             clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
             player.sendPacket(new PledgeSkillList(clan));
-            final ClanHall ch = ClanHallManager.getInstance().getClanHallByClan(clan);
+            final ClanHall ch = ClanHallEngine.getInstance().getClanHallByClan(clan);
             if ((ch != null) && (ch.getCostFailDay() > 0)) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-                sm.addInt(ch.getLease());
+                var sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(ch.getLease());
                 player.sendPacket(sm);
             }
         } else {

@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.residences.ResidenceFunctionTemplate;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
