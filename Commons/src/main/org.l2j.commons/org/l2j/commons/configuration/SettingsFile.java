@@ -198,4 +198,8 @@ public final class SettingsFile extends Properties {
     public Duration getDuration(String key, TemporalUnit unit, long defaultValue) {
         return Duration.of(getLong(key, defaultValue), unit);
     }
+
+    public Duration parseDuration(String key, String defaultValue) {
+        return Duration.parse(getString(key, defaultValue));
+    }
 }

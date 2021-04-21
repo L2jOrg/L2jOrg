@@ -31,6 +31,7 @@ import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.ClanSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -102,7 +103,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        if (Config.ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH) {
+        if (getSettings(ClanSettings.class).canMembersWithdrawFromWarehouse) {
             if ((warehouse instanceof ClanWarehouse) && !player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE)) {
                 return;
             }

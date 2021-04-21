@@ -100,18 +100,6 @@ public final class Config {
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
-    public static boolean ALT_CLAN_LEADER_INSTANT_ACTIVATION;
-    public static int ALT_CLAN_JOIN_DAYS;
-    public static int ALT_CLAN_CREATE_DAYS;
-    public static int ALT_CLAN_DISSOLVE_DAYS;
-    public static int ALT_ALLY_JOIN_DAYS_WHEN_LEAVED;
-    public static int ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED;
-    public static int ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED;
-    public static int ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED;
-    public static int ALT_MAX_NUM_OF_CLANS_IN_ALLY;
-    public static int ALT_CLAN_MEMBERS_FOR_WAR;
-    public static boolean ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH;
-    public static long ALT_CLAN_MEMBERS_TIME_FOR_BONUS;
     public static int ALT_PARTY_MAX_MEMBERS;
     public static int ALT_PARTY_RANGE;
 
@@ -772,18 +760,6 @@ public final class Config {
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 
-        ALT_CLAN_LEADER_INSTANT_ACTIVATION = Character.getBoolean("AltClanLeaderInstantActivation", false);
-        ALT_CLAN_JOIN_DAYS = Character.getInt("DaysBeforeJoinAClan", 1);
-        ALT_CLAN_CREATE_DAYS = Character.getInt("DaysBeforeCreateAClan", 10);
-        ALT_CLAN_DISSOLVE_DAYS = Character.getInt("DaysToPassToDissolveAClan", 7);
-        ALT_ALLY_JOIN_DAYS_WHEN_LEAVED = Character.getInt("DaysBeforeJoinAllyWhenLeaved", 1);
-        ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED = Character.getInt("DaysBeforeJoinAllyWhenDismissed", 1);
-        ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED = Character.getInt("DaysBeforeAcceptNewClanWhenDismissed", 1);
-        ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED = Character.getInt("DaysBeforeCreateNewAllyWhenDissolved", 1);
-        ALT_MAX_NUM_OF_CLANS_IN_ALLY = Character.getInt("AltMaxNumOfClansInAlly", 3);
-        ALT_CLAN_MEMBERS_FOR_WAR = Character.getInt("AltClanMembersForWar", 15);
-        ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = Character.getBoolean("AltMembersCanWithdrawFromClanWH", false);
-        ALT_CLAN_MEMBERS_TIME_FOR_BONUS = Character.getDuration("AltClanMembersTimeForBonus", "30mins").toMillis();
         ALT_PARTY_MAX_MEMBERS = Character.getInt("AltPartyMaxMembers", 7);
         ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
 

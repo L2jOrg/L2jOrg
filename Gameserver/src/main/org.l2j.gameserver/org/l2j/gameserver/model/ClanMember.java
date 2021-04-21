@@ -25,7 +25,9 @@ import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.ClanSettings;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -659,7 +661,7 @@ public class ClanMember {
     }
 
     public int getOnlineStatus() {
-        return !isOnline() ? 0 : _onlineTime >= (Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS) ? 2 : 1;
+        return !isOnline() ? 0 : _onlineTime >= getSettings(ClanSettings.class).onlineTimeForBonus ? 2 : 1;
     }
 
     public boolean isRewardClaimed(ClanRewardType type) {
