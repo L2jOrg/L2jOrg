@@ -128,20 +128,39 @@ public final class ClanHallEngine extends GameXmlReader {
     }
 
     public ClanHall getClanHallByNpcId(int npcId) {
-        return clanHalls.values().stream().filter(ch -> ch.getNpcs().contains(npcId)).findFirst().orElse(null);
+        for (ClanHall clanHall : clanHalls.values()) {
+            if(clanHall.getNpcs().contains(npcId)) {
+                return clanHall;
+            }
+        }
+        return null;
     }
 
     public ClanHall getClanHallByClan(Clan clan) {
-        return clanHalls.values().stream().filter(ch -> ch.getOwner() == clan).findFirst().orElse(null);
+        for (ClanHall clanHall : clanHalls.values()) {
+            if(clanHall.getOwner() == clan) {
+                return clanHall;
+            }
+        }
+        return null;
     }
 
     public ClanHall getClanHallByDoorId(int doorId) {
         final Door door = DoorDataManager.getInstance().getDoor(doorId);
-        return clanHalls.values().stream().filter(ch -> ch.getDoors().contains(door)).findFirst().orElse(null);
+        for (ClanHall clanHall : clanHalls.values()) {
+            if(clanHall.hasDoor(door)) {
+                return clanHall;
+            }
+        }
+        return null;
     }
 
     public List<ClanHall> getFreeAuctionableHall() {
-        return clanHalls.values().stream().filter(ch -> (ch.getType() == ClanHallType.AUCTIONABLE) && (ch.getOwner() == null)).sorted(Comparator.comparingInt(ClanHall::getId)).collect(Collectors.toList());
+        return clanHalls.values().stream().filter(this::isNotOwnedAuctionable).sorted(Comparator.comparingInt(ClanHall::getId)).collect(Collectors.toList());
+    }
+
+    private boolean isNotOwnedAuctionable(ClanHall ch) {
+        return (ch.getType() == ClanHallType.AUCTIONABLE) && (ch.getOwner() == null);
     }
 
     public static void init() {

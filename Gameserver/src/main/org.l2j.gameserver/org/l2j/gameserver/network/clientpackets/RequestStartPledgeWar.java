@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Clan;
@@ -69,7 +69,7 @@ public final class RequestStartPledgeWar extends ClientPacket {
             return;
         }
 
-        final Clan clanDeclaredWar = ClanTable.getInstance().getClanByName(_pledgeName);
+        final Clan clanDeclaredWar = ClanEngine.getInstance().getClanByName(_pledgeName);
         if (clanDeclaredWar == null) {
             client.sendPacket(getSystemMessage(SystemMessageId.A_CLAN_WAR_CANNOT_BE_DECLARED_AGAINST_A_CLAN_THAT_DOES_NOT_EXIST));
             client.sendPacket(ActionFailed.STATIC_PACKET);

@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -48,7 +48,7 @@ public final class RequestGMCommand extends ClientPacket {
 
         final Player player = World.getInstance().findPlayer(_targetName);
 
-        final Clan clan = ClanTable.getInstance().getClanByName(_targetName);
+        final Clan clan = ClanEngine.getInstance().getClanByName(_targetName);
 
         // player name was incorrect?
         if ((player == null) && ((clan == null) || (_command != 6))) {

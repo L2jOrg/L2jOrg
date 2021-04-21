@@ -19,7 +19,7 @@
  */
 package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -81,7 +81,7 @@ public final class PlayerEventHolder {
             PlayerNameTable.getInstance().addName(_player);
         }
         _player.setTitle(_title);
-        _player.setClan(ClanTable.getInstance().getClan(_clanId));
+        _player.setClan(ClanEngine.getInstance().getClan(_clanId));
         _player.teleToLocation(_loc, true);
         _player.setPvpKills(_pvpKills);
         _player.setPkKills(_pkKills);
