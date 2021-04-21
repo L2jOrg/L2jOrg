@@ -20,7 +20,7 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -121,7 +121,7 @@ public class AdminClan implements IAdminCommandHandler
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 				html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/clanchanges.htm"));
 				final StringBuilder sb = new StringBuilder();
-				for (Clan clan : ClanTable.getInstance().getClans())
+				for (Clan clan : ClanEngine.getInstance().getClans())
 				{
 					if (clan.getNewLeaderId() != 0)
 					{
@@ -147,7 +147,7 @@ public class AdminClan implements IAdminCommandHandler
 					}
 					final int clanId = Integer.parseInt(token);
 					
-					final Clan clan = ClanTable.getInstance().getClan(clanId);
+					final Clan clan = ClanEngine.getInstance().getClan(clanId);
 					if (clan == null)
 					{
 						break;

@@ -28,7 +28,7 @@ import org.l2j.commons.util.FileUtil;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
@@ -175,11 +175,7 @@ public class GameServer {
         PlayerSummonTable.getInstance().init();
 
         printSection("Clans");
-        ClanTable.init();
-        ResidenceFunctionsData.getInstance();
-        ClanHallEngine.init();
-        ClanHallAuctionManager.getInstance();
-        ClanEntryManager.init();
+        ClanEngine.init();
         WalkingManager.getInstance();
         StaticObjectData.getInstance();
 

@@ -20,7 +20,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -56,7 +56,7 @@ public final class AllyDismiss extends ClientPacket {
             player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
             return;
         }
-        final Clan clan = ClanTable.getInstance().getClanByName(_clanName);
+        final Clan clan = ClanEngine.getInstance().getClanByName(_clanName);
         if (clan == null) {
             player.sendPacket(SystemMessageId.THAT_CLAN_DOES_NOT_EXIST);
             return;

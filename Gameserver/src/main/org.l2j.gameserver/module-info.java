@@ -123,6 +123,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.commission;
     exports org.l2j.gameserver.model.events.impl.server;
     exports org.l2j.gameserver.engine.clan.clanhall;
+    exports org.l2j.gameserver.engine.clan;
 
     uses org.l2j.gameserver.handler.IActionHandler;
     uses org.l2j.gameserver.handler.IActionShiftHandler;

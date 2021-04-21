@@ -27,7 +27,7 @@ import org.l2j.gameserver.data.database.data.ClanData;
 import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.database.data.ClanSkillData;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
@@ -848,7 +848,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastToOnlineAllyMembers(ServerPacket packet) {
-        ClanTable.getInstance().getClanAllies(getAllyId()).forEach(c -> c.broadcastToOnlineMembers(packet));
+        ClanEngine.getInstance().getClanAllies(getAllyId()).forEach(c -> c.broadcastToOnlineMembers(packet));
     }
 
     public void broadcastToOnlineMembers(ServerPacket packet) {
@@ -1231,7 +1231,7 @@ public class Clan implements IIdentifiable, INamable {
             return false;
         }
 
-        if (ClanTable.getInstance().getClanAllies(activeChar.getAllyId()).size() >= Config.ALT_MAX_NUM_OF_CLANS_IN_ALLY) {
+        if (ClanEngine.getInstance().getClanAllies(activeChar.getAllyId()).size() >= Config.ALT_MAX_NUM_OF_CLANS_IN_ALLY) {
             activeChar.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_LIMIT);
             return false;
         }
@@ -1301,7 +1301,7 @@ public class Clan implements IIdentifiable, INamable {
             player.sendPacket(SystemMessageId.INCORRECT_LENGTH_FOR_AN_ALLIANCE_NAME);
             return;
         }
-        if (ClanTable.getInstance().isAllyExists(allyName)) {
+        if (ClanEngine.getInstance().isAllyExists(allyName)) {
             player.sendPacket(SystemMessageId.THAT_ALLIANCE_NAME_ALREADY_EXISTS);
             return;
         }
@@ -1334,7 +1334,7 @@ public class Clan implements IIdentifiable, INamable {
         broadcastToOnlineAllyMembers(getSystemMessage(SystemMessageId.THE_ALLIANCE_HAS_BEEN_DISSOLVED));
 
         final long currentTime = System.currentTimeMillis();
-        for (Clan clan : ClanTable.getInstance().getClanAllies(getAllyId())) {
+        for (Clan clan : ClanEngine.getInstance().getClanAllies(getAllyId())) {
             if (clan.getId() != getId()) {
                 clan.setAllyId(0);
                 clan.setAllyName(null);
@@ -1518,7 +1518,7 @@ public class Clan implements IIdentifiable, INamable {
                 member.broadcastUserInfo();
             }
         } else {
-            for (Clan clan : ClanTable.getInstance().getClanAllies(getAllyId())) {
+            for (Clan clan : ClanEngine.getInstance().getClanAllies(getAllyId())) {
                 clan.setAllyCrestId(crestId);
                 for (Player member : clan.getOnlineMembers(0)) {
                     member.broadcastUserInfo();

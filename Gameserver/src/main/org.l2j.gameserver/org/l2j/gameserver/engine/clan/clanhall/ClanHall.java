@@ -21,7 +21,7 @@ package org.l2j.gameserver.engine.clan.clanhall;
 import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.ClanHallDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.enums.ClanHallType;
 import org.l2j.gameserver.model.Clan;
@@ -140,15 +140,6 @@ public final class ClanHall extends AbstractResidence {
     }
 
     /**
-     * Gets all {@link Door} related to this {@link ClanHall}.
-     *
-     * @return all {@link Door} related to this {@link ClanHall}
-     */
-    List<Door> getDoors() {
-        return doors;
-    }
-
-    /**
      * Gets all {@link Npc} related to this {@link ClanHall}.
      *
      * @return all {@link Npc} related to this {@link ClanHall}
@@ -181,7 +172,7 @@ public final class ClanHall extends AbstractResidence {
      * @param clanId the Id of the clan
      */
     public void setOwner(int clanId) {
-        setOwner(ClanTable.getInstance().getClan(clanId));
+        setOwner(ClanEngine.getInstance().getClan(clanId));
     }
 
     /**
@@ -274,6 +265,10 @@ public final class ClanHall extends AbstractResidence {
 
     void addDoor(Door door) {
         doors.add(door);
+    }
+
+    boolean hasDoor(Door door) {
+        return doors.contains(door);
     }
 
     @Override

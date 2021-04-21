@@ -23,7 +23,7 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.engine.item.shop.LCoinShop;
 import org.l2j.gameserver.engine.mission.MissionData;
@@ -76,7 +76,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     public void onReset() {
-        ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
+        ClanEngine.getInstance().getClans().forEach(Clan::resetClanBonus);
         resetDailyMissionRewards();
         resetDailySkills();
         RankEngine.getInstance().updateRankers();
@@ -128,7 +128,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     private void onClansTask(){
-        for (Clan clan : ClanTable.getInstance().getClans()) {
+        for (Clan clan : ClanEngine.getInstance().getClans()) {
             checkNewLeader(clan);
             ClanRewardManager.getInstance().resetArenaProgress(clan);
         }

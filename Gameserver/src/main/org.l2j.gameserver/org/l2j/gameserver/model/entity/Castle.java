@@ -27,7 +27,7 @@ import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.data.database.data.CastleFunctionData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.CastleDataManager;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -466,7 +466,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public final Clan getOwner() {
-        return (ownerId != 0) ? ClanTable.getInstance().getClan(ownerId) : null;
+        return (ownerId != 0) ? ClanEngine.getInstance().getClan(ownerId) : null;
     }
 
     // This method updates the castle tax rate

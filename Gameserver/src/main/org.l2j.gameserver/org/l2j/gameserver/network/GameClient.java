@@ -27,7 +27,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.SecondaryAuthManager;
 import org.l2j.gameserver.engine.mail.MailEngine;
@@ -208,7 +208,7 @@ public final class GameClient extends Client<Connection<GameClient>> {
         } else {
             final int clanId = PlayerNameTable.getInstance().getClassIdById(info.getObjectId());
             if (clanId > 0) {
-                final Clan clan = ClanTable.getInstance().getClan(clanId);
+                final Clan clan = ClanEngine.getInstance().getClan(clanId);
                 if (clan != null) {
                     if (clan.getLeaderId() == info.getObjectId()) {
                         return CharacterDeleteFailType.PLEDGE_MASTER;
