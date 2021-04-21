@@ -289,7 +289,7 @@ public final class ClanHall extends AbstractResidence {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        ClanHall clanHall = (ClanHall) o;
+        var clanHall = (ClanHall) o;
         return getId() == clanHall.getId();
     }
 

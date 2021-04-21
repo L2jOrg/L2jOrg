@@ -25,7 +25,6 @@ import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
-import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.idfactory.IdFactory;
