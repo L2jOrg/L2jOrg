@@ -20,7 +20,6 @@ package org.l2j.scripts.handlers.actionshifthandlers;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionShiftHandler;
@@ -51,12 +50,11 @@ public class NpcActionShift implements IActionShiftHandler
 
 		if (player.isGM())
 		{
-			// Set the target of the Player activeChar
 			player.setTarget(target);
 			
-			final Npc npc = (Npc) target;
-			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-			final ClanHall clanHall = npc.getClanHall();
+			var npc = (Npc) target;
+			var html = new NpcHtmlMessage(0, 1);
+			var clanHall = npc.getClanHall();
 			html.setFile(player, "data/html/admin/npcinfo.htm");
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));

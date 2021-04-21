@@ -24,7 +24,6 @@ import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.enums.ClanHallType;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
