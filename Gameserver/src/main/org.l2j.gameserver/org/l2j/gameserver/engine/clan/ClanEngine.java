@@ -130,8 +130,8 @@ public class ClanEngine {
             return null;
         }
 
-        final Clan clan = new Clan(IdFactory.getInstance().getNextId(), clanName);
-        final ClanMember leader = ClanMember.of(clan, player);
+        var clan = new Clan(IdFactory.getInstance().getNextId(), clanName);
+        var leader = ClanMember.of(clan, player);
         clan.setLeader(leader);
         clan.store();
         player.setClan(clan);
@@ -153,7 +153,7 @@ public class ClanEngine {
     }
 
     private boolean canPlayerCreateClan(Player player, String clanName) {
-        boolean permit = true;
+        var permit = true;
         if (null == player) {
             permit  = false;
         } else if (10 > player.getLevel()) {
@@ -190,7 +190,7 @@ public class ClanEngine {
             }
         }
 
-        final ClanHall hall = ClanHallEngine.getInstance().getClanHallByClan(clan);
+        var hall = ClanHallEngine.getInstance().getClanHallByClan(clan);
         if (hall != null) {
             hall.setOwner(null);
         }
@@ -234,8 +234,8 @@ public class ClanEngine {
     }
 
     public void deleteClanWars(int clanId1, int clanId2) {
-        final Clan clan1 = getInstance().getClan(clanId1);
-        final Clan clan2 = getInstance().getClan(clanId2);
+        var clan1 = getInstance().getClan(clanId1);
+        var clan2 = getInstance().getClan(clanId2);
 
         EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
 
