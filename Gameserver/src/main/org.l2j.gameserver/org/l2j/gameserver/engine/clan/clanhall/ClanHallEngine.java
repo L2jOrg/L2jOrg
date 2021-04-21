@@ -77,7 +77,7 @@ public final class ClanHallEngine extends GameXmlReader {
 
     private void parseClanHall(Node clanHallNode) {
         var attr = clanHallNode.getAttributes();
-        int id = parseInt(attr, "id");
+        var id = parseInt(attr, "id");
         var name = parseString(attr, "name");
         var grade = parseEnum(attr, ClanHallGrade.class, "grade");
         var type = parseEnum(attr, ClanHallType.class, "type");
@@ -91,6 +91,7 @@ public final class ClanHallEngine extends GameXmlReader {
                 case "doors" -> parseDoors(node, clanHall);
                 case "restart-point" -> clanHall.setRestartPoint(parseLocation(node));
                 case "banish-point" -> clanHall.setBanishPoint(parseLocation(node));
+                default -> LOGGER.warn("unknown node {}", node.getNodeName());
             }
         }
         clanHall.init();
@@ -146,7 +147,7 @@ public final class ClanHallEngine extends GameXmlReader {
     }
 
     public ClanHall getClanHallByDoorId(int doorId) {
-        final Door door = DoorDataManager.getInstance().getDoor(doorId);
+        var door = DoorDataManager.getInstance().getDoor(doorId);
         for (ClanHall clanHall : clanHalls.values()) {
             if(clanHall.hasDoor(door)) {
                 return clanHall;

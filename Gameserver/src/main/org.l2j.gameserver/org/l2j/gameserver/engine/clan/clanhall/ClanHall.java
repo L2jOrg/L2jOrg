@@ -40,6 +40,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.SQLException;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
@@ -56,7 +57,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  */
 public final class ClanHall extends AbstractResidence {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallEngine.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHall.class);
 
     private long lease;
     private final ClanHallGrade grade;
@@ -110,7 +111,7 @@ public final class ClanHall extends AbstractResidence {
 
 
     public int getCostFailDay() {
-        final Duration failDay = Duration.between(Instant.ofEpochMilli(paidUntil), Instant.now());
+        var failDay = Duration.between(Instant.ofEpochMilli(paidUntil), Instant.now());
         return failDay.isNegative() ? 0 : (int) failDay.toDays();
     }
 
@@ -190,7 +191,14 @@ public final class ClanHall extends AbstractResidence {
             }
 
             final int failDays = getCostFailDay();
-            final long time = failDays > 0 ? (failDays > 8 ? Instant.now().toEpochMilli() : Instant.ofEpochMilli(paidUntil).plus(Duration.ofDays(failDays + 1)).toEpochMilli()) : paidUntil;
+            long time = paidUntil;
+
+            if(failDays > 8) {
+                time = Instant.now().toEpochMilli();
+            } else if(failDays > 0) {
+                time = Instant.ofEpochMilli(paidUntil).plus(1, ChronoUnit.DAYS).toEpochMilli();
+            }
+
             checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), time - System.currentTimeMillis());
         } else {
             if (nonNull(owner)) {
@@ -274,6 +282,20 @@ public final class ClanHall extends AbstractResidence {
     @Override
     public String toString() {
         return (getClass().getSimpleName() + ":" + getName() + "[" + getId() + "]");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        ClanHall clanHall = (ClanHall) o;
+        return getId() == clanHall.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
     }
 
     class CheckPaymentTask implements Runnable {
