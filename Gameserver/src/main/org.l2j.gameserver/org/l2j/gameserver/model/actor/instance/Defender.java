@@ -119,7 +119,7 @@ public class Defender extends Attackable {
      */
     @Override
     public void onAction(Player player, boolean interact) {
-        if (!canTarget(player)) {
+        if (!canBeTarget(player)) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

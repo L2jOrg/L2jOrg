@@ -24,7 +24,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.data.SiegeClanData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.impl.SiegeScheduleData;
 import org.l2j.gameserver.enums.SiegeClanType;
 import org.l2j.gameserver.enums.SiegeTeleportWhoType;
@@ -215,7 +215,7 @@ public class Siege implements Siegable {
                 if (firstOwnerClanId <= 0) {
                     sm = getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
                 } else {
-                    ClanTable.getInstance().getClan(firstOwnerClanId).increaseBloodAllianceCount();
+                    ClanEngine.getInstance().getClan(firstOwnerClanId).increaseBloodAllianceCount();
                     sm = getSystemMessage(SystemMessageId.S1_S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED);
                 }
                 sm.addCastleId(castle.getId());
@@ -262,8 +262,8 @@ public class Siege implements Siegable {
     }
 
     private void updatePlayerSiegeStateFlags(boolean clear) {
-        attackers.values().stream().map(siegeClan -> ClanTable.getInstance().getClan(siegeClan.getClanId())).forEach(clan -> updateClanMemberSiegeState(clear, clan, (byte) 1));
-        attackers.values().stream().map(siegeClan -> ClanTable.getInstance().getClan(siegeClan.getClanId())).forEach(clan -> updateClanMemberSiegeState(clear, clan, (byte) 2));
+        attackers.values().stream().map(siegeClan -> ClanEngine.getInstance().getClan(siegeClan.getClanId())).forEach(clan -> updateClanMemberSiegeState(clear, clan, (byte) 1));
+        attackers.values().stream().map(siegeClan -> ClanEngine.getInstance().getClan(siegeClan.getClanId())).forEach(clan -> updateClanMemberSiegeState(clear, clan, (byte) 2));
     }
 
     private void updateClanMemberSiegeState(boolean clear, Clan clan, byte state) {
@@ -364,12 +364,12 @@ public class Siege implements Siegable {
 
             if (castle.getOwnerId() > 0) {
 
-                final int allyId = ClanTable.getInstance().getClan(castle.getOwnerId()).getAllyId();
+                final int allyId = ClanEngine.getInstance().getClan(castle.getOwnerId()).getAllyId();
 
                 if (defenders.isEmpty()) {
                     if (allyId != 0) {
                         boolean allInSameAlliance = attackers.values().stream()
-                                    .map(siegeClan -> ClanTable.getInstance().getClan(siegeClan.getClanId()))
+                                    .map(siegeClan -> ClanEngine.getInstance().getClan(siegeClan.getClanId()))
                                     .allMatch(clan -> clan.getAllyId() == allyId);
 
                         if (allInSameAlliance) {
@@ -395,7 +395,7 @@ public class Siege implements Siegable {
                     addDefender(newOwner, SiegeClanType.OWNER);
                 });
 
-                for (Clan clan : ClanTable.getInstance().getClanAllies(allyId)) {
+                for (Clan clan : ClanEngine.getInstance().getClanAllies(allyId)) {
                     doIfNonNull(getAttackerClan(clan.getId()), siegeClan -> {
                         removeAttacker(siegeClan);
                         addDefender(siegeClan, SiegeClanType.DEFENDER);
@@ -437,7 +437,7 @@ public class Siege implements Siegable {
             Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.18"));
 
             if (castle.getOwnerId() > 0) {
-                var clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+                var clan = ClanEngine.getInstance().getClan(castle.getOwnerId());
 
                 Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.CLAN_S1_IS_VICTORIOUS_OVER_S2_S_CASTLE_SIEGE).addString(clan.getName()).addCastleId(castle.getId()));
 
@@ -451,7 +451,7 @@ public class Siege implements Siegable {
             }
 
             Stream.concat(attackers.values().stream(), defenders.values().stream()).forEach(siegeClan ->
-                    doIfNonNull(ClanTable.getInstance().getClan(siegeClan.getClanId()), clan -> {
+                    doIfNonNull(ClanEngine.getInstance().getClan(siegeClan.getClanId()), clan -> {
                     clan.forEachOnlineMember(Player::checkItemRestriction);
                     clan.clearSiegeKills();
                     clan.clearSiegeDeaths();
@@ -545,7 +545,7 @@ public class Siege implements Siegable {
         var clan = player.getClan();
 
         if (castle.getOwnerId() != 0) {
-            var allyId = ClanTable.getInstance().getClan(castle.getOwnerId()).getAllyId();
+            var allyId = ClanEngine.getInstance().getClan(castle.getOwnerId()).getAllyId();
 
             if(allyId != 0 && clan.getAllyId() == allyId && !force) {
                 player.sendPacket(SystemMessageId.YOU_CANNOT_REGISTER_AS_AN_ATTACKER_BECAUSE_YOU_ARE_IN_AN_ALLIANCE_WITH_THE_CASTLE_OWNING_CLAN);
@@ -667,7 +667,7 @@ public class Siege implements Siegable {
     }
 
     private void teleportAttackersInZone(TeleportWhereType teleportWhere) {
-        attackers.values().stream().map(a -> ClanTable.getInstance().getClan(a.getClanId())).forEach(
+        attackers.values().stream().map(a -> ClanEngine.getInstance().getClan(a.getClanId())).forEach(
                 clan -> clan.forEachOnlineMember(p -> p.teleToLocation(teleportWhere), p -> p.isInSiege() && !p.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) && !p.isJailed() ));
     }
 
@@ -679,7 +679,7 @@ public class Siege implements Siegable {
     private void teleportOnwersInZone(TeleportWhereType teleportWhere) {
         var defenderClan = getDefenderClan(castle.getOwnerId());
         if(nonNull(defenderClan)) {
-            var clan = ClanTable.getInstance().getClan(defenderClan.getClanId());
+            var clan = ClanEngine.getInstance().getClan(defenderClan.getClanId());
             clan.forEachOnlineMember(p -> p.teleToLocation(teleportWhere), p -> p.isInSiege() && !p.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) && !p.isJailed());
         }
     }
@@ -825,7 +825,7 @@ public class Siege implements Siegable {
 
     public void announceToPlayer(SystemMessage message, boolean bothSides) {
         var stream = bothSides ? Stream.concat(getDefenderClans().values().stream(), getAttackerClans().values().stream()) : getDefenderClans().values().stream();
-        stream.map(siegeClan -> ClanTable.getInstance().getClan(siegeClan.getClanId())).filter(Objects::nonNull).forEach(clan -> clan.forEachOnlineMember(message::sendTo));
+        stream.map(siegeClan -> ClanEngine.getInstance().getClan(siegeClan.getClanId())).filter(Objects::nonNull).forEach(clan -> clan.forEachOnlineMember(message::sendTo));
     }
 
     @Override

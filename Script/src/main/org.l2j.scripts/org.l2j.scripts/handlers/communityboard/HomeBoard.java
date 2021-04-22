@@ -25,7 +25,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CommunityDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.LevelData;
@@ -632,7 +632,7 @@ public final class HomeBoard implements IParseBoardHandler {
             } else {
                 returnHtml = returnHtml.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
                 returnHtml = returnHtml.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));
-                returnHtml = returnHtml.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
+                returnHtml = returnHtml.replaceAll("%clan_count%", Integer.toString(ClanEngine.getInstance().getClanCount()));
             }
             CommunityBoardHandler.separateAndSend(returnHtml, activeChar);
         }

@@ -21,7 +21,7 @@ package org.l2j.gameserver;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
@@ -29,7 +29,6 @@ import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.server.OnDayNightChange;
 import org.l2j.gameserver.model.events.impl.server.OnServerShutDown;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -265,7 +264,7 @@ public class Shutdown extends Thread {
         Olympiad.getInstance().saveOlympiadStatus();
         LOGGER.info("Olympiad System: Data saved.");
 
-        ClanTable.getInstance().shutdown();
+        ClanEngine.getInstance().shutdown();
         LOGGER.info("Clan System: Data saved.");
 
         // Save all manor data

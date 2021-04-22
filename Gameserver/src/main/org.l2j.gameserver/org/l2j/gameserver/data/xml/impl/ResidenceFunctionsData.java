@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.residences.ResidenceFunctionTemplate;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -34,18 +36,17 @@ import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-
 /**
  * The residence functions data
  *
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public final class ResidenceFunctionsData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ResidenceFunctionsData.class);
-    private final Map<Integer, List<ResidenceFunctionTemplate>> _functions = new HashMap<>();
+    private final IntMap<List<ResidenceFunctionTemplate>> functions = new HashIntMap<>();
 
     private ResidenceFunctionsData() {
-        load();
     }
 
     @Override
@@ -54,10 +55,10 @@ public final class ResidenceFunctionsData extends GameXmlReader {
     }
 
     @Override
-    public synchronized void load() {
-        _functions.clear();
+    public void load() {
+        functions.clear();
         parseDatapackFile("data/ResidenceFunctions.xml");
-        LOGGER.info("Loaded: {} functions.", _functions.size());
+        LOGGER.info("Loaded: {} functions.", functions.size());
         releaseResources();
     }
 
@@ -81,18 +82,18 @@ public final class ResidenceFunctionsData extends GameXmlReader {
                     levelSet.set(node.getNodeName(), node.getNodeValue());
                 }
                 final ResidenceFunctionTemplate template = new ResidenceFunctionTemplate(levelSet);
-                _functions.computeIfAbsent(template.getId(), key -> new ArrayList<>()).add(template);
+                functions.computeIfAbsent(template.getId(), key -> new ArrayList<>()).add(template);
             });
         }));
     }
 
-    /**
-     * @param id
-     * @param level
-     * @return function template by id and level, null if not available
-     */
+
     public ResidenceFunctionTemplate getFunction(int id, int level) {
-        return _functions.getOrDefault(id, Collections.emptyList()).stream().filter(template -> template.getLevel() == level).findAny().orElse(null);
+        return functions.getOrDefault(id, Collections.emptyList()).stream().filter(template -> template.getLevel() == level).findAny().orElse(null);
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static ResidenceFunctionsData getInstance() {

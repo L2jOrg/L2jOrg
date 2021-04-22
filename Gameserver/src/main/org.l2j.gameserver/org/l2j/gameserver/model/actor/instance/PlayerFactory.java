@@ -26,7 +26,7 @@ import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.database.data.PlayerStatsData;
 import org.l2j.gameserver.data.database.data.PlayerVariableData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.InitialEquipmentData;
 import org.l2j.gameserver.data.xml.impl.InitialShortcutData;
@@ -37,7 +37,6 @@ import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
@@ -115,7 +114,7 @@ public class PlayerFactory {
         }
 
         if (playerData.getClanId() > 0) {
-            player.setClan(ClanTable.getInstance().getClan(playerData.getClanId()));
+            player.setClan(ClanEngine.getInstance().getClan(playerData.getClanId()));
         }
 
         if (player.getClan() != null) {
@@ -128,24 +127,13 @@ public class PlayerFactory {
                 player.getClanPrivileges().setAll();
                 player.setPowerGrade(1);
             }
-            player.setPledgeClass(ClanMember.calculatePledgeClass(player));
-        } else {
-            if (player.isNoble()) {
-                player.setPledgeClass(5);
-            }
-
-            if (player.isHero()) {
-                player.setPledgeClass(8);
-            }
-
-            player.getClanPrivileges().clear();
         }
 
+        Clan.updateSocialStatus(player);
         player.setTitle(playerData.getTitle());
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
-        player.activeClass = playerData.getClassId();
 
         player.setXYZInvisible(playerData.getX(), playerData.getY(), playerData.getZ());
         player.setLastServerPosition(playerData.getX(), playerData.getY(), playerData.getZ());
@@ -306,7 +294,7 @@ public class PlayerFactory {
 
     public static void deletePlayer(PlayerData data) {
         if(data.getClanId() > 0) {
-            final Clan clan = ClanTable.getInstance().getClan(data.getClanId());
+            final Clan clan = ClanEngine.getInstance().getClan(data.getClanId());
             if (clan != null) {
                 clan.removeClanMember(data.getCharId(), 0);
             }

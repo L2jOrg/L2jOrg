@@ -21,7 +21,7 @@ package org.l2j.scripts.ai.others.CastleChamberlain;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
@@ -594,7 +594,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					else
 					{
-						final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+						final Clan clan = ClanEngine.getInstance().getClan(castle.getOwnerId());
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-02.html");
 						html.replace("%clanleadername%", clan.getLeaderName());
 						html.replace("%clanname%", clan.getName());

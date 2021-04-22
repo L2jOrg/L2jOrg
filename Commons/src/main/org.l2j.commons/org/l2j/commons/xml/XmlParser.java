@@ -359,20 +359,16 @@ public class XmlParser {
      * @param defaultValue the default value
      * @return if the node is not null and the node value is valid the parsed value, otherwise the default value
      */
-    public  <T extends Enum<T>> T parseEnum(Node node, Class<T> clazz, T defaultValue)
-    {
-        if (node == null)
-        {
+    public  <T extends Enum<T>> T parseEnum(Node node, Class<T> clazz, T defaultValue) {
+        if (node == null) {
             return defaultValue;
         }
-
-        try
-        {
-            return Enum.valueOf(clazz, node.getNodeValue());
+        var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
+        try {
+            return Enum.valueOf(clazz, value);
         }
-        catch (IllegalArgumentException e)
-        {
-            LOGGER.warn("Invalid value specified for node: " + node.getNodeName() + " specified value: " + node.getNodeValue() + " should be enum value of \"" + clazz.getSimpleName() + "\" using default value: " + defaultValue);
+        catch (IllegalArgumentException e) {
+            LOGGER.warn("Invalid value specified for node: {} specified value: {} should be enum value of '{}' using default value: {}",node.getNodeName(), value, clazz.getSimpleName(), defaultValue);
             return defaultValue;
         }
     }
@@ -455,7 +451,8 @@ public class XmlParser {
 
     public IntList parseIntList(Node node) {
         if(nonNull(node)) {
-            var values = node.getNodeValue().split("[,;]");
+            var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
+            var values = value.split("\\s");
             var list = new ArrayIntList(values.length);
             for (String val :  values) {
                 if(Util.isInteger(val)) {

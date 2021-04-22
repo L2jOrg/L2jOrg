@@ -274,7 +274,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeInt(player.getReputation()); // Reputation
             buffer.writeByte(player.isNoble());
             buffer.writeByte(player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2?
-            buffer.writeByte(player.getPledgeClass());
+            buffer.writeByte(player.getSocialStatus().ordinal());
             buffer.writeInt(player.getPkKills());
             buffer.writeInt(player.getPvpKills());
             buffer.writeShort(player.getRecommendLeft());

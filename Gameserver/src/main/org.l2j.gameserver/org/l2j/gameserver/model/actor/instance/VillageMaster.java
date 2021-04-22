@@ -18,13 +18,13 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -99,7 +99,7 @@ public class VillageMaster extends Folk {
 
         // The clan leader should take the XP penalty of a full death.
         player.calculateDeathExpPenalty(null);
-        ClanTable.getInstance().scheduleRemoveClan(clan);
+        ClanEngine.getInstance().scheduleRemoveClan(clan);
     }
 
     private static void recoverClan(Player player, int clanId) {
@@ -138,7 +138,7 @@ public class VillageMaster extends Folk {
             return;
         }
 
-        for (Clan tempClan : ClanTable.getInstance().getClans()) {
+        for (Clan tempClan : ClanEngine.getInstance().getClans()) {
             if (tempClan.getSubPledge(clanName) != null) {
                 if (pledgeType == Clan.SUBUNIT_ACADEMY) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
@@ -189,7 +189,7 @@ public class VillageMaster extends Folk {
             final ClanMember leaderSubPledge = clan.getClanMember(leaderName);
             final Player leaderPlayer = leaderSubPledge.getPlayerInstance();
             if (leaderPlayer != null) {
-                leaderPlayer.setPledgeClass(ClanMember.calculatePledgeClass(leaderPlayer));
+                Clan.updateSocialStatus(leaderPlayer);
                 leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
             }
         }
@@ -260,7 +260,7 @@ public class VillageMaster extends Folk {
         final ClanMember leaderSubPledge = clan.getClanMember(leaderName);
         final Player leaderPlayer = leaderSubPledge.getPlayerInstance();
         if (leaderPlayer != null) {
-            leaderPlayer.setPledgeClass(ClanMember.calculatePledgeClass(leaderPlayer));
+            Clan.updateSocialStatus(leaderPlayer);
             leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
         }
 
@@ -358,7 +358,7 @@ public class VillageMaster extends Folk {
                 return;
             }
 
-            ClanTable.getInstance().createClan(player, cmdParams);
+            ClanEngine.getInstance().createClan(player, cmdParams);
         } else if (actualCommand.equalsIgnoreCase("create_academy")) {
             if (cmdParams.isEmpty()) {
                 return;

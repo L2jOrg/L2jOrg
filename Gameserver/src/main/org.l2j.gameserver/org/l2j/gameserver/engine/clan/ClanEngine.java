@@ -16,23 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.sql.impl;
+package org.l2j.gameserver.engine.clan;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.data.database.data.ClanMember;
+import org.l2j.gameserver.data.sql.impl.CrestTable;
+import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanCreate;
@@ -56,14 +57,13 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 /**
- * This class loads the clan related data.
  * @author JoeAlisson
  */
-public class ClanTable {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClanTable.class);
+public class ClanEngine {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClanEngine.class);
     private final IntMap<Clan> clans = new CHashIntMap<>();
 
-    private ClanTable() {
+    private ClanEngine() {
     }
 
     private void load() {
@@ -125,46 +125,16 @@ public class ClanTable {
     }
 
     public Clan createClan(Player player, String clanName) {
-        if (null == player) {
+        if (!canPlayerCreateClan(player, clanName)) {
             return null;
         }
 
-        if (10 > player.getLevel()) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_CRITERIA_IN_ORDER_TO_CREATE_A_CLAN);
-            return null;
-        }
-        if (0 != player.getClanId()) {
-            player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_CREATE_A_CLAN);
-            return null;
-        }
-        if (System.currentTimeMillis() < player.getClanCreateExpiryTime()) {
-            player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
-            return null;
-        }
-        if (!isAlphaNumeric(clanName) || (2 > clanName.length())) {
-            player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
-            return null;
-        }
-        if (16 < clanName.length()) {
-            player.sendPacket(SystemMessageId.CLAN_NAME_S_LENGTH_IS_INCORRECT);
-            return null;
-        }
-
-        if (null != getClanByName(clanName)) {
-            // clan name is already taken
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
-            sm.addString(clanName);
-            player.sendPacket(sm);
-            return null;
-        }
-
-        final Clan clan = new Clan(IdFactory.getInstance().getNextId(), clanName);
-        final ClanMember leader = new ClanMember(clan, player);
+        var clan = new Clan(IdFactory.getInstance().getNextId(), clanName);
+        var leader = ClanMember.of(clan, player);
         clan.setLeader(leader);
-        leader.setPlayerInstance(player);
         clan.store();
         player.setClan(clan);
-        player.setPledgeClass(ClanMember.calculatePledgeClass(player));
+        Clan.updateSocialStatus(player);
         player.setClanPrivileges(new EnumIntBitmask<>(ClanPrivilege.class, true));
 
         clans.put(clan.getId(), clan);
@@ -181,6 +151,32 @@ public class ClanTable {
         return clan;
     }
 
+    private boolean canPlayerCreateClan(Player player, String clanName) {
+        var permit = true;
+        if (null == player) {
+            permit  = false;
+        } else if (10 > player.getLevel()) {
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_CRITERIA_IN_ORDER_TO_CREATE_A_CLAN);
+            permit = false;
+        } else if (0 != player.getClanId()) {
+            player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_CREATE_A_CLAN);
+            permit = false;
+        } else if (System.currentTimeMillis() < player.getClanCreateExpiryTime()) {
+            player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
+            permit = false;
+        } else if (!isAlphaNumeric(clanName) || (2 > clanName.length())) {
+            player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
+            permit = false;
+        } else if (16 < clanName.length()) {
+            player.sendPacket(SystemMessageId.CLAN_NAME_S_LENGTH_IS_INCORRECT);
+            permit = false;
+        } else if (null != getClanByName(clanName)) {
+            player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS).addString(clanName));
+            return false;
+        }
+        return permit;
+    }
+
     public synchronized void destroyClan(Clan clan) {
         clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_HAS_DISPERSED));
 
@@ -193,7 +189,7 @@ public class ClanTable {
             }
         }
 
-        final ClanHall hall = ClanHallManager.getInstance().getClanHallByClan(clan);
+        var hall = ClanHallEngine.getInstance().getClanHallByClan(clan);
         if (hall != null) {
             hall.setOwner(null);
         }
@@ -237,8 +233,8 @@ public class ClanTable {
     }
 
     public void deleteClanWars(int clanId1, int clanId2) {
-        final Clan clan1 = getInstance().getClan(clanId1);
-        final Clan clan2 = getInstance().getClan(clanId2);
+        var clan1 = getInstance().getClan(clanId1);
+        var clan2 = getInstance().getClan(clanId2);
 
         EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
 
@@ -271,13 +267,16 @@ public class ClanTable {
 
     public static void init() {
         getInstance().load();
+        ResidenceFunctionsData.init();
+        ClanHallEngine.init();
+        ClanEntryManager.init();
     }
 
-    public static ClanTable getInstance() {
+    public static ClanEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final ClanTable INSTANCE = new ClanTable();
+        private static final ClanEngine INSTANCE = new ClanEngine();
     }
 }

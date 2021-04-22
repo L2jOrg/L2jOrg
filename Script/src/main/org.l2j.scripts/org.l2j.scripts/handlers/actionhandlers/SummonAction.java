@@ -36,49 +36,49 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 public class SummonAction implements IActionHandler
 {
 	@Override
-	public boolean action(Player activeChar, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
 		// Aggression target lock effect
-		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))
+		if (player.isLockedTarget() && (player.getLockedTarget() != target))
 		{
-			activeChar.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
+			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
 			return false;
 		}
 		
-		if ((activeChar == ((Summon) target).getOwner()) && (activeChar.getTarget() == target))
+		if ((player == ((Summon) target).getOwner()) && (player.getTarget() == target))
 		{
-			activeChar.sendPacket(new PetStatusShow((Summon) target));
-			activeChar.updateNotMoveUntil();
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(new PetStatusShow((Summon) target));
+			player.updateNotMoveUntil();
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			
 			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((Summon) target), target);
 		}
-		else if (activeChar.getTarget() != target)
+		else if (player.getTarget() != target)
 		{
-			activeChar.setTarget(target);
+			player.setTarget(target);
 		}
 		else if (interact)
 		{
-			if (target.isAutoAttackable(activeChar))
+			if (target.isAutoAttackable(player))
 			{
-				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(player, target))
 				{
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-					activeChar.onActionRequest();
+					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+					player.onActionRequest();
 				}
 			}
 			else
 			{
 				// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				if (isInsideRadius2D(target, activeChar, 150))
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				if (isInsideRadius2D(target, player, 150))
 				{
-					activeChar.updateNotMoveUntil();
+					player.updateNotMoveUntil();
 				}
-				else if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
+				else if (GeoEngine.getInstance().canSeeTarget(player, target))
 				{
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
+					player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
 				}
 			}
 		}

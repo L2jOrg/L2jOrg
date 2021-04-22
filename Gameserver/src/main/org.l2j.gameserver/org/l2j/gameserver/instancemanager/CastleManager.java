@@ -26,7 +26,7 @@ import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;

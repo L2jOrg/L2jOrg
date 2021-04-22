@@ -24,7 +24,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
@@ -40,7 +40,7 @@ import org.l2j.gameserver.model.actor.stat.NpcStats;
 import org.l2j.gameserver.model.actor.status.NpcStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.*;
@@ -399,7 +399,7 @@ public class Npc extends Creature {
         return false;
     }
 
-    public boolean canTarget(Player player) {
+    public boolean canBeTarget(Player player) {
         if (player.isControlBlocked()) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -409,8 +409,6 @@ public class Npc extends Creature {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
-        // TODO: More checks...
-
         return true;
     }
 
@@ -479,7 +477,7 @@ public class Npc extends Creature {
     }
 
     public final ClanHall getClanHall() {
-        return ClanHallManager.getInstance().getClanHallByNpcId(getId());
+        return ClanHallEngine.getInstance().getClanHallByNpcId(getId());
     }
 
     /**

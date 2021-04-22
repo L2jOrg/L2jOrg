@@ -202,9 +202,8 @@ public class PlayerStats extends PlayableStats {
             return false;
         }
 
-
-
         Player player = getCreature();
+        byte oldLevel = getLevel();
         final boolean levelIncreased = super.addLevel(value);
         if (levelIncreased) {
             player.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
@@ -214,14 +213,13 @@ public class PlayerStats extends PlayableStats {
         }
 
         // Notify to scripts
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(player, getLevel() - value, getLevel()), player);
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(player, oldLevel, getLevel()), player);
 
         // Give AutoGet skills and all normal skills if Auto-Learn is activated.
         player.rewardSkills();
 
         if (player.getClan() != null) {
-            player.getClan().updateClanMember(player);
-            player.getClan().broadcastToOnlineMembers(new PledgeShowMemberListUpdate(player));
+            player.getClan().onMemberLevelChanged(player, oldLevel, getLevel());
         }
         if (player.isInParty()) {
             player.getParty().recalculatePartyLevel(); // Recalculate the party level
