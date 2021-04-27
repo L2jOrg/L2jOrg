@@ -93,6 +93,9 @@ public class ClanData {
     @Column("arena_progress")
     private short arenaProgress;
 
+    @Column("clan_exp")
+    private double clanExp;
+
     public int getId() {
         return id;
     }
@@ -271,6 +274,14 @@ public class ClanData {
 
     public void setArenaProgress(short arenaProgress) {
         this.arenaProgress = arenaProgress;
+    }
+
+    public double getClanExp() {
+        return clanExp;
+    }
+
+    public void setClanExp(double clanExp) {
+        this.clanExp = clanExp;
     }
 
     public String toString() {

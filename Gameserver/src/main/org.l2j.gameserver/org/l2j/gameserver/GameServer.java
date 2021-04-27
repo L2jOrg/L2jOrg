@@ -179,6 +179,7 @@ public class GameServer {
         ClanHallManager.init();
         ClanHallAuctionManager.getInstance();
         ClanEntryManager.init();
+        //ClanExperienceData.getInstance();
         WalkingManager.getInstance();
         StaticObjectData.getInstance();
 

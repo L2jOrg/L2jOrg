@@ -28,7 +28,7 @@ import org.l2j.gameserver.network.SystemMessageId;
  * @author Forsaiken, UnAfraid
  */
 public final class SystemMessage extends AbstractMessagePacket<SystemMessage> {
-    private SystemMessage(SystemMessageId smId) {
+    public SystemMessage(SystemMessageId smId) {
         super(smId);
     }
 

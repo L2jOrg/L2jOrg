@@ -62,6 +62,8 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -153,6 +155,8 @@ public class Clan implements IIdentifiable, INamable {
     private boolean noticeEnabled = false;
     private ClanRewardBonus _lastMembersOnlineBonus = null;
     private ClanRewardBonus _lastHuntingBonus = null;
+    private double exp = 0;
+    private int _rank = 0;
 
     private final ClanData data;
 
@@ -253,6 +257,55 @@ public class Clan implements IIdentifiable, INamable {
     @Override
     public String getName() {
         return data.getName();
+    }
+
+    public double getExp() {
+        return exp;
+    }
+
+    public void addExp(double val)
+    {
+        setExp(getExp() + val);
+    }
+
+    private int _lastSavedExp = 0;
+
+    public void setExp(double val)
+    {
+        exp = val;
+      /*  int actualLevel = ClanExperienceData.getInstance().getActualLevel(exp);
+        if (getLevel() != actualLevel)
+        {
+            changeLevel(ClanExperienceData.getInstance().getActualLevel(exp));
+        }*/
+
+        int expInt = (int) exp;
+        if (expInt != _lastSavedExp)
+        {
+            _lastSavedExp = expInt;
+            //clanDAO updateXp
+           /* try (Connection con = DatabaseFactory.getConnection();
+                 PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET clan_exp = ? WHERE clan_id = ?"))
+            {
+                ps.setDouble(1, _exp);
+                ps.setInt(2, _clanId);
+                ps.execute();
+            }
+            catch (Exception e)
+            {
+                LOGGER.warning("could not update clan exp");
+                e.printStackTrace();
+            }*/
+        }
+    }
+
+    public void setRank(int rank) {
+        _rank = rank;
+    }
+
+    public int getRank()
+    {
+        return _rank;
     }
 
     /**

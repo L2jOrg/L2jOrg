@@ -23,6 +23,7 @@ import org.l2j.gameserver.engine.item.shop.LCoinShop;
 import org.l2j.gameserver.engine.item.shop.lcoin.LCoinShopProduct;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.LCoinShopRequest;
+import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.network.serverpackets.l2coin.ExPurchaseLimitShopItemBuy;
@@ -60,6 +61,7 @@ public class RequestPurchaseLimitShopItemBuy extends ClientPacket {
         }
 
         player.addRequest(new LCoinShopRequest(player));
+
 
         List<ItemHolder> ingredients = product.ingredients();
         consumeIngredients(player, ingredients);
