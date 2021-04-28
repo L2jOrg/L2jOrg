@@ -338,10 +338,11 @@ public class Attackable extends Npc {
 
                 if (party != null) {
                     final CommandChannel command = party.getCommandChannel();
+                    var partyRange = getSettings(CharacterSettings.class).partyRange;
                     //@formatter:off
                     final List<Player> members = command != null ?
-                            command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange)).collect(Collectors.toList()) :
-                            player.getParty().getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange)).collect(Collectors.toList());
+                            command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, partyRange)).collect(Collectors.toList()) :
+                            player.getParty().getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, partyRange)).collect(Collectors.toList());
                     //@formatter:on
 
                     members.forEach(p ->

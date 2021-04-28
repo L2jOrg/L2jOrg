@@ -18,12 +18,10 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.settings.CharacterSettings;
-import org.l2j.gameserver.util.GameUtils;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 

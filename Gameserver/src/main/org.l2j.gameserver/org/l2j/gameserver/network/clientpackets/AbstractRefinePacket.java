@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -26,13 +26,10 @@ import org.l2j.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.item.Armor;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.CharacterSettings;
-
-import java.util.Arrays;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 

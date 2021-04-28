@@ -129,8 +129,6 @@ public class RequestProcureCropList extends ClientPacket {
             return;
         }
 
-        // Used when Config.ALT_MANOR_SAVE_ALL_ACTIONS == true
-        final int updateListSize =  0;
         // Proceed the purchase
         for (CropHolder i : _items) {
             final long rewardPrice = ItemEngine.getInstance().getTemplate(i.getRewardId()).getReferencePrice();

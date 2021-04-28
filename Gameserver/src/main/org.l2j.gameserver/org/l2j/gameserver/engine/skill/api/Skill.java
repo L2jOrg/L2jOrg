@@ -19,7 +19,6 @@
 package org.l2j.gameserver.engine.skill.api;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -106,9 +105,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int effectPoint;
     private int levelBonusRate;
     private double magicCriticalRate;
-
-    private int minChance;
-    private int maxChance;
 
     private TargetType targetType;
     public AffectScope affectScope;

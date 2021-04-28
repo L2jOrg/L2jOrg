@@ -125,9 +125,11 @@ public class SkillEngine extends EffectParser {
     protected void parseDocument(Document doc, File f) {
         forEach(doc, "list", list -> {
             for(var node = list.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-                switch (node.getNodeName()) {
-                    case "skill" -> parseSkill(node);
-                    case "skill-config" -> parseSkillConfig(node);
+                var name = node.getNodeName();
+                if(name.equals("skill")) {
+                    parseSkill(node);
+                } else if(name.equals("skill-config")) {
+                    parseSkillConfig(node);
                 }
             }
         });
@@ -138,9 +140,12 @@ public class SkillEngine extends EffectParser {
         skillsDelay = new HashIntIntMap();
         for (var node = skillConfigNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
             var attributes = node.getAttributes();
-            switch (node.getNodeName()) {
-                case "time" -> skillsTime.put(parseInt(attributes, "id"), parseInt(attributes, "value"));
-                case "delay" -> skillsDelay.put(parseInt(attributes, "id"), parseInt(attributes, "value"));
+            var name = node.getNodeName();
+
+            if(name.equals("time")) {
+                skillsTime.put(parseInt(attributes, ATTR_ID), parseInt(attributes, ATTR_VALUE));
+            } else if(name.equals("delay")) {
+                skillsDelay.put(parseInt(attributes, ATTR_ID), parseInt(attributes, ATTR_VALUE));
             }
         }
     }
@@ -149,7 +154,7 @@ public class SkillEngine extends EffectParser {
         Skill skill = null;
         try {
             var attr = skillNode.getAttributes();
-            var id = parseInt(attr, "id");
+            var id = parseInt(attr, ATTR_ID);
             var maxLevel = parseInt(attr, "max-level");
 
             skill = new Skill(id, parseString(attr, "name"), maxLevel, parseBoolean(attr, "debuff"), parseEnum(attr, SkillOperateType.class, "action"), parseEnum(attr, SkillType.class, "type"));
@@ -413,7 +418,7 @@ public class SkillEngine extends EffectParser {
 
         forEach(nodeAttributes, "element", elementNode -> {
             skill.setAttributeType(parseEnum(elementNode.getAttributes(), AttributeType.class, "type"));
-            skill.setAttributeValue(parseInt(elementNode.getAttributes(), "value"));
+            skill.setAttributeValue(parseInt(elementNode.getAttributes(), ATTR_VALUE));
         });
 
     }
@@ -439,7 +444,7 @@ public class SkillEngine extends EffectParser {
         setter.accept(lastValue);
 
         for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-            if ("value".equals(child.getNodeName())) {
+            if (ATTR_VALUE.equals(child.getNodeName())) {
                 var value = Integer.parseInt(child.getTextContent());
                 if (lastValue != value) {
                     var level = parseInt(child.getAttributes(), "level");
@@ -477,7 +482,7 @@ public class SkillEngine extends EffectParser {
         var lastValue = parseString(iconNode.getAttributes(), "initial");
         skill.setIcon(lastValue);
         for (var node = iconNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-            if ("value".equals(node.getNodeName())) {
+            if (ATTR_VALUE.equals(node.getNodeName())) {
 
                 var value = node.getTextContent();
                 if (!Objects.equals(lastValue, value)) {

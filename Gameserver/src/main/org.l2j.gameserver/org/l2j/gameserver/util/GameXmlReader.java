@@ -44,6 +44,9 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public abstract class GameXmlReader extends XmlReader {
 
+    protected static final String ATTR_ID = "id";
+    protected static final String ATTR_VALUE = "value";
+
     /**
      * Wrapper for {@link #parseFile(String)} method.
      *

@@ -560,11 +560,9 @@ public class RecipeController {
             }
 
             // check that the current recipe has a rare production or not
-            if (rareProdId > 0) {
-                if (Rnd.chance(_recipeList.getRarity())) {
-                    itemId = rareProdId;
-                    itemCount = _recipeList.getRareCount();
-                }
+            if (rareProdId > 0 && Rnd.chance(_recipeList.getRarity())) {
+                itemId = rareProdId;
+                itemCount = _recipeList.getRareCount();
             }
 
             _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);

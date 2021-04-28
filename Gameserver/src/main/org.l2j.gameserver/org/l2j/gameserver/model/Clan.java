@@ -1743,8 +1743,8 @@ public class Clan implements IIdentifiable, INamable {
         }
 
         var onlineTimeForBonus = getSettings(ClanSettings.class).onlineTimeForBonus;
-        int currentMaxOnline = 0;
-        for (ClanMember member : members.values()) {
+        var currentMaxOnline = 0;
+        for (var member : members.values()) {
             if(member.getOnlineTime() > onlineTimeForBonus) {
                 currentMaxOnline++;
             }

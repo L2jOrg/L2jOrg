@@ -19,7 +19,6 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.SkillLearn;
