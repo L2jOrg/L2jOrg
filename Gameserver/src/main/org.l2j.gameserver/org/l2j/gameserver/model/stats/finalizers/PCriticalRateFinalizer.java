@@ -44,7 +44,7 @@ public class PCriticalRateFinalizer implements IStatsFunction {
             baseValue += calcEnchantBodyPart(creature, BodyPart.LEGS);
         }
         final double dexBonus = creature.getDEX() > 0 ? BaseStats.DEX.calcBonus(creature) : 1.;
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * dexBonus * 10), 0, getSettings(CharacterSettings.class).maxPcritRate());
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * dexBonus * 10), 0, getSettings(CharacterSettings.class).maxPcritRate);
     }
 
     @Override

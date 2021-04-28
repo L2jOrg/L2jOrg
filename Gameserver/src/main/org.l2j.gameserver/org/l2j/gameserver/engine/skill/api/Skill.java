@@ -19,7 +19,6 @@
 package org.l2j.gameserver.engine.skill.api;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -107,9 +106,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     private int levelBonusRate;
     private double magicCriticalRate;
 
-    private int minChance;
-    private int maxChance;
-
     private TargetType targetType;
     public AffectScope affectScope;
     private AffectObject affectObject;
@@ -173,25 +169,11 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     void computeSkillAttributes() {
         buffType = isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : debuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
+        reuseHashCode = SkillEngine.skillHashCode(id, level);
 
         if(isNull(abnormalResists)) {
             abnormalResists = Collections.emptySet();
         }
-
-        if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(id)) {
-            useCustomDelay = true;
-            reuseDelay = Config.SKILL_REUSE_LIST.get(id);
-        }
-
-        if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(id)) {
-            useCustomTime = true;
-            abnormalTime = Config.SKILL_DURATION_LIST.get(id);
-        }
-
-        reuseHashCode = SkillEngine.skillHashCode(id, level);
-
-        minChance = Config.MIN_ABNORMAL_STATE_SUCCESS_RATE;
-        maxChance = Config.MAX_ABNORMAL_STATE_SUCCESS_RATE;
     }
 
     public boolean checkCondition(Creature creature, WorldObject object) {
@@ -585,14 +567,6 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     void setActivateRate(int rate) {
         activateRate = rate;
-    }
-
-    public int getMinChance() {
-        return minChance;
-    }
-
-    public int getMaxChance() {
-        return maxChance;
     }
 
     void setNextAction(NextActionType action) {
@@ -1217,5 +1191,15 @@ public final class Skill implements IIdentifiable, Cloneable {
 
     public boolean isAutoBuff() {
         return skillAutoUseType == SkillAutoUseType.BUFF;
+    }
+
+    void setCustomDelay(int delay) {
+        useCustomDelay = true;
+        reuseDelay = delay;
+    }
+
+    void setCustomTime(int time) {
+        useCustomTime = true;
+        abnormalTime = time;
     }
 }

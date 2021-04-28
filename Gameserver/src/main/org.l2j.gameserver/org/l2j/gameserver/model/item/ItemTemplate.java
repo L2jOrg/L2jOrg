@@ -344,12 +344,11 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     }
 
     /**
-     * This method also check the enchant blacklist.
      *
      * @return {@code true} if the item can be enchanted, {@code false} otherwise.
      */
     public final boolean isEnchantable() {
-        return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, id) < 0 && enchantable;
+        return enchantable;
     }
 
     public final boolean isHeroItem() {

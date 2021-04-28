@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
@@ -34,6 +33,7 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.ClanSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -94,7 +94,7 @@ public class VillageMaster extends Folk {
             return;
         }
 
-        clan.setDissolvingExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_DISSOLVE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+        clan.setDissolvingExpiryTime(System.currentTimeMillis() + getSettings(ClanSettings.class).daysToDissolveClan * 86400000L); // 24*60*60*1000 = 86400000
         clan.updateClanInDB();
 
         // The clan leader should take the XP penalty of a full death.
@@ -437,7 +437,7 @@ public class VillageMaster extends Folk {
                 return;
             }
 
-            if (Config.ALT_CLAN_LEADER_INSTANT_ACTIVATION) {
+            if (getSettings(ClanSettings.class).instantChangeLeader) {
                 clan.setNewLeader(member);
             } else {
                 final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());

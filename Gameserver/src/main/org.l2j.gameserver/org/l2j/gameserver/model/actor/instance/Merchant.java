@@ -19,7 +19,6 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TaxType;
@@ -29,9 +28,12 @@ import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.BuyList;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class Merchant extends Folk {
 
@@ -88,7 +90,7 @@ public class Merchant extends Folk {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && showPkDenyChatWindow(player, "merchant")) {
+        if(player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkShop && showPkDenyChatWindow(player, "merchant")) {
             return;
         }
         super.showChatWindow(player, val);

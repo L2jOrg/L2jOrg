@@ -43,7 +43,7 @@ public class MpRewardTask {
         _creature = creature;
         _count = template.getMpRewardTicks();
         _value = calculateBaseValue(npc, creature);
-        var effectTickRatio = getSettings(CharacterSettings.class).effectTickRatio();
+        var effectTickRatio = getSettings(CharacterSettings.class).effectTickRatio;
         _task = ThreadPool.scheduleAtFixedRate(this::run, effectTickRatio, effectTickRatio);
     }
 

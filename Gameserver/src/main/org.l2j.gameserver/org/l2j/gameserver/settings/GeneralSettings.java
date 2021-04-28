@@ -55,15 +55,15 @@ public class GeneralSettings implements Settings {
     @Override
     public void load(SettingsFile settingsFile) {
 
-        banChatAdenaAdsReportCount = settingsFile.getInteger("BanChatAdenaADSReportCount", 10);
+        banChatAdenaAdsReportCount = settingsFile.getInt("BanChatAdenaADSReportCount", 10);
 
         auditGM = settingsFile.getBoolean("AuditGM", false);
         logItems = settingsFile.getBoolean("LogItems", false);
         smallLogItems = settingsFile.getBoolean("LogItemsSmallLog", true);
 
         saveDroppedItems = settingsFile.getBoolean("SaveDroppedItem", false);
-        autoDestroyItemTime = settingsFile.getInteger("AutoDestroyDroppedItemAfter", 600) * 1000;
-        autoDestroyHerbTime = settingsFile.getInteger("AutoDestroyHerbTime", 120) * 1000;
+        autoDestroyItemTime = settingsFile.getInt("AutoDestroyDroppedItemAfter", 600) * 1000;
+        autoDestroyHerbTime = settingsFile.getInt("AutoDestroyHerbTime", 120) * 1000;
         saveDroppedItemInterval = settingsFile.getDuration("SaveDroppedItemInterval", ChronoUnit.MINUTES,60);
         clearDroppedItems = settingsFile.getBoolean("ClearDroppedItemTable", false);
         destroyPlayerDroppedItem = settingsFile.getBoolean("DestroyPlayerDroppedItem", false);
@@ -80,9 +80,9 @@ public class GeneralSettings implements Settings {
         defaultPunishment = settingsFile.getEnum("DefaultPunish", IllegalActionPunishmentType.class, IllegalActionPunishmentType.KICK);
         disableChatInJail = settingsFile.getBoolean("JailDisableChat", true);
 
-        defaultAccessLevel = settingsFile.getInteger("DefaultAccessLevel", 0);
+        defaultAccessLevel = settingsFile.getInt("DefaultAccessLevel", 0);
 
-        autoSavePlayerTime = settingsFile.getInteger("PlayerDataStoreInterval", 20);
+        autoSavePlayerTime = settingsFile.getInt("PlayerDataStoreInterval", 20);
      }
 
     public int banChatAdenaAdsReportCount() {

@@ -38,7 +38,7 @@ public class AuthServerSettings implements Settings {
     }
 
     public static int gameServerListenPort() {
-        return  getInstance().settings.getInteger("GameServerListenPort", 9013);
+        return  getInstance().settings.getInt("GameServerListenPort", 9013);
     }
 
     public static String listenHost() {
@@ -46,7 +46,7 @@ public class AuthServerSettings implements Settings {
     }
 
     public static int listenPort() {
-        return getInstance().settings.getInteger("Port", 2106);
+        return getInstance().settings.getInt("Port", 2106);
     }
 
     public static boolean isAutoCreateAccount(){
@@ -54,11 +54,11 @@ public class AuthServerSettings implements Settings {
     }
 
     public static int authTriesBeforeBan(){
-        return getInstance().settings.getInteger("AuthTriesBeforeBan", 10);
+        return getInstance().settings.getInt("AuthTriesBeforeBan", 10);
     }
 
     public static int loginBlockAfterBan() {
-        return getInstance().settings.getInteger("AuthBlockAfterBan", 600);
+        return getInstance().settings.getInt("AuthBlockAfterBan", 600);
     }
 
     public static boolean acceptNewGameServerEnabled() {
@@ -70,7 +70,7 @@ public class AuthServerSettings implements Settings {
     }
 
     public int gmMinimumLevel() {
-        return getInstance().settings.getInteger("GMMinLevel", 100);
+        return getInstance().settings.getInt("GMMinLevel", 100);
     }
 
     private static AuthServerSettings getInstance() {

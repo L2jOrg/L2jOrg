@@ -36,9 +36,9 @@ public class AttendanceSettings implements Settings {
     public void load(SettingsFile settingsFile) {
         enabled = settingsFile.getBoolean("Enable", false);
         vipOnly = settingsFile.getBoolean("VipOnly", false);
-        delay =  settingsFile.getInteger("Delay", 30);
+        delay =  settingsFile.getInt("Delay", 30);
         popUpWindow = settingsFile.getBoolean("PopupWindow", false);
-        minimumLevel = settingsFile.getInteger("MinimumLevel", 40);
+        minimumLevel = settingsFile.getInt("MinimumLevel", 40);
     }
 
     public boolean enabled() {

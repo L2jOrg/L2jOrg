@@ -143,7 +143,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                 final Clan clan = player.getClan();
                 final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
                 if (clan.getReputationScore() >= repCost) {
-                    if (getSettings(CharacterSettings.class).isPledgeSkillsItemNeeded()) {
+                    if (getSettings(CharacterSettings.class).pledgeSkillsItemNeeded) {
                         for (ItemHolder item : skillLearn.getRequiredItems()) {
                             if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
                                 // Doesn't have required item.
@@ -262,7 +262,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                     return false;
                 }
 
-                if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !getSettings(CharacterSettings.class).isDivineInspirationBookNeeded()) {
+                if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !getSettings(CharacterSettings.class).divineInspirationBookNeeded) {
                     return true;
                 }
 

@@ -62,11 +62,11 @@ public final class SettingsFile extends Properties {
         return getProperty(key, defaultValue);
     }
 
-    public int getInteger(String key, int defaultValue) {
-        return getInteger(key, 10, defaultValue);
+    public int getInt(String key, int defaultValue) {
+        return getInt(key, 10, defaultValue);
     }
 
-    public int getInteger(String key, int radix, int defaultValue) {
+    public int getInt(String key, int radix, int defaultValue) {
         try {
             return Integer.parseInt(getProperty(key), radix);
         } catch (Exception e) {
@@ -117,7 +117,7 @@ public final class SettingsFile extends Properties {
         return defaultValue;
     }
 
-    public int[] getIntegerArray(String key, String delimiter) {
+    public int[] getIntArray(String key, String delimiter) {
         var property = getProperty(key);
         if(isNullOrEmpty(property)) {
             return INT_ARRAY_EMPTY;
@@ -197,5 +197,9 @@ public final class SettingsFile extends Properties {
 
     public Duration getDuration(String key, TemporalUnit unit, long defaultValue) {
         return Duration.of(getLong(key, defaultValue), unit);
+    }
+
+    public Duration parseDuration(String key, String defaultValue) {
+        return Duration.parse(getString(key, defaultValue));
     }
 }

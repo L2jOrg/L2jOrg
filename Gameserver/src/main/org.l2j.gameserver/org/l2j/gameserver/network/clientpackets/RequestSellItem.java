@@ -57,7 +57,7 @@ public final class RequestSellItem extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _listId = readInt();
         final int size = readInt();
-        if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != available())) {
+        if (size <= 0 || size > getSettings(CharacterSettings.class).maxItemInPacket || size * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException("Invalid Size " + size);
         }
 
@@ -91,8 +91,7 @@ public final class RequestSellItem extends ClientPacket {
             return;
         }
 
-        // Alt game - Karma punishment
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getReputation() < 0)) {
+        if (player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkShop) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -138,8 +137,8 @@ public final class RequestSellItem extends ClientPacket {
 
             long price = item.getReferencePrice() / 2;
             totalPrice += price * i.getCount();
-            if (MathUtil.checkMulOverFlow(price, i.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena() + " adena worth of goods.");
+            if (MathUtil.checkMulOverFlow(price, i.getCount(), getSettings(CharacterSettings.class).maxAdena)) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena + " adena worth of goods.");
                 return;
             }
 

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
@@ -38,9 +37,9 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
-
 public class PlayableStats extends CreatureStats {
     protected static final Logger LOGGER = LoggerFactory.getLogger(PlayableStats.class);
+    private static final long MAX_SP = Long.MAX_VALUE;
 
     public PlayableStats(Playable activeChar) {
         super(activeChar);
@@ -96,7 +95,7 @@ public class PlayableStats extends CreatureStats {
     }
 
     public boolean removeExp(long value) {
-        if (getExp() - value < getExpForLevel(getLevel()) && !getSettings(CharacterSettings.class).delevel()) {
+        if (getExp() - value < getExpForLevel(getLevel()) && !getSettings(CharacterSettings.class).delevel) {
             value = getExp() - getExpForLevel(getLevel());
         }
 
@@ -181,12 +180,12 @@ public class PlayableStats extends CreatureStats {
             return false;
         }
         final long currentSp = getSp();
-        if (currentSp >= Config.MAX_SP) {
+        if (currentSp >= MAX_SP) {
             return false;
         }
 
-        if (currentSp > (Config.MAX_SP - value)) {
-            value = Config.MAX_SP - currentSp;
+        if (currentSp > (MAX_SP - value)) {
+            value = MAX_SP - currentSp;
         }
 
         setSp(currentSp + value);

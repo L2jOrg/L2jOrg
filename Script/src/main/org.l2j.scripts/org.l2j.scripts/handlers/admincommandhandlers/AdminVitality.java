@@ -52,7 +52,7 @@ public class AdminVitality implements IAdminCommandHandler
 			return false;
 		}
 		
-		if (!getSettings(CharacterSettings.class).isVitalityEnabled())
+		if (!getSettings(CharacterSettings.class).vitalityEnabled)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Vitality is not enabled on the server!");
 			return false;

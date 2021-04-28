@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.teleporter;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.enums.TeleportType;
@@ -181,7 +180,7 @@ public final class TeleportHolder {
                 msg.setFile(player, CASTLE_TELEPORTER_BUSY_HTM);
                 player.sendPacket(msg);
                 return;
-            } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getReputation() < 0)) {
+            } else if (player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkTeleport) {
                 player.sendMessage("Go away, you're not welcome here.");
                 return;
             }
@@ -213,7 +212,7 @@ public final class TeleportHolder {
      * @return {@code true} when all requirements are met otherwise {@code false}
      */
     private boolean shouldPayFee(Player player, TeleportLocation loc) {
-        return !isNormalTeleport() || ((player.getLevel() > getSettings(CharacterSettings.class).maxFreeTeleportLevel()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+        return !isNormalTeleport() || ((player.getLevel() > getSettings(CharacterSettings.class).maxFreeTeleportLevel) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
     }
 
     /**
@@ -227,7 +226,7 @@ public final class TeleportHolder {
      */
     private long calculateFee(Player player, TeleportLocation loc) {
         if (isNormalTeleport()) {
-            if (player.getLevel() <= getSettings(CharacterSettings.class).maxFreeTeleportLevel()) {
+            if (player.getLevel() <= getSettings(CharacterSettings.class).maxFreeTeleportLevel) {
                 return 0;
             }
 

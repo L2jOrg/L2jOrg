@@ -89,7 +89,7 @@ public class SiegeZone extends Zone {
                     player.setIsInSiege(true); // in siege
                     Siegable siegable;
                     if ((siegable = getSettings().getSiege()).giveFame() && (siegable.getFameFrequency() > 0)) {
-                        player.startFameTask(siegable.getFameFrequency() * 1000, siegable.getFameAmount());
+                        player.startFameTask(siegable.getFameFrequency() * 1000L, siegable.getFameAmount());
                     }
                 }
 

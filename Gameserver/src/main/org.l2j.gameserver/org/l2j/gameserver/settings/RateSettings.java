@@ -36,7 +36,7 @@ public class RateSettings implements Settings {
     public void load(SettingsFile settingsFile) {
         xp = settingsFile.getFloat("RateXp", 1f);
         rateVitalityExpMul = settingsFile.getFloat("RateVitalityExpMultiplier", 2);
-        maxItemsVitality = settingsFile.getInteger("VitalityMaxItemsAllowed", 999);
+        maxItemsVitality = settingsFile.getInt("VitalityMaxItemsAllowed", 999);
         rateVitalityLoss = settingsFile.getFloat("RateVitalityLost", 1f);
         rateVitalityGain = settingsFile.getFloat("RateVitalityGain", 1f);
     }

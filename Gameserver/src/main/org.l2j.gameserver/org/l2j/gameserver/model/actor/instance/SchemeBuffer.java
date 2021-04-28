@@ -119,7 +119,7 @@ public class SchemeBuffer extends Folk {
             if (currentCommand.startsWith("skillselect") && !schemeName.equalsIgnoreCase("none")) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
                 if (skill.isDance()) {
-                    if (getCountOf(skills, true) < getSettings(CharacterSettings.class).maxDances()) {
+                    if (getCountOf(skills, true) < getSettings(CharacterSettings.class).maxDances) {
                         skills.add(skillId);
                     } else {
                         player.sendMessage("This scheme has reached the maximum amount of dances/songs.");
@@ -261,7 +261,7 @@ public class SchemeBuffer extends Folk {
 
         html.setFile(player, getHtmlPath(getId(), 2));
         html.replace("%schemename%", schemeName);
-        html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStats().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + getSettings(CharacterSettings.class).maxDances() + " dances/songs");
+        html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStats().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + getSettings(CharacterSettings.class).maxDances + " dances/songs");
         html.replace("%typesframe%", getTypesFrame(groupType, schemeName));
         html.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
         html.replace("%objectId%", getObjectId());

@@ -1180,17 +1180,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             var characterSettings = getSettings(CharacterSettings.class);
 
-            var restore = characterSettings.restoreCPPercent() * stats.getMaxCp();
+            var restore = characterSettings.restoreCPPercent * stats.getMaxCp();
             if(restore > status.getCurrentCp()) {
                 status.setCurrentCp(restore);
             }
 
-            restore = characterSettings.restoreHPPercent() * stats.getMaxHp();
+            restore = characterSettings.restoreHPPercent * stats.getMaxHp();
             if(restore > status.getCurrentHp()) {
                 status.setCurrentHp(restore);
             }
 
-            restore = characterSettings.restoreMPPercent() * stats.getMaxMp();
+            restore = characterSettings.restoreMPPercent * stats.getMaxMp();
             if(restore > status.getCurrentMp()) {
                 status.setCurrentMp(restore);
             }
@@ -2775,7 +2775,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return false;
         }
 
-        if (Config.ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE) {
+        if (getSettings(CharacterSettings.class).canAttackPkInPeaceZone) {
             // allows red to be attacked and red to attack flagged players
             if ((target.getActingPlayer() != null) && (target.getActingPlayer().getReputation() < 0)) {
                 return false;
@@ -3336,7 +3336,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public int getMaxLoad() {
         if (isPlayer(this) || isPet(this)) {
             // Source http://l2p.bravehost.com/weightlimit.html (May 2007)
-            final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * getSettings(CharacterSettings.class).weightLimitMultiplier());
+            final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * getSettings(CharacterSettings.class).weightLimitMultiplier);
             return (int) stats.getValue(Stat.WEIGHT_LIMIT, baseLoad);
         }
         return 0;

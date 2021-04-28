@@ -21,11 +21,10 @@ package org.l2j.gameserver.model.entity;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.data.SiegeClanData;
-import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.impl.SiegeScheduleData;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.SiegeClanType;
 import org.l2j.gameserver.enums.SiegeTeleportWhoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -46,8 +45,12 @@ import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.network.serverpackets.SiegeInfo;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.network.serverpackets.siege.ExMercenarySiegeHUDInfo;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
@@ -67,6 +70,7 @@ import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
@@ -276,7 +280,8 @@ public class Siege implements Siegable {
                 member.setSiegeSide(castle.getId());
                 if (checkIfInZone(member)) {
                     member.setIsInSiege(true);
-                    member.startFameTask(Config.CASTLE_ZONE_FAME_TASK_FREQUENCY * 1000, Config.CASTLE_ZONE_FAME_AQUIRE_POINTS);
+                    var characterSettings = getSettings(CharacterSettings.class);
+                    member.startFameTask(characterSettings.fameTaskDelay * 1000L, characterSettings.fameTaskPoints);
                 }
             }
             broadcastMemberInfo(member);
@@ -808,12 +813,12 @@ public class Siege implements Siegable {
 
     @Override
     public int getFameFrequency() {
-        return Config.CASTLE_ZONE_FAME_TASK_FREQUENCY;
+        return getSettings(CharacterSettings.class).fameTaskDelay;
     }
 
     @Override
     public int getFameAmount() {
-        return Config.CASTLE_ZONE_FAME_AQUIRE_POINTS;
+        return getSettings(CharacterSettings.class).fameTaskPoints;
     }
 
     @Override

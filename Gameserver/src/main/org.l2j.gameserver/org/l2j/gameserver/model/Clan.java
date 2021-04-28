@@ -27,11 +27,11 @@ import org.l2j.gameserver.data.database.data.ClanData;
 import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.database.data.ClanSkillData;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
-import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ClanRewardType;
@@ -57,6 +57,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
 import org.l2j.gameserver.network.serverpackets.pledge.*;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.ClanSettings;
 import org.l2j.gameserver.util.EnumIntBitmask;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
@@ -179,7 +180,7 @@ public class Clan implements IIdentifiable, INamable {
             setAllyPenaltyExpiryTime(0, 0);
         }
 
-        if ((data.getCharPenaltyExpiryTime() + (Config.ALT_CLAN_JOIN_DAYS * 86400000L)) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
+        if ((data.getCharPenaltyExpiryTime() + getSettings(ClanSettings.class).daysToJoinClan * 86400000L) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
         {
             setCharPenaltyExpiryTime(0);
         }
@@ -349,7 +350,7 @@ public class Clan implements IIdentifiable, INamable {
             }
         }
         exMember.saveApprenticeAndSponsor(0, 0);
-        if (getSettings(CharacterSettings.class).removeCastleCirclets()) {
+        if (getSettings(CharacterSettings.class).removeCastleCirclets) {
             CastleManager.getInstance().removeCirclet(exMember, getCastleId());
         }
         if (exMember.isOnline()) {
@@ -362,7 +363,7 @@ public class Clan implements IIdentifiable, INamable {
 
             if (player.isClanLeader()) {
                 SiegeManager.getInstance().removeSiegeSkills(player);
-                player.setClanCreateExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000L)); // 24*60*60*1000 = 86400000
+                player.setClanCreateExpiryTime(System.currentTimeMillis() + getSettings(ClanSettings.class).daysToCreateClan * 86400000L); // 24*60*60*1000 = 86400000
             }
 
             // remove Clan skills from Player
@@ -387,7 +388,7 @@ public class Clan implements IIdentifiable, INamable {
             // disable clan tab
             player.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
         } else {
-            removeMemberInDatabase(exMember, clanJoinExpiryTime, getLeaderId() == objectId ? System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000L) : 0);
+            removeMemberInDatabase(exMember, clanJoinExpiryTime, getLeaderId() == objectId ? System.currentTimeMillis() + getSettings(ClanSettings.class).daysToCreateClan * 86400000L : 0);
         }
 
         // Notify to scripts
@@ -1231,7 +1232,7 @@ public class Clan implements IIdentifiable, INamable {
             return false;
         }
 
-        if (ClanEngine.getInstance().getClanAllies(activeChar.getAllyId()).size() >= Config.ALT_MAX_NUM_OF_CLANS_IN_ALLY) {
+        if (ClanEngine.getInstance().getClanAllies(activeChar.getAllyId()).size() >= getSettings(ClanSettings.class).maxClansInAlly) {
             activeChar.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_LIMIT);
             return false;
         }
@@ -1346,7 +1347,7 @@ public class Clan implements IIdentifiable, INamable {
         setAllyId(0);
         setAllyName(null);
         changeAllyCrest(0, false);
-        setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000L), PENALTY_TYPE_DISSOLVE_ALLY); // 24*60*60*1000 = 86400000
+        setAllyPenaltyExpiryTime(currentTime + getSettings(ClanSettings.class).daysToCreateAllyAfterDissolved * 86400000L, PENALTY_TYPE_DISSOLVE_ALLY); // 24*60*60*1000 = 86400000
         updateClanInDB();
     }
 
@@ -1741,7 +1742,14 @@ public class Clan implements IIdentifiable, INamable {
             }
         }
 
-        final int currentMaxOnline = (int) members.values().stream().filter(member -> member.getOnlineTime() > Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS).count();
+        var onlineTimeForBonus = getSettings(ClanSettings.class).onlineTimeForBonus;
+        var currentMaxOnline = 0;
+        for (var member : members.values()) {
+            if(member.getOnlineTime() > onlineTimeForBonus) {
+                currentMaxOnline++;
+            }
+        }
+
         if (getMaxOnlineMembers() < currentMaxOnline) {
             data.setMaxOnlineMembers(currentMaxOnline);
         }

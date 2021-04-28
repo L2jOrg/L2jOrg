@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -57,7 +56,7 @@ public class RequestBuySeed extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _manorId = readInt();
         final int count = readInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -109,7 +108,7 @@ public class RequestBuySeed extends ClientPacket {
         int totalWeight = 0;
 
         final IntMap<SeedProduction> _productInfo = new HashIntMap<>();
-        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
+        var maxAdena = getSettings(CharacterSettings.class).maxAdena;
         for (ItemHolder ih : _items) {
             final SeedProduction sp = manor.getSeedProduct(_manorId, ih.getId(), false);
             if ((sp == null) || (sp.getPrice() <= 0) || (sp.getAmount() < ih.getCount()) || MathUtil.checkMulOverFlow(sp.getPrice(), ih.getCount(), maxAdena)) {

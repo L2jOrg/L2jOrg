@@ -73,7 +73,7 @@ public final class RequestSendPost extends ClientPacket {
         _text = readString();
 
         final int attachCount = readInt();
-        if ((attachCount < 0) || (attachCount > Config.MAX_ITEM_IN_PACKET) || (((attachCount * BATCH_LENGTH) + 8) != available())) {
+        if (attachCount < 0 || attachCount > getSettings(CharacterSettings.class).maxItemInPacket || attachCount * BATCH_LENGTH + 8 != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -153,7 +153,7 @@ public final class RequestSendPost extends ClientPacket {
             return;
         }
 
-        if ((_reqAdena < 0) || (_reqAdena > getSettings(CharacterSettings.class).maxAdena())) {
+        if ((_reqAdena < 0) || (_reqAdena > getSettings(CharacterSettings.class).maxAdena)) {
             return;
         }
 

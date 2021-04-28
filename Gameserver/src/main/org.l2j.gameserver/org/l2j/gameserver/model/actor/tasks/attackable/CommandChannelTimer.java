@@ -40,7 +40,7 @@ public final class CommandChannelTimer implements Runnable {
             return;
         }
 
-        if ((System.currentTimeMillis() - _attackable.getCommandChannelLastAttack()) > getSettings(CharacterSettings.class).raidLootPrivilegeTime()) {
+        if ((System.currentTimeMillis() - _attackable.getCommandChannelLastAttack()) > getSettings(CharacterSettings.class).raidLootPrivilegeTime) {
             _attackable.setCommandChannelTimer(null);
             _attackable.setFirstCommandChannelAttacked(null);
             _attackable.setCommandChannelLastAttack(0);

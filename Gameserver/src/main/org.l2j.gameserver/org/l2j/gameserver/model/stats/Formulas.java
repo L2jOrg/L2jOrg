@@ -140,7 +140,7 @@ public final class Formulas {
         double damage = ( (77 *  attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, power)  * Math.sqrt(mAtk) ) / mDef) * shotsBonus;
 
         // Failure calculation
-        if (getSettings(CharacterSettings.class).isMagicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
+        if (getSettings(CharacterSettings.class).magicFailureAllowed && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 if (calcMagicSuccess(attacker, target, skill)) {
                     if (skill.hasAnyEffectType(EffectType.HP_DRAIN)) {
@@ -331,9 +331,9 @@ public final class Formulas {
         double init = 0;
 
         var characterSettings = getSettings(CharacterSettings.class);
-        if (characterSettings.breakCast() && target.isCastingNow(SkillCaster::canAbortCast)) {
+        if (characterSettings.breakCast && target.isCastingNow(SkillCaster::canAbortCast)) {
             init = 15;
-        } else if (characterSettings.breakBowAttack() && target.isAttackingNow()) {
+        } else if (characterSettings.breakBowAttack && target.isAttackingNow()) {
             final Weapon wpn = target.getActiveWeaponItem();
             if (nonNull(wpn) && wpn.getItemType() == WeaponType.BOW) {
                 init = 15;
@@ -577,7 +577,7 @@ public final class Formulas {
         final double basicPropertyResist = getBasicPropertyResistBonus(skill.getBasicProperty(), target);
         final double buffDebuffMod = skill.isDebuff() ?  2d - target.getStats().getValue(Stat.RESIST_ABNORMAL_DEBUFF, 1) : 1;
         final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
-        final double finalRate = traitMod > 0 ? CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist : 0;
+        final double finalRate = traitMod > 0 ? rate * basicPropertyResist : 0;
 
         if (!Rnd.chance(finalRate)) {
             if(target != attacker) {
@@ -633,10 +633,9 @@ public final class Formulas {
 
         // Add Matk/Mdef Bonus (TODO: Pending)
 
-        // Check the Rate Limits.
-        final double finalRate = CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist;
+        final double finalRate = rate * basicPropertyResist;
 
-        return Rnd.get(100) < finalRate;
+        return Rnd.chance(finalRate);
     }
 
     public static boolean calcMagicSuccess(Creature attacker, Creature target, Skill skill) {
@@ -688,7 +687,7 @@ public final class Formulas {
         damage *= calculatePvpPveBonus(attacker, target, skill, mcrit);
 
         // Failure calculation
-        if (getSettings(CharacterSettings.class).isMagicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
+        if (getSettings(CharacterSettings.class).magicFailureAllowed && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
                 sm.addString(target.getName());
@@ -1239,7 +1238,7 @@ public final class Formulas {
      */
     public static boolean calcStunBreak(Creature creature) {
         // Check if target is stunned and break it with 14% chance. (retail is 14% and 35% on crit?)
-        if (getSettings(CharacterSettings.class).breakStun() && creature.hasBlockActions() && Rnd.chance(14)) {
+        if (getSettings(CharacterSettings.class).breakStun && creature.hasBlockActions() && Rnd.chance(14)) {
             // Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
             return creature.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
         }

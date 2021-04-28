@@ -57,9 +57,9 @@ public class AcquireSkillInfo extends ServerPacket {
         _type = skillType;
         _reqs = new ArrayList<>();
         var characterSettings = getSettings(CharacterSettings.class);
-        if ((skillType != AcquireSkillType.PLEDGE) || characterSettings.isPledgeSkillsItemNeeded()) {
+        if ((skillType != AcquireSkillType.PLEDGE) || characterSettings.pledgeSkillsItemNeeded) {
             for (ItemHolder item : skillLearn.getRequiredItems()) {
-                if (_id == CommonSkill.DIVINE_INSPIRATION.getId() && !characterSettings.isDivineInspirationBookNeeded()) {
+                if (_id == CommonSkill.DIVINE_INSPIRATION.getId() && !characterSettings.divineInspirationBookNeeded) {
                     continue;
                 }
                 _reqs.add(new Req(99, item.getId(), item.getCount(), 50));

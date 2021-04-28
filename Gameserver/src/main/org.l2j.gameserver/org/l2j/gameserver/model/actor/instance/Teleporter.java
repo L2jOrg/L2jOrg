@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TeleportType;
@@ -29,6 +28,7 @@ import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.teleport.ExShowTeleportUi;
 import org.l2j.gameserver.network.serverpackets.teleport.ExTeleportFavoritesList;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +36,7 @@ import org.slf4j.LoggerFactory;
 import java.util.StringTokenizer;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.SPACE;
 import static org.l2j.commons.util.Util.parseNextInt;
 
@@ -128,7 +129,7 @@ public final class Teleporter extends Folk {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && showPkDenyChatWindow(player, "teleporter")) {
+        if(player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkTeleport && showPkDenyChatWindow(player, "teleporter")) {
             return;
         }
         super.showChatWindow(player, val);

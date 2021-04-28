@@ -298,7 +298,7 @@ public final class Item extends WorldObject {
             return;
         }
         final long old = data.getCount();
-        final long max = data.getItemId() == CommonItem.ADENA ? getSettings(CharacterSettings.class).maxAdena() : Long.MAX_VALUE;
+        final long max = data.getItemId() == CommonItem.ADENA ? getSettings(CharacterSettings.class).maxAdena : Long.MAX_VALUE;
 
         if (count > 0 && data.getCount() > (max - count)) {
             setCount(max);

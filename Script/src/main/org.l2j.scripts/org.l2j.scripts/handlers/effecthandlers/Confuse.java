@@ -71,7 +71,7 @@ public final class Confuse extends AbstractEffect {
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
         effected.getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 
-        var creature = World.getInstance().findAnyVisibleObject(effected, Creature.class, getSettings(CharacterSettings.class).partyRange(), false,
+        var creature = World.getInstance().findAnyVisibleObject(effected, Creature.class, getSettings(CharacterSettings.class).partyRange, false,
                 c -> GeoEngine.getInstance().canSeeTarget(effected, c));
         if(nonNull(creature)) {
             effected.setTarget(creature);
