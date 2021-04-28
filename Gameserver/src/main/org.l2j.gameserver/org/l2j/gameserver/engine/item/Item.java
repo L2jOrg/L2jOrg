@@ -348,7 +348,7 @@ public final class Item extends WorldObject {
     }
 
     public void updateEnchantLevel(int value) {
-        changeEnchantLevel(data.getEnchantLevel() + value);
+        changeEnchantLevel(max(0, data.getEnchantLevel() + value));
     }
 
     public void changeEnchantLevel(int enchantLevel) {
@@ -520,7 +520,7 @@ public final class Item extends WorldObject {
         if (nonNull(lifeTimeTask)) {
             lifeTimeTask.cancel(true);
         }
-        lifeTimeTask = ThreadPool.schedule(this::endOfLife, Math.max(getRemainingTime(), 2000));
+        lifeTimeTask = ThreadPool.schedule(this::endOfLife, max(getRemainingTime(), 2000));
     }
 
     @Override
