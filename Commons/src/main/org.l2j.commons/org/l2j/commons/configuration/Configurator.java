@@ -22,6 +22,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,7 +39,7 @@ public class Configurator {
     private static final String DEFAULT_CONFIGURATOR_FILE = "config/configurator.properties";
     private static final String CONFIGURATOR_FILE = "configurator.file";
 
-    private final Map<Class<? extends Settings>, String> settingsClasses = new HashMap<>();
+    private final Map<Class<?>, String> settingsClasses = new HashMap<>();
 
     private Configurator() {
         load();
@@ -49,14 +51,7 @@ public class Configurator {
             configuratorFile = DEFAULT_CONFIGURATOR_FILE;
         }
         logger.debug("Loading Configurations from {}", configuratorFile);
-
-        var settings = new SettingsFile(configuratorFile);
-        load(settings);
-        if (settings.isEmpty()) {
-            logger.info("Configurations not found on file {}. No Settings has been loaded", configuratorFile);
-        } else {
-            load(settings);
-        }
+        load(new SettingsFile(configuratorFile));
     }
 
     private void load(SettingsFile settings) {
@@ -75,32 +70,29 @@ public class Configurator {
             return;
         }
 
-        Class<? extends Settings> settings = createSettings(className);
+        Class<?> settings = createSettings(className);
         if(nonNull(settings)) {
             settingsClasses.put(settings, fileConfigurationPath);
             loadSettings(settings, fileConfigurationPath);
         }
     }
 
-    @SuppressWarnings("unchecked")
-    private Class<? extends Settings> createSettings(String className)	{
+    private Class<?> createSettings(String className)	{
         try {
-            Class<?> clazz = Class.forName(className);
-            if(Settings.class.isAssignableFrom(clazz)) {
-                return (Class<? extends Settings>) clazz;
-            }
+            return Class.forName(className);
         } catch (ClassNotFoundException e)  {
             logger.warn("The class {} was not found!", className);
         }
         return null;
     }
 
-    private <T extends Settings> void loadSettings(Class<T> settingsClass, String configurationFile) {
+    private void loadSettings(Class<?> settingsClass, String configurationFile) {
         try {
-            T settings = settingsClass.getDeclaredConstructor().newInstance();
-            SettingsFile settingsFile = new SettingsFile(configurationFile);
-            settings.load(settingsFile);
-        } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+            var method = settingsClass.getDeclaredMethod("load", SettingsFile.class);
+            if(Modifier.isStatic(method.getModifiers()) && method.trySetAccessible()) {
+                method.invoke(null, new SettingsFile(configurationFile));
+            }
+        } catch (IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
             logger.error("Error loading Settings {}", settingsClass, e);
         }
     }

@@ -19,7 +19,6 @@
 package org.l2j.gameserver.settings;
 
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 
@@ -29,7 +28,8 @@ import java.time.temporal.ChronoUnit;
 /**
  * @author JoeAlisson
  */
-public class GeneralSettings implements Settings {
+public class GeneralSettings {
+
     private static int banChatAdenaAdsReportCount;
     private static boolean auditGM;
     private static boolean saveDroppedItems;
@@ -52,8 +52,7 @@ public class GeneralSettings implements Settings {
     private static IntSet protectedItems;
     private static boolean clearDroppedItemsAfterLoad;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
+    public static void load(SettingsFile settingsFile) {
 
         banChatAdenaAdsReportCount = settingsFile.getInt("BanChatAdenaADSReportCount", 10);
 

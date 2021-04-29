@@ -18,13 +18,12 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
 /**
  * @author JoeAlisson
  */
-public class RateSettings implements Settings {
+public class RateSettings  {
 
     private static float xp;
     private static float rateVitalityExpMul;
@@ -32,8 +31,7 @@ public class RateSettings implements Settings {
     private static float rateVitalityLoss;
     private static float rateVitalityGain;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
+    public static void load(SettingsFile settingsFile) {
         xp = settingsFile.getFloat("RateXp", 1f);
         rateVitalityExpMul = settingsFile.getFloat("RateVitalityExpMultiplier", 2);
         maxItemsVitality = settingsFile.getInt("VitalityMaxItemsAllowed", 999);

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ServerType;
@@ -31,7 +30,7 @@ import java.util.regex.PatternSyntaxException;
 /**
  * @author JoeAlisson
  */
-public class ServerSettings implements Settings {
+public class ServerSettings {
 
     private static int serverId;
     private static boolean acceptAlternativeId;
@@ -63,8 +62,7 @@ public class ServerSettings implements Settings {
     private static int maxThreadPoolSize;
     private static int parallelismThreshold;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
+    public static void load(SettingsFile settingsFile) {
         serverId = settingsFile.getInt("RequestServerID", 1);
         acceptAlternativeId = settingsFile.getBoolean("AcceptAlternateID", true);
 
@@ -104,7 +102,7 @@ public class ServerSettings implements Settings {
         maxPlayerPerHWID = settingsFile.getInt("MaxPlayersPerHWID", 0);
     }
 
-    private Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
+    private static Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
         try {
             return Pattern.compile(settingsFile.getString(key, ".*")).asMatchPredicate();
         } catch (PatternSyntaxException e) {
@@ -112,7 +110,7 @@ public class ServerSettings implements Settings {
         }
     }
 
-    private int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
+    private static int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
         var size = settingsFile.getInt(property, processors);
 
         if(size < 2) {

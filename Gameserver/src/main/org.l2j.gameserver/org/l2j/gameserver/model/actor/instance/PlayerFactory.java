@@ -45,12 +45,12 @@ import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
-import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.EquipableItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.PcItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -215,13 +215,13 @@ public class PlayerFactory {
     public static void savePlayerData(PlayerTemplate template, PlayerData data) {
         data.setId(IdFactory.getInstance().getNextId());
 
-        if (Config.STARTING_LEVEL > 1) {
-            data.setLevel(Config.STARTING_LEVEL);
-            data.setExperience(LevelData.getInstance().getExpForLevel(Config.STARTING_LEVEL));
+        if (CharacterSettings.startLevel() > 1) {
+            data.setLevel(CharacterSettings.startLevel());
+            data.setExperience(LevelData.getInstance().getExpForLevel(CharacterSettings.startLevel()));
         }
 
-        if (Config.STARTING_SP > 0) {
-            data.setSp(Config.STARTING_SP);
+        if (CharacterSettings.startSP() > 0) {
+            data.setSp(CharacterSettings.startSP());
         }
 
         var hp = template.getBaseHpMax(data.getLevel()) * BaseStats.CON.getValue(template.getBaseCON());
@@ -265,9 +265,6 @@ public class PlayerFactory {
 
     private static void addItems(PlayerData data) {
         int nextLocData = 0;
-        if(Config.STARTING_ADENA > 0) {
-            getDAO(ItemDAO.class).saveItem(data.getCharId(), IdFactory.getInstance().getNextId(), CommonItem.ADENA, Config.STARTING_ADENA, ItemLocation.INVENTORY, nextLocData++);
-        }
 
         final var initialItems = InitialEquipmentData.getInstance().getEquipmentList(data.getClassId());
         for (PcItemTemplate ie : initialItems) {

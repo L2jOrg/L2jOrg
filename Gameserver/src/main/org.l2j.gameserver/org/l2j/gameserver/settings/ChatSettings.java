@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ChatType;
@@ -27,7 +26,10 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Set;
 
-public class ChatSettings implements Settings {
+/**
+ * @author JoeAlisson
+ */
+public class ChatSettings {
     private static int generalChatLevel;
     private static int whisperChatLevel;
     private static int shoutChatLevel;
@@ -47,8 +49,7 @@ public class ChatSettings implements Settings {
     private static int worldChatMinLevel;
     private static Duration worldChatInterval;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
+    public static void load(SettingsFile settingsFile) {
         generalChatLevel = settingsFile.getInt("MinimumGeneralChatLevel", 2);
         whisperChatLevel = settingsFile.getInt("MinimumWhisperChatLevel", 2);
         shoutChatLevel = settingsFile.getInt("MinimumShoutChatLevel", 10);
