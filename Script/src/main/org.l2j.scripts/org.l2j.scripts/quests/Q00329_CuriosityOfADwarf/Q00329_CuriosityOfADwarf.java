@@ -29,6 +29,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Arrays;
@@ -104,7 +105,7 @@ public final class Q00329_CuriosityOfADwarf extends Quest
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((st != null) && GameUtils.checkIfInRange(PartySettings.partyRange(), npc, killer, true))
 		{
 			final int rnd = Rnd.get(100);
 			for (ItemHolder drop : MONSTER_DROPS.get(npc.getId()))

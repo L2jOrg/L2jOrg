@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 
 /**
@@ -198,7 +199,7 @@ public final class Q00355_FamilyHonor extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs == null) || !GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((qs == null) || !GameUtils.checkIfInRange(PartySettings.partyRange(), npc, killer, true))
 		{
 			return null;
 		}

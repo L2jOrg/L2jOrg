@@ -58,6 +58,7 @@ import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
@@ -310,7 +311,7 @@ public class Attackable extends Npc {
                     // Prevent unwanted behavior
                     if (damage > 1) {
                         // Check if damage dealer isn't too far from this (killed monster)
-                        if (!GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, attacker, true)) {
+                        if (!GameUtils.checkIfInRange(PartySettings.partyRange(), this, attacker, true)) {
                             continue;
                         }
 
@@ -337,7 +338,7 @@ public class Attackable extends Npc {
 
                 if (party != null) {
                     final CommandChannel command = party.getCommandChannel();
-                    var partyRange = CharacterSettings.partyRange;
+                    var partyRange = PartySettings.partyRange();
                     //@formatter:off
                     final List<Player> members = command != null ?
                             command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, partyRange)).collect(Collectors.toList()) :
@@ -462,7 +463,7 @@ public class Attackable extends Npc {
 
                             // If the Player is in the Attackable rewards add its damages to party damages
                             if (reward2 != null) {
-                                if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true)) {
+                                if (GameUtils.checkIfInRange(PartySettings.partyRange(), this, partyPlayer, true)) {
                                     partyDmg += reward2.getDamage(); // Add Player damages to party damages
                                     rewardedMembers.add(partyPlayer);
 
@@ -475,7 +476,7 @@ public class Attackable extends Npc {
                                     }
                                 }
                                 rewards.remove(partyPlayer); // Remove the Player from the Attackable rewards
-                            } else if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true)) {
+                            } else if (GameUtils.checkIfInRange(PartySettings.partyRange(), this, partyPlayer, true)) {
                                 rewardedMembers.add(partyPlayer);
                                 if (partyPlayer.getLevel() > partyLvl) {
                                     if (attackerParty.isInCommandChannel()) {

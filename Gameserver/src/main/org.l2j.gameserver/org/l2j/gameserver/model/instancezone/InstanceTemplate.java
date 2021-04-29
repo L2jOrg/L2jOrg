@@ -46,6 +46,7 @@ import org.l2j.gameserver.model.instancezone.conditions.ConditionGroupMin;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.settings.PartySettings;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -222,7 +223,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
                 groupMask |= GroupType.NONE.getMask();
             }
             // Party
-            final int partySize = Config.ALT_PARTY_MAX_MEMBERS;
+            final int partySize = PartySettings.maxMembers();
             if (((max > 1) && (max <= partySize)) || ((min <= partySize) && (max > partySize))) {
                 groupMask |= GroupType.PARTY.getMask();
             }
