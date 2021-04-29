@@ -18,10 +18,9 @@
  */
 package org.l2j.authserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
-public class AuthServerSettings implements Settings {
+public class AuthServerSettings {
 
     private static String gameServerListenHost;
     private static int gameServerListenPort;
@@ -34,8 +33,7 @@ public class AuthServerSettings implements Settings {
     private static String usernameTemplate;
     private static int gmMinimumLevel;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
+    public static void load(SettingsFile settingsFile) {
         gameServerListenHost = settingsFile.getString("GameServerListenHostname", "*");
         gameServerListenPort = settingsFile.getInt("GameServerListenPort", 9013);
         hostName = settingsFile.getString("Hostname", "*");

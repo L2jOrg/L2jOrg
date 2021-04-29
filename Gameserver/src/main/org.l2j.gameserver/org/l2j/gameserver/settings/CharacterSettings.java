@@ -19,7 +19,6 @@
 package org.l2j.gameserver.settings;
 
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -31,7 +30,7 @@ import static java.lang.Math.max;
 /**
  * @author JoeAlisson
  */
-public class CharacterSettings implements Settings {
+public class CharacterSettings  {
 
     public static boolean autoLootRaid;
     public static int raidLootPrivilegeTime;
@@ -109,10 +108,12 @@ public class CharacterSettings implements Settings {
     private static int dwarfMaxSlotWarehouse;
     private static int maxSlotWarehouse;
     private static int[] nonAugmentedItems;
+    private static byte startLevel;
+    private static int startSP;
 
-
-    @Override
-    public void load(SettingsFile settingsFile) {
+    public static void load(SettingsFile settingsFile) {
+        startLevel = settingsFile.getByte("StartingLevel", (byte) 1);
+        startSP = settingsFile.getInt("StartingSP", 0);
         autoLoot = settingsFile.getBoolean("AutoLoot", false);
         autoLootItems = settingsFile.getIntSet("AutoLootItemIds", ",");
         autoLootRaid = settingsFile.getBoolean("AutoLootRaids", false);
@@ -242,5 +243,13 @@ public class CharacterSettings implements Settings {
 
     public static boolean canBeAugmented(int itemId) {
         return Arrays.binarySearch(nonAugmentedItems, itemId) < 0;
+    }
+
+    public static byte startLevel() {
+        return startLevel;
+    }
+
+    public static int startSP() {
+        return startSP;
     }
 }

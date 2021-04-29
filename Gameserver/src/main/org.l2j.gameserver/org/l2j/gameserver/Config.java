@@ -98,10 +98,6 @@ public final class Config {
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
-    public static long STARTING_ADENA;
-    public static byte STARTING_LEVEL;
-    public static int STARTING_SP;
-
     public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
 
     public static boolean ENABLE_KEYBOARD_MOVEMENT;
@@ -745,10 +741,6 @@ public final class Config {
 
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
-
-        STARTING_ADENA = Character.getLong("StartingAdena", 0);
-        STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
-        STARTING_SP = Character.getInt("StartingSP", 0);
 
         LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
 

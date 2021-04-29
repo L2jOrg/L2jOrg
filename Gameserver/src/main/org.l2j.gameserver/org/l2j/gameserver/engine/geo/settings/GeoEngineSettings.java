@@ -18,20 +18,18 @@
  */
 package org.l2j.gameserver.engine.geo.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.engine.geo.SyncMode;
 
 /**
  * @author JoeAlisson
  */
-public class GeoEngineSettings implements Settings {
+public class GeoEngineSettings {
 
     private static SyncMode syncMode;
     private static boolean enabledPathFinding;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
+    public static void load(SettingsFile settingsFile) {
         syncMode = settingsFile.getEnum("SyncMode", SyncMode.class, SyncMode.Z_ONLY);
         enabledPathFinding = settingsFile.getBoolean("EnablePathFinding", true);
     }

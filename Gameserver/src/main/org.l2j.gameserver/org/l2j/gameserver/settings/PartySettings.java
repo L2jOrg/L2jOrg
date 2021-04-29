@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
 import java.util.Arrays;
@@ -26,7 +25,7 @@ import java.util.Arrays;
 /**
  * @author JoeAlisson
  */
-public class PartySettings implements Settings {
+public class PartySettings {
 
     private static int maxMembers;
     private static int partyRange;
@@ -34,8 +33,7 @@ public class PartySettings implements Settings {
     private static int[] xpCutoffGaps;
     private static int[] xpCutoffGapsPercent;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
+    public static void load(SettingsFile settingsFile) {
         maxMembers = settingsFile.getInt("AltPartyMaxMembers", 9);
         partyRange = settingsFile.getInt("AltPartyRange", 1600);
         keepPartyOnLeaderLeave = settingsFile.getBoolean("AltLeavePartyLeader", false);
@@ -46,7 +44,6 @@ public class PartySettings implements Settings {
         if(xpCutoffGapsPercent.length < xpCutoffGaps.length) {
             xpCutoffGapsPercent = Arrays.copyOf(xpCutoffGapsPercent, xpCutoffGaps.length);
         }
-
     }
 
     public static int maxMembers() {
