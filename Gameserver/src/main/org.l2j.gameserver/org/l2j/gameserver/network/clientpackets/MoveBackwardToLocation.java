@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.AdminTeleportType;

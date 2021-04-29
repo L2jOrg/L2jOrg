@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.PetitionState;
@@ -36,7 +35,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 
 /**
  * Petition Manager

@@ -19,7 +19,6 @@
 package org.l2j.gameserver.world;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.settings.CharacterSettings;

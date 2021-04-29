@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.ai.others;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.instance.Player;
