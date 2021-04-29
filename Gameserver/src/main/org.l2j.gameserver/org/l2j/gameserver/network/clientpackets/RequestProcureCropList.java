@@ -47,7 +47,7 @@ public class RequestProcureCropList extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if (count <= 0 || count > CharacterSettings.maxItemInPacket || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 

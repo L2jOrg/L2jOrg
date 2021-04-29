@@ -41,7 +41,7 @@ public final class RequestPrivateStoreSell extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _storePlayerId = readInt();
         int itemsCount = readInt();
-        if (itemsCount <= 0 || itemsCount > CharacterSettings.maxItemInPacket) {
+        if (itemsCount <= 0 || itemsCount > CharacterSettings.maxItemInPacket()) {
             throw new InvalidDataPacketException();
         }
         _items = new ItemRequest[itemsCount];

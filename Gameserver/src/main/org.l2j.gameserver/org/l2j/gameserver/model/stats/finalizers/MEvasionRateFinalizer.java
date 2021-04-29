@@ -53,7 +53,7 @@ public class MEvasionRateFinalizer implements IStatsFunction {
                 baseValue += (level - 69) + 2;
             }
         }
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), Double.NEGATIVE_INFINITY, CharacterSettings.maxEvasion);
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), Double.NEGATIVE_INFINITY, CharacterSettings.maxEvasion());
     }
 
     @Override

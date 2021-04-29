@@ -50,7 +50,7 @@ public final class RequestBidItemAuction extends ClientPacket {
             return;
         }
 
-        if ((_bid < 0) || (_bid > CharacterSettings.maxAdena)) {
+        if ((_bid < 0) || (_bid > CharacterSettings.maxAdena())) {
             return;
         }
 

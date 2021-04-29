@@ -33,6 +33,10 @@ public class AuthServerSettings {
     private static String usernameTemplate;
     private static int gmMinimumLevel;
 
+    private AuthServerSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         gameServerListenHost = settingsFile.getString("GameServerListenHostname", "*");
         gameServerListenPort = settingsFile.getInt("GameServerListenPort", 9013);

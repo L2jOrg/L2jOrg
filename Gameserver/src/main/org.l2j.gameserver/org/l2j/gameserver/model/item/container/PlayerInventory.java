@@ -667,7 +667,7 @@ public class PlayerInventory extends Inventory {
     }
 
     public boolean validateCapacity(long slots, boolean questItem) {
-        return slots == 0 || questItem ? questItems.size() + slots <= CharacterSettings.maxSlotsQuestItem  : getSize() + slots <= owner.getInventoryLimit();
+        return slots == 0 || questItem ? questItems.size() + slots <= CharacterSettings.maxSlotsQuestItem()  : getSize() + slots <= owner.getInventoryLimit();
     }
 
     @Override

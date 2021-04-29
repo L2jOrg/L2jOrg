@@ -114,7 +114,7 @@ public final class TradeRequest extends ClientPacket {
         }
 
         // L2J Customs: Karma punishment
-        if(!CharacterSettings.canPkTrade) {
+        if(!CharacterSettings.canPkTrade()) {
             if(player.getReputation() < 0) {
                 player.sendMessage("You cannot trade while you are in a chaotic state.");
                 return;

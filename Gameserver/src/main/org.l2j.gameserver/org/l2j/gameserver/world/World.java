@@ -37,7 +37,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;

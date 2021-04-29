@@ -308,7 +308,7 @@ public final class BuffInfo {
             if (effect.getTicks() > 0) {
                 // The task for the effect ticks.
                 final EffectTickTask effectTask = new EffectTickTask(this, effect);
-                var effectTickRatio = CharacterSettings.effectTickRatio * effect.getTicks();
+                var effectTickRatio = CharacterSettings.effectTickRatio() * effect.getTicks();
                 final ScheduledFuture<?> scheduledFuture = ThreadPool.scheduleAtFixedRate(effectTask, effectTickRatio, effectTickRatio);
                 addTask(effect, new EffectTaskInfo(scheduledFuture));
             }
@@ -396,6 +396,6 @@ public final class BuffInfo {
             return false;
         }
 
-        return !skill.isDance() || CharacterSettings.storeDances;
+        return !skill.isDance() || CharacterSettings.storeDances();
     }
 }

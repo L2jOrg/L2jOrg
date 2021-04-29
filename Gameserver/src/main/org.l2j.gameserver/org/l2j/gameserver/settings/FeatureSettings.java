@@ -27,6 +27,10 @@ public class FeatureSettings {
 
     private static int[] siegeHours;
 
+    private FeatureSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         siegeHours =  settingsFile.getIntArray("SiegeHourList", ",");
     }

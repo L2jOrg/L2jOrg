@@ -75,7 +75,7 @@ public final class RequestOustPledgeMember extends ClientPacket {
             return;
         }
 
-        var daysToJoinClan = System.currentTimeMillis() + ClanSettings.daysToJoinClan * 86400000L;
+        var daysToJoinClan = System.currentTimeMillis() + ClanSettings.daysToJoinClan() * 86400000L;
 
         clan.removeClanMember(member.getObjectId(), daysToJoinClan);
         clan.setCharPenaltyExpiryTime(daysToJoinClan);

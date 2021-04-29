@@ -53,7 +53,7 @@ public final class RequestWithdrawalPledge extends ClientPacket {
 
         final Clan clan = activeChar.getClan();
 
-        clan.removeClanMember(activeChar.getObjectId(), System.currentTimeMillis() + ClanSettings.daysToJoinClan * 86400000L); // 24*60*60*1000 = 86400000
+        clan.removeClanMember(activeChar.getObjectId(), System.currentTimeMillis() + ClanSettings.daysToJoinClan() * 86400000L); // 24*60*60*1000 = 86400000
 
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_WITHDRAWN_FROM_THE_CLAN);
         sm.addString(activeChar.getName());

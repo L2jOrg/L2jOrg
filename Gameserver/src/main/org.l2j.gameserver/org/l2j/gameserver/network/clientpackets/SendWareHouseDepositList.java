@@ -53,7 +53,7 @@ public final class SendWareHouseDepositList extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int size = readInt();
-        if (size <= 0 || size > CharacterSettings.maxItemInPacket || size * BATCH_LENGTH != available()) {
+        if (size <= 0 || size > CharacterSettings.maxItemInPacket() || size * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -129,7 +129,7 @@ public final class SendWareHouseDepositList extends ClientPacket {
             return false;
         }
 
-        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse) {
+        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse()) {
             return false;
         }
 

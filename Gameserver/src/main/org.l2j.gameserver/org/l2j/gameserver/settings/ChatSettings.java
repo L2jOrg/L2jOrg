@@ -49,6 +49,10 @@ public class ChatSettings {
     private static int worldChatMinLevel;
     private static Duration worldChatInterval;
 
+    private ChatSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         generalChatLevel = settingsFile.getInt("MinimumGeneralChatLevel", 2);
         whisperChatLevel = settingsFile.getInt("MinimumWhisperChatLevel", 2);

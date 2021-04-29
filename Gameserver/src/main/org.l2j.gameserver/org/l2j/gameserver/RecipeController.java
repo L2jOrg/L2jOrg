@@ -87,7 +87,7 @@ public class RecipeController {
             return;
         }
 
-        var altGameCreation = CharacterSettings.altGameCreation;
+        var altGameCreation = CharacterSettings.altGameCreation();
         // Check if manufacturer is under manufacturing store or private store.
         if (altGameCreation && _activeMakers.containsKey(manufacturer.getObjectId())) {
             player.sendPacket(SystemMessageId.PLEASE_CLOSE_THE_SETUP_WINDOW_FOR_YOUR_PRIVATE_WORKSHOP_OR_PRIVATE_STORE_AND_TRY_AGAIN);
@@ -125,7 +125,7 @@ public class RecipeController {
             return;
         }
 
-        boolean altGAmeCreation = CharacterSettings.altGameCreation;
+        boolean altGAmeCreation = CharacterSettings.altGameCreation();
         // Check if player is busy (possible if alt game creation is enabled)
         if (altGAmeCreation && _activeMakers.containsKey(player.getObjectId())) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1);
@@ -246,7 +246,7 @@ public class RecipeController {
             }
 
             // initial AltStatChange checks
-            if (CharacterSettings.altGameCreation) {
+            if (CharacterSettings.altGameCreation()) {
                 calculateAltStatChange();
             }
 
@@ -260,7 +260,7 @@ public class RecipeController {
 
         @Override
         public void run() {
-            if (!CharacterSettings.craftEnabled) {
+            if (!CharacterSettings.craftEnabled()) {
                 _target.sendMessage("Item creation is currently disabled.");
                 abort();
                 return;
@@ -278,7 +278,7 @@ public class RecipeController {
                 return;
             }
 
-            if (CharacterSettings.altGameCreation && !_activeMakers.containsKey(_player.getObjectId())) {
+            if (CharacterSettings.altGameCreation() && !_activeMakers.containsKey(_player.getObjectId())) {
                 if (_target != _player) {
                     _target.sendMessage("Manufacture aborted");
                     _player.sendMessage("Manufacture aborted");
@@ -290,7 +290,7 @@ public class RecipeController {
                 return;
             }
 
-            if (CharacterSettings.altGameCreation && !_items.isEmpty()) {
+            if (CharacterSettings.altGameCreation() && !_items.isEmpty()) {
                 if (!calculateStatUse(true, true)) {
                     return; // check stat use
                 }
@@ -300,7 +300,7 @@ public class RecipeController {
 
                 // if still not empty, schedule another pass
                 if (!_items.isEmpty()) {
-                    _delay = (int) (CharacterSettings.altGameCreationSpeed * _player.getStats().getReuseTime(_skill) * WorldTimeController.TICKS_PER_SECOND * WorldTimeController.MILLIS_IN_TICK);
+                    _delay = (int) (CharacterSettings.altGameCreationSpeed() * _player.getStats().getReuseTime(_skill) * WorldTimeController.TICKS_PER_SECOND * WorldTimeController.MILLIS_IN_TICK);
 
                     // FIXME: please fix this packet to show crafting animation (somebody)
                     final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
@@ -326,7 +326,7 @@ public class RecipeController {
         }
 
         private void finishCrafting() {
-            if (!CharacterSettings.altGameCreation) {
+            if (!CharacterSettings.altGameCreation()) {
                 calculateStatUse(false, true);
             }
 
@@ -379,7 +379,7 @@ public class RecipeController {
         }
 
         private double getCraftCriticalRate() {
-            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, CharacterSettings.criticalCraftRate);
+            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, CharacterSettings.criticalCraftRate());
         }
 
         private void updateMakeInfo(boolean success) {
@@ -454,7 +454,7 @@ public class RecipeController {
 
         private boolean calculateStatUse(boolean isWait, boolean isReduce) {
             boolean ret = true;
-            boolean altGameCreation = CharacterSettings.altGameCreation;
+            boolean altGameCreation = CharacterSettings.altGameCreation();
             for (RecipeStat statUse : _recipeList.getStatUse()) {
                 final double modifiedValue = statUse.getValue() / _creationPasses;
                 if (statUse.getType() == StatType.HP) {
@@ -612,7 +612,7 @@ public class RecipeController {
                 _target.sendPacket(sm);
             }
 
-            if (CharacterSettings.altGameCreation) {
+            if (CharacterSettings.altGameCreation()) {
                 final int recipeLevel = _recipeList.getLevel();
                 if (_exp < 0) {
                     _exp = template.getReferencePrice() * itemCount;
@@ -622,8 +622,8 @@ public class RecipeController {
                     _sp = _exp / 10;
                 }
                 if (itemId == rareProdId) {
-                    _exp *= CharacterSettings.altGameCreationRareXpSpRate;
-                    _sp *= CharacterSettings.altGameCreationRareXpSpRate;
+                    _exp *= CharacterSettings.altGameCreationRareXpSpRate();
+                    _sp *= CharacterSettings.altGameCreationRareXpSpRate();
                 }
 
                 if (_exp < 0) {
@@ -640,7 +640,7 @@ public class RecipeController {
 
                 // Added multiplication of Creation speed with XP/SP gain slower crafting -> more XP,
                 // faster crafting -> less XP you can use ALT_GAME_CREATION_XP_RATE/SP to modify XP/SP gained (default = 1)
-                _player.addExpAndSp((int) _player.getStats().getValue(Stat.EXPSP_RATE, _exp * CharacterSettings.altGameCreationXpRate * CharacterSettings.altGameCreationSpeed), (int) _player.getStats().getValue(Stat.EXPSP_RATE, _sp * CharacterSettings.altGameCreationSpRate * CharacterSettings.altGameCreationSpeed));
+                _player.addExpAndSp((int) _player.getStats().getValue(Stat.EXPSP_RATE, _exp * CharacterSettings.altGameCreationXpRate() * CharacterSettings.altGameCreationSpeed()), (int) _player.getStats().getValue(Stat.EXPSP_RATE, _sp * CharacterSettings.altGameCreationSpRate() * CharacterSettings.altGameCreationSpeed()));
             }
             updateMakeInfo(true); // success
         }

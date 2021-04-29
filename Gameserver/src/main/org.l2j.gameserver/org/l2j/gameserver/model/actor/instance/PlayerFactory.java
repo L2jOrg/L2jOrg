@@ -99,11 +99,13 @@ public class PlayerFactory {
         player.setTeleportFavorites(playerDAO.findTeleportFavorites(playerId));
 
         player.setHeading(playerData.getHeading());
-        player.getStats().setExp(playerData.getExp());
-        player.getStats().setLevel(playerData.getLevel());
-        player.getStats().setSp(playerData.getSp());
+        var stats = player.getStats();
+        stats.setExp(playerData.getExp());
+        stats.setStartingXp(playerData.getExp());
+        stats.setLevel(playerData.getLevel());
+        stats.setSp(playerData.getSp());
         player.setNoble(playerData.isNobless());
-        player.getStats().setVitalityPoints(playerData.getVitalityPoints());
+        stats.setVitalityPoints(playerData.getVitalityPoints());
 
         if(Olympiad.getInstance().isHero(playerId)) {
             player.setHero(true);

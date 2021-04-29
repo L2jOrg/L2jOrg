@@ -43,7 +43,7 @@ public class MAttackSpeedFinalizer implements IStatsFunction {
 
         final double witBonus = creature.getWIT() > 0 ? BaseStats.WIT.calcBonus(creature) : 1.;
         baseValue *= witBonus;
-        return validateValue(creature, defaultValue(creature, stat, baseValue), 1, CharacterSettings.maxMAtkSpeed);
+        return validateValue(creature, defaultValue(creature, stat, baseValue), 1, CharacterSettings.maxMAtkSpeed());
     }
 
     private double defaultValue(Creature creature, Stat stat, double baseValue) {

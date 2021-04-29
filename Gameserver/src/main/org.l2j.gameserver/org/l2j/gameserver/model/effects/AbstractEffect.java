@@ -58,7 +58,7 @@ public abstract class AbstractEffect  {
     }
 
     public double getTicksMultiplier() {
-        return (getTicks() * CharacterSettings.effectTickRatio) / 1000f;
+        return (getTicks() * CharacterSettings.effectTickRatio()) / 1000f;
     }
 
     /**

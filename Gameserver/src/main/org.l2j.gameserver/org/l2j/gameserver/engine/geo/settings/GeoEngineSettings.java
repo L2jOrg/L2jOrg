@@ -29,6 +29,10 @@ public class GeoEngineSettings {
     private static SyncMode syncMode;
     private static boolean enabledPathFinding;
 
+    private GeoEngineSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         syncMode = settingsFile.getEnum("SyncMode", SyncMode.class, SyncMode.Z_ONLY);
         enabledPathFinding = settingsFile.getBoolean("EnablePathFinding", true);

@@ -88,7 +88,7 @@ public class Merchant extends Folk {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !CharacterSettings.canPkShop && showPkDenyChatWindow(player, "merchant")) {
+        if(player.getReputation() < 0 && !CharacterSettings.canPkShop() && showPkDenyChatWindow(player, "merchant")) {
             return;
         }
         super.showChatWindow(player, val);

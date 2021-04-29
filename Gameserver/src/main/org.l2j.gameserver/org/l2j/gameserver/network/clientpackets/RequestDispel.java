@@ -60,7 +60,7 @@ public class RequestDispel extends ClientPacket {
         if (skill.getAbnormalType() == AbnormalType.TRANSFORM) {
             return;
         }
-        if (skill.isDance() && !CharacterSettings.dispelDanceAllowed) {
+        if (skill.isDance() && !CharacterSettings.dispelDanceAllowed()) {
             return;
         }
         if (player.getObjectId() == _objectId) {

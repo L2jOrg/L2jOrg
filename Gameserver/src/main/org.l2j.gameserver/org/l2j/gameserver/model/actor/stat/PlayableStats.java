@@ -94,7 +94,7 @@ public class PlayableStats extends CreatureStats {
     }
 
     public boolean removeExp(long value) {
-        if (getExp() - value < getExpForLevel(getLevel()) && !CharacterSettings.delevel) {
+        if (getExp() - value < getExpForLevel(getLevel()) && !CharacterSettings.delevel()) {
             value = getExp() - getExpForLevel(getLevel());
         }
 

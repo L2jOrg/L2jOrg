@@ -47,7 +47,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -87,7 +87,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
 
         player.getManufactureItems().clear();
 
-        var maxAdena = CharacterSettings.maxAdena;
+        var maxAdena = CharacterSettings.maxAdena();
         for (ManufactureItem item : _items) {
             final RecipeList list = RecipeData.getInstance().getRecipeList(item.getRecipeId());
             if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {

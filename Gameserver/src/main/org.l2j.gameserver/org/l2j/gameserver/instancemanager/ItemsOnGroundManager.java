@@ -72,11 +72,11 @@ public final class ItemsOnGroundManager implements Runnable {
             World.getInstance().addObject(item);
             items.add(item);
 
-            if (!GeneralSettings.isProtectedItem(item.getId()) && !item.isProtected()) {
-                if ((GeneralSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect())
-                        || (GeneralSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
-                    ItemsAutoDestroy.getInstance().addItem(item);
-                }
+            if (!GeneralSettings.isProtectedItem(item.getId()) && !item.isProtected()
+                    && ((GeneralSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect())
+                        || (GeneralSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect()))) {
+
+                ItemsAutoDestroy.getInstance().addItem(item);
             }
         });
 

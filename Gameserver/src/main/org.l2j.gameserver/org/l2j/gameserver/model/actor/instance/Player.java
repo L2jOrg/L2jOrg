@@ -414,7 +414,7 @@ public final class Player extends Playable {
     }
 
     public boolean teleportInBattle() {
-        return !isInBattle() && CharacterSettings.teleportInBattle;
+        return !isInBattle() && CharacterSettings.teleportInBattle();
     }
 
     public void setAutoPlaySettings(AutoPlaySettings autoPlaySettings) {
@@ -2092,7 +2092,7 @@ public final class Player extends Playable {
 
     public void setFame(int fame) {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, data.getFame(), fame), this);
-        data.setFame(Math.min(fame, CharacterSettings.maxFame));
+        data.setFame(Math.min(fame, CharacterSettings.maxFame()));
     }
 
     public int getRaidbossPoints() {
@@ -2222,8 +2222,8 @@ public final class Player extends Playable {
      */
     public void rewardSkills() {
         // Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
-        if (CharacterSettings.autoLearnSkillEnabled) {
-            giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled, true);
+        if (CharacterSettings.autoLearnSkillEnabled()) {
+            giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled(), true);
         } else {
             giveAvailableAutoGetSkills();
         }
@@ -2272,7 +2272,7 @@ public final class Player extends Playable {
             skillsForStore.add(skill);
         }
         storeSkills(skillsForStore);
-        if (skillCounter > 0 && CharacterSettings.autoLearnSkillEnabled) {
+        if (skillCounter > 0 && CharacterSettings.autoLearnSkillEnabled()) {
             sendMessage("You have learned " + skillCounter + " new skills.");
         }
         return skillCounter;
@@ -2913,10 +2913,10 @@ public final class Player extends Playable {
         }
 
         item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
-        if ((GeneralSettings.autoDestroyItemTime() > 0) && GeneralSettings.destroyPlayerDroppedItem() && !GeneralSettings.isProtectedItem(item.getId())) {
-            if (!item.isEquipable() || GeneralSettings.destroyEquipableItem()) {
-                ItemsAutoDestroy.getInstance().addItem(item);
-            }
+        if (GeneralSettings.autoDestroyItemTime() > 0 && GeneralSettings.destroyPlayerDroppedItem() && !GeneralSettings.isProtectedItem(item.getId())
+                && (!item.isEquipable() || GeneralSettings.destroyEquipableItem())) {
+
+            ItemsAutoDestroy.getInstance().addItem(item);
         }
 
         // protection against auto destroy dropped item
@@ -2980,10 +2980,11 @@ public final class Player extends Playable {
 
         item.dropMe(this, x, y, z);
 
-        if ((GeneralSettings.autoDestroyItemTime() > 0) && GeneralSettings.destroyPlayerDroppedItem() && !GeneralSettings.isProtectedItem(item.getId())) {
-            if (!item.isEquipable() || GeneralSettings.destroyEquipableItem()) {
-                ItemsAutoDestroy.getInstance().addItem(item);
-            }
+        if ((GeneralSettings.autoDestroyItemTime() > 0) && GeneralSettings.destroyPlayerDroppedItem() && !GeneralSettings.isProtectedItem(item.getId())
+            && (!item.isEquipable() || GeneralSettings.destroyEquipableItem())) {
+
+            ItemsAutoDestroy.getInstance().addItem(item);
+
         }
         if (GeneralSettings.destroyPlayerDroppedItem()) {
             item.setProtected(item.isEquipable() && !GeneralSettings.destroyEquipableItem());
@@ -5472,7 +5473,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (!CharacterSettings.allowPKTeleport && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
+        if (!CharacterSettings.allowPKTeleport() && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -6335,7 +6336,7 @@ public final class Player extends Playable {
                 sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
             }
 
-            if (CharacterSettings.restoreSummonOnReconnect && !hasSummon()) {
+            if (CharacterSettings.restoreSummonOnReconnect() && !hasSummon()) {
                 if(PlayerSummonTable.getInstance().getServitors().containsKey(getObjectId())) {
                     PlayerSummonTable.getInstance().restoreServitor(this);
                 } else if(PlayerSummonTable.getInstance().getPets().containsKey(getObjectId())) {
@@ -6897,11 +6898,11 @@ public final class Player extends Playable {
     }
 
     public int getDwarfRecipeLimit() {
-        return CharacterSettings.dwarfRecipeLimit + (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
+        return CharacterSettings.dwarfRecipeLimit() + (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
     }
 
     public int getCommonRecipeLimit() {
-        return CharacterSettings.recipeLimit + (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
+        return CharacterSettings.recipeLimit() + (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
     }
 
     /**

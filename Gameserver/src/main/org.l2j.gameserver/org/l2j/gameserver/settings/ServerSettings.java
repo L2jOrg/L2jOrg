@@ -62,6 +62,10 @@ public class ServerSettings {
     private static int maxThreadPoolSize;
     private static int parallelismThreshold;
 
+    private ServerSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         serverId = settingsFile.getInt("RequestServerID", 1);
         acceptAlternativeId = settingsFile.getBoolean("AcceptAlternateID", true);

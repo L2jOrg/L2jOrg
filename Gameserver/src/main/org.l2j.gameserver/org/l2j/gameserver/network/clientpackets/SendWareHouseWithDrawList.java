@@ -50,7 +50,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -97,11 +97,11 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse) {
+        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse()) {
             return;
         }
 
-        if (ClanSettings.canMembersWithdrawFromWarehouse) {
+        if (ClanSettings.canMembersWithdrawFromWarehouse()) {
             if ((warehouse instanceof ClanWarehouse) && !player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE)) {
                 return;
             }

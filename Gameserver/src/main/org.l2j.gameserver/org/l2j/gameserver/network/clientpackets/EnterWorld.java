@@ -146,7 +146,7 @@ public class EnterWorld extends ClientPacket {
             player.setIsDead(true);
         }
 
-        if (CharacterSettings.vitalityEnabled) {
+        if (CharacterSettings.vitalityEnabled()) {
             player.sendPacket(new ExVitalityEffectInfo(player));
         }
 

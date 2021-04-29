@@ -52,6 +52,10 @@ public class GeneralSettings {
     private static IntSet protectedItems;
     private static boolean clearDroppedItemsAfterLoad;
 
+    private GeneralSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
 
         banChatAdenaAdsReportCount = settingsFile.getInt("BanChatAdenaADSReportCount", 10);

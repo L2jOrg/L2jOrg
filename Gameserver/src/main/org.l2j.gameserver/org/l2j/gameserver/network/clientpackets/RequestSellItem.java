@@ -56,7 +56,7 @@ public final class RequestSellItem extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _listId = readInt();
         final int size = readInt();
-        if (size <= 0 || size > CharacterSettings.maxItemInPacket || size * BATCH_LENGTH != available()) {
+        if (size <= 0 || size > CharacterSettings.maxItemInPacket() || size * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException("Invalid Size " + size);
         }
 
@@ -90,7 +90,7 @@ public final class RequestSellItem extends ClientPacket {
             return;
         }
 
-        if (player.getReputation() < 0 && !CharacterSettings.canPkShop) {
+        if (player.getReputation() < 0 && !CharacterSettings.canPkShop()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -136,8 +136,8 @@ public final class RequestSellItem extends ClientPacket {
 
             long price = item.getReferencePrice() / 2;
             totalPrice += price * i.getCount();
-            if (MathUtil.checkMulOverFlow(price, i.getCount(), CharacterSettings.maxAdena)) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + CharacterSettings.maxAdena + " adena worth of goods.");
+            if (MathUtil.checkMulOverFlow(price, i.getCount(), CharacterSettings.maxAdena())) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + CharacterSettings.maxAdena() + " adena worth of goods.");
                 return;
             }
 

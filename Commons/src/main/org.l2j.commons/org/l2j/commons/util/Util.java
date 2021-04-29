@@ -123,7 +123,7 @@ public class Util {
     }
 
     public static String hash(final String value) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance(CommonSettings.hashAlgorithm());
+        var md = MessageDigest.getInstance(CommonSettings.hashAlgorithm());
         byte[] raw = value.getBytes(StandardCharsets.UTF_8);
         return Base64.getEncoder().encodeToString(md.digest(raw));
     }

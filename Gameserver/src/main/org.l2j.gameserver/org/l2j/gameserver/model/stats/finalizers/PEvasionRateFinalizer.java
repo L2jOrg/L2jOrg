@@ -71,7 +71,7 @@ public class PEvasionRateFinalizer implements IStatsFunction {
             }
         }
 
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), Double.NEGATIVE_INFINITY, CharacterSettings.maxEvasion);
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), Double.NEGATIVE_INFINITY, CharacterSettings.maxEvasion());
     }
 
     @Override

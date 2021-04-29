@@ -38,7 +38,7 @@ public class Recipes implements IItemHandler
 {
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse) {
-		if (!CharacterSettings.craftEnabled) {
+		if (!CharacterSettings.craftEnabled()) {
 			playable.sendMessage("Crafting is disabled, you cannot register this recipe.");
 			return false;
 		}

@@ -61,7 +61,7 @@ public class PlayerSummonTable {
     }
 
     public void init() {
-        if (CharacterSettings.restoreSummonOnReconnect) {
+        if (CharacterSettings.restoreSummonOnReconnect()) {
 
             getDAO(SummonDAO.class).findAllSummonOwners().forEach(data -> servitors.computeIfAbsent(data.getOwnerId(), id ->  CHashIntMap.newKeySet()).add(data.getSummonId()));
             getDAO(PetDAO.class).findAllPetOwnersByRestore().forEach(data -> pets.put(data.getOwnerId(), data.getItemObjectId()));

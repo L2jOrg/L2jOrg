@@ -63,7 +63,7 @@ public class PlayerFreight extends Warehouse {
 
     @Override
     public boolean validateCapacity(long slots) {
-        final int maxSlot = CharacterSettings.maxSlotFreight;
+        final int maxSlot = CharacterSettings.maxSlotFreight();
         return getSize() + slots <= maxSlot;
     }
 

@@ -1178,17 +1178,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             setIsDead(false);
 
 
-            var restore = CharacterSettings.restoreCPPercent * stats.getMaxCp();
+            var restore = CharacterSettings.restoreCPPercent() * stats.getMaxCp();
             if(restore > status.getCurrentCp()) {
                 status.setCurrentCp(restore);
             }
 
-            restore = CharacterSettings.restoreHPPercent * stats.getMaxHp();
+            restore = CharacterSettings.restoreHPPercent() * stats.getMaxHp();
             if(restore > status.getCurrentHp()) {
                 status.setCurrentHp(restore);
             }
 
-            restore = CharacterSettings.restoreMPPercent * stats.getMaxMp();
+            restore = CharacterSettings.restoreMPPercent() * stats.getMaxMp();
             if(restore > status.getCurrentMp()) {
                 status.setCurrentMp(restore);
             }
@@ -2772,7 +2772,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return false;
         }
 
-        if (CharacterSettings.canAttackPkInPeaceZone) {
+        if (CharacterSettings.canAttackPkInPeaceZone()) {
             // allows red to be attacked and red to attack flagged players
             if ((target.getActingPlayer() != null) && (target.getActingPlayer().getReputation() < 0)) {
                 return false;
@@ -3333,7 +3333,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public int getMaxLoad() {
         if (isPlayer(this) || isPet(this)) {
             // Source http://l2p.bravehost.com/weightlimit.html (May 2007)
-            final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * CharacterSettings.weightLimitMultiplier);
+            final double baseLoad = Math.floor(BaseStats.CON.calcBonus(this) * 69000 * CharacterSettings.weightLimitMultiplier());
             return (int) stats.getValue(Stat.WEIGHT_LIMIT, baseLoad);
         }
         return 0;

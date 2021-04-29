@@ -217,12 +217,9 @@ public final class Item extends WorldObject {
     public void changeOwner(String process, int ownerId, Player creator, WorldObject reference) {
         changeOwner(ownerId);
 
-        if (GeneralSettings.logItems()) {
-            if (!GeneralSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
-                LOG_ITEMS.info("SETOWNER: {}, +{} item {} ({}), {}, {}", process, this, data.getEnchantLevel(), data.getCount(), creator, reference);
-            }
+        if (GeneralSettings.logItems() && (!GeneralSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA)) {
+            LOG_ITEMS.info("SETOWNER: {}, +{} item {} ({}), {}, {}", process, this, data.getEnchantLevel(), data.getCount(), creator, reference);
         }
-
         auditItem(process, getCount(), creator, reference);
     }
 
@@ -296,7 +293,7 @@ public final class Item extends WorldObject {
             return;
         }
         final long old = data.getCount();
-        final long max = data.getItemId() == CommonItem.ADENA ? CharacterSettings.maxAdena : Long.MAX_VALUE;
+        final long max = data.getItemId() == CommonItem.ADENA ? CharacterSettings.maxAdena() : Long.MAX_VALUE;
 
         if (count > 0 && data.getCount() > (max - count)) {
             setCount(max);
@@ -306,10 +303,8 @@ public final class Item extends WorldObject {
 
         storedInDb = false;
 
-        if (GeneralSettings.logItems() && (process != null)) {
-            if (!GeneralSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
-                LOG_ITEMS.info("CHANGE: {}, +{} item {} ({}), prev count {}, {}, {}", process, this, data.getEnchantLevel(), data.getCount(), old, creator, reference);
-            }
+        if (GeneralSettings.logItems() && process != null && (!GeneralSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA)){
+            LOG_ITEMS.info("CHANGE: {}, +{} item {} ({}), prev count {}, {}, {}", process, this, data.getEnchantLevel(), data.getCount(), old, creator, reference);
         }
 
         auditItem(process, count, creator, reference);

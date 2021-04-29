@@ -266,7 +266,7 @@ public class ClanMember {
         if(!isOnline()) {
             return 0;
         }
-        return onlineTime >= ClanSettings.onlineTimeForBonus ? 2 : 1;
+        return onlineTime >= ClanSettings.onlineTimeForBonus() ? 2 : 1;
     }
 
     public int getLastReputationLevel() {

@@ -49,7 +49,7 @@ import static java.util.Objects.isNull;
 public final class SpawnTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpawnTable.class);
     private static final IntMap<Set<Spawn>> _spawnTable = new CHashIntMap<>();
-    private static final String CUSTOM_XML_FOLDER = "data/spawns/custom";
+    private static final String CUSTOM_XML_FOLDER = "data/spawns/custom/";
 
     private SpawnTable() {}
 
@@ -235,7 +235,7 @@ public final class SpawnTable {
         if(isNull(spawn.getNpcSpawnTemplate())) {
             final int x = MapRegionManager.getInstance().getMapRegionX(spawn.getX());
             final int y = MapRegionManager.getInstance().getMapRegionY(spawn.getY());
-            filePath = ServerSettings.dataPackDirectory().resolve(CUSTOM_XML_FOLDER + "/" + x + "_" + y + ".xml");
+            filePath = ServerSettings.dataPackDirectory().resolve(CUSTOM_XML_FOLDER + x + "_" + y + ".xml");
         } else {
             filePath = ServerSettings.dataPackDirectory().resolve(spawn.getNpcSpawnTemplate().getSpawnTemplate().getFilePath());
         }

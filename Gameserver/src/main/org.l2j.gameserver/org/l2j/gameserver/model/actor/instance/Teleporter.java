@@ -128,7 +128,7 @@ public final class Teleporter extends Folk {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !CharacterSettings.canPkTeleport && showPkDenyChatWindow(player, "teleporter")) {
+        if(player.getReputation() < 0 && !CharacterSettings.canPkTeleport() && showPkDenyChatWindow(player, "teleporter")) {
             return;
         }
         super.showChatWindow(player, val);

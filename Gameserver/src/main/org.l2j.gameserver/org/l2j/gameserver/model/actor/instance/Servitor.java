@@ -201,7 +201,7 @@ public class Servitor extends Summon implements Runnable {
             return;
         }
 
-        if (CharacterSettings.restoreSummonOnReconnect) {
+        if (CharacterSettings.restoreSummonOnReconnect()) {
             if (isDead())
             {
                 PlayerSummonTable.getInstance().removeServitor(getOwner(), getObjectId());
@@ -234,7 +234,7 @@ public class Servitor extends Summon implements Runnable {
                     continue;
                 }
 
-                if (skill.isDance() && !CharacterSettings.storeDances) {
+                if (skill.isDance() && !CharacterSettings.storeDances()) {
                     continue;
                 }
 
