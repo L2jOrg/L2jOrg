@@ -39,6 +39,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -129,7 +130,7 @@ public class PlayerStats extends PlayableStats {
 
         // if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
         final Pet pet = activeChar.getPet();
-        if ((pet != null) && GameUtils.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, pet, false)) {
+        if ((pet != null) && GameUtils.checkIfInShortRange(PartySettings.partyRange(), activeChar, pet, false)) {
             ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
 
             // only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio

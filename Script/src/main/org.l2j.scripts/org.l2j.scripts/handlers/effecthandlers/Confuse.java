@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.nonNull;
@@ -70,7 +71,7 @@ public final class Confuse extends AbstractEffect {
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
         effected.getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 
-        var creature = World.getInstance().findAnyVisibleObject(effected, Creature.class, CharacterSettings.partyRange, false,
+        var creature = World.getInstance().findAnyVisibleObject(effected, Creature.class, PartySettings.partyRange(), false,
                 c -> GeoEngine.getInstance().canSeeTarget(effected, c));
         if(nonNull(creature)) {
             effected.setTarget(creature);

@@ -33,7 +33,6 @@ import static java.lang.Math.max;
  */
 public class CharacterSettings implements Settings {
 
-    public static int partyRange;
     public static boolean autoLootRaid;
     public static int raidLootPrivilegeTime;
     public static boolean autoLoot;
@@ -114,8 +113,6 @@ public class CharacterSettings implements Settings {
 
     @Override
     public void load(SettingsFile settingsFile) {
-        partyRange = settingsFile.getInt("AltPartyRange", 1600);
-
         autoLoot = settingsFile.getBoolean("AutoLoot", false);
         autoLootItems = settingsFile.getIntSet("AutoLootItemIds", ",");
         autoLootRaid = settingsFile.getBoolean("AutoLootRaids", false);

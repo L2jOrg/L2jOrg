@@ -98,11 +98,6 @@ public final class Config {
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
-    public static int ALT_PARTY_MAX_MEMBERS;
-    public static int ALT_PARTY_RANGE;
-
-    public static boolean ALT_LEAVE_PARTY_LEADER;
-
     public static long STARTING_ADENA;
     public static byte STARTING_LEVEL;
     public static int STARTING_SP;
@@ -121,11 +116,6 @@ public final class Config {
     public static int MAX_PETITIONS_PENDING;
     public static int MAX_NEWBIE_BUFF_LEVEL;
     public static int DELETE_DAYS;
-    public static String PARTY_XP_CUTOFF_METHOD;
-    public static double PARTY_XP_CUTOFF_PERCENT;
-    public static int PARTY_XP_CUTOFF_LEVEL;
-    public static int[][] PARTY_XP_CUTOFF_GAPS;
-    public static int[] PARTY_XP_CUTOFF_GAP_PERCENTS;
     public static boolean DISABLE_TUTORIAL;
     public static boolean STORE_RECIPE_SHOPLIST;
     public static boolean STORE_UI_SETTINGS;
@@ -445,8 +435,6 @@ public final class Config {
     public static int MAX_REPUTATION;
     public static int REPUTATION_INCREASE;
 
-    public static int[] AUGMENTATION_BLACKLIST;
-
     // GrandBoss Settings
     public static int ANTHARAS_SPAWN_INTERVAL;
     public static int ANTHARAS_SPAWN_RANDOM;
@@ -758,11 +746,6 @@ public final class Config {
         // Load Character config file (if exists)
         final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 
-        ALT_PARTY_MAX_MEMBERS = Character.getInt("AltPartyMaxMembers", 7);
-        ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
-
-        ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
-
         STARTING_ADENA = Character.getLong("StartingAdena", 0);
         STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
         STARTING_SP = Character.getInt("StartingSP", 0);
@@ -782,23 +765,7 @@ public final class Config {
 
         MAX_NEWBIE_BUFF_LEVEL = Character.getInt("MaxNewbieBuffLevel", 0);
         DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
-        PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "highfive").toLowerCase();
-        PARTY_XP_CUTOFF_PERCENT = Character.getDouble("PartyXpCutoffPercent", 3);
-        PARTY_XP_CUTOFF_LEVEL = Character.getInt("PartyXpCutoffLevel", 20);
-        final String[] gaps = Character.getString("PartyXpCutoffGaps", "0,9;10,14;15,99").split(";");
-        PARTY_XP_CUTOFF_GAPS = new int[gaps.length][2];
-        for (int i = 0; i < gaps.length; i++) {
-            PARTY_XP_CUTOFF_GAPS[i] = new int[]
-                    {
-                            Integer.parseInt(gaps[i].split(",")[0]),
-                            Integer.parseInt(gaps[i].split(",")[1])
-                    };
-        }
-        final String[] percents = Character.getString("PartyXpCutoffGapPercent", "100;30;0").split(";");
-        PARTY_XP_CUTOFF_GAP_PERCENTS = new int[percents.length];
-        for (int i = 0; i < percents.length; i++) {
-            PARTY_XP_CUTOFF_GAP_PERCENTS[i] = Integer.parseInt(percents[i]);
-        }
+
         DISABLE_TUTORIAL = Character.getBoolean("DisableTutorial", false);
         STORE_RECIPE_SHOPLIST = Character.getBoolean("StoreRecipeShopList", false);
         STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);

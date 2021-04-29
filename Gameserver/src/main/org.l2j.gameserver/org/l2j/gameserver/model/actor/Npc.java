@@ -57,6 +57,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.Broadcast;
@@ -713,7 +714,7 @@ public class Npc extends Creature {
                 final Party party = killerPlayer.getParty();
                 if (party != null) {
                     for (Player member : party.getMembers()) {
-                        if ((member != killerPlayer) && MathUtil.isInsideRadius3D(member, getX(), getY(), getZ(), Config.ALT_PARTY_RANGE)) {
+                        if ((member != killerPlayer) && MathUtil.isInsideRadius3D(member, getX(), getY(), getZ(), PartySettings.partyRange())) {
                             new MpRewardTask(member, this);
                             for (Summon summon : member.getServitors().values()) {
                                 new MpRewardTask(summon, this);

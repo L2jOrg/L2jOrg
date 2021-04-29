@@ -52,6 +52,7 @@ import org.l2j.gameserver.network.serverpackets.ExQuestNpcLogList;
 import org.l2j.gameserver.network.serverpackets.QuestList;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.html.NpcQuestHtmlMessage;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.Zone;
 import org.slf4j.Logger;
@@ -1232,7 +1233,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
                 continue;
             }
             temp = partyMember.getQuestState(getName());
-            if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && isInsideRadius3D(partyMember, target, Config.ALT_PARTY_RANGE)) {
+            if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && isInsideRadius3D(partyMember, target, PartySettings.partyRange())) {
                 candidates.add(partyMember);
             }
         }
@@ -1280,7 +1281,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     private boolean checkDistanceToTarget(Player player, Npc target) {
-        return (target == null) || GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, player, target, true);
+        return (target == null) || GameUtils.checkIfInRange(PartySettings.partyRange(), player, target, true);
     }
 
     /**

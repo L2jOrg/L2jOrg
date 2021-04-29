@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
@@ -707,7 +708,7 @@ public final class Q00662_AGameOfCards extends Quest
 		}
 		
 		final Player player = players.get(Rnd.get(players.size()));
-		if ((player != null) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
+		if ((player != null) && GameUtils.checkIfInRange(PartySettings.partyRange(), npc, player, false))
 		{
 			if (MONSTERS.get(npc.getId()) < Rnd.get(1000))
 			{

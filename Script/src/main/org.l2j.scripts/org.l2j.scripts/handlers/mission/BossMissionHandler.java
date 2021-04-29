@@ -32,6 +32,7 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.List;
@@ -69,7 +70,7 @@ public class BossMissionHandler extends AbstractMissionHandler
 			{
 				final CommandChannel channel = party.getCommandChannel();
 				final List<Player> members = channel != null ? channel.getMembers() : party.getMembers();
-				members.stream().filter(member -> MathUtil.isInsideRadius3D(member, monster, Config.ALT_PARTY_RANGE)).forEach(this::processPlayerProgress);
+				members.stream().filter(member -> MathUtil.isInsideRadius3D(member, monster, PartySettings.partyRange())).forEach(this::processPlayerProgress);
 			}
 			else
 			{
