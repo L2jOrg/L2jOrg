@@ -32,7 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Mobius
@@ -51,12 +50,12 @@ public class AttendanceEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/attendance.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/attendance.xsd");
     }
 
     @Override
     public void load() {
-        if (getSettings(AttendanceSettings.class).enabled()) {
+        if (AttendanceSettings.enabled()) {
             pcCafeMask = 0;
             rewards.clear();
             parseDatapackFile("data/attendance.xml");

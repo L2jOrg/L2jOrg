@@ -37,7 +37,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 
 import java.util.Set;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
@@ -116,7 +115,7 @@ public class NpcActionShift implements IActionShiftHandler
 				final NpcSpawnTemplate template = spawn.getNpcSpawnTemplate();
 				if (template != null)
 				{
-					final String fileName = template.getSpawnTemplate().getFilePath().substring(getSettings(ServerSettings.class).dataPackDirectory().toFile().getAbsolutePath().length() + 1).replace('\\', '/');
+					final String fileName = template.getSpawnTemplate().getFilePath().substring(ServerSettings.dataPackDirectory().toFile().getAbsolutePath().length() + 1).replace('\\', '/');
 					html.replace("%spawnfile%", fileName);
 					html.replace("%spawnname%", String.valueOf(template.getSpawnTemplate().getName())); // used String.valueOf because it can be null
 					html.replace("%spawngroup%", String.valueOf(template.getGroup().getName())); // used String.valueOf because it can be null

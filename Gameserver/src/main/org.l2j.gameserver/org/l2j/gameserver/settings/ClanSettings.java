@@ -26,18 +26,18 @@ import org.l2j.commons.configuration.SettingsFile;
  */
 public class ClanSettings implements Settings {
 
-    public boolean instantChangeLeader;
-    public int daysToJoinClan;
-    public int daysToCreateClan;
-    public int daysToDissolveClan;
-    public int daysToJoinAllyAfterLeft;
-    public int daysToJoinAllyAfterDismissed;
-    public int daysToAcceptClanAfterDismiss;
-    public int daysToCreateAllyAfterDissolved;
-    public int maxClansInAlly;
-    public int minMembersForWar;
-    public boolean canMembersWithdrawFromWarehouse;
-    public long onlineTimeForBonus;
+    public static boolean instantChangeLeader;
+    public static int daysToJoinClan;
+    public static int daysToCreateClan;
+    public static int daysToDissolveClan;
+    public static int daysToJoinAllyAfterLeft;
+    public static int daysToJoinAllyAfterDismissed;
+    public static int daysToAcceptClanAfterDismiss;
+    public static int daysToCreateAllyAfterDissolved;
+    public static int maxClansInAlly;
+    public static int minMembersForWar;
+    public static boolean canMembersWithdrawFromWarehouse;
+    public static long onlineTimeForBonus;
 
     @Override
     public void load(SettingsFile settingsFile) {

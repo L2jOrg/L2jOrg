@@ -29,8 +29,6 @@ import org.l2j.gameserver.settings.AttendanceSettings;
 
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Mobius
  * @author JoeAlisson
@@ -55,7 +53,7 @@ public class ExVipAttendanceItemList extends ServerPacket {
 
         available = player.canReceiveAttendance() && !rewards.isEmpty();
         vipAvailable = player.getVipTier() > 0 && !vipRewards.isEmpty();
-        minLevel = getSettings(AttendanceSettings.class).minimumLevel();
+        minLevel = AttendanceSettings.minimumLevel();
 
         pcCafeMask = engine.getPcCafeMask();
 

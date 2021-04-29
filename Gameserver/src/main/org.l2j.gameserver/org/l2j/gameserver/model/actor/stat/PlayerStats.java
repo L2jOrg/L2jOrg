@@ -21,6 +21,7 @@ package org.l2j.gameserver.model.actor.stat;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.LevelData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Party;
@@ -29,7 +30,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -47,7 +47,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.Math.round;
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
 import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStatType;
 
@@ -328,7 +327,7 @@ public class PlayerStats extends PlayableStats {
     }
 
     public double getVitalityExpBonus() {
-        return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, getSettings(RateSettings.class).rateVitalityExpMul()) : 1.0;
+        return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, RateSettings.rateVitalityExpMul()) : 1.0;
     }
 
     /*
@@ -368,7 +367,7 @@ public class PlayerStats extends PlayableStats {
     }
 
     public void updateVitalityPoints(int points, boolean useRates) {
-        if (points == 0 || !getSettings(CharacterSettings.class).vitalityEnabled) {
+        if (points == 0 || !CharacterSettings.vitalityEnabled) {
             return;
         }
 
@@ -391,10 +390,10 @@ public class PlayerStats extends PlayableStats {
 
             if (points > 0) {
                 // vitality increased
-                points *= getSettings(RateSettings.class).rateVitalityGain();
+                points *= RateSettings.rateVitalityGain();
             } else {
                 // vitality decreased
-                points *= getSettings(RateSettings.class).rateVitalityLoss();
+                points *= RateSettings.rateVitalityLoss();
             }
         }
 

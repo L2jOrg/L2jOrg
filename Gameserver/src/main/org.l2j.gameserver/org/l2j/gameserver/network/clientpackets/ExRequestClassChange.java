@@ -27,7 +27,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Mobius
@@ -83,9 +82,8 @@ public class ExRequestClassChange extends ClientPacket {
             player.setClassId(classId);
             player.setBaseClass(player.getActiveClass());
 
-            var characterSettings = getSettings(CharacterSettings.class);
-            if (characterSettings.autoLearnSkillEnabled) {
-                player.giveAvailableSkills(characterSettings.autoLearnSkillFSEnabled, true);
+            if (CharacterSettings.autoLearnSkillEnabled) {
+                player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled, true);
             }
             player.store(false); // Save player cause if server crashes before this char is saved, he will lose class.
             player.broadcastUserInfo();

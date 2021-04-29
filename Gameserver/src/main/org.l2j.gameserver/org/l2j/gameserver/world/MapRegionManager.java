@@ -49,7 +49,6 @@ import java.util.Set;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -70,7 +69,7 @@ public final class MapRegionManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/mapregion/map-region.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/mapregion/map-region.xsd");
     }
 
     @Override

@@ -43,7 +43,6 @@ import java.util.EnumSet;
 import java.util.List;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.SPACE;
 
 /**
@@ -180,7 +179,7 @@ public final class TeleportHolder {
                 msg.setFile(player, CASTLE_TELEPORTER_BUSY_HTM);
                 player.sendPacket(msg);
                 return;
-            } else if (player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkTeleport) {
+            } else if (player.getReputation() < 0 && !CharacterSettings.canPkTeleport) {
                 player.sendMessage("Go away, you're not welcome here.");
                 return;
             }
@@ -212,7 +211,7 @@ public final class TeleportHolder {
      * @return {@code true} when all requirements are met otherwise {@code false}
      */
     private boolean shouldPayFee(Player player, TeleportLocation loc) {
-        return !isNormalTeleport() || ((player.getLevel() > getSettings(CharacterSettings.class).maxFreeTeleportLevel) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+        return !isNormalTeleport() || ((player.getLevel() > CharacterSettings.maxFreeTeleportLevel) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
     }
 
     /**
@@ -226,7 +225,7 @@ public final class TeleportHolder {
      */
     private long calculateFee(Player player, TeleportLocation loc) {
         if (isNormalTeleport()) {
-            if (player.getLevel() <= getSettings(CharacterSettings.class).maxFreeTeleportLevel) {
+            if (player.getLevel() <= CharacterSettings.maxFreeTeleportLevel) {
                 return 0;
             }
 

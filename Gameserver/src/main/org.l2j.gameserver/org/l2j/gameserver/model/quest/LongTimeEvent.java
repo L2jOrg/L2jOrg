@@ -49,7 +49,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNotEmpty;
 
@@ -134,7 +133,7 @@ public class LongTimeEvent extends Quest {
 
         @Override
         protected Path getSchemaFilePath() {
-            return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/eventConfig.xsd");
+            return ServerSettings.dataPackDirectory().resolve("data/xsd/eventConfig.xsd");
         }
 
         @Override

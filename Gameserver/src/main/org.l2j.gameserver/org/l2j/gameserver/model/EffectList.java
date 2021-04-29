@@ -43,7 +43,6 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -515,12 +514,12 @@ public final class EffectList {
             // case TOGGLE: Do toggles have limit?
             switch (buffType) {
                 case TRIGGER -> {
-                    if (triggerBuffCount.get() > getSettings(CharacterSettings.class). maxTriggeredBuffs) {
+                    if (triggerBuffCount.get() > CharacterSettings. maxTriggeredBuffs) {
                         return true;
                     }
                 }
                 case DANCE -> {
-                    if (danceCount.get() > getSettings(CharacterSettings.class).maxDances) {
+                    if (danceCount.get() > CharacterSettings.maxDances) {
                         return true;
                     }
                 }

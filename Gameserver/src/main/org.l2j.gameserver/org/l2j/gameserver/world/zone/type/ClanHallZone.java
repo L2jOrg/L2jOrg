@@ -18,10 +18,10 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.isNull;

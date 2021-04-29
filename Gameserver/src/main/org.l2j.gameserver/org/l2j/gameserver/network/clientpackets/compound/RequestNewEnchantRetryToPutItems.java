@@ -19,10 +19,10 @@
 package org.l2j.gameserver.network.clientpackets.compound;
 
 import org.l2j.gameserver.data.xml.CombinationItemsManager;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.item.combination.CombinationItem;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ExEnchantRetryToPutItemFail;

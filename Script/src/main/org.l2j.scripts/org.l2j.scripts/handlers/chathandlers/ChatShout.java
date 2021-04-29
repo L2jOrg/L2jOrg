@@ -30,8 +30,6 @@ import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Shout chat handler.
  * @author durgus
@@ -45,8 +43,7 @@ public final class ChatShout implements IChatHandler {
 	
 	@Override
 	public void handleChat(ChatType type, Player player, String target, String text) {
-		var chatSettings = getSettings(ChatSettings.class);
-		var levelRequired = chatSettings.shoutChatLevel();
+		var levelRequired = ChatSettings.shoutChatLevel();
 
 		if ((player.getLevel() < levelRequired) && !player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SHOUT_CHAT_CANNOT_BE_USED_BY_USERS_LV_S1_OR_LOWER).addInt(levelRequired));
@@ -55,7 +52,7 @@ public final class ChatShout implements IChatHandler {
 		
 		final CreatureSay cs = new CreatureSay(player, type, text);
 
-		if (chatSettings.defaultGlobalChat().equalsIgnoreCase("ON") || (chatSettings.defaultGlobalChat().equalsIgnoreCase("GM") && player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))) {
+		if (ChatSettings.defaultGlobalChat().equalsIgnoreCase("ON") || (ChatSettings.defaultGlobalChat().equalsIgnoreCase("GM") && player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))) {
 			var region = MapRegionManager.getInstance().getMapRegionLocId(player);
 
 			World.getInstance().forEachPlayer(receiver -> {
@@ -64,7 +61,7 @@ public final class ChatShout implements IChatHandler {
 				}
 			});
 		}
-		else if (chatSettings.defaultGlobalChat().equalsIgnoreCase("global")) {
+		else if (ChatSettings.defaultGlobalChat().equalsIgnoreCase("global")) {
 			if (!player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS) && !player.getFloodProtectors().getGlobalChat().tryPerformAction("global chat")) {
 				player.sendMessage("Do not spam shout channel.");
 				return;

@@ -33,8 +33,6 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 public class Merchant extends Folk {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Merchant.class);
@@ -90,7 +88,7 @@ public class Merchant extends Folk {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkShop && showPkDenyChatWindow(player, "merchant")) {
+        if(player.getReputation() < 0 && !CharacterSettings.canPkShop && showPkDenyChatWindow(player, "merchant")) {
             return;
         }
         super.showChatWindow(player, val);

@@ -61,7 +61,6 @@ import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
-import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;

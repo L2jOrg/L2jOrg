@@ -35,7 +35,6 @@ import org.slf4j.LoggerFactory;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 
@@ -55,7 +54,7 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _storePlayerId = readInt();
         final int count = readInt();
-        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
         _items = new HashSet<>();

@@ -31,7 +31,6 @@ import org.slf4j.LoggerFactory;
 import java.sql.SQLException;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
@@ -48,7 +47,7 @@ public class PlayerNameTable {
     private final IntIntMap accessLevels = new CHashIntIntMap();
 
     private PlayerNameTable() {
-        if (getSettings(GeneralSettings.class).cachePlayersName()) {
+        if (GeneralSettings.cachePlayersName()) {
             loadAll();
         }
     }
@@ -84,7 +83,7 @@ public class PlayerNameTable {
             }
         }
 
-        if (getSettings(GeneralSettings.class).cachePlayersName()) {
+        if (GeneralSettings.cachePlayersName()) {
             return -1;
         }
 
@@ -108,7 +107,7 @@ public class PlayerNameTable {
             return name;
         }
 
-        if (getSettings(GeneralSettings.class).cachePlayersName()) {
+        if (GeneralSettings.cachePlayersName()) {
             return null;
         }
 

@@ -36,7 +36,6 @@ import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -62,7 +61,7 @@ public class PlayerSummonTable {
     }
 
     public void init() {
-        if (getSettings(CharacterSettings.class).restoreSummonOnReconnect) {
+        if (CharacterSettings.restoreSummonOnReconnect) {
 
             getDAO(SummonDAO.class).findAllSummonOwners().forEach(data -> servitors.computeIfAbsent(data.getOwnerId(), id ->  CHashIntMap.newKeySet()).add(data.getSummonId()));
             getDAO(PetDAO.class).findAllPetOwnersByRestore().forEach(data -> pets.put(data.getOwnerId(), data.getItemObjectId()));

@@ -18,8 +18,8 @@
  */
 package org.l2j.commons.database.handler;
 
-import org.l2j.commons.database.TypeHandler;
 import org.l2j.commons.database.QueryDescriptor;
+import org.l2j.commons.database.TypeHandler;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

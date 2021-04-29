@@ -26,14 +26,14 @@ import org.l2j.commons.configuration.SettingsFile;
  */
 public class FeatureSettings implements Settings {
 
-    private int[] siegeHours;
+    private static int[] siegeHours;
 
     @Override
     public void load(SettingsFile settingsFile) {
         siegeHours =  settingsFile.getIntArray("SiegeHourList", ",");
     }
 
-    public int[] siegeHours() {
+    public static int[] siegeHours() {
         return siegeHours;
     }
 }

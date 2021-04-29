@@ -27,9 +27,9 @@ import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.data.database.data.CastleFunctionData;
-import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.CastleDataManager;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.MountType;
@@ -71,7 +71,6 @@ import java.util.Objects;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -214,8 +213,8 @@ public final class Castle extends AbstractResidence {
                 return;
             }
             data.updateTreasury(-amount);
-        } else if (data.getTreasury() + amount > getSettings(CharacterSettings.class).maxAdena) {
-            data.setTreasury(getSettings(CharacterSettings.class).maxAdena);
+        } else if (data.getTreasury() + amount > CharacterSettings.maxAdena) {
+            data.setTreasury(CharacterSettings.maxAdena);
         } else {
             data.updateTreasury(amount);
         }
@@ -306,7 +305,7 @@ public final class Castle extends AbstractResidence {
     public void removeOwner(Clan clan) {
         if (nonNull(clan)) {
             formerOwner = clan;
-            if (getSettings(CharacterSettings.class).removeCastleCirclets) {
+            if (CharacterSettings.removeCastleCirclets) {
                 CastleManager.getInstance().removeCirclet(formerOwner, getId());
             }
             for (Player member : clan.getOnlineMembers(0)) {
@@ -478,7 +477,7 @@ public final class Castle extends AbstractResidence {
 
                 if (isNull(formerOwner)) {
                     formerOwner = oldOwner;
-                    if (getSettings(CharacterSettings.class).removeCastleCirclets) {
+                    if (CharacterSettings.removeCastleCirclets) {
                         CastleManager.getInstance().removeCirclet(formerOwner, getId());
                     }
                 }

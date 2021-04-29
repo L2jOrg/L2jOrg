@@ -27,8 +27,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * Recieve Private (Friend) Message - 0xCC Format: c SS S: Message S: Receiving Player
@@ -64,7 +62,7 @@ public final class RequestSendFriendMsg extends ClientPacket {
             return;
         }
 
-        if (getSettings(ChatSettings.class).logChat()) {
+        if (ChatSettings.logChat()) {
             LOGGER_CHAT.info("PRIV_MSG [{} to {}] {}", player, targetPlayer, _message);
         }
 

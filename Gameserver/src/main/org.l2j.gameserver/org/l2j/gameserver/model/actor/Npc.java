@@ -24,23 +24,24 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.BossStatus;
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.NpcStats;
 import org.l2j.gameserver.model.actor.status.NpcStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.*;
@@ -48,7 +49,6 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
@@ -73,7 +73,6 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class represents a Non-Player-Character in the world.<br>
@@ -638,7 +637,7 @@ public class Npc extends Creature {
      */
     public double getExpReward() {
         final Instance instance = getInstanceWorld();
-        final float rateMul = instance != null ? instance.getExpRate() : getSettings(RateSettings.class).xp();
+        final float rateMul = instance != null ? instance.getExpRate() : RateSettings.xp();
         return getTemplate().getExp() * rateMul;
     }
 
@@ -1082,9 +1081,8 @@ public class Npc extends Creature {
 
             item.dropMe(this, newX, newY, newZ);
 
-            final var generalSettings = getSettings(GeneralSettings.class);
-            if (!generalSettings.isProtectedItem(itemId)) {
-                if (( generalSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (generalSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
+            if (!GeneralSettings.isProtectedItem(itemId)) {
+                if (( GeneralSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (GeneralSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
                     ItemsAutoDestroy.getInstance().addItem(item);
                 }
             }

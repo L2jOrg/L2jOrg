@@ -147,7 +147,6 @@ import java.util.stream.Collectors;
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
@@ -415,7 +414,7 @@ public final class Player extends Playable {
     }
 
     public boolean teleportInBattle() {
-        return !isInBattle() && getSettings(CharacterSettings.class).teleportInBattle;
+        return !isInBattle() && CharacterSettings.teleportInBattle;
     }
 
     public void setAutoPlaySettings(AutoPlaySettings autoPlaySettings) {
@@ -2093,7 +2092,7 @@ public final class Player extends Playable {
 
     public void setFame(int fame) {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, data.getFame(), fame), this);
-        data.setFame(Math.min(fame, getSettings(CharacterSettings.class).maxFame));
+        data.setFame(Math.min(fame, CharacterSettings.maxFame));
     }
 
     public int getRaidbossPoints() {
@@ -2223,9 +2222,8 @@ public final class Player extends Playable {
      */
     public void rewardSkills() {
         // Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
-        var characterSettings = getSettings(CharacterSettings.class);
-        if (characterSettings.autoLearnSkillEnabled) {
-            giveAvailableSkills(characterSettings.autoLearnSkillFSEnabled, true);
+        if (CharacterSettings.autoLearnSkillEnabled) {
+            giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled, true);
         } else {
             giveAvailableAutoGetSkills();
         }
@@ -2274,7 +2272,7 @@ public final class Player extends Playable {
             skillsForStore.add(skill);
         }
         storeSkills(skillsForStore);
-        if (skillCounter > 0 && getSettings(CharacterSettings.class).autoLearnSkillEnabled) {
+        if (skillCounter > 0 && CharacterSettings.autoLearnSkillEnabled) {
             sendMessage("You have learned " + skillCounter + " new skills.");
         }
         return skillCounter;
@@ -2915,16 +2913,15 @@ public final class Player extends Playable {
         }
 
         item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
-        final var generalSettings = getSettings(GeneralSettings.class);
-        if ((generalSettings.autoDestroyItemTime() > 0) && generalSettings.destroyPlayerDroppedItem() && !generalSettings.isProtectedItem(item.getId())) {
-            if (!item.isEquipable() || generalSettings.destroyEquipableItem()) {
+        if ((GeneralSettings.autoDestroyItemTime() > 0) && GeneralSettings.destroyPlayerDroppedItem() && !GeneralSettings.isProtectedItem(item.getId())) {
+            if (!item.isEquipable() || GeneralSettings.destroyEquipableItem()) {
                 ItemsAutoDestroy.getInstance().addItem(item);
             }
         }
 
         // protection against auto destroy dropped item
-        if (generalSettings.destroyPlayerDroppedItem()) {
-            item.setProtected(item.isEquipable() && !generalSettings.destroyEquipableItem());
+        if (GeneralSettings.destroyPlayerDroppedItem()) {
+            item.setProtected(item.isEquipable() && !GeneralSettings.destroyEquipableItem());
         } else {
             item.setProtected(true);
         }
@@ -2983,14 +2980,13 @@ public final class Player extends Playable {
 
         item.dropMe(this, x, y, z);
 
-        final var generalSettings = getSettings(GeneralSettings.class);
-        if ((generalSettings.autoDestroyItemTime() > 0) && generalSettings.destroyPlayerDroppedItem() && !generalSettings.isProtectedItem(item.getId())) {
-            if (!item.isEquipable() || generalSettings.destroyEquipableItem()) {
+        if ((GeneralSettings.autoDestroyItemTime() > 0) && GeneralSettings.destroyPlayerDroppedItem() && !GeneralSettings.isProtectedItem(item.getId())) {
+            if (!item.isEquipable() || GeneralSettings.destroyEquipableItem()) {
                 ItemsAutoDestroy.getInstance().addItem(item);
             }
         }
-        if (generalSettings.destroyPlayerDroppedItem()) {
-            item.setProtected(item.isEquipable() && !generalSettings.destroyEquipableItem());
+        if (GeneralSettings.destroyPlayerDroppedItem()) {
+            item.setProtected(item.isEquipable() && !GeneralSettings.destroyEquipableItem());
         } else {
             item.setProtected(true);
         }
@@ -3446,7 +3442,7 @@ public final class Player extends Playable {
 
             // Remove the Item from the world and send server->client GetItem packets
             target.pickupMe(this);
-            if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+            if (GeneralSettings.saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().removeObject(target);
             }
         }
@@ -5476,7 +5472,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (!getSettings(CharacterSettings.class).allowPKTeleport && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
+        if (!CharacterSettings.allowPKTeleport && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -6339,7 +6335,7 @@ public final class Player extends Playable {
                 sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
             }
 
-            if (getSettings(CharacterSettings.class).restoreSummonOnReconnect && !hasSummon()) {
+            if (CharacterSettings.restoreSummonOnReconnect && !hasSummon()) {
                 if(PlayerSummonTable.getInstance().getServitors().containsKey(getObjectId())) {
                     PlayerSummonTable.getInstance().restoreServitor(this);
                 } else if(PlayerSummonTable.getInstance().getPets().containsKey(getObjectId())) {
@@ -6881,31 +6877,31 @@ public final class Player extends Playable {
     }
 
     public int getInventoryLimit() {
-        int limit = getSettings(CharacterSettings.class).maxSlotInventory(this);
+        int limit = CharacterSettings.maxSlotInventory(this);
         return limit + (int) getStats().getValue(Stat.INVENTORY_NORMAL, 0);
     }
 
     public int getWareHouseLimit() {
-        int limit = getSettings(CharacterSettings.class).maxSlotWarehouse(getRace());
+        int limit = CharacterSettings.maxSlotWarehouse(getRace());
         return limit + (int) getStats().getValue(Stat.STORAGE_PRIVATE, 0);
     }
 
     public int getPrivateSellStoreLimit() {
-        int limit = getSettings(CharacterSettings.class).maxSlotStoreSell(getRace());
+        int limit = CharacterSettings.maxSlotStoreSell(getRace());
         return limit + (int) getStats().getValue(Stat.TRADE_SELL, 0);
     }
 
     public int getPrivateBuyStoreLimit() {
-        var limit =  getSettings(CharacterSettings.class).maxSlotStoreBuy(getRace());
+        var limit =  CharacterSettings.maxSlotStoreBuy(getRace());
         return limit + (int) getStats().getValue(Stat.TRADE_BUY, 0);
     }
 
     public int getDwarfRecipeLimit() {
-        return getSettings(CharacterSettings.class).dwarfRecipeLimit + (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
+        return CharacterSettings.dwarfRecipeLimit + (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
     }
 
     public int getCommonRecipeLimit() {
-        return getSettings(CharacterSettings.class).recipeLimit + (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
+        return CharacterSettings.recipeLimit + (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
     }
 
     /**
@@ -7625,7 +7621,7 @@ public final class Player extends Playable {
      * @return {@code true} if the given Id is not excluded and this player is in silence mode, {@code false} otherwise
      */
     public boolean isSilenceMode(int playerObjId) {
-        if (getSettings(ChatSettings.class).silenceModeExclude() && silenceMode && nonNull(silenceModeExcluded)) {
+        if (ChatSettings.silenceModeExclude() && silenceMode && nonNull(silenceModeExcluded)) {
             return !silenceModeExcluded.contains(playerObjId);
         }
         return silenceMode;

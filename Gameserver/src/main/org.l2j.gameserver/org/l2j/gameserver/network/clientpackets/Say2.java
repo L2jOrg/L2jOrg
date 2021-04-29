@@ -38,7 +38,6 @@ import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -88,8 +87,7 @@ public final class Say2 extends ClientPacket {
             return;
         }
 
-        var chatSettings = getSettings(ChatSettings.class);
-        if (chatType == ChatType.WHISPER && chatSettings.l2WalkerProtectionEnabled() && chatSettings.isL2WalkerCommand(text)) {
+        if (chatType == ChatType.WHISPER && ChatSettings.l2WalkerProtectionEnabled() && ChatSettings.isL2WalkerCommand(text)) {
             GameUtils.handleIllegalPlayerAction(player, "Client Emulator Detect: Player " + player + " using l2walker.");
             return;
         }
@@ -97,7 +95,7 @@ public final class Say2 extends ClientPacket {
         if (player.isChatBanned() && text.charAt(0) != '.') {
             if (player.isAffected(EffectFlag.CHAT_BLOCK)) {
                 player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_CHATTING_IS_NOT_ALLOWED);
-            } else if (chatSettings.bannableChannels().contains(chatType)) {
+            } else if (ChatSettings.bannableChannels().contains(chatType)) {
                 player.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
             }
             return;
@@ -108,7 +106,7 @@ public final class Say2 extends ClientPacket {
             return;
         }
 
-        if (player.isJailed() && getSettings(GeneralSettings.class).disableChatInJail() && !player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
+        if (player.isJailed() && GeneralSettings.disableChatInJail() && !player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
             player.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
             return;
         }
@@ -117,7 +115,7 @@ public final class Say2 extends ClientPacket {
             chatType = ChatType.PETITION_GM;
         }
 
-        if (chatSettings.logChat()) {
+        if (ChatSettings.logChat()) {
             if (chatType == ChatType.WHISPER) {
                 LOGGER_CHAT.info("{} [ {} to {} ] {}", chatType, player,  target, text);
             } else {
@@ -139,8 +137,8 @@ public final class Say2 extends ClientPacket {
         }
 
         // Say Filter implementation
-        if (chatSettings.enableChatFilter()) {
-            text = chatSettings.filterText(text);
+        if (ChatSettings.enableChatFilter()) {
+            text = ChatSettings.filterText(text);
         }
 
         final IChatHandler handler = ChatHandler.getInstance().getHandler(chatType);

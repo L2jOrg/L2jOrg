@@ -19,10 +19,10 @@
 package org.l2j.gameserver.network.serverpackets.pledge;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -30,7 +30,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -61,7 +60,7 @@ public class PledgeShowMemberListAll extends PledgeAbstractPacket {
 
         buffer.writeInt(!isSubPledge);
         buffer.writeInt(clan.getId());
-        buffer.writeInt(getSettings(ServerSettings.class).serverId());
+        buffer.writeInt(ServerSettings.serverId());
 
         var pledgeId = isNull(pledge) ? 0x00 : pledge.getId();
         var leaderName = isNull(pledge) ? clan.getLeaderName() : PlayerNameTable.getInstance().getNameById(pledge.getLeaderId());

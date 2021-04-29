@@ -41,8 +41,6 @@ import org.l2j.gameserver.util.MathUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * @author l3x
@@ -56,7 +54,7 @@ public class RequestBuySeed extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _manorId = readInt();
         final int count = readInt();
-        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -108,7 +106,7 @@ public class RequestBuySeed extends ClientPacket {
         int totalWeight = 0;
 
         final IntMap<SeedProduction> _productInfo = new HashIntMap<>();
-        var maxAdena = getSettings(CharacterSettings.class).maxAdena;
+        var maxAdena = CharacterSettings.maxAdena;
         for (ItemHolder ih : _items) {
             final SeedProduction sp = manor.getSeedProduct(_manorId, ih.getId(), false);
             if ((sp == null) || (sp.getPrice() <= 0) || (sp.getAmount() < ih.getCount()) || MathUtil.checkMulOverFlow(sp.getPrice(), ih.getCount(), maxAdena)) {

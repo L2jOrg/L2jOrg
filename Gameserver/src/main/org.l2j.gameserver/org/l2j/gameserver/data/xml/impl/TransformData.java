@@ -39,8 +39,6 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Transformation data.
  *
@@ -57,7 +55,7 @@ public final class TransformData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/transformations.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/transformations.xsd");
     }
 
     @Override

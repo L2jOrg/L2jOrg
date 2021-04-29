@@ -23,14 +23,14 @@ package org.l2j.commons.configuration;
  */
 public class CommonSettings implements Settings{
 
-    private String hashAlg;
+    private static String hashAlg;
 
     @Override
     public void load(SettingsFile settingsFile) {
         hashAlg = settingsFile.getString("HashAlgorithm", "SHA3-256");
     }
 
-    public String hashAlgorithm() {
+    public static String hashAlgorithm() {
         return hashAlg;
     }
 }

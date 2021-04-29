@@ -20,8 +20,8 @@ package org.l2j.scripts.instances.MonsterArena;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;

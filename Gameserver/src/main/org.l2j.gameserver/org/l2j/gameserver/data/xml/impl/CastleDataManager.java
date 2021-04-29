@@ -32,8 +32,6 @@ import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author St3eT
  */
@@ -47,7 +45,7 @@ public final class CastleDataManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/castleData.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/castleData.xsd");
     }
 
     @Override

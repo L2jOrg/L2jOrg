@@ -18,13 +18,13 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.engine.clan.ClanEngine;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -40,7 +40,6 @@ import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 /**
@@ -94,7 +93,7 @@ public class VillageMaster extends Folk {
             return;
         }
 
-        clan.setDissolvingExpiryTime(System.currentTimeMillis() + getSettings(ClanSettings.class).daysToDissolveClan * 86400000L); // 24*60*60*1000 = 86400000
+        clan.setDissolvingExpiryTime(System.currentTimeMillis() + ClanSettings.daysToDissolveClan * 86400000L); // 24*60*60*1000 = 86400000
         clan.updateClanInDB();
 
         // The clan leader should take the XP penalty of a full death.
@@ -308,7 +307,7 @@ public class VillageMaster extends Folk {
     }
 
     private static boolean isValidName(String name) {
-        return getSettings(ServerSettings.class).acceptClanName(name);
+        return ServerSettings.acceptClanName(name);
     }
 
     @Override
@@ -437,7 +436,7 @@ public class VillageMaster extends Folk {
                 return;
             }
 
-            if (getSettings(ClanSettings.class).instantChangeLeader) {
+            if (ClanSettings.instantChangeLeader) {
                 clan.setNewLeader(member);
             } else {
                 final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());

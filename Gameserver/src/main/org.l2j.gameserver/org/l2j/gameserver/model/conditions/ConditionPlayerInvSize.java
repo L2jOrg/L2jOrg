@@ -24,8 +24,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
-import static java.util.Objects.isNull;
-
 /**
  * The Class ConditionPlayerInvSize.
  *

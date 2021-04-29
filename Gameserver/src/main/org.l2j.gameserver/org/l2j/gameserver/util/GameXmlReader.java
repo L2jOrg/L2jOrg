@@ -35,8 +35,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Interface for XML parsers.
  *
@@ -53,7 +51,7 @@ public abstract class GameXmlReader extends XmlReader {
      * @param path the relative path to the datapack root of the XML file to parse.
      */
     protected void parseDatapackFile(String path) {
-        parseFile(getSettings(ServerSettings.class).dataPackDirectory().resolve(path).toString());
+        parseFile(ServerSettings.dataPackDirectory().resolve(path).toString());
     }
 
     /**
@@ -64,7 +62,7 @@ public abstract class GameXmlReader extends XmlReader {
      * @return {@code false} if it fails to find the directory, {@code true} otherwise
      */
     protected boolean parseDatapackDirectory(String path, boolean recursive) {
-        return parseDirectory(new File(getSettings(ServerSettings.class).dataPackDirectory().toFile(), path), recursive);
+        return parseDirectory(new File(ServerSettings.dataPackDirectory().toFile(), path), recursive);
     }
 
     protected Map<String, Object> parseParameters(Node n) {

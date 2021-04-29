@@ -38,8 +38,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * The Class RecipeData.
  *
@@ -56,7 +54,7 @@ public class RecipeData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/Recipes.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/Recipes.xsd");
     }
 
     @Override

@@ -38,7 +38,6 @@ import java.io.*;
 import java.nio.file.Files;
 import java.util.StringTokenizer;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class AdminEventEngine implements IAdminCommandHandler {
@@ -110,7 +109,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
 				final String eventName = command.substring(16);
-				try(final DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream( getSettings(ServerSettings.class).dataPackDirectory().resolve("/data/events/" + eventName).toFile())));
+				try(final DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream( ServerSettings.dataPackDirectory().resolve("/data/events/" + eventName).toFile())));
 					final BufferedReader inbr = new BufferedReader(new InputStreamReader(in))) {
 					final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 
@@ -132,7 +131,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
 				final String eventName = command.substring(16);
-				Files.deleteIfExists(getSettings(ServerSettings.class).dataPackDirectory().resolve("/data/events/" + eventName));
+				Files.deleteIfExists(ServerSettings.dataPackDirectory().resolve("/data/events/" + eventName));
 				showMainPage(activeChar);
 			}
 			else if (actualCommand.startsWith("admin_event_name"))
@@ -148,7 +147,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 			}
 			else if (actualCommand.startsWith("admin_event_store"))
 			{
-				try(final FileOutputStream file = new FileOutputStream(getSettings(ServerSettings.class).dataPackDirectory().resolve("data/events/" + tempName).toFile());
+				try(final FileOutputStream file = new FileOutputStream(ServerSettings.dataPackDirectory().resolve("data/events/" + tempName).toFile());
 					final PrintStream p = new PrintStream(file)) {
 					p.println(activeChar.getName());
 					p.println(tempBuffer);
@@ -374,7 +373,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 	
 	private String showStoredEvents()
 	{
-		final File dir = getSettings(ServerSettings.class).dataPackDirectory().resolve("/data/events").toFile();
+		final File dir = ServerSettings.dataPackDirectory().resolve("/data/events").toFile();
 		if (dir.isFile())
 		{
 			return "<font color=\"FF0000\">The directory '" + dir.getAbsolutePath() + "' is a file or is corrupted!</font><br>";

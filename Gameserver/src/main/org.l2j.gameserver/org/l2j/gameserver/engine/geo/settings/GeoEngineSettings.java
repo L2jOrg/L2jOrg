@@ -27,8 +27,8 @@ import org.l2j.gameserver.engine.geo.SyncMode;
  */
 public class GeoEngineSettings implements Settings {
 
-    private SyncMode syncMode;
-    private boolean enabledPathFinding;
+    private static SyncMode syncMode;
+    private static boolean enabledPathFinding;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -36,19 +36,19 @@ public class GeoEngineSettings implements Settings {
         enabledPathFinding = settingsFile.getBoolean("EnablePathFinding", true);
     }
 
-    public boolean isEnabledPathFinding() {
+    public static boolean isEnabledPathFinding() {
         return enabledPathFinding;
     }
 
-    public void setEnabledPathFinding(boolean enabledPathFinding) {
-        this.enabledPathFinding = enabledPathFinding;
+    public static void setEnabledPathFinding(boolean enable) {
+        enabledPathFinding = enable;
     }
 
-    public void setSyncMode(SyncMode syncMode) {
-        this.syncMode = syncMode;
+    public static void setSyncMode(SyncMode mode) {
+        syncMode = mode;
     }
 
-    public boolean isSyncMode(SyncMode mode) {
+    public static boolean isSyncMode(SyncMode mode) {
         return syncMode == mode;
     }
 }

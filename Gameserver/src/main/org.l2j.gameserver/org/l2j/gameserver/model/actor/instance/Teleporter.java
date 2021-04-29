@@ -36,7 +36,6 @@ import org.slf4j.LoggerFactory;
 import java.util.StringTokenizer;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.SPACE;
 import static org.l2j.commons.util.Util.parseNextInt;
 
@@ -129,7 +128,7 @@ public final class Teleporter extends Folk {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkTeleport && showPkDenyChatWindow(player, "teleporter")) {
+        if(player.getReputation() < 0 && !CharacterSettings.canPkTeleport && showPkDenyChatWindow(player, "teleporter")) {
             return;
         }
         super.showChatWindow(player, val);

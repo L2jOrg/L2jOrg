@@ -33,7 +33,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -95,7 +94,7 @@ public class PlayableStats extends CreatureStats {
     }
 
     public boolean removeExp(long value) {
-        if (getExp() - value < getExpForLevel(getLevel()) && !getSettings(CharacterSettings.class).delevel) {
+        if (getExp() - value < getExpForLevel(getLevel()) && !CharacterSettings.delevel) {
             value = getExp() - getExpForLevel(getLevel());
         }
 

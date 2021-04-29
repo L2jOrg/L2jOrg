@@ -23,7 +23,6 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.ServerType.CLASSIC;
 
 public final class KeyPacket extends ServerPacket {
@@ -43,12 +42,11 @@ public final class KeyPacket extends ServerPacket {
         for (int i = 0; i < 8; i++) {
             buffer.writeByte(_key[i]); // key
         }
-        var serverSettings = getSettings(ServerSettings.class);
         buffer.writeInt(true); // cipher enabled
-        buffer.writeInt(serverSettings.serverId());
+        buffer.writeInt(ServerSettings.serverId());
         buffer.writeByte(false); // merged server
         buffer.writeInt(0x00); // obfuscation key
-        buffer.writeByte((serverSettings.type() & CLASSIC.getMask()) != 0); // isClassic
+        buffer.writeByte((ServerSettings.type() & CLASSIC.getMask()) != 0); // isClassic
         buffer.writeByte(0x00); // queued ?
     }
 

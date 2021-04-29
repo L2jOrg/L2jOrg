@@ -21,11 +21,10 @@ package org.l2j.gameserver.data.xml.impl;
 import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.VariationInstance;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.options.*;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -41,7 +40,6 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Pere
@@ -58,7 +56,7 @@ public class VariationData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/augmentation/Variations.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/augmentation/Variations.xsd");
     }
 
     @Override

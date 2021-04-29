@@ -49,7 +49,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class loads and manage the characters and pledges skills trees.<br>
@@ -104,7 +103,7 @@ public final class SkillTreesData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/skillTrees.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/skillTrees.xsd");
     }
 
     @Override

@@ -31,7 +31,6 @@ import org.w3c.dom.Document;
 import java.io.File;
 import java.nio.file.Path;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 
 /**
@@ -49,7 +48,7 @@ public class EnchantItemOptionsData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/EnchantItemOptions.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/EnchantItemOptions.xsd");
     }
 
     @Override

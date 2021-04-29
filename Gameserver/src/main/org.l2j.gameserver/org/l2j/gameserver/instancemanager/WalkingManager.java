@@ -50,7 +50,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isMonster;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
@@ -86,7 +85,7 @@ public final class WalkingManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/Routes.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/Routes.xsd");
     }
 
     @Override

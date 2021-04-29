@@ -30,8 +30,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author l3x
  * @author JoeAlisson
@@ -46,7 +44,7 @@ public class RequestSetSeed extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _manorId = readInt();
         final int count = readInt();
-        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 

@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.IntCollection;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventoryBlockType;
@@ -39,7 +40,6 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDrop;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemTransfer;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -51,7 +51,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.model.item.type.EtcItemType.ARROW;
 import static org.l2j.gameserver.model.item.type.EtcItemType.BOLT;
 
@@ -668,7 +667,7 @@ public class PlayerInventory extends Inventory {
     }
 
     public boolean validateCapacity(long slots, boolean questItem) {
-        return slots == 0 || questItem ? questItems.size() + slots <= getSettings(CharacterSettings.class).maxSlotsQuestItem  : getSize() + slots <= owner.getInventoryLimit();
+        return slots == 0 || questItem ? questItems.size() + slots <= CharacterSettings.maxSlotsQuestItem  : getSize() + slots <= owner.getInventoryLimit();
     }
 
     @Override

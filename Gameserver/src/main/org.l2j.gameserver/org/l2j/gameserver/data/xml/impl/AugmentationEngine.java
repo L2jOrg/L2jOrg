@@ -40,7 +40,6 @@ import java.nio.file.Path;
 import java.util.function.Function;
 
 import static java.util.Objects.*;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -57,7 +56,7 @@ public class AugmentationEngine extends EffectParser {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/augmentation/options/options.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/augmentation/options/options.xsd");
     }
 
     @Override

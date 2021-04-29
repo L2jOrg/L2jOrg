@@ -29,7 +29,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -42,7 +41,7 @@ public final class RequestPrivateStoreSell extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _storePlayerId = readInt();
         int itemsCount = readInt();
-        if (itemsCount <= 0 || itemsCount > getSettings(CharacterSettings.class).maxItemInPacket) {
+        if (itemsCount <= 0 || itemsCount > CharacterSettings.maxItemInPacket) {
             throw new InvalidDataPacketException();
         }
         _items = new ItemRequest[itemsCount];

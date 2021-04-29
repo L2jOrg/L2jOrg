@@ -33,7 +33,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Confuse effect implementation.
@@ -71,7 +70,7 @@ public final class Confuse extends AbstractEffect {
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
         effected.getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 
-        var creature = World.getInstance().findAnyVisibleObject(effected, Creature.class, getSettings(CharacterSettings.class).partyRange, false,
+        var creature = World.getInstance().findAnyVisibleObject(effected, Creature.class, CharacterSettings.partyRange, false,
                 c -> GeoEngine.getInstance().canSeeTarget(effected, c));
         if(nonNull(creature)) {
             effected.setTarget(creature);

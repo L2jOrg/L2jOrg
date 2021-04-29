@@ -32,9 +32,10 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.*;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * The residence functions data
@@ -51,7 +52,7 @@ public final class ResidenceFunctionsData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ResidenceFunctions.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/ResidenceFunctions.xsd");
     }
 
     @Override

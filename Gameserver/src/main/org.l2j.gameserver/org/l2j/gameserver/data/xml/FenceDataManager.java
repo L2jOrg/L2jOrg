@@ -43,7 +43,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author HoridoJoho / FBIagent
@@ -62,7 +61,7 @@ public final class FenceDataManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/FenceData.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/FenceData.xsd");
     }
 
     @Override

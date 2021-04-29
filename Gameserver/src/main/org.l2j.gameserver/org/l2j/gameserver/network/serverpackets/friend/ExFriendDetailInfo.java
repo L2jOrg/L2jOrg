@@ -20,8 +20,8 @@ package org.l2j.gameserver.network.serverpackets.friend;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;

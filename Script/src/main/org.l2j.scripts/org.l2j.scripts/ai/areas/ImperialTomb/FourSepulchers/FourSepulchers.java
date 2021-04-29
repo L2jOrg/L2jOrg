@@ -56,8 +56,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * Four Selpuchers AI
@@ -697,7 +695,7 @@ public class FourSepulchers extends AbstractNpcAI
 
 		@Override
 		protected Path getSchemaFilePath() {
-			return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/FourSepulchers.xsd");
+			return ServerSettings.dataPackDirectory().resolve("data/xsd/FourSepulchers.xsd");
 		}
 
 		@Override

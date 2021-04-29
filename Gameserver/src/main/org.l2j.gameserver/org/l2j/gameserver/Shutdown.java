@@ -21,10 +21,10 @@ package org.l2j.gameserver;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -41,7 +41,6 @@ import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -283,7 +282,7 @@ public class Shutdown extends Thread {
         LOGGER.info("SchemeBufferTable data has been saved.");
 
         // Save items on ground before closing
-        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+        if (GeneralSettings.saveDroppedItems()) {
             ItemsOnGroundManager.getInstance().saveInDb();
             LOGGER.info("Items On Ground Manager: Data saved.");
             ItemsOnGroundManager.getInstance().cleanUp();

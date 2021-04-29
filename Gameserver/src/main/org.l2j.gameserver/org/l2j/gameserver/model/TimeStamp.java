@@ -19,8 +19,8 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * Simple class containing all necessary information to maintain<br>
