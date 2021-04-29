@@ -27,8 +27,8 @@ subprojects {
         }
     }
     
-    sourceCompatibility = JavaVersion.VERSION_15
-    targetCompatibility = JavaVersion.VERSION_15
+    sourceCompatibility = JavaVersion.VERSION_16
+    targetCompatibility = JavaVersion.VERSION_16
 
     afterEvaluate {
         compileJava {
@@ -46,7 +46,10 @@ subprojects {
 }
 
 distZip {
-    subprojects.each { dependsOn("${it.name}:build") }
+    subprojects.each {
+        dependsOn("${it.name}:build")
+    }
+    dependsOn("${project(':AuthServer').name}:dist", "${project(':Gameserver').name}:dist")
 }
 
 distributions {

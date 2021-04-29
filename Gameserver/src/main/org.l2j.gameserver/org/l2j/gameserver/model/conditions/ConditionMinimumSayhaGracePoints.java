@@ -1,4 +1,5 @@
 /*
+ * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -16,27 +17,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.model.conditions;
 
-import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.item.ItemTemplate;
 
 /**
- * @author GodKratos
+ * @author Mobius
  */
-public class ExVitalityPointInfo extends ServerPacket {
-    private final int _vitalityPoints;
+public class ConditionMinimumSayhaGracePoints extends Condition {
+    private final int _count;
 
-    public ExVitalityPointInfo(int vitPoints) {
-        _vitalityPoints = vitPoints;
+    public ConditionMinimumSayhaGracePoints(int count) {
+        _count = count;
     }
 
     @Override
-    public void writeImpl(GameClient client, WritableBuffer buffer) {
-        writeId(ServerExPacketId.EX_VITALITY_POINT_INFO, buffer );
-
-        buffer.writeInt(_vitalityPoints);
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
+        final Player player = effector.getActingPlayer();
+        if (player != null) {
+            return player.getSayhaGracePoints() >= _count;
+        }
+        return false;
     }
-
 }

@@ -41,6 +41,7 @@ public class MissionDataHolder {
 
     private final int id;
     private final List<ItemHolder> rewardsItems;
+    private final int _clanExpReward;
     private final EnumSet<ClassId> classRestriction;
     private final int requiredCompletions;
     private final StatsSet params;
@@ -56,6 +57,7 @@ public class MissionDataHolder {
         id = set.getInt("id");
         requiredCompletions = set.getInt("required-completion", 1);
         rewardsItems = set.getList("rewards", ItemHolder.class);
+        _clanExpReward = set.getInt("clanExp", 0);
         classRestriction = set.getStringAsEnumSet("classRestriction", ClassId.class);
         params = set.getObject("params", StatsSet.class);
         cycle = set.getEnum("cycle", MissionCycle.class);
@@ -164,5 +166,9 @@ public class MissionDataHolder {
 
     int getRequiredMission() {
         return requiredMission;
+    }
+
+    public int getClanExpReward() {
+        return _clanExpReward;
     }
 }

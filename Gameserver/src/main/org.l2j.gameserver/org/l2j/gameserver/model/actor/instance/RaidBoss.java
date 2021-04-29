@@ -97,13 +97,13 @@ public class RaidBoss extends Monster {
     }
 
     @Override
-    public int getVitalityPoints(int level, double exp, boolean isBoss) {
-        return -super.getVitalityPoints(level, exp, isBoss);
+    public int getSayhaGracePoints(int level, double exp, boolean isBoss) {
+        return -super.getSayhaGracePoints(level, exp, isBoss);
     }
 
     @Override
-    public boolean useVitalityRate() {
-        return getSettings(CharacterSettings.class).raidBossUseVitality();
+    public boolean useSayhaGraceRate() {
+        return Config.RAIDBOSS_USE_SAYHA_GRACE;
     }
 
     @Override

@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -150,7 +151,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeInt(playerInfo.getFace());
 
             buffer.writeDouble(data.getMaxtHp());
-            buffer.writeDouble(data.getMaxtMp());
+            buffer.writeDouble(data.getMaxMp());
 
             buffer.writeInt(data.getDeleteTime() > 0 ? (int) ((data.getDeleteTime() - System.currentTimeMillis()) / 1000) : 0);
             buffer.writeInt(data.getClassId());
@@ -169,9 +170,9 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeDouble(0x00); // Current pet HP
             buffer.writeDouble(0x00); // Current pet MP
 
-            buffer.writeInt(data.getVitalityPoints());
-            buffer.writeInt((int)  getSettings(RateSettings.class).rateVitalityExpMul() * 100); // Vitality Percent
-            buffer.writeInt(playerInfo.getVitalityItemsUsed()); // Remaining vitality item uses
+            buffer.writeInt(data.getSayhaGracePoints());
+            buffer.writeInt((int)  Config.RATE_SAYHA_GRACE_EXP_MULTIPLIER * 100); // Vitality Percent
+            buffer.writeInt(playerInfo.getSayhaGraceItemsUsed()); // Remaining vitality item uses
             buffer.writeInt(data.getAccessLevel() != -100); // Char is active or not
             buffer.writeByte(data.isNobless());
             buffer.writeByte(Olympiad.getInstance().isHero(data.getCharId()) ? 0x02 : 0x00); // Hero glow

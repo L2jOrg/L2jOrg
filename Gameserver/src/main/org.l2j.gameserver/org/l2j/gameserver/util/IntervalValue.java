@@ -21,7 +21,7 @@ package org.l2j.gameserver.util;
 /**
  * @author JoeAlisson
  */
-public record IntervalValue(float from, float until, float value) {
+public record IntervalValue(double from, double until, double value) {
 
     public boolean contains(double i) {
         return from <= i && i <= until;

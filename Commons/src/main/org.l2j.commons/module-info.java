@@ -23,7 +23,9 @@ module org.l2j.commons {
     exports org.l2j.commons.network;
     exports org.l2j.commons.util.filter;
 
+    uses org.l2j.commons.database.ProvidedDAO;
     uses TypeHandler;
+
     provides TypeHandler
         with org.l2j.commons.database.handler.ByteHandler,
              org.l2j.commons.database.handler.ByteArrayHandler,
@@ -42,7 +44,7 @@ module org.l2j.commons {
              org.l2j.commons.database.handler.DateHandler,
              org.l2j.commons.database.handler.DateTimeHandler,
              org.l2j.commons.database.handler.InstantHandler,
-            org.l2j.commons.database.handler.DurationHandler,
+             org.l2j.commons.database.handler.DurationHandler,
              org.l2j.commons.database.handler.EnumHandler,
              org.l2j.commons.database.handler.EntityHandler;
 }

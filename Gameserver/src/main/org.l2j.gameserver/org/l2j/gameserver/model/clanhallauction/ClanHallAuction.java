@@ -19,26 +19,18 @@
  */
 package org.l2j.gameserver.model.clanhallauction;
 
-import org.l2j.commons.database.DatabaseFactory;
+import io.github.joealisson.primitive.IntMap;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.dao.ClanHallDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.database.data.Bidder;
 import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -48,34 +40,16 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author JoeAlisson
  */
 public class ClanHallAuction {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClanHallAuction.class);
-    private static final String LOAD_CLANHALL_BIDDERS = "SELECT * FROM clanhall_auctions_bidders WHERE clanHallId=?";
-    private static final String INSERT_CLANHALL_BIDDER = "REPLACE INTO clanhall_auctions_bidders (clanHallId, clanId, bid, bidTime) VALUES (?,?,?,?)";
-    private final int _clanHallId;
-    private volatile Map<Integer, Bidder> _bidders;
+    private final int clanHallId;
+    private final IntMap<Bidder> bidders;
 
     public ClanHallAuction(int clanHallId) {
-        _clanHallId = clanHallId;
-        loadBidder();
+        this.clanHallId = clanHallId;
+        bidders = getDAO(ClanHallDAO.class).loadBidders(clanHallId);
     }
 
-    private final void loadBidder() {
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement(LOAD_CLANHALL_BIDDERS)) {
-            ps.setInt(1, _clanHallId);
-            try (ResultSet rs = ps.executeQuery()) {
-                while (rs.next()) {
-                    final Clan clan = ClanTable.getInstance().getClan(rs.getInt("clanId"));
-                    addBid(clan, rs.getLong("bid"), rs.getLong("bidTime"));
-                }
-            }
-        } catch (SQLException e) {
-            LOGGER.warn("Failed loading clan hall auctions bidder for clan hall " + _clanHallId + ".", e);
-        }
-    }
-
-    public Map<Integer, Bidder> getBids() {
-        return _bidders == null ? Collections.emptyMap() : _bidders;
+    public IntMap<Bidder> getBids() {
+        return bidders;
     }
 
     public void addBid(Clan clan, long bid) {
@@ -83,47 +57,31 @@ public class ClanHallAuction {
     }
 
     public void addBid(Clan clan, long bid, long bidTime) {
-        if (_bidders == null) {
-            synchronized (this) {
-                if (_bidders == null) {
-                    _bidders = new ConcurrentHashMap<>();
-                }
-            }
-        }
-
-        try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement(INSERT_CLANHALL_BIDDER)) {
-            ps.setInt(1, _clanHallId);
-            ps.setInt(2, clan.getId());
-            ps.setLong(3, bid);
-            ps.setLong(4, bidTime);
-            ps.execute();
-            _bidders.put(clan.getId(), new Bidder(clan, bid, bidTime));
-        } catch (SQLException e) {
-            LOGGER.warn("Failed insert clan hall auctions bidder " + clan.getName() + " for clan hall " + _clanHallId + ".", e);
-        }
+        Bidder bidder = Bidder.of(clanHallId, clan, bid, bidTime);
+        bidders.put(clan.getId(), bidder);
+        getDAO(ClanHallDAO.class).save(bidder);
     }
 
     public void removeBid(Clan clan) {
-        getBids().remove(clan.getId());
+        bidders.remove(clan.getId());
         getDAO(ClanHallDAO.class).deleteBidder(clan.getId());
     }
 
     public long getHighestBid() {
-        final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
-        return getBids().values().stream().mapToLong(Bidder::getBid).max().orElse(clanHall.getMinBid());
+        final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+        return bidders.values().stream().mapToLong(Bidder::getBid).max().orElse(clanHall.getMinBid());
     }
 
     public long getClanBid(Clan clan) {
-        return getBids().get(clan.getId()).getBid();
+        return Util.zeroIfNullOrElseLong(bidders.get(clan.getId()), Bidder::getBid);
     }
 
     public Optional<Bidder> getHighestBidder() {
-        return getBids().values().stream().sorted(Comparator.comparingLong(Bidder::getBid).reversed()).findFirst();
+        return bidders.values().stream().max(Comparator.comparingLong(Bidder::getBid));
     }
 
     public int getBidCount() {
-        return getBids().values().size();
+        return bidders.size();
     }
 
     public void returnAdenas(Bidder bidder) {
@@ -135,16 +93,16 @@ public class ClanHallAuction {
 
         if (potentialHighestBidder.isPresent()) {
             final Bidder highestBidder = potentialHighestBidder.get();
-            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
+            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
             clanHall.setOwner(highestBidder.getClan());
-            getBids().clear();
+            bidders.clear();
 
-            getDAO(ClanHallDAO.class).deleteBidders(_clanHallId);
+            getDAO(ClanHallDAO.class).deleteBidders(clanHallId);
         }
     }
 
     public int getClanHallId() {
-        return _clanHallId;
+        return clanHallId;
     }
 
     public long getRemaingTime() {

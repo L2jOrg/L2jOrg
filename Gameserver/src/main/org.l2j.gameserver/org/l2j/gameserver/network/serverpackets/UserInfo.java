@@ -120,7 +120,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         buffer.writeInt(player.getObjectId());
         buffer.writeInt(initSize);
-        buffer.writeShort(28);
+        buffer.writeShort(0x1C);
         buffer.writeBytes(mask);
 
         if (containsMask(UserInfoType.RELATION)) {
@@ -136,10 +136,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeInt(player.getBaseTemplate().getClassId().getRootClassId().getId());
             buffer.writeInt(player.getClassId().getId());
             buffer.writeInt(player.getLevel());
-            buffer.writeByte(0x00); // 270
-            buffer.writeByte(0x00); // 270
-            buffer.writeByte(0x00); // 270
-            buffer.writeByte(0x00); // 286
+            buffer.writeInt(-1); // unk
         }
 
         if (containsMask(UserInfoType.BASE_STATS)) {
@@ -281,7 +278,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeInt(player.getReputation()); // Reputation
             buffer.writeByte(player.isNoble());
             buffer.writeByte(player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2?
-            buffer.writeByte(player.getPledgeClass());
+            buffer.writeByte(player.getSocialStatus().ordinal());
             buffer.writeInt(player.getPkKills());
             buffer.writeInt(player.getPvpKills());
             buffer.writeShort(player.getRecommendLeft());
@@ -389,6 +386,16 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeShort(player.getStatsData().getElixirsPoints());
             buffer.writeShort(0x00);
         }
+
+        /*// Send exp bonus change.
+        if (containsMask(UserInfoType.VITA_FAME))
+        {
+           // player.sendPacket(new ExUserBoostStat(player));
+            if (getSettings(CharacterSettings.class).isVitalityEnabled())
+            {
+                player.sendPacket(new ExVitalityEffectInfo(player));
+            }
+        }*/
     }
 
     private int calculateRelation(Player activeChar) {

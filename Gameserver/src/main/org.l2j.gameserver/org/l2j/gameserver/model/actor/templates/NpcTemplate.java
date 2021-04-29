@@ -28,11 +28,13 @@ import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
 
@@ -40,6 +42,7 @@ import java.util.*;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 /**
  * NPC template.
@@ -656,7 +659,31 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
                     // bonus drop amount effect
                     rateAmount *= killer.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
-
+                    // Sayha grace
+                    if ((dropItem.getItemId() != Inventory.ADENA_ID) && isPlayable(killer))
+                    {
+                        Player player = killer.getActingPlayer();
+                        if ((player.getSayhaGracePoints() <= 0) && (player.getLimitedSayhaGraceEndTime() < System.currentTimeMillis()))
+                        {
+                            rateChance *= 0.1;
+                        }
+                    }
+                    // Sayha grace
+                    if ((dropItem.getItemId() == Inventory.ADENA_ID) && isPlayable(killer))
+                    {
+                        Player player = killer.getActingPlayer();
+                        if (player.getSayhaGracePoints() <= 0)
+                        {
+                            if (player.getLimitedSayhaGraceEndTime() > System.currentTimeMillis())
+                            {
+                                rateAmount *= 0.3;
+                            }
+                            else
+                            {
+                                rateAmount *= 0.05;
+                            }
+                        }
+                    }
                     // finally
                     return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
                 }

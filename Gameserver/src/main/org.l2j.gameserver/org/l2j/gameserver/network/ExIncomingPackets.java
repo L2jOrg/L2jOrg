@@ -559,14 +559,14 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_PVP_RANKING_MY_INFO(ExRequestPvPMyRank::new, ConnectionState.IN_GAME_STATES),
     EX_PVP_RANKING_LIST(ExRequestPvPRanking::new, ConnectionState.IN_GAME_STATES),
     EX_ACQUIRE_PET_SKILL(null, ConnectionState.IN_GAME_STATES),
-    EX_PLEDGE_V3_INFO(null, ConnectionState.IN_GAME_STATES),
-    EX_PLEDGE_ENEMY_INFO_LIST(null, ConnectionState.IN_GAME_STATES),
-    EX_PLEDGE_ENEMY_REGISTER(null, ConnectionState.IN_GAME_STATES),
-    EX_PLEDGE_ENEMY_DELETE(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_V3_INFO(ExRequestPledgeV3Info::new, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_ENEMY_INFO_LIST(ExRequestPledgeEnemyInfoList::new, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_ENEMY_REGISTER(ExRequestPledgeEnemyRegister::new, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_ENEMY_DELETE(ExRequestPledgeEnemyDelete::new, ConnectionState.IN_GAME_STATES),
     EX_PK_PENALTY_LIST(null, ConnectionState.IN_GAME_STATES),
     EX_PK_PENALTY_LIST_ONLY_LOC(null, ConnectionState.IN_GAME_STATES),
     EX_TRY_PET_EXTRACT_SYSTEM(null, ConnectionState.IN_GAME_STATES),
-    EX_PLEDGE_V3_SET_ANNOUNCE(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_V3_SET_ANNOUNCE(ExRequestPledgeV3SetAnnounce::new, ConnectionState.IN_GAME_STATES),
     EX_RANKING_FESTIVAL_OPEN(null, ConnectionState.IN_GAME_STATES),
     EX_RANKING_FESTIVAL_BUY(null, ConnectionState.IN_GAME_STATES),
     EX_RANKING_FESTIVAL_BONUS(null, ConnectionState.IN_GAME_STATES),
@@ -615,6 +615,13 @@ public enum ExIncomingPackets implements PacketFactory {
 
     static final ExIncomingPackets[] PACKET_ARRAY = values();
 
+    private static final PacketFactory REQUEST_BOOK_MARK_SLOT_INFO = new DynamicPacketFactory(RequestBookMarkSlotInfo::new);
+    private static final PacketFactory REQUEST_SAVE_BOOK_MARK_SLOT = new DynamicPacketFactory(RequestSaveBookMarkSlot::new);
+    private static final PacketFactory REQUEST_MODIFY_BOOK_MARK_SLOT = new DynamicPacketFactory(RequestModifyBookMarkSlot::new);
+    private static final PacketFactory REQUEST_DELETE_BOOK_MARK_SLOT = new DynamicPacketFactory(RequestDeleteBookMarkSlot::new);
+    private static final PacketFactory REQUEST_TELEPORT_BOOK_MARK = new DynamicPacketFactory(RequestTeleportBookMark::new);
+    private static final PacketFactory REQUEST_CHANCE_BOOK_MARK_SLOT = new DynamicPacketFactory(RequestChangeBookMarkSlot::new);
+
     private final boolean hasExtension;
     private final Supplier<ClientPacket> incomingPacketFactory;
     private final EnumSet<ConnectionState> connectionStates;
@@ -654,12 +661,12 @@ public enum ExIncomingPackets implements PacketFactory {
 
     private PacketFactory handleBookMarkPaket(ReadableBuffer packet) {
         return switch (packet.readInt()) {
-            case 0 -> new DynamicPacketFactory(RequestBookMarkSlotInfo::new);
-            case 1 -> new DynamicPacketFactory(RequestSaveBookMarkSlot::new);
-            case 2 -> new DynamicPacketFactory(RequestModifyBookMarkSlot::new);
-            case 3 -> new DynamicPacketFactory(RequestDeleteBookMarkSlot::new);
-            case 4 -> new DynamicPacketFactory(RequestTeleportBookMark::new);
-            case 5 -> new DynamicPacketFactory(RequestChangeBookMarkSlot::new);
+            case 0 -> REQUEST_BOOK_MARK_SLOT_INFO;
+            case 1 -> REQUEST_SAVE_BOOK_MARK_SLOT;
+            case 2 -> REQUEST_MODIFY_BOOK_MARK_SLOT;
+            case 3 -> REQUEST_DELETE_BOOK_MARK_SLOT;
+            case 4 -> REQUEST_TELEPORT_BOOK_MARK;
+            case 5 -> REQUEST_CHANCE_BOOK_MARK_SLOT;
             default -> NULLABLE_PACKET_FACTORY;
         };
     }
@@ -669,23 +676,16 @@ public enum ExIncomingPackets implements PacketFactory {
         return connectionStates;
     }
 
+    record DynamicPacketFactory(Supplier<ClientPacket> supplier) implements PacketFactory {
 
-    static class DynamicPacketFactory implements PacketFactory {
-
-        private final Supplier<ClientPacket> supplier;
-
-        DynamicPacketFactory(Supplier<ClientPacket> supplier) {
-            this.supplier = supplier;
+        @Override
+        public ClientPacket newIncomingPacket() {
+            return supplier.get();
         }
 
         @Override
         public boolean canHandleState(ConnectionState state) {
             return true;
-        }
-
-        @Override
-        public ClientPacket newIncomingPacket() {
-            return supplier.get();
         }
     }
 }

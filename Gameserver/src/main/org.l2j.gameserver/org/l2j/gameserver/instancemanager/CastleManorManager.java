@@ -31,7 +31,7 @@ import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.enums.ManorMode;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.entity.Castle;

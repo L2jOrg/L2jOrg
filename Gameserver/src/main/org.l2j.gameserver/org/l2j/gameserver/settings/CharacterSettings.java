@@ -57,7 +57,7 @@ public class CharacterSettings implements Settings {
     private boolean autoLootHerbs;
     private boolean pledgeSkillsItemNeeded;
     private boolean divineInspirationBookNeeded;
-    private boolean vitalityEnabled;
+    private boolean sayhaGraceEnabled;
     private boolean raidBossUseVitality;
     private int maxRunSpeed;
     private int maxPcritRate;
@@ -119,7 +119,7 @@ public class CharacterSettings implements Settings {
         breakStun = settingsFile.getBoolean("BreakStun", true);
         magicFailureAllowed = settingsFile.getBoolean("MagicFailures", true);
 
-        vitalityEnabled = settingsFile.getBoolean("EnableVitality", false);
+        sayhaGraceEnabled = settingsFile.getBoolean("EnableSayhaGrace", false);
         raidBossUseVitality = settingsFile.getBoolean("RaidbossUseVitality", false);
 
         maxRunSpeed = settingsFile.getInteger("MaxRunSpeed", 300);
@@ -261,8 +261,8 @@ public class CharacterSettings implements Settings {
         return effectTickRatio;
     }
 
-    public boolean isVitalityEnabled() {
-        return vitalityEnabled;
+    public boolean isSayhaGraceEnabled() {
+        return sayhaGraceEnabled;
     }
 
     public boolean raidBossUseVitality() {

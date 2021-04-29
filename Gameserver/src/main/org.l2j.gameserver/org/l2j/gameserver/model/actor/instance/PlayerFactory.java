@@ -37,11 +37,11 @@ import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.appearance.Appearance;
+import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
@@ -104,7 +104,7 @@ public class PlayerFactory {
         player.getStats().setLevel(playerData.getLevel());
         player.getStats().setSp(playerData.getSp());
         player.setNoble(playerData.isNobless());
-        player.getStats().setVitalityPoints(playerData.getVitalityPoints());
+        player.getStats().setSayhaGracePoints(playerData.getSayhaGracePoints());
 
         if(Olympiad.getInstance().isHero(playerId)) {
             player.setHero(true);
@@ -128,24 +128,13 @@ public class PlayerFactory {
                 player.getClanPrivileges().setAll();
                 player.setPowerGrade(1);
             }
-            player.setPledgeClass(ClanMember.calculatePledgeClass(player));
-        } else {
-            if (player.isNoble()) {
-                player.setPledgeClass(5);
-            }
-
-            if (player.isHero()) {
-                player.setPledgeClass(8);
-            }
-
-            player.getClanPrivileges().clear();
         }
 
+        Clan.updateSocialStatus(player);
         player.setTitle(playerData.getTitle());
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
-        player.activeClass = playerData.getClassId();
 
         player.setXYZInvisible(playerData.getX(), playerData.getY(), playerData.getZ());
         player.setLastServerPosition(playerData.getX(), playerData.getY(), playerData.getZ());
@@ -158,9 +147,6 @@ public class PlayerFactory {
             player.setOverrideCond(masks);
         }
 
-        // Retrieve from the database all secondary data of this Player
-        // Note that Clan, Noblesse and Hero skills are given separately and not here.
-        // Retrieve from the database all skills of this Player and add them to _skills
         player.restoreCharData();
 
         // Reward auto-get skills and all available skills if auto-learn skills is true.
@@ -181,11 +167,11 @@ public class PlayerFactory {
         player.initStatusUpdateCache();
 
         // Restore current Cp, HP and MP values
-        player.setCurrentCp(playerData.getCurrentCp());
+        player.setCurrentCp(playerData.getCp());
         player.setCurrentHp(playerData.getHp());
         player.setCurrentMp(playerData.getMp());
 
-        player.setOriginalCpHpMp(playerData.getCurrentCp(), playerData.getHp(), playerData.getMp());
+        player.setOriginalCpHpMp(playerData.getCp(), playerData.getHp(), playerData.getMp());
 
         if (playerData.getHp() < 0.5) {
             player.setIsDead(true);
@@ -239,6 +225,10 @@ public class PlayerFactory {
 
         if (Config.STARTING_SP > 0) {
             data.setSp(Config.STARTING_SP);
+        }
+
+        if (Config.ENABLE_SAYHA_GRACE) {
+            data.setSayhaGracePoints(Math.min(Config.STARTING_SAYHA_GRACE_POINTS, PlayerStats.MAX_SAYHA_GRACE_POINTS));
         }
 
         var hp = template.getBaseHpMax(data.getLevel()) * BaseStats.CON.getValue(template.getBaseCON());

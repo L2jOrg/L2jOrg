@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.base.SocialClass;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.PlayerSkillHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -180,7 +180,7 @@ public final class SkillTreesData extends GameXmlReader {
                 case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "lvl")));
                 case "race" -> skillLearn.addRace(Race.valueOf(b.getTextContent()));
                 case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(b.getTextContent()));
-                case "socialClass" -> skillLearn.setSocialClass(Enum.valueOf(SocialClass.class, b.getTextContent()));
+                case "social-status" -> skillLearn.setSocialStatus(parseEnum(b, SocialStatus.class));
                 case "removeSkill" -> {
                     final int removeSkillId = parseInt(attrs, "id");
                     skillLearn.addRemoveSkills(removeSkillId);

@@ -49,4 +49,13 @@ public interface QuestDAO extends DAO<QuestData> {
 
     @Query("UPDATE character_quests SET value=:value: WHERE charId=:playerId: AND name=:questName: AND var = :var:")
     void updateQuestVar(int playerId, String questName, String var, String value);
+
+    @Query("SELECT * FROM character_quests WHERE charId = :playerId: AND var = '<state>'")
+    List<QuestData> findPlayerQuestsByState(int playerId);
+
+    @Query("SELECT * FROM character_quests WHERE charId = :playerId: AND var <> '<state>'")
+    List<QuestData> findPlayerQuestsByNonState(int playerId);
+
+    @Query("INSERT INTO character_quests (charId,name,var,value) VALUES (:playerId:,:name:,:var:,:value:) ON DUPLICATE KEY UPDATE value=:value:")
+    void saveQuestVar(int playerId, String name, String var, String value);
 }

@@ -18,8 +18,10 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
+import io.github.joealisson.primitive.ConcurrentIntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.Bidder;
 
 import java.sql.ResultSet;
 import java.util.function.Consumer;
@@ -40,4 +42,7 @@ public interface ClanHallDAO extends DAO<Object> {
 
     @Query("DELETE FROM clanhall_auctions_bidders WHERE clanId=:id:")
     void deleteBidder(int id);
+
+    @Query("SELECT clanId, clanHallId, bid, bidTime FROM clanhall_auctions_bidders WHERE clanHallId=:clanHallId:")
+    ConcurrentIntMap<Bidder> loadBidders(int clanHallId);
 }

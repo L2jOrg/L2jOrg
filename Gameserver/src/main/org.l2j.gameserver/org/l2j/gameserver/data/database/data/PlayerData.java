@@ -39,7 +39,7 @@ public class PlayerData {
     private double hp;
     private double maxCp;
     @Column("curCp")
-    private double currentCp;
+    private double cp;
     private double maxMp;
     @Column("curMp")
     private double mp;
@@ -105,13 +105,16 @@ public class PlayerData {
     private long clanCreateExpiryTime;
 
     private int bookMarkSlot;
-    @Column("vitality_points")
-    private int vitalityPoints;
+    @Column("sayha_grace_points")
+    private int sayhaGracePoints;
 
     private LocalDate createDate;
     private String language;
     @Column("pccafe_points")
     private int pcCafePoints;
+    private boolean online;
+    @Column("clan_privs")
+    private int clanPrivileges;
 
     public static PlayerData of(String accountName, String name, int classId, byte face, byte hairColor, byte hairStyle, boolean female) {
         PlayerData data = new PlayerData();
@@ -203,8 +206,16 @@ public class PlayerData {
         return heading;
     }
 
+    public void setHeading(int heading) {
+        this.heading = heading;
+    }
+
     public int getReputation() {
         return reputation;
+    }
+
+    public void setReputation(int reputation) {
+        this.reputation = reputation;
     }
 
     public int getFame() {
@@ -271,8 +282,12 @@ public class PlayerData {
         return powerGrade;
     }
 
-    public int getVitalityPoints() {
-        return vitalityPoints;
+    public int getSayhaGracePoints() {
+        return sayhaGracePoints;
+    }
+
+    public void setSayhaGracePoints(int sayhaGracePoints) {
+        this.sayhaGracePoints = sayhaGracePoints;
     }
 
     public int getSubPledge() {
@@ -281,6 +296,10 @@ public class PlayerData {
 
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getAccessLevel() {
@@ -299,15 +318,19 @@ public class PlayerData {
         return hp;
     }
 
-    public double getCurrentCp() {
-        return currentCp;
+    public double getCp() {
+        return cp;
+    }
+
+    public void setCp(double cp) {
+        this.cp = cp;
     }
 
     public double getMp() {
         return mp;
     }
 
-    public double getMaxtMp() {
+    public double getMaxMp() {
         return maxMp;
     }
 
@@ -351,6 +374,10 @@ public class PlayerData {
         return bookMarkSlot;
     }
 
+    public void setBookMarkSlot(int bookmarkSlot) {
+        this.bookMarkSlot = bookmarkSlot;
+    }
+
     public LocalDate getCreateDate() {
         return createDate;
     }
@@ -361,6 +388,10 @@ public class PlayerData {
 
     public String getLanguage() {
         return language;
+    }
+
+    public void setLanguage(String lang) {
+        this.language = lang;
     }
 
     public void setExpBeforeDeath(long exp) {
@@ -451,7 +482,7 @@ public class PlayerData {
         this.exp = experience;
     }
 
-    public void setSp(int sp) {
+    public void setSp(long sp) {
         this.sp = sp;
     }
 
@@ -465,6 +496,26 @@ public class PlayerData {
 
     public void addOnlineTime(long time) {
         onlineTime += time;
+    }
+
+    public void setMaxCp(int maxCp) {
+        this.maxCp = maxCp;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
+    }
+
+    public void setClanPrivileges(int privileges) {
+        this.clanPrivileges = privileges;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setClassId(int classId) {
+        this.classId = classId;
     }
 }
 

@@ -34,14 +34,14 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * @author Psychokiller1888
  */
-public class AdminVitality implements IAdminCommandHandler
+public class AdminSayhaGrace implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_set_vitality",
-		"admin_full_vitality",
-		"admin_empty_vitality",
-		"admin_get_vitality"
+			"admin_set_sayha_grace",
+			"admin_full_sayha_grace",
+			"admin_empty_sayha_grace",
+			"admin_get_sayha_grace"
 	};
 	
 	@Override
@@ -52,13 +52,13 @@ public class AdminVitality implements IAdminCommandHandler
 			return false;
 		}
 		
-		if (!getSettings(CharacterSettings.class).isVitalityEnabled())
+		if (!getSettings(CharacterSettings.class).isSayhaGraceEnabled())
 		{
-			BuilderUtil.sendSysMessage(activeChar, "Vitality is not enabled on the server!");
+			BuilderUtil.sendSysMessage(activeChar, "Sayha is not enabled on the server!");
 			return false;
 		}
-		
-		int vitality = 0;
+
+		int sayha = 0;
 		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String cmd = st.nextToken();
@@ -67,34 +67,34 @@ public class AdminVitality implements IAdminCommandHandler
 		{
 			final Player target = (Player) activeChar.getTarget();
 			
-			if (cmd.equals("admin_set_vitality"))
+			if (cmd.equals("admin_set_sayha_grace"))
 			{
 				try
 				{
-					vitality = Integer.parseInt(st.nextToken());
+					sayha = Integer.parseInt(st.nextToken());
 				}
 				catch (Exception e)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Incorrect vitality");
+					BuilderUtil.sendSysMessage(activeChar, "Incorrect sayha");
 				}
 				
-				target.setVitalityPoints(vitality, true);
-				target.sendMessage("Admin set your Vitality points to " + vitality);
+				target.setSayhaGracePoints(sayha, true);
+				target.sendMessage("Admin set your SayhaGrace points to " + sayha);
 			}
-			else if (cmd.equals("admin_full_vitality"))
+			else if (cmd.equals("admin_full_sayha_grace"))
 			{
-				target.setVitalityPoints(PlayerStats.MAX_VITALITY_POINTS, true);
+				target.setSayhaGracePoints(PlayerStats.MAX_SAYHA_GRACE_POINTS, true);
 				target.sendMessage("Admin completly recharged your Vitality");
 			}
-			else if (cmd.equals("admin_empty_vitality"))
+			else if (cmd.equals("admin_empty_sayha_grace"))
 			{
-				target.setVitalityPoints(PlayerStats.MIN_VITALITY_POINTS, true);
+				target.setSayhaGracePoints(PlayerStats.MIN_SAYHA_GRACE_POINTS, true);
 				target.sendMessage("Admin completly emptied your Vitality");
 			}
-			else if (cmd.equals("admin_get_vitality"))
+			else if (cmd.equals("admin_get_sayha_grace"))
 			{
-				vitality = target.getVitalityPoints();
-				BuilderUtil.sendSysMessage(activeChar, "Player vitality points: " + vitality);
+				sayha = target.getSayhaGracePoints();
+				BuilderUtil.sendSysMessage(activeChar, "Player vitality points: " + sayha);
 			}
 			return true;
 		}

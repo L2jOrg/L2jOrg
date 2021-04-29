@@ -385,7 +385,8 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
     }
 
     private void onDamageReceived(OnCreatureDamageReceived event) {
-        if(event.getAttacker().getActingPlayer() instanceof Player attacker && event.getTarget() instanceof Player target) {
+        var attacker = event.getAttacker().getActingPlayer();
+        if(nonNull(attacker) && event.getTarget() instanceof Player target) {
             onDamage(attacker, target, event.getDamage());
         }
     }

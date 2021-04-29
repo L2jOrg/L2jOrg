@@ -19,7 +19,6 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -27,8 +26,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Iterator;

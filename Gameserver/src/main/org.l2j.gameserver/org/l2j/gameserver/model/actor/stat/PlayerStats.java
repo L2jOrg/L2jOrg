@@ -37,7 +37,6 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
-import org.l2j.gameserver.network.serverpackets.grace.ExSayhaGracePointInfo;
 import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.RateSettings;
@@ -53,18 +52,15 @@ import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
 import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStatType;
 
 public class PlayerStats extends PlayableStats {
-    public static final int MAX_VITALITY_POINTS = 140000;
-    public static final int MIN_VITALITY_POINTS = 0;
+    public static final int MAX_SAYHA_GRACE_POINTS = 140000;
+    public static final int MIN_SAYHA_GRACE_POINTS = 0;
     private static final int FANCY_FISHING_ROD_SKILL = 21484;
     /**
      * Player's maximum talisman count.
      */
     private final AtomicInteger _talismanSlots = new AtomicInteger();
     private long _startingXp;
-    private int _vitalityPoints = 0;
-    private static int _sayhaGracePoints = 0;
-    public static final int MAX_SAYHA_GRACE_POINTS = 3500000;
-    public static final int MIN_SAYHA_GRACE_POINTS = 0;
+    private int _sayhaGracePoints = 0;
 
     public PlayerStats(Player activeChar) {
         super(activeChar);
@@ -206,9 +202,8 @@ public class PlayerStats extends PlayableStats {
             return false;
         }
 
-
-
         Player player = getCreature();
+        byte oldLevel = getLevel();
         final boolean levelIncreased = super.addLevel(value);
         if (levelIncreased) {
             player.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
@@ -218,14 +213,13 @@ public class PlayerStats extends PlayableStats {
         }
 
         // Notify to scripts
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(player, getLevel() - value, getLevel()), player);
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(player, oldLevel, getLevel()), player);
 
         // Give AutoGet skills and all normal skills if Auto-Learn is activated.
         player.rewardSkills();
 
         if (player.getClan() != null) {
-            player.getClan().updateClanMember(player);
-            player.getClan().broadcastToOnlineMembers(new PledgeShowMemberListUpdate(player));
+            player.getClan().onMemberLevelChanged(player, oldLevel, getLevel());
         }
         if (player.isInParty()) {
             player.getParty().recalculatePartyLevel(); // Recalculate the party level
@@ -321,37 +315,24 @@ public class PlayerStats extends PlayableStats {
         return super.getSp();
     }
 
-    public int getVitalityPoints() {
-        return Math.min(Math.max(_vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
-    }
-
-    public void setVitalityPoints(int value) {
-        _vitalityPoints = Math.min(Math.max(value, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
-    }
-
-    public int getBaseVitalityPoints() {
-        return Math.min(Math.max(_vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
-    }
-
-    /*
-     * Return current Sayha's Grace points in integer format
-     */
-    public  int getSayhaGracePoints()
-    {
+    public int getSayhaGracePoints() {
         return Math.min(Math.max(_sayhaGracePoints, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
     }
 
-    public  double getSayhaGraceExpBonus()
-    {
-        final Player player = getCreature();
+    public void setSayhaGracePoints(int value) {
+        _sayhaGracePoints = Math.min(Math.max(value, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
+       // getActiveChar().sendExpBoostInfo(true);
+    }
+
+    public int getBaseSayhaGracePoints() {
+        return Math.min(Math.max(_sayhaGracePoints, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
+    }
+
+    public double getSayhaGraceExpBonus() {
         double bonus = (getSayhaGracePoints() > 0) ? getValue(Stat.SAYHA_GRACE_EXP_RATE, Config.RATE_SAYHA_GRACE_EXP_MULTIPLIER) : 1.0;
-      /*  if ((bonus > 1) && getCreature().hasPremiumStatus())
-        {
-            bonus += Config.PREMIUM_RATE_SAYHA_GRACE_XP / 100;
-        }*/
         if (bonus == 1)
         {
-            if (player.getLimitedSayhaGraceEndTime() > System.currentTimeMillis())
+            if (getCreature().getLimitedSayhaGraceEndTime() > System.currentTimeMillis())
             {
                 return getLimitedSayhaGraceExpBonus();
             }
@@ -359,57 +340,53 @@ public class PlayerStats extends PlayableStats {
         return bonus;
     }
 
-  /*  public double getVitalityExpBonus() {
-        final double bonus = (getVitalityPoints() > 0) ? getMul(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1;
-        if ((bonus == 1) && (getCreature().getLimitedSayhaGraceEndTime() > System.currentTimeMillis()))
-        {
-            return getLimitedSayhaGraceExpBonus();
-        }
-        return bonus;
-    }*/
-
-    public  double getLimitedSayhaGraceExpBonus()
+    public double getLimitedSayhaGraceExpBonus()
     {
         return Config.RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
     }
     /*
-     * Set current vitality points to this value if quiet = true - does not send system messages
+     * Set current grace points to this value if quiet = true - does not send system messages
      */
-   public void setVitalityPoints(int points, boolean quiet) {
-        points = Math.min(Math.max(points, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
-        if (points == getVitalityPoints()) {
+    public void setSayhaGracePoints(int points, boolean quiet) {
+        points = Math.min(Math.max(points, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
+        if (points == getSayhaGracePoints()) {
             return;
         }
 
         if (!quiet) {
-            if (points < getVitalityPoints()) {
-                getCreature().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
+            if (points < getSayhaGracePoints()) {
+                getCreature().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_HAS_DECREASED);
             } else {
-                getCreature().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
+                getCreature().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_HAS_INCREASED);
             }
         }
 
-        setVitalityPoints(points);
+        setSayhaGracePoints(points);
 
         if (points == 0) {
-            getCreature().sendPacket(SystemMessageId.YOUR_VITALITY_IS_FULLY_EXHAUSTED);
-        } else if (points == MAX_VITALITY_POINTS) {
-            getCreature().sendPacket(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM);
+            getCreature().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_IS_FULLY_EXHAUSTED);
+        } else if (points == MAX_SAYHA_GRACE_POINTS) {
+            getCreature().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_IS_AT_MAXIMUM);
         }
 
         final Player player = getCreature();
-        player.sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
+        player.sendPacket(new ExSayhaGracePointInfo(getSayhaGracePoints()));
         player.broadcastUserInfo(UserInfoType.VITA_FAME);
         final Party party = player.getParty();
         if (party != null) {
             final PartySmallWindowUpdate partyWindow = new PartySmallWindowUpdate(player, false);
-            partyWindow.addComponentType(PartySmallWindowUpdateType.VITALITY_POINTS);
+            partyWindow.addComponentType(PartySmallWindowUpdateType.SAYHA_GRACE_POINTS);
             party.broadcastToPartyMembers(player, partyWindow);
         }
     }
 
-    public void updateVitalityPoints(int points, boolean useRates) {
-        if (points == 0 || !getSettings(CharacterSettings.class).isVitalityEnabled()) {
+    public void addSayhaGracePoints(int value, boolean quiet)
+    {
+        setSayhaGracePoints(getSayhaGracePoints() + value, quiet);
+    }
+
+    public void updateSayhaGracePoints(int points, boolean useRates, boolean quiet) {
+        if (points == 0 || !getSettings(CharacterSettings.class).isSayhaGraceEnabled()) {
             return;
         }
 
@@ -418,9 +395,9 @@ public class PlayerStats extends PlayableStats {
                 return;
             }
 
-            if (points < 0) // vitality consumed
+            if (points < 0) // Sayha grace consumed
             {
-                final int stat = (int) getValue(Stat.VITALITY_CONSUME_RATE, 1);
+                final int stat = (int) getValue(Stat.SAYHA_GRACE_CONSUME_RATE, 1);
 
                 if (stat == 0) {
                     return;
@@ -431,117 +408,10 @@ public class PlayerStats extends PlayableStats {
             }
 
             if (points > 0) {
-                // vitality increased
-                points *= getSettings(RateSettings.class).rateVitalityGain();
-            } else {
-                // vitality decreased
-                points *= getSettings(RateSettings.class).rateVitalityLoss();
-            }
-        }
-
-        if (points > 0) {
-            points = Math.min(getVitalityPoints() + points, MAX_VITALITY_POINTS);
-        } else {
-            points = Math.max(getVitalityPoints() + points, MIN_VITALITY_POINTS);
-        }
-
-        if (Math.abs(points - getVitalityPoints()) <= 1e-6) {
-            return;
-        }
-
-        setVitalityPoints(points);
-    }
-
-    public void setSayhaGracePoints(int value)
-    {
-        _sayhaGracePoints = Math.min(Math.max(value, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
-        //getCreature().sendExpBoostInfo(true);
-    }
-
-    /*
-     * Set current Sayha's Grace points to this value if quiet = true - does not send system messages
-     */
-    public void setSayhaGracePoints(int value, boolean quiet)
-    {
-        final int points = Math.min(Math.max(value, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
-        if (points == getSayhaGracePoints())
-        {
-            return;
-        }
-
-        if (!quiet)
-        {
-            if (points < getSayhaGracePoints())
-            {
-                getCreature().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
-            }
-            else
-            {
-                getCreature().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
-            }
-        }
-
-        setSayhaGracePoints(points);
-
-        if (points == 0)
-        {
-            getCreature().sendPacket(SystemMessageId.YOUR_VITALITY_IS_FULLY_EXHAUSTED);
-        }
-        else if (points == MAX_SAYHA_GRACE_POINTS)
-        {
-            getCreature().sendPacket(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM);
-        }
-
-        final Player player = getCreature();
-        player.sendPacket(new ExSayhaGracePointInfo(getSayhaGracePoints()));
-        player.broadcastUserInfo(UserInfoType.VITA_FAME);
-        final Party party = player.getParty();
-        if (party != null)
-        {
-            final PartySmallWindowUpdate partyWindow = new PartySmallWindowUpdate(player, false);
-            partyWindow.addComponentType(PartySmallWindowUpdateType.VITALITY_POINTS);
-            party.broadcastToPartyMembers(player, partyWindow);
-        }
-    }
-
-    public void addSayhaGracePoints(int value, boolean quiet)
-    {
-        setSayhaGracePoints(getSayhaGracePoints() + value, quiet);
-    }
-
-    public synchronized void updateSayhaGracePoints(int value, boolean useRates, boolean quiet)
-    {
-        if ((value == 0) || !Config.ENABLE_SAYHA_GRACE)
-        {
-            return;
-        }
-
-        int points = value;
-        if (useRates)
-        {
-            if (getCreature().isLucky())
-            {
-                return;
-            }
-
-            if (points < 0) // Sayha's Grace consumed
-            {
-                double consumeRate = getValue(Stat.SAYHA_GRACE_CONSUME_RATE, 1);
-                if (consumeRate <= 0)
-                {
-                    return;
-                }
-                points *= consumeRate;
-            }
-
-            if (points > 0)
-            {
                 // Sayha's Grace increased
                 points *= Config.RATE_SAYHA_GRACE_GAIN;
-            }
-            else
-            {
-                // Sayha's Grace decreased
+            } else {
+                // sayha grace decreased
                 points *= Config.RATE_SAYHA_GRACE_LOST;
             }
         }
@@ -563,19 +433,21 @@ public class PlayerStats extends PlayableStats {
         setSayhaGracePoints(points);
     }
 
+
     public double getExpBonusMultiplier() {
         double bonus = 1.0;
-        double vitality;
+        double sayhaGrace = 1.0;
         double bonusExp;
 
-        // Bonus from Vitality System
-        vitality = getSayhaGraceExpBonus();
+        // Bonus from Sayha's Grace System
+        sayhaGrace = getSayhaGraceExpBonus();
 
         // Bonus exp from skills
         bonusExp = getValue(Stat.BONUS_EXP, 1);
 
-        if (vitality > 1.0) {
-            bonus += (vitality - 1);
+        if (sayhaGrace > 1.0)
+        {
+            bonus += (sayhaGrace - 1);
         }
 
         if (bonusExp > 1) {
@@ -590,17 +462,17 @@ public class PlayerStats extends PlayableStats {
 
     public double getSpBonusMultiplier() {
         double bonus = 1.0;
-        double vitality;
+        double sayhaGrace = 1.0;
         double bonusSp;
 
-        // Bonus from Vitality System
-        vitality = getSayhaGraceExpBonus();
-
+        // Bonus from Sayha's Grace System
+        sayhaGrace = getSayhaGraceExpBonus();
         // Bonus sp from skills
         bonusSp = 1 + (getValue(Stat.BONUS_SP, 0) / 100);
 
-        if (vitality > 1.0) {
-            bonus += (vitality - 1);
+        if (sayhaGrace > 1.0)
+        {
+            bonus += (sayhaGrace - 1);
         }
 
         if (bonusSp > 1) {

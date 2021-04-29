@@ -108,7 +108,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 	}
 
     public void close(LoginFailReason reason) {
-        close(new LoginFail(reason));
+        sendPacket(new LoginFail(reason));
 	}
 	
 	public void close(PlayFailReason reason) {

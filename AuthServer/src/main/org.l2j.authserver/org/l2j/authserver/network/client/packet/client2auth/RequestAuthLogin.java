@@ -38,7 +38,7 @@ public class RequestAuthLogin extends AuthClientPacket {
 
     @Override
     public boolean readImpl() {
-        if (available() >= 256) {
+        if (available() >= 256) { //RU client 191; NA 319
             useNewAuth = true;
             readBytes(userData);
             readBytes(authData);
@@ -85,10 +85,10 @@ public class RequestAuthLogin extends AuthClientPacket {
         String password;
         if(useNewAuth) {
             user = new String(decUserData, 0x4E, 0x32).trim().toLowerCase() + new String(decAuthData, 0x4E, 0xE).trim().toLowerCase();
-            password = new String(decAuthData, 0x5C, 0x1F).trim();
+            password = new String(decAuthData, 0x5C, 0x10).trim();
         } else {
             user = new String(decUserData, 0x5E, 0xE).trim().toLowerCase();
-            password = new String(decUserData, 0x6C, 0x14).trim();
+            password = new String(decUserData, 0x6C, 0x10).trim();
         }
 
         AuthController.getInstance().authenticate(client, user, password);

@@ -105,6 +105,7 @@ public class LCoinShop extends GameXmlReader {
 
     private void parseProduct(Node productNode) {
         var attributes = productNode.getAttributes();
+        var index = parseInt(attributes, "index");
         var id = parseInt(attributes, "id");
         var restrictionAmount = parseInt(attributes, "restriction-amount");
         var restrictionPeriod = parseEnum(attributes, RestrictionPeriod.class, "restriction-period");
@@ -146,7 +147,7 @@ public class LCoinShop extends GameXmlReader {
             return;
         }
 
-        if (productInfos.put(id, new LCoinShopProduct(id, restrictionAmount, restrictionPeriod, minLevel, ingredients, production, serverItemAmount, expirationDate)) != null) {
+        if (productInfos.put(id, new LCoinShopProduct(index, id, restrictionAmount, restrictionPeriod, minLevel, ingredients, production, serverItemAmount, expirationDate)) != null) {
             LOGGER.warn("Duplicate product id {}", id);
         }
     }

@@ -19,6 +19,7 @@
 package org.l2j.gameserver.model.spawns;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.instancemanager.BossManager;
@@ -278,11 +279,11 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         spawn.setInstanceId(zeroIfNullOrElse(instance, Instance::getId));
         spawn.setAmount(1);
         spawn.setLocation(loc);
-        int respawn = zeroIfNullOrElse(respawnTime, r -> (int) r.getSeconds());
-        int respawnRandom = zeroIfNullOrElse(respawnTimeRandom, r -> (int) r.getSeconds());
+        long respawn = Util.zeroIfNullOrElseLong(respawnTime, Duration::getSeconds);
+        long respawnRandom = Util.zeroIfNullOrElseLong(respawnTimeRandom, Duration::getSeconds);
 
         if (respawn > 0) {
-            spawn.setRespawnDelay(respawn, respawnRandom);
+            spawn.setRespawnDelay((int) respawn, (int) respawnRandom);
             spawn.startRespawn();
         } else {
             spawn.stopRespawn();

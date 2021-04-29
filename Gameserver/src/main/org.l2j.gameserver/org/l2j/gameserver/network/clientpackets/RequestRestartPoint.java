@@ -62,7 +62,7 @@ public final class RequestRestartPoint extends ClientPacket {
             player.stopFakeDeath(true);
             return;
         } else if (!player.isDead()) {
-            LOGGER.warn("Living player [" + player.getName() + "] called RestartPointPacket! Ban this player!");
+            LOGGER.warn("Living {} called RestartPointPacket! Ban this player!", player);
             return;
         }
 
@@ -104,14 +104,14 @@ public final class RequestRestartPoint extends ClientPacket {
             case 1: // to clanhall
             {
                 if ((player.getClan() == null) || (player.getClan().getHideoutId() == 0)) {
-                    LOGGER.warn("Player [" + player.getName() + "] called RestartPointPacket - To Clanhall and he doesn't have Clanhall!");
+                    LOGGER.warn("Player {} called RestartPointPacket - To Clanhall and he doesn't have Clanhall!", player);
                     return;
                 }
                 loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.CLANHALL);
                 final ClanHall residense = ClanHallManager.getInstance().getClanHallByClan(player.getClan());
 
                 if ((residense != null) && (residense.hasFunction(ResidenceFunctionType.EXP_RESTORE))) {
-                    player.restoreExp(residense.getFunction(ResidenceFunctionType.EXP_RESTORE).getValue());
+                    player.restoreExp(residense.getFunction(ResidenceFunctionType.EXP_RESTORE).getValue() *100 -100);
                 }
                 break;
             }
@@ -126,7 +126,7 @@ public final class RequestRestartPoint extends ClientPacket {
                     } else if (castle.getSiege().checkIsAttacker(clan)) {
                         loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN);
                     } else {
-                        LOGGER.warn("Player [" + player.getName() + "] called RestartPointPacket - To Castle and he doesn't have Castle!");
+                        LOGGER.warn("Player {} called RestartPointPacket - To Castle and he doesn't have Castle!", player);
                         return;
                     }
                 } else {

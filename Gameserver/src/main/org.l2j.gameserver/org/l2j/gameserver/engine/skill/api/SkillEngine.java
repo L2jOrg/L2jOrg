@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.HashLongMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.LongMap;
 import io.github.joealisson.primitive.function.IntBiConsumer;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.xml.impl.PetSkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -56,6 +57,7 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 
 /**

@@ -74,7 +74,7 @@ public class MacroHandler implements TypeHandler<Macro> {
 
     @Override
     public Macro handleColumn(ResultSet resultSet, int column) throws SQLException {
-        return null;
+        return handleType(resultSet, null);
     }
 
     @Override

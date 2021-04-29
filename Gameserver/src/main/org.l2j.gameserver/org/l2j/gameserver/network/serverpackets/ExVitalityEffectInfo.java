@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -30,14 +31,14 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * @author Sdw
  */
 public class ExVitalityEffectInfo extends ServerPacket {
-   // private final int _vitalityBonus;
-    private final int _vitalityItemsRemaining;
+    private final int _sayhaGraceBonus;
+    private final int _sayhaGraceItemsRemaining;
     private final int _points;
 
     public ExVitalityEffectInfo(Player cha) {
-        _points = cha.getVitalityPoints();
-       // _vitalityBonus = (int) cha.getStats().getVitalityExpBonus() * 100;
-        _vitalityItemsRemaining = getSettings(RateSettings.class).maxItemsVitality() - cha.getVitalityItemsUsed();
+        _points = cha.getSayhaGracePoints();
+        _sayhaGraceBonus = (int) cha.getStats().getSayhaGraceExpBonus() * 100;
+        _sayhaGraceItemsRemaining = Config.SAYHA_GRACE_MAX_ITEMS_ALLOWED - cha.getSayhaGraceItemsUsed();
 
     }
 
@@ -45,11 +46,11 @@ public class ExVitalityEffectInfo extends ServerPacket {
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_VITALITY_EFFECT_INFO, buffer );
 
-        buffer.writeInt(500);
-        buffer.writeInt(2); // Vitality Bonus
+        buffer.writeInt(_points);
+        buffer.writeInt(_sayhaGraceBonus); // Vitality Bonus
         buffer.writeShort(0x00); // Vitality additional bonus in %
-        buffer.writeShort(0); // How much vitality items remaining for use
-        buffer.writeShort(getSettings(RateSettings.class).maxItemsVitality()); // Max number of items for use
+        buffer.writeShort(_sayhaGraceItemsRemaining); // How much vitality items remaining for use
+        buffer.writeShort(Config.SAYHA_GRACE_MAX_ITEMS_ALLOWED); // Max number of items for use
     }
 
 }

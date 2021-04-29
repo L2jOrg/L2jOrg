@@ -16486,17 +16486,17 @@ public final class SystemMessageId {
     @ClientString(id = 2312, message = "You do not have a pet.")
     public static SystemMessageId YOU_DO_NOT_HAVE_A_PET;
 
-    @ClientString(id = 2314, message = "Your Vitality is at maximum.")
-    public static SystemMessageId YOUR_VITALITY_IS_AT_MAXIMUM;
+    @ClientString(id = 2314, message = "Your Sayha's Grace is at maximum.")
+    public static SystemMessageId YOUR_SAYHA_S_GRACE_IS_AT_MAXIMUM;
 
-    @ClientString(id = 2315, message = "Your Vitality has increased.")
-    public static SystemMessageId YOUR_VITALITY_HAS_INCREASED;
+    @ClientString(id = 2315, message = "Your Sayha's Grace has increased.")
+    public static SystemMessageId YOUR_SAYHA_S_GRACE_HAS_INCREASED;
 
-    @ClientString(id = 2316, message = "Your Vitality has decreased.")
-    public static SystemMessageId YOUR_VITALITY_HAS_DECREASED;
+    @ClientString(id = 2316, message = "Your Sayha's Grace has decreased.")
+    public static SystemMessageId YOUR_SAYHA_S_GRACE_HAS_DECREASED;
 
-    @ClientString(id = 2317, message = "Your Vitality is fully exhausted.")
-    public static SystemMessageId YOUR_VITALITY_IS_FULLY_EXHAUSTED;
+    @ClientString(id = 2317, message = "Your Sayha's Grace is fully exhausted.")
+    public static SystemMessageId YOUR_SAYHA_S_GRACE_IS_FULLY_EXHAUSTED;
 
     @ClientString(id = 2319, message = "You have acquired $s1 fame.")
     public static SystemMessageId YOU_HAVE_ACQUIRED_S1_FAME;

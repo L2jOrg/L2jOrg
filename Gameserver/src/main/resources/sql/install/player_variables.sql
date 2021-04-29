@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
     `revenge_locations` SMALLINT NOT NULL DEFAULT 0,
     `hair_accessory_enabled` BOOLEAN DEFAULT TRUE,
     `world_chat_used` INT DEFAULT 0,
-	`vitality_items_used` INT DEFAULT 0,
+	`sayha_grace_items_used` INT DEFAULT 0,
 	`ability_points_main_class_used` INT DEFAULT 0,
 	`revelation_skill_main_class_1` INT DEFAULT 0,
 	`revelation_skill_main_class_2` INT DEFAULT 0,

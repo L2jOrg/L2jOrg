@@ -28,7 +28,7 @@ import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -159,12 +159,11 @@ public class ClanTable {
         }
 
         final Clan clan = new Clan(IdFactory.getInstance().getNextId(), clanName);
-        final ClanMember leader = new ClanMember(clan, player);
+        final ClanMember leader = ClanMember.of(clan, player);
         clan.setLeader(leader);
-        leader.setPlayerInstance(player);
         clan.store();
         player.setClan(clan);
-        player.setPledgeClass(ClanMember.calculatePledgeClass(player));
+        Clan.updateSocialStatus(player);
         player.setClanPrivileges(new EnumIntBitmask<>(ClanPrivilege.class, true));
 
         clans.put(clan.getId(), clan);

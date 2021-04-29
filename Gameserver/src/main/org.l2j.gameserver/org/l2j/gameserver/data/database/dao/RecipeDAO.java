@@ -16,30 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model;
+package org.l2j.gameserver.data.database.dao;
 
-import org.l2j.gameserver.data.xml.impl.RecipeData;
+import io.github.joealisson.primitive.ConcurrentIntMap;
+import org.l2j.commons.database.DAO;
+import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
 
-public class ManufactureItem {
-    private final int _recipeId;
-    private final long _cost;
-    private final boolean _isDwarven;
+import java.util.Collection;
 
-    public ManufactureItem(int recipeId, long cost) {
-        _recipeId = recipeId;
-        _cost = cost;
-        _isDwarven = RecipeData.getInstance().getRecipeList(_recipeId).isDwarvenRecipe();
-    }
+/**
+ * @author JoeAlisson
+ */
+public interface RecipeDAO extends DAO<ManufactureItem> {
 
-    public int getRecipeId() {
-        return _recipeId;
-    }
+    @Query("DELETE FROM character_recipeshoplist WHERE charId=:playerId:")
+    void deleteRecipeShop(int playerId);
 
-    public long getCost() {
-        return _cost;
-    }
+    @Query("SELECT * FROM character_recipeshoplist WHERE charId=:playerId:")
+    ConcurrentIntMap<ManufactureItem> findByPlayer(int playerId);
 
-    public boolean isDwarven() {
-        return _isDwarven;
-    }
+    void save(Collection<ManufactureItem> values);
 }

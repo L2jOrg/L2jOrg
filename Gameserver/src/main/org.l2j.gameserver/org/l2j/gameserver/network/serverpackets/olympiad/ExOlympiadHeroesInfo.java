@@ -27,8 +27,6 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import java.util.List;
 import java.util.Objects;
 
-import static org.l2j.commons.util.Util.zeroIfNullOrElse;
-
 /**
  * @author JoeAlisson
  */

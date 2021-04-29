@@ -25,6 +25,7 @@ import java.lang.reflect.Proxy;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ServiceLoader;
 
 /**
  * @author JoeAlisson
@@ -32,8 +33,8 @@ import java.util.Map;
 public class DatabaseAccess {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseAccess.class);
-    @SuppressWarnings("rawtypes")
-    private static final Map<Class, DAO> CACHE = new HashMap<>();
+
+    private static final Map<Class<?>, DAO<?>> DAO_CACHE = new HashMap<>();
     private static final JDBCInvocation handler = new JDBCInvocation();
 
     private volatile static boolean initialized = false;
@@ -44,6 +45,7 @@ public class DatabaseAccess {
         }
         try {
             HandlersSupport.initialize();
+            initializeProvidedDAO();
             DatabaseFactory.getInstance();
             return initialized = true;
         } catch (SQLException e) {
@@ -52,15 +54,27 @@ public class DatabaseAccess {
         return initialized;
     }
 
+    private static void initializeProvidedDAO() {
+        for (ProvidedDAO<?> dao : ServiceLoader.load(ProvidedDAO.class)) {
+            for (Class<?> anInterface : dao.getClass().getInterfaces()) {
+                if(!anInterface.equals(DAO.class) && !anInterface.equals(ProvidedDAO.class)) {
+                    DAO_CACHE.put(anInterface, dao);
+                }
+            }
+            DAO_CACHE.put(dao.getClass(), dao);
+        }
+    }
+
     public static <T extends DAO<?>> T getDAO(Class<T> daoClass) {
-        if(CACHE.containsKey(daoClass)) {
-            return daoClass.cast(CACHE.get(daoClass));
+        if(DAO_CACHE.containsKey(daoClass)) {
+            return daoClass.cast(DAO_CACHE.get(daoClass));
         }
 
         var dao =  daoClass.cast(Proxy.newProxyInstance(daoClass.getClassLoader(), new Class[]{ daoClass }, handler));
-        CACHE.put(daoClass, dao);
+        DAO_CACHE.put(daoClass, dao);
         return dao;
     }
+
 
     public static void shutdown() {
         try {

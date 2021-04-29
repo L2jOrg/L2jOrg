@@ -20,6 +20,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAskJoinMPCC;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -108,18 +109,7 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
     }
 
     private void askJoinMPCC(Player requestor, Player target) {
-        boolean hasRight = false;
-        if (requestor.isClanLeader() && (requestor.getClan().getLevel() >= 5)) {
-            // Clan leader of lvl5 Clan or higher.
-            hasRight = true;
-        } else if (requestor.getInventory().getItemByItemId(8871) != null) {
-            // 8871 Strategy Guide.
-            // TODO: Should destroyed after successful invite?
-            hasRight = true;
-        } else if ((requestor.getPledgeClass() >= 5) && (requestor.getKnownSkill(391) != null)) {
-            // At least Baron or higher and the skill Clan Imperium
-            hasRight = true;
-        }
+        boolean hasRight = canInviteToMPCC(requestor);
 
         if (!hasRight) {
             requestor.sendPacket(SystemMessageId.COMMAND_CHANNELS_CAN_ONLY_BE_FORMED_BY_A_PARTY_LEADER_WHO_IS_ALSO_THE_LEADER_OF_A_LEVEL_5_CLAN);
@@ -142,5 +132,11 @@ public final class RequestExAskJoinMPCC extends ClientPacket {
             sm.addString(targetLeader.getName());
             requestor.sendPacket(sm);
         }
+    }
+
+    private boolean canInviteToMPCC(Player player) {
+        return (player.isClanLeader() && player.getClan().getLevel() >= 5) ||
+               (player.getSocialStatus().compareTo(SocialStatus.BARON) >= 0 && player.getKnownSkill(391) != null) ||
+               (player.getInventory().getItemByItemId(8871) != null); // TODO: Should destroyed after successful invite?
     }
 }

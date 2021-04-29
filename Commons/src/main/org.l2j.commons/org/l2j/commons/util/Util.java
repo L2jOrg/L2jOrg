@@ -28,14 +28,13 @@ import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.ToIntFunction;
+import java.util.function.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -51,11 +50,15 @@ public class Util {
 
     public static final String STRING_EMPTY = "";
     public static final String SPACE = " ";
-    public static final int[] INT_ARRAY_EMPTY = new int[0];
-    public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
     public static final String[] STRING_ARRAY_EMPTY = new String[0];
     public static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     public static final Predicate<String> ANY_PATTERN = Pattern.compile(".*").asMatchPredicate();
+    public static final int[] INT_ARRAY_EMPTY = new int[0];
+    public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
+
+    private Util() {
+        // utility class
+    }
 
     public static boolean isNullOrEmpty(final CharSequence value) {
         return isNull(value) || value.length() == 0;
@@ -79,6 +82,10 @@ public class Util {
 
     public static <T> int zeroIfNullOrElse(T obj, ToIntFunction<T> function) {
         return isNull(obj) ? 0 : function.applyAsInt(obj);
+    }
+
+    public static <T> long zeroIfNullOrElseLong(T obj, ToLongFunction<T> function) {
+        return  isNull(obj) ? 0 : function.applyAsLong(obj);
     }
 
     public static <T> boolean falseIfNullOrElse(T obj, Predicate<T> predicate) {
@@ -262,7 +269,7 @@ public class Util {
     }
 
     public static LocalDateTime parseLocalDateTime(String dateTimeString) {
-        if(dateTimeString.length() > 10) {
+        if (dateTimeString.length() > 10) {
             return LocalDateTime.parse(dateTimeString, DEFAULT_DATE_TIME_FORMATTER);
         } else {
             return LocalDate.parse(dateTimeString, DateTimeFormatter.ISO_LOCAL_DATE).atStartOfDay();
@@ -276,4 +283,9 @@ public class Util {
     public static String formatDateTime(LocalDateTime dateTime) {
         return dateTime.format(DEFAULT_DATE_TIME_FORMATTER);
     }
+
+    public static String formatDateTime(long epochMilli) {
+        return  DEFAULT_DATE_TIME_FORMATTER.format(Instant.ofEpochMilli(epochMilli).atZone(ZoneId.systemDefault()));
+    }
+
 }

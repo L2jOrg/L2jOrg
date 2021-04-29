@@ -21,7 +21,7 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.base.SocialClass;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
 
@@ -52,7 +52,7 @@ public final class SkillLearn {
     private final int _row;
     private final int _column;
     private final int _pointsRequired;
-    private SocialClass _socialClass;
+    private SocialStatus socialStatus;
 
     /**
      * Constructor for SkillLearn.
@@ -161,18 +161,18 @@ public final class SkillLearn {
     /**
      * @return the social class required to get this skill.
      */
-    public SocialClass getSocialClass() {
-        return _socialClass;
+    public SocialStatus getSocialClass() {
+        return socialStatus;
     }
 
     /**
      * Sets the social class if hasn't been set before.
      *
-     * @param socialClass the social class to set.
+     * @param socialStatus the social class to set.
      */
-    public void setSocialClass(SocialClass socialClass) {
-        if (_socialClass == null) {
-            _socialClass = socialClass;
+    public void setSocialStatus(SocialStatus socialStatus) {
+        if (this.socialStatus == null) {
+            this.socialStatus = socialStatus;
         }
     }
 

@@ -38,4 +38,8 @@ public class QuestData {
     public String getValue() {
         return value;
     }
+
+    public String getName() {
+        return name;
+    }
 }

@@ -164,6 +164,18 @@ public final class UseItem extends ClientPacket {
         }
 
         player.onActionRequest();
+        if (player.getAutoPlaySettings().isActive()){
+            if (player.isAttackingNow() || player.isCastingNow()) {
+                ThreadPool.schedule(() -> {
+                    var usedItem = player.getInventory().getItemByObjectId(objectId);
+
+                    if(isNull(usedItem)) {
+                        return;
+                    }
+                    // Equip or unEquip
+                }, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
+            }
+        }
         if (item.isEquipable()) {
             handleEquipable(player, item);
         } else {

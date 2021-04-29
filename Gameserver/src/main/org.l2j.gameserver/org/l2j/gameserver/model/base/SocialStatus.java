@@ -16,16 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.data.database.dao;
-
-import org.l2j.commons.database.DAO;
-import org.l2j.commons.database.annotation.Query;
+package org.l2j.gameserver.model.base;
 
 /**
  * @author JoeAlisson
  */
-public interface GlobalVariableDAO extends DAO<Object> {
-
-    @Query("TRUNCATE global_variables")
-    boolean deleteAll();
+public enum SocialStatus {
+    VAGABOND,
+    APPRENTICE,
+    KNIGHT,
+    ELITE_KNIGHT,
+    BARON,
+    COUNT,
+    DUKE,
+    KING,
+    EMPEROR,
+    DUKE_2, // client shows duke twice
+    GRAND_DUKE,
+    DISTINGUISHED_KING,
 }
