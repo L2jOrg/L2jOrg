@@ -28,6 +28,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -228,7 +229,7 @@ public final class PetitionManager {
     }
 
     public boolean isPetitioningAllowed() {
-        return Config.PETITIONING_ALLOWED;
+        return CharacterSettings.petitionAllowed();
     }
 
     public boolean isPlayerPetitionPending(Player petitioner) {

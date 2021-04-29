@@ -3055,11 +3055,11 @@ public final class Player extends Playable {
     }
 
     public void setSpawnProtection(boolean protect) {
-        spawnProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_SPAWN_PROTECTION * 1000L) : 0;
+        spawnProtectEndTime = protect ? System.currentTimeMillis() + (CharacterSettings.spawnProtection() * 1000L) : 0;
     }
 
     private void setTeleportProtection(boolean protect) {
-        teleportProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_TELEPORT_PROTECTION * 1000L) : 0;
+        teleportProtectEndTime = protect ? System.currentTimeMillis() + (CharacterSettings.teleportProtection() * 1000L) : 0;
     }
 
     public final boolean isFakeDeath() {
@@ -4707,7 +4707,7 @@ public final class Player extends Playable {
         restoreTeleportBookmark();
         restoreRecipeBook();
 
-        if (Config.STORE_RECIPE_SHOPLIST) {
+        if (CharacterSettings.storeRecipeShopList()) {
             restoreRecipeShopList();
         }
 
@@ -4752,7 +4752,7 @@ public final class Player extends Playable {
         storeCharBase();
         storeEffect(storeActiveEffects);
         storeItemReuseDelay();
-        if (Config.STORE_RECIPE_SHOPLIST) {
+        if (CharacterSettings.storeRecipeShopList()) {
             storeRecipeShopList();
         }
 
@@ -6388,7 +6388,7 @@ public final class Player extends Playable {
 
         checkItemRestriction();
 
-        if ((Config.PLAYER_TELEPORT_PROTECTION > 0) && !isInOlympiadMode() && !getActingPlayer().isInBattle()) {
+        if ((CharacterSettings.teleportProtection() > 0) && !isInOlympiadMode() && !getActingPlayer().isInBattle()) {
             setTeleportProtection(true);
         }
 
@@ -7946,7 +7946,7 @@ public final class Player extends Playable {
     }
 
     public void updateNotMoveUntil() {
-        notMoveUntil = System.currentTimeMillis() + Config.PLAYER_MOVEMENT_BLOCK_TIME;
+        notMoveUntil = System.currentTimeMillis() + CharacterSettings.npcTalkBlockingTime();
     }
 
     /**

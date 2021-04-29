@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -82,7 +83,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        if ((Config.PLAYER_SPAWN_PROTECTION > 0) && player.isInvulnerable() && !player.isGM()) {
+        if ((CharacterSettings.spawnProtection() > 0) && player.isInvulnerable() && !player.isGM()) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             return;
         }

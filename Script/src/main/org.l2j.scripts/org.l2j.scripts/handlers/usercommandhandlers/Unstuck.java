@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.handlers.usercommandhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IUserCommandHandler;
@@ -27,6 +26,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
@@ -49,7 +49,7 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		final int unstuckTimer = (player.getAccessLevel().isGM() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
+		final int unstuckTimer = (player.getAccessLevel().isGM() ? 1000 : CharacterSettings.unstuckInterval() * 1000);
 		
 		if (player.isInOlympiadMode())
 		{
@@ -73,7 +73,7 @@ public class Unstuck implements IUserCommandHandler
 			}
 			player.sendMessage("You use Escape: 1 second.");
 		}
-		else if ((Config.UNSTUCK_INTERVAL == 300) && (escape != null))
+		else if (CharacterSettings.unstuckInterval() == 300 && escape != null)
 		{
 			player.doCast(escape);
 			return true;
@@ -88,7 +88,7 @@ public class Unstuck implements IUserCommandHandler
 				return false;
 			}
 			
-			if (Config.UNSTUCK_INTERVAL > 100)
+			if (CharacterSettings.unstuckInterval() > 100)
 			{
 				player.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
 			}

@@ -23,7 +23,6 @@ import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
 import org.l2j.commons.network.SessionKey;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
@@ -41,6 +40,7 @@ import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.FloodProtectors;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -218,11 +218,11 @@ public final class GameClient extends Client<Connection<GameClient>> {
             }
         }
 
-        if (Config.DELETE_DAYS == 0) {
+        if (CharacterSettings.daysToDelete() == 0) {
             PlayerFactory.deleteCharByObjId(info.getObjectId());
             playersInfo.remove(slot);
         } else {
-            var deleteTime = Duration.ofDays(Config.DELETE_DAYS).toMillis() + System.currentTimeMillis();
+            var deleteTime = Duration.ofDays(CharacterSettings.daysToDelete()).toMillis() + System.currentTimeMillis();
             info.setDeleteTime(deleteTime);
             getDAO(PlayerDAO.class).updateDeleteTime(info.getObjectId(), deleteTime);
         }

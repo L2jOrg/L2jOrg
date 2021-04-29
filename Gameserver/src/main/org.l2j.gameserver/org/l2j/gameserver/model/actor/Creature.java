@@ -583,7 +583,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset, Instance instance) {
-        teleToLocation(x, y, z, heading, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, instance);
+        teleToLocation(x, y, z, heading, (randomOffset) ? CharacterSettings.maxOffsetTeleport() : 0, instance);
     }
 
     public void teleToLocation(int x, int y, int z, int heading, int randomOffset) {
@@ -591,7 +591,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void teleToLocation(int x, int y, int z, int heading, int randomOffset, Instance instance) {
-        if (Config.OFFSET_ON_TELEPORT_ENABLED && (randomOffset > 0)) {
+        if (CharacterSettings.offsetTeleportEnabled() && (randomOffset > 0)) {
             x += Rnd.get(-randomOffset, randomOffset);
             y += Rnd.get(-randomOffset, randomOffset);
         }
@@ -615,7 +615,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void teleToLocation(ILocational loc, boolean randomOffset) {
-        teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+        teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), (randomOffset) ? CharacterSettings.maxOffsetTeleport() : 0);
     }
 
     public void teleToLocation(ILocational loc, boolean randomOffset, Instance instance) {

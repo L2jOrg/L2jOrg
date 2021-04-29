@@ -57,7 +57,6 @@ public final class Config {
     // --------------------------------------------------
 
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
-    private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
     private static final String GENERAL_CONFIG_FILE = "config/general.properties";
@@ -97,24 +96,6 @@ public final class Config {
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
-
-    public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
-
-    public static boolean ENABLE_KEYBOARD_MOVEMENT;
-    public static int UNSTUCK_INTERVAL;
-    public static int PLAYER_SPAWN_PROTECTION;
-    public static int PLAYER_TELEPORT_PROTECTION;
-    public static boolean RANDOM_RESPAWN_IN_TOWN_ENABLED;
-    public static boolean OFFSET_ON_TELEPORT_ENABLED;
-    public static int MAX_OFFSET_ON_TELEPORT;
-    public static boolean PETITIONING_ALLOWED;
-    public static int MAX_PETITIONS_PER_PLAYER;
-    public static int MAX_PETITIONS_PENDING;
-    public static int MAX_NEWBIE_BUFF_LEVEL;
-    public static int DELETE_DAYS;
-    public static boolean DISABLE_TUTORIAL;
-    public static boolean STORE_RECIPE_SHOPLIST;
-    public static boolean STORE_UI_SETTINGS;
 
     // --------------------------------------------------
     // Castle Settings
@@ -265,7 +246,6 @@ public final class Config {
     public static String ALT_BIRTHDAY_MAIL_TEXT;
     public static boolean ENABLE_BLOCK_CHECKER_EVENT;
     public static boolean HBCE_FAIR_PLAY;
-    public static int PLAYER_MOVEMENT_BLOCK_TIME;
     public static boolean BOTREPORT_ENABLE;
     public static String[] BOTREPORT_RESETPOINT_HOUR;
     public static long BOTREPORT_REPORT_DELAY;
@@ -739,30 +719,6 @@ public final class Config {
         ENABLE_L2_STORE = Feature.getBoolean("EnableL2Store", false);
         ENABLE_LCOIN_STORE = Feature.getBoolean("EnableLCoinStore", false);
 
-        // Load Character config file (if exists)
-        final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
-
-        LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
-
-        ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
-        UNSTUCK_INTERVAL = Character.getInt("UnstuckInterval", 300);
-        PLAYER_SPAWN_PROTECTION = Character.getInt("PlayerSpawnProtection", 0);
-        PLAYER_TELEPORT_PROTECTION = Character.getInt("PlayerTeleportProtection", 0);
-        RANDOM_RESPAWN_IN_TOWN_ENABLED = Character.getBoolean("RandomRespawnInTownEnabled", true);
-        OFFSET_ON_TELEPORT_ENABLED = Character.getBoolean("OffsetOnTeleportEnabled", true);
-        MAX_OFFSET_ON_TELEPORT = Character.getInt("MaxOffsetOnTeleport", 50);
-        PETITIONING_ALLOWED = Character.getBoolean("PetitioningAllowed", true);
-        MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
-        MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
-
-        MAX_NEWBIE_BUFF_LEVEL = Character.getInt("MaxNewbieBuffLevel", 0);
-        DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
-
-        DISABLE_TUTORIAL = Character.getBoolean("DisableTutorial", false);
-        STORE_RECIPE_SHOPLIST = Character.getBoolean("StoreRecipeShopList", false);
-        STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);
-
-        PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
 
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);

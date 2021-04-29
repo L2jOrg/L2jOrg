@@ -214,7 +214,7 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExDressRoomUiOpen());
 
-        if (Config.PLAYER_SPAWN_PROTECTION > 0) {
+        if (CharacterSettings.spawnProtection() > 0) {
             player.setSpawnProtection(true);
         }
 
@@ -258,7 +258,7 @@ public class EnterWorld extends ClientPacket {
             }
         }
 
-        if (Config.PETITIONING_ALLOWED) {
+        if (CharacterSettings.petitionAllowed()) {
             PetitionManager.getInstance().checkPetitionMessages(player);
         }
 
