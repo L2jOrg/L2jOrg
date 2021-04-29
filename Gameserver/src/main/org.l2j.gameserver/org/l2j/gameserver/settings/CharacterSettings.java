@@ -111,6 +111,22 @@ public class CharacterSettings  {
     private static byte startLevel;
     private static int startSP;
     private static int lootRaidCommandChannelSize;
+    private static boolean enableKeyboardMovement;
+    private static int unstuckInterval;
+    private static int spawnProtection;
+    private static int teleportProtection;
+    private static boolean randomRespawnEnabled;
+    private static boolean offsetTeleportEnabled;
+    private static int maxOffsetTeleport;
+    private static boolean petitionAllowed;
+    private static int maxPetitions;
+    private static int maxPendingPetitions;
+    private static int maxNewbieBuffLevel;
+    private static int daysToDelete;
+    private static boolean disableTutorial;
+    private static boolean storeRecipeShopList;
+    private static boolean storeUISettings;
+    private static long npcTalkBlockingTime;
 
     private CharacterSettings() {
         // helper class
@@ -225,6 +241,24 @@ public class CharacterSettings  {
         altGameCreationRareXpSpRate = settingsFile.getDouble("AltGameCreationRareXpSpRate", 2);
 
         lootRaidCommandChannelSize = settingsFile.getInt("RaidLootRightsCCSize", 45);
+        enableKeyboardMovement = settingsFile.getBoolean("KeyboardMovement", true);
+        unstuckInterval = settingsFile.getInt("UnstuckInterval", 300);
+        spawnProtection = settingsFile.getInt("PlayerSpawnProtection", 0);
+        teleportProtection = settingsFile.getInt("PlayerTeleportProtection", 0);
+        randomRespawnEnabled = settingsFile.getBoolean("RandomRespawnInTownEnabled", true);
+        offsetTeleportEnabled = settingsFile.getBoolean("OffsetOnTeleportEnabled", true);
+        maxOffsetTeleport = settingsFile.getInt("MaxOffsetOnTeleport", 50);
+        petitionAllowed = settingsFile.getBoolean("PetitioningAllowed", true);
+        maxPetitions = settingsFile.getInt("MaxPetitionsPerPlayer", 5);
+        maxPendingPetitions = settingsFile.getInt("MaxPetitionsPending", 25);
+
+        maxNewbieBuffLevel = settingsFile.getInt("MaxNewbieBuffLevel", 0);
+        daysToDelete = settingsFile.getInt("DeleteCharAfterDays", 1);
+
+        disableTutorial = settingsFile.getBoolean("DisableTutorial", false);
+        storeRecipeShopList = settingsFile.getBoolean("StoreRecipeShopList", false);
+        storeUISettings = settingsFile.getBoolean("StoreCharUiSettings", true);
+        npcTalkBlockingTime = settingsFile.getInt("NpcTalkBlockingTime", 0) * 1000L;
     }
 
 
@@ -518,4 +552,67 @@ public class CharacterSettings  {
         return lootRaidCommandChannelSize;
     }
 
+    public static boolean enableKeyboardMovement() {
+        return enableKeyboardMovement;
+    }
+
+    public static int unstuckInterval() {
+        return unstuckInterval;
+    }
+
+    public static int spawnProtection() {
+        return spawnProtection;
+    }
+
+    public static int teleportProtection() {
+        return teleportProtection;
+    }
+
+    public static boolean randomRespawnEnabled() {
+        return randomRespawnEnabled;
+    }
+
+    public static boolean offsetTeleportEnabled() {
+        return offsetTeleportEnabled;
+    }
+
+    public static int maxOffsetTeleport() {
+        return maxOffsetTeleport;
+    }
+
+    public static boolean petitionAllowed() {
+        return petitionAllowed;
+    }
+
+    public static int maxPetitions() {
+        return maxPetitions;
+    }
+
+    public static int maxPendingPetitions() {
+        return maxPendingPetitions;
+    }
+
+    public static int maxNewbieBuffLevel() {
+        return maxNewbieBuffLevel;
+    }
+
+    public static int daysToDelete() {
+        return daysToDelete;
+    }
+
+    public static boolean disableTutorial() {
+        return disableTutorial;
+    }
+
+    public static boolean storeRecipeShopList() {
+        return storeRecipeShopList;
+    }
+
+    public static boolean storeUISettings() {
+        return storeUISettings;
+    }
+
+    public static long npcTalkBlockingTime() {
+        return npcTalkBlockingTime;
+    }
 }

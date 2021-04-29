@@ -22,6 +22,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -82,7 +83,7 @@ public class MapRegion {
     }
 
     public final Location getSpawnLoc() {
-        if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
+        if (CharacterSettings.randomRespawnEnabled()) {
             return Rnd.get(spawnLocs);
         }
         return spawnLocs.get(0);
@@ -90,7 +91,7 @@ public class MapRegion {
 
     final Location getChaoticSpawnLoc() {
         if (nonNull(chaoticSpawnLocs)) {
-            if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
+            if (CharacterSettings.randomRespawnEnabled()) {
                 return Rnd.get(chaoticSpawnLocs);
             }
             return chaoticSpawnLocs.get(0);

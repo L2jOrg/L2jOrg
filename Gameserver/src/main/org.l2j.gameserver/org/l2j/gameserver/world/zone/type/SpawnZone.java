@@ -21,6 +21,7 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.zone.Zone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -96,7 +97,7 @@ public abstract class SpawnZone extends Zone {
     }
 
     public final Location getSpawnLoc() {
-        if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
+        if (CharacterSettings.randomRespawnEnabled()) {
             return spawnLocs.get(Rnd.get(spawnLocs.size()));
         }
         return spawnLocs.get(0);
@@ -104,7 +105,7 @@ public abstract class SpawnZone extends Zone {
 
     public final Location getOtherSpawnLoc() {
         if (otherSpawnLocs != null) {
-            if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
+            if (CharacterSettings.randomRespawnEnabled()) {
                 return otherSpawnLocs.get(Rnd.get(otherSpawnLocs.size()));
             }
             return otherSpawnLocs.get(0);
@@ -114,7 +115,7 @@ public abstract class SpawnZone extends Zone {
 
     public final Location getChaoticSpawnLoc() {
         if (chaoticSpawnLocs != null) {
-            if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
+            if (CharacterSettings.randomRespawnEnabled()) {
                 return chaoticSpawnLocs.get(Rnd.get(chaoticSpawnLocs.size()));
             }
             return chaoticSpawnLocs.get(0);
@@ -124,7 +125,7 @@ public abstract class SpawnZone extends Zone {
 
     public Location getBanishSpawnLoc() {
         if (banishSpawnLocs != null) {
-            if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
+            if (CharacterSettings.randomRespawnEnabled()) {
                 return banishSpawnLocs.get(Rnd.get(banishSpawnLocs.size()));
             }
             return banishSpawnLocs.get(0);

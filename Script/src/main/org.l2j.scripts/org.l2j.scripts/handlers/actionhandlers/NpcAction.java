@@ -32,6 +32,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import org.l2j.gameserver.network.serverpackets.MoveToPawn;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * @author JoeAlisson
@@ -66,7 +67,7 @@ public class NpcAction implements IActionHandler
 			} else {
 				moveNextTo(player, npc);
 				talk(player, npc);
-				if (Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) {
+				if (CharacterSettings.npcTalkBlockingTime() > 0) {
 					player.updateNotMoveUntil();
 				}
 			}

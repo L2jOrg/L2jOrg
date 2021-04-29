@@ -22,6 +22,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.serverpackets.ExUISetting;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * Request Save Key Mapping client packet.
@@ -43,7 +44,7 @@ public class RequestSaveKeyMapping extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (!Config.STORE_UI_SETTINGS || //
+        if (!CharacterSettings.storeUISettings() || //
                 (player == null) || //
                 (_uiKeyMapping == null) || //
                 (client.getConnectionState() != ConnectionState.IN_GAME)) {

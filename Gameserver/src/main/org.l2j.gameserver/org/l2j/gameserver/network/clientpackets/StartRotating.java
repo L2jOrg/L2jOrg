@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.StartRotation;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import static java.util.Objects.isNull;
 
@@ -41,7 +41,7 @@ public final class StartRotating extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!Config.ENABLE_KEYBOARD_MOVEMENT) {
+        if (!CharacterSettings.enableKeyboardMovement()) {
             return;
         }
 

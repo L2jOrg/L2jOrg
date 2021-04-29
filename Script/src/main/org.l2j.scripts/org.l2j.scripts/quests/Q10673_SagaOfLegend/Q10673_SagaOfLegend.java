@@ -36,6 +36,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -267,7 +268,7 @@ public class Q10673_SagaOfLegend extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
+		if (CharacterSettings.disableTutorial())
 		{
 			return;
 		}
