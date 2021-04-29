@@ -52,7 +52,7 @@ public class RequestPackageSend extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _objectId = readInt();
         final int count = readInt();
-        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -97,12 +97,12 @@ public class RequestPackageSend extends ClientPacket {
         }
 
         // Alt game - Karma punishment
-        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse) {
+        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse()) {
             return;
         }
 
         // Freight price from config per item slot.
-        final int fee = _items.length * CharacterSettings.freightPrice;
+        final int fee = _items.length * CharacterSettings.freightPrice();
         long currentAdena = player.getAdena();
         int slots = 0;
 

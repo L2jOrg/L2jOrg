@@ -55,7 +55,7 @@ public class Warehouse extends Folk {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse && showPkDenyChatWindow(player, "warehouse")) {
+        if(player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse() && showPkDenyChatWindow(player, "warehouse")) {
             return;
         }
         super.showChatWindow(player, val);

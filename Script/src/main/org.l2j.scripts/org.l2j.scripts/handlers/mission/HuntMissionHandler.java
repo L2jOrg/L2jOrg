@@ -19,7 +19,6 @@
 package org.l2j.scripts.handlers.mission;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.engine.mission.MissionHandlerFactory;

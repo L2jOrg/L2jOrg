@@ -33,6 +33,10 @@ public class PartySettings {
     private static int[] xpCutoffGaps;
     private static int[] xpCutoffGapsPercent;
 
+    private PartySettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         maxMembers = settingsFile.getInt("AltPartyMaxMembers", 9);
         partyRange = settingsFile.getInt("AltPartyRange", 1600);

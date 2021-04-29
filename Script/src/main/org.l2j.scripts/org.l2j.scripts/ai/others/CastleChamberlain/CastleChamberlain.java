@@ -654,7 +654,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
 					final long amount = (st.hasMoreTokens()) ? Long.parseLong(st.nextToken()) : 0;
-					if ((amount > 0) && (amount < CharacterSettings.maxAdena))
+					if ((amount > 0) && (amount < CharacterSettings.maxAdena()))
 					{
 						if (player.getAdena() >= amount)
 						{

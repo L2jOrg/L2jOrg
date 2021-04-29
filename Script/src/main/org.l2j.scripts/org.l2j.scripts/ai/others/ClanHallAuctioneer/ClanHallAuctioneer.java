@@ -361,7 +361,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
             else
             {
                 player.sendPacket(SystemMessageId.YOU_HAVE_REGISTERED_FOR_A_CLAN_HALL_AUCTION);
-                if (bid > CharacterSettings.maxAdena)
+                if (bid > CharacterSettings.maxAdena())
                 {
                     player.sendPacket(SystemMessageId.THE_HIGHEST_BID_IS_OVER_999_9_BILLION_THEREFORE_YOU_CANNOT_PLACE_A_BID);
                     return;

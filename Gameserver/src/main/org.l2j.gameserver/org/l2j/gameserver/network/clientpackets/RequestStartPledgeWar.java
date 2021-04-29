@@ -55,7 +55,7 @@ public final class RequestStartPledgeWar extends ClientPacket {
             return;
         }
 
-        if ((clanDeclaringWar.getLevel() < 3) || (clanDeclaringWar.getMembersCount() < ClanSettings.minMembersForWar)) {
+        if ((clanDeclaringWar.getLevel() < 3) || (clanDeclaringWar.getMembersCount() < ClanSettings.minMembersForWar())) {
             client.sendPacket(getSystemMessage(SystemMessageId.A_CLAN_WAR_CAN_ONLY_BE_DECLARED_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_15_OR_GREATER));
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
@@ -82,7 +82,7 @@ public final class RequestStartPledgeWar extends ClientPacket {
             client.sendPacket(getSystemMessage(SystemMessageId.A_DECLARATION_OF_CLAN_WAR_AGAINST_AN_ALLIED_CLAN_CAN_T_BE_MADE));
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
-        } else if ((clanDeclaredWar.getLevel() < 3) || (clanDeclaredWar.getMembersCount() < ClanSettings.minMembersForWar)) {
+        } else if ((clanDeclaredWar.getLevel() < 3) || (clanDeclaredWar.getMembersCount() < ClanSettings.minMembersForWar())) {
             client.sendPacket(getSystemMessage(SystemMessageId.A_CLAN_WAR_CAN_ONLY_BE_DECLARED_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_15_OR_GREATER));
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

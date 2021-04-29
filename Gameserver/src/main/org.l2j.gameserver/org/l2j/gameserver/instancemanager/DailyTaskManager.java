@@ -146,7 +146,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     private void onVitalityReset() {
-        if (!CharacterSettings.vitalityEnabled) {
+        if (!CharacterSettings.vitalityEnabled()) {
             return;
         }
 

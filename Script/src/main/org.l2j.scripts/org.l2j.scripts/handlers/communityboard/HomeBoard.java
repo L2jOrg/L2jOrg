@@ -432,13 +432,13 @@ public final class HomeBoard implements IParseBoardHandler {
             if (currentCommand.startsWith("_bbsskillselect") && !schemeName.equalsIgnoreCase("none")) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
                 if (skill.isDance()) {
-                    if (getCountOf(skills, true) < CharacterSettings.maxDances) {
+                    if (getCountOf(skills, true) < CharacterSettings.maxDances()) {
                         skills.add(skillId);
                     } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of dances/songs.");
                     }
                 } else {
-                    if (getCountOf(skills, false) < CharacterSettings.maxBuffs) {
+                    if (getCountOf(skills, false) < CharacterSettings.maxBuffs()) {
                         skills.add(skillId);
                     } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of buffs.");
@@ -710,7 +710,7 @@ public final class HomeBoard implements IParseBoardHandler {
         final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         returnHtml = setHtmlSchemeBuffList(groupType, schemeName, schemeSkills, page, returnHtml);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
-        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + CharacterSettings.maxBuffs + " buffs, " + getCountOf(schemeSkills, true) + " / " + CharacterSettings.maxDances + " dances/songs");
+        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + CharacterSettings.maxBuffs() + " buffs, " + getCountOf(schemeSkills, true) + " / " + CharacterSettings.maxDances() + " dances/songs");
         returnHtml = returnHtml.replace("%typesframe%", getTypesFrame(groupType, schemeName));
         returnHtml = returnHtml.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
         return returnHtml;

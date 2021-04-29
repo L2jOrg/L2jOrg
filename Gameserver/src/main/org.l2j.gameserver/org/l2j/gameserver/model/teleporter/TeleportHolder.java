@@ -179,7 +179,7 @@ public final class TeleportHolder {
                 msg.setFile(player, CASTLE_TELEPORTER_BUSY_HTM);
                 player.sendPacket(msg);
                 return;
-            } else if (player.getReputation() < 0 && !CharacterSettings.canPkTeleport) {
+            } else if (player.getReputation() < 0 && !CharacterSettings.canPkTeleport()) {
                 player.sendMessage("Go away, you're not welcome here.");
                 return;
             }
@@ -211,7 +211,7 @@ public final class TeleportHolder {
      * @return {@code true} when all requirements are met otherwise {@code false}
      */
     private boolean shouldPayFee(Player player, TeleportLocation loc) {
-        return !isNormalTeleport() || ((player.getLevel() > CharacterSettings.maxFreeTeleportLevel) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+        return !isNormalTeleport() || ((player.getLevel() > CharacterSettings.maxFreeTeleportLevel()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
     }
 
     /**
@@ -225,7 +225,7 @@ public final class TeleportHolder {
      */
     private long calculateFee(Player player, TeleportLocation loc) {
         if (isNormalTeleport()) {
-            if (player.getLevel() <= CharacterSettings.maxFreeTeleportLevel) {
+            if (player.getLevel() <= CharacterSettings.maxFreeTeleportLevel()) {
                 return 0;
             }
 

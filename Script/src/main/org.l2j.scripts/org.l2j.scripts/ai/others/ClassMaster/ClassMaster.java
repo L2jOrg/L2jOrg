@@ -243,8 +243,8 @@ public final class ClassMaster extends AbstractNpcAI
 					
 					player.setClassId(classId);
 					player.setBaseClass(player.getActiveClass());
-					if (CharacterSettings.autoLearnSkillEnabled) {
-						player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled, true);
+					if (CharacterSettings.autoLearnSkillEnabled()) {
+						player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled(), true);
 					}
 					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 					player.broadcastUserInfo();
@@ -629,9 +629,9 @@ public final class ClassMaster extends AbstractNpcAI
 			player.setClassId(newClass.getId());
 			player.setBaseClass(player.getActiveClass());
 
-			if (CharacterSettings.autoLearnSkillEnabled)
+			if (CharacterSettings.autoLearnSkillEnabled())
 			{
-				player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled, true);
+				player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled(), true);
 			}
 			player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 			player.broadcastUserInfo();

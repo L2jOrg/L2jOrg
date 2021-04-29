@@ -25,6 +25,10 @@ public class CommonSettings {
 
     private static String hashAlg;
 
+    private CommonSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         hashAlg = settingsFile.getString("HashAlgorithm", "SHA3-256");
     }

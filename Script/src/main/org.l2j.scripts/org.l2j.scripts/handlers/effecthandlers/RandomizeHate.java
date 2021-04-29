@@ -26,7 +26,6 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.world.World;
 

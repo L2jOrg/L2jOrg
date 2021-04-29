@@ -34,11 +34,11 @@ public class SummonStats extends PlayableStats {
     @Override
     public double getRunSpeed() {
         // In retail maximum run speed is 350 for summons and 300 for players
-        return Math.min(super.getRunSpeed(), CharacterSettings.maxRunSpeed + 50d);
+        return Math.min(super.getRunSpeed(), CharacterSettings.maxRunSpeed() + 50d);
     }
 
     @Override
     public double getWalkSpeed() {
-        return Math.min(super.getWalkSpeed(), CharacterSettings.maxRunSpeed + 50d);
+        return Math.min(super.getWalkSpeed(), CharacterSettings.maxRunSpeed() + 50d);
     }
 }

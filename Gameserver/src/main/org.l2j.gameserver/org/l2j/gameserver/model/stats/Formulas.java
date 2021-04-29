@@ -139,7 +139,7 @@ public final class Formulas {
         double damage = ( (77 *  attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, power)  * Math.sqrt(mAtk) ) / mDef) * shotsBonus;
 
         // Failure calculation
-        if (CharacterSettings.magicFailureAllowed && !calcMagicSuccess(attacker, target, skill)) {
+        if (CharacterSettings.magicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 if (calcMagicSuccess(attacker, target, skill)) {
                     if (skill.hasAnyEffectType(EffectType.HP_DRAIN)) {
@@ -329,9 +329,9 @@ public final class Formulas {
 
         double init = 0;
 
-        if (CharacterSettings.breakCast && target.isCastingNow(SkillCaster::canAbortCast)) {
+        if (CharacterSettings.breakCast() && target.isCastingNow(SkillCaster::canAbortCast)) {
             init = 15;
-        } else if (CharacterSettings.breakBowAttack && target.isAttackingNow()) {
+        } else if (CharacterSettings.breakBowAttack() && target.isAttackingNow()) {
             final Weapon wpn = target.getActiveWeaponItem();
             if (nonNull(wpn) && wpn.getItemType() == WeaponType.BOW) {
                 init = 15;
@@ -685,7 +685,7 @@ public final class Formulas {
         damage *= calculatePvpPveBonus(attacker, target, skill, mcrit);
 
         // Failure calculation
-        if (CharacterSettings.magicFailureAllowed && !calcMagicSuccess(attacker, target, skill)) {
+        if (CharacterSettings.magicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
             if (isPlayer(attacker)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
                 sm.addString(target.getName());
@@ -1236,7 +1236,7 @@ public final class Formulas {
      */
     public static boolean calcStunBreak(Creature creature) {
         // Check if target is stunned and break it with 14% chance. (retail is 14% and 35% on crit?)
-        if (CharacterSettings.breakStun && creature.hasBlockActions() && Rnd.chance(14)) {
+        if (CharacterSettings.breakStun() && creature.hasBlockActions() && Rnd.chance(14)) {
             // Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
             return creature.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
         }

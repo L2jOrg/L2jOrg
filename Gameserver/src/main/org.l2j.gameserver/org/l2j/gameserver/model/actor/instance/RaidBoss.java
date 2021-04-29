@@ -101,7 +101,7 @@ public class RaidBoss extends Monster {
 
     @Override
     public boolean useVitalityRate() {
-        return CharacterSettings.raidBossUseVitality;
+        return CharacterSettings.raidBossUseVitality();
     }
 
     @Override

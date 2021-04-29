@@ -28,7 +28,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.CubicTemplate;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;

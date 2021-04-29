@@ -32,69 +32,69 @@ import static java.lang.Math.max;
  */
 public class CharacterSettings  {
 
-    public static boolean autoLootRaid;
-    public static int raidLootPrivilegeTime;
-    public static boolean autoLoot;
-    public static boolean initialEquipEvent;
-    public static boolean delevel;
-    public static float weightLimitMultiplier;
-    public static boolean removeCastleCirclets;
-    public static boolean restoreSummonOnReconnect;
-    public static int minEnchantAnnounceWeapon;
-    public static int minEnchantAnnounceArmor;
-    public static float restoreCPPercent;
-    public static float restoreHPPercent;
-    public static float restoreMPPercent;
-    public static boolean autoLearnSkillEnabled;
-    public static boolean autoLearnSkillFSEnabled;
-    public static byte maxBuffs;
-    public static byte maxTriggeredBuffs;
-    public static byte maxDances;
-    public static boolean dispelDanceAllowed;
-    public static boolean storeDances;
-    public static boolean breakCast;
-    public static boolean breakBowAttack;
-    public static boolean magicFailureAllowed;
-    public static boolean breakStun;
-    public static int effectTickRatio;
-    public static boolean autoLootHerbs;
-    public static boolean pledgeSkillsItemNeeded;
-    public static boolean divineInspirationBookNeeded;
-    public static boolean vitalityEnabled;
-    public static boolean raidBossUseVitality;
-    public static int maxRunSpeed;
-    public static int maxPcritRate;
-    public static int maxMcritRate;
-    public static int maxPAtkSpeed;
-    public static int maxMAtkSpeed;
-    public static int maxEvasion;
-    public static boolean teleportInBattle;
-    public static boolean craftEnabled;
-    public static long maxAdena;
-    public static boolean allowPKTeleport;
-    public static int maxFreeTeleportLevel;
-    public static int maxItemInPacket;
-    public static int maxSlotsQuestItem;
-    public static int clanMaxWarehouseSlot;
-    public static int maxSlotFreight;
-    public static int freightPrice;
-    public static boolean canAttackPkInPeaceZone;
-    public static boolean canPkShop;
-    public static boolean canPkTeleport;
-    public static boolean canPkTrade;
-    public static boolean canPkUseWareHouse;
-    public static int maxFame;
-    public static int fameTaskDelay;
-    public static int fameTaskPoints;
-    public static boolean fameForDeadPlayers;
-    public static int criticalCraftRate;
-    public static int dwarfRecipeLimit;
-    public static int recipeLimit;
-    public static boolean altGameCreation;
-    public static double altGameCreationSpeed;
-    public static double altGameCreationXpRate;
-    public static double altGameCreationSpRate;
-    public static double altGameCreationRareXpSpRate;
+    private static boolean autoLootRaid;
+    private static int raidLootPrivilegeTime;
+    private static boolean autoLoot;
+    private static boolean initialEquipEvent;
+    private static boolean delevel;
+    private static float weightLimitMultiplier;
+    private static boolean removeCastleCirclets;
+    private static boolean restoreSummonOnReconnect;
+    private static int minEnchantAnnounceWeapon;
+    private static int minEnchantAnnounceArmor;
+    private static float restoreCPPercent;
+    private static float restoreHPPercent;
+    private static float restoreMPPercent;
+    private static boolean autoLearnSkillEnabled;
+    private static boolean autoLearnSkillFSEnabled;
+    private static byte maxBuffs;
+    private static byte maxTriggeredBuffs;
+    private static byte maxDances;
+    private static boolean dispelDanceAllowed;
+    private static boolean storeDances;
+    private static boolean breakCast;
+    private static boolean breakBowAttack;
+    private static boolean magicFailureAllowed;
+    private static boolean breakStun;
+    private static int effectTickRatio;
+    private static boolean autoLootHerbs;
+    private static boolean pledgeSkillsItemNeeded;
+    private static boolean divineInspirationBookNeeded;
+    private static boolean vitalityEnabled;
+    private static boolean raidBossUseVitality;
+    private static int maxRunSpeed;
+    private static int maxPcritRate;
+    private static int maxMcritRate;
+    private static int maxPAtkSpeed;
+    private static int maxMAtkSpeed;
+    private static int maxEvasion;
+    private static boolean teleportInBattle;
+    private static boolean craftEnabled;
+    private static long maxAdena;
+    private static boolean allowPKTeleport;
+    private static int maxFreeTeleportLevel;
+    private static int maxItemInPacket;
+    private static int maxSlotsQuestItem;
+    private static int clanMaxWarehouseSlot;
+    private static int maxSlotFreight;
+    private static int freightPrice;
+    private static boolean canAttackPkInPeaceZone;
+    private static boolean canPkShop;
+    private static boolean canPkTeleport;
+    private static boolean canPkTrade;
+    private static boolean canPkUseWareHouse;
+    private static int maxFame;
+    private static int fameTaskDelay;
+    private static int fameTaskPoints;
+    private static boolean fameForDeadPlayers;
+    private static int criticalCraftRate;
+    private static int dwarfRecipeLimit;
+    private static int recipeLimit;
+    private static boolean altGameCreation;
+    private static double altGameCreationSpeed;
+    private static double altGameCreationXpRate;
+    private static double altGameCreationSpRate;
+    private static double altGameCreationRareXpSpRate;
 
     private static IntSet autoLootItems;
 
@@ -110,15 +110,22 @@ public class CharacterSettings  {
     private static int[] nonAugmentedItems;
     private static byte startLevel;
     private static int startSP;
+    private static int lootRaidCommandChannelSize;
+
+    private CharacterSettings() {
+        // helper class
+    }
 
     public static void load(SettingsFile settingsFile) {
         startLevel = settingsFile.getByte("StartingLevel", (byte) 1);
         startSP = settingsFile.getInt("StartingSP", 0);
+
         autoLoot = settingsFile.getBoolean("AutoLoot", false);
         autoLootItems = settingsFile.getIntSet("AutoLootItemIds", ",");
         autoLootRaid = settingsFile.getBoolean("AutoLootRaids", false);
         raidLootPrivilegeTime = settingsFile.getInt("RaidLootRightsInterval", 900) * 1000;
         autoLootHerbs = settingsFile.getBoolean("AutoLootHerbs", false);
+
         maxAdena = settingsFile.getLong("MaxAdena", Long.MAX_VALUE);
         if(maxAdena < 1) {
             maxAdena = Long.MAX_VALUE;
@@ -216,6 +223,8 @@ public class CharacterSettings  {
         altGameCreationXpRate = settingsFile.getDouble("AltGameCreationXpRate", 1);
         altGameCreationSpRate = settingsFile.getDouble("AltGameCreationSpRate", 1);
         altGameCreationRareXpSpRate = settingsFile.getDouble("AltGameCreationRareXpSpRate", 2);
+
+        lootRaidCommandChannelSize = settingsFile.getInt("RaidLootRightsCCSize", 45);
     }
 
 
@@ -252,4 +261,261 @@ public class CharacterSettings  {
     public static int startSP() {
         return startSP;
     }
+
+    public static boolean autoLootRaid() {
+        return autoLootRaid;
+    }
+
+    public static int raidLootPrivilegeTime() {
+        return raidLootPrivilegeTime;
+    }
+
+    public static boolean autoLoot() {
+        return autoLoot;
+    }
+
+    public static boolean initialEquipEvent() {
+        return initialEquipEvent;
+    }
+
+    public static boolean delevel() {
+        return delevel;
+    }
+
+    public static float weightLimitMultiplier() {
+        return weightLimitMultiplier;
+    }
+
+    public static boolean removeCastleCirclets() {
+        return removeCastleCirclets;
+    }
+
+    public static boolean restoreSummonOnReconnect() {
+        return restoreSummonOnReconnect;
+    }
+
+    public static int minEnchantAnnounceWeapon() {
+        return minEnchantAnnounceWeapon;
+    }
+
+    public static int minEnchantAnnounceArmor() {
+        return minEnchantAnnounceArmor;
+    }
+
+    public static float restoreCPPercent() {
+        return restoreCPPercent;
+    }
+
+    public static float restoreHPPercent() {
+        return restoreHPPercent;
+    }
+
+    public static float restoreMPPercent() {
+        return restoreMPPercent;
+    }
+
+    public static boolean autoLearnSkillEnabled() {
+        return autoLearnSkillEnabled;
+    }
+
+    public static boolean autoLearnSkillFSEnabled() {
+        return autoLearnSkillFSEnabled;
+    }
+
+    public static byte maxBuffs() {
+        return maxBuffs;
+    }
+
+    public static byte maxTriggeredBuffs() {
+        return maxTriggeredBuffs;
+    }
+
+    public static byte maxDances() {
+        return maxDances;
+    }
+
+    public static boolean dispelDanceAllowed() {
+        return dispelDanceAllowed;
+    }
+
+    public static boolean storeDances() {
+        return storeDances;
+    }
+
+    public static boolean breakCast() {
+        return breakCast;
+    }
+
+    public static boolean breakBowAttack() {
+        return breakBowAttack;
+    }
+
+    public static boolean magicFailureAllowed() {
+        return magicFailureAllowed;
+    }
+
+    public static boolean breakStun() {
+        return breakStun;
+    }
+
+    public static int effectTickRatio() {
+        return effectTickRatio;
+    }
+
+    public static boolean autoLootHerbs() {
+        return autoLootHerbs;
+    }
+
+    public static boolean pledgeSkillsItemNeeded() {
+        return pledgeSkillsItemNeeded;
+    }
+
+    public static boolean divineInspirationBookNeeded() {
+        return divineInspirationBookNeeded;
+    }
+
+    public static boolean vitalityEnabled() {
+        return vitalityEnabled;
+    }
+
+    public static boolean raidBossUseVitality() {
+        return raidBossUseVitality;
+    }
+
+    public static int maxRunSpeed() {
+        return maxRunSpeed;
+    }
+
+    public static int maxPcritRate() {
+        return maxPcritRate;
+    }
+
+    public static int maxMcritRate() {
+        return maxMcritRate;
+    }
+
+    public static int maxPAtkSpeed() {
+        return maxPAtkSpeed;
+    }
+
+    public static int maxMAtkSpeed() {
+        return maxMAtkSpeed;
+    }
+
+    public static int maxEvasion() {
+        return maxEvasion;
+    }
+
+    public static boolean teleportInBattle() {
+        return teleportInBattle;
+    }
+
+    public static boolean craftEnabled() {
+        return craftEnabled;
+    }
+
+    public static long maxAdena() {
+        return maxAdena;
+    }
+
+    public static boolean allowPKTeleport() {
+        return allowPKTeleport;
+    }
+
+    public static int maxFreeTeleportLevel() {
+        return maxFreeTeleportLevel;
+    }
+
+    public static int maxItemInPacket() {
+        return maxItemInPacket;
+    }
+
+    public static int maxSlotsQuestItem() {
+        return maxSlotsQuestItem;
+    }
+
+    public static int clanMaxWarehouseSlot() {
+        return clanMaxWarehouseSlot;
+    }
+
+    public static int maxSlotFreight() {
+        return maxSlotFreight;
+    }
+
+    public static int freightPrice() {
+        return freightPrice;
+    }
+
+    public static boolean canAttackPkInPeaceZone() {
+        return canAttackPkInPeaceZone;
+    }
+
+    public static boolean canPkShop() {
+        return canPkShop;
+    }
+
+    public static boolean canPkTeleport() {
+        return canPkTeleport;
+    }
+
+    public static boolean canPkTrade() {
+        return canPkTrade;
+    }
+
+    public static boolean canPkUseWareHouse() {
+        return canPkUseWareHouse;
+    }
+
+    public static int maxFame() {
+        return maxFame;
+    }
+
+    public static int fameTaskDelay() {
+        return fameTaskDelay;
+    }
+
+    public static int fameTaskPoints() {
+        return fameTaskPoints;
+    }
+
+    public static boolean fameForDeadPlayers() {
+        return fameForDeadPlayers;
+    }
+
+    public static int criticalCraftRate() {
+        return criticalCraftRate;
+    }
+
+    public static int dwarfRecipeLimit() {
+        return dwarfRecipeLimit;
+    }
+
+    public static int recipeLimit() {
+        return recipeLimit;
+    }
+
+    public static boolean altGameCreation() {
+        return altGameCreation;
+    }
+
+    public static double altGameCreationSpeed() {
+        return altGameCreationSpeed;
+    }
+
+    public static double altGameCreationXpRate() {
+        return altGameCreationXpRate;
+    }
+
+    public static double altGameCreationSpRate() {
+        return altGameCreationSpRate;
+    }
+
+    public static double altGameCreationRareXpSpRate() {
+        return altGameCreationRareXpSpRate;
+    }
+
+    public static int lootRaidCommandChannelSize() {
+        return lootRaidCommandChannelSize;
+    }
+
 }

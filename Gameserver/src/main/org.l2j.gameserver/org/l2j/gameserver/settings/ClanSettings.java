@@ -25,18 +25,22 @@ import org.l2j.commons.configuration.SettingsFile;
  */
 public class ClanSettings  {
 
-    public static boolean instantChangeLeader;
-    public static int daysToJoinClan;
-    public static int daysToCreateClan;
-    public static int daysToDissolveClan;
-    public static int daysToJoinAllyAfterLeft;
-    public static int daysToJoinAllyAfterDismissed;
-    public static int daysToAcceptClanAfterDismiss;
-    public static int daysToCreateAllyAfterDissolved;
-    public static int maxClansInAlly;
-    public static int minMembersForWar;
-    public static boolean canMembersWithdrawFromWarehouse;
-    public static long onlineTimeForBonus;
+    private static boolean instantChangeLeader;
+    private static int daysToJoinClan;
+    private static int daysToCreateClan;
+    private static int daysToDissolveClan;
+    private static int daysToJoinAllyAfterLeft;
+    private static int daysToJoinAllyAfterDismissed;
+    private static int daysToAcceptClanAfterDismiss;
+    private static int daysToCreateAllyAfterDissolved;
+    private static int maxClansInAlly;
+    private static int minMembersForWar;
+    private static boolean canMembersWithdrawFromWarehouse;
+    private static long onlineTimeForBonus;
+
+    private ClanSettings() {
+        // helper class
+    }
 
     public static void load(SettingsFile settingsFile) {
         instantChangeLeader = settingsFile.getBoolean("AltClanLeaderInstantActivation", false);
@@ -56,4 +60,51 @@ public class ClanSettings  {
         onlineTimeForBonus = settingsFile.parseDuration("AltClanMembersTimeForBonus", "PT30M").toMillis();
     }
 
+    public static boolean instantChangeLeader() {
+        return instantChangeLeader;
+    }
+
+    public static int daysToJoinClan() {
+        return daysToJoinClan;
+    }
+
+    public static int daysToCreateClan() {
+        return daysToCreateClan;
+    }
+
+    public static int daysToDissolveClan() {
+        return daysToDissolveClan;
+    }
+
+    public static int daysToJoinAllyAfterLeft() {
+        return daysToJoinAllyAfterLeft;
+    }
+
+    public static int daysToJoinAllyAfterDismissed() {
+        return daysToJoinAllyAfterDismissed;
+    }
+
+    public static int daysToAcceptClanAfterDismiss() {
+        return daysToAcceptClanAfterDismiss;
+    }
+
+    public static int daysToCreateAllyAfterDissolved() {
+        return daysToCreateAllyAfterDissolved;
+    }
+
+    public static int maxClansInAlly() {
+        return maxClansInAlly;
+    }
+
+    public static int minMembersForWar() {
+        return minMembersForWar;
+    }
+
+    public static boolean canMembersWithdrawFromWarehouse() {
+        return canMembersWithdrawFromWarehouse;
+    }
+
+    public static long onlineTimeForBonus() {
+        return onlineTimeForBonus;
+    }
 }

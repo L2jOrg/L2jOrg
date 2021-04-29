@@ -509,13 +509,13 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private OlympiadParticipantData loadOrCreateParticipantData(Player player) {
-        OlympiadParticipantData data = getDAO(OlympiadDAO.class).findParticipantData(player.getObjectId(), ServerSettings.serverId());
-        if(isNull(data)) {
-            data = OlympiadParticipantData.of(player, settings.initialPoints, ServerSettings.serverId());
-            getDAO(OlympiadDAO.class).save(data);
+        var participantData = getDAO(OlympiadDAO.class).findParticipantData(player.getObjectId(), ServerSettings.serverId());
+        if(isNull(participantData)) {
+            participantData = OlympiadParticipantData.of(player, settings.initialPoints, ServerSettings.serverId());
+            getDAO(OlympiadDAO.class).save(participantData);
         }
-        participantsData.put(player.getObjectId(), data);
-        return data;
+        participantsData.put(player.getObjectId(), participantData);
+        return participantData;
     }
 
     short updateDefeat(Player player, int points, Player winnerLeader, Duration battleDuration) {

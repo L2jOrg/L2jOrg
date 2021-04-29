@@ -514,12 +514,12 @@ public final class EffectList {
             // case TOGGLE: Do toggles have limit?
             switch (buffType) {
                 case TRIGGER -> {
-                    if (triggerBuffCount.get() > CharacterSettings. maxTriggeredBuffs) {
+                    if (triggerBuffCount.get() > CharacterSettings.maxTriggeredBuffs()) {
                         return true;
                     }
                 }
                 case DANCE -> {
-                    if (danceCount.get() > CharacterSettings.maxDances) {
+                    if (danceCount.get() > CharacterSettings.maxDances()) {
                         return true;
                     }
                 }

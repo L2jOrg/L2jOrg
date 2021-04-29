@@ -1082,10 +1082,10 @@ public class Npc extends Creature {
 
             item.dropMe(this, newX, newY, newZ);
 
-            if (!GeneralSettings.isProtectedItem(itemId)) {
-                if (( GeneralSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (GeneralSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
-                    ItemsAutoDestroy.getInstance().addItem(item);
-                }
+            if (!GeneralSettings.isProtectedItem(itemId) &&
+                ((GeneralSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (GeneralSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect()))) {
+
+                ItemsAutoDestroy.getInstance().addItem(item);
             }
             item.setProtected(false);
 

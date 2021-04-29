@@ -55,7 +55,7 @@ public final class AllyLeave extends ClientPacket {
         clan.setAllyId(0);
         clan.setAllyName(null);
         clan.changeAllyCrest(0, true);
-        clan.setAllyPenaltyExpiryTime(currentTime + ClanSettings.daysToJoinAllyAfterLeft * 86400000L, Clan.PENALTY_TYPE_CLAN_LEAVED); // 24*60*60*1000 = 86400000
+        clan.setAllyPenaltyExpiryTime(currentTime + ClanSettings.daysToJoinAllyAfterLeft() * 86400000L, Clan.PENALTY_TYPE_CLAN_LEAVED); // 24*60*60*1000 = 86400000
         clan.updateClanInDB();
 
         player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_ALLIANCE);

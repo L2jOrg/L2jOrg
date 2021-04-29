@@ -31,6 +31,10 @@ public class AttendanceSettings  {
     private static boolean popUpWindow;
     private static int minimumLevel;
 
+    private AttendanceSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         enabled = settingsFile.getBoolean("Enable", false);
         vipOnly = settingsFile.getBoolean("VipOnly", false);

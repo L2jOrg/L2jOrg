@@ -63,7 +63,7 @@ public final class RequestGiveItemToPet extends ClientPacket {
         }
 
         // Alt game - Karma punishment
-        if ( player.getReputation() < 0 && !CharacterSettings.canPkTrade ) {
+        if ( player.getReputation() < 0 && !CharacterSettings.canPkTrade() ) {
             return;
         }
 

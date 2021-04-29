@@ -78,7 +78,7 @@ public final class Fisherman extends Merchant {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !CharacterSettings.canPkShop && showPkDenyChatWindow(player, "fisherman")) {
+        if(player.getReputation() < 0 && !CharacterSettings.canPkShop() && showPkDenyChatWindow(player, "fisherman")) {
             return;
         }
         super.showChatWindow(player, val);

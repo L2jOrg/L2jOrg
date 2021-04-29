@@ -50,7 +50,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _packageSale = readIntAsBoolean();
         final int count = readInt();
-        if (count < 1 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count < 1 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -116,7 +116,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
         tradeList.setPackaged(_packageSale);
 
         long totalCost = player.getAdena();
-        var maxAdena = CharacterSettings.maxAdena;
+        var maxAdena = CharacterSettings.maxAdena();
         for (Item i : _items) {
             if (!i.addToTradeList(tradeList)) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + maxAdena + " adena in Private Store - Sell.");
@@ -158,7 +158,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
         }
 
         public boolean addToTradeList(TradeList list) {
-            if (MathUtil.checkMulOverFlow(_price, _count, CharacterSettings.maxAdena)) {
+            if (MathUtil.checkMulOverFlow(_price, _count, CharacterSettings.maxAdena())) {
                 return false;
             }
 

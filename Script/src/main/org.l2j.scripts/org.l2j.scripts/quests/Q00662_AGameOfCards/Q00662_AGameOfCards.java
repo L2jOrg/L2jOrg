@@ -22,7 +22,6 @@ package org.l2j.scripts.quests.Q00662_AGameOfCards;
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;

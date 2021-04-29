@@ -408,12 +408,12 @@ public final class ItemEngine extends GameXmlReader {
             {
                 final Attackable raid = (Attackable) reference;
                 // if in CommandChannel and was killing a World/RaidBoss
-                if ((raid.getFirstCommandChannelAttacked() != null) && !CharacterSettings.autoLootRaid) {
+                if ((raid.getFirstCommandChannelAttacked() != null) && !CharacterSettings.autoLootRaid()) {
                     item.changeOwner(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), CharacterSettings.raidLootPrivilegeTime);
+                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), CharacterSettings.raidLootPrivilegeTime());
                     item.setItemLootShedule(itemLootShedule);
                 }
-            } else if (!CharacterSettings.autoLoot || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
+            } else if (!CharacterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
                 item.changeOwner(actor.getObjectId());
                 itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
                 item.setItemLootShedule(itemLootShedule);
@@ -478,10 +478,8 @@ public final class ItemEngine extends GameXmlReader {
         World.getInstance().removeObject(item);
         IdFactory.getInstance().releaseId(item.getObjectId());
 
-        if (GeneralSettings.logItems()) {
-            if (!GeneralSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA) {
-                LOGGER_ITEMS.info("DELETE: {}, item {}:+{} {} ({}), Previous Count ({}), {}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(),old ,actor, reference);
-            }
+        if (GeneralSettings.logItems() && (!GeneralSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA)) {
+            LOGGER_ITEMS.info("DELETE: {}, item {}:+{} {} ({}), Previous Count ({}), {}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(),old ,actor, reference);
         }
 
         auditGM(process, item.getId(), item.getCount(), actor, reference, item);

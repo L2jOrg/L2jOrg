@@ -94,7 +94,7 @@ public final class RequestPreviewItem extends ClientPacket {
         }
 
         // If Alternate rule Karma punishment is set to true, forbid Wear to player with Karma
-        if (activeChar.getReputation() < 0 && !CharacterSettings.canPkShop) {
+        if (activeChar.getReputation() < 0 && !CharacterSettings.canPkShop()) {
             return;
         }
 
@@ -149,8 +149,8 @@ public final class RequestPreviewItem extends ClientPacket {
 
             items.put(slot, itemId);
             totalPrice += Config.WEAR_PRICE;
-            if (totalPrice > CharacterSettings.maxAdena) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + CharacterSettings.maxAdena + " adena worth of goods.");
+            if (totalPrice > CharacterSettings.maxAdena()) {
+                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + CharacterSettings.maxAdena() + " adena worth of goods.");
                 return;
             }
         }

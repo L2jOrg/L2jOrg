@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.item.Item;
@@ -59,11 +58,11 @@ public class PlayerStats extends PlayableStats {
      * Player's maximum talisman count.
      */
     private final AtomicInteger _talismanSlots = new AtomicInteger();
-    private long _startingXp;
+    private long startingXp;
     private int _vitalityPoints = 0;
 
-    public PlayerStats(Player activeChar) {
-        super(activeChar);
+    public PlayerStats(Player player) {
+        super(player);
     }
 
     @Override
@@ -282,7 +281,11 @@ public class PlayerStats extends PlayableStats {
     }
 
     public long getStartingExp() {
-        return _startingXp;
+        return startingXp;
+    }
+
+    public void setStartingXp(long xp) {
+        this.startingXp = xp;
     }
 
     /**
@@ -368,7 +371,7 @@ public class PlayerStats extends PlayableStats {
     }
 
     public void updateVitalityPoints(int points, boolean useRates) {
-        if (points == 0 || !CharacterSettings.vitalityEnabled) {
+        if (points == 0 || !CharacterSettings.vitalityEnabled()) {
             return;
         }
 
@@ -508,8 +511,6 @@ public class PlayerStats extends PlayableStats {
     public double getEnchantRateBonus() {
         return getValue(Stat.ENCHANT_RATE_BONUS, 0);
     }
-
-
 
     @Override
     protected void onRecalculateStats(boolean broadcast) {

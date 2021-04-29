@@ -57,7 +57,7 @@ public final class ClanWarehouse extends Warehouse {
 
     @Override
     public boolean validateCapacity(long slots) {
-        return items.size() + slots <= CharacterSettings.clanMaxWarehouseSlot;
+        return items.size() + slots <= CharacterSettings.clanMaxWarehouseSlot();
     }
 
     @Override

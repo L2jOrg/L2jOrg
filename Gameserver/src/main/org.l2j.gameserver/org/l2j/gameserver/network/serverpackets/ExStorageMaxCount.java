@@ -53,13 +53,13 @@ public class ExStorageMaxCount extends ServerPacket {
 
         buffer.writeInt(_inventory);
         buffer.writeInt(_warehouse);
-        buffer.writeInt(CharacterSettings.clanMaxWarehouseSlot);
+        buffer.writeInt(CharacterSettings.clanMaxWarehouseSlot());
         buffer.writeInt(_privateSell);
         buffer.writeInt(_privateBuy);
         buffer.writeInt(_receipeD);
         buffer.writeInt(_recipe);
         buffer.writeInt(_inventoryExtraSlots); // Belt inventory slots increase count
-        buffer.writeInt(CharacterSettings.maxSlotsQuestItem);
+        buffer.writeInt(CharacterSettings.maxSlotsQuestItem());
         buffer.writeInt(40); // TODO: Find me!
         buffer.writeInt(40); // TODO: Find me!
         buffer.writeInt(0x64); // Artifact slots (Fixed)

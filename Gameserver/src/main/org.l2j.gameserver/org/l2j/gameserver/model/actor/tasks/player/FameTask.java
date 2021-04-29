@@ -41,7 +41,7 @@ public class FameTask implements Runnable {
 
     @Override
     public void run() {
-        if ((_player == null) || (_player.isDead() && !CharacterSettings.fameForDeadPlayers)) {
+        if ((_player == null) || (_player.isDead() && !CharacterSettings.fameForDeadPlayers())) {
             return;
         }
 

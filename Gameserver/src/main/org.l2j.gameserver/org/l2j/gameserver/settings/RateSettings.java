@@ -31,6 +31,10 @@ public class RateSettings  {
     private static float rateVitalityLoss;
     private static float rateVitalityGain;
 
+    private RateSettings() {
+        // helper class
+    }
+
     public static void load(SettingsFile settingsFile) {
         xp = settingsFile.getFloat("RateXp", 1f);
         rateVitalityExpMul = settingsFile.getFloat("RateVitalityExpMultiplier", 2);

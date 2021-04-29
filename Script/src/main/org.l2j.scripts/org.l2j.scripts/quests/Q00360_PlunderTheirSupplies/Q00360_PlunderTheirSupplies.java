@@ -22,7 +22,6 @@ package org.l2j.scripts.quests.Q00360_PlunderTheirSupplies;
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;

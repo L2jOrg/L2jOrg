@@ -54,7 +54,7 @@ public class RequestBuySeed extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _manorId = readInt();
         final int count = readInt();
-        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -106,7 +106,7 @@ public class RequestBuySeed extends ClientPacket {
         int totalWeight = 0;
 
         final IntMap<SeedProduction> _productInfo = new HashIntMap<>();
-        var maxAdena = CharacterSettings.maxAdena;
+        var maxAdena = CharacterSettings.maxAdena();
         for (ItemHolder ih : _items) {
             final SeedProduction sp = manor.getSeedProduct(_manorId, ih.getId(), false);
             if ((sp == null) || (sp.getPrice() <= 0) || (sp.getAmount() < ih.getCount()) || MathUtil.checkMulOverFlow(sp.getPrice(), ih.getCount(), maxAdena)) {

@@ -20,7 +20,6 @@
 package org.l2j.scripts.quests.Q00333_HuntOfTheBlackLion;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;

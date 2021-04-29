@@ -279,7 +279,7 @@ public class Siege implements Siegable {
                 member.setSiegeSide(castle.getId());
                 if (checkIfInZone(member)) {
                     member.setIsInSiege(true);
-                    member.startFameTask(CharacterSettings.fameTaskDelay * 1000L, CharacterSettings.fameTaskPoints);
+                    member.startFameTask(CharacterSettings.fameTaskDelay() * 1000L, CharacterSettings.fameTaskPoints());
                 }
             }
             broadcastMemberInfo(member);
@@ -811,12 +811,12 @@ public class Siege implements Siegable {
 
     @Override
     public int getFameFrequency() {
-        return CharacterSettings.fameTaskDelay;
+        return CharacterSettings.fameTaskDelay();
     }
 
     @Override
     public int getFameAmount() {
-        return CharacterSettings.fameTaskPoints;
+        return CharacterSettings.fameTaskPoints();
     }
 
     @Override
