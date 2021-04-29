@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.ai.others.guide;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;

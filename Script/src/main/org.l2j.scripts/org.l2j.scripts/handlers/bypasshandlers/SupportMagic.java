@@ -19,7 +19,6 @@
  */
 package org.l2j.scripts.handlers.bypasshandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;

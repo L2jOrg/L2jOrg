@@ -19,7 +19,6 @@
 package org.l2j.scripts.quests.tutorial;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.Location;

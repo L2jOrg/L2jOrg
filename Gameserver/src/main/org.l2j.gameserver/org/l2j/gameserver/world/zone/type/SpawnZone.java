@@ -19,7 +19,6 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.zone.Zone;
