@@ -43,8 +43,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * This class loads all the game server related configurations from files.<br>
  * The files are usually located in config folder in server root folder.<br>
@@ -983,7 +981,7 @@ public final class Config {
 
         RATE_INSTANCE_XP = RatesSettings.getFloat("RateInstanceXp", -1);
         if (RATE_INSTANCE_XP < 0) {
-            RATE_INSTANCE_XP = getSettings(RateSettings.class).xp();
+            RATE_INSTANCE_XP = RateSettings.xp();
         }
         RATE_INSTANCE_SP = RatesSettings.getFloat("RateInstanceSp", -1);
         if (RATE_INSTANCE_SP < 0) {
@@ -1014,7 +1012,7 @@ public final class Config {
 
         RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
         if (RATE_KARMA_LOST == -1) {
-            RATE_KARMA_LOST = getSettings(RateSettings.class).xp();
+            RATE_KARMA_LOST = RateSettings.xp();
         }
         RATE_KARMA_EXP_LOST = RatesSettings.getFloat("RateKarmaExpLost", 1);
         RATE_SIEGE_GUARDS_PRICE = RatesSettings.getFloat("RateSiegeGuardsPrice", 1);

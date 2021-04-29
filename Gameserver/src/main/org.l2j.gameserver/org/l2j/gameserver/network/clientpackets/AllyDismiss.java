@@ -25,8 +25,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.ClanSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 public final class AllyDismiss extends ClientPacket {
     private String _clanName;
 
@@ -72,15 +70,14 @@ public final class AllyDismiss extends ClientPacket {
             return;
         }
 
-        var clanSettings = getSettings(ClanSettings.class);
         final long currentTime = System.currentTimeMillis();
-        leaderClan.setAllyPenaltyExpiryTime(currentTime + clanSettings.daysToAcceptClanAfterDismiss * 86400000L, Clan.PENALTY_TYPE_DISMISS_CLAN); // 24*60*60*1000 = 86400000
+        leaderClan.setAllyPenaltyExpiryTime(currentTime + ClanSettings.daysToAcceptClanAfterDismiss * 86400000L, Clan.PENALTY_TYPE_DISMISS_CLAN); // 24*60*60*1000 = 86400000
         leaderClan.updateClanInDB();
 
         clan.setAllyId(0);
         clan.setAllyName(null);
         clan.changeAllyCrest(0, true);
-        clan.setAllyPenaltyExpiryTime(currentTime + clanSettings.daysToJoinAllyAfterDismissed * 86400000L, Clan.PENALTY_TYPE_CLAN_DISMISSED); // 24*60*60*1000 = 86400000
+        clan.setAllyPenaltyExpiryTime(currentTime + ClanSettings.daysToJoinAllyAfterDismissed * 86400000L, Clan.PENALTY_TYPE_CLAN_DISMISSED); // 24*60*60*1000 = 86400000
         clan.updateClanInDB();
 
         player.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_EXPELLING_THE_CLAN);

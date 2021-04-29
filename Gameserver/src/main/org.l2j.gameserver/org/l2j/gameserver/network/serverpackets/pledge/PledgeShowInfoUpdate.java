@@ -24,8 +24,6 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author JoeAlisson
  */
@@ -40,7 +38,7 @@ public class PledgeShowInfoUpdate extends PledgeAbstractPacket {
         writeId(ServerPacketId.PLEDGE_SHOW_INFO_UPDATE, buffer );
 
         buffer.writeInt(clan.getId());
-        buffer.writeInt(getSettings(ServerSettings.class).serverId());
+        buffer.writeInt(ServerSettings.serverId());
         writeClanInfo(0x00, buffer);
     }
 

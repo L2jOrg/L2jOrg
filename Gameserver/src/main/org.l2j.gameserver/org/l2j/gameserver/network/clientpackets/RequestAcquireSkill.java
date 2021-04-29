@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -36,7 +35,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -48,7 +46,6 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
@@ -143,7 +140,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                 final Clan clan = player.getClan();
                 final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
                 if (clan.getReputationScore() >= repCost) {
-                    if (getSettings(CharacterSettings.class).pledgeSkillsItemNeeded) {
+                    if (CharacterSettings.pledgeSkillsItemNeeded) {
                         for (ItemHolder item : skillLearn.getRequiredItems()) {
                             if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
                                 // Doesn't have required item.
@@ -262,7 +259,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                     return false;
                 }
 
-                if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !getSettings(CharacterSettings.class).divineInspirationBookNeeded) {
+                if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !CharacterSettings.divineInspirationBookNeeded) {
                     return true;
                 }
 

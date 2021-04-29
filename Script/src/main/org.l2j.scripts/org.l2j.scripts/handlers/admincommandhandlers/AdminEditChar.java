@@ -47,7 +47,6 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.network.SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED;
 import static org.l2j.gameserver.util.GameUtils.*;
@@ -428,7 +427,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					return false;
 				}
 				player.setName(val);
-				if (getSettings(GeneralSettings.class).cachePlayersName())
+				if (GeneralSettings.cachePlayersName())
 				{
 					PlayerNameTable.getInstance().addName(player);
 				}

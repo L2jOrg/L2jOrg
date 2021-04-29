@@ -29,7 +29,6 @@ import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Migi, DS
@@ -42,7 +41,7 @@ public final class RequestDeleteSentPost extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -55,7 +54,7 @@ public final class RequestDeleteSentPost extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (isNull(player) || isNull(mailIds) || !getSettings(GeneralSettings.class).allowMail()) {
+        if (isNull(player) || isNull(mailIds) || !GeneralSettings.allowMail()) {
             return;
         }
 

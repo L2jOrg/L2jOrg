@@ -30,7 +30,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.enums.InventorySlot.RIGHT_HAND;
 
 /**
@@ -54,7 +53,7 @@ public class PlayerSelectionInfo extends ServerPacket {
         this.account = client.getAccountName();
         this.playersInfo = client.getPlayersInfo();
         this.activeSlot = activeSlot;
-        this.maxPlayerAllowed = getSettings(ServerSettings.class).maxPlayersAllowed();
+        this.maxPlayerAllowed = ServerSettings.maxPlayersAllowed();
     }
 
     @Override
@@ -96,7 +95,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeInt(data.getRace());
             buffer.writeInt(data.getClassId());
 
-            buffer.writeInt(getSettings(ServerSettings.class).serverId());
+            buffer.writeInt(ServerSettings.serverId());
 
             buffer.writeInt(data.getX());
             buffer.writeInt(data.getY());
@@ -170,7 +169,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeDouble(0x00); // Current pet MP
 
             buffer.writeInt(data.getVitalityPoints());
-            buffer.writeInt((int)  getSettings(RateSettings.class).rateVitalityExpMul() * 100); // Vitality Percent
+            buffer.writeInt((int)  RateSettings.rateVitalityExpMul() * 100); // Vitality Percent
             buffer.writeInt(playerInfo.getVitalityItemsUsed()); // Remaining vitality item uses
             buffer.writeInt(data.getAccessLevel() != -100); // Char is active or not
             buffer.writeByte(data.isNobless());

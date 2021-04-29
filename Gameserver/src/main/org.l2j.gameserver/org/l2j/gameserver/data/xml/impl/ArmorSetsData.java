@@ -36,8 +36,6 @@ import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.IntStream;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Loads armor set bonuses.
  *
@@ -55,7 +53,7 @@ public final class ArmorSetsData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/armorSets.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/armorSets.xsd");
     }
 
     @Override

@@ -33,7 +33,6 @@ import java.util.*;
 import java.util.Map.Entry;
 
 import static java.util.Objects.requireNonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
@@ -45,7 +44,7 @@ public final class ScriptEngineManager  {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ScriptEngineManager.class);
 
-    public static final Path SCRIPT_FOLDER = getSettings(ServerSettings.class).dataPackDirectory().resolve("data/scripts");
+    public static final Path SCRIPT_FOLDER = ServerSettings.dataPackDirectory().resolve("data/scripts");
 
     private final Map<String, IExecutionContext> extEngines = new HashMap<>();
     private IExecutionContext currentExecutionContext = null;

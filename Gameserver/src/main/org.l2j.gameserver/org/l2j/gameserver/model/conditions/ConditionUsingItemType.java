@@ -18,13 +18,13 @@
  */
 package org.l2j.gameserver.model.conditions;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.ArmorType;
 
 import static java.util.Objects.isNull;

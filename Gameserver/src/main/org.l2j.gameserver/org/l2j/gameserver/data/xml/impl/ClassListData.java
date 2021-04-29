@@ -33,8 +33,6 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Loads the the list of classes and it's info.
  *
@@ -51,7 +49,7 @@ public final class ClassListData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/classList.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/classList.xsd");
     }
 
     @Override

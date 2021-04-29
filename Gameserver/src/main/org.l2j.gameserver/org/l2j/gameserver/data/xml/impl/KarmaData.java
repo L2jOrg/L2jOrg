@@ -31,8 +31,6 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author UnAfraid
  */
@@ -47,7 +45,7 @@ public class KarmaData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/pcKarmaIncrease.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/pcKarmaIncrease.xsd");
     }
 
     @Override

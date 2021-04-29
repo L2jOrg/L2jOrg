@@ -42,7 +42,6 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -59,7 +58,7 @@ public final class MultisellEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/multisell/multisell.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/multisell/multisell.xsd");
     }
 
     @Override

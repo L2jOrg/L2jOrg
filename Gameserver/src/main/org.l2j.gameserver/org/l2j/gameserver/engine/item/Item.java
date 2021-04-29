@@ -81,7 +81,6 @@ import java.util.function.Predicate;
 import static java.lang.Math.max;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
 
@@ -218,9 +217,8 @@ public final class Item extends WorldObject {
     public void changeOwner(String process, int ownerId, Player creator, WorldObject reference) {
         changeOwner(ownerId);
 
-        var generalSettings = getSettings(GeneralSettings.class);
-        if (generalSettings.logItems()) {
-            if (!generalSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
+        if (GeneralSettings.logItems()) {
+            if (!GeneralSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
                 LOG_ITEMS.info("SETOWNER: {}, +{} item {} ({}), {}, {}", process, this, data.getEnchantLevel(), data.getCount(), creator, reference);
             }
         }
@@ -298,7 +296,7 @@ public final class Item extends WorldObject {
             return;
         }
         final long old = data.getCount();
-        final long max = data.getItemId() == CommonItem.ADENA ? getSettings(CharacterSettings.class).maxAdena : Long.MAX_VALUE;
+        final long max = data.getItemId() == CommonItem.ADENA ? CharacterSettings.maxAdena : Long.MAX_VALUE;
 
         if (count > 0 && data.getCount() > (max - count)) {
             setCount(max);
@@ -308,9 +306,8 @@ public final class Item extends WorldObject {
 
         storedInDb = false;
 
-        var generalSettings = getSettings(GeneralSettings.class);
-        if (generalSettings.logItems() && (process != null)) {
-            if (!generalSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
+        if (GeneralSettings.logItems() && (process != null)) {
+            if (!GeneralSettings.smallLogItems() || template.isEquipable() || template.getId() == CommonItem.ADENA) {
                 LOG_ITEMS.info("CHANGE: {}, +{} item {} ({}), prev count {}, {}, {}", process, this, data.getEnchantLevel(), data.getCount(), old, creator, reference);
             }
         }
@@ -319,7 +316,7 @@ public final class Item extends WorldObject {
     }
 
     private void auditItem(String process, long count, Player creator, Object reference) {
-        if (nonNull(creator) && creator.isGM() && getSettings(GeneralSettings.class).auditGM()) {
+        if (nonNull(creator) && creator.isGM() && GeneralSettings.auditGM()) {
             String referenceName = "no-reference";
             if (reference instanceof WorldObject) {
                 referenceName = (((WorldObject) reference).getName() != null ? ((WorldObject) reference).getName() : "no-name");
@@ -534,7 +531,7 @@ public final class Item extends WorldObject {
 
     @Override
     public boolean decayMe() {
-        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+        if (GeneralSettings.saveDroppedItems()) {
             ItemsOnGroundManager.getInstance().removeObject(this);
         }
 
@@ -1076,7 +1073,7 @@ public final class Item extends WorldObject {
 
             // Add the Item dropped in the world as a visible object
             World.getInstance().addVisibleObject(_item, _item.getWorldRegion());
-            if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+            if (GeneralSettings.saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().save(_item);
             }
             _item.setDropperObjectId(0); // Set the dropper Id back to 0 so it no longer shows the drop packet

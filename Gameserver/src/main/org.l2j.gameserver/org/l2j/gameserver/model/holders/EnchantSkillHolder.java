@@ -21,7 +21,10 @@ package org.l2j.gameserver.model.holders;
 import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.model.StatsSet;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author Sdw

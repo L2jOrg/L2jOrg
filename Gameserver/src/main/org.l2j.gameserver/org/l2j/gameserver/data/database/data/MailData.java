@@ -22,11 +22,11 @@ import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.item.container.Attachment;
-import org.l2j.gameserver.engine.item.Item;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

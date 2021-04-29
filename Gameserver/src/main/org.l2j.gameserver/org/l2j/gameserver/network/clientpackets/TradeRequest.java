@@ -35,7 +35,6 @@ import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
@@ -115,7 +114,7 @@ public final class TradeRequest extends ClientPacket {
         }
 
         // L2J Customs: Karma punishment
-        if(!getSettings(CharacterSettings.class).canPkTrade) {
+        if(!CharacterSettings.canPkTrade) {
             if(player.getReputation() < 0) {
                 player.sendMessage("You cannot trade while you are in a chaotic state.");
                 return;

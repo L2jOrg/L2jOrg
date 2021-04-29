@@ -29,7 +29,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class ...
@@ -64,7 +63,7 @@ public final class RequestGiveItemToPet extends ClientPacket {
         }
 
         // Alt game - Karma punishment
-        if ( player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkTrade ) {
+        if ( player.getReputation() < 0 && !CharacterSettings.canPkTrade ) {
             return;
         }
 

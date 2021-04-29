@@ -18,11 +18,11 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -33,7 +33,6 @@ import org.l2j.gameserver.settings.ClanSettings;
 
 import java.util.Objects;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 public final class RequestStartPledgeWar extends ClientPacket {
@@ -56,7 +55,7 @@ public final class RequestStartPledgeWar extends ClientPacket {
             return;
         }
 
-        if ((clanDeclaringWar.getLevel() < 3) || (clanDeclaringWar.getMembersCount() < getSettings(ClanSettings.class).minMembersForWar)) {
+        if ((clanDeclaringWar.getLevel() < 3) || (clanDeclaringWar.getMembersCount() < ClanSettings.minMembersForWar)) {
             client.sendPacket(getSystemMessage(SystemMessageId.A_CLAN_WAR_CAN_ONLY_BE_DECLARED_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_15_OR_GREATER));
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
@@ -83,7 +82,7 @@ public final class RequestStartPledgeWar extends ClientPacket {
             client.sendPacket(getSystemMessage(SystemMessageId.A_DECLARATION_OF_CLAN_WAR_AGAINST_AN_ALLIED_CLAN_CAN_T_BE_MADE));
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
-        } else if ((clanDeclaredWar.getLevel() < 3) || (clanDeclaredWar.getMembersCount() < getSettings(ClanSettings.class).minMembersForWar)) {
+        } else if ((clanDeclaredWar.getLevel() < 3) || (clanDeclaredWar.getMembersCount() < ClanSettings.minMembersForWar)) {
             client.sendPacket(getSystemMessage(SystemMessageId.A_CLAN_WAR_CAN_ONLY_BE_DECLARED_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_15_OR_GREATER));
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

@@ -49,8 +49,6 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * 	Class Master AI.
@@ -245,9 +243,8 @@ public final class ClassMaster extends AbstractNpcAI
 					
 					player.setClassId(classId);
 					player.setBaseClass(player.getActiveClass());
-					var characterSettings = getSettings(CharacterSettings.class);
-					if (characterSettings.autoLearnSkillEnabled) {
-						player.giveAvailableSkills(characterSettings.autoLearnSkillFSEnabled, true);
+					if (CharacterSettings.autoLearnSkillEnabled) {
+						player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled, true);
 					}
 					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 					player.broadcastUserInfo();
@@ -632,10 +629,9 @@ public final class ClassMaster extends AbstractNpcAI
 			player.setClassId(newClass.getId());
 			player.setBaseClass(player.getActiveClass());
 
-			var characterSettings = getSettings(CharacterSettings.class);
-			if (characterSettings.autoLearnSkillEnabled)
+			if (CharacterSettings.autoLearnSkillEnabled)
 			{
-				player.giveAvailableSkills(characterSettings.autoLearnSkillFSEnabled, true);
+				player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled, true);
 			}
 			player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 			player.broadcastUserInfo();

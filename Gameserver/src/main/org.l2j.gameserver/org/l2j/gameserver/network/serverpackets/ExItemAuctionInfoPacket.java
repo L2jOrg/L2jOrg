@@ -19,8 +19,8 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.item.auction.ItemAuction;
 import org.l2j.gameserver.data.database.data.ItemAuctionBid;
+import org.l2j.gameserver.model.item.auction.ItemAuction;
 import org.l2j.gameserver.model.item.auction.ItemAuctionState;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;

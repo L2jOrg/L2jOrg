@@ -40,7 +40,6 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author St3eT
@@ -56,7 +55,7 @@ public final class ClanHallEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/residences/clanHalls/clanHall.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/residences/clanHalls/clanHall.xsd");
     }
 
     @Override

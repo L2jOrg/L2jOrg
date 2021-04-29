@@ -40,7 +40,6 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.handleIllegalPlayerAction;
 import static org.l2j.gameserver.util.GameUtils.isWarehouseManager;
@@ -54,7 +53,7 @@ public final class SendWareHouseDepositList extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int size = readInt();
-        if (size <= 0 || size > getSettings(CharacterSettings.class).maxItemInPacket || size * BATCH_LENGTH != available()) {
+        if (size <= 0 || size > CharacterSettings.maxItemInPacket || size * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -130,7 +129,7 @@ public final class SendWareHouseDepositList extends ClientPacket {
             return false;
         }
 
-        if (player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkUseWareHouse) {
+        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse) {
             return false;
         }
 

@@ -21,61 +21,71 @@ package org.l2j.authserver.settings;
 import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
-import static java.util.Objects.requireNonNullElseGet;
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 public class AuthServerSettings implements Settings {
 
-    private SettingsFile settings;
+    private static String gameServerListenHost;
+    private static int gameServerListenPort;
+    private static String hostName;
+    private static int port;
+    private static boolean autoCreateAccount;
+    private static int authTriesBeforeBan;
+    private static int authBlockAfterBan;
+    private static boolean acceptNewGameServer;
+    private static String usernameTemplate;
+    private static int gmMinimumLevel;
 
     @Override
     public void load(SettingsFile settingsFile) {
-        settings = requireNonNullElseGet(settingsFile, SettingsFile::new);
+        gameServerListenHost = settingsFile.getString("GameServerListenHostname", "*");
+        gameServerListenPort = settingsFile.getInt("GameServerListenPort", 9013);
+        hostName = settingsFile.getString("Hostname", "*");
+        port = settingsFile.getInt("Port", 2106);
+        autoCreateAccount = settingsFile.getBoolean("AutoCreateAccounts", false);
+        authTriesBeforeBan = settingsFile.getInt("AuthTriesBeforeBan", 10);
+        authBlockAfterBan = settingsFile.getInt("AuthBlockAfterBan", 600);
+        acceptNewGameServer = settingsFile.getBoolean("AcceptNewGameServer", false);
+        usernameTemplate = settingsFile.getString("UsernameTemplate", "[A-Za-z0-9_]{5,32}");
+        gmMinimumLevel = settingsFile.getInt("GMMinLevel", 100);
     }
 
     public static String gameServerListenHost() {
-        return getInstance().settings.getString("GameServerListenHostname", "*");
+        return gameServerListenHost;
     }
 
     public static int gameServerListenPort() {
-        return  getInstance().settings.getInt("GameServerListenPort", 9013);
+        return gameServerListenPort;
     }
 
     public static String listenHost() {
-        return getInstance().settings.getString("Hostname", "*");
+        return hostName;
     }
 
     public static int listenPort() {
-        return getInstance().settings.getInt("Port", 2106);
+        return port;
     }
 
     public static boolean isAutoCreateAccount(){
-        return getInstance().settings.getBoolean("AutoCreateAccounts", false);
+        return autoCreateAccount;
     }
 
     public static int authTriesBeforeBan(){
-        return getInstance().settings.getInt("AuthTriesBeforeBan", 10);
+        return authTriesBeforeBan;
     }
 
     public static int loginBlockAfterBan() {
-        return getInstance().settings.getInt("AuthBlockAfterBan", 600);
+        return authBlockAfterBan;
     }
 
     public static boolean acceptNewGameServerEnabled() {
-        return  getInstance().settings.getBoolean("AcceptNewGameServer", false);
+        return acceptNewGameServer;
     }
 
     public static String usernameTemplate() {
-        return getInstance().settings.getString("UsernameTemplate", "[A-Za-z0-9_]{5,32}");
+        return usernameTemplate;
     }
 
-    public int gmMinimumLevel() {
-        return getInstance().settings.getInt("GMMinLevel", 100);
+    public static int gmMinimumLevel() {
+        return gmMinimumLevel;
     }
-
-    private static AuthServerSettings getInstance() {
-        return getSettings(AuthServerSettings.class);
-    }
-
 
 }

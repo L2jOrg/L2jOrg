@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.engine.olympiad.Olympiad;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
 
 /**
  * Format: (ch)d d: unknown (always 0?)

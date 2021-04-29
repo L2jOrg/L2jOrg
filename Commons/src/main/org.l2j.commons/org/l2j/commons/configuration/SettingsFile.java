@@ -33,7 +33,6 @@ import java.util.EnumSet;
 import java.util.Properties;
 import java.util.Set;
 
-import static java.nio.file.Files.newBufferedReader;
 import static java.util.Arrays.stream;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.*;

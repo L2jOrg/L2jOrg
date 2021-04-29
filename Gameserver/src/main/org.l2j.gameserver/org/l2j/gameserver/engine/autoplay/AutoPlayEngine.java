@@ -44,7 +44,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -337,7 +336,7 @@ public final class AutoPlayEngine {
 
         private void useAutoPotion() {
             var toRemove = new HashSet<Player>();
-            if(getSettings(ServerSettings.class).parallelismThreshold() < autoPotionPlayers.size()) {
+            if(ServerSettings.parallelismThreshold() < autoPotionPlayers.size()) {
                 autoPotionPlayers.parallelStream().filter(this::canUseAutoPotion).forEach(player -> usePotionShortcut(toRemove, player));
             } else {
                 for (Player player : autoPotionPlayers) {

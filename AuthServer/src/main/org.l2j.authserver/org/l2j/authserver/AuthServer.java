@@ -28,6 +28,7 @@ import org.l2j.authserver.network.client.AuthPacketHandler;
 import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
 import org.l2j.authserver.network.gameserver.ServerClient;
 import org.l2j.commons.cache.CacheFactory;
+import org.l2j.commons.configuration.Configurator;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.FileUtil;
@@ -80,7 +81,8 @@ public class AuthServer {
         configureLogger();
         configureCaches();
         configureDatabase();
-        configureNetworkPackets();  
+        configureNetworkPackets();
+        Configurator.getInstance().load();
         var processors = Runtime.getRuntime().availableProcessors();
         ThreadPool.init(processors, Math.max(1, processors/2), 50);
         try {

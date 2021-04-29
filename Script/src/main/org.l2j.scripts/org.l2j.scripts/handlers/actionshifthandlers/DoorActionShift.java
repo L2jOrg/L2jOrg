@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.handlers.actionshifthandlers;
 
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionShiftHandler;
@@ -25,7 +26,6 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.HtmlUtil;

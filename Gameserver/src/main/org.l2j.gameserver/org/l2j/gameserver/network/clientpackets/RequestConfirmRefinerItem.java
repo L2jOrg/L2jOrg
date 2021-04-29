@@ -19,8 +19,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.VariationData;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPutIntensiveResultForVariationMake;

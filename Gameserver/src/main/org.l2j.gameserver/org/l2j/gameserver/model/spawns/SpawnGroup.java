@@ -30,8 +30,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author UnAfraid
  */
@@ -109,7 +107,7 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
     }
 
     public void spawnAll(Instance instance) {
-        if(getSettings(ServerSettings.class).parallelismThreshold() < spawns.size()) {
+        if(ServerSettings.parallelismThreshold() < spawns.size()) {
             spawns.parallelStream().forEach(template -> template.spawn(instance));
         } else {
             for (NpcSpawnTemplate spawn : spawns) {

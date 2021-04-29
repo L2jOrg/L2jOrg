@@ -1,6 +1,5 @@
 package org.l2j.gameserver.data.xml;
 
-import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -18,11 +17,6 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-/**
- * @author L2CCCP
- * @Reworked Vicochips
- */
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class MagicLampData  extends GameXmlReader {
     private static final List<MagicLampDataHolder> LAMPS = new ArrayList<>();
@@ -37,7 +31,7 @@ public class MagicLampData  extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/magic-lamp.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/magic-lamp.xsd");
     }
 
     @Override

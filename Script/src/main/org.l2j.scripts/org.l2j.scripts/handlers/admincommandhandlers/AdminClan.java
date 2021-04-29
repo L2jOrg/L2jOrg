@@ -20,12 +20,12 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;

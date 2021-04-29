@@ -41,7 +41,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -70,7 +69,7 @@ public class GeoEngine {
 
     private void loadGeodataFiles() {
         int loaded = 0;
-        var geodataPath = getSettings(ServerSettings.class).dataPackDirectory().resolve("geodata");
+        var geodataPath = ServerSettings.dataPackDirectory().resolve("geodata");
 
         for (int rx = World.TILE_X_MIN; rx <= World.TILE_X_MAX; rx++) {
             for (int ry = World.TILE_Y_MIN; ry <= World.TILE_Y_MAX; ry++) {
@@ -87,13 +86,12 @@ public class GeoEngine {
         LOGGER.info("Loaded {} geodata files.", loaded);
 
         if (loaded == 0) {
-            var geoSettings = getSettings(GeoEngineSettings.class);
-            if (geoSettings.isEnabledPathFinding()) {
-                geoSettings.setEnabledPathFinding(false);
+            if (GeoEngineSettings.isEnabledPathFinding()) {
+                GeoEngineSettings.setEnabledPathFinding(false);
                 LOGGER.warn("Disabling  Path Finding.");
             }
-            if (geoSettings.isSyncMode(SyncMode.SERVER)) {
-                geoSettings.setSyncMode(SyncMode.Z_ONLY);
+            if (GeoEngineSettings.isSyncMode(SyncMode.SERVER)) {
+                GeoEngineSettings.setSyncMode(SyncMode.Z_ONLY);
                 LOGGER.warn("Forcing Sync Mode setting to {}", SyncMode.Z_ONLY);
             }
         }
@@ -779,6 +777,6 @@ public class GeoEngine {
 
 
     private static class Singleton {
-        private static final GeoEngine INSTANCE = getSettings(GeoEngineSettings.class).isEnabledPathFinding() ? new GeoEnginePathFinding() : new GeoEngine();
+        private static final GeoEngine INSTANCE = GeoEngineSettings.isEnabledPathFinding() ? new GeoEnginePathFinding() : new GeoEngine();
     }
 }

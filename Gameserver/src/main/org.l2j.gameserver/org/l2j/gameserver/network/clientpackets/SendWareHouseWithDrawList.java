@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -26,7 +27,6 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.container.ClanWarehouse;
 import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.model.item.container.PlayerWarehouse;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -35,8 +35,6 @@ import org.l2j.gameserver.settings.ClanSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class ... 32 SendWareHouseWithDrawList cd (dd) WootenGil rox :P
@@ -52,7 +50,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -99,11 +97,11 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        if (player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkUseWareHouse) {
+        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse) {
             return;
         }
 
-        if (getSettings(ClanSettings.class).canMembersWithdrawFromWarehouse) {
+        if (ClanSettings.canMembersWithdrawFromWarehouse) {
             if ((warehouse instanceof ClanWarehouse) && !player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE)) {
                 return;
             }

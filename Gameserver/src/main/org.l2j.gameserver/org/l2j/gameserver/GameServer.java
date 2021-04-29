@@ -21,6 +21,7 @@ package org.l2j.gameserver;
 import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
 import org.l2j.commons.cache.CacheFactory;
+import org.l2j.commons.configuration.Configurator;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.DeadLockDetector;
@@ -75,7 +76,6 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -207,12 +207,11 @@ public class GameServer {
         SiegeGuardManager.init();
         QuestManager.getInstance().report();
 
-        var generalSettings = getSettings(GeneralSettings.class);
-        if (generalSettings.saveDroppedItems()) {
+        if (GeneralSettings.saveDroppedItems()) {
             ItemsOnGroundManager.init();
         }
 
-        if (generalSettings.autoDestroyItemTime() > 0 || generalSettings.autoDestroyHerbTime() > 0) {
+        if (GeneralSettings.autoDestroyItemTime() > 0 || GeneralSettings.autoDestroyHerbTime() > 0) {
             ItemsAutoDestroy.getInstance();
         }
 
@@ -220,7 +219,7 @@ public class GameServer {
 
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
 
-        if (generalSettings.allowMail()) {
+        if (GeneralSettings.allowMail()) {
             MailEngine.init();
         }
 
@@ -230,18 +229,17 @@ public class GameServer {
 
         LOGGER.info("IdFactory: Free ObjectID's remaining: {}", IdFactory.getInstance().size());
 
-        var serverSettings = getSettings(ServerSettings.class);
-        if (serverSettings.scheduleRestart()) {
+        if (ServerSettings.scheduleRestart()) {
             ServerRestartManager.init();
         }
 
-        LOGGER.info("Maximum number of connected players is configured to {}", serverSettings.maximumOnlineUsers());
+        LOGGER.info("Maximum number of connected players is configured to {}", ServerSettings.maximumOnlineUsers());
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 
         printSection("Setting All characters to offline status!");
         getDAO(PlayerDAO.class).setAllCharactersOffline();
 
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(ServerSettings.port()), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
         connectionHandler.start();
     }
 
@@ -253,11 +251,11 @@ public class GameServer {
         configureNetworkPackets();
 
         printSection("Server Configuration");
+        Configurator.getInstance().load();
         Config.load(); // TODO remove this
 
-        var settings = getSettings(ServerSettings.class);
         printSection("Thread Pools");
-        ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize(), settings.maxThreadPoolSize());
+        ThreadPool.init(ServerSettings.threadPoolSize() ,ServerSettings.scheduledPoolSize(), ServerSettings.maxThreadPoolSize());
 
         printSection("Identity Factory");
         if (!IdFactory.getInstance().isInitialized()) {
@@ -272,21 +270,21 @@ public class GameServer {
         INSTANCE = new GameServer();
 
         ThreadPool.execute(AuthServerCommunication.getInstance());
-        scheduleDeadLockDetector(settings);
+        scheduleDeadLockDetector();
 
         printSection("Extensions Pos Loaders");
         ExtensionBoot.posLoaders();
     }
 
-    private static void scheduleDeadLockDetector(ServerSettings settings) {
-        if (settings.useDeadLockDetector()) {
+    private static void scheduleDeadLockDetector() {
+        if (ServerSettings.useDeadLockDetector()) {
             ThreadPool.scheduleAtFixedDelay(new DeadLockDetector( () -> {
-                if(getSettings(ServerSettings.class).restartOnDeadLock()) {
+                if(ServerSettings.restartOnDeadLock()) {
                     Broadcast.toAllOnlinePlayers("Server restarting now.");
                     LOGGER.warn("Deadlock detected restarting the server");
                     Shutdown.getInstance().startShutdown(null, 60, true);
                 }
-            }), settings.deadLockDetectorInterval(), settings.deadLockDetectorInterval(), TimeUnit.SECONDS);
+            }), ServerSettings.deadLockDetectorInterval(), ServerSettings.deadLockDetectorInterval(), TimeUnit.SECONDS);
         }
     }
 
@@ -321,7 +319,7 @@ public class GameServer {
                 versionProperties.load(versionFile);
                 var version = versionProperties.getProperty("version");
                 var updateName = versionProperties.getProperty("update");
-                var protocol = getSettings(ServerSettings.class).acceptedProtocols();
+                var protocol = ServerSettings.acceptedProtocols();
 
                 fullVersion = String.format("%s [%s]: %s-%s (%s)", Arrays.toString(protocol), updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
                 printSection("L2jOrg Server Info Version");

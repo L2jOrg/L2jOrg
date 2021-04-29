@@ -25,7 +25,6 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.ClanSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.emptyIfNullOrElse;
 
@@ -267,7 +266,7 @@ public class ClanMember {
         if(!isOnline()) {
             return 0;
         }
-        return onlineTime >= getSettings(ClanSettings.class).onlineTimeForBonus ? 2 : 1;
+        return onlineTime >= ClanSettings.onlineTimeForBonus ? 2 : 1;
     }
 
     public int getLastReputationLevel() {

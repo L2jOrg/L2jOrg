@@ -73,7 +73,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.doIfIsCreature;
 
@@ -338,7 +337,7 @@ public class Attackable extends Npc {
 
                 if (party != null) {
                     final CommandChannel command = party.getCommandChannel();
-                    var partyRange = getSettings(CharacterSettings.class).partyRange;
+                    var partyRange = CharacterSettings.partyRange;
                     //@formatter:off
                     final List<Player> members = command != null ?
                             command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, partyRange)).collect(Collectors.toList()) :
@@ -804,9 +803,8 @@ public class Attackable extends Npc {
         for (ItemHolder drop : deathItems) {
             final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
             // Check if the autoLoot mode is active
-            var characterSettings = getSettings(CharacterSettings.class);
-            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot)
-                    || (_isRaid && characterSettings.autoLootRaid))) || (item.hasExImmediateEffect() && characterSettings.autoLootHerbs)) {
+            if (CharacterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && CharacterSettings.autoLoot)
+                    || (_isRaid && CharacterSettings.autoLootRaid))) || (item.hasExImmediateEffect() && CharacterSettings.autoLootHerbs)) {
                 player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
             } else {
                 dropItem(player, drop); // drop the item on the ground
@@ -860,8 +858,7 @@ public class Attackable extends Npc {
                 final var itemId = drop.getItemId();
                 final var itemCount = Rnd.get(drop.getMin(), drop.getMax());
 
-                var characterSettings = getSettings(CharacterSettings.class);
-                if (characterSettings.autoLoot || isFlying() || characterSettings.isAutoLoot(itemId)) {
+                if (CharacterSettings.autoLoot || isFlying() || CharacterSettings.isAutoLoot(itemId)) {
                     player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the Player that has killed the Attackable
                 } else {
                     dropItem(player, itemId, itemCount); // drop the item on the ground

@@ -28,8 +28,6 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemD
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemTransfer;
 import org.l2j.gameserver.settings.CharacterSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 public final class ClanWarehouse extends Warehouse {
     private final Clan _clan;
 
@@ -59,7 +57,7 @@ public final class ClanWarehouse extends Warehouse {
 
     @Override
     public boolean validateCapacity(long slots) {
-        return items.size() + slots <= getSettings(CharacterSettings.class).clanMaxWarehouseSlot;
+        return items.size() + slots <= CharacterSettings.clanMaxWarehouseSlot;
     }
 
     @Override

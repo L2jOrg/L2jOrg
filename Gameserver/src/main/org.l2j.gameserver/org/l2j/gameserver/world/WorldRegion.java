@@ -43,7 +43,8 @@ import java.util.stream.Stream;
 import static java.lang.Math.abs;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.util.GameUtils.*;
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author JoeAlisson

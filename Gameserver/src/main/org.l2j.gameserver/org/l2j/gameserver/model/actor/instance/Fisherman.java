@@ -31,8 +31,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 public final class Fisherman extends Merchant {
     public Fisherman(NpcTemplate template) {
         super(template);
@@ -80,7 +78,7 @@ public final class Fisherman extends Merchant {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !getSettings(CharacterSettings.class).canPkShop && showPkDenyChatWindow(player, "fisherman")) {
+        if(player.getReputation() < 0 && !CharacterSettings.canPkShop && showPkDenyChatWindow(player, "fisherman")) {
             return;
         }
         super.showChatWindow(player, val);

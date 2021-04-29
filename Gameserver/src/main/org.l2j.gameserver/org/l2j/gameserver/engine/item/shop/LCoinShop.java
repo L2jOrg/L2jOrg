@@ -46,7 +46,6 @@ import java.util.*;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -64,7 +63,7 @@ public class LCoinShop extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/shop/l-coin.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/shop/l-coin.xsd");
     }
 
     @Override

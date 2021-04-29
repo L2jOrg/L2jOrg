@@ -53,7 +53,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.*;
 
 /**
@@ -103,7 +102,7 @@ public class SkillEngine extends EffectParser {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/skills/skills.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/skills/skills.xsd");
     }
 
     @Override

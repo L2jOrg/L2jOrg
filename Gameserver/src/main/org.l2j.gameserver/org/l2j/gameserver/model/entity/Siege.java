@@ -70,7 +70,6 @@ import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
@@ -280,8 +279,7 @@ public class Siege implements Siegable {
                 member.setSiegeSide(castle.getId());
                 if (checkIfInZone(member)) {
                     member.setIsInSiege(true);
-                    var characterSettings = getSettings(CharacterSettings.class);
-                    member.startFameTask(characterSettings.fameTaskDelay * 1000L, characterSettings.fameTaskPoints);
+                    member.startFameTask(CharacterSettings.fameTaskDelay * 1000L, CharacterSettings.fameTaskPoints);
                 }
             }
             broadcastMemberInfo(member);
@@ -813,12 +811,12 @@ public class Siege implements Siegable {
 
     @Override
     public int getFameFrequency() {
-        return getSettings(CharacterSettings.class).fameTaskDelay;
+        return CharacterSettings.fameTaskDelay;
     }
 
     @Override
     public int getFameAmount() {
-        return getSettings(CharacterSettings.class).fameTaskPoints;
+        return CharacterSettings.fameTaskPoints;
     }
 
     @Override

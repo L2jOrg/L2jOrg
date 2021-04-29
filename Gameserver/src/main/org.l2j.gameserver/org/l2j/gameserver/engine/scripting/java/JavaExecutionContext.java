@@ -45,7 +45,6 @@ import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.*;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -65,7 +64,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
     JavaExecutionContext(JavaScriptingEngine engine) {
         super(engine);
 
-        sourcePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(requireNonNullElse(getProperty("source.path"), "data/scripts"));
+        sourcePath = ServerSettings.dataPackDirectory().resolve(requireNonNullElse(getProperty("source.path"), "data/scripts"));
         destination = Path.of(requireNonNullElse(getProperty("compiled.path"), "compiledScripts"));
         forceCompile =  Boolean.parseBoolean(requireNonNullElse(getProperty("force.compile"), "true"));
 

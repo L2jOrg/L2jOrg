@@ -30,27 +30,27 @@ import java.time.temporal.ChronoUnit;
  * @author JoeAlisson
  */
 public class GeneralSettings implements Settings {
-    private int banChatAdenaAdsReportCount;
-    private boolean auditGM;
-    private boolean saveDroppedItems;
-    private int autoDestroyItemTime;
-    private int autoDestroyHerbTime;
-    private boolean allowMail;
-    private boolean logItems;
-    private boolean smallLogItems;
-    private boolean loadCustomBuyList;
-    private boolean cachePlayersName;
+    private static int banChatAdenaAdsReportCount;
+    private static boolean auditGM;
+    private static boolean saveDroppedItems;
+    private static int autoDestroyItemTime;
+    private static int autoDestroyHerbTime;
+    private static boolean allowMail;
+    private static boolean logItems;
+    private static boolean smallLogItems;
+    private static boolean loadCustomBuyList;
+    private static boolean cachePlayersName;
 
-    private IllegalActionPunishmentType defaultPunishment;
-    private boolean disableChatInJail;
-    private int defaultAccessLevel;
-    private int autoSavePlayerTime;
-    private Duration saveDroppedItemInterval;
-    private boolean clearDroppedItems;
-    private boolean destroyPlayerDroppedItem;
-    private boolean destroyEquipableItem;
-    private IntSet protectedItems;
-    private boolean clearDroppedItemsAfterLoad;
+    private static IllegalActionPunishmentType defaultPunishment;
+    private static boolean disableChatInJail;
+    private static int defaultAccessLevel;
+    private static int autoSavePlayerTime;
+    private static Duration saveDroppedItemInterval;
+    private static boolean clearDroppedItems;
+    private static boolean destroyPlayerDroppedItem;
+    private static boolean destroyEquipableItem;
+    private static IntSet protectedItems;
+    private static boolean clearDroppedItemsAfterLoad;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -85,87 +85,87 @@ public class GeneralSettings implements Settings {
         autoSavePlayerTime = settingsFile.getInt("PlayerDataStoreInterval", 20);
      }
 
-    public int banChatAdenaAdsReportCount() {
+    public static int banChatAdenaAdsReportCount() {
         return banChatAdenaAdsReportCount;
     }
 
-    public boolean auditGM() {
+    public static boolean auditGM() {
         return auditGM;
     }
 
-    public boolean saveDroppedItems() {
+    public static boolean saveDroppedItems() {
         return saveDroppedItems;
     }
 
-    public Duration saveDroppedItemInterval() {
+    public static Duration saveDroppedItemInterval() {
         return saveDroppedItemInterval;
     }
 
-    public boolean clearDroppedItems() {
+    public static boolean clearDroppedItems() {
         return clearDroppedItems;
     }
 
-    public boolean destroyPlayerDroppedItem() {
+    public static boolean destroyPlayerDroppedItem() {
         return destroyPlayerDroppedItem;
     }
 
-    public boolean destroyEquipableItem() {
+    public static boolean destroyEquipableItem() {
         return destroyEquipableItem;
     }
 
-    public boolean isProtectedItem(int itemId) {
+    public static boolean isProtectedItem(int itemId) {
         return protectedItems.contains(itemId);
     }
 
-    public boolean clearDroppedItemsAfterLoad() {
+    public static boolean clearDroppedItemsAfterLoad() {
         return clearDroppedItemsAfterLoad;
     }
 
-    public int autoDestroyItemTime() {
+    public static int autoDestroyItemTime() {
         return autoDestroyItemTime;
     }
 
-    public int autoDestroyHerbTime() {
+    public static int autoDestroyHerbTime() {
         return autoDestroyHerbTime;
     }
 
-    public boolean allowMail() {
+    public static boolean allowMail() {
         return allowMail;
     }
 
-    public boolean logItems() {
+    public static boolean logItems() {
         return logItems;
     }
 
-    public boolean smallLogItems() {
+    public static boolean smallLogItems() {
         return smallLogItems;
     }
 
-    public boolean loadCustomBuyList() {
+    public static boolean loadCustomBuyList() {
         return loadCustomBuyList;
     }
 
-    public boolean cachePlayersName() {
+    public static boolean cachePlayersName() {
         return cachePlayersName;
     }
 
-    public IllegalActionPunishmentType defaultPunishment() {
+    public static IllegalActionPunishmentType defaultPunishment() {
         return defaultPunishment;
     }
 
-    public boolean disableChatInJail() {
+    public static boolean disableChatInJail() {
         return disableChatInJail;
     }
 
-    public int defaultAccessLevel() {
+    public static int defaultAccessLevel() {
         return defaultAccessLevel;
     }
 
-    public void setDefaultAccessLevel(int accessLevel) {
+    public static void setDefaultAccessLevel(int accessLevel) {
         defaultAccessLevel = accessLevel;
     }
 
-    public int autoSavePlayerTime() {
+    public static int autoSavePlayerTime() {
         return autoSavePlayerTime;
     }
 }

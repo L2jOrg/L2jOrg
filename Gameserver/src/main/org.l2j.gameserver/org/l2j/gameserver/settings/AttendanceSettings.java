@@ -26,11 +26,11 @@ import org.l2j.commons.configuration.SettingsFile;
  */
 public class AttendanceSettings implements Settings {
 
-    private boolean enabled;
-    private boolean vipOnly;
-    private int delay;
-    private boolean popUpWindow;
-    private int minimumLevel;
+    private static boolean enabled;
+    private static boolean vipOnly;
+    private static int delay;
+    private static boolean popUpWindow;
+    private static int minimumLevel;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -41,23 +41,23 @@ public class AttendanceSettings implements Settings {
         minimumLevel = settingsFile.getInt("MinimumLevel", 40);
     }
 
-    public boolean enabled() {
+    public static boolean enabled() {
         return enabled;
     }
 
-    public boolean vipOnly() {
+    public static boolean vipOnly() {
         return vipOnly;
     }
 
-    public int delay() {
+    public static int delay() {
         return delay;
     }
 
-    public boolean popUpWindow() {
+    public static boolean popUpWindow() {
         return popUpWindow;
     }
 
-    public int minimumLevel() {
+    public static int minimumLevel() {
         return minimumLevel;
     }
 }

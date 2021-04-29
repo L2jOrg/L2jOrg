@@ -38,8 +38,6 @@ import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * This class loads and hold info about doors.
  *
@@ -59,7 +57,7 @@ public final class DoorDataManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/doors.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/doors.xsd");
     }
 
     @Override

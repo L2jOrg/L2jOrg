@@ -25,8 +25,6 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Task dedicated to reward player with fame while standing on siege zone.
  *
@@ -43,7 +41,7 @@ public class FameTask implements Runnable {
 
     @Override
     public void run() {
-        if ((_player == null) || (_player.isDead() && !getSettings(CharacterSettings.class).fameForDeadPlayers)) {
+        if ((_player == null) || (_player.isDead() && !CharacterSettings.fameForDeadPlayers)) {
             return;
         }
 

@@ -18,12 +18,12 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;

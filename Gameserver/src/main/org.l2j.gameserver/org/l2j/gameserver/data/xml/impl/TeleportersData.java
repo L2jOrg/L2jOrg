@@ -38,7 +38,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -55,7 +54,7 @@ public class TeleportersData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/teleporters/teleporterData.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/teleporters/teleporterData.xsd");
     }
 
     @Override

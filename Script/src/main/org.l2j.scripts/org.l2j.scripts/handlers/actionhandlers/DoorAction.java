@@ -19,6 +19,7 @@
 package org.l2j.scripts.handlers.actionhandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
@@ -26,7 +27,6 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.holders.DoorRequest;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 

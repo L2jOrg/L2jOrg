@@ -20,12 +20,12 @@
 package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;

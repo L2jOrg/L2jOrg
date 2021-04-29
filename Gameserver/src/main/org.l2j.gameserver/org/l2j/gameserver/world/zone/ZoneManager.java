@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.ArrayIntList;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
@@ -100,7 +99,7 @@ public final class ZoneManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return Configurator.getSettings(ServerSettings.class).dataPackDirectory().resolve("data/zones/zones.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/zones/zones.xsd");
     }
 
     public void reload() {

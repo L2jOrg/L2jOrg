@@ -23,10 +23,10 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.dao.ClanHallDAO;
 import org.l2j.gameserver.data.database.data.Bidder;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.model.item.CommonItem;
 
 import java.util.Comparator;

@@ -33,83 +33,83 @@ import static java.lang.Math.max;
  */
 public class CharacterSettings implements Settings {
 
-    public int partyRange;
-    public boolean autoLootRaid;
-    public int raidLootPrivilegeTime;
-    public boolean autoLoot;
-    public boolean initialEquipEvent;
-    public boolean delevel;
-    public float weightLimitMultiplier;
-    public boolean removeCastleCirclets;
-    public boolean restoreSummonOnReconnect;
-    public int minEnchantAnnounceWeapon;
-    public int minEnchantAnnounceArmor;
-    public float restoreCPPercent;
-    public float restoreHPPercent;
-    public float restoreMPPercent;
-    public boolean autoLearnSkillEnabled;
-    public boolean autoLearnSkillFSEnabled;
-    public byte maxBuffs;
-    public byte maxTriggeredBuffs;
-    public byte maxDances;
-    public boolean dispelDanceAllowed;
-    public boolean storeDances;
-    public boolean breakCast;
-    public boolean breakBowAttack;
-    public boolean magicFailureAllowed;
-    public boolean breakStun;
-    public int effectTickRatio;
-    public boolean autoLootHerbs;
-    public boolean pledgeSkillsItemNeeded;
-    public boolean divineInspirationBookNeeded;
-    public boolean vitalityEnabled;
-    public boolean raidBossUseVitality;
-    public int maxRunSpeed;
-    public int maxPcritRate;
-    public int maxMcritRate;
-    public int maxPAtkSpeed;
-    public int maxMAtkSpeed;
-    public int maxEvasion;
-    public boolean teleportInBattle;
-    public boolean craftEnabled;
-    public long maxAdena;
-    public boolean allowPKTeleport;
-    public int maxFreeTeleportLevel;
-    public int maxItemInPacket;
-    public int maxSlotsQuestItem;
-    public int clanMaxWarehouseSlot;
-    public int maxSlotFreight;
-    public int freightPrice;
-    public boolean canAttackPkInPeaceZone;
-    public boolean canPkShop;
-    public boolean canPkTeleport;
-    public boolean canPkTrade;
-    public boolean canPkUseWareHouse;
-    public int maxFame;
-    public int fameTaskDelay;
-    public int fameTaskPoints;
-    public boolean fameForDeadPlayers;
-    public int criticalCraftRate;
-    public int dwarfRecipeLimit;
-    public int recipeLimit;
-    public boolean altGameCreation;
-    public double altGameCreationSpeed;
-    public double altGameCreationXpRate;
-    public double altGameCreationSpRate;
-    public double altGameCreationRareXpSpRate;
+    public static int partyRange;
+    public static boolean autoLootRaid;
+    public static int raidLootPrivilegeTime;
+    public static boolean autoLoot;
+    public static boolean initialEquipEvent;
+    public static boolean delevel;
+    public static float weightLimitMultiplier;
+    public static boolean removeCastleCirclets;
+    public static boolean restoreSummonOnReconnect;
+    public static int minEnchantAnnounceWeapon;
+    public static int minEnchantAnnounceArmor;
+    public static float restoreCPPercent;
+    public static float restoreHPPercent;
+    public static float restoreMPPercent;
+    public static boolean autoLearnSkillEnabled;
+    public static boolean autoLearnSkillFSEnabled;
+    public static byte maxBuffs;
+    public static byte maxTriggeredBuffs;
+    public static byte maxDances;
+    public static boolean dispelDanceAllowed;
+    public static boolean storeDances;
+    public static boolean breakCast;
+    public static boolean breakBowAttack;
+    public static boolean magicFailureAllowed;
+    public static boolean breakStun;
+    public static int effectTickRatio;
+    public static boolean autoLootHerbs;
+    public static boolean pledgeSkillsItemNeeded;
+    public static boolean divineInspirationBookNeeded;
+    public static boolean vitalityEnabled;
+    public static boolean raidBossUseVitality;
+    public static int maxRunSpeed;
+    public static int maxPcritRate;
+    public static int maxMcritRate;
+    public static int maxPAtkSpeed;
+    public static int maxMAtkSpeed;
+    public static int maxEvasion;
+    public static boolean teleportInBattle;
+    public static boolean craftEnabled;
+    public static long maxAdena;
+    public static boolean allowPKTeleport;
+    public static int maxFreeTeleportLevel;
+    public static int maxItemInPacket;
+    public static int maxSlotsQuestItem;
+    public static int clanMaxWarehouseSlot;
+    public static int maxSlotFreight;
+    public static int freightPrice;
+    public static boolean canAttackPkInPeaceZone;
+    public static boolean canPkShop;
+    public static boolean canPkTeleport;
+    public static boolean canPkTrade;
+    public static boolean canPkUseWareHouse;
+    public static int maxFame;
+    public static int fameTaskDelay;
+    public static int fameTaskPoints;
+    public static boolean fameForDeadPlayers;
+    public static int criticalCraftRate;
+    public static int dwarfRecipeLimit;
+    public static int recipeLimit;
+    public static boolean altGameCreation;
+    public static double altGameCreationSpeed;
+    public static double altGameCreationXpRate;
+    public static double altGameCreationSpRate;
+    public static double altGameCreationRareXpSpRate;
 
-    private IntSet autoLootItems;
+    private static IntSet autoLootItems;
 
-    private int dwarfMaxSlotStoreSell;
-    private int maxSlotStoreSell;
-    private int dwarfMaxSlotStoreBuy;
-    private int maxSlotStoreBuy;
-    private int maxSlots;
-    private int dwarfMaxSlots;
-    private int gmMaxSlots;
-    private int dwarfMaxSlotWarehouse;
-    private int maxSlotWarehouse;
-    private int[] nonAugmentedItems;
+    private static int dwarfMaxSlotStoreSell;
+    private static int maxSlotStoreSell;
+    private static int dwarfMaxSlotStoreBuy;
+    private static int maxSlotStoreBuy;
+    private static int maxSlots;
+    private static int dwarfMaxSlots;
+    private static int gmMaxSlots;
+    private static int dwarfMaxSlotWarehouse;
+    private static int maxSlotWarehouse;
+    private static int[] nonAugmentedItems;
 
 
     @Override
@@ -221,29 +221,29 @@ public class CharacterSettings implements Settings {
     }
 
 
-    public boolean isAutoLoot(int item) {
+    public static boolean isAutoLoot(int item) {
         return autoLootItems.contains(item);
     }
 
-    public int maxSlotStoreBuy(Race race) {
+    public static int maxSlotStoreBuy(Race race) {
         return race == Race.DWARF ? dwarfMaxSlotStoreBuy : maxSlotStoreBuy;
     }
-    public int maxSlotStoreSell(Race race) {
+    public static int maxSlotStoreSell(Race race) {
         return race == Race.DWARF ? dwarfMaxSlotStoreSell : maxSlotStoreSell;
     }
 
-    public int maxSlotInventory(Player player) {
+    public static int maxSlotInventory(Player player) {
         if(player.isGM()) {
             return gmMaxSlots;
         }
         return player.getRace() == Race.DWARF ? dwarfMaxSlots : maxSlots;
     }
 
-    public int maxSlotWarehouse(Race race) {
+    public static int maxSlotWarehouse(Race race) {
         return race == Race.DWARF ? dwarfMaxSlotWarehouse : maxSlotWarehouse;
     }
 
-    public boolean canBeAugmented(int itemId) {
+    public static boolean canBeAugmented(int itemId) {
         return Arrays.binarySearch(nonAugmentedItems, itemId) < 0;
     }
 }

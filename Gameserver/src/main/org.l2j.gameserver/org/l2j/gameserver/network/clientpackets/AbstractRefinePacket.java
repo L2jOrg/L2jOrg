@@ -31,8 +31,6 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.CharacterSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 public abstract class AbstractRefinePacket extends ClientPacket {
     /**
      * Checks player, source item, lifestone and gemstone validity for augmentation process
@@ -118,7 +116,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
             return false;
         }
 
-        return getSettings(CharacterSettings.class).canBeAugmented(item.getId());
+        return CharacterSettings.canBeAugmented(item.getId());
     }
 
     private static boolean isValidItem(Item item) {

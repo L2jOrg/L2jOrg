@@ -35,7 +35,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
@@ -53,7 +52,7 @@ public class RequestPackageSend extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _objectId = readInt();
         final int count = readInt();
-        if (count <= 0 || count > getSettings(CharacterSettings.class).maxItemInPacket || count * BATCH_LENGTH != available()) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -97,15 +96,13 @@ public class RequestPackageSend extends ClientPacket {
             return;
         }
 
-        var characterSettings = getSettings(CharacterSettings.class);
-
         // Alt game - Karma punishment
-        if (player.getReputation() < 0 && !characterSettings.canPkUseWareHouse) {
+        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse) {
             return;
         }
 
         // Freight price from config per item slot.
-        final int fee = _items.length * characterSettings.freightPrice;
+        final int fee = _items.length * CharacterSettings.freightPrice;
         long currentAdena = player.getAdena();
         int slots = 0;
 

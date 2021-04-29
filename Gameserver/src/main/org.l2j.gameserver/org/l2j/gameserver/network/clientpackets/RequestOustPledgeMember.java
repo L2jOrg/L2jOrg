@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.data.database.data.ClanMember;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -29,8 +29,6 @@ import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.settings.ClanSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class ...
@@ -77,7 +75,7 @@ public final class RequestOustPledgeMember extends ClientPacket {
             return;
         }
 
-        var daysToJoinClan = System.currentTimeMillis() + getSettings(ClanSettings.class).daysToJoinClan * 86400000L;
+        var daysToJoinClan = System.currentTimeMillis() + ClanSettings.daysToJoinClan * 86400000L;
 
         clan.removeClanMember(member.getObjectId(), daysToJoinClan);
         clan.setCharPenaltyExpiryTime(daysToJoinClan);

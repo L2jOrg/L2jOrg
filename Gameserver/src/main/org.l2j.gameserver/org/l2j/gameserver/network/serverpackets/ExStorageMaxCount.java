@@ -25,37 +25,26 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.settings.CharacterSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author -Wooden-, KenM
  */
 public class ExStorageMaxCount extends ServerPacket {
     private final int _inventory;
     private final int _warehouse;
-    // private final int _freight; // Removed with 152.
-    private final int _clan;
     private final int _privateSell;
     private final int _privateBuy;
     private final int _receipeD;
     private final int _recipe;
     private final int _inventoryExtraSlots;
-    private final int _inventoryQuestItems;
 
     public ExStorageMaxCount(Player player) {
         _inventory = player.getInventoryLimit();
         _warehouse = player.getWareHouseLimit();
-        // _freight = Config.ALT_FREIGHT_SLOTS; // Removed with 152.
         _privateSell = player.getPrivateSellStoreLimit();
         _privateBuy = player.getPrivateBuyStoreLimit();
-
-        var settings = getSettings(CharacterSettings.class);
-
-        _clan = settings.clanMaxWarehouseSlot;
         _receipeD = player.getDwarfRecipeLimit();
         _recipe = player.getCommonRecipeLimit();
         _inventoryExtraSlots = (int) player.getStats().getValue(Stat.INVENTORY_NORMAL, 0);
-        _inventoryQuestItems =  settings.maxSlotsQuestItem;
     }
 
     @Override
@@ -64,14 +53,13 @@ public class ExStorageMaxCount extends ServerPacket {
 
         buffer.writeInt(_inventory);
         buffer.writeInt(_warehouse);
-        // writeInt(_freight); // Removed with 152.
-        buffer.writeInt(_clan);
+        buffer.writeInt(CharacterSettings.clanMaxWarehouseSlot);
         buffer.writeInt(_privateSell);
         buffer.writeInt(_privateBuy);
         buffer.writeInt(_receipeD);
         buffer.writeInt(_recipe);
         buffer.writeInt(_inventoryExtraSlots); // Belt inventory slots increase count
-        buffer.writeInt(_inventoryQuestItems);
+        buffer.writeInt(CharacterSettings.maxSlotsQuestItem);
         buffer.writeInt(40); // TODO: Find me!
         buffer.writeInt(40); // TODO: Find me!
         buffer.writeInt(0x64); // Artifact slots (Fixed)
