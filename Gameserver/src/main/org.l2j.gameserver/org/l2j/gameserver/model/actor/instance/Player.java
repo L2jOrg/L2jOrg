@@ -770,7 +770,7 @@ public final class Player extends Playable {
         var shotsCount = weapon.getConsumeShotsCount();
         var item = inventory.getItemByItemId(itemId);
 
-        if(shotsCount > item.getCount()) {
+        if(isNull(item) || shotsCount > item.getCount()) {
             return false;
         }
 
@@ -2288,7 +2288,7 @@ public final class Player extends Playable {
             if (skill != null) {
                 addSkill(skill, true);
             } else {
-                LOGGER.warn("Skipping null auto-get skill for player: " + toString());
+                LOGGER.warn("Skipping null auto-get skill for {}", this);
             }
         }
     }
@@ -7814,10 +7814,10 @@ public final class Player extends Playable {
         }
 
         if (nextLevel == -1) {
-            LOGGER.info("Removing skill " + skill + " from player " + toString());
+            LOGGER.info("Removing skill {}  from {}", skill, this);
             removeSkill(skill, true); // there is no lower skill
         } else {
-            LOGGER.info("Decreasing skill " + skill + " to " + nextLevel + " for player " + toString());
+            LOGGER.info("Decreasing skill {} to {} for {}",  skill, nextLevel, this);
             addSkill(SkillEngine.getInstance().getSkill(skill.getId(), nextLevel), true); // replace with lower one
         }
     }
