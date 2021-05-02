@@ -379,7 +379,8 @@ public final class AutoPlayEngine {
     private boolean checkReuseRestriction(Player player, Item item) {
         var reuseDelay = item.getReuseDelay();
         return (reuseDelay <= 0 || player.getItemRemainingReuseTime(item.getObjectId()) <= 0) &&
-                (item.isAutoPotion() || item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> player.getBuffRemainTimeBySkillOrAbormalType(s.getSkill()) <= 3));
+                ( (item.isAutoPotion() && player.getAutoPlaySettings().getUsableHpPotionPercent() > player.getCurrentHpPercent()) ||
+                 (item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> player.getBuffRemainTimeBySkillOrAbormalType(s.getSkill()) <= 3)));
     }
 
     private boolean canDoAutoAction(Player player) {

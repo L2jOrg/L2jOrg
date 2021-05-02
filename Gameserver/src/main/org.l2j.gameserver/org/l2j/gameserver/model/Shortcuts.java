@@ -109,7 +109,7 @@ public class Shortcuts {
         if(shortcut.getType() != ShortcutType.ITEM) {
             return false;
         }
-        var item = owner.getInventory().getItemByItemId(shortcut.getShortcutId());
+        var item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
         return nonNull(item) && (item.isAutoSupply() || item.isAutoPotion());
     }
 
