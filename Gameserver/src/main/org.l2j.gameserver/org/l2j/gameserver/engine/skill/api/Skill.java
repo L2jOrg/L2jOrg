@@ -54,6 +54,7 @@ import static java.lang.String.format;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
+import static org.l2j.gameserver.engine.skill.SkillAutoUseType.NONE;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -147,7 +148,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private SkillBuffType buffType;
     private BasicProperty basicProperty;
     private NextActionType nextAction = NextActionType.NONE;
-    private SkillAutoUseType skillAutoUseType;
+    private SkillAutoUseType skillAutoUseType = NONE;
 
     private int fanStartAngle;
     private int fanRadius;
@@ -1182,7 +1183,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public boolean isAutoUse() {
-        return falseIfNullOrElse(skillAutoUseType, t -> t != SkillAutoUseType.NONE);
+        return skillAutoUseType != NONE;
     }
 
     public boolean isAutoTransformation() {

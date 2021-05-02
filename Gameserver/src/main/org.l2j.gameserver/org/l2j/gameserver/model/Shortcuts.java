@@ -29,13 +29,14 @@ import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
 import java.util.BitSet;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
  * @author JoeAlisson
@@ -45,6 +46,7 @@ public class Shortcuts {
     private final Player owner;
     private final IntMap<Shortcut> shortcuts = new CHashIntMap<>();
     private final BitSet activeShortcuts = new BitSet(Shortcut.MAX_ROOM);
+    private final Set<Shortcut> suppliesShortcuts = ConcurrentHashMap.newKeySet();
     private int nextAutoShortcut = 0;
 
     public Shortcuts(Player owner) {
@@ -73,17 +75,42 @@ public class Shortcuts {
     }
 
     public void setActive(int room, boolean active) {
-        doIfNonNull(shortcuts.get(room), s -> {
-            s.setActive(active);
-            if(Shortcut.AUTO_POTION_ROOM != room) {
-                if(active) {
-                    activeShortcuts.set(room);
-                } else {
-                    activeShortcuts.clear(room);
-                }
-            }
-            owner.sendPacket(new ExActivateAutoShortcut(room, active));
-        });
+        var shortcut = shortcuts.get(room);
+        shortcut.setActive(active);
+        if(isAutoSupply(shortcut)) {
+            setActiveSupplyShortcut(active, shortcut);
+        } else {
+            setActiveShortcut(room, active);
+        }
+        owner.sendPacket(new ExActivateAutoShortcut(room, active));
+    }
+
+    private void setActiveShortcut(int room, boolean active) {
+        if(active) {
+            activeShortcuts.set(room);
+        } else {
+            activeShortcuts.clear(room);
+        }
+    }
+
+    private void setActiveSupplyShortcut(boolean active, Shortcut shortcut) {
+        if(active) {
+            suppliesShortcuts.add(shortcut);
+        } else {
+            suppliesShortcuts.remove(shortcut);
+        }
+    }
+
+    public Set<Shortcut> getSuppliesShortcuts() {
+        return suppliesShortcuts;
+    }
+
+    private boolean isAutoSupply(Shortcut shortcut) {
+        if(shortcut.getType() != ShortcutType.ITEM) {
+            return false;
+        }
+        var item = owner.getInventory().getItemByItemId(shortcut.getShortcutId());
+        return nonNull(item) && (item.isAutoSupply() || item.isAutoPotion());
     }
 
     public Shortcut nextAutoShortcut() {

@@ -31,12 +31,10 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
-import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ForkJoinPool;
@@ -44,6 +42,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @author JoeAlisson
@@ -52,19 +51,20 @@ import static java.util.Objects.nonNull;
 public final class AutoPlayEngine {
 
     private static final int AUTO_PLAY_INTERVAL = 500;
+    private static final int AUTO_USE_ITEM_INTERVAL = 1000;
     private static final int DEFAULT_ACTION = 2;
 
     private final ForkJoinPool autoPlayPool = new ForkJoinPool();
     private final Set<Player> players = ConcurrentHashMap.newKeySet();
-    private final Set<Player> autoPotionPlayers = ConcurrentHashMap.newKeySet();
+    private final Set<Player> autoItemPlayers = ConcurrentHashMap.newKeySet();
 
     private final DoAutoPlay doAutoPlayTask = new DoAutoPlay();
     private final Object autoPlayTaskLocker = new Object();
     private ScheduledFuture<?> autoPlayTask;
 
-    private final DoAutoPotion doAutoPotion = new DoAutoPotion();
-    private final Object autoPotionTaskLocker = new Object();
-    private ScheduledFuture<?> autoPotionTask;
+    private final DoAutoUseItem doAutoUseItem = new DoAutoUseItem();
+    private final Object autoItemTaskLocker = new Object();
+    private ScheduledFuture<?> autoItemTask;
 
     private final AutoPlayTargetFinder tauntFinder = new TauntFinder();
     private final AutoPlayTargetFinder monsterFinder = new MonsterFinder();
@@ -74,14 +74,14 @@ public final class AutoPlayEngine {
     private AutoPlayEngine() {
     }
 
-    public Shortcut setActiveAutoShortcut(Player player, int room, boolean activate) {
+    public boolean setActiveAutoShortcut(Player player, int room, boolean activate) {
         var shortcut = player.getShortcut(room);
 
         if(nonNull(shortcut) && handleShortcut(player, shortcut, activate)) {
             player.setActiveAutoShortcut(room, activate);
-            return shortcut;
+            return true;
         }
-        return null;
+        return false;
     }
 
     private boolean handleShortcut(Player player, Shortcut shortcut, boolean activate) {
@@ -99,25 +99,24 @@ public final class AutoPlayEngine {
 
     private boolean handleAutoSkill(Player player, Shortcut shortcut) {
         var skill = player.getKnownSkill(shortcut.getShortcutId());
-        if(isNull(skill) || !skill.isAutoUse()) {
+        if(isNull(skill)) {
             player.deleteShortcut(shortcut.getClientId());
             return false;
         }
-        return true;
+        return skill.isAutoUse();
     }
 
     private boolean handleAutoItem(Player player, Shortcut shortcut, boolean activate) {
         var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
-        if (isNull(item) || !(item.isAutoSupply() || item.isAutoPotion())) {
+        if (isNull(item)) {
             player.deleteShortcut(shortcut.getClientId());
             return false;
+        } else if(!(item.isAutoSupply() || item.isAutoPotion())) {
+            return false;
         }
-        if(item.isAutoPotion()) {
-            if(activate) {
-                startAutoPotion(player);
-            } else {
-                stopAutoPotion(player);
-            }
+
+        if(activate) {
+            startAutoUseItem(player);
         }
         return true;
     }
@@ -147,22 +146,27 @@ public final class AutoPlayEngine {
         player.resetNextAutoShortcut();
     }
 
-    public void startAutoPotion(Player player) {
-        autoPotionPlayers.add(player);
-        synchronized (autoPotionTaskLocker) {
-            if(isNull(autoPotionTask)) {
-                autoPotionTask = ThreadPool.scheduleAtFixedDelay(doAutoPotion, AUTO_PLAY_INTERVAL, AUTO_PLAY_INTERVAL);
+    private void startAutoUseItem(Player player) {
+        if(autoItemPlayers.add(player)) {
+            synchronized (autoItemTaskLocker) {
+                if (isNull(autoItemTask)) {
+                    autoItemTask = ThreadPool.scheduleAtFixedDelay(doAutoUseItem, AUTO_USE_ITEM_INTERVAL, AUTO_USE_ITEM_INTERVAL);
+                }
             }
         }
     }
 
-    public void stopAutoPotion(Player player) {
-        if(autoPotionPlayers.remove(player)) {
-            synchronized (autoPotionTaskLocker) {
-                if (autoPotionPlayers.isEmpty() && nonNull(autoPotionTask)) {
-                    autoPotionTask.cancel(false);
-                    autoPotionTask = null;
-                }
+    private void stopAutoUseItem(Player player) {
+        if(autoItemPlayers.remove(player)) {
+            stopAutoItemTask();
+        }
+    }
+
+    private void stopAutoItemTask() {
+        synchronized (autoItemTaskLocker) {
+            if (autoItemPlayers.isEmpty() && nonNull(autoItemTask)) {
+                autoItemTask.cancel(false);
+                autoItemTask = null;
             }
         }
     }
@@ -170,7 +174,7 @@ public final class AutoPlayEngine {
     public void stopTasks(Player player) {
         if(nonNull(player.getAutoPlaySettings())) {
             stopAutoPlay(player);
-            stopAutoPotion(player);
+            stopAutoUseItem(player);
         }
     }
 
@@ -195,7 +199,7 @@ public final class AutoPlayEngine {
 
         private void doAutoPlay() {
             for (Player player : players) {
-                if(canUseAutoPlay(player)) {
+                if(!player.getAutoPlaySettings().isAutoPlaying() && canDoAutoAction(player)) {
                     doNextAction(player);
                 }
             }
@@ -242,21 +246,16 @@ public final class AutoPlayEngine {
             };
         }
 
-        private void tryUseAutoShortcut(Player player)
-        {
+        private void tryUseAutoShortcut(Player player) {
             var nextShortcut = player.nextAutoShortcut();
-            if(nonNull(nextShortcut))
-            {
+            if(nonNull(nextShortcut)) {
                 var  shortcut = nextShortcut;
-                do
-                {
-                    if(useShortcut(player, shortcut))
-                    {
+                do {
+                    if(useShortcut(player, shortcut)) {
                         return;
                     }
                     shortcut = player.nextAutoShortcut();
-                }
-                while (!nextShortcut.equals(shortcut));
+                } while (!nextShortcut.equals(shortcut));
             }
             autoUseAction(player, DEFAULT_ACTION);
         }
@@ -264,7 +263,6 @@ public final class AutoPlayEngine {
         private boolean useShortcut(Player player, Shortcut shortcut) {
             return switch (shortcut.getType()) {
                 case SKILL -> autoUseSkill(player, shortcut);
-                case ITEM -> autoUseItem(player, shortcut);
                 case ACTION -> autoUseAction(player, shortcut.getShortcutId());
                 default -> false;
             };
@@ -288,34 +286,27 @@ public final class AutoPlayEngine {
             return false;
         }
 
-        private boolean autoUseItem(Player player, Shortcut shortcut) {
-            var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
-            if(nonNull(item) && item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> player.getBuffRemainTimeBySkillOrAbormalType(s.getSkill()) <= 3)) {
-                useItem(player, item);
-                return true;
-            }
-            return false;
-        }
-
-        private boolean autoUseSkill(Player player, Shortcut shortcut)
-        {
+        private boolean autoUseSkill(Player player, Shortcut shortcut) {
             final WorldObject oldTarget = player.getTarget();
             var skill = player.getKnownSkill(shortcut.getShortcutId());
 
-            if (skill.isBlockActionUseSkill() || player.isSkillDisabled(skill))
-            { return true; }
+            if (skill.isBlockActionUseSkill() || player.isSkillDisabled(skill)) {
+                return true;
+            }
 
-            if(skill.isAutoTransformation() && player.isTransformed())
-            { return false; }
+            if(skill.isAutoTransformation() && player.isTransformed()) {
+                return false;
+            }
 
-            if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3)
-            { return false; }
+            if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3) {
+                return false;
+            }
 
-            if(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled())
-            { return true; }
+            if(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled()) {
+                return true;
+            }
 
-            if (skill.hasAnyEffectType(EffectType.HEAL))
-            {
+            if (skill.hasAnyEffectType(EffectType.HEAL)) {
                 player.onActionRequest();
                 player.setTarget(player);
                 player.doCast(skill);
@@ -327,64 +318,72 @@ public final class AutoPlayEngine {
         }
     }
 
-    private final class DoAutoPotion implements Runnable {
+    private final class DoAutoUseItem implements Runnable {
 
         @Override
         public void run() {
-            autoPlayPool.submit(this::useAutoPotion);
-        }
+            if(autoItemPlayers.isEmpty()) {
+                stopAutoItemTask();
+                return;
+            }
 
-        private void useAutoPotion() {
-            var toRemove = new HashSet<Player>();
-            if(ServerSettings.parallelismThreshold() < autoPotionPlayers.size()) {
-                autoPotionPlayers.parallelStream().filter(this::canUseAutoPotion).forEach(player -> usePotionShortcut(toRemove, player));
-            } else {
-                for (Player player : autoPotionPlayers) {
-                    if(canUseAutoPotion(player)) {
-                        usePotionShortcut(toRemove, player);
-                    }
+            var it = autoItemPlayers.iterator();
+            while (it.hasNext()) {
+                var player = it.next();
+
+                if(!canDoAutoAction(player)) {
+                    continue;
+                }
+
+                var shortcuts =  player.getActiveAutoSupplies();
+                if(isNullOrEmpty(shortcuts)) {
+                    it.remove();
+                } else {
+                    ThreadPool.executeForked(() -> autoUseItem(player));
                 }
             }
-            if(!toRemove.isEmpty()) {
-                autoPotionPlayers.removeAll(toRemove);
-            }
         }
 
-        private void usePotionShortcut(HashSet<Player> toRemove, Player player) {
-            var shortcut = player.getShortcut(Shortcut.AUTO_POTION_ROOM);
-            if (nonNull(shortcut)) {
+        private void autoUseItem(Player player) {
+            if(!canDoAutoAction(player)) {
+                return;
+            }
+            var supplies = player.getActiveAutoSupplies();
+            var it = supplies.iterator();
+            while (it.hasNext()) {
+                var shortcut = it.next();
                 var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
                 if (nonNull(item)) {
                     useItem(player, item);
+                } else {
+                    it.remove();
                 }
-            } else {
-                toRemove.add(player);
             }
-        }
-
-        private boolean canUseAutoPotion(Player player) {
-            return canUseAutoPlay(player) && player.getAutoPlaySettings().getUsableHpPotionPercent() >= player.getCurrentHpPercent();
         }
     }
 
     private void useItem(Player player, Item item) {
-        var reuseDelay = item.getReuseDelay();
-        if (reuseDelay <= 0 || player.getItemRemainingReuseTime(item.getObjectId()) <= 0) {
+        if (checkReuseRestriction(player, item)) {
             var etcItem = item.getEtcItem();
             var handler = ItemHandler.getInstance().getHandler(etcItem);
 
             if (nonNull(handler) && handler.useItem(player, item, false)) {
                 player.onActionRequest();
-                if(reuseDelay > 0) {
-                    player.addTimeStampItem(item, reuseDelay);
+                if(item.getReuseDelay() > 0) {
+                    player.addTimeStampItem(item, item.getReuseDelay());
                 }
             }
         }
     }
 
-    private boolean canUseAutoPlay(Player player) {
-        return !player.getAutoPlaySettings().isAutoPlaying() &&
-                player.getAI().getIntention() != CtrlIntention.AI_INTENTION_PICK_UP &&
+    private boolean checkReuseRestriction(Player player, Item item) {
+        var reuseDelay = item.getReuseDelay();
+        return (reuseDelay <= 0 || player.getItemRemainingReuseTime(item.getObjectId()) <= 0) &&
+                (item.isAutoPotion() || item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> player.getBuffRemainTimeBySkillOrAbormalType(s.getSkill()) <= 3));
+    }
+
+    private boolean canDoAutoAction(Player player) {
+        return  player.getAI().getIntention() != CtrlIntention.AI_INTENTION_PICK_UP &&
                 player.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST &&
                 !player.hasBlockActions() &&
                 !player.isControlBlocked() &&

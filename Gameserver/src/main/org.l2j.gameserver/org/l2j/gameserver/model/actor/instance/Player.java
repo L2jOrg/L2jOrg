@@ -174,7 +174,6 @@ public final class Player extends Playable {
     private final IntMap<String> accountPlayers = new HashIntMap<>();
     private final IntMap<RecipeList> dwarvenRecipes = new CHashIntMap<>();
     private final IntMap<RecipeList> commonRecipes = new CHashIntMap<>();
-    private final AutoUseSettingsHolder autoUseSettings = new AutoUseSettingsHolder();
     private final Map<ShotType, Integer> activeSoulShots = new EnumMap<>(ShotType.class);
     private final LimitedQueue<DamageInfo> lastDamages = new LimitedQueue<>(30);
 
@@ -1648,11 +1647,6 @@ public final class Player extends Playable {
         return (notifyQuestOfDeathList == null) || notifyQuestOfDeathList.isEmpty();
     }
 
-    public AutoUseSettingsHolder getAutoUseSettings()
-    {
-        return autoUseSettings;
-    }
-
     public Shortcut getShortcut(int room) {
         return shortcuts.getShortcut(room);
     }
@@ -2288,7 +2282,7 @@ public final class Player extends Playable {
             if (skill != null) {
                 addSkill(skill, true);
             } else {
-                LOGGER.warn("Skipping null auto-get skill for player: " + toString());
+                LOGGER.warn("Skipping null auto-get skill for player: {}", this);
             }
         }
     }
@@ -8435,5 +8429,9 @@ public final class Player extends Playable {
             return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
         }
         return 0;
+    }
+
+    public Set<Shortcut> getActiveAutoSupplies() {
+        return shortcuts.getSuppliesShortcuts();
     }
 }
