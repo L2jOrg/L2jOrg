@@ -23,12 +23,12 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ItemSkillType;
+import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
 import org.l2j.gameserver.world.World;
@@ -51,20 +51,20 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 public final class AutoPlayEngine {
 
     private static final int AUTO_PLAY_INTERVAL = 500;
-    private static final int AUTO_USE_ITEM_INTERVAL = 1000;
+    private static final int AUTO_SUPPLY_INTERVAL = 1000;
     private static final int DEFAULT_ACTION = 2;
 
     private final ForkJoinPool autoPlayPool = new ForkJoinPool();
     private final Set<Player> players = ConcurrentHashMap.newKeySet();
-    private final Set<Player> autoItemPlayers = ConcurrentHashMap.newKeySet();
+    private final Set<Player> autoSupplyPlayers = ConcurrentHashMap.newKeySet();
 
     private final DoAutoPlay doAutoPlayTask = new DoAutoPlay();
     private final Object autoPlayTaskLocker = new Object();
     private ScheduledFuture<?> autoPlayTask;
 
-    private final DoAutoUseItem doAutoUseItem = new DoAutoUseItem();
-    private final Object autoItemTaskLocker = new Object();
-    private ScheduledFuture<?> autoItemTask;
+    private final DoAutoSupply doAutoSupply = new DoAutoSupply();
+    private final Object autoSupplyTaskLocker = new Object();
+    private ScheduledFuture<?> autoSupplyTask;
 
     private final AutoPlayTargetFinder tauntFinder = new TauntFinder();
     private final AutoPlayTargetFinder monsterFinder = new MonsterFinder();
@@ -77,20 +77,39 @@ public final class AutoPlayEngine {
     public boolean setActiveAutoShortcut(Player player, int room, boolean activate) {
         var shortcut = player.getShortcut(room);
 
-        if(nonNull(shortcut) && handleShortcut(player, shortcut, activate)) {
+        if(isNull(shortcut)) {
+            return false;
+        }
+
+        if(isAutoSupply(player, shortcut)) {
+            player.setActiveAutoSupplyShortcut(room, activate);
+            startAutoSupply(player);
+            return true;
+        } else if(handleShortcut(player, shortcut)) {
             player.setActiveAutoShortcut(room, activate);
             return true;
         }
         return false;
     }
 
-    private boolean handleShortcut(Player player, Shortcut shortcut, boolean activate) {
-        return switch (shortcut.getType()) {
-            case ITEM -> handleAutoItem(player, shortcut, activate);
-            case SKILL -> handleAutoSkill(player, shortcut);
-            case ACTION -> handleAutoAction(shortcut);
-            default -> false;
-        };
+    private boolean isAutoSupply(Player player, Shortcut shortcut) {
+        return (shortcut.getType() == ShortcutType.ITEM && handleAutoItem(player, shortcut)) ||
+               (shortcut.getType() == ShortcutType.SKILL && handleAutoSupplySkill(player, shortcut));
+    }
+
+    private boolean handleAutoSupplySkill(Player player, Shortcut shortcut) {
+        var skill = player.getKnownSkill(shortcut.getShortcutId());
+        if(isNull(skill)) {
+            player.deleteShortcut(shortcut.getClientId());
+            return false;
+        }
+
+        return skill.isAutoBuff() || skill.isAutoTransformation();
+    }
+
+    private boolean handleShortcut(Player player, Shortcut shortcut) {
+        return (shortcut.getType() == ShortcutType.SKILL && handleAutoSkill(player, shortcut)) ||
+               (shortcut.getType() == ShortcutType.ACTION && handleAutoAction(shortcut));
     }
 
     private boolean handleAutoAction(Shortcut shortcut) {
@@ -106,19 +125,13 @@ public final class AutoPlayEngine {
         return skill.isAutoUse();
     }
 
-    private boolean handleAutoItem(Player player, Shortcut shortcut, boolean activate) {
+    private boolean handleAutoItem(Player player, Shortcut shortcut) {
         var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
         if (isNull(item)) {
             player.deleteShortcut(shortcut.getClientId());
             return false;
-        } else if(!(item.isAutoSupply() || item.isAutoPotion())) {
-            return false;
         }
-
-        if(activate) {
-            startAutoUseItem(player);
-        }
-        return true;
+        return item.isAutoSupply() || item.isAutoPotion();
     }
 
     public void startAutoPlay(Player player) {
@@ -146,27 +159,27 @@ public final class AutoPlayEngine {
         player.resetNextAutoShortcut();
     }
 
-    private void startAutoUseItem(Player player) {
-        if(autoItemPlayers.add(player)) {
-            synchronized (autoItemTaskLocker) {
-                if (isNull(autoItemTask)) {
-                    autoItemTask = ThreadPool.scheduleAtFixedDelay(doAutoUseItem, AUTO_USE_ITEM_INTERVAL, AUTO_USE_ITEM_INTERVAL);
+    private void startAutoSupply(Player player) {
+        if(autoSupplyPlayers.add(player)) {
+            synchronized (autoSupplyTaskLocker) {
+                if (isNull(autoSupplyTask)) {
+                    autoSupplyTask = ThreadPool.scheduleAtFixedDelay(doAutoSupply, AUTO_SUPPLY_INTERVAL, AUTO_SUPPLY_INTERVAL);
                 }
             }
         }
     }
 
-    private void stopAutoUseItem(Player player) {
-        if(autoItemPlayers.remove(player)) {
-            stopAutoItemTask();
+    private void stopAutoSupply(Player player) {
+        if(autoSupplyPlayers.remove(player)) {
+            stopAutoSupplyTask();
         }
     }
 
-    private void stopAutoItemTask() {
-        synchronized (autoItemTaskLocker) {
-            if (autoItemPlayers.isEmpty() && nonNull(autoItemTask)) {
-                autoItemTask.cancel(false);
-                autoItemTask = null;
+    private void stopAutoSupplyTask() {
+        synchronized (autoSupplyTaskLocker) {
+            if (autoSupplyPlayers.isEmpty() && nonNull(autoSupplyTask)) {
+                autoSupplyTask.cancel(false);
+                autoSupplyTask = null;
             }
         }
     }
@@ -174,16 +187,16 @@ public final class AutoPlayEngine {
     public void stopTasks(Player player) {
         if(nonNull(player.getAutoPlaySettings())) {
             stopAutoPlay(player);
-            stopAutoUseItem(player);
+            stopAutoSupply(player);
         }
-    }
-
-    public static AutoPlayEngine getInstance() {
-        return Singleton.INSTANCE;
     }
 
     public void shutdown() {
         autoPlayPool.shutdown();
+    }
+
+    public static AutoPlayEngine getInstance() {
+        return Singleton.INSTANCE;
     }
 
     private static final class Singleton {
@@ -261,11 +274,8 @@ public final class AutoPlayEngine {
         }
 
         private boolean useShortcut(Player player, Shortcut shortcut) {
-            return switch (shortcut.getType()) {
-                case SKILL -> autoUseSkill(player, shortcut);
-                case ACTION -> autoUseAction(player, shortcut.getShortcutId());
-                default -> false;
-            };
+            return (shortcut.getType() == ShortcutType.SKILL && autoUseSkill(player, shortcut)) ||
+                   (shortcut.getType() == ShortcutType.ACTION) && autoUseAction(player, shortcut.getShortcutId());
         }
 
         private boolean autoUseAction(Player player, int actionId) {
@@ -287,47 +297,25 @@ public final class AutoPlayEngine {
         }
 
         private boolean autoUseSkill(Player player, Shortcut shortcut) {
-            final WorldObject oldTarget = player.getTarget();
             var skill = player.getKnownSkill(shortcut.getShortcutId());
-
-            if (skill.isBlockActionUseSkill() || player.isSkillDisabled(skill)) {
-                return true;
-            }
-
-            if(skill.isAutoTransformation() && player.isTransformed()) {
+            if(isNull(skill)) {
+                player.deleteShortcut(shortcut.getShortcutId());
                 return false;
             }
-
-            if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3) {
-                return false;
-            }
-
-            if(player.getCurrentMp() < (skill.getMpConsume() + skill.getMpInitialConsume()) || player.getAttackType().isRanged() && player.isAttackingDisabled()) {
-                return true;
-            }
-
-            if (skill.hasAnyEffectType(EffectType.HEAL)) {
-                player.onActionRequest();
-                player.setTarget(player);
-                player.doCast(skill);
-                player.setTarget(oldTarget);
-            }
-
-            player.onActionRequest();
-            return player.useSkill(skill, null, false, false);
+            return useSkill(player, skill);
         }
     }
 
-    private final class DoAutoUseItem implements Runnable {
+    private final class DoAutoSupply implements Runnable {
 
         @Override
         public void run() {
-            if(autoItemPlayers.isEmpty()) {
-                stopAutoItemTask();
+            if(autoSupplyPlayers.isEmpty()) {
+                stopAutoSupplyTask();
                 return;
             }
 
-            var it = autoItemPlayers.iterator();
+            var it = autoSupplyPlayers.iterator();
             while (it.hasNext()) {
                 var player = it.next();
 
@@ -339,27 +327,66 @@ public final class AutoPlayEngine {
                 if(isNullOrEmpty(shortcuts)) {
                     it.remove();
                 } else {
-                    ThreadPool.executeForked(() -> autoUseItem(player));
+                    ThreadPool.executeForked(() -> autoSupply(player));
                 }
             }
         }
 
-        private void autoUseItem(Player player) {
+        private void autoSupply(Player player) {
             if(!canDoAutoAction(player)) {
                 return;
             }
-            var supplies = player.getActiveAutoSupplies();
-            var it = supplies.iterator();
+
+            var it = player.getActiveAutoSupplies().iterator();
             while (it.hasNext()) {
                 var shortcut = it.next();
-                var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
-                if (nonNull(item)) {
-                    useItem(player, item);
-                } else {
+                if(!useSupplyShortcut(player, shortcut)) {
                     it.remove();
+                    player.deleteShortcut(shortcut.getClientId());
                 }
             }
         }
+
+        private boolean useSupplyShortcut(Player player, Shortcut shortcut) {
+            return (shortcut.getType() == ShortcutType.SKILL && useSkillShortcut(player, shortcut)) ||
+                   (shortcut.getType() == ShortcutType.ITEM && useItemShortcut(player, shortcut));
+        }
+
+        private boolean useItemShortcut(Player player, Shortcut shortcut) {
+            var item = player.getInventory().getItemByObjectId(shortcut.getShortcutId());
+            if (nonNull(item)) {
+                useItem(player, item);
+                return true;
+            }
+            return false;
+        }
+
+        private boolean useSkillShortcut(Player player, Shortcut shortcut) {
+            var skill = player.getKnownSkill(shortcut.getShortcutId());
+            if(nonNull(skill)) {
+                useSkill(player, skill);
+                return true;
+            }
+            return false;
+        }
+    }
+
+    private boolean useSkill(Player player, Skill skill) {
+        if (skill.isBlockActionUseSkill()) {
+            return false;
+        }
+
+        if(skill.isAutoTransformation() && player.isTransformed()) {
+            return false;
+        }
+
+        if(skill.isAutoBuff() && player.getBuffRemainTimeBySkillOrAbormalType(skill) > 3) {
+            return false;
+        }
+
+        player.onActionRequest();
+        return player.useSkill(skill, null, false, false);
+
     }
 
     private void useItem(Player player, Item item) {

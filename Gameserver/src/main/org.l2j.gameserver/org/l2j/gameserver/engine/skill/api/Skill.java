@@ -1161,27 +1161,6 @@ public final class Skill implements IIdentifiable, Cloneable {
         activateRate = chance;
     }
 
-    Skill clone(boolean keepEffects, boolean keepConditions) throws CloneNotSupportedException {
-        var clone = clone();
-        if (!keepEffects) {
-            clone.effects = new EnumMap<>(EffectScope.class);
-        }
-        if(!keepConditions) {
-            clone.conditions = new EnumMap<>(SkillConditionScope.class);
-        }
-        return clone;
-    }
-
-    @Override
-    protected Skill clone() throws CloneNotSupportedException {
-        return (Skill) super.clone();
-    }
-
-    @Override
-    public String toString() {
-        return format("Skill %s (%d, %d)", name, id, level);
-    }
-
     public boolean isAutoUse() {
         return skillAutoUseType != NONE;
     }
@@ -1202,5 +1181,26 @@ public final class Skill implements IIdentifiable, Cloneable {
     void setCustomTime(int time) {
         useCustomTime = true;
         abnormalTime = time;
+    }
+
+    Skill clone(boolean keepEffects, boolean keepConditions) throws CloneNotSupportedException {
+        var clone = clone();
+        if (!keepEffects) {
+            clone.effects = new EnumMap<>(EffectScope.class);
+        }
+        if(!keepConditions) {
+            clone.conditions = new EnumMap<>(SkillConditionScope.class);
+        }
+        return clone;
+    }
+
+    @Override
+    protected Skill clone() throws CloneNotSupportedException {
+        return (Skill) super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return format("Skill %s (%d, %d)", name, id, level);
     }
 }

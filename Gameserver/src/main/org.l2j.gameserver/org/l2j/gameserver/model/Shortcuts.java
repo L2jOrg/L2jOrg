@@ -74,26 +74,21 @@ public class Shortcuts {
         getDAO(ShortcutDAO.class).save(shortcut);
     }
 
-    public void setActive(int room, boolean active) {
-        var shortcut = shortcuts.get(room);
-        shortcut.setActive(active);
-        if(isAutoSupply(shortcut)) {
-            setActiveSupplyShortcut(active, shortcut);
-        } else {
-            setActiveShortcut(room, active);
-        }
-        owner.sendPacket(new ExActivateAutoShortcut(room, active));
-    }
-
-    private void setActiveShortcut(int room, boolean active) {
-        if(active) {
+    public void setActiveShortcut(int room, boolean active) {
+        var shortcut = setActive(room, active);
+        if(nonNull(shortcut) && active) {
             activeShortcuts.set(room);
         } else {
             activeShortcuts.clear(room);
         }
     }
 
-    private void setActiveSupplyShortcut(boolean active, Shortcut shortcut) {
+    public void setActiveSupplyShortcut(int room, boolean active) {
+        var shortcut = setActive(room, active);
+        if(isNull(shortcut)) {
+            return;
+        }
+
         if(active) {
             suppliesShortcuts.add(shortcut);
         } else {
@@ -101,17 +96,19 @@ public class Shortcuts {
         }
     }
 
+    private Shortcut setActive(int room, boolean active) {
+        var shortcut = shortcuts.get(room);
+        if(nonNull(shortcut)) {
+            shortcut.setActive(active);
+            owner.sendPacket(new ExActivateAutoShortcut(room, active));
+        }
+        return shortcut;
+    }
+
     public Set<Shortcut> getSuppliesShortcuts() {
         return suppliesShortcuts;
     }
 
-    private boolean isAutoSupply(Shortcut shortcut) {
-        if(shortcut.getType() != ShortcutType.ITEM) {
-            return false;
-        }
-        var item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
-        return nonNull(item) && (item.isAutoSupply() || item.isAutoPotion());
-    }
 
     public Shortcut nextAutoShortcut() {
         if(activeShortcuts.isEmpty()) {

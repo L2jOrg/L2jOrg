@@ -429,7 +429,7 @@ public final class Player extends Playable {
     }
 
     public void setActiveAutoShortcut(int room, boolean active) {
-        shortcuts.setActive(room, active);
+        shortcuts.setActiveShortcut(room, active);
     }
 
     public Shortcut nextAutoShortcut() {
@@ -438,6 +438,14 @@ public final class Player extends Playable {
 
     public void resetNextAutoShortcut() {
         shortcuts.resetNextAutoShortcut();
+    }
+
+    public Set<Shortcut> getActiveAutoSupplies() {
+        return shortcuts.getSuppliesShortcuts();
+    }
+
+    public void setActiveAutoSupplyShortcut(int room, boolean activate) {
+        shortcuts.setActiveSupplyShortcut(room, activate);
     }
 
     public void setRank(int rank) {
@@ -8429,9 +8437,5 @@ public final class Player extends Playable {
             return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
         }
         return 0;
-    }
-
-    public Set<Shortcut> getActiveAutoSupplies() {
-        return shortcuts.getSuppliesShortcuts();
     }
 }
