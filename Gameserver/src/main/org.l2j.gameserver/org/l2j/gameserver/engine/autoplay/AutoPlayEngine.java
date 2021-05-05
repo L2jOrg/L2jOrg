@@ -418,6 +418,7 @@ public final class AutoPlayEngine {
                 !player.isAlikeDead() &&
                 !player.isInsideZone(ZoneType.PEACE) &&
                 !player.isInObserverMode() &&
+                !player.isAttackingNow() &&
                 !player.isCastingNow();
     }
 }

@@ -1248,15 +1248,6 @@ public final class Formulas {
     }
 
     /**
-     * @param attackSpeed the attack speed of the Creature.
-     * @return {@code 500000 / attackSpeed}.
-     */
-    public static int calculateTimeBetweenAttacks(int attackSpeed) {
-        // Measured Nov 2015 by Nik. Formula: atk.spd/500 = hits per second.
-        return max(50, (500000 / attackSpeed));
-    }
-
-    /**
      * @param totalAttackTime the time needed to make a full attack.
      * @param attackType      the weapon type used for attack.
      * @param twoHanded       if the weapon is two handed.
@@ -1278,7 +1269,7 @@ public final class Formulas {
             case BOW:
             case CROSSBOW:
             case TWO_HAND_CROSSBOW: {
-                return (int) (totalAttackTime * 0.95);
+                return (int) (totalAttackTime * 0.6);
             }
             case DUAL_BLUNT:
             case DUAL_DAGGER:
@@ -1300,24 +1291,21 @@ public final class Formulas {
         }
     }
 
-    public static int calculateReuseTime(Creature activeChar, Weapon weapon) {
+    public static int calculateTimeBetweenAttacks(Creature creature, Weapon weapon) {
+        var reuse = calculateWeaponReuse(creature, weapon);
+        return (int) ((500000 + (333 * reuse)) / creature.getStats().getPAtkSpd());
+    }
+
+    private static double calculateWeaponReuse(Creature creature, Weapon weapon) {
         if (weapon == null) {
             return 0;
         }
 
-        final WeaponType defaultAttackType = weapon.getItemType();
-        final WeaponType weaponType = activeChar.getTransformation().map(transform -> transform.getBaseAttackType(activeChar, defaultAttackType)).orElse(defaultAttackType);
-        int reuse = weapon.getReuseDelay();
+        var defaultWeaponType = weapon.getItemType();
+        var weaponType = creature.getTransformation().map(transform -> transform.getBaseAttackType(creature, defaultWeaponType)).orElse(defaultWeaponType);
 
-        // only bows should continue for now
-        if ((reuse == 0) || !weaponType.isRanged()) {
-            return 0;
-        }
-
-        reuse *= activeChar.getStats().getWeaponReuseModifier();
-        double atkSpd = activeChar.getStats().getPAtkSpd();
-
-        return (int) ((500000 + (333 * reuse)) / atkSpd);
+        int reuse = weaponType.isRanged() ?  weapon.getReuseDelay() : 0;
+        return reuse * creature.getStats().getWeaponReuseModifier();
     }
 
     public static double calculatePvpPveBonus(Creature attacker, Creature target, Skill skill, boolean crit) {

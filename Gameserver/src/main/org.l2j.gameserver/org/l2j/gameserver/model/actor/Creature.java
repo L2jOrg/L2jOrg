@@ -663,9 +663,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
-                }
-                // Checking if target has moved to peace zone
-                else if (target.isInsidePeaceZone(player)) {
+                } else if (target.isInsidePeaceZone(player)) { // Checking if target has moved to peace zone
                     getAI().setIntention(AI_INTENTION_ACTIVE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -712,13 +710,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             final WeaponType weaponType = getAttackType();
             final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == BodyPart.TWO_HAND);
-            final int timeAtk = Formulas.calculateTimeBetweenAttacks(stats.getPAtkSpd());
+            final int timeAtk = Formulas.calculateTimeBetweenAttacks(this, weaponItem);
             final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
-            attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
+            attackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(timeAtk);
 
             setHeading(calculateHeadingFrom(this, target));
 
-            // Get the Attack Reuse Delay of the Weapon
             final Attack attack = generateAttackTargetData(target, weaponItem, weaponType);
             boolean crossbow = false;
             switch (weaponType) {
@@ -726,8 +723,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 case TWO_HAND_CROSSBOW:
                     crossbow = true;
                 case BOW: {
-                    final int reuse = Formulas.calculateReuseTime(this, weaponItem);
-                    onStartRangedAttack(crossbow, reuse);
+                    onStartRangedAttack(crossbow, timeAtk);
                     hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
                     break;
                 }
@@ -2688,11 +2684,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     private void onAttackFinish(Attack attack) {
-        // Recharge any active auto-soulshot tasks for current creature after the attack has successfully hit.
-        if (attack.getHits().stream().anyMatch(h -> !h.isMiss())) {
-            consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
+        for (Hit hit : attack.getHits()) {
+            if(!hit.isMiss()) {
+                consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
+                break;
+            }
         }
-        // Notify that this character is ready to act for the next attack
         getAI().notifyEvent(CtrlEvent.EVT_READY_TO_ACT);
     }
 
