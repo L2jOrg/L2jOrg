@@ -2595,20 +2595,32 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
 
+        var hasHit = false;
         for (Hit hit : attack.getHits()) {
-            final Creature hitTarget = ((Creature) hit.getTarget());
-            if ((hitTarget == null) || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
-                continue;
-            }
+            hasHit |= doHit(weapon, hit);
+        }
 
-            if (hit.isMiss()) {
-                notifyAttackAvoid(hitTarget, false);
-            } else {
-                onHitTarget(hitTarget, weapon, hit);
-            }
+        if(hasHit) {
+            consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
         }
 
         hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), (long) attackTime - hitTime);
+    }
+
+    private boolean doHit(Weapon weapon, Hit hit) {
+        final Creature hitTarget = ((Creature) hit.getTarget());
+        if (hitTarget == null || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
+            return false;
+        }
+
+        var hasHit= false;
+        if (hit.isMiss()) {
+            notifyAttackAvoid(hitTarget, false);
+        } else {
+            onHitTarget(hitTarget, weapon, hit);
+            hasHit = true;
+        }
+        return hasHit;
     }
 
     public void onFirstHitTimeForDual(Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack) {
@@ -2641,19 +2653,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
 
-        // Second dual attack is the remaining hits (first hit not included)
-        for (int i = 1; i < attack.getHits().size(); i++) {
-            final Hit hit = attack.getHits().get(i);
-            final Creature hitTarget = ((Creature) hit.getTarget());
-            if ((hitTarget == null) || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
-                continue;
-            }
+        var hits = attack.getHits();
+        var hasHit = false;
+        for (int i = 1; i < hits.size(); i++) {
+            final Hit hit = hits.get(i);
+            hasHit |= doHit(weapon, hit);
+        }
 
-            if (hit.isMiss()) {
-                notifyAttackAvoid(hitTarget, false);
-            } else {
-                onHitTarget(hitTarget, weapon, hit);
-            }
+        if(hasHit || !hits.get(0).isMiss()) {
+            consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
         }
 
         hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
@@ -2684,12 +2692,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     private void onAttackFinish(Attack attack) {
-        for (Hit hit : attack.getHits()) {
-            if(!hit.isMiss()) {
-                consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
-                break;
-            }
-        }
         getAI().notifyEvent(CtrlEvent.EVT_READY_TO_ACT);
     }
 
