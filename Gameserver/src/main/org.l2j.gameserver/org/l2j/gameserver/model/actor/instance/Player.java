@@ -89,6 +89,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.BaseStats;
@@ -5472,6 +5473,10 @@ public final class Player extends Playable {
     private boolean checkUseSkill(Skill skill) {
         if (skill.isPassive() || isDead() || (skill.isToggle() && isMounted())) {
             sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+
+        if(!SkillCaster.checkSkillConsume(this, skill)) {
             return false;
         }
 

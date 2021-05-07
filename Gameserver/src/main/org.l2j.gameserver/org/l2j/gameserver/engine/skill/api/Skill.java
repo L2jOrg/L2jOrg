@@ -178,10 +178,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public boolean checkCondition(Creature creature, WorldObject object) {
-        if (creature.canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
-            return true;
-        }
-
         if (creature instanceof Player player && player.isMounted() && isBad() && !MountEnabledSkillList.contains(id)) {
             creature.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(id));
             return false;

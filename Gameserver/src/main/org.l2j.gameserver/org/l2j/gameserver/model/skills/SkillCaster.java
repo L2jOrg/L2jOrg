@@ -398,7 +398,7 @@ public class SkillCaster implements Runnable {
         return true;
     }
 
-    private static boolean checkSkillConsume(Creature caster, Skill skill) {
+    public static boolean checkSkillConsume(Creature caster, Skill skill) {
         if (caster.getCurrentMp() < (caster.getStats().getMpConsume(skill) + caster.getStats().getMpInitialConsume(skill))) {
             caster.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
             caster.sendPacket(ActionFailed.STATIC_PACKET);

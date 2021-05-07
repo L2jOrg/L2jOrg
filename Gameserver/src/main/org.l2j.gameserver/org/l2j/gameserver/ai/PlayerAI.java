@@ -94,9 +94,10 @@ public class PlayerAI extends PlayableAI {
         if (_nextIntention != null) {
             setIntention(_nextIntention._crtlIntention, _nextIntention._arg0, _nextIntention._arg1);
             _nextIntention = null;
-        }
-        if(!getActor().getAutoPlaySettings().isActive()) {
+        } else if(!getActor().getAutoPlaySettings().isActive()) {
             super.onEvtReadyToAct();
+        } else {
+            setIntention(CtrlIntention.AI_INTENTION_IDLE);
         }
     }
 

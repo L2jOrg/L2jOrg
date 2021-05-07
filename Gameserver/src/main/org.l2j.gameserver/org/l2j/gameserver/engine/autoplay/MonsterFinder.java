@@ -29,8 +29,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 class MonsterFinder extends AbstractAutoPlayTargetFinder {
 
     @Override
-    public boolean canBeTarget(Player player, WorldObject target) {
-        return  target instanceof Monster monster && !monster.isDead() && super.canBeTarget(player, monster);
+    public boolean canBeTarget(Player player, WorldObject target, int range) {
+        return  target instanceof Monster monster && !monster.isDead() && super.canBeTarget(player, monster, range);
     }
 
     @Override

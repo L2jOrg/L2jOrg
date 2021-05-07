@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.Shortcut;
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -179,6 +180,7 @@ public class Shortcuts {
 
     public void restoreMe() {
         shortcuts.clear();
+        var autoPlayEngine = AutoPlayEngine.getInstance();
         for (Shortcut shortcut : getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId())) {
             if (shortcut.getType() == ShortcutType.ITEM) {
                 final Item item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
@@ -194,7 +196,11 @@ public class Shortcuts {
 
             shortcuts.put(shortcut.getClientId(), shortcut);
             if(shortcut.isActive()) {
-                activeShortcuts.set(shortcut.getClientId());
+                if(autoPlayEngine.isAutoSupply(owner, shortcut)) {
+                    suppliesShortcuts.add(shortcut);
+                } else {
+                    activeShortcuts.set(shortcut.getClientId());
+                }
             }
         }
     }

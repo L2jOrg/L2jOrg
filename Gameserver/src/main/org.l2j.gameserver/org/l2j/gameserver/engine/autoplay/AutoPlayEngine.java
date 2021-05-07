@@ -92,7 +92,7 @@ public final class AutoPlayEngine {
         return false;
     }
 
-    private boolean isAutoSupply(Player player, Shortcut shortcut) {
+    public boolean isAutoSupply(Player player, Shortcut shortcut) {
         return (shortcut.getType() == ShortcutType.ITEM && handleAutoItem(player, shortcut)) ||
                (shortcut.getType() == ShortcutType.SKILL && handleAutoSupplySkill(player, shortcut));
     }
@@ -241,7 +241,7 @@ public final class AutoPlayEngine {
         private void pickTargetAndAct(Player player, AutoPlaySettings setting, int range) {
             var targetFinder = targetFinderBySettings(setting);
 
-            if(!targetFinder.canBeTarget(player, player.getTarget())) {
+            if(!targetFinder.canBeTarget(player, player.getTarget(), range)) {
                 player.setTarget(targetFinder.findNextTarget(player, range));
             }
 
@@ -270,7 +270,9 @@ public final class AutoPlayEngine {
                     shortcut = player.nextAutoShortcut();
                 } while (!nextShortcut.equals(shortcut));
             }
-            autoUseAction(player, DEFAULT_ACTION);
+            if(!player.isMageClass()) {
+                autoUseAction(player, DEFAULT_ACTION);
+            }
         }
 
         private boolean useShortcut(Player player, Shortcut shortcut) {
