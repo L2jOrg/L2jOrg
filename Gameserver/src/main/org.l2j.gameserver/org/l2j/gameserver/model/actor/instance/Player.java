@@ -778,7 +778,7 @@ public final class Player extends Playable {
         var shotsCount = weapon.getConsumeShotsCount();
         var item = inventory.getItemByItemId(itemId);
 
-        if(shotsCount > item.getCount()) {
+        if(isNull(item) || shotsCount > item.getCount()) {
             return false;
         }
 

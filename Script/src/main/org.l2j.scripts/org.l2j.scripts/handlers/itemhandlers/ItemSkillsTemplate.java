@@ -94,7 +94,7 @@ public class ItemSkillsTemplate implements IItemHandler {
 
                 var player  = playable.getActingPlayer();
 
-                if (itemSkill.hasAnyEffectType(EffectType.EXTRACT_ITEM) && nonNull(player) && !playable.getActingPlayer().isInventoryUnder80()) {
+                if (itemSkill.hasAnyEffectType(EffectType.EXTRACT_ITEM) && nonNull(player) && !player.isInventoryUnder80()) {
                     player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
                     return false;
                 }

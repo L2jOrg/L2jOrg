@@ -3890,6 +3890,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return effectList.remainTimeBySkillIdOrAbnormalType(skill.getId(), skill.getAbnormalType());
     }
 
+    public int getBuffRemainTimeByItemSkill(Item item) {
+        return effectList.remainTimeByItemSkill(item);
+    }
+
     public int getReputation() {
         return 0;
     }

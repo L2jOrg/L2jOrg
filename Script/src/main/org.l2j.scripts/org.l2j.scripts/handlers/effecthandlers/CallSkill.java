@@ -66,7 +66,7 @@ public final class CallSkill extends AbstractEffect {
 		}
 		
 		if (nonNull(triggerSkill)) {
-			SkillCaster.triggerCast(effector, effected, triggerSkill);
+			SkillCaster.triggerCast(effector, effected, triggerSkill, item, true);
 		} else {
 			LOGGER.warn("Skill not found effect called from {}", skill);
 		}

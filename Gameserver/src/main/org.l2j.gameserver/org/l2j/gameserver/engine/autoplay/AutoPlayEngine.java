@@ -24,7 +24,6 @@ import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
@@ -409,7 +408,11 @@ public final class AutoPlayEngine {
         var reuseDelay = item.getReuseDelay();
         return (reuseDelay <= 0 || player.getItemRemainingReuseTime(item.getObjectId()) <= 0) &&
                 ( (item.isAutoPotion() && player.getAutoPlaySettings().getUsableHpPotionPercent() > player.getCurrentHpPercent()) ||
-                 (item.isAutoSupply() && item.getTemplate().checkAnySkill(ItemSkillType.NORMAL, s -> player.getBuffRemainTimeBySkillOrAbormalType(s.getSkill()) <= 3)));
+                 (item.isAutoSupply() && isSupplyEffectReusable(player, item)));
+    }
+
+    private boolean isSupplyEffectReusable(Player player, Item item) {
+        return player.getBuffRemainTimeByItemSkill(item) <= 3;
     }
 
     private boolean canDoAutoAction(Player player) {

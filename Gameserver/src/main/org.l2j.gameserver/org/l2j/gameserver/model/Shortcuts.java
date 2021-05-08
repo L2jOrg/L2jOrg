@@ -182,27 +182,42 @@ public class Shortcuts {
         shortcuts.clear();
         var autoPlayEngine = AutoPlayEngine.getInstance();
         for (Shortcut shortcut : getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId())) {
-            if (shortcut.getType() == ShortcutType.ITEM) {
-                final Item item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
-                if (isNull(item)) {
-                    deleteShortcutFromDb(shortcut);
-                    continue;
-                }
-
-                if (item.isEtcItem()) {
-                    shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
-                }
+            if (!addShortcut(shortcut)) {
+                continue;
             }
 
-            shortcuts.put(shortcut.getClientId(), shortcut);
-            if(shortcut.isActive()) {
-                if(autoPlayEngine.isAutoSupply(owner, shortcut)) {
-                    suppliesShortcuts.add(shortcut);
-                } else {
-                    activeShortcuts.set(shortcut.getClientId());
-                }
+            processActiveShortcut(autoPlayEngine, shortcut);
+        }
+        if(!suppliesShortcuts.isEmpty()) {
+            autoPlayEngine.setActiveAutoShortcut(owner, suppliesShortcuts.iterator().next().getClientId(), true);
+        }
+    }
+
+    private void processActiveShortcut(AutoPlayEngine autoPlayEngine, Shortcut shortcut) {
+        if(shortcut.isActive()) {
+            if(autoPlayEngine.isAutoSupply(owner, shortcut)) {
+                suppliesShortcuts.add(shortcut);
+            } else {
+                activeShortcuts.set(shortcut.getClientId());
             }
         }
+    }
+
+    private boolean addShortcut(Shortcut shortcut) {
+        if (shortcut.getType() == ShortcutType.ITEM) {
+            final Item item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
+            if (isNull(item)) {
+                deleteShortcutFromDb(shortcut);
+                return false;
+            }
+
+            if (item.isEtcItem()) {
+                shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
+            }
+        }
+
+        shortcuts.put(shortcut.getClientId(), shortcut);
+        return true;
     }
 
     public void storeMe() {
