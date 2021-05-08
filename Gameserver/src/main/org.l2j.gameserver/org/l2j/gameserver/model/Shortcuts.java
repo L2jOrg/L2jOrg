@@ -47,8 +47,10 @@ public class Shortcuts {
     private final Player owner;
     private final IntMap<Shortcut> shortcuts = new CHashIntMap<>();
     private final BitSet activeShortcuts = new BitSet(Shortcut.MAX_ROOM);
+    private final BitSet summonShortcuts = new BitSet(Shortcut.MAX_ROOM);
     private final Set<Shortcut> suppliesShortcuts = ConcurrentHashMap.newKeySet();
     private int nextAutoShortcut = 0;
+    private int nextSummonShortcut = 0;
 
     public Shortcuts(Player owner) {
         this.owner = owner;
@@ -77,10 +79,24 @@ public class Shortcuts {
 
     public void setActiveShortcut(int room, boolean active) {
         var shortcut = setActive(room, active);
-        if(nonNull(shortcut) && active) {
-            activeShortcuts.set(room);
+        if(nonNull(shortcut)) {
+            if(shortcut.isSummonShortcut()) {
+                setActiveSummonShortcut(room, active);
+            } else if (active){
+                activeShortcuts.set(room);
+            } else {
+                activeShortcuts.clear(room);
+            }
         } else {
             activeShortcuts.clear(room);
+        }
+    }
+
+    private void setActiveSummonShortcut(int room, boolean active) {
+        if(active) {
+            summonShortcuts.set(room);
+        } else {
+            summonShortcuts.clear(room);
         }
     }
 
@@ -109,30 +125,41 @@ public class Shortcuts {
     public Set<Shortcut> getSuppliesShortcuts() {
         return suppliesShortcuts;
     }
-
-
+    
     public Shortcut nextAutoShortcut() {
-        if(activeShortcuts.isEmpty()) {
+        var shortcut = nextAutoShortcut(activeShortcuts, nextAutoShortcut);
+        nextAutoShortcut = nonNull(shortcut) ? shortcut.getClientId() + 1 : 0;
+        return shortcut;
+    }
+
+    public Shortcut nextAutoSummonShortcut() {
+        var shortcut =  nextAutoShortcut(summonShortcuts, nextSummonShortcut);
+        nextSummonShortcut = nonNull(shortcut) ? shortcut.getClientId() + 1 : 0;
+        return shortcut;
+    }
+
+    private Shortcut nextAutoShortcut(BitSet autoShortcuts, int nextAutoShortcut) {
+        if(autoShortcuts.isEmpty()) {
             return null;
         }
         Shortcut shortcut = null;
-        var next = activeShortcuts.nextSetBit(nextAutoShortcut);
+        var next = autoShortcuts.nextSetBit(nextAutoShortcut);
         if(next == -1) {
-            next = activeShortcuts.nextSetBit(nextAutoShortcut = 0);
+            next = autoShortcuts.nextSetBit(0);
         }
         if(next >= 0) {
             shortcut = shortcuts.get(next);
             if(isNull(shortcut)) {
                 deleteShortcut(next);
-                activeShortcuts.clear(next);
+                autoShortcuts.clear(next);
             }
-            nextAutoShortcut = next + 1;
         }
         return shortcut;
     }
 
     public void resetNextAutoShortcut() {
         nextAutoShortcut = 0;
+        nextSummonShortcut = 0;
     }
     
     private void deleteShortcutFromDb(Shortcut shortcut) {
@@ -198,7 +225,7 @@ public class Shortcuts {
             if(autoPlayEngine.isAutoSupply(owner, shortcut)) {
                 suppliesShortcuts.add(shortcut);
             } else {
-                activeShortcuts.set(shortcut.getClientId());
+                setActiveShortcut(shortcut.getClientId(), true);
             }
         }
     }

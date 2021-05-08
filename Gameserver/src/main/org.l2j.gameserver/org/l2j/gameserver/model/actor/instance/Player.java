@@ -437,6 +437,10 @@ public final class Player extends Playable {
         return shortcuts.nextAutoShortcut();
     }
 
+    public Shortcut nextAutoSummonShortcut() {
+        return shortcuts.nextAutoSummonShortcut();
+    }
+
     public void resetNextAutoShortcut() {
         shortcuts.resetNextAutoShortcut();
     }

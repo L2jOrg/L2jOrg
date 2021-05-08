@@ -38,6 +38,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ScheduledFuture;
+import java.util.function.Supplier;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -246,6 +247,9 @@ public final class AutoPlayEngine {
 
             if (nonNull(player.getTarget())) {
                 tryUseAutoShortcut(player);
+                if(player.hasSummon()) {
+                    tryUseAutoSummonShortcut(player);
+                }
             }
         }
 
@@ -259,19 +263,28 @@ public final class AutoPlayEngine {
         }
 
         private void tryUseAutoShortcut(Player player) {
-            var nextShortcut = player.nextAutoShortcut();
+            var used = tryUseAutoShortcut(player, player::nextAutoShortcut);
+            if(!(used || player.isMageClass())) {
+                autoUseAction(player, DEFAULT_ACTION);
+            }
+        }
+
+        private void tryUseAutoSummonShortcut(Player player) {
+            tryUseAutoShortcut(player, player::nextAutoSummonShortcut);
+        }
+
+        private boolean tryUseAutoShortcut(Player player, Supplier<Shortcut> supplier) {
+            var nextShortcut = supplier.get();
             if(nonNull(nextShortcut)) {
                 var  shortcut = nextShortcut;
                 do {
                     if(useShortcut(player, shortcut)) {
-                        return;
+                        return true;
                     }
-                    shortcut = player.nextAutoShortcut();
+                    shortcut = supplier.get();
                 } while (!nextShortcut.equals(shortcut));
             }
-            if(!player.isMageClass()) {
-                autoUseAction(player, DEFAULT_ACTION);
-            }
+            return false;
         }
 
         private boolean useShortcut(Player player, Shortcut shortcut) {

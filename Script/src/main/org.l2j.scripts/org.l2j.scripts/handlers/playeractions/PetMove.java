@@ -58,4 +58,9 @@ public final class PetMove implements IPlayerActionHandler
 			pet.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getTarget().getLocation());
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }
