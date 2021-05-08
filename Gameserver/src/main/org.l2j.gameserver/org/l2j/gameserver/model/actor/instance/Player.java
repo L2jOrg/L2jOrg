@@ -6432,7 +6432,7 @@ public final class Player extends Playable {
         if (movieHolder != null) {
             sendPacket(new ExStartScenePlayer(movieHolder.getMovie()));
         }
-        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive() && !getActingPlayer().isInBattle()) {
+        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive()) {
             AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
     }
@@ -8161,7 +8161,14 @@ public final class Player extends Playable {
     }
 
     public boolean hasItemRequest() {
-        return nonNull(requests) && requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+        if(nonNull(requests)) {
+            for (AbstractRequest request : requests.values()) {
+                if(request.isItemRequest()) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     @SafeVarargs

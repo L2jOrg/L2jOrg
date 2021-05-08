@@ -58,6 +58,10 @@ public class ItemSkillsTemplate implements IItemHandler {
             return false;
         }
 
+        if(playable.isAttackingNow() || playable.isCastingNow()) {
+            return false;
+        }
+
         // Verify that item is not under reuse.
         if (!isAvailableToUse(playable, null, item)) {
             return false;
