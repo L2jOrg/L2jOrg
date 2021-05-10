@@ -119,8 +119,8 @@ public class HtmCache {
                 return "data/" + name;
             } else if (name.startsWith("CommunityBoard/")) {
                 return "data/html/" + name;
-            } else if (name.startsWith("scripts/")) {
-                return "data/scripts/" + name;
+            } else if (name.startsWith("extension/")) {
+                return "data/extension/" + name;
             }
         }
         return name;

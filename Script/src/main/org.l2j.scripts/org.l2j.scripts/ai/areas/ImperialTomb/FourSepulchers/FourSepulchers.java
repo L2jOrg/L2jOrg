@@ -285,7 +285,7 @@ public class FourSepulchers extends AbstractNpcAI
 					else
 					{
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-						html.setFile(player, "data/scripts/ai/areas/ImperialTomb/FourSepulchers/Gatekeeper-no.html");
+						html.setFile(player, "data/extension/html/ai/areas/ImperialTomb/FourSepulchers/Gatekeeper-no.html");
 						html.replace("%npcname%", npc.getName());
 						player.sendPacket(html);
 					}
@@ -674,7 +674,7 @@ public class FourSepulchers extends AbstractNpcAI
 	private void showHtmlFile(Player player, String file, Npc npc, Player member)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		html.setFile(player, "data/scripts/org.l2j.scripts/ai/areas/ImperialTomb/FourSepulchers/" + file);
+		html.setFile(player, "data/extension/html/ai/areas/ImperialTomb/FourSepulchers/" + file);
 		if (member != null)
 		{
 			html.replace("%member%", member.getName());
