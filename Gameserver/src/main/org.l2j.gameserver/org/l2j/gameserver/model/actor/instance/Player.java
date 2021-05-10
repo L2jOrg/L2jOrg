@@ -8166,8 +8166,8 @@ public final class Player extends Playable {
 
     public boolean hasItemRequest() {
         if(nonNull(requests)) {
-            for (AbstractRequest request : requests.values()) {
-                if(request.isItemRequest()) {
+            for (var req : requests.values()) {
+                if(req.isItemRequest()) {
                     return true;
                 }
             }

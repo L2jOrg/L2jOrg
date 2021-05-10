@@ -27,7 +27,6 @@ import org.l2j.gameserver.enums.BasicProperty;
 import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.handler.AffectScopeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
-import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;

@@ -36,7 +36,6 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Supplier;
 
@@ -54,7 +53,6 @@ public final class AutoPlayEngine {
     private static final int AUTO_SUPPLY_INTERVAL = 1000;
     private static final int DEFAULT_ACTION = 2;
 
-    private final ForkJoinPool autoPlayPool = new ForkJoinPool();
     private final Set<Player> players = ConcurrentHashMap.newKeySet();
     private final Set<Player> autoSupplyPlayers = ConcurrentHashMap.newKeySet();
 
@@ -191,10 +189,6 @@ public final class AutoPlayEngine {
         }
     }
 
-    public void shutdown() {
-        autoPlayPool.shutdown();
-    }
-
     public static AutoPlayEngine getInstance() {
         return Singleton.INSTANCE;
     }
@@ -207,13 +201,9 @@ public final class AutoPlayEngine {
 
         @Override
         public void run() {
-            autoPlayPool.submit(this::doAutoPlay);
-        }
-
-        private void doAutoPlay() {
             for (Player player : players) {
                 if(!player.getAutoPlaySettings().isAutoPlaying() && canDoAutoAction(player)) {
-                    doNextAction(player);
+                    ThreadPool.executeForked(() -> doNextAction(player));
                 }
             }
         }
@@ -375,6 +365,20 @@ public final class AutoPlayEngine {
             return false;
         }
 
+        private void useItem(Player player, Item item) {
+            if (checkReuseRestriction(player, item)) {
+                var etcItem = item.getEtcItem();
+                var handler = ItemHandler.getInstance().getHandler(etcItem);
+
+                if (nonNull(handler) && handler.useItem(player, item, false)) {
+                    player.onActionRequest();
+                    if(item.getReuseDelay() > 0) {
+                        player.addTimeStampItem(item, item.getReuseDelay());
+                    }
+                }
+            }
+        }
+
         private boolean useSkillShortcut(Player player, Shortcut shortcut) {
             var skill = player.getKnownSkill(shortcut.getShortcutId());
             if(nonNull(skill)) {
@@ -401,20 +405,6 @@ public final class AutoPlayEngine {
         player.onActionRequest();
         return player.useSkill(skill, null, false, false);
 
-    }
-
-    private void useItem(Player player, Item item) {
-        if (checkReuseRestriction(player, item)) {
-            var etcItem = item.getEtcItem();
-            var handler = ItemHandler.getInstance().getHandler(etcItem);
-
-            if (nonNull(handler) && handler.useItem(player, item, false)) {
-                player.onActionRequest();
-                if(item.getReuseDelay() > 0) {
-                    player.addTimeStampItem(item, item.getReuseDelay());
-                }
-            }
-        }
     }
 
     private boolean checkReuseRestriction(Player player, Item item) {

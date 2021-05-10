@@ -2604,7 +2604,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
         }
 
-        hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), (long) attackTime - hitTime);
+        hitTask = ThreadPool.schedule(this::onAttackFinish, (long) attackTime - hitTime);
     }
 
     private boolean doHit(Weapon weapon, Hit hit) {
@@ -2655,8 +2655,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         var hits = attack.getHits();
         var hasHit = false;
-        for (int i = 1; i < hits.size(); i++) {
-            final Hit hit = hits.get(i);
+        for (var i = 1; i < hits.size(); i++) {
+            final var hit = hits.get(i);
             hasHit |= doHit(weapon, hit);
         }
 
@@ -2664,7 +2664,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
         }
 
-        hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
+        hitTask = ThreadPool.schedule(this::onAttackFinish, attackTime - (hitTime1 + hitTime2));
     }
 
     public void onHitTarget(Creature hitTarget, Weapon weapon, Hit hit) {
@@ -2691,7 +2691,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    private void onAttackFinish(Attack attack) {
+    private void onAttackFinish() {
         getAI().notifyEvent(CtrlEvent.EVT_READY_TO_ACT);
     }
 

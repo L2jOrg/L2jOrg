@@ -127,9 +127,6 @@ public class Shutdown extends Thread {
             GameServer.getInstance().getConnectionHandler().shutdown();
             LOGGER.info("Game Server: Networking has been shut down.");
 
-            AutoPlayEngine.getInstance().shutdown();
-            LOGGER.info("Auto Play Engine has been shut down.");
-
             WorldTimeController.getInstance().stopTimer();
             LOGGER.info("Game Time Controller: Timer stopped.");
 
