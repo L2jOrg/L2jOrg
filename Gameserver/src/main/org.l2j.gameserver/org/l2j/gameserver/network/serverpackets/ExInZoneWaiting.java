@@ -23,7 +23,6 @@ import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.maps.IntLongMap;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -33,25 +32,25 @@ import java.util.concurrent.TimeUnit;
  * @author UnAfraid
  */
 public class ExInZoneWaiting extends ServerPacket {
-    private final int _currentTemplateId;
-    private final IntLongMap _instanceTimes;
-    private final boolean _hide;
+    private final int currentTemplateId;
+    private final IntLongMap instanceTimes;
+    private final boolean hide;
 
     public ExInZoneWaiting(Player activeChar, boolean hide) {
-        final Instance instance = InstanceManager.getInstance().getPlayerInstance(activeChar, false);
-        _currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
-        _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar);
-        _hide = hide;
+        final var instance = InstanceManager.getInstance().getPlayerInstance(activeChar, false);
+        currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
+        instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar);
+        this.hide = hide;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_INZONE_WAITING_INFO, buffer );
 
-        buffer.writeByte(!_hide); // Grand Crusade
-        buffer.writeInt(_currentTemplateId);
-        buffer.writeInt(_instanceTimes.size());
-        for (var entry : _instanceTimes.entrySet()) {
+        buffer.writeByte(!hide); // Grand Crusade
+        buffer.writeInt(currentTemplateId);
+        buffer.writeInt(instanceTimes.size());
+        for (var entry : instanceTimes.entrySet()) {
             final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
             buffer.writeInt(entry.getKey());
             buffer.writeInt((int) instanceTime);
