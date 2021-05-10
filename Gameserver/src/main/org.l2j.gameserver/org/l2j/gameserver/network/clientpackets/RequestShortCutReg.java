@@ -22,10 +22,8 @@ import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShortcutType;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
 import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
@@ -68,8 +66,8 @@ public final class RequestShortCutReg extends ClientPacket {
         }
 
         player.registerShortCut(new Shortcut(room, type, id, lvl, subLvl, characterType));
-        if(room == Shortcut.AUTO_POTION_ROOM && nonNull(AutoPlayEngine.getInstance().setActiveAutoShortcut(player, room, true))) {
-            client.sendPacket(new ExActivateAutoShortcut(room, true));
+        if(room == Shortcut.AUTO_POTION_ROOM) {
+            AutoPlayEngine.getInstance().setActiveAutoShortcut(player, room, true);
         }
     }
 }

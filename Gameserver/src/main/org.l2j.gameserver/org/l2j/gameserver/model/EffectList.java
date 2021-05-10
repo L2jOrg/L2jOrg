@@ -19,8 +19,10 @@
 package org.l2j.gameserver.model;
 
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -206,8 +208,26 @@ public final class EffectList {
         return null;
     }
 
+    public int remainTimeByItemSkill(Item item) {
+        var template = item.getTemplate();
+        for (BuffInfo info : actives) {
+            if((nonNull(info.getItem()) && info.getItem().getId() == template.getId())
+                 || template.checkAnySkill(ItemSkillType.NORMAL,
+                    s -> isSkillOrHasType(s.getSkillId(), s.getSkill().getAbnormalType(), info))) {
+
+                return info.getTime();
+            }
+        }
+        return 0;
+    }
+
     public int remainTimeBySkillIdOrAbnormalType(int skillId, AbnormalType type) {
-        return actives.stream().filter(b -> isSkillOrHasType(skillId, type, b)).mapToInt(BuffInfo::getTime).findFirst().orElse(0);
+        for (BuffInfo info : actives) {
+            if(isSkillOrHasType(skillId, type, info)) {
+                return info.getTime();
+            }
+        }
+        return 0;
     }
 
     private boolean isSkillOrHasType(int skillId, AbnormalType type, BuffInfo buff) {

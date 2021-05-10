@@ -42,14 +42,11 @@ public class ClientPacketHandler implements PacketHandler<GameClient> {
     public ReadablePacket<GameClient> handlePacket(ReadableBuffer buffer, GameClient client) {
         ST_PACKET.debug("{}", buffer.remaining());
         var opcode = toUnsignedInt(buffer.readByte());
-        ST_PACKET.debug("requesting opcode {}", opcode);
         if(opcode >= IncomingPackets.PACKET_ARRAY.length) {
-            ST_PACKET.debug("unknownPacket opcode {}", opcode);
             unknownPacket(buffer, opcode, null);
             return null;
         }
         PacketFactory packetFactory = getPacketFactory(opcode, buffer);
-        ST_PACKET.debug("packet for opcode {} is {}", opcode, packetFactory);
         return makePacketWithFactory(buffer, client, opcode, packetFactory);
     }
 

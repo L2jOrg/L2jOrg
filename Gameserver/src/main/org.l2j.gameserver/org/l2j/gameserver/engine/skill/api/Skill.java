@@ -27,7 +27,6 @@ import org.l2j.gameserver.enums.BasicProperty;
 import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.handler.AffectScopeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
-import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -54,6 +53,7 @@ import static java.lang.String.format;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
+import static org.l2j.gameserver.engine.skill.SkillAutoUseType.NONE;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -147,7 +147,7 @@ public final class Skill implements IIdentifiable, Cloneable {
     private SkillBuffType buffType;
     private BasicProperty basicProperty;
     private NextActionType nextAction = NextActionType.NONE;
-    private SkillAutoUseType skillAutoUseType;
+    private SkillAutoUseType skillAutoUseType = NONE;
 
     private int fanStartAngle;
     private int fanRadius;
@@ -177,10 +177,6 @@ public final class Skill implements IIdentifiable, Cloneable {
     }
 
     public boolean checkCondition(Creature creature, WorldObject object) {
-        if (creature.canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
-            return true;
-        }
-
         if (creature instanceof Player player && player.isMounted() && isBad() && !MountEnabledSkillList.contains(id)) {
             creature.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(id));
             return false;
@@ -1160,6 +1156,28 @@ public final class Skill implements IIdentifiable, Cloneable {
         activateRate = chance;
     }
 
+    public boolean isAutoUse() {
+        return skillAutoUseType != NONE;
+    }
+
+    public boolean isAutoTransformation() {
+        return skillAutoUseType == SkillAutoUseType.TRANSFORM;
+    }
+
+    public boolean isAutoBuff() {
+        return skillAutoUseType == SkillAutoUseType.BUFF;
+    }
+
+    void setCustomDelay(int delay) {
+        useCustomDelay = true;
+        reuseDelay = delay;
+    }
+
+    void setCustomTime(int time) {
+        useCustomTime = true;
+        abnormalTime = time;
+    }
+
     Skill clone(boolean keepEffects, boolean keepConditions) throws CloneNotSupportedException {
         var clone = clone();
         if (!keepEffects) {
@@ -1179,27 +1197,5 @@ public final class Skill implements IIdentifiable, Cloneable {
     @Override
     public String toString() {
         return format("Skill %s (%d, %d)", name, id, level);
-    }
-
-    public boolean isAutoUse() {
-        return falseIfNullOrElse(skillAutoUseType, t -> t != SkillAutoUseType.NONE);
-    }
-
-    public boolean isAutoTransformation() {
-        return skillAutoUseType == SkillAutoUseType.TRANSFORM;
-    }
-
-    public boolean isAutoBuff() {
-        return skillAutoUseType == SkillAutoUseType.BUFF;
-    }
-
-    void setCustomDelay(int delay) {
-        useCustomDelay = true;
-        reuseDelay = delay;
-    }
-
-    void setCustomTime(int time) {
-        useCustomTime = true;
-        abnormalTime = time;
     }
 }

@@ -663,9 +663,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
-                }
-                // Checking if target has moved to peace zone
-                else if (target.isInsidePeaceZone(player)) {
+                } else if (target.isInsidePeaceZone(player)) { // Checking if target has moved to peace zone
                     getAI().setIntention(AI_INTENTION_ACTIVE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -712,13 +710,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             final WeaponType weaponType = getAttackType();
             final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == BodyPart.TWO_HAND);
-            final int timeAtk = Formulas.calculateTimeBetweenAttacks(stats.getPAtkSpd());
+            final int timeAtk = Formulas.calculateTimeBetweenAttacks(this, weaponItem);
             final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
-            attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
+            attackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(timeAtk);
 
             setHeading(calculateHeadingFrom(this, target));
 
-            // Get the Attack Reuse Delay of the Weapon
             final Attack attack = generateAttackTargetData(target, weaponItem, weaponType);
             boolean crossbow = false;
             switch (weaponType) {
@@ -726,8 +723,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 case TWO_HAND_CROSSBOW:
                     crossbow = true;
                 case BOW: {
-                    final int reuse = Formulas.calculateReuseTime(this, weaponItem);
-                    onStartRangedAttack(crossbow, reuse);
+                    onStartRangedAttack(crossbow, timeAtk);
                     hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
                     break;
                 }
@@ -2599,20 +2595,32 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
 
+        var hasHit = false;
         for (Hit hit : attack.getHits()) {
-            final Creature hitTarget = ((Creature) hit.getTarget());
-            if ((hitTarget == null) || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
-                continue;
-            }
-
-            if (hit.isMiss()) {
-                notifyAttackAvoid(hitTarget, false);
-            } else {
-                onHitTarget(hitTarget, weapon, hit);
-            }
+            hasHit |= doHit(weapon, hit);
         }
 
-        hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), (long) attackTime - hitTime);
+        if(hasHit) {
+            consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
+        }
+
+        hitTask = ThreadPool.schedule(this::onAttackFinish, (long) attackTime - hitTime);
+    }
+
+    private boolean doHit(Weapon weapon, Hit hit) {
+        final Creature hitTarget = ((Creature) hit.getTarget());
+        if (hitTarget == null || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
+            return false;
+        }
+
+        var hasHit= false;
+        if (hit.isMiss()) {
+            notifyAttackAvoid(hitTarget, false);
+        } else {
+            onHitTarget(hitTarget, weapon, hit);
+            hasHit = true;
+        }
+        return hasHit;
     }
 
     public void onFirstHitTimeForDual(Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack) {
@@ -2645,22 +2653,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
 
-        // Second dual attack is the remaining hits (first hit not included)
-        for (int i = 1; i < attack.getHits().size(); i++) {
-            final Hit hit = attack.getHits().get(i);
-            final Creature hitTarget = ((Creature) hit.getTarget());
-            if ((hitTarget == null) || hitTarget.isDead() || !isInSurroundingRegion(hitTarget)) {
-                continue;
-            }
-
-            if (hit.isMiss()) {
-                notifyAttackAvoid(hitTarget, false);
-            } else {
-                onHitTarget(hitTarget, weapon, hit);
-            }
+        var hits = attack.getHits();
+        var hasHit = false;
+        for (var i = 1; i < hits.size(); i++) {
+            final var hit = hits.get(i);
+            hasHit |= doHit(weapon, hit);
         }
 
-        hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
+        if(hasHit || !hits.get(0).isMiss()) {
+            consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
+        }
+
+        hitTask = ThreadPool.schedule(this::onAttackFinish, attackTime - (hitTime1 + hitTime2));
     }
 
     public void onHitTarget(Creature hitTarget, Weapon weapon, Hit hit) {
@@ -2687,12 +2691,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    private void onAttackFinish(Attack attack) {
-        // Recharge any active auto-soulshot tasks for current creature after the attack has successfully hit.
-        if (attack.getHits().stream().anyMatch(h -> !h.isMiss())) {
-            consumeAndRechargeShots(ShotType.SOULSHOTS, attack.getHitsWithSoulshotCount());
-        }
-        // Notify that this character is ready to act for the next attack
+    private void onAttackFinish() {
         getAI().notifyEvent(CtrlEvent.EVT_READY_TO_ACT);
     }
 
@@ -3889,6 +3888,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public int getBuffRemainTimeBySkillOrAbormalType(Skill skill) {
         return effectList.remainTimeBySkillIdOrAbnormalType(skill.getId(), skill.getAbnormalType());
+    }
+
+    public int getBuffRemainTimeByItemSkill(Item item) {
+        return effectList.remainTimeByItemSkill(item);
     }
 
     public int getReputation() {

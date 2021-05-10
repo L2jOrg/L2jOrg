@@ -23,7 +23,6 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
-import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.instancemanager.*;
@@ -126,9 +125,6 @@ public class Shutdown extends Thread {
         try {
             GameServer.getInstance().getConnectionHandler().shutdown();
             LOGGER.info("Game Server: Networking has been shut down.");
-
-            AutoPlayEngine.getInstance().shutdown();
-            LOGGER.info("Auto Play Engine has been shut down.");
 
             WorldTimeController.getInstance().stopTimer();
             LOGGER.info("Game Time Controller: Timer stopped.");

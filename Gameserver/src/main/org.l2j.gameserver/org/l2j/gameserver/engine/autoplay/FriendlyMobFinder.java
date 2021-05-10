@@ -29,8 +29,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 class FriendlyMobFinder extends AbstractAutoPlayTargetFinder {
 
     @Override
-    public boolean canBeTarget(Player player, WorldObject target) {
-        return target instanceof FriendlyMob friendly && !friendly.isDead() && super.canBeTarget(player, friendly);
+    public boolean canBeTarget(Player player, WorldObject target, int range) {
+        return target instanceof FriendlyMob friendly && !friendly.isDead() && super.canBeTarget(player, friendly, range);
     }
 
     @Override

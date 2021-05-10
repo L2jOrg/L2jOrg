@@ -89,6 +89,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.BaseStats;
@@ -174,7 +175,6 @@ public final class Player extends Playable {
     private final IntMap<String> accountPlayers = new HashIntMap<>();
     private final IntMap<RecipeList> dwarvenRecipes = new CHashIntMap<>();
     private final IntMap<RecipeList> commonRecipes = new CHashIntMap<>();
-    private final AutoUseSettingsHolder autoUseSettings = new AutoUseSettingsHolder();
     private final Map<ShotType, Integer> activeSoulShots = new EnumMap<>(ShotType.class);
     private final LimitedQueue<DamageInfo> lastDamages = new LimitedQueue<>(30);
 
@@ -430,15 +430,27 @@ public final class Player extends Playable {
     }
 
     public void setActiveAutoShortcut(int room, boolean active) {
-        shortcuts.setActive(room, active);
+        shortcuts.setActiveShortcut(room, active);
     }
 
     public Shortcut nextAutoShortcut() {
         return shortcuts.nextAutoShortcut();
     }
 
+    public Shortcut nextAutoSummonShortcut() {
+        return shortcuts.nextAutoSummonShortcut();
+    }
+
     public void resetNextAutoShortcut() {
         shortcuts.resetNextAutoShortcut();
+    }
+
+    public Set<Shortcut> getActiveAutoSupplies() {
+        return shortcuts.getSuppliesShortcuts();
+    }
+
+    public void setActiveAutoSupplyShortcut(int room, boolean activate) {
+        shortcuts.setActiveSupplyShortcut(room, activate);
     }
 
     public void setRank(int rank) {
@@ -1646,11 +1658,6 @@ public final class Player extends Playable {
 
     public final boolean isNotifyQuestOfDeathEmpty() {
         return (notifyQuestOfDeathList == null) || notifyQuestOfDeathList.isEmpty();
-    }
-
-    public AutoUseSettingsHolder getAutoUseSettings()
-    {
-        return autoUseSettings;
     }
 
     public Shortcut getShortcut(int room) {
@@ -5473,6 +5480,10 @@ public final class Player extends Playable {
             return false;
         }
 
+        if(!SkillCaster.checkSkillConsume(this, skill)) {
+            return false;
+        }
+
         if (!CharacterSettings.allowPKTeleport() && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -6425,7 +6436,7 @@ public final class Player extends Playable {
         if (movieHolder != null) {
             sendPacket(new ExStartScenePlayer(movieHolder.getMovie()));
         }
-        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive() && !getActingPlayer().isInBattle()) {
+        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive()) {
             AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
     }
@@ -8154,7 +8165,14 @@ public final class Player extends Playable {
     }
 
     public boolean hasItemRequest() {
-        return nonNull(requests) && requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+        if(nonNull(requests)) {
+            for (var req : requests.values()) {
+                if(req.isItemRequest()) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     @SafeVarargs
