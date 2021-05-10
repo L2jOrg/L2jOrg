@@ -379,6 +379,17 @@ public final class AutoPlayEngine {
             }
         }
 
+        private boolean checkReuseRestriction(Player player, Item item) {
+            var reuseDelay = item.getReuseDelay();
+            return (reuseDelay <= 0 || player.getItemRemainingReuseTime(item.getObjectId()) <= 0) &&
+                    ( (item.isAutoPotion() && player.getAutoPlaySettings().getUsableHpPotionPercent() > player.getCurrentHpPercent()) ||
+                            (item.isAutoSupply() && isSupplyEffectReusable(player, item)));
+        }
+
+        private boolean isSupplyEffectReusable(Player player, Item item) {
+            return player.getBuffRemainTimeByItemSkill(item) <= 3;
+        }
+
         private boolean useSkillShortcut(Player player, Shortcut shortcut) {
             var skill = player.getKnownSkill(shortcut.getShortcutId());
             if(nonNull(skill)) {
@@ -405,17 +416,6 @@ public final class AutoPlayEngine {
         player.onActionRequest();
         return player.useSkill(skill, null, false, false);
 
-    }
-
-    private boolean checkReuseRestriction(Player player, Item item) {
-        var reuseDelay = item.getReuseDelay();
-        return (reuseDelay <= 0 || player.getItemRemainingReuseTime(item.getObjectId()) <= 0) &&
-                ( (item.isAutoPotion() && player.getAutoPlaySettings().getUsableHpPotionPercent() > player.getCurrentHpPercent()) ||
-                 (item.isAutoSupply() && isSupplyEffectReusable(player, item)));
-    }
-
-    private boolean isSupplyEffectReusable(Player player, Item item) {
-        return player.getBuffRemainTimeByItemSkill(item) <= 3;
     }
 
     private boolean canDoAutoAction(Player player) {
