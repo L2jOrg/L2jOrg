@@ -34,20 +34,20 @@ import java.util.concurrent.TimeUnit;
 public class ExInZoneWaiting extends ServerPacket {
     private final int currentTemplateId;
     private final IntLongMap instanceTimes;
-    private final boolean hide;
+    private final boolean show;
 
-    public ExInZoneWaiting(Player activeChar, boolean hide) {
-        final var instance = InstanceManager.getInstance().getPlayerInstance(activeChar, false);
+    public ExInZoneWaiting(Player player, boolean show) {
+        final var instance = InstanceManager.getInstance().getPlayerInstance(player, false);
         currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
-        instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar);
-        this.hide = hide;
+        instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
+        this.show = show;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_INZONE_WAITING_INFO, buffer );
 
-        buffer.writeByte(!hide); // Grand Crusade
+        buffer.writeByte(show); // Grand Crusade
         buffer.writeInt(currentTemplateId);
         buffer.writeInt(instanceTimes.size());
         for (var entry : instanceTimes.entrySet()) {

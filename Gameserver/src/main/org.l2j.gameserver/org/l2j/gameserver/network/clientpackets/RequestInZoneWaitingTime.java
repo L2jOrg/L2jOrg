@@ -25,15 +25,15 @@ import org.l2j.gameserver.network.serverpackets.ExInZoneWaiting;
  * @author JoeAlisson
  */
 public class RequestInZoneWaitingTime extends ClientPacket {
-    private boolean hide;
+    private boolean show;
 
     @Override
     public void readImpl() {
-        hide = readByte() == 0;
+        show = readBoolean();
     }
 
     @Override
     public void runImpl() {
-        client.sendPacket(new ExInZoneWaiting(client.getPlayer(), hide));
+        client.sendPacket(new ExInZoneWaiting(client.getPlayer(), show));
     }
 }
