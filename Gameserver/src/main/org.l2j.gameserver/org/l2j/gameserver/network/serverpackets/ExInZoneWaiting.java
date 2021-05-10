@@ -32,12 +32,12 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author UnAfraid
  */
-public class ExInzoneWaiting extends ServerPacket {
+public class ExInZoneWaiting extends ServerPacket {
     private final int _currentTemplateId;
     private final IntLongMap _instanceTimes;
     private final boolean _hide;
 
-    public ExInzoneWaiting(Player activeChar, boolean hide) {
+    public ExInZoneWaiting(Player activeChar, boolean hide) {
         final Instance instance = InstanceManager.getInstance().getPlayerInstance(activeChar, false);
         _currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
         _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar);

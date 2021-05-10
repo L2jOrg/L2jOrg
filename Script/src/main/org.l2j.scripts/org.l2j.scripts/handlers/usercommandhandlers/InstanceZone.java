@@ -20,7 +20,7 @@ package org.l2j.scripts.handlers.usercommandhandlers;
 
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.ExInzoneWaiting;
+import org.l2j.gameserver.network.serverpackets.ExInZoneWaiting;
 
 /**
  * Instance Zone user command.
@@ -46,7 +46,7 @@ public class InstanceZone implements IUserCommandHandler
 		{
 			return false;
 		}
-		player.sendPacket(new ExInzoneWaiting(player, false));
+		player.sendPacket(new ExInZoneWaiting(player, false));
 		return true;
 	}
 }
