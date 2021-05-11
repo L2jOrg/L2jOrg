@@ -142,14 +142,6 @@ public final class Config {
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
 
-    public static int REPUTATION_SCORE_PER_KILL;
-    public static boolean ALLOW_WYVERN_ALWAYS;
-    public static boolean ALLOW_WYVERN_DURING_SIEGE;
-    public static boolean ALLOW_MOUNTS_DURING_SIEGE;
-    public static boolean ENABLE_L2_STORE;
-    public static boolean ENABLE_LCOIN_STORE;
-
-
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
@@ -703,14 +695,6 @@ public final class Config {
         TAKE_CASTLE_POINTS = Feature.getInt("TakeCastlePoints", 1500);
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
-
-        REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
-        ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
-        ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
-        ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
-        ENABLE_L2_STORE = Feature.getBoolean("EnableL2Store", false);
-        ENABLE_LCOIN_STORE = Feature.getBoolean("EnableLCoinStore", false);
-
 
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);

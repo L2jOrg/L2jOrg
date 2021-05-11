@@ -112,6 +112,7 @@ import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExi
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
@@ -4425,7 +4426,7 @@ public final class Player extends Playable {
     }
 
     public boolean mount(Summon pet) {
-        if (!Config.ALLOW_MOUNTS_DURING_SIEGE && isInsideZone(ZoneType.SIEGE)) {
+        if (!FeatureSettings.allowRideInSiege() && isInsideZone(ZoneType.SIEGE)) {
             return false;
         }
 

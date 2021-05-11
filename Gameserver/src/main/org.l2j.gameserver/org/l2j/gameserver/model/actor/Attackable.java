@@ -527,7 +527,7 @@ public class Attackable extends Npc {
                 }
             }
         } catch (Exception e) {
-            LOGGER.error("", e);
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
