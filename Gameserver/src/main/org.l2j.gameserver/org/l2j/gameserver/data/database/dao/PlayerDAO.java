@@ -217,9 +217,6 @@ public interface PlayerDAO extends DAO<PlayerData> {
     @Query("DELETE FROM character_tpbookmark WHERE charId=:playerId: AND Id=:id:")
     void deleteTeleportBookMark(int playerId, int id);
 
-    @Query("UPDATE characters SET subpledge=:pledgeType: WHERE charId=:playerId:")
-    void updateSubpledge(int playerId, int pledgeType);
-
     @Query("UPDATE characters SET power_grade=:powerGrade: WHERE charId=:playerId:")
     void updatePowerGrade(int playerId, int powerGrade);
 

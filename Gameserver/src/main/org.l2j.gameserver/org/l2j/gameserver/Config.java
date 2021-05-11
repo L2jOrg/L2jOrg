@@ -142,11 +142,7 @@ public final class Config {
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
 
-    public static int ROYAL_GUARD_COST;
-    public static int KNIGHT_UNIT_COST;
     public static int REPUTATION_SCORE_PER_KILL;
-    public static int JOIN_ACADEMY_MIN_REP_SCORE;
-    public static int JOIN_ACADEMY_MAX_REP_SCORE;
     public static boolean ALLOW_WYVERN_ALWAYS;
     public static boolean ALLOW_WYVERN_DURING_SIEGE;
     public static boolean ALLOW_MOUNTS_DURING_SIEGE;
@@ -708,11 +704,7 @@ public final class Config {
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
 
-        ROYAL_GUARD_COST = Feature.getInt("CreateRoyalGuardCost", 5000);
-        KNIGHT_UNIT_COST = Feature.getInt("CreateKnightUnitCost", 10000);
         REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
-        JOIN_ACADEMY_MIN_REP_SCORE = Feature.getInt("CompleteAcademyMinPoints", 190);
-        JOIN_ACADEMY_MAX_REP_SCORE = Feature.getInt("CompleteAcademyMaxPoints", 650);
         ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
         ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
         ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);

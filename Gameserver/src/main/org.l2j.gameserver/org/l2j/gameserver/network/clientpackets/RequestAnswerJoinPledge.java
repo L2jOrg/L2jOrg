@@ -61,25 +61,14 @@ public final class RequestAnswerJoinPledge extends ClientPacket {
                 return; // hax
             }
 
-            final int pledgeType;
-            if (requestor.getRequest().getRequestPacket() instanceof RequestJoinPledge)
-            {
-                pledgeType = ((RequestJoinPledge) requestor.getRequest().getRequestPacket()).getPledgeType();
-            }
-            else
-            {
-                pledgeType = ((RequestClanAskJoinByName) requestor.getRequest().getRequestPacket()).getPledgeType();
-            }
             final Clan clan = requestor.getClan();
             // we must double check this cause during response time conditions can be changed, i.e. another player could join clan
-            if (clan.checkClanJoinCondition(requestor, activeChar, pledgeType)) {
+            if (clan.checkClanJoinCondition(requestor, activeChar)) {
                 if (activeChar.getClan() != null) {
                     return;
                 }
 
                 activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
-
-                activeChar.setPledgeType(pledgeType);
                 activeChar.setPowerGrade(5); // new member starts at 5, not confirmed
 
                 clan.addClanMember(activeChar);

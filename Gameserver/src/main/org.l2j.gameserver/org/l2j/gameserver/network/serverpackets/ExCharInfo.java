@@ -160,7 +160,7 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeInt(appearence.getNameColor());
         buffer.writeInt(player.getHeading());
         buffer.writeByte(player.getSocialStatus().ordinal());
-        buffer.writeShort(player.getPledgeType());
+        buffer.writeShort(0x00); // pledge type
 
         buffer.writeInt(appearence.getTitleColor());
         buffer.writeByte(0x00); // cursed weapon level

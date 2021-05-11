@@ -51,9 +51,6 @@ public class ClanMember {
     @Column("race")
     private int raceOrdinal;
 
-    @Column("subpledge")
-    private int pledgeType;
-
     @Column("last_reputation_level")
     private int lastReputationLevel;
 
@@ -80,7 +77,6 @@ public class ClanMember {
             classId = player.getClassId().getId();
             objectId = player.getObjectId();
             powerGrade = player.getPowerGrade();
-            pledgeType = player.getPledgeType();
             title = player.getTitle();
             apprentice = player.getApprentice();
             sponsor = player.getSponsor();
@@ -103,15 +99,6 @@ public class ClanMember {
             memberName = emptyIfNullOrElse(clan.getClanMember(sponsor), ClanMember::getName);
         }
         return memberName;
-    }
-
-    public void setPledgeType(int pledgeType) {
-        this.pledgeType = pledgeType;
-        if (player != null) {
-            player.setPledgeType(pledgeType);
-        } else {
-            getDAO(PlayerDAO.class).updateSubpledge(objectId, pledgeType);
-        }
     }
 
     public void setPowerGrade(int powerGrade) {
@@ -189,15 +176,6 @@ public class ClanMember {
      */
     public String getTitle() {
         return player != null ? player.getTitle() : title;
-    }
-
-    /**
-     * Gets the pledge type.
-     *
-     * @return the pledge type
-     */
-    public int getPledgeType() {
-        return player != null ? player.getPledgeType() : pledgeType;
     }
 
     /**
