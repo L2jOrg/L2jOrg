@@ -257,7 +257,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         if (containsMask(UserInfoType.CLAN)) {
             buffer.writeShort(UserInfoType.CLAN.getBlockLength() + (title.length() * 2));
             buffer.writeSizedString(title);
-            buffer.writeShort(player.getPledgeType());
+            buffer.writeShort(0x00); // pledge type
             buffer.writeInt(player.getClanId());
             buffer.writeInt(player.getClanCrestLargeId());
             buffer.writeInt(player.getClanCrestId());

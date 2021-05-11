@@ -33,7 +33,7 @@ public abstract class PledgeAbstractPacket extends ServerPacket {
         this.clan = clan;
     }
 
-    protected void writeClanInfo(int pledgeId, WritableBuffer buffer) {
+    protected void writeClanInfo(WritableBuffer buffer) {
         buffer.writeInt(clan.getCrestId());
         buffer.writeInt(clan.getLevel());
         buffer.writeInt(clan.getCastleId());
@@ -49,6 +49,6 @@ public abstract class PledgeAbstractPacket extends ServerPacket {
         buffer.writeInt(clan.getAllyCrestId());
         buffer.writeInt(clan.isAtWar()); // new c3
         buffer.writeInt(0x00); // Territory castle ID
-        buffer.writeInt(clan.getSubPledgeMembersCount(pledgeId));
+        buffer.writeInt(clan.getMembersCount());
     }
 }

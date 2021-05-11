@@ -3389,6 +3389,9 @@ public final class SystemMessageId {
     @ClientString(id = 1734, message = "In order to join the clan academy, you must be unaffiliated with a clan and be an unawakened character Lv. 84 or below fpr both main and subclass.")
     public static SystemMessageId IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS;
 
+    @ClientString(id = 1735, message = "$s1 does not meet the requirements to join a Clan Academy.")
+    public static SystemMessageId S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY;
+
     @ClientString(id = 1736, message = "The Clan Academy has reached its maximum enrollment.")
     public static SystemMessageId THE_CLAN_ACADEMY_HAS_REACHED_ITS_MAXIMUM_ENROLLMENT;
 
@@ -3428,6 +3431,13 @@ public final class SystemMessageId {
     @ClientString(id = 1748, message = "Clan Academy member $s1 has successfully Awakened, obtaining $s2 Clan Reputation.")
     public static SystemMessageId CLAN_ACADEMY_MEMBER_S1_HAS_SUCCESSFULLY_AWAKENED_OBTAINING_S2_CLAN_REPUTATION;
 
+    @ClientString(id = 1749, message = "Congratulations! You will now graduate from the Clan Academy and leave your current clan. You can now join a clan without being subject to any penalties.")
+    public static SystemMessageId CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES;
+
+
+    @ClientString(id = 1750, message = "$c1 does not meet the participation requirements. The owner of $s2 cannot participate in the Olympiad.")
+    public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_THE_OWNER_OF_S2_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
+
     @ClientString(id = 1751, message = "The Grand Master has given you a commemorative item.")
     public static SystemMessageId THE_GRAND_MASTER_HAS_GIVEN_YOU_A_COMMEMORATIVE_ITEM;
 
@@ -3436,6 +3446,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 1753, message = "The clan leader has decreed that that particular privilege cannot be granted to a Clan Academy member.")
     public static SystemMessageId THE_CLAN_LEADER_HAS_DECREED_THAT_THAT_PARTICULAR_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER;
+
+    @ClientString(id = 1754, message = "That privilege cannot be granted to a Clan Academy member.")
+    public static SystemMessageId THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER;
 
     @ClientString(id = 1757, message = "Your apprentice, $c1 , has logged out.")
     public static SystemMessageId YOUR_APPRENTICE_C1_HAS_LOGGED_OUT;
@@ -3506,11 +3519,20 @@ public final class SystemMessageId {
     @ClientString(id = 1786, message = "Your clan has failed to defend the castle. $s1 point(s) have been deducted from your Clan Reputation.")
     public static SystemMessageId YOUR_CLAN_HAS_FAILED_TO_DEFEND_THE_CASTLE_S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_YOUR_CLAN_REPUTATION;
 
+    @ClientString(id = 1791, message = "The conditions necessary to create a military unit have not been met.")
+    public static SystemMessageId THE_CONDITIONS_NECESSARY_TO_CREATE_A_MILITARY_UNIT_HAVE_NOT_BEEN_MET;
+
     @ClientString(id = 1792, message = "Please assign a manager for your new Order of Knights.")
     public static SystemMessageId PLEASE_ASSIGN_A_MANAGER_FOR_YOUR_NEW_ORDER_OF_KNIGHTS;
 
     @ClientString(id = 1793, message = "$c1 has been selected as the captain of $s2.")
     public static SystemMessageId C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2;
+
+    @ClientString(id = 1794, message = "The Knights of $s1 have been created.")
+    public static SystemMessageId THE_KNIGHTS_OF_S1_HAVE_BEEN_CREATED;
+
+     @ClientString(id = 1795, message = "The Royal Guard of $s1 have been created.")
+    public static SystemMessageId THE_ROYAL_GUARD_OF_S1_HAVE_BEEN_CREATED;
 
     @ClientString(id = 1796, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the websitewebsite .")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_WEBSITE_SUPPORT_COM_1796;
@@ -3627,7 +3649,6 @@ public final class SystemMessageId {
     @ClientString(id = 1841, message = "This clan hall war has been cancelled.  Not enough clans have registered.")
     public static SystemMessageId THIS_CLAN_HALL_WAR_HAS_BEEN_CANCELLED_NOT_ENOUGH_CLANS_HAVE_REGISTERED;
 
-
     @ClientString(id = 1847, message = "You caught a fish $s1 in length.")
     public static SystemMessageId YOU_CAUGHT_A_FISH_S1_IN_LENGTH;
 
@@ -3637,11 +3658,20 @@ public final class SystemMessageId {
     @ClientString(id = 1849, message = "All of $s1 will be discarded. Would you like to continue?")
     public static SystemMessageId ALL_OF_S1_WILL_BE_DISCARDED_WOULD_YOU_LIKE_TO_CONTINUE;
 
+    @ClientString(id = 1850, message = "The Captain of the Order of Knights cannot be appointed.")
+    public static SystemMessageId THE_CAPTAIN_OF_THE_ORDER_OF_KNIGHTS_CANNOT_BE_APPOINTED;
+
+    @ClientString(id = 1851, message = "The Royal Guard Captain cannot be appointed.")
+    public static SystemMessageId THE_ROYAL_GUARD_CAPTAIN_CANNOT_BE_APPOINTED;
+
     @ClientString(id = 1853, message = "Quantity items of the same type cannot be exchanged at the same time.")
     public static SystemMessageId QUANTITY_ITEMS_OF_THE_SAME_TYPE_CANNOT_BE_EXCHANGED_AT_THE_SAME_TIME;
 
     @ClientString(id = 1854, message = "The item was converted successfully.")
     public static SystemMessageId THE_ITEM_WAS_CONVERTED_SUCCESSFULLY;
+
+    @ClientString(id = 1855, message = "Another military unit is already using that name. Please enter a different name.")
+    public static SystemMessageId ANOTHER_MILITARY_UNIT_IS_ALREADY_USING_THAT_NAME_PLEASE_ENTER_A_DIFFERENT_NAME;
 
     @ClientString(id = 1856, message = "Olympiad match has been canceled. Your opponent has the Cursed Sword.")
     public static SystemMessageId OLYMPIAD_MATCH_HAS_BEEN_CANCELED_YOUR_OPPONENT_HAS_THE_CURSED_SWORD;
@@ -4333,6 +4363,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 2218, message = "This is a main class skill only.")
     public static SystemMessageId THIS_IS_A_MAIN_CLASS_SKILL_ONLY;
+
+    @ClientString(id = 2219, message = "This squad skill has already been learned.")
+    public static SystemMessageId THIS_SQUAD_SKILL_HAS_ALREADY_BEEN_LEARNED;
 
     @ClientString(id = 2221, message = "Do you wish to activate the selected functions?")
     public static SystemMessageId DO_YOU_WISH_TO_ACTIVATE_THE_SELECTED_FUNCTIONS;
@@ -15912,23 +15945,11 @@ public final class SystemMessageId {
     @ClientString(id = 1728, message = "The recipient of your invitation did not accept the party matching invitation.")
     public static SystemMessageId THE_RECIPIENT_OF_YOUR_INVITATION_DID_NOT_ACCEPT_THE_PARTY_MATCHING_INVITATION;
 
-    @ClientString(id = 1735, message = "$s1 does not meet the requirements to join a Clan Academy.")
-    public static SystemMessageId S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY;
-
     @ClientString(id = 1724, message = "A servitor whom is engaged in battle cannot be de-activated.")
     public static SystemMessageId A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED;
 
     @ClientString(id = 1725, message = "You have earned $s1 raid point(s).")
     public static SystemMessageId YOU_HAVE_EARNED_S1_RAID_POINT_S;
-
-    @ClientString(id = 1749, message = "Congratulations! You will now graduate from the Clan Academy and leave your current clan. You can now join a clan without being subject to any penalties.")
-    public static SystemMessageId CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES;
-
-    @ClientString(id = 1750, message = "$c1 does not meet the participation requirements. The owner of $s2 cannot participate in the Olympiad.")
-    public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_THE_OWNER_OF_S2_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
-
-    @ClientString(id = 1754, message = "That privilege cannot be granted to a Clan Academy member.")
-    public static SystemMessageId THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER;
 
     @ClientString(id = 1755, message = "$s2 has been designated as the apprentice of clan member $s1.")
     public static SystemMessageId S2_HAS_BEEN_DESIGNATED_AS_THE_APPRENTICE_OF_CLAN_MEMBER_S1;
@@ -15969,15 +15990,6 @@ public final class SystemMessageId {
     @ClientString(id = 1790, message = "The conditions necessary to increase the clan's level have not been met.")
     public static SystemMessageId THE_CONDITIONS_NECESSARY_TO_INCREASE_THE_CLAN_S_LEVEL_HAVE_NOT_BEEN_MET;
 
-    @ClientString(id = 1791, message = "The conditions necessary to create a military unit have not been met.")
-    public static SystemMessageId THE_CONDITIONS_NECESSARY_TO_CREATE_A_MILITARY_UNIT_HAVE_NOT_BEEN_MET;
-
-    @ClientString(id = 1794, message = "The Knights of $s1 have been created.")
-    public static SystemMessageId THE_KNIGHTS_OF_S1_HAVE_BEEN_CREATED;
-
-    @ClientString(id = 1795, message = "The Royal Guard of $s1 have been created.")
-    public static SystemMessageId THE_ROYAL_GUARD_OF_S1_HAVE_BEEN_CREATED;
-
     @ClientString(id = 1798, message = "Clan Leader privileges have been transferred to $c1.")
     public static SystemMessageId CLAN_LEADER_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_C1;
 
@@ -16017,17 +16029,8 @@ public final class SystemMessageId {
     @ClientString(id = 1846, message = "You are too far away from your mount to ride.")
     public static SystemMessageId YOU_ARE_TOO_FAR_AWAY_FROM_YOUR_MOUNT_TO_RIDE;
 
-    @ClientString(id = 1850, message = "The Captain of the Order of Knights cannot be appointed.")
-    public static SystemMessageId THE_CAPTAIN_OF_THE_ORDER_OF_KNIGHTS_CANNOT_BE_APPOINTED;
-
-    @ClientString(id = 1851, message = "The Royal Guard Captain cannot be appointed.")
-    public static SystemMessageId THE_ROYAL_GUARD_CAPTAIN_CANNOT_BE_APPOINTED;
-
     @ClientString(id = 1852, message = "The attempt to acquire the skill has failed because of an insufficient Clan Reputation.")
     public static SystemMessageId THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION;
-
-    @ClientString(id = 1855, message = "Another military unit is already using that name. Please enter a different name.")
-    public static SystemMessageId ANOTHER_MILITARY_UNIT_IS_ALREADY_USING_THAT_NAME_PLEASE_ENTER_A_DIFFERENT_NAME;
 
     @ClientString(id = 1858, message = "$c1 is currently dead and cannot participate in the Olympiad.")
     public static SystemMessageId C1_IS_CURRENTLY_DEAD_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
@@ -16428,9 +16431,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 2212, message = "You have not completed the necessary quest for skill acquisition.")
     public static SystemMessageId YOU_HAVE_NOT_COMPLETED_THE_NECESSARY_QUEST_FOR_SKILL_ACQUISITION;
-
-    @ClientString(id = 2219, message = "This squad skill has already been learned.")
-    public static SystemMessageId THIS_SQUAD_SKILL_HAS_ALREADY_BEEN_LEARNED;
 
     @ClientString(id = 2220, message = "The previous level skill has not been learned.")
     public static SystemMessageId THE_PREVIOUS_LEVEL_SKILL_HAS_NOT_BEEN_LEARNED;

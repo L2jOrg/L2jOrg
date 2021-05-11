@@ -103,16 +103,8 @@ public class AdminClan implements IAdminCommandHandler
 				}
 				
 				final ClanMember member = clan.getClanMember(player.getObjectId());
-				if (member != null)
-				{
-					if (player.isAcademyMember())
-					{
-						player.sendPacket(SystemMessageId.THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER);
-					}
-					else
-					{
-						clan.setNewLeader(member);
-					}
+				if (member != null) {
+					clan.setNewLeader(member);
 				}
 				break;
 			}

@@ -3515,24 +3515,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     /**
      * Dummy method overriden in {@link Player}
      *
-     * @return {@code true} if player is in academy, {@code false} otherwise.
-     */
-    public boolean isAcademyMember() {
-        return false;
-    }
-
-    /**
-     * Dummy method overriden in {@link Player}
-     *
-     * @return the pledge type of current character.
-     */
-    public int getPledgeType() {
-        return 0;
-    }
-
-    /**
-     * Dummy method overriden in {@link Player}
-     *
      * @return the alliance id of current character.
      */
     public int getAllyId() {

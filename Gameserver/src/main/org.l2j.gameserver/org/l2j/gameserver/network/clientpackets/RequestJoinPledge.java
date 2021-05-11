@@ -67,7 +67,7 @@ public final class RequestJoinPledge extends ClientPacket {
             return;
         }
 
-        if (!clan.checkClanJoinCondition(activeChar, target, _pledgeType)) {
+        if (!clan.checkClanJoinCondition(activeChar, target)) {
             return;
         }
 

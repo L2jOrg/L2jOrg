@@ -39,7 +39,7 @@ public class PledgeShowInfoUpdate extends PledgeAbstractPacket {
 
         buffer.writeInt(clan.getId());
         buffer.writeInt(ServerSettings.serverId());
-        writeClanInfo(0x00, buffer);
+        writeClanInfo(buffer);
     }
 
 }

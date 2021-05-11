@@ -1,5 +1,4 @@
 DROP TABLE IF EXISTS `clan_members`;
-DROP TABLE IF EXISTS `clan_subpledges`;
 DROP TABLE IF EXISTS `clan_privs`;
 DROP TABLE IF EXISTS `clan_skills`;
 DROP TABLE IF EXISTS `clan_wars`;
@@ -56,22 +55,8 @@ CREATE TABLE IF NOT EXISTS `clan_skills`
     `clan_id`       INT NOT NULL DEFAULT 0,
     `skill_id`      INT NOT NULL DEFAULT 0,
     `skill_level`   INT NOT NULL DEFAULT 0,
-    `sub_pledge_id` INT NOT NULL DEFAULT -2,
 
-    PRIMARY KEY (`clan_id`, `skill_id`, `sub_pledge_id`),
-    FOREIGN KEY (clan_id) REFERENCES clan_data (clan_id) ON DELETE CASCADE
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8MB4;
-
-CREATE TABLE IF NOT EXISTS `clan_subpledges`
-(
-    `clan_id`       INT NOT NULL DEFAULT 0,
-    `sub_pledge_id` INT NOT NULL DEFAULT 0,
-    `name`          VARCHAR(45),
-    `leader_id`     INT NOT NULL DEFAULT 0,
-
-    PRIMARY KEY (`clan_id`, `sub_pledge_id`),
-    KEY `leader_id` (`leader_id`),
+    PRIMARY KEY (`clan_id`, `skill_id`),
     FOREIGN KEY (clan_id) REFERENCES clan_data (clan_id) ON DELETE CASCADE
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8MB4;
