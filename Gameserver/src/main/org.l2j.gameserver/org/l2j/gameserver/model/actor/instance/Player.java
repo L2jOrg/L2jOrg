@@ -1419,7 +1419,7 @@ public final class Player extends Playable {
 
     private int warRelation(Player target, Clan targetClan) {
         int result = 0;
-        if(nonNull(targetClan) && target.getPledgeType() != Clan.SUBUNIT_ACADEMY && getPledgeType() != Clan.SUBUNIT_ACADEMY) {
+        if(nonNull(targetClan)) {
             ClanWar war = clan.getWarWith(target.getClan().getId());
             if (nonNull(war)) {
                 switch (war.getState()) {

@@ -80,12 +80,7 @@ public final class RequestAnswerJoinPledge extends ClientPacket {
                 activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
 
                 activeChar.setPledgeType(pledgeType);
-                if (pledgeType == Clan.SUBUNIT_ACADEMY) {
-                    activeChar.setPowerGrade(9); // academy
-                    activeChar.setLvlJoinedAcademy(activeChar.getLevel());
-                } else {
-                    activeChar.setPowerGrade(5); // new member starts at 5, not confirmed
-                }
+                activeChar.setPowerGrade(5); // new member starts at 5, not confirmed
 
                 clan.addClanMember(activeChar);
                 activeChar.setClanPrivileges(activeChar.getClan().getRankPrivs(activeChar.getPowerGrade()));

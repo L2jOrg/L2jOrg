@@ -53,7 +53,7 @@ public class PledgeReceiveSubPledgeCreated extends ServerPacket {
 
     private String getLeaderName() {
         final int LeaderId = _subPledge.getLeaderId();
-        if ((_subPledge.getId() == Clan.SUBUNIT_ACADEMY) || (LeaderId == 0)) {
+        if (LeaderId == 0) {
             return "";
         } else if (_clan.getClanMember(LeaderId) == null) {
             LOGGER.warn("SubPledgeLeader: " + LeaderId + " is missing from clan: " + _clan.getName() + "[" + _clan.getId() + "]");

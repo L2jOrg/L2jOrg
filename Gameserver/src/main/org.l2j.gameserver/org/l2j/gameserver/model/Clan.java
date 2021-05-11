@@ -106,10 +106,7 @@ public class Clan implements IIdentifiable, INamable {
      * Leader clan dissolve ally
      */
     public static final int PENALTY_TYPE_DISSOLVE_ALLY = 4;
-    /**
-     * Clan subunit type of Academy
-     */
-    public static final int SUBUNIT_ACADEMY = -1;
+
     /**
      * Clan subunit type of Royal Guard A
      */
@@ -935,11 +932,7 @@ public class Clan implements IIdentifiable, INamable {
     public SubPledgeData createSubPledge(Player player, int pledgeType, int leaderId, String subPledgeName) {
         pledgeType = getAvailablePledgeTypes(pledgeType);
         if (pledgeType == 0) {
-            if (pledgeType == SUBUNIT_ACADEMY) {
-                player.sendPacket(SystemMessageId.YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY);
-            } else {
-                player.sendMessage("You can't create any more sub-units of this type");
-            }
+            player.sendMessage("You can't create any more sub-units of this type");
             return null;
         }
         if (leader.getObjectId() == leaderId) {
@@ -981,7 +974,7 @@ public class Clan implements IIdentifiable, INamable {
     public int getAvailablePledgeTypes(int pledgeType) {
         if (subPledges.get(pledgeType) != null) {
             switch (pledgeType) {
-                case SUBUNIT_ACADEMY, SUBUNIT_ROYAL2, SUBUNIT_KNIGHT4 -> {
+                case SUBUNIT_ROYAL2, SUBUNIT_KNIGHT4 -> {
                     return 0;
                 }
                 case SUBUNIT_ROYAL1 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_ROYAL2);
