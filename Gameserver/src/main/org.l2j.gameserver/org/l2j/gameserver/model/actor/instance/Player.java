@@ -8041,14 +8041,7 @@ public final class Player extends Playable {
         if (target == null) {
             return false;
         }
-        if (clan != null) // Current player
-        {
-            if (target.getClan() != null) // Target player
-            {
-                return clan.isAtWarWith(target.getClan());
-            }
-        }
-        return false;
+        return nonNull(clan) && nonNull(target.getClan()) && clan.isAtWarWith(target.getClan());
     }
 
     public int getAbilityPointsUsed() {

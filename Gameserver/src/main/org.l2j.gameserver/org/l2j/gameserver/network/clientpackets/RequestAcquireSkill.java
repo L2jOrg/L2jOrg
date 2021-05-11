@@ -63,8 +63,8 @@ public final class RequestAcquireSkill extends ClientPacket {
     public void readImpl() {
         id = readInt();
         level = readInt();
-        skillType = AcquireSkillType.getAcquireSkillType(readInt());
-        // if skill type is sub pledge subType  read Int;
+        skillType = AcquireSkillType.getAcquireSkillType(readInt()); // if type is sub pledge subType, so read d
+
     }
 
     @Override
