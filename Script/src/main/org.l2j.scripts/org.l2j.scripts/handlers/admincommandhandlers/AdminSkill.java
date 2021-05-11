@@ -37,7 +37,6 @@ import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Map;
 import java.util.StringTokenizer;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
