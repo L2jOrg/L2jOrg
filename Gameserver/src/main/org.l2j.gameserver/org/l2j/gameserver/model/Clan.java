@@ -977,7 +977,6 @@ public class Clan implements IIdentifiable, INamable {
                 case SUBUNIT_ROYAL2, SUBUNIT_KNIGHT4 -> {
                     return 0;
                 }
-                case SUBUNIT_ROYAL1 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_ROYAL2);
                 case SUBUNIT_KNIGHT1 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT2);
                 case SUBUNIT_KNIGHT2 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT3);
                 case SUBUNIT_KNIGHT3 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT4);

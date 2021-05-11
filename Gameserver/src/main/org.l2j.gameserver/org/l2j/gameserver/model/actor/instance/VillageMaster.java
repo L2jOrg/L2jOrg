@@ -203,54 +203,6 @@ public class VillageMaster extends Folk {
         player.sendMessage("Pledge name changed.");
     }
 
-    private static void assignSubPledgeLeader(Player player, String clanName, String leaderName) {
-        if (!player.isClanLeader()) {
-            player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-            return;
-        }
-        if (leaderName.length() > 16) {
-            player.sendPacket(SystemMessageId.YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN);
-            return;
-        }
-        if (player.getName().equals(leaderName)) {
-            player.sendPacket(SystemMessageId.THE_ROYAL_GUARD_CAPTAIN_CANNOT_BE_APPOINTED);
-            return;
-        }
-
-        final Clan clan = player.getClan();
-        final var subPledge = player.getClan().getSubPledge(clanName);
-
-        if (null == subPledge) {
-            player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
-            return;
-        }
-        if ((clan.getClanMember(leaderName) == null) || (clan.getClanMember(leaderName).getPledgeType() != 0)) {
-            if (subPledge.getId() >= Clan.SUBUNIT_KNIGHT1) {
-                player.sendPacket(SystemMessageId.THE_CAPTAIN_OF_THE_ORDER_OF_KNIGHTS_CANNOT_BE_APPOINTED);
-            } else if (subPledge.getId() >= Clan.SUBUNIT_ROYAL1) {
-                player.sendPacket(SystemMessageId.THE_ROYAL_GUARD_CAPTAIN_CANNOT_BE_APPOINTED);
-            }
-
-            return;
-        }
-
-        subPledge.setLeaderId(clan.getClanMember(leaderName).getObjectId());
-        clan.updateSubPledgeInDB(subPledge.getId());
-
-        final ClanMember leaderSubPledge = clan.getClanMember(leaderName);
-        final Player leaderPlayer = leaderSubPledge.getPlayerInstance();
-        if (leaderPlayer != null) {
-            Clan.updateSocialStatus(leaderPlayer);
-            leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
-        }
-
-        clan.broadcastClanStatus();
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2);
-        sm.addString(leaderName);
-        sm.addString(clanName);
-        clan.broadcastToOnlineMembers(sm);
-    }
-
     /**
      * this displays PledgeSkillList to the player.
      *
@@ -345,24 +297,12 @@ public class VillageMaster extends Folk {
             }
 
             renameSubPledge(player, Integer.parseInt(cmdParams), cmdParams2);
-        } else if (actualCommand.equalsIgnoreCase("create_royal")) {
-            if (cmdParams.isEmpty()) {
-                return;
-            }
-
-            createSubPledge(player, cmdParams, cmdParams2, Clan.SUBUNIT_ROYAL1, 6);
         } else if (actualCommand.equalsIgnoreCase("create_knight")) {
             if (cmdParams.isEmpty()) {
                 return;
             }
 
             createSubPledge(player, cmdParams, cmdParams2, Clan.SUBUNIT_KNIGHT1, 7);
-        } else if (actualCommand.equalsIgnoreCase("assign_subpl_leader")) {
-            if (cmdParams.isEmpty()) {
-                return;
-            }
-
-            assignSubPledgeLeader(player, cmdParams, cmdParams2);
         } else if (actualCommand.equalsIgnoreCase("create_ally")) {
             if (cmdParams.isEmpty()) {
                 return;

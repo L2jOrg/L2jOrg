@@ -182,6 +182,9 @@ public final class SystemMessageId {
     @ClientString(id = 79, message = "This name already exists.")
     public static SystemMessageId THIS_NAME_ALREADY_EXISTS;
 
+    @ClientString(id = 80, message = "Your title cannot exceed 16 characters in length. Please try again.")
+    public static SystemMessageId YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN;
+
     @ClientString(id = 81, message = "Please select your race.")
     public static SystemMessageId PLEASE_SELECT_YOUR_RACE;
 
@@ -3505,6 +3508,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 1792, message = "Please assign a manager for your new Order of Knights.")
     public static SystemMessageId PLEASE_ASSIGN_A_MANAGER_FOR_YOUR_NEW_ORDER_OF_KNIGHTS;
+
+    @ClientString(id = 1793, message = "$c1 has been selected as the captain of $s2.")
+    public static SystemMessageId C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2;
 
     @ClientString(id = 1796, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the websitewebsite .")
     public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_WEBSITE_SUPPORT_COM_1796;
@@ -14174,9 +14180,6 @@ public final class SystemMessageId {
     @ClientString(id = 61, message = "Nothing happened.")
     public static SystemMessageId NOTHING_HAPPENED;
 
-    @ClientString(id = 80, message = "Your title cannot exceed 16 characters in length. Please try again.")
-    public static SystemMessageId YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN;
-
     @ClientString(id = 84, message = "You may not attack in a peaceful zone.")
     public static SystemMessageId YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE;
 
@@ -15968,9 +15971,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1791, message = "The conditions necessary to create a military unit have not been met.")
     public static SystemMessageId THE_CONDITIONS_NECESSARY_TO_CREATE_A_MILITARY_UNIT_HAVE_NOT_BEEN_MET;
-
-    @ClientString(id = 1793, message = "$c1 has been selected as the captain of $s2.")
-    public static SystemMessageId C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2;
 
     @ClientString(id = 1794, message = "The Knights of $s1 have been created.")
     public static SystemMessageId THE_KNIGHTS_OF_S1_HAVE_BEEN_CREATED;
