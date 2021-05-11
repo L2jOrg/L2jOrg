@@ -18,14 +18,13 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -34,13 +33,13 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.ClanSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 /**
@@ -94,12 +93,12 @@ public class VillageMaster extends Folk {
             return;
         }
 
-        clan.setDissolvingExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_DISSOLVE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+        clan.setDissolvingExpiryTime(System.currentTimeMillis() + ClanSettings.daysToDissolveClan() * 86400000L); // 24*60*60*1000 = 86400000
         clan.updateClanInDB();
 
         // The clan leader should take the XP penalty of a full death.
         player.calculateDeathExpPenalty(null);
-        ClanTable.getInstance().scheduleRemoveClan(clan);
+        ClanEngine.getInstance().scheduleRemoveClan(clan);
     }
 
     private static void recoverClan(Player player, int clanId) {
@@ -138,7 +137,7 @@ public class VillageMaster extends Folk {
             return;
         }
 
-        for (Clan tempClan : ClanTable.getInstance().getClans()) {
+        for (Clan tempClan : ClanEngine.getInstance().getClans()) {
             if (tempClan.getSubPledge(clanName) != null) {
                 if (pledgeType == Clan.SUBUNIT_ACADEMY) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
@@ -308,7 +307,7 @@ public class VillageMaster extends Folk {
     }
 
     private static boolean isValidName(String name) {
-        return getSettings(ServerSettings.class).acceptClanName(name);
+        return ServerSettings.acceptClanName(name);
     }
 
     @Override
@@ -358,7 +357,7 @@ public class VillageMaster extends Folk {
                 return;
             }
 
-            ClanTable.getInstance().createClan(player, cmdParams);
+            ClanEngine.getInstance().createClan(player, cmdParams);
         } else if (actualCommand.equalsIgnoreCase("create_academy")) {
             if (cmdParams.isEmpty()) {
                 return;
@@ -437,15 +436,15 @@ public class VillageMaster extends Folk {
                 return;
             }
 
-            if (Config.ALT_CLAN_LEADER_INSTANT_ACTIVATION) {
+            if (ClanSettings.instantChangeLeader()) {
                 clan.setNewLeader(member);
             } else {
                 final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());
                 if (clan.getNewLeaderId() == 0) {
                     clan.setNewLeaderId(member.getObjectId(), true);
-                    msg.setFile(player, "data/scripts/village_master/Clan/9000-07-success.htm");
+                    msg.setFile(player, "data/extension/html/village/master/Clan/9000-07-success.htm");
                 } else {
-                    msg.setFile(player, "data/scripts/village_master/Clan/9000-07-in-progress.htm");
+                    msg.setFile(player, "data/extension/html/village/master/Clan/9000-07-in-progress.htm");
                 }
                 player.sendPacket(msg);
             }
@@ -459,7 +458,7 @@ public class VillageMaster extends Folk {
             final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());
             if (clan.getNewLeaderId() != 0) {
                 clan.setNewLeaderId(0, true);
-                msg.setFile(player, "data/scripts/village_master/Clan/9000-07-canceled.htm");
+                msg.setFile(player, "data/extension/html/village/master/Clan/9000-07-canceled.htm");
             } else {
                 msg.setHtml("<html><body>You don't have clan leader delegation applications submitted yet!</body></html>");
             }

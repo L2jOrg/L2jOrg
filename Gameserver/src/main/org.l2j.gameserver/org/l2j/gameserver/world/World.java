@@ -37,7 +37,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneManager;
@@ -51,7 +51,6 @@ import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAnyNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -399,7 +398,7 @@ public final class World {
             return null;
         }
 
-        return region.findObjectInSurrounding(reference, objectId, getSettings(CharacterSettings.class).partyRange());
+        return region.findObjectInSurrounding(reference, objectId, PartySettings.partyRange());
     }
 
     public void forEachCreature(Consumer<Creature> action) {
@@ -434,7 +433,7 @@ public final class World {
             return false;
         }
 
-        return region.hasObjectInSurrounding(Player.class, isVisibleInRange(object, getSettings(CharacterSettings.class).partyRange(), false));
+        return region.hasObjectInSurrounding(Player.class, isVisibleInRange(object, PartySettings.partyRange(), false));
     }
 
     public <T extends WorldObject> boolean hasAnyVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
@@ -506,7 +505,7 @@ public final class World {
     }
 
     public <T extends WorldObject> void forAnyVisibleObject(WorldObject reference, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
-        forAnyVisibleObjectInRange(reference, clazz, getSettings(CharacterSettings.class).partyRange(), action, filter);
+        forAnyVisibleObjectInRange(reference, clazz, PartySettings.partyRange(), action, filter);
     }
 
     public <T extends WorldObject> void forAnyVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Consumer<T> action, Predicate<T> filter) {

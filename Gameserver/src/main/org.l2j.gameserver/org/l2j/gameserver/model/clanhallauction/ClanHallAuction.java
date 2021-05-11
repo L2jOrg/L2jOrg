@@ -23,10 +23,10 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.dao.ClanHallDAO;
 import org.l2j.gameserver.data.database.data.Bidder;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.item.CommonItem;
 
 import java.util.Comparator;
@@ -68,7 +68,7 @@ public class ClanHallAuction {
     }
 
     public long getHighestBid() {
-        final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+        final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallId);
         return bidders.values().stream().mapToLong(Bidder::getBid).max().orElse(clanHall.getMinBid());
     }
 
@@ -93,7 +93,7 @@ public class ClanHallAuction {
 
         if (potentialHighestBidder.isPresent()) {
             final Bidder highestBidder = potentialHighestBidder.get();
-            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+            final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallId);
             clanHall.setOwner(highestBidder.getClan());
             bidders.clear();
 

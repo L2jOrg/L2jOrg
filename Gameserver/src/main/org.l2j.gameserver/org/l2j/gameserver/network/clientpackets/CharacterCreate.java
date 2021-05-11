@@ -32,7 +32,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.CharCreateFail.CharacterCreateFailReason.*;
 
 public final class CharacterCreate extends ClientPacket {
@@ -94,14 +93,13 @@ public final class CharacterCreate extends ClientPacket {
             return;
         }
 
-        var serverSettings = getSettings(ServerSettings.class);
-        if (!serverSettings.acceptPlayerName(name)) {
+        if (!ServerSettings.acceptPlayerName(name)) {
             client.sendPacket(new CharCreateFail(REASON_INCORRECT_NAME));
             return;
         }
 
 
-        if (!serverSettings.allowPlayersCount(client.getPlayerCount())) {
+        if (!ServerSettings.allowPlayersCount(client.getPlayerCount())) {
             client.sendPacket(new CharCreateFail(REASON_TOO_MANY_CHARACTERS));
             return;
         }
@@ -126,7 +124,7 @@ public final class CharacterCreate extends ClientPacket {
             data = PlayerData.of(client.getAccountName(), name, classId, face, hairColor, hairStyle, female);
             PlayerFactory.savePlayerData(template, data);
 
-            if (getSettings(GeneralSettings.class).cachePlayersName()) {
+            if (GeneralSettings.cachePlayersName()) {
                 PlayerNameTable.getInstance().addName(data.getCharId(), data.getName());
             }
         }

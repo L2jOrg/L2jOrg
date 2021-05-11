@@ -18,22 +18,24 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
 /**
  * @author JoeAlisson
  */
-public class FeatureSettings implements Settings {
+public class FeatureSettings {
 
-    private int[] siegeHours;
+    private static int[] siegeHours;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
-        siegeHours =  settingsFile.getIntegerArray("SiegeHourList", ",");
+    private FeatureSettings() {
+        // helper class
     }
 
-    public int[] siegeHours() {
+    public static void load(SettingsFile settingsFile) {
+        siegeHours =  settingsFile.getIntArray("SiegeHourList", ",");
+    }
+
+    public static int[] siegeHours() {
         return siegeHours;
     }
 }

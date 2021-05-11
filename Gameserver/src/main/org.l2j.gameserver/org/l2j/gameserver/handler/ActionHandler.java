@@ -20,34 +20,35 @@ package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.enums.InstanceType;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class ActionHandler implements IHandler<IActionHandler, InstanceType> {
-    private final Map<InstanceType, IActionHandler> _actions;
+    private final Map<InstanceType, IActionHandler> actions;
 
     private ActionHandler() {
-        _actions = new HashMap<>();
+        actions = new EnumMap<>(InstanceType.class);
     }
 
     @Override
     public void registerHandler(IActionHandler handler) {
-        _actions.put(handler.getInstanceType(), handler);
+        actions.put(handler.getInstanceType(), handler);
     }
 
     @Override
-    public synchronized void removeHandler(IActionHandler handler) {
-        _actions.remove(handler.getInstanceType());
+    public void removeHandler(IActionHandler handler) {
+        actions.remove(handler.getInstanceType());
     }
 
     @Override
     public IActionHandler getHandler(InstanceType iType) {
         IActionHandler result = null;
         for (InstanceType t = iType; t != null; t = t.getParent()) {
-            result = _actions.get(t);
+            result = actions.get(t);
             if (result != null) {
                 break;
             }
@@ -57,7 +58,7 @@ public class ActionHandler implements IHandler<IActionHandler, InstanceType> {
 
     @Override
     public int size() {
-        return _actions.size();
+        return actions.size();
     }
 
     public static ActionHandler getInstance() {

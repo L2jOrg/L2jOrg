@@ -36,8 +36,6 @@ import java.nio.file.Path;
 import java.util.*;
 import java.util.function.Function;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Sdw
  */
@@ -51,7 +49,7 @@ public class ExtendDropData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ExtendDrop.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/ExtendDrop.xsd");
     }
 
     @Override

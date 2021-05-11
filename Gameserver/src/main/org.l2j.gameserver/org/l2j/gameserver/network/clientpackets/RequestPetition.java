@@ -18,11 +18,11 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.PetitionManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * <p>
@@ -68,14 +68,14 @@ public final class RequestPetition extends ClientPacket {
             return;
         }
 
-        if (PetitionManager.getInstance().getPendingPetitionCount() == Config.MAX_PETITIONS_PENDING) {
+        if (PetitionManager.getInstance().getPendingPetitionCount() == CharacterSettings.maxPendingPetitions()) {
             client.sendPacket(SystemMessageId.THE_PETITION_SERVICE_IS_CURRENTLY_UNAVAILABLE_PLEASE_SEND_A_SUPPORT_TICKET_ON_SUPPORT_IF_YOU_BECOME_TRAPPED_OR_UNABLE_TO_MOVE_PLEASE_USE_THE_UNSTUCK_COMMAND);
             return;
         }
 
         final int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(player) + 1;
 
-        if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER) {
+        if (totalPetitions > CharacterSettings.maxPetitions()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS);
             sm.addInt(totalPetitions);
             client.sendPacket(sm);
@@ -95,7 +95,7 @@ public final class RequestPetition extends ClientPacket {
 
         sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_S1_PETITION_S_NYOU_MAY_SUBMIT_S2_MORE_PETITION_S_TODAY);
         sm.addInt(totalPetitions);
-        sm.addInt(Config.MAX_PETITIONS_PER_PLAYER - totalPetitions);
+        sm.addInt(CharacterSettings.maxPetitions() - totalPetitions);
         client.sendPacket(sm);
 
         sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_PETITIONS_CURRENTLY_ON_THE_WAITING_LIST);

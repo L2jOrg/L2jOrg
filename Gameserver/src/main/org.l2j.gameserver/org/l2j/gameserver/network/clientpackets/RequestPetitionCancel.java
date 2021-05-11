@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.PetitionManager;
@@ -26,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * <p>
@@ -61,7 +61,7 @@ public final class RequestPetitionCancel extends ClientPacket {
             }
         } else if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar)) {
             if (PetitionManager.getInstance().cancelActivePetition(activeChar)) {
-                final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
+                final int numRemaining = CharacterSettings.maxPetitions() - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
 
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
                 sm.addString(String.valueOf(numRemaining));

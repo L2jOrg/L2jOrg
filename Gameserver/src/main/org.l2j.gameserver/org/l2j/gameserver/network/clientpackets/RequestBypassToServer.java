@@ -20,6 +20,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.BypassHandler;
@@ -34,7 +35,6 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -68,7 +68,8 @@ public final class RequestBypassToServer extends ClientPacket {
         "_olympiad?command",
         "menu_select",
         "manor_menu_select",
-        "pccafe"
+        "pccafe",
+        "dimensional"
     };
 
     private String bypass;

@@ -24,8 +24,9 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ShotType;
@@ -40,7 +41,6 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -71,7 +71,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -209,10 +208,9 @@ public class EnterWorld extends ClientPacket {
             PledgeShowMemberListAll.sendAllTo(player);
             clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
             player.sendPacket(new PledgeSkillList(clan));
-            final ClanHall ch = ClanHallManager.getInstance().getClanHallByClan(clan);
+            final ClanHall ch = ClanHallEngine.getInstance().getClanHallByClan(clan);
             if ((ch != null) && (ch.getCostFailDay() > 0)) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-                sm.addInt(ch.getLease());
+                var sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(ch.getLease());
                 player.sendPacket(sm);
             }
         } else {
@@ -222,7 +220,7 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExDressRoomUiOpen());
 
-        if (Config.PLAYER_SPAWN_PROTECTION > 0) {
+        if (CharacterSettings.spawnProtection() > 0) {
             player.setSpawnProtection(true);
         }
 
@@ -266,7 +264,7 @@ public class EnterWorld extends ClientPacket {
             }
         }
 
-        if (Config.PETITIONING_ALLOWED) {
+        if (CharacterSettings.petitionAllowed()) {
             PetitionManager.getInstance().checkPetitionMessages(player);
         }
 
@@ -283,7 +281,7 @@ public class EnterWorld extends ClientPacket {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
 
-        if (getSettings(GeneralSettings.class).allowMail()) {
+        if (GeneralSettings.allowMail()) {
             MailEngine.getInstance().sendUnreadCount(player);
         }
 
@@ -298,7 +296,7 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(StatusUpdate.of(player, StatusUpdateType.CUR_HP, (int) player.getCurrentHp()).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()));
         player.sendPacket(new ExUserInfoEquipSlot(player));
 
-        if (getSettings(ChatSettings.class).worldChatEnabled()) {
+        if (ChatSettings.worldChatEnabled()) {
             player.sendPacket(new ExWorldChatCnt(player));
         }
 
@@ -307,13 +305,13 @@ public class EnterWorld extends ClientPacket {
             player.updateAbnormalVisualEffects();
         }
 
-        if (getSettings(AttendanceSettings.class).enabled()) {
+        if (AttendanceSettings.enabled()) {
             sendAttendanceInfo(player);
         }
 
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 
-        if (getSettings(ServerSettings.class).isHardwareInfoEnabled()) {
+        if (ServerSettings.isHardwareInfoEnabled()) {
             ThreadPool.schedule(() -> {
                 if (client.getHardwareInfo() == null) {
                     Disconnection.of(client).logout(false);
@@ -359,7 +357,6 @@ public class EnterWorld extends ClientPacket {
     }
 
     private void sendAttendanceInfo(Player player) {
-        var attendanceSettings = getSettings(AttendanceSettings.class);
         ThreadPool.schedule(() -> {
             // Check if player can receive reward today.
             if (player.canReceiveAttendance()) {
@@ -367,11 +364,11 @@ public class EnterWorld extends ClientPacket {
                 player.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
                 player.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
                 player.sendMessage("Click on General Menu -> Attendance Check.");
-                if (attendanceSettings.popUpWindow()) {
+                if (AttendanceSettings.popUpWindow()) {
                     player.sendPacket(new ExVipAttendanceItemList(player));
                 }
             }
-        }, attendanceSettings.delay(), TimeUnit.MINUTES);
+        }, AttendanceSettings.delay(), TimeUnit.MINUTES);
     }
 
     private void onGameMasterEnter(Player activeChar) {

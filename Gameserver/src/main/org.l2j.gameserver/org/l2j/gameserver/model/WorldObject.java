@@ -21,7 +21,6 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.ActionHandler;
 import org.l2j.gameserver.handler.ActionShiftHandler;
-import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.InstanceManager;
@@ -106,11 +105,10 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     public void onAction(Player player, boolean interact) {
-        final IActionHandler handler = ActionHandler.getInstance().getHandler(getInstanceType());
+        var handler = ActionHandler.getInstance().getHandler(getInstanceType());
         if (nonNull(handler)) {
             handler.action(player, this, interact);
         }
-
         player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 

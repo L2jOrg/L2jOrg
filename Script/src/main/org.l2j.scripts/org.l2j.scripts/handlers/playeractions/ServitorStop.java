@@ -50,4 +50,9 @@ public final class ServitorStop implements IPlayerActionHandler
 			summon.cancelAction();
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

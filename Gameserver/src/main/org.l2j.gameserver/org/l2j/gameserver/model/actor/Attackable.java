@@ -58,6 +58,7 @@ import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
@@ -73,7 +74,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.doIfIsCreature;
 
@@ -311,7 +311,7 @@ public class Attackable extends Npc {
                     // Prevent unwanted behavior
                     if (damage > 1) {
                         // Check if damage dealer isn't too far from this (killed monster)
-                        if (!GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, attacker, true)) {
+                        if (!GameUtils.checkIfInRange(PartySettings.partyRange(), this, attacker, true)) {
                             continue;
                         }
 
@@ -338,10 +338,11 @@ public class Attackable extends Npc {
 
                 if (party != null) {
                     final CommandChannel command = party.getCommandChannel();
+                    var partyRange = PartySettings.partyRange();
                     //@formatter:off
                     final List<Player> members = command != null ?
-                            command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange())).collect(Collectors.toList()) :
-                            player.getParty().getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, getSettings(CharacterSettings.class).partyRange())).collect(Collectors.toList());
+                            command.getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, partyRange)).collect(Collectors.toList()) :
+                            player.getParty().getMembers().stream().filter(p -> MathUtil.isInsideRadius3D(p, this, partyRange)).collect(Collectors.toList());
                     //@formatter:on
 
                     members.forEach(p ->
@@ -464,7 +465,7 @@ public class Attackable extends Npc {
 
                             // If the Player is in the Attackable rewards add its damages to party damages
                             if (reward2 != null) {
-                                if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true)) {
+                                if (GameUtils.checkIfInRange(PartySettings.partyRange(), this, partyPlayer, true)) {
                                     partyDmg += reward2.getDamage(); // Add Player damages to party damages
                                     rewardedMembers.add(partyPlayer);
 
@@ -477,7 +478,7 @@ public class Attackable extends Npc {
                                     }
                                 }
                                 rewards.remove(partyPlayer); // Remove the Player from the Attackable rewards
-                            } else if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true)) {
+                            } else if (GameUtils.checkIfInRange(PartySettings.partyRange(), this, partyPlayer, true)) {
                                 rewardedMembers.add(partyPlayer);
                                 if (partyPlayer.getLevel() > partyLvl) {
                                     if (attackerParty.isInCommandChannel()) {
@@ -805,9 +806,8 @@ public class Attackable extends Npc {
         for (ItemHolder drop : deathItems) {
             final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
             // Check if the autoLoot mode is active
-            var characterSettings = getSettings(CharacterSettings.class);
-            if (characterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && characterSettings.autoLoot())
-                    || (_isRaid && characterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && characterSettings.autoLootHerbs())) {
+            if (CharacterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && CharacterSettings.autoLoot())
+                    || (_isRaid && CharacterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && CharacterSettings.autoLootHerbs())) {
                 player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
             } else {
                 dropItem(player, drop); // drop the item on the ground
@@ -861,8 +861,7 @@ public class Attackable extends Npc {
                 final var itemId = drop.getItemId();
                 final var itemCount = Rnd.get(drop.getMin(), drop.getMax());
 
-                var characterSettings = getSettings(CharacterSettings.class);
-                if (characterSettings.autoLoot() || isFlying() || characterSettings.isAutoLoot(itemId)) {
+                if (CharacterSettings.autoLoot() || isFlying() || CharacterSettings.isAutoLoot(itemId)) {
                     player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the Player that has killed the Attackable
                 } else {
                     dropItem(player, itemId, itemCount); // drop the item on the ground

@@ -34,7 +34,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -101,7 +100,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
             {
                 final long begin = System.currentTimeMillis();
                 try {
-                    if (getSettings(GeneralSettings.class).auditGM()) {
+                    if (GeneralSettings.auditGM()) {
                         final WorldObject target = player.getTarget();
                         GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", fullCommand, (target != null ? target.getName() : "no-target"));
                     }

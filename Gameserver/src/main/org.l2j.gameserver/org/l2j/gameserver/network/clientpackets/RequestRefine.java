@@ -19,11 +19,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.VariationData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.Variation;
 import org.l2j.gameserver.model.options.VariationFee;
 import org.l2j.gameserver.model.options.VariationWeaponType;

@@ -229,7 +229,7 @@ public class ClanData {
     }
 
     public void setNewLeader(int leaderId) {
-        this.leaderId = leaderId;
+        this.newLeaderId = leaderId;
     }
 
     public void setMaxOnlineMembers(int maxOnlineMember) {

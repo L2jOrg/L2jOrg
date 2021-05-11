@@ -19,7 +19,6 @@
 package org.l2j.scripts.quests.tutorial;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.Location;
@@ -43,6 +42,7 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.TutorialShowHtml;
 import org.l2j.gameserver.network.serverpackets.html.TutorialWindowType;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -298,7 +298,7 @@ public abstract class Tutorial extends Quest {
     @RegisterEvent(EventType.ON_PLAYER_LOGIN)
     @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
     public void OnPlayerLogin(OnPlayerLogin event) {
-        if (Config.DISABLE_TUTORIAL) {
+        if (CharacterSettings.disableTutorial()) {
             return;
         }
 

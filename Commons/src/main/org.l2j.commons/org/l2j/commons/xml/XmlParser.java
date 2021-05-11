@@ -451,7 +451,8 @@ public class XmlParser {
 
     public IntList parseIntList(Node node) {
         if(nonNull(node)) {
-            var values = node.getNodeValue().split("[,;]");
+            var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
+            var values = value.split("\\s");
             var list = new ArrayIntList(values.length);
             for (String val :  values) {
                 if(Util.isInteger(val)) {

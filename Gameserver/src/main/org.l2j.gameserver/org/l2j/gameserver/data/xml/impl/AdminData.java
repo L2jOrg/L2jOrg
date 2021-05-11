@@ -43,7 +43,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -136,15 +135,14 @@ public final class AdminData extends GameXmlReader {
             accessLevel = AdminData.getInstance().getAccessLevel(0);
         }
 
-        var generalSettings = getSettings(GeneralSettings.class);
-        var defaultAccessLevel = generalSettings.defaultAccessLevel();
+        var defaultAccessLevel = GeneralSettings.defaultAccessLevel();
 
         if (accessLevel.getLevel() == 0 && defaultAccessLevel > 0) {
             accessLevel = AdminData.getInstance().getAccessLevel(defaultAccessLevel);
             if (isNull(accessLevel)) {
                 LOGGER.warn("Config's default access level ({}) is not defined, defaulting to 0!", defaultAccessLevel);
                 accessLevel = AdminData.getInstance().getAccessLevel(0);
-                generalSettings.setDefaultAccessLevel(0);
+                GeneralSettings.setDefaultAccessLevel(0);
             }
         }
         return  accessLevel;

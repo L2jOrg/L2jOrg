@@ -51,7 +51,7 @@ public abstract class Tower extends Npc {
 
     @Override
     public void onAction(Player player, boolean interact) {
-        if (!canTarget(player)) {
+        if (!canBeTarget(player)) {
             return;
         }
 

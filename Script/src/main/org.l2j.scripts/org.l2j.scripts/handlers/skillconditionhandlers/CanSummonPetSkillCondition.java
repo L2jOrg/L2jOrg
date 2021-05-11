@@ -31,8 +31,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.w3c.dom.Node;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Sdw
  * @author JoeAlisson
@@ -53,7 +51,7 @@ public class CanSummonPetSkillCondition implements SkillCondition {
 		
 		boolean canSummon = true;
 		
-		if (getSettings(CharacterSettings.class).restoreSummonOnReconnect() && PlayerSummonTable.getInstance().getPets().containsKey(player.getObjectId()))
+		if (CharacterSettings.restoreSummonOnReconnect() && PlayerSummonTable.getInstance().getPets().containsKey(player.getObjectId()))
 		{
 			player.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_MULTIPLE_PETS_AT_THE_SAME_TIME);
 			canSummon = false;

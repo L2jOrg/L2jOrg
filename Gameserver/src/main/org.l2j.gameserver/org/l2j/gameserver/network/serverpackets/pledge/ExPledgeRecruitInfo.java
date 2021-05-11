@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.pledge;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -32,7 +32,7 @@ public class ExPledgeRecruitInfo extends ServerPacket {
     private final Clan _clan;
 
     public ExPledgeRecruitInfo(int clanId) {
-        _clan = ClanTable.getInstance().getClan(clanId);
+        _clan = ClanEngine.getInstance().getClan(clanId);
     }
 
     @Override

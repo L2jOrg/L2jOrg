@@ -18,10 +18,9 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.data.database.data.ManufactureItem;
 import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -37,8 +36,6 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * RequestRecipeShopListSet client packet class.
  */
@@ -50,7 +47,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -90,7 +87,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
 
         player.getManufactureItems().clear();
 
-        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
+        var maxAdena = CharacterSettings.maxAdena();
         for (ManufactureItem item : _items) {
             final RecipeList list = RecipeData.getInstance().getRecipeList(item.getRecipeId());
             if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {

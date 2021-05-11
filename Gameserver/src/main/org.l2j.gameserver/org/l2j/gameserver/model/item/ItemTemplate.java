@@ -43,7 +43,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
@@ -344,12 +343,11 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     }
 
     /**
-     * This method also check the enchant blacklist.
      *
      * @return {@code true} if the item can be enchanted, {@code false} otherwise.
      */
     public final boolean isEnchantable() {
-        return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, id) < 0 && enchantable;
+        return enchantable;
     }
 
     public final boolean isHeroItem() {
@@ -441,7 +439,11 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
 
     public boolean checkAnySkill(ItemSkillType type, Predicate<ItemSkillHolder> predicate) {
         if(nonNull(skills)) {
-            return skills.stream().filter(sk -> sk.getType() == type).anyMatch(predicate);
+            for (ItemSkillHolder skill : skills) {
+                if(skill.getType() == type && predicate.test(skill)) {
+                    return true;
+                }
+            }
         }
         return false;
     }

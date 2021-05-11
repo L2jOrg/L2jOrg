@@ -19,17 +19,15 @@
 package org.l2j.gameserver;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.settings.GeneralSettings;
 
 import java.time.temporal.ChronoUnit;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class ItemsAutoDestroy {
     private final List<Item> _items = new LinkedList<>();
@@ -55,13 +53,12 @@ public final class ItemsAutoDestroy {
             if ((item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID)) {
                 itemIterator.remove();
             } else {
-                var generalSettings = getSettings(GeneralSettings.class);
                 long autoDestroyTime;
 
                 if (item.getTemplate().hasExImmediateEffect()) {
-                    autoDestroyTime = generalSettings.autoDestroyHerbTime();
+                    autoDestroyTime = GeneralSettings.autoDestroyHerbTime();
                 } else {
-                    if( (autoDestroyTime = generalSettings.autoDestroyItemTime()) <= 0) {
+                    if( (autoDestroyTime = GeneralSettings.autoDestroyItemTime()) <= 0) {
                         autoDestroyTime = 3600000;
                     }
                 }
@@ -69,7 +66,7 @@ public final class ItemsAutoDestroy {
                 if ((curtime - item.getDropTime()) > autoDestroyTime) {
                     item.decayMe();
                     itemIterator.remove();
-                    if (generalSettings.saveDroppedItems()) {
+                    if (GeneralSettings.saveDroppedItems()) {
                         ItemsOnGroundManager.getInstance().removeObject(item);
                     }
                 }

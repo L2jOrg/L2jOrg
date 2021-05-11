@@ -19,16 +19,17 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
-import org.l2j.gameserver.model.entity.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
-import java.util.Collection;
+import static org.l2j.commons.util.Util.emptyIfNullOrElse;
 
 /**
  * @author KenM
+ * @author JoeAlisson
  */
 public class ExShowAgitInfo extends ServerPacket {
     public static final ExShowAgitInfo STATIC_PACKET = new ExShowAgitInfo();
@@ -40,15 +41,16 @@ public class ExShowAgitInfo extends ServerPacket {
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_SHOW_AGIT_INFO, buffer );
 
-        final Collection<ClanHall> clanHalls = ClanHallManager.getInstance().getClanHalls();
-        buffer.writeInt(clanHalls.size());
-        clanHalls.forEach(clanHall ->
-        {
-            buffer.writeInt(clanHall.getId());
-            buffer.writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getName()); // owner clan name
-            buffer.writeString(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getLeaderName()); // leader name
-            buffer.writeInt(clanHall.getType().getClientVal()); // Clan hall type
-        });
+        var clanHallEngine = ClanHallEngine.getInstance();
+        buffer.writeInt(clanHallEngine.getClanHallAmount());
+        clanHallEngine.forEachClanHall(clanHall -> writeClanHallInfo(clanHall, buffer));
+    }
+
+    private void writeClanHallInfo(ClanHall clanHall, WritableBuffer buffer) {
+        buffer.writeInt(clanHall.getId());
+        buffer.writeString(emptyIfNullOrElse(clanHall.getOwner(), Clan::getName));
+        buffer.writeString(emptyIfNullOrElse(clanHall.getOwner(), Clan::getLeaderName));
+        buffer.writeInt(clanHall.getType().ordinal());
     }
 
 }

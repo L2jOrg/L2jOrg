@@ -27,7 +27,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Optional;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -54,7 +53,7 @@ public class MEvasionRateFinalizer implements IStatsFunction {
                 baseValue += (level - 69) + 2;
             }
         }
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), Double.NEGATIVE_INFINITY, getSettings(CharacterSettings.class).maxEvasion());
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), Double.NEGATIVE_INFINITY, CharacterSettings.maxEvasion());
     }
 
     @Override

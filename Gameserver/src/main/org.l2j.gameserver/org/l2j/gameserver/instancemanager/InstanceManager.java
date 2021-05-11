@@ -58,7 +58,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -81,7 +80,7 @@ public final class InstanceManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-         return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/instances/instance.xsd");
+         return ServerSettings.dataPackDirectory().resolve("data/instances/instance.xsd");
     }
 
     @Override

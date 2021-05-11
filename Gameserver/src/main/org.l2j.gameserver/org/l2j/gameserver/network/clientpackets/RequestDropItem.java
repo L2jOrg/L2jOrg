@@ -20,16 +20,17 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -82,7 +83,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        if ((Config.PLAYER_SPAWN_PROTECTION > 0) && player.isInvulnerable() && !player.isGM()) {
+        if ((CharacterSettings.spawnProtection() > 0) && player.isInvulnerable() && !player.isGM()) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             return;
         }

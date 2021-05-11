@@ -18,12 +18,10 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.EnsoulOption;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.ItemTemplate;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Objects;
 
 public class TradeItem {

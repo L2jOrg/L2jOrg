@@ -20,11 +20,11 @@ package org.l2j.gameserver.model;
 
 import io.github.joealisson.primitive.IntSet;
 import io.github.joealisson.primitive.LinkedHashIntSet;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 
 import java.util.*;

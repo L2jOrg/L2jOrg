@@ -19,14 +19,14 @@
 package org.l2j.scripts.handlers.skillconditionhandlers;
 
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.w3c.dom.Node;
 
 import static java.util.Objects.nonNull;
@@ -50,7 +50,7 @@ public class OpCheckResidenceSkillCondition implements SkillCondition {
 		if (isPlayer(caster)) {
 			final Clan clan = caster.getActingPlayer().getClan();
 			if (nonNull(clan)) {
-				final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByClan(clan);
+				final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallByClan(clan);
 				if (nonNull(clanHall)) {
 					return isWithin == residencesId.contains(clanHall.getId());
 				}

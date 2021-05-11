@@ -35,8 +35,6 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Layane
  * @author JoeAlisson
@@ -64,7 +62,7 @@ public class HtmCache {
     }
 
     private String loadFile(String filePath) {
-        var path =  getSettings(ServerSettings.class).dataPackDirectory().resolve(filePath);
+        var path =  ServerSettings.dataPackDirectory().resolve(filePath);
         if(FilterUtil.htmlFile(path)) {
             try {
                 var content = processHtml(Files.readString(path));
@@ -112,7 +110,7 @@ public class HtmCache {
      * @return {@code true} if the path targets a HTM or HTML file, {@code false} otherwise.
      */
     public boolean isLoadable(String path) {
-        return FilterUtil.htmlFile(getSettings(ServerSettings.class).dataPackDirectory().resolve(path));
+        return FilterUtil.htmlFile(ServerSettings.dataPackDirectory().resolve(path));
     }
 
     private String parseTemplateName(String name) {
@@ -121,8 +119,8 @@ public class HtmCache {
                 return "data/" + name;
             } else if (name.startsWith("CommunityBoard/")) {
                 return "data/html/" + name;
-            } else if (name.startsWith("scripts/")) {
-                return "data/scripts/" + name;
+            } else if (name.startsWith("extension/")) {
+                return "data/extension/" + name;
             }
         }
         return name;

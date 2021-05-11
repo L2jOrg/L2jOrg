@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,7 +46,7 @@ public final class RequestReplySurrenderPledgeWar extends ClientPacket {
         }
 
         if (_answer == 1) {
-            ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
+            ClanEngine.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
         } else {
             LOGGER.info(getClass().getSimpleName() + ": Missing implementation for answer: " + _answer + " and name: " + _reqName + "!");
         }

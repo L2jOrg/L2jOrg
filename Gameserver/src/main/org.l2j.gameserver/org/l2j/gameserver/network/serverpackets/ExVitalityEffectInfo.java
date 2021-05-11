@@ -25,8 +25,6 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.settings.RateSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Sdw
  */

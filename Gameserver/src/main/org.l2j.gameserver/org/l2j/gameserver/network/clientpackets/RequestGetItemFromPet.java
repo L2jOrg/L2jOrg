@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

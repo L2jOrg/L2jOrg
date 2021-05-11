@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -26,6 +25,7 @@ import org.l2j.gameserver.network.serverpackets.ExCloseMPCC;
 import org.l2j.gameserver.network.serverpackets.ExMPCCPartyInfoUpdate;
 import org.l2j.gameserver.network.serverpackets.ExOpenMPCC;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Collection;
 import java.util.LinkedList;
@@ -171,7 +171,7 @@ public class CommandChannel extends AbstractPlayerGroup {
         if (!(isCreature(obj) && ((Creature) obj).isRaid())) {
             return false;
         }
-        return (getMemberCount() >= Config.LOOT_RAIDS_PRIVILEGE_CC_SIZE);
+        return getMemberCount() >= CharacterSettings.lootRaidCommandChannelSize();
     }
 
     /**

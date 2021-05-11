@@ -91,12 +91,14 @@ public class PlayerAI extends PlayableAI {
      */
     @Override
     protected void onEvtReadyToAct() {
-        // Launch actions corresponding to the Event Think
         if (_nextIntention != null) {
             setIntention(_nextIntention._crtlIntention, _nextIntention._arg0, _nextIntention._arg1);
             _nextIntention = null;
+        } else if(!getActor().getAutoPlaySettings().isActive()) {
+            super.onEvtReadyToAct();
+        } else {
+            setIntention(CtrlIntention.AI_INTENTION_IDLE);
         }
-        super.onEvtReadyToAct();
     }
 
     /**

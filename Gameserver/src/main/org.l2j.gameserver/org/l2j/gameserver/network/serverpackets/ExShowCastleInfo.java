@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
@@ -51,8 +51,8 @@ public class ExShowCastleInfo extends ServerPacket {
         for (Castle castle : castles) {
             buffer.writeInt(castle.getId());
             if (castle.getOwnerId() > 0) {
-                if (ClanTable.getInstance().getClan(castle.getOwnerId()) != null) {
-                    buffer.writeString(ClanTable.getInstance().getClan(castle.getOwnerId()).getName());
+                if (ClanEngine.getInstance().getClan(castle.getOwnerId()) != null) {
+                    buffer.writeString(ClanEngine.getInstance().getClan(castle.getOwnerId()).getName());
                 } else {
                     LOGGER.warn("Castle owner with no name! Castle: " + castle.getName() + " has an OwnerId = " + castle.getOwnerId() + " who does not have a  name!");
                     buffer.writeString("");

@@ -42,8 +42,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Advi
  * @author JoeAlisson
@@ -164,7 +162,7 @@ public class TradeList {
             return false;
         }
 
-        if (MathUtil.checkMulOverFlow(price, count, getSettings(CharacterSettings.class).maxAdena())) {
+        if (MathUtil.checkMulOverFlow(price, count, CharacterSettings.maxAdena())) {
             LOGGER.warn("{} Attempt to overflow adena !", owner);
             return false;
         }
@@ -199,7 +197,7 @@ public class TradeList {
             return null;
         }
 
-        if (MathUtil.checkMulOverFlow(price, count, getSettings(CharacterSettings.class).maxAdena())) {
+        if (MathUtil.checkMulOverFlow(price, count, CharacterSettings.maxAdena())) {
             LOGGER.warn("{} Attempt to overflow adena !", owner);
             return null;
         }
@@ -539,7 +537,7 @@ public class TradeList {
             }
 
             // check for overflow in the single item
-            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
+            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), CharacterSettings.maxAdena())) {
                 // private store attempting to overflow - disable it
                 lock();
                 return 1;
@@ -547,7 +545,7 @@ public class TradeList {
 
             totalPrice += item.getCount() * item.getPrice();
             // check for overflow of the total price
-            if ((getSettings(CharacterSettings.class).maxAdena() < totalPrice) || (totalPrice < 0)) {
+            if ((CharacterSettings.maxAdena() < totalPrice) || (totalPrice < 0)) {
                 // private store attempting to overflow - disable it
                 lock();
                 return 1;
@@ -721,13 +719,13 @@ public class TradeList {
             }
 
             // check for overflow in the single item
-            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
+            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), CharacterSettings.maxAdena())) {
                 lock();
                 break;
             }
 
             final long _totalPrice = totalPrice + (item.getCount() * item.getPrice());
-            if ((getSettings(CharacterSettings.class).maxAdena() < _totalPrice) || (_totalPrice < 0)) {
+            if ((CharacterSettings.maxAdena() < _totalPrice) || (_totalPrice < 0)) {
                 lock();
                 break;
             }

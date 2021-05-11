@@ -18,50 +18,52 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
 /**
  * @author JoeAlisson
  */
-public class RateSettings implements Settings {
+public class RateSettings  {
 
-    private float xp;
-    private float rateVitalityExpMul;
-    private int maxItemsVitality;
-    private float rateVitalityLoss;
-    private float rateVitalityGain;
+    private static float xp;
+    private static float rateVitalityExpMul;
+    private static int maxItemsVitality;
+    private static float rateVitalityLoss;
+    private static float rateVitalityGain;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
+    private RateSettings() {
+        // helper class
+    }
+
+    public static void load(SettingsFile settingsFile) {
         xp = settingsFile.getFloat("RateXp", 1f);
         rateVitalityExpMul = settingsFile.getFloat("RateVitalityExpMultiplier", 2);
-        maxItemsVitality = settingsFile.getInteger("VitalityMaxItemsAllowed", 999);
+        maxItemsVitality = settingsFile.getInt("VitalityMaxItemsAllowed", 999);
         rateVitalityLoss = settingsFile.getFloat("RateVitalityLost", 1f);
         rateVitalityGain = settingsFile.getFloat("RateVitalityGain", 1f);
     }
 
-    public float xp() {
+    public static float xp() {
         return xp;
     }
 
-    public void setXp(float xp) {
-        this.xp = xp;
+    public static void setXp(float value) {
+        xp = value;
     }
 
-    public float rateVitalityExpMul() {
+    public static float rateVitalityExpMul() {
         return rateVitalityExpMul;
     }
 
-    public int maxItemsVitality() {
+    public static int maxItemsVitality() {
         return maxItemsVitality;
     }
 
-    public float rateVitalityLoss() {
+    public static float rateVitalityLoss() {
         return rateVitalityLoss;
     }
 
-    public float rateVitalityGain() {
+    public static float rateVitalityGain() {
         return rateVitalityGain;
     }
 }

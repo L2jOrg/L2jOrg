@@ -19,14 +19,14 @@
 package org.l2j.scripts.handlers.actionhandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.DoorRequest;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 
@@ -47,7 +47,7 @@ public class DoorAction implements IActionHandler
         else if (interact)
         {
             final Door door = (Door) target;
-            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByDoorId(door.getId());
+            final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallByDoorId(door.getId());
             // MyTargetSelected my = new MyTargetSelected(getObjectId(), activeChar.getLevel());
             // activeChar.sendPacket(my);
             if (target.isAutoAttackable(player))

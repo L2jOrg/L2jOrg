@@ -34,8 +34,6 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Sdw
  */
@@ -49,7 +47,7 @@ public final class BeautyShopData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/beautyShop.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/beautyShop.xsd");
     }
 
     @Override

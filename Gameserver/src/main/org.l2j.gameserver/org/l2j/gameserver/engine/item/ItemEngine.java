@@ -22,7 +22,10 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.PetDAO;
-import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
+import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
+import org.l2j.gameserver.data.xml.impl.ItemCrystallizationData;
+import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.Race;
@@ -63,7 +66,6 @@ import java.util.ServiceLoader;
 import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.*;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.util.GameUtils.isGM;
 
@@ -83,7 +85,7 @@ public final class ItemEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/items/items.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/items/items.xsd");
     }
 
     public void load() {
@@ -403,19 +405,18 @@ public final class ItemEngine extends GameXmlReader {
         final Item item = new Item(IdFactory.getInstance().getNextId(), template);
 
         // TODO Extract this block
-        var characterSettings = getSettings(CharacterSettings.class);
-        if (process.equalsIgnoreCase("loot") && !characterSettings.isAutoLoot(itemId)) {
+        if (process.equalsIgnoreCase("loot") && !CharacterSettings.isAutoLoot(itemId)) {
             ScheduledFuture<?> itemLootShedule;
             if ((reference instanceof Attackable) && ((Attackable) reference).isRaid()) // loot privilege for raids
             {
                 final Attackable raid = (Attackable) reference;
                 // if in CommandChannel and was killing a World/RaidBoss
-                if ((raid.getFirstCommandChannelAttacked() != null) && !characterSettings.autoLootRaid()) {
+                if ((raid.getFirstCommandChannelAttacked() != null) && !CharacterSettings.autoLootRaid()) {
                     item.changeOwner(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), characterSettings.raidLootPrivilegeTime());
+                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), CharacterSettings.raidLootPrivilegeTime());
                     item.setItemLootShedule(itemLootShedule);
                 }
-            } else if (!characterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
+            } else if (!CharacterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
                 item.changeOwner(actor.getObjectId());
                 itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
                 item.setItemLootShedule(itemLootShedule);
@@ -428,9 +429,8 @@ public final class ItemEngine extends GameXmlReader {
             item.setCount(count);
         }
 
-        var generalSettings = getSettings(GeneralSettings.class);
-        if (generalSettings.logItems() && !process.equals("Reset")) {
-            if (!generalSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA) {
+        if (GeneralSettings.logItems() && !process.equals("Reset")) {
+            if (!GeneralSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA) {
                 LOGGER_ITEMS.info("CREATE: {}, item {}:+{} {} ({}), Previous count{}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(), actor, reference);
             }
         }
@@ -442,7 +442,7 @@ public final class ItemEngine extends GameXmlReader {
     }
 
     private void auditGM(String process, int itemId, long count, Creature actor, Object reference, Item item) {
-        if (isGM(actor) && getSettings(GeneralSettings.class).auditGM()) {
+        if (isGM(actor) && GeneralSettings.auditGM()) {
 
             String referenceName = "no-reference";
             if (reference instanceof WorldObject) {
@@ -481,11 +481,8 @@ public final class ItemEngine extends GameXmlReader {
         World.getInstance().removeObject(item);
         IdFactory.getInstance().releaseId(item.getObjectId());
 
-        var generalSettings = getSettings(GeneralSettings.class);
-        if (generalSettings.logItems()) {
-            if (!generalSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA) {
-                LOGGER_ITEMS.info("DELETE: {}, item {}:+{} {} ({}), Previous Count ({}), {}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(),old ,actor, reference);
-            }
+        if (GeneralSettings.logItems() && (!GeneralSettings.smallLogItems() || item.isEquipable() || item.getId() == CommonItem.ADENA)) {
+            LOGGER_ITEMS.info("DELETE: {}, item {}:+{} {} ({}), Previous Count ({}), {}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(),old ,actor, reference);
         }
 
         auditGM(process, item.getId(), item.getCount(), actor, reference, item);

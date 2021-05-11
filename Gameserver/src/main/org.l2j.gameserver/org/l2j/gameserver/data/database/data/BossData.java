@@ -3,7 +3,6 @@ package org.l2j.gameserver.data.database.data;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.actor.Npc;
 
 @Table("boss_data")
 public class BossData {

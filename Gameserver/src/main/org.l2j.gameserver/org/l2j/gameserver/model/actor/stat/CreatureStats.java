@@ -39,7 +39,6 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.BiFunction;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
@@ -69,7 +68,7 @@ public class CreatureStats {
     /**
      * Creature's maximum buff count.
      */
-    private int _maxBuffCount = getSettings(CharacterSettings.class).maxBuffs();
+    private int maxBuff = CharacterSettings.maxBuffs();
     private double _vampiricSum = 0;
     /**
      * Values to be recalculated after every stat update
@@ -641,7 +640,7 @@ public class CreatureStats {
      * @return the maximum buff count
      */
     public int getMaxBuffCount() {
-        return _maxBuffCount;
+        return maxBuff;
     }
 
     /**
@@ -650,7 +649,7 @@ public class CreatureStats {
      * @param buffCount the buff count
      */
     public void setMaxBuffCount(int buffCount) {
-        _maxBuffCount = buffCount;
+        maxBuff = buffCount;
     }
 
     /**

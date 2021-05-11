@@ -70,7 +70,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
 import static java.util.Objects.*;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.engine.olympiad.OlympiadState.*;
@@ -242,7 +241,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private void removeOnlineHeroes(OlympiadDAO olympiadDAO) {
-        IntSet heroesIds = olympiadDAO.findHeroesId(getSettings(ServerSettings.class).serverId());
+        IntSet heroesIds = olympiadDAO.findHeroesId(ServerSettings.serverId());
         heroesIds.forEach(this::removeHero);
     }
 
@@ -495,7 +494,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private OlympiadHistoryData getLastCycleInfo(int playerId) {
-        return getDAO(OlympiadDAO.class).findHistory(playerId, getSettings(ServerSettings.class).serverId(), data.getSeason() - 1);
+        return getDAO(OlympiadDAO.class).findHistory(playerId, ServerSettings.serverId(), data.getSeason() - 1);
     }
 
     private OlympiadParticipantData participantDataOf(Player player) {
@@ -510,13 +509,13 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     private OlympiadParticipantData loadOrCreateParticipantData(Player player) {
-        OlympiadParticipantData data = getDAO(OlympiadDAO.class).findParticipantData(player.getObjectId(), getSettings(ServerSettings.class).serverId());
-        if(isNull(data)) {
-            data = OlympiadParticipantData.of(player, settings.initialPoints, getSettings(ServerSettings.class).serverId());
-            getDAO(OlympiadDAO.class).save(data);
+        var participantData = getDAO(OlympiadDAO.class).findParticipantData(player.getObjectId(), ServerSettings.serverId());
+        if(isNull(participantData)) {
+            participantData = OlympiadParticipantData.of(player, settings.initialPoints, ServerSettings.serverId());
+            getDAO(OlympiadDAO.class).save(participantData);
         }
-        participantsData.put(player.getObjectId(), data);
-        return data;
+        participantsData.put(player.getObjectId(), participantData);
+        return participantData;
     }
 
     short updateDefeat(Player player, int points, Player winnerLeader, Duration battleDuration) {
@@ -525,7 +524,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         data.increaseDefeats();
         data.increaseBattlesToday();
 
-        final int server =  getSettings(ServerSettings.class).serverId();
+        final int server =  ServerSettings.serverId();
         getDAO(OlympiadDAO.class).updateDefeat(player.getObjectId(), server, data.getPoints(), data.getBattlesToday());
         getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, winnerLeader, PlayerMatchResult.LOSS, data, battleDuration));
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(winnerLeader.getName(), winnerLeader.getClassId().getId(), winnerLeader.getLevel(), (byte) 0));
@@ -537,7 +536,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         data.updatePoints(points);
         data.increaseVictory();
         data.increaseBattlesToday();
-        final int server = getSettings(ServerSettings.class).serverId();
+        final int server = ServerSettings.serverId();
         getDAO(OlympiadDAO.class).updateVictory(player.getObjectId(), server, data.getPoints(), data.getBattlesToday());
         getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, loserLeader, PlayerMatchResult.VICTORY, data, battleDuration));
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(loserLeader.getName(), loserLeader.getClassId().getId(), loserLeader.getLevel(), (byte) 1));
@@ -548,7 +547,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         var data = participantDataOf(player);
         data.increaseBattlesToday();
 
-        final int server = getSettings(ServerSettings.class).serverId();
+        final int server = ServerSettings.serverId();
         getDAO(OlympiadDAO.class).updateTie(player.getObjectId(), server, data.getPoints(), data.getBattlesToday());
         getDAO(OlympiadDAO.class).save(OlympiadMatchResultData.of(player, server, enemy, PlayerMatchResult.DRAW, data, battleDuration));
         recentBattlesRecord.computeIfAbsent(player.getObjectId(), i -> new LimitedQueue<>(3)).add(new OlympiadBattleRecord(enemy.getName(), enemy.getClassId().getId(), enemy.getLevel(), (byte) 2));
@@ -565,7 +564,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public void showPersonalRank(Player player) {
-        final var server = getSettings(ServerSettings.class).serverId();
+        final var server = ServerSettings.serverId();
         final var rankData = getDAO(OlympiadDAO.class).findRankData(player.getObjectId(), server);
         final var previousData = getDAO(OlympiadDAO.class).findPreviousRankData(player.getObjectId(), server);
         player.sendPacket(new ExOlympiadMyRankInfo(rankData, previousData, recentBattlesRecord.get(player.getObjectId())));
@@ -617,7 +616,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
 
             player.broadcastUserInfo(UserInfoType.SOCIAL);
             addClanReputation(player);
-            getDAO(OlympiadDAO.class).claimHero(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+            getDAO(OlympiadDAO.class).claimHero(player.getObjectId(), ServerSettings.serverId());
 
             player.broadcastPacket(PlaySound.music("ns01_f"));
             final var className =  ClassListData.getInstance().getClass(player.getClassId()).getClassName();
@@ -642,11 +641,11 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public boolean isUnclaimedHero(Player player) {
-        return getDAO(OlympiadDAO.class).isUnclaimedHero(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+        return getDAO(OlympiadDAO.class).isUnclaimedHero(player.getObjectId(), ServerSettings.serverId());
     }
 
     public boolean isHero(int playerId) {
-        return getDAO(OlympiadDAO.class).isHero(playerId, getSettings(ServerSettings.class).serverId());
+        return getDAO(OlympiadDAO.class).isHero(playerId, ServerSettings.serverId());
     }
 
     private void addClanReputation(Player player) {
@@ -778,7 +777,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
     }
 
     public int getUnclaimedPoints(Player player) {
-        return getDAO(OlympiadDAO.class).unclaimedPoints(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+        return getDAO(OlympiadDAO.class).unclaimedPoints(player.getObjectId(), ServerSettings.serverId());
     }
 
     public void changePoints(Player player) {
@@ -796,7 +795,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
         points += getRankingPoints(player);
 
         giveItems(player, settings.markOfBattle, points * settings.markOfBattlePerPoint);
-        getDAO(OlympiadDAO.class).claimPoints(player.getObjectId(), getSettings(ServerSettings.class).serverId());
+        getDAO(OlympiadDAO.class).claimPoints(player.getObjectId(), ServerSettings.serverId());
     }
 
     private int getRankingPoints(Player player) {

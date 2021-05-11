@@ -43,7 +43,8 @@ import java.util.stream.Stream;
 import static java.lang.Math.abs;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.util.GameUtils.*;
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author JoeAlisson
@@ -73,7 +74,7 @@ public final class WorldRegion {
         if (isNull(objects.put(object.getObjectId(), object)) && isPlayer(object)) {
             // If this is the first player to enter the region, activate self and neighbors.
             playersInside.getAndIncrement();
-            if (!active && (!Config.GRIDS_ALWAYS_ON)) {
+            if (!active) {
                 startActivation();
             }
         }
@@ -162,7 +163,7 @@ public final class WorldRegion {
 
         if (nonNull(objects.remove(object.getObjectId())) && isPlayer(object)) {
             playersInside.getAndDecrement();
-            if (areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON) {
+            if (areNeighborsEmpty()) {
                 startDeactivation();
             }
         }

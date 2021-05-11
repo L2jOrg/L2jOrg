@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
@@ -26,6 +25,7 @@ import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.JoinParty;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.PartySettings;
 
 public final class RequestAnswerJoinParty extends ClientPacket {
     private int _response;
@@ -62,7 +62,7 @@ public final class RequestAnswerJoinParty extends ClientPacket {
         requestor.sendPacket(new JoinParty(_response));
 
         if (_response == 1) {
-            if (party.getMemberCount() >= Config.ALT_PARTY_MAX_MEMBERS) {
+            if (party.getMemberCount() >= PartySettings.maxMembers()) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
                 player.sendPacket(sm);
                 requestor.sendPacket(sm);

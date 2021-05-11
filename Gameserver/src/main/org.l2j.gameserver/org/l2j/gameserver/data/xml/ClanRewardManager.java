@@ -39,7 +39,6 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.enums.ClanRewardType.ARENA;
 
 /**
@@ -58,7 +57,7 @@ public class ClanRewardManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/clan-reward.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/clan-reward.xsd");
     }
 
     @Override

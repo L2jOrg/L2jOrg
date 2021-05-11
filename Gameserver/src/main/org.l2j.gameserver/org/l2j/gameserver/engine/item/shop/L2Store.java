@@ -42,7 +42,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -63,7 +62,7 @@ public class L2Store extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/shop/l2-store.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/shop/l2-store.xsd");
     }
 
     @Override

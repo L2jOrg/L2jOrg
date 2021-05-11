@@ -47,7 +47,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -63,7 +62,7 @@ public class SpawnsData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/spawns.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/spawns.xsd");
     }
 
     @Override
@@ -201,7 +200,7 @@ public class SpawnsData extends GameXmlReader {
     }
 
     public void spawnByName(String spawnName) {
-        if(getSettings(ServerSettings.class).parallelismThreshold() < spawns.size()) {
+        if(ServerSettings.parallelismThreshold() < spawns.size()) {
             spawns.parallelStream().filter(template -> spawnName.equals(template.getName())).forEach(template -> {
                 template.spawn(group -> spawnName.equals(group.getName()), null);
                 template.notifyActivate();
@@ -217,7 +216,7 @@ public class SpawnsData extends GameXmlReader {
     }
 
     public void deSpawnByName(String spawnName) {
-        if(getSettings(ServerSettings.class).parallelismThreshold() < spawns.size()) {
+        if(ServerSettings.parallelismThreshold() < spawns.size()) {
             spawns.parallelStream().filter(spawnTemplate -> spawnName.equals(spawnTemplate.getName())).forEach(template ->
                     template.despawn(spawnTemplate -> spawnName.equals(spawnTemplate.getName())));
         } else {
@@ -235,7 +234,7 @@ public class SpawnsData extends GameXmlReader {
         }
 
         LOGGER.info("Initializing spawns...");
-        if(getSettings(ServerSettings.class).parallelismThreshold() < spawns.size()) {
+        if(ServerSettings.parallelismThreshold() < spawns.size()) {
             spawns.parallelStream().filter(SpawnTemplate::isSpawningByDefault).forEach(template -> {
                 template.spawnAll(null);
                 template.notifyActivate();

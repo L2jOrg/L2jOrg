@@ -292,7 +292,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_MENTOR_ADD(RequestMenteeAdd::new, ConnectionState.IN_GAME_STATES),
     EX_MENTEE_WAITING_LIST(RequestMenteeWaitingList::new, ConnectionState.IN_GAME_STATES),
     EX_JOIN_PLEDGE_BY_NAME(RequestClanAskJoinByName::new, ConnectionState.IN_GAME_STATES),
-    EX_INZONE_WAITING_TIME(RequestInzoneWaitingTime::new, ConnectionState.IN_GAME_STATES),
+    EX_INZONE_WAITING_TIME(RequestInZoneWaitingTime::new, ConnectionState.IN_GAME_STATES),
     EX_JOIN_CURIOUS_HOUSE(RequestJoinCuriousHouse::new, ConnectionState.IN_GAME_STATES),
     EX_CANCEL_CURIOUS_HOUSE(RequestCancelCuriousHouse::new, ConnectionState.IN_GAME_STATES),
     EX_LEAVE_CURIOUS_HOUSE(null, ConnectionState.IN_GAME_STATES),

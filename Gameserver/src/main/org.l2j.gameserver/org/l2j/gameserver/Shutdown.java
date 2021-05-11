@@ -21,15 +21,13 @@ package org.l2j.gameserver;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
-import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.server.OnDayNightChange;
 import org.l2j.gameserver.model.events.impl.server.OnServerShutDown;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,7 +40,6 @@ import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -128,9 +125,6 @@ public class Shutdown extends Thread {
         try {
             GameServer.getInstance().getConnectionHandler().shutdown();
             LOGGER.info("Game Server: Networking has been shut down.");
-
-            AutoPlayEngine.getInstance().shutdown();
-            LOGGER.info("Auto Play Engine has been shut down.");
 
             WorldTimeController.getInstance().stopTimer();
             LOGGER.info("Game Time Controller: Timer stopped.");
@@ -265,7 +259,7 @@ public class Shutdown extends Thread {
         Olympiad.getInstance().saveOlympiadStatus();
         LOGGER.info("Olympiad System: Data saved.");
 
-        ClanTable.getInstance().shutdown();
+        ClanEngine.getInstance().shutdown();
         LOGGER.info("Clan System: Data saved.");
 
         // Save all manor data
@@ -284,7 +278,7 @@ public class Shutdown extends Thread {
         LOGGER.info("SchemeBufferTable data has been saved.");
 
         // Save items on ground before closing
-        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+        if (GeneralSettings.saveDroppedItems()) {
             ItemsOnGroundManager.getInstance().saveInDb();
             LOGGER.info("Items On Ground Manager: Data saved.");
             ItemsOnGroundManager.getInstance().cleanUp();

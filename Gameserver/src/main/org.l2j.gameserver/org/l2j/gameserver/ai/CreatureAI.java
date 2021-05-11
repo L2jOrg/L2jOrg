@@ -548,7 +548,6 @@ public class CreatureAI extends AbstractAI {
      */
     @Override
     protected void onEvtReadyToAct() {
-        // Launch actions corresponding to the Event Think
         onEvtThink();
     }
 

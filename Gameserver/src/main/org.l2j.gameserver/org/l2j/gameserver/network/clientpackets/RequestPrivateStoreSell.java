@@ -18,13 +18,13 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ItemRequest;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,7 +41,7 @@ public final class RequestPrivateStoreSell extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _storePlayerId = readInt();
         int itemsCount = readInt();
-        if ((itemsCount <= 0) || (itemsCount > Config.MAX_ITEM_IN_PACKET)) {
+        if (itemsCount <= 0 || itemsCount > CharacterSettings.maxItemInPacket()) {
             throw new InvalidDataPacketException();
         }
         _items = new ItemRequest[itemsCount];

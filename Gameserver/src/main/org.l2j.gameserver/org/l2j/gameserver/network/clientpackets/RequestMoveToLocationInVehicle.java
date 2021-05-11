@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.BoatManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Boat;
@@ -28,6 +27,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.MoveToLocationInVehicle;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -58,7 +58,7 @@ public final class RequestMoveToLocationInVehicle extends ClientPacket {
             return;
         }
 
-        if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !activeChar.isGM() && (activeChar.getNotMoveUntil() > System.currentTimeMillis())) {
+        if ((CharacterSettings.npcTalkBlockingTime() > 0) && !activeChar.isGM() && (activeChar.getNotMoveUntil() > System.currentTimeMillis())) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

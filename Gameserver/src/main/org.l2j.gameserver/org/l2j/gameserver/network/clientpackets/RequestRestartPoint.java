@@ -20,14 +20,14 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.data.SiegeClanData;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -108,7 +108,7 @@ public final class RequestRestartPoint extends ClientPacket {
                     return;
                 }
                 loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.CLANHALL);
-                final ClanHall residense = ClanHallManager.getInstance().getClanHallByClan(player.getClan());
+                final ClanHall residense = ClanHallEngine.getInstance().getClanHallByClan(player.getClan());
 
                 if ((residense != null) && (residense.hasFunction(ResidenceFunctionType.EXP_RESTORE))) {
                     player.restoreExp(residense.getFunction(ResidenceFunctionType.EXP_RESTORE).getValue() *100 -100);

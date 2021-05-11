@@ -40,7 +40,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Sdw
@@ -59,7 +58,7 @@ public class MissionData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/mission.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/mission.xsd");
     }
 
     @Override

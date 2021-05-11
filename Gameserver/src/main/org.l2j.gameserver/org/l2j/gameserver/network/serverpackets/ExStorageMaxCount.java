@@ -19,11 +19,11 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * @author -Wooden-, KenM
@@ -31,26 +31,20 @@ import org.l2j.gameserver.network.ServerExPacketId;
 public class ExStorageMaxCount extends ServerPacket {
     private final int _inventory;
     private final int _warehouse;
-    // private final int _freight; // Removed with 152.
-    private final int _clan;
     private final int _privateSell;
     private final int _privateBuy;
     private final int _receipeD;
     private final int _recipe;
     private final int _inventoryExtraSlots;
-    private final int _inventoryQuestItems;
 
-    public ExStorageMaxCount(Player activeChar) {
-        _inventory = activeChar.getInventoryLimit();
-        _warehouse = activeChar.getWareHouseLimit();
-        // _freight = Config.ALT_FREIGHT_SLOTS; // Removed with 152.
-        _privateSell = activeChar.getPrivateSellStoreLimit();
-        _privateBuy = activeChar.getPrivateBuyStoreLimit();
-        _clan = Config.WAREHOUSE_SLOTS_CLAN;
-        _receipeD = activeChar.getDwarfRecipeLimit();
-        _recipe = activeChar.getCommonRecipeLimit();
-        _inventoryExtraSlots = (int) activeChar.getStats().getValue(Stat.INVENTORY_NORMAL, 0);
-        _inventoryQuestItems = Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
+    public ExStorageMaxCount(Player player) {
+        _inventory = player.getInventoryLimit();
+        _warehouse = player.getWareHouseLimit();
+        _privateSell = player.getPrivateSellStoreLimit();
+        _privateBuy = player.getPrivateBuyStoreLimit();
+        _receipeD = player.getDwarfRecipeLimit();
+        _recipe = player.getCommonRecipeLimit();
+        _inventoryExtraSlots = (int) player.getStats().getValue(Stat.INVENTORY_NORMAL, 0);
     }
 
     @Override
@@ -59,14 +53,13 @@ public class ExStorageMaxCount extends ServerPacket {
 
         buffer.writeInt(_inventory);
         buffer.writeInt(_warehouse);
-        // writeInt(_freight); // Removed with 152.
-        buffer.writeInt(_clan);
+        buffer.writeInt(CharacterSettings.clanMaxWarehouseSlot());
         buffer.writeInt(_privateSell);
         buffer.writeInt(_privateBuy);
         buffer.writeInt(_receipeD);
         buffer.writeInt(_recipe);
         buffer.writeInt(_inventoryExtraSlots); // Belt inventory slots increase count
-        buffer.writeInt(_inventoryQuestItems);
+        buffer.writeInt(CharacterSettings.maxSlotsQuestItem());
         buffer.writeInt(40); // TODO: Find me!
         buffer.writeInt(40); // TODO: Find me!
         buffer.writeInt(0x64); // Artifact slots (Fixed)
