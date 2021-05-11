@@ -3371,6 +3371,9 @@ public final class SystemMessageId {
     @ClientString(id = 1729, message = "You cannot join a Command Channel while teleporting.")
     public static SystemMessageId YOU_CANNOT_JOIN_A_COMMAND_CHANNEL_WHILE_TELEPORTING;
 
+    @ClientString(id = 1730, message = "To establish a Clan Academy, your clan must be Level 5 or higher.")
+    public static SystemMessageId TO_ESTABLISH_A_CLAN_ACADEMY_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER;
+
     @ClientString(id = 1731, message = "Only the clan leader can create a Clan Academy.")
     public static SystemMessageId ONLY_THE_CLAN_LEADER_CAN_CREATE_A_CLAN_ACADEMY;
 
@@ -3389,11 +3392,17 @@ public final class SystemMessageId {
     @ClientString(id = 1737, message = "Your clan has not established a Clan Academy but is eligible to do so.")
     public static SystemMessageId YOUR_CLAN_HAS_NOT_ESTABLISHED_A_CLAN_ACADEMY_BUT_IS_ELIGIBLE_TO_DO_SO;
 
+     @ClientString(id = 1738, message = "Your clan has already established a Clan Academy.")
+    public static SystemMessageId YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY;
+
     @ClientString(id = 1739, message = "Would you like to create a Clan Academy?")
     public static SystemMessageId WOULD_YOU_LIKE_TO_CREATE_A_CLAN_ACADEMY;
 
     @ClientString(id = 1740, message = "Please enter the name of the Clan Academy.")
     public static SystemMessageId PLEASE_ENTER_THE_NAME_OF_THE_CLAN_ACADEMY;
+
+    @ClientString(id = 1741, message = "Congratulations! The $s1's Clan Academy has been created.")
+    public static SystemMessageId CONGRATULATIONS_THE_S1_S_CLAN_ACADEMY_HAS_BEEN_CREATED;
 
     @ClientString(id = 1742, message = "A message inviting $s1 to join the Clan Academy is being sent.")
     public static SystemMessageId A_MESSAGE_INVITING_S1_TO_JOIN_THE_CLAN_ACADEMY_IS_BEING_SENT;
@@ -15900,9 +15909,6 @@ public final class SystemMessageId {
     @ClientString(id = 1728, message = "The recipient of your invitation did not accept the party matching invitation.")
     public static SystemMessageId THE_RECIPIENT_OF_YOUR_INVITATION_DID_NOT_ACCEPT_THE_PARTY_MATCHING_INVITATION;
 
-    @ClientString(id = 1730, message = "To establish a Clan Academy, your clan must be Level 5 or higher.")
-    public static SystemMessageId TO_ESTABLISH_A_CLAN_ACADEMY_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER;
-
     @ClientString(id = 1735, message = "$s1 does not meet the requirements to join a Clan Academy.")
     public static SystemMessageId S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY;
 
@@ -15911,12 +15917,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1725, message = "You have earned $s1 raid point(s).")
     public static SystemMessageId YOU_HAVE_EARNED_S1_RAID_POINT_S;
-
-    @ClientString(id = 1738, message = "Your clan has already established a Clan Academy.")
-    public static SystemMessageId YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY;
-
-    @ClientString(id = 1741, message = "Congratulations! The $s1's Clan Academy has been created.")
-    public static SystemMessageId CONGRATULATIONS_THE_S1_S_CLAN_ACADEMY_HAS_BEEN_CREATED;
 
     @ClientString(id = 1749, message = "Congratulations! You will now graduate from the Clan Academy and leave your current clan. You can now join a clan without being subject to any penalties.")
     public static SystemMessageId CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES;
