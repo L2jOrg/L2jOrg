@@ -24,6 +24,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 /**
@@ -176,7 +177,7 @@ public final class WyvernManager extends AbstractNpcAI {
 				{
 					htmltext = "wyvernmanager-02.html";
 				}
-				else if (Config.ALLOW_WYVERN_ALWAYS)
+				else if (FeatureSettings.alwaysAllowRideWyvern())
 				{
 					htmltext = replaceAll(npc, player);
 				}
@@ -197,9 +198,9 @@ public final class WyvernManager extends AbstractNpcAI {
 			}
 			case "RideWyvern":
 			{
-				if (!Config.ALLOW_WYVERN_ALWAYS)
+				if (!FeatureSettings.alwaysAllowRideWyvern())
 				{
-					if (!Config.ALLOW_WYVERN_DURING_SIEGE && (isInSiege(npc) || player.isInSiege()))
+					if (!FeatureSettings.allowWyvernInSiege() && (isInSiege(npc) || player.isInSiege()))
 					{
 						player.sendMessage("You cannot summon wyvern while in siege.");
 						return null;
@@ -231,7 +232,7 @@ public final class WyvernManager extends AbstractNpcAI {
 		{
 			htmltext = "wyvernmanager-02.html";
 		}
-		else if (Config.ALLOW_WYVERN_ALWAYS)
+		else if (FeatureSettings.alwaysAllowRideWyvern())
 		{
 			htmltext = replaceAll(npc, player);
 		}

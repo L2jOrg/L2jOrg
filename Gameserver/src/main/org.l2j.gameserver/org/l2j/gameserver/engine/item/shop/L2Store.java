@@ -29,6 +29,7 @@ import org.l2j.gameserver.engine.item.shop.l2store.RestrictionPeriod;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.network.serverpackets.store.ExBRProductInfo;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -67,7 +68,7 @@ public class L2Store extends GameXmlReader {
 
     @Override
     public void load() {
-        if (!Config.ENABLE_L2_STORE){
+        if (!FeatureSettings.isL2StoreEnabled()){
             return;
         }
         primeItems.clear();

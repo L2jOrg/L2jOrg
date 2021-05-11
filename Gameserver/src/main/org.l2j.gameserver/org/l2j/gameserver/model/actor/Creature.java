@@ -75,6 +75,7 @@ import org.l2j.gameserver.model.stats.*;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.MapRegionManager;
@@ -310,7 +311,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void transform(Transform transformation, boolean addSkills) {
-        if (!Config.ALLOW_MOUNTS_DURING_SIEGE && transformation.isRiding() && isInsideZone(ZoneType.SIEGE)) {
+        if (!FeatureSettings.allowRideInSiege() && transformation.isRiding() && isInsideZone(ZoneType.SIEGE)) {
             return;
         }
 
