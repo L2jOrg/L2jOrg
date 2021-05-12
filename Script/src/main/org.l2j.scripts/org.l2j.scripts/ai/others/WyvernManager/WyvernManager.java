@@ -21,7 +21,6 @@ package org.l2j.scripts.ai.others.WyvernManager;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.FeatureSettings;

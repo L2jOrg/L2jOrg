@@ -20,7 +20,6 @@ package org.l2j.gameserver.engine.item.shop;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.L2StoreDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
