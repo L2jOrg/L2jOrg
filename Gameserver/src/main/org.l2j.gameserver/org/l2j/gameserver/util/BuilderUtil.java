@@ -39,11 +39,7 @@ public final class BuilderUtil {
      * @param message
      */
     public static void sendSysMessage(Player player, String message) {
-        if (Config.GM_STARTUP_BUILDER_HIDE) {
-            player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "SYS", message));
-        } else {
-            player.sendMessage(message);
-        }
+        player.sendMessage(message);
     }
 
     public static void sendSystemMessage(Player player, String message, Object... args) {
@@ -69,12 +65,10 @@ public final class BuilderUtil {
      */
     public static boolean setHiding(Player player, boolean hide) {
         if (player.isInvisible() && hide) {
-            // already hiding
             return false;
         }
 
         if (!player.isInvisible() && !hide) {
-            // already visible
             return false;
         }
 

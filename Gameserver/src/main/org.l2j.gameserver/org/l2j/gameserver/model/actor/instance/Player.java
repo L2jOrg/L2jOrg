@@ -6144,18 +6144,6 @@ public final class Player extends Playable {
 
     public void onEnter() {
         startWarnUserTakeBreak();
-        if (isGM() && !Config.GM_STARTUP_BUILDER_HIDE) {
-            if (isInvulnerable()) {
-                sendMessage("Entering world in Invulnerable mode.");
-            }
-            if (isInvisible()) {
-                sendMessage("Entering world in Invisible mode.");
-            }
-            if (silenceMode) {
-                sendMessage("Entering world in Silence mode.");
-            }
-        }
-
         restoreItemReuse();
         restoreShortCuts();
         restoreEffects();

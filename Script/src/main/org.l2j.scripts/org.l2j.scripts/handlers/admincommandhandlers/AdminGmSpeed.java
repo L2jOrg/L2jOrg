@@ -63,13 +63,6 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 			}
 			final String token = st.nextToken();
 			
-			// Rollback feature for old custom way, in order to make everyone happy.
-			if (Config.USE_SUPER_HASTE_AS_GM_SPEED)
-			{
-				AdminCommandHandler.getInstance().useAdminCommand(player, AdminSuperHaste.ADMIN_COMMANDS[0] + " " + token, false);
-				return true;
-			}
-			
 			if (!Util.isFloat(token))
 			{
 				BuilderUtil.sendSysMessage(player, "//gmspeed [0...10]");

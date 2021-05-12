@@ -84,8 +84,7 @@ public final class SkillTreesData extends GameXmlReader {
     private static final LongMap<SkillLearn> nobleSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> heroSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> gameMasterSkillTree = new HashLongMap<>();
-    private static final LongMap<SkillLearn> gameMasterAuraSkillTree = new HashLongMap<>();
-    // Remove skill tree
+
     private static final Map<ClassId, IntSet> removeSkillCache = new HashMap<>();
     /**
      * Parent class Ids are read from XML and stored in this map, to allow easy customization.
@@ -116,7 +115,6 @@ public final class SkillTreesData extends GameXmlReader {
         nobleSkillTree.clear();
         heroSkillTree.clear();
         gameMasterSkillTree.clear();
-        gameMasterAuraSkillTree.clear();
         removeSkillCache.clear();
 
         parseDatapackDirectory("data/skillTrees/", true);
@@ -201,7 +199,6 @@ public final class SkillTreesData extends GameXmlReader {
             case "nobleSkillTree" -> nobleSkillTree.put(skillHashCode, skillLearn);
             case "heroSkillTree" -> heroSkillTree.put(skillHashCode, skillLearn);
             case "gameMasterSkillTree" -> gameMasterSkillTree.put(skillHashCode, skillLearn);
-            case "gameMasterAuraSkillTree" -> gameMasterAuraSkillTree.put(skillHashCode, skillLearn);
             default -> LOGGER.warn("Unknown Skill Tree type: {}", type);
         }
     }
@@ -259,24 +256,6 @@ public final class SkillTreesData extends GameXmlReader {
      */
     public List<Skill> getHeroSkillTree() {
         return heroSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
-    }
-
-    /**
-     * Gets the Game Master skill tree.
-     *
-     * @return the complete Game Master Skill Tree
-     */
-    public List<Skill> getGMSkillTree() {
-        return gameMasterSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
-    }
-
-    /**
-     * Gets the Game Master Aura skill tree.
-     *
-     * @return the complete Game Master Aura Skill Tree
-     */
-    public List<Skill> getGMAuraSkillTree() {
-        return gameMasterAuraSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
     }
 
     public boolean hasAvailableSkills(Player player, ClassId classId) {
@@ -665,7 +644,7 @@ public final class SkillTreesData extends GameXmlReader {
      */
     public boolean isGMSkill(int skillId, int skillLevel) {
         final long hashCode = SkillEngine.skillHashCode(skillId, skillLevel);
-        return gameMasterSkillTree.containsKey(hashCode) || gameMasterAuraSkillTree.containsKey(hashCode);
+        return gameMasterSkillTree.containsKey(hashCode);
     }
 
     /**
@@ -684,17 +663,9 @@ public final class SkillTreesData extends GameXmlReader {
         return removeSkillCache.getOrDefault(classId, Containers.emptyIntSet()).contains(skillId);
     }
 
-    /**
-     * Adds the skills.
-     *
-     * @param gmchar     the player to add the Game Master skills
-     * @param auraSkills if {@code true} it will add "GM Aura" skills, else will add the "GM regular" skills
-     */
-    public void addSkills(Player gmchar, boolean auraSkills) {
-        final Collection<SkillLearn> skills = auraSkills ? gameMasterAuraSkillTree.values() : gameMasterSkillTree.values();
-        final SkillEngine st = SkillEngine.getInstance();
-        for (SkillLearn sl : skills) {
-            gmchar.addSkill(st.getSkill(sl.getSkillId(), sl.getSkillLevel()), false); // Don't Save GM skills to database
+    public void addGMSkills(Player gm) {
+        for (SkillLearn learn : gameMasterSkillTree.values()) {
+            gm.addSkill(learn.getSkill(), false);
         }
     }
 
@@ -819,7 +790,6 @@ public final class SkillTreesData extends GameXmlReader {
         LOGGER.info("Loaded {} Noble Skills.", nobleSkillTree.size());
         LOGGER.info("Loaded {} Hero Skills.", heroSkillTree.size());
         LOGGER.info("Loaded {} Game Master Skills.", gameMasterSkillTree.size());
-        LOGGER.info("Loaded {} Game Master Aura Skills.", gameMasterAuraSkillTree.size());
         LOGGER.info("Loaded {} Common Skills to all classes.", commonSkillTree.size());
     }
 

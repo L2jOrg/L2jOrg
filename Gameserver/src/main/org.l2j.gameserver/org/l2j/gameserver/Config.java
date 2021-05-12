@@ -134,10 +134,6 @@ public final class Config {
     public static int TRAP_UPGRADE_PRICE2;
     public static int TRAP_UPGRADE_PRICE3;
     public static int TRAP_UPGRADE_PRICE4;
-
-    // --------------------------------------------------
-    // Feature Settings
-    // --------------------------------------------------
     public static int TAKE_CASTLE_POINTS;
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
@@ -145,22 +141,6 @@ public final class Config {
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
-
-    public static boolean SERVER_GMONLY;
-    public static boolean GM_HERO_AURA;
-    public static boolean GM_STARTUP_BUILDER_HIDE;
-    public static boolean GM_STARTUP_INVULNERABLE;
-    public static boolean GM_STARTUP_INVISIBLE;
-    public static boolean GM_STARTUP_SILENCE;
-    public static boolean GM_STARTUP_AUTO_LIST;
-    public static boolean GM_STARTUP_DIET_MODE;
-    public static boolean GM_ITEM_RESTRICTION;
-    public static boolean GM_TRADE_RESTRICTED_ITEMS;
-    public static boolean GM_ANNOUNCER_NAME;
-    public static boolean GM_GIVE_SPECIAL_SKILLS;
-    public static boolean GM_GIVE_SPECIAL_AURA_SKILLS;
-    public static boolean GM_DEBUG_HTML_PATHS;
-    public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 
     public static boolean LOG_ITEM_ENCHANTS;
 
@@ -698,22 +678,6 @@ public final class Config {
 
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
-
-        SERVER_GMONLY = General.getBoolean("ServerGMOnly", false);
-        GM_HERO_AURA = General.getBoolean("GMHeroAura", false);
-        GM_STARTUP_BUILDER_HIDE = General.getBoolean("GMStartupBuilderHide", false);
-        GM_STARTUP_INVULNERABLE = General.getBoolean("GMStartupInvulnerable", false);
-        GM_STARTUP_INVISIBLE = General.getBoolean("GMStartupInvisible", false);
-        GM_STARTUP_SILENCE = General.getBoolean("GMStartupSilence", false);
-        GM_STARTUP_AUTO_LIST = General.getBoolean("GMStartupAutoList", false);
-        GM_STARTUP_DIET_MODE = General.getBoolean("GMStartupDietMode", false);
-        GM_ITEM_RESTRICTION = General.getBoolean("GMItemRestriction", true);
-        GM_TRADE_RESTRICTED_ITEMS = General.getBoolean("GMTradeRestrictedItems", false);
-        GM_ANNOUNCER_NAME = General.getBoolean("GMShowAnnouncerName", false);
-        GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
-        GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
-        GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
-        USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
 
         LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
 

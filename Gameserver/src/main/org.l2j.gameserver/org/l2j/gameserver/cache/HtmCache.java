@@ -21,8 +21,8 @@ package org.l2j.gameserver.cache;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.util.FilterUtil;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
@@ -91,7 +91,7 @@ public class HtmCache {
             CACHE.put(path, content);
         }
 
-        if ((player != null) && player.isGM() && (path != null) && Config.GM_DEBUG_HTML_PATHS) {
+        if (player != null && player.isGM() && path != null && AdminSettings.debugHtml()) {
             BuilderUtil.sendHtmlMessage(player, path.substring(5));
         }
         return content;
