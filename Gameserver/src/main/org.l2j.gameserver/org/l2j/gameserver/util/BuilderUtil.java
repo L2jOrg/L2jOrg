@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.util;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;

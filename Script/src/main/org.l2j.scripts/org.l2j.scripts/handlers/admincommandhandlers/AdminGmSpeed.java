@@ -19,8 +19,6 @@
 package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
