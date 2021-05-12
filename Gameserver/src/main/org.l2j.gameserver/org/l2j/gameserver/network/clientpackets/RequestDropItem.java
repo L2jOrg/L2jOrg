@@ -70,11 +70,13 @@ public final class RequestDropItem extends ClientPacket {
 
         final Item item = player.getInventory().getItemByObjectId(_objectId);
 
-        if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && !(player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems()) || player.isInsideZone(ZoneType.NO_ITEM_DROP)) {
+        if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) ||
+                (!item.isDropable() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())
+                || player.isInsideZone(ZoneType.NO_ITEM_DROP)) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             return;
         }
-        if (item.isQuestItem() && !(player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) {
+        if (item.isQuestItem() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) {
             return;
         }
 

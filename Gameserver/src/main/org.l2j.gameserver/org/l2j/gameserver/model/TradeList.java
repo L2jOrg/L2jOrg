@@ -29,6 +29,7 @@ import org.l2j.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSellingResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
@@ -142,7 +143,7 @@ public class TradeList {
     }
 
     private boolean validateItem(int objectId, long count, long price, Item item) {
-        if (!(item.isTradeable() || (owner.isGM() && Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem()) {
+        if (!(item.isTradeable() || (owner.isGM() && !AdminSettings.tradeRestrictItem())) || item.isQuestItem()) {
             LOGGER.warn("{} Attempt to add a restricted item!", owner);
             return false;
         }

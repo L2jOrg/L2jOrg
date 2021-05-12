@@ -457,10 +457,6 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     }
 
     public boolean checkCondition(Creature activeChar, WorldObject object, boolean sendMessage) {
-        if (activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !Config.GM_ITEM_RESTRICTION) {
-            return true;
-        }
-
         // Don't allow hero equipment and restricted items during Olympiad
         if ((isOlyRestrictedItem() || heroItem) && (isPlayer(activeChar) && activeChar.getActingPlayer().isInOlympiadMode())) {
             if (isEquipable()) {
