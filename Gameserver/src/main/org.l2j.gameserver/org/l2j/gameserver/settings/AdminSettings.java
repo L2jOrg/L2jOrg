@@ -32,6 +32,7 @@ public class AdminSettings {
     private static boolean showAnnouncerName;
     private static boolean giveGMSkills;
     private static boolean debugHtml;
+    private static int defaultAccessLevel;
 
     private AdminSettings() {
         // helper class
@@ -41,6 +42,7 @@ public class AdminSettings {
        gmOnlyServer = settingsFile.getBoolean("ServerGMOnly", false);
        showAura = settingsFile.getBoolean("GMHeroAura", false);
 
+       defaultAccessLevel = settingsFile.getInt("DefaultAccessLevel", 0);
        startUpHide = settingsFile.getBoolean("GMStartupBuilderHide", true);
        tradeRestrictItem = settingsFile.getBoolean("GMTradeRestrictedItems", false);
        showAnnouncerName = settingsFile.getBoolean("GMShowAnnouncerName", false);
@@ -79,5 +81,13 @@ public class AdminSettings {
 
     public static boolean debugHtml() {
         return debugHtml;
+    }
+
+    public static int defaultAccessLevel() {
+        return defaultAccessLevel;
+    }
+
+    public static void setDefaultAccessLevel(int accesslevel) {
+        defaultAccessLevel = accesslevel;
     }
 }

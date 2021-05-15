@@ -43,7 +43,6 @@ public class GeneralSettings {
 
     private static IllegalActionPunishmentType defaultPunishment;
     private static boolean disableChatInJail;
-    private static int defaultAccessLevel;
     private static int autoSavePlayerTime;
     private static Duration saveDroppedItemInterval;
     private static boolean clearDroppedItems;
@@ -82,9 +81,6 @@ public class GeneralSettings {
 
         defaultPunishment = settingsFile.getEnum("DefaultPunish", IllegalActionPunishmentType.class, IllegalActionPunishmentType.KICK);
         disableChatInJail = settingsFile.getBoolean("JailDisableChat", true);
-
-        defaultAccessLevel = settingsFile.getInt("DefaultAccessLevel", 0);
-
         autoSavePlayerTime = settingsFile.getInt("PlayerDataStoreInterval", 20);
      }
 
@@ -158,14 +154,6 @@ public class GeneralSettings {
 
     public static boolean disableChatInJail() {
         return disableChatInJail;
-    }
-
-    public static int defaultAccessLevel() {
-        return defaultAccessLevel;
-    }
-
-    public static void setDefaultAccessLevel(int accessLevel) {
-        defaultAccessLevel = accessLevel;
     }
 
     public static int autoSavePlayerTime() {
