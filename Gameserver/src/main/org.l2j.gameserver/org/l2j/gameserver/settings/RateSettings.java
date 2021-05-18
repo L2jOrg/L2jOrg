@@ -35,10 +35,10 @@ public class RateSettings implements Settings {
     @Override
     public void load(SettingsFile settingsFile) {
         xp = settingsFile.getFloat("RateXp", 1f);
-        rateVitalityExpMul = settingsFile.getFloat("RateVitalityExpMultiplier", 2);
-        maxItemsVitality = settingsFile.getInteger("VitalityMaxItemsAllowed", 999);
-        rateVitalityLoss = settingsFile.getFloat("RateVitalityLost", 1f);
-        rateVitalityGain = settingsFile.getFloat("RateVitalityGain", 1f);
+        rateVitalityExpMul = settingsFile.getFloat("RateSayhaGraceExpMultiplier", 2);
+        maxItemsVitality = settingsFile.getInteger("SayhaGraceMaxItemsAllowed", 999);
+        rateVitalityLoss = settingsFile.getFloat("RateSayhaGraceLost", 1f);
+        rateVitalityGain = settingsFile.getFloat("RateSayhaGraceGain", 1f);
     }
 
     public float xp() {
