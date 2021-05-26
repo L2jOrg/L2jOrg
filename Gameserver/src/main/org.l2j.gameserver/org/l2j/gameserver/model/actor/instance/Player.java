@@ -5397,7 +5397,7 @@ public final class Player extends Playable {
      */
     @Override
     public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
-        if (!checkUseSkill(skill)) {
+        if (!checkUseSkill(skill, item)) {
             return false;
         }
 
@@ -5451,7 +5451,7 @@ public final class Player extends Playable {
         return true;
     }
 
-    private boolean checkUseSkill(Skill skill) {
+    private boolean checkUseSkill(Skill skill, Item item) {
         if (skill.isPassive() || isDead() || (skill.isToggle() && isMounted())) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -5487,7 +5487,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (sitting) {
+        if (sitting && item == null) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
