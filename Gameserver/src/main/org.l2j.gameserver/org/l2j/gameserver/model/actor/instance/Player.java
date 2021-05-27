@@ -5398,6 +5398,7 @@ public final class Player extends Playable {
     @Override
     public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
         if (!checkUseSkill(skill, item)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
@@ -5453,21 +5454,45 @@ public final class Player extends Playable {
 
     private boolean checkUseSkill(Skill skill, Item item) {
         if (skill.isPassive() || isDead() || (skill.isToggle() && isMounted())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        if(!SkillCaster.checkSkillConsume(this, skill)) {
+        if (!checkSkillPlayerState(skill, item)) {
             return false;
         }
 
-        if (!CharacterSettings.allowPKTeleport() && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
-            sendPacket(ActionFailed.STATIC_PACKET);
+        return checkUseSkillState(skill);
+    }
+
+    private boolean checkUseSkillState(Skill skill) {
+        if (isSkillDisabled(skill)) {
+            sendSkillReuseTimeMessage(skill);
             return false;
         }
 
-        if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
+        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
+            return false;
+        }
+
+        if (isFakeDeath()) {
+            return false;
+        }
+
+        return !isNull(currentSkillWorldPosition) || skill.getTargetType() != TargetType.GROUND;
+    }
+
+    private boolean checkSkillPlayerState(Skill skill, Item item) {
+        if (sitting && item == null) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
+            return false;
+        }
+
+        if (inObserverMode) {
+            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+            return false;
+        }
+
+        if (!CharacterSettings.allowPKTeleport() && getReputation() < 0 && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             return false;
         }
 
@@ -5476,39 +5501,11 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (inObserverMode) {
-            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-            sendPacket(ActionFailed.STATIC_PACKET);
+        if(!SkillCaster.checkSkillConsume(this, skill)) {
             return false;
         }
 
-        if (isSkillDisabled(skill)) {
-            sendSkillReuseTimeMessage(skill);
-            return false;
-        }
-
-        if (sitting && item == null) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        // Note: do not check this before TOGGLE reset
-        if (isFakeDeath()) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (isNull(currentSkillWorldPosition) && skill.getTargetType() == TargetType.GROUND) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-        return true;
+        return skill.canCastWhileDisabled() || (!isControlBlocked() && !hasBlockActions());
     }
 
     private void sendSkillReuseTimeMessage(Skill skill) {
