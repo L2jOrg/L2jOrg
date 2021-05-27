@@ -71,14 +71,14 @@ public final class ZoneEngine extends GameXmlReader {
     private final Map<String, ZoneFactory> factories = new HashMap<>();
     private final ZoneRegion[][] zoneRegions;
     private int lastDynamicId = 300000;
-    private List<Item> _debugItems;
+    private List<Item> debugItems;
 
     private ZoneEngine() {
         var regionsX = (World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1;
         var regionsY = (World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1;
         zoneRegions = new ZoneRegion[regionsX][regionsY];
-        for (int x = 0; x < regionsX; x++) {
-            for (int y = 0; y < regionsY; y++) {
+        for (var x = 0; x < regionsX; x++) {
+            for (var y = 0; y < regionsY; y++) {
                 zoneRegions[x][y] = new ZoneRegion();
             }
         }
@@ -154,7 +154,7 @@ public final class ZoneEngine extends GameXmlReader {
     }
 
     private void parseZoneProperties(Node zoneNode, Zone zone) throws InvalidZoneException {
-        for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+        for (var node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             var attr = node.getAttributes();
             switch (node.getNodeName()) {
                 case "polygon" -> zone.setArea(parsePolygon(node));
@@ -178,7 +178,7 @@ public final class ZoneEngine extends GameXmlReader {
         zone.setArea(area);
 
         if(isNull(zone.getArea())) {
-            LOGGER.error("There is no defined area to Zone " + zone);
+            LOGGER.error("There is no defined area to Zone {}", zone);
         }
 
         if(nonNull(addZone(zoneId, zone))) {
@@ -193,13 +193,13 @@ public final class ZoneEngine extends GameXmlReader {
         // Register the zone into any world region it
         // intersects with...
         // currently 11136 test for each zone :>
-        for (int x = 0; x < zoneRegions.length; x++) {
-            for (int y = 0; y < zoneRegions[x].length; y++) {
+        for (var x = 0; x < zoneRegions.length; x++) {
+            for (var y = 0; y < zoneRegions[x].length; y++) {
 
-                final int ax = (x - OFFSET_X) << SHIFT_BY;
-                final int bx = ((x + 1) - OFFSET_X) << SHIFT_BY;
-                final int ay = (y - OFFSET_Y) << SHIFT_BY;
-                final int by = ((y + 1) - OFFSET_Y) << SHIFT_BY;
+                final var ax = (x - OFFSET_X) << SHIFT_BY;
+                final var bx = ((x + 1) - OFFSET_X) << SHIFT_BY;
+                final var ay = (y - OFFSET_Y) << SHIFT_BY;
+                final var by = ((y + 1) - OFFSET_Y) << SHIFT_BY;
 
                 if (zone.getArea().intersectsRectangle(ax, bx, ay, by)) {
                     zoneRegions[x][y].getZones().put(zone.getId(), zone);
@@ -261,7 +261,7 @@ public final class ZoneEngine extends GameXmlReader {
         IntList yPoints = new ArrayIntList();
 
         for (Node node = polygonNode.getFirstChild(); node != null; node = node.getNextSibling()) {
-            if ("point".equalsIgnoreCase(node.getNodeName())) {
+            if (isPointNode(node)) {
                 var attr = node.getAttributes();
                 xPoints.add(parseInt(attr, "x"));
                 yPoints.add(parseInt(attr, "y"));
@@ -277,20 +277,24 @@ public final class ZoneEngine extends GameXmlReader {
         return new ZonePolygonArea(xPoints.toArray(int[]::new), yPoints.toArray(int[]::new), minZ, maxZ);
     }
 
+    private boolean isPointNode(Node node) {
+        return "point".equalsIgnoreCase(node.getNodeName());
+    }
+
     private ZoneArea parseCylinder(Node zoneNode) throws InvalidZoneException {
         var attributes = zoneNode.getAttributes();
-        int radius = parseInt(attributes, "radius");
+        var radius = parseInt(attributes, "radius");
 
         if(radius <= 0) {
             throw new  InvalidZoneException("The Zone with Cylinder form must have a radius");
         }
 
-        for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
-            if ("point".equalsIgnoreCase(node.getNodeName())) {
+        for (var node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+            if (isPointNode(node)) {
                 var attr = node.getAttributes();
 
-                int x = parseInt(attr, "x");
-                int y = parseInt(attr, "y");
+                var x = parseInt(attr, "x");
+                var y = parseInt(attr, "y");
                 var minZ = parseInt(attributes, "min-z");
                 var maxZ = parseInt(attributes, "max-z");
                 return new ZoneCylinderArea(x, y, minZ, maxZ, radius);
@@ -301,14 +305,14 @@ public final class ZoneEngine extends GameXmlReader {
 
     private ZoneArea parseCube(Node cubeNode) throws InvalidZoneException {
         var attributes = cubeNode.getAttributes();
-        int[] points = new int[4];
+        var points = new int[4];
         var point = 0;
-        for (Node node = cubeNode.getFirstChild(); node != null; node = node.getNextSibling()) {
-            if ("point".equalsIgnoreCase(node.getNodeName())) {
+        for (var node = cubeNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+            if (isPointNode(node)) {
                 var attr = node.getAttributes();
 
-                int x = parseInt(attr, "x");
-                int y = parseInt(attr, "y");
+                var x = parseInt(attr, "x");
+                var y = parseInt(attr, "y");
                 points[point++] = x;
                 points[point++] = y;
 
@@ -503,20 +507,20 @@ public final class ZoneEngine extends GameXmlReader {
      * @return list of items
      */
     List<Item> getDebugItems() {
-        if (_debugItems == null) {
-            _debugItems = new ArrayList<>();
+        if (debugItems == null) {
+            debugItems = new ArrayList<>();
         }
-        return _debugItems;
+        return debugItems;
     }
 
     /**
      * Remove all debug items from l2world.
      */
     public void clearDebugItems() {
-        if (_debugItems != null) {
-            final Iterator<Item> it = _debugItems.iterator();
+        if (debugItems != null) {
+            final var it = debugItems.iterator();
             while (it.hasNext()) {
-                final Item item = it.next();
+                final var item = it.next();
                 if (item != null) {
                     item.decayMe();
                 }

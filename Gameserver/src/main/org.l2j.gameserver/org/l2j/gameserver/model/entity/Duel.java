@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.DuelResult;
@@ -33,18 +32,14 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.MathUtil;
-import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-
 
 public class Duel {
     public static final int DUELSTATE_NODUEL = 0;

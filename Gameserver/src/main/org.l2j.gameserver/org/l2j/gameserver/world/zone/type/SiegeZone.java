@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.entity.Siegable;
 import org.l2j.gameserver.model.skills.BuffInfo;
+import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -36,6 +37,7 @@ import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.w3c.dom.Node;
 
+import static org.l2j.gameserver.model.skills.CommonSkill.BATTLEGROUND_DEATH_SYNDROME;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -121,19 +123,16 @@ public class SiegeZone extends Zone {
 
     @Override
     public void onDieInside(Creature creature) {
-        if (getSettings().isActiveSiege()) {
-            // debuff participants only if they die inside siege zone
-            if (isPlayer(creature) && creature.getActingPlayer().isRegisteredOnThisSiegeField(castleId)) {
-                int lvl = 1;
-                final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(5660);
-                if (info != null) {
-                    lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
-                }
+        if (getSettings().isActiveSiege() && creature instanceof Player player && player.isRegisteredOnThisSiegeField(castleId)) {
+            var level = 1;
+            final var buff = creature.getEffectList().getBuffInfoBySkillId(BATTLEGROUND_DEATH_SYNDROME.getId());
+            if (buff != null) {
+                level = Math.min(level + buff.getSkill().getLevel(), 5);
+            }
 
-                final Skill skill = SkillEngine.getInstance().getSkill(5660, lvl);
-                if (skill != null) {
-                    skill.applyEffects(creature, creature);
-                }
+            final var skill = SkillEngine.getInstance().getSkill(BATTLEGROUND_DEATH_SYNDROME.getId(), level);
+            if (skill != null) {
+                skill.applyEffects(creature, creature);
             }
         }
     }

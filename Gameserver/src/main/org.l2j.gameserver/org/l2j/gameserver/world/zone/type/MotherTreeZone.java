@@ -27,8 +27,6 @@ import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.w3c.dom.Node;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
-
 /**
  * A mother-trees zone Basic type zone for Hp, MP regen
  *
@@ -46,8 +44,7 @@ public class MotherTreeZone extends Zone {
 
     @Override
     protected void onEnter(Creature creature) {
-        if (isPlayer(creature)) {
-            final Player player = creature.getActingPlayer();
+        if (creature instanceof Player player) {
             creature.setInsideZone(ZoneType.MOTHER_TREE, true);
             player.sendPacket(enterMsg);
         }
@@ -55,23 +52,16 @@ public class MotherTreeZone extends Zone {
 
     @Override
     protected void onExit(Creature creature) {
-        if (isPlayer(creature)) {
-            final Player player = creature.getActingPlayer();
+        if (creature instanceof Player player) {
             player.setInsideZone(ZoneType.MOTHER_TREE, false);
             player.sendPacket(leaveMsg);
         }
     }
 
-    /**
-     * @return the _mpRegen
-     */
     public int getMpRegenBonus() {
         return mpRegen;
     }
 
-    /**
-     * @return the _hpRegen
-     */
     public int getHpRegenBonus() {
         return hpRegen;
     }

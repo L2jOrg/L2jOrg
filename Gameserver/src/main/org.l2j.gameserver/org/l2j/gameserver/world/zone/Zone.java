@@ -65,10 +65,7 @@ public abstract class Zone extends ListenersContainer {
     public int getId() {
         return id;
     }
-
-    public void setParameter(String name, String value) {
-    }
-
+    
     /**
      * @param creature the creature to verify.
      * @return {@code true} if the given character is affected by this zone, {@code false} otherwise.

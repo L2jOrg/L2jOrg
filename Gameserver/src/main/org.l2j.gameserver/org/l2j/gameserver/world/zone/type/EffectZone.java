@@ -24,13 +24,17 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.util.GameXmlReader;
-import org.l2j.gameserver.world.zone.*;
+import org.l2j.gameserver.world.zone.TaskZoneSettings;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.w3c.dom.Node;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.util.Objects.*;
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -58,17 +62,6 @@ public final class EffectZone extends Zone {
     @Override
     public TaskZoneSettings getSettings() {
         return (TaskZoneSettings) super.getSettings();
-    }
-
-    @Override
-    public void setParameter(String name, String value) {
-        switch (name) {
-            case "chance" -> chance = Integer.parseInt(value);
-            case "initialDelay" -> startTime = Integer.parseInt(value);
-            case "reuse" -> delay = Integer.parseInt(value);
-            case "bypassSkillConditions" -> bypassConditions = Boolean.parseBoolean(value);
-            case "showDangerIcon" -> showDangerIcon = Boolean.parseBoolean(value);
-        }
     }
 
     public int getSkillLevel(int skillId) {
@@ -117,11 +110,6 @@ public final class EffectZone extends Zone {
     }
 
     private final class ApplySkill implements Runnable {
-        ApplySkill() {
-            if (isNull(skills)) {
-                throw new IllegalStateException("No skills defined.");
-            }
-        }
 
         @Override
         public void run() {
