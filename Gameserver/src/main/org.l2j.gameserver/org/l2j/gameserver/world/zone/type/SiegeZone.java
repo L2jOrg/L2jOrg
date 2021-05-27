@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -26,8 +25,6 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.entity.Siegable;
-import org.l2j.gameserver.model.skills.BuffInfo;
-import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -181,15 +178,6 @@ public class SiegeZone extends Zone {
 
     public void setSiegeInstance(Siegable siege) {
         getSettings().setSiege(siege);
-    }
-
-    /**
-     * Removes all foreigners from the zone
-     *
-     * @param owningClanId
-     */
-    public void banishForeigners(int owningClanId) {
-        forEachPlayer(p -> p.teleToLocation(TeleportWhereType.TOWN), p -> p.getClanId() != owningClanId);
     }
 
     public static final class Settings extends AbstractZoneSettings {

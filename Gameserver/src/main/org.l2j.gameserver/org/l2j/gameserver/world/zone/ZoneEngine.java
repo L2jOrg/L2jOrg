@@ -65,6 +65,8 @@ public final class ZoneEngine extends GameXmlReader {
     private static final int SHIFT_BY = 15;
     private static final int OFFSET_X = Math.abs(World.MAP_MIN_X >> SHIFT_BY);
     private static final int OFFSET_Y = Math.abs(World.MAP_MIN_Y >> SHIFT_BY);
+    public static final String MIN_Z = "min-z";
+    public static final String MAX_Z = "max-z";
 
     private final Map<Class<? extends Zone>, IntMap<? extends Zone>> classZones = new HashMap<>();
     private final Map<String, SpawnTerritory> spawnTerritories = new HashMap<>();
@@ -209,20 +211,20 @@ public final class ZoneEngine extends GameXmlReader {
     }
 
     private void parseRespawn(Zone zone, NamedNodeMap attr) {
-        if(zone instanceof RespawnZone) {
+        if(zone instanceof RespawnZone respawnZone) {
             var race = parseString(attr, "race");
-            final String point = parseString(attr,"region");
-            ((RespawnZone) zone).addRaceRespawnPoint(race, point);
+            final var region = parseString(attr,"region");
+            respawnZone.addRaceRespawnPoint(race, region);
         }
     }
 
     private void parseSpawn(Zone zone, NamedNodeMap attr) {
-        if(zone instanceof SpawnZone) {
+        if(zone instanceof SpawnZone spawnZone) {
             var x = parseInt(attr, "x");
             var y = parseInt(attr, "y");
             var z = parseInt(attr, "z");
             var type = parseString(attr, "type");
-            ((SpawnZone) zone).parseLoc(x, y, z, type);
+            spawnZone.parseLoc(x, y, z, type);
         }
     }
 
@@ -236,7 +238,7 @@ public final class ZoneEngine extends GameXmlReader {
 
             ZoneArea area = null;
 
-            for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+            for (var node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
 
                 area = switch (node.getNodeName()) {
                     case "polygon" -> parsePolygon(node);
@@ -260,7 +262,7 @@ public final class ZoneEngine extends GameXmlReader {
         IntList xPoints = new ArrayIntList();
         IntList yPoints = new ArrayIntList();
 
-        for (Node node = polygonNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+        for (var node = polygonNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             if (isPointNode(node)) {
                 var attr = node.getAttributes();
                 xPoints.add(parseInt(attr, "x"));
@@ -272,8 +274,8 @@ public final class ZoneEngine extends GameXmlReader {
         }
 
         var attributes = polygonNode.getAttributes();
-        var minZ = parseInt(attributes, "min-z");
-        var maxZ = parseInt(attributes, "max-z");
+        var minZ = parseInt(attributes, MIN_Z);
+        var maxZ = parseInt(attributes, MAX_Z);
         return new ZonePolygonArea(xPoints.toArray(int[]::new), yPoints.toArray(int[]::new), minZ, maxZ);
     }
 
@@ -295,8 +297,8 @@ public final class ZoneEngine extends GameXmlReader {
 
                 var x = parseInt(attr, "x");
                 var y = parseInt(attr, "y");
-                var minZ = parseInt(attributes, "min-z");
-                var maxZ = parseInt(attributes, "max-z");
+                var minZ = parseInt(attributes, MIN_Z);
+                var maxZ = parseInt(attributes, MAX_Z);
                 return new ZoneCylinderArea(x, y, minZ, maxZ, radius);
             }
         }
@@ -317,8 +319,8 @@ public final class ZoneEngine extends GameXmlReader {
                 points[point++] = y;
 
                 if(point > 3) {
-                    var minZ = parseInt(attributes, "min-z");
-                    var maxZ = parseInt(attributes, "max-z");
+                    var minZ = parseInt(attributes, MIN_Z);
+                    var maxZ = parseInt(attributes, MAX_Z);
                     return new ZoneCubeArea(points[0], points[2], points[1], points[3], minZ, maxZ);
                 }
             }
