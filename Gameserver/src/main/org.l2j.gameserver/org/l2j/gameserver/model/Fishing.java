@@ -42,7 +42,7 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndT
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingStart;
 import org.l2j.gameserver.network.serverpackets.fishing.ExUserInfoFishing;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.FishingZone;
 import org.l2j.gameserver.world.zone.type.WaterZone;
@@ -348,7 +348,7 @@ public class Fishing {
 
         // search for fishing zone
         FishingZone fishingZone = null;
-        for (Zone zone : ZoneManager.getInstance().getZones(player)) {
+        for (Zone zone : ZoneEngine.getInstance().getZones(player)) {
             if (zone instanceof FishingZone) {
                 fishingZone = (FishingZone) zone;
                 break;
@@ -356,7 +356,7 @@ public class Fishing {
         }
         // search for water zone
         WaterZone waterZone = null;
-        for (Zone zone : ZoneManager.getInstance().getZones(baitX, baitY)) {
+        for (Zone zone : ZoneEngine.getInstance().getZones(baitX, baitY)) {
             if (zone instanceof WaterZone) {
                 waterZone = (WaterZone) zone;
                 break;

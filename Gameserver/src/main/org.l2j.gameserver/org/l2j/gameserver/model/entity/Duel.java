@@ -33,7 +33,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.MathUtil;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.slf4j.Logger;
@@ -359,22 +359,15 @@ public class Duel {
         }
 
         final int instanceId = DuelManager.getInstance().getDuelArena();
-        final OlympiadStadiumZone zone = ZoneManager.getInstance().getAllZones(OlympiadStadiumZone.class) //
-                .stream().filter(z -> z.getInstanceTemplateId() == instanceId).findFirst().orElse(null);
-
-        if (zone == null) {
-            throw new RuntimeException("Unable to find a party duel arena!");
-        }
-
-        final List<Location> spawns = zone.getSpawns();
         _duelInstance = InstanceManager.getInstance().createInstance(instanceId, null);
 
-        final Location spawn1 = spawns.get(Rnd.get(spawns.size() / 2));
+        var spawns = _duelInstance.getEnterLocations();
+        final Location spawn1 = spawns.get(0);
         for (Player temp : _playerA.getParty().getMembers()) {
             temp.teleToLocation(spawn1.getX(), spawn1.getY(), spawn1.getZ(), 0, 0, _duelInstance);
         }
 
-        final Location spawn2 = spawns.get(Rnd.get(spawns.size() / 2, spawns.size()));
+        final Location spawn2 = spawns.get(1);
         for (Player temp : _playerB.getParty().getMembers()) {
             temp.teleToLocation(spawn2.getX(), spawn2.getY(), spawn2.getZ(), 0, 0, _duelInstance);
         }

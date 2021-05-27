@@ -38,7 +38,7 @@ import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.EffectZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -430,8 +430,9 @@ public class FourSepulchers extends AbstractNpcAI
 			case ROOM_4_CHARM_3:
 			case ROOM_4_CHARM_4:
 			{
-				for (Zone zone : ZoneManager.getInstance().getZones(killer))
+				for (Zone zone : ZoneEngine.getInstance().getZones(killer))
 				{
+					// TODO improve to remove getSkillLevel from EffectZone
 					if ((zone instanceof EffectZone) && (((EffectZone) zone).getSkillLevel(CHARM_SKILLS.get(npc.getId())) > 0))
 					{
 						zone.setEnabled(false);
@@ -487,7 +488,7 @@ public class FourSepulchers extends AbstractNpcAI
 	private void tryEnter(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
-		if (ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).getPlayersInsideCount() > 0)
+		if (ZoneEngine.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).getPlayersInsideCount() > 0)
 		{
 			showHtmlFile(player, npcId + "-FULL.htm", npc, null);
 			return;
@@ -534,7 +535,7 @@ public class FourSepulchers extends AbstractNpcAI
 		final int sepulcherId = getSepulcherId(player);
 		
 		// Delete any existing spawns
-		ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).forEachCreature(creature -> {
+		ZoneEngine.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).forEachCreature(creature -> {
 			if (GameUtils.isMonster(creature) || creature.isRaid() || (GameUtils.isNpc(creature) && ((creature.getId() == MYSTERIOUS_CHEST) || (creature.getId() == KEY_CHEST) || (creature.getId() == TELEPORTER))))
 			{
 				creature.deleteMe();
@@ -546,7 +547,7 @@ public class FourSepulchers extends AbstractNpcAI
 		{
 			if ((spawnInfo[0] == sepulcherId) && (spawnInfo[1] == 4))
 			{
-				for (Zone zone : ZoneManager.getInstance().getZones(spawnInfo[2], spawnInfo[3], spawnInfo[4]))
+				for (Zone zone : ZoneEngine.getInstance().getZones(spawnInfo[2], spawnInfo[3], spawnInfo[4]))
 				{
 					if (zone instanceof EffectZone)
 					{
@@ -589,7 +590,7 @@ public class FourSepulchers extends AbstractNpcAI
 		// Kick all players when/if time is over
 		ThreadPool.schedule(() ->
 		{
-			ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).oustAllPlayers();
+			ZoneEngine.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).oustAllPlayers();
 		}, TIME_ATTACK * 60 * 1000);
 		
 		// Save attack time
@@ -613,7 +614,7 @@ public class FourSepulchers extends AbstractNpcAI
 		}
 		if (currentWave == 4)
 		{
-			for (Zone zone : ZoneManager.getInstance().getZones(player))
+			for (Zone zone : ZoneEngine.getInstance().getZones(player))
 			{
 				if (zone instanceof EffectZone)
 				{
@@ -652,19 +653,19 @@ public class FourSepulchers extends AbstractNpcAI
 	
 	private int getSepulcherId(Player player)
 	{
-		if (ZoneManager.getInstance().getZoneById(CONQUEROR_ZONE).isCreatureInZone(player))
+		if (ZoneEngine.getInstance().getZoneById(CONQUEROR_ZONE).isCreatureInZone(player))
 		{
 			return 1;
 		}
-		if (ZoneManager.getInstance().getZoneById(EMPEROR_ZONE).isCreatureInZone(player))
+		if (ZoneEngine.getInstance().getZoneById(EMPEROR_ZONE).isCreatureInZone(player))
 		{
 			return 2;
 		}
-		if (ZoneManager.getInstance().getZoneById(GREAT_SAGES_ZONE).isCreatureInZone(player))
+		if (ZoneEngine.getInstance().getZoneById(GREAT_SAGES_ZONE).isCreatureInZone(player))
 		{
 			return 3;
 		}
-		if (ZoneManager.getInstance().getZoneById(JUDGE_ZONE).isCreatureInZone(player))
+		if (ZoneEngine.getInstance().getZoneById(JUDGE_ZONE).isCreatureInZone(player))
 		{
 			return 4;
 		}

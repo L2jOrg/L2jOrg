@@ -41,7 +41,7 @@ import org.l2j.gameserver.network.serverpackets.ExShowTerritory;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
@@ -177,7 +177,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler {
 
     private void buildZonesEditorWindow(Player activeChar) {
         final StringBuilder sb = new StringBuilder();
-        final List<Zone> zones = ZoneManager.getInstance().getZones(activeChar);
+        final List<Zone> zones = ZoneEngine.getInstance().getZones(activeChar);
         for (Zone zone : zones) {
             if (zone.getArea() instanceof ZonePolygonArea) {
                 sb.append("<tr>");
@@ -194,7 +194,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler {
 
     private void loadZone(Player activeChar, String zoneName) {
         BuilderUtil.sendSystemMessage(activeChar, "Searching for zone: %s", zoneName);
-        Zone zone = ZoneManager.getInstance().getZoneByName(zoneName);
+        Zone zone = ZoneEngine.getInstance().getZoneByName(zoneName);
 
         if ((zone != null) && (zone.getArea() instanceof ZonePolygonArea)) {
             final ZonePolygonArea zoneArea = (ZonePolygonArea) zone.getArea();

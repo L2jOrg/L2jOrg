@@ -30,17 +30,17 @@ import org.l2j.gameserver.model.Location;
 public abstract class ZoneArea {
     protected static final int STEP = 10;
 
-    public abstract boolean isInsideZone(int x, int y, int z);
+    public abstract boolean isInside(int x, int y, int z);
 
     public abstract boolean intersectsRectangle(int x1, int x2, int y1, int y2);
 
-    public abstract double getDistanceToZone(int x, int y);
+    public abstract double distanceFrom(int x, int y);
 
     public abstract int getLowZ(); // Support for the ability to extract the z coordinates of zones.
 
     public abstract int getHighZ(); // New fishing patch makes use of that to get the Z for the hook
 
-    public abstract void visualizeZone(int z);
+    public abstract void visualize(int z);
 
     // TODO Drop this
     protected final void dropDebugItem(int itemId, int num, int x, int y, int z) {
@@ -48,7 +48,7 @@ public abstract class ZoneArea {
         final Item item = ItemEngine.getInstance().createTempItem(itemId);
         item.setCount(num);
         item.spawnMe(x, y, z + 5);
-        ZoneManager.getInstance().getDebugItems().add(item);
+        ZoneEngine.getInstance().getDebugItems().add(item);
     }
 
     public abstract Location getRandomPoint();

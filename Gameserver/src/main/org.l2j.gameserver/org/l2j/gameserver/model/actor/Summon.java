@@ -49,7 +49,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -368,7 +368,7 @@ public abstract class Summon extends Playable {
                 }
             }
 
-            final ZoneRegion oldRegion = ZoneManager.getInstance().getRegion(this);
+            final ZoneRegion oldRegion = ZoneEngine.getInstance().getRegion(this);
             decayMe();
             oldRegion.removeFromZones(this);
 

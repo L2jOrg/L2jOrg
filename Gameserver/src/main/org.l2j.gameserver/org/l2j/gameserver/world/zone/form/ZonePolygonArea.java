@@ -44,7 +44,7 @@ public class ZonePolygonArea extends ZoneArea {
     }
 
     @Override
-    public boolean isInsideZone(int x, int y, int z) {
+    public boolean isInside(int x, int y, int z) {
         return polygon.contains(x, y) &&  (z >= minZ) && (z <= maxZ);
     }
 
@@ -54,7 +54,7 @@ public class ZonePolygonArea extends ZoneArea {
     }
 
     @Override
-    public double getDistanceToZone(int x, int y) {
+    public double distanceFrom(int x, int y) {
         final int[] _x = polygon.xpoints;
         final int[] _y = polygon.ypoints;
         double test;
@@ -81,7 +81,7 @@ public class ZonePolygonArea extends ZoneArea {
     }
 
     @Override
-    public void visualizeZone(int z) {
+    public void visualize(int z) {
         for (int i = 0; i < polygon.npoints; i++) {
             final int nextIndex = (i + 1) == polygon.xpoints.length ? 0 : i + 1;
             final int vx = polygon.xpoints[nextIndex] - polygon.xpoints[i];

@@ -19,28 +19,26 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 /**
  * based on Kerberos work for custom L2CastleTeleportZone
  *
  * @author Nyaran
+ * @author JoeAlisson
  */
 public class ResidenceTeleportZone extends SpawnZone {
-    private int residenceId;
+    private final int residenceId;
 
-    public ResidenceTeleportZone(int id) {
+    private ResidenceTeleportZone(int id, int residenceId) {
         super(id);
+        this.residenceId =residenceId;
     }
 
-    @Override
-    public void setParameter(String name, String value) {
-        if (name.equals("residenceId")) {
-            residenceId = Integer.parseInt(value);
-        } else {
-            super.setParameter(name, value);
-        }
-    }
 
     @Override
     protected void onEnter(Creature creature) {
@@ -59,5 +57,19 @@ public class ResidenceTeleportZone extends SpawnZone {
 
     public int getResidenceId() {
         return residenceId;
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var residenceId = reader.parseInt(zoneNode.getAttributes(), "residence-id");
+            return new ResidenceTeleportZone(id, residenceId);
+        }
+
+        @Override
+        public String type() {
+            return "residence-teleport";
+        }
     }
 }

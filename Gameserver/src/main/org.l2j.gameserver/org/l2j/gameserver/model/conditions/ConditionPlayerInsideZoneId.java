@@ -23,7 +23,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 
 /**
  * @author UnAfraid
@@ -42,7 +42,7 @@ public class ConditionPlayerInsideZoneId extends Condition {
             return false;
         }
 
-        for (Zone zone : ZoneManager.getInstance().getZones(effector)) {
+        for (Zone zone : ZoneEngine.getInstance().getZones(effector)) {
             if (zones.contains(zone.getId())) {
                 return true;
             }

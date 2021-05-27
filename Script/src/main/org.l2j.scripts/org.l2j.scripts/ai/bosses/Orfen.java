@@ -39,7 +39,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 import java.util.Set;
@@ -93,7 +93,7 @@ public final class Orfen extends AbstractNpcAI
 		};
 		registerMobs(mobs);
 		_IsTeleported = false;
-		ZONE = ZoneManager.getInstance().getZoneById(12013);
+		ZONE = ZoneEngine.getInstance().getZoneById(12013);
 		final var info = GrandBossManager.getInstance().getBossData(ORFEN);
 		final var status = GrandBossManager.getInstance().getBossStatus(ORFEN);
 		if (status == BossStatus.DEAD)

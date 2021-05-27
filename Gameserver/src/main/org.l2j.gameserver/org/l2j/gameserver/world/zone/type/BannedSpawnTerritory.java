@@ -33,6 +33,6 @@ public class BannedSpawnTerritory {
     }
 
     public boolean isInsideZone(int x, int y, int z) {
-        return area.isInsideZone(x, y, z);
+        return area.isInside(x, y, z);
     }
 }

@@ -21,8 +21,11 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -32,24 +35,13 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author durgus
  */
 public class MotherTreeZone extends Zone {
-    private int enterMsg;
-    private int leaveMsg;
+    private SystemMessage enterMsg;
+    private SystemMessage leaveMsg;
     private int mpRegen;
     private int hpRegen;
 
-    public MotherTreeZone(int id) {
+    private MotherTreeZone(int id) {
         super(id);
-    }
-
-    @Override
-    public void setParameter(String name, String value) {
-        switch (name) {
-            case "enterMsgId" -> enterMsg = Integer.parseInt(value);
-            case "leaveMsgId" -> leaveMsg = Integer.parseInt(value);
-            case "MpRegenBonus" -> mpRegen = Integer.parseInt(value);
-            case "HpRegenBonus" -> hpRegen = Integer.parseInt(value);
-            default -> super.setParameter(name, value);
-        }
     }
 
     @Override
@@ -57,20 +49,16 @@ public class MotherTreeZone extends Zone {
         if (isPlayer(creature)) {
             final Player player = creature.getActingPlayer();
             creature.setInsideZone(ZoneType.MOTHER_TREE, true);
-            if (enterMsg != 0) {
-                player.sendPacket(SystemMessage.getSystemMessage(enterMsg));
-            }
+            player.sendPacket(enterMsg);
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        if (isPlayer(character)) {
-            final Player player = character.getActingPlayer();
+    protected void onExit(Creature creature) {
+        if (isPlayer(creature)) {
+            final Player player = creature.getActingPlayer();
             player.setInsideZone(ZoneType.MOTHER_TREE, false);
-            if (leaveMsg != 0) {
-                player.sendPacket(SystemMessage.getSystemMessage(leaveMsg));
-            }
+            player.sendPacket(leaveMsg);
         }
     }
 
@@ -86,5 +74,25 @@ public class MotherTreeZone extends Zone {
      */
     public int getHpRegenBonus() {
         return hpRegen;
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var zone = new MotherTreeZone(id);
+
+            var attr = zoneNode.getAttributes();
+            zone.enterMsg = SystemMessage.getSystemMessage(reader.parseInt(attr, "enter-message"));
+            zone.leaveMsg = SystemMessage.getSystemMessage(reader.parseInt(attr, "leave-message"));
+            zone.hpRegen = reader.parseInt(attr, "regen-hp");
+            zone.mpRegen = reader.parseInt(attr, "regen-mp");
+            return zone;
+        }
+
+        @Override
+        public String type() {
+            return "mother-tree";
+        }
     }
 }

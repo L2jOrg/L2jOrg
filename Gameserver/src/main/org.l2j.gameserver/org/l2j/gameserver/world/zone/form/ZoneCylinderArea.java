@@ -47,7 +47,7 @@ public class ZoneCylinderArea extends ZoneArea {
     }
 
     @Override
-    public boolean isInsideZone(int x, int y, int z) {
+    public boolean isInside(int x, int y, int z) {
         return ((Math.pow(centerX - x, 2) + Math.pow(centerY - y, 2)) <= _radS) && (z >= minZ) && (z <= maxZ);
     }
 
@@ -92,7 +92,7 @@ public class ZoneCylinderArea extends ZoneArea {
     }
 
     @Override
-    public double getDistanceToZone(int x, int y) {
+    public double distanceFrom(int x, int y) {
         return Math.hypot(centerX - x, centerY - y) - radius;
     }
 
@@ -107,7 +107,7 @@ public class ZoneCylinderArea extends ZoneArea {
     }
 
     @Override
-    public void visualizeZone(int z) {
+    public void visualize(int z) {
         final int count = (int) ((2 * Math.PI * radius) / STEP);
         final double angle = (2 * Math.PI) / count;
         for (int i = 0; i < count; i++) {

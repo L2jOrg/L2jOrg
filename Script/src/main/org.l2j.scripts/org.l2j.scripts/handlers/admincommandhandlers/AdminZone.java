@@ -27,7 +27,7 @@ import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 
@@ -92,11 +92,11 @@ public class AdminZone implements IAdminCommandHandler
             final String next = st.nextToken();
             if (next.equalsIgnoreCase("all"))
             {
-                for (Zone zone : ZoneManager.getInstance().getZones(player))
+                for (Zone zone : ZoneEngine.getInstance().getZones(player))
                 {
                     zone.visualizeZone(player.getZ());
                 }
-                for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(player))
+                for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(player))
                 {
                     territory.visualizeZone(player.getZ());
                 }
@@ -105,12 +105,12 @@ public class AdminZone implements IAdminCommandHandler
             else
             {
                 final int zoneId = Integer.parseInt(next);
-                ZoneManager.getInstance().getZoneById(zoneId).visualizeZone(player.getZ());
+                ZoneEngine.getInstance().getZoneById(zoneId).visualizeZone(player.getZ());
             }
         }
         else if (actualCommand.equalsIgnoreCase("admin_zone_visual_clear"))
         {
-            ZoneManager.getInstance().clearDebugItems();
+            ZoneEngine.getInstance().clearDebugItems();
             showHtml(player);
         }
         return true;
@@ -140,7 +140,7 @@ public class AdminZone implements IAdminCommandHandler
         adminReply.replace("%TAX%", (activeChar.isInsideZone(ZoneType.TAX) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 
         final StringBuilder zones = new StringBuilder(100);
-        for (Zone zone : ZoneManager.getInstance().getZones(activeChar))
+        for (Zone zone : ZoneEngine.getInstance().getZones(activeChar))
         {
             if (zone.getName() != null)
             {
@@ -159,7 +159,7 @@ public class AdminZone implements IAdminCommandHandler
             }
             zones.append(" ");
         }
-        for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+        for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(activeChar))
         {
             zones.append(territory.getName());
             zones.append("<br1>");

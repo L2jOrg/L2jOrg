@@ -82,7 +82,7 @@ import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldRegion;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -387,7 +387,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public void onDecay() {
         decayMe();
-        final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+        final ZoneRegion region = ZoneEngine.getInstance().getRegion(this);
         if (region != null) {
             region.removeFromZones(this);
         }
@@ -1120,7 +1120,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     protected void onDie(Creature killer) {
         EventDispatcher.getInstance().notifyEventAsync(new OnCreatureKilled(killer, this), killer);
-        ZoneManager.getInstance().getRegion(this).onDeath(this);
+        ZoneEngine.getInstance().getRegion(this).onDeath(this);
 
         forgetTarget();
         if (isChannelized()) {
@@ -1193,7 +1193,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             // Start broadcast status
             broadcastPacket(new Revive(this));
 
-            ZoneManager.getInstance().getRegion(this).onRevive(this);
+            ZoneEngine.getInstance().getRegion(this).onRevive(this);
         } else {
             setIsPendingRevive(true);
         }
@@ -2121,7 +2121,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+        final ZoneRegion region = ZoneEngine.getInstance().getRegion(this);
         if (region != null) {
             region.revalidateZones(this);
         } else // Precaution. Moved at invalid region?
@@ -3677,8 +3677,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     @Override
     public final void setXYZ(int newX, int newY, int newZ) {
-        final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
-        final ZoneRegion newZoneRegion = ZoneManager.getInstance().getRegion(newX, newY);
+        final ZoneRegion oldZoneRegion = ZoneEngine.getInstance().getRegion(this);
+        final ZoneRegion newZoneRegion = ZoneEngine.getInstance().getRegion(newX, newY);
 
         // Mobius: Prevent moving to nonexistent regions.
         if (newZoneRegion == null) {

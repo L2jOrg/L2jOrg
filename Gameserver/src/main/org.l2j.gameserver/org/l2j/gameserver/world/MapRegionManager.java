@@ -33,7 +33,7 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.util.MathUtil;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.RespawnZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -184,7 +184,7 @@ public final class MapRegionManager extends GameXmlReader {
                 }
             }
 
-            final RespawnZone zone = ZoneManager.getInstance().getZone(player, RespawnZone.class);
+            final RespawnZone zone = ZoneEngine.getInstance().getZone(player, RespawnZone.class);
             if (nonNull(zone)) {
                 return getRestartRegion(player, zone.getRespawnPoint(player)).getSpawnLoc();
             }
@@ -201,7 +201,7 @@ public final class MapRegionManager extends GameXmlReader {
 
     private Location getChaoticLocation(Player player) {
         try {
-            final RespawnZone zone = ZoneManager.getInstance().getZone(player, RespawnZone.class);
+            final RespawnZone zone = ZoneEngine.getInstance().getZone(player, RespawnZone.class);
             if(nonNull(zone)) {
                 return getRestartRegion(player, zone.getRespawnPoint(player)).getChaoticSpawnLoc();
             }

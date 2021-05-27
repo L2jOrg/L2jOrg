@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -271,7 +271,7 @@ public abstract class Vehicle extends Creature {
             LOGGER.error("Failed oustPlayers().", e);
         }
 
-        final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
+        final ZoneRegion oldZoneRegion = ZoneEngine.getInstance().getRegion(this);
 
         try {
             decayMe();

@@ -49,7 +49,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
@@ -58,9 +57,9 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
  * @author durgus
  * @author JoeAlisson
  */
-public final class ZoneManager extends GameXmlReader {
+public final class ZoneEngine extends GameXmlReader {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ZoneManager.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ZoneEngine.class);
     private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();
 
     private static final int SHIFT_BY = 15;
@@ -69,11 +68,12 @@ public final class ZoneManager extends GameXmlReader {
 
     private final Map<Class<? extends Zone>, IntMap<? extends Zone>> classZones = new HashMap<>();
     private final Map<String, SpawnTerritory> spawnTerritories = new HashMap<>();
+    private final Map<String, ZoneFactory> factories = new HashMap<>();
     private final ZoneRegion[][] zoneRegions;
     private int lastDynamicId = 300000;
     private List<Item> _debugItems;
 
-    private ZoneManager() {
+    private ZoneEngine() {
         var regionsX = (World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1;
         var regionsY = (World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1;
         zoneRegions = new ZoneRegion[regionsX][regionsY];
@@ -83,18 +83,11 @@ public final class ZoneManager extends GameXmlReader {
             }
         }
         LOGGER.info("Zone Region Grid set up: {} by {}", regionsX, regionsY);
+        ServiceLoader.load(ZoneFactory.class).forEach(this::registerFactory);
     }
 
-    @Override
-    public final void load() {
-        classZones.clear();
-        spawnTerritories.clear();
-        parseDatapackDirectory("data/zones", true);
-        LOGGER.info("Loaded {} zone classes and {} zones.", classZones.size(), getSize());
-        LOGGER.info("Loaded {}  NPC spawn territories.", spawnTerritories.size());
-        final OptionalInt maxId = classZones.values().stream().flatMapToInt(map -> map.keySet().stream()).filter(value -> value < 300000).max();
-        maxId.ifPresent(id -> LOGGER.info("Last static id: {}", id));
-        releaseResources();
+    private void registerFactory(ZoneFactory zoneFactory) {
+        factories.put(zoneFactory.type(), zoneFactory);
     }
 
     @Override
@@ -102,81 +95,75 @@ public final class ZoneManager extends GameXmlReader {
         return ServerSettings.dataPackDirectory().resolve("data/zones/zones.xsd");
     }
 
-    public void reload() {
-        unload();
-        load();
+    @Override
+    public final void load() {
+        classZones.clear();
+        spawnTerritories.clear();
+        parseDatapackDirectory("data/zones", true);
 
-        World.getInstance().forEachCreature(creature -> creature.revalidateZone(true));
-        SETTINGS.clear();
-    }
-
-    public void unload() {
-        // Backup old zone settings
-        classZones.values().stream()
-                .flatMap(map -> map.values().stream())
-                .filter(z -> nonNull(z.getSettings()))
-                .forEach(z -> SETTINGS.put(z.getName(), z.getSettings()));
-
-        Arrays.stream(zoneRegions).flatMap(Arrays::stream).forEach(r -> r.getZones().clear());
-        LOGGER.info("Removed zones in regions.");
+        LOGGER.info("Loaded {} zone classes and {} zones.", classZones.size(), getSize());
+        LOGGER.info("Loaded {} NPC spawn territories.", spawnTerritories.size());
+        releaseResources();
     }
 
     @Override
-    public void parseDocument(Document doc, File f) {
+    public void parseDocument(Document doc, File file) {
         for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
-            if ("list".equalsIgnoreCase(n.getNodeName()) &&  parseBoolean(n.getAttributes(), "enabled")) {
-                forEach(n, "zone", zone -> this.parseZone(zone, f.getAbsolutePath()));
+            if ("list".equalsIgnoreCase(n.getNodeName()) && parseBoolean(n.getAttributes(), "enabled")) {
+                parseZoneList(n, file);
             }
         }
     }
 
-    private void parseZone(Node zoneNode, String file) {
-        final var attributes = zoneNode.getAttributes();
-
-        var type = parseString(attributes, "type");
-        try {
-            var zoneClass = Class.forName(type);
-
-            if(SpawnTerritory.class.isAssignableFrom(zoneClass)) {
-                addTerritory(zoneNode, file);
-                return;
+    private void parseZoneList(Node n, File file) {
+        for(var zoneNode = n.getFirstChild(); nonNull(zoneNode); zoneNode = zoneNode.getNextSibling()) {
+            try {
+                var nodeName= zoneNode.getNodeName();
+                if(nodeName.equals("territory")) {
+                    addTerritory(zoneNode, file.getAbsolutePath());
+                } else {
+                    var factory = factories.get(zoneNode.getNodeName());
+                    if (nonNull(factory)) {
+                        parseZone(zoneNode, factory);
+                    } else {
+                        LOGGER.warn("There is no factory registered to zone type {} in file {}", zoneNode.getNodeName(), file);
+                    }
+                }
+            } catch (InvalidZoneException e) {
+                LOGGER.warn("Could not parse zone type {} in file {}", zoneNode.getNodeName(), file);
             }
-
-            if(!Zone.class.isAssignableFrom(zoneClass)) {
-                LOGGER.warn("The zone type: {} in file: {} is not subclass of Zone Class", type, file);
-                return;
-            }
-
-            addZone(zoneNode, zoneClass, file);
-        } catch (ClassNotFoundException e) {
-            LOGGER.warn("No such zone type: {} in file: {}", type, file);
-        } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
-            LOGGER.warn("The type: {} in file: {} must have a public constructor with a int parameter", type, file);
-        } catch (InvalidZoneException e) {
-            LOGGER.warn("There is a invalid Zone in file {}: {}", file, e.getMessage());
         }
     }
 
-    private void addZone(Node zoneNode, Class<?> zoneClass, String file) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException, InvalidZoneException {
-        var constructor = zoneClass.asSubclass(Zone.class).getConstructor(int.class);
+    private void parseZone(Node zoneNode, ZoneFactory factory) throws InvalidZoneException {
         var attributes = zoneNode.getAttributes();
-        var zoneId = computeIfNonNull(attributes.getNamedItem("id"), this::parseInt);
-        if(isNull(zoneId)) {
-            zoneId = lastDynamicId++;
-        }
+        if(parseBoolean(attributes, "enabled")) {
+            int id = zoneId(zoneNode.getAttributes());
 
-        var zone = constructor.newInstance(zoneId);
-        zone.setName(parseString(attributes, "name"));
-        parseZoneProperties(zoneNode, zone);
-
-        if(isNull(zone.getArea())) {
-            throw new InvalidZoneException("There is no defined area to Zone " + zone);
+            var zone = factory.create(id, zoneNode, this);
+            zone.setName(parseString(attributes, "name"));
+            parseZoneProperties(zoneNode, zone);
+            addZone(id, zone);
+            registerIntoWorldRegion(zone);
         }
+    }
 
-        if(nonNull(addZone(zoneId, zone))) {
-            LOGGER.warn("Zone ({}) from file: {} overrides previous definition.", zone, file);
+    private int zoneId(NamedNodeMap attributes) {
+        var idNode = attributes.getNamedItem("id");
+        return idNode == null ? lastDynamicId++ : parseInt(idNode);
+    }
+
+    private void parseZoneProperties(Node zoneNode, Zone zone) throws InvalidZoneException {
+        for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+            var attr = node.getAttributes();
+            switch (node.getNodeName()) {
+                case "polygon" -> zone.setArea(parsePolygon(node));
+                case "cube" -> zone.setArea(parseCube(node));
+                case "cylinder" -> zone.setArea(parseCylinder(node));
+                case "spawn" -> parseSpawn(zone, attr);
+                case "respawn" -> parseRespawn(zone, attr);
+            }
         }
-        registerIntoWorldRegion(zone);
     }
 
     public int addCylinderZone(Class<?> zoneClass,String zoneName, Location coords, int radius) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
@@ -217,21 +204,6 @@ public final class ZoneManager extends GameXmlReader {
                 if (zone.getArea().intersectsRectangle(ax, bx, ay, by)) {
                     zoneRegions[x][y].getZones().put(zone.getId(), zone);
                 }
-            }
-        }
-    }
-
-    private void parseZoneProperties(Node zoneNode, Zone zone) throws InvalidZoneException {
-        for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
-            var attr = node.getAttributes();
-
-            switch (node.getNodeName()) {
-                case "polygon" -> zone.setArea(parsePolygon(node));
-                case "cube" -> zone.setArea(parseCube(node));
-                case "cylinder" -> zone.setArea(parseCylinder(node));
-                case "property" ->  zone.setParameter(parseString(attr, "name"), parseString(attr, "value"));
-                case "spawn" -> parseSpawn(zone, attr);
-                case "respawn" -> parseRespawn(zone, attr);
             }
         }
     }
@@ -348,6 +320,31 @@ public final class ZoneManager extends GameXmlReader {
             }
         }
         throw new InvalidZoneException("The Zone with Cube Form must have 2 points");
+    }
+
+    public void reload() {
+        unload();
+        load();
+
+        World.getInstance().forEachCreature(creature -> creature.revalidateZone(true));
+        SETTINGS.clear();
+    }
+
+    public void unload() {
+        for (IntMap<? extends Zone> zones : classZones.values()) {
+            for (Zone zone : zones.values()) {
+                if(nonNull(zone.getSettings())) {
+                    SETTINGS.put(zone.getName(), zone.getSettings());
+                }
+            }
+        }
+
+        for (ZoneRegion[] regions : zoneRegions) {
+            for (ZoneRegion region : regions) {
+                region.getZones().clear();
+            }
+        }
+        LOGGER.info("Removed zones in regions.");
     }
 
 
@@ -555,11 +552,11 @@ public final class ZoneManager extends GameXmlReader {
         getInstance().load();
     }
 
-    public static ZoneManager getInstance() {
+    public static ZoneEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final ZoneManager INSTANCE = new ZoneManager();
+        private static final ZoneEngine INSTANCE = new ZoneEngine();
     }
 }

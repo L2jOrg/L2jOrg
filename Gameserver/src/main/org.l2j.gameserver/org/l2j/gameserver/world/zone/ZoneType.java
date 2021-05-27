@@ -52,7 +52,7 @@ public enum ZoneType {
     TAX,
     RAID_LIMIT;
 
-    private static final int ZONE_COUNT = values().length;
+    private static final int ZONE_COUNT =  values().length;
 
     public static int getZoneCount() {
         return ZONE_COUNT;

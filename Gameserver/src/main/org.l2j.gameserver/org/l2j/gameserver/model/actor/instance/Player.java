@@ -121,7 +121,7 @@ import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.slf4j.Logger;
@@ -1803,7 +1803,7 @@ public final class Player extends Playable {
             }
         }
 
-        ZoneManager.getInstance().getRegion(this).revalidateZones(this);
+        ZoneEngine.getInstance().getRegion(this).revalidateZones(this);
 
         if (Config.ALLOW_WATER) {
             checkWaterState();
@@ -4540,7 +4540,7 @@ public final class Player extends Playable {
 
     public boolean dismount() {
         WaterZone water = null;
-        for (Zone zone : ZoneManager.getInstance().getZones(getX(), getY(), getZ() - 300)) {
+        for (Zone zone : ZoneEngine.getInstance().getZones(getX(), getY(), getZ() - 300)) {
             if (zone instanceof WaterZone) {
                 water = (WaterZone) zone;
             }
@@ -6169,7 +6169,7 @@ public final class Player extends Playable {
         }
 
         try {
-            for (Zone zone : ZoneManager.getInstance().getZones(this)) {
+            for (Zone zone : ZoneEngine.getInstance().getZones(this)) {
                 zone.onPlayerLoginInside(this);
             }
         } catch (Exception e) {
@@ -6587,7 +6587,7 @@ public final class Player extends Playable {
     public boolean deleteMe() {
         AutoPlayEngine.getInstance().stopTasks(this);
         try {
-            for (Zone zone : ZoneManager.getInstance().getZones(this)) {
+            for (Zone zone : ZoneEngine.getInstance().getZones(this)) {
                 zone.onPlayerLogoutInside(this);
             }
         } catch (Exception e) {
@@ -6677,7 +6677,7 @@ public final class Player extends Playable {
         getEffectList().stopAllToggles();
 
         // Remove from world regions zones
-        ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+        ZoneEngine.getInstance().getRegion(this).removeFromZones(this);
 
         // Remove the Player from the world
         try {

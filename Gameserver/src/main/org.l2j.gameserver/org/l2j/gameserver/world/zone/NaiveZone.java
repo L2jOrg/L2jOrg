@@ -16,52 +16,44 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.world.zone.type;
+package org.l2j.gameserver.world.zone;
 
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameXmlReader;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneFactory;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
- * @author UnAfraid
  * @author JoeAlisson
  */
-public class ConditionZone extends Zone {
-    private final boolean allowDrop;
-    private final boolean allowBookmark;
+public class NaiveZone extends Zone {
 
-    private ConditionZone(int id, boolean allowBookmark, boolean allowDrop) {
+    private final ZoneType type;
+    private final int enterMessage;
+    private final int leaveMessage;
+
+    protected NaiveZone(int id, ZoneType type, int enterMessage, int leaveMessage) {
         super(id);
-        this.allowBookmark = allowBookmark;
-        this.allowDrop = allowDrop;
+        this.type = type;
+        this.enterMessage = enterMessage;
+        this.leaveMessage = leaveMessage;
     }
 
     @Override
     protected void onEnter(Creature creature) {
-        if (isPlayer(creature)) {
-            if (!allowBookmark) {
-                creature.setInsideZone(ZoneType.NO_BOOKMARK, true);
-            }
-            if (!allowDrop) {
-                creature.setInsideZone(ZoneType.NO_ITEM_DROP, true);
-            }
+        if(enterMessage != 0 && isPlayer(creature) && !creature.isInsideZone(type)) {
+            creature.sendPacket(SystemMessage.getSystemMessage(enterMessage));
         }
+        creature.setInsideZone(type, true);
     }
 
     @Override
     protected void onExit(Creature creature) {
-        if (isPlayer(creature)) {
-            if (!allowBookmark) {
-                creature.setInsideZone(ZoneType.NO_BOOKMARK, false);
-            }
-            if (!allowDrop) {
-                creature.setInsideZone(ZoneType.NO_ITEM_DROP, false);
-            }
+        creature.setInsideZone(ZoneType.PVP, false);
+        if(leaveMessage != 0 && isPlayer(creature) && !creature.isInsideZone(type)) {
+            creature.sendPacket(SystemMessage.getSystemMessage(leaveMessage));
         }
     }
 
@@ -70,14 +62,15 @@ public class ConditionZone extends Zone {
         @Override
         public Zone create(int id, Node zoneNode, GameXmlReader reader) {
             var attr = zoneNode.getAttributes();
-            var allowBookmark = reader.parseBoolean(attr, "allow-bookmark");
-            var allowDrop = reader.parseBoolean(attr, "allow-droop");
-            return new ConditionZone(id, allowBookmark, allowDrop);
+            var type = reader.parseEnum(attr, ZoneType.class, "type");
+            var leaveMessage = reader.parseInt(attr, "leave-message");
+            var enterMessage = reader.parseInt(attr, "enter-message");
+            return new NaiveZone(id, type, enterMessage, leaveMessage);
         }
 
         @Override
         public String type() {
-            return "condition";
+            return "zone";
         }
     }
 }

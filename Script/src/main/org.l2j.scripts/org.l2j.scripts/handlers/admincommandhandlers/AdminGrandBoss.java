@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.NoRestartZone;
 
 import java.text.SimpleDateFormat;
@@ -217,7 +217,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			{
 				case ANTHARAS:
 				{
-					bossZone = ZoneManager.getInstance().getZoneById(ANTHARAS_ZONE, NoRestartZone.class);
+					bossZone = ZoneEngine.getInstance().getZoneById(ANTHARAS_ZONE, NoRestartZone.class);
 					htmlPatch = "data/html/admin/grandboss_antharas.htm";
 					break;
 				}
@@ -228,7 +228,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				}
 				case BAIUM:
 				{
-					bossZone = ZoneManager.getInstance().getZoneById(BAIUM_ZONE, NoRestartZone.class);
+					bossZone = ZoneEngine.getInstance().getZoneById(BAIUM_ZONE, NoRestartZone.class);
 					htmlPatch = "data/html/admin/grandboss_baium.htm";
 					break;
 				}

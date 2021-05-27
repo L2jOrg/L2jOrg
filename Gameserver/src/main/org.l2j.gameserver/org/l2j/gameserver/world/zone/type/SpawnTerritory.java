@@ -44,10 +44,10 @@ public class SpawnTerritory {
     }
 
     public boolean isInsideZone(int x, int y, int z) {
-        return territory.isInsideZone(x, y, z);
+        return territory.isInside(x, y, z);
     }
 
     public void visualizeZone(int z) {
-        territory.visualizeZone(z);
+        territory.visualize(z);
     }
 }

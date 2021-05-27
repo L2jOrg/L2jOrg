@@ -23,15 +23,22 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.ServerObjectInfo;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
+/**
+ * @author JoeAlisson
+ */
 public class WaterZone extends Zone {
-    public WaterZone(int id) {
+
+    private WaterZone(int id) {
         super(id);
     }
 
@@ -83,5 +90,18 @@ public class WaterZone extends Zone {
 
     public int getWaterZ() {
         return getArea().getHighZ();
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            return new WaterZone(id);
+        }
+
+        @Override
+        public String type() {
+            return "water";
+        }
     }
 }

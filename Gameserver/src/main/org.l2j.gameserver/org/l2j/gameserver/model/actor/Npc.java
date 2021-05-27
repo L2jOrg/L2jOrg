@@ -64,7 +64,7 @@ import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.TaxZone;
 import org.slf4j.Logger;
@@ -848,7 +848,7 @@ public class Npc extends Creature {
             getSkillChannelized().abortChannelization();
         }
 
-        ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+        ZoneEngine.getInstance().getRegion(this).removeFromZones(this);
 
         return super.deleteMe();
     }

@@ -53,7 +53,7 @@ import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.ResidenceTeleportZone;
 import org.l2j.gameserver.world.zone.type.SiegeZone;
@@ -120,7 +120,7 @@ public final class Castle extends AbstractResidence {
     }
 
     private void initResidenceZone() {
-        for (CastleZone zone : ZoneManager.getInstance().getAllZones(CastleZone.class)) {
+        for (CastleZone zone : ZoneEngine.getInstance().getAllZones(CastleZone.class)) {
             if (zone.getResidenceId() == getId()) {
                 setResidenceZone(zone);
                 break;
@@ -239,7 +239,7 @@ public final class Castle extends AbstractResidence {
 
     public SiegeZone getZone() {
         if (isNull(zone)) {
-            for (SiegeZone zone : ZoneManager.getInstance().getAllZones(SiegeZone.class)) {
+            for (SiegeZone zone : ZoneEngine.getInstance().getAllZones(SiegeZone.class)) {
                 if (zone.getSiegeObjectId() == getId()) {
                     this.zone = zone;
                     break;
@@ -256,7 +256,7 @@ public final class Castle extends AbstractResidence {
 
     public ResidenceTeleportZone getTeleZone() {
         if (isNull(teleZone)) {
-            for (ResidenceTeleportZone zone : ZoneManager.getInstance().getAllZones(ResidenceTeleportZone.class)) {
+            for (ResidenceTeleportZone zone : ZoneEngine.getInstance().getAllZones(ResidenceTeleportZone.class)) {
                 if (zone.getResidenceId() == getId()) {
                     teleZone = zone;
                     break;

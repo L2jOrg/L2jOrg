@@ -44,7 +44,7 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.NoRestartZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
@@ -78,7 +78,7 @@ public final class Baium extends AbstractNpcAI
     // Items
     private static final int FABRIC = 4295; // Blooded Fabric
     // Zone
-    private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(70051, NoRestartZone.class); // Baium zone
+    private static final NoRestartZone zone = ZoneEngine.getInstance().getZoneById(70051, NoRestartZone.class); // Baium zone
 
     // Locations
     private static final Location BAIUM_GIFT_LOC = new Location(115910, 17337, 10105);

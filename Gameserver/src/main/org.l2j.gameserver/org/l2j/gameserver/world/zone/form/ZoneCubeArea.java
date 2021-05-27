@@ -49,7 +49,7 @@ public class ZoneCubeArea extends ZoneArea {
     }
 
     @Override
-    public boolean isInsideZone(int x, int y, int z) {
+    public boolean isInside(int x, int y, int z) {
         return _r.contains(x, y) && (z >= _z1) && (z <= _z2);
     }
 
@@ -59,7 +59,7 @@ public class ZoneCubeArea extends ZoneArea {
     }
 
     @Override
-    public double getDistanceToZone(int x, int y) {
+    public double distanceFrom(int x, int y) {
         final int _x1 = _r.x;
         final int _x2 = _r.x + _r.width;
         final int _y1 = _r.y;
@@ -95,7 +95,7 @@ public class ZoneCubeArea extends ZoneArea {
     }
 
     @Override
-    public void visualizeZone(int z) {
+    public void visualize(int z) {
         final int _x1 = _r.x;
         final int _x2 = _r.x + _r.width;
         final int _y1 = _r.y;

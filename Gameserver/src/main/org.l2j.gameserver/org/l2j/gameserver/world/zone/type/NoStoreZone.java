@@ -19,8 +19,11 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -45,6 +48,19 @@ public class NoStoreZone extends Zone {
     protected void onExit(Creature creature) {
         if (isPlayer(creature)) {
             creature.setInsideZone(ZoneType.NO_STORE, false);
+        }
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            return new NoStoreZone(id);
+        }
+
+        @Override
+        public String type() {
+            return "no-store";
         }
     }
 }

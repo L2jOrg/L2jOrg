@@ -37,7 +37,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.ArrayList;
@@ -266,7 +266,7 @@ public final class Trap extends Npc {
         _owner = null;
 
         if (isSpawned() && !isDead()) {
-            ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+            ZoneEngine.getInstance().getRegion(this).removeFromZones(this);
             deleteMe();
         }
     }
