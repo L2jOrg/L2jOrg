@@ -19,6 +19,7 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.ZoneArea;
 
 /**
@@ -47,7 +48,7 @@ public class SpawnTerritory {
         return territory.isInside(x, y, z);
     }
 
-    public void visualizeZone(int z) {
-        territory.visualize(z);
+    public void visualizeZone(Player player) {
+        territory.visualize(player, toString());
     }
 }

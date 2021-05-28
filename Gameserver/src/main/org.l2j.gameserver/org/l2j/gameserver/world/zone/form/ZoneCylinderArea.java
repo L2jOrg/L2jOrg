@@ -21,7 +21,7 @@ package org.l2j.gameserver.world.zone.form;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.ZoneArea;
 
 /**
@@ -107,11 +107,11 @@ public class ZoneCylinderArea extends ZoneArea {
     }
 
     @Override
-    public void visualize(int z) {
+    public void visualize(Player player, String zoneName) {
         final int count = (int) ((2 * Math.PI * radius) / STEP);
         final double angle = (2 * Math.PI) / count;
         for (int i = 0; i < count; i++) {
-            dropDebugItem(CommonItem.ADENA, 1, centerX + (int) (Math.cos(angle * i) * radius), centerY + (int) (Math.sin(angle * i) * radius), z);
+            dropDebugItem(centerX + (int) (Math.cos(angle * i) * radius), centerY + (int) (Math.sin(angle * i) * radius), player.getZ());
         }
     }
 

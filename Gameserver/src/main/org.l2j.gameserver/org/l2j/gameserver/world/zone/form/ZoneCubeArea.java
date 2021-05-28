@@ -21,7 +21,7 @@ package org.l2j.gameserver.world.zone.form;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.ZoneArea;
 
 import java.awt.*;
@@ -95,7 +95,7 @@ public class ZoneCubeArea extends ZoneArea {
     }
 
     @Override
-    public void visualize(int z) {
+    public void visualize(Player player, String zoneName) {
         final int _x1 = _r.x;
         final int _x2 = _r.x + _r.width;
         final int _y1 = _r.y;
@@ -103,13 +103,13 @@ public class ZoneCubeArea extends ZoneArea {
 
         // x1->x2
         for (int x = _x1; x < _x2; x += STEP) {
-            dropDebugItem(CommonItem.ADENA, 1, x, _y1, z);
-            dropDebugItem(CommonItem.ADENA, 1, x, _y2, z);
+            dropDebugItem(x, _y1, player.getZ());
+            dropDebugItem(x, _y2, player.getZ());
         }
         // y1->y2
         for (int y = _y1; y < _y2; y += STEP) {
-            dropDebugItem(CommonItem.ADENA, 1, _x1, y, z);
-            dropDebugItem(CommonItem.ADENA, 1, _x2, y, z);
+            dropDebugItem(_x1, y, player.getZ());
+            dropDebugItem(_x2, y, player.getZ());
         }
     }
 

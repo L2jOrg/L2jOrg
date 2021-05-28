@@ -21,7 +21,8 @@ package org.l2j.gameserver.world.zone.form;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2j.gameserver.world.zone.ZoneArea;
 
 import java.awt.*;
@@ -81,16 +82,14 @@ public class ZonePolygonArea extends ZoneArea {
     }
 
     @Override
-    public void visualize(int z) {
-        for (int i = 0; i < polygon.npoints; i++) {
-            final int nextIndex = (i + 1) == polygon.xpoints.length ? 0 : i + 1;
-            final int vx = polygon.xpoints[nextIndex] - polygon.xpoints[i];
-            final int vy = polygon.ypoints[nextIndex] - polygon.ypoints[i];
-            final float length = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
-            for (int o = 1; o <= length; o++) {
-                dropDebugItem(CommonItem.ADENA, 1, (int) (polygon.xpoints[i] + ((o / length) * vx)), (int) (polygon.ypoints[i] + ((o / length) * vy)), z);
-            }
+    public void visualize(Player player, String zoneName) {
+        var primitive = new ExServerPrimitive(zoneName, polygon.xpoints[0], polygon.ypoints[0], minZ);
+        for(var i = 0; i < polygon.npoints; i++) {
+            primitive.addLine(Color.GRAY, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[i], polygon.ypoints[i], maxZ);
+            primitive.addLine(Color.GRAY, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[(i+1) % polygon.npoints], polygon.ypoints[(i+1) % polygon.npoints], minZ);
+            primitive.addLine(Color.GRAY, polygon.xpoints[i], polygon.ypoints[i], maxZ, polygon.xpoints[(i+1) % polygon.npoints], polygon.ypoints[(i+1) % polygon.npoints], maxZ);
         }
+        player.sendPacket(primitive);
     }
 
     @Override

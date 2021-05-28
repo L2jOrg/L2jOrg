@@ -90,22 +90,19 @@ public class AdminZone implements IAdminCommandHandler
             }
 
             final String next = st.nextToken();
-            if (next.equalsIgnoreCase("all"))
-            {
-                for (Zone zone : ZoneEngine.getInstance().getZones(player))
-                {
-                    zone.visualizeZone(player.getZ());
+            if (next.equalsIgnoreCase("all")) {
+                for (Zone zone : ZoneEngine.getInstance().getZones(player)) {
+                    zone.visualizeZone(player);
                 }
-                for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(player))
-                {
-                    territory.visualizeZone(player.getZ());
+                for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(player)) {
+                    territory.visualizeZone(player);
                 }
                 showHtml(player);
             }
             else
             {
                 final int zoneId = Integer.parseInt(next);
-                ZoneEngine.getInstance().getZoneById(zoneId).visualizeZone(player.getZ());
+                ZoneEngine.getInstance().getZoneById(zoneId).visualizeZone(player);
             }
         }
         else if (actualCommand.equalsIgnoreCase("admin_zone_visual_clear"))

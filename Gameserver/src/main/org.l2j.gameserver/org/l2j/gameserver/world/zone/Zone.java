@@ -217,8 +217,8 @@ public abstract class Zone extends ListenersContainer {
         }
     }
 
-    public void visualizeZone(int z) {
-        area.visualize(z);
+    public void visualizeZone(Player player) {
+        area.visualize(player, toString());
     }
 
     public void oustAllPlayers() {
