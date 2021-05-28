@@ -148,7 +148,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     private void onSayhaGraceReset() {
-        if (!getSettings(CharacterSettings.class).isSayhaGraceEnabled()) {
+        if (!CharacterSettings.isSayhaGraceEnabled()) {
             return;
         }
 

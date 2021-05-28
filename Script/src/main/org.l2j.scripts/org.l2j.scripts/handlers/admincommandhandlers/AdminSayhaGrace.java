@@ -27,8 +27,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 
 import java.util.StringTokenizer;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -52,7 +50,7 @@ public class AdminSayhaGrace implements IAdminCommandHandler
 			return false;
 		}
 		
-		if (!getSettings(CharacterSettings.class).isSayhaGraceEnabled())
+		if (CharacterSettings.isSayhaGraceEnabled())
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Sayha is not enabled on the server!");
 			return false;

@@ -19,7 +19,6 @@ import org.l2j.gameserver.util.GameUtils;
 import java.util.Set;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class RequestBlessOptionEnchant extends ClientPacket {
 
@@ -98,9 +97,7 @@ public class RequestBlessOptionEnchant extends ClientPacket {
             return;
         }
 
-        var generalSettings = getSettings(GeneralSettings.class);
-
-        boolean isSuccess = Rnd.chance(generalSettings.getBlessItemChance());
+        boolean isSuccess = Rnd.chance( GeneralSettings.getBlessItemChance());
 
         var scroll = activeChar.getInventory().getItemByObjectId(request.getScroll().getObjectId());
 

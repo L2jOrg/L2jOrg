@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.item.Item;
@@ -58,7 +59,7 @@ public class PlayerStats extends PlayableStats {
      * Player's maximum talisman count.
      */
     private final AtomicInteger _talismanSlots = new AtomicInteger();
-    private long _startingXp;
+    private long startingXp;
     private int _sayhaGracePoints = 0;
 
     public PlayerStats(Player player) {
@@ -389,7 +390,7 @@ public class PlayerStats extends PlayableStats {
     }
 
     public void updateSayhaGracePoints(int points, boolean useRates, boolean quiet) {
-        if (points == 0 || !getSettings(CharacterSettings.class).isSayhaGraceEnabled()) {
+        if (points == 0 || CharacterSettings.isSayhaGraceEnabled()) {
             return;
         }
 

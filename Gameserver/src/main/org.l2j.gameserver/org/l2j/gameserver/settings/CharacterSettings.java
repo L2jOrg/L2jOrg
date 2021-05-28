@@ -96,50 +96,9 @@ public class CharacterSettings  {
     private static double altGameCreationSpRate;
     private static double altGameCreationRareXpSpRate;
 
-    private int partyRange;
-    private IntSet autoLootItems;
-    private boolean autoLootRaid;
-    private int raidLootPrivilegeTime;
-    private boolean autoLoot;
-    private boolean initialEquipEvent;
-    private boolean delevel;
-    private float weightLimitMultiplier;
-    private boolean removeCastleCirclets;
-    private boolean restoreSummonOnReconnect;
-    private int minEnchantAnnounceWeapon;
-    private int minEnchantAnnounceArmor;
-    private float restoreCPPercent;
-    private float restoreHPPercent;
-    private float restoreMPPercent;
-    private boolean autoLearnSkillEnabled;
-    private boolean autoLearnSkillFSEnabled;
-    private byte maxBuffs;
-    private byte maxTriggeredBuffs;
-    private byte maxDances;
-    private boolean dispelDanceAllowed;
-    private boolean storeDances;
-    private boolean breakCast;
-    private boolean breakBowAttack;
-    private boolean magicFailureAllowed;
-    private boolean breakStun;
-    private int effectTickRatio;
-    private boolean autoLootHerbs;
-    private boolean pledgeSkillsItemNeeded;
-    private boolean divineInspirationBookNeeded;
-    private boolean sayhaGraceEnabled;
-    private boolean raidBossUseVitality;
-    private int maxRunSpeed;
-    private int maxPcritRate;
-    private int maxMcritRate;
-    private int maxPAtkSpeed;
-    private int maxMAtkSpeed;
-    private int maxEvasion;
-    private boolean teleportInBattle;
-    private boolean craftEnabled;
-    private long maxAdena;
-    private boolean allowPKTeleport;
-    private int maxFreeTeleportLevel;
+    private static int partyRange;
     private static IntSet autoLootItems;
+    private static boolean sayhaGraceEnabled;
 
     private static int dwarfMaxSlotStoreSell;
     private static int maxSlotStoreSell;
@@ -439,8 +398,10 @@ public class CharacterSettings  {
         return effectTickRatio;
     }
 
-    public boolean isSayhaGraceEnabled() {
+    public static boolean isSayhaGraceEnabled() {
         return sayhaGraceEnabled;
+    }
+
     public static boolean autoLootHerbs() {
         return autoLootHerbs;
     }

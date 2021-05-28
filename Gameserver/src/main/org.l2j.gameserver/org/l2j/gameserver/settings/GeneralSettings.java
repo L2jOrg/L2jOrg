@@ -42,7 +42,7 @@ public class GeneralSettings {
     private static boolean cachePlayersName;
 
 
-    private double blessItemChance;
+    private static double blessItemChance;
     private static IllegalActionPunishmentType defaultPunishment;
     private static boolean disableChatInJail;
     private static int defaultAccessLevel;
@@ -175,7 +175,7 @@ public class GeneralSettings {
         return autoSavePlayerTime;
     }
 
-    public double getBlessItemChance() {
+    public static double getBlessItemChance() {
         return blessItemChance;
     }
 }

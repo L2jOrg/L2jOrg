@@ -1023,9 +1023,6 @@ public final class Config {
             RATE_INSTANCE_PARTY_SP = RATE_PARTY_SP;
         }
 
-        ENABLE_SAYHA_GRACE = Character.getBoolean("EnableSayhaGrace", true);
-        STARTING_SAYHA_GRACE_POINTS = Character.getInt("StartingSayhaGracePoints", 140000);
-        RAIDBOSS_USE_SAYHA_GRACE = Character.getBoolean("RaidbossUseSayhaGrace", true);
         SAYHA_GRACE_CONSUME_BY_MOB = NPC.getInt("SayhaGraceConsumeByMob", 2250);
         SAYHA_GRACE_CONSUME_BY_BOSS = NPC.getInt("SayhaGraceConsumeByBoss", 1125);
         RATE_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateSayhaGraceExpMultiplier", 3);

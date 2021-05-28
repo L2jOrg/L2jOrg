@@ -565,7 +565,7 @@ public class Party extends AbstractPlayerGroup {
             double exp = member.getStats().getValue(Stat.EXPSP_RATE, xpReward * preCalculation);
             double sp = member.getStats().getValue(Stat.EXPSP_RATE, spReward * preCalculation);
 
-            exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
+            exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useSayhaGraceRate());
             if (exp > 0) {
                 final Clan clan = member.getClan();
                 if (clan != null) {
