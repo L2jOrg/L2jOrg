@@ -85,9 +85,9 @@ public class ZonePolygonArea extends ZoneArea {
     public void visualize(Player player, String zoneName) {
         var primitive = new ExServerPrimitive(zoneName, polygon.xpoints[0], polygon.ypoints[0], minZ);
         for(var i = 0; i < polygon.npoints; i++) {
-            primitive.addLine(Color.GRAY, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[i], polygon.ypoints[i], maxZ);
-            primitive.addLine(Color.GRAY, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[(i+1) % polygon.npoints], polygon.ypoints[(i+1) % polygon.npoints], minZ);
-            primitive.addLine(Color.GRAY, polygon.xpoints[i], polygon.ypoints[i], maxZ, polygon.xpoints[(i+1) % polygon.npoints], polygon.ypoints[(i+1) % polygon.npoints], maxZ);
+            primitive.addLine(zoneName + i, Color.GREEN, false, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[i], polygon.ypoints[i], maxZ);
+            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[(i+1) % polygon.npoints], polygon.ypoints[(i+1) % polygon.npoints], minZ);
+            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], maxZ, polygon.xpoints[(i+1) % polygon.npoints], polygon.ypoints[(i+1) % polygon.npoints], maxZ);
         }
         player.sendPacket(primitive);
     }
