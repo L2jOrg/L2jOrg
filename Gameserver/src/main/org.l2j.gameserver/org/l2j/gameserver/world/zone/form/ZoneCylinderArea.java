@@ -22,7 +22,10 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2j.gameserver.world.zone.ZoneArea;
+
+import java.awt.*;
 
 /**
  * A primitive circular zone
@@ -108,11 +111,22 @@ public class ZoneCylinderArea extends ZoneArea {
 
     @Override
     public void visualize(Player player, String zoneName) {
-        final int count = (int) ((2 * Math.PI * radius) / STEP);
-        final double angle = (2 * Math.PI) / count;
+        var count = (int) ((2 * Math.PI * radius) / 20);
+        var angle = (2 * Math.PI) / count;
+        var z = player.getZ() + (int)(player.getCollisionHeight() / 2);
+        var primitive = new ExServerPrimitive(zoneName, centerX, centerY, z);
+
         for (int i = 0; i < count; i++) {
-            dropDebugItem(centerX + (int) (Math.cos(angle * i) * radius), centerY + (int) (Math.sin(angle * i) * radius), player.getZ());
+            var x = centerX + (int) (Math.cos(angle * i) * radius);
+            var y = centerY + (int) (Math.sin(angle * i) * radius);
+            primitive.addLine(Color.RED, x, y, minZ, x, y, maxZ);
+            primitive.addLine(Color.RED, centerX, centerY, minZ, x, y, minZ);
+            primitive.addLine(Color.RED, centerX, centerY, maxZ, x, y, maxZ);
+            if(i % 10 == 0) {
+                primitive.addPoint(zoneName + i, Color.YELLOW, false, x, y, z);
+            }
         }
+        player.sendPacket(primitive);
     }
 
     @Override

@@ -31,6 +31,7 @@ import java.awt.*;
  * A not so primitive npoly zone
  *
  * @author durgus
+ * @author JoeAlisson
  */
 public class ZonePolygonArea extends ZoneArea {
     private final Polygon polygon;
@@ -83,11 +84,14 @@ public class ZonePolygonArea extends ZoneArea {
 
     @Override
     public void visualize(Player player, String zoneName) {
-        var primitive = new ExServerPrimitive(zoneName, polygon.xpoints[0], polygon.ypoints[0], minZ);
-        for(var i = 0; i < polygon.npoints; i++) {
-            primitive.addLine(zoneName + i, Color.GREEN, false, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[i], polygon.ypoints[i], maxZ);
-            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[(i+1) % polygon.npoints], polygon.ypoints[(i+1) % polygon.npoints], minZ);
-            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], maxZ, polygon.xpoints[(i+1) % polygon.npoints], polygon.ypoints[(i+1) % polygon.npoints], maxZ);
+        var z = player.getZ() + (int) (player.getCollisionHeight() / 2);
+        var primitive = new ExServerPrimitive(zoneName, polygon.xpoints[0], polygon.ypoints[0], z);
+        for (var i = 0; i < polygon.npoints; i++) {
+            var nextNode = (i+1) % polygon.npoints;
+            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[i], polygon.ypoints[i], maxZ);
+            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[nextNode], polygon.ypoints[nextNode], minZ);
+            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], maxZ, polygon.xpoints[nextNode], polygon.ypoints[nextNode], maxZ);
+            primitive.addLine(zoneName + i, Color.GREEN, false, polygon.xpoints[i], polygon.ypoints[i], z, polygon.xpoints[nextNode], polygon.ypoints[nextNode], z);
         }
         player.sendPacket(primitive);
     }

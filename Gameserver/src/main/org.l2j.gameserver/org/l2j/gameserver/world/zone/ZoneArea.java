@@ -18,12 +18,8 @@
  */
 package org.l2j.gameserver.world.zone;
 
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-
-import static org.l2j.gameserver.model.item.CommonItem.ADENA;
 
 /**
  * Abstract base class for any zone area
@@ -31,7 +27,6 @@ import static org.l2j.gameserver.model.item.CommonItem.ADENA;
  * @author durgus
  */
 public abstract class ZoneArea {
-    protected static final int STEP = 10;
 
     public abstract boolean isInside(int x, int y, int z);
 
@@ -44,13 +39,6 @@ public abstract class ZoneArea {
     public abstract int getHighZ(); // New fishing patch makes use of that to get the Z for the hook
 
     public abstract void visualize(Player player, String zoneName);
-
-    // TODO Drop this
-    protected final void dropDebugItem(int x, int y, int z) {
-        final Item item = ItemEngine.getInstance().createTempItem(ADENA);
-        item.spawnMe(x, y, z + 5);
-        ZoneEngine.getInstance().getDebugItems().add(item);
-    }
 
     public abstract Location getRandomPoint();
 }
