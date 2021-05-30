@@ -559,7 +559,6 @@
 	<!-- ADMIN ZONE -->
 	<admin command="admin_zone_check" accessLevel="100" />
 	<admin command="admin_zone_visual" accessLevel="100" />
-	<admin command="admin_zone_visual_clear" accessLevel="100" />
 
 	<!-- ADMIN SCAN -->
 	<admin command="admin_scan" accessLevel="100" />

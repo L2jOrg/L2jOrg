@@ -38,14 +38,11 @@ import static java.util.Objects.isNull;
 /**
  * Small typo fix by Zoey76 24/02/2011
  */
-public class AdminZone implements IAdminCommandHandler
-{
-    private static final String[] ADMIN_COMMANDS =
-            {
-                    "admin_zone_check",
-                    "admin_zone_visual",
-                    "admin_zone_visual_clear"
-            };
+public class AdminZone implements IAdminCommandHandler {
+    private static final String[] ADMIN_COMMANDS = {
+        "admin_zone_check",
+        "admin_zone_visual",
+    };
 
     @Override
     public boolean useAdminCommand(String command, Player player)
@@ -104,11 +101,6 @@ public class AdminZone implements IAdminCommandHandler
                 final int zoneId = Integer.parseInt(next);
                 ZoneEngine.getInstance().getZoneById(zoneId).visualizeZone(player);
             }
-        }
-        else if (actualCommand.equalsIgnoreCase("admin_zone_visual_clear"))
-        {
-            ZoneEngine.getInstance().clearDebugItems();
-            showHtml(player);
         }
         return true;
     }

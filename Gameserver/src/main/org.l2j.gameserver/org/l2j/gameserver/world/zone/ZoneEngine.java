@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.ArrayIntList;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -73,7 +72,6 @@ public final class ZoneEngine extends GameXmlReader {
     private final Map<String, ZoneFactory> factories = new HashMap<>();
     private final ZoneRegion[][] zoneRegions;
     private int lastDynamicId = 300000;
-    private List<Item> debugItems;
 
     private ZoneEngine() {
         var regionsX = (World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1;
@@ -85,7 +83,6 @@ public final class ZoneEngine extends GameXmlReader {
             }
         }
         LOGGER.info("Zone Region Grid set up: {} by {}", regionsX, regionsY);
-        ServiceLoader.load(ZoneFactory.class).forEach(this::registerFactory);
     }
 
     private void registerFactory(ZoneFactory zoneFactory) {
@@ -503,34 +500,6 @@ public final class ZoneEngine extends GameXmlReader {
         return spawnTerritories.values().stream().filter(t -> t.isInsideZone(object.getX(), object.getY(), object.getZ())).collect(Collectors.toList());
     }
 
-    /**
-     * General storage for debug items used for visualizing zones.
-     *
-     * @return list of items
-     */
-    List<Item> getDebugItems() {
-        if (debugItems == null) {
-            debugItems = new ArrayList<>();
-        }
-        return debugItems;
-    }
-
-    /**
-     * Remove all debug items from l2world.
-     */
-    public void clearDebugItems() {
-        if (debugItems != null) {
-            final var it = debugItems.iterator();
-            while (it.hasNext()) {
-                final var item = it.next();
-                if (item != null) {
-                    item.decayMe();
-                }
-                it.remove();
-            }
-        }
-    }
-
     public ZoneRegion getRegion(int x, int y) {
         try {
             return zoneRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
@@ -555,7 +524,9 @@ public final class ZoneEngine extends GameXmlReader {
     }
 
     public static void init() {
-        getInstance().load();
+        var engine = getInstance();
+        ServiceLoader.load(ZoneFactory.class).forEach(engine::registerFactory);
+        engine.load();
     }
 
     public static ZoneEngine getInstance() {
