@@ -33,26 +33,25 @@ import java.awt.*;
  * @author durgus
  * @author JoeAlisson
  */
-public class ZonePolygonArea extends ZoneArea {
+public class ZonePolygonArea implements ZoneArea {
     private final Polygon polygon;
     private final int minZ;
     private final int maxZ;
 
     public ZonePolygonArea(int[] x, int[] y, int minZ, int maxZ) {
         polygon = new Polygon(x, y, x.length);
-
         this.minZ = Math.min(minZ, maxZ);
         this.maxZ = Math.max(minZ, maxZ);
     }
 
     @Override
     public boolean isInside(int x, int y, int z) {
-        return polygon.contains(x, y) &&  (z >= minZ) && (z <= maxZ);
+        return z >= minZ && z <= maxZ && polygon.contains(x, y);
     }
 
     @Override
-    public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2) {
-        return polygon.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1));
+    public boolean intersectsRectangle(int x1, int x2, int y1, int y2) {
+        return polygon.intersects(x1, y2, x2 - x1, y2 - y1);
     }
 
     @Override

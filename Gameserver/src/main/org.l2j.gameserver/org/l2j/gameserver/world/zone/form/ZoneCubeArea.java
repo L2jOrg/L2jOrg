@@ -31,8 +31,9 @@ import java.awt.*;
  * A primitive rectangular zone
  *
  * @author durgus
+ * @author JoeAlisson
  */
-public class ZoneCubeArea extends ZoneArea {
+public class ZoneCubeArea implements ZoneArea {
     private final int minZ;
     private final int maxZ;
     private final Rectangle rectangle;
@@ -51,12 +52,12 @@ public class ZoneCubeArea extends ZoneArea {
 
     @Override
     public boolean isInside(int x, int y, int z) {
-        return rectangle.contains(x, y) && (z >= minZ) && (z <= maxZ);
+        return z >= minZ && z <= maxZ && rectangle.contains(x, y);
     }
 
     @Override
-    public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2) {
-        return rectangle.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1));
+    public boolean intersectsRectangle(int x1, int x2, int y1, int y2) {
+        return rectangle.intersects(x1, y1, x2 - x1, y2 - y1);
     }
 
     @Override
