@@ -58,6 +58,7 @@ import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.taskmanager.TaskManager;
@@ -141,10 +142,10 @@ public class GameServer {
         VipEngine.init();
         ElementalSpiritEngine.init();
         TeleportEngine.init();
-        if (Config.ENABLE_L2_STORE){
+        if (FeatureSettings.isL2StoreEnabled()){
             L2Store.init();
         }
-        if (Config.ENABLE_LCOIN_STORE){
+        if (FeatureSettings.isLCoinStoreEnabled()){
             LCoinShop.init();
         }
         CommissionManager.getInstance();

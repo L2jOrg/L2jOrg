@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.data.ClanWarData;
 import org.l2j.gameserver.engine.clan.ClanEngine;
@@ -30,6 +29,7 @@ import org.l2j.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SurrenderPledgeWar;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.ClanSettings;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -92,8 +92,8 @@ public final class ClanWar {
         if ((victim.getLevel() > 4) && (data.getState() == ClanWarState.MUTUAL)) {
             // however, when the other side reputation score is 0 or below, your clan cannot acquire any reputation points from them.
             if (victimClan.getReputationScore() > 0) {
-                victimClan.takeReputationScore(Config.REPUTATION_SCORE_PER_KILL, false);
-                killerClan.addReputationScore(Config.REPUTATION_SCORE_PER_KILL, false);
+                victimClan.takeReputationScore(ClanSettings.warKillReputation(), false);
+                killerClan.addReputationScore(ClanSettings.warKillReputation(), false);
             }
 
             // System Message notification to clan members

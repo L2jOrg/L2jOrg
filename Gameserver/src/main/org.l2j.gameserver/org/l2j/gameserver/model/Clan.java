@@ -20,13 +20,11 @@ package org.l2j.gameserver.model;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.ClanData;
 import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.database.data.ClanSkillData;
-import org.l2j.gameserver.data.database.data.SubPledgeData;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
@@ -54,7 +52,6 @@ import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
 import org.l2j.gameserver.network.serverpackets.pledge.*;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ClanSettings;
@@ -66,7 +63,6 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -78,7 +74,6 @@ import java.util.stream.Stream;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 import static org.l2j.gameserver.network.SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -108,35 +103,6 @@ public class Clan implements IIdentifiable, INamable {
      * Leader clan dissolve ally
      */
     public static final int PENALTY_TYPE_DISSOLVE_ALLY = 4;
-    /**
-     * Clan subunit type of Academy
-     */
-    public static final int SUBUNIT_ACADEMY = -1;
-    /**
-     * Clan subunit type of Royal Guard A
-     */
-    public static final int SUBUNIT_ROYAL1 = 100;
-    /**
-     * Clan subunit type of Royal Guard B
-     */
-    public static final int SUBUNIT_ROYAL2 = 200;
-    // Sub-unit types
-    /**
-     * Clan subunit type of Order of Knights A-1
-     */
-    public static final int SUBUNIT_KNIGHT1 = 1001;
-    /**
-     * Clan subunit type of Order of Knights A-2
-     */
-    public static final int SUBUNIT_KNIGHT2 = 1002;
-    /**
-     * Clan subunit type of Order of Knights B-1
-     */
-    public static final int SUBUNIT_KNIGHT3 = 2001;
-    /**
-     * Clan subunit type of Order of Knights B-2
-     */
-    public static final int SUBUNIT_KNIGHT4 = 2002;
 
     private static final int MAX_NOTICE_LENGTH = 8192;
     private final IntMap<ClanMember> members = new CHashIntMap<>();
@@ -144,12 +110,10 @@ public class Clan implements IIdentifiable, INamable {
     private final IntMap<ClanWar> _atWarWith = new CHashIntMap<>();
     private final IntMap<Skill> _skills = new CHashIntMap<>();
     private final IntMap<RankPrivs> privs = new CHashIntMap<>();
-    private final IntMap<Skill> _subPledgeSkills = new CHashIntMap<>();
     private final AtomicInteger _siegeKills = new AtomicInteger();
     private final AtomicInteger _siegeDeaths = new AtomicInteger();
 
     private ClanMember leader;
-    private IntMap<SubPledgeData> subPledges = new CHashIntMap<>();
     private int _hideoutId;
     private String notice;
     private boolean noticeEnabled = false;
@@ -197,7 +161,6 @@ public class Clan implements IIdentifiable, INamable {
             }
         });
 
-        restoreSubPledges();
         restoreRankPrivs();
         restoreSkills();
         restoreNotice();
@@ -366,15 +329,8 @@ public class Clan implements IIdentifiable, INamable {
     public void removeClanMember(int objectId, long clanJoinExpiryTime) {
         final ClanMember exMember = members.remove(objectId);
         if (exMember == null) {
-            LOGGER.warn("Member Object ID: " + objectId + " not found in clan while trying to remove");
+            LOGGER.warn("Member Object ID: {} not found in clan while trying to remove",  objectId);
             return;
-        }
-        final int leadssubpledge = getLeaderSubPledge(objectId);
-        if (leadssubpledge != 0) {
-            // Sub-unit leader withdraws, position becomes vacant and leader
-            // should appoint new via NPC
-            getSubPledge(leadssubpledge).setLeaderId(0);
-            updateSubPledgeInDB(leadssubpledge);
         }
 
         if (exMember.getApprentice() != 0) {
@@ -430,14 +386,10 @@ public class Clan implements IIdentifiable, INamable {
             player.sendSkillList();
             player.setClan(null);
 
-            // players leaving from clan academy have no penalty
-            if (exMember.getPledgeType() != -1) {
-                player.setClanJoinExpiryTime(clanJoinExpiryTime);
-            }
+            player.setClanJoinExpiryTime(clanJoinExpiryTime);
 
             updateSocialStatus(player);
             player.broadcastUserInfo();
-            // disable clan tab
             player.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
         } else {
             removeMemberInDatabase(exMember, clanJoinExpiryTime, getLeaderId() == objectId ? System.currentTimeMillis() + ClanSettings.daysToCreateClan() * 86400000L : 0);
@@ -455,44 +407,16 @@ public class Clan implements IIdentifiable, INamable {
         return members.size();
     }
 
-    public int getSubPledgeMembersCount(int subpl) {
-        int result = 0;
-        for (ClanMember temp : members.values()) {
-            if (temp.getPledgeType() == subpl) {
-                result++;
-            }
-        }
-        return result;
-    }
-
     /**
-     * @param pledgeType the Id of the pledge type.
-     * @return the maximum number of members allowed for a given {@code pledgeType}.
+     * @return the maximum number of members allowed.
      */
-    public int getMaxNrOfMembers(int pledgeType) {
-        return switch (pledgeType) {
-            case 0 ->
-                switch (data.getLevel()) {
-                    case 3 -> 30;
-                    case 2 -> 20;
-                    case 1 -> 15;
-                    case 0 -> 10;
-                    default -> 40;
-            };
-            case -1 -> 20;
-            case 100, 200 -> {
-                if (data.getLevel() == 11) {
-                    yield  30;
-                } else {
-                    yield 20;
-                }
-            }
-            case 1001, 1002, 2001, 2002 ->
-                switch (data.getLevel()) {
-                    case 9, 10, 11 -> 25;
-                    default -> 10;
-                };
-            default -> 0;
+    public int getMaxNrOfMembers() {
+        return switch (data.getLevel()) {
+            case 3 -> 30;
+            case 2 -> 20;
+            case 1 -> 15;
+            case 0 -> 10;
+            default -> 40;
         };
     }
 
@@ -522,8 +446,8 @@ public class Clan implements IIdentifiable, INamable {
         //@formatter:on
     }
 
-    public void forEachMember(Consumer<ClanMember> action, Predicate<ClanMember> filter) {
-        members.values().stream().filter(filter).forEach(action);
+    public void forEachMember(Consumer<ClanMember> action) {
+        members.values().forEach(action);
     }
 
     public void forEachOnlineMember(Consumer<Player> action) {
@@ -709,20 +633,8 @@ public class Clan implements IIdentifiable, INamable {
 
     private void restoreSkills() {
         for (ClanSkillData skillData : getDAO(ClanDAO.class).findSkillsByClan(data.getId())) {
-            doIfNonNull(SkillEngine.getInstance().getSkill(skillData.getId(), skillData.getLevel()), skill -> {
-                switch (skillData.getSubPledge()) {
-                    case -2 -> _skills.put(skill.getId(), skill);
-                    case 0 -> _subPledgeSkills.put(skill.getId(), skill);
-                    default -> {
-                        var subPledge = subPledges.get(skillData.getSubPledge());
-                        if (nonNull(subPledge)) {
-                            subPledge.addNewSkill(skill);
-                        } else {
-                            LOGGER.info("Missing sub pledge {} for clan {}, skill skipped.", subPledge, this);
-                        }
-                    }
-                }
-            });
+            var skill = SkillEngine.getInstance().getSkill(skillData.getId(), skillData.getLevel());
+            _skills.put(skill.getId(), skill);
         }
     }
 
@@ -734,58 +646,32 @@ public class Clan implements IIdentifiable, INamable {
         return _skills;
     }
 
-    public Skill addNewSkill(Skill newSkill) {
-        return addNewSkill(newSkill, -2);
-    }
-
     /**
      * Used to add a new skill to the list, send a packet to all online clan members, update their stats and store it in db
      */
-    public Skill addNewSkill(Skill newSkill, int subType) {
-        Skill oldSkill = null;
+    public void addNewSkill(Skill newSkill) {
+        Skill oldSkill;
         if (newSkill != null) {
-            if (subType == -2) {
-                oldSkill = _skills.put(newSkill.getId(), newSkill);
-            } else if (subType == 0) {
-                oldSkill = _subPledgeSkills.put(newSkill.getId(), newSkill);
-            } else {
-                final var subunit = getSubPledge(subType);
-                if (subunit != null) {
-                    oldSkill = subunit.addNewSkill(newSkill);
-                } else {
-                    LOGGER.warn("Subpledge " + subType + " does not exist for clan " + this);
-                    return oldSkill;
-                }
-            }
+            oldSkill = _skills.put(newSkill.getId(), newSkill);
 
             if(nonNull(oldSkill)) {
                 getDAO(ClanDAO.class).updateClanSkill(data.getId(), oldSkill.getId(), newSkill.getLevel());
             } else {
-                getDAO(ClanDAO.class).saveClanSkill(data.getId(), newSkill.getId(), newSkill.getLevel(), subType);
+                getDAO(ClanDAO.class).saveClanSkill(data.getId(), newSkill.getId(), newSkill.getLevel());
             }
-
 
             final SystemMessage sm = getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
             sm.addSkillName(newSkill.getId());
 
             for (ClanMember temp : members.values()) {
                 if ((temp != null) && (temp.getPlayerInstance() != null) && temp.isOnline()) {
-                    if (subType == -2) {
-                        temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-                        temp.getPlayerInstance().sendPacket(new PledgeSkillAdd(newSkill.getId(), newSkill.getLevel()));
-                        temp.getPlayerInstance().sendPacket(sm);
-                        temp.getPlayerInstance().sendSkillList();
-                    } else if (temp.getPledgeType() == subType) {
-                        temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-                        temp.getPlayerInstance().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
-                        temp.getPlayerInstance().sendPacket(sm);
-                        temp.getPlayerInstance().sendSkillList();
-                    }
+                    temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
+                    temp.getPlayerInstance().sendPacket(new PledgeSkillAdd(newSkill.getId(), newSkill.getLevel()));
+                    temp.getPlayerInstance().sendPacket(sm);
+                    temp.getPlayerInstance().sendSkillList();
                 }
             }
         }
-
-        return oldSkill;
     }
 
     public void removeSkill(int skillId) {
@@ -815,23 +701,6 @@ public class Clan implements IIdentifiable, INamable {
             }
         }
 
-        if (player.getPledgeType() == 0) {
-            for (Skill skill : _subPledgeSkills.values()) {
-                final SkillLearn skillLearn = SkillTreesData.getInstance().getSubPledgeSkill(skill.getId(), skill.getLevel());
-                if (hasSocialStatusRequirements(socialStatus, skillLearn)) {
-                    player.addSkill(skill, false); // Skill is not saved to player DB
-                }
-            }
-        } else {
-            final var subunit = getSubPledge(player.getPledgeType());
-            if (subunit == null) {
-                return;
-            }
-            for (Skill skill : subunit.getSkills()) {
-                player.addSkill(skill, false); // Skill is not saved to player DB
-            }
-        }
-
         if (data.getReputation() < 0) {
             skillsStatus(player, true);
         }
@@ -849,20 +718,6 @@ public class Clan implements IIdentifiable, INamable {
         for (Skill skill : _skills.values()) {
             player.removeSkill(skill, false); // Skill is not saved to player DB
         }
-
-        if (player.getPledgeType() == 0) {
-            for (Skill skill : _subPledgeSkills.values()) {
-                player.removeSkill(skill, false); // Skill is not saved to player DB
-            }
-        } else {
-            final var subunit = getSubPledge(player.getPledgeType());
-            if (subunit == null) {
-                return;
-            }
-            for (Skill skill : subunit.getSkills()) {
-                player.removeSkill(skill, false); // Skill is not saved to player DB
-            }
-        }
     }
 
     public void skillsStatus(Player player, boolean disable) {
@@ -875,27 +730,6 @@ public class Clan implements IIdentifiable, INamable {
                 player.disableSkill(skill, -1);
             } else {
                 player.enableSkill(skill);
-            }
-        }
-
-        if (player.getPledgeType() == 0) {
-            for (Skill skill : _subPledgeSkills.values()) {
-                if (disable) {
-                    player.disableSkill(skill, -1);
-                } else {
-                    player.enableSkill(skill);
-                }
-            }
-        } else {
-            final var subunit = getSubPledge(player.getPledgeType());
-            if (subunit != null) {
-                for (Skill skill : subunit.getSkills()) {
-                    if (disable) {
-                        player.disableSkill(skill, -1);
-                    } else {
-                        player.enableSkill(skill);
-                    }
-                }
             }
         }
     }
@@ -959,97 +793,6 @@ public class Clan implements IIdentifiable, INamable {
         }
     }
 
-    private void restoreSubPledges() {
-        subPledges = getDAO(ClanDAO.class).findClanSubPledges(data.getId());
-    }
-
-    public final SubPledgeData getSubPledge(int pledgeType) {
-        return subPledges.get(pledgeType);
-    }
-
-    public final SubPledgeData getSubPledge(String pledgeName) {
-        for (var sp : subPledges.values()) {
-            if (sp.getName().equalsIgnoreCase(pledgeName)) {
-                return sp;
-            }
-        }
-        return null;
-    }
-
-
-    public final SubPledgeData[] getAllSubPledges() {
-        if (subPledges == null) {
-            return new SubPledgeData[0];
-        }
-
-        return subPledges.values().toArray(SubPledgeData[]::new);
-    }
-
-    public SubPledgeData createSubPledge(Player player, int pledgeType, int leaderId, String subPledgeName) {
-        pledgeType = getAvailablePledgeTypes(pledgeType);
-        if (pledgeType == 0) {
-            if (pledgeType == SUBUNIT_ACADEMY) {
-                player.sendPacket(SystemMessageId.YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY);
-            } else {
-                player.sendMessage("You can't create any more sub-units of this type");
-            }
-            return null;
-        }
-        if (leader.getObjectId() == leaderId) {
-            player.sendMessage("Leader is not correct");
-            return null;
-        }
-
-        // Royal Guard 5000 points per each
-        // Order of Knights 10000 points per each
-        if ((pledgeType != -1) && (((data.getReputation() < Config.ROYAL_GUARD_COST) && (pledgeType < SUBUNIT_KNIGHT1)) || ((data.getReputation() < Config.KNIGHT_UNIT_COST) && (pledgeType > SUBUNIT_ROYAL2)))) {
-            player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
-            return null;
-        }
-
-        SubPledgeData subPledgeData = new SubPledgeData();
-        subPledgeData.setClanId(data.getId());
-        subPledgeData.setId(pledgeType);
-        subPledgeData.setName(subPledgeName);
-        subPledgeData.setLeaderId(pledgeType != -1 ? leaderId : 0);
-        subPledges.put(pledgeType, subPledgeData);
-        getDAO(ClanDAO.class).save(subPledgeData);
-
-        if (pledgeType != -1) {
-            // Royal Guard 5000 points per each
-            // Order of Knights 10000 points per each
-            if (pledgeType < SUBUNIT_KNIGHT1) {
-                setReputationScore(data.getReputation() - Config.ROYAL_GUARD_COST, true);
-            } else {
-                setReputationScore(data.getReputation() - Config.KNIGHT_UNIT_COST, true);
-                // TODO: clan lvl9 or more can reinforce knights cheaper if first knight unit already created, use Config.KNIGHT_REINFORCE_COST
-            }
-        }
-
-        broadcastToOnlineMembers(new PledgeShowInfoUpdate(leader.getClan()));
-        broadcastToOnlineMembers(new PledgeReceiveSubPledgeCreated(subPledgeData, leader.getClan()));
-        return subPledgeData;
-    }
-
-    public int getAvailablePledgeTypes(int pledgeType) {
-        if (subPledges.get(pledgeType) != null) {
-            switch (pledgeType) {
-                case SUBUNIT_ACADEMY, SUBUNIT_ROYAL2, SUBUNIT_KNIGHT4 -> {
-                    return 0;
-                }
-                case SUBUNIT_ROYAL1 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_ROYAL2);
-                case SUBUNIT_KNIGHT1 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT2);
-                case SUBUNIT_KNIGHT2 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT3);
-                case SUBUNIT_KNIGHT3 -> pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT4);
-            }
-        }
-        return pledgeType;
-    }
-
-    public void updateSubPledgeInDB(int pledgeType) {
-        getDAO(ClanDAO.class).save(getSubPledge(pledgeType));
-    }
-
     private void restoreRankPrivs() {
         getDAO(ClanDAO.class).withClanPrivs(data.getId(), resultSet -> {
             try{
@@ -1107,19 +850,6 @@ public class Clan implements IIdentifiable, INamable {
         return privs.values().toArray(RankPrivs[]::new);
     }
 
-    public int getLeaderSubPledge(int leaderId) {
-        int id = 0;
-        for (var sp : subPledges.values()) {
-            if (sp.getLeaderId() == 0) {
-                continue;
-            }
-            if (sp.getLeaderId() == leaderId) {
-                id = sp.getId();
-            }
-        }
-        return id;
-    }
-
     public synchronized void addReputationScore(int value, boolean save) {
         setReputationScore(data.getReputation() + value, save);
     }
@@ -1162,55 +892,45 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     /**
-     * @param activeChar the clan inviting player.
+     * @param player the clan inviting player.
      * @param target     the invited player.
-     * @param pledgeType the pledge type to join.
      * @return {core true} if activeChar and target meet various conditions to join a clan.
      */
-    public boolean checkClanJoinCondition(Player activeChar, Player target, int pledgeType) {
-        if (activeChar == null) {
+    public boolean checkClanJoinCondition(Player player, Player target) {
+        if (player == null) {
             return false;
         }
-        if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_JOIN_CLAN)) {
-            activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+        if (!player.hasClanPrivilege(ClanPrivilege.CL_JOIN_CLAN)) {
+            player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
             return false;
         }
         if (target == null) {
-            activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+            player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
             return false;
         }
-        if (activeChar.getObjectId() == target.getObjectId()) {
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN);
+        if (player.getObjectId() == target.getObjectId()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN);
             return false;
         }
         if (data.getCharPenaltyExpiryTime() > System.currentTimeMillis()) {
-            activeChar.sendPacket(SystemMessageId.AFTER_A_CLAN_MEMBER_IS_DISMISSED_FROM_A_CLAN_THE_CLAN_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_ACCEPTING_A_NEW_MEMBER);
+            player.sendPacket(SystemMessageId.AFTER_A_CLAN_MEMBER_IS_DISMISSED_FROM_A_CLAN_THE_CLAN_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_ACCEPTING_A_NEW_MEMBER);
             return false;
         }
         if (target.getClanId() != 0) {
             final SystemMessage sm = getSystemMessage(SystemMessageId.S1_IS_ALREADY_A_MEMBER_OF_ANOTHER_CLAN);
             sm.addString(target.getName());
-            activeChar.sendPacket(sm);
+            player.sendPacket(sm);
             return false;
         }
         if (target.getClanJoinExpiryTime() > System.currentTimeMillis()) {
             final SystemMessage sm = getSystemMessage(SystemMessageId.C1_CANNOT_JOIN_THE_CLAN_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_CLAN);
             sm.addString(target.getName());
-            activeChar.sendPacket(sm);
+            player.sendPacket(sm);
             return false;
         }
-        if (((target.getLevel() > 40) || (target.getClassId().level() >= 2)) && (pledgeType == -1)) {
-            activeChar.sendPacket(getSystemMessage(SystemMessageId.S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY).addString(target.getName()));
-            return false;
-        }
-        if (getSubPledgeMembersCount(pledgeType) >= getMaxNrOfMembers(pledgeType)) {
-            if (pledgeType == 0) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME);
-                sm.addString(data.getName());
-                activeChar.sendPacket(sm);
-            } else {
-                activeChar.sendPacket(SystemMessageId.THE_CLAN_IS_FULL);
-            }
+
+        if (getMembersCount() >= getMaxNrOfMembers()) {
+            player.sendPacket(getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME).addString(data.getName()));
             return false;
         }
         return true;
@@ -1594,77 +1314,6 @@ public class Clan implements IIdentifiable, INamable {
 
         getDAO(ClanDAO.class).updateClanCrestLarge(data.getId(), crestId);
         forEachOnlineMember(Player::broadcastUserInfo);
-    }
-
-    /**
-     * Check if this clan can learn the skill for the given skill ID, level.
-     *
-     * @param skillId
-     * @param skillLevel
-     * @return {@code true} if skill can be learned.
-     */
-    public boolean isLearnableSubSkill(int skillId, int skillLevel) {
-        Skill current = _subPledgeSkills.get(skillId);
-        // is next level?
-        if ((current != null) && ((current.getLevel() + 1) == skillLevel)) {
-            return true;
-        }
-        // is first level?
-        if ((current == null) && (skillLevel == 1)) {
-            return true;
-        }
-        // other sub-pledges
-        for (var subunit : subPledges.values()) {
-            // disable academy
-            if (subunit.getId() == -1) {
-                continue;
-            }
-            current = subunit.getSkill(skillId);
-            // is next level?
-            if ((current != null) && ((current.getLevel() + 1) == skillLevel)) {
-                return true;
-            }
-            // is first level?
-            if ((current == null) && (skillLevel == 1)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean isLearnableSubPledgeSkill(Skill skill, int subType) {
-        // academy
-        if (subType == -1) {
-            return false;
-        }
-
-        final int id = skill.getId();
-        Skill current;
-        if (subType == 0) {
-            current = _subPledgeSkills.get(id);
-        } else {
-            current = subPledges.get(subType).getSkill(id);
-        }
-        // is next level?
-        if ((current != null) && ((current.getLevel() + 1) == skill.getLevel())) {
-            return true;
-        }
-        // is first level?
-        return (current == null) && (skill.getLevel() == 1);
-
-    }
-
-    public SubPledgeSkill[] getAllSubSkills() {
-        final List<SubPledgeSkill> list = new LinkedList<>();
-        for (Skill skill : _subPledgeSkills.values()) {
-            list.add(new SubPledgeSkill(0, skill.getId(), skill.getLevel()));
-        }
-        for (var subunit : subPledges.values()) {
-            for (Skill skill : subunit.getSkills()) {
-                list.add(new SubPledgeSkill(subunit.getId(), skill.getId(), skill.getLevel()));
-            }
-        }
-        return list.toArray(SubPledgeSkill[]::new);
     }
 
     public void setNewLeaderId(int objectId, boolean storeInDb) {

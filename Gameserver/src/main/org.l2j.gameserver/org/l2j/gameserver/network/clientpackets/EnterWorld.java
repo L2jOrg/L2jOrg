@@ -371,45 +371,20 @@ public class EnterWorld extends ClientPacket {
         }, AttendanceSettings.delay(), TimeUnit.MINUTES);
     }
 
-    private void onGameMasterEnter(Player activeChar) {
-
-        if (Config.GM_GIVE_SPECIAL_SKILLS) {
-            SkillTreesData.getInstance().addSkills(activeChar, false);
+    private void onGameMasterEnter(Player player) {
+        if (AdminSettings.giveGMSkills()) {
+            SkillTreesData.getInstance().addGMSkills(player);
         }
 
-        if (Config.GM_GIVE_SPECIAL_AURA_SKILLS) {
-            SkillTreesData.getInstance().addSkills(activeChar, true);
-        }
+        AdminData.getInstance().addGm(player, true);
+        player.setDietMode(true);
 
-        AdminData.getInstance().addGm(activeChar, !Config.GM_STARTUP_AUTO_LIST || !AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel()));
+        if (AdminSettings.startUpHide() && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel())) {
+            BuilderUtil.setHiding(player, true);
 
-        if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", activeChar.getAccessLevel())) {
-            BuilderUtil.setHiding(activeChar, true);
-
-            BuilderUtil.sendSysMessage(activeChar, "hide is default for builder.");
-            BuilderUtil.sendSysMessage(activeChar, "FriendAddOff is default for builder.");
-            BuilderUtil.sendSysMessage(activeChar, "whisperoff is default for builder.");
-
-            // It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
-            return;
-        }
-
-        if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", activeChar.getAccessLevel())) {
-            activeChar.setIsInvul(true);
-        }
-
-        if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel())) {
-            activeChar.setInvisible(true);
-            activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
-        }
-
-        if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel())) {
-            activeChar.setSilenceMode(true);
-        }
-
-        if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", activeChar.getAccessLevel())) {
-            activeChar.setDietMode(true);
-            activeChar.refreshOverloaded(true);
+            BuilderUtil.sendSysMessage(player, "hide is default for builder.");
+            BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
+            BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
         }
     }
 

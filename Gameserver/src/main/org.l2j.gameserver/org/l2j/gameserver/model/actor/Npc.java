@@ -597,22 +597,11 @@ public class Npc extends Creature {
         }
 
         final int npcId = getTemplate().getId();
-
-        String filename;
-        if (npcId == 30298) { // Blacksmith Pinter
-            if (player.isAcademyMember()) {
-                filename = getHtmlPath(npcId, 1);
-            } else {
-                filename = getHtmlPath(npcId, val);
-            }
-        } else {
-            if (((npcId >= 31093) && (npcId <= 31094)) || ((npcId >= 31172) && (npcId <= 31201)) || ((npcId >= 31239) && (npcId <= 31254))) {
-                return;
-            }
-            filename = getHtmlPath(npcId, val);
+        if ((npcId >= 31093 && npcId <= 31094) || (npcId >= 31172 && npcId <= 31201) || (npcId >= 31239 && npcId <= 31254)) {
+            return;
         }
 
-        // Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player
+        String  filename = getHtmlPath(npcId, val);
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         html.setFile(player, filename);
         html.replace("%npcname%", getName());

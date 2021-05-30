@@ -34,7 +34,6 @@ import org.l2j.gameserver.data.database.dao.*;
 import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
-import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
@@ -114,6 +113,7 @@ import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExi
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
@@ -1429,7 +1429,7 @@ public final class Player extends Playable {
 
     private int warRelation(Player target, Clan targetClan) {
         int result = 0;
-        if(nonNull(targetClan) && target.getPledgeType() != Clan.SUBUNIT_ACADEMY && getPledgeType() != Clan.SUBUNIT_ACADEMY) {
+        if(nonNull(targetClan)) {
             ClanWar war = clan.getWarWith(target.getClan().getId());
             if (nonNull(war)) {
                 switch (war.getState()) {
@@ -2142,27 +2142,6 @@ public final class Player extends Playable {
         }
 
         try {
-            if ((getLvlJoinedAcademy() != 0) && (clan != null) && CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, Id)) {
-                if (getLvlJoinedAcademy() <= 16) {
-                    clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE, true);
-                } else if (getLvlJoinedAcademy() >= 39) {
-                    clan.addReputationScore(Config.JOIN_ACADEMY_MIN_REP_SCORE, true);
-                } else {
-                    clan.addReputationScore((Config.JOIN_ACADEMY_MAX_REP_SCORE - ((getLvlJoinedAcademy() - 16) * 20)), true);
-                }
-                setLvlJoinedAcademy(0);
-                // oust pledge member from the academy, cuz he has finished his 2nd class transfer
-                final SystemMessage msg = getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
-                msg.addPcName(this);
-                clan.broadcastToOnlineMembers(msg);
-                clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(getName()));
-                clan.removeClanMember(getObjectId(), 0);
-                sendPacket(SystemMessageId.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES);
-
-                // receive graduation gift
-                inventory.addItem("Gift", 8181, 1, this, null); // give academy circlet
-            }
-
             setTarget(this);
             broadcastPacket(new MagicSkillUse(this, 5103, 1, 1000, 0));
             setClassTemplate(Id);
@@ -3694,7 +3673,7 @@ public final class Player extends Playable {
 
             if (!insidePvpZone && (pk != null)) {
                 final Clan pkClan = pk.getClan();
-                if ((pkClan != null) && (clan != null) && !isAcademyMember() && !(pk.isAcademyMember())) {
+                if (pkClan != null && clan != null) {
                     final ClanWar clanWar = clan.getWarWith(pkClan.getId());
                     if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
                         clanWar.onKill(pk, this);
@@ -4358,9 +4337,7 @@ public final class Player extends Playable {
             setTitle("");
             data.setClanId(0);
             clanPrivileges = new EnumIntBitmask<>(ClanPrivilege.class, false);
-            setPledgeType(0);
             setPowerGrade(0);
-            setLvlJoinedAcademy(0);
             setApprentice(0);
             setSponsor(0);
             activeWarehouse = null;
@@ -4459,7 +4436,7 @@ public final class Player extends Playable {
     }
 
     public boolean mount(Summon pet) {
-        if (!Config.ALLOW_MOUNTS_DURING_SIEGE && isInsideZone(ZoneType.SIEGE)) {
+        if (!FeatureSettings.allowRideInSiege() && isInsideZone(ZoneType.SIEGE)) {
             return false;
         }
 
@@ -5368,7 +5345,7 @@ public final class Player extends Playable {
                 }
 
                 // Check if clan is at war
-                if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace()) && !isAcademyMember()) {
+                if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace())) {
                     final ClanWar war = attackerClan.getWarWith(getClanId());
                     if (nonNull(war) && war.getState() == ClanWarState.MUTUAL) {
                         return true;
@@ -5435,7 +5412,8 @@ public final class Player extends Playable {
      */
     @Override
     public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
-        if (!checkUseSkill(skill)) {
+        if (!checkUseSkill(skill, item)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
@@ -5489,23 +5467,47 @@ public final class Player extends Playable {
         return true;
     }
 
-    private boolean checkUseSkill(Skill skill) {
+    private boolean checkUseSkill(Skill skill, Item item) {
         if (skill.isPassive() || isDead() || (skill.isToggle() && isMounted())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        if(!SkillCaster.checkSkillConsume(this, skill)) {
+        if (!checkSkillPlayerState(skill, item)) {
             return false;
         }
 
-        if (!CharacterSettings.allowPKTeleport() && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
-            sendPacket(ActionFailed.STATIC_PACKET);
+        return checkUseSkillState(skill);
+    }
+
+    private boolean checkUseSkillState(Skill skill) {
+        if (isSkillDisabled(skill)) {
+            sendSkillReuseTimeMessage(skill);
             return false;
         }
 
-        if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
+        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
+            return false;
+        }
+
+        if (isFakeDeath()) {
+            return false;
+        }
+
+        return !isNull(currentSkillWorldPosition) || skill.getTargetType() != TargetType.GROUND;
+    }
+
+    private boolean checkSkillPlayerState(Skill skill, Item item) {
+        if (sitting && item == null) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
+            return false;
+        }
+
+        if (inObserverMode) {
+            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+            return false;
+        }
+
+        if (!CharacterSettings.allowPKTeleport() && getReputation() < 0 && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             return false;
         }
 
@@ -5514,39 +5516,11 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (inObserverMode) {
-            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-            sendPacket(ActionFailed.STATIC_PACKET);
+        if(!SkillCaster.checkSkillConsume(this, skill)) {
             return false;
         }
 
-        if (isSkillDisabled(skill)) {
-            sendSkillReuseTimeMessage(skill);
-            return false;
-        }
-
-        if (sitting) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        // Note: do not check this before TOGGLE reset
-        if (isFakeDeath()) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (isNull(currentSkillWorldPosition) && skill.getTargetType() == TargetType.GROUND) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-        return true;
+        return skill.canCastWhileDisabled() || (!isControlBlocked() && !hasBlockActions());
     }
 
     private void sendSkillReuseTimeMessage(Skill skill) {
@@ -5744,15 +5718,6 @@ public final class Player extends Playable {
     public void setSocialStatus(SocialStatus status) {
         socialStatus = status;
         checkItemRestriction();
-    }
-
-    @Override
-    public int getPledgeType() {
-        return data.getSubPledge();
-    }
-
-    public void setPledgeType(int typeId) {
-        data.setSubPledge(typeId);
     }
 
     public int getApprentice() {
@@ -6054,19 +6019,6 @@ public final class Player extends Playable {
         sendSkillList();
     }
 
-    private int getLvlJoinedAcademy() {
-        return data.getLevelJoinedAcademy();
-    }
-
-    public void setLvlJoinedAcademy(int lvl) {
-        data.setLevelJoinedAcademy(lvl);
-    }
-
-    @Override
-    public boolean isAcademyMember() {
-        return getLvlJoinedAcademy() > 0;
-    }
-
     @Override
     public void setTeam(Team team) {
         super.setTeam(team);
@@ -6204,18 +6156,6 @@ public final class Player extends Playable {
 
     public void onEnter() {
         startWarnUserTakeBreak();
-        if (isGM() && !Config.GM_STARTUP_BUILDER_HIDE) {
-            if (isInvulnerable()) {
-                sendMessage("Entering world in Invulnerable mode.");
-            }
-            if (isInvisible()) {
-                sendMessage("Entering world in Invisible mode.");
-            }
-            if (silenceMode) {
-                sendMessage("Entering world in Silence mode.");
-            }
-        }
-
         restoreItemReuse();
         restoreShortCuts();
         restoreEffects();
@@ -8143,14 +8083,7 @@ public final class Player extends Playable {
         if (target == null) {
             return false;
         }
-        if ((clan != null) && !isAcademyMember()) // Current player
-        {
-            if ((target.getClan() != null) && !target.isAcademyMember()) // Target player
-            {
-                return clan.isAtWarWith(target.getClan());
-            }
-        }
-        return false;
+        return nonNull(clan) && nonNull(target.getClan()) && clan.isAtWarWith(target.getClan());
     }
 
     public int getAbilityPointsUsed() {

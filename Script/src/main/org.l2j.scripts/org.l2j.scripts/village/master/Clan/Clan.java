@@ -55,13 +55,6 @@ public final class Clan extends AbstractNpcAI
 		LEADER_REQUIRED.put("9000-04.htm", "9000-04-no.htm");
 		LEADER_REQUIRED.put("9000-05.htm", "9000-05-no.htm");
 		LEADER_REQUIRED.put("9000-07.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-12a.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-12b.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-13a.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-13b.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-14a.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-14b.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-15.htm", "9000-07-no.htm");
 	}
 	
 	private Clan()

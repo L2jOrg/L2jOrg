@@ -26,6 +26,11 @@ import org.l2j.commons.configuration.SettingsFile;
 public class FeatureSettings {
 
     private static int[] siegeHours;
+    private static boolean alwaysAllowRideWyvern;
+    private static boolean allowWyvernInSiege;
+    private static boolean allowRideInSiege;
+    private static boolean l2StoreEnabled;
+    private static boolean lCoinStoreEnabled;
 
     private FeatureSettings() {
         // helper class
@@ -33,9 +38,34 @@ public class FeatureSettings {
 
     public static void load(SettingsFile settingsFile) {
         siegeHours =  settingsFile.getIntArray("SiegeHourList", ",");
+        alwaysAllowRideWyvern = settingsFile.getBoolean("AllowRideWyvernAlways", false);
+        allowWyvernInSiege = settingsFile.getBoolean("AllowRideWyvernDuringSiege", true);
+        allowRideInSiege = settingsFile.getBoolean("AllowRideMountsDuringSiege", false);
+        l2StoreEnabled = settingsFile.getBoolean("EnableL2Store", false);
+        lCoinStoreEnabled = settingsFile.getBoolean("EnableLCoinStore", false);
     }
 
     public static int[] siegeHours() {
         return siegeHours;
+    }
+
+    public static boolean alwaysAllowRideWyvern() {
+        return alwaysAllowRideWyvern;
+    }
+
+    public static boolean allowWyvernInSiege() {
+        return allowWyvernInSiege;
+    }
+
+    public static boolean allowRideInSiege() {
+        return allowRideInSiege;
+    }
+
+    public static boolean isL2StoreEnabled() {
+        return l2StoreEnabled;
+    }
+
+    public static boolean isLCoinStoreEnabled() {
+        return lCoinStoreEnabled;
     }
 }

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.MountType;
@@ -29,6 +28,7 @@ import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.entity.Siegable;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
@@ -94,16 +94,16 @@ public class SiegeZone extends Zone {
                 }
 
                 creature.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-                if (!Config.ALLOW_WYVERN_DURING_SIEGE && (player.getMountType() == MountType.WYVERN)) {
+                if (!FeatureSettings.allowWyvernInSiege() && (player.getMountType() == MountType.WYVERN)) {
                     player.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
                     player.enteredNoLanding(DISMOUNT_DELAY);
                 }
 
-                if (!Config.ALLOW_MOUNTS_DURING_SIEGE && player.isMounted()) {
+                if (!FeatureSettings.allowRideInSiege() && player.isMounted()) {
                     player.dismount();
                 }
 
-                if (!Config.ALLOW_MOUNTS_DURING_SIEGE && player.getTransformation().map(Transform::isRiding).orElse(false)) {
+                if (!FeatureSettings.allowRideInSiege() && player.getTransformation().map(Transform::isRiding).orElse(false)) {
                     player.untransform();
                 }
             }

@@ -18,11 +18,13 @@
  */
 package org.l2j.gameserver.data.database.dao;
 
-import io.github.joealisson.primitive.ConcurrentIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.data.*;
+import org.l2j.gameserver.data.database.data.ClanData;
+import org.l2j.gameserver.data.database.data.ClanSkillData;
+import org.l2j.gameserver.data.database.data.ClanWarData;
+import org.l2j.gameserver.data.database.data.CrestData;
 
 import java.sql.ResultSet;
 import java.util.List;
@@ -41,9 +43,6 @@ public interface ClanDAO extends DAO<ClanData> {
 
     @Query("UPDATE clan_data SET new_leader_id = 0 WHERE new_leader_id <> 0 AND new_leader_id NOT IN (SELECT charId FROM characters)")
     void resetNewLeaderWithoutCharacter();
-
-    @Query("UPDATE clan_subpledges SET leader_id=0 WHERE clan_subpledges.leader_id NOT IN (SELECT charId FROM characters) AND leader_id > 0;")
-    void resetSubpledgeLeaderWithoutCharacter();
 
     @Query("SELECT clan_id FROM clan_data WHERE hasCastle = :castleId:")
     int findOwnerClanIdByCastle(int castleId);
@@ -93,19 +92,14 @@ public interface ClanDAO extends DAO<ClanData> {
     @Query("REPLACE INTO clan_notices (clan_id, notice, enabled) values (:id:,:notice:,:enabled:)")
     void saveNotice(int id, String notice, boolean enabled);
 
-    @Query("SELECT skill_id, skill_level, sub_pledge_id FROM clan_skills WHERE clan_id=:id:")
+    @Query("SELECT skill_id, skill_level FROM clan_skills WHERE clan_id=:id:")
     List<ClanSkillData> findSkillsByClan(int id);
 
     @Query("UPDATE clan_skills SET skill_level= :level: WHERE skill_id=:skillId: AND clan_id=:id:")
     void updateClanSkill(int id, int skillId, int level);
 
-    @Query("REPLACE INTO clan_skills (clan_id,skill_id,skill_level ,sub_pledge_id) VALUES (:id:, :skillId:, :level:, :subType:)")
-    void saveClanSkill(int id, int skillId, int level, int subType);
-
-    @Query("SELECT sub_pledge_id, name, leader_id FROM clan_subpledges WHERE clan_id=:id:")
-    ConcurrentIntMap<SubPledgeData> findClanSubPledges(int id);
-
-    void save(SubPledgeData subPledgeData);
+    @Query("REPLACE INTO clan_skills (clan_id,skill_id,skill_level) VALUES (:id:, :skillId:, :level:)")
+    void saveClanSkill(int id, int skillId, int level);
 
     @Query("SELECT privs,`rank` FROM clan_privs WHERE clan_id=:id:")
     void withClanPrivs(int id, Consumer<ResultSet> action);

@@ -96,97 +96,10 @@ public final class Config {
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
-
     private static final String RANDOM_CRAFT_CONFIG_FILE = "./config/random-craft.properties";
 
     private static final String SUBJUGATION_CONFIG_FILE = "./config/subjugation.properties";
 
-
-
-    public static boolean ENABLE_MODIFY_SKILL_DURATION;
-    public static Map<Integer, Integer> SKILL_DURATION_LIST;
-    public static boolean ENABLE_MODIFY_SKILL_REUSE;
-    public static Map<Integer, Integer> SKILL_REUSE_LIST;
-
-    public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
-    public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
-    public static long MAX_SP;
-    public static int MAX_PVTSTORESELL_SLOTS_DWARF;
-    public static int MAX_PVTSTORESELL_SLOTS_OTHER;
-    public static int MAX_PVTSTOREBUY_SLOTS_DWARF;
-    public static int MAX_PVTSTOREBUY_SLOTS_OTHER;
-    public static int INVENTORY_MAXIMUM_NO_DWARF;
-    public static int INVENTORY_MAXIMUM_DWARF;
-    public static int INVENTORY_MAXIMUM_GM;
-    public static int INVENTORY_MAXIMUM_QUEST_ITEMS;
-    public static int WAREHOUSE_SLOTS_DWARF;
-    public static int WAREHOUSE_SLOTS_NO_DWARF;
-    public static int WAREHOUSE_SLOTS_CLAN;
-    public static int ALT_FREIGHT_SLOTS;
-    public static int ALT_FREIGHT_PRICE;
-
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_GK;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_TRADE;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE;
-    public static int MAX_PERSONAL_FAME_POINTS;
-
-    public static int CASTLE_ZONE_FAME_TASK_FREQUENCY;
-    public static int CASTLE_ZONE_FAME_AQUIRE_POINTS;
-    public static boolean FAME_FOR_DEAD_PLAYERS;
-    public static boolean CRAFT_MASTERWORK;
-    public static int BASE_CRITICAL_CRAFT_RATE;
-    public static int DWARF_RECIPE_LIMIT;
-    public static int COMMON_RECIPE_LIMIT;
-    public static boolean ALT_GAME_CREATION;
-    public static double ALT_GAME_CREATION_SPEED;
-    public static double ALT_GAME_CREATION_XP_RATE;
-    public static double ALT_GAME_CREATION_RARE_XPSP_RATE;
-    public static double ALT_GAME_CREATION_SP_RATE;
-    public static boolean ALT_CLAN_LEADER_INSTANT_ACTIVATION;
-    public static int ALT_CLAN_JOIN_DAYS;
-    public static int ALT_CLAN_CREATE_DAYS;
-    public static int ALT_CLAN_DISSOLVE_DAYS;
-    public static int ALT_ALLY_JOIN_DAYS_WHEN_LEAVED;
-    public static int ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED;
-    public static int ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED;
-    public static int ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED;
-    public static int ALT_MAX_NUM_OF_CLANS_IN_ALLY;
-    public static int ALT_CLAN_MEMBERS_FOR_WAR;
-    public static boolean ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH;
-    public static long ALT_CLAN_MEMBERS_TIME_FOR_BONUS;
-    public static int ALT_PARTY_MAX_MEMBERS;
-    public static int ALT_PARTY_RANGE;
-
-    public static boolean ALT_LEAVE_PARTY_LEADER;
-
-    public static long STARTING_ADENA;
-    public static byte STARTING_LEVEL;
-    public static int STARTING_SP;
-
-    public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
-
-    public static boolean ENABLE_KEYBOARD_MOVEMENT;
-    public static int UNSTUCK_INTERVAL;
-    public static int PLAYER_SPAWN_PROTECTION;
-    public static int PLAYER_TELEPORT_PROTECTION;
-    public static boolean RANDOM_RESPAWN_IN_TOWN_ENABLED;
-    public static boolean OFFSET_ON_TELEPORT_ENABLED;
-    public static int MAX_OFFSET_ON_TELEPORT;
-    public static boolean PETITIONING_ALLOWED;
-    public static int MAX_PETITIONS_PER_PLAYER;
-    public static int MAX_PETITIONS_PENDING;
-    public static int MAX_NEWBIE_BUFF_LEVEL;
-    public static int DELETE_DAYS;
-    public static String PARTY_XP_CUTOFF_METHOD;
-    public static double PARTY_XP_CUTOFF_PERCENT;
-    public static int PARTY_XP_CUTOFF_LEVEL;
-    public static int[][] PARTY_XP_CUTOFF_GAPS;
-    public static int[] PARTY_XP_CUTOFF_GAP_PERCENTS;
-    public static boolean DISABLE_TUTORIAL;
-    public static boolean STORE_RECIPE_SHOPLIST;
-    public static boolean STORE_UI_SETTINGS;
 
     // --------------------------------------------------
     // Castle Settings
@@ -225,45 +138,13 @@ public final class Config {
     public static int TRAP_UPGRADE_PRICE2;
     public static int TRAP_UPGRADE_PRICE3;
     public static int TRAP_UPGRADE_PRICE4;
-
-    // --------------------------------------------------
-    // Feature Settings
-    // --------------------------------------------------
     public static int TAKE_CASTLE_POINTS;
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
 
-    public static int ROYAL_GUARD_COST;
-    public static int KNIGHT_UNIT_COST;
-    public static int REPUTATION_SCORE_PER_KILL;
-    public static int JOIN_ACADEMY_MIN_REP_SCORE;
-    public static int JOIN_ACADEMY_MAX_REP_SCORE;
-    public static boolean ALLOW_WYVERN_ALWAYS;
-    public static boolean ALLOW_WYVERN_DURING_SIEGE;
-    public static boolean ALLOW_MOUNTS_DURING_SIEGE;
-    public static boolean ENABLE_L2_STORE;
-    public static boolean ENABLE_LCOIN_STORE;
-
-
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
-
-    public static boolean SERVER_GMONLY;
-    public static boolean GM_HERO_AURA;
-    public static boolean GM_STARTUP_BUILDER_HIDE;
-    public static boolean GM_STARTUP_INVULNERABLE;
-    public static boolean GM_STARTUP_INVISIBLE;
-    public static boolean GM_STARTUP_SILENCE;
-    public static boolean GM_STARTUP_AUTO_LIST;
-    public static boolean GM_STARTUP_DIET_MODE;
-    public static boolean GM_ITEM_RESTRICTION;
-    public static boolean GM_TRADE_RESTRICTED_ITEMS;
-    public static boolean GM_ANNOUNCER_NAME;
-    public static boolean GM_GIVE_SPECIAL_SKILLS;
-    public static boolean GM_GIVE_SPECIAL_AURA_SKILLS;
-    public static boolean GM_DEBUG_HTML_PATHS;
-    public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 
     public static boolean LOG_ITEM_ENCHANTS;
 
@@ -822,36 +703,8 @@ public final class Config {
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
 
-        ROYAL_GUARD_COST = Feature.getInt("CreateRoyalGuardCost", 5000);
-        KNIGHT_UNIT_COST = Feature.getInt("CreateKnightUnitCost", 10000);
-        REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
-        JOIN_ACADEMY_MIN_REP_SCORE = Feature.getInt("CompleteAcademyMinPoints", 190);
-        JOIN_ACADEMY_MAX_REP_SCORE = Feature.getInt("CompleteAcademyMaxPoints", 650);
-        ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
-        ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
-        ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
-        ENABLE_L2_STORE = Feature.getBoolean("EnableL2Store", true);
-        ENABLE_LCOIN_STORE = Feature.getBoolean("EnableLCoinStore", true);
-
-
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
-
-        SERVER_GMONLY = General.getBoolean("ServerGMOnly", false);
-        GM_HERO_AURA = General.getBoolean("GMHeroAura", false);
-        GM_STARTUP_BUILDER_HIDE = General.getBoolean("GMStartupBuilderHide", false);
-        GM_STARTUP_INVULNERABLE = General.getBoolean("GMStartupInvulnerable", false);
-        GM_STARTUP_INVISIBLE = General.getBoolean("GMStartupInvisible", false);
-        GM_STARTUP_SILENCE = General.getBoolean("GMStartupSilence", false);
-        GM_STARTUP_AUTO_LIST = General.getBoolean("GMStartupAutoList", false);
-        GM_STARTUP_DIET_MODE = General.getBoolean("GMStartupDietMode", false);
-        GM_ITEM_RESTRICTION = General.getBoolean("GMItemRestriction", true);
-        GM_TRADE_RESTRICTED_ITEMS = General.getBoolean("GMTradeRestrictedItems", false);
-        GM_ANNOUNCER_NAME = General.getBoolean("GMShowAnnouncerName", false);
-        GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
-        GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
-        GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
-        USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
 
         LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
 

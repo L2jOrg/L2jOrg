@@ -78,15 +78,13 @@ public final class SkillTreesData extends GameXmlReader {
     // Skill Hash Code, SkillLearn
     private static final LongMap<SkillLearn> fishingSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> pledgeSkillTree = new HashLongMap<>();
-    private static final LongMap<SkillLearn> subPledgeSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> transformSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> commonSkillTree = new HashLongMap<>();
     // Other skill trees
     private static final LongMap<SkillLearn> nobleSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> heroSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> gameMasterSkillTree = new HashLongMap<>();
-    private static final LongMap<SkillLearn> gameMasterAuraSkillTree = new HashLongMap<>();
-    // Remove skill tree
+
     private static final Map<ClassId, IntSet> removeSkillCache = new HashMap<>();
     /**
      * Parent class Ids are read from XML and stored in this map, to allow easy customization.
@@ -113,12 +111,10 @@ public final class SkillTreesData extends GameXmlReader {
         classSkillTrees.clear();
         fishingSkillTree.clear();
         pledgeSkillTree.clear();
-        subPledgeSkillTree.clear();
         transformSkillTree.clear();
         nobleSkillTree.clear();
         heroSkillTree.clear();
         gameMasterSkillTree.clear();
-        gameMasterAuraSkillTree.clear();
         removeSkillCache.clear();
 
         parseDatapackDirectory("data/skillTrees/", true);
@@ -199,12 +195,10 @@ public final class SkillTreesData extends GameXmlReader {
             }
             case "fishingSkillTree" -> fishingSkillTree.put(skillHashCode, skillLearn);
             case "pledgeSkillTree" -> pledgeSkillTree.put(skillHashCode, skillLearn);
-            case "subPledgeSkillTree" -> subPledgeSkillTree.put(skillHashCode, skillLearn);
             case "transformSkillTree" -> transformSkillTree.put(skillHashCode, skillLearn);
             case "nobleSkillTree" -> nobleSkillTree.put(skillHashCode, skillLearn);
             case "heroSkillTree" -> heroSkillTree.put(skillHashCode, skillLearn);
             case "gameMasterSkillTree" -> gameMasterSkillTree.put(skillHashCode, skillLearn);
-            case "gameMasterAuraSkillTree" -> gameMasterAuraSkillTree.put(skillHashCode, skillLearn);
             default -> LOGGER.warn("Unknown Skill Tree type: {}", type);
         }
     }
@@ -262,24 +256,6 @@ public final class SkillTreesData extends GameXmlReader {
      */
     public List<Skill> getHeroSkillTree() {
         return heroSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
-    }
-
-    /**
-     * Gets the Game Master skill tree.
-     *
-     * @return the complete Game Master Skill Tree
-     */
-    public List<Skill> getGMSkillTree() {
-        return gameMasterSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
-    }
-
-    /**
-     * Gets the Game Master Aura skill tree.
-     *
-     * @return the complete Game Master Aura Skill Tree
-     */
-    public List<Skill> getGMAuraSkillTree() {
-        return gameMasterAuraSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
     }
 
     public boolean hasAvailableSkills(Player player, ClassId classId) {
@@ -496,48 +472,23 @@ public final class SkillTreesData extends GameXmlReader {
      * Gets the available pledge skills.
      *
      * @param clan         the pledge skill learning clan
-     * @param includeSquad if squad skill will be added too
      * @return all the available pledge skills for a given {@code clan}
      */
-    public Map<Integer, SkillLearn> getMaxPledgeSkills(Clan clan, boolean includeSquad) {
-        final Map<Integer, SkillLearn> result = new HashMap<>();
+    public IntMap<SkillLearn> getMaxPledgeSkills(Clan clan) {
+        final IntMap<SkillLearn> result = new HashIntMap<>();
         for (SkillLearn skill : pledgeSkillTree.values()) {
             if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.getGetLevel())) {
                 checkClanSkillLevel(clan, result, skill);
             }
         }
-
-        if (includeSquad) {
-            for (SkillLearn skill : subPledgeSkillTree.values()) {
-                if ((clan.getLevel() >= skill.getGetLevel())) {
-                    checkClanSkillLevel(clan, result, skill);
-                }
-            }
-        }
         return result;
     }
 
-    private void checkClanSkillLevel(Clan clan, Map<Integer, SkillLearn> result, SkillLearn skill) {
+    private void checkClanSkillLevel(Clan clan, IntMap<SkillLearn> result, SkillLearn skill) {
         final Skill oldSkill = clan.getSkills().get(skill.getSkillId());
         if ((oldSkill == null) || (oldSkill.getLevel() < skill.getSkillLevel())) {
             result.put(skill.getSkillId(), skill);
         }
-    }
-
-    /**
-     * Gets the available sub pledge skills.
-     *
-     * @param clan the sub-pledge skill learning clan
-     * @return all the available Sub-Pledge skills for a given {@code clan}
-     */
-    public List<SkillLearn> getAvailableSubPledgeSkills(Clan clan) {
-        final List<SkillLearn> result = new ArrayList<>();
-        for (SkillLearn skill : subPledgeSkillTree.values()) {
-            if ((clan.getLevel() >= skill.getGetLevel()) && clan.isLearnableSubSkill(skill.getSkillId(), skill.getSkillLevel())) {
-                result.add(skill);
-            }
-        }
-        return result;
     }
 
     /**
@@ -576,10 +527,6 @@ public final class SkillTreesData extends GameXmlReader {
             }
             case PLEDGE: {
                 sl = getPledgeSkill(id, lvl);
-                break;
-            }
-            case SUBPLEDGE: {
-                sl = getSubPledgeSkill(id, lvl);
                 break;
             }
         }
@@ -629,17 +576,6 @@ public final class SkillTreesData extends GameXmlReader {
      */
     public SkillLearn getPledgeSkill(int id, int lvl) {
         return pledgeSkillTree.get(SkillEngine.skillHashCode(id, lvl));
-    }
-
-    /**
-     * Gets the sub pledge skill.
-     *
-     * @param id  the sub-pledge skill Id
-     * @param lvl the sub-pledge skill level
-     * @return the sub-pledge skill from the Sub-Pledge Skill Tree for a given {@code id} and {@code lvl}
-     */
-    public SkillLearn getSubPledgeSkill(int id, int lvl) {
-        return subPledgeSkillTree.get(SkillEngine.skillHashCode(id, lvl));
     }
 
     /**
@@ -708,7 +644,7 @@ public final class SkillTreesData extends GameXmlReader {
      */
     public boolean isGMSkill(int skillId, int skillLevel) {
         final long hashCode = SkillEngine.skillHashCode(skillId, skillLevel);
-        return gameMasterSkillTree.containsKey(hashCode) || gameMasterAuraSkillTree.containsKey(hashCode);
+        return gameMasterSkillTree.containsKey(hashCode);
     }
 
     /**
@@ -720,24 +656,16 @@ public final class SkillTreesData extends GameXmlReader {
      */
     public boolean isClanSkill(int skillId, int skillLevel) {
         final long hashCode = SkillEngine.skillHashCode(skillId, skillLevel);
-        return pledgeSkillTree.containsKey(hashCode) || subPledgeSkillTree.containsKey(hashCode);
+        return pledgeSkillTree.containsKey(hashCode);
     }
 
     public boolean isRemoveSkill(ClassId classId, int skillId) {
         return removeSkillCache.getOrDefault(classId, Containers.emptyIntSet()).contains(skillId);
     }
 
-    /**
-     * Adds the skills.
-     *
-     * @param gmchar     the player to add the Game Master skills
-     * @param auraSkills if {@code true} it will add "GM Aura" skills, else will add the "GM regular" skills
-     */
-    public void addSkills(Player gmchar, boolean auraSkills) {
-        final Collection<SkillLearn> skills = auraSkills ? gameMasterAuraSkillTree.values() : gameMasterSkillTree.values();
-        final SkillEngine st = SkillEngine.getInstance();
-        for (SkillLearn sl : skills) {
-            gmchar.addSkill(st.getSkill(sl.getSkillId(), sl.getSkillLevel()), false); // Don't Save GM skills to database
+    public void addGMSkills(Player gm) {
+        for (SkillLearn learn : gameMasterSkillTree.values()) {
+            gm.addSkill(learn.getSkill(), false);
         }
     }
 
@@ -858,12 +786,10 @@ public final class SkillTreesData extends GameXmlReader {
         LOGGER.info("Loaded {} Class Skills for {} Class Skill Trees",  classSkillTreeCount, classSkillTrees.size());
         LOGGER.info("Loaded {} Fishing Skills, {} Dwarven only Fishing Skills",  fishingSkillTree.size(), dwarvenOnlyFishingSkillCount);
         LOGGER.info("Loaded {} Pledge Skills, {} for Pledge and {} Residential",  pledgeSkillTree.size(), pledgeSkillTree.size() - resSkillCount, resSkillCount);
-        LOGGER.info("Loaded {} Sub-Pledge Skills.", subPledgeSkillTree.size());
         LOGGER.info("Loaded {} Transform Skills.", transformSkillTree.size());
         LOGGER.info("Loaded {} Noble Skills.", nobleSkillTree.size());
         LOGGER.info("Loaded {} Hero Skills.", heroSkillTree.size());
         LOGGER.info("Loaded {} Game Master Skills.", gameMasterSkillTree.size());
-        LOGGER.info("Loaded {} Game Master Aura Skills.", gameMasterAuraSkillTree.size());
         LOGGER.info("Loaded {} Common Skills to all classes.", commonSkillTree.size());
     }
 

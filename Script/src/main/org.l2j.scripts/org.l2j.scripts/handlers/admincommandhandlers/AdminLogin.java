@@ -19,12 +19,12 @@
 package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ServerType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 
@@ -182,23 +182,15 @@ public class AdminLogin implements IAdminCommandHandler
 	private String getServerTypeName(int serverType) {
 		return Arrays.stream(ServerType.values()).filter(type -> (serverType & type.getMask()) != 0).map(ServerType::toString).collect(Collectors.joining(", "));
 	}
-	
-	/**
-	 *
-	 */
-	private void allowToAll()
-	{
+
+	private void allowToAll() {
+		AdminSettings.gmOnlyServer(false);
 		// TODO Implement AuthServerCommunication.getInstance().setServerStatus(ServerStatus.STATUS_AUTO);
-		Config.SERVER_GMONLY = false;
 	}
-	
-	/**
-	 *
-	 */
-	private void gmOnly()
-	{
+
+	private void gmOnly() {
 		// TODO  IMPLEMENT AuthServerCommunication.getInstance().setServerStatus(ServerStatus.STATUS_GM_ONLY);
-		Config.SERVER_GMONLY = true;
+		AdminSettings.gmOnlyServer(true);
 	}
 	
 	@Override

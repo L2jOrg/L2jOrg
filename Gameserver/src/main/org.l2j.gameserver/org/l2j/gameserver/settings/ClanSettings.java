@@ -37,6 +37,7 @@ public class ClanSettings  {
     private static int minMembersForWar;
     private static boolean canMembersWithdrawFromWarehouse;
     private static long onlineTimeForBonus;
+    private static int warKillReputation;
 
     private ClanSettings() {
         // helper class
@@ -58,6 +59,7 @@ public class ClanSettings  {
         minMembersForWar = settingsFile.getInt("AltClanMembersForWar", 15);
         canMembersWithdrawFromWarehouse = settingsFile.getBoolean("AltMembersCanWithdrawFromClanWH", false);
         onlineTimeForBonus = settingsFile.parseDuration("AltClanMembersTimeForBonus", "PT30M").toMillis();
+        warKillReputation =  settingsFile.getInt("WarKillReputation", 1);
     }
 
     public static boolean instantChangeLeader() {
@@ -106,5 +108,9 @@ public class ClanSettings  {
 
     public static long onlineTimeForBonus() {
         return onlineTimeForBonus;
+    }
+
+    public static int warKillReputation() {
+        return warKillReputation;
     }
 }
