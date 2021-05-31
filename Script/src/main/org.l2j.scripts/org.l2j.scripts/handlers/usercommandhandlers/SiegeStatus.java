@@ -67,7 +67,7 @@ public class SiegeStatus implements IUserCommandHandler
 				continue;
 			}
 			
-			final SiegeZone siegeZone = siege.getCastle().getZone();
+			final SiegeZone siegeZone = siege.getCastle().getSiegeZone();
 			final StringBuilder sb = new StringBuilder();
 			for (Player member : clan.getOnlineMembers(0))
 			{

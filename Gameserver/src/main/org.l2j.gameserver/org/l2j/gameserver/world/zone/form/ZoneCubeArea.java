@@ -57,7 +57,7 @@ public class ZoneCubeArea implements ZoneArea {
 
     @Override
     public boolean intersectsRectangle(int x1, int x2, int y1, int y2) {
-        return rectangle.intersects(x1, y1, x2 - x1, y2 - y1);
+        return rectangle.intersects(x1, y1, (double) x2 - x1, y2 - y1);
     }
 
     @Override
@@ -84,16 +84,6 @@ public class ZoneCubeArea implements ZoneArea {
         }
 
         return Math.sqrt(shortestDist);
-    }
-
-    @Override
-    public int getLowZ() {
-        return minZ;
-    }
-
-    @Override
-    public int getHighZ() {
-        return maxZ;
     }
 
     @Override
@@ -132,5 +122,15 @@ public class ZoneCubeArea implements ZoneArea {
         final int y = Rnd.get(rectangle.y, rectangle.y + rectangle.height);
 
         return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, minZ));
+    }
+
+    @Override
+    public int getLowZ() {
+        return minZ;
+    }
+
+    @Override
+    public int getHighZ() {
+        return maxZ;
     }
 }

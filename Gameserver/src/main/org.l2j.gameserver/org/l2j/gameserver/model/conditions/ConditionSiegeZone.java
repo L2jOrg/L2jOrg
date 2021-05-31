@@ -74,7 +74,7 @@ public final class ConditionSiegeZone extends Condition {
 
         if (((castle == null) || (castle.getId() <= 0))) {
             return (value & COND_NOT_ZONE) != 0;
-        } else if (!castle.getZone().isActive()) {
+        } else if (!castle.getSiegeZone().isActive()) {
             return (value & COND_NOT_ZONE) != 0;
         } else if (((value & COND_CAST_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(castle.getId()) && (player.getSiegeState() == 1)) {
             return true;

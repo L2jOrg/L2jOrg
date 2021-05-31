@@ -20,6 +20,7 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.MountType;
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -215,7 +216,12 @@ public class SiegeZone extends Zone {
         @Override
         public Zone create(int id, Node zoneNode, GameXmlReader reader) {
             var castleId = reader.parseInt(zoneNode.getAttributes(), "castle-id");
-            return new SiegeZone(id, castleId);
+            var zone = new SiegeZone(id, castleId);
+            var castle = CastleManager.getInstance().getCastleById(castleId);
+            if(castle != null) {
+                castle.setSiegeZone(zone);
+            }
+            return zone;
         }
 
         @Override

@@ -61,7 +61,7 @@ public class ConditionPlayerCanCreateOutpost extends Condition {
         if ((castle != null) && (castle.getId() == 0)) {
             player.sendMessage("You must be on fort or castle ground to construct an outpost or flag.");
             canCreateOutpost = false;
-        } else if ((castle != null) && !castle.getZone().isActive()) {
+        } else if ((castle != null) && !castle.getSiegeZone().isActive()) {
             player.sendMessage("You can only construct an outpost or flag on siege field.");
             canCreateOutpost = false;
         } else if (!player.isClanLeader()) {

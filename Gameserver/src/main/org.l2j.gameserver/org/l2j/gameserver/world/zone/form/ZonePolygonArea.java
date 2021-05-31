@@ -72,16 +72,6 @@ public class ZonePolygonArea implements ZoneArea {
     }
 
     @Override
-    public int getLowZ() {
-        return minZ;
-    }
-
-    @Override
-    public int getHighZ() {
-        return maxZ;
-    }
-
-    @Override
     public void visualize(Player player, String zoneName) {
         var z = player.getZ() + (int) (player.getCollisionHeight() / 2);
         var primitive = new ExServerPrimitive(zoneName, polygon.xpoints[0], polygon.ypoints[0], z);
@@ -120,5 +110,16 @@ public class ZonePolygonArea implements ZoneArea {
 
     public int[] getY() {
         return polygon.ypoints;
+    }
+
+
+    @Override
+    public int getLowZ() {
+        return minZ;
+    }
+
+    @Override
+    public int getHighZ() {
+        return maxZ;
     }
 }

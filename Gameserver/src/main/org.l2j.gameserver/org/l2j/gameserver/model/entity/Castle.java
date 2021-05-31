@@ -92,11 +92,11 @@ public final class Castle extends AbstractResidence {
     private final List<Artefact> artefacts = new ArrayList<>(1);
     private final IntMap<CastleFunction> functions = new CHashIntMap<>();
 
-    int ownerId = 0;
-    private Siege siege = null;
-    private SiegeZone zone = null;
+    int ownerId;
+    private Siege siege;
+    private SiegeZone siegeZone;
     private ResidenceTeleportZone teleZone;
-    private Clan formerOwner = null;
+    private Clan formerOwner;
 
     private final CastleData data;
 
@@ -217,23 +217,19 @@ public final class Castle extends AbstractResidence {
     }
 
     public boolean checkIfInZone(int x, int y, int z) {
-        return getZone().isInsideZone(x, y, z);
+        return getSiegeZone().isInsideZone(x, y, z);
     }
 
     public boolean checkIfInZone(ILocational loc) {
-        return getZone().isInsideZone(loc);
+        return getSiegeZone().isInsideZone(loc);
     }
 
-    public SiegeZone getZone() {
-        if (isNull(zone)) {
-            for (SiegeZone zone : ZoneEngine.getInstance().getAllZones(SiegeZone.class)) {
-                if (zone.getSiegeObjectId() == getId()) {
-                    this.zone = zone;
-                    break;
-                }
-            }
-        }
-        return zone;
+    public SiegeZone getSiegeZone() {
+        return siegeZone;
+    }
+
+    public void setSiegeZone(SiegeZone siegeZone) {
+        this.siegeZone = siegeZone;
     }
 
     @Override
@@ -258,7 +254,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public double getDistance(WorldObject obj) {
-        return getZone().getDistanceToZone(obj);
+        return getSiegeZone().getDistanceToZone(obj);
     }
 
     private void openCloseDoor(Player player, Door door, boolean open) {
