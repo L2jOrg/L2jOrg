@@ -21,6 +21,7 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -35,6 +36,7 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -55,7 +57,6 @@ public final class EffectZone extends Zone {
 
     private EffectZone(int id) {
         super(id);
-        //setTargetType(InstanceType.Playable); // default only playable
         setSettings(new TaskZoneSettings());
     }
 
@@ -71,6 +72,11 @@ public final class EffectZone extends Zone {
             }
         }
         return 0;
+    }
+
+    @Override
+    protected boolean isAffected(Creature creature) {
+        return super.isAffected(creature) && isPlayable(creature);
     }
 
     @Override

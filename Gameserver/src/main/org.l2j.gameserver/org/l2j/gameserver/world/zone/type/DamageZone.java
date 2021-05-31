@@ -32,6 +32,7 @@ import org.w3c.dom.Node;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.model.DamageInfo.DamageType;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -50,13 +51,17 @@ public class DamageZone extends Zone {
 
     private DamageZone(int id) {
         super(id);
-        //setTargetType(InstanceType.Playable); // default only playable
         setSettings(new TaskZoneSettings());
     }
 
     @Override
     public TaskZoneSettings getSettings() {
         return (TaskZoneSettings) super.getSettings();
+    }
+
+    @Override
+    protected boolean isAffected(Creature creature) {
+        return super.isAffected(creature) && isPlayable(creature);
     }
 
     @Override
