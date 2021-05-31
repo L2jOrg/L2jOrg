@@ -51,7 +51,7 @@ public class NaiveZone extends Zone {
 
     @Override
     protected void onExit(Creature creature) {
-        creature.setInsideZone(ZoneType.PVP, false);
+        creature.setInsideZone(type, false);
         if(leaveMessage != 0 && isPlayer(creature) && !creature.isInsideZone(type)) {
             creature.sendPacket(SystemMessage.getSystemMessage(leaveMessage));
         }

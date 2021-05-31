@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
@@ -52,7 +53,13 @@ public final class CastleZone extends ResidenceZone {
         @Override
         public Zone create(int id, Node zoneNode, GameXmlReader reader) {
             var castleId = reader.parseInt(zoneNode.getAttributes(), "castle-id");
-            return new CastleZone(id, castleId);
+            var zone = new CastleZone(id, castleId);
+
+            var castle = CastleManager.getInstance().getCastleById(castleId);
+            if(castle != null) {
+                castle.setResidenceZone(zone);
+            }
+            return zone;
         }
 
         @Override

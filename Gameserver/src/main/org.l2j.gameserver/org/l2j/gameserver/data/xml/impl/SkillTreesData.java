@@ -118,13 +118,8 @@ public final class SkillTreesData extends GameXmlReader {
         removeSkillCache.clear();
 
         parseDatapackDirectory("data/skillTrees/", true);
-
-        // Generate check arrays.
         generateCheckArrays();
-
-        // Logs a report with skill trees info.
         report();
-
         isLoading.set(false);
         releaseResources();
     }
@@ -164,7 +159,6 @@ public final class SkillTreesData extends GameXmlReader {
     private void parseSkill(Node skillNode, LongMap<SkillLearn> classSkillTree, ClassId classId, String type) {
         final SkillLearn skillLearn = new SkillLearn(new StatsSet(parseAttributes(skillNode)));
 
-        // test if skill exists
         SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 
         for (Node b = skillNode.getFirstChild(); b != null; b = b.getNextSibling()) {
@@ -212,7 +206,6 @@ public final class SkillTreesData extends GameXmlReader {
      * @return the complete Class Skill Tree including skill trees from parent class for a given {@code classId}
      */
     public LongMap<SkillLearn> getCompleteClassSkillTree(ClassId classId) {
-        // Add all skills that belong to all classes.
         final LongMap<SkillLearn> skillTree = new HashLongMap<>(commonSkillTree);
         while ((classId != null) && (classSkillTrees.get(classId) != null)) {
             skillTree.putAll(classSkillTrees.get(classId));

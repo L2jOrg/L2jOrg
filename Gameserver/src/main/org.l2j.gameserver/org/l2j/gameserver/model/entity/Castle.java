@@ -67,7 +67,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Objects;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -104,11 +103,8 @@ public final class Castle extends AbstractResidence {
     public Castle(CastleData data){
         super(data.getId());
         setName(data.getName()); // tempfix
-
         this.data = data;
         load();
-        initResidenceZone();
-        spawnSideNpcs();
     }
 
     private void load() {
@@ -119,17 +115,8 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    private void initResidenceZone() {
-        for (CastleZone zone : ZoneEngine.getInstance().getAllZones(CastleZone.class)) {
-            if (zone.getResidenceId() == getId()) {
-                setResidenceZone(zone);
-                break;
-            }
-        }
-    }
-
-    private void spawnSideNpcs() {
-        sideNpcs.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
+    public void spawnSideNpcs() {
+        sideNpcs.forEach(Npc::deleteMe);
         sideNpcs.clear();
 
         for (CastleSpawnHolder holder : getSideSpawns()) {

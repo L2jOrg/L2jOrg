@@ -171,7 +171,7 @@ public final class ItemEngine extends GameXmlReader {
             var msgId = parseInt(attr, "msg-id");
             if(nonNull(msg)) {
                 condition.setMessage(msg);
-            } else if(nonNull(msgId)) {
+            } else {
                 condition.setMessageId(msgId);
                 if(parseBoolean(attr, "add-name")) {
                     condition.addName();

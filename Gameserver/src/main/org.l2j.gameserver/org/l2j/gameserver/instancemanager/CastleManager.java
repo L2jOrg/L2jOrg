@@ -24,14 +24,18 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.InstanceListManager;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
+import org.l2j.gameserver.data.database.data.CastleData;
 import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Siege;
+import org.l2j.gameserver.model.holders.CastleSpawnHolder;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -171,7 +175,9 @@ public final class CastleManager implements InstanceListManager {
 
     @Override
     public void loadInstances() {
-        getDAO(CastleDAO.class).findAll().stream().map(Castle::new).forEach(c -> castles.put(c.getId(), c));
+        for (CastleData data : getDAO(CastleDAO.class).findAll()) {
+            castles.put(data.getId(), new Castle(data));
+        }
         LOGGER.info("Loaded {} castles", castles.size());
     }
 
@@ -191,6 +197,12 @@ public final class CastleManager implements InstanceListManager {
 
     public int getSiegesOnDate(LocalDateTime siegeDate) {
         return (int) castleSiegesDate.values().stream().filter(date -> ChronoUnit.DAYS.between(siegeDate, date) == 0).count();
+    }
+
+    public void spawnSideNpcs() {
+        for (Castle castle : castles.values()) {
+            castle.spawnSideNpcs();
+        }
     }
 
     public static void init() {
