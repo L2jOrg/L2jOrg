@@ -126,6 +126,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.engine.clan.clanhall;
     exports org.l2j.gameserver.engine.clan;
 
+
     uses org.l2j.gameserver.handler.IActionHandler;
     uses org.l2j.gameserver.handler.IActionShiftHandler;
     uses org.l2j.gameserver.handler.IAdminCommandHandler;

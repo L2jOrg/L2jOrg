@@ -488,6 +488,7 @@ public final class Config {
     public static double DEFENDER_MDEF_MULTIPLIER;
     public static double DEFENDER_AGRRO_RANGE_MULTIPLIER;
     public static double DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
+    public static int ALT_CLAN_MEMBERS_FOR_WAR;
 
     public static boolean DISPLAY_SERVER_TIME;
     public static int BUFFER_MAX_SCHEMES;
