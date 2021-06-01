@@ -60,6 +60,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * Four Selpuchers AI
  * @author Mobius
+ * @author JoeAlisson
  */
 public class FourSepulchers extends AbstractNpcAI
 {
@@ -430,14 +431,9 @@ public class FourSepulchers extends AbstractNpcAI
 			case ROOM_4_CHARM_3:
 			case ROOM_4_CHARM_4:
 			{
-				for (Zone zone : ZoneEngine.getInstance().getZones(killer))
-				{
-					// TODO improve to remove getSkillLevel from EffectZone
-					if ((zone instanceof EffectZone) && (((EffectZone) zone).getSkillLevel(CHARM_SKILLS.get(npc.getId())) > 0))
-					{
-						zone.setEnabled(false);
-						break;
-					}
+				var zone = ZoneEngine.getInstance().findFirstZone(killer, EffectZone.class);
+				if(zone != null && zone.getSkillLevel(CHARM_SKILLS.get(npc.getId())) > 0) {
+					zone.setEnabled(false);
 				}
 				npc.broadcastSay(ChatType.NPC_GENERAL, CHARM_MSG.get(npc.getId()));
 				break;
@@ -543,17 +539,9 @@ public class FourSepulchers extends AbstractNpcAI
 		});
 
 		// Disable EffectZones
-		for (int[] spawnInfo : CHEST_SPAWN_LOCATIONS)
-		{
-			if ((spawnInfo[0] == sepulcherId) && (spawnInfo[1] == 4))
-			{
-				for (Zone zone : ZoneEngine.getInstance().getZones(spawnInfo[2], spawnInfo[3], spawnInfo[4]))
-				{
-					if (zone instanceof EffectZone)
-					{
-						zone.setEnabled(false);
-					}
-				}
+		for (int[] spawnInfo : CHEST_SPAWN_LOCATIONS) {
+			if ((spawnInfo[0] == sepulcherId) && (spawnInfo[1] == 4)) {
+				ZoneEngine.getInstance().forEachZone(spawnInfo[2], spawnInfo[3], spawnInfo[4], EffectZone.class, z -> z.setEnabled(false));
 				break;
 			}
 		}
@@ -612,15 +600,8 @@ public class FourSepulchers extends AbstractNpcAI
 				STORED_MONSTER_SPAWNS.get(sepulcherId).add(addSpawn(spawnInfo[2], spawnInfo[3], spawnInfo[4], spawnInfo[5], spawnInfo[6], false, 0));
 			}
 		}
-		if (currentWave == 4)
-		{
-			for (Zone zone : ZoneEngine.getInstance().getZones(player))
-			{
-				if (zone instanceof EffectZone)
-				{
-					zone.setEnabled(true);
-				}
-			}
+		if (currentWave == 4) {
+			ZoneEngine.getInstance().forEachZone(player, EffectZone.class, zone -> zone.setEnabled(true));
 		}
 		if ((currentWave == 2) || (currentWave == 5))
 		{

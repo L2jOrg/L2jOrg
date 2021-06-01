@@ -57,6 +57,7 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * @author bit
+ * @author JoeAlisson
  */
 public class Fishing {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Fishing.class);
@@ -346,23 +347,8 @@ public class Fishing {
         int baitX = (int) (player.getX() + (cos * distance));
         int baitY = (int) (player.getY() + (sin * distance));
 
-        // search for fishing zone
-        FishingZone fishingZone = null;
-        for (Zone zone : ZoneEngine.getInstance().getZones(player)) {
-            if (zone instanceof FishingZone) {
-                fishingZone = (FishingZone) zone;
-                break;
-            }
-        }
-        // search for water zone
-        WaterZone waterZone = null;
-        for (Zone zone : ZoneEngine.getInstance().getZones(baitX, baitY)) {
-            if (zone instanceof WaterZone) {
-                waterZone = (WaterZone) zone;
-                break;
-            }
-        }
-
+        FishingZone fishingZone = ZoneEngine.getInstance().findFirstZone(player, FishingZone.class);
+        WaterZone waterZone = ZoneEngine.getInstance().findFirstZone(baitX, baitY, WaterZone.class);
         int baitZ = computeBaitZ(player, baitX, baitY, fishingZone, waterZone);
         if (baitZ == Integer.MIN_VALUE) {
             player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);

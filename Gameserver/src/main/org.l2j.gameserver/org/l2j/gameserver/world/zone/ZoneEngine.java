@@ -24,6 +24,7 @@ import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -44,6 +45,8 @@ import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
@@ -201,7 +204,7 @@ public final class ZoneEngine extends GameXmlReader {
                 final var by = ((y + 1) - OFFSET_Y) << SHIFT_BY;
 
                 if (zone.getArea().intersectsRectangle(ax, bx, ay, by)) {
-                    zoneRegions[x][y].getZones().put(zone.getId(), zone);
+                    zoneRegions[x][y].registerZone(zone);
                 }
             }
         }
@@ -344,7 +347,7 @@ public final class ZoneEngine extends GameXmlReader {
 
         for (ZoneRegion[] regions : zoneRegions) {
             for (ZoneRegion region : regions) {
-                region.getZones().clear();
+                region.clear();
             }
         }
         LOGGER.info("Removed zones in regions.");
@@ -357,7 +360,11 @@ public final class ZoneEngine extends GameXmlReader {
      * @return the size
      */
     public int getSize() {
-        return classZones.values().stream().mapToInt(IntMap::size).sum();
+        var size = 0;
+        for (IntMap<? extends Zone> zones : classZones.values()) {
+            size += zones.size();
+        }
+        return size;
     }
 
     /**
@@ -392,7 +399,12 @@ public final class ZoneEngine extends GameXmlReader {
      * @see #getZoneById(int, Class)
      */
     public Zone getZoneById(int id) {
-        return classZones.values().stream().filter(m -> m.containsKey(id)).map(m -> m.get(id)).findAny().orElse(null);
+        for (IntMap<? extends Zone> zones : classZones.values()) {
+            if(zones.containsKey(id)) {
+                return zones.get(id);
+            }
+        }
+        return null;
     }
 
     /**
@@ -402,7 +414,14 @@ public final class ZoneEngine extends GameXmlReader {
      * @return the zone by name
      */
     public Zone getZoneByName(String name) {
-        return classZones.values().stream().flatMap(m -> m.values().stream()).filter(z -> Objects.equals(name, z.getName())).findAny().orElse(null);
+        for (IntMap<? extends Zone> zones : classZones.values()) {
+            for (Zone zone : zones.values()) {
+                if(Objects.equals(name, zone.getName())) {
+                    return zone;
+                }
+            }
+        }
+        return null;
     }
 
     /**
@@ -418,66 +437,63 @@ public final class ZoneEngine extends GameXmlReader {
         return (T) classZones.get(zoneType).get(id);
     }
 
-    /**
-     * Returns all zones from where the object is located.
-     *
-     * @param locational the locational
-     * @return zones
-     */
-    public List<Zone> getZones(ILocational locational) {
-        return getZones(locational.getX(), locational.getY(), locational.getZ());
-    }
-
-    /**
-     * Gets the zone.
-     *
-     * @param <T>        the generic type
-     * @param locational the locational
-     * @param type       the type
-     * @return zone from where the object is located by type
-     */
-    public <T extends Zone> T getZone(ILocational locational, Class<T> type) {
-        return isNull(locational) ?  null : getZone(locational.getX(), locational.getY(), locational.getZ(), type);
-    }
-
-    /**
-     * Returns all zones from given coordinates (plane).
-     *
-     * @param x the x
-     * @param y the y
-     * @return zones
-     */
-    public List<Zone> getZones(int x, int y) {
+    public <T extends Zone> T findFirstZone(int x, int y, Class<T> zoneClass) {
         var region = getRegion(x, y);
-        return isNull(region) ? Collections.emptyList() : region.getZones().values().stream().filter(z -> z.isInsideZone(x, y)).collect(Collectors.toList());
+        if(region != null) {
+            for (Zone zone : region.getZones()) {
+                if(zoneClass.isInstance(zone) && zone.isInsideZone(x, y)) {
+                    return zoneClass.cast(zone);
+                }
+            }
+        }
+        return null;
     }
 
-    /**
-     * Returns all zones from given coordinates.
-     *
-     * @param x the x
-     * @param y the y
-     * @param z the z
-     * @return zones
-     */
-    public List<Zone> getZones(int x, int y, int z) {
-        var region = getRegion(x, y);
-        return isNull(region) ? Collections.emptyList() : region.getZones().values().stream().filter(zone -> zone.isInsideZone(x, y, z)).collect(Collectors.toList());
+    public <T extends Zone> T findFirstZone(ILocational loc, Class<T> zoneClass) {
+        return findFirstZone(loc.getX(), loc.getY(), loc.getZ(), zoneClass);
     }
 
-    /**
-     * Gets the zone.
-     *
-     * @param <T>  the generic type
-     * @param x    the x
-     * @param y    the y
-     * @param z    the z
-     * @param type the type
-     * @return zone from given coordinates
-     */
-    private <T extends Zone> T getZone(int x, int y, int z, Class<T> type) {
+    public <T extends Zone> T findFirstZone(int x, int y, int z, Class<T> zoneClass) {
         var region = getRegion(x, y);
-        return isNull(region) ? null : region.getZones().values().stream().filter(zone -> type.isInstance(zone) && zone.isInsideZone(x, y, z)).map(type::cast).findFirst().orElse(null);
+        if(region != null) {
+            for (Zone zone : region.getZones()) {
+                if(zoneClass.isInstance(zone) && zone.isInsideZone(x, y, z)) {
+                    return zoneClass.cast(zone);
+                }
+            }
+        }
+        return null;
+    }
+
+    public void forEachZone(ILocational loc, Consumer<Zone> action) {
+        forEachZone(loc.getX(), loc.getY(), loc.getZ(), Zone.class, action);
+    }
+
+    public <T extends Zone> void forEachZone(ILocational loc, Class<T> zoneClass, Consumer<T> action) {
+        forEachZone(loc.getX(), loc.getY(), loc.getZ(), zoneClass, action);
+    }
+
+    public <T extends Zone> void forEachZone(int x, int y, int z, Class<T> zoneClass, Consumer<T> action) {
+        var region = getRegion(x, y);
+        if(region != null) {
+            for (Zone zone : region.getZones()) {
+                if(zoneClass.isInstance(zone) && zone.isInsideZone(x, y, z)) {
+                    action.accept(zoneClass.cast(zone));
+                }
+            }
+        }
+    }
+
+    public boolean anyZoneMatches(ILocational loc, Predicate<Zone> predicate) {
+        var region = getRegion(loc.getX(), loc.getY());
+        if(region != null) {
+            for (Zone zone : region.getZones()) {
+                if(zone.isInsideZone(loc) && predicate.test(zone)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**

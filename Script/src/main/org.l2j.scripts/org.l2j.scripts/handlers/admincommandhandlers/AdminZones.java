@@ -175,21 +175,21 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler {
         _zones.computeIfAbsent(activeChar.getObjectId(), key -> new ZoneNodeHolder(activeChar)).setMaxZ(maxZ);
     }
 
-    private void buildZonesEditorWindow(Player activeChar) {
+    private void buildZonesEditorWindow(Player player) {
         final StringBuilder sb = new StringBuilder();
-        final List<Zone> zones = ZoneEngine.getInstance().getZones(activeChar);
-        for (Zone zone : zones) {
+
+        ZoneEngine.getInstance().forEachZone(player, zone -> {
             if (zone.getArea() instanceof ZonePolygonArea) {
                 sb.append("<tr>");
                 sb.append("<td fixwidth=200><a action=\"bypass -h admin_zones load ").append(zone.getName()).append("\">").append(zone.getName()).append("</a></td>");
                 sb.append("</tr>");
             }
-        }
+        });
 
         final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
-        msg.setFile(activeChar, "data/html/admin/zone_editor.htm");
+        msg.setFile(player, "data/html/admin/zone_editor.htm");
         msg.replace("%zones%", sb.toString());
-        activeChar.sendPacket(msg);
+        player.sendPacket(msg);
     }
 
     private void loadZone(Player activeChar, String zoneName) {

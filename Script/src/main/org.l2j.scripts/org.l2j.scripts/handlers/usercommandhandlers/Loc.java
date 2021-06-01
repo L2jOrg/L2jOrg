@@ -39,7 +39,7 @@ public class Loc implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, Player player) {
 		int region;
-		final RespawnZone zone = ZoneEngine.getInstance().getZone(player, RespawnZone.class);
+		final RespawnZone zone = ZoneEngine.getInstance().findFirstZone(player, RespawnZone.class);
 		if (nonNull(zone)) {
 			region = MapRegionManager.getInstance().getRestartRegion(player, zone.getAllRespawnPoints().get(Race.HUMAN)).getLocId();
 		} else {

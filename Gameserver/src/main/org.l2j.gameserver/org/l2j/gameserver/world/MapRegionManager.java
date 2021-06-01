@@ -184,7 +184,7 @@ public final class MapRegionManager extends GameXmlReader {
                 }
             }
 
-            final RespawnZone zone = ZoneEngine.getInstance().getZone(player, RespawnZone.class);
+            final RespawnZone zone = ZoneEngine.getInstance().findFirstZone(player, RespawnZone.class);
             if (nonNull(zone)) {
                 return getRestartRegion(player, zone.getRespawnPoint(player)).getSpawnLoc();
             }
@@ -201,7 +201,7 @@ public final class MapRegionManager extends GameXmlReader {
 
     private Location getChaoticLocation(Player player) {
         try {
-            final RespawnZone zone = ZoneEngine.getInstance().getZone(player, RespawnZone.class);
+            final RespawnZone zone = ZoneEngine.getInstance().findFirstZone(player, RespawnZone.class);
             if(nonNull(zone)) {
                 return getRestartRegion(player, zone.getRespawnPoint(player)).getChaoticSpawnLoc();
             }

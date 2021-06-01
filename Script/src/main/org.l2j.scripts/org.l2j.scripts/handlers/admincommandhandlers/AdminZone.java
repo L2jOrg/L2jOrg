@@ -88,9 +88,7 @@ public class AdminZone implements IAdminCommandHandler {
 
             final String next = st.nextToken();
             if (next.equalsIgnoreCase("all")) {
-                for (Zone zone : ZoneEngine.getInstance().getZones(player)) {
-                    zone.visualizeZone(player);
-                }
+                ZoneEngine.getInstance().forEachZone(player, z -> z.visualizeZone(player));
                 for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(player)) {
                     territory.visualizeZone(player);
                 }
@@ -105,56 +103,53 @@ public class AdminZone implements IAdminCommandHandler {
         return true;
     }
 
-    private static void showHtml(Player activeChar)
+    private static void showHtml(Player player)
     {
-        final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/zone.htm");
+        final String htmContent = HtmCache.getInstance().getHtm(player, "data/html/admin/zone.htm");
         final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
         adminReply.setHtml(htmContent);
-        adminReply.replace("%PEACE%", activeChar.isInsideZone(ZoneType.PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%PVP%", activeChar.isInsideZone(ZoneType.PVP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SIEGE%", activeChar.isInsideZone(ZoneType.SIEGE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%CASTLE%", activeChar.isInsideZone(ZoneType.CASTLE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%FORT%", activeChar.isInsideZone(ZoneType.FORT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%HQ%", activeChar.isInsideZone(ZoneType.HQ) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%CLANHALL%", activeChar.isInsideZone(ZoneType.CLAN_HALL) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%LAND%", activeChar.isInsideZone(ZoneType.LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOLAND%", activeChar.isInsideZone(ZoneType.NO_LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOSUMMON%", activeChar.isInsideZone(ZoneType.NO_SUMMON_FRIEND) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%WATER%", activeChar.isInsideZone(ZoneType.WATER) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%FISHING%", activeChar.isInsideZone(ZoneType.FISHING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SWAMP%", activeChar.isInsideZone(ZoneType.SWAMP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%DANGER%", activeChar.isInsideZone(ZoneType.DANGER_AREA) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOSTORE%", activeChar.isInsideZone(ZoneType.NO_STORE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SCRIPT%", activeChar.isInsideZone(ZoneType.SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%TAX%", (activeChar.isInsideZone(ZoneType.TAX) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
+        adminReply.replace("%PEACE%", player.isInsideZone(ZoneType.PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%PVP%", player.isInsideZone(ZoneType.PVP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%SIEGE%", player.isInsideZone(ZoneType.SIEGE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%CASTLE%", player.isInsideZone(ZoneType.CASTLE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%FORT%", player.isInsideZone(ZoneType.FORT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%HQ%", player.isInsideZone(ZoneType.HQ) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%CLANHALL%", player.isInsideZone(ZoneType.CLAN_HALL) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%LAND%", player.isInsideZone(ZoneType.LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%NOLAND%", player.isInsideZone(ZoneType.NO_LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%NOSUMMON%", player.isInsideZone(ZoneType.NO_SUMMON_FRIEND) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%WATER%", player.isInsideZone(ZoneType.WATER) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%FISHING%", player.isInsideZone(ZoneType.FISHING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%SWAMP%", player.isInsideZone(ZoneType.SWAMP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%DANGER%", player.isInsideZone(ZoneType.DANGER_AREA) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%NOSTORE%", player.isInsideZone(ZoneType.NO_STORE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%SCRIPT%", player.isInsideZone(ZoneType.SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+        adminReply.replace("%TAX%", (player.isInsideZone(ZoneType.TAX) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 
         final StringBuilder zones = new StringBuilder(100);
-        for (Zone zone : ZoneEngine.getInstance().getZones(activeChar))
-        {
-            if (zone.getName() != null)
-            {
-                zones.append(zone.getName());
-                if (zone.getId() < 300000)
-                {
-                    zones.append(" (");
-                    zones.append(zone.getId());
-                    zones.append(")");
-                }
-                zones.append("<br1>");
-            }
-            else
-            {
-                zones.append(zone.getId());
-            }
-            zones.append(" ");
-        }
-        for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(activeChar))
+        ZoneEngine.getInstance().forEachZone(player, zone -> appendZoneInfo(zones, zone));
+        for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(player))
         {
             zones.append(territory.getName());
             zones.append("<br1>");
         }
         adminReply.replace("%ZLIST%", zones.toString());
-        activeChar.sendPacket(adminReply);
+        player.sendPacket(adminReply);
+    }
+
+    private static void appendZoneInfo(StringBuilder zones, Zone zone) {
+        if (zone.getName() != null) {
+            zones.append(zone.getName());
+            if (zone.getId() < 300000) {
+                zones.append(" (");
+                zones.append(zone.getId());
+                zones.append(")");
+            }
+            zones.append("<br1>");
+        } else {
+            zones.append(zone.getId());
+        }
+        zones.append(" ");
     }
 
     private static void getGeoRegionXY(Player activeChar)

@@ -86,7 +86,7 @@ public class SpeedFinalizer implements IStatsFunction {
             }
         }
         if (isPlayable(creature) && creature.isInsideZone(ZoneType.SWAMP)) {
-            final SwampZone zone = ZoneEngine.getInstance().getZone(creature, SwampZone.class);
+            final SwampZone zone = ZoneEngine.getInstance().findFirstZone(creature, SwampZone.class);
             if (zone != null) {
                 baseValue *= zone.getMoveBonus();
             }

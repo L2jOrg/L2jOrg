@@ -4539,12 +4539,7 @@ public final class Player extends Playable {
     }
 
     public boolean dismount() {
-        WaterZone water = null;
-        for (Zone zone : ZoneEngine.getInstance().getZones(getX(), getY(), getZ() - 300)) {
-            if (zone instanceof WaterZone) {
-                water = (WaterZone) zone;
-            }
-        }
+        WaterZone water = ZoneEngine.getInstance().findFirstZone(getX(), getY(), getZ() - 300, WaterZone.class);
         if (water == null) {
             if (!isInWater() && (getZ() > 10000)) {
                 sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
@@ -4557,8 +4552,7 @@ public final class Player extends Playable {
                 return false;
             }
         } else {
-            ThreadPool.schedule(() ->
-            {
+            ThreadPool.schedule(() -> {
                 if (isInWater()) {
                     broadcastUserInfo();
                 }
@@ -6168,14 +6162,7 @@ public final class Player extends Playable {
             checkPlayerSkills();
         }
 
-        try {
-            for (Zone zone : ZoneEngine.getInstance().getZones(this)) {
-                zone.onPlayerLoginInside(this);
-            }
-        } catch (Exception e) {
-            LOGGER.error("", e);
-        }
-
+        ZoneEngine.getInstance().forEachZone(this, z -> z.onPlayerLoginInside(this));
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogin(this), this);
     }
 
@@ -6586,13 +6573,7 @@ public final class Player extends Playable {
     @Override
     public boolean deleteMe() {
         AutoPlayEngine.getInstance().stopTasks(this);
-        try {
-            for (Zone zone : ZoneEngine.getInstance().getZones(this)) {
-                zone.onPlayerLogoutInside(this);
-            }
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
-        }
+        ZoneEngine.getInstance().forEachZone(this, z -> z.onPlayerLogoutInside(this));
 
         try {
             if (!isOnline) {
