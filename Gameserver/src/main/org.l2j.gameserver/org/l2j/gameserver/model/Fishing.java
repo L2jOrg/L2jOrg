@@ -41,7 +41,6 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndR
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndType;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingStart;
 import org.l2j.gameserver.network.serverpackets.fishing.ExUserInfoFishing;
-import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.FishingZone;
@@ -347,8 +346,8 @@ public class Fishing {
         int baitX = (int) (player.getX() + (cos * distance));
         int baitY = (int) (player.getY() + (sin * distance));
 
-        FishingZone fishingZone = ZoneEngine.getInstance().findFirstZone(player, FishingZone.class);
-        WaterZone waterZone = ZoneEngine.getInstance().findFirstZone(baitX, baitY, WaterZone.class);
+        var fishingZone = ZoneEngine.getInstance().findFirstZone(player, FishingZone.class);
+        var waterZone = ZoneEngine.getInstance().findFirstZone(baitX, baitY, WaterZone.class);
         int baitZ = computeBaitZ(player, baitX, baitY, fishingZone, waterZone);
         if (baitZ == Integer.MIN_VALUE) {
             player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);

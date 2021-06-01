@@ -103,28 +103,27 @@ public class AdminZone implements IAdminCommandHandler {
         return true;
     }
 
-    private static void showHtml(Player player)
-    {
-        final String htmContent = HtmCache.getInstance().getHtm(player, "data/html/admin/zone.htm");
-        final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
+    private static void showHtml(Player player) {
+        final var htmContent = HtmCache.getInstance().getHtm(player, "data/html/admin/zone.htm");
+        final var adminReply = new NpcHtmlMessage(0, 1);
         adminReply.setHtml(htmContent);
-        adminReply.replace("%PEACE%", player.isInsideZone(ZoneType.PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%PVP%", player.isInsideZone(ZoneType.PVP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SIEGE%", player.isInsideZone(ZoneType.SIEGE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%CASTLE%", player.isInsideZone(ZoneType.CASTLE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%FORT%", player.isInsideZone(ZoneType.FORT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%HQ%", player.isInsideZone(ZoneType.HQ) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%CLANHALL%", player.isInsideZone(ZoneType.CLAN_HALL) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%LAND%", player.isInsideZone(ZoneType.LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOLAND%", player.isInsideZone(ZoneType.NO_LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOSUMMON%", player.isInsideZone(ZoneType.NO_SUMMON_FRIEND) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%WATER%", player.isInsideZone(ZoneType.WATER) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%FISHING%", player.isInsideZone(ZoneType.FISHING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SWAMP%", player.isInsideZone(ZoneType.SWAMP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%DANGER%", player.isInsideZone(ZoneType.DANGER_AREA) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOSTORE%", player.isInsideZone(ZoneType.NO_STORE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SCRIPT%", player.isInsideZone(ZoneType.SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%TAX%", (player.isInsideZone(ZoneType.TAX) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
+        adminReply.replace("%PEACE%", IsInsideZoneHtml(player, ZoneType.PEACE));
+        adminReply.replace("%PVP%", IsInsideZoneHtml(player, ZoneType.PVP));
+        adminReply.replace("%SIEGE%", IsInsideZoneHtml(player, ZoneType.SIEGE));
+        adminReply.replace("%CASTLE%", IsInsideZoneHtml(player, ZoneType.CASTLE));
+        adminReply.replace("%FORT%", IsInsideZoneHtml(player, ZoneType.FORT));
+        adminReply.replace("%HQ%", IsInsideZoneHtml(player, ZoneType.HQ));
+        adminReply.replace("%CLANHALL%", IsInsideZoneHtml(player, ZoneType.CLAN_HALL));
+        adminReply.replace("%LAND%", IsInsideZoneHtml(player, ZoneType.LANDING));
+        adminReply.replace("%NOLAND%", IsInsideZoneHtml(player, ZoneType.NO_LANDING));
+        adminReply.replace("%NOSUMMON%", IsInsideZoneHtml(player, ZoneType.NO_SUMMON_FRIEND));
+        adminReply.replace("%WATER%", IsInsideZoneHtml(player, ZoneType.WATER));
+        adminReply.replace("%FISHING%", IsInsideZoneHtml(player, ZoneType.FISHING));
+        adminReply.replace("%SWAMP%", IsInsideZoneHtml(player, ZoneType.SWAMP));
+        adminReply.replace("%DANGER%", IsInsideZoneHtml(player, ZoneType.DANGER_AREA));
+        adminReply.replace("%NOSTORE%", IsInsideZoneHtml(player, ZoneType.NO_STORE));
+        adminReply.replace("%SCRIPT%", IsInsideZoneHtml(player, ZoneType.SCRIPT));
+        adminReply.replace("%TAX%", IsInsideZoneHtml(player, ZoneType.TAX));
 
         final StringBuilder zones = new StringBuilder(100);
         ZoneEngine.getInstance().forEachZone(player, zone -> appendZoneInfo(zones, zone));
@@ -135,6 +134,10 @@ public class AdminZone implements IAdminCommandHandler {
         }
         adminReply.replace("%ZLIST%", zones.toString());
         player.sendPacket(adminReply);
+    }
+
+    private static String IsInsideZoneHtml(Player player, ZoneType peace) {
+        return player.isInsideZone(peace) ? "<font color=\"LEVEL\">YES</font>" : "NO";
     }
 
     private static void appendZoneInfo(StringBuilder zones, Zone zone) {
