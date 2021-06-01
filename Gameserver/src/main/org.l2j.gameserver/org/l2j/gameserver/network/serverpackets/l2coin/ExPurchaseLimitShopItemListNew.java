@@ -19,11 +19,16 @@
 package org.l2j.gameserver.network.serverpackets.l2coin;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.shop.LCoinShop;
+import org.l2j.gameserver.engine.item.shop.lcoin.LCoinShopProduct;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCoinInfo;
 
 import java.util.List;
 
@@ -31,53 +36,83 @@ import java.util.List;
  * @author JoeAlisson
  */
 public class ExPurchaseLimitShopItemListNew extends ServerPacket {
+    private final byte _index;
 
-    private final byte index;
-
-    public ExPurchaseLimitShopItemListNew(byte index) {
-        this.index = index;
+    public ExPurchaseLimitShopItemListNew(byte index)
+    {
+        _index = index;
     }
 
     @Override
-    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
-        writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST_NEW, buffer );
-        buffer.writeByte(index);
-
-        final var products = LCoinShop.getInstance().getProductInfos();
+    protected void writeImpl(GameClient client, WritableBuffer buffer)
+    {
+        final IntMap<LCoinShopProduct> products = LCoinShop.getInstance().getProducts(_index);
+        if (products == null)
+        {
+            return;
+        }
+        final Player player = client.getPlayer();
+        if (_index == 100)
+        {
+            client.sendPacket(new ExPledgeCoinInfo(player));
+        }
+        writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST_NEW, buffer);
+        buffer.writeByte(_index);
         buffer.writeInt(products.size());
-
-        for (var product : products.values()) {
+        for (var product : products.values())
+        {
             buffer.writeInt(product.id());
-            buffer.writeInt(product.production().getId());
+            buffer.writeInt(product.productions().get(0).getId());
             writeIngredients(product.ingredients(), buffer);
-            buffer.writeInt(product.restrictionAmount() - LCoinShop.getInstance().boughtCount(client.getPlayer(), product));
-            buffer.writeShort(0x00);
-            buffer.writeShort(0x00);
-            buffer.writeShort(0x00);
-            buffer.writeShort(0x00);
-            buffer.writeShort(0x00);
+            if (product.restrictionAmount() > 0)
+            {
+                buffer.writeInt(product.restrictionAmount() - LCoinShop.getInstance().boughtCount(player, product));
+            }
+            else
+            {
+                buffer.writeInt(1);
+            }
             buffer.writeInt(product.remainTime());
             buffer.writeInt(product.remainServerItemAmount());
-
         }
     }
 
-    private void writeIngredients(List<ItemHolder> ingredients, WritableBuffer buffer) {
-        for (int i = 0; i < 5; i++) {
-            if(i < ingredients.size()) {
-                buffer.writeInt(ingredients.get(i).getId());
-            } else {
+    private void writeIngredients(List<ItemHolder> ingredients, WritableBuffer buffer)
+    {
+        final int size = ingredients.size();
+        for (int i = 0; i < 5; i++)
+        {
+            if (i < size)
+            {
+                final int id = ingredients.get(i).getId();
+                buffer.writeInt(id == CommonItem.HONOR_COIN ? -700 : id);
+            }
+            else
+            {
                 buffer.writeInt(0);
             }
         }
-
-        for (int i = 0; i < 5; i++) {
-            if(i < ingredients.size()) {
+        for (int i = 0; i < 5; i++)
+        {
+            if (i < size)
+            {
                 buffer.writeLong(ingredients.get(i).getCount());
-            } else {
+            }
+            else
+            {
                 buffer.writeLong(0);
             }
-
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            if (i < size)
+            {
+                buffer.writeShort(ingredients.get(i).getEnchantment());
+            }
+            else
+            {
+                buffer.writeShort(0);
+            }
         }
     }
 }

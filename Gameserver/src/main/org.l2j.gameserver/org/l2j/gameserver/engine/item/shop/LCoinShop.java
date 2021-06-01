@@ -55,7 +55,7 @@ public class LCoinShop extends GameXmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LCoinShop.class);
 
-    private final IntMap<LCoinShopProduct> productInfos = new LinkedHashIntMap<>();
+    private final IntMap<IntMap<LCoinShopProduct>> productInfos = new LinkedHashIntMap<>();
     private final IntMap<Map<String, Integer>> shopHistory = new HashIntMap<>();
 
     private LCoinShop() {
@@ -63,115 +63,140 @@ public class LCoinShop extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return ServerSettings.dataPackDirectory().resolve("data/shop/l-coin.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/shop/xsd/shop.xsd");
     }
 
     @Override
     public void load() {
-        if (!FeatureSettings.isLCoinStoreEnabled()){
-            return;
+        if (FeatureSettings.isLCoinStoreEnabled()){
+            parseDatapackFile("data/shop/l2-coin-shop.xml");
         }
-        parseDatapackFile("data/shop/l-coin.xml");
+        parseDatapackFile("data/shop/clan-shop.xml");
+        parseDatapackFile("data/shop/special-crafting.xml");
         releaseResources();
         reloadShopHistory();
     }
 
-    public void reloadShopHistory() {
+    public void reloadShopHistory()
+    {
         getDAO(LCoinShopDAO.class).deleteExpired();
-        synchronized (shopHistory) {
+        synchronized (shopHistory)
+        {
             shopHistory.clear();
             getDAO(LCoinShopDAO.class).loadAllGrouped(this::addHistory);
         }
     }
 
-    private void addHistory(ResultSet result) {
-        try {
-            while (result.next()) {
+    private void addHistory(ResultSet result)
+    {
+        try
+        {
+            while (result.next())
+            {
                 int id = result.getInt("product_id");
                 String account = result.getString("account");
                 int count = result.getInt("sum");
                 shopHistory.computeIfAbsent(id, i -> new HashMap<>()).put(account, count);
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             LOGGER.warn(e.getMessage(), e);
         }
     }
 
     @Override
-    protected void parseDocument(Document doc, File f) {
-        forEach(doc, "list",  list -> forEach(list, "product", this::parseProduct));
+    protected void parseDocument(Document doc, File f)
+    {
+        forEach(doc, "list", list -> forEach(list, "product", this::parseProduct));
     }
 
-    private void parseProduct(Node productNode) {
+    private void parseProduct(Node productNode)
+    {
         var attributes = productNode.getAttributes();
-        var index = parseInt(attributes, "index");
         var id = parseInt(attributes, "id");
+        var index = parseInt(attributes, "index");
+        var chance = parseInt(attributes, "chance");
+        var clan_level = parseInt(attributes, "clan-level");
         var restrictionAmount = parseInt(attributes, "restriction-amount");
         var restrictionPeriod = parseEnum(attributes, RestrictionPeriod.class, "restriction-period");
-        var minLevel = parseInt(attributes, "min-level", 1);
-        var serverItemAmount = parseInt(attributes, "server-item-amount", -1);
-        var expiration = parseString(attributes,"expiration-date");
+        var minLevel = parseInt(attributes, "min-level");
+        var serverItemAmount = parseInt(attributes, "server-item-amount");
+        var expiration = parseString(attributes, "expiration-date");
         LocalDateTime expirationDate = null;
-
-        if(nonNull(expiration)) {
+        if (nonNull(expiration))
+        {
             expirationDate = Util.parseLocalDateTime(expiration);
         }
-
         List<ItemHolder> ingredients = new ArrayList<>();
-        ItemHolder production = null;
+        List<ItemHolder> productions = new ArrayList<>();
         final NodeList list = productNode.getChildNodes();
-        for (int i = 0; i < list.getLength(); i++) {
-
+        for (int i = 0; i < list.getLength(); i++)
+        {
             final Node targetNode = list.item(i);
-
             var holder = parseItemHolder(targetNode);
-            if (isNull(holder)) {
+            if (isNull(holder))
+            {
                 return;
             }
-
-            if(isNull(ItemEngine.getInstance().getTemplate(holder.getId()))) {
+            if (isNull(ItemEngine.getInstance().getTemplate(holder.getId())))
+            {
                 LOGGER.error("Item template does not exists for itemId: {} in product id {}", holder.getId(), id);
                 return;
             }
-
-            if ("ingredient".equalsIgnoreCase(targetNode.getNodeName())) {
+            if ("ingredient".equalsIgnoreCase(targetNode.getNodeName()))
+            {
                 ingredients.add(holder);
-            } else {
-                production = holder;
+            }
+            else
+            {
+                productions.add(holder);
             }
         }
-
-        if (ingredients.isEmpty() || production == null) {
+        if (ingredients.isEmpty() || productions.isEmpty())
+        {
             LOGGER.error("Incorrect configuration product id {}", id);
             return;
         }
-
-        if (productInfos.put(id, new LCoinShopProduct(index, id, restrictionAmount, restrictionPeriod, minLevel, ingredients, production, serverItemAmount, expirationDate)) != null) {
-            LOGGER.warn("Duplicate product id {}", id);
+        if (!productInfos.containsKey(index))
+        {
+            productInfos.put(index, new LinkedHashIntMap<>());
         }
+        if (productInfos.get(index).containsKey(id))
+        {
+            LOGGER.warn("Duplicate product id {}", id);
+            return;
+        }
+        productInfos.get(index).put(id, new LCoinShopProduct(id, restrictionAmount, restrictionPeriod, minLevel, clan_level, ingredients, productions, serverItemAmount, expirationDate, chance));
     }
 
-    public LCoinShopProduct getProductInfo(int id) {
-        return productInfos.get(id);
+    public LCoinShopProduct getProductInfo(int index, int id)
+    {
+        return productInfos.get(index).get(id);
     }
 
-    public IntMap<LCoinShopProduct> getProductInfos() {
-        return productInfos;
+    public IntMap<LCoinShopProduct> getProducts(int index)
+    {
+        return productInfos.get(index);
     }
 
-    public void addHistory(Player player, LCoinShopProduct product, int amount) {
+    public void addHistory(Player player, LCoinShopProduct product, int amount)
+    {
         shopHistory.computeIfAbsent(product.id(), id -> new HashMap<>()).merge(player.getAccountName(), amount, Integer::sum);
     }
 
-    public int boughtCount(Player player, LCoinShopProduct product) {
+    public int boughtCount(Player player, LCoinShopProduct product)
+    {
         return shopHistory.getOrDefault(product.id(), Collections.emptyMap()).getOrDefault(player.getAccountName(), 0);
     }
 
-    public static void init() {
+    public static void init()
+    {
         getInstance().load();
     }
 
-    public static LCoinShop getInstance() {
+    public static LCoinShop getInstance()
+    {
         return LCoinShop.Singleton.INSTANCE;
     }
 

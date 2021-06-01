@@ -489,6 +489,14 @@ public class MultiSellChoose extends ClientPacket {
                 }
                 yield true;
             }
+            case HONOR_COIN -> {
+                if (player.getHonorCoins() < totalCount)
+                {
+                    player.sendMessage("Not enough Honor Coins.");
+                    yield false;
+                }
+                yield true;
+            }
         };
     }
 }

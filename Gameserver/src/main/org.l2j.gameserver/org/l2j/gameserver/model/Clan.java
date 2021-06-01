@@ -1547,7 +1547,6 @@ public class Clan implements IIdentifiable, INamable {
 
     public long getExp()
     {
-        System.out.println(_exp / Config.CLAN_EXP_MUL);
         return _exp / Config.CLAN_EXP_MUL;
     }
 }

@@ -289,6 +289,11 @@ public final class Skill implements IIdentifiable, Cloneable {
         applyEffects(effector, effected, false, false, true, 0, null);
     }
 
+    public void applyEffects(Creature effector)
+    {
+        applyEffects(effector, effector, false, false, true, 0, null);
+    }
+
     private void applyEffects(Creature effector, Creature effected, Item item) {
         applyEffects(effector, effected, false, false, true, 0, item);
     }

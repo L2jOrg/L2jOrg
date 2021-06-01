@@ -62,7 +62,7 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
         buffer.writeInt((int) dayRemainTime);
         buffer.writeInt((int) weekRemainTime);
         buffer.writeInt((int) monthRemainTime);
-        buffer.writeByte(0x17);
+        buffer.writeByte(0x00);
         buffer.writeInt(player.getClassId().getId());
         buffer.writeInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK)); // Day of week
         buffer.writeInt(missions.size());

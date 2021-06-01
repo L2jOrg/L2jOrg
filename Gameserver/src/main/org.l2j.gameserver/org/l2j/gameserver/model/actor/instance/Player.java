@@ -8454,4 +8454,9 @@ public final class Player extends Playable {
     {
         return _randomCraft;
     }
+
+    public int getHonorCoins()
+    {
+        return (int) getInventory().getInventoryItemCount(95570, 0);
+    }
 }

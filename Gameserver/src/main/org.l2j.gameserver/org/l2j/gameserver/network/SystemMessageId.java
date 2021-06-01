@@ -17768,6 +17768,9 @@ public final class SystemMessageId {
     @ClientString(id = 13280, message = "You cannot use any more Elixirs.")
     public static SystemMessageId YOU_CANNOT_USE_ANY_MORE_ELIXIRS;
 
+    @ClientString(id = 13406, message = "$s1 Honor Coins have been used.")
+    public static        SystemMessageId         HONOR_COINS_USED;
+
     private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 
     static {

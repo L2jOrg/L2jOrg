@@ -20,6 +20,7 @@ package org.l2j.gameserver.engine.item.shop;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.LinkedHashIntMap;
 import org.l2j.gameserver.data.database.dao.L2StoreDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
@@ -54,7 +55,7 @@ public class L2Store extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(L2Store.class);
     private static final int VIP_GIFT_BASE_ID = 100000;
 
-    private final IntMap<L2StoreProduct> primeItems = new HashIntMap<>(140);
+    private final        IntMap<L2StoreProduct> primeItems       = new LinkedHashIntMap<>(140);
     private final IntMap<L2StoreProduct> vipGifts = new HashIntMap<>(10);
 
     private L2Store() {
@@ -62,7 +63,7 @@ public class L2Store extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return ServerSettings.dataPackDirectory().resolve("data/shop/l2-store.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/shop/xsd/l2-store.xsd");
     }
 
     @Override

@@ -40,7 +40,7 @@ public class ReceiveVipProductList extends ServerPacket {
         buffer.writeLong(player.getAdena());
         buffer.writeLong(player.getGoldCoin()); // Gold Coin Amount
         buffer.writeLong(player.getSilverCoin()); // Silver Coin Amount
-        buffer.writeByte(1); // Show Reward tab
+        buffer.writeByte(player.getVipTier() > 0 ? 1 : 0); // Show Reward Coins tab
 
         if(nonNull(gift)) {
             buffer.writeInt(products.size() + 1);
