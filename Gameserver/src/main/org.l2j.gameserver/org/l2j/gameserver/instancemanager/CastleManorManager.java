@@ -27,11 +27,11 @@ import org.l2j.commons.util.StreamUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ManorProcureDAO;
 import org.l2j.gameserver.data.database.dao.ManorProductionDAO;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.data.database.data.SeedProduction;
 import org.l2j.gameserver.enums.ManorMode;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.Seed;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.entity.Castle;
@@ -53,7 +53,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -105,7 +104,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/Seeds.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/Seeds.xsd");
     }
 
     @Override

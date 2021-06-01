@@ -20,7 +20,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Creature;
@@ -93,7 +93,7 @@ public class RegenHPFinalizer implements IStatsFunction {
                 final int posChIndex = zone == null ? -1 : zone.getResidenceId();
                 final int clanHallIndex = player.getClan().getHideoutId();
                 if ((clanHallIndex > 0) && (clanHallIndex == posChIndex)) {
-                    final AbstractResidence residense = ClanHallManager.getInstance().getClanHallById(player.getClan().getHideoutId());
+                    final AbstractResidence residense = ClanHallEngine.getInstance().getClanHallById(player.getClan().getHideoutId());
                     if (residense != null) {
                         final ResidenceFunctionData func = residense.getFunction(ResidenceFunctionType.HP_REGEN);
                         if (func != null) {

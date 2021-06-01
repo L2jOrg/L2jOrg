@@ -52,7 +52,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 import static java.util.Objects.*;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -202,7 +201,7 @@ public class Servitor extends Summon implements Runnable {
             return;
         }
 
-        if (getSettings(CharacterSettings.class).restoreSummonOnReconnect()) {
+        if (CharacterSettings.restoreSummonOnReconnect()) {
             if (isDead())
             {
                 PlayerSummonTable.getInstance().removeServitor(getOwner(), getObjectId());
@@ -235,7 +234,7 @@ public class Servitor extends Summon implements Runnable {
                     continue;
                 }
 
-                if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances()) {
+                if (skill.isDance() && !CharacterSettings.storeDances()) {
                     continue;
                 }
 

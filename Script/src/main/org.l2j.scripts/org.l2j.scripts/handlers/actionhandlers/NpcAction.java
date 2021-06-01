@@ -19,140 +19,99 @@
 package org.l2j.scripts.handlers.actionhandlers;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.IActionHandler;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
-import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.MoveToPawn;
+import org.l2j.gameserver.settings.CharacterSettings;
 
+/**
+ * @author JoeAlisson
+ */
 public class NpcAction implements IActionHandler
 {
 	/**
 	 * Manage actions when a player click on the Npc.<BR>
-	 * <BR>
-	 * <B><U> Actions on first click on the Npc (Select it)</U> :</B><BR>
-	 * <BR>
-	 * <li>Set the Npc as target of the Player player (if necessary)</li>
-	 * <li>Send a Server->Client packet MyTargetSelected to the Player player (display the select window)</li>
-	 * <li>If Npc is autoAttackable, send a Server->Client packet StatusUpdate to the Player in order to update Npc HP bar</li>
-	 * <li>Send a Server->Client packet ValidateLocation to correct the Npc position and heading on the client</li><BR>
-	 * <BR>
-	 * <B><U> Actions on second click on the Npc (Attack it/Intercat with it)</U> :</B><BR>
-	 * <BR>
-	 * <li>Send a Server->Client packet MyTargetSelected to the Player player (display the select window)</li>
-	 * <li>If Npc is autoAttackable, notify the Player AI with AI_INTENTION_ATTACK (after a height verification)</li>
-	 * <li>If Npc is NOT autoAttackable, notify the Player AI with AI_INTENTION_INTERACT (after a distance verification) and show message</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</B></FONT><BR>
-	 * <BR>
-	 * <B><U> Example of use </U> :</B><BR>
-	 * <BR>
-	 * <li>Client packet : Action, AttackRequest</li><BR>
-	 * <BR>
 	 * @param player The Player that start an action on the Npc
 	 */
 	@Override
-	public boolean action(Player player, WorldObject target, boolean interact)
-	{
-		if (!((Npc) target).canTarget(player))
-		{
+	public boolean action(Player player, WorldObject target, boolean interact) {
+		if(!(target instanceof Npc npc) || !npc.canBeTarget(player)) {
 			return false;
 		}
-		player.setLastFolkNPC((Npc) target);
-		// Check if the Player already target the Npc
-		if (target != player.getTarget())
-		{
-			// Set the target of the Player activeChar
-			player.setTarget(target);
-			// Check if the activeChar is attackable (without a forced attack)
-			if (target.isAutoAttackable(player))
-			{
-				((Npc) target).getAI(); // wake up ai
-			}
+
+		if (npc != player.getTarget()) {
+			setPlayerTarget(player, npc);
 		}
-		else if (interact)
-		{
-			// Check if the activeChar is attackable (without a forced attack) and isn't dead
-			if (target.isAutoAttackable(player) && !((Creature) target).isAlikeDead())
-			{
-				// Check if target is in LoS
-				if (GeoEngine.getInstance().canSeeTarget(player, target))
-				{
-					// Set the Player Intention to AI_INTENTION_ATTACK
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-				}
-				else
-				{
-					// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-				}
-			}
-			else if (!target.isAutoAttackable(player))
-			{
-				// Calculate the distance between the Player and the Npc
-				if (!((Npc) target).canInteract(player))
-				{
-					// Notify the Player AI with AI_INTENTION_INTERACT
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-				}
-				else
-				{
-					final Npc npc = (Npc) target;
-					if (!player.isSitting()) // Needed for Mystic Tavern Globe
-					{
-						// Turn NPC to the player.
-						player.sendPacket(new MoveToPawn(player, npc, 100));
-						if (npc.hasRandomAnimation())
-						{
-							npc.onRandomAnimation(Rnd.get(8));
-						}
-					}
-
-					if (npc.isMoving())
-					{
-						player.stopMove(null);
-					}
-
-					// Open a chat window on client with the text of the Npc
-					if (npc.hasVariables() && npc.getVariables().getBoolean("eventmob", false))
-					{
-						Event.showEventHtml(player, String.valueOf(target.getObjectId()));
-					}
-					else
-					{
-						if (npc.hasListener(EventType.ON_NPC_QUEST_START))
-						{
-							player.setLastQuestNpcObject(target.getObjectId());
-						}
-						if (npc.hasListener(EventType.ON_NPC_FIRST_TALK))
-						{
-							EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
-						}
-						else
-						{
-							npc.showChatWindow(player);
-						}
-					}
-					if (Config.PLAYER_MOVEMENT_BLOCK_TIME > 0)
-					{
-						player.updateNotMoveUntil();
-					}
-				}
-			}
+		else if (interact) {
+			interact(player, npc);
 		}
 		return true;
 	}
-	
+
+	private void interact(Player player, Npc npc) {
+		if (npc.isAutoAttackable(player) && !npc.isAlikeDead()) {
+			attack(player, npc);
+		} else if (!npc.isAutoAttackable(player)) {
+			if (!npc.canInteract(player)) {
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, npc);
+			} else {
+				moveNextTo(player, npc);
+				talk(player, npc);
+				if (CharacterSettings.npcTalkBlockingTime() > 0) {
+					player.updateNotMoveUntil();
+				}
+			}
+		}
+	}
+
+	private void moveNextTo(Player player, Npc npc) {
+		if (!player.isSitting()) // Needed for Mystic Tavern Globe
+		{
+			player.sendPacket(new MoveToPawn(player, npc, 100));
+			if (npc.hasRandomAnimation()) {
+				npc.onRandomAnimation(Rnd.get(8));
+			}
+		}
+	}
+
+	private void talk(Player player, Npc npc) {
+		player.setLastFolkNPC(npc);
+		if (npc.hasVariables() && npc.getVariables().getBoolean("eventmob", false)) {
+			Event.showEventHtml(player, String.valueOf(npc.getObjectId()));
+		} else {
+			if (npc.hasListener(EventType.ON_NPC_QUEST_START)) {
+				player.setLastQuestNpcObject(npc.getObjectId());
+			}
+			if (npc.hasListener(EventType.ON_NPC_FIRST_TALK)) {
+				EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
+			} else {
+				npc.showChatWindow(player);
+			}
+		}
+	}
+
+	private void attack(Player player, Npc npc) {
+		if (GeoEngine.getInstance().canSeeTarget(player, npc)) {
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc);
+		}
+	}
+
+	private void setPlayerTarget(Player player, Npc npc) {
+		player.setTarget(npc);
+		if (npc.isAutoAttackable(player)) {
+			npc.getAI(); // wake up ai
+		}
+	}
+
 	@Override
 	public InstanceType getInstanceType()
 	{

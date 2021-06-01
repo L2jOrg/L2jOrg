@@ -32,8 +32,6 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.nio.file.Path;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * This class load, holds and calculates the hit condition bonuses.
@@ -58,7 +56,7 @@ public final class HitConditionBonusData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/hitConditionBonus.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/hitConditionBonus.xsd");
     }
 
     @Override

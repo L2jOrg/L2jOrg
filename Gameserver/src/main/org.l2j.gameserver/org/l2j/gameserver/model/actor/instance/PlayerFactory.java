@@ -26,18 +26,17 @@ import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.database.data.PlayerData;
 import org.l2j.gameserver.data.database.data.PlayerStatsData;
 import org.l2j.gameserver.data.database.data.PlayerVariableData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.InitialEquipmentData;
 import org.l2j.gameserver.data.xml.impl.InitialShortcutData;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
@@ -46,12 +45,12 @@ import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
-import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.EquipableItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.PcItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -100,11 +99,13 @@ public class PlayerFactory {
         player.setTeleportFavorites(playerDAO.findTeleportFavorites(playerId));
 
         player.setHeading(playerData.getHeading());
-        player.getStats().setExp(playerData.getExp());
-        player.getStats().setLevel(playerData.getLevel());
-        player.getStats().setSp(playerData.getSp());
+        var stats = player.getStats();
+        stats.setExp(playerData.getExp());
+        stats.setStartingXp(playerData.getExp());
+        stats.setLevel(playerData.getLevel());
+        stats.setSp(playerData.getSp());
         player.setNoble(playerData.isNobless());
-        player.getStats().setVitalityPoints(playerData.getVitalityPoints());
+        stats.setVitalityPoints(playerData.getVitalityPoints());
 
         if(Olympiad.getInstance().isHero(playerId)) {
             player.setHero(true);
@@ -115,7 +116,7 @@ public class PlayerFactory {
         }
 
         if (playerData.getClanId() > 0) {
-            player.setClan(ClanTable.getInstance().getClan(playerData.getClanId()));
+            player.setClan(ClanEngine.getInstance().getClan(playerData.getClanId()));
         }
 
         if (player.getClan() != null) {
@@ -128,24 +129,13 @@ public class PlayerFactory {
                 player.getClanPrivileges().setAll();
                 player.setPowerGrade(1);
             }
-            player.setPledgeClass(ClanMember.calculatePledgeClass(player));
-        } else {
-            if (player.isNoble()) {
-                player.setPledgeClass(5);
-            }
-
-            if (player.isHero()) {
-                player.setPledgeClass(8);
-            }
-
-            player.getClanPrivileges().clear();
         }
 
+        Clan.updateSocialStatus(player);
         player.setTitle(playerData.getTitle());
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
-        player.activeClass = playerData.getClassId();
 
         player.setXYZInvisible(playerData.getX(), playerData.getY(), playerData.getZ());
         player.setLastServerPosition(playerData.getX(), playerData.getY(), playerData.getZ());
@@ -158,9 +148,6 @@ public class PlayerFactory {
             player.setOverrideCond(masks);
         }
 
-        // Retrieve from the database all secondary data of this Player
-        // Note that Clan, Noblesse and Hero skills are given separately and not here.
-        // Retrieve from the database all skills of this Player and add them to _skills
         player.restoreCharData();
 
         // Reward auto-get skills and all available skills if auto-learn skills is true.
@@ -181,11 +168,11 @@ public class PlayerFactory {
         player.initStatusUpdateCache();
 
         // Restore current Cp, HP and MP values
-        player.setCurrentCp(playerData.getCurrentCp());
+        player.setCurrentCp(playerData.getCp());
         player.setCurrentHp(playerData.getHp());
         player.setCurrentMp(playerData.getMp());
 
-        player.setOriginalCpHpMp(playerData.getCurrentCp(), playerData.getHp(), playerData.getMp());
+        player.setOriginalCpHpMp(playerData.getCp(), playerData.getHp(), playerData.getMp());
 
         if (playerData.getHp() < 0.5) {
             player.setIsDead(true);
@@ -230,13 +217,13 @@ public class PlayerFactory {
     public static void savePlayerData(PlayerTemplate template, PlayerData data) {
         data.setId(IdFactory.getInstance().getNextId());
 
-        if (Config.STARTING_LEVEL > 1) {
-            data.setLevel(Config.STARTING_LEVEL);
-            data.setExperience(LevelData.getInstance().getExpForLevel(Config.STARTING_LEVEL));
+        if (CharacterSettings.startLevel() > 1) {
+            data.setLevel(CharacterSettings.startLevel());
+            data.setExperience(LevelData.getInstance().getExpForLevel(CharacterSettings.startLevel()));
         }
 
-        if (Config.STARTING_SP > 0) {
-            data.setSp(Config.STARTING_SP);
+        if (CharacterSettings.startSP() > 0) {
+            data.setSp(CharacterSettings.startSP());
         }
 
         var hp = template.getBaseHpMax(data.getLevel()) * BaseStats.CON.getValue(template.getBaseCON());
@@ -280,9 +267,6 @@ public class PlayerFactory {
 
     private static void addItems(PlayerData data) {
         int nextLocData = 0;
-        if(Config.STARTING_ADENA > 0) {
-            getDAO(ItemDAO.class).saveItem(data.getCharId(), IdFactory.getInstance().getNextId(), CommonItem.ADENA, Config.STARTING_ADENA, ItemLocation.INVENTORY, nextLocData++);
-        }
 
         final var initialItems = InitialEquipmentData.getInstance().getEquipmentList(data.getClassId());
         for (PcItemTemplate ie : initialItems) {
@@ -309,7 +293,7 @@ public class PlayerFactory {
 
     public static void deletePlayer(PlayerData data) {
         if(data.getClanId() > 0) {
-            final Clan clan = ClanTable.getInstance().getClan(data.getClanId());
+            final Clan clan = ClanEngine.getInstance().getClan(data.getClanId());
             if (clan != null) {
                 clan.removeClanMember(data.getCharId(), 0);
             }

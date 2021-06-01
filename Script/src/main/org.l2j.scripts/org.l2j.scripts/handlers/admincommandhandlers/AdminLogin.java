@@ -19,20 +19,18 @@
 package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ServerType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 
 import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class handles the admin commands that acts on the login
@@ -110,10 +108,9 @@ public class AdminLogin implements IAdminCommandHandler
 					newType = ServerType.maskOf(modes);
 				}
 
-				var serverSettings = getSettings(ServerSettings.class);
-				if (serverSettings.type() != newType)
+				if (ServerSettings.type() != newType)
 				{
-					serverSettings.setType(newType);
+					ServerSettings.setType(newType);
 					AuthServerCommunication.getInstance().sendServerType(newType);
 					BuilderUtil.sendSysMessage(activeChar, "Server Type changed to " + getServerTypeName(newType));
 					showMainPage(activeChar);
@@ -140,10 +137,9 @@ public class AdminLogin implements IAdminCommandHandler
 				try
 				{
 					age = Integer.parseInt(mode);
-					var serverSettings = getSettings(ServerSettings.class);
-					if (serverSettings.ageLimit() != age)
+					if (ServerSettings.ageLimit() != age)
 					{
-						serverSettings.setAgeLimit((byte) age);
+						ServerSettings.setAgeLimit((byte) age);
 						// TODO Implement AuthServerCommunication.getInstance().sendServerStatus(ServerStatus.SERVER_AGE, age);
 						BuilderUtil.sendSysMessage(activeChar, "Server Age changed to " + age);
 						showMainPage(activeChar);
@@ -177,9 +173,8 @@ public class AdminLogin implements IAdminCommandHandler
 		html.setFile(activeChar, "data/html/admin/login.htm");
 		// TODO Implement html.replace("%server_name%", AuthServerCommunication.getInstance().getServerName());
 		// TODO Implment html.replace("%status%", AuthServerCommunication.getInstance().getStatusString());
-		var serverSettings = getSettings(ServerSettings.class);
-		html.replace("%type%", getServerTypeName(serverSettings.type()));
-		html.replace("%brackets%", String.valueOf(serverSettings.isShowingBrackets()));
+		html.replace("%type%", getServerTypeName(ServerSettings.type()));
+		html.replace("%brackets%", String.valueOf(ServerSettings.isShowingBrackets()));
 		// TODO implement html.replace("%max_players%", String.valueOf(AuthServerCommunication.getInstance().getMaxPlayer()));
 		activeChar.sendPacket(html);
 	}
@@ -187,23 +182,15 @@ public class AdminLogin implements IAdminCommandHandler
 	private String getServerTypeName(int serverType) {
 		return Arrays.stream(ServerType.values()).filter(type -> (serverType & type.getMask()) != 0).map(ServerType::toString).collect(Collectors.joining(", "));
 	}
-	
-	/**
-	 *
-	 */
-	private void allowToAll()
-	{
+
+	private void allowToAll() {
+		AdminSettings.gmOnlyServer(false);
 		// TODO Implement AuthServerCommunication.getInstance().setServerStatus(ServerStatus.STATUS_AUTO);
-		Config.SERVER_GMONLY = false;
 	}
-	
-	/**
-	 *
-	 */
-	private void gmOnly()
-	{
+
+	private void gmOnly() {
 		// TODO  IMPLEMENT AuthServerCommunication.getInstance().setServerStatus(ServerStatus.STATUS_GM_ONLY);
-		Config.SERVER_GMONLY = true;
+		AdminSettings.gmOnlyServer(true);
 	}
 	
 	@Override

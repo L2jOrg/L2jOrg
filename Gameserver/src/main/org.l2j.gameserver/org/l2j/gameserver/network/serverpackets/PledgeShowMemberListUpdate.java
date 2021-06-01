@@ -19,8 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -29,7 +28,6 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author -Wooden-
  */
 public final class PledgeShowMemberListUpdate extends ServerPacket {
-    private final int _pledgeType;
     private final String _name;
     private final int _level;
     private final int _classId;
@@ -48,15 +46,10 @@ public final class PledgeShowMemberListUpdate extends ServerPacket {
         _level = member.getLevel();
         _classId = member.getClassId();
         _objectId = member.getObjectId();
-        _pledgeType = member.getPledgeType();
         _race = member.getRaceOrdinal();
         _sex = member.getSex() ? 1 : 0;
         _onlineStatus = member.getOnlineStatus();
-        if (_pledgeType == Clan.SUBUNIT_ACADEMY) {
-            _hasSponsor = member.getSponsor() != 0 ? 1 : 0;
-        } else {
-            _hasSponsor = 0;
-        }
+        _hasSponsor = 0;
     }
 
     @Override
@@ -70,12 +63,10 @@ public final class PledgeShowMemberListUpdate extends ServerPacket {
         buffer.writeInt(_race);
         if (_onlineStatus > 0) {
             buffer.writeInt(_objectId);
-            buffer.writeInt(_pledgeType);
         } else {
-            // when going offline send as 0
-            buffer.writeInt(0);
-            buffer.writeInt(0);
+            buffer.writeInt(0); // when going offline send as 0
         }
+        buffer.writeInt(0x00); // pledge type
         buffer.writeInt(_hasSponsor);
         buffer.writeByte(_onlineStatus);
     }

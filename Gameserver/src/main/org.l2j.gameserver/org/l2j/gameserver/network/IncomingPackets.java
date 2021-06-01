@@ -26,6 +26,7 @@ import java.util.EnumSet;
 import java.util.function.Supplier;
 
 import static java.lang.Short.toUnsignedInt;
+import static java.util.Objects.nonNull;
 import static java.util.Objects.requireNonNullElse;
 
 /**
@@ -285,6 +286,10 @@ public enum IncomingPackets implements PacketFactory {
         if (exPacketId >= ExIncomingPackets.PACKET_ARRAY.length) {
             return NULLABLE_PACKET_FACTORY;
         }
-        return requireNonNullElse(ExIncomingPackets.PACKET_ARRAY[exPacketId],NULLABLE_PACKET_FACTORY);
+        var packetFactory =  ExIncomingPackets.PACKET_ARRAY[exPacketId];
+        if(nonNull(packetFactory) && packetFactory.hasExtension()) {
+            return packetFactory.handleExtension(buffer);
+        }
+        return packetFactory;
     }
 }

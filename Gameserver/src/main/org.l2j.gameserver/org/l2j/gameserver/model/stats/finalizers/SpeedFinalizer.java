@@ -33,7 +33,6 @@ import org.l2j.gameserver.world.zone.type.SwampZone;
 
 import java.util.Optional;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -58,7 +57,7 @@ public class SpeedFinalizer implements IStatsFunction {
             baseValue += bonusDex;
         }
 
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, getSettings(CharacterSettings.class).maxRunSpeed());
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, CharacterSettings.maxRunSpeed());
     }
 
     @Override

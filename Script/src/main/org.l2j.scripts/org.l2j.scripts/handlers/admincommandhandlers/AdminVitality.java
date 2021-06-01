@@ -19,7 +19,6 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
@@ -28,7 +27,6 @@ import org.l2j.gameserver.util.BuilderUtil;
 
 import java.util.StringTokenizer;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -52,7 +50,7 @@ public class AdminVitality implements IAdminCommandHandler
 			return false;
 		}
 		
-		if (!getSettings(CharacterSettings.class).isVitalityEnabled())
+		if (!CharacterSettings.vitalityEnabled())
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Vitality is not enabled on the server!");
 			return false;

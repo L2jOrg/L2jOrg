@@ -20,16 +20,17 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -69,11 +70,13 @@ public final class RequestDropItem extends ClientPacket {
 
         final Item item = player.getInventory().getItemByObjectId(_objectId);
 
-        if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && !(player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems()) || player.isInsideZone(ZoneType.NO_ITEM_DROP)) {
+        if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) ||
+                (!item.isDropable() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())
+                || player.isInsideZone(ZoneType.NO_ITEM_DROP)) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             return;
         }
-        if (item.isQuestItem() && !(player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) {
+        if (item.isQuestItem() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) {
             return;
         }
 
@@ -82,7 +85,7 @@ public final class RequestDropItem extends ClientPacket {
             return;
         }
 
-        if ((Config.PLAYER_SPAWN_PROTECTION > 0) && player.isInvulnerable() && !player.isGM()) {
+        if ((CharacterSettings.spawnProtection() > 0) && player.isInvulnerable() && !player.isGM()) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             return;
         }

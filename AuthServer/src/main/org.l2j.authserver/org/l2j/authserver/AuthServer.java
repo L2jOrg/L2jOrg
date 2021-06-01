@@ -28,6 +28,7 @@ import org.l2j.authserver.network.client.AuthPacketHandler;
 import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
 import org.l2j.authserver.network.gameserver.ServerClient;
 import org.l2j.commons.cache.CacheFactory;
+import org.l2j.commons.configuration.Configurator;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.FileUtil;
@@ -45,7 +46,7 @@ public class AuthServer {
     private static final String LOG4J_CONFIGURATION = "log4j.configurationFile";
     private static final String HIKARICP_CONFIGURATION_FILE = "hikaricp.configurationFile";
 
-    public static final int PROTOCOL_REV = 0x0102;
+    public static final int PROTOCOL_REV = 0x0102; // 0xC621 auth token
 
     private static AuthServer _instance;
     private static Logger logger;
@@ -80,7 +81,8 @@ public class AuthServer {
         configureLogger();
         configureCaches();
         configureDatabase();
-        configureNetworkPackets();  
+        configureNetworkPackets();
+        Configurator.getInstance().load();
         var processors = Runtime.getRuntime().availableProcessors();
         ThreadPool.init(processors, Math.max(1, processors/2), 50);
         try {

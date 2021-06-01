@@ -49,4 +49,9 @@ public final class PetAttack implements IPlayerActionHandler
 			pet.doAttack(player.getTarget());
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

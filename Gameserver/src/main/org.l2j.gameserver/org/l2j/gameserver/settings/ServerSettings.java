@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ServerType;
@@ -31,41 +30,44 @@ import java.util.regex.PatternSyntaxException;
 /**
  * @author JoeAlisson
  */
-public class ServerSettings implements Settings {
+public class ServerSettings {
 
-    private int serverId;
-    private boolean acceptAlternativeId;
-    private String authServerAddress;
-    private short authServerPort;
+    private static int serverId;
+    private static boolean acceptAlternativeId;
+    private static String authServerAddress;
+    private static short authServerPort;
 
-    private byte ageLimit;
-    private boolean showBrackets;
-    private boolean isPvP;
-    private int type;
-    private short port;
-    private int maximumOnlineUsers;
-    private Path dataPackDirectory;
+    private static byte ageLimit;
+    private static boolean showBrackets;
+    private static boolean isPvP;
+    private static int type;
+    private static short port;
+    private static int maximumOnlineUsers;
+    private static Path dataPackDirectory;
 
-    private int scheduledPoolSize;
-    private int threadPoolSize;
-    private int[] acceptedProtocols;
-    private boolean scheduleRestart;
-    private boolean useDeadLockDetector;
-    private int deadLockDetectorInterval;
-    private boolean restartOnDeadLock;
-    private int maxPlayers;
-    private Predicate<String> playerNamePattern;
-    private Predicate<String> petNamePattern;
-    private Predicate<String> clanNamePattern;
-    private String[] scheduleRestartHours;
-    private boolean hardwareInfoEnabled;
-    private int maxPlayerPerHWID;
-    private int maxThreadPoolSize;
-    private int parallelismThreshold;
+    private static int scheduledPoolSize;
+    private static int threadPoolSize;
+    private static int[] acceptedProtocols;
+    private static boolean scheduleRestart;
+    private static boolean useDeadLockDetector;
+    private static int deadLockDetectorInterval;
+    private static boolean restartOnDeadLock;
+    private static int maxPlayers;
+    private static Predicate<String> playerNamePattern;
+    private static Predicate<String> petNamePattern;
+    private static Predicate<String> clanNamePattern;
+    private static String[] scheduleRestartHours;
+    private static boolean hardwareInfoEnabled;
+    private static int maxPlayerPerHWID;
+    private static int maxThreadPoolSize;
+    private static int parallelismThreshold;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
-        serverId = settingsFile.getInteger("RequestServerID", 1);
+    private ServerSettings() {
+        // helper class
+    }
+
+    public static void load(SettingsFile settingsFile) {
+        serverId = settingsFile.getInt("RequestServerID", 1);
         acceptAlternativeId = settingsFile.getBoolean("AcceptAlternateID", true);
 
         authServerAddress = settingsFile.getString("LoginHost", "127.0.0.1");
@@ -73,7 +75,7 @@ public class ServerSettings implements Settings {
         port = settingsFile.getShort("GameserverPort", (short) 7777);
         type = ServerType.maskOf(settingsFile.getStringArray("ServerListType"));
 
-        maximumOnlineUsers = Math.max(1, settingsFile.getInteger("MaximumOnlineUsers", 20));
+        maximumOnlineUsers = Math.max(1, settingsFile.getInt("MaximumOnlineUsers", 20));
         ageLimit = settingsFile.getByte("ServerListAge", (byte) 0);
         showBrackets = settingsFile.getBoolean("ServerListBrackets", false);
         isPvP = settingsFile.getBoolean("PvPServer", false);
@@ -85,26 +87,26 @@ public class ServerSettings implements Settings {
         scheduledPoolSize = determinePoolSize(settingsFile, "ScheduledThreadPoolSize", processors);
         threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
         maxThreadPoolSize = determinePoolSize(settingsFile, "MaxThreadPoolSize", threadPoolSize * 10);
-        parallelismThreshold = settingsFile.getInteger("ParallelismThreshold", 1000);
-        acceptedProtocols =  settingsFile.getIntegerArray("AllowedProtocolRevisions", ";");
+        parallelismThreshold = settingsFile.getInt("ParallelismThreshold", 1000);
+        acceptedProtocols =  settingsFile.getIntArray("AllowedProtocolRevisions", ";");
 
         scheduleRestart = settingsFile.getBoolean("ServerRestartScheduleEnabled", false);
         scheduleRestartHours = settingsFile.getStringArray("ServerRestartSchedule");
 
         useDeadLockDetector = settingsFile.getBoolean("DeadLockDetector", true);
-        deadLockDetectorInterval = settingsFile.getInteger("DeadLockCheckInterval", 1800);
+        deadLockDetectorInterval = settingsFile.getInt("DeadLockCheckInterval", 1800);
         restartOnDeadLock = settingsFile.getBoolean("RestartOnDeadlock", false);
 
         playerNamePattern = determineNamePattern(settingsFile, "CnameTemplate");
         petNamePattern = determineNamePattern(settingsFile, "PetNameTemplate");
         clanNamePattern = determineNamePattern(settingsFile, "ClanNameTemplate");
 
-        maxPlayers = settingsFile.getInteger("CharMaxNumber", 7);
+        maxPlayers = settingsFile.getInt("CharMaxNumber", 7);
         hardwareInfoEnabled = settingsFile.getBoolean("EnableHardwareInfo", false);
-        maxPlayerPerHWID = settingsFile.getInteger("MaxPlayersPerHWID", 0);
+        maxPlayerPerHWID = settingsFile.getInt("MaxPlayersPerHWID", 0);
     }
 
-    private Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
+    private static Predicate<String> determineNamePattern(SettingsFile settingsFile, String key) {
         try {
             return Pattern.compile(settingsFile.getString(key, ".*")).asMatchPredicate();
         } catch (PatternSyntaxException e) {
@@ -112,8 +114,8 @@ public class ServerSettings implements Settings {
         }
     }
 
-    private int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
-        var size = settingsFile.getInteger(property, processors);
+    private static int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
+        var size = settingsFile.getInt(property, processors);
 
         if(size < 2) {
             return processors;
@@ -121,127 +123,127 @@ public class ServerSettings implements Settings {
         return size;
     }
 
-    public int serverId() {
+    public static int serverId() {
         return serverId;
     }
 
-    public void setServerId(int serverId) {
-        this.serverId = serverId;
+    public static void setServerId(int id) {
+        serverId = id;
     }
 
-    public short port() {
+    public static short port() {
         return port;
     }
 
-    public String authServerAddress() {
+    public static String authServerAddress() {
         return authServerAddress;
     }
 
-    public int authServerPort() {
+    public static int authServerPort() {
         return authServerPort;
     }
 
-    public byte ageLimit() {
+    public static byte ageLimit() {
         return ageLimit;
     }
 
-    public boolean isShowingBrackets() {
+    public static boolean isShowingBrackets() {
         return showBrackets;
     }
 
-    public boolean isPvP() {
+    public static boolean isPvP() {
         return isPvP;
     }
 
-    public int type() {
+    public static int type() {
         return type;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public static void setType(int value) {
+        type = value;
     }
 
-    public int maximumOnlineUsers() {
+    public static int maximumOnlineUsers() {
         return maximumOnlineUsers;
     }
 
-    public boolean acceptAlternativeId() {
+    public static boolean acceptAlternativeId() {
         return acceptAlternativeId;
     }
 
-    public Path dataPackDirectory() {
+    public static Path dataPackDirectory() {
         return dataPackDirectory;
     }
 
-    public int scheduledPoolSize() {
+    public static int scheduledPoolSize() {
         return scheduledPoolSize;
     }
 
-    public int threadPoolSize() {
+    public static int threadPoolSize() {
         return threadPoolSize;
     }
 
-    public int maxThreadPoolSize() {
+    public static int maxThreadPoolSize() {
         return maxThreadPoolSize;
     }
 
-    public int parallelismThreshold() {
+    public static int parallelismThreshold() {
         return parallelismThreshold;
     }
 
-    public int[] acceptedProtocols() {
+    public static int[] acceptedProtocols() {
         return acceptedProtocols;
     }
 
-    public boolean scheduleRestart() {
+    public static boolean scheduleRestart() {
         return scheduleRestart;
     }
 
-    public String[] scheduleRestartHours() {
+    public static String[] scheduleRestartHours() {
         return scheduleRestartHours;
     }
 
-    public boolean useDeadLockDetector() {
+    public static boolean useDeadLockDetector() {
         return useDeadLockDetector;
     }
 
-    public int deadLockDetectorInterval() {
+    public static int deadLockDetectorInterval() {
         return deadLockDetectorInterval;
     }
 
-    public boolean restartOnDeadLock() {
+    public static boolean restartOnDeadLock() {
         return restartOnDeadLock;
     }
 
-    public boolean acceptPlayerName(String name) {
+    public static boolean acceptPlayerName(String name) {
         return playerNamePattern.test(name);
     }
 
-    public boolean acceptPetName(String name) {
+    public static boolean acceptPetName(String name) {
         return petNamePattern.test(name);
     }
 
-    public boolean acceptClanName(String name) {
+    public static boolean acceptClanName(String name) {
         return clanNamePattern.test(name);
     }
 
-    public int maxPlayersAllowed() {
+    public static int maxPlayersAllowed() {
         return maxPlayers;
     }
 
-    public boolean allowPlayersCount(int playerCount) {
+    public static boolean allowPlayersCount(int playerCount) {
         return maxPlayers <= 0 || maxPlayers >= playerCount;
     }
 
-    public void setAgeLimit(byte age) {
-        this.ageLimit = age;
+    public static void setAgeLimit(byte age) {
+        ageLimit = age;
     }
 
-    public boolean isHardwareInfoEnabled() {
+    public static boolean isHardwareInfoEnabled() {
         return hardwareInfoEnabled;
     }
 
-    public int maxPlayerPerHWID() {
+    public static int maxPlayerPerHWID() {
         return maxPlayerPerHWID;
     }
 }

@@ -20,12 +20,12 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.data.database.data.ClanMember;
+import org.l2j.gameserver.engine.clan.ClanEngine;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -78,7 +78,7 @@ public class AdminClan implements IAdminCommandHandler
 				html.replace("%clan_leader%", clan.getLeaderName());
 				html.replace("%clan_level%", String.valueOf(clan.getLevel()));
 				html.replace("%clan_has_castle%", clan.getCastleId() > 0 ? CastleManager.getInstance().getCastleById(clan.getCastleId()).getName() : "No");
-				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallManager.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
+				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallEngine.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
 				html.replace("%clan_points%", String.valueOf(clan.getReputationScore()));
 				html.replace("%clan_players_count%", String.valueOf(clan.getMembersCount()));
 				html.replace("%clan_ally%", clan.getAllyId() > 0 ? clan.getAllyName() : "Not in ally");
@@ -103,16 +103,8 @@ public class AdminClan implements IAdminCommandHandler
 				}
 				
 				final ClanMember member = clan.getClanMember(player.getObjectId());
-				if (member != null)
-				{
-					if (player.isAcademyMember())
-					{
-						player.sendPacket(SystemMessageId.THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER);
-					}
-					else
-					{
-						clan.setNewLeader(member);
-					}
+				if (member != null) {
+					clan.setNewLeader(member);
 				}
 				break;
 			}
@@ -121,7 +113,7 @@ public class AdminClan implements IAdminCommandHandler
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 				html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/clanchanges.htm"));
 				final StringBuilder sb = new StringBuilder();
-				for (Clan clan : ClanTable.getInstance().getClans())
+				for (Clan clan : ClanEngine.getInstance().getClans())
 				{
 					if (clan.getNewLeaderId() != 0)
 					{
@@ -147,7 +139,7 @@ public class AdminClan implements IAdminCommandHandler
 					}
 					final int clanId = Integer.parseInt(token);
 					
-					final Clan clan = ClanTable.getInstance().getClan(clanId);
+					final Clan clan = ClanEngine.getInstance().getClan(clanId);
 					if (clan == null)
 					{
 						break;

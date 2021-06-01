@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.VariationInstance;
@@ -29,6 +28,7 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.nonNull;
@@ -149,7 +149,7 @@ public class ExCharInfo extends ServerPacket {
 
         buffer.writeInt(appearence.getVisibleClanLargeCrestId());
         buffer.writeByte(player.isNoble());
-        buffer.writeByte((player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 2 : 0));
+        buffer.writeByte((player.isHero() || (player.isGM() && AdminSettings.showAura()) ? 2 : 0));
 
         buffer.writeByte(player.isFishing());
         var baitLocation = player.getFishing().getBaitLocation();
@@ -159,8 +159,8 @@ public class ExCharInfo extends ServerPacket {
 
         buffer.writeInt(appearence.getNameColor());
         buffer.writeInt(player.getHeading());
-        buffer.writeByte(player.getPledgeClass());
-        buffer.writeShort(player.getPledgeType());
+        buffer.writeByte(player.getSocialStatus().ordinal());
+        buffer.writeShort(0x00); // pledge type
 
         buffer.writeInt(appearence.getTitleColor());
         buffer.writeByte(0x00); // cursed weapon level

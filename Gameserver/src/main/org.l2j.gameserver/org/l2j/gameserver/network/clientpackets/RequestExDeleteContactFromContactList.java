@@ -22,8 +22,6 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.GeneralSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Format: (ch)S S: Character Name
  *
@@ -40,7 +38,7 @@ public class RequestExDeleteContactFromContactList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!getSettings(GeneralSettings.class).allowMail()) {
+        if (!GeneralSettings.allowMail()) {
             return;
         }
 

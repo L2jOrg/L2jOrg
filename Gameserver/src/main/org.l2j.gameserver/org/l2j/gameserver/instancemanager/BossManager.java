@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BossDAO;
 import org.l2j.gameserver.data.database.data.BossData;
@@ -37,6 +38,7 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
@@ -44,7 +46,6 @@ import java.util.concurrent.ScheduledFuture;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
 /**
  *
@@ -102,7 +103,7 @@ public class BossManager {
             return null;
         }
 
-        int respawn = zeroIfNullOrElse(spawnTemplate.getRespawnTime(), d -> (int) d.getSeconds());
+        int respawn = (int) Util.zeroIfNullOrElseLong(spawnTemplate.getRespawnTime(), Duration::getSeconds);
         if(respawn <= 0) {
             LOGGER.warn("Found database spawns without respawn for npc: {} - {} {}", template.getId(), template.getName(), spawnTemplate);
             return null;
@@ -120,7 +121,7 @@ public class BossManager {
             spawn.setHeading(bossData.getHeading());
             spawn.setSpawnTemplate(spawnTemplate);
 
-            int respawnRandom = zeroIfNullOrElse(spawnTemplate.getRespawnTimeRandom(), d -> (int) d.getSeconds());
+            int respawnRandom = (int) Util.zeroIfNullOrElseLong(spawnTemplate.getRespawnTimeRandom(), Duration::getSeconds);
             spawn.setRespawnDelay(respawn, respawnRandom);
             spawn.startRespawn();
 

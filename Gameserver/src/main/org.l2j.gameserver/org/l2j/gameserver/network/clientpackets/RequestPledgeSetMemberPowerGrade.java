@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -63,12 +63,6 @@ public final class RequestPledgeSetMemberPowerGrade extends ClientPacket {
         }
 
         if (member.getObjectId() == clan.getLeaderId()) {
-            return;
-        }
-
-        if (member.getPledgeType() == Clan.SUBUNIT_ACADEMY) {
-            // also checked from client side
-            activeChar.sendPacket(SystemMessageId.THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER);
             return;
         }
 

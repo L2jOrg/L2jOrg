@@ -25,6 +25,7 @@ import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.world.zone.type.ResidenceZone;
@@ -59,14 +60,18 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 
     public void giveResidentialSkills(Player player) {
         if (!isNullOrEmpty(residentialSkills)) {
-            var socialClass = player.getPledgeClass() + 1;
-            residentialSkills.stream().filter(s -> checkSocialClass(socialClass, s)).forEach(s ->  player.addSkill(s.getSkill()));
+            var socialClass = player.getSocialStatus();
+            for (SkillLearn skillLearn : residentialSkills) {
+                if(checkSocialStatus(socialClass, skillLearn)) {
+                    player.addSkill(skillLearn.getSkill());
+                }
+            }
         }
     }
 
-    private boolean checkSocialClass(int socialClass, SkillLearn skillLearn) {
-        var skillSocialClass =  skillLearn.getSocialClass();
-        return isNull(skillSocialClass) || socialClass >= skillSocialClass.ordinal();
+    private boolean checkSocialStatus(SocialStatus socialClass, SkillLearn skillLearn) {
+        SocialStatus skillSocialClass =  skillLearn.getSocialClass();
+        return isNull(skillSocialClass) || socialClass.compareTo(skillSocialClass) >= 0;
     }
 
     public void removeResidentialSkills(Player player) {

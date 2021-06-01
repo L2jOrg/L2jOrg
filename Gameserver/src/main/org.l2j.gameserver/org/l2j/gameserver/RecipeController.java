@@ -20,13 +20,17 @@ package org.l2j.gameserver;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.StatType;
 import org.l2j.gameserver.enums.StatusUpdateType;
-import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.Recipe;
+import org.l2j.gameserver.model.RecipeList;
+import org.l2j.gameserver.model.RecipeStat;
+import org.l2j.gameserver.model.TempItem;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
@@ -46,7 +50,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.model.DamageInfo.DamageType;
 
 
@@ -84,15 +87,16 @@ public class RecipeController {
             return;
         }
 
+        var altGameCreation = CharacterSettings.altGameCreation();
         // Check if manufacturer is under manufacturing store or private store.
-        if (Config.ALT_GAME_CREATION && _activeMakers.containsKey(manufacturer.getObjectId())) {
+        if (altGameCreation && _activeMakers.containsKey(manufacturer.getObjectId())) {
             player.sendPacket(SystemMessageId.PLEASE_CLOSE_THE_SETUP_WINDOW_FOR_YOUR_PRIVATE_WORKSHOP_OR_PRIVATE_STORE_AND_TRY_AGAIN);
             return;
         }
 
         final RecipeItemMaker maker = new RecipeItemMaker(manufacturer, recipeList, player);
         if (maker._isValid) {
-            if (Config.ALT_GAME_CREATION) {
+            if (altGameCreation) {
                 _activeMakers.put(manufacturer.getObjectId(), maker);
                 ThreadPool.schedule(maker, 100);
             } else {
@@ -121,8 +125,9 @@ public class RecipeController {
             return;
         }
 
+        boolean altGAmeCreation = CharacterSettings.altGameCreation();
         // Check if player is busy (possible if alt game creation is enabled)
-        if (Config.ALT_GAME_CREATION && _activeMakers.containsKey(player.getObjectId())) {
+        if (altGAmeCreation && _activeMakers.containsKey(player.getObjectId())) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1);
             sm.addItemName(recipeList.getItemId());
             sm.addString("You are busy creating.");
@@ -132,7 +137,7 @@ public class RecipeController {
 
         final RecipeItemMaker maker = new RecipeItemMaker(player, recipeList, player);
         if (maker._isValid) {
-            if (Config.ALT_GAME_CREATION) {
+            if (altGAmeCreation) {
                 _activeMakers.put(player.getObjectId(), maker);
                 ThreadPool.schedule(maker, 100);
             } else {
@@ -213,7 +218,7 @@ public class RecipeController {
             if (_player != _target) {
                 final ManufactureItem item = _player.getManufactureItems().get(_recipeList.getId());
                 if (item != null) {
-                    _price = item.getCost();
+                    _price = item.getPrice();
                     if (_target.getAdena() < _price) // check price
                     {
                         _target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
@@ -241,7 +246,7 @@ public class RecipeController {
             }
 
             // initial AltStatChange checks
-            if (Config.ALT_GAME_CREATION) {
+            if (CharacterSettings.altGameCreation()) {
                 calculateAltStatChange();
             }
 
@@ -255,7 +260,7 @@ public class RecipeController {
 
         @Override
         public void run() {
-            if (!getSettings(CharacterSettings.class).isCraftEnabled()) {
+            if (!CharacterSettings.craftEnabled()) {
                 _target.sendMessage("Item creation is currently disabled.");
                 abort();
                 return;
@@ -273,7 +278,7 @@ public class RecipeController {
                 return;
             }
 
-            if (Config.ALT_GAME_CREATION && !_activeMakers.containsKey(_player.getObjectId())) {
+            if (CharacterSettings.altGameCreation() && !_activeMakers.containsKey(_player.getObjectId())) {
                 if (_target != _player) {
                     _target.sendMessage("Manufacture aborted");
                     _player.sendMessage("Manufacture aborted");
@@ -285,7 +290,7 @@ public class RecipeController {
                 return;
             }
 
-            if (Config.ALT_GAME_CREATION && !_items.isEmpty()) {
+            if (CharacterSettings.altGameCreation() && !_items.isEmpty()) {
                 if (!calculateStatUse(true, true)) {
                     return; // check stat use
                 }
@@ -295,7 +300,7 @@ public class RecipeController {
 
                 // if still not empty, schedule another pass
                 if (!_items.isEmpty()) {
-                    _delay = (int) (Config.ALT_GAME_CREATION_SPEED * _player.getStats().getReuseTime(_skill) * WorldTimeController.TICKS_PER_SECOND * WorldTimeController.MILLIS_IN_TICK);
+                    _delay = (int) (CharacterSettings.altGameCreationSpeed() * _player.getStats().getReuseTime(_skill) * WorldTimeController.TICKS_PER_SECOND * WorldTimeController.MILLIS_IN_TICK);
 
                     // FIXME: please fix this packet to show crafting animation (somebody)
                     final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
@@ -321,7 +326,7 @@ public class RecipeController {
         }
 
         private void finishCrafting() {
-            if (!Config.ALT_GAME_CREATION) {
+            if (!CharacterSettings.altGameCreation()) {
                 calculateStatUse(false, true);
             }
 
@@ -374,7 +379,7 @@ public class RecipeController {
         }
 
         private double getCraftCriticalRate() {
-            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, Config.BASE_CRITICAL_CRAFT_RATE);
+            return _player.getStats().getValue(Stat.CRAFT_RATE_CRITICAL, CharacterSettings.criticalCraftRate());
         }
 
         private void updateMakeInfo(boolean success) {
@@ -449,13 +454,14 @@ public class RecipeController {
 
         private boolean calculateStatUse(boolean isWait, boolean isReduce) {
             boolean ret = true;
+            boolean altGameCreation = CharacterSettings.altGameCreation();
             for (RecipeStat statUse : _recipeList.getStatUse()) {
                 final double modifiedValue = statUse.getValue() / _creationPasses;
                 if (statUse.getType() == StatType.HP) {
                     // we do not want to kill the player, so its CurrentHP must be greater than the reduce value
                     if (_player.getCurrentHp() <= modifiedValue) {
                         // rest (wait for HP)
-                        if (Config.ALT_GAME_CREATION && isWait) {
+                        if (altGameCreation && isWait) {
                             _player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
                             ThreadPool.schedule(this, 100 + _delay);
                         } else {
@@ -469,7 +475,7 @@ public class RecipeController {
                 } else if (statUse.getType() == StatType.MP) {
                     if (_player.getCurrentMp() < modifiedValue) {
                         // rest (wait for MP)
-                        if (Config.ALT_GAME_CREATION && isWait) {
+                        if (altGameCreation && isWait) {
                             _player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
                             ThreadPool.schedule(this, 100 + _delay);
                         } else {
@@ -555,11 +561,9 @@ public class RecipeController {
             }
 
             // check that the current recipe has a rare production or not
-            if ((rareProdId != -1) && ((rareProdId == itemId) || Config.CRAFT_MASTERWORK)) {
-                if (Rnd.get(100) < _recipeList.getRarity()) {
-                    itemId = rareProdId;
-                    itemCount = _recipeList.getRareCount();
-                }
+            if (rareProdId > 0 && Rnd.chance(_recipeList.getRarity())) {
+                itemId = rareProdId;
+                itemCount = _recipeList.getRareCount();
             }
 
             _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
@@ -608,7 +612,7 @@ public class RecipeController {
                 _target.sendPacket(sm);
             }
 
-            if (Config.ALT_GAME_CREATION) {
+            if (CharacterSettings.altGameCreation()) {
                 final int recipeLevel = _recipeList.getLevel();
                 if (_exp < 0) {
                     _exp = template.getReferencePrice() * itemCount;
@@ -618,8 +622,8 @@ public class RecipeController {
                     _sp = _exp / 10;
                 }
                 if (itemId == rareProdId) {
-                    _exp *= Config.ALT_GAME_CREATION_RARE_XPSP_RATE;
-                    _sp *= Config.ALT_GAME_CREATION_RARE_XPSP_RATE;
+                    _exp *= CharacterSettings.altGameCreationRareXpSpRate();
+                    _sp *= CharacterSettings.altGameCreationRareXpSpRate();
                 }
 
                 if (_exp < 0) {
@@ -636,7 +640,7 @@ public class RecipeController {
 
                 // Added multiplication of Creation speed with XP/SP gain slower crafting -> more XP,
                 // faster crafting -> less XP you can use ALT_GAME_CREATION_XP_RATE/SP to modify XP/SP gained (default = 1)
-                _player.addExpAndSp((int) _player.getStats().getValue(Stat.EXPSP_RATE, _exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED), (int) _player.getStats().getValue(Stat.EXPSP_RATE, _sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED));
+                _player.addExpAndSp((int) _player.getStats().getValue(Stat.EXPSP_RATE, _exp * CharacterSettings.altGameCreationXpRate() * CharacterSettings.altGameCreationSpeed()), (int) _player.getStats().getValue(Stat.EXPSP_RATE, _sp * CharacterSettings.altGameCreationSpRate() * CharacterSettings.altGameCreationSpeed()));
             }
             updateMakeInfo(true); // success
         }

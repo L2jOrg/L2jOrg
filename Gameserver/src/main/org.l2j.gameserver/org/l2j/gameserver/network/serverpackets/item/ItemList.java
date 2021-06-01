@@ -19,8 +19,8 @@
 package org.l2j.gameserver.network.serverpackets.item;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.AbstractItemPacket;
@@ -44,17 +44,16 @@ public final class ItemList {
     private static void sendPackets(Player player, boolean show) {
         Collection<Item> items = player.getInventory().getItems();
         sendHeader(player, show, items.size());
-        sendList(player, items);
+        sendContent(player, items);
     }
 
-    private static void sendList(Player player, Collection<Item> items) {
-        player.sendPacket(new List(items));
+    private static void sendContent(Player player, Collection<Item> items) {
+        player.sendPacket(new Content(items));
     }
 
     private static void sendHeader(Player player, boolean show, int itemsAmount) {
         player.sendPacket(new Header(show, itemsAmount));
     }
-
 
     private static class Header extends ServerPacket {
 
@@ -76,11 +75,11 @@ public final class ItemList {
         }
     }
 
-    private static final class List extends AbstractItemPacket {
+    private static final class Content extends AbstractItemPacket {
 
         private final Collection<Item> items;
 
-        private List(Collection<Item> items) {
+        private Content(Collection<Item> items) {
             this.items = items;
         }
 

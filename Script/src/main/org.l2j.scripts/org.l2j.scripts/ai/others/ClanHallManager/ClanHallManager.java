@@ -23,13 +23,13 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.residences.ResidenceFunctionTemplate;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
@@ -324,7 +324,7 @@ public final class ClanHallManager extends AbstractNpcAI
 										final ResidenceFunctionData oldFunc = clanHall.getFunction(funcId, funcLv);
 										if (oldFunc != null)
 										{
-											final int funcVal = (int) oldFunc.getTemplate().getValue();
+											final int funcVal = (int) (oldFunc.getTemplate().getValue() * 100 -100);
 											htmltext = getHtml(player, "ClanHallManager-manageFuncAlreadySet.html");
 											htmltext = htmltext.replaceAll("%funcEffect%", "<fstring p1=\"" + (funcVal > 0 ? funcVal : oldFunc.getLevel()) + "\">" + (funcVal > 0 ? NpcStringId.S1.getId() : NpcStringId.STAGE_S1.getId()) + "</fstring>");
 										}
@@ -470,17 +470,13 @@ public final class ClanHallManager extends AbstractNpcAI
 		World.getInstance().forEachVisibleObject(npc, Player.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
 	}
 	
-	private String getFunctionInfo(ResidenceFunctionData func, String htmltext, String name)
-	{
-		if (func != null)
-		{
-			htmltext = htmltext.replaceAll("%" + name + "recovery%", (int) func.getTemplate().getValue() + "%");
+	private String getFunctionInfo(ResidenceFunctionData func, String htmltext, String name) {
+		if (func != null) {
+			htmltext = htmltext.replaceAll("%" + name + "recovery%", (int)(func.getTemplate().getValue() *100 -100) + "%");
 			htmltext = htmltext.replaceAll("%" + name + "price%", "<fstring p1=\"" + func.getTemplate().getCost().getCount() + "\" p2=\"" + func.getTemplate().getDurationAsDays() + "\">" + NpcStringId.FONT_COLOR_FFAABB_S1_FONT_ADENA_S2_DAY_S.getId() + "</fstring>");
 			htmltext = htmltext.replace("%" + name + "expire%", "Withdraw the fee for the next time at " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(func.getExpiration())));
 			htmltext = htmltext.replaceAll("%" + name + "deactive%", "[<a action=\"bypass -h Quest ClanHallManager manageFunctions removeFunction confirm " + func.getType().toString() + "\">Deactivate</a>]");
-		}
-		else
-		{
+		} else {
 			htmltext = htmltext.replaceAll("%" + name + "recovery%", "<fstring p1=\"\" p2=\"\">" + NpcStringId.NONE_2.getId() + "</fstring>");
 			htmltext = htmltext.replaceAll("%" + name + "price%", "");
 			htmltext = htmltext.replaceAll("%" + name + "expire%", "");

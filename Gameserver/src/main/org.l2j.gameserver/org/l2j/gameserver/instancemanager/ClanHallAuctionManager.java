@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.clanhallauction.ClanHallAuction;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
@@ -48,7 +48,7 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent> 
         AUCTIONS.clear();
 
         //@formatter:off
-        ClanHallManager.getInstance().getFreeAuctionableHall()
+        ClanHallEngine.getInstance().getFreeAuctionableHall()
                 .forEach(c -> AUCTIONS.put(c.getId(), new ClanHallAuction(c.getId())));
         //@formatter:on
     }

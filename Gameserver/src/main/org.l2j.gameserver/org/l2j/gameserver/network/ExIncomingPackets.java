@@ -285,7 +285,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_MENTOR_ADD(RequestMenteeAdd::new, ConnectionState.IN_GAME_STATES),
     EX_MENTEE_WAITING_LIST(RequestMenteeWaitingList::new, ConnectionState.IN_GAME_STATES),
     EX_JOIN_PLEDGE_BY_NAME(RequestClanAskJoinByName::new, ConnectionState.IN_GAME_STATES),
-    EX_INZONE_WAITING_TIME(RequestInzoneWaitingTime::new, ConnectionState.IN_GAME_STATES),
+    EX_INZONE_WAITING_TIME(RequestInZoneWaitingTime::new, ConnectionState.IN_GAME_STATES),
     EX_JOIN_CURIOUS_HOUSE(RequestJoinCuriousHouse::new, ConnectionState.IN_GAME_STATES),
     EX_CANCEL_CURIOUS_HOUSE(RequestCancelCuriousHouse::new, ConnectionState.IN_GAME_STATES),
     EX_LEAVE_CURIOUS_HOUSE(null, ConnectionState.IN_GAME_STATES),
@@ -549,6 +549,13 @@ public enum ExIncomingPackets implements PacketFactory {
 
     static final ExIncomingPackets[] PACKET_ARRAY = values();
 
+    private static final PacketFactory REQUEST_BOOK_MARK_SLOT_INFO = new DynamicPacketFactory(RequestBookMarkSlotInfo::new);
+    private static final PacketFactory REQUEST_SAVE_BOOK_MARK_SLOT = new DynamicPacketFactory(RequestSaveBookMarkSlot::new);
+    private static final PacketFactory REQUEST_MODIFY_BOOK_MARK_SLOT = new DynamicPacketFactory(RequestModifyBookMarkSlot::new);
+    private static final PacketFactory REQUEST_DELETE_BOOK_MARK_SLOT = new DynamicPacketFactory(RequestDeleteBookMarkSlot::new);
+    private static final PacketFactory REQUEST_TELEPORT_BOOK_MARK = new DynamicPacketFactory(RequestTeleportBookMark::new);
+    private static final PacketFactory REQUEST_CHANCE_BOOK_MARK_SLOT = new DynamicPacketFactory(RequestChangeBookMarkSlot::new);
+
     private final boolean hasExtension;
     private final Supplier<ClientPacket> incomingPacketFactory;
     private final EnumSet<ConnectionState> connectionStates;
@@ -588,12 +595,12 @@ public enum ExIncomingPackets implements PacketFactory {
 
     private PacketFactory handleBookMarkPaket(ReadableBuffer packet) {
         return switch (packet.readInt()) {
-            case 0 -> new DynamicPacketFactory(RequestBookMarkSlotInfo::new);
-            case 1 -> new DynamicPacketFactory(RequestSaveBookMarkSlot::new);
-            case 2 -> new DynamicPacketFactory(RequestModifyBookMarkSlot::new);
-            case 3 -> new DynamicPacketFactory(RequestDeleteBookMarkSlot::new);
-            case 4 -> new DynamicPacketFactory(RequestTeleportBookMark::new);
-            case 5 -> new DynamicPacketFactory(RequestChangeBookMarkSlot::new);
+            case 0 -> REQUEST_BOOK_MARK_SLOT_INFO;
+            case 1 -> REQUEST_SAVE_BOOK_MARK_SLOT;
+            case 2 -> REQUEST_MODIFY_BOOK_MARK_SLOT;
+            case 3 -> REQUEST_DELETE_BOOK_MARK_SLOT;
+            case 4 -> REQUEST_TELEPORT_BOOK_MARK;
+            case 5 -> REQUEST_CHANCE_BOOK_MARK_SLOT;
             default -> NULLABLE_PACKET_FACTORY;
         };
     }
@@ -603,23 +610,16 @@ public enum ExIncomingPackets implements PacketFactory {
         return connectionStates;
     }
 
+    record DynamicPacketFactory(Supplier<ClientPacket> supplier) implements PacketFactory {
 
-    static class DynamicPacketFactory implements PacketFactory {
-
-        private final Supplier<ClientPacket> supplier;
-
-        DynamicPacketFactory(Supplier<ClientPacket> supplier) {
-            this.supplier = supplier;
+        @Override
+        public ClientPacket newIncomingPacket() {
+            return supplier.get();
         }
 
         @Override
         public boolean canHandleState(ConnectionState state) {
             return true;
-        }
-
-        @Override
-        public ClientPacket newIncomingPacket() {
-            return supplier.get();
         }
     }
 }

@@ -19,13 +19,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.settings.AdminSettings;
 
 import java.util.Collection;
 
@@ -70,7 +70,7 @@ public final class TradeStart extends AbstractItemPacket {
 
     private TradeStart(byte type, Player player) {
         this.type = type;
-        items = player.getInventory().getAvailableItems(true, player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS, false);
+        items = player.getInventory().getAvailableItems(true, player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && AdminSettings.tradeRestrictItem(), false);
     }
 
     @Override

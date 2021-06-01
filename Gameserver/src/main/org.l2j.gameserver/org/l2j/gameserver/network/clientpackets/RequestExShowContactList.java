@@ -18,11 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExShowContactList;
 import org.l2j.gameserver.settings.GeneralSettings;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Format: (ch)
@@ -37,7 +34,7 @@ public final class RequestExShowContactList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!getSettings(GeneralSettings.class).allowMail()) {
+        if (!GeneralSettings.allowMail()) {
             return;
         }
 

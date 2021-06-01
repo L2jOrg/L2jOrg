@@ -19,39 +19,30 @@
 package org.l2j.gameserver.network.serverpackets.pledge;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.database.data.SubPledgeData;
-import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
  */
 public class PledgeShowMemberListAll extends PledgeAbstractPacket {
-    private final SubPledgeData pledge;
     private final boolean isSubPledge;
 
-    private PledgeShowMemberListAll(Clan clan, SubPledgeData pledge, boolean isSubPledge) {
+    private PledgeShowMemberListAll(Clan clan, boolean isSubPledge) {
         super(clan);
-        this.pledge = pledge;
         this.isSubPledge = isSubPledge;
     }
 
     public static void sendAllTo(Player player) {
         final Clan clan = player.getClan();
         if (clan != null) {
-            for (var subPledge : clan.getAllSubPledges()) {
-                player.sendPacket(new PledgeShowMemberListAll(clan, subPledge, false));
-            }
-            player.sendPacket(new PledgeShowMemberListAll(clan, null, true));
+            player.sendPacket(new PledgeShowMemberListAll(clan, true));
         }
     }
 
@@ -61,18 +52,15 @@ public class PledgeShowMemberListAll extends PledgeAbstractPacket {
 
         buffer.writeInt(!isSubPledge);
         buffer.writeInt(clan.getId());
-        buffer.writeInt(getSettings(ServerSettings.class).serverId());
+        buffer.writeInt(ServerSettings.serverId());
 
-        var pledgeId = isNull(pledge) ? 0x00 : pledge.getId();
-        var leaderName = isNull(pledge) ? clan.getLeaderName() : PlayerNameTable.getInstance().getNameById(pledge.getLeaderId());
+        buffer.writeInt(0x00); // subpledge id
+        buffer.writeString(clan.getName());
+        buffer.writeString(clan.getLeaderName());
 
-        buffer.writeInt(pledgeId);
-        buffer.writeString(isNull(pledge) ? clan.getName() : pledge.getName());
-        buffer.writeString(leaderName);
+        writeClanInfo(buffer);
 
-        writeClanInfo(pledgeId, buffer);
-
-        clan.forEachMember(m1 -> writeMemberInfo(m1, buffer), m -> m.getPledgeType() == pledgeId);
+        clan.forEachMember(member -> writeMemberInfo(member, buffer));
     }
 
     protected void writeMemberInfo(ClanMember m, WritableBuffer buffer) {

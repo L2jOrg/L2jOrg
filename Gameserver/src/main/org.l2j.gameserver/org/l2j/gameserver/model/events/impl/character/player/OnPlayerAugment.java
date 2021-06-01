@@ -19,11 +19,11 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.engine.item.Item;
 
 /**
  * @author UnAfraid

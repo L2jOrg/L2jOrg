@@ -18,7 +18,7 @@
  */
 package org.l2j.scripts.handlers.communityboard;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IWriteBoardHandler;
 import org.l2j.gameserver.model.Clan;
@@ -134,7 +134,7 @@ public class ClanBoard implements IWriteBoardHandler {
 		html.append("\">[GO TO MY CLAN]</a>&nbsp;&nbsp;</td><td fixWIDTH=5></td></tr><tr><td height=10></td></tr></table><br><table border=0 cellspacing=0 cellpadding=2 bgcolor=5A5A5A width=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=200 align=center>CLAN NAME</td><td FIXWIDTH=200 align=center>CLAN LEADER</td><td FIXWIDTH=100 align=center>CLAN LEVEL</td><td FIXWIDTH=100 align=center>CLAN MEMBERS</td><td FIXWIDTH=5></td></tr></table><img src=\"L2UI.Squareblank\" width=\"1\" height=\"5\">");
 		
 		int i = 0;
-		for (Clan cl : ClanTable.getInstance().getClans())
+		for (Clan cl : ClanEngine.getInstance().getClans())
 		{
 			if (i > ((index + 1) * 7))
 			{
@@ -170,8 +170,8 @@ public class ClanBoard implements IWriteBoardHandler {
 			html.append("\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");
 		}
 
-		int nbp = ClanTable.getInstance().getClanCount() / 8;
-		if ((nbp * 8) != ClanTable.getInstance().getClanCount())
+		int nbp = ClanEngine.getInstance().getClanCount() / 8;
+		if ((nbp * 8) != ClanEngine.getInstance().getClanCount())
 		{
 			nbp++;
 		}
@@ -215,7 +215,7 @@ public class ClanBoard implements IWriteBoardHandler {
 	
 	private void clanHome(Player activeChar, int clanId)
 	{
-		final Clan cl = ClanTable.getInstance().getClan(clanId);
+		final Clan cl = ClanEngine.getInstance().getClan(clanId);
 		if (cl != null)
 		{
 			if (cl.getLevel() < 2)

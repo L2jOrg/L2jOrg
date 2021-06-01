@@ -18,18 +18,17 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Migi, DS
@@ -42,7 +41,7 @@ public final class RequestDeleteReceivedPost extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -55,7 +54,7 @@ public final class RequestDeleteReceivedPost extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (isNull(player) || isNull(mailIds) || !getSettings(GeneralSettings.class).allowMail()) {
+        if (isNull(player) || isNull(mailIds) || !GeneralSettings.allowMail()) {
             return;
         }
 

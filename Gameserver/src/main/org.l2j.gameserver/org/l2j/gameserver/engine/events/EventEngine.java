@@ -41,7 +41,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -55,7 +54,7 @@ public final class EventEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/events/events.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/events/events.xsd");
     }
 
     @Override

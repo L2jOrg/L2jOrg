@@ -24,8 +24,9 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.data.xml.impl.BeautyShopData;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ShotType;
@@ -40,7 +41,6 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -70,7 +70,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -147,7 +146,7 @@ public class EnterWorld extends ClientPacket {
             player.setIsDead(true);
         }
 
-        if (getSettings(CharacterSettings.class).isVitalityEnabled()) {
+        if (CharacterSettings.vitalityEnabled()) {
             player.sendPacket(new ExVitalityEffectInfo(player));
         }
 
@@ -175,7 +174,7 @@ public class EnterWorld extends ClientPacket {
         final Clan clan = player.getClan();
         // Clan packets
         if (clan != null) {
-            notifyClanMembers(player);
+            clan.onMemberLogin(player);
             notifySponsorOrApprentice(player);
 
             for (Siege siege : SiegeManager.getInstance().getSieges()) {
@@ -203,10 +202,9 @@ public class EnterWorld extends ClientPacket {
             PledgeShowMemberListAll.sendAllTo(player);
             clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
             player.sendPacket(new PledgeSkillList(clan));
-            final ClanHall ch = ClanHallManager.getInstance().getClanHallByClan(clan);
+            final ClanHall ch = ClanHallEngine.getInstance().getClanHallByClan(clan);
             if ((ch != null) && (ch.getCostFailDay() > 0)) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-                sm.addInt(ch.getLease());
+                var sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(ch.getLease());
                 player.sendPacket(sm);
             }
         } else {
@@ -216,7 +214,7 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExDressRoomUiOpen());
 
-        if (Config.PLAYER_SPAWN_PROTECTION > 0) {
+        if (CharacterSettings.spawnProtection() > 0) {
             player.setSpawnProtection(true);
         }
 
@@ -260,7 +258,7 @@ public class EnterWorld extends ClientPacket {
             }
         }
 
-        if (Config.PETITIONING_ALLOWED) {
+        if (CharacterSettings.petitionAllowed()) {
             PetitionManager.getInstance().checkPetitionMessages(player);
         }
 
@@ -277,7 +275,7 @@ public class EnterWorld extends ClientPacket {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
 
-        if (getSettings(GeneralSettings.class).allowMail()) {
+        if (GeneralSettings.allowMail()) {
             MailEngine.getInstance().sendUnreadCount(player);
         }
 
@@ -292,7 +290,7 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(StatusUpdate.of(player, StatusUpdateType.CUR_HP, (int) player.getCurrentHp()).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()));
         player.sendPacket(new ExUserInfoEquipSlot(player));
 
-        if (getSettings(ChatSettings.class).worldChatEnabled()) {
+        if (ChatSettings.worldChatEnabled()) {
             player.sendPacket(new ExWorldChatCnt(player));
         }
 
@@ -301,13 +299,13 @@ public class EnterWorld extends ClientPacket {
             player.updateAbnormalVisualEffects();
         }
 
-        if (getSettings(AttendanceSettings.class).enabled()) {
+        if (AttendanceSettings.enabled()) {
             sendAttendanceInfo(player);
         }
 
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 
-        if (getSettings(ServerSettings.class).isHardwareInfoEnabled()) {
+        if (ServerSettings.isHardwareInfoEnabled()) {
             ThreadPool.schedule(() -> {
                 if (client.getHardwareInfo() == null) {
                     Disconnection.of(client).logout(false);
@@ -353,7 +351,6 @@ public class EnterWorld extends ClientPacket {
     }
 
     private void sendAttendanceInfo(Player player) {
-        var attendanceSettings = getSettings(AttendanceSettings.class);
         ThreadPool.schedule(() -> {
             // Check if player can receive reward today.
             if (player.canReceiveAttendance()) {
@@ -361,64 +358,27 @@ public class EnterWorld extends ClientPacket {
                 player.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
                 player.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
                 player.sendMessage("Click on General Menu -> Attendance Check.");
-                if (attendanceSettings.popUpWindow()) {
+                if (AttendanceSettings.popUpWindow()) {
                     player.sendPacket(new ExVipAttendanceItemList(player));
                 }
             }
-        }, attendanceSettings.delay(), TimeUnit.MINUTES);
+        }, AttendanceSettings.delay(), TimeUnit.MINUTES);
     }
 
-    private void onGameMasterEnter(Player activeChar) {
-
-        if (Config.GM_GIVE_SPECIAL_SKILLS) {
-            SkillTreesData.getInstance().addSkills(activeChar, false);
+    private void onGameMasterEnter(Player player) {
+        if (AdminSettings.giveGMSkills()) {
+            SkillTreesData.getInstance().addGMSkills(player);
         }
 
-        if (Config.GM_GIVE_SPECIAL_AURA_SKILLS) {
-            SkillTreesData.getInstance().addSkills(activeChar, true);
-        }
+        AdminData.getInstance().addGm(player, true);
+        player.setDietMode(true);
 
-        AdminData.getInstance().addGm(activeChar, !Config.GM_STARTUP_AUTO_LIST || !AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel()));
+        if (AdminSettings.startUpHide() && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel())) {
+            BuilderUtil.setHiding(player, true);
 
-        if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", activeChar.getAccessLevel())) {
-            BuilderUtil.setHiding(activeChar, true);
-
-            BuilderUtil.sendSysMessage(activeChar, "hide is default for builder.");
-            BuilderUtil.sendSysMessage(activeChar, "FriendAddOff is default for builder.");
-            BuilderUtil.sendSysMessage(activeChar, "whisperoff is default for builder.");
-
-            // It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
-            return;
-        }
-
-        if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", activeChar.getAccessLevel())) {
-            activeChar.setIsInvul(true);
-        }
-
-        if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel())) {
-            activeChar.setInvisible(true);
-            activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
-        }
-
-        if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel())) {
-            activeChar.setSilenceMode(true);
-        }
-
-        if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", activeChar.getAccessLevel())) {
-            activeChar.setDietMode(true);
-            activeChar.refreshOverloaded(true);
-        }
-    }
-
-    private void notifyClanMembers(Player activeChar) {
-        final Clan clan = activeChar.getClan();
-        if (clan != null) {
-            clan.getClanMember(activeChar.getObjectId()).setPlayerInstance(activeChar);
-
-            final SystemMessage msg = getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME);
-            msg.addString(activeChar.getName());
-            clan.broadcastToOtherOnlineMembers(msg, activeChar);
-            clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(activeChar), activeChar);
+            BuilderUtil.sendSysMessage(player, "hide is default for builder.");
+            BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
+            BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
         }
     }
 

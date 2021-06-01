@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.ai.others;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -29,6 +28,7 @@ import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 /**
@@ -43,7 +43,7 @@ public class SecondClassChange extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		if (Config.DISABLE_TUTORIAL)
+		if (CharacterSettings.disableTutorial())
 		{
 			return;
 		}
@@ -66,7 +66,7 @@ public class SecondClassChange extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
+		if (CharacterSettings.disableTutorial())
 		{
 			return;
 		}

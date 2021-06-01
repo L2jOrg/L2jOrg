@@ -18,10 +18,10 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.isNull;
@@ -63,7 +63,7 @@ public class ClanHallZone extends ResidenceZone {
 
     @Override
     public final Location getBanishSpawnLoc() {
-        final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(getResidenceId());
-        return isNull(clanHall) ? null : clanHall.getBanishLocation();
+        final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(getResidenceId());
+        return isNull(clanHall) ? null : clanHall.getBanishPoint();
     }
 }

@@ -507,9 +507,9 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private double calculateLevelGapChanceToDrop(DropHolder dropItem, int levelDifference) {
         final double levelGapChanceToDrop;
         if (dropItem.getItemId() == CommonItem.ADENA) {
-            levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
+            levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
         } else {
-            levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
+            levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
         }
 
         return levelGapChanceToDrop;

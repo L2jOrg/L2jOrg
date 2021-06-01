@@ -18,10 +18,9 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -37,8 +36,6 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * RequestRecipeShopListSet client packet class.
  */
@@ -50,7 +47,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -62,7 +59,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
                 _items = null;
                 throw new InvalidDataPacketException();
             }
-            _items[i] = new ManufactureItem(id, cost);
+            _items[i] = ManufactureItem.of(id, cost);
         }
     }
 
@@ -70,12 +67,6 @@ public final class RequestRecipeShopListSet extends ClientPacket {
     public void runImpl() {
         final Player player = client.getPlayer();
         if (player == null) {
-            return;
-        }
-
-        if (_items == null) {
-            player.setPrivateStoreType(PrivateStoreType.NONE);
-            player.broadcastUserInfo();
             return;
         }
 
@@ -96,20 +87,22 @@ public final class RequestRecipeShopListSet extends ClientPacket {
 
         player.getManufactureItems().clear();
 
-        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
-        for (ManufactureItem i : _items) {
-            final RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
+        var maxAdena = CharacterSettings.maxAdena();
+        for (ManufactureItem item : _items) {
+            final RecipeList list = RecipeData.getInstance().getRecipeList(item.getRecipeId());
             if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.");
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! " + player + " tried to set recipe which he dont have.");
                 return;
             }
 
-            if (i.getCost() > maxAdena) {
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + maxAdena + " adena in Private Manufacture.");
+            if (item.getPrice() > maxAdena) {
+                GameUtils.handleIllegalPlayerAction(player, "Warning!! " + player + " tried to set price more than " + maxAdena + " adena in Private Manufacture.");
                 return;
             }
 
-            player.getManufactureItems().put(i.getRecipeId(), i);
+            item.setDwarven(list.isDwarvenRecipe());
+            item.setOwner(player.getObjectId());
+            player.getManufactureItems().put(item.getRecipeId(), item);
         }
 
         player.setStoreName(!player.hasManufactureShop() ? "" : player.getStoreName());

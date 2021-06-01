@@ -43,8 +43,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * This class loads all the game server related configurations from files.<br>
  * The files are usually located in config folder in server root folder.<br>
@@ -59,7 +57,6 @@ public final class Config {
     // --------------------------------------------------
 
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
-    private static final String CHARACTER_CONFIG_FILE = "config/character.properties";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
     private static final String GENERAL_CONFIG_FILE = "config/general.properties";
@@ -85,8 +82,7 @@ public final class Config {
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
     private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
-    private static final String  CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
-
+    private static final String CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
 
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
@@ -100,93 +96,6 @@ public final class Config {
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
-
-
-
-    public static boolean ENABLE_MODIFY_SKILL_DURATION;
-    public static Map<Integer, Integer> SKILL_DURATION_LIST;
-    public static boolean ENABLE_MODIFY_SKILL_REUSE;
-    public static Map<Integer, Integer> SKILL_REUSE_LIST;
-
-    public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
-    public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
-    public static long MAX_SP;
-    public static int MAX_PVTSTORESELL_SLOTS_DWARF;
-    public static int MAX_PVTSTORESELL_SLOTS_OTHER;
-    public static int MAX_PVTSTOREBUY_SLOTS_DWARF;
-    public static int MAX_PVTSTOREBUY_SLOTS_OTHER;
-    public static int INVENTORY_MAXIMUM_NO_DWARF;
-    public static int INVENTORY_MAXIMUM_DWARF;
-    public static int INVENTORY_MAXIMUM_GM;
-    public static int INVENTORY_MAXIMUM_QUEST_ITEMS;
-    public static int WAREHOUSE_SLOTS_DWARF;
-    public static int WAREHOUSE_SLOTS_NO_DWARF;
-    public static int WAREHOUSE_SLOTS_CLAN;
-    public static int ALT_FREIGHT_SLOTS;
-    public static int ALT_FREIGHT_PRICE;
-
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_GK;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_TRADE;
-    public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE;
-    public static int MAX_PERSONAL_FAME_POINTS;
-
-    public static int CASTLE_ZONE_FAME_TASK_FREQUENCY;
-    public static int CASTLE_ZONE_FAME_AQUIRE_POINTS;
-    public static boolean FAME_FOR_DEAD_PLAYERS;
-    public static boolean CRAFT_MASTERWORK;
-    public static int BASE_CRITICAL_CRAFT_RATE;
-    public static int DWARF_RECIPE_LIMIT;
-    public static int COMMON_RECIPE_LIMIT;
-    public static boolean ALT_GAME_CREATION;
-    public static double ALT_GAME_CREATION_SPEED;
-    public static double ALT_GAME_CREATION_XP_RATE;
-    public static double ALT_GAME_CREATION_RARE_XPSP_RATE;
-    public static double ALT_GAME_CREATION_SP_RATE;
-    public static boolean ALT_CLAN_LEADER_INSTANT_ACTIVATION;
-    public static int ALT_CLAN_JOIN_DAYS;
-    public static int ALT_CLAN_CREATE_DAYS;
-    public static int ALT_CLAN_DISSOLVE_DAYS;
-    public static int ALT_ALLY_JOIN_DAYS_WHEN_LEAVED;
-    public static int ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED;
-    public static int ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED;
-    public static int ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED;
-    public static int ALT_MAX_NUM_OF_CLANS_IN_ALLY;
-    public static int ALT_CLAN_MEMBERS_FOR_WAR;
-    public static boolean ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH;
-    public static long ALT_CLAN_MEMBERS_TIME_FOR_BONUS;
-    public static int ALT_PARTY_MAX_MEMBERS;
-    public static int ALT_PARTY_RANGE;
-
-    public static boolean ALT_LEAVE_PARTY_LEADER;
-
-    public static long STARTING_ADENA;
-    public static byte STARTING_LEVEL;
-    public static int STARTING_SP;
-
-    public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
-
-    public static boolean ENABLE_KEYBOARD_MOVEMENT;
-    public static int UNSTUCK_INTERVAL;
-    public static int PLAYER_SPAWN_PROTECTION;
-    public static int PLAYER_TELEPORT_PROTECTION;
-    public static boolean RANDOM_RESPAWN_IN_TOWN_ENABLED;
-    public static boolean OFFSET_ON_TELEPORT_ENABLED;
-    public static int MAX_OFFSET_ON_TELEPORT;
-    public static boolean PETITIONING_ALLOWED;
-    public static int MAX_PETITIONS_PER_PLAYER;
-    public static int MAX_PETITIONS_PENDING;
-    public static int MAX_NEWBIE_BUFF_LEVEL;
-    public static int DELETE_DAYS;
-    public static String PARTY_XP_CUTOFF_METHOD;
-    public static double PARTY_XP_CUTOFF_PERCENT;
-    public static int PARTY_XP_CUTOFF_LEVEL;
-    public static int[][] PARTY_XP_CUTOFF_GAPS;
-    public static int[] PARTY_XP_CUTOFF_GAP_PERCENTS;
-    public static boolean DISABLE_TUTORIAL;
-    public static boolean STORE_RECIPE_SHOPLIST;
-    public static boolean STORE_UI_SETTINGS;
 
     // --------------------------------------------------
     // Castle Settings
@@ -225,45 +134,13 @@ public final class Config {
     public static int TRAP_UPGRADE_PRICE2;
     public static int TRAP_UPGRADE_PRICE3;
     public static int TRAP_UPGRADE_PRICE4;
-
-    // --------------------------------------------------
-    // Feature Settings
-    // --------------------------------------------------
     public static int TAKE_CASTLE_POINTS;
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
 
-    public static int ROYAL_GUARD_COST;
-    public static int KNIGHT_UNIT_COST;
-    public static int REPUTATION_SCORE_PER_KILL;
-    public static int JOIN_ACADEMY_MIN_REP_SCORE;
-    public static int JOIN_ACADEMY_MAX_REP_SCORE;
-    public static boolean ALLOW_WYVERN_ALWAYS;
-    public static boolean ALLOW_WYVERN_DURING_SIEGE;
-    public static boolean ALLOW_MOUNTS_DURING_SIEGE;
-    public static boolean ENABLE_L2_STORE;
-    public static boolean ENABLE_LCOIN_STORE;
-
-
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
-
-    public static boolean SERVER_GMONLY;
-    public static boolean GM_HERO_AURA;
-    public static boolean GM_STARTUP_BUILDER_HIDE;
-    public static boolean GM_STARTUP_INVULNERABLE;
-    public static boolean GM_STARTUP_INVISIBLE;
-    public static boolean GM_STARTUP_SILENCE;
-    public static boolean GM_STARTUP_AUTO_LIST;
-    public static boolean GM_STARTUP_DIET_MODE;
-    public static boolean GM_ITEM_RESTRICTION;
-    public static boolean GM_TRADE_RESTRICTED_ITEMS;
-    public static boolean GM_ANNOUNCER_NAME;
-    public static boolean GM_GIVE_SPECIAL_SKILLS;
-    public static boolean GM_GIVE_SPECIAL_AURA_SKILLS;
-    public static boolean GM_DEBUG_HTML_PATHS;
-    public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 
     public static boolean LOG_ITEM_ENCHANTS;
 
@@ -290,7 +167,7 @@ public final class Config {
     public static int MIN_MONSTER_ANIMATION;
     public static int MAX_MONSTER_ANIMATION;
     public static boolean ENABLE_FALLING_DAMAGE;
-    public static boolean GRIDS_ALWAYS_ON;
+
     public static int GRID_NEIGHBOR_TURNON_TIME;
     public static int GRID_NEIGHBOR_TURNOFF_TIME;
     public static int PEACE_ZONE_MODE;
@@ -337,7 +214,6 @@ public final class Config {
     public static String ALT_BIRTHDAY_MAIL_TEXT;
     public static boolean ENABLE_BLOCK_CHECKER_EVENT;
     public static boolean HBCE_FAIR_PLAY;
-    public static int PLAYER_MOVEMENT_BLOCK_TIME;
     public static boolean BOTREPORT_ENABLE;
     public static String[] BOTREPORT_RESETPOINT_HOUR;
     public static long BOTREPORT_REPORT_DELAY;
@@ -496,20 +372,12 @@ public final class Config {
     // --------------------------------------------------
     // No classification assigned to the following yet
     // --------------------------------------------------
-    public static int MAX_ITEM_IN_PACKET;
     public static List<String> GAME_SERVER_SUBNETS;
     public static List<String> GAME_SERVER_HOSTS;
     public static int PVP_NORMAL_TIME;
     public static int PVP_PVP_TIME;
     public static int MAX_REPUTATION;
     public static int REPUTATION_INCREASE;
-
-    public static double ENCHANT_CHANCE_ELEMENT_STONE;
-    public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
-    public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
-    public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
-    public static int[] ENCHANT_BLACKLIST;
-    public static int[] AUGMENTATION_BLACKLIST;
 
     // GrandBoss Settings
     public static int ANTHARAS_SPAWN_INTERVAL;
@@ -808,196 +676,8 @@ public final class Config {
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
 
-        ROYAL_GUARD_COST = Feature.getInt("CreateRoyalGuardCost", 5000);
-        KNIGHT_UNIT_COST = Feature.getInt("CreateKnightUnitCost", 10000);
-        REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
-        JOIN_ACADEMY_MIN_REP_SCORE = Feature.getInt("CompleteAcademyMinPoints", 190);
-        JOIN_ACADEMY_MAX_REP_SCORE = Feature.getInt("CompleteAcademyMaxPoints", 650);
-        ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
-        ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
-        ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
-        ENABLE_L2_STORE = Feature.getBoolean("EnableL2Store", false);
-        ENABLE_LCOIN_STORE = Feature.getBoolean("EnableLCoinStore", false);
-
-
-        // Load Character config file (if exists)
-        final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
-
-        // TODO move to skill property or custom
-        ENABLE_MODIFY_SKILL_DURATION = Character.getBoolean("EnableModifySkillDuration", false);
-
-        // Create Map only if enabled
-        if (ENABLE_MODIFY_SKILL_DURATION) {
-            final String[] propertySplit = Character.getString("SkillDurationList", "").split(";");
-            SKILL_DURATION_LIST = new HashMap<>(propertySplit.length);
-            for (String skill : propertySplit) {
-                final String[] skillSplit = skill.split(",");
-                if (skillSplit.length != 2) {
-                    LOGGER.warn("[SkillDurationList]: invalid config property -> SkillDurationList " + skill);
-                } else {
-                    try {
-                        SKILL_DURATION_LIST.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
-                    } catch (NumberFormatException nfe) {
-                        if (!skill.isEmpty()) {
-                            LOGGER.warn(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
-                        }
-                    }
-                }
-            }
-        }
-        ENABLE_MODIFY_SKILL_REUSE = Character.getBoolean("EnableModifySkillReuse", false);
-        // Create Map only if enabled
-        if (ENABLE_MODIFY_SKILL_REUSE) {
-            final String[] propertySplit = Character.getString("SkillReuseList", "").split(";");
-            SKILL_REUSE_LIST = new HashMap<>(propertySplit.length);
-            for (String skill : propertySplit) {
-                final String[] skillSplit = skill.split(",");
-                if (skillSplit.length != 2) {
-                    LOGGER.warn(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillReuseList \"", skill, "\""));
-                } else {
-                    try {
-                        SKILL_REUSE_LIST.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
-                    } catch (NumberFormatException nfe) {
-                        if (!skill.isEmpty()) {
-                            LOGGER.warn(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
-                        }
-                    }
-                }
-            }
-        }
-
-        MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
-        MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);
-        MAX_SP = Character.getLong("MaxSp", 50000000000L) >= 0 ? Character.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;
-        MAX_PVTSTORESELL_SLOTS_DWARF = Character.getInt("MaxPvtStoreSellSlotsDwarf", 4);
-        MAX_PVTSTORESELL_SLOTS_OTHER = Character.getInt("MaxPvtStoreSellSlotsOther", 3);
-        MAX_PVTSTOREBUY_SLOTS_DWARF = Character.getInt("MaxPvtStoreBuySlotsDwarf", 5);
-        MAX_PVTSTOREBUY_SLOTS_OTHER = Character.getInt("MaxPvtStoreBuySlotsOther", 4);
-        INVENTORY_MAXIMUM_NO_DWARF = Character.getInt("MaximumSlotsForNoDwarf", 80);
-        INVENTORY_MAXIMUM_DWARF = Character.getInt("MaximumSlotsForDwarf", 100);
-        INVENTORY_MAXIMUM_GM = Character.getInt("MaximumSlotsForGMPlayer", 250);
-        INVENTORY_MAXIMUM_QUEST_ITEMS = Character.getInt("MaximumSlotsForQuestItems", 100);
-        MAX_ITEM_IN_PACKET = Math.max(INVENTORY_MAXIMUM_NO_DWARF, Math.max(INVENTORY_MAXIMUM_DWARF, INVENTORY_MAXIMUM_GM));
-        WAREHOUSE_SLOTS_DWARF = Character.getInt("MaximumWarehouseSlotsForDwarf", 120);
-        WAREHOUSE_SLOTS_NO_DWARF = Character.getInt("MaximumWarehouseSlotsForNoDwarf", 100);
-        WAREHOUSE_SLOTS_CLAN = Character.getInt("MaximumWarehouseSlotsForClan", 150);
-        ALT_FREIGHT_SLOTS = Character.getInt("MaximumFreightSlots", 200);
-        ALT_FREIGHT_PRICE = Character.getInt("FreightPrice", 1000);
-
-        ENCHANT_CHANCE_ELEMENT_STONE = Character.getDouble("EnchantChanceElementStone", 50);
-        ENCHANT_CHANCE_ELEMENT_CRYSTAL = Character.getDouble("EnchantChanceElementCrystal", 30);
-        ENCHANT_CHANCE_ELEMENT_JEWEL = Character.getDouble("EnchantChanceElementJewel", 20);
-        ENCHANT_CHANCE_ELEMENT_ENERGY = Character.getDouble("EnchantChanceElementEnergy", 10);
-        final String[] notenchantable = Character.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
-        ENCHANT_BLACKLIST = new int[notenchantable.length];
-        for (int i = 0; i < notenchantable.length; i++) {
-            ENCHANT_BLACKLIST[i] = Integer.parseInt(notenchantable[i]);
-        }
-        Arrays.sort(ENCHANT_BLACKLIST);
-        String[] array = Character.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
-        AUGMENTATION_BLACKLIST = new int[array.length];
-
-        for (int i = 0; i < array.length; i++) {
-            AUGMENTATION_BLACKLIST[i] = Integer.parseInt(array[i]);
-        }
-
-        Arrays.sort(AUGMENTATION_BLACKLIST);
-        ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = Character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
-        ALT_GAME_KARMA_PLAYER_CAN_SHOP = Character.getBoolean("AltKarmaPlayerCanShop", true);
-        ALT_GAME_KARMA_PLAYER_CAN_USE_GK = Character.getBoolean("AltKarmaPlayerCanUseGK", false);
-        ALT_GAME_KARMA_PLAYER_CAN_TRADE = Character.getBoolean("AltKarmaPlayerCanTrade", true);
-        ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = Character.getBoolean("AltKarmaPlayerCanUseWareHouse", true);
-        MAX_PERSONAL_FAME_POINTS = Character.getInt("MaxPersonalFamePoints", 100000);
-
-        CASTLE_ZONE_FAME_TASK_FREQUENCY = Character.getInt("CastleZoneFameTaskFrequency", 300);
-        CASTLE_ZONE_FAME_AQUIRE_POINTS = Character.getInt("CastleZoneFameAquirePoints", 125);
-        FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);
-        CRAFT_MASTERWORK = Character.getBoolean("CraftMasterwork", true);
-        BASE_CRITICAL_CRAFT_RATE = Character.getInt("BaseCriticalCraftRate", 3);
-        DWARF_RECIPE_LIMIT = Character.getInt("DwarfRecipeLimit", 50);
-        COMMON_RECIPE_LIMIT = Character.getInt("CommonRecipeLimit", 50);
-        ALT_GAME_CREATION = Character.getBoolean("AltGameCreation", false);
-        ALT_GAME_CREATION_SPEED = Character.getDouble("AltGameCreationSpeed", 1);
-        ALT_GAME_CREATION_XP_RATE = Character.getDouble("AltGameCreationXpRate", 1);
-        ALT_GAME_CREATION_SP_RATE = Character.getDouble("AltGameCreationSpRate", 1);
-        ALT_GAME_CREATION_RARE_XPSP_RATE = Character.getDouble("AltGameCreationRareXpSpRate", 2);
-        ALT_CLAN_LEADER_INSTANT_ACTIVATION = Character.getBoolean("AltClanLeaderInstantActivation", false);
-        ALT_CLAN_JOIN_DAYS = Character.getInt("DaysBeforeJoinAClan", 1);
-        ALT_CLAN_CREATE_DAYS = Character.getInt("DaysBeforeCreateAClan", 10);
-        ALT_CLAN_DISSOLVE_DAYS = Character.getInt("DaysToPassToDissolveAClan", 7);
-        ALT_ALLY_JOIN_DAYS_WHEN_LEAVED = Character.getInt("DaysBeforeJoinAllyWhenLeaved", 1);
-        ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED = Character.getInt("DaysBeforeJoinAllyWhenDismissed", 1);
-        ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED = Character.getInt("DaysBeforeAcceptNewClanWhenDismissed", 1);
-        ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED = Character.getInt("DaysBeforeCreateNewAllyWhenDissolved", 1);
-        ALT_MAX_NUM_OF_CLANS_IN_ALLY = Character.getInt("AltMaxNumOfClansInAlly", 3);
-        ALT_CLAN_MEMBERS_FOR_WAR = Character.getInt("AltClanMembersForWar", 15);
-        ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = Character.getBoolean("AltMembersCanWithdrawFromClanWH", false);
-        ALT_CLAN_MEMBERS_TIME_FOR_BONUS = Character.getDuration("AltClanMembersTimeForBonus", "30mins").toMillis();
-        ALT_PARTY_MAX_MEMBERS = Character.getInt("AltPartyMaxMembers", 7);
-        ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
-
-        ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
-
-        STARTING_ADENA = Character.getLong("StartingAdena", 0);
-        STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
-        STARTING_SP = Character.getInt("StartingSP", 0);
-
-        LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
-
-        ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
-        UNSTUCK_INTERVAL = Character.getInt("UnstuckInterval", 300);
-        PLAYER_SPAWN_PROTECTION = Character.getInt("PlayerSpawnProtection", 0);
-        PLAYER_TELEPORT_PROTECTION = Character.getInt("PlayerTeleportProtection", 0);
-        RANDOM_RESPAWN_IN_TOWN_ENABLED = Character.getBoolean("RandomRespawnInTownEnabled", true);
-        OFFSET_ON_TELEPORT_ENABLED = Character.getBoolean("OffsetOnTeleportEnabled", true);
-        MAX_OFFSET_ON_TELEPORT = Character.getInt("MaxOffsetOnTeleport", 50);
-        PETITIONING_ALLOWED = Character.getBoolean("PetitioningAllowed", true);
-        MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
-        MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
-
-        MAX_NEWBIE_BUFF_LEVEL = Character.getInt("MaxNewbieBuffLevel", 0);
-        DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
-        PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "highfive").toLowerCase();
-        PARTY_XP_CUTOFF_PERCENT = Character.getDouble("PartyXpCutoffPercent", 3);
-        PARTY_XP_CUTOFF_LEVEL = Character.getInt("PartyXpCutoffLevel", 20);
-        final String[] gaps = Character.getString("PartyXpCutoffGaps", "0,9;10,14;15,99").split(";");
-        PARTY_XP_CUTOFF_GAPS = new int[gaps.length][2];
-        for (int i = 0; i < gaps.length; i++) {
-            PARTY_XP_CUTOFF_GAPS[i] = new int[]
-                    {
-                            Integer.parseInt(gaps[i].split(",")[0]),
-                            Integer.parseInt(gaps[i].split(",")[1])
-                    };
-        }
-        final String[] percents = Character.getString("PartyXpCutoffGapPercent", "100;30;0").split(";");
-        PARTY_XP_CUTOFF_GAP_PERCENTS = new int[percents.length];
-        for (int i = 0; i < percents.length; i++) {
-            PARTY_XP_CUTOFF_GAP_PERCENTS[i] = Integer.parseInt(percents[i]);
-        }
-        DISABLE_TUTORIAL = Character.getBoolean("DisableTutorial", false);
-        STORE_RECIPE_SHOPLIST = Character.getBoolean("StoreRecipeShopList", false);
-        STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);
-
-        PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
-
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
-
-        SERVER_GMONLY = General.getBoolean("ServerGMOnly", false);
-        GM_HERO_AURA = General.getBoolean("GMHeroAura", false);
-        GM_STARTUP_BUILDER_HIDE = General.getBoolean("GMStartupBuilderHide", false);
-        GM_STARTUP_INVULNERABLE = General.getBoolean("GMStartupInvulnerable", false);
-        GM_STARTUP_INVISIBLE = General.getBoolean("GMStartupInvisible", false);
-        GM_STARTUP_SILENCE = General.getBoolean("GMStartupSilence", false);
-        GM_STARTUP_AUTO_LIST = General.getBoolean("GMStartupAutoList", false);
-        GM_STARTUP_DIET_MODE = General.getBoolean("GMStartupDietMode", false);
-        GM_ITEM_RESTRICTION = General.getBoolean("GMItemRestriction", true);
-        GM_TRADE_RESTRICTED_ITEMS = General.getBoolean("GMTradeRestrictedItems", false);
-        GM_ANNOUNCER_NAME = General.getBoolean("GMShowAnnouncerName", false);
-        GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
-        GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
-        GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
-        USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
 
         LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
 
@@ -1022,7 +702,7 @@ public final class Config {
         MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
         MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
         MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
-        GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
+
         GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
         GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
         PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
@@ -1156,7 +836,7 @@ public final class Config {
 
         RATE_INSTANCE_XP = RatesSettings.getFloat("RateInstanceXp", -1);
         if (RATE_INSTANCE_XP < 0) {
-            RATE_INSTANCE_XP = getSettings(RateSettings.class).xp();
+            RATE_INSTANCE_XP = RateSettings.xp();
         }
         RATE_INSTANCE_SP = RatesSettings.getFloat("RateInstanceSp", -1);
         if (RATE_INSTANCE_SP < 0) {
@@ -1187,7 +867,7 @@ public final class Config {
 
         RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
         if (RATE_KARMA_LOST == -1) {
-            RATE_KARMA_LOST = getSettings(RateSettings.class).xp();
+            RATE_KARMA_LOST = RateSettings.xp();
         }
         RATE_KARMA_EXP_LOST = RatesSettings.getFloat("RateKarmaExpLost", 1);
         RATE_SIEGE_GUARDS_PRICE = RatesSettings.getFloat("RateSiegeGuardsPrice", 1);

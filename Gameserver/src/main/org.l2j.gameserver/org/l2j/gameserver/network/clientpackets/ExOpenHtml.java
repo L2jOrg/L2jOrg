@@ -26,7 +26,6 @@ import org.l2j.gameserver.network.serverpackets.html.ExPremiumManagerShowHtml;
  */
 public class ExOpenHtml extends ClientPacket {
 
-    private static final String COMMON_HTML_PATH = "data/html/common/%d.htm";
     private byte dialogId;
 
     @Override
@@ -36,9 +35,9 @@ public class ExOpenHtml extends ClientPacket {
 
     @Override
     protected void runImpl(){
-        switch (dialogId) {
-            // case 1 -> pc points
-            case 5 -> client.sendPacket(new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm( client.getPlayer(), String.format(COMMON_HTML_PATH, dialogId))));
+        // case 1 -> pc points
+        if (dialogId == 5) {
+            client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(client.getPlayer(), "data/html/common/dimensional/index.htm")));
         }
     }
 }

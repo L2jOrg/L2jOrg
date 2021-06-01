@@ -19,7 +19,6 @@
 package org.l2j.scripts.handlers.actionshifthandlers;
 
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
@@ -31,7 +30,6 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -39,7 +37,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 
 import java.util.Set;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
@@ -52,12 +49,11 @@ public class NpcActionShift implements IActionShiftHandler
 
 		if (player.isGM())
 		{
-			// Set the target of the Player activeChar
 			player.setTarget(target);
 			
-			final Npc npc = (Npc) target;
-			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByNpcId(npc.getId());
+			var npc = (Npc) target;
+			var html = new NpcHtmlMessage(0, 1);
+			var clanHall = npc.getClanHall();
 			html.setFile(player, "data/html/admin/npcinfo.htm");
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
@@ -119,7 +115,7 @@ public class NpcActionShift implements IActionShiftHandler
 				final NpcSpawnTemplate template = spawn.getNpcSpawnTemplate();
 				if (template != null)
 				{
-					final String fileName = template.getSpawnTemplate().getFilePath().substring(getSettings(ServerSettings.class).dataPackDirectory().toFile().getAbsolutePath().length() + 1).replace('\\', '/');
+					final String fileName = template.getSpawnTemplate().getFilePath().substring(ServerSettings.dataPackDirectory().toFile().getAbsolutePath().length() + 1).replace('\\', '/');
 					html.replace("%spawnfile%", fileName);
 					html.replace("%spawnname%", String.valueOf(template.getSpawnTemplate().getName())); // used String.valueOf because it can be null
 					html.replace("%spawngroup%", String.valueOf(template.getGroup().getName())); // used String.valueOf because it can be null

@@ -34,8 +34,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Sdw
  */
@@ -52,7 +50,7 @@ public class LuckyGameData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/LuckyGameData.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/LuckyGameData.xsd");
     }
 
     @Override

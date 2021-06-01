@@ -21,7 +21,6 @@ package org.l2j.scripts.handlers.usercommandhandlers;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.SystemMessageId;
 
 /**
  * Olympiad Stat user command.

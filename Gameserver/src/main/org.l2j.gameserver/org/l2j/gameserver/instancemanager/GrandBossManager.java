@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.database.dao.BossDAO;
 import org.l2j.gameserver.data.database.dao.GrandBossDAO;
 import org.l2j.gameserver.data.database.data.GrandBossData;
 import org.l2j.gameserver.data.xml.impl.NpcData;

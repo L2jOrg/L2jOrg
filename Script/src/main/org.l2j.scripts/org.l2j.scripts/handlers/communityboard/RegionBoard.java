@@ -19,7 +19,7 @@
 package org.l2j.scripts.handlers.communityboard;
 
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IWriteBoardHandler;
@@ -68,7 +68,7 @@ public class RegionBoard implements IWriteBoardHandler {
 			for (int i = 0; i < REGIONS.length; i++)
 			{
 				final Castle castle = CastleManager.getInstance().getCastleById(i + 1);
-				final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+				final Clan clan = ClanEngine.getInstance().getClan(castle.getOwnerId());
 				String link = list.replaceAll("%region_id%", String.valueOf(i));
 				link = link.replace("%region_name%", String.valueOf(REGIONS[i]));
 				link = link.replace("%region_owning_clan%", (clan != null ? clan.getName() : "NPC"));

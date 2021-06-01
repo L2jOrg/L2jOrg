@@ -42,21 +42,21 @@ public class ArtefactAction implements IActionHandler
      * <BR>
      */
     @Override
-    public boolean action(Player activeChar, WorldObject target, boolean interact)
+    public boolean action(Player player, WorldObject target, boolean interact)
     {
-        if (!((Npc) target).canTarget(activeChar))
+        if (!((Npc) target).canBeTarget(player))
         {
             return false;
         }
-        if (activeChar.getTarget() != target)
+        if (player.getTarget() != target)
         {
-            activeChar.setTarget(target);
+            player.setTarget(target);
         }
         // Calculate the distance between the Player and the Folk
-        else if (interact && !((Npc) target).canInteract(activeChar))
+        else if (interact && !((Npc) target).canInteract(player))
         {
             // Notify the Player AI with AI_INTENTION_INTERACT
-            activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
+            player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
         }
         return true;
     }

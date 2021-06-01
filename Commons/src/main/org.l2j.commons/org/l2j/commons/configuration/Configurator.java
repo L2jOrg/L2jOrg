@@ -21,11 +21,13 @@ package org.l2j.commons.configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @author JoeAlisson
@@ -33,89 +35,73 @@ import static java.util.Objects.nonNull;
 public class Configurator {
 
     private static final Logger logger = LoggerFactory.getLogger(Configurator.class);
-    private static final String CONFIGURATOR_PROPERTIES = "config/configurator.properties";
-    private static Configurator configurator;
-    private final LazyConfiguratorLoader loader;
+    private static final String DEFAULT_CONFIGURATOR_FILE = "config/configurator.properties";
+    private static final String CONFIGURATOR_FILE = "configurator.file";
 
-    private final Map<Class<? extends Settings>, Settings> settingsMap;
+    private final Map<Class<?>, String> settingsClasses = new HashMap<>();
 
     private Configurator() {
-        settingsMap = new HashMap<>();
-        loader = new LazyConfiguratorLoader();
         load();
     }
 
-    private void load() {
-        logger.debug("Loading Configurations from {}", CONFIGURATOR_PROPERTIES);
-        SettingsFile settings = new SettingsFile(CONFIGURATOR_PROPERTIES);
-        if(settings.isEmpty()) {
-            logger.warn("Configurations not found on file {}. No Settings has been loaded", CONFIGURATOR_PROPERTIES);
-        } else {
-            loader.load(settings);
+    public void load() {
+        var configuratorFile = System.getProperty(CONFIGURATOR_FILE);
+        if (isNullOrEmpty(configuratorFile)) {
+            configuratorFile = DEFAULT_CONFIGURATOR_FILE;
         }
+        logger.debug("Loading Configurations from {}", configuratorFile);
+        load(new SettingsFile(configuratorFile));
     }
 
-    public static <T extends Settings> T getSettings(Class<T> settingsClass) {
-        return getSettings(settingsClass, false);
+    private void load(SettingsFile settings) {
+        settingsClasses.clear();
+        for(Map.Entry<Object, Object> entry : settings.entrySet()) {
+            String className = (String) entry.getKey();
+            String fileConfigurationPath = ((String) entry.getValue()).trim();
+
+            addSettingsClass(className, fileConfigurationPath);
+        }
+        logger.debug("Settings classes loaded: {}", settingsClasses.size());
     }
 
-    public static <T extends Settings> T getSettings(final Class<T> settingsClass, boolean forceReload) {
-        if(isNull(settingsClass)) {
-            throw new IllegalArgumentException("Can't load settings from Null class");
+    private void addSettingsClass(String className, String fileConfigurationPath) {
+        if(isNullOrEmpty(className) || isNullOrEmpty(fileConfigurationPath)) {
+            return;
         }
 
-        var instance = getInstance();
-
-        synchronized (settingsClass) {
-            if (!forceReload && instance.hasSettings(settingsClass)) {
-                return instance.get(settingsClass);
-            }
-            return instance.getFromLoader(settingsClass);
-        }
-    }
-
-    private <T extends Settings> T getFromLoader(Class<T> settingsClass) {
-        T settings = loader.getSettings(settingsClass);
+        Class<?> settings = createSettings(className);
         if(nonNull(settings)) {
-            settingsMap.put(settingsClass, settings);
+            settingsClasses.put(settings, fileConfigurationPath);
+            loadSettings(settings, fileConfigurationPath);
         }
-        return settings;
     }
 
-    @SuppressWarnings("unchecked")
-    private <T extends Settings> T get(Class<T> settingsClass){
-        return (T) settingsMap.get(settingsClass);
-    }
-
-    private  boolean hasSettings(Class<? extends Settings> settingsClass) {
-        return settingsMap.containsKey(settingsClass);
-    }
-
-    public static void reloadAll() {
-        logger.debug("Reloading all settings");
-        getInstance().reload();
-    }
-
-    private void reload() {
-        settingsMap.clear();
-        load();
-    }
-
-    public static void reloadSettings(Class<? extends Settings>  settingsClass) {
-        logger.debug("Reloading settings " + settingsClass.getName());
-        getInstance().removeSettings(settingsClass);
-    }
-
-
-    private void removeSettings(Class<? extends Settings> settingsClass) {
-        settingsMap.remove(settingsClass);
-    }
-
-    private static Configurator getInstance() {
-        if(isNull(configurator)) {
-            configurator = new Configurator();
+    private Class<?> createSettings(String className)	{
+        try {
+            return Class.forName(className);
+        } catch (ClassNotFoundException e)  {
+            logger.warn("The class {} was not found!", className);
         }
-        return configurator;
+        return null;
+    }
+
+    private void loadSettings(Class<?> settingsClass, String configurationFile) {
+        try {
+            var method = settingsClass.getDeclaredMethod("load", SettingsFile.class);
+            if(Modifier.isStatic(method.getModifiers()) && method.trySetAccessible()) {
+                method.invoke(null, new SettingsFile(configurationFile));
+            }
+        } catch (IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+            logger.error("Error loading Settings {}", settingsClass, e);
+        }
+    }
+
+    public static Configurator getInstance() {
+        return Singleton.INSTANCE;
+    }
+
+    private static class Singleton {
+        private static final Configurator INSTANCE = new Configurator();
     }
 
 }

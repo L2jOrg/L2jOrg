@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.util;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.interfaces.ILocational;
 
 import static java.lang.Math.pow;

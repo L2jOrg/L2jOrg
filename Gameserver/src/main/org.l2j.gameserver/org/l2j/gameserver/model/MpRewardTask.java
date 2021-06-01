@@ -26,7 +26,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.concurrent.ScheduledFuture;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -43,7 +42,7 @@ public class MpRewardTask {
         _creature = creature;
         _count = template.getMpRewardTicks();
         _value = calculateBaseValue(npc, creature);
-        var effectTickRatio = getSettings(CharacterSettings.class).effectTickRatio();
+        var effectTickRatio = CharacterSettings.effectTickRatio();
         _task = ThreadPool.scheduleAtFixedRate(this::run, effectTickRatio, effectTickRatio);
     }
 

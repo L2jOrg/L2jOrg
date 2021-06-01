@@ -29,7 +29,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.CharacterSettings;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -39,7 +38,7 @@ public class Recipes implements IItemHandler
 {
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse) {
-		if (!getSettings(CharacterSettings.class).isCraftEnabled()) {
+		if (!CharacterSettings.craftEnabled()) {
 			playable.sendMessage("Crafting is disabled, you cannot register this recipe.");
 			return false;
 		}

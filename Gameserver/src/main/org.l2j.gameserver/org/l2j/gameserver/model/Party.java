@@ -24,6 +24,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.MagicLampData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.StatusUpdateType;
@@ -37,10 +38,10 @@ import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
@@ -139,7 +140,7 @@ public class Party extends AbstractPlayerGroup {
      */
     private Player getCheckedRandomMember(int itemId, Creature target) {
         return Rnd.get(members.stream()
-                .filter(member -> member.getInventory().validateCapacityByItemId(itemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
+                .filter(member -> member.getInventory().validateCapacityByItemId(itemId) && GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true))
                 .collect(Collectors.toList()));
     }
 
@@ -150,7 +151,7 @@ public class Party extends AbstractPlayerGroup {
             }
 
             var member = members.get(itemLastLoot);
-            if (member.getInventory().validateCapacityByItemId(ItemId) && GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
+            if (member.getInventory().validateCapacityByItemId(ItemId) && GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true)) {
                 return member;
             }
         }
@@ -326,7 +327,7 @@ public class Party extends AbstractPlayerGroup {
         if (members.contains(player)) {
             var isLeader = isLeader(player);
 
-            if (members.size() == 2 || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && type != MessageType.DISCONNECTED)) {
+            if (members.size() == 2 || (isLeader && !PartySettings.keepPartyOnLeaderLeave() && type != MessageType.DISCONNECTED)) {
                 disbandParty();
                 return;
             }
@@ -504,7 +505,7 @@ public class Party extends AbstractPlayerGroup {
         // (The party member must be in range to receive its reward)
         final List<Player> toReward = new LinkedList<>();
         for (Player member : members) {
-            if (GameUtils.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true)) {
+            if (GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true)) {
                 toReward.add(member);
             }
         }
@@ -535,13 +536,12 @@ public class Party extends AbstractPlayerGroup {
      * @param target
      */
     public void distributeXpAndSp(double xpReward, double spReward, List<Player> rewardedMembers, int topLvl, long partyDmg, Attackable target) {
-        final List<Player> validMembers = getValidMembers(rewardedMembers, topLvl);
 
-        xpReward *= getExpBonus(validMembers.size(), target.getInstanceWorld());
-        spReward *= getSpBonus(validMembers.size(), target.getInstanceWorld());
+        xpReward *= getExpBonus(rewardedMembers.size(), target.getInstanceWorld());
+        spReward *= getSpBonus(rewardedMembers.size(), target.getInstanceWorld());
 
         int sqLevelSum = 0;
-        for (Player member : validMembers) {
+        for (Player member : rewardedMembers) {
             sqLevelSum += (member.getLevel() * member.getLevel());
         }
 
@@ -550,61 +550,47 @@ public class Party extends AbstractPlayerGroup {
                 continue;
             }
 
-            // Calculate and add the EXP and SP reward to the member
-            if (validMembers.contains(member)) {
-                // The servitor penalty
-                float penalty = 1;
+            // The servitor penalty
+            float penalty = 1;
 
-                final Summon summon = member.getServitors().values().stream().filter(s -> ((Servitor) s).getExpMultiplier() > 1).findFirst().orElse(null);
-                if (summon != null) {
-                    penalty = ((Servitor) summon).getExpMultiplier();
-                }
+            final Summon summon = member.getServitors().values().stream().filter(s -> ((Servitor) s).getExpMultiplier() > 1).findFirst().orElse(null);
+            if (summon != null) {
+                penalty = ((Servitor) summon).getExpMultiplier();
+            }
 
-                final double sqLevel = member.getLevel() * member.getLevel();
-                final double preCalculation = (sqLevel / sqLevelSum) * penalty;
+            final double sqLevel = member.getLevel() * member.getLevel();
+            final double preCalculation = (sqLevel / sqLevelSum) * penalty;
 
-                // Add the XP/SP points to the requested party member
-                double exp = member.getStats().getValue(Stat.EXPSP_RATE, xpReward * preCalculation);
-                double sp = member.getStats().getValue(Stat.EXPSP_RATE, spReward * preCalculation);
+            // Add the XP/SP points to the requested party member
+            double exp = member.getStats().getValue(Stat.EXPSP_RATE, xpReward * preCalculation);
+            double sp = member.getStats().getValue(Stat.EXPSP_RATE, spReward * preCalculation);
 
-                exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
-                if (exp > 0) {
-                    final Clan clan = member.getClan();
-                    if (clan != null) {
-                        double finalExp = exp;
-                        if (target.useVitalityRate()) {
-                            finalExp *= member.getStats().getExpBonusMultiplier();
-                        }
-                        clan.addHuntingPoints(member, target, finalExp);
+            exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
+            if (exp > 0) {
+                final Clan clan = member.getClan();
+                if (clan != null) {
+                    double finalExp = exp;
+                    if (target.useVitalityRate()) {
+                        finalExp *= member.getStats().getExpBonusMultiplier();
                     }
-                    member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true);
-                    PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
-                    MagicLampData.getInstance().addLampExp(member, exp, true);
+                    clan.addHuntingPoints(member, target, finalExp);
                 }
-            } else {
-                member.addExpAndSp(0, 0);
+                member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true);
+                PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
+                MagicLampData.getInstance().addLampExp(member, exp, true);
             }
         }
     }
 
     private double calculateExpSpPartyCutoff(Player player, int topLvl, double addExp, double addSp, boolean vit) {
-        double xp = addExp;
+        double xp;
         double sp;
-        if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive")) {
-            int i = 0;
-            final int lvlDiff = topLvl - player.getLevel();
-            for (int[] gap : Config.PARTY_XP_CUTOFF_GAPS) {
-                if ((lvlDiff >= gap[0]) && (lvlDiff <= gap[1])) {
-                    xp = (addExp * Config.PARTY_XP_CUTOFF_GAP_PERCENTS[i]) / 100;
-                    sp = (addSp * Config.PARTY_XP_CUTOFF_GAP_PERCENTS[i]) / 100;
-                    player.addExpAndSp(xp, sp, vit);
-                    break;
-                }
-                i++;
-            }
-        } else {
-            player.addExpAndSp(addExp, addSp, vit);
-        }
+        final int lvlDiff = topLvl - player.getLevel();
+        var levelCutoff =  PartySettings.levelDiffCutOff(lvlDiff);
+
+        xp = addExp * levelCutoff;
+        sp = addSp * levelCutoff;
+        player.addExpAndSp(xp, sp, vit);
         return xp;
     }
 
@@ -624,59 +610,6 @@ public class Party extends AbstractPlayerGroup {
             }
         }
         partyLvl = newLevel;
-    }
-
-    private List<Player> getValidMembers(List<Player> members, int topLvl) {
-        final List<Player> validMembers = new ArrayList<>();
-        switch (Config.PARTY_XP_CUTOFF_METHOD) {
-            case "level": {
-                for (Player member : members) {
-                    if ((topLvl - member.getLevel()) <= Config.PARTY_XP_CUTOFF_LEVEL) {
-                        validMembers.add(member);
-                    }
-                }
-                break;
-            }
-            case "percentage": {
-                int sqLevelSum = 0;
-                for (Player member : members) {
-                    sqLevelSum += (member.getLevel() * member.getLevel());
-                }
-                for (Player member : members) {
-                    final int sqLevel = member.getLevel() * member.getLevel();
-                    if ((sqLevel * 100) >= (sqLevelSum * Config.PARTY_XP_CUTOFF_PERCENT)) {
-                        validMembers.add(member);
-                    }
-                }
-                break;
-            }
-            case "auto": {
-                int sqLevelSum = 0;
-                for (Player member : members) {
-                    sqLevelSum += (member.getLevel() * member.getLevel());
-                }
-                int i = members.size() - 1;
-                if (i < 1) {
-                    return members;
-                }
-                for (Player member : members) {
-                    final int sqLevel = member.getLevel() * member.getLevel();
-                    if (sqLevel >= (sqLevelSum / (members.size() * members.size()))) {
-                        validMembers.add(member);
-                    }
-                }
-                break;
-            }
-            case "highfive": {
-                validMembers.addAll(members);
-                break;
-            }
-            case "none": {
-                validMembers.addAll(members);
-                break;
-            }
-        }
-        return validMembers;
     }
 
     private double getBaseExpSpBonus(int membersCount) {

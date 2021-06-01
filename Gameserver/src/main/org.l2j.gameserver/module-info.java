@@ -1,3 +1,6 @@
+import org.l2j.gameserver.data.database.dao.GlobalVariablesDAO;
+import org.l2j.gameserver.data.database.dao.ReuseInfoDAO;
+import org.l2j.gameserver.data.database.dao.SkillsDAO;
 import org.l2j.gameserver.engine.item.container.listener.BowCrossListener;
 
 module org.l2j.gameserver {
@@ -119,6 +122,8 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.engine.rank;
     exports org.l2j.gameserver.network.serverpackets.commission;
     exports org.l2j.gameserver.model.events.impl.server;
+    exports org.l2j.gameserver.engine.clan.clanhall;
+    exports org.l2j.gameserver.engine.clan;
 
     uses org.l2j.gameserver.handler.IActionHandler;
     uses org.l2j.gameserver.handler.IActionShiftHandler;
@@ -144,7 +149,13 @@ module org.l2j.gameserver {
 
     provides org.l2j.commons.database.TypeHandler
             with org.l2j.gameserver.data.database.handler.CommissionItemHandler,
-                 org.l2j.gameserver.data.database.handler.MacroHandler;
+                 org.l2j.gameserver.data.database.handler.MacroHandler,
+                 org.l2j.gameserver.data.database.handler.SkillHandler;
+
+    provides org.l2j.commons.database.ProvidedDAO
+            with ReuseInfoDAO,
+                 SkillsDAO,
+                 GlobalVariablesDAO;
 
     uses org.l2j.gameserver.handler.IPunishmentHandler;
     uses org.l2j.gameserver.handler.IUserCommandHandler;

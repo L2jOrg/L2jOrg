@@ -19,7 +19,6 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.SkillLearn;
@@ -28,6 +27,7 @@ import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.List;
 
@@ -78,7 +78,7 @@ public final class Fisherman extends Merchant {
 
     @Override
     public void showChatWindow(Player player, int val) {
-        if(player.getReputation() < 0 && !Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && showPkDenyChatWindow(player, "fisherman")) {
+        if(player.getReputation() < 0 && !CharacterSettings.canPkShop() && showPkDenyChatWindow(player, "fisherman")) {
             return;
         }
         super.showChatWindow(player, val);

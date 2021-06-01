@@ -20,12 +20,12 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.BlockCheckerEngine;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameChangePoints;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
@@ -109,7 +109,7 @@ public class Block extends Monster {
 
     @Override
     public void onAction(Player player, boolean interact) {
-        if (!canTarget(player)) {
+        if (!canBeTarget(player)) {
             return;
         }
 

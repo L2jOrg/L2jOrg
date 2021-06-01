@@ -20,10 +20,10 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.MailData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.model.item.container.ItemContainer;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.SystemMessageId;

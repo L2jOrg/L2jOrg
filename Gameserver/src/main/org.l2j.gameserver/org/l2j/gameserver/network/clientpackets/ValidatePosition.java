@@ -27,8 +27,6 @@ import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * This class ...
  *
@@ -77,10 +75,8 @@ public class ValidatePosition extends ClientPacket {
         int dz;
         double diffSq;
 
-        var geoSettings = getSettings(GeoEngineSettings.class);
-
         if (player.isInBoat()) {
-            if (geoSettings.isSyncMode(SyncMode.SERVER)) {
+            if (GeoEngineSettings.isSyncMode(SyncMode.SERVER)) {
                 dx = _x - player.getInVehiclePosition().getX();
                 dy = _y - player.getInVehiclePosition().getY();
 
@@ -117,13 +113,13 @@ public class ValidatePosition extends ClientPacket {
             }
         } else if (diffSq < 360000) // if too large, messes observation
         {
-            if (geoSettings.isSyncMode(SyncMode.Z_ONLY))
+            if (GeoEngineSettings.isSyncMode(SyncMode.Z_ONLY))
             // mainly used when no geodata but can be used also with geodata
             {
                 player.setXYZ(realX, realY, _z);
                 return;
             }
-            if (geoSettings.isSyncMode(SyncMode.CLIENT)) // Trusting also client x,y coordinates (should not be used with geodata)
+            if (GeoEngineSettings.isSyncMode(SyncMode.CLIENT)) // Trusting also client x,y coordinates (should not be used with geodata)
             {
                 if (!player.isMoving() || !player.validateMovementHeading(_heading)) // Heading changed on client = possible obstacle
                 {

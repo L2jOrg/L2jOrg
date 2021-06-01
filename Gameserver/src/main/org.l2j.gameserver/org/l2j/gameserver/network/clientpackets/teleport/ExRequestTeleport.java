@@ -27,7 +27,6 @@ import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CAN_T_TELEPORT_DURING_AN_OLYMPIAD_MATCH;
 
@@ -60,7 +59,7 @@ public class ExRequestTeleport extends ClientPacket {
             return;
         }
 
-        if(GameUtils.canTeleport(player) && (player.getLevel() <= getSettings(CharacterSettings.class).maxFreeTeleportLevel() || player.reduceAdena("Teleport", info.getPrice(), null, true))) {
+        if(GameUtils.canTeleport(player) && (player.getLevel() <= CharacterSettings.maxFreeTeleportLevel() || player.reduceAdena("Teleport", info.getPrice(), null, true))) {
             player.addRequest(new TeleportRequest(player, id));
             player.useSkill(CommonSkill.TELEPORT.getSkill(), null, false, true);
         }

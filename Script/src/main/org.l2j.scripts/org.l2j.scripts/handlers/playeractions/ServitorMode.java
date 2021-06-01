@@ -71,4 +71,9 @@ public final class ServitorMode implements IPlayerActionHandler
 			}
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

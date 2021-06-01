@@ -41,7 +41,6 @@ import org.slf4j.LoggerFactory;
 import java.util.EnumMap;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
@@ -95,7 +94,7 @@ public final class RequestPreviewItem extends ClientPacket {
         }
 
         // If Alternate rule Karma punishment is set to true, forbid Wear to player with Karma
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (activeChar.getReputation() < 0)) {
+        if (activeChar.getReputation() < 0 && !CharacterSettings.canPkShop()) {
             return;
         }
 
@@ -150,8 +149,8 @@ public final class RequestPreviewItem extends ClientPacket {
 
             items.put(slot, itemId);
             totalPrice += Config.WEAR_PRICE;
-            if (totalPrice > getSettings(CharacterSettings.class).maxAdena()) {
-                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + getSettings(CharacterSettings.class).maxAdena() + " adena worth of goods.");
+            if (totalPrice > CharacterSettings.maxAdena()) {
+                GameUtils.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + CharacterSettings.maxAdena() + " adena worth of goods.");
                 return;
             }
         }

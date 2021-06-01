@@ -19,8 +19,8 @@
  */
 package org.l2j.gameserver.model.events.impl.character.player;
 
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 

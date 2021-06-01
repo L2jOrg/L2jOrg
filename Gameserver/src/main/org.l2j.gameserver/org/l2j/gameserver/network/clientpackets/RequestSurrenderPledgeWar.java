@@ -18,10 +18,10 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.database.data.ClanMember;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -57,7 +57,7 @@ public final class RequestSurrenderPledgeWar extends ClientPacket {
             return;
         }
 
-        final Clan targetClan = ClanTable.getInstance().getClanByName(_pledgeName);
+        final Clan targetClan = ClanEngine.getInstance().getClanByName(_pledgeName);
         if (targetClan == null) {
             activeChar.sendMessage("No such clan.");
             client.sendPacket(ActionFailed.STATIC_PACKET);

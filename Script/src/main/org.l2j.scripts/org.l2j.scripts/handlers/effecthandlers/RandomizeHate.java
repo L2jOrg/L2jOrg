@@ -26,10 +26,9 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.stats.Formulas;
-import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.world.World;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
@@ -63,7 +62,7 @@ public final class RandomizeHate extends AbstractEffect {
 
         final Attackable effectedMob = (Attackable) effected;
 
-        var target = World.getInstance().findAnyVisibleObject(effected, Creature.class, getSettings(CharacterSettings.class).partyRange() / 2, false,
+        var target = World.getInstance().findAnyVisibleObject(effected, Creature.class, PartySettings.partyRange() / 2, false,
                 creature -> creature != effector && (!isAttackable(creature) || !((Attackable)creature).isInMyClan(effectedMob)));
 
         final int hate = effectedMob.getHating(effector);

@@ -20,14 +20,11 @@ package org.l2j.gameserver.taskmanager;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
 
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-
-import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
  * @author Mobius

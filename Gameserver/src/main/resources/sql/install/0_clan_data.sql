@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `clan_subpledges`;
+DROP TABLE IF EXISTS `clan_members`;
 DROP TABLE IF EXISTS `clan_privs`;
 DROP TABLE IF EXISTS `clan_skills`;
 DROP TABLE IF EXISTS `clan_wars`;
@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `clan_data`
     `hunting_points`           INT               NOT NULL DEFAULT 0,
     `prev_hunting_points`      INT               NOT NULL DEFAULT 0,
     `arena_progress`           INT UNSIGNED      NOT NULL DEFAULT 0,
+
     PRIMARY KEY (`clan_id`),
     KEY `ally_id` (`ally_id`),
     KEY `leader_id` (`leader_id`),
@@ -43,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `clan_privs`
     `clan_id` INT NOT NULL DEFAULT 0,
     `rank`    INT NOT NULL DEFAULT 0,
     `privs`   INT NOT NULL DEFAULT 0,
+
     PRIMARY KEY (`clan_id`, `rank`),
     FOREIGN KEY (`clan_id`) REFERENCES clan_data (clan_id) ON DELETE CASCADE
 ) ENGINE = InnoDB
@@ -53,34 +55,23 @@ CREATE TABLE IF NOT EXISTS `clan_skills`
     `clan_id`       INT NOT NULL DEFAULT 0,
     `skill_id`      INT NOT NULL DEFAULT 0,
     `skill_level`   INT NOT NULL DEFAULT 0,
-    `sub_pledge_id` INT NOT NULL DEFAULT -2,
-    PRIMARY KEY (`clan_id`, `skill_id`, `sub_pledge_id`),
-    FOREIGN KEY (clan_id) REFERENCES clan_data (clan_id) ON DELETE CASCADE
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8MB4;
 
-CREATE TABLE IF NOT EXISTS `clan_subpledges`
-(
-    `clan_id`       INT NOT NULL DEFAULT 0,
-    `sub_pledge_id` INT NOT NULL DEFAULT 0,
-    `name`          VARCHAR(45),
-    `leader_id`     INT NOT NULL DEFAULT 0,
-    PRIMARY KEY (`clan_id`, `sub_pledge_id`),
-    KEY `leader_id` (`leader_id`),
+    PRIMARY KEY (`clan_id`, `skill_id`),
     FOREIGN KEY (clan_id) REFERENCES clan_data (clan_id) ON DELETE CASCADE
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8MB4;
 
 CREATE TABLE IF NOT EXISTS `clan_wars`
 (
-    `clan1`      INT         NOT NULL,
-    `clan2`      INT         NOT NULL,
-    `clan1Kill`  INT         NOT NULL DEFAULT 0,
-    `clan2Kill`  INT         NOT NULL DEFAULT 0,
-    `winnerClan` VARCHAR(35) NOT NULL DEFAULT 0,
-    `startTime`  BIGINT      NOT NULL DEFAULT 0,
-    `endTime`    BIGINT      NOT NULL DEFAULT 0,
-    `state`      ENUM('DECLARATION', 'BLOOD_DECLARATION', 'MUTUAL', 'WIN', 'LOSS', 'TIE') NOT NULL,
+    `clan1`      INT                                                                       NOT NULL,
+    `clan2`      INT                                                                       NOT NULL,
+    `clan1Kill`  INT                                                                       NOT NULL DEFAULT 0,
+    `clan2Kill`  INT                                                                       NOT NULL DEFAULT 0,
+    `winnerClan` VARCHAR(35)                                                               NOT NULL DEFAULT 0,
+    `startTime`  BIGINT                                                                    NOT NULL DEFAULT 0,
+    `endTime`    BIGINT                                                                    NOT NULL DEFAULT 0,
+    `state`      ENUM ('DECLARATION', 'BLOOD_DECLARATION', 'MUTUAL', 'WIN', 'LOSS', 'TIE') NOT NULL,
+
     FOREIGN KEY (`clan1`) REFERENCES clan_data (clan_id) ON DELETE CASCADE,
     FOREIGN KEY (`clan2`) REFERENCES clan_data (clan_id) ON DELETE CASCADE
 ) ENGINE = InnoDB
@@ -88,10 +79,22 @@ CREATE TABLE IF NOT EXISTS `clan_wars`
 
 CREATE TABLE IF NOT EXISTS `clan_notices`
 (
-    `clan_id` INT     NOT NULL DEFAULT 0,
+    `clan_id` INT     NOT NULL,
     `enabled` BOOLEAN NOT NULL DEFAULT false,
     `notice`  TEXT    NOT NULL,
+
     PRIMARY KEY (`clan_id`),
     FOREIGN KEY (`clan_id`) REFERENCES clan_data (clan_id) ON DELETE CASCADE
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
+
+CREATE TABLE IF NOT EXISTS `clan_members`
+(
+    `clan_id`               INT          NOT NULL,
+    `player_id`             INT UNSIGNED NOT NULL,
+    `last_reputation_level` SMALLINT     NOT NULL DEFAULT 0,
+
+    PRIMARY KEY (`clan_id`, `player_id`),
+    FOREIGN KEY (`clan_id`) REFERENCES clan_data (clan_id) ON DELETE CASCADE,
+    FOREIGN KEY (`player_id`) REFERENCES characters (charId) ON DELETE CASCADE
+)

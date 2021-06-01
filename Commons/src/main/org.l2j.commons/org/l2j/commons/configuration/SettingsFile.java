@@ -18,9 +18,10 @@
  */
 package org.l2j.commons.configuration;
 
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.FileUtil;
-import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +34,6 @@ import java.util.EnumSet;
 import java.util.Properties;
 import java.util.Set;
 
-import static java.nio.file.Files.newBufferedReader;
-import static java.util.Arrays.stream;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.*;
 
@@ -62,11 +61,11 @@ public final class SettingsFile extends Properties {
         return getProperty(key, defaultValue);
     }
 
-    public int getInteger(String key, int defaultValue) {
-        return getInteger(key, 10, defaultValue);
+    public int getInt(String key, int defaultValue) {
+        return getInt(key, 10, defaultValue);
     }
 
-    public int getInteger(String key, int radix, int defaultValue) {
+    public int getInt(String key, int radix, int defaultValue) {
         try {
             return Integer.parseInt(getProperty(key), radix);
         } catch (Exception e) {
@@ -95,8 +94,24 @@ public final class SettingsFile extends Properties {
         return values;
     }
 
+    public IntSet getIntSet(String key) {
+        return getIntSet(key, DEFAULT_DELIMITER);
+    }
+
     public IntSet getIntSet(String key, String delimiter) {
-        return StreamUtil.collectToSet(stream(getProperty(key).split(delimiter)).filter(Util::isInteger).mapToInt(Integer::parseInt));
+        String value = getProperty(key);
+        if(isNullOrEmpty(value)) {
+            return Containers.emptyIntSet();
+        }
+
+        IntSet set = new HashIntSet();
+        var values = value.split(delimiter);
+        for (String s : values) {
+            if (Util.isInteger(s)) {
+                set.add(Integer.parseInt(s));
+            }
+        }
+        return set;
     }
 
     public double getDouble(String key, double defaultValue) {
@@ -117,7 +132,11 @@ public final class SettingsFile extends Properties {
         return defaultValue;
     }
 
-    public int[] getIntegerArray(String key, String delimiter) {
+    public int[] getIntArray(String key) {
+        return getIntArray(key, DEFAULT_DELIMITER);
+    }
+
+    public int[] getIntArray(String key, String delimiter) {
         var property = getProperty(key);
         if(isNullOrEmpty(property)) {
             return INT_ARRAY_EMPTY;
@@ -197,5 +216,9 @@ public final class SettingsFile extends Properties {
 
     public Duration getDuration(String key, TemporalUnit unit, long defaultValue) {
         return Duration.of(getLong(key, defaultValue), unit);
+    }
+
+    public Duration parseDuration(String key, String defaultValue) {
+        return Duration.parse(getString(key, defaultValue));
     }
 }

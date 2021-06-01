@@ -24,8 +24,6 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.settings.RateSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Sdw
  */
@@ -37,7 +35,7 @@ public class ExVitalityEffectInfo extends ServerPacket {
     public ExVitalityEffectInfo(Player cha) {
         _points = cha.getVitalityPoints();
         _vitalityBonus = (int) cha.getStats().getVitalityExpBonus() * 100;
-        _vitalityItemsRemaining = getSettings(RateSettings.class).maxItemsVitality() - cha.getVitalityItemsUsed();
+        _vitalityItemsRemaining = RateSettings.maxItemsVitality() - cha.getVitalityItemsUsed();
 
     }
 
@@ -49,7 +47,7 @@ public class ExVitalityEffectInfo extends ServerPacket {
         buffer.writeInt(_vitalityBonus); // Vitality Bonus
         buffer.writeShort(0x00); // Vitality additional bonus in %
         buffer.writeShort(_vitalityItemsRemaining); // How much vitality items remaining for use
-        buffer.writeShort(getSettings(RateSettings.class).maxItemsVitality()); // Max number of items for use
+        buffer.writeShort(RateSettings.maxItemsVitality()); // Max number of items for use
     }
 
 }

@@ -61,7 +61,6 @@ import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
-import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -217,7 +216,7 @@ public class SkillCaster implements Runnable {
         }
         else if (creature != player) {
             // Supporting monsters or players results in pvpflag.
-            if ((skill.getEffectPoint() > 0 && isMonster(creature))
+            if (skill.getEffectPoint() > 0 && isMonster(creature)
                     || (isPlayable(creature) && creature.getActingPlayer().getPvpFlag() > 0)
                     || creature.getReputation() < 0) {
                 player.updatePvPStatus();
@@ -399,7 +398,7 @@ public class SkillCaster implements Runnable {
         return true;
     }
 
-    private static boolean checkSkillConsume(Creature caster, Skill skill) {
+    public static boolean checkSkillConsume(Creature caster, Skill skill) {
         if (caster.getCurrentMp() < (caster.getStats().getMpConsume(skill) + caster.getStats().getMpInitialConsume(skill))) {
             caster.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
             caster.sendPacket(ActionFailed.STATIC_PACKET);
@@ -527,14 +526,14 @@ public class SkillCaster implements Runnable {
         }
 
         // Consume skill initial MP needed for cast. Retail sends it regardless if > 0 or not.
-        final int initmpcons = caster.getStats().getMpInitialConsume(skill);
-        if (initmpcons > 0) {
-            if (initmpcons > caster.getCurrentMp()) {
+        final int mpInitialConsume = caster.getStats().getMpInitialConsume(skill);
+        if (mpInitialConsume > 0) {
+            if (mpInitialConsume > caster.getCurrentMp()) {
                 caster.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
                 return false;
             }
 
-            caster.getStatus().reduceMp(initmpcons);
+            caster.getStatus().reduceMp(mpInitialConsume);
             caster.sendPacket(new StatusUpdate(caster).addUpdate(StatusUpdateType.CUR_MP, (int) caster.getCurrentMp()));
         }
 

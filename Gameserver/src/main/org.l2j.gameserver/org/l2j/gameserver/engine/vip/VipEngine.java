@@ -42,7 +42,6 @@ import java.time.temporal.ChronoUnit;
 import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -107,7 +106,7 @@ public final class VipEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/vip.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/vip.xsd");
     }
 
     @Override

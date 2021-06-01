@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.Party;
@@ -26,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.AskJoinParty;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
@@ -119,7 +119,7 @@ public final class RequestJoinParty extends ClientPacket {
         // summary of ppl already in party and ppl that get invitation
         if (!party.isLeader(requestor)) {
             requestor.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
-        } else if (party.getMemberCount() >= Config.ALT_PARTY_MAX_MEMBERS) {
+        } else if (party.getMemberCount() >= PartySettings.maxMembers()) {
             requestor.sendPacket(SystemMessageId.THE_PARTY_IS_FULL);
         } else if (party.getPendingInvitation() && !party.isInvitationRequestExpired()) {
             requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);

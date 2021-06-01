@@ -20,8 +20,8 @@ package org.l2j.gameserver.network.serverpackets.friend;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -97,7 +97,7 @@ public class ExFriendDetailInfo extends ServerPacket {
         buffer.writeInt(info.clanId);
 
         Clan clan;
-        if(info.clanId > 0 && nonNull(clan = ClanTable.getInstance().getClan(info.clanId))) {
+        if(info.clanId > 0 && nonNull(clan = ClanEngine.getInstance().getClan(info.clanId))) {
             buffer.writeInt(clan.getCrestId());
             buffer.writeString(clan.getName());
             buffer.writeInt(clan.getAllyId());

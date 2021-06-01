@@ -76,7 +76,6 @@ import java.util.concurrent.Future;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 
@@ -360,7 +359,7 @@ public class Pet extends Summon {
             // Remove from the ground!
             target.pickupMe(this);
 
-            if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+            if (GeneralSettings.saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().removeObject(target);
             }
         }
@@ -576,7 +575,7 @@ public class Pet extends Summon {
             return;
         }
 
-        if (!getSettings(CharacterSettings.class).restoreSummonOnReconnect()) {
+        if (!CharacterSettings.restoreSummonOnReconnect()) {
             _restoreSummon = false;
         }
 
@@ -622,7 +621,7 @@ public class Pet extends Summon {
 
 
                 // Dances and songs are not kept in retail.
-                if (skill.isDance() && !getSettings(CharacterSettings.class).storeDances()) {
+                if (skill.isDance() && !CharacterSettings.storeDances()) {
                     continue;
                 }
 

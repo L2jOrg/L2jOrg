@@ -23,14 +23,14 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.item.shop.LCoinShop;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
@@ -46,7 +46,6 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -76,7 +75,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     public void onReset() {
-        ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
+        ClanEngine.getInstance().getClans().forEach(Clan::resetClanBonus);
         resetDailyMissionRewards();
         resetDailySkills();
         RankEngine.getInstance().updateRankers();
@@ -94,7 +93,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
             player.setRecommend(player.getRecommend() - 20);
             player.sendPacket(new ExVoteSystemInfo(player));
 
-            if (getSettings(ChatSettings.class).worldChatEnabled()) {
+            if (ChatSettings.worldChatEnabled()) {
                 player.setWorldChatUsed(0);
                 player.sendPacket(new ExWorldChatCnt(player));
             }
@@ -113,7 +112,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
         getDAO(PlayerDAO.class).resetRecommends();
 
-        if (getSettings(ChatSettings.class).worldChatEnabled()) {
+        if (ChatSettings.worldChatEnabled()) {
             getDAO(PlayerVariablesDAO.class).resetWorldChatPoint();
             LOGGER.info("Daily world chat points has been reset.");
         }
@@ -128,7 +127,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     private void onClansTask(){
-        for (Clan clan : ClanTable.getInstance().getClans()) {
+        for (Clan clan : ClanEngine.getInstance().getClans()) {
             checkNewLeader(clan);
             ClanRewardManager.getInstance().resetArenaProgress(clan);
         }
@@ -147,7 +146,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
 
     @ScheduleTarget
     private void onVitalityReset() {
-        if (!getSettings(CharacterSettings.class).isVitalityEnabled()) {
+        if (!CharacterSettings.vitalityEnabled()) {
             return;
         }
 

@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -43,7 +44,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -136,15 +136,14 @@ public final class AdminData extends GameXmlReader {
             accessLevel = AdminData.getInstance().getAccessLevel(0);
         }
 
-        var generalSettings = getSettings(GeneralSettings.class);
-        var defaultAccessLevel = generalSettings.defaultAccessLevel();
+        var defaultAccessLevel = AdminSettings.defaultAccessLevel();
 
         if (accessLevel.getLevel() == 0 && defaultAccessLevel > 0) {
             accessLevel = AdminData.getInstance().getAccessLevel(defaultAccessLevel);
             if (isNull(accessLevel)) {
                 LOGGER.warn("Config's default access level ({}) is not defined, defaulting to 0!", defaultAccessLevel);
                 accessLevel = AdminData.getInstance().getAccessLevel(0);
-                generalSettings.setDefaultAccessLevel(0);
+                AdminSettings.setDefaultAccessLevel(0);
             }
         }
         return  accessLevel;

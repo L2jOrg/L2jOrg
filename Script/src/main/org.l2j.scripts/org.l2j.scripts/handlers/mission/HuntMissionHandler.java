@@ -19,7 +19,6 @@
 package org.l2j.scripts.handlers.mission;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.mission.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.engine.mission.MissionHandlerFactory;
@@ -29,6 +28,7 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Arrays;
@@ -84,7 +84,7 @@ public class HuntMissionHandler extends AbstractMissionHandler {
         } else {
             var channel = party.getCommandChannel();
             final List<Player> members = isNull(channel) ? party.getMembers() : channel.getMembers();
-            members.stream().filter(member -> MathUtil.isInsideRadius3D(member, monster,  Config.ALT_PARTY_RANGE)).forEach(this::onKillProgress);
+            members.stream().filter(member -> MathUtil.isInsideRadius3D(member, monster,  PartySettings.partyRange())).forEach(this::onKillProgress);
         }
     }
 

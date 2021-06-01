@@ -16,26 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.base;
+package org.l2j.gameserver.data.database.dao;
+
+import io.github.joealisson.primitive.ConcurrentIntMap;
+import org.l2j.commons.database.DAO;
+import org.l2j.commons.database.annotation.Query;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
+
+import java.util.Collection;
 
 /**
- * Enumerated for Social Classes.
- *
- * @author Zoey76
+ * @author JoeAlisson
  */
-public enum SocialClass {
-    VAGABOND,
-    VASSAL,
-    APPRENTICE,
-    HEIR,
-    KNIGHT,
-    ELDER,
-    BARON,
-    VISCOUNT,
-    COUNT,
-    MARQUIS,
-    DUKE,
-    GRAND_DUKE,
-    DISTINGUISHED_KING,
-    EMPEROR
+public interface RecipeDAO extends DAO<ManufactureItem> {
+
+    @Query("DELETE FROM character_recipeshoplist WHERE charId=:playerId:")
+    void deleteRecipeShop(int playerId);
+
+    @Query("SELECT * FROM character_recipeshoplist WHERE charId=:playerId:")
+    ConcurrentIntMap<ManufactureItem> findByPlayer(int playerId);
+
+    void save(Collection<ManufactureItem> values);
 }

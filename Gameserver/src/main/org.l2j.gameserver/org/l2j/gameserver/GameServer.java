@@ -21,6 +21,7 @@ package org.l2j.gameserver;
 import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
 import org.l2j.commons.cache.CacheFactory;
+import org.l2j.commons.configuration.Configurator;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.DeadLockDetector;
@@ -28,7 +29,6 @@ import org.l2j.commons.util.FileUtil;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
@@ -36,14 +36,15 @@ import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
-import org.l2j.gameserver.engine.item.AttendanceEngine;
-import org.l2j.gameserver.engine.item.shop.MultisellEngine;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.events.EventEngine;
+import org.l2j.gameserver.engine.item.AttendanceEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.L2Store;
 import org.l2j.gameserver.engine.item.shop.LCoinShop;
+import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.rank.RankEngine;
@@ -57,6 +58,7 @@ import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.taskmanager.TaskManager;
@@ -70,11 +72,11 @@ import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -140,10 +142,10 @@ public class GameServer {
         VipEngine.init();
         ElementalSpiritEngine.init();
         TeleportEngine.init();
-        if (Config.ENABLE_L2_STORE){
+        if (FeatureSettings.isL2StoreEnabled()){
             L2Store.init();
         }
-        if (Config.ENABLE_LCOIN_STORE){
+        if (FeatureSettings.isLCoinStoreEnabled()){
             LCoinShop.init();
         }
         CommissionManager.getInstance();
@@ -173,11 +175,7 @@ public class GameServer {
         PlayerSummonTable.getInstance().init();
 
         printSection("Clans");
-        ClanTable.init();
-        ResidenceFunctionsData.getInstance();
-        ClanHallManager.init();
-        ClanHallAuctionManager.getInstance();
-        ClanEntryManager.init();
+        ClanEngine.init();
         WalkingManager.getInstance();
         StaticObjectData.getInstance();
 
@@ -210,12 +208,11 @@ public class GameServer {
         SiegeGuardManager.init();
         QuestManager.getInstance().report();
 
-        var generalSettings = getSettings(GeneralSettings.class);
-        if (generalSettings.saveDroppedItems()) {
+        if (GeneralSettings.saveDroppedItems()) {
             ItemsOnGroundManager.init();
         }
 
-        if (generalSettings.autoDestroyItemTime() > 0 || generalSettings.autoDestroyHerbTime() > 0) {
+        if (GeneralSettings.autoDestroyItemTime() > 0 || GeneralSettings.autoDestroyHerbTime() > 0) {
             ItemsAutoDestroy.getInstance();
         }
 
@@ -223,7 +220,7 @@ public class GameServer {
 
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
 
-        if (generalSettings.allowMail()) {
+        if (GeneralSettings.allowMail()) {
             MailEngine.init();
         }
 
@@ -233,18 +230,17 @@ public class GameServer {
 
         LOGGER.info("IdFactory: Free ObjectID's remaining: {}", IdFactory.getInstance().size());
 
-        var serverSettings = getSettings(ServerSettings.class);
-        if (serverSettings.scheduleRestart()) {
+        if (ServerSettings.scheduleRestart()) {
             ServerRestartManager.init();
         }
 
-        LOGGER.info("Maximum number of connected players is configured to {}", serverSettings.maximumOnlineUsers());
+        LOGGER.info("Maximum number of connected players is configured to {}", ServerSettings.maximumOnlineUsers());
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 
         printSection("Setting All characters to offline status!");
         getDAO(PlayerDAO.class).setAllCharactersOffline();
 
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(ServerSettings.port()), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
         connectionHandler.start();
     }
 
@@ -256,11 +252,11 @@ public class GameServer {
         configureNetworkPackets();
 
         printSection("Server Configuration");
+        Configurator.getInstance().load();
         Config.load(); // TODO remove this
 
-        var settings = getSettings(ServerSettings.class);
         printSection("Thread Pools");
-        ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize(), settings.maxThreadPoolSize());
+        ThreadPool.init(ServerSettings.threadPoolSize() ,ServerSettings.scheduledPoolSize(), ServerSettings.maxThreadPoolSize());
 
         printSection("Identity Factory");
         if (!IdFactory.getInstance().isInitialized()) {
@@ -275,21 +271,21 @@ public class GameServer {
         INSTANCE = new GameServer();
 
         ThreadPool.execute(AuthServerCommunication.getInstance());
-        scheduleDeadLockDetector(settings);
+        scheduleDeadLockDetector();
 
         printSection("Extensions Pos Loaders");
         ExtensionBoot.posLoaders();
     }
 
-    private static void scheduleDeadLockDetector(ServerSettings settings) {
-        if (settings.useDeadLockDetector()) {
+    private static void scheduleDeadLockDetector() {
+        if (ServerSettings.useDeadLockDetector()) {
             ThreadPool.scheduleAtFixedDelay(new DeadLockDetector( () -> {
-                if(getSettings(ServerSettings.class).restartOnDeadLock()) {
+                if(ServerSettings.restartOnDeadLock()) {
                     Broadcast.toAllOnlinePlayers("Server restarting now.");
                     LOGGER.warn("Deadlock detected restarting the server");
                     Shutdown.getInstance().startShutdown(null, 60, true);
                 }
-            }), settings.deadLockDetectorInterval(), settings.deadLockDetectorInterval(), TimeUnit.SECONDS);
+            }), ServerSettings.deadLockDetectorInterval(), ServerSettings.deadLockDetectorInterval(), TimeUnit.SECONDS);
         }
     }
 
@@ -324,9 +320,9 @@ public class GameServer {
                 versionProperties.load(versionFile);
                 var version = versionProperties.getProperty("version");
                 var updateName = versionProperties.getProperty("update");
+                var protocol = ServerSettings.acceptedProtocols();
 
-                fullVersion = String.format("%s: %s-%s (%s)", updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
-                var protocol = getSettings(ServerSettings.class).acceptedProtocols();
+                fullVersion = String.format("%s [%s]: %s-%s (%s)", Arrays.toString(protocol), updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
                 printSection("L2jOrg Server Info Version");
                 LOGGER.info("Update: .................. {}", updateName);
                 LOGGER.info("Protocol: ................ {}", protocol);
@@ -337,7 +333,7 @@ public class GameServer {
                 LOGGER.info("Report any bug at https://github.com/JoeAlisson/L2jOrg/issues");
             }
         } catch (IOException e) {
-            LOGGER.warn(e.getLocalizedMessage(), e);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 

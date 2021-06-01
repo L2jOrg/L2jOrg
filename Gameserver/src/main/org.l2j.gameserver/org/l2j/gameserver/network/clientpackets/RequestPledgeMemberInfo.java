@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
 

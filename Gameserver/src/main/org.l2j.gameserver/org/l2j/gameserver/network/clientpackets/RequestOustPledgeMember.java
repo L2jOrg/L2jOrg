@@ -18,15 +18,15 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.ClanMember;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
+import org.l2j.gameserver.settings.ClanSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -75,9 +75,10 @@ public final class RequestOustPledgeMember extends ClientPacket {
             return;
         }
 
-        // this also updates the database
-        clan.removeClanMember(member.getObjectId(), System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // 24*60*60*1000 = 86400000
-        clan.setCharPenaltyExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+        var daysToJoinClan = System.currentTimeMillis() + ClanSettings.daysToJoinClan() * 86400000L;
+
+        clan.removeClanMember(member.getObjectId(), daysToJoinClan);
+        clan.setCharPenaltyExpiryTime(daysToJoinClan);
         clan.updateClanInDB();
 
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
