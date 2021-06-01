@@ -31,6 +31,8 @@ CREATE TABLE IF NOT EXISTS `clan_data`
     `prev_hunting_points`      INT               NOT NULL DEFAULT 0,
     `arena_progress`           INT UNSIGNED      NOT NULL DEFAULT 0,
     `clan_exp` DOUBLE NOT NULL DEFAULT 0,
+    `clan_exp_monster`         BIGINT UNSIGNED   NOT NULL DEFAULT 0,
+    `clan_exp_quest`           BIGINT UNSIGNED   NOT NULL DEFAULT 0,
 
     PRIMARY KEY (`clan_id`),
     KEY `ally_id` (`ally_id`),

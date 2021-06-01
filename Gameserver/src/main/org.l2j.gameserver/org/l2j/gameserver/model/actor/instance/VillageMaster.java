@@ -270,11 +270,6 @@ public class VillageMaster extends Folk {
             player.sendPacket(msg);
         } else if (actualCommand.equalsIgnoreCase("recover_clan")) {
             recoverClan(player, player.getClanId());
-        } else if (actualCommand.equalsIgnoreCase("increase_clan_level")) {
-            if (player.getClan().levelUpClan(player)) {
-                player.broadcastPacket(new MagicSkillUse(player, 5103, 1, 0, 0));
-                player.broadcastPacket(new MagicSkillLaunched(player, 5103, 1));
-            }
         } else if (actualCommand.equalsIgnoreCase("learn_clan_skills")) {
             showPledgeSkillList(player);
         } else {

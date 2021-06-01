@@ -154,6 +154,6 @@ public interface ClanDAO extends DAO<ClanData> {
     @Query("UPDATE clan_data SET arena_progress = 0")
     void resetArenaProgress();
 
-    @Query("UPDATE clan_data SET clan_exp = :clanExp: WHERE clan_id = :id:")
-    void updateClanXp(int id, int clanExp);
+    @Query("UPDATE clan_data SET clan_exp_monster = :exp_monster:, clan_exp_quest = :exp_quest: WHERE clan_id = :clanId:")
+    void updateClanExp(int clanId, long exp_monster, long exp_quest);
 }

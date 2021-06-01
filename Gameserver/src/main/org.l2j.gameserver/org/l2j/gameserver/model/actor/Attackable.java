@@ -330,8 +330,9 @@ public class Attackable extends Npc {
             }
 
             // Calculate raidboss points
+            final Player player = (maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker.getActingPlayer();
+
             if (_isRaid && !_isRaidMinion) {
-                final Player player = (maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker.getActingPlayer();
                 broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
                 final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS);
                 final Party party = player.getParty();
@@ -359,13 +360,18 @@ public class Attackable extends Npc {
             }
 
             // Manage Base, Quests and Sweep drops of the Attackable
-            doItemDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
+            doItemDrop(player);
 
             // Manage drop of Special Events created by GM for a defined period
             doEventDrop(lastAttacker);
 
             if (!getMustRewardExpSP()) {
                 return;
+            }
+
+            if (this instanceof Monster && player.getClan() != null && player.getLevel() - getLevel() <= 15)
+            {
+                player.getClan().increaseClanExp(player, 1, false);
             }
 
             if (!rewards.isEmpty()) {

@@ -634,6 +634,15 @@ public final class Config {
     public static int ALTHARS_MIN_DURATION_CYCLE;
     public static int ALTHARS_MAX_DURATION_CYCLE;
 
+    // --------------------------------------------------
+    // CLAN
+    // --------------------------------------------------
+    public static        List<Integer>         CLAN_LIMIT                                = new ArrayList<>();
+    public static        List<Integer>         CLAN_EXP_REQ                              = new ArrayList<>();
+    public static        int                   CLAN_EXP_MUL;
+    public static        int                   CLAN_EXP_MONSTER_MUL;
+    public static        int                   CLAN_EXP_QUEST_MUL;
+
     /**
      * This class initializes all global variables for configuration.<br>
      * If the key doesn't appear in properties file, a default value is set by this class. (properties file) for configuring your server.
@@ -703,6 +712,18 @@ public final class Config {
         TAKE_CASTLE_POINTS = Feature.getInt("TakeCastlePoints", 1500);
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
+
+        for (String limit : Feature.getString("ClanLimit", "").split(","))
+        {
+            CLAN_LIMIT.add(Integer.parseInt(limit));
+        }
+        for (String exp : Feature.getString("ClanExpReq", "").split(","))
+        {
+            CLAN_EXP_REQ.add(Integer.parseInt(exp));
+        }
+        CLAN_EXP_MUL = Feature.getInt("ClanExpMul", 100);
+        CLAN_EXP_MONSTER_MUL = Feature.getInt("ClanExpMonsterMul", 1);
+        CLAN_EXP_QUEST_MUL = Feature.getInt("ClanExpQuestMul", 100);
 
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
@@ -850,6 +871,7 @@ public final class Config {
         INVENTORY_MAXIMUM_PET = NPC.getInt("MaximumSlotsForPet", 12);
         PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
         PET_MP_REGEN_MULTIPLIER = NPC.getDouble("PetMpRegenMultiplier", 100) / 100;
+
 
 
         // Load Rates config file (if exists)

@@ -1,4 +1,5 @@
-package org.l2j.gameserver.model;/*
+package org.l2j.gameserver.model;
+/*
  * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -20,6 +21,7 @@ package org.l2j.gameserver.model;/*
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.data.ClanData;
@@ -33,7 +35,6 @@ import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ClanRewardType;
-import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.Npc;
@@ -60,8 +61,6 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
@@ -121,6 +120,7 @@ public class Clan implements IIdentifiable, INamable {
     private ClanRewardBonus _lastHuntingBonus = null;
     private double exp = 0;
     private int _rank = 0;
+    private long _exp = 0;
 
     private final ClanData data;
 
@@ -165,6 +165,7 @@ public class Clan implements IIdentifiable, INamable {
         restoreSkills();
         restoreNotice();
         ClanRewardManager.getInstance().checkArenaProgress(this);
+        restoreClanExp();
     }
 
 
@@ -220,15 +221,6 @@ public class Clan implements IIdentifiable, INamable {
     @Override
     public String getName() {
         return data.getName();
-    }
-
-    public double getExp() {
-        return exp;
-    }
-
-    public void addExp(double val)
-    {
-        setExp(getExp() + val);
     }
 
     private int _lastSavedExp = 0;
@@ -410,15 +402,11 @@ public class Clan implements IIdentifiable, INamable {
     /**
      * @return the maximum number of members allowed.
      */
-    public int getMaxNrOfMembers() {
-        return switch (data.getLevel()) {
-            case 3 -> 30;
-            case 2 -> 20;
-            case 1 -> 15;
-            case 0 -> 10;
-            default -> 40;
-        };
+    public int getLimit()
+    {
+        return Config.CLAN_LIMIT.get(data.getLevel());
     }
+
 
     /**
      * @param exclude the object Id to exclude from list.
@@ -929,7 +917,7 @@ public class Clan implements IIdentifiable, INamable {
             return false;
         }
 
-        if (getMembersCount() >= getMaxNrOfMembers()) {
+        if (getMembersCount() >= getLimit()) {
             player.sendPacket(getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME).addString(data.getName()));
             return false;
         }
@@ -1123,115 +1111,19 @@ public class Clan implements IIdentifiable, INamable {
         updateClanInDB();
     }
 
-    public boolean levelUpClan(Player player) {
-        if (!player.isClanLeader()) {
-            player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-            return false;
-        }
-        if (System.currentTimeMillis() < data.getDissolvingExpiryTime()) {
-            player.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_YOUR_CLAN_LEVEL_CANNOT_BE_INCREASED);
-            return false;
-        }
-
-        boolean increaseClanLevel = false;
-
-        // Such as https://l2wiki.com/classic/Clans_%E2%80%93_Clan_Level
-        switch (getLevel()) {
-            case 0 -> {
-                // Upgrade to 1
-                if ((player.getSp() >= 1000) && (player.getAdena() >= 150000) && (members.size() >= 1)) {
-                    if (player.reduceAdena("ClanLvl", 150000, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 1000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(1000);
-                        player.sendPacket(sp);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            case 1 -> {
-                // Upgrade to 2
-                if ((player.getSp() >= 15000) && (player.getAdena() >= 300000) && (members.size() >= 1)) {
-                    if (player.reduceAdena("ClanLvl", 300000, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 15000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(15000);
-                        player.sendPacket(sp);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            case 2 -> {
-                // Upgrade to 3
-                if ((player.getSp() >= 100000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
-                    // itemId 1419 == Blood Mark
-                    if (player.destroyItemByItemId("ClanLvl", 1419, 100, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 100000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(100000);
-                        player.sendPacket(sp);
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                        sm.addItemName(1419);
-                        player.sendPacket(sm);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            case 3 -> {
-                // Upgrade to 4
-                if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
-                    // itemId 1419 == Blood Mark
-                    if (player.destroyItemByItemId("ClanLvl", 1419, 5000, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 1000000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(1000000);
-                        player.sendPacket(sp);
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                        sm.addItemName(1419);
-                        player.sendPacket(sm);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            case 4 -> {
-                // Upgrade to 5
-                if ((player.getSp() >= 5000000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
-                    // itemId 1419 == Blood Mark
-                    if (player.destroyItemByItemId("ClanLvl", 1419, 10000, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 5000000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(5000000);
-                        player.sendPacket(sp);
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                        sm.addItemName(1419);
-                        player.sendPacket(sm);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            default -> {
-                return false;
-            }
-        }
-
-        if (!increaseClanLevel) {
-            player.sendPacket(SystemMessageId.THE_CONDITIONS_NECESSARY_TO_INCREASE_THE_CLAN_S_LEVEL_HAVE_NOT_BEEN_MET);
-            return false;
-        }
-
-        // the player should know that he has less sp now :p
-        final UserInfo ui = new UserInfo(player, false);
-        ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
-        player.sendPacket(ui);
-
-        player.sendItemList();
-
+    public boolean levelUpClan()
+    {
         changeLevel(getLevel() + 1);
-
-        // Notify to scripts
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLvlUp(player, this));
+        for (Player member : getOnlineMembers(0))
+        {
+            member.broadcastPacket(new MagicSkillUse(member, 5103, 1, 0, 0));
+            member.broadcastPacket(new MagicSkillLaunched(member, 5103, 1));
+            // Notify to scripts
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLvlUp(member, this));
+        }
         return true;
     }
+
 
     public void changeLevel(int level) {
         getDAO(ClanDAO.class).updateClanLevel(data.getId(), level);
@@ -1613,5 +1505,49 @@ public class Clan implements IIdentifiable, INamable {
         public void setPrivs(int privs) {
             _rankPrivs.setBitmask(privs);
         }
+    }
+
+
+    private void restoreClanExp()
+    {
+        _exp += data.getExpMonster() * Config.CLAN_EXP_MONSTER_MUL;
+        _exp += data.getExpQuest() * Config.CLAN_EXP_QUEST_MUL;
+    }
+
+    public void increaseClanExp(Player player, int val, boolean quest)
+    {
+        final long old_exp = getExp();
+        if (old_exp >= Config.CLAN_EXP_REQ.get(Config.CLAN_EXP_REQ.size() - 1))
+        {
+            return;
+        }
+        if (quest)
+        {
+            data.incExpQuest(val);
+            _exp += val * Config.CLAN_EXP_QUEST_MUL;
+        }
+        else
+        {
+            data.incExpMonster(val);
+            _exp += val * Config.CLAN_EXP_MONSTER_MUL;
+        }
+        final long new_exp = getExp();
+        if (new_exp != old_exp)
+        {
+            if (Config.CLAN_EXP_REQ.size() != getLevel())
+            {
+                if (new_exp >= Config.CLAN_EXP_REQ.get(getLevel()))
+                {
+                    levelUpClan();
+                }
+            }
+            getDAO(ClanDAO.class).updateClanExp(this.getId(), data.getExpMonster(), data.getExpQuest());
+        }
+    }
+
+    public long getExp()
+    {
+        System.out.println(_exp / Config.CLAN_EXP_MUL);
+        return _exp / Config.CLAN_EXP_MUL;
     }
 }
