@@ -120,7 +120,6 @@ import org.l2j.gameserver.util.*;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.WaterZone;
@@ -5270,11 +5269,7 @@ public final class Player extends Playable {
      */
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (isNull(attacker)) {
-            return false;
-        }
-
-        if (attacker == this || attacker == pet || attacker.hasServitor(attacker.getObjectId())) {
+        if (isSelfAttacking(attacker)) {
             return false;
         }
 
@@ -5282,91 +5277,108 @@ public final class Player extends Playable {
             return true;
         }
 
-        if(isPlayable(attacker)) {
-            final var attackerPlayer = attacker.getActingPlayer();
-            if(duelState == Duel.DUELSTATE_DUELLING && getDuelId() == attackerPlayer.getDuelId()) {
-                return true;
-            }
+        return checkAttackerInstance(attacker);
+    }
 
-            if(isInParty() && party.isMember(attackerPlayer)) {
-                return false;
-            }
-
-            if(attackerPlayer.isInOlympiadMode()) {
-                return isInOlympiadMode() && olympiadStart && attackerPlayer.getOlympiadMatchId() == getOlympiadMatchId();
-            }
-
-            if (isOnCustomEvent && (getTeam() == attacker.getTeam())) {
-                return false;
-            }
-
-            if (isOnEvent()) {
-                return true;
-            }
-
-            if (isInsideZone(ZoneType.PEACE)) {
-                return false;
-            }
-
-            if(nonNull(clan)) {
-                final Siege siege = SiegeManager.getInstance().getSiege(this);
-                final Clan attackerClan = attackerPlayer.getClan();
-                if (nonNull(siege)) {
-                    // Check if a siege is in progress and if attacker and the Player aren't in the Defender clan
-                    if (siege.checkIsDefender(attackerClan) && siege.checkIsDefender(clan)) {
-                        return false;
-                    }
-
-                    // Check if a siege is in progress and if attacker and the Player aren't in the Attacker clan
-                    if (siege.checkIsAttacker(attackerClan) && siege.checkIsAttacker(clan)) {
-                        return false;
-                    }
-                }
-
-                // Check if clan is at war
-                if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace())) {
-                    final ClanWar war = attackerClan.getWarWith(getClanId());
-                    if (nonNull(war) && war.getState() == ClanWarState.MUTUAL) {
-                        return true;
-                    }
-                }
-            }
-
-            // Check if the Player is in an arena, but NOT siege zone. NOTE: This check comes before clan/ally checks, but after party checks.
-            // This is done because in arenas, clan/ally members can auto attack if they arent in party.
-            if ((isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP)) && !(isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE))) {
-                return true;
-            }
-
-            // Check if the attacker is not in the same clan
-            if (nonNull(clan) && clan.isMember(attackerPlayer.getObjectId())) {
-                return false;
-            }
-
-            // Check if the attacker is not in the same ally
-            if (GameUtils.isPlayer(attacker) && (getAllyId() != 0) && (getAllyId() == attackerPlayer.getAllyId())) {
-                return false;
-            }
-
-            // Now check again if the Player is in pvp zone, but this time at siege PvP zone, applying clan/ally checks
-            if (isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP) && isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE)) {
-                return true;
-            }
-
-            if(getPvpFlag() > 0) {
-                return true;
-            }
-        } else if (attacker instanceof Defender) {
-            if (clan != null) {
-                final Siege siege = SiegeManager.getInstance().getSiege(this);
-                return ((siege != null) && siege.checkIsAttacker(clan));
-            }
-        } else if (attacker instanceof Guard || attacker instanceof FriendlyMob) {
+    private boolean checkAttackerInstance(Creature attacker) {
+        if (attacker instanceof Defender && clan != null) {
+            final Siege siege = SiegeManager.getInstance().getSiege(this);
+            return ((siege != null) && siege.checkIsAttacker(clan));
+        } 
+         
+        if (attacker instanceof Guard || attacker instanceof FriendlyMob) {
             return getReputation() < 0; // Guards attack only PK players.
         }
 
-        // Check if the Player has Karma
-        return getReputation() < 0 || pvpFlag > 0;
+        return cabBeAttacked(attacker);
+    }
+
+    private boolean cabBeAttacked(Creature attacker) {
+        var canAttack = getReputation() < 0 || pvpFlag > 0;
+        if(isPlayable(attacker)) {
+            final var attackerPlayer = attacker.getActingPlayer();
+            if(attackerPlayer.isInOlympiadMode()) {
+                canAttack = isInOlympiadMode() && olympiadStart && attackerPlayer.getOlympiadMatchId() == getOlympiadMatchId();
+            } else if(duelState == Duel.DUELSTATE_DUELLING && getDuelId() == attackerPlayer.getDuelId()) {
+                canAttack = true;
+            } else if (isInSameGroup(attacker, attackerPlayer)) {
+                canAttack = false;
+            } else if (isOnEvent()) {
+                canAttack = true;
+            } else if (isInsideZone(ZoneType.PEACE)) {
+                canAttack = false;
+            } else if (isEnemy(attackerPlayer)) {
+                canAttack = true;
+            } else if (isAlly(attacker, attackerPlayer)) {
+                canAttack = false;
+            } else if (isInPvp(attackerPlayer)) {
+                canAttack = true;
+            }
+        }
+        return canAttack;
+    }
+
+    private boolean isEnemy(Player attackerPlayer) {
+        var enemy = false;
+        if(nonNull(clan)) {
+            final Clan attackerClan = attackerPlayer.getClan();
+            enemy =  isOppositeSiegeSide(attackerClan) || isMutualWar(attackerPlayer, attackerClan);
+        }
+        return enemy || isInSingleBattleZone(attackerPlayer);
+    }
+
+    private boolean isInSingleBattleZone(Player attackerPlayer) {
+        return isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP) && !(isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE));
+    }
+
+    private boolean isInSameGroup(Creature attacker, Player attackerPlayer) {
+        if(isInParty() && party.isMember(attackerPlayer)) {
+            return true;
+        }
+
+        return isOnCustomEvent && getTeam() == attacker.getTeam();
+    }
+
+    private boolean isInPvp(Player attackerPlayer) {
+        if (isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP) && isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE)) {
+            return true;
+        }
+
+        return getPvpFlag() > 0;
+    }
+
+    private boolean isAlly(Creature attacker, Player attackerPlayer) {
+        if (nonNull(clan) && clan.isMember(attackerPlayer.getObjectId())) {
+            return true;
+        }
+
+        return GameUtils.isPlayer(attacker) && getAllyId() != 0 && getAllyId() == attackerPlayer.getAllyId();
+    }
+
+    private boolean isMutualWar(Player attackerPlayer, Clan attackerClan) {
+        if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace())) {
+            final ClanWar war = attackerClan.getWarWith(getClanId());
+            return nonNull(war) && war.getState() == ClanWarState.MUTUAL;
+        }
+        return false;
+    }
+
+    private boolean isOppositeSiegeSide(Clan attackerClan) {
+        final Siege siege = SiegeManager.getInstance().getSiege(this);
+        if (nonNull(siege)) {
+            if (siege.checkIsDefender(attackerClan) && siege.checkIsAttacker(clan)) {
+                return true;
+            }
+            return siege.checkIsAttacker(attackerClan) && siege.checkIsDefender(clan);
+        }
+        return false;
+    }
+
+    private boolean isSelfAttacking(Creature attacker) {
+        if (isNull(attacker)) {
+            return true;
+        }
+        return attacker == this || attacker == pet || attacker.hasServitor(attacker.getObjectId());
     }
 
     /**
