@@ -154,6 +154,7 @@ import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -3355,112 +3356,44 @@ public final class Player extends Playable {
      */
     @Override
     public void doPickupItem(WorldObject object) {
-        if (isAlikeDead() || isFakeDeath()) {
+        if (isAlikeDead()) {
             return;
         }
 
-        // Set the AI Intention to AI_INTENTION_IDLE
         getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 
-        // Check if the WorldObject to pick up is a Item
-        if (!GameUtils.isItem(object)) {
-            // dont try to pickup anything that is not an item :)
-            LOGGER.warn(this + " trying to pickup wrong target." + getTarget());
+        if(!(object instanceof Item target)) {
+            LOGGER.warn("{} trying to pickup wrong target {}", this, object);
             return;
         }
 
-        final Item target = (Item) object;
-
-        // Send a Server->Client packet ActionFailed to this Player
-        sendPacket(ActionFailed.STATIC_PACKET);
-
-        // Send a Server->Client packet StopMove to this Player
-        final StopMove sm = new StopMove(this);
-        sendPacket(sm);
-
-        SystemMessage message;
+        sendPacket(new StopMove(this));
         synchronized (target) {
-            // Check if the target to pick up is visible
-            if (!target.isSpawned()) {
-                // Send a Server->Client packet ActionFailed to this Player
-                sendPacket(ActionFailed.STATIC_PACKET);
+            if (!canPickUpItem(target)) {
                 return;
             }
 
-            if (!target.getDropProtection().tryPickUp(this)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                message.addItemName(target);
-                sendPacket(message);
-                return;
-            }
-
-            if ((!isInParty() || (party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS)) && !inventory.validateCapacity(target)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
-                return;
-            }
-
-            if (isInvulnerable() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                message.addItemName(target);
-                sendPacket(message);
-                return;
-            }
-
-            if ((target.getOwnerId() != 0) && (target.getOwnerId() != getObjectId()) && !isInLooterParty(target.getOwnerId())) {
-                if (target.getId() == CommonItem.ADENA) {
-                    message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
-                    message.addLong(target.getCount());
-                } else if (target.getCount() > 1) {
-                    message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
-                    message.addItemName(target);
-                    message.addLong(target.getCount());
-                } else {
-                    message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                    message.addItemName(target);
-                }
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(message);
-                return;
-            }
-
-            if ((target.getItemLootShedule() != null) && ((target.getOwnerId() == getObjectId()) || isInLooterParty(target.getOwnerId()))) {
+            if (target.getItemLootShedule() != null && (target.getOwnerId() == getObjectId() || isInLooterParty(target.getOwnerId()))) {
                 target.resetOwnerTimer();
             }
 
-            // Remove the Item from the world and send server->client GetItem packets
             target.pickupMe(this);
             if (GeneralSettings.saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().removeObject(target);
             }
         }
 
-        // Auto use herbs - pick up
+        onPickupItem(target);
+    }
+
+    private void onPickupItem(Item target) {
         if (target.getTemplate().hasExImmediateEffect()) {
-            final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
-            if (handler == null) {
-                LOGGER.warn("No item handler registered for item ID: " + target.getId() + ".");
-            } else {
-                handler.useItem(this, target, false);
-            }
-            ItemEngine.getInstance().destroyItem("Consume", target, this, null);
+            pickUpAutoConsumeItem(target);
         } else {
-            if ((target.getItemType() instanceof ArmorType) || (target.getItemType() instanceof WeaponType)) {
-                if (target.getEnchantLevel() > 0) {
-                    message = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3);
-                    message.addPcName(this);
-                    message.addInt(target.getEnchantLevel());
-                } else {
-                    message = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2);
-                    message.addPcName(this);
-                }
-                message.addItemName(target.getId());
-                broadcastPacket(message, 1400);
+            if (target.getItemType() instanceof ArmorType || target.getItemType() instanceof WeaponType) {
+                broadcastPickUpEquipment(target);
             }
 
-            // Check if a Party is in progress
             if (isInParty()) {
                 party.distributeItem(this, target);
             } else if ((target.getId() == CommonItem.ADENA) && (inventory.getAdenaInstance() != null)) {
@@ -3468,19 +3401,77 @@ public final class Player extends Playable {
                 ItemEngine.getInstance().destroyItem("Pickup", target, this, null);
             } else {
                 addItem("Pickup", target, null, true);
-                // Auto-Equip arrows/bolts if player has a bow/crossbow and player picks up arrows/bolts.
-                final Item weapon = inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
-                if (weapon != null) {
-                    final EtcItem etcItem = target.getEtcItem();
-                    if (etcItem != null) {
-                        final EtcItemType itemType = etcItem.getItemType();
-                        if (((weapon.getItemType() == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) || (((weapon.getItemType() == WeaponType.CROSSBOW) || (weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) && (itemType == EtcItemType.BOLT))) {
-                            inventory.findAmmunitionForCurrentWeapon();
-                        }
-                    }
+                checkPickupAmmunition(target);
+            }
+        }
+    }
+
+    private void checkPickupAmmunition(Item target) {
+        final Item weapon = inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
+        if (weapon != null) {
+            final EtcItem etcItem = target.getEtcItem();
+            if (etcItem != null) {
+                final EtcItemType itemType = etcItem.getItemType();
+                if ((weapon.getItemType() == WeaponType.BOW && itemType == EtcItemType.ARROW) || ((weapon.getItemType() == WeaponType.CROSSBOW || weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW) && itemType == EtcItemType.BOLT)) {
+                    inventory.findAmmunitionForCurrentWeapon();
                 }
             }
         }
+    }
+
+    private boolean canPickUpItem(Item target) {
+        var canPickup = true;
+        if (!target.isSpawned()) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+            canPickup = false;
+        } else if (!target.getDropProtection().tryPickUp(this)) {
+            sendPackets(ActionFailed.STATIC_PACKET, buildFailedToPickupMessage(target));
+            canPickup = false;
+        } else if ((!isInParty() || party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS) && !inventory.validateCapacity(target)) {
+            sendPackets(ActionFailed.STATIC_PACKET);
+            sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+            canPickup = false;
+        } else if (isInvulnerable() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS)) {
+            sendPackets(ActionFailed.STATIC_PACKET, buildFailedToPickupMessage(target));
+            canPickup = false;
+        } else if (target.getOwnerId() != 0 && target.getOwnerId() != getObjectId() && !isInLooterParty(target.getOwnerId())) {
+            sendPackets(ActionFailed.STATIC_PACKET, buildFailedToPickupMessage(target));
+            canPickup = false;
+        }
+        return canPickup;
+    }
+
+    private void broadcastPickUpEquipment(Item target) {
+        SystemMessage message;
+        if (target.getEnchantLevel() > 0) {
+            message = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3).addPcName(this).addInt(target.getEnchantLevel());
+        } else {
+            message = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2).addPcName(this);
+        }
+        message.addItemName(target.getId());
+        broadcastPacket(message, 1400);
+    }
+
+    private void pickUpAutoConsumeItem(Item target) {
+        final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
+        if (handler == null) {
+            LOGGER.warn("No item handler registered for item ID: {}.", target.getId());
+        } else {
+            handler.useItem(this, target, false);
+        }
+        ItemEngine.getInstance().destroyItem("Consume", target, this, null);
+    }
+
+    private SystemMessage buildFailedToPickupMessage(Item target) {
+        SystemMessage message;
+        if (target.getId() == CommonItem.ADENA) {
+            message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA).addLong(target.getCount());
+        } else if (target.getCount() > 1) {
+            message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S).addItemName(target).addLong(target.getCount());
+        } else {
+            message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(target);
+        }
+        return message;
     }
 
     public boolean canOpenPrivateStore() {
@@ -3842,35 +3833,43 @@ public final class Player extends Playable {
     public void onPlayeableKill(Playable killedPlayable) {
         final Player killedPlayer = killedPlayable.getActingPlayer();
 
-        // Avoid nulls && check if player != killedPlayer
-        if ((killedPlayer == null) || (this == killedPlayer)) {
+        if (!hasKillReputationGain(killedPlayer)) {
             return;
         }
 
-        // Duel support
-        if (isInDuel() && killedPlayer.isInDuel()) {
-            return;
+        calculatePvPReputation(killedPlayer, isSummon(killedPlayable));
+        sendPacket(new UserInfo(this, UserInfoType.SOCIAL));
+        checkItemRestriction();
+    }
+
+    private boolean hasKillReputationGain(Player killedPlayer) {
+        if (killedPlayer == null || this == killedPlayer) {
+            return false;
         }
 
-        // Do nothing if both players are in PVP zone
-        if (isInsideZone(ZoneType.PVP) && killedPlayer.isInsideZone(ZoneType.PVP)) {
-            return;
+        if ((isInDuel() && killedPlayer.isInDuel()) || killInSiege(killedPlayer)) {
+            return false;
         }
 
-        // If both players are in SIEGE zone just increase siege kills/deaths
+        return !(isInsideZone(ZoneType.PVP) && killedPlayer.isInsideZone(ZoneType.PVP));
+    }
+
+    private boolean killInSiege(Player killedPlayer) {
         if (isInsideZone(ZoneType.SIEGE) && killedPlayer.isInsideZone(ZoneType.SIEGE)) {
-            if (!isSiegeFriend(killedPlayable)) {
+            if (!isSiegeFriend(killedPlayer)) {
                 final Clan targetClan = killedPlayer.getClan();
-                if ((clan != null) && (targetClan != null)) {
+                if (clan != null && targetClan != null) {
                     clan.addSiegeKill();
                     targetClan.addSiegeDeath();
                 }
             }
-            return;
+            return true;
         }
+        return false;
+    }
 
+    private void calculatePvPReputation( Player killedPlayer, boolean isSummon) {
         if (checkIfPvP(killedPlayer)) {
-            // Check if player should get + rep
             if (killedPlayer.getReputation() < 0) {
                 final int levelDiff = killedPlayer.getLevel() - getLevel();
                 if ((getReputation() >= 0) && (levelDiff < 11) && (levelDiff > -11)) // TODO: Time check, same player can't be killed again in 8 hours
@@ -3882,19 +3881,13 @@ public final class Player extends Playable {
             setPvpKills(data.getPvP() + 1);
 
             updatePvpTitleAndColor(true);
-        } else if ((getReputation() > 0) && (data.getPk() == 0)) {
+        } else if (getReputation() > 0 && data.getPk() == 0) {
             setReputation(0);
             setPkKills(1);
         } else {
-            // Calculate new karma and increase pk count
-            setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), GameUtils.isSummon(killedPlayable)));
+            setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), isSummon));
             setPkKills(getPkKills() + 1);
         }
-
-        final UserInfo ui = new UserInfo(this, false);
-        ui.addComponentType(UserInfoType.SOCIAL);
-        sendPacket(ui);
-        checkItemRestriction();
     }
 
     public void updatePvpTitleAndColor(boolean broadcastInfo) {

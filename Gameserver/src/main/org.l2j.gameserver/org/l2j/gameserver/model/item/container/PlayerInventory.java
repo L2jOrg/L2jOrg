@@ -821,7 +821,12 @@ public class PlayerInventory extends Inventory {
     }
 
     private Item findAmmunition(Item currentWeapon) {
-        return items.values().stream().filter(i -> matchesAmmunition(i, currentWeapon)).findFirst().orElse(null);
+        for (Item item : items.values()) {
+            if(matchesAmmunition(item, currentWeapon)) {
+                return item;
+            }
+        }
+        return null;
     }
 
     private boolean matchesAmmunition(Item ammunition, Item weapon) {

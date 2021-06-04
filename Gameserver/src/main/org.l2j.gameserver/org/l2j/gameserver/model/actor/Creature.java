@@ -3674,8 +3674,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     @Override
     public final void setXYZ(int newX, int newY, int newZ) {
-        final ZoneRegion oldZoneRegion = ZoneEngine.getInstance().getRegion(this);
-        final ZoneRegion newZoneRegion = ZoneEngine.getInstance().getRegion(newX, newY);
+        final var oldZoneRegion = ZoneEngine.getInstance().getRegion(this);
+        final var newZoneRegion = ZoneEngine.getInstance().getRegion(newX, newY);
 
         // Mobius: Prevent moving to nonexistent regions.
         if (newZoneRegion == null) {
