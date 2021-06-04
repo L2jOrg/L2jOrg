@@ -33,7 +33,6 @@ import org.l2j.gameserver.model.item.Weapon;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.ZoneEngine;
-import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -194,10 +193,7 @@ public abstract class Vehicle extends Creature {
     }
 
     public void removePassenger(Player player) {
-        try {
-            _passengers.remove(player);
-        } catch (Exception e) {
-        }
+        _passengers.remove(player);
     }
 
     @Override
@@ -271,15 +267,13 @@ public abstract class Vehicle extends Creature {
             LOGGER.error("Failed oustPlayers().", e);
         }
 
-        final ZoneRegion oldZoneRegion = ZoneEngine.getInstance().getRegion(this);
+        ZoneEngine.getInstance().removeFromZones(this);
 
         try {
             decayMe();
         } catch (Exception e) {
             LOGGER.error("Failed decayMe().", e);
         }
-
-        oldZoneRegion.removeFromZones(this);
 
         return super.deleteMe();
     }

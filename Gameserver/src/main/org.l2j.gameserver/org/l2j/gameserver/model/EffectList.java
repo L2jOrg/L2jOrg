@@ -390,7 +390,6 @@ public final class EffectList {
      */
     public void stopAllToggles() {
         if (toggleCount.get() > 0) {
-            // Ignore necessary toggles.
             stopEffects(b -> b.getSkill().isToggle() &&  !b.getSkill().isIrreplacableBuff(), true, true);
         }
     }
@@ -498,7 +497,11 @@ public final class EffectList {
      */
     public void stopEffects(Predicate<BuffInfo> filter, boolean update, boolean broadcast) {
         if (!actives.isEmpty()) {
-            actives.stream().filter(filter).forEach(this::remove);
+            for (BuffInfo active : actives) {
+                if(filter.test(active)) {
+                    remove(active);
+                }
+            }
 
             // Update stats, effect flags and icons.
             if (update) {

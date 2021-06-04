@@ -2427,6 +2427,10 @@ public final class Player extends Playable {
             warehouse.deleteMe();
         }
         warehouse = null;
+
+        if (Config.WAREHOUSE_CACHE) {
+            WarehouseCacheManager.getInstance().remCacheTask(this);
+        }
     }
 
     public PlayerFreight getFreight() {
@@ -6587,110 +6591,115 @@ public final class Player extends Playable {
         AutoPlayEngine.getInstance().stopTasks(this);
         ZoneEngine.getInstance().forEachZone(this, z -> z.onPlayerLogoutInside(this));
 
-        try {
-            if (!isOnline) {
-                LOGGER.error("deleteMe() called on offline player {}", this);
-            }
-            setOnlineStatus(false, true);
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
+        setOnlineStatus(false, true);
+        stopActionsInProgress();
+
+        storeRecommendations();
+
+        if (isGM()) {
+            AdminData.getInstance().deleteGm(this);
         }
 
-        try {
-            if (Config.ENABLE_BLOCK_CHECKER_EVENT && (handysBlockCheckerEventArena != -1)) {
-                HandysBlockCheckerManager.getInstance().onDisconnect(this);
-            }
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        if (inObserverMode) {
+            setLocationInvisible(lastLoc);
         }
 
-        try {
-            abortAttack();
-            abortCast();
-            stopMove(null);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        if (vehicle != null) {
+            vehicle.oustPlayer(this);
         }
 
-        try {
-            if (matchingRoom != null) {
-                matchingRoom.deleteMember(this, false);
-            }
-            MatchingRoomManager.getInstance().removeFromWaitingList(this);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        removeFromWorld();
+        cleanUpItems();
+
+        notifyClanLogout();
+        removeSnoop();
+
+        if (Event.isParticipant(this)) {
+            Event.savePlayerEventStatus(this);
         }
 
-        try {
-            if (isFlying()) {
-                removeSkill(SkillEngine.getInstance().getSkill(CommonSkill.WYVERN_BREATH.getId(), 1));
-            }
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        notifyFriends(FriendStatus.OFFLINE);
+        blockList.playerLogout();
+
+        stopEffects();
+
+        SaveTaskManager.getInstance().remove(this);
+        return super.deleteMe();
+    }
+
+    private void stopEffects() {
+        stopCubics();
+        getEffectList().stopAllToggles();
+        getEffectList().stopAllPassives(false, false);
+        getEffectList().stopAllOptions(false, false);
+    }
+
+    private void removeFromWorld() {
+        ZoneEngine.getInstance().removeFromZones(this);
+        decayMe();
+        leaveParty();
+        unSummonServitors();
+
+        final Instance inst = getInstanceWorld();
+        if (inst != null) {
+            inst.onPlayerLogout(this);
+        }
+    }
+
+    private void cleanUpItems() {
+        inventory.deleteMe();
+        clearWarehouse();
+
+        freight.deleteMe();
+        clearRefund();
+    }
+
+    private void stopActionsInProgress() {
+        if (Config.ENABLE_BLOCK_CHECKER_EVENT && (handysBlockCheckerEventArena != -1)) {
+            HandysBlockCheckerManager.getInstance().onDisconnect(this);
         }
 
-        // Recommendations must be saved before task (timer) is canceled
-        try {
-            storeRecommendations();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-        // Stop the HP/MP/CP Regeneration task (scheduled tasks)
-        try {
-            stopAllTimers();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        forgetTarget();
+        stopMove(null);
+        leaveMatchingRoom();
+
+        if (isFlying()) {
+            removeSkill(SkillEngine.getInstance().getSkill(CommonSkill.WYVERN_BREATH.getId(), 1));
         }
 
-        try {
-            setIsTeleporting(false);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
 
-        // Stop crafting, if in progress
-        try {
-            RecipeController.getInstance().requestMakeItemAbort(this);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // Cancel Attack or Cast
-        try {
-            setTarget(null);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
+        stopAllTimers();
+        setIsTeleporting(false);
+        RecipeController.getInstance().requestMakeItemAbort(this);
 
         if (isChannelized()) {
             getSkillChannelized().abortChannelization();
         }
 
-        // Stop all toggles.
-        getEffectList().stopAllToggles();
+        setActiveRequester(null);
+        cancelActiveTrade();
+    }
 
-        // Remove from world regions zones
-        ZoneEngine.getInstance().getRegion(this).removeFromZones(this);
+    private void notifyClanLogout() {
+        if (clan != null) {
+            clan.onMemberLogout(this);
+            clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
+            clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
+        }
+    }
 
-        // Remove the Player from the world
-        try {
-            decayMe();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+    private void removeSnoop() {
+        for (Player player : snoopedPlayer) {
+            player.removeSnooper(this);
         }
 
-        // If a Party is in progress, leave it (and festival party)
-        if (isInParty()) {
-            try {
-                leaveParty();
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
+        for (Player player : snoopListener) {
+            player.removeSnooped(this);
         }
+    }
 
-        // If the Player has Pet, un summon it
+    private void unSummonServitors() {
         if (hasSummon()) {
-            try {
                 Summon pet = this.pet;
                 if (pet != null) {
                     pet.setRestoreSummon(true);
@@ -6707,121 +6716,14 @@ public final class Player extends Playable {
                     s.setRestoreSummon(true);
                     s.unSummon(this);
                 });
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            } // returns pet to control item
         }
+    }
 
-        if (clan != null) {
-            clan.onMemberLogout(this);
+    private void leaveMatchingRoom() {
+        if (matchingRoom != null) {
+            matchingRoom.deleteMember(this, false);
         }
-
-        if (getActiveRequester() != null) {
-            // deals with sudden exit in the middle of transaction
-            setActiveRequester(null);
-            cancelActiveTrade();
-        }
-
-        // If the Player is a GM, remove it from the GM List
-        if (isGM()) {
-            try {
-                AdminData.getInstance().deleteGm(this);
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
-        }
-
-        try {
-            // Check if the Player is in observer mode to set its position to its position
-            // before entering in observer mode
-            if (inObserverMode) {
-                setLocationInvisible(lastLoc);
-            }
-
-            if (vehicle != null) {
-                vehicle.oustPlayer(this);
-            }
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // remove player from instance
-        final Instance inst = getInstanceWorld();
-        if (inst != null) {
-            try {
-                inst.onPlayerLogout(this);
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
-        }
-
-        try {
-            stopCubics();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // Update database with items in its inventory and remove them from the world
-        try {
-            inventory.deleteMe();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // Update database with items in its warehouse and remove them from the world
-        try {
-            clearWarehouse();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-        if (Config.WAREHOUSE_CACHE) {
-            WarehouseCacheManager.getInstance().remCacheTask(this);
-        }
-
-        try {
-            freight.deleteMe();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        try {
-            clearRefund();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        if (data.getClanId() > 0) {
-            clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
-            clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
-        }
-
-        for (Player player : snoopedPlayer) {
-            player.removeSnooper(this);
-        }
-
-        for (Player player : snoopListener) {
-            player.removeSnooped(this);
-        }
-
-        // we store all data from players who are disconnected while in an event in order to restore it in the next login
-        if (Event.isParticipant(this)) {
-            Event.savePlayerEventStatus(this);
-        }
-
-        try {
-            notifyFriends(FriendStatus.OFFLINE);
-            blockList.playerLogout();
-        } catch (Exception e) {
-            LOGGER.warn("Exception on deleteMe() notifyFriends: ", e);
-        }
-
-        // Stop all passives and augment options
-        getEffectList().stopAllPassives(false, false);
-        getEffectList().stopAllOptions(false, false);
-
-        SaveTaskManager.getInstance().remove(this);
-
-        return super.deleteMe();
+        MatchingRoomManager.getInstance().removeFromWaitingList(this);
     }
 
     public int getInventoryLimit() {

@@ -266,7 +266,7 @@ public final class Trap extends Npc {
         _owner = null;
 
         if (isSpawned() && !isDead()) {
-            ZoneEngine.getInstance().getRegion(this).removeFromZones(this);
+            ZoneEngine.getInstance().removeFromZones(this);
             deleteMe();
         }
     }

@@ -387,10 +387,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public void onDecay() {
         decayMe();
-        final ZoneRegion region = ZoneEngine.getInstance().getRegion(this);
-        if (region != null) {
-            region.removeFromZones(this);
-        }
+        ZoneEngine.getInstance().removeFromZones(this);
 
         // Removes itself from the summoned list.
         if ((summoner != null)) {

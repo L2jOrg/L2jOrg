@@ -848,7 +848,7 @@ public class Npc extends Creature {
             getSkillChannelized().abortChannelization();
         }
 
-        ZoneEngine.getInstance().getRegion(this).removeFromZones(this);
+        ZoneEngine.getInstance().removeFromZones(this);
 
         return super.deleteMe();
     }
