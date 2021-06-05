@@ -3370,6 +3370,7 @@ public final class Player extends Playable {
         sendPacket(new StopMove(this));
         synchronized (target) {
             if (!canPickUpItem(target)) {
+                sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
 
@@ -3422,23 +3423,23 @@ public final class Player extends Playable {
     private boolean canPickUpItem(Item target) {
         var canPickup = true;
         if (!target.isSpawned()) {
-            sendPacket(ActionFailed.STATIC_PACKET);
             canPickup = false;
-        } else if (!target.getDropProtection().tryPickUp(this)) {
-            sendPackets(ActionFailed.STATIC_PACKET, buildFailedToPickupMessage(target));
+        } else if(!checkItemOwnerProtection(target)){
+            sendPacket(buildFailedToPickupMessage(target));
             canPickup = false;
-        } else if ((!isInParty() || party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS) && !inventory.validateCapacity(target)) {
-            sendPackets(ActionFailed.STATIC_PACKET);
+        }
+        else if ((!isInParty() || party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS) && !inventory.validateCapacity(target)) {
             sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
-            canPickup = false;
-        } else if (isInvulnerable() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS)) {
-            sendPackets(ActionFailed.STATIC_PACKET, buildFailedToPickupMessage(target));
-            canPickup = false;
-        } else if (target.getOwnerId() != 0 && target.getOwnerId() != getObjectId() && !isInLooterParty(target.getOwnerId())) {
-            sendPackets(ActionFailed.STATIC_PACKET, buildFailedToPickupMessage(target));
             canPickup = false;
         }
         return canPickup;
+    }
+
+    private boolean checkItemOwnerProtection(Item target) {
+        if (!target.getDropProtection().tryPickUp(this) || (isInvulnerable() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS))) {
+           return false;
+        }
+        return isInLooterParty(target.getOwnerId());
     }
 
     private void broadcastPickUpEquipment(Item target) {
@@ -5368,6 +5369,7 @@ public final class Player extends Playable {
     @Override
     public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
         if (!checkUseSkill(skill)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
@@ -5422,33 +5424,11 @@ public final class Player extends Playable {
     }
 
     private boolean checkUseSkill(Skill skill) {
-        if (skill.isPassive() || isDead() || (skill.isToggle() && isMounted())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
+        if (skill.isPassive() || !hasUseSkillState(skill)) {
             return false;
         }
 
-        if(!SkillCaster.checkSkillConsume(this, skill)) {
-            return false;
-        }
-
-        if (!CharacterSettings.allowPKTeleport() && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (isFishing() && !skill.hasAnyEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
-            sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
-            return false;
-        }
-
-        if (inObserverMode) {
-            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-            sendPacket(ActionFailed.STATIC_PACKET);
+        if (!checkToggleSkill(skill)) {
             return false;
         }
 
@@ -5457,28 +5437,36 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (sitting) {
+        if(!SkillCaster.checkSkillConsume(this, skill)) {
+            return false;
+        }
+        return !isNull(currentSkillWorldPosition) || skill.getTargetType() != TargetType.GROUND;
+    }
+
+    private boolean hasUseSkillState(Skill skill) {
+        var canUseSkill = true;
+        if (inObserverMode) {
+            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+            canUseSkill = false;
+        } else if (sitting) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
+            canUseSkill = false;
+        } else if (isFishing() && !skill.hasAnyEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
+            sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
+            canUseSkill = false;
+        } else if (!CharacterSettings.allowPKTeleport() && getReputation() < 0 && skill.hasAnyEffectType(EffectType.TELEPORT)) {
+            canUseSkill = false;
+        } else if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions())) {
+            canUseSkill = false;
         }
+        return canUseSkill && !isDead();
+    }
 
-        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
+    private boolean checkToggleSkill(Skill skill) {
+        if (skill.isToggle() && (isMounted() || stopSkillEffects(true, skill.getId())) ) {
             return false;
         }
-
-        // Note: do not check this before TOGGLE reset
-        if (isFakeDeath()) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (isNull(currentSkillWorldPosition) && skill.getTargetType() == TargetType.GROUND) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-        return true;
+        return !isFakeDeath();
     }
 
     private void sendSkillReuseTimeMessage(Skill skill) {
