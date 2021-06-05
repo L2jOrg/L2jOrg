@@ -4408,117 +4408,97 @@ public final class Player extends Playable {
         return true;
     }
 
-    public boolean mount(Summon pet) {
+    public boolean mount(Summon summon) {
+        var success = false;
+        if (summon != null && summon.isMountable() && !isMounted() && !isBetrayed()) {
+            success = canMount(summon) && doMount(summon);
+        } else if (isRentedPet()) {
+            stopRentPet();
+            success = true;
+        } else if (isMounted()) {
+            success = canUnMount() && dismount();
+        }
+        return success;
+    }
+
+    private boolean canUnMount() {
+        if (mountType == MountType.WYVERN && isInsideZone(ZoneType.NO_LANDING)) {
+            sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
+            return false;
+        } else if (isHungry()) {
+            sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean canMount(Summon pet) {
         if (!FeatureSettings.allowRideInSiege() && isInsideZone(ZoneType.SIEGE)) {
             return false;
         }
+        var canMount = !isTransformed();
+        if (isDead()) {
+            sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHEN_DEAD);
+            canMount = false;
+        } else if (isInCombat()) {
+            sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
+            canMount = false;
+        } else if (sitting) {
+            sendPacket(SystemMessageId.A_MOUNT_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
+            canMount = false;
+        } else if (isFishing()) {
+            sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
+            canMount = false;
+        }
+        return canMount && canBeMounted(pet);
+    }
 
+    private boolean canBeMounted(Summon pet) {
+        var canBeMounted = true;
+        if (pet.isDead()) {
+            sendPacket(SystemMessageId.A_DEAD_MOUNT_CANNOT_BE_RIDDEN);
+            canBeMounted = false;
+        } else if (pet.isInCombat() || pet.isRooted()) {
+            sendPacket(SystemMessageId.A_MOUNT_IN_BATTLE_CANNOT_BE_RIDDEN);
+            canBeMounted = false;
+        }
+        else if (pet.isHungry()) {
+            sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
+            canBeMounted = false;
+        } else if (!GameUtils.checkIfInRange(200, this, pet, true)) {
+            sendPacket(SystemMessageId.YOU_ARE_TOO_FAR_AWAY_FROM_YOUR_MOUNT_TO_RIDE);
+            canBeMounted = false;
+        }
+        return canBeMounted;
+    }
+
+    private boolean doMount(Summon pet) {
+        var mounted = mount(pet.getId(), pet.getLevel(), pet.getControlObjectId(), true);
+        if(mounted) {
+            pet.unSummon(this);
+        }
+        return mounted;
+    }
+
+    private boolean mount(int petId, int level, int controlObjectId, boolean useFood) {
         if (!disarmWeapons() || !disarmShield() || isTransformed()) {
             return false;
         }
 
         getEffectList().stopAllToggles();
-        setMount(pet.getId(), pet.getLevel());
-        setMountObjectID(pet.getControlObjectId());
+        setMount(petId, level);
+        setMountObjectID(controlObjectId);
         clearPetData();
-        startFeed(pet.getId());
         broadcastPacket(new Ride(this));
-
-        // Notify self and others about speed change
         broadcastUserInfo();
-
-        pet.unSummon(this);
+        if (useFood) {
+            startFeed(petId);
+        }
         return true;
     }
 
     public boolean mount(int npcId, int controlItemObjId, boolean useFood) {
-        if (!disarmWeapons() || !disarmShield() || isTransformed()) {
-            return false;
-        }
-
-        getEffectList().stopAllToggles();
-        setMount(npcId, getLevel());
-        clearPetData();
-        setMountObjectID(controlItemObjId);
-        broadcastPacket(new Ride(this));
-
-        // Notify self and others about speed change
-        broadcastUserInfo();
-        if (useFood) {
-            startFeed(npcId);
-        }
-        return true;
-    }
-
-    public boolean mountPlayer(Summon pet) {
-        if ((pet != null) && pet.isMountable() && !isMounted() && !isBetrayed()) {
-            if (isDead()) {
-                // A strider cannot be ridden when dead
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHEN_DEAD);
-                return false;
-            } else if (pet.isDead()) {
-                // A dead strider cannot be ridden.
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_DEAD_MOUNT_CANNOT_BE_RIDDEN);
-                return false;
-            } else if (pet.isInCombat() || pet.isRooted()) {
-                // A strider in battle cannot be ridden
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_MOUNT_IN_BATTLE_CANNOT_BE_RIDDEN);
-                return false;
-
-            } else if (isInCombat()) {
-                // A strider cannot be ridden while in battle
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
-                return false;
-            } else if (sitting) {
-                // A strider can be ridden only when standing
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_MOUNT_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
-                return false;
-            } else if (isFishing()) {
-                // You can't mount, dismount, break and drop items while fishing
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
-                return false;
-            } else if (isTransformed()) {
-                // no message needed, player while transformed doesn't have mount action
-                sendPacket(ActionFailed.STATIC_PACKET);
-                return false;
-            } else if (inventory.getItemByItemId(9819) != null) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                // FIXME: Wrong Message
-                sendMessage("You cannot mount a steed while holding a flag.");
-                return false;
-            } else if (pet.isHungry()) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
-                return false;
-            } else if (!GameUtils.checkIfInRange(200, this, pet, true)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOU_ARE_TOO_FAR_AWAY_FROM_YOUR_MOUNT_TO_RIDE);
-                return false;
-            } else if (!pet.isDead() && !isMounted()) {
-                mount(pet);
-            }
-        } else if (isRentedPet()) {
-            stopRentPet();
-        } else if (isMounted()) {
-            if ((mountType == MountType.WYVERN) && isInsideZone(ZoneType.NO_LANDING)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
-                return false;
-            } else if (isHungry()) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
-                return false;
-            } else {
-                dismount();
-            }
-        }
-        return true;
+        return mount(npcId, controlItemObjId, getLevel(), useFood);
     }
 
     public boolean dismount() {
