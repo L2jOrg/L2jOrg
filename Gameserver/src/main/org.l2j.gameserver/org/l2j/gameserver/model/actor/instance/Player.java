@@ -3520,6 +3520,44 @@ public final class Player extends Playable {
      */
     @Override
     public void setTarget(WorldObject newTarget) {
+        newTarget = validateNewTarget(newTarget);
+
+        final WorldObject oldTarget = getTarget();
+
+        if (oldTarget != null) {
+            if (oldTarget.equals(newTarget)) {
+                if (newTarget.getObjectId() != getObjectId()) {
+                    sendPacket(new ValidateLocation(newTarget));
+                }
+                return;
+            }
+
+            oldTarget.removeStatusListener(this);
+        }
+
+        if (newTarget instanceof Creature target) {
+            onCreatureTargetSelected(target);
+        }
+
+        if (newTarget == null && getTarget() != null) {
+            broadcastPacket(new TargetUnselected(this));
+        }
+        super.setTarget(newTarget);
+    }
+
+    private void onCreatureTargetSelected(Creature target) {
+        if (target.getObjectId() != getObjectId()) {
+            sendPacket(new ValidateLocation(target));
+        }
+
+        sendPacket(new MyTargetSelected(this, target));
+        target.addStatusListener(this);
+        sendPacket(new StatusUpdate(target).addUpdate(StatusUpdateType.MAX_HP, target.getMaxHp()).addUpdate(StatusUpdateType.CUR_HP, (int) target.getCurrentHp()));
+        Broadcast.toKnownPlayers(this, new TargetSelected(getObjectId(), target.getObjectId(), getX(), getY(), getZ()));
+        sendPacket(new ExAbnormalStatusUpdateFromTarget(target));
+    }
+
+    private WorldObject validateNewTarget(WorldObject newTarget) {
         if (newTarget != null) {
             final boolean isInParty = (GameUtils.isPlayer(newTarget) && isInParty() && party.isMember(newTarget.getActingPlayer()));
 
@@ -3538,58 +3576,7 @@ public final class Player extends Playable {
                 newTarget = null;
             }
         }
-
-        // Get the current target
-        final WorldObject oldTarget = getTarget();
-
-        if (oldTarget != null) {
-            if (oldTarget.equals(newTarget)) // no target change?
-            {
-                // Validate location of the target.
-                if (newTarget.getObjectId() != getObjectId()) {
-                    sendPacket(new ValidateLocation(newTarget));
-                }
-                return;
-            }
-
-            // Remove the target from the status listener.
-            oldTarget.removeStatusListener(this);
-        }
-
-        if (GameUtils.isCreature(newTarget)) {
-            final Creature target = (Creature) newTarget;
-
-            // Validate location of the new target.
-            if (newTarget.getObjectId() != getObjectId()) {
-                sendPacket(new ValidateLocation(target));
-            }
-
-            // Show the client his new target.
-            sendPacket(new MyTargetSelected(this, target));
-
-            // Register target to listen for hp changes.
-            target.addStatusListener(this);
-
-            // Send max/current hp.
-            final StatusUpdate su = new StatusUpdate(target);
-            su.addUpdate(StatusUpdateType.MAX_HP, target.getMaxHp());
-            su.addUpdate(StatusUpdateType.CUR_HP, (int) target.getCurrentHp());
-            sendPacket(su);
-
-            // To others the new target, and not yourself!
-            Broadcast.toKnownPlayers(this, new TargetSelected(getObjectId(), newTarget.getObjectId(), getX(), getY(), getZ()));
-
-            // Send buffs
-            sendPacket(new ExAbnormalStatusUpdateFromTarget(target));
-        }
-
-        // Target was removed?
-        if ((newTarget == null) && (getTarget() != null)) {
-            broadcastPacket(new TargetUnselected(this));
-        }
-
-        // Target the new WorldObject (add the target to the Player _target, _knownObject and Player to _KnownObject of the WorldObject)
-        super.setTarget(newTarget);
+        return newTarget;
     }
 
     /**
