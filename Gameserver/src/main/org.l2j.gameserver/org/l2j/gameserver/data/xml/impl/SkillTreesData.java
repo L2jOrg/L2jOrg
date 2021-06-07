@@ -161,23 +161,14 @@ public final class SkillTreesData extends GameXmlReader {
 
         SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 
-        for (Node b = skillNode.getFirstChild(); b != null; b = b.getNextSibling()) {
-            var attrs = b.getAttributes();
-
-            switch (b.getNodeName()) {
-                case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
-                case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "lvl")));
-                case "race" -> skillLearn.addRace(Race.valueOf(b.getTextContent()));
-                case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(b.getTextContent()));
-                case "social-status" -> skillLearn.setSocialStatus(parseEnum(b, SocialStatus.class));
-                case "removeSkill" -> {
-                    final int removeSkillId = parseInt(attrs, "id");
-                    skillLearn.addRemoveSkills(removeSkillId);
-                    removeSkillCache.computeIfAbsent(classId, k -> new HashIntSet()).add(removeSkillId);
-                }
-            }
+        for (Node node = skillNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+            parseSkillLearnAttributes(classId, skillLearn, node);
         }
 
+        addToSkillTree(classSkillTree, classId, type, skillLearn);
+    }
+
+    private void addToSkillTree(LongMap<SkillLearn> classSkillTree, ClassId classId, String type, SkillLearn skillLearn) {
         final long skillHashCode = SkillEngine.skillHashCode(skillLearn.getSkillId(), skillLearn.getSkillLevel());
         switch (type) {
             case "classSkillTree" -> {
@@ -194,6 +185,23 @@ public final class SkillTreesData extends GameXmlReader {
             case "heroSkillTree" -> heroSkillTree.put(skillHashCode, skillLearn);
             case "gameMasterSkillTree" -> gameMasterSkillTree.put(skillHashCode, skillLearn);
             default -> LOGGER.warn("Unknown Skill Tree type: {}", type);
+        }
+    }
+
+    private void parseSkillLearnAttributes(ClassId classId, SkillLearn skillLearn, Node node) {
+        var attrs = node.getAttributes();
+
+        switch (node.getNodeName()) {
+            case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
+            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "lvl")));
+            case "race" -> skillLearn.addRace(Race.valueOf(node.getTextContent()));
+            case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(node.getTextContent()));
+            case "social-status" -> skillLearn.setSocialStatus(parseEnum(node, SocialStatus.class));
+            case "removeSkill" -> {
+                final int removeSkillId = parseInt(attrs, "id");
+                skillLearn.addRemoveSkills(removeSkillId);
+                removeSkillCache.computeIfAbsent(classId, k -> new HashIntSet()).add(removeSkillId);
+            }
         }
     }
 

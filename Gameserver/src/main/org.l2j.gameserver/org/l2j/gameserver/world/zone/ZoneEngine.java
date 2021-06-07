@@ -392,22 +392,6 @@ public final class ZoneEngine extends GameXmlReader {
     }
 
     /**
-     * Get zone by ID.
-     *
-     * @param id the id
-     * @return the zone by id
-     * @see #getZoneById(int, Class)
-     */
-    public Zone getZoneById(int id) {
-        for (IntMap<? extends Zone> zones : classZones.values()) {
-            if(zones.containsKey(id)) {
-                return zones.get(id);
-            }
-        }
-        return null;
-    }
-
-    /**
      * Get zone by name.
      *
      * @param name the zone name
@@ -435,6 +419,15 @@ public final class ZoneEngine extends GameXmlReader {
     @SuppressWarnings("unchecked")
     public <T extends Zone> T getZoneById(int id, Class<T> zoneType) {
         return (T) classZones.get(zoneType).get(id);
+    }
+
+    public Zone getZoneById(int id) {
+        for (IntMap<? extends Zone> zones : classZones.values()) {
+            if(zones.containsKey(id)) {
+                return zones.get(id);
+            }
+        }
+        return null;
     }
 
     public <T extends Zone> T findFirstZone(int x, int y, Class<T> zoneClass) {

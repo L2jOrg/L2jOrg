@@ -483,42 +483,10 @@ public class FourSepulchers extends AbstractNpcAI
 	private void tryEnter(Npc npc, Player player)
 	{
 		final int npcId = npc.getId();
-		if (ZoneEngine.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).getPlayersInsideCount() > 0)
-		{
-			showHtmlFile(player, npcId + "-FULL.htm", npc, null);
+		if (isEntranceUnavailable(npc, player, npcId)) {
 			return;
 		}
-		if (!player.isInParty() || (player.getParty().getMemberCount() < PARTY_MEMBER_COUNT))
-		{
-			showHtmlFile(player, npcId + "-SP.html", npc, null);
-			return;
-		}
-		if (!player.getParty().isLeader(player))
-		{
-			showHtmlFile(player, npcId + "-NL.html", npc, null);
-			return;
-		}
-		
-		for (Player mem : player.getParty().getMembers())
-		{
-			final QuestState qs = mem.getQuestState(Q00620_FourGoblets.class.getSimpleName());
-			if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
-			{
-				showHtmlFile(player, npcId + "-NS.html", npc, mem);
-				return;
-			}
-			if (!hasQuestItems(mem, ENTRANCE_PASS))
-			{
-				showHtmlFile(player, npcId + "-SE.html", npc, mem);
-				return;
-			}
-			if (player.getWeightPenalty() >= 3)
-			{
-				mem.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
-				return;
-			}
-		}
-		
+
 		final GlobalVariablesManager vars = GlobalVariablesManager.getInstance();
 		final long var = vars.getLong("FourSepulchers" + npcId, 0) + (TIME_ATTACK * 60 * 1000);
 		if (var > System.currentTimeMillis())
@@ -528,52 +496,12 @@ public class FourSepulchers extends AbstractNpcAI
 		}
 		
 		final int sepulcherId = getSepulcherId(player);
-		
-		// Delete any existing spawns
-		ZoneEngine.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).forEachCreature(creature -> {
-			if (GameUtils.isMonster(creature) || creature.isRaid() || (GameUtils.isNpc(creature) && ((creature.getId() == MYSTERIOUS_CHEST) || (creature.getId() == KEY_CHEST) || (creature.getId() == TELEPORTER))))
-			{
-				creature.deleteMe();
-			}
-		});
 
-		// Disable EffectZones
-		for (int[] spawnInfo : CHEST_SPAWN_LOCATIONS) {
-			if ((spawnInfo[0] == sepulcherId) && (spawnInfo[1] == 4)) {
-				ZoneEngine.getInstance().forEachZone(spawnInfo[2], spawnInfo[3], spawnInfo[4], EffectZone.class, z -> z.setEnabled(false));
-				break;
-			}
-		}
-		// Close all doors
-		for (int[] doorInfo : DOORS)
-		{
-			if (doorInfo[0] == sepulcherId)
-			{
-				closeDoor(doorInfo[2], 0);
-			}
-		}
-		
-		// Teleport players inside
-		final List<Player> members = new ArrayList<>();
-		for (Player mem : player.getParty().getMembers())
-		{
-			if (MathUtil.isInsideRadius3D(player, mem, 700))
-			{
-				members.add(mem);
-			}
-		}
-		for (Player mem : members)
-		{
-			mem.teleToLocation(START_HALL_SPAWNS.get(npcId), 80);
-			takeItems(mem, ENTRANCE_PASS, 1);
-			takeItems(mem, CHAPEL_KEY, -1);
-			if (!hasQuestItems(mem, ANTIQUE_BROOCH))
-			{
-				giveItems(mem, USED_PASS, 1);
-			}
-		}
-		showHtmlFile(player, npcId + "-OK.html", npc, null);
-		
+		cleanUpZone(npcId);
+		disableEffectZones(sepulcherId);
+		closeDoors(sepulcherId);
+		teleportPlayers(npc, player, npcId);
+
 		// Kick all players when/if time is over
 		ThreadPool.schedule(() ->
 		{
@@ -587,7 +515,92 @@ public class FourSepulchers extends AbstractNpcAI
 		// Start
 		startQuestTimer("SPAWN_MYSTERIOUS_CHEST", ENTRY_DELAY * 60 * 1000, npc, player);
 	}
-	
+
+	private void teleportPlayers(Npc npc, Player player, int npcId) {
+		for (Player mem : player.getParty().getMembers())
+		{
+			if (MathUtil.isInsideRadius3D(player, mem, 700)) {
+				mem.teleToLocation(START_HALL_SPAWNS.get(npcId), 80);
+				takeItems(mem, ENTRANCE_PASS, 1);
+				takeItems(mem, CHAPEL_KEY, -1);
+				if (!hasQuestItems(mem, ANTIQUE_BROOCH))
+				{
+					giveItems(mem, USED_PASS, 1);
+				}
+			}
+		}
+		showHtmlFile(player, npcId + "-OK.html", npc, null);
+	}
+
+	private void closeDoors(int sepulcherId) {
+		for (int[] doorInfo : DOORS)
+		{
+			if (doorInfo[0] == sepulcherId)
+			{
+				closeDoor(doorInfo[2], 0);
+			}
+		}
+	}
+
+	private void disableEffectZones(int sepulcherId) {
+		for (int[] spawnInfo : CHEST_SPAWN_LOCATIONS) {
+			if ((spawnInfo[0] == sepulcherId) && (spawnInfo[1] == 4)) {
+				ZoneEngine.getInstance().forEachZone(spawnInfo[2], spawnInfo[3], spawnInfo[4], EffectZone.class, z -> z.setEnabled(false));
+				break;
+			}
+		}
+	}
+
+	private void cleanUpZone(int npcId) {
+		var zone = ZoneEngine.getInstance().getZoneById(MANAGER_ZONES.get(npcId));
+		if(zone != null) {
+			zone.forEachCreature(creature -> {
+				if (GameUtils.isMonster(creature) || creature.isRaid() || (GameUtils.isNpc(creature) && ((creature.getId() == MYSTERIOUS_CHEST) || (creature.getId() == KEY_CHEST) || (creature.getId() == TELEPORTER)))) {
+					creature.deleteMe();
+				}
+			});
+		}
+	}
+
+	private boolean isEntranceUnavailable(Npc npc, Player player, int npcId) {
+		if (ZoneEngine.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).getPlayersInsideCount() > 0)
+		{
+			showHtmlFile(player, npcId + "-FULL.htm", npc, null);
+			return true;
+		}
+		if (!player.isInParty() || (player.getParty().getMemberCount() < PARTY_MEMBER_COUNT))
+		{
+			showHtmlFile(player, npcId + "-SP.html", npc, null);
+			return true;
+		}
+		if (!player.getParty().isLeader(player))
+		{
+			showHtmlFile(player, npcId + "-NL.html", npc, null);
+			return true;
+		}
+
+		for (Player mem : player.getParty().getMembers())
+		{
+			final QuestState qs = mem.getQuestState(Q00620_FourGoblets.class.getSimpleName());
+			if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
+			{
+				showHtmlFile(player, npcId + "-NS.html", npc, mem);
+				return true;
+			}
+			if (!hasQuestItems(mem, ENTRANCE_PASS))
+			{
+				showHtmlFile(player, npcId + "-SE.html", npc, mem);
+				return true;
+			}
+			if (player.getWeightPenalty() >= 3)
+			{
+				mem.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	private void spawnNextWave(Player player)
 	{
 		final int sepulcherId = getSepulcherId(player);

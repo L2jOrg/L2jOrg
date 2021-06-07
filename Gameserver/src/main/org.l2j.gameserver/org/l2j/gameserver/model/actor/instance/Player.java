@@ -71,7 +71,10 @@ import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.*;
+import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -153,8 +156,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
-import static org.l2j.gameserver.util.GameUtils.isPlayable;
-import static org.l2j.gameserver.util.GameUtils.isSummon;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -2648,44 +2650,62 @@ public final class Player extends Playable {
             }
 
             if(template.hasExImmediateEffect()) {
-                final var handler = ItemHandler.getInstance().getHandler(template instanceof EtcItem etcItem ? etcItem : null);
-
-                if (handler == null) {
-                    LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
-                } else {
-                    handler.useItem(this, ItemEngine.getInstance().createTempItem(itemId), false);
-                }
+                useAutoConsumeItem(template);
             } else {
-                item = inventory.addItem(process, itemId, count, this, reference, sendUpdate);
-                if(enchant > 0) {
-                    item.changeEnchantLevel(enchant);
-                }
-
-                // If over capacity, drop the item
-                if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, template.isQuestItem()) && item.isDropable()
-                        && (!item.isStackable() || (item.getLastChange() != ItemChangeType.MODIFIED))) {
-
-                    dropItem("InvDrop", item, null);
-                }
+                item = addItemToInventory(process, itemId, count, enchant, reference, sendUpdate, template);
             }
 
             if (sendMessage) {
-                if (count > 1) {
-                    if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                        sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(template).addLong(count) );
-                    } else {
-                        sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_S2_S1).addItemName(template).addLong(count) );
-                    }
-                } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                    sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(template) );
-                } else if(enchant > 0) {
-                    sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_A_S1_S2).addItemName(template).addInt(enchant));
-                } else {
-                    sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(template) );
-                }
+                sendObtainItemMessage(process, count, enchant, template);
             }
         }
         return item;
+    }
+
+    private Item addItemToInventory(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendUpdate, ItemTemplate template) {
+        Item item;
+        item = inventory.addItem(process, itemId, count, this, reference, sendUpdate);
+        if(enchant > 0) {
+            item.changeEnchantLevel(enchant);
+        }
+
+        // If over capacity, drop the item
+        if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, template.isQuestItem()) && item.isDropable()
+                && (!item.isStackable() || (item.getLastChange() != ItemChangeType.MODIFIED))) {
+
+            dropItem("InvDrop", item, null);
+        }
+        return item;
+    }
+
+    private void useAutoConsumeItem(ItemTemplate template) {
+        final var handler = ItemHandler.getInstance().getHandler(template instanceof EtcItem etcItem ? etcItem : null);
+
+        if (handler == null) {
+            LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
+        } else {
+            handler.useItem(this, ItemEngine.getInstance().createTempItem(template), false);
+        }
+    }
+
+    private void sendObtainItemMessage(String process, long count, int enchant, ItemTemplate template) {
+        SystemMessage message = null;
+        if (count > 1) {
+            SystemMessageId messageId;
+            if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
+                messageId = SystemMessageId.YOU_HAVE_EARNED_S2_S1_S;
+            } else {
+                messageId = YOU_HAVE_OBTAINED_S2_S1;
+            }
+            message = getSystemMessage(messageId).addItemName(template).addLong(count);
+        } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
+            sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(template) );
+        } else if(enchant > 0) {
+            sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_A_S1_S2).addItemName(template).addInt(enchant));
+        } else {
+            sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(template) );
+        }
+        sendPacket(message);
     }
 
     public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
@@ -3636,49 +3656,16 @@ public final class Player extends Playable {
                 onKilledByPlayer(pk);
             }
 
-            // Clear resurrect xp calculation
-            data.setExpBeforeDeath(0);
-            Collection<Item> droppedItems = onDieDropItem(killer);
-            sendPacket(new ExDieInfo(lastDamages, droppedItems));
-
-            final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
-
-            if (!insidePvpZone && (pk != null)) {
-                final Clan pkClan = pk.getClan();
-                if (pkClan != null && clan != null) {
-                    final ClanWar clanWar = clan.getWarWith(pkClan.getId());
-                    if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
-                        clanWar.onKill(pk, this);
-                    }
-                }
-            }
-            // If player is Lucky shouldn't get penalized.
-            if (!isLucky() && !insidePvpZone) {
-                calculateDeathExpPenalty(killer);
-            }
+            applyDeathPenalty(killer, pk);
         }
 
-        if (isMounted()) {
-            stopFeed();
-        }
-        synchronized (this) {
-            if (isFakeDeath()) {
-                stopFakeDeath(true);
-            }
+        if (getReputation() < 0) {
+            final int newRep = getReputation() - (getReputation() / 4);
+            setReputation(newRep < -20 ? newRep : 0);
         }
 
-        // Unsummon Cubics
-        if (!cubics.isEmpty()) {
-            cubics.values().forEach(CubicInstance::deactivate);
-            cubics.clear();
-        }
-
-        if (agathionId != 0) {
-            setAgathionId(0);
-        }
-
-        stopRentPet();
-        stopWaterTask();
+        stopCurrentTasks();
+        notifySummons();
 
         if (hasCharmOfCourage) {
             if (isInSiege()) {
@@ -3689,17 +3676,58 @@ public final class Player extends Playable {
         }
 
         doIfNonNull(getInstanceWorld(), instance -> instance.onDeath(this));
-
         AntiFeedManager.getInstance().setLastDeathTime(getObjectId());
-        // FIXME: Karma reduction temp fix.
-        if (getReputation() < 0) {
-            final int newRep = getReputation() - (getReputation() / 4);
-            setReputation(newRep < -20 ? newRep : 0);
+        return true;
+    }
+
+    private void notifySummons() {
+        if (isMounted()) {
+            stopFeed();
         }
+
+        if (!cubics.isEmpty()) {
+            cubics.values().forEach(CubicInstance::deactivate);
+            cubics.clear();
+        }
+
+        if (agathionId != 0) {
+            setAgathionId(0);
+        }
+
+        stopRentPet();
+    }
+
+    private void stopCurrentTasks() {
+        if (isFakeDeath()) {
+            stopFakeDeath(true);
+        }
+
         if(autoPlaySettings.isActive()) {
             AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
-        return true;
+        stopWaterTask();
+    }
+
+    private void applyDeathPenalty(Creature killer, Player pk) {
+        data.setExpBeforeDeath(0);
+        Collection<Item> droppedItems = deathPenaltyDropItems(killer);
+        sendPacket(new ExDieInfo(lastDamages, droppedItems));
+
+        final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
+
+        if (!insidePvpZone && (pk != null)) {
+            final Clan pkClan = pk.getClan();
+            if (pkClan != null && clan != null) {
+                final ClanWar clanWar = clan.getWarWith(pkClan.getId());
+                if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
+                    clanWar.onKill(pk, this);
+                }
+            }
+        }
+
+        if (!isLucky() && !insidePvpZone) {
+            calculateDeathExpPenalty(killer);
+        }
     }
 
     private void onKilledByPlayer(Player killer) {
@@ -3739,7 +3767,7 @@ public final class Player extends Playable {
         }
     }
 
-    private Collection<Item> onDieDropItem(Creature killer) {
+    private Collection<Item> deathPenaltyDropItems(Creature killer) {
         if (Event.isParticipant(this) || (killer == null)) {
             return Collections.emptyList();
         }
@@ -3750,72 +3778,70 @@ public final class Player extends Playable {
         }
 
         if ( (!isInsideZone(ZoneType.PVP) || isNull(pk)) && (!isGM() || Config.KARMA_DROP_GM)) {
-            boolean isKarmaDrop = false;
-            int dropEquip = 0;
-            int dropEquipWeapon = 0;
-            int rateDropItem = 0;
-            int dropLimit = 0;
-            double dropPercent = 0;
-
-            // Classic calculation.
-            if (isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= Config.KARMA_PK_LIMIT)) {
-                isKarmaDrop = true;
-                dropPercent = Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
-                dropEquip = Config.KARMA_RATE_DROP_EQUIP;
-                dropEquipWeapon = Config.KARMA_RATE_DROP_EQUIP_WEAPON;
-                rateDropItem = Config.KARMA_RATE_DROP_ITEM;
-                dropLimit = Config.KARMA_DROP_LIMIT;
-            } else if (GameUtils.isNpc(killer)) {
-                dropPercent = Config.PLAYER_RATE_DROP * (killer.isRaid() ? getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_RAID, 1) : getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_MOB, 1));
-                dropEquip = Config.PLAYER_RATE_DROP_EQUIP;
-                dropEquipWeapon = Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
-                rateDropItem = Config.PLAYER_RATE_DROP_ITEM;
-                dropLimit = Config.PLAYER_DROP_LIMIT;
-            }
-
-
-            if (Rnd.chance(dropPercent)) {
-                int dropCount = 0;
-                int itemDropPercent;
-
-                for (Item itemDrop : inventory.getItems()) {
-                    // Don't drop
-                    if (itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
-                            !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
-                            (itemDrop.getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
-                            ((pet != null) && (pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
-                            (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
-                            (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
-                            )) {
-                        continue;
-                    }
-
-                    if (itemDrop.isEquipped()) {
-                        // Set proper chance according to Item type of equipped Item
-                        itemDropPercent = itemDrop.getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
-                        inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
-                    } else {
-                        itemDropPercent = rateDropItem; // Item in inventory
-                    }
-
-                    // NOTE: Each time an item is dropped, the chance of another item being dropped gets lesser (dropCount * 2)
-                    if (Rnd.chance(itemDropPercent)) {
-                        dropItem("DieDrop", itemDrop, killer);
-                        if (isKarmaDrop) {
-                            LOGGER.warn("{} has karma and dropped {} {}", this, itemDrop.getCount(), itemDrop);
-                        } else {
-                            LOGGER.warn("{} dropped {} {}", this, itemDrop.getCount(), itemDrop);
-                        }
-
-                        if (++dropCount >= dropLimit) {
-                            break;
-                        }
-                    }
-                }
-            }
+            return onDieDropItems(killer);
         }
 
         return Collections.emptyList();
+    }
+
+    private Collection<Item> onDieDropItems(Creature killer) {
+        var isKarmaDrop = isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= Config.KARMA_PK_LIMIT);
+        var dropPercent = calculateDropPercent(killer, isKarmaDrop);
+
+        if (Rnd.chance(dropPercent)) {
+            int dropEquip = isKarmaDrop ? Config.KARMA_RATE_DROP_EQUIP : Config.PLAYER_RATE_DROP_EQUIP;
+            int dropEquipWeapon = isKarmaDrop ? Config.KARMA_RATE_DROP_EQUIP_WEAPON : Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
+            int rateDropItem = isKarmaDrop ? Config.KARMA_RATE_DROP_ITEM : Config.PLAYER_RATE_DROP_ITEM;
+            int dropLimit = isKarmaDrop ? Config.KARMA_DROP_LIMIT : Config.PLAYER_DROP_LIMIT;
+            int dropCount = 0;
+            int itemDropPercent;
+
+            Collection<Item> droppedItems = new ArrayList<>();
+            for (Item itemDrop : inventory.getItems()) {
+                if (isUndropable(itemDrop)) {
+                    continue;
+                }
+
+                if (itemDrop.isEquipped()) {
+                    itemDropPercent = itemDrop.getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
+                    inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
+                } else {
+                    itemDropPercent = rateDropItem;
+                }
+
+                if (Rnd.chance(itemDropPercent)) {
+                    dropItem("DieDrop", itemDrop, killer);
+                    droppedItems.add(itemDrop);
+                    LOGGER.info("{} has dropped {} {}. With karma {}", this, itemDrop.getCount(), itemDrop, isKarmaDrop);
+                    if (++dropCount >= dropLimit) {
+                        break;
+                    }
+                }
+            }
+            return droppedItems;
+        }
+        return Collections.emptyList();
+    }
+
+    private boolean isUndropable(Item itemDrop) {
+        return itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
+                !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
+                (itemDrop.getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
+                ((pet != null) && (pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
+                (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
+                (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
+                );
+    }
+
+    private double calculateDropPercent(Creature killer, boolean isKarmaDrop) {
+        var dropPercent = 0.;
+        if(isKarmaDrop) {
+            dropPercent =  Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
+        } else if(isNpc(killer)) {
+            var penaltyStat  = killer.isRaid() ? Stat.REDUCE_DEATH_PENALTY_BY_RAID : Stat.REDUCE_DEATH_PENALTY_BY_MOB;
+            dropPercent = Config.PLAYER_RATE_DROP * getStats().getValue(penaltyStat, 1);
+        }
+        return dropPercent;
     }
 
     public void onPlayeableKill(Playable killedPlayable) {
@@ -4422,6 +4448,27 @@ public final class Player extends Playable {
         return success;
     }
 
+    private boolean mount(int petId, int level, int controlObjectId, boolean useFood) {
+        if (!disarmWeapons() || !disarmShield() || isTransformed()) {
+            return false;
+        }
+
+        getEffectList().stopAllToggles();
+        setMount(petId, level);
+        setMountObjectID(controlObjectId);
+        clearPetData();
+        broadcastPacket(new Ride(this));
+        broadcastUserInfo();
+        if (useFood) {
+            startFeed(petId);
+        }
+        return true;
+    }
+
+    public boolean mount(int npcId, int controlItemObjId, boolean useFood) {
+        return mount(npcId, controlItemObjId, getLevel(), useFood);
+    }
+
     private boolean canUnMount() {
         if (mountType == MountType.WYVERN && isInsideZone(ZoneType.NO_LANDING)) {
             sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
@@ -4479,27 +4526,6 @@ public final class Player extends Playable {
             pet.unSummon(this);
         }
         return mounted;
-    }
-
-    private boolean mount(int petId, int level, int controlObjectId, boolean useFood) {
-        if (!disarmWeapons() || !disarmShield() || isTransformed()) {
-            return false;
-        }
-
-        getEffectList().stopAllToggles();
-        setMount(petId, level);
-        setMountObjectID(controlObjectId);
-        clearPetData();
-        broadcastPacket(new Ride(this));
-        broadcastUserInfo();
-        if (useFood) {
-            startFeed(petId);
-        }
-        return true;
-    }
-
-    public boolean mount(int npcId, int controlItemObjId, boolean useFood) {
-        return mount(npcId, controlItemObjId, getLevel(), useFood);
     }
 
     public boolean dismount() {
@@ -5909,7 +5935,6 @@ public final class Player extends Playable {
      * @return true if the player might join/start a duel.
      */
     public boolean canDuel() {
-
         if (isInCombat() || isJailed()) {
             noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
             return false;
@@ -8232,5 +8257,10 @@ public final class Player extends Playable {
             return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
         }
         return 0;
+    }
+
+    @Override
+    protected Queue<AbstractEventListener> globalListenerByType(EventType type) {
+        return Listeners.players().getListeners(type);
     }
 }

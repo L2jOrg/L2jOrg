@@ -60,8 +60,9 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
  */
 public class Fishing {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Fishing.class);
+    private static final Location DEFAULT_BAIT_LOCATION = new Location(0, 0, 0);
     private final Player player;
-    private volatile ILocational baitLocation = new Location(0, 0, 0);
+    private volatile ILocational baitLocation = DEFAULT_BAIT_LOCATION;
     private ScheduledFuture<?> reelInTask;
     private ScheduledFuture<?> startFishingTask;
     private boolean isFishing = false;
@@ -351,7 +352,7 @@ public class Fishing {
         int baitZ = computeBaitZ(player, baitX, baitY, fishingZone, waterZone);
         if (baitZ == Integer.MIN_VALUE) {
             player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
-            return null;
+            return DEFAULT_BAIT_LOCATION;
         }
 
         return new Location(baitX, baitY, baitZ);

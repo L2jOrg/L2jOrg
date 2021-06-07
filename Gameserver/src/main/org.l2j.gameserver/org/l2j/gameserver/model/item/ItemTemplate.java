@@ -23,6 +23,7 @@ import org.l2j.gameserver.enums.ItemGrade;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.events.ListenersContainer;
@@ -454,14 +455,8 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
         skills.add(holder);
     }
 
-    public boolean checkCondition(Creature activeChar, WorldObject object, boolean sendMessage) {
-        // Don't allow hero equipment and restricted items during Olympiad
-        if ((isOlyRestrictedItem() || heroItem) && (isPlayer(activeChar) && activeChar.getActingPlayer().isInOlympiadMode())) {
-            if (isEquipable()) {
-                activeChar.sendPacket(SystemMessageId.YOU_CANNOT_EQUIP_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
-            } else {
-                activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
-            }
+    public boolean checkCondition(Creature creature, WorldObject object, boolean sendMessage) {
+        if (!checkItemRestriction(creature)) {
             return false;
         }
 
@@ -471,33 +466,49 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
 
         final Creature target = isCreature(object) ? (Creature) object : null;
         for (Condition preCondition : _preConditions) {
-            if (preCondition == null) {
-                continue;
-            }
-
-            if (!preCondition.test(activeChar, target, null, null)) {
-                if (isSummon(activeChar)) {
-                    activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
-                    return false;
-                }
-
-                if (sendMessage) {
-                    final String msg = preCondition.getMessage();
-                    final int msgId = preCondition.getMessageId();
-                    if (msg != null) {
-                        activeChar.sendMessage(msg);
-                    } else if (msgId != 0) {
-                        final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
-                        if (preCondition.isAddName()) {
-                            sm.addItemName(id);
-                        }
-                        activeChar.sendPacket(sm);
-                    }
-                }
+            if (failPrecondition(creature, sendMessage, target, preCondition)) {
                 return false;
             }
         }
         return true;
+    }
+
+    private boolean checkItemRestriction(Creature creature) {
+        if ((isOlyRestrictedItem() || heroItem) &&  (creature instanceof Player player && player.isInOlympiadMode())) {
+            if (isEquipable()) {
+                creature.sendPacket(SystemMessageId.YOU_CANNOT_EQUIP_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
+            } else {
+                creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
+            }
+            return false;
+        }
+        return true;
+    }
+
+    private boolean failPrecondition(Creature creature, boolean sendMessage, Creature target, Condition preCondition) {
+        if (!preCondition.test(creature, target, null, null)) {
+            if (isSummon(creature)) {
+                creature.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
+            } else if (sendMessage) {
+                sendPreconditionMessage(creature, preCondition);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    private void sendPreconditionMessage(Creature creature, Condition preCondition) {
+        final String msg = preCondition.getMessage();
+        final int msgId = preCondition.getMessageId();
+        if (msg != null) {
+            creature.sendMessage(msg);
+        } else if (msgId != 0) {
+            final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
+            if (preCondition.isAddName()) {
+                sm.addItemName(id);
+            }
+            creature.sendPacket(sm);
+        }
     }
 
     public boolean isConditionAttached() {

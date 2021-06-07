@@ -65,7 +65,14 @@ public class ZoneCylinderArea implements ZoneArea {
             return true; // cylinder center is inside of rect
         }
 
-        // Collision on any side of the rectangle?
+        if (hasSideCollision(x1, x2, y1, y2)) {
+            return true;
+        }
+
+        return isInsideRadius(x1, y1) || isInsideRadius(x1, y2) || isInsideRadius(x2, y1) || isInsideRadius(x2, y2);
+    }
+
+    private boolean hasSideCollision(int x1, int x2, int y1, int y2) {
         if (centerX > x1 && centerX < x2) {
             if (Math.abs(centerY - y2) < radius) {
                 return true;
@@ -82,8 +89,7 @@ public class ZoneCylinderArea implements ZoneArea {
                 return true;
             }
         }
-
-        return isInsideRadius(x1, y1) || isInsideRadius(x1, y2) || isInsideRadius(x2, y1) || isInsideRadius(x2, y2);
+        return false;
     }
 
     @Override

@@ -44,7 +44,9 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.npc.*;
+import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
@@ -71,6 +73,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Queue;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -1275,5 +1278,10 @@ public class Npc extends Creature {
     @Override
     public int getReputation() {
         return 0;
+    }
+
+    @Override
+    protected Queue<AbstractEventListener> globalListenerByType(EventType type) {
+        return Listeners.Npcs().getListeners(type);
     }
 }

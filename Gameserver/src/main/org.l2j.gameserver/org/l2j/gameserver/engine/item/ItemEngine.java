@@ -374,9 +374,7 @@ public final class ItemEngine extends GameXmlReader {
         return items.get(id);
     }
 
-    public Item createTempItem(int itemId) {
-        var template = items.get(itemId);
-        requireNonNull(template, "The itemId should be a existent template id");
+    public Item createTempItem(ItemTemplate template) {
         var item = new Item(0, template);
         item.setCount(1);
         return item;

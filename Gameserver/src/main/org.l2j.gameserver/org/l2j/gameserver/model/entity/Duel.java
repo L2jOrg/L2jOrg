@@ -570,29 +570,31 @@ public class Duel {
             return DuelResult.TEAM_2_WIN;
         }
 
-        // More end duel conditions for 1on1 duels
-        else if (!_partyDuel) {
-            // Duel was interrupted e.g.: player was attacked by mobs / other players
-            if ((_playerA.getDuelState() == DUELSTATE_INTERRUPTED) || (_playerB.getDuelState() == DUELSTATE_INTERRUPTED)) {
-                return DuelResult.CANCELED;
-            }
+        return checkSingleDuelConditions();
+    }
 
-            // Are the players too far apart?
-            if (!MathUtil.isInsideRadius2D(_playerA,  _playerB, 1600)) {
-                return DuelResult.CANCELED;
-            }
+    private DuelResult checkSingleDuelConditions() {
+        if (!_partyDuel) {
+           // Duel was interrupted e.g.: player was attacked by mobs / other players
+           if ((_playerA.getDuelState() == DUELSTATE_INTERRUPTED) || (_playerB.getDuelState() == DUELSTATE_INTERRUPTED)) {
+               return DuelResult.CANCELED;
+           }
 
-            // Did one of the players engage in PvP combat?
-            if (isDuelistInPvp(true)) {
-                return DuelResult.CANCELED;
-            }
+           // Are the players too far apart?
+           if (!MathUtil.isInsideRadius2D(_playerA,  _playerB, 1600)) {
+               return DuelResult.CANCELED;
+           }
 
-            // is one of the players in a Siege, Peace or PvP zone?
-            if (_playerA.isInsideZone(ZoneType.PEACE) || _playerB.isInsideZone(ZoneType.PEACE) || _playerA.isInsideZone(ZoneType.SIEGE) || _playerB.isInsideZone(ZoneType.SIEGE) || _playerA.isInsideZone(ZoneType.PVP) || _playerB.isInsideZone(ZoneType.PVP)) {
-                return DuelResult.CANCELED;
-            }
-        }
+           // Did one of the players engage in PvP combat?
+           if (isDuelistInPvp(true)) {
+               return DuelResult.CANCELED;
+           }
 
+           // is one of the players in a Siege, Peace or PvP zone?
+           if (_playerA.isInsideZone(ZoneType.PEACE) || _playerB.isInsideZone(ZoneType.PEACE) || _playerA.isInsideZone(ZoneType.SIEGE) || _playerB.isInsideZone(ZoneType.SIEGE) || _playerA.isInsideZone(ZoneType.PVP) || _playerB.isInsideZone(ZoneType.PVP)) {
+               return DuelResult.CANCELED;
+           }
+       }
         return DuelResult.CONTINUE;
     }
 

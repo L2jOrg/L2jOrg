@@ -567,51 +567,37 @@ public final class EffectList {
      * @return the new count of the given {@code BuffInfo}'s category.
      */
     private int increaseDecreaseCount(BuffInfo info, boolean increase) {
-        // If it's a hidden buff, manage hidden buff count.
         if (!info.isInUse()) {
-            if (increase) {
-                hiddenBuffs.incrementAndGet();
-            } else {
-                hiddenBuffs.decrementAndGet();
-            }
+            changeByOne(increase, hiddenBuffs);
         }
 
-        // Update flag for skills being removed on action or damage.
         if (info.getSkill().isRemovedOnAnyActionExceptMove()) {
-            if (increase) {
-                hasBuffsRemovedOnAnyAction.incrementAndGet();
-            } else {
-                hasBuffsRemovedOnAnyAction.decrementAndGet();
-            }
+            changeByOne(increase, hasBuffsRemovedOnAnyAction);
         }
         if (info.getSkill().isRemovedOnDamage()) {
-            if (increase) {
-                hasBuffsRemovedOnDamage.incrementAndGet();
-            } else {
-                hasBuffsRemovedOnDamage.decrementAndGet();
-            }
+            changeByOne(increase, hasBuffsRemovedOnDamage);
         }
 
-        // Increase specific buff count
-        switch (info.getSkill().getBuffType()) {
-            case TRIGGER: {
-                return increase ? triggerBuffCount.incrementAndGet() : triggerBuffCount.decrementAndGet();
-            }
-            case DANCE: {
-                return increase ? danceCount.incrementAndGet() : danceCount.decrementAndGet();
-            }
-            case TOGGLE: {
-                return increase ? toggleCount.incrementAndGet() : toggleCount.decrementAndGet();
-            }
-            case DEBUFF: {
-                return increase ? debuffCount.incrementAndGet() : debuffCount.decrementAndGet();
-            }
-            case BUFF: {
-                return increase ? buffCount.incrementAndGet() : buffCount.decrementAndGet();
-            }
-        }
+        return switch (info.getSkill().getBuffType()) {
+            case TRIGGER -> changeByOneAndGet(increase, triggerBuffCount);
+            case DANCE -> changeByOneAndGet(increase, danceCount);
+            case TOGGLE -> changeByOneAndGet(increase, toggleCount);
+            case DEBUFF -> changeByOneAndGet(increase, debuffCount);
+            case BUFF -> changeByOneAndGet(increase, buffCount);
+            default -> 0;
+        };
+    }
 
-        return 0;
+    private int changeByOneAndGet(boolean increase, AtomicInteger triggerBuffCount) {
+        return increase ? triggerBuffCount.incrementAndGet() : triggerBuffCount.decrementAndGet();
+    }
+
+    private void changeByOne(boolean increase, AtomicInteger hiddenBuffs) {
+        if (increase) {
+            hiddenBuffs.incrementAndGet();
+        } else {
+            hiddenBuffs.decrementAndGet();
+        }
     }
 
     /**
@@ -875,44 +861,19 @@ public final class EffectList {
         final Player player = owner.getActingPlayer();
         if (player != null) {
             final Party party = player.getParty();
-            final Optional<AbnormalStatusUpdate> asu = (isPlayer(owner) && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
-            final Optional<PartySpelled> ps = ((party != null) || isSummon(owner)) ? Optional.of(new PartySpelled(owner)) : Optional.empty();
-            final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
 
-            if (!actives.isEmpty()) {
-                for (BuffInfo info : actives) {
-                    if(info.isInUse()) {
-                        if(info.getSkill().isHealingPotionSkill()) {
-                            shortBuffStatusUpdate(info);
-                        } else {
-                            asu.ifPresent(a -> a.addSkill(info));
-                            if(!info.getSkill().isToggle()) {
-                                ps.ifPresent(p -> p.addSkill(info));
-                            }
-                            os.ifPresent(o -> o.addSkill(info));
-                        }
-                    }
+            final AbnormalStatusUpdate asu = (isPlayer(owner) && !partyOnly) ? new AbnormalStatusUpdate() : null;
+            final PartySpelled ps = (party != null || isSummon(owner)) ? new PartySpelled(owner) : null;
+            final ExOlympiadSpelledInfo os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? new ExOlympiadSpelledInfo(player) : null;
 
-                }
-            }
-
-            asu.ifPresent(owner::sendPacket);
-
-            // Player or summon is in party. Broadcast packet to everyone in the party.
-            if (party != null) {
-                ps.ifPresent(party::broadcastPacket);
-            } else // Not in party, then its a summon info for its owner.
-            {
-                ps.ifPresent(player::sendPacket);
-            }
-
-            // Send icon update to all olympiad observers.
-            if (os.isPresent() && Olympiad.getInstance().isMatchInBattle(player.getOlympiadMatchId())) {
-                Olympiad.getInstance().sendPacketToMatch(player.getOlympiadMatchId(), os.get());
-            }
+            updateActiveEffectIcons(asu, ps, os);
+            sendEffectIconsUpdate(player, party, asu, ps, os);
         }
 
-        // Update effect icons for everyone targeting this owner.
+        notifyListeners();
+    }
+
+    private void notifyListeners() {
         final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(owner);
 
         // @formatter:off
@@ -924,6 +885,44 @@ public final class EffectList {
 
         if (isPlayer(owner) && (owner.getTarget() == owner)) {
             owner.sendPacket(upd);
+        }
+    }
+
+    private void sendEffectIconsUpdate(Player player, Party party, AbnormalStatusUpdate statusUpdate, PartySpelled partySpelled, ExOlympiadSpelledInfo olympiadSpelledInfo) {
+        if(statusUpdate != null) {
+            owner.sendPacket(statusUpdate);
+        }
+
+        if(partySpelled != null) {
+            if(party != null) {
+                party.broadcastPacket(partySpelled);
+            } else {
+                player.sendPacket(partySpelled);
+            }
+        }
+
+        if (olympiadSpelledInfo != null && Olympiad.getInstance().isMatchInBattle(player.getOlympiadMatchId())) {
+            Olympiad.getInstance().sendPacketToMatch(player.getOlympiadMatchId(), olympiadSpelledInfo);
+        }
+    }
+
+    private void updateActiveEffectIcons(AbnormalStatusUpdate statusUpdate, PartySpelled partySpelled, ExOlympiadSpelledInfo olympiadSpelledInfo) {
+        for (BuffInfo info : actives) {
+            if(info.isInUse()) {
+                if(info.getSkill().isHealingPotionSkill()) {
+                    shortBuffStatusUpdate(info);
+                } else {
+                    if(statusUpdate != null) {
+                        statusUpdate.addSkill(info);
+                    }
+                    if(!info.getSkill().isToggle() && partySpelled != null) {
+                        partySpelled.addSkill(info);
+                    }
+                    if(olympiadSpelledInfo != null) {
+                        olympiadSpelledInfo.addSkill(info);
+                    }
+                }
+            }
         }
     }
 
@@ -974,84 +973,68 @@ public final class EffectList {
      * @param broadcast {@code true} sends update packets to observing players, {@code false} doesn't send any packets.
      */
     private void updateEffectList(boolean broadcast) {
-        // Create new empty flags.
-        long flags = 0;
         final Set<AbnormalType> abnormalTypes = EnumSet.noneOf(AbnormalType.class);
-        final Set<AbnormalVisualEffect> abnormalVisualEffects = EnumSet.noneOf(AbnormalVisualEffect.class);
-        final Set<BuffInfo> unhideBuffs = new HashSet<>();
+        final Set<AbnormalVisualEffect> visualEffects = EnumSet.noneOf(AbnormalVisualEffect.class);
+        final Set<BuffInfo> unHideBuffs = new HashSet<>();
 
-        // Recalculate new flags
-        for (BuffInfo info : actives) {
-            if (info != null) {
-                final Skill skill = info.getSkill();
-
-                // Handle hidden buffs. Check if there was such abnormal before so we can continue.
-                if ((hiddenBuffs.get() > 0) && stackedEffects.contains(skill.getAbnormalType())) {
-                    // If incoming buff isnt hidden, remove any hidden buffs with its abnormal type.
-                    if (info.isInUse()) {
-                        unhideBuffs.removeIf(b -> b.isAbnormalType(skill.getAbnormalType()));
-                    }
-                    // If this incoming buff is hidden and its first of its abnormal, or it removes any previous hidden buff with the same or lower abnormal level and add this instead.
-                    else if (!abnormalTypes.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl()))) {
-                        unhideBuffs.add(info);
-                    }
-                }
-
-                // Add the EffectType flag.
-                for (AbstractEffect e : info.getEffects()) {
-                    flags |= e.getEffectFlags();
-                }
-
-                // Add the AbnormalType flag.
-                abnormalTypes.add(skill.getAbnormalType());
-
-                // Add AbnormalVisualEffect flag.
-                if (skill.hasAbnormalVisualEffect()) {
-                    var visual = skill.getAbnormalVisualEffect();
-                    abnormalVisualEffects.addAll(visual); // TODO review : why two lists ?
-                    this.abnormalVisualEffects.addAll(visual);
-                    if (broadcast) {
-                        owner.updateAbnormalVisualEffects();
-                    }
-                }
-            }
-        }
-        // Add passive effect flags.
-        for (BuffInfo info : passives)
-        {
-            if (info != null)
-            {
-                // Add the EffectType flag.
-                for (AbstractEffect e : info.getEffects())
-                {
-                    flags |= e.getEffectFlags();
-                }
-            }
-        }
-
-        // Replace the old flags with the new flags.
-        effectFlags = flags;
+        effectFlags = recalculateEffectFlags(abnormalTypes, visualEffects, unHideBuffs);
         stackedEffects = abnormalTypes;
 
-        // Unhide the selected buffs.
-        unhideBuffs.forEach(b ->
-        {
+        unHideBuffs.forEach(b -> {
             b.setInUse(true);
             hiddenBuffs.decrementAndGet();
         });
 
-        // Recalculate all stats
         owner.getStats().recalculateStats(broadcast);
+        abnormalVisualEffects = visualEffects;
 
         if (broadcast) {
-            // Check if there is change in AbnormalVisualEffect
-            if (!abnormalVisualEffects.containsAll(this.abnormalVisualEffects)) {
-                this.abnormalVisualEffects = abnormalVisualEffects;
-                owner.updateAbnormalVisualEffects();
-            }
-
-            // Send updates to the client
+            owner.updateAbnormalVisualEffects();
             updateEffectIcons(false);
+        }
+    }
+
+    private long recalculateEffectFlags(Set<AbnormalType> abnormalTypes, Set<AbnormalVisualEffect> visualEffects, Set<BuffInfo> unHideBuffs) {
+        long flags = 0;
+        for (BuffInfo info : actives) {
+            if (info != null) {
+                final Skill skill = info.getSkill();
+
+                handleUnHidden(abnormalTypes, unHideBuffs, info, skill);
+
+                for (AbstractEffect e : info.getEffects()) {
+                    flags |= e.getEffectFlags();
+                }
+
+                abnormalTypes.add(skill.getAbnormalType());
+
+                if (skill.hasAbnormalVisualEffect()) {
+                    visualEffects.addAll(skill.getAbnormalVisualEffect());
+                }
+            }
+        }
+
+        for (BuffInfo info : passives) {
+            if (info != null) {
+                for (AbstractEffect e : info.getEffects()) {
+                    flags |= e.getEffectFlags();
+                }
+            }
+        }
+
+        return flags;
+    }
+
+    private void handleUnHidden(Set<AbnormalType> abnormalTypes, Set<BuffInfo> unHideBuffs, BuffInfo info, Skill skill) {
+        if ((hiddenBuffs.get() > 0) && stackedEffects.contains(skill.getAbnormalType())) {
+            // If incoming buff isnt hidden, remove any hidden buffs with its abnormal type.
+            if (info.isInUse()) {
+                unHideBuffs.removeIf(b -> b.isAbnormalType(skill.getAbnormalType()));
+            }
+            // If this incoming buff is hidden and its first of its abnormal, or it removes any previous hidden buff with the same or lower abnormal level and add this instead.
+            else if (!abnormalTypes.contains(skill.getAbnormalType()) || unHideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl()))) {
+                unHideBuffs.add(info);
+            }
         }
     }
 

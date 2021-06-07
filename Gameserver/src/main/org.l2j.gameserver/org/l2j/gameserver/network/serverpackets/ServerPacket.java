@@ -70,8 +70,7 @@ public abstract class ServerPacket extends WritablePacket<GameClient> {
             writeImpl(client, buffer);
             return true;
         } catch (Exception e) {
-            LOGGER.error("[{}] Error writing packet {} to client {}", GameServer.fullVersion, this, client);
-            LOGGER.error(e.getLocalizedMessage(), e);
+            LOGGER.error("[{}] Error writing packet {} to client {}]]", GameServer.fullVersion, this, client, e);
         }
         return false;
     }
