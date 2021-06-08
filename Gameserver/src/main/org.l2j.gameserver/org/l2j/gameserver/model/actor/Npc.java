@@ -50,7 +50,7 @@ import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;

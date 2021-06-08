@@ -28,7 +28,6 @@ import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.skills.CommonSkill;

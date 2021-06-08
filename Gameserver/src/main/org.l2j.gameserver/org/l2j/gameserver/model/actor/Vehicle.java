@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.VehicleStats;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.ZoneEngine;

@@ -708,48 +708,41 @@ public final class EffectList {
         updateEffectList(true);
     }
 
-    private synchronized void addActive(BuffInfo info) {
+    private void addActive(BuffInfo info) {
         final Skill skill = info.getSkill();
 
-        // Cannot add active buff to dead creature. Even in retail if you are dead with Lv. 3 Shillien's Breath, it will disappear instead of going 1 level down.
-        if (info.getEffected().isDead()) {
+        if (!checkAddActiveEffect(info, skill)) {
             return;
         }
 
-        if (blockedAbnormalTypes.contains(skill.getAbnormalType())) {
+        if (hasGreaterEffect(info, skill)) {
             return;
         }
 
-        // Fix for stacking trigger skills
-        if (skill.isTriggeredSkill()) {
-            final BuffInfo triggerInfo = info.getEffected().getEffectList().getBuffInfoBySkillId(skill.getId());
-            if (triggerInfo != null) {
-                if (triggerInfo.getSkill().getLevel() >= skill.getLevel()) {
-                    return;
+        increaseDecreaseCount(info, true);
+
+        if (isLimitExceeded(SkillBuffType.values())) {
+            // Check for each category.
+            for (BuffInfo existingInfo : actives) {
+                if (existingInfo.isInUse() && !skill.is7Signs() && isLimitExceeded(existingInfo.getSkill().getBuffType())) {
+                    remove(existingInfo);
+                }
+
+                // Break further loops if there is no any other limit exceeding.
+                if (!isLimitExceeded(SkillBuffType.values())) {
+                    break;
                 }
             }
         }
 
-        if (info.getEffector() != null) {
-            // Check for debuffs against target.
-            if ((info.getEffector() != info.getEffected()) && skill.isBad()) {
-                // Check if effected is debuff blocked.
-                if ((info.getEffected().isDebuffBlocked() || (info.getEffector().isGM() && !info.getEffector().getAccessLevel().canGiveDamage()))) {
-                    return;
-                }
+        // After removing old buff (same ID) or stacked buff (same abnormal type),
+        // Add the buff to the end of the effect list.
+        actives.add(info);
+        // Initialize effects.
+        info.initializeEffects();
+    }
 
-                if (isPlayer(info.getEffector()) && isPlayer(info.getEffected())  && info.getEffected().isAffected(EffectFlag.DUELIST_FURY) && !info.getEffector().isAffected(EffectFlag.DUELIST_FURY)) {
-                    return;
-                }
-            }
-
-            // Check if buff skills are blocked.
-            if (info.getEffected().isBuffBlocked() && !skill.isBad()) {
-                return;
-            }
-        }
-
-        // Manage effect stacking.
+    private boolean hasGreaterEffect(BuffInfo info, Skill skill) {
         if (hasAbnormalType(skill.getAbnormalType())) {
             for (BuffInfo existingInfo : actives) {
                 final Skill existingSkill = existingInfo.getSkill();
@@ -778,35 +771,50 @@ public final class EffectList {
                         info.setInUse(false);
                     } else // The effect we try to add should be overridden.
                     {
-                        return;
+                        return true;
                     }
                 }
             }
         }
+        return false;
+    }
 
-        // Increase buff count.
-        increaseDecreaseCount(info, true);
+    private boolean checkAddActiveEffect(BuffInfo info, Skill skill) {
+        if (info.getEffected().isDead()) {
+            return false;
+        }
 
-        // Check if any effect limit is exceeded.
-        if (isLimitExceeded(SkillBuffType.values())) {
-            // Check for each category.
-            for (BuffInfo existingInfo : actives) {
-                if (existingInfo.isInUse() && !skill.is7Signs() && isLimitExceeded(existingInfo.getSkill().getBuffType())) {
-                    remove(existingInfo);
-                }
+        if (blockedAbnormalTypes.contains(skill.getAbnormalType())) {
+            return false;
+        }
 
-                // Break further loops if there is no any other limit exceeding.
-                if (!isLimitExceeded(SkillBuffType.values())) {
-                    break;
+        // Fix for stacking trigger skills
+        if (skill.isTriggeredSkill()) {
+            final BuffInfo triggerInfo = info.getEffected().getEffectList().getBuffInfoBySkillId(skill.getId());
+            if (triggerInfo != null) {
+                if (triggerInfo.getSkill().getLevel() >= skill.getLevel()) {
+                    return false;
                 }
             }
         }
 
-        // After removing old buff (same ID) or stacked buff (same abnormal type),
-        // Add the buff to the end of the effect list.
-        actives.add(info);
-        // Initialize effects.
-        info.initializeEffects();
+        if (info.getEffector() != null) {
+            // Check for debuffs against target.
+            if ((info.getEffector() != info.getEffected()) && skill.isBad()) {
+                // Check if effected is debuff blocked.
+                if ((info.getEffected().isDebuffBlocked() || (info.getEffector().isGM() && !info.getEffector().getAccessLevel().canGiveDamage()))) {
+                    return false;
+                }
+
+                if (isPlayer(info.getEffector()) && isPlayer(info.getEffected())  && info.getEffected().isAffected(EffectFlag.DUELIST_FURY) && !info.getEffector().isAffected(EffectFlag.DUELIST_FURY)) {
+                    return false;
+                }
+            }
+
+            // Check if buff skills are blocked.
+            return !info.getEffected().isBuffBlocked() || skill.isBad();
+        }
+        return true;
     }
 
     private void addPassive(BuffInfo info) {

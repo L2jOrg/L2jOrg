@@ -20,7 +20,6 @@ package org.l2j.gameserver.model.actor.stat;
 
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.LevelData;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Party;
@@ -28,8 +27,6 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
@@ -53,10 +50,7 @@ import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStat
 public class PlayerStats extends PlayableStats {
     public static final int MAX_VITALITY_POINTS = 140000;
     public static final int MIN_VITALITY_POINTS = 0;
-    private static final int FANCY_FISHING_ROD_SKILL = 21484;
-    /**
-     * Player's maximum talisman count.
-     */
+
     private final AtomicInteger _talismanSlots = new AtomicInteger();
     private long startingXp;
     private int _vitalityPoints = 0;
@@ -105,21 +99,8 @@ public class PlayerStats extends PlayableStats {
         double bonusSp = 1.;
 
         if (useBonuses) {
-            if (activeChar.isFishing()) {
-                // rod fishing skills
-                final Item rod = activeChar.getActiveWeaponInstance();
-                if ((rod != null) && (rod.getItemType() == WeaponType.FISHING_ROD) && (rod.getTemplate().getAllSkills() != null)) {
-                    for (ItemSkillHolder s : rod.getTemplate().getAllSkills()) {
-                        if (s.getSkill().getId() == FANCY_FISHING_ROD_SKILL) {
-                            bonusExp *= 1.5;
-                            bonusSp *= 1.5;
-                        }
-                    }
-                }
-            } else {
-                bonusExp = getExpBonusMultiplier();
-                bonusSp = getSpBonusMultiplier();
-            }
+            bonusExp = getExpBonusMultiplier();
+            bonusSp = getSpBonusMultiplier();
         }
 
         addToExp *= bonusExp;

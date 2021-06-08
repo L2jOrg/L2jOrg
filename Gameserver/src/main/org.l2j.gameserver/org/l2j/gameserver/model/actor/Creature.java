@@ -63,8 +63,8 @@ import org.l2j.gameserver.model.interfaces.IDeletable;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
@@ -657,7 +657,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 stopMove(getLocation());
             }
 
-            doAttack(target, weaponItem);
+            doAutoAttack(target, weaponItem);
 
             var player = getActingPlayer();
             if (player != null) {
@@ -669,7 +669,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    private void doAttack(Creature target, Weapon weaponItem) {
+    private void doAutoAttack(Creature target, Weapon weaponItem) {
         final WeaponType weaponType = getAttackType();
         final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == BodyPart.TWO_HAND);
         final int timeAtk = Formulas.calculateTimeBetweenAttacks(this, weaponItem);
@@ -2055,6 +2055,22 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return false;
     }
 
+    private void updatePosition(MoveData m, int gameTicks, int zPrev, double dx, double dy, double dz, double distFraction) {
+        if (distFraction > 1) {
+            super.setXYZ(m._xDestination, m._yDestination, m._zDestination);
+        } else {
+            m._xAccurate += dx * distFraction;
+            m._yAccurate += dy * distFraction;
+
+            // Set the position of the Creature to estimated after parcial move
+            super.setXYZ((int) (m._xAccurate), (int) (m._yAccurate), zPrev + (int) ((dz * distFraction) + 0.5));
+        }
+        revalidateZone(false);
+
+        // Set the timer of last position update to now
+        m._moveTimestamp = gameTicks;
+    }
+
     private boolean isPositionAlreadyUpdated(MoveData m) {
         if (m == null) {
             return true;
@@ -2098,22 +2114,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
         return true;
-    }
-
-    private void updatePosition(MoveData m, int gameTicks, int zPrev, double dx, double dy, double dz, double distFraction) {
-        if (distFraction > 1) {
-            super.setXYZ(m._xDestination, m._yDestination, m._zDestination);
-        } else {
-            m._xAccurate += dx * distFraction;
-            m._yAccurate += dy * distFraction;
-
-            // Set the position of the Creature to estimated after parcial move
-            super.setXYZ((int) (m._xAccurate), (int) (m._yAccurate), zPrev + (int) ((dz * distFraction) + 0.5));
-        }
-        revalidateZone(false);
-
-        // Set the timer of last position update to now
-        m._moveTimestamp = gameTicks;
     }
 
     private double calculateDistFraction(MoveData m, int gameTicks, double dx, double dy, double dz) {

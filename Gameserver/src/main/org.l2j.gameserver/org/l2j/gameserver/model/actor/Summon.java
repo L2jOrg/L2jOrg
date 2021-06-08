@@ -40,7 +40,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.PetInventory;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -54,7 +54,6 @@ import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Arrays;
 
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 public abstract class Summon extends Playable {

@@ -43,7 +43,7 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillUse;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.SkillUseHolder;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;

@@ -16,15 +16,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.item;
+package org.l2j.gameserver.engine.item;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.EquipableItem;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -76,7 +79,6 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
     /**
      * @return {@code true} if the weapon is magic, {@code false} otherwise.
      */
-    @Override
     public boolean isMagicWeapon() {
         return magic;
     }

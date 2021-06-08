@@ -69,7 +69,7 @@ public class EventItem implements IItemHandler
 		return used;
 	}
 	
-	private final boolean useBlockCheckerItem(Player castor, Item item)
+	private boolean useBlockCheckerItem(Player castor, Item item)
 	{
 		final int blockCheckerArena = castor.getBlockCheckerArena();
 		if (blockCheckerArena == -1)
@@ -80,7 +80,7 @@ public class EventItem implements IItemHandler
 			return false;
 		}
 		
-		final Skill sk = item.getSkills(ItemSkillType.NORMAL).get(0).getSkill();
+		final Skill sk = item.getFirstSkill(ItemSkillType.NORMAL);
 		if (sk == null)
 		{
 			return false;

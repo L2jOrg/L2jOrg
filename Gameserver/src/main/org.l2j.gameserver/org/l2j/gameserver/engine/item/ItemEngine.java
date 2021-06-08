@@ -141,7 +141,6 @@ public final class ItemEngine extends GameXmlReader {
             var type = parseEnum(attr, ItemSkillType.class, "type");
             item.addSkill(new ItemSkillHolder(parseInt(attr, "id"), parseInt(attr, "level"), type, parseInt(attr, "chance"), parseInt(attr, "value")));
         });
-
     }
 
     private void parseItemStats(ItemTemplate item, Node node) {

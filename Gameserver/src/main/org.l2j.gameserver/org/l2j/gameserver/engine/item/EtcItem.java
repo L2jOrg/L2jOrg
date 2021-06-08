@@ -16,9 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.item;
+package org.l2j.gameserver.engine.item;
 
 import org.l2j.gameserver.model.ExtractableProduct;
+import org.l2j.gameserver.model.item.AutoUseType;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 

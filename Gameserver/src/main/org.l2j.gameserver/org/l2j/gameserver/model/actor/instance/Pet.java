@@ -50,7 +50,7 @@ import org.l2j.gameserver.model.actor.stat.PetStats;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PetInventory;
 import org.l2j.gameserver.model.skills.AbnormalType;

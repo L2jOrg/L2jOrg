@@ -24,13 +24,10 @@ import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
-
-import java.util.List;
 
 import static java.util.Objects.isNull;
 
@@ -60,17 +57,15 @@ public class FishShots implements IItemHandler {
 		
 		player.chargeShot(ShotType.SOULSHOTS, 1.5);
 		player.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
-		final WorldObject oldTarget = player.getTarget();
-		player.setTarget(player);
-		
-		final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-		
-		if (skills == null) {
-			LOGGER.warn("is missing skills!");
+
+		if (!item.hasSkills(ItemSkillType.NORMAL)) {
+			LOGGER.warn("item {} is missing skills!", item);
 			return false;
 		}
-		
-		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, holder.getSkill(), 0), 600));
+
+		final WorldObject oldTarget = player.getTarget();
+		player.setTarget(player);
+		item.forEachSkill(ItemSkillType.NORMAL, s -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, s.getSkill(), 0), 600));
 		player.setTarget(oldTarget);
 		return true;
 	}

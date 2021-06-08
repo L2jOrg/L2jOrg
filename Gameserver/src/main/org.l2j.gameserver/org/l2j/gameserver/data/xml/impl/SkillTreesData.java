@@ -202,6 +202,7 @@ public final class SkillTreesData extends GameXmlReader {
                 skillLearn.addRemoveSkills(removeSkillId);
                 removeSkillCache.computeIfAbsent(classId, k -> new HashIntSet()).add(removeSkillId);
             }
+            default -> LOGGER.warn("Unknown skill learn attribute {}", node.getNodeName());
         }
     }
 

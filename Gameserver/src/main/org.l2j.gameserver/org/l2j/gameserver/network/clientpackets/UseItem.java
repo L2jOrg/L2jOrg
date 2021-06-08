@@ -32,9 +32,8 @@ import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.EtcItem;
+import org.l2j.gameserver.engine.item.EtcItem;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -43,7 +42,6 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
@@ -133,8 +131,7 @@ public final class UseItem extends ClientPacket {
         }
 
         if (!CharacterSettings.allowPKTeleport() && player.getReputation() < 0) {
-            final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-            if (nonNull(skills) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
+            if(item.hasSkills(ItemSkillType.NORMAL, s -> s.hasAnyEffectType(EffectType.TELEPORT))) {
                 return;
             }
         }

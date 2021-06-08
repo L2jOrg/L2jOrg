@@ -38,9 +38,7 @@ import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.engine.geo.GeoEngine;
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.engine.item.ItemChangeType;
-import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.*;
 import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
 import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -2592,6 +2590,22 @@ public final class Player extends Playable {
         return true;
     }
 
+
+    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
+        return addItem(process, itemId, count, enchant, reference, sendMessage, true);
+    }
+
+    /**
+     * @param process     the process name
+     * @param item        the item holder
+     * @param reference   the reference object
+     * @param sendMessage if {@code true} a system message will be sent
+     */
+    public Item addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
+        return addItem(process, item.getId(), item.getCount(), item.getEnchantment(), reference, sendMessage);
+    }
+
+
     /**
      * Adds item to inventory and send a Server->Client InventoryUpdate packet to the Player.
      *
@@ -2706,22 +2720,6 @@ public final class Player extends Playable {
             sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(template) );
         }
         sendPacket(message);
-    }
-
-    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
-        return addItem(process, itemId, count, enchant, reference, sendMessage, true);
-    }
-
-
-
-    /**
-     * @param process     the process name
-     * @param item        the item holder
-     * @param reference   the reference object
-     * @param sendMessage if {@code true} a system message will be sent
-     */
-    public Item addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
-        return addItem(process, item.getId(), item.getCount(), item.getEnchantment(), reference, sendMessage);
     }
 
     /**
@@ -5935,12 +5933,27 @@ public final class Player extends Playable {
      * @return true if the player might join/start a duel.
      */
     public boolean canDuel() {
-        if (isInCombat() || isJailed()) {
-            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
+        if (!checkDuelStatus()) {
             return false;
         }
-        if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2d)) || (getCurrentMp() < (getMaxMp() / 2d)))) {
-            noDuelReason = SystemMessageId.C1_S_HP_OR_MP_IS_BELOW_50_AND_CANNOT_DUEL;
+
+        if (privateStoreType != PrivateStoreType.NONE) {
+            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
+            return false;
+        }
+
+        if (isMounted() || isInBoat()) {
+            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
+            return false;
+        }
+
+        return checkDuelActivities();
+    }
+
+    private boolean checkDuelActivities() {
+        if (isOnEvent()) // custom event message
+        {
+            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
             return false;
         }
         if (isInDuel || startingDuel) {
@@ -5951,26 +5964,25 @@ public final class Player extends Playable {
             noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS;
             return false;
         }
-        if (isOnEvent()) // custom event message
-        {
-            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
-            return false;
-        }
 
-        if (privateStoreType != PrivateStoreType.NONE) {
-            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
-            return false;
-        }
-        if (isMounted() || isInBoat()) {
-            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
-            return false;
-        }
         if (isFishing()) {
             noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING;
             return false;
         }
         if (isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.PEACE) || isInsideZone(ZoneType.SIEGE)) {
             noDuelReason = SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL;
+            return false;
+        }
+        return true;
+    }
+
+    private boolean checkDuelStatus() {
+        if (isInCombat() || isJailed()) {
+            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
+            return false;
+        }
+        if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2d)) || (getCurrentMp() < (getMaxMp() / 2d)))) {
+            noDuelReason = SystemMessageId.C1_S_HP_OR_MP_IS_BELOW_50_AND_CANNOT_DUEL;
             return false;
         }
         return true;

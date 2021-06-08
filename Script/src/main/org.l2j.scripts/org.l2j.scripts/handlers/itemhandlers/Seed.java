@@ -80,26 +80,19 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final org.l2j.gameserver.model.Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
-		if (seed == null)
-		{
+		final var seed = CastleManorManager.getInstance().getSeed(item.getId());
+		if (seed == null) {
 			return false;
 		}
 		
 		final Castle taxCastle = target.getTaxCastle();
-		if ((taxCastle == null) || (seed.getCastleId() != taxCastle.getId()))
-		{
+		if (taxCastle == null || seed.getCastleId() != taxCastle.getId()) {
 			playable.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 			return false;
 		}
 		
-		final Player activeChar = playable.getActingPlayer();
-		
-		final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-		if (skills != null)
-		{
-			skills.forEach(holder -> activeChar.useSkill(holder.getSkill(), item, false, false));
-		}
+		final Player player = playable.getActingPlayer();
+		item.forEachSkill(ItemSkillType.NORMAL, holder -> player.useSkill(holder.getSkill(), item, false, false));
 		return true;
 	}
 }

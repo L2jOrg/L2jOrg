@@ -50,16 +50,12 @@ public class PetFood implements IItemHandler
 			playable.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 			return false;
 		}
-		
-		final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-		if (skills != null)
-		{
-			skills.forEach(holder -> useFood(playable, holder.getSkillId(), holder.getLevel(), item));
-		}
+
+		item.forEachSkill(ItemSkillType.NORMAL, s -> useFood(playable, s.getSkillId(), s.getLevel(), item));
 		return true;
 	}
 	
-	private boolean useFood(Playable activeChar, int skillId, int skillLevel, Item item)
+	private void useFood(Playable activeChar, int skillId, int skillLevel, Item item)
 	{
 		final Skill skill = SkillEngine.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)
@@ -76,7 +72,6 @@ public class PetFood implements IItemHandler
 					{
 						pet.sendPacket(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
 					}
-					return true;
 				}
 			}
 			else if (isPlayer(activeChar))
@@ -91,7 +86,6 @@ public class PetFood implements IItemHandler
 						{
 							player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
 							skill.applyEffects(player, player);
-							return true;
 						}
 					}
 				}
@@ -100,6 +94,5 @@ public class PetFood implements IItemHandler
 				player.sendPacket(sm);
 			}
 		}
-		return false;
 	}
 }

@@ -72,6 +72,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
@@ -538,7 +539,7 @@ public final class Item extends WorldObject {
     }
 
     private boolean hasPassiveSkills() {
-        return (template.getItemType() == EtcItemType.RUNE || template.getItemType() == EtcItemType.NONE) && (data.getLoc() == ItemLocation.INVENTORY) && (data.getOwnerId() > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
+        return (template.getItemType() == EtcItemType.RUNE || template.getItemType() == EtcItemType.NONE) && (data.getLoc() == ItemLocation.INVENTORY) && (data.getOwnerId() > 0) && (template.hasSkill(ItemSkillType.NORMAL));
     }
 
     public void onBypassFeedback(Player player, String command) {
@@ -817,7 +818,7 @@ public final class Item extends WorldObject {
     }
 
     public int getSharedReuseGroup() {
-        return template.getSharedReuseGroup();
+        return template.getReuseGroup();
     }
 
     public ItemChangeType getLastChange() {
@@ -993,6 +994,22 @@ public final class Item extends WorldObject {
 
     public List<ItemSkillHolder> getSkills(ItemSkillType type) {
         return template.getSkills(type);
+    }
+
+    public Skill getFirstSkill(ItemSkillType type) {
+        return template.getFirstSkill(type);
+    }
+
+    public Skill getFirstSkill(ItemSkillType type, Comparator<ItemSkillHolder> comparator) {
+        return template.getFirstSkill(type, comparator);
+    }
+
+    public boolean hasSkills(ItemSkillType type) {
+        return template.hasSkill(type);
+    }
+
+    public boolean hasSkills(ItemSkillType type, Predicate<Skill> predicate) {
+        return template.hasSkill(type, predicate);
     }
 
     public boolean isSelfResurrection() {
