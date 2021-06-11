@@ -3454,10 +3454,10 @@ public final class Player extends Playable {
     }
 
     private boolean checkItemOwnerProtection(Item target) {
-        if (!target.getDropProtection().tryPickUp(this) || (isInvulnerable() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS))) {
+        if (!(target.getDropProtection().tryPickUp(this) || isInLooterParty(target.getOwnerId()) )) {
            return false;
         }
-        return isInLooterParty(target.getOwnerId());
+        return !isInvulnerable() || canOverrideCond(PcCondOverride.ITEM_CONDITIONS);
     }
 
     private void broadcastPickUpEquipment(Item target) {

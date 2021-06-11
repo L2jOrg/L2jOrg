@@ -398,24 +398,7 @@ public final class ItemEngine extends GameXmlReader {
 
         final Item item = new Item(IdFactory.getInstance().getNextId(), template);
 
-        // TODO Extract this block
-        if (process.equalsIgnoreCase("loot") && !CharacterSettings.isAutoLoot(itemId)) {
-            ScheduledFuture<?> itemLootShedule;
-            if ((reference instanceof Attackable) && ((Attackable) reference).isRaid()) // loot privilege for raids
-            {
-                final Attackable raid = (Attackable) reference;
-                // if in CommandChannel and was killing a World/RaidBoss
-                if ((raid.getFirstCommandChannelAttacked() != null) && !CharacterSettings.autoLootRaid()) {
-                    item.changeOwner(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), CharacterSettings.raidLootPrivilegeTime());
-                    item.setItemLootShedule(itemLootShedule);
-                }
-            } else if (!CharacterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
-                item.changeOwner(actor.getObjectId());
-                itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
-                item.setItemLootShedule(itemLootShedule);
-            }
-        }
+        scheduleDropProtection(process, itemId, actor, reference, item);
 
         World.getInstance().addObject(item);
 
@@ -433,6 +416,23 @@ public final class ItemEngine extends GameXmlReader {
 
         EventDispatcher.getInstance().notifyEventAsync(new OnItemCreate(process, item, actor, reference), item.getTemplate());
         return item;
+    }
+
+    private void scheduleDropProtection(String process, int itemId, Creature actor, Object reference, Item item) {
+        if (process.equalsIgnoreCase("loot") && !CharacterSettings.isAutoLoot(itemId)) {
+            ScheduledFuture<?> itemLootShedule;
+            if ((reference instanceof final Attackable raid) && ((Attackable) reference).isRaid()) { // loot privilege for raids
+                if ((raid.getFirstCommandChannelAttacked() != null) && !CharacterSettings.autoLootRaid()) {
+                    item.changeOwner(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
+                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), CharacterSettings.raidLootPrivilegeTime());
+                    item.setItemLootShedule(itemLootShedule);
+                }
+            } else if (!CharacterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
+                item.changeOwner(actor.getObjectId());
+                itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
+                item.setItemLootShedule(itemLootShedule);
+            }
+        }
     }
 
     private void auditGM(String process, int itemId, long count, Creature actor, Object reference, Item item) {

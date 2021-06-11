@@ -750,33 +750,35 @@ public final class EffectList {
                 // Effects with no abnormal don't stack if their ID is the same. Effects of the same abnormal type don't stack.
                 if ((skill.getAbnormalType().isNone() && (existingSkill.getId() == skill.getId())) || (!skill.getAbnormalType().isNone() && (existingSkill.getAbnormalType() == skill.getAbnormalType()))) {
                     // Check if there is subordination abnormal. Skills with subordination abnormal stack with each other, unless the caster is the same.
-                    if (!skill.getSubordinationAbnormalType().isNone() && (skill.getSubordinationAbnormalType() == existingSkill.getSubordinationAbnormalType())) {
-                        if ((info.getEffectorObjectId() == 0) || (existingInfo.getEffectorObjectId() == 0) || (info.getEffectorObjectId() != existingInfo.getEffectorObjectId())) {
-                            continue;
-                        }
+                    if (isAbnormalSubordination(info, skill, existingInfo, existingSkill)) {
+                        continue;
                     }
 
                     // The effect we are adding overrides the existing effect. Delete or disable the existing effect.
                     if (skill.getAbnormalLvl() >= existingSkill.getAbnormalLvl()) {
-                        // If it is an herb, set as not in use the lesser buff, unless it is the same skill.
-                        if ((skill.isAbnormalInstant() || existingSkill.isIrreplacableBuff()) && (skill.getId() != existingSkill.getId())) {
-                            existingInfo.setInUse(false);
-                            hiddenBuffs.incrementAndGet();
-                        } else {
-                            // Remove effect that gets overridden.
-                            remove(existingInfo);
-                        }
-                    } else if (skill.isIrreplacableBuff()) // The effect we try to add should be hidden.
-                    {
+                        disableOrRemoveEffect(skill, existingInfo, existingSkill);
+                    } else if (skill.isIrreplacableBuff()) {
                         info.setInUse(false);
-                    } else // The effect we try to add should be overridden.
-                    {
+                    } else {
                         return true;
                     }
                 }
             }
         }
         return false;
+    }
+
+    private boolean isAbnormalSubordination(BuffInfo info, Skill skill, BuffInfo existingInfo, Skill existingSkill) {
+        return !skill.getSubordinationAbnormalType().isNone() && (skill.getSubordinationAbnormalType() == existingSkill.getSubordinationAbnormalType()) && ((info.getEffectorObjectId() == 0) || (existingInfo.getEffectorObjectId() == 0) || (info.getEffectorObjectId() != existingInfo.getEffectorObjectId()));
+    }
+
+    private void disableOrRemoveEffect(Skill skill, BuffInfo existingInfo, Skill existingSkill) {
+        if ((skill.isAbnormalInstant() || existingSkill.isIrreplacableBuff()) && (skill.getId() != existingSkill.getId())) {
+            existingInfo.setInUse(false);
+            hiddenBuffs.incrementAndGet();
+        } else {
+            remove(existingInfo);
+        }
     }
 
     private boolean checkAddActiveEffect(BuffInfo info, Skill skill) {
@@ -788,33 +790,33 @@ public final class EffectList {
             return false;
         }
 
-        // Fix for stacking trigger skills
-        if (skill.isTriggeredSkill()) {
-            final BuffInfo triggerInfo = info.getEffected().getEffectList().getBuffInfoBySkillId(skill.getId());
-            if (triggerInfo != null) {
-                if (triggerInfo.getSkill().getLevel() >= skill.getLevel()) {
-                    return false;
-                }
-            }
+        if (skill.isTriggeredSkill() && hasGreaterTriggeredSkill(info, skill)) {
+            return false;
         }
 
         if (info.getEffector() != null) {
-            // Check for debuffs against target.
-            if ((info.getEffector() != info.getEffected()) && skill.isBad()) {
-                // Check if effected is debuff blocked.
-                if ((info.getEffected().isDebuffBlocked() || (info.getEffector().isGM() && !info.getEffector().getAccessLevel().canGiveDamage()))) {
-                    return false;
-                }
-
-                if (isPlayer(info.getEffector()) && isPlayer(info.getEffected())  && info.getEffected().isAffected(EffectFlag.DUELIST_FURY) && !info.getEffector().isAffected(EffectFlag.DUELIST_FURY)) {
-                    return false;
-                }
+            if (!checkTarget(info, skill)) {
+                return false;
             }
-
-            // Check if buff skills are blocked.
             return !info.getEffected().isBuffBlocked() || skill.isBad();
         }
         return true;
+    }
+
+    private boolean checkTarget(BuffInfo info, Skill skill) {
+        if ((info.getEffector() != info.getEffected()) && skill.isBad()) {
+            if ((info.getEffected().isDebuffBlocked() || (info.getEffector().isGM() && !info.getEffector().getAccessLevel().canGiveDamage()))) {
+                return false;
+            }
+            return !isPlayer(info.getEffector()) || !isPlayer(info.getEffected()) || !info.getEffected().isAffected(EffectFlag.DUELIST_FURY) || info.getEffector().isAffected(EffectFlag.DUELIST_FURY);
+        }
+
+        return true;
+    }
+
+    private boolean hasGreaterTriggeredSkill(BuffInfo info, Skill skill) {
+        final BuffInfo triggerInfo = info.getEffected().getEffectList().getBuffInfoBySkillId(skill.getId());
+        return triggerInfo != null && triggerInfo.getSkill().getLevel() >= skill.getLevel();
     }
 
     private void addPassive(BuffInfo info) {
