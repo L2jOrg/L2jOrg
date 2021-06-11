@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;

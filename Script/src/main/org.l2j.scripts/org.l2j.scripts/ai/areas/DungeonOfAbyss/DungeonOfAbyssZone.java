@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -34,15 +34,15 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class DungeonOfAbyssZone extends AbstractNpcAI
 {
-	private static final Zone ABYSS_WEST_ZONE_1 = ZoneManager.getInstance().getZoneByName("The West Dungeon of Abyss");
-	private static final Zone ABYSS_WEST_ZONE_2 = ZoneManager.getInstance().getZoneByName("The West Dungeon of Abyss 2nd");
-	private static final Zone ABYSS_EAST_ZONE_3 = ZoneManager.getInstance().getZoneByName("The East Dungeon of Abyss");
-	private static final Zone ABYSS_EAST_ZONE_4 = ZoneManager.getInstance().getZoneByName("The East Dungeon of Abyss 2nd");
+	private static final Zone ABYSS_WEST_ZONE_1 = ZoneEngine.getInstance().getZoneByName("The West Dungeon of Abyss");
+	private static final Zone ABYSS_WEST_ZONE_2 = ZoneEngine.getInstance().getZoneByName("The West Dungeon of Abyss 2nd");
+	private static final Zone ABYSS_EAST_ZONE_3 = ZoneEngine.getInstance().getZoneByName("The East Dungeon of Abyss");
+	private static final Zone ABYSS_EAST_ZONE_4 = ZoneEngine.getInstance().getZoneByName("The East Dungeon of Abyss 2nd");
 	
-	private static final Zone ABYSS_WEST_ZONE_BOSS_1 = ZoneManager.getInstance().getZoneByName("The West Dungeon of Abyss Boss Room");
-	private static final Zone ABYSS_WEST_ZONE_BOSS_2 = ZoneManager.getInstance().getZoneByName("The West Dungeon of Abyss 2nd Boss Room");
-	private static final Zone ABYSS_EAST_ZONE_BOSS_3 = ZoneManager.getInstance().getZoneByName("The East Dungeon of Abyss Boss Room");
-	private static final Zone ABYSS_EAST_ZONE_BOSS_4 = ZoneManager.getInstance().getZoneByName("The East Dungeon of Abyss 2nd Boss Room");
+	private static final Zone ABYSS_WEST_ZONE_BOSS_1 = ZoneEngine.getInstance().getZoneByName("The West Dungeon of Abyss Boss Room");
+	private static final Zone ABYSS_WEST_ZONE_BOSS_2 = ZoneEngine.getInstance().getZoneByName("The West Dungeon of Abyss 2nd Boss Room");
+	private static final Zone ABYSS_EAST_ZONE_BOSS_3 = ZoneEngine.getInstance().getZoneByName("The East Dungeon of Abyss Boss Room");
+	private static final Zone ABYSS_EAST_ZONE_BOSS_4 = ZoneEngine.getInstance().getZoneByName("The East Dungeon of Abyss 2nd Boss Room");
 	
 	private static final int EXIT_TIME = 60 * 60 * 1000; // 60 minute
 	private static final int EXIT_TIME_BOSS_ROOM = 30 * 60 * 1000; // 60 minute

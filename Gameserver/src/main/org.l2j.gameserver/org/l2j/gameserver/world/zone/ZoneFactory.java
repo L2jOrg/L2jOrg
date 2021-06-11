@@ -16,35 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.world.zone.type;
+package org.l2j.gameserver.world.zone;
 
-import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneType;
-
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.w3c.dom.Node;
 
 /**
- * A landing zone
- *
- * @author Kerberos
+ * @author JoeAlisson
  */
-public class LandingZone extends Zone {
-    public LandingZone(int id) {
-        super(id);
-    }
+public interface ZoneFactory  {
 
-    @Override
-    protected void onEnter(Creature creature) {
-        if (isPlayer(creature)) {
-            creature.setInsideZone(ZoneType.LANDING, true);
-        }
-    }
+    Zone create(int id, Node zoneNode, GameXmlReader reader);
 
-    @Override
-    protected void onExit(Creature creature) {
-        if (isPlayer(creature)) {
-            creature.setInsideZone(ZoneType.LANDING, false);
-        }
-    }
+    String type();
 }

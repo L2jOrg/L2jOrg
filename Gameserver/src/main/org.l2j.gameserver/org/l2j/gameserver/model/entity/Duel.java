@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.DuelResult;
@@ -33,18 +32,14 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.MathUtil;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-
 
 public class Duel {
     public static final int DUELSTATE_NODUEL = 0;
@@ -359,22 +354,15 @@ public class Duel {
         }
 
         final int instanceId = DuelManager.getInstance().getDuelArena();
-        final OlympiadStadiumZone zone = ZoneManager.getInstance().getAllZones(OlympiadStadiumZone.class) //
-                .stream().filter(z -> z.getInstanceTemplateId() == instanceId).findFirst().orElse(null);
-
-        if (zone == null) {
-            throw new RuntimeException("Unable to find a party duel arena!");
-        }
-
-        final List<Location> spawns = zone.getSpawns();
         _duelInstance = InstanceManager.getInstance().createInstance(instanceId, null);
 
-        final Location spawn1 = spawns.get(Rnd.get(spawns.size() / 2));
+        var spawns = _duelInstance.getEnterLocations();
+        final Location spawn1 = spawns.get(0);
         for (Player temp : _playerA.getParty().getMembers()) {
             temp.teleToLocation(spawn1.getX(), spawn1.getY(), spawn1.getZ(), 0, 0, _duelInstance);
         }
 
-        final Location spawn2 = spawns.get(Rnd.get(spawns.size() / 2, spawns.size()));
+        final Location spawn2 = spawns.get(1);
         for (Player temp : _playerB.getParty().getMembers()) {
             temp.teleToLocation(spawn2.getX(), spawn2.getY(), spawn2.getZ(), 0, 0, _duelInstance);
         }
@@ -582,29 +570,31 @@ public class Duel {
             return DuelResult.TEAM_2_WIN;
         }
 
-        // More end duel conditions for 1on1 duels
-        else if (!_partyDuel) {
-            // Duel was interrupted e.g.: player was attacked by mobs / other players
-            if ((_playerA.getDuelState() == DUELSTATE_INTERRUPTED) || (_playerB.getDuelState() == DUELSTATE_INTERRUPTED)) {
-                return DuelResult.CANCELED;
-            }
+        return checkSingleDuelConditions();
+    }
 
-            // Are the players too far apart?
-            if (!MathUtil.isInsideRadius2D(_playerA,  _playerB, 1600)) {
-                return DuelResult.CANCELED;
-            }
+    private DuelResult checkSingleDuelConditions() {
+        if (!_partyDuel) {
+           // Duel was interrupted e.g.: player was attacked by mobs / other players
+           if ((_playerA.getDuelState() == DUELSTATE_INTERRUPTED) || (_playerB.getDuelState() == DUELSTATE_INTERRUPTED)) {
+               return DuelResult.CANCELED;
+           }
 
-            // Did one of the players engage in PvP combat?
-            if (isDuelistInPvp(true)) {
-                return DuelResult.CANCELED;
-            }
+           // Are the players too far apart?
+           if (!MathUtil.isInsideRadius2D(_playerA,  _playerB, 1600)) {
+               return DuelResult.CANCELED;
+           }
 
-            // is one of the players in a Siege, Peace or PvP zone?
-            if (_playerA.isInsideZone(ZoneType.PEACE) || _playerB.isInsideZone(ZoneType.PEACE) || _playerA.isInsideZone(ZoneType.SIEGE) || _playerB.isInsideZone(ZoneType.SIEGE) || _playerA.isInsideZone(ZoneType.PVP) || _playerB.isInsideZone(ZoneType.PVP)) {
-                return DuelResult.CANCELED;
-            }
-        }
+           // Did one of the players engage in PvP combat?
+           if (isDuelistInPvp(true)) {
+               return DuelResult.CANCELED;
+           }
 
+           // is one of the players in a Siege, Peace or PvP zone?
+           if (_playerA.isInsideZone(ZoneType.PEACE) || _playerB.isInsideZone(ZoneType.PEACE) || _playerA.isInsideZone(ZoneType.SIEGE) || _playerB.isInsideZone(ZoneType.SIEGE) || _playerA.isInsideZone(ZoneType.PVP) || _playerB.isInsideZone(ZoneType.PVP)) {
+               return DuelResult.CANCELED;
+           }
+       }
         return DuelResult.CONTINUE;
     }
 

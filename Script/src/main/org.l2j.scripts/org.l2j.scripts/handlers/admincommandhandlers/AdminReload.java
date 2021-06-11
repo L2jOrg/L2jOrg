@@ -37,7 +37,7 @@ import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 
 import java.util.StringTokenizer;
 
@@ -147,7 +147,7 @@ public class AdminReload implements IAdminCommandHandler {
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Doors.");
             }
             case "zone" -> {
-                ZoneManager.getInstance().reload();
+                ZoneEngine.getInstance().reload();
                 AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Zones.");
             }
             case "crest" -> {

@@ -31,7 +31,7 @@ import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.ClanHallZone;
@@ -59,7 +59,7 @@ public class RegenMPFinalizer implements IStatsFunction {
             final Player player = creature.getActingPlayer();
 
             if (player.isInsideZone(ZoneType.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0)) {
-                final ClanHallZone zone = ZoneManager.getInstance().getZone(player, ClanHallZone.class);
+                final ClanHallZone zone = ZoneEngine.getInstance().findFirstZone(player, ClanHallZone.class);
                 final int posChIndex = zone == null ? -1 : zone.getResidenceId();
                 final int clanHallIndex = player.getClan().getHideoutId();
                 if ((clanHallIndex > 0) && (clanHallIndex == posChIndex)) {
@@ -74,7 +74,7 @@ public class RegenMPFinalizer implements IStatsFunction {
             }
 
             if (player.isInsideZone(ZoneType.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0)) {
-                final CastleZone zone = ZoneManager.getInstance().getZone(player, CastleZone.class);
+                final CastleZone zone = ZoneEngine.getInstance().findFirstZone(player, CastleZone.class);
                 final int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
                 final int castleIndex = player.getClan().getCastleId();
                 if ((castleIndex > 0) && (castleIndex == posCastleIndex)) {
@@ -90,7 +90,7 @@ public class RegenMPFinalizer implements IStatsFunction {
 
             // Mother Tree effect is calculated at last'
             if (player.isInsideZone(ZoneType.MOTHER_TREE)) {
-                final MotherTreeZone zone = ZoneManager.getInstance().getZone(player, MotherTreeZone.class);
+                final MotherTreeZone zone = ZoneEngine.getInstance().findFirstZone(player, MotherTreeZone.class);
                 final int mpBonus = zone == null ? 0 : zone.getMpRegenBonus();
                 baseValue += mpBonus;
             }

@@ -52,7 +52,6 @@ import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.*;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.events.returns.DamageReturn;
@@ -64,8 +63,8 @@ import org.l2j.gameserver.model.interfaces.IDeletable;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
@@ -82,7 +81,7 @@ import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldRegion;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.l2j.gameserver.world.zone.ZoneType;
 
@@ -387,10 +386,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      */
     public void onDecay() {
         decayMe();
-        final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
-        if (region != null) {
-            region.removeFromZones(this);
-        }
+        ZoneEngine.getInstance().removeFromZones(this);
 
         // Removes itself from the summoned list.
         if ((summoner != null)) {
@@ -637,47 +633,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
         try {
-            if (isNull(target) || (isAttackingDisabled() && !GameUtils.isSummon(this)) || !target.isTargetable()) {
-                return;
-            }
-
-            if (!isAlikeDead()) {
-                if ((GameUtils.isNpc(this) && target.isAlikeDead()) || !isInSurroundingRegion(target) || target.isDead()) {
-                    getAI().setIntention(AI_INTENTION_ACTIVE);
-                    sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                }
-
-                if (checkTransformed(transformation -> !transformation.canAttack())) {
-                    sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                }
-            }
-
-            var player = getActingPlayer();
-            if (nonNull(player)) {
-                if (player.isInObserverMode()) {
-                    sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-                    sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                } else if (player.isSiegeFriend(target)) {
-                    sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
-                    sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                } else if (target.isInsidePeaceZone(player)) { // Checking if target has moved to peace zone
-                    getAI().setIntention(AI_INTENTION_ACTIVE);
-                    sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                }
-            } else if (isInsidePeaceZone(this, target)) {
-                getAI().setIntention(AI_INTENTION_ACTIVE);
+            if (!canAutoAttack(target)) {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
 
             stopEffectsOnAction();
 
-            // GeoData Los Check here (or dz > 1000)
             if (!GeoEngine.getInstance().canSeeTarget(this, target)) {
                 getAI().setIntention(AI_INTENTION_ACTIVE);
                 sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
@@ -685,70 +647,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 return;
             }
 
-            // BOW and CROSSBOW checks
             final Weapon weaponItem = getActiveWeaponItem();
-            if (nonNull(weaponItem)) {
-                if (!weaponItem.isAttackWeapon()) {
-                    if (weaponItem.getItemType() == WeaponType.FISHING_ROD) {
-                        sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
-                    } else {
-                        sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
-                    }
-                    sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                }
-
-                if (weaponItem.getItemType().isRanged() && !checkRangedAttackCondition(weaponItem, target)) {
-                    sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                }
+            if (!checkAttackWeapon(target, weaponItem)) {
+                sendPacket(ActionFailed.STATIC_PACKET);
+                return;
             }
 
-            // Mobius: Do not move when attack is launched.
             if (isMoving()) {
                 stopMove(getLocation());
             }
 
-            final WeaponType weaponType = getAttackType();
-            final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == BodyPart.TWO_HAND);
-            final int timeAtk = Formulas.calculateTimeBetweenAttacks(this, weaponItem);
-            final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
-            attackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(timeAtk);
+            doAutoAttack(target, weaponItem);
 
-            setHeading(calculateHeadingFrom(this, target));
-
-            final Attack attack = generateAttackTargetData(target, weaponItem, weaponType);
-            boolean crossbow = false;
-            switch (weaponType) {
-                case CROSSBOW:
-                case TWO_HAND_CROSSBOW:
-                    crossbow = true;
-                case BOW: {
-                    onStartRangedAttack(crossbow, timeAtk);
-                    hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
-                    break;
-                }
-                case DUAL:
-                case FIST:
-                case DUAL_BLUNT:
-                case DUAL_DAGGER: {
-                    final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
-                    hitTask = ThreadPool.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
-                    break;
-                }
-                default: {
-                    hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
-                    break;
-                }
-            }
-
-            // If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack
-            // to the Creature AND to all Player in the _KnownPlayers of the Creature
-            if (attack.hasHits()) {
-                broadcastPacket(attack);
-            }
-
-            // Flag the attacker if it's a Player outside a PvP area
+            var player = getActingPlayer();
             if (player != null) {
                 AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
                 player.updatePvPStatus(target);
@@ -756,6 +667,99 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         } finally {
             attackLock.unlockWrite(stamp);
         }
+    }
+
+    private void doAutoAttack(Creature target, Weapon weaponItem) {
+        final WeaponType weaponType = getAttackType();
+        final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == BodyPart.TWO_HAND);
+        final int timeAtk = Formulas.calculateTimeBetweenAttacks(this, weaponItem);
+        final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
+        attackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(timeAtk);
+
+        setHeading(calculateHeadingFrom(this, target));
+
+        final Attack attack = generateAttackTargetData(target, weaponItem, weaponType);
+        boolean crossbow = false;
+        switch (weaponType) {
+            case CROSSBOW:
+            case TWO_HAND_CROSSBOW:
+                crossbow = true;
+            case BOW: {
+                onStartRangedAttack(crossbow, timeAtk);
+                hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+                break;
+            }
+            case DUAL:
+            case FIST:
+            case DUAL_BLUNT:
+            case DUAL_DAGGER: {
+                final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
+                hitTask = ThreadPool.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
+                break;
+            }
+            default: {
+                hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+                break;
+            }
+        }
+
+        if (attack.hasHits()) {
+            broadcastPacket(attack);
+        }
+    }
+
+    private boolean checkAttackWeapon(Creature target, Weapon weaponItem) {
+        if (nonNull(weaponItem)) {
+            if (!weaponItem.isAttackWeapon()) {
+                if (weaponItem.getItemType() == WeaponType.FISHING_ROD) {
+                    sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
+                } else {
+                    sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
+                }
+                return false;
+            }
+
+            return !weaponItem.getItemType().isRanged() || checkRangedAttackCondition(weaponItem, target);
+        }
+        return true;
+    }
+
+    private boolean canAutoAttack(Creature target) {
+        if (isNull(target) || (isAttackingDisabled() && !GameUtils.isSummon(this)) || !target.isTargetable()) {
+            return false;
+        }
+
+        if (!isAlikeDead()) {
+            if ((GameUtils.isNpc(this) && target.isAlikeDead()) || !isInSurroundingRegion(target) || target.isDead()) {
+                getAI().setIntention(AI_INTENTION_ACTIVE);
+                return false;
+            }
+
+            if (checkTransformed(transformation -> !transformation.canAttack())) {
+                return false;
+            }
+        }
+        return isAutoAttackAllowedInZone(target);
+    }
+
+    private boolean isAutoAttackAllowedInZone(Creature target) {
+        var player = getActingPlayer();
+        if (nonNull(player)) {
+            if (player.isInObserverMode()) {
+                sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+                return false;
+            } else if (player.isSiegeFriend(target)) {
+                sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
+                return false;
+            } else if (target.isInsidePeaceZone(player)) { // Checking if target has moved to peace zone
+                getAI().setIntention(AI_INTENTION_ACTIVE);
+                return false;
+            }
+        } else if (isInsidePeaceZone(this, target)) {
+            getAI().setIntention(AI_INTENTION_ACTIVE);
+            return false;
+        }
+        return true;
     }
 
     protected void onStartRangedAttack(boolean crossbow, int reuse) {
@@ -1120,7 +1124,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     protected void onDie(Creature killer) {
         EventDispatcher.getInstance().notifyEventAsync(new OnCreatureKilled(killer, this), killer);
-        ZoneManager.getInstance().getRegion(this).onDeath(this);
+        ZoneEngine.getInstance().getRegion(this).onDeath(this);
 
         forgetTarget();
         if (isChannelized()) {
@@ -1193,7 +1197,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             // Start broadcast status
             broadcastPacket(new Revive(this));
 
-            ZoneManager.getInstance().getRegion(this).onRevive(this);
+            ZoneEngine.getInstance().getRegion(this).onRevive(this);
         } else {
             setIsPendingRevive(true);
         }
@@ -1728,26 +1732,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void broadcastModifiedStats(Set<Stat> changed) {
-        if (!isSpawned()) {
+        if (isUnchangedStats(changed)) {
             return;
         }
 
-        if (isNullOrEmpty(changed)) {
-            return;
-        }
-
-        // Don't broadcast modified stats on login.
-        if (isPlayer(this) && !getActingPlayer().isOnline()) {
-            return;
-        }
-
-        // If this creature was previously moving, but now due to stat change can no longer move, broadcast StopMove packet.
         if (isMoving() && (stats.getMoveSpeed() <= 0)) {
             stopMove(null);
         }
 
-        if (GameUtils.isSummon(this)) {
-            final Summon summon = (Summon) this;
+        if (this instanceof Summon summon) {
             if (summon.getOwner() != null) {
                 summon.updateAndBroadcastStatus(1);
             }
@@ -1755,9 +1748,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             final boolean broadcastFull = true;
             final StatusUpdate su = new StatusUpdate(this);
             UserInfo info = null;
+
             if (isPlayer(this)) {
-                info = new UserInfo(getActingPlayer(), false);
-                info.addComponentType(UserInfoType.SLOTS, UserInfoType.ENCHANTLEVEL);
+                info = new UserInfo(getActingPlayer(), UserInfoType.SLOTS, UserInfoType.ENCHANTLEVEL);
             }
             if (info != null) {
                 for (Stat stat : changed) {
@@ -1766,39 +1759,59 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             if (isPlayer(this)) {
-                final Player player = getActingPlayer();
-                player.refreshOverloaded(true);
-                sendPacket(info);
-
-                if (broadcastFull) {
-                    player.broadcastCharInfo();
-                } else if (su.hasUpdates()) {
-                    broadcastPacket(su);
-                }
-                if (hasServitors() && hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
-                    getServitors().values().forEach(Summon::broadcastStatusUpdate);
-                }
+                updatePlayerStats(broadcastFull, su, info);
             } else if (GameUtils.isNpc(this)) {
-                if (broadcastFull) {
-                    World.getInstance().forEachVisibleObject(this, Player.class, player ->
-                    {
-                        if (!isVisibleFor(player)) {
-                            return;
-                        }
-
-                        if (stats.getRunSpeed() == 0) {
-                            player.sendPacket(new ServerObjectInfo((Npc) this, player));
-                        } else {
-                            player.sendPacket(new NpcInfo((Npc) this));
-                        }
-                    });
-                } else if (su.hasUpdates()) {
-                    broadcastPacket(su);
-                }
+                updateNpcStats(broadcastFull, su);
             } else if (su.hasUpdates()) {
                 broadcastPacket(su);
             }
         }
+    }
+
+    private void updateNpcStats(boolean broadcastFull, StatusUpdate su) {
+        if (broadcastFull) {
+            World.getInstance().forEachVisibleObject(this, Player.class, player ->
+            {
+                if (!isVisibleFor(player)) {
+                    return;
+                }
+
+                if (stats.getRunSpeed() == 0) {
+                    player.sendPacket(new ServerObjectInfo((Npc) this, player));
+                } else {
+                    player.sendPacket(new NpcInfo((Npc) this));
+                }
+            });
+        } else if (su.hasUpdates()) {
+            broadcastPacket(su);
+        }
+    }
+
+    private void updatePlayerStats(boolean broadcastFull, StatusUpdate su, UserInfo info) {
+        final Player player = getActingPlayer();
+        player.refreshOverloaded(true);
+        sendPacket(info);
+
+        if (broadcastFull) {
+            player.broadcastCharInfo();
+        } else if (su.hasUpdates()) {
+            broadcastPacket(su);
+        }
+        if (hasServitors() && hasAbnormalType(AbnormalType.ABILITY_CHANGE)) {
+            getServitors().values().forEach(Summon::broadcastStatusUpdate);
+        }
+    }
+
+    private boolean isUnchangedStats(Set<Stat> changed) {
+        if (!isSpawned()) {
+            return true;
+        }
+
+        if (isNullOrEmpty(changed)) {
+            return true;
+        }
+
+        return isPlayer(this) && !getActingPlayer().isOnline();
     }
 
     private void addStatInfoType(StatusUpdate su, UserInfo info, Stat stat) {
@@ -1990,21 +2003,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return True if the movement is finished
      */
     public boolean updatePosition() {
-        // Get movement data
         final MoveData m = move;
 
-        if (m == null) {
+        if (isPositionAlreadyUpdated(m)) {
             return true;
         }
 
-        if (!isSpawned()) {
-            move = null;
-            if (isPlayer(this))
-                sendPacket(new UserInfo(getActingPlayer(), UserInfoType.STATS));
-            return true;
-        }
-
-        // Check if this is the first update
         if (m._moveTimestamp == 0) {
             m._moveTimestamp = m._moveStartTime;
             m._xAccurate = getX();
@@ -2013,7 +2017,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         final int gameTicks = WorldTimeController.getInstance().getGameTicks();
 
-        // Check if the position has already been calculated
         if (m._moveTimestamp == gameTicks) {
             return false;
         }
@@ -2024,7 +2027,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         double dx;
         double dy;
-        double dz;
+        double dz = (double) m._zDestination - zPrev; // Z coordinate will follow client values
 
         // the only method that can modify x,y while moving (otherwise _move would/should be set null)
         if (GeoEngineSettings.isSyncMode(SyncMode.CLIENT)) {
@@ -2035,9 +2038,54 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             dy = m._yDestination - m._yAccurate;
         }
 
-        // Z coordinate will follow client values
-        dz = m._zDestination - zPrev;
+        if (!checkCanMoveToDestination(xPrev, yPrev, zPrev, dx, dy, dz)) {
+            return false;
+        }
 
+        double distFraction = calculateDistFraction(m, gameTicks, dx, dy, dz);
+        updatePosition(m, gameTicks, zPrev, dx, dy, dz, distFraction);
+
+        // broadcastPacket(new MoveToLocation(this));
+
+        if (distFraction > 1) {
+            ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
+            return true;
+        }
+
+        return false;
+    }
+
+    private void updatePosition(MoveData m, int gameTicks, int zPrev, double dx, double dy, double dz, double distFraction) {
+        if (distFraction > 1) {
+            super.setXYZ(m._xDestination, m._yDestination, m._zDestination);
+        } else {
+            m._xAccurate += dx * distFraction;
+            m._yAccurate += dy * distFraction;
+
+            // Set the position of the Creature to estimated after parcial move
+            super.setXYZ((int) (m._xAccurate), (int) (m._yAccurate), zPrev + (int) ((dz * distFraction) + 0.5));
+        }
+        revalidateZone(false);
+
+        // Set the timer of last position update to now
+        m._moveTimestamp = gameTicks;
+    }
+
+    private boolean isPositionAlreadyUpdated(MoveData m) {
+        if (m == null) {
+            return true;
+        }
+
+        if (!isSpawned()) {
+            move = null;
+            if (isPlayer(this))
+                sendPacket(new UserInfo(getActingPlayer(), UserInfoType.STATS));
+            return true;
+        }
+        return false;
+    }
+
+    private boolean checkCanMoveToDestination(int xPrev, int yPrev, int zPrev, double dx, double dy, double dz) {
         if (isPlayer(this) && !isFlying) {
             final double distance = Math.hypot(dx, dy);
             if (cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
@@ -2065,7 +2113,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 return false;
             }
         }
+        return true;
+    }
 
+    private double calculateDistFraction(MoveData m, int gameTicks, double dx, double dy, double dz) {
         final boolean isFloating = isFlying || isInsideZone(ZoneType.WATER);
         double delta = (dx * dx) + (dy * dy);
         if ((delta < 10000) && ((dz * dz) > 2500) // close enough, allows error between client and server geodata if it cannot be avoided
@@ -2080,32 +2131,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             final double distPassed = (stats.getMoveSpeed() * (gameTicks - m._moveTimestamp)) / WorldTimeController.TICKS_PER_SECOND;
             distFraction = distPassed / delta;
         }
-
-        // if (Config.DEVELOPER) LOGGER.warn("Move Ticks:" + (gameTicks - m._moveTimestamp) + ", distPassed:" + distPassed + ", distFraction:" + distFraction);
-
-        if (distFraction > 1) {
-            // Set the position of the Creature to the destination
-            super.setXYZ(m._xDestination, m._yDestination, m._zDestination);
-        } else {
-            m._xAccurate += dx * distFraction;
-            m._yAccurate += dy * distFraction;
-
-            // Set the position of the Creature to estimated after parcial move
-            super.setXYZ((int) (m._xAccurate), (int) (m._yAccurate), zPrev + (int) ((dz * distFraction) + 0.5));
-        }
-        revalidateZone(false);
-
-        // Set the timer of last position update to now
-        m._moveTimestamp = gameTicks;
-
-       // broadcastPacket(new MoveToLocation(this));
-
-        if (distFraction > 1) {
-            ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
-            return true;
-        }
-
-        return false;
+        return distFraction;
     }
 
     public void revalidateZone(boolean force) {
@@ -2121,7 +2147,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+        final ZoneRegion region = ZoneEngine.getInstance().getRegion(this);
         if (region != null) {
             region.revalidateZones(this);
         } else // Precaution. Moved at invalid region?
@@ -2768,25 +2794,30 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public boolean isInsidePeaceZone(WorldObject attacker, WorldObject target) {
         final Instance instanceWorld = getInstanceWorld();
-        if (isNull(target) || !( GameUtils.isPlayable(target) && GameUtils.isPlayable(attacker)) || ((instanceWorld != null) && instanceWorld.isPvP())) {
+
+        if (!( GameUtils.isPlayable(target) && GameUtils.isPlayable(attacker)) || (instanceWorld != null && instanceWorld.isPvP())) {
             return false;
         }
 
+        if (checkCanBeAttackedInPeaceZone(attacker, target)) {
+            return false;
+        }
+
+        if (attacker.getActingPlayer() != null && attacker.getActingPlayer().getAccessLevel().allowPeaceAttack()) {
+            return false;
+        }
+
+        return target.isInsideZone(ZoneType.PEACE) || attacker.isInsideZone(ZoneType.PEACE);
+    }
+
+    private boolean checkCanBeAttackedInPeaceZone(WorldObject attacker, WorldObject target) {
         if (CharacterSettings.canAttackPkInPeaceZone()) {
-            // allows red to be attacked and red to attack flagged players
-            if ((target.getActingPlayer() != null) && (target.getActingPlayer().getReputation() < 0)) {
-                return false;
+            if (target.getActingPlayer() != null && target.getActingPlayer().getReputation() < 0) {
+                return true;
             }
-            if ((attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getReputation() < 0) && (target.getActingPlayer() != null) && (target.getActingPlayer().getPvpFlag() > 0)) {
-                return false;
-            }
+            return attacker.getActingPlayer() != null && attacker.getActingPlayer().getReputation() < 0 && target.getActingPlayer() != null && target.getActingPlayer().getPvpFlag() > 0;
         }
-
-        if ((attacker.getActingPlayer() != null) && attacker.getActingPlayer().getAccessLevel().allowPeaceAttack()) {
-            return false;
-        }
-
-        return (target.isInsideZone(ZoneType.PEACE) || attacker.isInsideZone(ZoneType.PEACE));
+        return false;
     }
 
     /**
@@ -3094,15 +3125,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         getAI().clientStartAutoAttack();
 
         if (!reflect && !isDOT) {
-            // RearDamage effect bonus.
-            if (isBehind(target)) {
-                damage *= stats.getValue(Stat.REAR_DAMAGE_RATE, 1);
-            }
-
-            if (target.isImmobilized()) {
-                damage *= stats.getValue(Stat.DAMAGE_IMMOBILIZED, 1);
-                damage *= target.stats.getValue(Stat.DAMAGE_TAKEN_IMMOBILIZED, 1);
-            }
+            damage = applyStateDamageBonus(damage, target);
 
             if (counterAttackReflect(damage, target, skill, isDOT, directlyToHp, critical)) {
                 if (target.hasAI()) {
@@ -3120,66 +3143,82 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Check if damage should be reflected or absorbed. When killing blow is made, the target doesn't reflect (vamp too?).
         if (!reflect && !isDOT && !target.isDead()) {
-            int reflectedDamage = 0;
-
-            // Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
-            double reflectPercent = target.getStats().getValue(Stat.REFLECT_DAMAGE_PERCENT, 0) - getStats().getValue(Stat.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
-            if (reflectPercent > 0)
-            {
-                reflectedDamage = (int) ((reflectPercent / 100.) * damage);
-                reflectedDamage = Math.min(reflectedDamage, target.getMaxHp());
-
-                // Reflected damage is limited by P.Def/M.Def
-                if ((skill != null) && skill.isMagic())
-                {
-                    reflectedDamage = (int) Math.min(reflectedDamage, target.getStats().getMDef() * 1.5);
-                }
-                else
-                {
-                    reflectedDamage = Math.min(reflectedDamage, target.getStats().getPDef());
-                }
+            absorbHP(damage, target);
+            if (skill != null && Rnd.chance(30)) {
+                absorbMana(damage, target);
             }
 
-            double absorbPercent = getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStats().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
-            if ((absorbPercent > 0) && (Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
-            {
-                int absorbDamage = (int) Math.min(absorbPercent * damage, stats.getMaxRecoverableHp() - status.getCurrentHp());
-                absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
-                if (absorbDamage > 0)
-                {
-                    setCurrentHp(status.getCurrentHp() + absorbDamage);
-                }
-            }
-
-            // Absorb MP from the damage inflicted.
-            if (skill != null) // Classic: Used to reduce skill MP consumption. See Orfen's Earring.
-            {
-                if (Rnd.get(10) < 3) // Classic: Static 30% change.
-                {
-                    absorbPercent = stats.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
-                    if (absorbPercent > 0)
-                    {
-                        int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, stats.getMaxRecoverableMp() - status.getCurrentMp());
-                        absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
-                        if (absorbDamage > 0)
-                        {
-                            setCurrentMp(status.getCurrentMp() + absorbDamage);
-                        }
-                    }
-                }
-            }
-
-            if (reflectedDamage > 0)
-            {
+            int reflectedDamage = calcReflectDamage(damage, target, skill);
+            if (reflectedDamage > 0) {
                 target.doAttack(reflectedDamage, this, skill, isDOT, directlyToHp, critical, true);
             }
         }
 
-        // Break casting of target during attack.
         if (!target.isRaid() && Formulas.calcAtkBreak(target, damage)) {
             target.breakAttack();
             target.breakCast();
         }
+    }
+
+    private void absorbMana(double damage, Creature target) {
+        var absorbPercent = stats.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
+        if (absorbPercent > 0)
+        {
+            int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, stats.getMaxRecoverableMp() - status.getCurrentMp());
+            absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
+            if (absorbDamage > 0)
+            {
+                setCurrentMp(status.getCurrentMp() + absorbDamage);
+            }
+        }
+    }
+
+    private void absorbHP(double damage, Creature target) {
+        double absorbPercent = getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStats().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
+        if ((absorbPercent > 0) && (Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
+        {
+            int absorbDamage = (int) Math.min(absorbPercent * damage, stats.getMaxRecoverableHp() - status.getCurrentHp());
+            absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+            if (absorbDamage > 0)
+            {
+                setCurrentHp(status.getCurrentHp() + absorbDamage);
+            }
+        }
+    }
+
+    private int calcReflectDamage(double damage, Creature target, Skill skill) {
+        int reflectedDamage = 0;
+
+        // Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
+        double reflectPercent = target.getStats().getValue(Stat.REFLECT_DAMAGE_PERCENT, 0) - getStats().getValue(Stat.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
+        if (reflectPercent > 0)
+        {
+            reflectedDamage = (int) ((reflectPercent / 100.) * damage);
+            reflectedDamage = Math.min(reflectedDamage, target.getMaxHp());
+
+            // Reflected damage is limited by P.Def/M.Def
+            if ((skill != null) && skill.isMagic())
+            {
+                reflectedDamage = (int) Math.min(reflectedDamage, target.getStats().getMDef() * 1.5);
+            }
+            else
+            {
+                reflectedDamage = Math.min(reflectedDamage, target.getStats().getPDef());
+            }
+        }
+        return reflectedDamage;
+    }
+
+    private double applyStateDamageBonus(double damage, Creature target) {
+        if (isBehind(target)) {
+            damage *= stats.getValue(Stat.REAR_DAMAGE_RATE, 1);
+        }
+
+        if (target.isImmobilized()) {
+            damage *= stats.getValue(Stat.DAMAGE_IMMOBILIZED, 1);
+            damage *= target.stats.getValue(Stat.DAMAGE_TAKEN_IMMOBILIZED, 1);
+        }
+        return damage;
     }
 
     private boolean counterAttackReflect(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical) {
@@ -3201,22 +3240,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect, DamageType damageType) {
         double elementalDamage = 0;
 
-        // Calculate PvP/PvE damage received. It is a post-attack stat.
         if (nonNull(attacker)) {
-
-            if (GameUtils.isPlayable(attacker) && GameUtils.isPlayable(this)) {
-                value *= (100 + max(stats.getValue(Stat.PVP_DAMAGE_TAKEN), -80)) / 100;
-
-            } else if (attacker.isRaid() || attacker.isRaidMinion()) {
-                value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN_RAID), -80)) / 100;
-                value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
-
-            } else if (isMonster(attacker)) {
-                value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN_MONSTER), -80)) / 100;
-                value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
-            }
-
-            value *= (100 + max(stats.getValue(Stat.DAMAGE_TAKEN), -80)) / 100;
+            value = applyDamageBonus(value, attacker);
 
             if(!reflect && !isDOT) {
                 elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, value);
@@ -3225,16 +3250,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             value += elementalDamage;
         }
 
-        if(Config.CHAMPION_ENABLE && isChampion() && Config.CHAMPION_HP > 0) {
-            value /= Config.CHAMPION_HP;
-        }
-
-        final double damageCap = stats.getValue(Stat.DAMAGE_LIMIT);
-        if (damageCap > 0) {
-            value = Math.min(value, damageCap);
-        }
-
-        value = max(0, value);
+        value = applyDamageLimiters(value);
 
         final var damageReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, value, skill, critical, isDOT, reflect), this, DamageReturn.class);
         if (damageReturn != null) {
@@ -3246,16 +3262,51 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         onReceiveDamage(attacker, skill, value, damageType);
-        if (isPlayer(this)) {
-            getActingPlayer().getStatus().reduceHp(value, attacker, isNull(skill) || !skill.isToggle(), isDOT, false, directlyToHp);
-        } else {
-            status.reduceHp(value, attacker, isNull(skill) || !skill.isToggle(), isDOT, false);
-        }
+        reduceHp(value, attacker, skill, isDOT, directlyToHp);
 
         if (nonNull(attacker)) {
             attacker.sendDamageMessage(this, skill, (int) value, elementalDamage, critical, false);
             EventDispatcher.getInstance().notifyEventAsync(new OnCreatureDamageDealt(attacker, this, value, skill, critical, isDOT, reflect), attacker);
         }
+    }
+
+    private double applyDamageLimiters(double value) {
+        if(Config.CHAMPION_ENABLE && isChampion() && Config.CHAMPION_HP > 0) {
+            value /= Config.CHAMPION_HP;
+        }
+
+        final double damageCap = stats.getValue(Stat.DAMAGE_LIMIT);
+        if (damageCap > 0) {
+            value = Math.min(value, damageCap);
+        }
+
+        value = max(0, value);
+        return value;
+    }
+
+    private void reduceHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp) {
+        if (isPlayer(this)) {
+            getActingPlayer().getStatus().reduceHp(value, attacker, isNull(skill) || !skill.isToggle(), isDOT, false, directlyToHp);
+        } else {
+            status.reduceHp(value, attacker, isNull(skill) || !skill.isToggle(), isDOT, false);
+        }
+    }
+
+    private double applyDamageBonus(double value, Creature attacker) {
+        if (GameUtils.isPlayable(attacker) && GameUtils.isPlayable(this)) {
+            value *= (100 + max(stats.getValue(Stat.PVP_DAMAGE_TAKEN), -80)) / 100;
+
+        } else if (attacker.isRaid() || attacker.isRaidMinion()) {
+            value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN_RAID), -80)) / 100;
+            value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
+
+        } else if (isMonster(attacker)) {
+            value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN_MONSTER), -80)) / 100;
+            value *= (100 + max(stats.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
+        }
+
+        value *= (100 + max(stats.getValue(Stat.DAMAGE_TAKEN), -80)) / 100;
+        return value;
     }
 
     protected void onReceiveDamage(Creature attacker, Skill skill, double value, DamageType damageType) {
@@ -3649,26 +3700,30 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     @Override
     public Queue<AbstractEventListener> getListeners(EventType type) {
-        final Queue<AbstractEventListener> objectListenres = super.getListeners(type);
+        final Queue<AbstractEventListener> objectListeners = super.getListeners(type);
         final Queue<AbstractEventListener> templateListeners = template.getListeners(type);
-        final Queue<AbstractEventListener> globalListeners = GameUtils.isNpc(this) && !isMonster(this) ? Listeners.Npcs().getListeners(type) : isMonster(this) ? Listeners.Monsters().getListeners(type) : isPlayer(this) ? Listeners.players().getListeners(type) : EmptyQueue.emptyQueue();
+        final Queue<AbstractEventListener> globalListeners = globalListenerByType(type);
 
         // Attempt to do not create collection
-        if (objectListenres.isEmpty() && templateListeners.isEmpty() && globalListeners.isEmpty()) {
+        if (objectListeners.isEmpty() && templateListeners.isEmpty() && globalListeners.isEmpty()) {
             return EmptyQueue.emptyQueue();
-        } else if (!objectListenres.isEmpty() && templateListeners.isEmpty() && globalListeners.isEmpty()) {
-            return objectListenres;
-        } else if (!templateListeners.isEmpty() && objectListenres.isEmpty() && globalListeners.isEmpty()) {
+        } else if (!objectListeners.isEmpty() && templateListeners.isEmpty() && globalListeners.isEmpty()) {
+            return objectListeners;
+        } else if (!templateListeners.isEmpty() && objectListeners.isEmpty() && globalListeners.isEmpty()) {
             return templateListeners;
-        } else if (!globalListeners.isEmpty() && objectListenres.isEmpty() && templateListeners.isEmpty()) {
+        } else if (!globalListeners.isEmpty() && objectListeners.isEmpty() && templateListeners.isEmpty()) {
             return globalListeners;
         }
 
-        final Queue<AbstractEventListener> both = new LinkedBlockingDeque<>(objectListenres.size() + templateListeners.size() + globalListeners.size());
-        both.addAll(objectListenres);
+        final Queue<AbstractEventListener> both = new LinkedBlockingDeque<>(objectListeners.size() + templateListeners.size() + globalListeners.size());
+        both.addAll(objectListeners);
         both.addAll(templateListeners);
         both.addAll(globalListeners);
         return both;
+    }
+
+    protected Queue<AbstractEventListener> globalListenerByType(EventType type) {
+        return EmptyQueue.emptyQueue();
     }
 
     public Race getRace() {
@@ -3677,8 +3732,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     @Override
     public final void setXYZ(int newX, int newY, int newZ) {
-        final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
-        final ZoneRegion newZoneRegion = ZoneManager.getInstance().getRegion(newX, newY);
+        final var oldZoneRegion = ZoneEngine.getInstance().getRegion(this);
+        final var newZoneRegion = ZoneEngine.getInstance().getRegion(newX, newY);
 
         // Mobius: Prevent moving to nonexistent regions.
         if (newZoneRegion == null) {

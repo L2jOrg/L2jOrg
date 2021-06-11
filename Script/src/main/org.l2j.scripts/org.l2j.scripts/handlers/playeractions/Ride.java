@@ -30,8 +30,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 public final class Ride implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
-	{
-		player.mountPlayer(player.getPet());
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed) {
+		player.mount(player.getPet());
 	}
 }

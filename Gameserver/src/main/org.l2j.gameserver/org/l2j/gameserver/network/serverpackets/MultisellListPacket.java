@@ -26,7 +26,7 @@ import org.l2j.gameserver.engine.item.shop.multisell.MultisellIngredient;
 import org.l2j.gameserver.engine.item.shop.multisell.MultisellProduct;
 import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 

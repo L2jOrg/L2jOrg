@@ -18,38 +18,28 @@
  */
 package org.l2j.gameserver.world.zone;
 
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
  * Abstract base class for any zone area
  *
  * @author durgus
+ * @author JoeAlisson
  */
-public abstract class ZoneArea {
-    protected static final int STEP = 10;
+public interface ZoneArea {
 
-    public abstract boolean isInsideZone(int x, int y, int z);
+    boolean isInside(int x, int y, int z);
 
-    public abstract boolean intersectsRectangle(int x1, int x2, int y1, int y2);
+    boolean intersectsRectangle(int x1, int x2, int y1, int y2);
 
-    public abstract double getDistanceToZone(int x, int y);
+    double distanceFrom(int x, int y);
 
-    public abstract int getLowZ(); // Support for the ability to extract the z coordinates of zones.
+    int getLowZ(); // Support for the ability to extract the z coordinates of zones.
 
-    public abstract int getHighZ(); // New fishing patch makes use of that to get the Z for the hook
+    int getHighZ(); // New fishing patch makes use of that to get the Z for the hook
 
-    public abstract void visualizeZone(int z);
+    void visualize(Player player, String zoneName);
 
-    // TODO Drop this
-    protected final void dropDebugItem(int itemId, int num, int x, int y, int z) {
-
-        final Item item = ItemEngine.getInstance().createTempItem(itemId);
-        item.setCount(num);
-        item.spawnMe(x, y, z + 5);
-        ZoneManager.getInstance().getDebugItems().add(item);
-    }
-
-    public abstract Location getRandomPoint();
+    Location getRandomPoint();
 }

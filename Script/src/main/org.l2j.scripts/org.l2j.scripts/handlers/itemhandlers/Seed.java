@@ -28,13 +28,9 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Chest;
 import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
-
-import java.util.List;
 
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -80,26 +76,19 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final org.l2j.gameserver.model.Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
-		if (seed == null)
-		{
+		final var seed = CastleManorManager.getInstance().getSeed(item.getId());
+		if (seed == null) {
 			return false;
 		}
 		
 		final Castle taxCastle = target.getTaxCastle();
-		if ((taxCastle == null) || (seed.getCastleId() != taxCastle.getId()))
-		{
+		if (taxCastle == null || seed.getCastleId() != taxCastle.getId()) {
 			playable.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 			return false;
 		}
 		
-		final Player activeChar = playable.getActingPlayer();
-		
-		final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-		if (skills != null)
-		{
-			skills.forEach(holder -> activeChar.useSkill(holder.getSkill(), item, false, false));
-		}
+		var player = playable.getActingPlayer();
+		item.forEachSkill(ItemSkillType.NORMAL, holder -> player.useSkill(holder.getSkill(), item, false, false));
 		return true;
 	}
 }

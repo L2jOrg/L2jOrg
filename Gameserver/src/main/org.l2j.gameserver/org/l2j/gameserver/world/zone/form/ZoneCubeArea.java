@@ -21,7 +21,8 @@ package org.l2j.gameserver.world.zone.form;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2j.gameserver.world.zone.ZoneArea;
 
 import java.awt.*;
@@ -30,40 +31,41 @@ import java.awt.*;
  * A primitive rectangular zone
  *
  * @author durgus
+ * @author JoeAlisson
  */
-public class ZoneCubeArea extends ZoneArea {
-    private final int _z1;
-    private final int _z2;
-    private final Rectangle _r;
+public class ZoneCubeArea implements ZoneArea {
+    private final int minZ;
+    private final int maxZ;
+    private final Rectangle rectangle;
 
     public ZoneCubeArea(int x1, int x2, int y1, int y2, int z1, int z2) {
-        final int _x1 = Math.min(x1, x2);
-        final int _x2 = Math.max(x1, x2);
-        final int _y1 = Math.min(y1, y2);
-        final int _y2 = Math.max(y1, y2);
+        final int minX = Math.min(x1, x2);
+        final int maxX = Math.max(x1, x2);
+        final int minY = Math.min(y1, y2);
+        final int maxY = Math.max(y1, y2);
 
-        _r = new Rectangle(_x1, _y1, _x2 - _x1, _y2 - _y1);
+        rectangle = new Rectangle(minX, minY, maxX - minX, maxY - minY);
 
-        _z1 = Math.min(z1, z2);
-        _z2 = Math.max(z1, z2);
+        minZ = Math.min(z1, z2);
+        maxZ = Math.max(z1, z2);
     }
 
     @Override
-    public boolean isInsideZone(int x, int y, int z) {
-        return _r.contains(x, y) && (z >= _z1) && (z <= _z2);
+    public boolean isInside(int x, int y, int z) {
+        return z >= minZ && z <= maxZ && rectangle.contains(x, y);
     }
 
     @Override
-    public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2) {
-        return _r.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1));
+    public boolean intersectsRectangle(int x1, int x2, int y1, int y2) {
+        return rectangle.intersects(x1, y1, (double) x2 - x1, y2 - y1);
     }
 
     @Override
-    public double getDistanceToZone(int x, int y) {
-        final int _x1 = _r.x;
-        final int _x2 = _r.x + _r.width;
-        final int _y1 = _r.y;
-        final int _y2 = _r.y + _r.height;
+    public double distanceFrom(int x, int y) {
+        final int _x1 = rectangle.x;
+        final int _x2 = rectangle.x + rectangle.width;
+        final int _y1 = rectangle.y;
+        final int _y2 = rectangle.y + rectangle.height;
         double test = Math.pow(_x1 - x, 2) + Math.pow(_y2 - y, 2);
         double shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
 
@@ -85,39 +87,50 @@ public class ZoneCubeArea extends ZoneArea {
     }
 
     @Override
-    public int getLowZ() {
-        return _z1;
-    }
+    public void visualize(Player player, String zoneName) {
+        var z = player.getZ() + (int) (player.getCollisionHeight() / 2);
+        var maxX = rectangle.x + rectangle.width;
+        var maxY = rectangle.y + rectangle.height;
 
-    @Override
-    public int getHighZ() {
-        return _z2;
-    }
+        var primitive = new ExServerPrimitive(zoneName, rectangle.x, rectangle.y, z);
+        primitive.addLine(zoneName +"_00", Color.BLUE, false, rectangle.x, rectangle.y, z, maxX, rectangle.y, z);
+        primitive.addLine(Color.BLUE, rectangle.x, rectangle.y, minZ, rectangle.x, rectangle.y, maxZ);
+        primitive.addLine(Color.BLUE, rectangle.x, rectangle.y, minZ, maxX, rectangle.y, minZ);
+        primitive.addLine(Color.BLUE, rectangle.x, rectangle.y, maxZ, maxX, rectangle.y, maxZ);
 
-    @Override
-    public void visualizeZone(int z) {
-        final int _x1 = _r.x;
-        final int _x2 = _r.x + _r.width;
-        final int _y1 = _r.y;
-        final int _y2 = _r.y + _r.height;
+        primitive.addLine(zoneName +"_10", Color.BLUE, false, maxX, rectangle.y, z, maxX, maxY, z);
+        primitive.addLine(Color.BLUE, maxX, rectangle.y, minZ, maxX, rectangle.y, maxZ);
+        primitive.addLine(Color.BLUE, maxX, rectangle.y, minZ, maxX, maxY, minZ);
+        primitive.addLine(Color.BLUE, maxX, rectangle.y, maxZ, maxX, maxY, maxZ);
 
-        // x1->x2
-        for (int x = _x1; x < _x2; x += STEP) {
-            dropDebugItem(CommonItem.ADENA, 1, x, _y1, z);
-            dropDebugItem(CommonItem.ADENA, 1, x, _y2, z);
-        }
-        // y1->y2
-        for (int y = _y1; y < _y2; y += STEP) {
-            dropDebugItem(CommonItem.ADENA, 1, _x1, y, z);
-            dropDebugItem(CommonItem.ADENA, 1, _x2, y, z);
-        }
+        primitive.addLine(zoneName +"_11", Color.BLUE, false, maxX, maxY, z, rectangle.x, maxY, z);
+        primitive.addLine(Color.BLUE, maxX, maxY, minZ, maxX, maxY, maxZ);
+        primitive.addLine(Color.BLUE, maxX, maxY, minZ, rectangle.x, maxY, minZ);
+        primitive.addLine(Color.BLUE, maxX, maxY, maxZ, rectangle.x, maxY, maxZ);
+
+        primitive.addLine(zoneName +"_01", Color.BLUE, false, rectangle.x, maxY, z, rectangle.x, rectangle.y, z);
+        primitive.addLine(Color.BLUE, rectangle.x, maxY, minZ, rectangle.x, maxY, maxZ);
+        primitive.addLine(Color.BLUE, rectangle.x, maxY, minZ, rectangle.x, rectangle.y, minZ);
+        primitive.addLine(Color.BLUE, rectangle.x, maxY, maxZ, rectangle.x, rectangle.y, maxZ);
+
+        player.sendPacket(primitive);
     }
 
     @Override
     public Location getRandomPoint() {
-        final int x = Rnd.get(_r.x, _r.x + _r.width);
-        final int y = Rnd.get(_r.y, _r.y + _r.height);
+        final int x = Rnd.get(rectangle.x, rectangle.x + rectangle.width);
+        final int y = Rnd.get(rectangle.y, rectangle.y + rectangle.height);
 
-        return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));
+        return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, minZ));
+    }
+
+    @Override
+    public int getLowZ() {
+        return minZ;
+    }
+
+    @Override
+    public int getHighZ() {
+        return maxZ;
     }
 }

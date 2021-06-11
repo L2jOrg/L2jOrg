@@ -2,6 +2,8 @@ import org.l2j.gameserver.data.database.dao.GlobalVariablesDAO;
 import org.l2j.gameserver.data.database.dao.ReuseInfoDAO;
 import org.l2j.gameserver.data.database.dao.SkillsDAO;
 import org.l2j.gameserver.engine.item.container.listener.BowCrossListener;
+import org.l2j.gameserver.world.zone.NaiveZone;
+import org.l2j.gameserver.world.zone.type.*;
 
 module org.l2j.gameserver {
     requires transitive org.l2j.commons;
@@ -125,14 +127,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.engine.clan.clanhall;
     exports org.l2j.gameserver.engine.clan;
 
-    uses org.l2j.gameserver.handler.IActionHandler;
-    uses org.l2j.gameserver.handler.IActionShiftHandler;
-    uses org.l2j.gameserver.handler.IAdminCommandHandler;
-    uses org.l2j.gameserver.handler.IBypassHandler;
-    uses org.l2j.gameserver.handler.IChatHandler;
-    uses org.l2j.gameserver.handler.IItemHandler;
-    uses org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
-
     uses org.l2j.gameserver.api.item.PlayerInventoryListener;
     provides org.l2j.gameserver.api.item.PlayerInventoryListener
         with org.l2j.gameserver.engine.item.container.listener.ItemSkillsListener,
@@ -157,6 +151,38 @@ module org.l2j.gameserver {
                  SkillsDAO,
                  GlobalVariablesDAO;
 
+    uses org.l2j.gameserver.world.zone.ZoneFactory;
+    provides org.l2j.gameserver.world.zone.ZoneFactory
+            with CastleZone.Factory,
+                ClanHallZone.Factory,
+                ConditionZone.Factory,
+                DamageZone.Factory,
+                EffectZone.Factory,
+                FishingZone.Factory,
+                FortZone.Factory,
+                JailZone.Factory,
+                MotherTreeZone.Factory,
+                NaiveZone.Factory,
+                NoLandingZone.Factory,
+                NoRestartZone.Factory,
+                OlympiadStadiumZone.Factory,
+                PeaceZone.Factory,
+                ResidenceTeleportZone.Factory,
+                RespawnZone.Factory,
+                ScriptZone.Factory,
+                SiegeZone.Factory,
+                SwampZone.Factory,
+                TaxZone.Factory,
+                WaterZone.Factory
+            ;
+
+    uses org.l2j.gameserver.handler.IActionHandler;
+    uses org.l2j.gameserver.handler.IActionShiftHandler;
+    uses org.l2j.gameserver.handler.IAdminCommandHandler;
+    uses org.l2j.gameserver.handler.IBypassHandler;
+    uses org.l2j.gameserver.handler.IChatHandler;
+    uses org.l2j.gameserver.handler.IItemHandler;
+    uses org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
     uses org.l2j.gameserver.handler.IPunishmentHandler;
     uses org.l2j.gameserver.handler.IUserCommandHandler;
     uses org.l2j.gameserver.handler.IVoicedCommandHandler;

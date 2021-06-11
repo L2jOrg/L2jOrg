@@ -28,18 +28,15 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayeableChargeShots;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
 
-import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @author JoeAlisson
@@ -66,8 +63,8 @@ public abstract class AbstractBeastShot implements IItemHandler {
             return false;
         }
 
-        var skills = item.getSkills(ItemSkillType.NORMAL);
-        if (isNullOrEmpty(skills)) {
+
+        if (!item.hasSkills(ItemSkillType.NORMAL)) {
             LOGGER.warn("item {} is missing skills!", item);
             return false;
         }
@@ -92,18 +89,20 @@ public abstract class AbstractBeastShot implements IItemHandler {
         }
 
         if (nonNull(pet)) {
-            chargeShot(owner, skills, shotType, pet);
+            chargeShot(owner, item, shotType, pet);
         }
 
-        aliveServitors.forEach(s -> chargeShot(owner, skills, shotType, s));
+        for (var servitor : aliveServitors) {
+            chargeShot(owner, item, shotType, servitor);
+        }
         return true;
     }
 
-    private void chargeShot(Player owner, List<ItemSkillHolder> skills, ShotType shotType, Summon s) {
+    private void chargeShot(Player owner, Item item, ShotType shotType, Summon summon) {
         sendUsesMessage(owner);
-        s.chargeShot(shotType, getBonus(s));
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayeableChargeShots(s, shotType, isBlessed()), owner);
-        skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(s, holder.getSkill(), 0), 600));
+        summon.chargeShot(shotType, getBonus(summon));
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayeableChargeShots(summon, shotType, isBlessed()), owner);
+        item.forEachSkill(ItemSkillType.NORMAL, s -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(summon, s.getSkill(), 0), 600));
     }
 
     protected abstract boolean isBlessed();

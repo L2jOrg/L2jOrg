@@ -39,7 +39,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDestroy
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDrop;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemTransfer;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -821,7 +821,12 @@ public class PlayerInventory extends Inventory {
     }
 
     private Item findAmmunition(Item currentWeapon) {
-        return items.values().stream().filter(i -> matchesAmmunition(i, currentWeapon)).findFirst().orElse(null);
+        for (Item item : items.values()) {
+            if(matchesAmmunition(item, currentWeapon)) {
+                return item;
+            }
+        }
+        return null;
     }
 
     private boolean matchesAmmunition(Item ammunition, Item weapon) {

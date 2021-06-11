@@ -25,7 +25,7 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -59,7 +59,7 @@ public class HeavenlyRift {
 
     public static Zone getZone() {
         if(_zone == null)
-            _zone = ZoneManager.getInstance().getZoneByName("[heavenly_rift]");
+            _zone = ZoneEngine.getInstance().getZoneByName("[heavenly_rift]");
         return _zone;
     }
 

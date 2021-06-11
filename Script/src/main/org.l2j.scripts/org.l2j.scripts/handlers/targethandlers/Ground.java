@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -67,7 +67,7 @@ public class Ground implements ITargetTypeHandler
 					return null;
 				}
 				
-				final ZoneRegion zoneRegion = ZoneManager.getInstance().getRegion(creature);
+				final ZoneRegion zoneRegion = ZoneEngine.getInstance().getRegion(creature);
 				if (skill.isBad() && !zoneRegion.checkEffectRangeInsidePeaceZone(skill, worldPosition.getX(), worldPosition.getY(), worldPosition.getZ()))
 				{
 					if (sendMessage)

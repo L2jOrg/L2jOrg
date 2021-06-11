@@ -73,8 +73,8 @@ import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.EtcItem;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.EtcItem;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
@@ -85,7 +85,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.util.MinionList;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -868,7 +868,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 break;
             }
             case ZONE: {
-                final Zone template = ZoneManager.getInstance().getZoneById(id);
+                final Zone template = ZoneEngine.getInstance().getZoneById(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }

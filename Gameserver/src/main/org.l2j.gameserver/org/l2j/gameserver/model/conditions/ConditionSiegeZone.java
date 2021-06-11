@@ -24,7 +24,7 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -74,7 +74,7 @@ public final class ConditionSiegeZone extends Condition {
 
         if (((castle == null) || (castle.getId() <= 0))) {
             return (value & COND_NOT_ZONE) != 0;
-        } else if (!castle.getZone().isActive()) {
+        } else if (!castle.getSiegeZone().isActive()) {
             return (value & COND_NOT_ZONE) != 0;
         } else if (((value & COND_CAST_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(castle.getId()) && (player.getSiegeState() == 1)) {
             return true;

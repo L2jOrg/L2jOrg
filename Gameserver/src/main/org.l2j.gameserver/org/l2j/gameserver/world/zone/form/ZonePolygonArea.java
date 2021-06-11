@@ -21,7 +21,8 @@ package org.l2j.gameserver.world.zone.form;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2j.gameserver.world.zone.ZoneArea;
 
 import java.awt.*;
@@ -30,31 +31,31 @@ import java.awt.*;
  * A not so primitive npoly zone
  *
  * @author durgus
+ * @author JoeAlisson
  */
-public class ZonePolygonArea extends ZoneArea {
+public class ZonePolygonArea implements ZoneArea {
     private final Polygon polygon;
     private final int minZ;
     private final int maxZ;
 
     public ZonePolygonArea(int[] x, int[] y, int minZ, int maxZ) {
         polygon = new Polygon(x, y, x.length);
-
         this.minZ = Math.min(minZ, maxZ);
         this.maxZ = Math.max(minZ, maxZ);
     }
 
     @Override
-    public boolean isInsideZone(int x, int y, int z) {
-        return polygon.contains(x, y) &&  (z >= minZ) && (z <= maxZ);
+    public boolean isInside(int x, int y, int z) {
+        return z >= minZ && z <= maxZ && polygon.contains(x, y);
     }
 
     @Override
-    public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2) {
-        return polygon.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1));
+    public boolean intersectsRectangle(int x1, int x2, int y1, int y2) {
+        return polygon.intersects(x1, y2, x2 - x1, y2 - y1);
     }
 
     @Override
-    public double getDistanceToZone(int x, int y) {
+    public double distanceFrom(int x, int y) {
         final int[] _x = polygon.xpoints;
         final int[] _y = polygon.ypoints;
         double test;
@@ -71,26 +72,17 @@ public class ZonePolygonArea extends ZoneArea {
     }
 
     @Override
-    public int getLowZ() {
-        return minZ;
-    }
-
-    @Override
-    public int getHighZ() {
-        return maxZ;
-    }
-
-    @Override
-    public void visualizeZone(int z) {
-        for (int i = 0; i < polygon.npoints; i++) {
-            final int nextIndex = (i + 1) == polygon.xpoints.length ? 0 : i + 1;
-            final int vx = polygon.xpoints[nextIndex] - polygon.xpoints[i];
-            final int vy = polygon.ypoints[nextIndex] - polygon.ypoints[i];
-            final float length = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
-            for (int o = 1; o <= length; o++) {
-                dropDebugItem(CommonItem.ADENA, 1, (int) (polygon.xpoints[i] + ((o / length) * vx)), (int) (polygon.ypoints[i] + ((o / length) * vy)), z);
-            }
+    public void visualize(Player player, String zoneName) {
+        var z = player.getZ() + (int) (player.getCollisionHeight() / 2);
+        var primitive = new ExServerPrimitive(zoneName, polygon.xpoints[0], polygon.ypoints[0], z);
+        for (var i = 0; i < polygon.npoints; i++) {
+            var nextNode = (i+1) % polygon.npoints;
+            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[i], polygon.ypoints[i], maxZ);
+            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], minZ, polygon.xpoints[nextNode], polygon.ypoints[nextNode], minZ);
+            primitive.addLine(Color.GREEN, polygon.xpoints[i], polygon.ypoints[i], maxZ, polygon.xpoints[nextNode], polygon.ypoints[nextNode], maxZ);
+            primitive.addLine(zoneName + i, Color.GREEN, false, polygon.xpoints[i], polygon.ypoints[i], z, polygon.xpoints[nextNode], polygon.ypoints[nextNode], z);
         }
+        player.sendPacket(primitive);
     }
 
     @Override
@@ -118,5 +110,16 @@ public class ZonePolygonArea extends ZoneArea {
 
     public int[] getY() {
         return polygon.ypoints;
+    }
+
+
+    @Override
+    public int getLowZ() {
+        return minZ;
+    }
+
+    @Override
+    public int getHighZ() {
+        return maxZ;
     }
 }

@@ -22,8 +22,11 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
@@ -31,22 +34,14 @@ import static org.l2j.gameserver.util.GameUtils.isNpc;
  * Tax zone type.
  *
  * @author malyelfik
+ * @author JoeAlisson
  */
 public class TaxZone extends Zone {
-    private int domainId;
-    private Castle castle;
+    private final Castle castle;
 
-    public TaxZone(int id) {
+    private TaxZone(int id, Castle castle) {
         super(id);
-    }
-
-    @Override
-    public void setParameter(String name, String value) {
-        if (name.equalsIgnoreCase("domainId")) {
-            domainId = Integer.parseInt(value);
-        } else {
-            super.setParameter(name, value);
-        }
+        this.castle = castle;
     }
 
     @Override
@@ -65,16 +60,22 @@ public class TaxZone extends Zone {
         }
     }
 
-    /**
-     * Gets castle associated with tax zone.<br>
-     *
-     * @return instance of {@link Castle} if found otherwise {@code null}
-     */
     public Castle getCastle() {
-        // Lazy loading is used because zone is loaded before residence
-        if (castle == null) {
-            castle = CastleManager.getInstance().getCastleById(domainId);
-        }
         return castle;
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var castleId = reader.parseInt(zoneNode.getAttributes(), "castle-id");
+            var castle = CastleManager.getInstance().getCastleById(castleId);
+            return new TaxZone(id, castle);
+        }
+
+        @Override
+        public String type() {
+            return "tax";
+        }
     }
 }

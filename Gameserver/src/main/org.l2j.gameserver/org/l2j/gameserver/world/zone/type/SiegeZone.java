@@ -18,23 +18,24 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.MountType;
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.entity.Siegable;
-import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.FeatureSettings;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
-import static java.util.Objects.isNull;
+import static org.l2j.gameserver.model.skills.CommonSkill.BATTLEGROUND_DEATH_SYNDROME;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -44,36 +45,17 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public class SiegeZone extends Zone {
     private static final int DISMOUNT_DELAY = 5;
+    private final int castleId;
 
-    public SiegeZone(int id) {
+    public SiegeZone(int id, int castleId) {
         super(id);
-        AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-        if (isNull(settings)) {
-            settings = new Settings();
-        }
-        setSettings(settings);
+        this.castleId = castleId;
+        setSettings(new Settings());
     }
 
     @Override
     public Settings getSettings() {
         return (Settings) super.getSettings();
-    }
-
-    @Override
-    public void setParameter(String name, String value) {
-        if (name.equals("castleId")) {
-            if (getSettings().getSiegeableId() != -1) {
-                throw new IllegalArgumentException("Siege object already defined!");
-            }
-            getSettings().setSiegeableId(Integer.parseInt(value));
-        } else if (name.equals("fortId")) {
-            if (getSettings().getSiegeableId() != -1) {
-                throw new IllegalArgumentException("Siege object already defined!");
-            }
-            getSettings().setSiegeableId(Integer.parseInt(value));
-        } else {
-            super.setParameter(name, value);
-        }
     }
 
     @Override
@@ -85,7 +67,7 @@ public class SiegeZone extends Zone {
 
             if (isPlayer(creature)) {
                 final Player player = creature.getActingPlayer();
-                if (player.isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
+                if (player.isRegisteredOnThisSiegeField(castleId)) {
                     player.setIsInSiege(true); // in siege
                     Siegable siegable;
                     if ((siegable = getSettings().getSiege()).giveFame() && (siegable.getFameFrequency() > 0)) {
@@ -139,26 +121,24 @@ public class SiegeZone extends Zone {
 
     @Override
     public void onDieInside(Creature creature) {
-        if (getSettings().isActiveSiege()) {
-            // debuff participants only if they die inside siege zone
-            if (isPlayer(creature) && creature.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
-                int lvl = 1;
-                final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(5660);
-                if (info != null) {
-                    lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
-                }
+        if (getSettings().isActiveSiege() && creature instanceof Player player && player.isRegisteredOnThisSiegeField(castleId)) {
+            var level = 1;
+            final var buff = creature.getEffectList().getBuffInfoBySkillId(BATTLEGROUND_DEATH_SYNDROME.getId());
+            if (buff != null) {
+                level = Math.min(level + buff.getSkill().getLevel(), 5);
+            }
 
-                final Skill skill = SkillEngine.getInstance().getSkill(5660, lvl);
-                if (skill != null) {
-                    skill.applyEffects(creature, creature);
-                }
+            final var skill = SkillEngine.getInstance().getSkill(BATTLEGROUND_DEATH_SYNDROME.getId(), level);
+            if (skill != null) {
+                skill.applyEffects(creature, creature);
             }
         }
     }
 
     @Override
     public void onPlayerLogoutInside(Player player) {
-        if (player.getClanId() != getSettings().getSiegeableId()) {
+        var clan = player.getClan();
+        if(clan == null || clan.getCastleId() != castleId) {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
     }
@@ -186,7 +166,7 @@ public class SiegeZone extends Zone {
     }
 
     public int getSiegeObjectId() {
-        return getSettings().getSiegeableId();
+        return castleId;
     }
 
     public boolean isActive() {
@@ -201,29 +181,11 @@ public class SiegeZone extends Zone {
         getSettings().setSiege(siege);
     }
 
-    /**
-     * Removes all foreigners from the zone
-     *
-     * @param owningClanId
-     */
-    public void banishForeigners(int owningClanId) {
-        forEachPlayer(p -> p.teleToLocation(TeleportWhereType.TOWN), p -> p.getClanId() != owningClanId);
-    }
-
     public static final class Settings extends AbstractZoneSettings {
-        private int siegableId = -1;
         private Siegable siege = null;
         private boolean isActiveSiege = false;
 
-        protected Settings() {
-        }
-
-        public int getSiegeableId() {
-            return siegableId;
-        }
-
-        protected void setSiegeableId(int id) {
-            siegableId = id;
+       private Settings() {
         }
 
         public Siegable getSiege() {
@@ -244,9 +206,27 @@ public class SiegeZone extends Zone {
 
         @Override
         public void clear() {
-            siegableId = -1;
             siege = null;
             isActiveSiege = false;
+        }
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var castleId = reader.parseInt(zoneNode.getAttributes(), "castle-id");
+            var zone = new SiegeZone(id, castleId);
+            var castle = CastleManager.getInstance().getCastleById(castleId);
+            if(castle != null) {
+                castle.setSiegeZone(zone);
+            }
+            return zone;
+        }
+
+        @Override
+        public String type() {
+            return "siege";
         }
     }
 }

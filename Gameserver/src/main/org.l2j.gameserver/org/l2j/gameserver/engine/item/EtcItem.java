@@ -16,9 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.item;
+package org.l2j.gameserver.engine.item;
 
 import org.l2j.gameserver.model.ExtractableProduct;
+import org.l2j.gameserver.model.item.AutoUseType;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 
@@ -33,7 +35,7 @@ import java.util.List;
 public final class EtcItem extends ItemTemplate {
     private String handler;
     private final EtcItemType type;
-    private List<ExtractableProduct> _extractableItems;
+    private List<ExtractableProduct> extractableItems;
     private int maxExtractable;
     private boolean isInfinite;
     private boolean selfResurrection;
@@ -83,7 +85,7 @@ public final class EtcItem extends ItemTemplate {
      * @return the extractable items list.
      */
     public List<ExtractableProduct> getExtractableItems() {
-        return _extractableItems;
+        return extractableItems;
     }
 
     /**
@@ -101,10 +103,10 @@ public final class EtcItem extends ItemTemplate {
     }
 
     public void addCapsuledItem(ExtractableProduct extractableProduct) {
-        if (_extractableItems == null) {
-            _extractableItems = new ArrayList<>();
+        if (extractableItems == null) {
+            extractableItems = new ArrayList<>();
         }
-        _extractableItems.add(extractableProduct);
+        extractableItems.add(extractableProduct);
     }
 
     public void setImmediateEffect(boolean immediateEffect) {

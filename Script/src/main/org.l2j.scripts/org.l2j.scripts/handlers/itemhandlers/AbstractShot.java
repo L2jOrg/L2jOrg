@@ -30,8 +30,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
 
-import static org.l2j.commons.util.Util.isNullOrEmpty;
-
 /**
  * @author JoeAlisson
  */
@@ -40,9 +38,8 @@ public abstract class AbstractShot implements IItemHandler {
     @Override
     public boolean useItem(Playable playable, Item item, boolean forceUse) {
         var player = playable.getActingPlayer();
-        var skills = item.getSkills(ItemSkillType.NORMAL);
 
-        if (isNullOrEmpty(skills)) {
+        if (!item.hasSkills(ItemSkillType.NORMAL)) {
             LOGGER.warn("item {} is missing skills!", item);
             return false;
         }
@@ -56,7 +53,7 @@ public abstract class AbstractShot implements IItemHandler {
         player.chargeShot(getShotType(), getBonus(player));
         player.sendPacket(getEnabledShotsMessage());
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayeableChargeShots(player, getShotType(), isBlessed()), player);
-        skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, holder.getSkill(), 0), 600));
+        item.forEachSkill(ItemSkillType.NORMAL, s -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, s.getSkill(), 0), 600));
         return true;
     }
 

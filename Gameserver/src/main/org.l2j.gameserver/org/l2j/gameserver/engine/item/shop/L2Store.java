@@ -26,7 +26,7 @@ import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.engine.item.shop.l2store.RestrictionPeriod;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.network.serverpackets.store.ExBRProductInfo;
 import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.ServerSettings;

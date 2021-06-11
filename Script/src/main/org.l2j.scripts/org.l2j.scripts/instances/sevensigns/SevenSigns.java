@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.scripts.instances.AbstractInstance;
 
 import java.util.Objects;
@@ -76,7 +76,7 @@ public class SevenSigns extends AbstractInstance {
     }
 
     protected void teleportFromZone(int lilithZoneId) {
-        final var zone = ZoneManager.getInstance().getZoneById(lilithZoneId);
+        final var zone = ZoneEngine.getInstance().getZoneById(lilithZoneId);
         zone.forEachPlayer(p -> p.teleToLocation(TeleportWhereType.TOWN));
     }
 
@@ -90,7 +90,7 @@ public class SevenSigns extends AbstractInstance {
 
     protected void onRaidEnter(Npc npc, Player player, int zoneId, int raidTemplateId) {
         if(isInsideRadius3D(player, npc, 1000)) {
-            var zone = ZoneManager.getInstance().getZoneById(zoneId);
+            var zone = ZoneEngine.getInstance().getZoneById(zoneId);
             if(zone.getPlayersInsideCount() < MAX_PLAYERS_IN_ZONE) {
                 enterInstance(player, npc, raidTemplateId);
             } else {

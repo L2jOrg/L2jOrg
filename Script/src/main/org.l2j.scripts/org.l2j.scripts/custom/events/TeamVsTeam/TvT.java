@@ -51,7 +51,7 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.ArrayList;
@@ -102,8 +102,8 @@ public class TvT extends Event
 	private static final Location RED_BUFFER_SPAWN_LOC = new Location(151545, 46528, -3400, 16000);
 	private static final Location BLUE_SPAWN_LOC = new Location(147447, 46722, -3416);
 	private static final Location RED_SPAWN_LOC = new Location(151536, 46722, -3416);
-	private static final Zone BLUE_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace1");
-	private static final Zone RED_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace2");
+	private static final Zone BLUE_PEACE_ZONE = ZoneEngine.getInstance().getZoneByName("colosseum_peace1");
+	private static final Zone RED_PEACE_ZONE = ZoneEngine.getInstance().getZoneByName("colosseum_peace2");
 	// Settings
 	private static final int REGISTRATION_TIME = 10; // Minutes
 	private static final int WAIT_TIME = 1; // Minutes

@@ -95,9 +95,6 @@ public class GameServer {
     public GameServer() throws Exception {
         final var serverLoadStart = Instant.now();
 
-        printSection("World");
-        World.init();
-
         printSection("Skills");
         SkillEngine.init();
 
@@ -109,6 +106,9 @@ public class GameServer {
 
         printSection("Castle Data");
         CastleManager.init();
+
+        printSection("World");
+        World.init();
 
         printSection("Class Categories");
         CategoryManager.init();
@@ -122,6 +122,7 @@ public class GameServer {
         GrandBossManager.getInstance();
         BossManager.init();
         ThreadPool.executeForked(SpawnsData.getInstance()::spawnAll);
+        CastleManager.getInstance().spawnSideNpcs();
 
         printSection("Server Data");
         GlobalVariablesManager.init();
@@ -181,9 +182,6 @@ public class GameServer {
 
         printSection("Instance");
         InstanceManager.init();
-
-        /*printSection("Olympiad");
-        Hero.getInstance();*/
 
         // Call to load caches
         printSection("Cache");
@@ -247,7 +245,6 @@ public class GameServer {
     public static void main(String[] args) throws Exception {
         configureLogger();
         configureCache();
-        logVersionInfo();
         configureDatabase();
         configureNetworkPackets();
 
@@ -255,6 +252,7 @@ public class GameServer {
         Configurator.getInstance().load();
         Config.load(); // TODO remove this
 
+        logVersionInfo();
         printSection("Thread Pools");
         ThreadPool.init(ServerSettings.threadPoolSize() ,ServerSettings.scheduledPoolSize(), ServerSettings.maxThreadPoolSize());
 

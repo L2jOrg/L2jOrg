@@ -41,7 +41,7 @@ import org.l2j.gameserver.network.serverpackets.ExShowTerritory;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
@@ -175,26 +175,26 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler {
         _zones.computeIfAbsent(activeChar.getObjectId(), key -> new ZoneNodeHolder(activeChar)).setMaxZ(maxZ);
     }
 
-    private void buildZonesEditorWindow(Player activeChar) {
+    private void buildZonesEditorWindow(Player player) {
         final StringBuilder sb = new StringBuilder();
-        final List<Zone> zones = ZoneManager.getInstance().getZones(activeChar);
-        for (Zone zone : zones) {
+
+        ZoneEngine.getInstance().forEachZone(player, zone -> {
             if (zone.getArea() instanceof ZonePolygonArea) {
                 sb.append("<tr>");
                 sb.append("<td fixwidth=200><a action=\"bypass -h admin_zones load ").append(zone.getName()).append("\">").append(zone.getName()).append("</a></td>");
                 sb.append("</tr>");
             }
-        }
+        });
 
         final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
-        msg.setFile(activeChar, "data/html/admin/zone_editor.htm");
+        msg.setFile(player, "data/html/admin/zone_editor.htm");
         msg.replace("%zones%", sb.toString());
-        activeChar.sendPacket(msg);
+        player.sendPacket(msg);
     }
 
     private void loadZone(Player activeChar, String zoneName) {
         BuilderUtil.sendSystemMessage(activeChar, "Searching for zone: %s", zoneName);
-        Zone zone = ZoneManager.getInstance().getZoneByName(zoneName);
+        Zone zone = ZoneEngine.getInstance().getZoneByName(zoneName);
 
         if ((zone != null) && (zone.getArea() instanceof ZonePolygonArea)) {
             final ZonePolygonArea zoneArea = (ZonePolygonArea) zone.getArea();

@@ -69,7 +69,7 @@ public class Defender extends Attackable {
         final Player player = attacker.getActingPlayer();
 
         // Check if siege is in progress
-        if (nonNull(_castle) && _castle.getZone().isActive()) {
+        if (nonNull(_castle) && _castle.getSiegeZone().isActive()) {
             final int activeSiegeId = _castle.getId();
 
             // Check if player is an enemy of this defender npc
@@ -183,7 +183,7 @@ public class Defender extends Attackable {
             if ((damage == 0) && (aggro <= 1) && (GameUtils.isPlayable(attacker))) {
                 final Player player = attacker.getActingPlayer();
                 // Check if siege is in progress
-                if (nonNull(_castle) && _castle.getZone().isActive()) {
+                if (nonNull(_castle) && _castle.getSiegeZone().isActive()) {
                     final int activeSiegeId = _castle.getId();
                     if ((player != null) && (((player.getSiegeState() == 2) && player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1)))) {
                         return;

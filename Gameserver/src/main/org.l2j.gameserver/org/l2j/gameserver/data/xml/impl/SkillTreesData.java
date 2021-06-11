@@ -118,13 +118,8 @@ public final class SkillTreesData extends GameXmlReader {
         removeSkillCache.clear();
 
         parseDatapackDirectory("data/skillTrees/", true);
-
-        // Generate check arrays.
         generateCheckArrays();
-
-        // Logs a report with skill trees info.
         report();
-
         isLoading.set(false);
         releaseResources();
     }
@@ -164,26 +159,16 @@ public final class SkillTreesData extends GameXmlReader {
     private void parseSkill(Node skillNode, LongMap<SkillLearn> classSkillTree, ClassId classId, String type) {
         final SkillLearn skillLearn = new SkillLearn(new StatsSet(parseAttributes(skillNode)));
 
-        // test if skill exists
         SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 
-        for (Node b = skillNode.getFirstChild(); b != null; b = b.getNextSibling()) {
-            var attrs = b.getAttributes();
-
-            switch (b.getNodeName()) {
-                case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
-                case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "lvl")));
-                case "race" -> skillLearn.addRace(Race.valueOf(b.getTextContent()));
-                case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(b.getTextContent()));
-                case "social-status" -> skillLearn.setSocialStatus(parseEnum(b, SocialStatus.class));
-                case "removeSkill" -> {
-                    final int removeSkillId = parseInt(attrs, "id");
-                    skillLearn.addRemoveSkills(removeSkillId);
-                    removeSkillCache.computeIfAbsent(classId, k -> new HashIntSet()).add(removeSkillId);
-                }
-            }
+        for (var node = skillNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+            parseSkillLearnAttributes(classId, skillLearn, node);
         }
 
+        addToSkillTree(classSkillTree, classId, type, skillLearn);
+    }
+
+    private void addToSkillTree(LongMap<SkillLearn> classSkillTree, ClassId classId, String type, SkillLearn skillLearn) {
         final long skillHashCode = SkillEngine.skillHashCode(skillLearn.getSkillId(), skillLearn.getSkillLevel());
         switch (type) {
             case "classSkillTree" -> {
@@ -203,6 +188,24 @@ public final class SkillTreesData extends GameXmlReader {
         }
     }
 
+    private void parseSkillLearnAttributes(ClassId classId, SkillLearn skillLearn, Node node) {
+        var attrs = node.getAttributes();
+
+        switch (node.getNodeName()) {
+            case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
+            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "lvl")));
+            case "race" -> skillLearn.addRace(Race.valueOf(node.getTextContent()));
+            case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(node.getTextContent()));
+            case "social-status" -> skillLearn.setSocialStatus(parseEnum(node, SocialStatus.class));
+            case "removeSkill" -> {
+                final int removeSkillId = parseInt(attrs, "id");
+                skillLearn.addRemoveSkills(removeSkillId);
+                removeSkillCache.computeIfAbsent(classId, k -> new HashIntSet()).add(removeSkillId);
+            }
+            default -> LOGGER.warn("Unknown skill learn attribute {}", node.getNodeName());
+        }
+    }
+
     /**
      * Method to get the complete skill tree for a given class id.<br>
      * Include all skills common to all classes.<br>
@@ -212,7 +215,6 @@ public final class SkillTreesData extends GameXmlReader {
      * @return the complete Class Skill Tree including skill trees from parent class for a given {@code classId}
      */
     public LongMap<SkillLearn> getCompleteClassSkillTree(ClassId classId) {
-        // Add all skills that belong to all classes.
         final LongMap<SkillLearn> skillTree = new HashLongMap<>(commonSkillTree);
         while ((classId != null) && (classSkillTrees.get(classId) != null)) {
             skillTree.putAll(classSkillTrees.get(classId));
