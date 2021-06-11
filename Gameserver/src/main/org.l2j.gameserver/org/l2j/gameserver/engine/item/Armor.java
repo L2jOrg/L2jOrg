@@ -63,16 +63,6 @@ public final class Armor extends ItemTemplate implements EquipableItem {
         return type.mask();
     }
 
-    @Override
-    public void setCrystalType(CrystalType type) {
-        this.crystalType = type;
-    }
-
-    @Override
-    public void setCrystalCount(int count) {
-        this.crystalCount = count;
-    }
-
     public void setEnchantable(Boolean enchantable) {
         this.enchantable = enchantable;
     }

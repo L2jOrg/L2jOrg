@@ -748,24 +748,34 @@ public final class EffectList {
                 final Skill existingSkill = existingInfo.getSkill();
                 // Check if existing effect should be removed due to stack.
                 // Effects with no abnormal don't stack if their ID is the same. Effects of the same abnormal type don't stack.
-                if ((skill.getAbnormalType().isNone() && (existingSkill.getId() == skill.getId())) || (!skill.getAbnormalType().isNone() && (existingSkill.getAbnormalType() == skill.getAbnormalType()))) {
+                if (isSameSkillOrAbnormalType(skill, existingSkill)) {
                     // Check if there is subordination abnormal. Skills with subordination abnormal stack with each other, unless the caster is the same.
                     if (isAbnormalSubordination(info, skill, existingInfo, existingSkill)) {
                         continue;
                     }
 
-                    // The effect we are adding overrides the existing effect. Delete or disable the existing effect.
-                    if (skill.getAbnormalLvl() >= existingSkill.getAbnormalLvl()) {
-                        disableOrRemoveEffect(skill, existingInfo, existingSkill);
-                    } else if (skill.isIrreplacableBuff()) {
-                        info.setInUse(false);
-                    } else {
+                    if (!disableExistingEffect(info, skill, existingInfo, existingSkill)) {
                         return true;
                     }
                 }
             }
         }
         return false;
+    }
+
+    private boolean disableExistingEffect(BuffInfo info, Skill skill, BuffInfo existingInfo, Skill existingSkill) {
+        if (skill.getAbnormalLvl() >= existingSkill.getAbnormalLvl()) {
+            disableOrRemoveEffect(skill, existingInfo, existingSkill);
+        } else if (skill.isIrreplacableBuff()) {
+            info.setInUse(false);
+        } else {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isSameSkillOrAbnormalType(Skill skill, Skill existingSkill) {
+        return (skill.getAbnormalType().isNone() && (existingSkill.getId() == skill.getId())) || (!skill.getAbnormalType().isNone() && (existingSkill.getAbnormalType() == skill.getAbnormalType()));
     }
 
     private boolean isAbnormalSubordination(BuffInfo info, Skill skill, BuffInfo existingInfo, Skill existingSkill) {
@@ -922,17 +932,21 @@ public final class EffectList {
                 if(info.getSkill().isHealingPotionSkill()) {
                     shortBuffStatusUpdate(info);
                 } else {
-                    if(statusUpdate != null) {
-                        statusUpdate.addSkill(info);
-                    }
-                    if(!info.getSkill().isToggle() && partySpelled != null) {
-                        partySpelled.addSkill(info);
-                    }
-                    if(olympiadSpelledInfo != null) {
-                        olympiadSpelledInfo.addSkill(info);
-                    }
+                    addToUpdatePacket(statusUpdate, partySpelled, olympiadSpelledInfo, info);
                 }
             }
+        }
+    }
+
+    private void addToUpdatePacket(AbnormalStatusUpdate statusUpdate, PartySpelled partySpelled, ExOlympiadSpelledInfo olympiadSpelledInfo, BuffInfo info) {
+        if(statusUpdate != null) {
+            statusUpdate.addSkill(info);
+        }
+        if(!info.getSkill().isToggle() && partySpelled != null) {
+            partySpelled.addSkill(info);
+        }
+        if(olympiadSpelledInfo != null) {
+            olympiadSpelledInfo.addSkill(info);
         }
     }
 

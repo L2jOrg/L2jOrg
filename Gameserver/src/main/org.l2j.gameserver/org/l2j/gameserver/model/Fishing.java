@@ -62,7 +62,7 @@ public class Fishing {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Fishing.class);
     private static final Location DEFAULT_BAIT_LOCATION = new Location(0, 0, 0);
     private final Player player;
-    private volatile ILocational baitLocation = DEFAULT_BAIT_LOCATION;
+    private ILocational baitLocation = DEFAULT_BAIT_LOCATION;
     private ScheduledFuture<?> reelInTask;
     private ScheduledFuture<?> startFishingTask;
     private boolean isFishing = false;

@@ -35,7 +35,7 @@ import java.util.List;
 public final class EtcItem extends ItemTemplate {
     private String handler;
     private final EtcItemType type;
-    private List<ExtractableProduct> _extractableItems;
+    private List<ExtractableProduct> extractableItems;
     private int maxExtractable;
     private boolean isInfinite;
     private boolean selfResurrection;
@@ -85,7 +85,7 @@ public final class EtcItem extends ItemTemplate {
      * @return the extractable items list.
      */
     public List<ExtractableProduct> getExtractableItems() {
-        return _extractableItems;
+        return extractableItems;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class EtcItem extends ItemTemplate {
     }
 
     public void addCapsuledItem(ExtractableProduct extractableProduct) {
-        if (_extractableItems == null) {
-            _extractableItems = new ArrayList<>();
+        if (extractableItems == null) {
+            extractableItems = new ArrayList<>();
         }
-        _extractableItems.add(extractableProduct);
+        extractableItems.add(extractableProduct);
     }
 
     public void setImmediateEffect(boolean immediateEffect) {

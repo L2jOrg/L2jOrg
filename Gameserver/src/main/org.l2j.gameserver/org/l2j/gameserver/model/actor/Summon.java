@@ -487,7 +487,7 @@ public abstract class Summon extends Playable {
             return false;
         }
 
-        final Player currentTargetPlayer = target.getActingPlayer();
+        var currentTargetPlayer = target.getActingPlayer();
         if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(owner)) {
             sendPacket(SystemMessageId.INVALID_TARGET);
             return false;

@@ -161,7 +161,7 @@ public final class SkillTreesData extends GameXmlReader {
 
         SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 
-        for (Node node = skillNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+        for (var node = skillNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             parseSkillLearnAttributes(classId, skillLearn, node);
         }
 

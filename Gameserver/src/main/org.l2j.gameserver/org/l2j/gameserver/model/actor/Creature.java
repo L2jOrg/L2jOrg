@@ -2027,7 +2027,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         double dx;
         double dy;
-        double dz = m._zDestination - zPrev; // Z coordinate will follow client values
+        double dz = (double) m._zDestination - zPrev; // Z coordinate will follow client values
 
         // the only method that can modify x,y while moving (otherwise _move would/should be set null)
         if (GeoEngineSettings.isSyncMode(SyncMode.CLIENT)) {

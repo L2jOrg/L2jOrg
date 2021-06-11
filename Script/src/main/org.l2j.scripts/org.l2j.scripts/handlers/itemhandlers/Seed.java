@@ -28,13 +28,9 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Chest;
 import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
-
-import java.util.List;
 
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -91,7 +87,7 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final Player player = playable.getActingPlayer();
+		var player = playable.getActingPlayer();
 		item.forEachSkill(ItemSkillType.NORMAL, holder -> player.useSkill(holder.getSkill(), item, false, false));
 		return true;
 	}

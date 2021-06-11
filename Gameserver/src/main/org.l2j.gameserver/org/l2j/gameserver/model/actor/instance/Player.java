@@ -3791,34 +3791,39 @@ public final class Player extends Playable {
             int dropEquipWeapon = isKarmaDrop ? Config.KARMA_RATE_DROP_EQUIP_WEAPON : Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
             int rateDropItem = isKarmaDrop ? Config.KARMA_RATE_DROP_ITEM : Config.PLAYER_RATE_DROP_ITEM;
             int dropLimit = isKarmaDrop ? Config.KARMA_DROP_LIMIT : Config.PLAYER_DROP_LIMIT;
-            int dropCount = 0;
-            int itemDropPercent;
 
-            Collection<Item> droppedItems = new ArrayList<>();
-            for (Item itemDrop : inventory.getItems()) {
-                if (isUndropable(itemDrop)) {
-                    continue;
-                }
-
-                if (itemDrop.isEquipped()) {
-                    itemDropPercent = itemDrop.getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
-                    inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
-                } else {
-                    itemDropPercent = rateDropItem;
-                }
-
-                if (Rnd.chance(itemDropPercent)) {
-                    dropItem("DieDrop", itemDrop, killer);
-                    droppedItems.add(itemDrop);
-                    LOGGER.info("{} has dropped {} {}. With karma {}", this, itemDrop.getCount(), itemDrop, isKarmaDrop);
-                    if (++dropCount >= dropLimit) {
-                        break;
-                    }
-                }
-            }
-            return droppedItems;
+            return dropItems(killer, isKarmaDrop, dropEquip, dropEquipWeapon, rateDropItem, dropLimit);
         }
         return Collections.emptyList();
+    }
+
+    private Collection<Item> dropItems(Creature killer, boolean isKarmaDrop, int dropEquip, int dropEquipWeapon, int rateDropItem, int dropLimit) {
+        Collection<Item> droppedItems = new ArrayList<>();
+        int dropCount = 0;
+        int itemDropPercent;
+
+        for (Item itemDrop : inventory.getItems()) {
+            if (isUndropable(itemDrop)) {
+                continue;
+            }
+
+            if (itemDrop.isEquipped()) {
+                itemDropPercent = itemDrop.getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
+                inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
+            } else {
+                itemDropPercent = rateDropItem;
+            }
+
+            if (Rnd.chance(itemDropPercent)) {
+                dropItem("DieDrop", itemDrop, killer);
+                droppedItems.add(itemDrop);
+                LOGGER.info("{} has dropped {} {}. With karma {}", this, itemDrop.getCount(), itemDrop, isKarmaDrop);
+                if (++dropCount >= dropLimit) {
+                    break;
+                }
+            }
+        }
+        return droppedItems;
     }
 
     private boolean isUndropable(Item itemDrop) {

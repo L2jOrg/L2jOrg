@@ -55,7 +55,7 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		final Player player = playable.getActingPlayer();
+		var player = playable.getActingPlayer();
 		final WorldObject target = player.getTarget();
 		if (!isMonster(target) || !((Creature) target).isDead()) {
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -63,7 +63,7 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		item.forEachSkill(ItemSkillType.NORMAL, S -> player.useSkill(S.getSkill(), item, false, false));
+		item.forEachSkill(ItemSkillType.NORMAL, s -> player.useSkill(s.getSkill(), item, false, false));
 		return true;
 	}
 }
