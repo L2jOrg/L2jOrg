@@ -53,7 +53,7 @@ public class PlayerStats extends PlayableStats {
 
     private final AtomicInteger _talismanSlots = new AtomicInteger();
     private long startingXp;
-    private int _vitalityPoints = 0;
+    private int vitalityPoints;
 
     public PlayerStats(Player player) {
         super(player);
@@ -178,7 +178,7 @@ public class PlayerStats extends PlayableStats {
 
     @Override
     public final boolean addLevel(byte value) {
-        if ((getLevel() + value) > LevelData.getInstance().getMaxLevel()) {
+        if (getLevel() + value > LevelData.getInstance().getMaxLevel()) {
             return false;
         }
 
@@ -192,10 +192,8 @@ public class PlayerStats extends PlayableStats {
             player.notifyFriends(FriendStatus.LEVEL);
         }
 
-        // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(player, oldLevel, getLevel()), player);
 
-        // Give AutoGet skills and all normal skills if Auto-Learn is activated.
         player.rewardSkills();
 
         if (player.getClan() != null) {
@@ -205,37 +203,31 @@ public class PlayerStats extends PlayableStats {
             player.getParty().recalculatePartyLevel(); // Recalculate the party level
         }
 
-        // Maybe add some skills when player levels up in transformation.
         player.getTransformation().ifPresent(transform -> transform.onLevelUp(player));
 
-        // Synchronize level with pet if possible.
-        final Pet sPet = player.getPet();
-        if (sPet != null) {
-            if (sPet.getPetData().isSyncLevel() && (sPet.getLevel() != getLevel())) {
-                final byte availableLevel = (byte) Math.min(sPet.getPetData().getMaxLevel(), getLevel());
-                sPet.getStats().setLevel(availableLevel);
-                sPet.getStats().getExpForLevel(availableLevel);
-                sPet.setCurrentHp(sPet.getMaxHp());
-                sPet.setCurrentMp(sPet.getMaxMp());
-                sPet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
-                sPet.updateAndBroadcastStatus(1);
-            }
-        }
+        syncPetLevel(player);
 
         if (getLevel() >= 40) {
             player.initElementalSpirits();
         }
         player.updateCharacteristicPoints();
         player.broadcastStatusUpdate();
-        // Update the overloaded status of the Player
         player.refreshOverloaded(true);
-        // Send a Server->Client packet UserInfo to the Player
-        player.sendPacket(new UserInfo(player));
-        // Send acquirable skill list
-        player.sendPacket(new AcquireSkillList(player));
-        player.sendPacket(new ExVoteSystemInfo(player));
-        player.sendPacket(new ExOneDayReceiveRewardList(player, true));
+        player.sendPackets(new UserInfo(player), new AcquireSkillList(player), new ExVoteSystemInfo(player), new ExOneDayReceiveRewardList(player, true));
         return levelIncreased;
+    }
+
+    private void syncPetLevel(Player player) {
+        final Pet sPet = player.getPet();
+        if (sPet != null && sPet.getPetData().isSyncLevel() && sPet.getLevel() != getLevel()) {
+            final byte availableLevel = (byte) Math.min(sPet.getPetData().getMaxLevel(), getLevel());
+            sPet.getStats().setLevel(availableLevel);
+            sPet.getStats().getExpForLevel(availableLevel);
+            sPet.setCurrentHp(sPet.getMaxHp());
+            sPet.setCurrentMp(sPet.getMaxMp());
+            sPet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
+            sPet.updateAndBroadcastStatus(1);
+        }
     }
 
     @Override
@@ -300,15 +292,15 @@ public class PlayerStats extends PlayableStats {
     }
 
     public int getVitalityPoints() {
-        return Math.min(Math.max(_vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
+        return Math.min(Math.max(vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
     }
 
     public void setVitalityPoints(int value) {
-        _vitalityPoints = Math.min(Math.max(value, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
+        vitalityPoints = Math.min(Math.max(value, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
     }
 
     public int getBaseVitalityPoints() {
-        return Math.min(Math.max(_vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
+        return Math.min(Math.max(vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
     }
 
     public double getVitalityExpBonus() {
