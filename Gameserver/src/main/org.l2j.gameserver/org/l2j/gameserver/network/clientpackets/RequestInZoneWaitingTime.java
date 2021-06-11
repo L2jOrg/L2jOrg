@@ -18,26 +18,22 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.ExInzoneWaiting;
+import org.l2j.gameserver.network.serverpackets.ExInZoneWaiting;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class RequestInzoneWaitingTime extends ClientPacket {
-    private boolean _hide;
+public class RequestInZoneWaitingTime extends ClientPacket {
+    private boolean show;
 
     @Override
     public void readImpl() {
-        _hide = readChar() == 0;
+        show = readBoolean();
     }
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
-            return;
-        }
-        client.sendPacket(new ExInzoneWaiting(activeChar, _hide));
+        client.sendPacket(new ExInZoneWaiting(client.getPlayer(), show));
     }
 }

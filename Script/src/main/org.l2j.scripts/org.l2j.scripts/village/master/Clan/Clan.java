@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.village.master.Clan;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
@@ -26,6 +27,7 @@ import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
 import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.*;
+import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
@@ -47,6 +49,19 @@ public final class Clan extends AbstractNpcAI
 		30681,30685,30687,30689,30694,30699,30704,30845,30847,30849,
 		30854,30857,30862,30865,30894,30897,30900,30905,30910,30913,
 	};
+
+	private static final Skill[] CLAN_ADVENT = new Skill[]{
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 1).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 2).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 3).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 4).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 5).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 6).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 7).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 8).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 9).getSkill(),
+			new SkillHolder(CommonSkill.CLAN_ADVENT.getId(), 10).getSkill(),
+	};
 	// @formatter:on
 	private static final Map<String, String> LEADER_REQUIRED = new HashMap<>();
 	static
@@ -55,13 +70,6 @@ public final class Clan extends AbstractNpcAI
 		LEADER_REQUIRED.put("9000-04.htm", "9000-04-no.htm");
 		LEADER_REQUIRED.put("9000-05.htm", "9000-05-no.htm");
 		LEADER_REQUIRED.put("9000-07.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-12a.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-12b.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-13a.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-13b.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-14a.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-14b.htm", "9000-07-no.htm");
-		LEADER_REQUIRED.put("9000-15.htm", "9000-07-no.htm");
 	}
 	
 	private Clan()
@@ -93,21 +101,30 @@ public final class Clan extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		final Player activeChar = event.getPlayer();
-		if (activeChar.isClanLeader())
+		final org.l2j.gameserver.model.Clan clan = event.getPlayer().getClan();
+		if (clan == null)
 		{
-			final org.l2j.gameserver.model.Clan clan = event.getPlayer().getClan();
+			return;
+		}
+		if (clan.getLevel() == 0)
+		{
+			return;
+		}
+		if (event.getPlayer().isClanLeader())
+		{
+			final Skill skill = getClanAdvent(clan.getLevel());
 			clan.getMembers().forEach(member ->
 			{
 				if (member.isOnline())
 				{
-					CommonSkill.CLAN_ADVENT.getSkill().applyEffects(member.getPlayerInstance(), member.getPlayerInstance());
+					skill.applyEffects(member.getPlayerInstance());
 				}
 			});
 		}
-		else if ((activeChar.getClan() != null) && activeChar.getClan().getLeader().isOnline())
+		else if (clan.getLeader().isOnline())
 		{
-			CommonSkill.CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+			final Skill skill = getClanAdvent(clan.getLevel());
+			skill.applyEffects(event.getPlayer());
 		}
 	}
 	
@@ -115,32 +132,68 @@ public final class Clan extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogout(OnPlayerLogout event)
 	{
-		final Player activeChar = event.getPlayer();
-		if (activeChar.isClanLeader())
+		final org.l2j.gameserver.model.Clan clan = event.getPlayer().getClan();
+		if (clan == null)
 		{
-			final org.l2j.gameserver.model.Clan clan = activeChar.getClan();
+			return;
+		}
+		if (clan.getLevel() == 0)
+		{
+			return;
+		}
+		if (event.getPlayer().isClanLeader())
+		{
 			clan.getMembers().forEach(member ->
 			{
 				if (member.isOnline())
 				{
-					member.getPlayerInstance().getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
+					stopClanAdvent(member.getPlayerInstance());
 				}
 			});
 		}
-		if (activeChar.getClan() != null)
-		{
-			activeChar.getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
-		}
+		stopClanAdvent(event.getPlayer());
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_PROFESSION_CHANGE)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onProfessionChange(OnPlayerProfessionChange event)
 	{
-		final Player activeChar = event.getActiveChar();
-		if (activeChar.isClanLeader() || ((activeChar.getClan() != null) && activeChar.getClan().getLeader().isOnline()))
+		final org.l2j.gameserver.model.Clan clan = event.getActiveChar().getClan();
+		if (clan == null)
 		{
-			CommonSkill.CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+			return;
+		}
+		if (clan.getLevel() == 0)
+		{
+			return;
+		}
+		if (event.getActiveChar().isClanLeader() || clan.getLeader().isOnline())
+		{
+			final Skill skill = getClanAdvent(clan.getLevel());
+			skill.applyEffects(event.getActiveChar());
+		}
+	}
+
+	@RegisterEvent(EventType.ON_PLAYER_CLAN_LVLUP)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerClanLvlUp(OnPlayerClanLvlUp event)
+	{
+		final org.l2j.gameserver.model.Clan clan = event.getClan();
+		if (clan.getLevel() == 0)
+		{
+			return;
+		}
+		if (clan.getLeader().isOnline())
+		{
+			final Skill skill = getClanAdvent(clan.getLevel());
+			clan.getMembers().forEach(member ->
+			{
+				if (member.isOnline())
+				{
+					stopClanAdvent(member.getPlayerInstance());
+					skill.applyEffects(member.getPlayerInstance());
+				}
+			});
 		}
 	}
 	
@@ -148,10 +201,15 @@ public final class Clan extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerClanJoin(OnPlayerClanJoin event)
 	{
-		final Player activeChar = event.getActiveChar().getPlayerInstance();
-		if (activeChar.getClan().getLeader().isOnline())
+		final org.l2j.gameserver.model.Clan clan = event.getActiveChar().getClan();
+		if (clan.getLevel() == 0)
 		{
-			CommonSkill.CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+			return;
+		}
+		if (clan.getLeader().isOnline())
+		{
+			final Skill skill = getClanAdvent(clan.getLevel());
+			skill.applyEffects(event.getActiveChar().getPlayerInstance());
 		}
 	}
 	
@@ -159,7 +217,21 @@ public final class Clan extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerClanLeft(OnPlayerClanLeft event)
 	{
-		event.getActiveChar().getPlayerInstance().getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
+		if (event.getClan().getLevel() == 0)
+		{
+			return;
+		}
+		stopClanAdvent(event.getActiveChar().getPlayerInstance());	}
+
+
+	private void stopClanAdvent(Player player)
+	{
+		player.getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
+	}
+
+	private Skill getClanAdvent(int level)
+	{
+		return CLAN_ADVENT[level - 1];
 	}
 	
 	public static Clan provider() {

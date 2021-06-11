@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets.pledge;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -42,7 +42,7 @@ public class RequestPledgeRecruitInfo extends ClientPacket {
             return;
         }
 
-        final Clan clan = ClanTable.getInstance().getClan(_clanId);
+        final Clan clan = ClanEngine.getInstance().getClan(_clanId);
         if (clan == null) {
             return;
         }

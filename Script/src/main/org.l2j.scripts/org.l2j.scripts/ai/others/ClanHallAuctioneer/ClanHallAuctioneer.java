@@ -19,15 +19,15 @@
 package org.l2j.scripts.ai.others.ClanHallAuctioneer;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.data.database.data.Bidder;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.data.database.data.Bidder;
 import org.l2j.gameserver.model.clanhallauction.ClanHallAuction;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
@@ -49,8 +49,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Clan Hall Auctioneer AI.
@@ -192,7 +190,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
                 // THE_CLAN_DOES_NOT_OWN_A_CLAN_HALL
 
-                final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallAuction.getClanHallId());
+                final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallAuction.getClanHallId());
                 final Clan owner = clanHall.getOwner();
                 final long remainingTime = clanHallAuction.getRemaingTime();
                 final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
@@ -247,7 +245,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
         if (clanHallId > 0)
         {
-            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+            final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallId);
             if (clanHall != null)
             {
                 final ClanHallAuction clanHallAuction = ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHallId);
@@ -273,7 +271,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
         }
         else
         {
-            final List<ClanHall> clanHalls = ClanHallManager.getInstance().getFreeAuctionableHall();
+            final List<ClanHall> clanHalls = ClanHallEngine.getInstance().getFreeAuctionableHall();
             if (clanHalls.isEmpty())
             {
                 player.sendPacket(SystemMessageId.THERE_ARE_NO_CLAN_HALLS_UP_FOR_AUCTION);
@@ -322,7 +320,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 
         if (clanHallId > 0)
         {
-            final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+            final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallId);
             if (clanHall == null)
             {
                 return;
@@ -339,7 +337,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
                 player.sendPacket(SystemMessageId.TO_PARTICIPATE_IN_THE_32_CLAN_HALL_AUCTION_THE_CLAN_LEVEL_MUST_BE_2_OR_HIGHER_AND_THE_CHARACTER_MUST_BE_A_CLAN_LEADER_OR_HAVE_THE_RIGHT_TO_BID_AND_SELL);
                 return;
             }
-            final ClanHall playerClanHall = ClanHallManager.getInstance().getClanHallByClan(clan);
+            final ClanHall playerClanHall = ClanHallEngine.getInstance().getClanHallByClan(clan);
             if (playerClanHall != null)
             {
                 player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_PARTICIPATE_IN_AN_AUCTION);
@@ -363,7 +361,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
             else
             {
                 player.sendPacket(SystemMessageId.YOU_HAVE_REGISTERED_FOR_A_CLAN_HALL_AUCTION);
-                if (bid > getSettings(CharacterSettings.class).maxAdena())
+                if (bid > CharacterSettings.maxAdena())
                 {
                     player.sendPacket(SystemMessageId.THE_HIGHEST_BID_IS_OVER_999_9_BILLION_THEREFORE_YOU_CANNOT_PLACE_A_BID);
                     return;

@@ -37,8 +37,6 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Loads player's base stats.
  *
@@ -59,7 +57,7 @@ public final class PlayerTemplateData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/charTemplate.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/charTemplate.xsd");
     }
 
     @Override

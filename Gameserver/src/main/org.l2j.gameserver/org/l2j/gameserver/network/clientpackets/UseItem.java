@@ -20,11 +20,11 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.NextAction;
 import org.l2j.gameserver.data.xml.impl.VariationData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.AdminCommandHandler;
@@ -36,7 +36,6 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EtcItem;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
@@ -51,7 +50,6 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isBetween;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
@@ -136,7 +134,7 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        if (!getSettings(CharacterSettings.class).allowPKTeleport() && player.getReputation() < 0) {
+        if (!CharacterSettings.allowPKTeleport() && player.getReputation() < 0) {
             final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
             if (nonNull(skills) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
                 return;

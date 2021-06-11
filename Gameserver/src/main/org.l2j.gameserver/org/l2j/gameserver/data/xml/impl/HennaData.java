@@ -38,8 +38,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * This class holds the henna related information.<br>
@@ -60,7 +58,7 @@ public final class HennaData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/hennaList.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/hennaList.xsd");
     }
 
     @Override

@@ -21,7 +21,11 @@ package org.l2j.gameserver.data.database.data;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.enums.ShortcutType;
+import org.l2j.gameserver.handler.PlayerActionHandler;
+
+import static java.util.Objects.nonNull;
 
 /**
  * Shortcut DTO.
@@ -170,4 +174,14 @@ public class Shortcut {
     public boolean isActive() {
         return active;
     }
+
+    public boolean isSummonShortcut() {
+        if(type != ShortcutType.ACTION) {
+            return false;
+        }
+        var action = ActionManager.getInstance().getActionData(shortcutId);
+        var handler = PlayerActionHandler.getInstance().getHandler(action.getHandler());
+        return nonNull(handler) && handler.isSummonAction();
+    }
+
 }

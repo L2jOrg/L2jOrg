@@ -22,7 +22,7 @@ package org.l2j.scripts.handlers.playeractions;
 import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.ExInzoneWaiting;
+import org.l2j.gameserver.network.serverpackets.ExInZoneWaiting;
 
 /**
  * Instance Zone Info player action handler.
@@ -33,6 +33,6 @@ public final class InstanceZoneInfo implements IPlayerActionHandler
 	@Override
 	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
 	{
-		player.sendPacket(new ExInzoneWaiting(player, false));
+		player.sendPacket(new ExInZoneWaiting(player, false));
 	}
 }

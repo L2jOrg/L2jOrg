@@ -32,7 +32,6 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -69,7 +68,7 @@ public class RequestSetCastleSiegeTime extends ClientPacket {
             var requestedTime = Instant.ofEpochSecond(time).atZone(ZoneId.systemDefault());
             var requestedHour = requestedTime.getHour();
 
-            if(Util.contains(getSettings(FeatureSettings.class).siegeHours(), requestedHour)) {
+            if(Util.contains(FeatureSettings.siegeHours(), requestedHour)) {
                 CastleManager.getInstance().registerSiegeDate(castle, castle.getSiegeDate().withHour(requestedHour));
                 castle.setSiegeTimeRegistrationEnd(LocalDateTime.now());
                 Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME).addCastleId(castleId));

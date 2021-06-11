@@ -35,8 +35,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author UnAfraid
  */
@@ -49,7 +47,7 @@ public class CombinationItemsManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/combination-items.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/combination-items.xsd");
     }
 
     @Override

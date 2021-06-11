@@ -19,10 +19,9 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ClanDAO;
 import org.l2j.gameserver.data.database.data.ClanWarData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -30,6 +29,7 @@ import org.l2j.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SurrenderPledgeWar;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.ClanSettings;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -80,7 +80,7 @@ public final class ClanWar {
             if (endTimePeriod > System.currentTimeMillis()) {
                 endTimePeriod = 10000;
             }
-            ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(warData.getAttacker(), warData.getAttacked()), endTimePeriod);
+            ThreadPool.schedule(() -> ClanEngine.getInstance().deleteClanWars(warData.getAttacker(), warData.getAttacked()), endTimePeriod);
         }
     }
 
@@ -92,8 +92,8 @@ public final class ClanWar {
         if ((victim.getLevel() > 4) && (data.getState() == ClanWarState.MUTUAL)) {
             // however, when the other side reputation score is 0 or below, your clan cannot acquire any reputation points from them.
             if (victimClan.getReputationScore() > 0) {
-                victimClan.takeReputationScore(Config.REPUTATION_SCORE_PER_KILL, false);
-                killerClan.addReputationScore(Config.REPUTATION_SCORE_PER_KILL, false);
+                victimClan.takeReputationScore(ClanSettings.warKillReputation(), false);
+                killerClan.addReputationScore(ClanSettings.warKillReputation(), false);
             }
 
             // System Message notification to clan members
@@ -140,7 +140,7 @@ public final class ClanWar {
     }
 
     public void cancel(Player player, Clan cancelor) {
-        final Clan winnerClan = cancelor.getId() == data.getAttacker() ? ClanTable.getInstance().getClan(data.getAttacked()) : ClanTable.getInstance().getClan(data.getAttacker());
+        final Clan winnerClan = cancelor.getId() == data.getAttacker() ? ClanEngine.getInstance().getClan(data.getAttacked()) : ClanEngine.getInstance().getClan(data.getAttacker());
 
         // Reduce reputation.
         cancelor.takeReputationScore(500, true);
@@ -158,12 +158,12 @@ public final class ClanWar {
         data.setWinnerClan(winnerClan.getId());
         data.setEndTime(System.currentTimeMillis());
 
-        ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(cancelor.getId(), winnerClan.getId()), (data.getEndTime() + TIME_TO_DELETION_AFTER_DEFEAT) - System.currentTimeMillis());
+        ThreadPool.schedule(() -> ClanEngine.getInstance().deleteClanWars(cancelor.getId(), winnerClan.getId()), (data.getEndTime() + TIME_TO_DELETION_AFTER_DEFEAT) - System.currentTimeMillis());
     }
 
     public void clanWarTimeout() {
-        final Clan attackerClan = ClanTable.getInstance().getClan(data.getAttacker());
-        final Clan attackedClan = ClanTable.getInstance().getClan(data.getAttacked());
+        final Clan attackerClan = ClanEngine.getInstance().getClan(data.getAttacker());
+        final Clan attackedClan = ClanEngine.getInstance().getClan(data.getAttacked());
 
         if ((attackerClan != null) && (attackedClan != null)) {
             SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_DECLARED_BY_CLAN_S1_WAS_CANCELLED);
@@ -178,7 +178,7 @@ public final class ClanWar {
             data.setEndTime(System.currentTimeMillis());
 
             ThreadPool.schedule(() ->
-                    ClanTable.getInstance().deleteClanWars(attackerClan.getId(), attackedClan.getId()), (data.getEndTime() + TIME_TO_DELETION_AFTER_CANCELLATION) - System.currentTimeMillis());
+                    ClanEngine.getInstance().deleteClanWars(attackerClan.getId(), attackedClan.getId()), (data.getEndTime() + TIME_TO_DELETION_AFTER_CANCELLATION) - System.currentTimeMillis());
         }
     }
 
@@ -223,7 +223,7 @@ public final class ClanWar {
     }
 
     public Clan getOpposingClan(Clan clan) {
-        return data.getAttacker() == clan.getId() ? ClanTable.getInstance().getClan(data.getAttacked()) : ClanTable.getInstance().getClan(data.getAttacker());
+        return data.getAttacker() == clan.getId() ? ClanEngine.getInstance().getClan(data.getAttacked()) : ClanEngine.getInstance().getClan(data.getAttacker());
     }
 
     public void save() {

@@ -57,7 +57,6 @@ public abstract class IdFactory {
         // Update needed items after cleaning has taken place.
         clanDao.resetAuctionBidWithoutAction();
         clanDao.resetNewLeaderWithoutCharacter();
-        clanDao.resetSubpledgeLeaderWithoutCharacter();
 
         getDAO(CastleDAO.class).updateToNeutralWithoutOwner();
         getDAO(PlayerDAO.class).resetClanInfoOfNonexistentClan();

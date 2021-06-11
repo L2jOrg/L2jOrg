@@ -30,8 +30,6 @@ import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Trade chat handler.
  * @author durgus
@@ -45,8 +43,7 @@ public final class ChatTrade implements IChatHandler {
 	
 	@Override
 	public void handleChat(ChatType type, Player player, String target, String text) {
-		var chatSettings = getSettings(ChatSettings.class);
-		var levelRequired =  chatSettings.tradeChatLevel();
+		var levelRequired =  ChatSettings.tradeChatLevel();
 
 		if (player.getLevel() < levelRequired) {
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TRADE_CHAT_CANNOT_BE_USED_BY_USERS_LV_S1_OR_LOWER).addInt(levelRequired));
@@ -55,7 +52,7 @@ public final class ChatTrade implements IChatHandler {
 		
 		final CreatureSay cs = new CreatureSay(player, type, text);
 
-		if (chatSettings.defaultTradeChat().equalsIgnoreCase("on") || (chatSettings.defaultTradeChat().equalsIgnoreCase("gm") && player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))) {
+		if (ChatSettings.defaultTradeChat().equalsIgnoreCase("on") || (ChatSettings.defaultTradeChat().equalsIgnoreCase("gm") && player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))) {
 			final int region = MapRegionManager.getInstance().getMapRegionLocId(player);
 			World.getInstance().forEachPlayer(receiver -> {
 				if ((region == MapRegionManager.getInstance().getMapRegionLocId(receiver)) && !BlockList.isBlocked(receiver, player) && (receiver.getInstanceId() == player.getInstanceId())) {
@@ -63,7 +60,7 @@ public final class ChatTrade implements IChatHandler {
 				}
 			});
 		}
-		else if (chatSettings.defaultTradeChat().equalsIgnoreCase("global")) {
+		else if (ChatSettings.defaultTradeChat().equalsIgnoreCase("global")) {
 			if (!player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS) && !player.getFloodProtectors().getGlobalChat().tryPerformAction("global chat")) {
 				player.sendMessage("Do not spam trade channel.");
 				return;

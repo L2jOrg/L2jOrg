@@ -22,7 +22,7 @@ package org.l2j.gameserver.data.database.data;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 
 /**
@@ -59,7 +59,7 @@ public class PledgeRecruitData {
         this.karma = karma;
         this.information = information;
         this.detailedInformation = detailedInformation;
-        clan = ClanTable.getInstance().getClan(clanId);
+        clan = ClanEngine.getInstance().getClan(clanId);
         this.applicationType = applicationType;
         this.recruitType = recruitType;
     }

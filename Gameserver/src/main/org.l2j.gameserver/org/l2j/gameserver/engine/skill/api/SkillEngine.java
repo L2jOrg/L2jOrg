@@ -18,11 +18,8 @@
  */
 package org.l2j.gameserver.engine.skill.api;
 
-import io.github.joealisson.primitive.HashLongMap;
-import io.github.joealisson.primitive.IntMap;
-import io.github.joealisson.primitive.LongMap;
+import io.github.joealisson.primitive.*;
 import io.github.joealisson.primitive.function.IntBiConsumer;
-import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.xml.impl.PetSkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
@@ -56,8 +53,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 
 /**
@@ -68,6 +63,8 @@ public class SkillEngine extends EffectParser {
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillEngine.class);
 
     private final LongMap<Skill> skills = new HashLongMap<>(36800);
+    private IntIntMap skillsTime;
+    private HashIntIntMap skillsDelay;
 
     private SkillEngine() {
     }
@@ -99,33 +96,64 @@ public class SkillEngine extends EffectParser {
         player.removeSkill(CommonSkill.OUTPOST_DEMOLITION.getSkill());
     }
 
-
     public int getMaxLevel(int skillId) {
         return zeroIfNullOrElse(skills.get(skillHashCode(skillId, 1)), Skill::getMaxLevel);
     }
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/skills/skills.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/skills/skills.xsd");
     }
 
     @Override
     public void load() {
+        parseDatapackFile("data/skills/skill-config.xml");
         parseDatapackDirectory("data/skills/", true);
         LOGGER.info("Loaded {} skills", skills.size());
         releaseResources();
     }
 
     @Override
+    protected void releaseResources() {
+        skillsTime = null;
+        skillsDelay = null;
+        super.releaseResources();
+    }
+
+    @Override
     protected void parseDocument(Document doc, File f) {
-        forEach(doc, "list", list -> forEach(list, "skill", this::parseSkill));
+        forEach(doc, "list", list -> {
+            for(var node = list.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+                var name = node.getNodeName();
+                if(name.equals("skill")) {
+                    parseSkill(node);
+                } else if(name.equals("skill-config")) {
+                    parseSkillConfig(node);
+                }
+            }
+        });
+    }
+
+    private void parseSkillConfig(Node skillConfigNode) {
+        skillsTime = new HashIntIntMap();
+        skillsDelay = new HashIntIntMap();
+        for (var node = skillConfigNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
+            var attributes = node.getAttributes();
+            var name = node.getNodeName();
+
+            if(name.equals("time")) {
+                skillsTime.put(parseInt(attributes, ATTR_ID), parseInt(attributes, ATTR_VALUE));
+            } else if(name.equals("delay")) {
+                skillsDelay.put(parseInt(attributes, ATTR_ID), parseInt(attributes, ATTR_VALUE));
+            }
+        }
     }
 
     private void parseSkill(Node skillNode)  {
         Skill skill = null;
         try {
             var attr = skillNode.getAttributes();
-            var id = parseInt(attr, "id");
+            var id = parseInt(attr, ATTR_ID);
             var maxLevel = parseInt(attr, "max-level");
 
             skill = new Skill(id, parseString(attr, "name"), maxLevel, parseBoolean(attr, "debuff"), parseEnum(attr, SkillOperateType.class, "action"), parseEnum(attr, SkillType.class, "type"));
@@ -304,6 +332,14 @@ public class SkillEngine extends EffectParser {
                 case "channeling" -> parseConstantsChanneling(node, skill);
             }
         }
+
+        if(nonNull(skillsDelay) && skillsDelay.containsKey(skill.getId())) {
+            skill.setCustomDelay(skillsDelay.get(skill.getId()));
+        }
+
+        if(nonNull(skillsTime) && skillsTime.containsKey(skill.getId())) {
+            skill.setCustomTime(skillsTime.get(skill.getId()));
+        }
     }
 
 
@@ -381,7 +417,7 @@ public class SkillEngine extends EffectParser {
 
         forEach(nodeAttributes, "element", elementNode -> {
             skill.setAttributeType(parseEnum(elementNode.getAttributes(), AttributeType.class, "type"));
-            skill.setAttributeValue(parseInt(elementNode.getAttributes(), "value"));
+            skill.setAttributeValue(parseInt(elementNode.getAttributes(), ATTR_VALUE));
         });
 
     }
@@ -407,7 +443,7 @@ public class SkillEngine extends EffectParser {
         setter.accept(lastValue);
 
         for (var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
-            if ("value".equals(child.getNodeName())) {
+            if (ATTR_VALUE.equals(child.getNodeName())) {
                 var value = Integer.parseInt(child.getTextContent());
                 if (lastValue != value) {
                     var level = parseInt(child.getAttributes(), "level");
@@ -445,7 +481,7 @@ public class SkillEngine extends EffectParser {
         var lastValue = parseString(iconNode.getAttributes(), "initial");
         skill.setIcon(lastValue);
         for (var node = iconNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
-            if ("value".equals(node.getNodeName())) {
+            if (ATTR_VALUE.equals(node.getNodeName())) {
 
                 var value = node.getTextContent();
                 if (!Objects.equals(lastValue, value)) {

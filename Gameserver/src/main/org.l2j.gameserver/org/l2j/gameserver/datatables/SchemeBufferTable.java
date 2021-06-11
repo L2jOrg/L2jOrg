@@ -39,7 +39,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -62,7 +61,7 @@ public class SchemeBufferTable {
             dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
             dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
             DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(getSettings(ServerSettings.class).dataPackDirectory().resolve("data/SchemeBufferSkills.xml").toFile());
+            Document doc = db.parse(ServerSettings.dataPackDirectory().resolve("data/SchemeBufferSkills.xml").toFile());
 
             final Node n = doc.getFirstChild();
 

@@ -18,7 +18,7 @@
  */
 package org.l2j.scripts.handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
@@ -51,7 +51,7 @@ public class OpHomeSkillCondition implements SkillCondition {
 			if (nonNull(clan)) {
 				return switch (type) {
 					case CASTLE -> nonNull(CastleManager.getInstance().getCastleByOwner(clan));
-					case CLANHALL -> nonNull(ClanHallManager.getInstance().getClanHallByClan(clan));
+					case CLANHALL -> nonNull(ClanHallEngine.getInstance().getClanHallByClan(clan));
 					default -> false;
 				};
 			}

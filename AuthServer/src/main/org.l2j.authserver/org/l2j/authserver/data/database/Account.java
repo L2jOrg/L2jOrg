@@ -43,7 +43,7 @@ public class Account  {
         this.lastAccess = lastAccess;
         this.lastIP = lastIP;
         this.accessLevel = 0;
-        this.lastServer = 1;
+        this.lastServer = 0;
     }
 
     public String getLogin() {

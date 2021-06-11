@@ -21,8 +21,8 @@ package org.l2j.gameserver.model.commission;
 
 import org.l2j.gameserver.data.database.data.CommissionItemData;
 import org.l2j.gameserver.data.database.data.ItemData;
-import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.ItemInfo;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

@@ -20,12 +20,12 @@
 package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
@@ -68,7 +68,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	
 	private void doAction(Player player, int clanHallId, String action, String actionVal)
 	{
-		final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+		final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
 		{
 			switch (action)
@@ -90,12 +90,12 @@ public final class AdminClanHall implements IAdminCommandHandler
 						{
 							case "inside":
 							{
-								loc = clanHall.getOwnerLocation();
+								loc = clanHall.getRestartPoint();
 								break;
 							}
 							case "outside":
 							{
-								loc = clanHall.getBanishLocation();
+								loc = clanHall.getBanishPoint();
 								break;
 							}
 							default:
@@ -161,7 +161,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
-		final List<ClanHall> clanHallList = ClanHallManager.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getId)).collect(Collectors.toList());
+		final List<ClanHall> clanHallList = ClanHallEngine.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getId)).collect(Collectors.toList());
 		
 		//@formatter:off
 		final PageResult result = PageBuilder.newBuilder(clanHallList, 4, "bypass -h admin_clanhall")
@@ -172,26 +172,26 @@ public final class AdminClanHall implements IAdminCommandHandler
 			.bodyHandler((pages, clanHall, sb) ->
 		{
 			sb.append("<table border=0 cellpadding=0 cellspacing=0 bgcolor=\"363636\">");
-			sb.append("<tr><td align=center fixwidth=\"250\"><font color=\"LEVEL\">&%" + clanHall.getId() + "; (" + clanHall.getId() + ")</font></td></tr>");
+			sb.append("<tr><td align=center fixwidth=\"250\"><font color=\"LEVEL\">&%").append(clanHall.getId()).append("; (").append(clanHall.getId()).append(")</font></td></tr>");
 			sb.append("</table>");
 
 			sb.append("<table border=0 cellpadding=0 cellspacing=0 bgcolor=\"363636\">");
 			sb.append("<tr>");		
 			sb.append("<td align=center fixwidth=\"83\">Status:</td>");		
-			sb.append("<td align=center fixwidth=\"83\"></td>");		
-			sb.append("<td align=center fixwidth=\"83\">" + (clanHall.getOwner() == null ? "<font color=\"00FF00\">Free</font>" : "<font color=\"FF9900\">Owned</font>") + "</td>");		
+			sb.append("<td align=center fixwidth=\"83\"></td>");
+			sb.append("<td align=center fixwidth=\"83\">").append((clanHall.getOwner() == null ? "<font color=\"00FF00\">Free</font>" : "<font color=\"FF9900\">Owned</font>")).append("</td>");
 			sb.append("</tr>");
 			
 			sb.append("<tr>");
 			sb.append("<td align=center fixwidth=\"83\">Location:</td>");
 			sb.append("<td align=center fixwidth=\"83\"></td>");
-			sb.append("<td align=center fixwidth=\"83\">&^" + clanHall.getId() + ";</td>");
+			sb.append("<td align=center fixwidth=\"83\">&^").append(clanHall.getId()).append(";</td>");
 			sb.append("</tr>");
 			
 			sb.append("<tr>");
 			sb.append("<td align=center fixwidth=\"83\">Detailed Info:</td>");
 			sb.append("<td align=center fixwidth=\"83\"></td>");
-			sb.append("<td align=center fixwidth=\"83\"><button value=\"Show me!\" action=\"bypass -h admin_clanhall id=" + clanHall.getId() + "\" width=\"85\" height=\"20\" back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
+			sb.append("<td align=center fixwidth=\"83\"><button value=\"Show me!\" action=\"bypass -h admin_clanhall id=").append(clanHall.getId()).append("\" width=\"85\" height=\"20\" back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
 			sb.append("</tr>");
 			
 			
@@ -207,7 +207,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	
 	private void sendClanHallDetails(Player player, int clanHallId)
 	{
-		final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(clanHallId);
+		final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);

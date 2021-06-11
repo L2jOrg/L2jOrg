@@ -21,8 +21,8 @@ package org.l2j.gameserver.cache;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.util.FilterUtil;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
@@ -34,8 +34,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Layane
@@ -64,7 +62,7 @@ public class HtmCache {
     }
 
     private String loadFile(String filePath) {
-        var path =  getSettings(ServerSettings.class).dataPackDirectory().resolve(filePath);
+        var path =  ServerSettings.dataPackDirectory().resolve(filePath);
         if(FilterUtil.htmlFile(path)) {
             try {
                 var content = processHtml(Files.readString(path));
@@ -93,7 +91,7 @@ public class HtmCache {
             CACHE.put(path, content);
         }
 
-        if ((player != null) && player.isGM() && (path != null) && Config.GM_DEBUG_HTML_PATHS) {
+        if (player != null && player.isGM() && path != null && AdminSettings.debugHtml()) {
             BuilderUtil.sendHtmlMessage(player, path.substring(5));
         }
         return content;
@@ -112,7 +110,7 @@ public class HtmCache {
      * @return {@code true} if the path targets a HTM or HTML file, {@code false} otherwise.
      */
     public boolean isLoadable(String path) {
-        return FilterUtil.htmlFile(getSettings(ServerSettings.class).dataPackDirectory().resolve(path));
+        return FilterUtil.htmlFile(ServerSettings.dataPackDirectory().resolve(path));
     }
 
     private String parseTemplateName(String name) {
@@ -121,8 +119,8 @@ public class HtmCache {
                 return "data/" + name;
             } else if (name.startsWith("CommunityBoard/")) {
                 return "data/html/" + name;
-            } else if (name.startsWith("scripts/")) {
-                return "data/scripts/" + name;
+            } else if (name.startsWith("extension/")) {
+                return "data/extension/" + name;
             }
         }
         return name;

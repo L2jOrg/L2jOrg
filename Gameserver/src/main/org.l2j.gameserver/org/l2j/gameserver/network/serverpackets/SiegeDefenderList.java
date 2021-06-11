@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.SiegeClanType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Castle;
@@ -88,7 +88,7 @@ public final class SiegeDefenderList extends ServerPacket {
 
         // List of confirmed defenders
         for (var siegeClan : _castle.getSiege().getDefenderClans().values()) {
-            final Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
+            final Clan defendingClan = ClanEngine.getInstance().getClan(siegeClan.getClanId());
             if ((defendingClan == null) || (defendingClan == _castle.getOwner())) {
                 continue;
             }
@@ -107,7 +107,7 @@ public final class SiegeDefenderList extends ServerPacket {
 
         // List of not confirmed defenders
         for (var siegeClan : _castle.getSiege().getDefendersWaiting().values()) {
-            final Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
+            final Clan defendingClan = ClanEngine.getInstance().getClan(siegeClan.getClanId());
             if (defendingClan == null) {
                 continue;
             }

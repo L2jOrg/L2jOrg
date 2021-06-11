@@ -51,4 +51,9 @@ public final class ServitorHold implements IPlayerActionHandler
 			((SummonAI) s.getAI()).notifyFollowStatusChange();
 		});
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

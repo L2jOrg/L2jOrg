@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.serverpackets;
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
-import org.l2j.gameserver.network.SystemMessageId;
 
 /**
  * @author JoeAlisson

@@ -24,8 +24,6 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.world.World;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Mobius
  */
@@ -77,16 +75,14 @@ public final class RequestHardWareInfo extends ClientPacket {
 
         client.setHardwareInfo(hardwareInfo);
 
-        var serverSettings = getSettings(ServerSettings.class);
-
-        if (serverSettings.isHardwareInfoEnabled() && serverSettings.maxPlayerPerHWID() > 0) {
+        if (ServerSettings.isHardwareInfoEnabled() && ServerSettings.maxPlayerPerHWID() > 0) {
             int count = 0;
             for (Player player : World.getInstance().getPlayers()) {
                 if (player.isOnline() && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo()))) {
                     count++;
                 }
             }
-            if (count >= serverSettings.maxPlayerPerHWID()) {
+            if (count >= ServerSettings.maxPlayerPerHWID()) {
                 Disconnection.of(client).logout(false);
             }
         }

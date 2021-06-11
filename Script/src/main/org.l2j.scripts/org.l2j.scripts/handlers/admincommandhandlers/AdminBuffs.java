@@ -18,8 +18,6 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -39,9 +37,11 @@ import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.world.World;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.StringTokenizer;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -57,7 +57,6 @@ public class AdminBuffs implements IAdminCommandHandler
 		"admin_viewblockedeffects",
 		"admin_areacancel",
 		"admin_removereuse",
-		"admin_switch_gm_buffs"
 	};
 	// Misc
 	private static final String FONT_RED1 = "<font color=\"FF0000\">";
@@ -221,14 +220,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String playername = st.nextToken();
-				
-				try
-				{
-					player = World.getInstance().findPlayer(playername);
-				}
-				catch (Exception e)
-				{
-				}
+				player = World.getInstance().findPlayer(playername);
 				
 				if (player == null)
 				{
@@ -259,34 +251,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				return false;
 			}
 		}
-		else if (command.startsWith("admin_switch_gm_buffs"))
-		{
-			if (Config.GM_GIVE_SPECIAL_SKILLS != Config.GM_GIVE_SPECIAL_AURA_SKILLS)
-			{
-				final boolean toAuraSkills = activeChar.getKnownSkill(7041) != null;
-				switchSkills(activeChar, toAuraSkills);
-				activeChar.sendSkillList();
-				BuilderUtil.sendSysMessage(activeChar, "You have succefully changed to target " + (toAuraSkills ? "aura" : "one") + " special skills.");
-				return true;
-			}
-			BuilderUtil.sendSysMessage(activeChar, "There is nothing to switch.");
-			return false;
-		}
 		return true;
-	}
-	
-	/**
-	 * @param gmchar the player to switch the Game Master skills.
-	 * @param toAuraSkills if {@code true} it will remove "GM Aura" skills and add "GM regular" skills, vice versa if {@code false}.
-	 */
-	private static void switchSkills(Player gmchar, boolean toAuraSkills)
-	{
-		final Collection<Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree() : SkillTreesData.getInstance().getGMAuraSkillTree();
-		for (Skill skill : skills)
-		{
-			gmchar.removeSkill(skill, false); // Don't Save GM skills to database
-		}
-		SkillTreesData.getInstance().addSkills(gmchar, toAuraSkills);
 	}
 	
 	@Override
@@ -350,7 +315,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.replace("%effectSize%", effects.size());
 		activeChar.sendPacket(html);
 		
-		if (getSettings(GeneralSettings.class).auditGM())
+		if (GeneralSettings.auditGM())
 		{
 			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "getbuffs", target.getName() + " (" + target.getObjectId() + ")", "");
 		}
@@ -376,7 +341,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			
 			showBuffs(activeChar, target, 0, false);
-			if (getSettings(GeneralSettings.class).auditGM())
+			if (GeneralSettings.auditGM())
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "stopbuff", target.getName() + " (" + objId + ")", Integer.toString(skillId));
 			}
@@ -399,7 +364,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			target.stopAllEffects();
 			BuilderUtil.sendSysMessage(activeChar, "Removed all effects from " + target.getName() + " (" + objId + ")");
 			showBuffs(activeChar, target, 0, false);
-			if (getSettings(GeneralSettings.class).auditGM())
+			if (GeneralSettings.auditGM())
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "stopallbuffs", target.getName() + " (" + objId + ")", "");
 			}
@@ -442,7 +407,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			// Send the packet
 			activeChar.sendPacket(new NpcHtmlMessage(0, 1, html.toString()));
 			
-			if (getSettings(GeneralSettings.class).auditGM())
+			if (GeneralSettings.auditGM())
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "viewblockedeffects", target.getName() + " (" + target.getObjectId() + ")", "");
 			}

@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -73,7 +73,7 @@ public class SiegeInfo extends ServerPacket {
             buffer.writeInt(((ownerId == player.getClanId()) && (player.isClanLeader())) ? 0x01 : 0x00);
             buffer.writeInt(ownerId);
             if (ownerId > 0) {
-                final Clan owner = ClanTable.getInstance().getClan(ownerId);
+                final Clan owner = ClanEngine.getInstance().getClan(ownerId);
                 if (owner != null) {
                     buffer.writeString(owner.getName()); // Clan Name
                     buffer.writeString(owner.getLeaderName()); // Clan Leader Name

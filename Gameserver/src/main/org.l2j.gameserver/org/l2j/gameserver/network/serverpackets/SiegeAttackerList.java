@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
@@ -70,7 +70,7 @@ public final class SiegeAttackerList extends ServerPacket {
             buffer.writeInt(size);
             buffer.writeInt(size);
             for (var siegeclan : _castle.getSiege().getAttackerClans().values()) {
-                clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
+                clan = ClanEngine.getInstance().getClan(siegeclan.getClanId());
                 if (clan == null) {
                     continue;
                 }

@@ -31,7 +31,6 @@ import java.nio.file.Path;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -47,7 +46,7 @@ public final class LevelData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/level-data.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/level-data.xsd");
     }
 
     @Override

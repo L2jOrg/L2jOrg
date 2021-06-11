@@ -20,7 +20,6 @@ package org.l2j.gameserver.instancemanager;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import io.github.joealisson.primitive.function.IntBiFunction;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;

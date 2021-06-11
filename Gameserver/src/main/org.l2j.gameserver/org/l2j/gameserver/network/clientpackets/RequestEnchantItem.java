@@ -19,8 +19,8 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.engine.item.EnchantItemEngine;
-import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.EnchantResult;
 import org.l2j.gameserver.util.GameUtils;

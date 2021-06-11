@@ -92,9 +92,6 @@ public class PlayerData {
     @Column("power_grade")
     private int powerGrade;
     private boolean nobless; // TODO should be removed
-    private int subPledge;
-    @Column("lvl_joined_academy")
-    private int levelJoinedAcademy;
 
     private int apprentice;
     private int sponsor;
@@ -290,10 +287,6 @@ public class PlayerData {
         this.sayhaGracePoints = sayhaGracePoints;
     }
 
-    public int getSubPledge() {
-        return subPledge;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -354,10 +347,6 @@ public class PlayerData {
         return sponsor;
     }
 
-    public int getLevelJoinedAcademy() {
-        return levelJoinedAcademy;
-    }
-
     public int getX() {
         return x;
     }
@@ -414,20 +403,12 @@ public class PlayerData {
         this.powerGrade = powerGrade;
     }
 
-    public void setSubPledge(int subPledge) {
-        this.subPledge = subPledge;
-    }
-
     public void setApprentice(int apprentice) {
         this.apprentice = apprentice;
     }
 
     public void setSponsor(int sponsor) {
         this.sponsor= sponsor;
-    }
-
-    public void setLevelJoinedAcademy(int level) {
-        this.levelJoinedAcademy = level;
     }
 
     public int getRace() {

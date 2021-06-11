@@ -2,12 +2,12 @@ package org.l2j.gameserver.network.clientpackets.pledge;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.ClanMember;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.ClanWar;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -55,7 +55,7 @@ public class ExRequestPledgeEnemyRegister extends ClientPacket {
             return;
         }
 
-        final Clan clanDeclaredWar = ClanTable.getInstance().getClanByName(_clanName);
+        final Clan clanDeclaredWar = ClanEngine.getInstance().getClanByName(_clanName);
         if (clanDeclaredWar == null)
         {
             client.sendPacket(new SystemMessage(SystemMessageId.A_CLAN_WAR_CANNOT_BE_DECLARED_AGAINST_A_CLAN_THAT_DOES_NOT_EXIST));

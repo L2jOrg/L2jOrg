@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.AdminTeleportType;
@@ -30,6 +29,7 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.Broadcast;
 
 public class MoveBackwardToLocation extends ClientPacket {
@@ -55,7 +55,7 @@ public class MoveBackwardToLocation extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis())) {
+        if ((CharacterSettings.npcTalkBlockingTime() > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis())) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
@@ -95,7 +95,7 @@ public class MoveBackwardToLocation extends ClientPacket {
             }
         } else // 0
         {
-            if (!Config.ENABLE_KEYBOARD_MOVEMENT) {
+            if (!CharacterSettings.enableKeyboardMovement()) {
                 return;
             }
             player.setCursorKeyMovement(true);

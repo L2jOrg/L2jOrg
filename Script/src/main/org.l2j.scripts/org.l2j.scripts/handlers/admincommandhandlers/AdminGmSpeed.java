@@ -19,8 +19,6 @@
 package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -62,13 +60,6 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 				return false;
 			}
 			final String token = st.nextToken();
-			
-			// Rollback feature for old custom way, in order to make everyone happy.
-			if (Config.USE_SUPER_HASTE_AS_GM_SPEED)
-			{
-				AdminCommandHandler.getInstance().useAdminCommand(player, AdminSuperHaste.ADMIN_COMMANDS[0] + " " + token, false);
-				return true;
-			}
 			
 			if (!Util.isFloat(token))
 			{

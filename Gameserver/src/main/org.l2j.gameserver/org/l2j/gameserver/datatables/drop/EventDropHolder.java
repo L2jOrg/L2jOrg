@@ -21,6 +21,8 @@ package org.l2j.gameserver.datatables.drop;
 import io.github.joealisson.primitive.IntCollection;
 import org.l2j.gameserver.model.holders.DropHolder;
 
+import static java.util.Objects.isNull;
+
 /**
  * @author Mobius
  * @author JoeAlisson
@@ -39,7 +41,7 @@ public class EventDropHolder extends DropHolder {
 	}
 
 	public boolean hasMonster(int id) {
-		return monsterIds.contains(id);
+		return isNull(monsterIds) || monsterIds.isEmpty() ||  monsterIds.contains(id);
 	}
 
 	public boolean checkLevel(int level) {

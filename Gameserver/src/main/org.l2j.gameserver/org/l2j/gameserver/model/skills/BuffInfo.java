@@ -20,6 +20,7 @@ package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.EffectList;
 import org.l2j.gameserver.model.WorldObject;
@@ -28,7 +29,6 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectTaskInfo;
 import org.l2j.gameserver.model.effects.EffectTickTask;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -42,7 +42,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
@@ -309,7 +308,7 @@ public final class BuffInfo {
             if (effect.getTicks() > 0) {
                 // The task for the effect ticks.
                 final EffectTickTask effectTask = new EffectTickTask(this, effect);
-                var effectTickRatio = getSettings(CharacterSettings.class).effectTickRatio() * effect.getTicks();
+                var effectTickRatio = CharacterSettings.effectTickRatio() * effect.getTicks();
                 final ScheduledFuture<?> scheduledFuture = ThreadPool.scheduleAtFixedRate(effectTask, effectTickRatio, effectTickRatio);
                 addTask(effect, new EffectTaskInfo(scheduledFuture));
             }
@@ -397,6 +396,6 @@ public final class BuffInfo {
             return false;
         }
 
-        return !skill.isDance() || getSettings(CharacterSettings.class).storeDances();
+        return !skill.isDance() || CharacterSettings.storeDances();
     }
 }

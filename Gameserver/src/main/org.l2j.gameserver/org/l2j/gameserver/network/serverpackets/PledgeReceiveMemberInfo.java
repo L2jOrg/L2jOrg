@@ -37,17 +37,11 @@ public class PledgeReceiveMemberInfo extends ServerPacket {
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_VIEW_PLEDGE_MEMBER_INFO, buffer );
 
-        buffer.writeInt(member.getPledgeType());
+        buffer.writeInt(0x00); // pledge type
         buffer.writeString(member.getName());
         buffer.writeString(member.getTitle());
         buffer.writeInt(member.getPowerGrade());
-
-        if (member.getPledgeType() != 0) {
-            buffer.writeString((member.getClan().getSubPledge(member.getPledgeType())).getName());
-        } else {
-            buffer.writeString(member.getClan().getName());
-        }
-
+        buffer.writeString(member.getClan().getName());
         buffer.writeString(member.getApprenticeOrSponsorName());
     }
 }

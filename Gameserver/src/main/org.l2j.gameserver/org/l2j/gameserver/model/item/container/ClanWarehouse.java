@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.model.item.container;
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -26,7 +26,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemAdd;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemDestroy;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerClanWHItemTransfer;
-import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 public final class ClanWarehouse extends Warehouse {
     private final Clan _clan;
@@ -57,7 +57,7 @@ public final class ClanWarehouse extends Warehouse {
 
     @Override
     public boolean validateCapacity(long slots) {
-        return (items.size() + slots) <= Config.WAREHOUSE_SLOTS_CLAN;
+        return items.size() + slots <= CharacterSettings.clanMaxWarehouseSlot();
     }
 
     @Override

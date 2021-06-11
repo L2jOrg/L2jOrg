@@ -19,7 +19,6 @@
  */
 package org.l2j.scripts.handlers.bypasshandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
@@ -28,6 +27,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
@@ -80,7 +80,7 @@ public class SupportMagic implements IBypassHandler
 	private static final int LOWEST_LEVEL = 6;
 	private static final int CUBIC_LOWEST = 16;
 	private static final int CUBIC_HIGHEST = 34;
-	private static final int HASTE_LEVEL_2 = Config.MAX_NEWBIE_BUFF_LEVEL + 1; // disabled
+	private static final int HASTE_LEVEL_2 = CharacterSettings.maxNewbieBuffLevel() + 1; // disabled
 	
 	@Override
 	public boolean useBypass(String command, Player player, Creature target)
@@ -114,7 +114,7 @@ public class SupportMagic implements IBypassHandler
 			npc.showChatWindow(player, "data/html/default/SupportMagicLowLevel.htm");
 			return;
 		}
-		else if (level > Config.MAX_NEWBIE_BUFF_LEVEL)
+		else if (level > CharacterSettings.maxNewbieBuffLevel())
 		{
 			npc.showChatWindow(player, "data/html/default/SupportMagicHighLevel.htm");
 			return;

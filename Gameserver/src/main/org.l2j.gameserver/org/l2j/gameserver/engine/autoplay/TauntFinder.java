@@ -28,8 +28,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 class TauntFinder extends AbstractAutoPlayTargetFinder {
 
     @Override
-    public boolean canBeTarget(Player player, WorldObject target) {
-        return target instanceof Creature creature && !creature.isDead() && super.canBeTarget(player, creature);
+    public boolean canBeTarget(Player player, WorldObject target, int range) {
+        return target instanceof Creature creature && !creature.isDead() && super.canBeTarget(player, creature, range);
     }
 
     @Override

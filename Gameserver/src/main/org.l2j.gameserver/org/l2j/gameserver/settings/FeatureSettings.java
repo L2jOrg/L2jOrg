@@ -18,22 +18,54 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
 /**
  * @author JoeAlisson
  */
-public class FeatureSettings implements Settings {
+public class FeatureSettings {
 
-    private int[] siegeHours;
+    private static int[] siegeHours;
+    private static boolean alwaysAllowRideWyvern;
+    private static boolean allowWyvernInSiege;
+    private static boolean allowRideInSiege;
+    private static boolean l2StoreEnabled;
+    private static boolean lCoinStoreEnabled;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
-        siegeHours =  settingsFile.getIntegerArray("SiegeHourList", ",");
+    private FeatureSettings() {
+        // helper class
     }
 
-    public int[] siegeHours() {
+    public static void load(SettingsFile settingsFile) {
+        siegeHours =  settingsFile.getIntArray("SiegeHourList", ",");
+        alwaysAllowRideWyvern = settingsFile.getBoolean("AllowRideWyvernAlways", false);
+        allowWyvernInSiege = settingsFile.getBoolean("AllowRideWyvernDuringSiege", true);
+        allowRideInSiege = settingsFile.getBoolean("AllowRideMountsDuringSiege", false);
+        l2StoreEnabled = settingsFile.getBoolean("EnableL2Store", false);
+        lCoinStoreEnabled = settingsFile.getBoolean("EnableLCoinStore", false);
+    }
+
+    public static int[] siegeHours() {
         return siegeHours;
+    }
+
+    public static boolean alwaysAllowRideWyvern() {
+        return alwaysAllowRideWyvern;
+    }
+
+    public static boolean allowWyvernInSiege() {
+        return allowWyvernInSiege;
+    }
+
+    public static boolean allowRideInSiege() {
+        return allowRideInSiege;
+    }
+
+    public static boolean isL2StoreEnabled() {
+        return l2StoreEnabled;
+    }
+
+    public static boolean isLCoinStoreEnabled() {
+        return lCoinStoreEnabled;
     }
 }

@@ -38,7 +38,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Spawn data retriever.
@@ -50,7 +49,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public final class SpawnTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpawnTable.class);
     private static final IntMap<Set<Spawn>> _spawnTable = new CHashIntMap<>();
-    private static final String CUSTOM_XML_FOLDER = "data/spawns/custom";
+    private static final String CUSTOM_XML_FOLDER = "data/spawns/custom/";
 
     private SpawnTable() {}
 
@@ -93,7 +92,7 @@ public final class SpawnTable {
     }
 
     private void storeNewSpawn(Spawn spawn) throws IOException {
-        Path outputFolder = getSettings(ServerSettings.class).dataPackDirectory().resolve(CUSTOM_XML_FOLDER);
+        Path outputFolder = ServerSettings.dataPackDirectory().resolve(CUSTOM_XML_FOLDER);
         Files.createDirectories(outputFolder);
 
         final int x = MapRegionManager.getInstance().getMapRegionX(spawn.getX());
@@ -236,9 +235,9 @@ public final class SpawnTable {
         if(isNull(spawn.getNpcSpawnTemplate())) {
             final int x = MapRegionManager.getInstance().getMapRegionX(spawn.getX());
             final int y = MapRegionManager.getInstance().getMapRegionY(spawn.getY());
-            filePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(CUSTOM_XML_FOLDER + "/" + x + "_" + y + ".xml");
+            filePath = ServerSettings.dataPackDirectory().resolve(CUSTOM_XML_FOLDER + x + "_" + y + ".xml");
         } else {
-            filePath = getSettings(ServerSettings.class).dataPackDirectory().resolve(spawn.getNpcSpawnTemplate().getSpawnTemplate().getFilePath());
+            filePath = ServerSettings.dataPackDirectory().resolve(spawn.getNpcSpawnTemplate().getSpawnTemplate().getFilePath());
         }
         return filePath;
     }

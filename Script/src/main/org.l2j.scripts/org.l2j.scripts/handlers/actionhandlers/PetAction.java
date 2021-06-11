@@ -36,56 +36,56 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 public class PetAction implements IActionHandler
 {
 	@Override
-	public boolean action(Player activeChar, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
 		// Aggression target lock effect
-		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))
+		if (player.isLockedTarget() && (player.getLockedTarget() != target))
 		{
-			activeChar.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
+			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ENMITY);
 			return false;
 		}
 		
-		final boolean isOwner = activeChar.getObjectId() == ((Pet) target).getOwner().getObjectId();
+		final boolean isOwner = player.getObjectId() == ((Pet) target).getOwner().getObjectId();
 		
-		if (isOwner && (activeChar != ((Pet) target).getOwner()))
+		if (isOwner && (player != ((Pet) target).getOwner()))
 		{
-			((Pet) target).updateRefOwner(activeChar);
+			((Pet) target).updateRefOwner(player);
 		}
-		if (activeChar.getTarget() != target)
+		if (player.getTarget() != target)
 		{
 			// Set the target of the Player activeChar
-			activeChar.setTarget(target);
+			player.setTarget(target);
 		}
 		else if (interact)
 		{
 			// Check if the pet is attackable (without a forced attack) and isn't dead
-			if (target.isAutoAttackable(activeChar) && !isOwner)
+			if (target.isAutoAttackable(player) && !isOwner)
 			{
-				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(player, target))
 				{
 					// Set the Player Intention to AI_INTENTION_ATTACK
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-					activeChar.onActionRequest();
+					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+					player.onActionRequest();
 				}
 			}
-			else if (!isInsideRadius2D(target, activeChar, 150))
+			else if (!isInsideRadius2D(target, player, 150))
 			{
-				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(player, target))
 				{
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-					activeChar.onActionRequest();
+					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
+					player.onActionRequest();
 				}
 			}
 			else
 			{
 				if (isOwner)
 				{
-					activeChar.sendPacket(new PetStatusShow((Pet) target));
+					player.sendPacket(new PetStatusShow((Pet) target));
 					
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonTalk((Summon) target), target);
 				}
-				activeChar.updateNotMoveUntil();
+				player.updateNotMoveUntil();
 			}
 		}
 		return true;

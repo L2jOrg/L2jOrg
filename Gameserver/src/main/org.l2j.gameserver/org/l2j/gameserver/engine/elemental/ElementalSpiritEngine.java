@@ -30,8 +30,6 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author JoeAlisson
  */
@@ -58,7 +56,7 @@ public final class ElementalSpiritEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/elemental/elemental-spirits.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/elemental/elemental-spirits.xsd");
     }
 
     @Override

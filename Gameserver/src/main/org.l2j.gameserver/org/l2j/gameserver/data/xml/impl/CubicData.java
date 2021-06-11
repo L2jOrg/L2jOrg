@@ -40,8 +40,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author UnAfraid
  */
@@ -56,7 +54,7 @@ public class CubicData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/cubics.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/cubics.xsd");
     }
 
     @Override

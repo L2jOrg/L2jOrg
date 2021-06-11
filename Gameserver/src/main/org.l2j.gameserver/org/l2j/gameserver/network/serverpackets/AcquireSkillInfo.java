@@ -30,8 +30,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Acquire Skill Info server packet implementation.
  *
@@ -56,10 +54,10 @@ public class AcquireSkillInfo extends ServerPacket {
         _spCost = skillLearn.getLevelUpSp();
         _type = skillType;
         _reqs = new ArrayList<>();
-        var characterSettings = getSettings(CharacterSettings.class);
-        if ((skillType != AcquireSkillType.PLEDGE) || characterSettings.isPledgeSkillsItemNeeded()) {
+
+        if ((skillType != AcquireSkillType.PLEDGE) || CharacterSettings.pledgeSkillsItemNeeded()) {
             for (ItemHolder item : skillLearn.getRequiredItems()) {
-                if (_id == CommonSkill.DIVINE_INSPIRATION.getId() && !characterSettings.isDivineInspirationBookNeeded()) {
+                if (_id == CommonSkill.DIVINE_INSPIRATION.getId() && !CharacterSettings.divineInspirationBookNeeded()) {
                     continue;
                 }
                 _reqs.add(new Req(99, item.getId(), item.getCount(), 50));

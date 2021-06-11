@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.CropProcure;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.actor.Npc;
@@ -27,11 +27,11 @@ import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.UniqueItemHolder;
 import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +47,7 @@ public class RequestProcureCropList extends ClientPacket {
     @Override
     public void readImpl() throws InvalidDataPacketException {
         final int count = readInt();
-        if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || ((count * BATCH_LENGTH) != available())) {
             throw new InvalidDataPacketException();
         }
 
@@ -126,10 +126,6 @@ public class RequestProcureCropList extends ClientPacket {
             player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
             return;
         }
-
-        // Used when Config.ALT_MANOR_SAVE_ALL_ACTIONS == true
-        final int updateListSize =  0;
-        final List<CropProcure> updateList = new ArrayList<>(updateListSize);
 
         // Proceed the purchase
         for (CropHolder i : _items) {

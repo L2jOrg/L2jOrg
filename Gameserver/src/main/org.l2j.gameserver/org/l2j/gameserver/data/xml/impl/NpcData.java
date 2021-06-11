@@ -51,7 +51,6 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.contains;
 
@@ -74,7 +73,7 @@ public class NpcData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/stats/npcs/npcs.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/stats/npcs/npcs.xsd");
     }
 
     public boolean isMaster(int id) {

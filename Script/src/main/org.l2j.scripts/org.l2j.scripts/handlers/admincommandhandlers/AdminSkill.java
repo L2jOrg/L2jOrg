@@ -37,7 +37,6 @@ import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Map;
 import java.util.StringTokenizer;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
@@ -166,11 +165,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_give_clan_skills"))
 		{
-			adminGiveClanSkills(activeChar, false);
-		}
-		else if (command.equals("admin_give_all_clan_skills"))
-		{
-			adminGiveClanSkills(activeChar, true);
+			adminGiveClanSkills(activeChar);
 		}
 		else if (command.equals("admin_remove_all_skills")) {
 			final WorldObject target = activeChar.getTarget();
@@ -297,9 +292,8 @@ public class AdminSkill implements IAdminCommandHandler
 	 * This function will give all the skills that the target's clan can learn at it's level.<br>
 	 * If the target is not the clan leader, a system message will be sent to the Game Master.
 	 * @param activeChar the active char, probably a Game Master.
-	 * @param includeSquad if Squad skills is included
 	 */
-	private void adminGiveClanSkills(Player activeChar, boolean includeSquad)
+	private void adminGiveClanSkills(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !isPlayer(target))
@@ -324,7 +318,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendPacket(sm);
 		}
 		
-		final Map<Integer, SkillLearn> skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, includeSquad);
+		final var skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan);
 		for (SkillLearn s : skills.values())
 		{
 			clan.addNewSkill(SkillEngine.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));

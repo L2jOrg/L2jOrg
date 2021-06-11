@@ -25,8 +25,6 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 public class AllyCrest extends ServerPacket {
     private final int _crestId;
     private final byte[] _data;
@@ -46,7 +44,7 @@ public class AllyCrest extends ServerPacket {
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.ALLIANCE_CREST, buffer );
 
-        buffer.writeInt(getSettings(ServerSettings.class).serverId());
+        buffer.writeInt(ServerSettings.serverId());
         buffer.writeInt(_crestId);
         if (_data != null) {
             buffer.writeInt(_data.length);

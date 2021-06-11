@@ -36,5 +36,6 @@ package org.l2j.gameserver.enums;
 public enum BasicProperty {
     NONE,
     PHYSIC,
-    MAGIC
+    MAGIC,
+    ALTER
 }

@@ -19,11 +19,11 @@
  */
 package org.l2j.gameserver.model.actor.tasks.player;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * Task dedicated to reward player with fame while standing on siege zone.
@@ -41,7 +41,7 @@ public class FameTask implements Runnable {
 
     @Override
     public void run() {
-        if ((_player == null) || (_player.isDead() && !Config.FAME_FOR_DEAD_PLAYERS)) {
+        if ((_player == null) || (_player.isDead() && !CharacterSettings.fameForDeadPlayers())) {
             return;
         }
 

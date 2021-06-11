@@ -19,8 +19,10 @@
 package org.l2j.gameserver.model;
 
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -43,7 +45,6 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -207,8 +208,26 @@ public final class EffectList {
         return null;
     }
 
+    public int remainTimeByItemSkill(Item item) {
+        var template = item.getTemplate();
+        for (BuffInfo info : actives) {
+            if((nonNull(info.getItem()) && info.getItem().getId() == template.getId())
+                 || template.checkAnySkill(ItemSkillType.NORMAL,
+                    s -> isSkillOrHasType(s.getSkillId(), s.getSkill().getAbnormalType(), info))) {
+
+                return info.getTime();
+            }
+        }
+        return 0;
+    }
+
     public int remainTimeBySkillIdOrAbnormalType(int skillId, AbnormalType type) {
-        return actives.stream().filter(b -> isSkillOrHasType(skillId, type, b)).mapToInt(BuffInfo::getTime).findFirst().orElse(0);
+        for (BuffInfo info : actives) {
+            if(isSkillOrHasType(skillId, type, info)) {
+                return info.getTime();
+            }
+        }
+        return 0;
     }
 
     private boolean isSkillOrHasType(int skillId, AbnormalType type, BuffInfo buff) {
@@ -515,12 +534,12 @@ public final class EffectList {
             // case TOGGLE: Do toggles have limit?
             switch (buffType) {
                 case TRIGGER -> {
-                    if (triggerBuffCount.get() > getSettings(CharacterSettings.class).maxTriggeredBuffs()) {
+                    if (triggerBuffCount.get() > CharacterSettings.maxTriggeredBuffs()) {
                         return true;
                     }
                 }
                 case DANCE -> {
-                    if (danceCount.get() > getSettings(CharacterSettings.class).maxDances()) {
+                    if (danceCount.get() > CharacterSettings.maxDances()) {
                         return true;
                     }
                 }
@@ -1003,20 +1022,6 @@ public final class EffectList {
                 for (AbstractEffect e : info.getEffects())
                 {
                     flags |= e.getEffectFlags();
-                }
-                // Add AbnormalVisualEffect flag.
-                final Skill skill = info.getSkill();
-                if (skill.hasAbnormalVisualEffect())
-                {
-                    for (AbnormalVisualEffect ave : skill.getAbnormalVisualEffect())
-                    {
-                        abnormalVisualEffects.add(ave);
-                        this.abnormalVisualEffects.add(ave);
-                    }
-                    if (broadcast)
-                    {
-                        owner.updateAbnormalVisualEffects();
-                    }
                 }
             }
         }

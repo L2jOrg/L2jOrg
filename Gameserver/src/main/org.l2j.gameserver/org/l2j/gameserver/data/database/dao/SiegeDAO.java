@@ -23,9 +23,7 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.CastleSiegeGuardData;
 
-import java.sql.ResultSet;
 import java.util.List;
-import java.util.function.Consumer;
 
 /**
  * @author JoeAlisson

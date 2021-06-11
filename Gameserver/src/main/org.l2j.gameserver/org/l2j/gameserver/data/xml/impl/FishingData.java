@@ -32,8 +32,6 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * This class holds the Fishing information.
  *
@@ -55,7 +53,7 @@ public final class FishingData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/Fishing.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/Fishing.xsd");
     }
 
     @Override

@@ -33,8 +33,7 @@ public final class ChefMonkeyEvent extends LongTimeEvent
 	// NPC
 	private static final int CHEF_MONKEY = 34292;
 	
-	private ChefMonkeyEvent()
-	{
+	private ChefMonkeyEvent() {
 		addStartNpc(CHEF_MONKEY);
 		addFirstTalkId(CHEF_MONKEY);
 		addTalkId(CHEF_MONKEY);

@@ -18,67 +18,24 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.database.data.ClanMember;
-import org.l2j.gameserver.model.ClanPrivilege;
-
 /**
  * Format: (ch) dSdS
  *
  * @author -Wooden-
  */
 public final class RequestPledgeReorganizeMember extends ClientPacket {
-    private int _isMemberSelected;
-    private String _memberName;
-    private int _newPledgeType;
-    private String _selectedMember;
 
     @Override
     public void readImpl() {
-        _isMemberSelected = readInt();
-        _memberName = readString();
-        _newPledgeType = readInt();
-        _selectedMember = readString();
+        // d is member selected
+        // s member name
+        // d new pledge type
+        // s selected member
     }
 
     @Override
     public void runImpl() {
-        if (_isMemberSelected == 0) {
-            return;
-        }
-
-        var player = client.getPlayer();
-
-        if (player == null) {
-            return;
-        }
-
-        var clan = player.getClan();
-        if (clan == null) {
-            return;
-        }
-
-        if (!player.hasClanPrivilege(ClanPrivilege.CL_MANAGE_RANKS)) {
-            return;
-        }
-
-        final ClanMember member1 = clan.getClanMember(_memberName);
-        if ((member1 == null) || (member1.getObjectId() == clan.getLeaderId())) {
-            return;
-        }
-
-        final ClanMember member2 = clan.getClanMember(_selectedMember);
-        if ((member2 == null) || (member2.getObjectId() == clan.getLeaderId())) {
-            return;
-        }
-
-        final int oldPledgeType = member1.getPledgeType();
-        if (oldPledgeType == _newPledgeType) {
-            return;
-        }
-
-        member1.setPledgeType(_newPledgeType);
-        member2.setPledgeType(oldPledgeType);
-        clan.broadcastClanStatus();
+        // dropped content
     }
 
 }

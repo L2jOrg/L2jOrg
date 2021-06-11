@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanInfo;
 import org.l2j.gameserver.network.GameClient;
@@ -42,12 +42,12 @@ public class AllianceInfo extends ServerPacket {
     private final ClanInfo[] _allies;
 
     public AllianceInfo(int allianceId) {
-        final Clan leader = ClanTable.getInstance().getClan(allianceId);
+        final Clan leader = ClanEngine.getInstance().getClan(allianceId);
         _name = leader.getAllyName();
         _leaderC = leader.getName();
         _leaderP = leader.getLeaderName();
 
-        final Collection<Clan> allies = ClanTable.getInstance().getClanAllies(allianceId);
+        final Collection<Clan> allies = ClanEngine.getInstance().getClanAllies(allianceId);
         _allies = new ClanInfo[allies.size()];
         int idx = 0;
         int total = 0;

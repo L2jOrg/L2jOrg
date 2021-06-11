@@ -24,8 +24,6 @@ import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2j.gameserver.settings.AttendanceSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Mobius
  */
@@ -41,7 +39,7 @@ public class RequestVipAttendanceItemList extends ClientPacket {
             return;
         }
 
-        if (!getSettings(AttendanceSettings.class).enabled()) {
+        if (!AttendanceSettings.enabled()) {
             activeChar.sendPacket(SystemMessageId.DUE_TO_A_SYSTEM_ERROR_THE_ATTENDANCE_REWARD_CANNOT_BE_RECEIVED_PLEASE_TRY_AGAIN_LATER_BY_GOING_TO_MENU_ATTENDANCE_CHECK);
             return;
         }

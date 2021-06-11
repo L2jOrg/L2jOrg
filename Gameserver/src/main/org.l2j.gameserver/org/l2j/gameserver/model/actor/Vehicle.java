@@ -20,6 +20,7 @@ package org.l2j.gameserver.model.actor;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -29,7 +30,6 @@ import org.l2j.gameserver.model.actor.stat.VehicleStats;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.ZoneManager;

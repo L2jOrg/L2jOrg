@@ -19,11 +19,11 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.ClanSettings;
 
 public final class AllyDismiss extends ClientPacket {
     private String _clanName;
@@ -56,7 +56,7 @@ public final class AllyDismiss extends ClientPacket {
             player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
             return;
         }
-        final Clan clan = ClanTable.getInstance().getClanByName(_clanName);
+        final Clan clan = ClanEngine.getInstance().getClanByName(_clanName);
         if (clan == null) {
             player.sendPacket(SystemMessageId.THAT_CLAN_DOES_NOT_EXIST);
             return;
@@ -71,13 +71,13 @@ public final class AllyDismiss extends ClientPacket {
         }
 
         final long currentTime = System.currentTimeMillis();
-        leaderClan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED * 86400000), Clan.PENALTY_TYPE_DISMISS_CLAN); // 24*60*60*1000 = 86400000
+        leaderClan.setAllyPenaltyExpiryTime(currentTime + ClanSettings.daysToAcceptClanAfterDismiss() * 86400000L, Clan.PENALTY_TYPE_DISMISS_CLAN); // 24*60*60*1000 = 86400000
         leaderClan.updateClanInDB();
 
         clan.setAllyId(0);
         clan.setAllyName(null);
         clan.changeAllyCrest(0, true);
-        clan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED * 86400000), Clan.PENALTY_TYPE_CLAN_DISMISSED); // 24*60*60*1000 = 86400000
+        clan.setAllyPenaltyExpiryTime(currentTime + ClanSettings.daysToJoinAllyAfterDismissed() * 86400000L, Clan.PENALTY_TYPE_CLAN_DISMISSED); // 24*60*60*1000 = 86400000
         clan.updateClanInDB();
 
         player.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_EXPELLING_THE_CLAN);

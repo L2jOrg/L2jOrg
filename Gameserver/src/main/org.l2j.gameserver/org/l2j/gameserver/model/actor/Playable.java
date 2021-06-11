@@ -83,7 +83,7 @@ public abstract class Playable extends Creature {
 
         final Clan playerClan = player.getClan();
 
-        if ((playerClan != null) && !player.isAcademyMember() && !target.isAcademyMember()) {
+        if (playerClan != null) {
             final ClanWar war = playerClan.getWarWith(target.getClanId());
             return (war != null) && (war.getState() == ClanWarState.MUTUAL);
         }

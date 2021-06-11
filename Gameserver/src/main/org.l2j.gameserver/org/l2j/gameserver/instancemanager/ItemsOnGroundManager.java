@@ -31,7 +31,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -45,7 +44,7 @@ public final class ItemsOnGroundManager implements Runnable {
     private final Set<Item> items = ConcurrentHashMap.newKeySet();
 
     private ItemsOnGroundManager() {
-        final var saveDropItemInterval = getSettings(GeneralSettings.class).saveDroppedItemInterval();
+        final var saveDropItemInterval = GeneralSettings.saveDroppedItemInterval();
         if(saveDropItemInterval.compareTo(Duration.ZERO) > 0) {
             ThreadPool.scheduleAtFixedRate(this, saveDropItemInterval, saveDropItemInterval);
         }
@@ -54,16 +53,15 @@ public final class ItemsOnGroundManager implements Runnable {
     private void load() {
         final var itemDAO = getDAO(ItemDAO.class);
         // If SaveDroppedItem is false, may want to delete all items previously stored to avoid add old items on reactivate
-        var generalSettings = getSettings(GeneralSettings.class);
-        if (!generalSettings.saveDroppedItems()) {
-            if(generalSettings.clearDroppedItems()) {
+        if (!GeneralSettings.saveDroppedItems()) {
+            if(GeneralSettings.clearDroppedItems()) {
                 itemDAO.deleteItemsOnGround();
             }
             return;
         }
 
-        if (generalSettings.destroyPlayerDroppedItem()) {
-            if (!generalSettings.destroyEquipableItem()) {
+        if (GeneralSettings.destroyPlayerDroppedItem()) {
+            if (!GeneralSettings.destroyEquipableItem()) {
                 itemDAO.updateNonEquipDropTimeByNonDestroyable(System.currentTimeMillis());
             } else {
                 itemDAO.updateDropTimeByNonDestroyable(System.currentTimeMillis());
@@ -74,27 +72,27 @@ public final class ItemsOnGroundManager implements Runnable {
             World.getInstance().addObject(item);
             items.add(item);
 
-            if (!generalSettings.isProtectedItem(item.getId()) && !item.isProtected()) {
-                if ((generalSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect())
-                        || (generalSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
-                    ItemsAutoDestroy.getInstance().addItem(item);
-                }
+            if (!GeneralSettings.isProtectedItem(item.getId()) && !item.isProtected()
+                    && ((GeneralSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect())
+                        || (GeneralSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect()))) {
+
+                ItemsAutoDestroy.getInstance().addItem(item);
             }
         });
 
-        if (generalSettings.clearDroppedItemsAfterLoad()) {
+        if (GeneralSettings.clearDroppedItemsAfterLoad()) {
             itemDAO.deleteItemsOnGround();
         }
     }
 
     public void save(Item item) {
-        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+        if (GeneralSettings.saveDroppedItems()) {
             items.add(item);
         }
     }
 
     public void removeObject(Item item) {
-        if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+        if (GeneralSettings.saveDroppedItems()) {
             items.remove(item);
         }
     }
@@ -109,7 +107,7 @@ public final class ItemsOnGroundManager implements Runnable {
 
     @Override
     public synchronized void run() {
-        if (!getSettings(GeneralSettings.class).saveDroppedItems()) {
+        if (!GeneralSettings.saveDroppedItems()) {
             return;
         }
         final var itemDAO = getDAO(ItemDAO.class);

@@ -36,8 +36,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author St3eT
  */
@@ -62,10 +60,10 @@ public class AdminServerInfo implements IAdminCommandHandler
 			
 			html.replace("%os_name%", System.getProperty("os.name"));
 			html.replace("%os_ver%", System.getProperty("os.version"));
-			html.replace("%slots%", getPlayersCount("ALL") + "/" + getSettings(ServerSettings.class).maximumOnlineUsers());
+			html.replace("%slots%", getPlayersCount("ALL") + "/" + ServerSettings.maximumOnlineUsers());
 			html.replace("%gameTime%", WorldTimeController.getInstance().getGameHour() + ":" + WorldTimeController.getInstance().getGameMinute());
 			html.replace("%dayNight%", WorldTimeController.getInstance().isNight() ? "Night" : "Day");
-			html.replace("%geodata%", getSettings(GeoEngineSettings.class).isEnabledPathFinding() ? "Enabled" : "Disabled");
+			html.replace("%geodata%", GeoEngineSettings.isEnabledPathFinding() ? "Enabled" : "Disabled");
 			html.replace("%serverTime%", fmt.format(new Date(System.currentTimeMillis())));
 			html.replace("%serverUpTime%", GameServer.getInstance().getUptime());
 			html.replace("%onlineAll%", getPlayersCount("ALL"));

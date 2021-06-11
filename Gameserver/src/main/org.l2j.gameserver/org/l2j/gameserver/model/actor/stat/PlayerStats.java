@@ -21,6 +21,7 @@ package org.l2j.gameserver.model.actor.stat;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.LevelData;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Party;
@@ -29,7 +30,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -39,6 +39,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -47,7 +48,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.Math.round;
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.enums.UserInfoType.CURRENT_HPMPCP_EXP_SP;
 import static org.l2j.gameserver.network.serverpackets.ExUserBoostStat.BoostStatType;
 
@@ -59,11 +59,11 @@ public class PlayerStats extends PlayableStats {
      * Player's maximum talisman count.
      */
     private final AtomicInteger _talismanSlots = new AtomicInteger();
-    private long _startingXp;
+    private long startingXp;
     private int _sayhaGracePoints = 0;
 
-    public PlayerStats(Player activeChar) {
-        super(activeChar);
+    public PlayerStats(Player player) {
+        super(player);
     }
 
     @Override
@@ -130,7 +130,7 @@ public class PlayerStats extends PlayableStats {
 
         // if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
         final Pet pet = activeChar.getPet();
-        if ((pet != null) && GameUtils.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, pet, false)) {
+        if ((pet != null) && GameUtils.checkIfInShortRange(PartySettings.partyRange(), activeChar, pet, false)) {
             ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
 
             // only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio
@@ -282,7 +282,11 @@ public class PlayerStats extends PlayableStats {
     }
 
     public long getStartingExp() {
-        return _startingXp;
+        return startingXp;
+    }
+
+    public void setStartingXp(long xp) {
+        this.startingXp = xp;
     }
 
     /**
@@ -386,7 +390,7 @@ public class PlayerStats extends PlayableStats {
     }
 
     public void updateSayhaGracePoints(int points, boolean useRates, boolean quiet) {
-        if (points == 0 || !getSettings(CharacterSettings.class).isSayhaGraceEnabled()) {
+        if (points == 0 || CharacterSettings.isSayhaGraceEnabled()) {
             return;
         }
 
@@ -532,8 +536,6 @@ public class PlayerStats extends PlayableStats {
     public double getEnchantRateBonus() {
         return getValue(Stat.ENCHANT_RATE_BONUS, 0);
     }
-
-
 
     @Override
     protected void onRecalculateStats(boolean broadcast) {

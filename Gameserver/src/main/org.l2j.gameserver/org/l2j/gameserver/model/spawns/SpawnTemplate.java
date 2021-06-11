@@ -36,8 +36,6 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author UnAfraid
  */
@@ -136,7 +134,7 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
     }
 
     public void spawn(Predicate<SpawnGroup> groupFilter, Instance instance) {
-        if(getSettings(ServerSettings.class).parallelismThreshold() < groups.size()) {
+        if(ServerSettings.parallelismThreshold() < groups.size()) {
             groups.parallelStream().filter(groupFilter).forEach(group -> group.spawnAll(instance));
         } else {
             for (SpawnGroup group : groups) {

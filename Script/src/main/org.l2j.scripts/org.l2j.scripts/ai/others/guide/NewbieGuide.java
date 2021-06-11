@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.ai.others.guide;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -26,6 +25,7 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 /**
@@ -59,7 +59,7 @@ public class NewbieGuide extends AbstractNpcAI {
 	public String onAdvEvent(String event, Npc npc, Player player) {
 		String htmlText;
 		if (event.equals("0")) {
-			if (Config.MAX_NEWBIE_BUFF_LEVEL > 0) {
+			if (CharacterSettings.maxNewbieBuffLevel() > 0) {
 				htmlText = npc.getId() + ".htm";
 			} else {
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId(), getHtml(player, npc.getId() + ".htm"));
@@ -80,7 +80,7 @@ public class NewbieGuide extends AbstractNpcAI {
 		}
 
 		final QuestState qs = player.getQuestState(TUTORIAL_QUEST);
-		if ((qs != null) && !Config.DISABLE_TUTORIAL && qs.isMemoState(5))
+		if ((qs != null) && !CharacterSettings.disableTutorial() && qs.isMemoState(5))
 		{
 			qs.setMemoState(6);
 			if (player.isMageClass() && (player.getRace() != Race.ORC)) {
@@ -92,7 +92,7 @@ public class NewbieGuide extends AbstractNpcAI {
 			}
 		}
 
-		if (Config.MAX_NEWBIE_BUFF_LEVEL > 0)
+		if (CharacterSettings.maxNewbieBuffLevel() > 0)
 		{
 			return npc.getId() + ".htm";
 		}

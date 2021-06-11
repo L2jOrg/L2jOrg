@@ -19,11 +19,11 @@
 package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Column;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.ClanSettings;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.emptyIfNullOrElse;
@@ -51,9 +51,6 @@ public class ClanMember {
     @Column("race")
     private int raceOrdinal;
 
-    @Column("subpledge")
-    private int pledgeType;
-
     @Column("last_reputation_level")
     private int lastReputationLevel;
 
@@ -80,7 +77,6 @@ public class ClanMember {
             classId = player.getClassId().getId();
             objectId = player.getObjectId();
             powerGrade = player.getPowerGrade();
-            pledgeType = player.getPledgeType();
             title = player.getTitle();
             apprentice = player.getApprentice();
             sponsor = player.getSponsor();
@@ -103,15 +99,6 @@ public class ClanMember {
             memberName = emptyIfNullOrElse(clan.getClanMember(sponsor), ClanMember::getName);
         }
         return memberName;
-    }
-
-    public void setPledgeType(int pledgeType) {
-        this.pledgeType = pledgeType;
-        if (player != null) {
-            player.setPledgeType(pledgeType);
-        } else {
-            getDAO(PlayerDAO.class).updateSubpledge(objectId, pledgeType);
-        }
     }
 
     public void setPowerGrade(int powerGrade) {
@@ -192,15 +179,6 @@ public class ClanMember {
     }
 
     /**
-     * Gets the pledge type.
-     *
-     * @return the pledge type
-     */
-    public int getPledgeType() {
-        return player != null ? player.getPledgeType() : pledgeType;
-    }
-
-    /**
      * Gets the power grade.
      *
      * @return the power grade
@@ -266,7 +244,7 @@ public class ClanMember {
         if(!isOnline()) {
             return 0;
         }
-        return onlineTime >= Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS ? 2 : 1;
+        return onlineTime >= ClanSettings.onlineTimeForBonus() ? 2 : 1;
     }
 
     public int getLastReputationLevel() {

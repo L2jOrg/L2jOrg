@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.Shortcut;
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -29,13 +30,14 @@ import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
 import java.util.BitSet;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.util.Util.doIfNonNull;
 
 /**
  * @author JoeAlisson
@@ -45,7 +47,10 @@ public class Shortcuts {
     private final Player owner;
     private final IntMap<Shortcut> shortcuts = new CHashIntMap<>();
     private final BitSet activeShortcuts = new BitSet(Shortcut.MAX_ROOM);
+    private final BitSet summonShortcuts = new BitSet(Shortcut.MAX_ROOM);
+    private final Set<Shortcut> suppliesShortcuts = ConcurrentHashMap.newKeySet();
     private int nextAutoShortcut = 0;
+    private int nextSummonShortcut = 0;
 
     public Shortcuts(Player owner) {
         this.owner = owner;
@@ -72,42 +77,89 @@ public class Shortcuts {
         getDAO(ShortcutDAO.class).save(shortcut);
     }
 
-    public void setActive(int room, boolean active) {
-        doIfNonNull(shortcuts.get(room), s -> {
-            s.setActive(active);
-            if(Shortcut.AUTO_POTION_ROOM != room) {
-                if(active) {
-                    activeShortcuts.set(room);
-                } else {
-                    activeShortcuts.clear(room);
-                }
+    public void setActiveShortcut(int room, boolean active) {
+        var shortcut = setActive(room, active);
+        if(nonNull(shortcut)) {
+            if(shortcut.isSummonShortcut()) {
+                setActiveSummonShortcut(room, active);
+            } else if (active){
+                activeShortcuts.set(room);
+            } else {
+                activeShortcuts.clear(room);
             }
-            owner.sendPacket(new ExActivateAutoShortcut(room, active));
-        });
+        } else {
+            activeShortcuts.clear(room);
+        }
     }
 
+    private void setActiveSummonShortcut(int room, boolean active) {
+        if(active) {
+            summonShortcuts.set(room);
+        } else {
+            summonShortcuts.clear(room);
+        }
+    }
+
+    public void setActiveSupplyShortcut(int room, boolean active) {
+        var shortcut = setActive(room, active);
+        if(isNull(shortcut)) {
+            return;
+        }
+
+        if(active) {
+            suppliesShortcuts.add(shortcut);
+        } else {
+            suppliesShortcuts.remove(shortcut);
+        }
+    }
+
+    private Shortcut setActive(int room, boolean active) {
+        var shortcut = shortcuts.get(room);
+        if(nonNull(shortcut)) {
+            shortcut.setActive(active);
+            owner.sendPacket(new ExActivateAutoShortcut(room, active));
+        }
+        return shortcut;
+    }
+
+    public Set<Shortcut> getSuppliesShortcuts() {
+        return suppliesShortcuts;
+    }
+    
     public Shortcut nextAutoShortcut() {
-        if(activeShortcuts.isEmpty()) {
+        var shortcut = nextAutoShortcut(activeShortcuts, nextAutoShortcut);
+        nextAutoShortcut = nonNull(shortcut) ? shortcut.getClientId() + 1 : 0;
+        return shortcut;
+    }
+
+    public Shortcut nextAutoSummonShortcut() {
+        var shortcut =  nextAutoShortcut(summonShortcuts, nextSummonShortcut);
+        nextSummonShortcut = nonNull(shortcut) ? shortcut.getClientId() + 1 : 0;
+        return shortcut;
+    }
+
+    private Shortcut nextAutoShortcut(BitSet autoShortcuts, int nextAutoShortcut) {
+        if(autoShortcuts.isEmpty()) {
             return null;
         }
         Shortcut shortcut = null;
-        var next = activeShortcuts.nextSetBit(nextAutoShortcut);
+        var next = autoShortcuts.nextSetBit(nextAutoShortcut);
         if(next == -1) {
-            next = activeShortcuts.nextSetBit(nextAutoShortcut = 0);
+            next = autoShortcuts.nextSetBit(0);
         }
         if(next >= 0) {
             shortcut = shortcuts.get(next);
             if(isNull(shortcut)) {
                 deleteShortcut(next);
-                activeShortcuts.clear(next);
+                autoShortcuts.clear(next);
             }
-            nextAutoShortcut = next + 1;
         }
         return shortcut;
     }
 
     public void resetNextAutoShortcut() {
         nextAutoShortcut = 0;
+        nextSummonShortcut = 0;
     }
     
     private void deleteShortcutFromDb(Shortcut shortcut) {
@@ -155,24 +207,44 @@ public class Shortcuts {
 
     public void restoreMe() {
         shortcuts.clear();
+        var autoPlayEngine = AutoPlayEngine.getInstance();
         for (Shortcut shortcut : getDAO(ShortcutDAO.class).findByPlayer(owner.getObjectId())) {
-            if (shortcut.getType() == ShortcutType.ITEM) {
-                final Item item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
-                if (isNull(item)) {
-                    deleteShortcutFromDb(shortcut);
-                    continue;
-                }
-
-                if (item.isEtcItem()) {
-                    shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
-                }
+            if (!addShortcut(shortcut)) {
+                continue;
             }
 
-            shortcuts.put(shortcut.getClientId(), shortcut);
-            if(shortcut.isActive()) {
-                activeShortcuts.set(shortcut.getClientId());
+            processActiveShortcut(autoPlayEngine, shortcut);
+        }
+        if(!suppliesShortcuts.isEmpty()) {
+            autoPlayEngine.setActiveAutoShortcut(owner, suppliesShortcuts.iterator().next().getClientId(), true);
+        }
+    }
+
+    private void processActiveShortcut(AutoPlayEngine autoPlayEngine, Shortcut shortcut) {
+        if(shortcut.isActive()) {
+            if(autoPlayEngine.isAutoSupply(owner, shortcut)) {
+                suppliesShortcuts.add(shortcut);
+            } else {
+                setActiveShortcut(shortcut.getClientId(), true);
             }
         }
+    }
+
+    private boolean addShortcut(Shortcut shortcut) {
+        if (shortcut.getType() == ShortcutType.ITEM) {
+            final Item item = owner.getInventory().getItemByObjectId(shortcut.getShortcutId());
+            if (isNull(item)) {
+                deleteShortcutFromDb(shortcut);
+                return false;
+            }
+
+            if (item.isEtcItem()) {
+                shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
+            }
+        }
+
+        shortcuts.put(shortcut.getClientId(), shortcut);
+        return true;
     }
 
     public void storeMe() {

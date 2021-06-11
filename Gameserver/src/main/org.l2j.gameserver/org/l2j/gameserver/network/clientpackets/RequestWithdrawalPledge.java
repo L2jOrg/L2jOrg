@@ -18,19 +18,14 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
+import org.l2j.gameserver.settings.ClanSettings;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
- */
 public final class RequestWithdrawalPledge extends ClientPacket {
     @Override
     public void readImpl() {
@@ -58,7 +53,7 @@ public final class RequestWithdrawalPledge extends ClientPacket {
 
         final Clan clan = activeChar.getClan();
 
-        clan.removeClanMember(activeChar.getObjectId(), System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+        clan.removeClanMember(activeChar.getObjectId(), System.currentTimeMillis() + ClanSettings.daysToJoinClan() * 86400000L); // 24*60*60*1000 = 86400000
 
         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_WITHDRAWN_FROM_THE_CLAN);
         sm.addString(activeChar.getName());

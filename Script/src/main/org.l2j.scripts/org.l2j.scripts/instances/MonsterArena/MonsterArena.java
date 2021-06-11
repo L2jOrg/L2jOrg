@@ -20,14 +20,12 @@ package org.l2j.scripts.instances.MonsterArena;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2j.scripts.instances.AbstractInstance;
@@ -194,7 +192,7 @@ public class MonsterArena extends AbstractInstance {
 			case "next_spawn": {
 				final Instance world = npc.getInstanceWorld();
 				if (world != null) {
-					world.spawnGroup("boss_" + ClanTable.getInstance().getClan(npc.getScriptValue()).getArenaProgress());
+					world.spawnGroup("boss_" + ClanEngine.getInstance().getClan(npc.getScriptValue()).getArenaProgress());
 				}
 				break;
 			}
@@ -209,7 +207,7 @@ public class MonsterArena extends AbstractInstance {
 
 						// Mandatory reward.
 						final Npc machine = world.getNpc(MACHINE);
-						final int progress = ClanTable.getInstance().getClan(machine.getScriptValue()).getArenaProgress();
+						final int progress = ClanEngine.getInstance().getClan(machine.getScriptValue()).getArenaProgress();
 						if (progress > 16)
 						{
 							giveItems(player, BATTLE_BOX_4, 1);
@@ -309,7 +307,7 @@ public class MonsterArena extends AbstractInstance {
 			machine.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HA_NOT_BAD);
 
 			// Save progress to global variables.
-			var clan = ClanTable.getInstance().getClan(machine.getScriptValue());
+			var clan = ClanEngine.getInstance().getClan(machine.getScriptValue());
 			clan.setArenaProgress(clan.getArenaProgress() + 1);
 			ClanRewardManager.getInstance().checkArenaProgress(clan);
 

@@ -44,8 +44,6 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * Sell Buffs Manager
  *
@@ -63,7 +61,7 @@ public final class SellBuffsManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/SellBuffData.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/SellBuffData.xsd");
     }
 
     @Override

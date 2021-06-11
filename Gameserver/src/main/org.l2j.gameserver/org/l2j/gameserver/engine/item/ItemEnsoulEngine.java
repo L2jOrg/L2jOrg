@@ -37,7 +37,6 @@ import java.nio.file.Path;
 import java.util.*;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 
 /**
@@ -56,7 +55,7 @@ public class ItemEnsoulEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ensoul-stones.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/ensoul-stones.xsd");
     }
 
     @Override

@@ -18,14 +18,12 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Fisherman;
@@ -36,7 +34,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.SkillHolder;
-import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -45,10 +42,7 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
-
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
@@ -64,16 +58,13 @@ public final class RequestAcquireSkill extends ClientPacket {
     private int id;
     private int level;
     private AcquireSkillType skillType;
-    private int subType;
 
     @Override
     public void readImpl() {
         id = readInt();
         level = readInt();
-        skillType = AcquireSkillType.getAcquireSkillType(readInt());
-        if (skillType == AcquireSkillType.SUBPLEDGE) {
-            subType = readInt();
-        }
+        skillType = AcquireSkillType.getAcquireSkillType(readInt()); // if type is sub pledge subType, so read d
+
     }
 
     @Override
@@ -143,7 +134,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                 final Clan clan = player.getClan();
                 final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
                 if (clan.getReputationScore() >= repCost) {
-                    if (getSettings(CharacterSettings.class).isPledgeSkillsItemNeeded()) {
+                    if (CharacterSettings.pledgeSkillsItemNeeded()) {
                         for (ItemHolder item : skillLearn.getRequiredItems()) {
                             if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
                                 // Doesn't have required item.
@@ -178,57 +169,8 @@ public final class RequestAcquireSkill extends ClientPacket {
                 }
                 break;
             }
-            case SUBPLEDGE: {
-                if (!player.isClanLeader() || !player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME)) {
-                    return;
-                }
-
-                final Clan clan = player.getClan();
-                if (clan.getCastleId() == 0) {
-                    return;
-                }
-
-                // Hack check. Check if SubPledge can accept the new skill:
-                if (!clan.isLearnableSubPledgeSkill(skill, subType)) {
-                    player.sendPacket(SystemMessageId.THIS_SQUAD_SKILL_HAS_ALREADY_BEEN_LEARNED);
-                    GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " is requesting skill Id: " + id + " level " + level + " without knowing it's previous level!", IllegalActionPunishmentType.NONE);
-                    return;
-                }
-
-                final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
-                if (clan.getReputationScore() < repCost) {
-                    player.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
-                    return;
-                }
-
-                for (ItemHolder item : skillLearn.getRequiredItems()) {
-                    if (!player.destroyItemByItemId("SubSkills", item.getId(), item.getCount(), trainer, false)) {
-                        player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
-                        return;
-                    }
-
-                    final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-                    sm.addItemName(item.getId());
-                    sm.addLong(item.getCount());
-                    player.sendPacket(sm);
-                }
-
-                if (repCost > 0) {
-                    clan.takeReputationScore(repCost, true);
-                    final SystemMessage cr = getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-                    cr.addInt(repCost);
-                    player.sendPacket(cr);
-                }
-
-                clan.addNewSkill(skill, subType);
-                clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-                player.sendPacket(new AcquireSkillDone());
-
-                showSubUnitSkillList(player);
-                break;
-            }
             default: {
-                LOGGER.warn("Recived Wrong Packet Data in Aquired Skill, unknown skill type:" + skillType);
+                LOGGER.warn("Received Wrong Packet Data in Acquired Skill, unknown skill type: {}", skillType);
                 break;
             }
         }
@@ -262,7 +204,7 @@ public final class RequestAcquireSkill extends ClientPacket {
                     return false;
                 }
 
-                if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !getSettings(CharacterSettings.class).isDivineInspirationBookNeeded()) {
+                if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !CharacterSettings.divineInspirationBookNeeded()) {
                     return true;
                 }
 
@@ -379,16 +321,6 @@ public final class RequestAcquireSkill extends ClientPacket {
     private void showSkillList(Npc trainer, Player player) {
         if (trainer instanceof Fisherman) {
             Fisherman.showFishSkillList(player);
-        }
-    }
-
-    private void showSubUnitSkillList(Player activeChar) {
-        final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubPledgeSkills(activeChar.getClan());
-
-        if (skills.isEmpty()) {
-            activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
-        } else {
-            activeChar.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.SUBPLEDGE));
         }
     }
 }

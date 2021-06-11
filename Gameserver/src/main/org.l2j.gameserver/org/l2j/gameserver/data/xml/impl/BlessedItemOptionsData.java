@@ -16,7 +16,6 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class BlessedItemOptionsData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(BlessedItemOptionsData.class);
@@ -27,7 +26,7 @@ public class BlessedItemOptionsData extends GameXmlReader {
     }
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/BlessedItemOptions.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/BlessedItemOptions.xsd");
     }
 
     @Override

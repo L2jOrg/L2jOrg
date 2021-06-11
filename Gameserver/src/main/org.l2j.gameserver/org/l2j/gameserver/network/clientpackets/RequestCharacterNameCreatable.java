@@ -22,7 +22,6 @@ import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAlphaNumeric;
 
 /**
@@ -60,6 +59,6 @@ public class RequestCharacterNameCreatable extends ClientPacket {
     }
 
     private boolean isValidName(String text) {
-        return getSettings(ServerSettings.class).acceptPlayerName(text);
+        return ServerSettings.acceptPlayerName(text);
     }
 }

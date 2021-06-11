@@ -37,7 +37,7 @@ public class StaticWorldObjectAction implements IActionHandler
 	private static final Logger LOGGER = LoggerFactory.getLogger(StaticWorldObjectAction.class);
 
 	@Override
-	public boolean action(Player activeChar, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
 		final StaticWorldObject staticObject = (StaticWorldObject) target;
 		if (staticObject.getType() < 0)
@@ -46,23 +46,23 @@ public class StaticWorldObjectAction implements IActionHandler
 		}
 		
 		// Check if the Player already target the Folk
-		if (activeChar.getTarget() != staticObject)
+		if (player.getTarget() != staticObject)
 		{
 			// Set the target of the Player activeChar
-			activeChar.setTarget(staticObject);
+			player.setTarget(staticObject);
 		}
 		else if (interact)
 		{
 			// Calculate the distance between the Player and the Folk
-			if (!isInsideRadius2D(activeChar, staticObject, Npc.INTERACTION_DISTANCE))
+			if (!isInsideRadius2D(player, staticObject, Npc.INTERACTION_DISTANCE))
 			{
 				// Notify the Player AI with AI_INTENTION_INTERACT
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, staticObject);
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, staticObject);
 			}
 			else if (staticObject.getType() == 2)
 			{
 				final String filename = (staticObject.getId() == 24230101) ? "data/html/signboards/tomb_of_crystalgolem.htm" : "data/html/signboards/pvp_signboard.htm";
-				final String content = HtmCache.getInstance().getHtm(activeChar, filename);
+				final String content = HtmCache.getInstance().getHtm(player, filename);
 				final NpcHtmlMessage html = new NpcHtmlMessage(staticObject.getObjectId());
 				
 				if (content == null)
@@ -74,11 +74,11 @@ public class StaticWorldObjectAction implements IActionHandler
 					html.setHtml(content);
 				}
 				
-				activeChar.sendPacket(html);
+				player.sendPacket(html);
 			}
 			else if (staticObject.getType() == 0)
 			{
-				activeChar.sendPacket(staticObject.getMap());
+				player.sendPacket(staticObject.getMap());
 			}
 		}
 		return true;

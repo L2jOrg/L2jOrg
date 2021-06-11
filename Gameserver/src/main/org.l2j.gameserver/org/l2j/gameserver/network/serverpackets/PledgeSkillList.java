@@ -29,11 +29,9 @@ import org.l2j.gameserver.network.ServerExPacketId;
  */
 public class PledgeSkillList extends ServerPacket {
     private final Skill[] _skills;
-    private final SubPledgeSkill[] _subSkills;
 
     public PledgeSkillList(Clan clan) {
         _skills = clan.getAllSkills();
-        _subSkills = clan.getAllSubSkills();
     }
 
     @Override
@@ -41,30 +39,12 @@ public class PledgeSkillList extends ServerPacket {
         writeId(ServerExPacketId.EX_PLEDGE_SKILL_LIST, buffer );
 
         buffer.writeInt(_skills.length);
-        buffer.writeInt(_subSkills.length); // Squad skill length
+        buffer.writeInt(0x00); //sub pledge  Squad skill length
         for (Skill sk : _skills) {
             buffer.writeInt(sk.getDisplayId());
             buffer.writeShort(sk.getDisplayLevel());
             buffer.writeShort(0x00); // Sub level
         }
-        for (SubPledgeSkill sk : _subSkills) {
-            buffer.writeInt(sk._subType); // Clan Sub-unit types
-            buffer.writeInt(sk._skillId);
-            buffer.writeShort(sk._skillLvl);
-            buffer.writeShort(0x00); // Sub level
-        }
-    }
-
-
-    public static class SubPledgeSkill {
-        int _subType;
-        int _skillId;
-        int _skillLvl;
-
-        public SubPledgeSkill(int subType, int skillId, int skillLvl) {
-            _subType = subType;
-            _skillId = skillId;
-            _skillLvl = skillLvl;
-        }
+        // for each sub pledge skill write sub pledge type and skill info
     }
 }

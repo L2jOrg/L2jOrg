@@ -38,7 +38,6 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.network.authcomm.gs2as.ServerStatus.SERVER_LIST_TYPE;
 
@@ -61,13 +60,12 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
     }
 
     public void connect() throws IOException, ExecutionException, InterruptedException {
-        var serverSettings = getSettings(ServerSettings.class);
         InetSocketAddress address;
-        if(isNullOrEmpty(serverSettings.authServerAddress())) {
+        if(isNullOrEmpty(ServerSettings.authServerAddress())) {
             LOGGER.warn("Auth server address not configured trying to connect to localhost");
-            address = new InetSocketAddress(serverSettings.authServerPort());
+            address = new InetSocketAddress(ServerSettings.authServerPort());
         } else {
-            address =  new InetSocketAddress(serverSettings.authServerAddress(), serverSettings.authServerPort());
+            address =  new InetSocketAddress(ServerSettings.authServerAddress(), ServerSettings.authServerPort());
         }
         if(nonNull(client)) {
             client.close();

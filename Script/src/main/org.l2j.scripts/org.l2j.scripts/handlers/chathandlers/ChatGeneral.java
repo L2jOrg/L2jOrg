@@ -33,7 +33,6 @@ import org.l2j.gameserver.world.World;
 import java.util.StringTokenizer;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * General Chat Handler.
@@ -52,7 +51,7 @@ public final class ChatGeneral implements IChatHandler {
 
 		if (!vcd_used) {
 
-			var levelRequired = getSettings(ChatSettings.class).generalChatLevel();
+			var levelRequired = ChatSettings.generalChatLevel();
 
 			if ((player.getLevel() < levelRequired) && !player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.GENERAL_CHAT_CANNOT_BE_USED_BY_USERS_LV_S1_OR_LOWER).addInt(levelRequired));

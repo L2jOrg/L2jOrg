@@ -33,7 +33,6 @@ import java.nio.file.Path;
 import java.util.Optional;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class TeleportEngine extends GameXmlReader {
 
@@ -55,7 +54,7 @@ public final class TeleportEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/teleports.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/teleports.xsd");
     }
 
     @Override

@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.clientpackets.pledge;
 
 import org.l2j.gameserver.data.database.data.PledgeApplicantData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.ClanEntryStatus;
 import org.l2j.gameserver.instancemanager.ClanEntryManager;
 import org.l2j.gameserver.model.Clan;
@@ -53,7 +53,7 @@ public class RequestPledgeWaitingApply extends ClientPacket {
             return;
         }
 
-        final Clan clan = ClanTable.getInstance().getClan(_clanId);
+        final Clan clan = ClanEngine.getInstance().getClan(_clanId);
         if (clan == null) {
             return;
         }

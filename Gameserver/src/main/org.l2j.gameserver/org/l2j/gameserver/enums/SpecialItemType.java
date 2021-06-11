@@ -27,7 +27,8 @@ public enum SpecialItemType {
     CLAN_REPUTATION(-200, "Clan Reputation Points"),
     FAME(-300, "Fame"),
     //FIELD_CYCLE_POINTS(-400, "Field Cycle Points"),
-    RAIDBOSS_POINTS(-500, "Raid Points");
+    RAIDBOSS_POINTS(-500, "Raid Points"),
+    HONOR_COIN(-700, "Honor Coin");
 
     private final String description;
     private final int clientId;

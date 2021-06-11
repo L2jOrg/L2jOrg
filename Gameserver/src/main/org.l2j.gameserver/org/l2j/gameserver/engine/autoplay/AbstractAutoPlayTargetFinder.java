@@ -38,9 +38,9 @@ import static org.l2j.gameserver.util.GameUtils.isGM;
 abstract class AbstractAutoPlayTargetFinder implements AutoPlayTargetFinder {
 
     @Override
-    public boolean canBeTarget(Player player, WorldObject target) {
+    public boolean canBeTarget(Player player, WorldObject target, int range) {
         return !isGM(target) && !player.isTargetingDisabled() && target.isTargetable() && target.isAutoAttackable(player) && checkRespectfulMode(player, target) &&
-                GeoEngine.getInstance().canSeeTarget(player, target) && GeoEngine.getInstance().canMoveToTarget(player, target);
+                MathUtil.isInsideRadius3D(player, target, range) && GeoEngine.getInstance().canSeeTarget(player, target) && GeoEngine.getInstance().canMoveToTarget(player, target);
     }
 
     private boolean checkRespectfulMode(Player player, WorldObject target) {
@@ -59,7 +59,7 @@ abstract class AbstractAutoPlayTargetFinder implements AutoPlayTargetFinder {
 
     protected Creature findNextTarget(Player player, Class<? extends Creature> targetClass, int range) {
         return World.getInstance().findFirstVisibleObject(player, targetClass, range, false,
-                creature -> canBeTarget(player, creature),
+                creature -> canBeTarget(player, creature, range),
                 Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
     }
 }

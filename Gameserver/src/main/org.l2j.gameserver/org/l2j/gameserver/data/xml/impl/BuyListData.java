@@ -37,7 +37,6 @@ import java.io.File;
 import java.nio.file.Path;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -56,14 +55,14 @@ public final class BuyListData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/buylist.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/buylist.xsd");
     }
 
     @Override
     public synchronized void load() {
         buyLists.clear();
         parseDatapackDirectory("data/buylists", false);
-        if (getSettings(GeneralSettings.class).loadCustomBuyList()) {
+        if (GeneralSettings.loadCustomBuyList()) {
             parseDatapackDirectory("data/buylists/custom", false);
         }
         releaseResources();

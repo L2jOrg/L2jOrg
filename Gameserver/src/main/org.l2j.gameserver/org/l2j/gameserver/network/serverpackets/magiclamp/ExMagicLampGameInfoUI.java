@@ -6,8 +6,6 @@ import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.enums.LampMode;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.GreaterMagicLampHolder;
-import org.l2j.gameserver.model.holders.MagicLampDataHolder;
-import org.l2j.gameserver.model.holders.MagicLampHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;

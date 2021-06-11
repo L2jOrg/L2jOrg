@@ -20,7 +20,7 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -194,7 +194,7 @@ public final class AdminCastle implements IAdminCommandHandler
 						}
 						case "takeCastle":
 						{
-							final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+							final Clan clan = ClanEngine.getInstance().getClan(castle.getOwnerId());
 							if (clan != null)
 							{
 								castle.removeOwner(clan);

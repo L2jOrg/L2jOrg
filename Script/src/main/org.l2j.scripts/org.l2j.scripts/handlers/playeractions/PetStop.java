@@ -49,4 +49,9 @@ public final class PetStop implements IPlayerActionHandler
 			pet.cancelAction();
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

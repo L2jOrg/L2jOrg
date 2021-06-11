@@ -29,6 +29,7 @@ import org.l2j.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSellingResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
@@ -41,8 +42,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Advi
@@ -144,7 +143,7 @@ public class TradeList {
     }
 
     private boolean validateItem(int objectId, long count, long price, Item item) {
-        if (!(item.isTradeable() || (owner.isGM() && Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem()) {
+        if (!(item.isTradeable() || (owner.isGM() && !AdminSettings.tradeRestrictItem())) || item.isQuestItem()) {
             LOGGER.warn("{} Attempt to add a restricted item!", owner);
             return false;
         }
@@ -164,7 +163,7 @@ public class TradeList {
             return false;
         }
 
-        if (MathUtil.checkMulOverFlow(price, count, getSettings(CharacterSettings.class).maxAdena())) {
+        if (MathUtil.checkMulOverFlow(price, count, CharacterSettings.maxAdena())) {
             LOGGER.warn("{} Attempt to overflow adena !", owner);
             return false;
         }
@@ -199,7 +198,7 @@ public class TradeList {
             return null;
         }
 
-        if (MathUtil.checkMulOverFlow(price, count, getSettings(CharacterSettings.class).maxAdena())) {
+        if (MathUtil.checkMulOverFlow(price, count, CharacterSettings.maxAdena())) {
             LOGGER.warn("{} Attempt to overflow adena !", owner);
             return null;
         }
@@ -539,7 +538,7 @@ public class TradeList {
             }
 
             // check for overflow in the single item
-            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
+            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), CharacterSettings.maxAdena())) {
                 // private store attempting to overflow - disable it
                 lock();
                 return 1;
@@ -547,7 +546,7 @@ public class TradeList {
 
             totalPrice += item.getCount() * item.getPrice();
             // check for overflow of the total price
-            if ((getSettings(CharacterSettings.class).maxAdena() < totalPrice) || (totalPrice < 0)) {
+            if ((CharacterSettings.maxAdena() < totalPrice) || (totalPrice < 0)) {
                 // private store attempting to overflow - disable it
                 lock();
                 return 1;
@@ -721,13 +720,13 @@ public class TradeList {
             }
 
             // check for overflow in the single item
-            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), getSettings(CharacterSettings.class).maxAdena())) {
+            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), CharacterSettings.maxAdena())) {
                 lock();
                 break;
             }
 
             final long _totalPrice = totalPrice + (item.getCount() * item.getPrice());
-            if ((getSettings(CharacterSettings.class).maxAdena() < _totalPrice) || (_totalPrice < 0)) {
+            if ((CharacterSettings.maxAdena() < _totalPrice) || (_totalPrice < 0)) {
                 lock();
                 break;
             }

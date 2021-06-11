@@ -74,4 +74,9 @@ public final class PetSkillUse implements IPlayerActionHandler
 			}
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

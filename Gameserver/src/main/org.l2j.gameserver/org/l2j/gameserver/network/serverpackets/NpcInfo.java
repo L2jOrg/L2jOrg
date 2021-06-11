@@ -20,7 +20,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.Clan;
@@ -154,7 +154,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
         }
 
         if (npc.getClanId() > 0) {
-            final Clan clan = ClanTable.getInstance().getClan(npc.getClanId());
+            final Clan clan = ClanEngine.getInstance().getClan(npc.getClanId());
             if (clan != null) {
                 _clanId = clan.getId();
                 _clanCrest = clan.getCrestId();

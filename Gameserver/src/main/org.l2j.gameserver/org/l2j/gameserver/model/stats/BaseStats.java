@@ -29,7 +29,6 @@ import java.nio.file.Path;
 import java.util.NoSuchElementException;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author DS, Sdw, UnAfraid
@@ -119,7 +118,7 @@ public enum BaseStats {
         new GameXmlReader() {
             @Override
             protected Path getSchemaFilePath() {
-                return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/statBonus.xsd");
+                return ServerSettings.dataPackDirectory().resolve("data/xsd/statBonus.xsd");
             }
 
             @Override

@@ -18,46 +18,48 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
 /**
  * @author JoeAlisson
  */
-public class AttendanceSettings implements Settings {
+public class AttendanceSettings  {
 
-    private boolean enabled;
-    private boolean vipOnly;
-    private int delay;
-    private boolean popUpWindow;
-    private int minimumLevel;
+    private static boolean enabled;
+    private static boolean vipOnly;
+    private static int delay;
+    private static boolean popUpWindow;
+    private static int minimumLevel;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
-        enabled = settingsFile.getBoolean("Enable", false);
-        vipOnly = settingsFile.getBoolean("VipOnly", false);
-        delay =  settingsFile.getInteger("Delay", 30);
-        popUpWindow = settingsFile.getBoolean("PopupWindow", false);
-        minimumLevel = settingsFile.getInteger("MinimumLevel", 40);
+    private AttendanceSettings() {
+        // helper class
     }
 
-    public boolean enabled() {
+    public static void load(SettingsFile settingsFile) {
+        enabled = settingsFile.getBoolean("Enable", false);
+        vipOnly = settingsFile.getBoolean("VipOnly", false);
+        delay =  settingsFile.getInt("Delay", 30);
+        popUpWindow = settingsFile.getBoolean("PopupWindow", false);
+        minimumLevel = settingsFile.getInt("MinimumLevel", 40);
+    }
+
+    public static boolean enabled() {
         return enabled;
     }
 
-    public boolean vipOnly() {
+    public static boolean vipOnly() {
         return vipOnly;
     }
 
-    public int delay() {
+    public static int delay() {
         return delay;
     }
 
-    public boolean popUpWindow() {
+    public static boolean popUpWindow() {
         return popUpWindow;
     }
 
-    public int minimumLevel() {
+    public static int minimumLevel() {
         return minimumLevel;
     }
 }

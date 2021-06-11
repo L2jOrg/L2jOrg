@@ -32,7 +32,6 @@ import org.w3c.dom.Document;
 import java.io.File;
 import java.nio.file.Path;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
 
 /**
@@ -50,7 +49,7 @@ public final class ActionManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/actions.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/actions.xsd");
     }
 
     @Override

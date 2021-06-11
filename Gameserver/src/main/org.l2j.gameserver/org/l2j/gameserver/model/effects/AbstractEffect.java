@@ -18,14 +18,12 @@
  */
 package org.l2j.gameserver.model.effects;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -60,7 +58,7 @@ public abstract class AbstractEffect  {
     }
 
     public double getTicksMultiplier() {
-        return (getTicks() * getSettings(CharacterSettings.class).effectTickRatio()) / 1000f;
+        return (getTicks() * CharacterSettings.effectTickRatio()) / 1000f;
     }
 
     /**

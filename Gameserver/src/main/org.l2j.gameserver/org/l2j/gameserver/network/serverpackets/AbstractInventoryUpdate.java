@@ -21,9 +21,9 @@ package org.l2j.gameserver.network.serverpackets;
 import io.github.joealisson.mmocore.WritableBuffer;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.model.ItemInfo;
-import org.l2j.gameserver.engine.item.Item;
 
 import java.util.Collection;
 import java.util.List;

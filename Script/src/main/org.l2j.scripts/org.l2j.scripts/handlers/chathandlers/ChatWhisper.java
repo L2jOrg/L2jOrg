@@ -30,7 +30,6 @@ import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_SEND_A_WHISPER_TO_A_USER_WHO_IS_PARTICIPATING_IN_THE_OLYMPIAD;
 
@@ -63,8 +62,7 @@ public final class ChatWhisper implements IChatHandler {
 				return;
 			}
 
-			var chatSettings = getSettings(ChatSettings.class);
-			var levelRequired = chatSettings.whisperChatLevel();
+			var levelRequired = ChatSettings.whisperChatLevel();
 			if ((player.getLevel() < levelRequired) && !player.getWhisperers().contains(receiver.getObjectId()) && !player.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.USERS_LV_S1_OR_LOWER_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_IT).addInt(levelRequired));
 				return;
@@ -72,7 +70,7 @@ public final class ChatWhisper implements IChatHandler {
 
 			if (!BlockList.isBlocked(receiver, player)) {
 				// Allow receiver to send PMs to this char, which is in silence mode.
-				if (chatSettings.silenceModeExclude() && player.isSilenceMode()) {
+				if (ChatSettings.silenceModeExclude() && player.isSilenceMode()) {
 					player.addSilenceModeExcluded(receiver.getObjectId());
 				}
 

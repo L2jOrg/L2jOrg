@@ -25,11 +25,11 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CommunityDAO;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -59,7 +59,6 @@ import java.util.function.Predicate;
 
 import static java.lang.Math.min;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.parseNextInt;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -433,13 +432,13 @@ public final class HomeBoard implements IParseBoardHandler {
             if (currentCommand.startsWith("_bbsskillselect") && !schemeName.equalsIgnoreCase("none")) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillId, SkillEngine.getInstance().getMaxLevel(skillId));
                 if (skill.isDance()) {
-                    if (getCountOf(skills, true) < getSettings(CharacterSettings.class).maxDances()) {
+                    if (getCountOf(skills, true) < CharacterSettings.maxDances()) {
                         skills.add(skillId);
                     } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of dances/songs.");
                     }
                 } else {
-                    if (getCountOf(skills, false) < getSettings(CharacterSettings.class).maxBuffs()) {
+                    if (getCountOf(skills, false) < CharacterSettings.maxBuffs()) {
                         skills.add(skillId);
                     } else {
                         activeChar.sendMessage("This scheme has reached the maximum amount of buffs.");
@@ -632,7 +631,7 @@ public final class HomeBoard implements IParseBoardHandler {
             } else {
                 returnHtml = returnHtml.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
                 returnHtml = returnHtml.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));
-                returnHtml = returnHtml.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
+                returnHtml = returnHtml.replaceAll("%clan_count%", Integer.toString(ClanEngine.getInstance().getClanCount()));
             }
             CommunityBoardHandler.separateAndSend(returnHtml, activeChar);
         }
@@ -711,8 +710,7 @@ public final class HomeBoard implements IParseBoardHandler {
         final var schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
         returnHtml = setHtmlSchemeBuffList(groupType, schemeName, schemeSkills, page, returnHtml);
         returnHtml = returnHtml.replace("%schemename%", schemeName);
-        var characterSettings = getSettings(CharacterSettings.class);
-        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + characterSettings.maxBuffs() + " buffs, " + getCountOf(schemeSkills, true) + " / " + characterSettings.maxDances() + " dances/songs");
+        returnHtml = returnHtml.replace("%count%", getCountOf(schemeSkills, false) + " / " + CharacterSettings.maxBuffs() + " buffs, " + getCountOf(schemeSkills, true) + " / " + CharacterSettings.maxDances() + " dances/songs");
         returnHtml = returnHtml.replace("%typesframe%", getTypesFrame(groupType, schemeName));
         returnHtml = returnHtml.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
         return returnHtml;

@@ -27,8 +27,6 @@ import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Migi, DS
  */
@@ -43,7 +41,7 @@ public final class RequestReceivedPost extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (!getSettings(GeneralSettings.class).allowMail()) {
+        if (!GeneralSettings.allowMail()) {
             return;
         }
 

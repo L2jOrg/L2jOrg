@@ -24,21 +24,17 @@ import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 import static java.lang.Math.max;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * MagicSkillUse server packet implementation.

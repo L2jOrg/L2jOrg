@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
  */
 interface AutoPlayTargetFinder {
 
-    boolean canBeTarget(Player player, WorldObject target);
+    boolean canBeTarget(Player player, WorldObject target, int range);
 
     Creature findNextTarget(Player player, int range);
 

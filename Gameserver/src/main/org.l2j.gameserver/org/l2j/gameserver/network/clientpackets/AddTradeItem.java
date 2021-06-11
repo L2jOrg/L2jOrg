@@ -18,10 +18,10 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.TradeItem;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.TradeUpdate;
 import org.l2j.gameserver.network.serverpackets.trade.TradeOtherAdd;

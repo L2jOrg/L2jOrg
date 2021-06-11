@@ -57,4 +57,9 @@ public final class PetHold implements IPlayerActionHandler
 			((SummonAI) pet.getAI()).notifyFollowStatusChange();
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

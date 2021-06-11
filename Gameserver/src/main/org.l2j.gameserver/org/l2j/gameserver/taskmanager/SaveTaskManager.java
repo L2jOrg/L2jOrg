@@ -31,7 +31,6 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.falseIfNullOrElse;
 
 /**
@@ -46,7 +45,7 @@ public class SaveTaskManager {
     }
 
     public void registerPlayer(Player player) {
-        var scheduleTime = getSettings(GeneralSettings.class).autoSavePlayerTime();
+        var scheduleTime = GeneralSettings.autoSavePlayerTime();
         if(playerSaveStamp.isEmpty() && (isNull(scheduledTask) || scheduledTask.isDone())) {
             scheduledTask = ThreadPool.scheduleAtFixedDelay(this::saveTask, scheduleTime, scheduleTime, TimeUnit.MINUTES);
         }
@@ -59,7 +58,7 @@ public class SaveTaskManager {
 
     private void saveTask() {
         final var now = System.currentTimeMillis();
-        final var nextSave = nextSave(getSettings(GeneralSettings.class).autoSavePlayerTime());
+        final var nextSave = nextSave(GeneralSettings.autoSavePlayerTime());
 
         synchronized (playerSaveStamp) {
             playerSaveStamp.entrySet().stream()

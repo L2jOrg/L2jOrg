@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.model.item.container;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * @author UnAfraid
@@ -63,8 +63,8 @@ public class PlayerFreight extends Warehouse {
 
     @Override
     public boolean validateCapacity(long slots) {
-        final int curSlots = _owner == null ? Config.ALT_FREIGHT_SLOTS : Config.ALT_FREIGHT_SLOTS;
-        return ((getSize() + slots) <= curSlots);
+        final int maxSlot = CharacterSettings.maxSlotFreight();
+        return getSize() + slots <= maxSlot;
     }
 
     @Override

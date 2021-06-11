@@ -20,9 +20,9 @@ package org.l2j.commons.database.handler;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.database.TypeHandler;
 import org.l2j.commons.database.HandlersSupport;
 import org.l2j.commons.database.QueryDescriptor;
+import org.l2j.commons.database.TypeHandler;
 
 import java.lang.reflect.ParameterizedType;
 import java.sql.PreparedStatement;

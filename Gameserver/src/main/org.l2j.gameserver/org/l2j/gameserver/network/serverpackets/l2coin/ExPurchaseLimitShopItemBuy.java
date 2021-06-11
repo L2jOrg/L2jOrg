@@ -25,45 +25,58 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
+import java.util.Map;
+
 /**
  * @author JoeAlisson
  */
 public class ExPurchaseLimitShopItemBuy extends ServerPacket {
 
-    private final boolean fail;
-    private final LCoinShopProduct product;
-    private final byte tab;
+    private final LCoinShopProduct      _product;
+    private final Map<Integer, Integer> _productions;
+    private final byte                  _index;
+    private final boolean               _fail;
 
-    private ExPurchaseLimitShopItemBuy(LCoinShopProduct product, byte tab, boolean fail) {
-        this.fail = fail;
-        this.tab = tab;
-        this.product = product;
+    private ExPurchaseLimitShopItemBuy(LCoinShopProduct product, Map<Integer, Integer> productions, byte index, boolean fail)
+    {
+        _product = product;
+        _productions = productions;
+        _index = index;
+        _fail = fail;
     }
 
     @Override
-    protected void writeImpl(GameClient client, WritableBuffer buffer) {
-        writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_BUY, buffer );
-        buffer.writeByte(fail);
-        buffer.writeByte(tab);
-        buffer.writeInt(product.id());
-
-        ItemHolder production = product.production();
-        int size = 1;
-        buffer.writeInt(size); // size
-        for (int i = 0; i < size ; i++) {
-            buffer.writeByte(i);
-            buffer.writeInt(production.getId()); //item id
-            buffer.writeInt((int) production.getCount()); // count
+    protected void writeImpl(GameClient client, WritableBuffer buffer)
+    {
+        writeId(ServerExPacketId.EX_PURCHASE_LIMIT_SHOP_ITEM_BUY, buffer);
+        buffer.writeByte(_fail);
+        buffer.writeByte(_index);
+        buffer.writeInt(_product.id());
+        if (_fail)
+        {
+            buffer.writeInt(0); // size
         }
-
-        buffer.writeInt(product.getRemainAmount()); // remain item count
+        else
+        {
+            buffer.writeInt(_productions.size()); // size
+            int i = 0;
+            for (Map.Entry<Integer, Integer> map : _productions.entrySet())
+            {
+                buffer.writeByte(i++);
+                buffer.writeInt(map.getKey()); // item id
+                buffer.writeInt(map.getValue()); // count
+            }
+        }
+        buffer.writeInt(_product.getRemainAmount()); // remain item count
     }
 
-    public static ServerPacket fail(LCoinShopProduct product, byte tab) {
-        return new ExPurchaseLimitShopItemBuy(product, tab,true);
+    public static ServerPacket fail(LCoinShopProduct product, byte index)
+    {
+        return new ExPurchaseLimitShopItemBuy(product, null, index, true);
     }
 
-    public static ServerPacket success(LCoinShopProduct product, byte tab) {
-        return new ExPurchaseLimitShopItemBuy(product, tab, false);
+    public static ServerPacket success(LCoinShopProduct product, Map<Integer, Integer> productions, byte index)
+    {
+        return new ExPurchaseLimitShopItemBuy(product, productions, index, false);
     }
 }

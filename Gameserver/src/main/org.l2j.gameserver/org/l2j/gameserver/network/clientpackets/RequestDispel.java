@@ -25,8 +25,6 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.settings.CharacterSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author KenM
  */
@@ -62,7 +60,7 @@ public class RequestDispel extends ClientPacket {
         if (skill.getAbnormalType() == AbnormalType.TRANSFORM) {
             return;
         }
-        if (skill.isDance() && !getSettings(CharacterSettings.class).isDispelDanceAllowed()) {
+        if (skill.isDance() && !CharacterSettings.dispelDanceAllowed()) {
             return;
         }
         if (player.getObjectId() == _objectId) {

@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -48,7 +48,7 @@ public final class RequestReplyStopPledgeWar extends ClientPacket {
         }
 
         if (_answer == 1) {
-            ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
+            ClanEngine.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
         } else {
             requestor.sendPacket(SystemMessageId.REQUEST_TO_END_WAR_HAS_BEEN_DENIED);
         }

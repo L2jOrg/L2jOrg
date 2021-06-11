@@ -55,7 +55,6 @@ import static org.l2j.authserver.network.client.AuthClientState.AUTHED_LOGIN;
 import static org.l2j.authserver.network.client.packet.auth2client.AccountKicked.AccountKickedReason.REASON_PERMANENTLY_BANNED;
 import static org.l2j.authserver.network.client.packet.auth2client.LoginFail.LoginFailReason.*;
 import static org.l2j.authserver.settings.AuthServerSettings.*;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.hash;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
@@ -225,8 +224,8 @@ public class AuthController {
 
     private void createNewAccount(AuthClient client, String username, String password) {
         try {
-            getDAO(AccountDAO.class).save(username, hash(password), currentTimeMillis(), client.getHostAddress());
             var account = new Account(username, hash(password), currentTimeMillis(), client.getHostAddress());
+            getDAO(AccountDAO.class).save(account);
             processAuth(client, account);
         } catch (NoSuchAlgorithmException e) {
             LOGGER.error(e.getMessage(), e);
@@ -255,7 +254,7 @@ public class AuthController {
         GameServerInfo gsi = GameServerManager.getInstance().getRegisteredGameServerById(serverId);
         int access = client.getAccessLevel();
         if (nonNull(gsi) && gsi.isAuthed()) {
-            boolean loginOk = ((gsi.getOnlinePlayersCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access >= getSettings(AuthServerSettings.class).gmMinimumLevel());
+            boolean loginOk = ((gsi.getOnlinePlayersCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access >= AuthServerSettings.gmMinimumLevel());
 
             if (loginOk && (client.getLastServer() != serverId)) {
                 if(getDAO(AccountDAO.class).updateLastServer(client.getAccount().getLogin(), serverId) < 1) {

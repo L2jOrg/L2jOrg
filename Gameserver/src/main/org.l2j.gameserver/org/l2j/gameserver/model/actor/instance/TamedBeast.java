@@ -276,7 +276,7 @@ public final class TamedBeast extends FeedableBeast {
 
     @Override
     public void onAction(Player player, boolean interact) {
-        if ((player == null) || !canTarget(player)) {
+        if ((player == null) || !canBeTarget(player)) {
             return;
         }
 

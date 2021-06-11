@@ -20,8 +20,8 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.enums.MountType;
-import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.PetLevelData;
+import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -36,7 +36,6 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 
@@ -58,7 +57,7 @@ public final class PetDataTable extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/stats/pets/pets.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/stats/pets/pets.xsd");
     }
 
     /**
@@ -204,7 +203,7 @@ public final class PetDataTable extends GameXmlReader {
     }
 
     public boolean isValidPetName(String name) {
-        return getSettings(ServerSettings.class).acceptPetName(name);
+        return ServerSettings.acceptPetName(name);
     }
 
     public static PetDataTable getInstance() {

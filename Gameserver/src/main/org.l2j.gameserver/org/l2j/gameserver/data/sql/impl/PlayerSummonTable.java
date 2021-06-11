@@ -23,20 +23,19 @@ import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.database.dao.SummonDAO;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.PetTemplate;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -62,7 +61,7 @@ public class PlayerSummonTable {
     }
 
     public void init() {
-        if (getSettings(CharacterSettings.class).restoreSummonOnReconnect()) {
+        if (CharacterSettings.restoreSummonOnReconnect()) {
 
             getDAO(SummonDAO.class).findAllSummonOwners().forEach(data -> servitors.computeIfAbsent(data.getOwnerId(), id ->  CHashIntMap.newKeySet()).add(data.getSummonId()));
             getDAO(PetDAO.class).findAllPetOwnersByRestore().forEach(data -> pets.put(data.getOwnerId(), data.getItemObjectId()));

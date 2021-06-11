@@ -87,6 +87,10 @@ public final class RequestActionUse extends ClientPacket {
         if (nonNull(action)) {
             var handler = PlayerActionHandler.getInstance().getHandler(action.getHandler());
             if (nonNull(handler)) {
+                if(handler.isSummonAction() && !player.hasSummon()) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
+                    return;
+                }
                 handler.useAction(player, action, ctrlPressed, shiftPressed);
                 return;
             }

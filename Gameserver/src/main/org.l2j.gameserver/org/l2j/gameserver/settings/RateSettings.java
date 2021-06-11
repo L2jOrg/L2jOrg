@@ -18,50 +18,29 @@
  */
 package org.l2j.gameserver.settings;
 
-import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 
 /**
  * @author JoeAlisson
  */
-public class RateSettings implements Settings {
+public class RateSettings  {
 
-    private float xp;
-    private float rateVitalityExpMul;
-    private int maxItemsVitality;
-    private float rateVitalityLoss;
-    private float rateVitalityGain;
+    private static float xp;
 
-    @Override
-    public void load(SettingsFile settingsFile) {
-        xp = settingsFile.getFloat("RateXp", 1f);
-        rateVitalityExpMul = settingsFile.getFloat("RateSayhaGraceExpMultiplier", 2);
-        maxItemsVitality = settingsFile.getInteger("SayhaGraceMaxItemsAllowed", 999);
-        rateVitalityLoss = settingsFile.getFloat("RateSayhaGraceLost", 1f);
-        rateVitalityGain = settingsFile.getFloat("RateSayhaGraceGain", 1f);
+    private RateSettings() {
+        // helper class
     }
 
-    public float xp() {
+    public static void load(SettingsFile settingsFile) {
+        xp = settingsFile.getFloat("RateXp", 1f);
+
+    }
+
+    public static float xp() {
         return xp;
     }
 
-    public void setXp(float xp) {
-        this.xp = xp;
-    }
-
-    public float rateVitalityExpMul() {
-        return rateVitalityExpMul;
-    }
-
-    public int maxItemsVitality() {
-        return maxItemsVitality;
-    }
-
-    public float rateVitalityLoss() {
-        return rateVitalityLoss;
-    }
-
-    public float rateVitalityGain() {
-        return rateVitalityGain;
+    public static void setXp(float value) {
+        xp = value;
     }
 }

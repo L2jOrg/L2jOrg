@@ -25,8 +25,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 public class AuthResponse extends ReceivablePacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthResponse.class);
@@ -44,7 +42,7 @@ public class AuthResponse extends ReceivablePacket {
     protected void runImpl() {
         String[] accounts = AuthServerCommunication.getInstance().getAccounts();
         sendPacket(new PlayerInGame(accounts));
-        getSettings(ServerSettings.class).setServerId(serverId);
+        ServerSettings.setServerId(serverId);
         LOGGER.info("Registered on authserver as {} [{}]", serverId, serverName);
     }
 }

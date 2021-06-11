@@ -31,7 +31,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.enums.InventorySlot.RIGHT_HAND;
 
 /**
@@ -55,7 +54,7 @@ public class PlayerSelectionInfo extends ServerPacket {
         this.account = client.getAccountName();
         this.playersInfo = client.getPlayersInfo();
         this.activeSlot = activeSlot;
-        this.maxPlayerAllowed = getSettings(ServerSettings.class).maxPlayersAllowed();
+        this.maxPlayerAllowed = ServerSettings.maxPlayersAllowed();
     }
 
     @Override
@@ -97,7 +96,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeInt(data.getRace());
             buffer.writeInt(data.getClassId());
 
-            buffer.writeInt(getSettings(ServerSettings.class).serverId());
+            buffer.writeInt(ServerSettings.serverId());
 
             buffer.writeInt(data.getX());
             buffer.writeInt(data.getY());

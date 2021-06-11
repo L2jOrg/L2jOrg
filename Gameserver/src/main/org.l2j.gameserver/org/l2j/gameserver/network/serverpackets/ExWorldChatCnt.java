@@ -24,8 +24,6 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.settings.ChatSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author UnAfraid
  */
@@ -37,7 +35,7 @@ public class ExWorldChatCnt extends ServerPacket {
     }
 
     private boolean canUseWorldChat(Player activeChar) {
-        return activeChar.getLevel() >= getSettings(ChatSettings.class).worldChatMinLevel()|| activeChar.getVipTier() > 0;
+        return activeChar.getLevel() >= ChatSettings.worldChatMinLevel()|| activeChar.getVipTier() > 0;
     }
 
     @Override

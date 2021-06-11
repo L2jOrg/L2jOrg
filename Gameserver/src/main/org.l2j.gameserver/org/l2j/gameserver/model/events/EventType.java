@@ -20,7 +20,6 @@ package org.l2j.gameserver.model.events;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.events.impl.server.OnDayNightChange;
 import org.l2j.gameserver.model.events.impl.character.*;
 import org.l2j.gameserver.model.events.impl.character.npc.*;
 import org.l2j.gameserver.model.events.impl.character.player.*;
@@ -31,6 +30,7 @@ import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
+import org.l2j.gameserver.model.events.impl.server.OnDayNightChange;
 import org.l2j.gameserver.model.events.impl.server.OnServerShutDown;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;

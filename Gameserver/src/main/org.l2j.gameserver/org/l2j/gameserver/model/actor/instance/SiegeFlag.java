@@ -95,7 +95,7 @@ public class SiegeFlag extends Npc {
 
     @Override
     public void onAction(Player player, boolean interact) {
-        if ((player == null) || !canTarget(player)) {
+        if ((player == null) || !canBeTarget(player)) {
             return;
         }
 

@@ -24,23 +24,24 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.xml.impl.ClanHallManager;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.BossManager;
 import org.l2j.gameserver.instancemanager.BossStatus;
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.instance.*;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.NpcStats;
 import org.l2j.gameserver.model.actor.status.NpcStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.*;
@@ -48,7 +49,6 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
@@ -57,6 +57,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.Broadcast;
@@ -73,7 +74,6 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class represents a Non-Player-Character in the world.<br>
@@ -399,7 +399,7 @@ public class Npc extends Creature {
         return false;
     }
 
-    public boolean canTarget(Player player) {
+    public boolean canBeTarget(Player player) {
         if (player.isControlBlocked()) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
@@ -409,8 +409,6 @@ public class Npc extends Creature {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
-        // TODO: More checks...
-
         return true;
     }
 
@@ -479,7 +477,7 @@ public class Npc extends Creature {
     }
 
     public final ClanHall getClanHall() {
-        return ClanHallManager.getInstance().getClanHallByNpcId(getId());
+        return ClanHallEngine.getInstance().getClanHallByNpcId(getId());
     }
 
     /**
@@ -599,22 +597,11 @@ public class Npc extends Creature {
         }
 
         final int npcId = getTemplate().getId();
-
-        String filename;
-        if (npcId == 30298) { // Blacksmith Pinter
-            if (player.isAcademyMember()) {
-                filename = getHtmlPath(npcId, 1);
-            } else {
-                filename = getHtmlPath(npcId, val);
-            }
-        } else {
-            if (((npcId >= 31093) && (npcId <= 31094)) || ((npcId >= 31172) && (npcId <= 31201)) || ((npcId >= 31239) && (npcId <= 31254))) {
-                return;
-            }
-            filename = getHtmlPath(npcId, val);
+        if ((npcId >= 31093 && npcId <= 31094) || (npcId >= 31172 && npcId <= 31201) || (npcId >= 31239 && npcId <= 31254)) {
+            return;
         }
 
-        // Send a Server->Client NpcHtmlMessage containing the text of the Folk to the Player
+        String  filename = getHtmlPath(npcId, val);
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         html.setFile(player, filename);
         html.replace("%npcname%", getName());
@@ -640,7 +627,7 @@ public class Npc extends Creature {
      */
     public double getExpReward() {
         final Instance instance = getInstanceWorld();
-        final float rateMul = instance != null ? instance.getExpRate() : getSettings(RateSettings.class).xp();
+        final float rateMul = instance != null ? instance.getExpRate() : RateSettings.xp();
         return getTemplate().getExp() * rateMul;
     }
 
@@ -716,7 +703,7 @@ public class Npc extends Creature {
                 final Party party = killerPlayer.getParty();
                 if (party != null) {
                     for (Player member : party.getMembers()) {
-                        if ((member != killerPlayer) && MathUtil.isInsideRadius3D(member, getX(), getY(), getZ(), Config.ALT_PARTY_RANGE)) {
+                        if ((member != killerPlayer) && MathUtil.isInsideRadius3D(member, getX(), getY(), getZ(), PartySettings.partyRange())) {
                             new MpRewardTask(member, this);
                             for (Summon summon : member.getServitors().values()) {
                                 new MpRewardTask(summon, this);
@@ -1084,11 +1071,10 @@ public class Npc extends Creature {
 
             item.dropMe(this, newX, newY, newZ);
 
-            final var generalSettings = getSettings(GeneralSettings.class);
-            if (!generalSettings.isProtectedItem(itemId)) {
-                if (( generalSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (generalSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect())) {
-                    ItemsAutoDestroy.getInstance().addItem(item);
-                }
+            if (!GeneralSettings.isProtectedItem(itemId) &&
+                ((GeneralSettings.autoDestroyItemTime() > 0 && !item.getTemplate().hasExImmediateEffect()) || (GeneralSettings.autoDestroyHerbTime() > 0 && item.getTemplate().hasExImmediateEffect()))) {
+
+                ItemsAutoDestroy.getInstance().addItem(item);
             }
             item.setProtected(false);
 

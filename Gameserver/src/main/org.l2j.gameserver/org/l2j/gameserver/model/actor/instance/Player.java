@@ -34,7 +34,6 @@ import org.l2j.gameserver.data.database.dao.*;
 import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
-import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
@@ -89,6 +88,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.BaseStats;
@@ -113,6 +113,7 @@ import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExi
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
@@ -148,7 +149,6 @@ import java.util.stream.Collectors;
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
@@ -176,7 +176,6 @@ public final class Player extends Playable {
     private final IntMap<String> accountPlayers = new HashIntMap<>();
     private final IntMap<RecipeList> dwarvenRecipes = new CHashIntMap<>();
     private final IntMap<RecipeList> commonRecipes = new CHashIntMap<>();
-    private final AutoUseSettingsHolder autoUseSettings = new AutoUseSettingsHolder();
     private final Map<ShotType, Integer> activeSoulShots = new EnumMap<>(ShotType.class);
     private final LimitedQueue<DamageInfo> lastDamages = new LimitedQueue<>(30);
 
@@ -420,7 +419,7 @@ public final class Player extends Playable {
     }
 
     public boolean teleportInBattle() {
-        return !isInBattle() && getSettings(CharacterSettings.class).teleportInBattle();
+        return !isInBattle() && CharacterSettings.teleportInBattle();
     }
 
     public void setAutoPlaySettings(AutoPlaySettings autoPlaySettings) {
@@ -436,15 +435,27 @@ public final class Player extends Playable {
     }
 
     public void setActiveAutoShortcut(int room, boolean active) {
-        shortcuts.setActive(room, active);
+        shortcuts.setActiveShortcut(room, active);
     }
 
     public Shortcut nextAutoShortcut() {
         return shortcuts.nextAutoShortcut();
     }
 
+    public Shortcut nextAutoSummonShortcut() {
+        return shortcuts.nextAutoSummonShortcut();
+    }
+
     public void resetNextAutoShortcut() {
         shortcuts.resetNextAutoShortcut();
+    }
+
+    public Set<Shortcut> getActiveAutoSupplies() {
+        return shortcuts.getSuppliesShortcuts();
+    }
+
+    public void setActiveAutoSupplyShortcut(int room, boolean activate) {
+        shortcuts.setActiveSupplyShortcut(room, activate);
     }
 
     public void setRank(int rank) {
@@ -781,7 +792,7 @@ public final class Player extends Playable {
         var shotsCount = weapon.getConsumeShotsCount();
         var item = inventory.getItemByItemId(itemId);
 
-        if(shotsCount > item.getCount()) {
+        if(isNull(item) || shotsCount > item.getCount()) {
             return false;
         }
 
@@ -1418,7 +1429,7 @@ public final class Player extends Playable {
 
     private int warRelation(Player target, Clan targetClan) {
         int result = 0;
-        if(nonNull(targetClan) && target.getPledgeType() != Clan.SUBUNIT_ACADEMY && getPledgeType() != Clan.SUBUNIT_ACADEMY) {
+        if(nonNull(targetClan)) {
             ClanWar war = clan.getWarWith(target.getClan().getId());
             if (nonNull(war)) {
                 switch (war.getState()) {
@@ -1657,11 +1668,6 @@ public final class Player extends Playable {
 
     public final boolean isNotifyQuestOfDeathEmpty() {
         return (notifyQuestOfDeathList == null) || notifyQuestOfDeathList.isEmpty();
-    }
-
-    public AutoUseSettingsHolder getAutoUseSettings()
-    {
-        return autoUseSettings;
     }
 
     public Shortcut getShortcut(int room) {
@@ -2103,7 +2109,7 @@ public final class Player extends Playable {
 
     public void setFame(int fame) {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, data.getFame(), fame), this);
-        data.setFame(Math.min(fame, Config.MAX_PERSONAL_FAME_POINTS));
+        data.setFame(Math.min(fame, CharacterSettings.maxFame()));
     }
 
     public int getRaidbossPoints() {
@@ -2136,27 +2142,6 @@ public final class Player extends Playable {
         }
 
         try {
-            if ((getLvlJoinedAcademy() != 0) && (clan != null) && CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, Id)) {
-                if (getLvlJoinedAcademy() <= 16) {
-                    clan.addReputationScore(Config.JOIN_ACADEMY_MAX_REP_SCORE, true);
-                } else if (getLvlJoinedAcademy() >= 39) {
-                    clan.addReputationScore(Config.JOIN_ACADEMY_MIN_REP_SCORE, true);
-                } else {
-                    clan.addReputationScore((Config.JOIN_ACADEMY_MAX_REP_SCORE - ((getLvlJoinedAcademy() - 16) * 20)), true);
-                }
-                setLvlJoinedAcademy(0);
-                // oust pledge member from the academy, cuz he has finished his 2nd class transfer
-                final SystemMessage msg = getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
-                msg.addPcName(this);
-                clan.broadcastToOnlineMembers(msg);
-                clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(getName()));
-                clan.removeClanMember(getObjectId(), 0);
-                sendPacket(SystemMessageId.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES);
-
-                // receive graduation gift
-                inventory.addItem("Gift", 8181, 1, this, null); // give academy circlet
-            }
-
             setTarget(this);
             broadcastPacket(new MagicSkillUse(this, 5103, 1, 1000, 0));
             setClassTemplate(Id);
@@ -2233,9 +2218,8 @@ public final class Player extends Playable {
      */
     public void rewardSkills() {
         // Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
-        var characterSettings = getSettings(CharacterSettings.class);
-        if (characterSettings.isAutoLearnSkillEnabled()) {
-            giveAvailableSkills(characterSettings.isAutoLearnSkillFSEnabled(), true);
+        if (CharacterSettings.autoLearnSkillEnabled()) {
+            giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled(), true);
         } else {
             giveAvailableAutoGetSkills();
         }
@@ -2284,7 +2268,7 @@ public final class Player extends Playable {
             skillsForStore.add(skill);
         }
         storeSkills(skillsForStore);
-        if (skillCounter > 0 && getSettings(CharacterSettings.class).isAutoLearnSkillEnabled()) {
+        if (skillCounter > 0 && CharacterSettings.autoLearnSkillEnabled()) {
             sendMessage("You have learned " + skillCounter + " new skills.");
         }
         return skillCounter;
@@ -2300,7 +2284,7 @@ public final class Player extends Playable {
             if (skill != null) {
                 addSkill(skill, true);
             } else {
-                LOGGER.warn("Skipping null auto-get skill for player: " + toString());
+                LOGGER.warn("Skipping null auto-get skill for {}", this);
             }
         }
     }
@@ -2925,16 +2909,15 @@ public final class Player extends Playable {
         }
 
         item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
-        final var generalSettings = getSettings(GeneralSettings.class);
-        if ((generalSettings.autoDestroyItemTime() > 0) && generalSettings.destroyPlayerDroppedItem() && !generalSettings.isProtectedItem(item.getId())) {
-            if (!item.isEquipable() || generalSettings.destroyEquipableItem()) {
-                ItemsAutoDestroy.getInstance().addItem(item);
-            }
+        if (GeneralSettings.autoDestroyItemTime() > 0 && GeneralSettings.destroyPlayerDroppedItem() && !GeneralSettings.isProtectedItem(item.getId())
+                && (!item.isEquipable() || GeneralSettings.destroyEquipableItem())) {
+
+            ItemsAutoDestroy.getInstance().addItem(item);
         }
 
         // protection against auto destroy dropped item
-        if (generalSettings.destroyPlayerDroppedItem()) {
-            item.setProtected(item.isEquipable() && !generalSettings.destroyEquipableItem());
+        if (GeneralSettings.destroyPlayerDroppedItem()) {
+            item.setProtected(item.isEquipable() && !GeneralSettings.destroyEquipableItem());
         } else {
             item.setProtected(true);
         }
@@ -2993,14 +2976,14 @@ public final class Player extends Playable {
 
         item.dropMe(this, x, y, z);
 
-        final var generalSettings = getSettings(GeneralSettings.class);
-        if ((generalSettings.autoDestroyItemTime() > 0) && generalSettings.destroyPlayerDroppedItem() && !generalSettings.isProtectedItem(item.getId())) {
-            if (!item.isEquipable() || generalSettings.destroyEquipableItem()) {
-                ItemsAutoDestroy.getInstance().addItem(item);
-            }
+        if ((GeneralSettings.autoDestroyItemTime() > 0) && GeneralSettings.destroyPlayerDroppedItem() && !GeneralSettings.isProtectedItem(item.getId())
+            && (!item.isEquipable() || GeneralSettings.destroyEquipableItem())) {
+
+            ItemsAutoDestroy.getInstance().addItem(item);
+
         }
-        if (generalSettings.destroyPlayerDroppedItem()) {
-            item.setProtected(item.isEquipable() && !generalSettings.destroyEquipableItem());
+        if (GeneralSettings.destroyPlayerDroppedItem()) {
+            item.setProtected(item.isEquipable() && !GeneralSettings.destroyEquipableItem());
         } else {
             item.setProtected(true);
         }
@@ -3068,11 +3051,11 @@ public final class Player extends Playable {
     }
 
     public void setSpawnProtection(boolean protect) {
-        spawnProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_SPAWN_PROTECTION * 1000L) : 0;
+        spawnProtectEndTime = protect ? System.currentTimeMillis() + (CharacterSettings.spawnProtection() * 1000L) : 0;
     }
 
     private void setTeleportProtection(boolean protect) {
-        teleportProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_TELEPORT_PROTECTION * 1000L) : 0;
+        teleportProtectEndTime = protect ? System.currentTimeMillis() + (CharacterSettings.teleportProtection() * 1000L) : 0;
     }
 
     public final boolean isFakeDeath() {
@@ -3456,7 +3439,7 @@ public final class Player extends Playable {
 
             // Remove the Item from the world and send server->client GetItem packets
             target.pickupMe(this);
-            if (getSettings(GeneralSettings.class).saveDroppedItems()) {
+            if (GeneralSettings.saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().removeObject(target);
             }
         }
@@ -3690,7 +3673,7 @@ public final class Player extends Playable {
 
             if (!insidePvpZone && (pk != null)) {
                 final Clan pkClan = pk.getClan();
-                if ((pkClan != null) && (clan != null) && !isAcademyMember() && !(pk.isAcademyMember())) {
+                if (pkClan != null && clan != null) {
                     final ClanWar clanWar = clan.getWarWith(pkClan.getId());
                     if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
                         clanWar.onKill(pk, this);
@@ -4354,9 +4337,7 @@ public final class Player extends Playable {
             setTitle("");
             data.setClanId(0);
             clanPrivileges = new EnumIntBitmask<>(ClanPrivilege.class, false);
-            setPledgeType(0);
             setPowerGrade(0);
-            setLvlJoinedAcademy(0);
             setApprentice(0);
             setSponsor(0);
             activeWarehouse = null;
@@ -4455,7 +4436,7 @@ public final class Player extends Playable {
     }
 
     public boolean mount(Summon pet) {
-        if (!Config.ALLOW_MOUNTS_DURING_SIEGE && isInsideZone(ZoneType.SIEGE)) {
+        if (!FeatureSettings.allowRideInSiege() && isInsideZone(ZoneType.SIEGE)) {
             return false;
         }
 
@@ -4720,7 +4701,7 @@ public final class Player extends Playable {
         restoreTeleportBookmark();
         restoreRecipeBook();
 
-        if (Config.STORE_RECIPE_SHOPLIST) {
+        if (CharacterSettings.storeRecipeShopList()) {
             restoreRecipeShopList();
         }
 
@@ -4765,7 +4746,7 @@ public final class Player extends Playable {
         storeCharBase();
         storeEffect(storeActiveEffects);
         storeItemReuseDelay();
-        if (Config.STORE_RECIPE_SHOPLIST) {
+        if (CharacterSettings.storeRecipeShopList()) {
             storeRecipeShopList();
         }
 
@@ -5364,7 +5345,7 @@ public final class Player extends Playable {
                 }
 
                 // Check if clan is at war
-                if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace()) && !isAcademyMember()) {
+                if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace())) {
                     final ClanWar war = attackerClan.getWarWith(getClanId());
                     if (nonNull(war) && war.getState() == ClanWarState.MUTUAL) {
                         return true;
@@ -5431,7 +5412,8 @@ public final class Player extends Playable {
      */
     @Override
     public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
-        if (!checkUseSkill(skill)) {
+        if (!checkUseSkill(skill, item)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
@@ -5485,19 +5467,47 @@ public final class Player extends Playable {
         return true;
     }
 
-    private boolean checkUseSkill(Skill skill) {
+    private boolean checkUseSkill(Skill skill, Item item) {
         if (skill.isPassive() || isDead() || (skill.isToggle() && isMounted())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
 
-        if (!getSettings(CharacterSettings.class).allowPKTeleport() && (getReputation() < 0) && skill.hasAnyEffectType(EffectType.TELEPORT)) {
-            sendPacket(ActionFailed.STATIC_PACKET);
+        if (!checkSkillPlayerState(skill, item)) {
             return false;
         }
 
-        if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
+        return checkUseSkillState(skill);
+    }
+
+    private boolean checkUseSkillState(Skill skill) {
+        if (isSkillDisabled(skill)) {
+            sendSkillReuseTimeMessage(skill);
+            return false;
+        }
+
+        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
+            return false;
+        }
+
+        if (isFakeDeath()) {
+            return false;
+        }
+
+        return !isNull(currentSkillWorldPosition) || skill.getTargetType() != TargetType.GROUND;
+    }
+
+    private boolean checkSkillPlayerState(Skill skill, Item item) {
+        if (sitting && item == null) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
+            return false;
+        }
+
+        if (inObserverMode) {
+            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+            return false;
+        }
+
+        if (!CharacterSettings.allowPKTeleport() && getReputation() < 0 && skill.hasAnyEffectType(EffectType.TELEPORT)) {
             return false;
         }
 
@@ -5506,39 +5516,11 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (inObserverMode) {
-            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-            sendPacket(ActionFailed.STATIC_PACKET);
+        if(!SkillCaster.checkSkillConsume(this, skill)) {
             return false;
         }
 
-        if (isSkillDisabled(skill)) {
-            sendSkillReuseTimeMessage(skill);
-            return false;
-        }
-
-        if (sitting) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        // Note: do not check this before TOGGLE reset
-        if (isFakeDeath()) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (isNull(currentSkillWorldPosition) && skill.getTargetType() == TargetType.GROUND) {
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-        return true;
+        return skill.canCastWhileDisabled() || (!isControlBlocked() && !hasBlockActions());
     }
 
     private void sendSkillReuseTimeMessage(Skill skill) {
@@ -5736,15 +5718,6 @@ public final class Player extends Playable {
     public void setSocialStatus(SocialStatus status) {
         socialStatus = status;
         checkItemRestriction();
-    }
-
-    @Override
-    public int getPledgeType() {
-        return data.getSubPledge();
-    }
-
-    public void setPledgeType(int typeId) {
-        data.setSubPledge(typeId);
     }
 
     public int getApprentice() {
@@ -6046,19 +6019,6 @@ public final class Player extends Playable {
         sendSkillList();
     }
 
-    private int getLvlJoinedAcademy() {
-        return data.getLevelJoinedAcademy();
-    }
-
-    public void setLvlJoinedAcademy(int lvl) {
-        data.setLevelJoinedAcademy(lvl);
-    }
-
-    @Override
-    public boolean isAcademyMember() {
-        return getLvlJoinedAcademy() > 0;
-    }
-
     @Override
     public void setTeam(Team team) {
         super.setTeam(team);
@@ -6196,18 +6156,6 @@ public final class Player extends Playable {
 
     public void onEnter() {
         startWarnUserTakeBreak();
-        if (isGM() && !Config.GM_STARTUP_BUILDER_HIDE) {
-            if (isInvulnerable()) {
-                sendMessage("Entering world in Invulnerable mode.");
-            }
-            if (isInvisible()) {
-                sendMessage("Entering world in Invisible mode.");
-            }
-            if (silenceMode) {
-                sendMessage("Entering world in Silence mode.");
-            }
-        }
-
         restoreItemReuse();
         restoreShortCuts();
         restoreEffects();
@@ -6354,7 +6302,7 @@ public final class Player extends Playable {
                 sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
             }
 
-            if (getSettings(CharacterSettings.class).restoreSummonOnReconnect() && !hasSummon()) {
+            if (CharacterSettings.restoreSummonOnReconnect() && !hasSummon()) {
                 if(PlayerSummonTable.getInstance().getServitors().containsKey(getObjectId())) {
                     PlayerSummonTable.getInstance().restoreServitor(this);
                 } else if(PlayerSummonTable.getInstance().getPets().containsKey(getObjectId())) {
@@ -6406,7 +6354,7 @@ public final class Player extends Playable {
 
         checkItemRestriction();
 
-        if ((Config.PLAYER_TELEPORT_PROTECTION > 0) && !isInOlympiadMode() && !getActingPlayer().isInBattle()) {
+        if ((CharacterSettings.teleportProtection() > 0) && !isInOlympiadMode() && !getActingPlayer().isInBattle()) {
             setTeleportProtection(true);
         }
 
@@ -6443,7 +6391,7 @@ public final class Player extends Playable {
         if (movieHolder != null) {
             sendPacket(new ExStartScenePlayer(movieHolder.getMovie()));
         }
-        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive() && !getActingPlayer().isInBattle()) {
+        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive()) {
             AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
     }
@@ -6896,36 +6844,31 @@ public final class Player extends Playable {
     }
 
     public int getInventoryLimit() {
-        int limit = Config.INVENTORY_MAXIMUM_NO_DWARF;
-        if (isGM()) {
-            limit = Config.INVENTORY_MAXIMUM_GM;
-        } else if (getRace() == Race.DWARF) {
-            limit = Config.INVENTORY_MAXIMUM_DWARF;
-        }
+        int limit = CharacterSettings.maxSlotInventory(this);
         return limit + (int) getStats().getValue(Stat.INVENTORY_NORMAL, 0);
     }
 
     public int getWareHouseLimit() {
-        int limit = getRace() == Race.DWARF ? Config.WAREHOUSE_SLOTS_DWARF : Config.WAREHOUSE_SLOTS_NO_DWARF;
+        int limit = CharacterSettings.maxSlotWarehouse(getRace());
         return limit + (int) getStats().getValue(Stat.STORAGE_PRIVATE, 0);
     }
 
     public int getPrivateSellStoreLimit() {
-        int limit = getRace() == Race.DWARF ?  Config.MAX_PVTSTORESELL_SLOTS_DWARF :  Config.MAX_PVTSTORESELL_SLOTS_OTHER;
+        int limit = CharacterSettings.maxSlotStoreSell(getRace());
         return limit + (int) getStats().getValue(Stat.TRADE_SELL, 0);
     }
 
     public int getPrivateBuyStoreLimit() {
-        int limit =  getRace() == Race.DWARF ? Config.MAX_PVTSTOREBUY_SLOTS_DWARF : Config.MAX_PVTSTOREBUY_SLOTS_OTHER;
+        var limit =  CharacterSettings.maxSlotStoreBuy(getRace());
         return limit + (int) getStats().getValue(Stat.TRADE_BUY, 0);
     }
 
     public int getDwarfRecipeLimit() {
-        return Config.DWARF_RECIPE_LIMIT + (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
+        return CharacterSettings.dwarfRecipeLimit() + (int) getStats().getValue(Stat.RECIPE_DWARVEN, 0);
     }
 
     public int getCommonRecipeLimit() {
-        return Config.COMMON_RECIPE_LIMIT + (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
+        return CharacterSettings.recipeLimit() + (int) getStats().getValue(Stat.RECIPE_COMMON, 0);
     }
 
     /**
@@ -7686,7 +7629,7 @@ public final class Player extends Playable {
      * @return {@code true} if the given Id is not excluded and this player is in silence mode, {@code false} otherwise
      */
     public boolean isSilenceMode(int playerObjId) {
-        if (getSettings(ChatSettings.class).silenceModeExclude() && silenceMode && nonNull(silenceModeExcluded)) {
+        if (ChatSettings.silenceModeExclude() && silenceMode && nonNull(silenceModeExcluded)) {
             return !silenceModeExcluded.contains(playerObjId);
         }
         return silenceMode;
@@ -7878,10 +7821,10 @@ public final class Player extends Playable {
         }
 
         if (nextLevel == -1) {
-            LOGGER.info("Removing skill " + skill + " from player " + toString());
+            LOGGER.info("Removing skill {}  from {}", skill, this);
             removeSkill(skill, true); // there is no lower skill
         } else {
-            LOGGER.info("Decreasing skill " + skill + " to " + nextLevel + " for player " + toString());
+            LOGGER.info("Decreasing skill {} to {} for {}",  skill, nextLevel, this);
             addSkill(SkillEngine.getInstance().getSkill(skill.getId(), nextLevel), true); // replace with lower one
         }
     }
@@ -7905,10 +7848,6 @@ public final class Player extends Playable {
 
     public Collection<TeleportBookmark> getTeleportBookmarks() {
         return teleportBookmarks.values();
-    }
-
-    public int getQuestInventoryLimit() {
-        return Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
     }
 
     public boolean isInventoryUnder90() {
@@ -8014,7 +7953,7 @@ public final class Player extends Playable {
     }
 
     public void updateNotMoveUntil() {
-        notMoveUntil = System.currentTimeMillis() + Config.PLAYER_MOVEMENT_BLOCK_TIME;
+        notMoveUntil = System.currentTimeMillis() + CharacterSettings.npcTalkBlockingTime();
     }
 
     /**
@@ -8144,14 +8083,7 @@ public final class Player extends Playable {
         if (target == null) {
             return false;
         }
-        if ((clan != null) && !isAcademyMember()) // Current player
-        {
-            if ((target.getClan() != null) && !target.isAcademyMember()) // Target player
-            {
-                return clan.isAtWarWith(target.getClan());
-            }
-        }
-        return false;
+        return nonNull(clan) && nonNull(target.getClan()) && clan.isAtWarWith(target.getClan());
     }
 
     public int getAbilityPointsUsed() {
@@ -8222,7 +8154,14 @@ public final class Player extends Playable {
     }
 
     public boolean hasItemRequest() {
-        return nonNull(requests) && requests.values().stream().anyMatch(AbstractRequest::isItemRequest);
+        if(nonNull(requests)) {
+            for (var req : requests.values()) {
+                if(req.isItemRequest()) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     @SafeVarargs
@@ -8514,5 +8453,10 @@ public final class Player extends Playable {
     public PlayerRandomCraft getRandomCraft()
     {
         return _randomCraft;
+    }
+
+    public int getHonorCoins()
+    {
+        return (int) getInventory().getInventoryItemCount(95570, 0);
     }
 }

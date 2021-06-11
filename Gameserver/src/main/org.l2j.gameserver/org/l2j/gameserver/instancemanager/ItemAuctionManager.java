@@ -36,7 +36,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
@@ -60,7 +59,7 @@ public final class ItemAuctionManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ItemAuctions.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/ItemAuctions.xsd");
     }
 
     public static void deleteAuction(int auctionId) {

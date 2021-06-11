@@ -94,7 +94,7 @@ public class FriendlyNpc extends Attackable {
 
     @Override
     public void onAction(Player player, boolean interact) {
-        if (!canTarget(player)) {
+        if (!canBeTarget(player)) {
             return;
         }
 

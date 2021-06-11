@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.clientpackets.olympiad;
 
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadRankingInfo;
 
 /**
  * @author JoeAlisson

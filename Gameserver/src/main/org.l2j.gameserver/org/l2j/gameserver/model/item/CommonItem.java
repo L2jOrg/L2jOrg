@@ -25,4 +25,5 @@ public class CommonItem {
     public static final int SILVER_COIN = 29983;
     public static final int GOLD_COIN = 29984;
     public static final int L2_COIN = 91663;
+    public static final int HONOR_COIN      = 95570;
 }

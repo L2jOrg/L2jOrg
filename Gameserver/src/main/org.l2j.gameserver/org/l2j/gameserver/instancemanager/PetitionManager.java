@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.PetitionState;
@@ -28,6 +27,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.CharacterSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,7 +35,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 
 /**
  * Petition Manager
@@ -228,7 +227,7 @@ public final class PetitionManager {
     }
 
     public boolean isPetitioningAllowed() {
-        return Config.PETITIONING_ALLOWED;
+        return CharacterSettings.petitionAllowed();
     }
 
     public boolean isPlayerPetitionPending(Player petitioner) {

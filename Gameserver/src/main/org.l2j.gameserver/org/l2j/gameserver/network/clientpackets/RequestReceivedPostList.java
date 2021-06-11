@@ -23,7 +23,6 @@ import org.l2j.gameserver.network.serverpackets.ExShowReceivedPostList;
 import org.l2j.gameserver.settings.GeneralSettings;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Migi, DS
@@ -37,7 +36,7 @@ public final class RequestReceivedPostList extends ClientPacket {
     @Override
     public void runImpl() {
         final Player activeChar = client.getPlayer();
-        if (isNull(activeChar) || !getSettings(GeneralSettings.class).allowMail()) {
+        if (isNull(activeChar) || !GeneralSettings.allowMail()) {
             return;
         }
 

@@ -21,8 +21,6 @@ package org.l2j.gameserver.model.interfaces;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
-import java.util.Map;
-
 /**
  * @author UnAfraid
  */

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -35,7 +34,6 @@ import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class ...
@@ -52,7 +50,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
     public void readImpl() throws InvalidDataPacketException {
         _packageSale = readIntAsBoolean();
         final int count = readInt();
-        if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != available())) {
+        if (count < 1 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -118,7 +116,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
         tradeList.setPackaged(_packageSale);
 
         long totalCost = player.getAdena();
-        var maxAdena = getSettings(CharacterSettings.class).maxAdena();
+        var maxAdena = CharacterSettings.maxAdena();
         for (Item i : _items) {
             if (!i.addToTradeList(tradeList)) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + maxAdena + " adena in Private Store - Sell.");
@@ -160,7 +158,7 @@ public class SetPrivateStoreListSell extends ClientPacket {
         }
 
         public boolean addToTradeList(TradeList list) {
-            if (MathUtil.checkMulOverFlow(_price, _count, getSettings(CharacterSettings.class).maxAdena())) {
+            if (MathUtil.checkMulOverFlow(_price, _count, CharacterSettings.maxAdena())) {
                 return false;
             }
 

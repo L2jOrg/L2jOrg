@@ -25,5 +25,10 @@ import org.l2j.gameserver.model.actor.instance.Player;
  * @author UnAfraid
  */
 public interface IPlayerActionHandler {
+
     void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed);
+
+    default boolean isSummonAction() {
+        return false;
+    }
 }

@@ -25,7 +25,6 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.contains;
 
 /**
@@ -47,7 +46,7 @@ public final class ProtocolVersion extends ClientPacket {
         if (version == -2) {
             // this is just a ping attempt from the new C2 client
             client.close();
-        } else if (!contains(getSettings(ServerSettings.class).acceptedProtocols(), version)) {
+        } else if (!contains(ServerSettings.acceptedProtocols(), version)) {
             LOGGER_ACCOUNTING.warn("Wrong protocol version {}, {}", version, client);
             AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(client.getAccountName()));
             client.setProtocolOk(false);

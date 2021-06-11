@@ -26,8 +26,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Gigi
  */
@@ -50,7 +48,7 @@ public class ServerRestartManager {
             long delay;
             long lastDelay = 0;
 
-            for (String scheduledTime : getSettings(ServerSettings.class).scheduleRestartHours()) {
+            for (String scheduledTime : ServerSettings.scheduleRestartHours()) {
                 final String[] splitTime = scheduledTime.trim().split(":");
                 restartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTime[0]));
                 restartTime.set(Calendar.MINUTE, Integer.parseInt(splitTime[1]));

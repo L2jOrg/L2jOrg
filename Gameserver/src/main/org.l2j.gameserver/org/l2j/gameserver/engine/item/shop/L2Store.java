@@ -20,7 +20,7 @@ package org.l2j.gameserver.engine.item.shop;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.Config;
+import io.github.joealisson.primitive.LinkedHashIntMap;
 import org.l2j.gameserver.data.database.dao.L2StoreDAO;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
@@ -29,6 +29,7 @@ import org.l2j.gameserver.engine.item.shop.l2store.RestrictionPeriod;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.network.serverpackets.store.ExBRProductInfo;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -42,7 +43,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -55,7 +55,7 @@ public class L2Store extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(L2Store.class);
     private static final int VIP_GIFT_BASE_ID = 100000;
 
-    private final IntMap<L2StoreProduct> primeItems = new HashIntMap<>(140);
+    private final        IntMap<L2StoreProduct> primeItems       = new LinkedHashIntMap<>(140);
     private final IntMap<L2StoreProduct> vipGifts = new HashIntMap<>(10);
 
     private L2Store() {
@@ -63,12 +63,12 @@ public class L2Store extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/shop/l2-store.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/shop/xsd/l2-store.xsd");
     }
 
     @Override
     public void load() {
-        if (!Config.ENABLE_L2_STORE){
+        if (!FeatureSettings.isL2StoreEnabled()){
             return;
         }
         primeItems.clear();

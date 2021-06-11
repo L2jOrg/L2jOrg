@@ -44,4 +44,9 @@ public final class ServitorAttack implements IPlayerActionHandler
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

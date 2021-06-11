@@ -55,7 +55,6 @@ import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
 import static java.util.Objects.requireNonNullElseGet;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
@@ -82,7 +81,7 @@ public class CostumeEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/costumes.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/costumes.xsd");
     }
 
     @Override

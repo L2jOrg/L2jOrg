@@ -28,15 +28,13 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.CubicTemplate;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.Comparator;
 import java.util.concurrent.ScheduledFuture;
 import java.util.stream.Stream;
-
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -151,7 +149,7 @@ public class CubicInstance {
                     Stream<Creature> stream;
 
                     if (party != null) {
-                        stream = party.getMembers().stream().filter(c -> MathUtil.isInsideRadius3D(_owner, c, getSettings(CharacterSettings.class).partyRange()) &&  _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).map(c -> c);
+                        stream = party.getMembers().stream().filter(c -> MathUtil.isInsideRadius3D(_owner, c, PartySettings.partyRange()) &&  _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).map(c -> c);
                     } else {
                         stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(Creature.class::cast);
                     }

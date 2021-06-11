@@ -39,8 +39,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Migi, DS
  * @author JoeAlisson
@@ -73,7 +71,7 @@ public final class RequestSendPost extends ClientPacket {
         _text = readString();
 
         final int attachCount = readInt();
-        if ((attachCount < 0) || (attachCount > Config.MAX_ITEM_IN_PACKET) || (((attachCount * BATCH_LENGTH) + 8) != available())) {
+        if (attachCount < 0 || attachCount > CharacterSettings.maxItemInPacket() || attachCount * BATCH_LENGTH + 8 != available()) {
             throw new InvalidDataPacketException();
         }
 
@@ -95,7 +93,7 @@ public final class RequestSendPost extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!getSettings(GeneralSettings.class).allowMail()) {
+        if (!GeneralSettings.allowMail()) {
             return;
         }
 
@@ -153,7 +151,7 @@ public final class RequestSendPost extends ClientPacket {
             return;
         }
 
-        if ((_reqAdena < 0) || (_reqAdena > getSettings(CharacterSettings.class).maxAdena())) {
+        if ((_reqAdena < 0) || (_reqAdena > CharacterSettings.maxAdena())) {
             return;
         }
 
@@ -189,7 +187,7 @@ public final class RequestSendPost extends ClientPacket {
             return;
         }
 
-        if (player.isJailed() && ((Config.JAIL_DISABLE_TRANSACTION && !items.isEmpty()) || getSettings(GeneralSettings.class).disableChatInJail())) {
+        if (player.isJailed() && ((Config.JAIL_DISABLE_TRANSACTION && !items.isEmpty()) || GeneralSettings.disableChatInJail())) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
             return;
         }

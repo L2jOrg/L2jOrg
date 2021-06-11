@@ -55,4 +55,9 @@ public final class ServitorMove implements IPlayerActionHandler
 			});
 		}
 	}
+
+	@Override
+	public boolean isSummonAction() {
+		return true;
+	}
 }

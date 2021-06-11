@@ -21,6 +21,7 @@ package org.l2j.gameserver.util;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.instancemanager.WalkingManager;
@@ -34,7 +35,6 @@ import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.Armor;
 import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.Weapon;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -54,7 +54,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isAnyNull;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
@@ -70,7 +69,7 @@ public final class GameUtils {
     private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);
 
     public static void handleIllegalPlayerAction(Player actor, String message) {
-        handleIllegalPlayerAction(actor, message, getSettings(GeneralSettings.class).defaultPunishment());
+        handleIllegalPlayerAction(actor, message, GeneralSettings.defaultPunishment());
     }
 
     public static void handleIllegalPlayerAction(Player actor, String message, IllegalActionPunishmentType punishment) {

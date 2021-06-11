@@ -33,7 +33,6 @@ import java.time.Duration;
 import java.time.Instant;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -50,8 +49,7 @@ public final class ChatWorld implements IChatHandler {
 	
 	@Override
 	public void handleChat(ChatType type, Player player, String target, String text) {
-		var chatSettings = getSettings(ChatSettings.class);
-		if (!chatSettings.worldChatEnabled()) {
+		if (!ChatSettings.worldChatEnabled()) {
 			return;
 		}
 		
@@ -60,15 +58,15 @@ public final class ChatWorld implements IChatHandler {
 			REUSE.values().removeIf(now::isAfter);
 		}
 		
-		if (player.getLevel() < chatSettings.worldChatMinLevel() && player.getVipTier() < 1) {
-			player.sendPacket(getSystemMessage(SystemMessageId.YOU_MUST_BE_LV_S1_OR_HIGHER_TO_USE_WORLD_CHAT_YOU_CAN_ALSO_USE_IT_WITH_VIP_BENEFITS).addInt(chatSettings.worldChatMinLevel()));
+		if (player.getLevel() < ChatSettings.worldChatMinLevel() && player.getVipTier() < 1) {
+			player.sendPacket(getSystemMessage(SystemMessageId.YOU_MUST_BE_LV_S1_OR_HIGHER_TO_USE_WORLD_CHAT_YOU_CAN_ALSO_USE_IT_WITH_VIP_BENEFITS).addInt(ChatSettings.worldChatMinLevel()));
 		}
 		else if (player.getWorldChatUsed() >= player.getWorldChatPoints()) {
 			player.sendPacket(SystemMessageId.YOU_USED_WORLD_CHAT_UP_TO_TODAY_S_LIMIT_THE_USAGE_COUNT_OF_WORLD_CHAT_IS_RESET_EVERY_DAY_AT_6_30);
 		}
 		else {
 			// Verify if player is not spaming.
-			if (chatSettings.worldChatInterval().getSeconds() > 0)
+			if (ChatSettings.worldChatInterval().getSeconds() > 0)
 			{
 				final Instant instant = REUSE.getOrDefault(player.getObjectId(), null);
 				if (nonNull(instant) && instant.isAfter(now))
@@ -84,8 +82,8 @@ public final class ChatWorld implements IChatHandler {
 			
 			player.setWorldChatUsed(player.getWorldChatUsed() + 1);
 			player.sendPacket(new ExWorldChatCnt(player));
-			if (chatSettings.worldChatInterval().getSeconds() > 0) {
-				REUSE.put(player.getObjectId(), now.plus(chatSettings.worldChatInterval()));
+			if (ChatSettings.worldChatInterval().getSeconds() > 0) {
+				REUSE.put(player.getObjectId(), now.plus(ChatSettings.worldChatInterval()));
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.pledge;
 
 import org.l2j.gameserver.data.database.data.ClanMember;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -31,7 +31,7 @@ public class ExRequestPledgeEnemyDelete extends ClientPacket {
             return;
         }
 
-        final Clan clan = ClanTable.getInstance().getClan(_clanId);
+        final Clan clan = ClanEngine.getInstance().getClan(_clanId);
         if (clan == null)
         {
             player.sendMessage("No such clan.");
@@ -68,7 +68,7 @@ public class ExRequestPledgeEnemyDelete extends ClientPacket {
 
         // Reduce reputation.
         playerClan.takeReputationScore(500, true);
-        ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
+        ClanEngine.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
         for (Player member : playerClan.getOnlineMembers(0))
         {
             member.broadcastUserInfo();

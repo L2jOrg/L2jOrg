@@ -6,12 +6,14 @@ import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeV3Info;
 
 public class ExRequestPledgeV3Info extends ClientPacket {
     @Override
-    protected void readImpl() throws Exception {
+    protected void readImpl() throws Exception
+    {
     }
 
     @Override
-    protected void runImpl() {
-        Player player = client.getPlayer();
+    protected void runImpl()
+    {
+        final Player player = client.getPlayer();
         if (player == null)
         {
             return;

@@ -19,7 +19,6 @@
 package org.l2j.commons.util;
 
 
-
 import io.github.joealisson.primitive.IntCollection;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.configuration.CommonSettings;
@@ -41,7 +40,6 @@ import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author JoeAlisson
@@ -125,7 +123,7 @@ public class Util {
     }
 
     public static String hash(final String value) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance(getSettings(CommonSettings.class).hashAlgorithm());
+        var md = MessageDigest.getInstance(CommonSettings.hashAlgorithm());
         byte[] raw = value.getBytes(StandardCharsets.UTF_8);
         return Base64.getEncoder().encodeToString(md.digest(raw));
     }

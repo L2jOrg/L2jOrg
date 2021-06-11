@@ -40,8 +40,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * @author UnAfraid
@@ -58,7 +56,7 @@ public final class ShuttleData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ShuttleData.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/ShuttleData.xsd");
     }
 
     @Override

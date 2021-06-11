@@ -18,9 +18,9 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExUISetting;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * @author KenM / mrTJO
@@ -38,7 +38,7 @@ public class RequestKeyMapping extends ClientPacket {
             return;
         }
 
-        if (Config.STORE_UI_SETTINGS) {
+        if (CharacterSettings.storeUISettings()) {
             client.sendPacket(new ExUISetting(activeChar));
         }
     }

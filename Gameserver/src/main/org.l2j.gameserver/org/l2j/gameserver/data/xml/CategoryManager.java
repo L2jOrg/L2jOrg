@@ -35,7 +35,6 @@ import java.util.EnumMap;
 import java.util.Map;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Loads the category data with Class or NPC IDs.
@@ -53,7 +52,7 @@ public final class CategoryManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/categories.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/categories.xsd");
     }
 
     @Override

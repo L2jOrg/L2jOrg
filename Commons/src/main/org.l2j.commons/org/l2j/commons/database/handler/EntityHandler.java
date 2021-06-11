@@ -18,10 +18,10 @@
  */
 package org.l2j.commons.database.handler;
 
+import org.l2j.commons.database.HandlersSupport;
 import org.l2j.commons.database.QueryDescriptor;
 import org.l2j.commons.database.TypeHandler;
 import org.l2j.commons.database.annotation.Column;
-import org.l2j.commons.database.HandlersSupport;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

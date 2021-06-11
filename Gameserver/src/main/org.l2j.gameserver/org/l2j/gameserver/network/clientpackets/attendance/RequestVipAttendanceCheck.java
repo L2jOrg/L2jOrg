@@ -29,7 +29,6 @@ import org.l2j.gameserver.network.serverpackets.attendance.ExConfirmVipAttendanc
 import org.l2j.gameserver.settings.AttendanceSettings;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.SystemMessageId.YOU_DO_NOT_MEET_THE_LEVEL_REQUIREMENTS_TO_RECEIVE_THE_ATTENDANCE_REWARD_PLEASE_CHECK_THE_REQUIRED_LEVEL_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
 
 /**
@@ -49,24 +48,22 @@ public class RequestVipAttendanceCheck extends ClientPacket {
             return;
         }
 
-        final var attendanceSettings = getSettings(AttendanceSettings.class);
-
-        if (!attendanceSettings.enabled()) {
+        if (!AttendanceSettings.enabled()) {
             player.sendPacket(SystemMessageId.DUE_TO_A_SYSTEM_ERROR_THE_ATTENDANCE_REWARD_CANNOT_BE_RECEIVED_PLEASE_TRY_AGAIN_LATER_BY_GOING_TO_MENU_ATTENDANCE_CHECK);
             return;
         }
 
-        if (attendanceSettings.vipOnly() && player.getVipTier() <= 0) {
+        if (AttendanceSettings.vipOnly() && player.getVipTier() <= 0) {
             player.sendPacket(SystemMessageId.YOUR_VIP_LEVEL_IS_TOO_LOW_TO_RECEIVE_THE_REWARD);
             return;
         }
 
-        if(player.getLevel() < attendanceSettings.minimumLevel()) {
+        if(player.getLevel() < AttendanceSettings.minimumLevel()) {
             player.sendPacket(YOU_DO_NOT_MEET_THE_LEVEL_REQUIREMENTS_TO_RECEIVE_THE_ATTENDANCE_REWARD_PLEASE_CHECK_THE_REQUIRED_LEVEL_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN);
             return;
         }
 
-        var delay = attendanceSettings.delay();
+        var delay = AttendanceSettings.delay();
         var uptimeInMinutes = player.getUptime() / 60000;
         if (uptimeInMinutes < delay) {
             player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_REDEEM_YOUR_REWARD_S1_MINUTES_AFTER_LOGGING_IN_S2_MINUTES_LEFT).addInt(delay).addInt((int) (delay - uptimeInMinutes)) );

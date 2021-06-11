@@ -40,7 +40,7 @@ public class SkillHandler implements TypeHandler<Skill> {
     @Override
     public void setParameter(PreparedStatement statement, int parameterIndex, Skill arg) throws SQLException {
         statement.setInt(parameterIndex, arg.getId());
-        statement.setInt(parameterIndex, arg.getLevel());
+        statement.setInt(++parameterIndex, arg.getLevel());
     }
 
     @Override

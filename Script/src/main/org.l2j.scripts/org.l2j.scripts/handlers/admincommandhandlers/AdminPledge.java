@@ -19,7 +19,7 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
@@ -94,7 +94,7 @@ public class AdminPledge implements IAdminCommandHandler
 
                         final long penalty = targetPlayer.getClanCreateExpiryTime();
                         targetPlayer.setClanCreateExpiryTime(0);
-                        clan = ClanTable.getInstance().createClan(targetPlayer, param);
+                        clan = ClanEngine.getInstance().createClan(targetPlayer, param);
                         if (clan != null)
                         {
                             BuilderUtil.sendSysMessage(activeChar, "Clan " + param + " created. Leader: " + targetPlayer.getName());
@@ -122,7 +122,7 @@ public class AdminPledge implements IAdminCommandHandler
                             return false;
                         }
 
-                        ClanTable.getInstance().destroyClan(clan);
+                        ClanEngine.getInstance().destroyClan(clan);
                         clan = targetPlayer.getClan();
                         if (clan == null)
                         {

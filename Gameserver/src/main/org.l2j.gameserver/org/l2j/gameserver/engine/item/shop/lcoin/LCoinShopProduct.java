@@ -30,8 +30,7 @@ import static java.util.Objects.nonNull;
 /**
  * @author JoeAlisson
  */
-public record LCoinShopProduct(int index, int id, int restrictionAmount, RestrictionPeriod restrictionPeriod, int minLevel, List<ItemHolder> ingredients, ItemHolder production, int remainServerItemAmount, LocalDateTime expiration) {
-
+public record LCoinShopProduct(int id, int restrictionAmount, RestrictionPeriod restrictionPeriod, int minLevel, int minClanLevel, List<ItemHolder> ingredients, List<ItemHolder> productions, int remainServerItemAmount, LocalDateTime expiration, int chance) {
     public int getRemainAmount() {
         return restrictionAmount;
     }

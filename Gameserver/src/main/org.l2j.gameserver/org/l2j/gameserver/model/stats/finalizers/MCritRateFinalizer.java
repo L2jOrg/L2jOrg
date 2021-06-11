@@ -27,7 +27,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Optional;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -45,7 +44,7 @@ public class MCritRateFinalizer implements IStatsFunction {
         }
 
         final double witBonus = creature.getWIT() > 0 ? BaseStats.WIT.calcBonus(creature) : 1.;
-        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * witBonus * 10), 0, getSettings(CharacterSettings.class).maxMcritRate());
+        return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * witBonus * 10), 0, CharacterSettings.maxMcritRate());
     }
 
     @Override

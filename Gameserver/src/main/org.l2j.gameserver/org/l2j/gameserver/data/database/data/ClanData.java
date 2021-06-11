@@ -93,8 +93,11 @@ public class ClanData {
     @Column("arena_progress")
     private short arenaProgress;
 
-    @Column("clan_exp")
-    private double clanExp;
+    @Column("clan_exp_monster")
+    private long   _exp_monster;
+
+    @Column("clan_exp_quest")
+    private long   _exp_quest;
 
     public int getId() {
         return id;
@@ -229,7 +232,7 @@ public class ClanData {
     }
 
     public void setNewLeader(int leaderId) {
-        this.leaderId = leaderId;
+        this.newLeaderId = leaderId;
     }
 
     public void setMaxOnlineMembers(int maxOnlineMember) {
@@ -276,15 +279,37 @@ public class ClanData {
         this.arenaProgress = arenaProgress;
     }
 
-    public double getClanExp() {
-        return clanExp;
-    }
-
-    public void setClanExp(double clanExp) {
-        this.clanExp = clanExp;
-    }
-
     public String toString() {
         return name + " [" + id + "]";
+    }
+
+    public long getExpMonster()
+    {
+        return _exp_monster;
+    }
+
+    public void setExpMonster(int exp)
+    {
+        _exp_monster = exp;
+    }
+
+    public void incExpMonster(int exp)
+    {
+        _exp_monster += exp;
+    }
+
+    public long getExpQuest()
+    {
+        return _exp_quest;
+    }
+
+    public void setExpQuest(int exp)
+    {
+        _exp_quest = exp;
+    }
+
+    public void incExpQuest(int exp)
+    {
+        _exp_quest += exp;
     }
 }

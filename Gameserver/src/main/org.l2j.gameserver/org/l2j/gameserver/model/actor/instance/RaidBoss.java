@@ -28,8 +28,6 @@ import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.MathUtil;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * This class manages all RaidBoss.<br>
  * In a group mob, there are one master called RaidBoss and several slaves called Minions.

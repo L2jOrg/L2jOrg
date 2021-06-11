@@ -18,139 +18,102 @@
  */
 package org.l2j.scripts.ai.others.DimensionalMerchant;
 
+import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
+import org.l2j.gameserver.handler.BypassHandler;
+import org.l2j.gameserver.handler.IBypassHandler;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.ListenerRegisterType;
-import org.l2j.gameserver.model.events.annotations.RegisterEvent;
-import org.l2j.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PackageToList;
 import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
+import org.l2j.gameserver.network.serverpackets.html.ExPremiumManagerShowHtml;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
-/**
- * Dimensional Merchant AI.
- * @author Mobius
- */
-public class DimensionalMerchant extends AbstractNpcAI
-{
-    // Others
-    private static final int ATTENDANCE_REWARD_MULTISELL = 3247801;
-    private static final int HAIR_MULTISELL = 4706;
-    private static final int TICKET_MULTISELL = 4707;
-    private static final int ENHANCEMENT_MULTISELL = 567;
-    private static final int CLOAK_MULTISELL = 4669;
-    private static final int HERO_MULTISELL = 4680;
-    private static final int WEAPON_D_MULTISELL = 4037;
-    private static final int WEAPON_C_MULTISELL = 4038;
-    private static final String COMMAND_BYPASS = "Quest DimensionalMerchant ";
+import java.util.StringTokenizer;
 
-    private DimensionalMerchant()
-    {
+import static org.l2j.commons.util.Util.parseNextInt;
+
+/**
+ * @author JoeAlisson
+ */
+public class DimensionalMerchant extends AbstractNpcAI implements IBypassHandler {
+
+    private DimensionalMerchant() {
+        addFirstTalkId(32478);
+        BypassHandler.getInstance().registerHandler(this);
     }
 
     @Override
-    public String onAdvEvent(String event, Npc npc, Player player)
-    {
-        String htmltext = null;
-        switch (event)
-        {
-            case "package_deposit":
-            {
-                if (player.getAccountChars().size() < 1)
-                {
-                    player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
-                }
-                else
-                {
-                    player.sendPacket(new PackageToList(player.getAccountChars()));
-                }
-                break;
-            }
-            case "package_withdraw":
-            {
-                var freight = player.getFreight();
-                if (freight != null)
-                {
-                    if (freight.getSize() > 0)
-                    {
-                        player.setActiveWarehouse(freight);
-                        for (var i : player.getActiveWarehouse().getItems())
-                        {
-                            if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
-                            {
-                                player.getActiveWarehouse().destroyItem("ItemInstance", i, player, null);
-                            }
-                        }
-                        player.sendPacket(new WareHouseWithdrawalList(1, player, WareHouseWithdrawalList.FREIGHT));
-                        player.sendPacket(new WareHouseWithdrawalList(2, player, WareHouseWithdrawalList.FREIGHT));
-                    }
-                    else
-                    {
-                        player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
-                    }
-                }
-                break;
-            }
-            case "attendance_rewards":
-            {
-                player.sendPacket(new ExVipAttendanceItemList(player));
-                break;
-            }
-            case "shop":
-            {
-                MultisellEngine.getInstance().separateAndSend(ATTENDANCE_REWARD_MULTISELL, player, null, false);
-                break;
-            }
-            case "hair":{
-                MultisellEngine.getInstance().separateAndSend(HAIR_MULTISELL, player, null, false);
-                break;
-            }
-            case "ticket":{
-                MultisellEngine.getInstance().separateAndSend(TICKET_MULTISELL, player, null, false);
-                break;
-            }
-            case "enhancement":{
-                MultisellEngine.getInstance().separateAndSend(ENHANCEMENT_MULTISELL, player, null, false);
-                break;
-            }
-            case "kingdomcloak":{
-                MultisellEngine.getInstance().separateAndSend(CLOAK_MULTISELL, player, null, false);
-                break;
-            }
-            case "herosweapon":{
-                MultisellEngine.getInstance().separateAndSend(HERO_MULTISELL, player, null, false);
-                break;
-            }
-            case "timedweapond":{
-                MultisellEngine.getInstance().separateAndSend(WEAPON_D_MULTISELL, player, null, false);
-                break;
-            }
-            case "timedweaponc":{
-                MultisellEngine.getInstance().separateAndSend(WEAPON_C_MULTISELL, player, null, false);
-                break;
-            }
-
-        }
-        return htmltext;
+    public String onFirstTalk(Npc npc, Player player) {
+        openHtml(player, "index.htm");
+        return null;
     }
 
-    @RegisterEvent(EventType.ON_PLAYER_BYPASS)
-    @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-    public void OnPlayerBypass(OnPlayerBypass event)
-    {
-        var player = event.getPlayer();
-        if (event.getCommand().startsWith(COMMAND_BYPASS))
-        {
-            notifyEvent(event.getCommand().replace(COMMAND_BYPASS, ""), null, player);
+    @Override
+    public boolean useBypass(String bypass, Player player, Creature bypassOrigin) {
+        var tokens = new StringTokenizer(bypass);
+        tokens.nextToken(); // skip first
+        if(tokens.hasMoreTokens()) {
+            switch (tokens.nextToken()) {
+                case "link" -> openHtml(player, tokens.nextToken());
+                case "attendance_rewards" ->  player.sendPacket(new ExVipAttendanceItemList(player));
+                case "shop" -> shop(player, parseNextInt(tokens, 0));
+                case "market" -> player.sendMessage("There is no Dimensional Item"); // What is this supposed to do?
+                case "package_deposit" -> packageDeposit(player);
+                case "package_withdraw" -> packageWithdraw(player);
+            }
+            return true;
         }
+        return false;
+    }
+
+    private void shop(Player player, int multiSell) {
+        MultisellEngine.getInstance().separateAndSend(multiSell, player, null, false);
+    }
+
+    private void packageWithdraw(Player player) {
+        var freight = player.getFreight();
+        if (freight != null) {
+            if (freight.getSize() > 0) {
+                player.setActiveWarehouse(freight);
+                for (var i : player.getActiveWarehouse().getItems()) {
+                    if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0)) {
+                        player.getActiveWarehouse().destroyItem("ItemInstance", i, player, null);
+                    }
+                }
+                player.sendPacket(new WareHouseWithdrawalList(1, player, WareHouseWithdrawalList.FREIGHT));
+                player.sendPacket(new WareHouseWithdrawalList(2, player, WareHouseWithdrawalList.FREIGHT));
+            } else {
+                player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
+            }
+        }
+    }
+
+    private void packageDeposit(Player player) {
+        if (player.getAccountChars().size() < 2) {
+            player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
+        } else {
+            player.sendPacket(new PackageToList(player.getAccountChars()));
+        }
+    }
+
+    private void openHtml(Player player, String html) {
+        player.sendPacket(new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm(player, "data/html/common/dimensional/" + html)));
+    }
+
+    @Override
+    public String[] getBypassList() {
+        return new String[] { "dimensional"};
     }
 
     public static DimensionalMerchant provider() {
-        return new DimensionalMerchant();
+        return Singleton.INSTANCE;
+    }
+
+    private static final class Singleton {
+        private static final DimensionalMerchant INSTANCE = new DimensionalMerchant();
     }
 }

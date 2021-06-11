@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.Announce;
 import org.l2j.gameserver.data.database.announce.AnnouncementType;
@@ -28,6 +27,7 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
@@ -329,19 +329,19 @@ public class AdminAnnouncements implements IAdminCommandHandler {
     }
 
 
-    private void doAnnouncement(Player activeChar, StringTokenizer st, String cmd) {
+    private void doAnnouncement(Player player, StringTokenizer st, String cmd) {
         StringBuilder announceBuilder = getContent(st);
 
         if (cmd.equals("admin_announce_screen")) {
             Broadcast.toAllOnlinePlayersOnScreen(announceBuilder.toString());
         }
         else {
-            if (Config.GM_ANNOUNCER_NAME) {
-                announceBuilder.append("[").append(activeChar.getName()).append("]");
+            if (AdminSettings.showAnnouncerName()) {
+                announceBuilder.append("[").append(player.getName()).append("]");
             }
             Broadcast.toAllOnlinePlayers(announceBuilder.toString(), cmd.equals("admin_announce_crit"));
         }
-        AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
+        AdminHtml.showAdminHtml(player, "gm_menu.htm");
     }
 
     @Override

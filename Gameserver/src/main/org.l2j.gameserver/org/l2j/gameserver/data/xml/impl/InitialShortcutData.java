@@ -23,12 +23,12 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.data.MacroCmdData;
 import org.l2j.gameserver.data.database.data.MacroData;
 import org.l2j.gameserver.data.database.data.Shortcut;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.MacroType;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Macro;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -46,7 +46,6 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Objects.isNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -68,7 +67,7 @@ public final class InitialShortcutData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/initialShortcuts.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/initialShortcuts.xsd");
     }
 
     @Override

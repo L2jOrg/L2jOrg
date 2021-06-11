@@ -34,8 +34,6 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 
 /**
  * This class holds the Initial Equipment information.<br>
@@ -55,13 +53,13 @@ public final class InitialEquipmentData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/initialEquipment.xsd");
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/initialEquipment.xsd");
     }
 
     @Override
     public void load() {
         _initialEquipmentList.clear();
-        parseDatapackFile(getSettings(CharacterSettings.class).initialEquipEvent()  ? EVENT : NORMAL);
+        parseDatapackFile(CharacterSettings.initialEquipEvent()  ? EVENT : NORMAL);
         LOGGER.info("Loaded {} Initial Equipment data.", _initialEquipmentList.size());
         releaseResources();
     }

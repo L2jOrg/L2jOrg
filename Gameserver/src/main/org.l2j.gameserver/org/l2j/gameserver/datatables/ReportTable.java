@@ -65,9 +65,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author BiggBoss
@@ -370,7 +368,7 @@ public final class ReportTable {
         reportedData.addReporter(reporterId, reportedId, REPORT_TYPE_ADENA_ADS);
         var reportedCount = reportedData.getADSReportedCount();
 
-        if(reportedCount >= getSettings(GeneralSettings.class).banChatAdenaAdsReportCount()) {
+        if(reportedCount >= GeneralSettings.banChatAdenaAdsReportCount()) {
             var manager = PunishmentManager.getInstance();
             if(manager.hasPunishment(reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN)) {
                 manager.stopPunishment(reportedId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);

@@ -38,7 +38,6 @@ import java.io.*;
 import java.nio.file.Files;
 import java.util.StringTokenizer;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class AdminEventEngine implements IAdminCommandHandler {
@@ -109,30 +108,14 @@ public class AdminEventEngine implements IAdminCommandHandler {
 			else if (actualCommand.startsWith("admin_event_see"))
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
-				final String eventName = command.substring(16);
-				try(final DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream( getSettings(ServerSettings.class).dataPackDirectory().resolve("/data/events/" + eventName).toFile())));
-					final BufferedReader inbr = new BufferedReader(new InputStreamReader(in))) {
-					final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
+				adminEventSee(command, activeChar);
 
-					adminReply.setFile(null, "data/html/mods/EventEngine/Participation.htm");
-					adminReply.replace("%eventName%", eventName);
-					adminReply.replace("%eventCreator%", inbr.readLine());
-					adminReply.replace("%eventInfo%", inbr.readLine());
-					adminReply.replace("npc_%objectId%_event_participate", "admin_event"); // Weird, but nice hack, isnt it? :)
-					adminReply.replace("button value=\"Participate\"", "button value=\"Back\"");
-					activeChar.sendPacket(adminReply);
-				}
-				catch (Exception e) {
-					LOGGER.error(e.getMessage(), e);
-					
-				}
-				
 			}
 			else if (actualCommand.startsWith("admin_event_del"))
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
 				final String eventName = command.substring(16);
-				Files.deleteIfExists(getSettings(ServerSettings.class).dataPackDirectory().resolve("/data/events/" + eventName));
+				Files.deleteIfExists(ServerSettings.dataPackDirectory().resolve("/data/events/" + eventName));
 				showMainPage(activeChar);
 			}
 			else if (actualCommand.startsWith("admin_event_name"))
@@ -148,18 +131,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 			}
 			else if (actualCommand.startsWith("admin_event_store"))
 			{
-				try(final FileOutputStream file = new FileOutputStream(getSettings(ServerSettings.class).dataPackDirectory().resolve("data/events/" + tempName).toFile());
-					final PrintStream p = new PrintStream(file)) {
-					p.println(activeChar.getName());
-					p.println(tempBuffer);
-				}
-				catch (Exception e) {
-					LOGGER.error(e.getMessage(), e);
-				}
-				
-				tempBuffer = "";
-				tempName = "";
-				showMainPage(activeChar);
+				eventStore(activeChar);
 			}
 			else if (actualCommand.startsWith("admin_event_set"))
 			{
@@ -365,7 +337,42 @@ public class AdminEventEngine implements IAdminCommandHandler {
 		}
 		return true;
 	}
-	
+
+	private void eventStore(Player activeChar) {
+		try(final var file = new FileOutputStream(ServerSettings.dataPackDirectory().resolve("data/events/" + tempName).toFile());
+			final var p = new PrintStream(file)) {
+			p.println(activeChar.getName());
+			p.println(tempBuffer);
+		}
+		catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+
+		tempBuffer = "";
+		tempName = "";
+		showMainPage(activeChar);
+	}
+
+	private void adminEventSee(String command, Player activeChar) {
+		final String eventName = command.substring(16);
+		try(final var in = new DataInputStream(new BufferedInputStream(new FileInputStream( ServerSettings.dataPackDirectory().resolve("/data/events/" + eventName).toFile())));
+			final var inbr = new BufferedReader(new InputStreamReader(in))) {
+			final var adminReply = new NpcHtmlMessage(0, 1);
+
+			adminReply.setFile(null, "data/html/mods/EventEngine/Participation.htm");
+			adminReply.replace("%eventName%", eventName);
+			adminReply.replace("%eventCreator%", inbr.readLine());
+			adminReply.replace("%eventInfo%", inbr.readLine());
+			adminReply.replace("npc_%objectId%_event_participate", "admin_event"); // Weird, but nice hack, isnt it? :)
+			adminReply.replace("button value=\"Participate\"", "button value=\"Back\"");
+			activeChar.sendPacket(adminReply);
+		}
+		catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+
+		}
+	}
+
 	@Override
 	public String[] getAdminCommandList()
 	{
@@ -374,7 +381,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 	
 	private String showStoredEvents()
 	{
-		final File dir = getSettings(ServerSettings.class).dataPackDirectory().resolve("/data/events").toFile();
+		final var dir = ServerSettings.dataPackDirectory().resolve("/data/events").toFile();
 		if (dir.isFile())
 		{
 			return "<font color=\"FF0000\">The directory '" + dir.getAbsolutePath() + "' is a file or is corrupted!</font><br>";

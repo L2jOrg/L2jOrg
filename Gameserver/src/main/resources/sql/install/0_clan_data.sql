@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `clan_subpledges`;
+DROP TABLE IF EXISTS `clan_members`;
 DROP TABLE IF EXISTS `clan_privs`;
 DROP TABLE IF EXISTS `clan_skills`;
 DROP TABLE IF EXISTS `clan_wars`;
@@ -31,6 +31,8 @@ CREATE TABLE IF NOT EXISTS `clan_data`
     `prev_hunting_points`      INT               NOT NULL DEFAULT 0,
     `arena_progress`           INT UNSIGNED      NOT NULL DEFAULT 0,
     `clan_exp` DOUBLE NOT NULL DEFAULT 0,
+    `clan_exp_monster`         BIGINT UNSIGNED   NOT NULL DEFAULT 0,
+    `clan_exp_quest`           BIGINT UNSIGNED   NOT NULL DEFAULT 0,
 
     PRIMARY KEY (`clan_id`),
     KEY `ally_id` (`ally_id`),
@@ -56,22 +58,8 @@ CREATE TABLE IF NOT EXISTS `clan_skills`
     `clan_id`       INT NOT NULL DEFAULT 0,
     `skill_id`      INT NOT NULL DEFAULT 0,
     `skill_level`   INT NOT NULL DEFAULT 0,
-    `sub_pledge_id` INT NOT NULL DEFAULT -2,
 
-    PRIMARY KEY (`clan_id`, `skill_id`, `sub_pledge_id`),
-    FOREIGN KEY (clan_id) REFERENCES clan_data (clan_id) ON DELETE CASCADE
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8MB4;
-
-CREATE TABLE IF NOT EXISTS `clan_subpledges`
-(
-    `clan_id`       INT NOT NULL DEFAULT 0,
-    `sub_pledge_id` INT NOT NULL DEFAULT 0,
-    `name`          VARCHAR(45),
-    `leader_id`     INT NOT NULL DEFAULT 0,
-
-    PRIMARY KEY (`clan_id`, `sub_pledge_id`),
-    KEY `leader_id` (`leader_id`),
+    PRIMARY KEY (`clan_id`, `skill_id`),
     FOREIGN KEY (clan_id) REFERENCES clan_data (clan_id) ON DELETE CASCADE
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8MB4;
@@ -102,3 +90,14 @@ CREATE TABLE IF NOT EXISTS `clan_notices`
     FOREIGN KEY (`clan_id`) REFERENCES clan_data (clan_id) ON DELETE CASCADE
 ) ENGINE = InnoDB
   DEFAULT CHARSET = UTF8MB4;
+
+CREATE TABLE IF NOT EXISTS `clan_members`
+(
+    `clan_id`               INT          NOT NULL,
+    `player_id`             INT UNSIGNED NOT NULL,
+    `last_reputation_level` SMALLINT     NOT NULL DEFAULT 0,
+
+    PRIMARY KEY (`clan_id`, `player_id`),
+    FOREIGN KEY (`clan_id`) REFERENCES clan_data (clan_id) ON DELETE CASCADE,
+    FOREIGN KEY (`player_id`) REFERENCES characters (charId) ON DELETE CASCADE
+)

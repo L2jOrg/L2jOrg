@@ -19,7 +19,7 @@
  */
 package org.l2j.scripts.handlers.bypasshandlers;
 
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.Clan;
@@ -51,7 +51,7 @@ public class TerritoryStatus implements IBypassHandler
 			if (npc.getCastle().getOwnerId() > 0)
 			{
 				html.setFile(player, "data/html/territorystatus.htm");
-				final Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
+				final Clan clan = ClanEngine.getInstance().getClan(npc.getCastle().getOwnerId());
 				html.replace("%clanname%", clan.getName());
 				html.replace("%clanleadername%", clan.getLeaderName());
 			}

@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.clientpackets.castle;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.ExMercenaryCastleWarCastleSiegeDefender;
 import org.l2j.gameserver.network.serverpackets.SiegeDefenderList;
 
 public class ExRequestMercenaryCastleWarCastleSiegeDefender extends ClientPacket {

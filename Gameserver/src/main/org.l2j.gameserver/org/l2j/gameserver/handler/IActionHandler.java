@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 
 public interface IActionHandler {
 
-    boolean action(Player activeChar, WorldObject target, boolean interact);
+    boolean action(Player player, WorldObject target, boolean interact);
 
     InstanceType getInstanceType();
 }

@@ -30,8 +30,6 @@ import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  * @author Migi, DS
  */
@@ -45,7 +43,7 @@ public final class RequestRejectPostAttachment extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!getSettings(GeneralSettings.class).allowMail() || !Config.ALLOW_ATTACHMENTS) {
+        if (!GeneralSettings.allowMail() || !Config.ALLOW_ATTACHMENTS) {
             return;
         }
 

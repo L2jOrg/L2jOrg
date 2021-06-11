@@ -27,7 +27,7 @@ import org.l2j.gameserver.data.database.dao.PledgeRecruitDAO;
 import org.l2j.gameserver.data.database.data.PledgeApplicantData;
 import org.l2j.gameserver.data.database.data.PledgeRecruitData;
 import org.l2j.gameserver.data.database.data.PledgeWaitingData;
-import org.l2j.gameserver.data.sql.impl.ClanTable;
+import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -80,7 +80,7 @@ public class ClanEntryManager {
     private void load() {
         final var pledgeRecruitDAO= getDAO(PledgeRecruitDAO.class);
 
-        clans = pledgeRecruitDAO.findAll(pledgeRecruit -> pledgeRecruit.setClan(ClanTable.getInstance().getClan(pledgeRecruit.getClanId())));
+        clans = pledgeRecruitDAO.findAll(pledgeRecruit -> pledgeRecruit.setClan(ClanEngine.getInstance().getClan(pledgeRecruit.getClanId())));
         LOGGER.info("Loaded {} clan entry", clans.size());
 
         waitings = pledgeRecruitDAO.findAllWaiting();

@@ -19,8 +19,8 @@
 package org.l2j.gameserver.network.serverpackets.attributechange;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;

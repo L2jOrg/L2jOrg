@@ -75,22 +75,22 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     WITH base AS (SELECT CONVERT(`rank`, SIGNED) AS base_rank FROM olympiad_rankers_class_snapshot WHERE player_id = :playerId:)
     SELECT rc.*, c.level, c.char_name as player_name, IFNULL(cl.clan_name, '') as clan_name, IFNULL(cl.clan_level, 0) as clan_level, h.hero_count, h.legend_count
     FROM base, olympiad_rankers_class_snapshot rc
-    JOIN characters c ON c.charId = rc.player_id  
+    JOIN characters c ON c.charId = rc.player_id
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
-    LEFT JOIN olympiad_heroes_history h ON rc.player_id = h.player_id AND rc.server = h.server  
+    LEFT JOIN olympiad_heroes_history h ON rc.player_id = h.player_id AND rc.server = h.server
     WHERE base_rank IS NOT NULL AND  rc.class_id = :classId:  AND rc.`rank` BETWEEN  base_rank - 10 AND base_rank + 10
     ORDER BY rc.`rank`
     """)
     List<OlympiadRankData> findPreviousRankersNextToPlayerByClass(int playerId, int classId);
 
     @Query("""
-    SELECT r.*, c.level, c.char_name as player_name, IFNULL(cl.clan_name, '') as clan_name, IFNULL(cl.clan_level, 0) as clan_level, h.hero_count, h.legend_count 
+    SELECT r.*, c.level, c.char_name as player_name, IFNULL(cl.clan_name, '') as clan_name, IFNULL(cl.clan_level, 0) as clan_level, h.hero_count, h.legend_count
     FROM olympiad_rankers_class_snapshot r
-    JOIN characters c ON c.charId = r.player_id  
+    JOIN characters c ON c.charId = r.player_id
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
     LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server
     WHERE r.class_id = :classId: AND (:server: = 0 OR r.server = :server: )
-    ORDER BY r.`rank` 
+    ORDER BY r.`rank`
     LIMIT 50
     """)
     List<OlympiadRankData> findPreviousRankersByClass(int classId, int server);
@@ -98,7 +98,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     @Query("""
     SELECT r.*, c.level, c.char_name as player_name, IFNULL(cl.clan_name, '') as clan_name, IFNULL(cl.clan_level, 0) as clan_level, hero_count, h.legend_count
     FROM olympiad_rankers_snapshot r
-    JOIN characters c ON c.charId = r.player_id  
+    JOIN characters c ON c.charId = r.player_id
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
     LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server
     ORDER BY r.`rank`
@@ -110,7 +110,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     WITH base AS (SELECT CONVERT(`rank`, SIGNED) AS base_rank FROM olympiad_rankers_snapshot WHERE player_id = :playerId:)
     SELECT r.*, c.level, c.char_name as player_name, IFNULL(cl.clan_name, '') as clan_name, IFNULL(cl.clan_level, 0) as clan_level, h.hero_count, h.legend_count
     FROM  base, olympiad_rankers_snapshot r
-    JOIN characters c ON c.charId = r.player_id  
+    JOIN characters c ON c.charId = r.player_id
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
     LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server
     WHERE base_rank IS NOT NULL AND r.`rank` BETWEEN  base_rank - 10 AND base_rank + 10
@@ -130,9 +130,9 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     @Query("""
     SELECT r.*, c.level, c.char_name as player_name, IFNULL(cl.clan_name, '') as clan_name, IFNULL(cl.clan_level, 0) as clan_level, h.hero_count, h.legend_count
     FROM olympiad_rankers_snapshot r
-    JOIN characters c ON c.charId = r.player_id  
+    JOIN characters c ON c.charId = r.player_id
     LEFT JOIN clan_data cl  ON c.clanid = cl.clan_id
-    LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server 
+    LEFT JOIN olympiad_heroes_history h ON r.player_id = h.player_id AND r.server = h.server
     WHERE r.player_id = :playerId: AND  r.server = :server:
     ORDER BY r.`rank`
     """)
@@ -203,13 +203,13 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     void deleteParticipants();
 
     @Query("""
-    UPDATE olympiad_heroes_history h SET h.legend_count = h.legend_count + 1 
+    UPDATE olympiad_heroes_history h SET h.legend_count = h.legend_count + 1
     WHERE (h.player_id, h.server) = (SELECT s.player_id, s.server FROM olympiad_rankers_snapshot s WHERE `rank` = 1)
     """)
     void updateLegendHistory();
 
     @Query("""
-    UPDATE olympiad_heroes h SET h.legend = TRUE 
+    UPDATE olympiad_heroes h SET h.legend = TRUE
     WHERE (h.player_id, h.server) = (SELECT s.player_id, s.server FROM olympiad_rankers_snapshot s WHERE `rank` = 1)
     """)
     void updateLegend();
@@ -241,7 +241,7 @@ public interface OlympiadDAO extends DAO<OlympiadData> {
     JOIN characters c ON h.player_id = c.charId
     JOIN olympiad_heroes_history ohh on h.server = ohh.server AND h.player_id = ohh.player_id
     JOIN olympiad_rankers_class_snapshot orcs on h.player_id = h.player_id AND h.server = orcs.server
-    LEFT JOIN clan_data cl ON c.clanid = cl.clan_id    
+    LEFT JOIN clan_data cl ON c.clanid = cl.clan_id
     WHERE legend = TRUE
     """)
     OlympiadHeroData findRankLegend();

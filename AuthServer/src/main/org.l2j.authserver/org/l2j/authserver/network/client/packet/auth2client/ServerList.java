@@ -25,8 +25,6 @@ import org.l2j.authserver.network.client.packet.AuthServerPacket;
 import org.l2j.authserver.network.gameserver.packet.game2auth.ServerStatus;
 import org.l2j.authserver.settings.AuthServerSettings;
 
-import static org.l2j.commons.configuration.Configurator.getSettings;
-
 /**
  *
  * TYPE_BARE=0 - Indicates that each game server will have its basic information specified.
@@ -74,7 +72,7 @@ public final class ServerList extends AuthServerPacket {
             buffer.writeShort(server.getMaxPlayers());
 
             var status = server.getStatus();
-            if(ServerStatus.STATUS_GM_ONLY == status && client.getAccessLevel() < getSettings(AuthServerSettings.class).gmMinimumLevel()) {
+            if(ServerStatus.STATUS_GM_ONLY == status && client.getAccessLevel() < AuthServerSettings.gmMinimumLevel()) {
                 status = ServerStatus.STATUS_DOWN;
             }
 
