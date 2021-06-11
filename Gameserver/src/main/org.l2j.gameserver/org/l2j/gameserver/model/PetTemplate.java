@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.ArrayIntList;
+import io.github.joealisson.primitive.IntList;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.holders.SkillHolder;
 
@@ -37,7 +39,7 @@ public class PetTemplate {
 
     private final int _npcId;
     private final int _itemId;
-    private final List<Integer> _food = new ArrayList<>();
+    private final IntList _food = new ArrayIntList();
     private int _hungryLimit = 1;
     private int _minlvl = Byte.MAX_VALUE;
     private int _maxlvl = 0;
@@ -122,7 +124,7 @@ public class PetTemplate {
     /**
      * @return the pet's food list.
      */
-    public List<Integer> getFood() {
+    public IntList getFood() {
         return _food;
     }
 

@@ -31,8 +31,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.util.List;
-
 import static org.l2j.gameserver.util.GameUtils.isPet;
 
 /**
@@ -60,20 +58,17 @@ public class PetFood implements IItemHandler
 				consumeItem(skillId, skillLevel, item, skill, pet);
 			}
 			else if (playable instanceof Player player) {
-				useItem(skillId, skillLevel, item, skill, player);
+				feedPet(skillId, skillLevel, item, skill, player);
 			}
-
 		}
 	}
 
-	private void useItem(int skillId, int skillLevel, Item item, Skill skill, Player player) {
+	private void feedPet(int skillId, int skillLevel, Item item, Skill skill, Player player) {
 		if (player.isMounted()) {
-			final List<Integer> foodIds = PetDataTable.getInstance().getPetTemplate(player.getMountNpcId()).getFood();
-			if (foodIds.contains(item.getId())) {
-				if (player.destroyItem("Consume", item.getObjectId(), 1, null, false)) {
-					player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
-					skill.applyEffects(player, player);
-				}
+			var foodIds = PetDataTable.getInstance().getPetTemplate(player.getMountNpcId()).getFood();
+			if (foodIds.contains(item.getId()) && player.destroyItem("Consume", item.getObjectId(), 1, null, false)) {
+				player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
+				skill.applyEffects(player, player);
 			}
 		} else {
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS));

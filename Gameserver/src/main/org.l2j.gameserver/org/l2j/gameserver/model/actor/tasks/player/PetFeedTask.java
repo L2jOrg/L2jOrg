@@ -65,19 +65,18 @@ public class PetFeedTask implements Runnable {
                     _player.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_FEED_MOUNT_STATUS_CANCELED);
                 }
 
-                final List<Integer> foodIds = _player.getPetData(_player.getMountNpcId()).getFood();
+                var foodIds = _player.getPetData(_player.getMountNpcId()).getFood();
                 if (foodIds.isEmpty()) {
                     return;
                 }
                 Item food = null;
-                for (int id : foodIds) {
-                    // TODO: possibly pet inv?
-                    food = _player.getInventory().getItemByItemId(id);
+                var it = foodIds.iterator();
+                while(it.hasNext()) {
+                    food = _player.getInventory().getItemByItemId(it.nextInt());
                     if (food != null) {
                         break;
                     }
                 }
-
                 if ((food != null) && _player.isHungry()) {
                     final IItemHandler handler = ItemHandler.getInstance().getHandler(food.getEtcItem());
                     if (handler != null) {

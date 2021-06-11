@@ -133,11 +133,9 @@ public final class Weapon extends ItemTemplate implements EquipableItem {
             skill.activateSkill(caster, target);
 
             // TODO: Verify if this applies ONLY to ON_MAGIC_SKILL!
-            if (type == ItemSkillType.ON_MAGIC_SKILL) {
-                if (isPlayer(caster)) {
-                    World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc -> EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc));
-                    caster.sendPacket( SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED).addSkillName(skill));
-                }
+            if (type == ItemSkillType.ON_MAGIC_SKILL && isPlayer(caster)) {
+                World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc -> EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc));
+                caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED).addSkillName(skill));
             }
         });
     }

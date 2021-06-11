@@ -945,7 +945,7 @@ public class Pet extends Summon {
 
                 broadcastStatusUpdate();
 
-                final List<Integer> foodIds = getPetData().getFood();
+                var foodIds = getPetData().getFood();
                 if (foodIds.isEmpty()) {
                     if (isUncontrollable()) {
                         // Owl Monk remove PK
@@ -961,8 +961,9 @@ public class Pet extends Summon {
                 }
 
                 Item food = null;
-                for (int id : foodIds) {
-                    food = _inventory.getItemByItemId(id);
+                var it = foodIds.iterator();
+                while(it.hasNext()) {
+                    food = _inventory.getItemByItemId(it.nextInt());
                     if (food != null) {
                         break;
                     }

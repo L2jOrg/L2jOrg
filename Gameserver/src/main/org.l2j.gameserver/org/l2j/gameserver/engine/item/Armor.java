@@ -21,7 +21,6 @@ package org.l2j.gameserver.engine.item;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.EquipableItem;
 import org.l2j.gameserver.model.item.type.ArmorType;
-import org.l2j.gameserver.model.item.type.CrystalType;
 
 import static org.l2j.gameserver.model.item.BodyPart.*;
 

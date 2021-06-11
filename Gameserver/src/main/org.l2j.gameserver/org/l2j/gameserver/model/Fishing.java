@@ -231,7 +231,7 @@ public class Fishing {
         }
 
         baitLocation = calculateBaitLocation();
-        if (!player.isInsideZone(ZoneType.FISHING) || (baitLocation == null)) {
+        if (!player.isInsideZone(ZoneType.FISHING) || (baitLocation == DEFAULT_BAIT_LOCATION)) {
             if (!isFishing) {
                 player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
             }
