@@ -28,9 +28,6 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
-
-
 /**
  * Task dedicated for feeding player's pet.
  *
@@ -39,55 +36,55 @@ import java.util.List;
 public class PetFeedTask implements Runnable {
     private static final Logger LOGGER = LoggerFactory.getLogger(PetFeedTask.class);
 
-    private final Player _player;
+    private final Player player;
 
     public PetFeedTask(Player player) {
-        _player = player;
+        this.player = player;
     }
 
     @Override
     public void run() {
-        if (_player != null) {
+        if (player != null) {
             try {
-                if (!_player.isMounted() || (_player.getMountNpcId() == 0) || (_player.getPetData(_player.getMountNpcId()) == null)) {
-                    _player.stopFeed();
+                if (!player.isMounted() || (player.getMountNpcId() == 0) || (player.getPetData(player.getMountNpcId()) == null)) {
+                    player.stopFeed();
                     return;
                 }
 
-                if (_player.getCurrentFeed() > _player.getFeedConsume()) {
+                if (player.getCurrentFeed() > player.getFeedConsume()) {
                     // eat
-                    _player.setCurrentFeed(_player.getCurrentFeed() - _player.getFeedConsume());
+                    player.setCurrentFeed(player.getCurrentFeed() - player.getFeedConsume());
                 } else {
                     // go back to pet control item, or simply said, unsummon it
-                    _player.setCurrentFeed(0);
-                    _player.stopFeed();
-                    _player.dismount();
-                    _player.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_FEED_MOUNT_STATUS_CANCELED);
+                    player.setCurrentFeed(0);
+                    player.stopFeed();
+                    player.dismount();
+                    player.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_FEED_MOUNT_STATUS_CANCELED);
                 }
 
-                var foodIds = _player.getPetData(_player.getMountNpcId()).getFood();
+                var foodIds = player.getPetData(player.getMountNpcId()).getFood();
                 if (foodIds.isEmpty()) {
                     return;
                 }
                 Item food = null;
                 var it = foodIds.iterator();
                 while(it.hasNext()) {
-                    food = _player.getInventory().getItemByItemId(it.nextInt());
+                    food = player.getInventory().getItemByItemId(it.nextInt());
                     if (food != null) {
                         break;
                     }
                 }
-                if ((food != null) && _player.isHungry()) {
+                if ((food != null) && player.isHungry()) {
                     final IItemHandler handler = ItemHandler.getInstance().getHandler(food.getEtcItem());
                     if (handler != null) {
-                        handler.useItem(_player, food, false);
+                        handler.useItem(player, food, false);
                         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
                         sm.addItemName(food.getId());
-                        _player.sendPacket(sm);
+                        player.sendPacket(sm);
                     }
                 }
             } catch (Exception e) {
-                LOGGER.error("Mounted Pet [NpcId: " + _player.getMountNpcId() + "] a feed task error has occurred", e);
+                LOGGER.error("Mounted Pet [NpcId: " + player.getMountNpcId() + "] a feed task error has occurred", e);
             }
         }
     }

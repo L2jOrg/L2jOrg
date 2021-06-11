@@ -211,7 +211,7 @@ public class PlayerStats extends PlayableStats {
         // Synchronize level with pet if possible.
         final Pet sPet = player.getPet();
         if (sPet != null) {
-            if (sPet.getPetData().isSynchLevel() && (sPet.getLevel() != getLevel())) {
+            if (sPet.getPetData().isSyncLevel() && (sPet.getLevel() != getLevel())) {
                 final byte availableLevel = (byte) Math.min(sPet.getPetData().getMaxLevel(), getLevel());
                 sPet.getStats().setLevel(availableLevel);
                 sPet.getStats().getExpForLevel(availableLevel);

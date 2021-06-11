@@ -1005,7 +1005,7 @@ public class Pet extends Summon {
         final Pet pet = restore(control, template, owner);
         // add the pet instance to world
         pet.setTitle(owner.getName());
-        if (petTemplate.isSynchLevel() && (pet.getLevel() != owner.getLevel())) {
+        if (petTemplate.isSyncLevel() && (pet.getLevel() != owner.getLevel())) {
             final byte availableLevel = (byte) Math.min(petTemplate.getMaxLevel(), owner.getLevel());
             pet.getStats().setLevel(availableLevel);
             pet.getStats().setExp(pet.getStats().getExpForLevel(availableLevel));
