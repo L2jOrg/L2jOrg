@@ -5392,7 +5392,7 @@ public final class Player extends Playable {
      */
     @Override
     public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
-        if (!checkUseSkill(skill)) {
+        if (!checkUseSkill(skill, item)) {
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
@@ -5447,8 +5447,8 @@ public final class Player extends Playable {
         return true;
     }
 
-    private boolean checkUseSkill(Skill skill) {
-        if (skill.isPassive() || !hasUseSkillState(skill)) {
+    private boolean checkUseSkill(Skill skill, Item item) {
+        if (skill.isPassive() || !hasUseSkillState(skill, item)) {
             return false;
         }
 
@@ -5467,12 +5467,12 @@ public final class Player extends Playable {
         return !isNull(currentSkillWorldPosition) || skill.getTargetType() != TargetType.GROUND;
     }
 
-    private boolean hasUseSkillState(Skill skill) {
+    private boolean hasUseSkillState(Skill skill, Item item) {
         var canUseSkill = true;
         if (inObserverMode) {
             sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
             canUseSkill = false;
-        } else if (sitting) {
+        } else if (sitting && item == null) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
             canUseSkill = false;
         } else if (isFishing() && !skill.hasAnyEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
