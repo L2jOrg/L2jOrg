@@ -17,27 +17,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.holders;
+package org.l2j.gameserver.engine.fishing;
+
+import org.l2j.gameserver.model.holders.ItemChanceHolder;
+
+import java.util.List;
 
 /**
- *
- * @author xban1x
  * @author JoeAlisson
  */
-public class ItemChanceHolder extends ItemHolder {
-    private final float chance;
-
-    public ItemChanceHolder(int id, float chance, long count) {
-        super(id, count);
-        this.chance = chance;
-    }
-
-    public float getChance() {
-        return chance;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + getClass().getSimpleName() + "] ID: " + getId() + ", count: " + getCount() + ", chance: " + chance;
-    }
-}
+public record FishingBait (
+    int id,
+    int level,
+    int minPlayerLevel,
+    double chance,
+    int minTime,
+    int maxTime,
+    int minWait,
+    int maxWait,
+    List<ItemChanceHolder> rewards) { }

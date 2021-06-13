@@ -109,7 +109,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
             var attrs = itemNode.getAttributes();
             var itemId = parseInt(attrs, "id");
             var itemCount = parseLong(attrs, "count");
-            var itemChance = parseDouble(attrs, "chance");
+            var itemChance = parseFloat(attrs, "chance");
             crystallizeRewards.add(new ItemChanceHolder(itemId, itemChance, itemCount));
         });
         return crystallizeRewards;
@@ -130,7 +130,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
         final List<ItemChanceHolder> rewards = new ArrayList<>();
 
         for (ItemChanceHolder reward : crystallizeRewards) {
-            double chance = reward.getChance() * item.getCrystalCount();
+            float chance = reward.getChance() * item.getCrystalCount();
             long count = reward.getCount();
 
             if (chance > 100.) {

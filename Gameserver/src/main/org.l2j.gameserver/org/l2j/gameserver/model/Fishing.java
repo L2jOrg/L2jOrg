@@ -22,7 +22,8 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.FishingData;
+import org.l2j.gameserver.engine.fishing.FishingBait;
+import org.l2j.gameserver.engine.fishing.FishingEngine;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShotType;
@@ -120,9 +121,9 @@ public class Fishing {
         return !player.isDead() && !player.isAlikeDead() && !player.hasBlockActions() && !player.isSitting();
     }
 
-    private FishingBaitData getCurrentBaitData() {
+    private FishingBait getCurrentBaitData() {
         if(nonNull(currentBait) && currentBait.getCount() > 0 && nonNull(player.getInventory().getItemByObjectId(currentBait.getObjectId()))) {
-            return FishingData.getInstance().getBaitData(currentBait.getId());
+            return FishingEngine.getInstance().getBaitData(currentBait.getId());
         }
 
         var baits = player.getInventory().getItems(item -> item.getItemType() == EtcItemType.LURE);
@@ -130,7 +131,7 @@ public class Fishing {
             currentBait = null;
         } else {
             currentBait = baits.iterator().next();
-            return FishingData.getInstance().getBaitData(currentBait.getId());
+            return FishingEngine.getInstance().getBaitData(currentBait.getId());
         }
         return null;
     }
@@ -183,7 +184,7 @@ public class Fishing {
             return;
         }
 
-        final FishingBaitData baitData = getCurrentBaitData();
+        final FishingBait baitData = getCurrentBaitData();
         if (baitData == null) {
             player.sendPacket(SystemMessageId.YOU_MUST_PUT_BAIT_ON_YOUR_HOOK_BEFORE_YOU_CAN_FISH);
             player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -199,17 +200,17 @@ public class Fishing {
 
         reelInTask = ThreadPool.schedule(() -> {
             player.getFishing().reelInWithReward();
-            startFishingTask = ThreadPool.schedule(() -> player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
-        }, Rnd.get(baitData.getTimeMin(), baitData.getTimeMax()));
+            startFishingTask = ThreadPool.schedule(() -> player.getFishing().castLine(), Rnd.get(baitData.minWait(), baitData.maxWait()));
+        }, Rnd.get(baitData.minTime(), baitData.maxTime()));
         player.stopMove(null);
-        player.broadcastPacket(new ExFishingStart(player, -1, baitData.getLevel(), baitLocation));
+        player.broadcastPacket(new ExFishingStart(player, -1, baitData.level(), baitLocation));
         player.sendPacket(new ExUserInfoFishing(player, true, baitLocation));
         player.sendPacket(PlaySound.sound("SF_P_01"));
         player.sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
     }
 
-    private boolean checkCastLine(FishingBaitData baitData) {
-        final int minPlayerLevel = baitData.getMinPlayerLevel();
+    private boolean checkCastLine(FishingBait baitData) {
+        final int minPlayerLevel = baitData.minPlayerLevel();
         if (player.getLevel() < minPlayerLevel) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_FISHING_LEVEL_REQUIREMENTS);
             return false;
@@ -243,14 +244,14 @@ public class Fishing {
     public void reelInWithReward() {
         // Fish may or may not eat the hook. If it does - it consumes fishing bait and fishing shot.
         // Then player may or may not catch the fish. Using fishing shots increases chance to win.
-        final FishingBaitData baitData = getCurrentBaitData();
+        final FishingBait baitData = getCurrentBaitData();
         if (baitData == null) {
             reelIn(FishingEndReason.LOSE, false);
             LOGGER.warn("Player {} is fishing with unhandled bait", player);
             return;
         }
 
-        double chance = baitData.getChance();
+        double chance = baitData.chance();
         if (player.isChargedShot(ShotType.SOULSHOTS)) {
             player.consumeAndRechargeShotCount(ShotType.SOULSHOTS, 1);
             chance *= 1.5; // +50 % chance to win
@@ -279,16 +280,16 @@ public class Fishing {
             }
 
             if ((reason == FishingEndReason.WIN) && (currentBait != null)) {
-                final FishingBaitData baitData = FishingData.getInstance().getBaitData(currentBait.getId());
-                final int numRewards = baitData.getRewards().size();
+                final FishingBait baitData = FishingEngine.getInstance().getBaitData(currentBait.getId());
+                final int numRewards = baitData.rewards().size();
                 if (numRewards > 0) {
-                    final FishingData fishingData = FishingData.getInstance();
+                    final FishingEngine fishingEngine = FishingEngine.getInstance();
                     final int lvlModifier = player.getLevel() * player.getLevel();
-                    player.addExpAndSp(Rnd.get(fishingData.getExpRateMin(), fishingData.getExpRateMax()) * lvlModifier, Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier, true);
-                    final int fishId = baitData.getRewards().get(Rnd.get(0, numRewards - 1));
-                    player.getInventory().addItem("Fishing Reward", fishId, 1, player, null);
+                    player.addExpAndSp(Rnd.get(fishingEngine.getExpRateMin(), fishingEngine.getExpRateMax()) * lvlModifier, Rnd.get(fishingEngine.getSpRateMin(), fishingEngine.getSpRateMax()) * lvlModifier, true);
+                    final var fish = baitData.rewards().get(Rnd.get(0, numRewards - 1));
+                    player.getInventory().addItem("Fishing Reward", fish.getId(), 1, player, null);
                     final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-                    msg.addItemName(fishId);
+                    msg.addItemName(fish.getId());
                     player.sendPacket(msg);
                     player.consumeAndRechargeShots(ShotType.SOULSHOTS, 1);
                 } else {
@@ -328,8 +329,8 @@ public class Fishing {
 
     private Location calculateBaitLocation() {
         // calculate a position in front of the player with a random distance
-        final int distMin = FishingData.getInstance().getBaitDistanceMin();
-        final int distMax = FishingData.getInstance().getBaitDistanceMax();
+        final int distMin = FishingEngine.getInstance().getBaitDistanceMin();
+        final int distMax = FishingEngine.getInstance().getBaitDistanceMax();
         int distance = Rnd.get(distMin, distMax);
         final double angle = convertHeadingToDegree(player.getHeading());
         final double radian = Math.toRadians(angle);

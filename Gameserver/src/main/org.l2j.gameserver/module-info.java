@@ -126,6 +126,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.events.impl.server;
     exports org.l2j.gameserver.engine.clan.clanhall;
     exports org.l2j.gameserver.engine.clan;
+    exports org.l2j.gameserver.engine.fishing;
 
     uses org.l2j.gameserver.api.item.PlayerInventoryListener;
     provides org.l2j.gameserver.api.item.PlayerInventoryListener
