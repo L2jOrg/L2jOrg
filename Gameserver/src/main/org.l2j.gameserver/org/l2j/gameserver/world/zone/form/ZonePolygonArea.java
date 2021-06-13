@@ -51,7 +51,7 @@ public class ZonePolygonArea implements ZoneArea {
 
     @Override
     public boolean intersectsRectangle(int x1, int x2, int y1, int y2) {
-        return polygon.intersects(x1, y2, x2 - x1, y2 - y1);
+        return polygon.intersects(x1, y1, Math.abs(x2 - x1), Math.abs(y2 - y1));
     }
 
     @Override

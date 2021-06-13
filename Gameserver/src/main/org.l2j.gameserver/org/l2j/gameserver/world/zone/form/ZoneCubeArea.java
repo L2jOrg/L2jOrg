@@ -57,7 +57,7 @@ public class ZoneCubeArea implements ZoneArea {
 
     @Override
     public boolean intersectsRectangle(int x1, int x2, int y1, int y2) {
-        return rectangle.intersects(x1, y1, (double) x2 - x1, y2 - y1);
+        return rectangle.intersects(Math.min(x1, x2), Math.min(y1, y2), Math.abs(x2 - x1), Math.abs(y2 - y1));
     }
 
     @Override

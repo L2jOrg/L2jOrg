@@ -40,6 +40,7 @@ import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.costume.CostumeEngine;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.engine.events.EventEngine;
+import org.l2j.gameserver.engine.fishing.FishingEngine;
 import org.l2j.gameserver.engine.item.AttendanceEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.shop.L2Store;
@@ -131,7 +132,7 @@ public class GameServer {
         MultisellEngine.init();
         RecipeData.getInstance();
         ArmorSetsData.getInstance();
-        FishingData.getInstance();
+        FishingEngine.init();
         HennaData.getInstance();
         ShuttleData.getInstance();
 
