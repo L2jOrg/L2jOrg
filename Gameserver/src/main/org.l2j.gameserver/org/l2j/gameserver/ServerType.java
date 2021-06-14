@@ -37,10 +37,7 @@ public enum ServerType
 	UNK_7,
 	WORLD,
 	NEW,
-	CLASSIC,
-	ARENA,
-	BLOODY,
-	ESSENCE(BLOODY.getMask() | CLASSIC.getMask());
+	ESSENCE;
 
 
 
@@ -77,9 +74,7 @@ public enum ServerType
 	public static int getClientType(int type) {
 		int clientType = 0;
 		if ((type & ServerType.ESSENCE.getMask()) > 0) {
-			clientType = 4;
-		} else if ((type & ServerType.CLASSIC.getMask()) > 0) {
-			clientType = 1;
+			clientType = 0x400;
 		}
 		return clientType;
 	}

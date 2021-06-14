@@ -23,7 +23,8 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.ServerSettings;
 
-import static org.l2j.gameserver.ServerType.CLASSIC;
+import static org.l2j.gameserver.ServerType.ESSENCE;
+import static org.l2j.gameserver.ServerType.getClientType;
 
 public final class KeyPacket extends ServerPacket {
     private final byte[] _key;
@@ -46,7 +47,7 @@ public final class KeyPacket extends ServerPacket {
         buffer.writeInt(ServerSettings.serverId());
         buffer.writeByte(false); // merged server
         buffer.writeInt(0x00); // obfuscation key
-        buffer.writeByte((ServerSettings.type() & CLASSIC.getMask()) != 0); // isClassic
+        buffer.writeByte(4); // isClassic
         buffer.writeByte(0x00); // queued ?
     }
 
