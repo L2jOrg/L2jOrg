@@ -23,16 +23,16 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.item.type.WeaponType;
 
-import java.util.EnumSet;
+import java.util.Set;
 
 /**
  * @author JoeAlisson
  */
 public class ConditionWeaponTypes extends Condition {
 
-    private final EnumSet<WeaponType> types;
+    private final Set<WeaponType> types;
 
-    public ConditionWeaponTypes(EnumSet<WeaponType> types) {
+    public ConditionWeaponTypes(Set<WeaponType> types) {
         this.types = types;
     }
 

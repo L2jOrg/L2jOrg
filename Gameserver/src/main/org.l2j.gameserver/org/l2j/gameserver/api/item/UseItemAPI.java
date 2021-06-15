@@ -47,6 +47,10 @@ public class UseItemAPI {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UseItemAPI.class);
 
+    private UseItemAPI() {
+        // helper class
+    }
+
     public static boolean useItem(Player player, int itemObjectId, boolean force) {
         var item = player.getInventory().getItemByObjectId(itemObjectId);
         if(item == null) {
