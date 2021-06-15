@@ -2,11 +2,11 @@ package org.l2j.gameserver.data.xml;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.RandomCraftExtractDataHolder;
 import org.l2j.gameserver.model.holders.RandomCraftRewardDataHolder;
 import org.l2j.gameserver.model.holders.RandomCraftRewardItemHolder;
-import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;

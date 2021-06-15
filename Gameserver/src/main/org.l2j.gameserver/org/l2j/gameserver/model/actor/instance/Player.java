@@ -196,7 +196,6 @@ public final class Player extends Playable {
     private int rank;
     private int rankRace;
     private int additionalSoulshot;
-    private byte vipTier;
     private byte shineSouls;
     private byte shadowSouls;
     private long _sayhaGraceSupportEndTime = 0;
@@ -7759,7 +7758,7 @@ public final class Player extends Playable {
      * Restore Pet's inventory items from database.
      */
     private void restorePetInventoryItems() {
-        setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
+       // setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
     }
 
     public String getAdminConfirmCmd() {

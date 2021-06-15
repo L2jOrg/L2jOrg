@@ -26,6 +26,7 @@ import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
 import org.l2j.gameserver.data.xml.impl.AugmentationEngine;
+import org.l2j.gameserver.data.xml.impl.BlessedItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -70,6 +71,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;

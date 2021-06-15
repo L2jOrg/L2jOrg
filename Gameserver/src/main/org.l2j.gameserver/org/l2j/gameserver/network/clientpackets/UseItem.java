@@ -60,6 +60,7 @@ public final class UseItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(UseItem.class);
     private int objectId;
     private boolean ctrlPressed;
+    private int itemId;
 
     @Override
     public void readImpl() {
