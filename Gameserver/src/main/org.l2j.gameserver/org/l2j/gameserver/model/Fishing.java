@@ -214,11 +214,9 @@ public class Fishing {
         try {
             var bait = player.getSecondaryWeapon();
 
-            if (consumeBait) {
-                if (!player.getInventory().updateItemCount(null, bait, -1, player, null)) {
-                    reason = FishingEndReason.LOSE; // no bait - no reward
-                    return;
-                }
+            if (consumeBait && !player.getInventory().updateItemCount(null, bait, -1, player, null)) {
+                reason = FishingEndReason.LOSE;
+                return;
             }
 
             if (reason == FishingEndReason.WIN && (bait != null)) {
@@ -239,7 +237,7 @@ public class Fishing {
         final FishingBait baitData = FishingEngine.getInstance().getBaitData(bait.getId());
         final int numRewards = baitData.rewards().size();
         if (numRewards > 0) {
-            final FishingEngine fishingEngine = FishingEngine.getInstance();
+            final var fishingEngine = FishingEngine.getInstance();
             final int lvlModifier = player.getLevel() * player.getLevel();
             player.addExpAndSp(Rnd.get(fishingEngine.getExpRateMin(), fishingEngine.getExpRateMax()) * lvlModifier, Rnd.get(fishingEngine.getSpRateMin(), fishingEngine.getSpRateMax()) * lvlModifier, true);
             final var fish = baitData.rewards().get(Rnd.get(0, numRewards - 1));
