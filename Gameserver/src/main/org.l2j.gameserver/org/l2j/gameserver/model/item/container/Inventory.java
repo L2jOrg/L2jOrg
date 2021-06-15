@@ -422,6 +422,10 @@ public abstract class Inventory extends ItemContainer {
             }
         }
 
+        equipInBodyPart(item, bodyPart);
+    }
+
+    private void equipInBodyPart(Item item, BodyPart bodyPart) {
         switch (bodyPart) {
             case TWO_HAND -> equipTwoHand(item);
             case LEFT_HAND -> equipLeftHand(item);

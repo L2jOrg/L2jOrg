@@ -136,37 +136,47 @@ public class UseItemAPI {
     }
 
     private static boolean checkUnlockedSlot(Player player, Item item, BodyPart bodyPart) {
-        switch (bodyPart) {
-            case TWO_HAND, LEFT_HAND, RIGHT_HAND -> {
-                if (player.isMounted() || player.isDisarmed()) {
-                    return false;
-                }
-            }
-            case TALISMAN -> {
-                if (player.getInventory().getTalismanSlots() == 0) {
-                    player.sendPacket(getSystemMessage(YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET).addItemName(item));
-                    return false;
-                }
-            }
-            case BROOCH_JEWEL -> {
-                if (player.getInventory().getBroochJewelSlots() == 0) {
-                    player.sendPacket(getSystemMessage(YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH).addItemName(item));
-                    return false;
-                }
-            }
-            case AGATHION -> {
-                if (player.getInventory().getAgathionSlots() == 0) {
-                    return false;
-                }
-            }
-            case ARTIFACT -> {
-                if (player.getInventory().getArtifactSlots() == 0) {
-                    player.sendPacket(getSystemMessage(NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1).addItemName(item));
-                    return false;
-                }
-            }
+        return switch (bodyPart) {
+            case TWO_HAND, LEFT_HAND, RIGHT_HAND -> checkUnlockedHands(player);
+            case TALISMAN -> checkUnlockedTalisman(player, item);
+            case BROOCH_JEWEL -> checkUnlockedJewels(player, item);
+            case AGATHION -> checkUnlockedAgathion(player);
+            case ARTIFACT -> checkUnlockedArtifact(player, item);
+            default -> true;
+        };
+    }
+
+    private static boolean checkUnlockedArtifact(Player player, Item item) {
+        if (player.getInventory().getArtifactSlots() == 0) {
+            player.sendPacket(getSystemMessage(NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1).addItemName(item));
+            return false;
         }
         return true;
+    }
+
+    private static boolean checkUnlockedAgathion(Player player) {
+        return player.getInventory().getAgathionSlots() != 0;
+    }
+
+    private static boolean checkUnlockedJewels(Player player, Item item) {
+        if (player.getInventory().getBroochJewelSlots() == 0) {
+            player.sendPacket(getSystemMessage(YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH).addItemName(item));
+            return false;
+        }
+        return true;
+    }
+
+    private static boolean checkUnlockedTalisman(Player player, Item item) {
+        if (player.getInventory().getTalismanSlots() == 0) {
+            player.sendPacket(getSystemMessage(YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET).addItemName(item));
+            return false;
+        }
+        return true;
+    }
+
+
+    private static boolean checkUnlockedHands(Player player) {
+        return !(player.isMounted() || player.isDisarmed());
     }
 
     private static boolean checkUseItem(Player player, Item item) {
