@@ -36,10 +36,12 @@ import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 import static java.util.Objects.isNull;
@@ -91,7 +93,7 @@ public abstract class ItemContainer {
         for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
-        List<Item> selected = new LinkedList<>();
+        List<Item> selected = new ArrayList<>();
         for (Item item : items.values()) {
             if(filter.test(item)) {
                 selected.add(item);
@@ -110,6 +112,15 @@ public abstract class ItemContainer {
 
     public void forEachItem(Consumer<Item> action) {
         items.values().forEach(action);
+    }
+
+    public Item findAnyItem(Predicate<Item> filter) {
+        for (Item item : items.values()) {
+            if(filter.test(item)) {
+                return item;
+            }
+        }
+        return null;
     }
 
     public final IntSet getItemsId(Predicate<Item> filter) {

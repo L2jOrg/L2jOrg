@@ -20,7 +20,6 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.fishing.FishingBait;
 import org.l2j.gameserver.engine.fishing.FishingEngine;
@@ -92,7 +91,6 @@ public class Fishing {
             return Integer.MIN_VALUE;
         }
 
-        // always use water zone, fishing zone high z is high in the air...
         final int baitZ = waterZone.getWaterZ();
 
         if (GeoEngine.getInstance().hasGeo(baitX, baitY)) {
@@ -112,11 +110,6 @@ public class Fishing {
         return isFishing;
     }
 
-    public boolean isAtValidLocation() {
-        // TODO: implement checking direction
-        return player.isInsideZone(ZoneType.FISHING);
-    }
-
     public boolean canFish() {
         return !player.isDead() && !player.isAlikeDead() && !player.hasBlockActions() && !player.isSitting();
     }
@@ -126,14 +119,15 @@ public class Fishing {
             return FishingEngine.getInstance().getBaitData(currentBait.getId());
         }
 
-        var baits = player.getInventory().getItems(item -> item.getItemType() == EtcItemType.LURE);
-        if(Util.isNullOrEmpty(baits)) {
-            currentBait = null;
-        } else {
-            currentBait = baits.iterator().next();
-            return FishingEngine.getInstance().getBaitData(currentBait.getId());
+        currentBait = player.getInventory().findAnyItem(this::isValidBait);
+        if(currentBait != null) {
+            FishingEngine.getInstance().getBaitData(currentBait.getId());
         }
         return null;
+    }
+
+    private boolean isValidBait(Item item) {
+        return item.getItemType() == EtcItemType.LURE && FishingEngine.getInstance().getBaitData(item.getId()) != null;
     }
 
     private void cancelTasks() {
@@ -203,7 +197,7 @@ public class Fishing {
             startFishingTask = ThreadPool.schedule(() -> player.getFishing().castLine(), Rnd.get(baitData.minWait(), baitData.maxWait()));
         }, Rnd.get(baitData.minTime(), baitData.maxTime()));
         player.stopMove(null);
-        player.broadcastPacket(new ExFishingStart(player, -1, baitData.level(), baitLocation));
+        player.broadcastPacket(new ExFishingStart(player, 1, baitData.level(), baitLocation));
         player.sendPacket(new ExUserInfoFishing(player, true, baitLocation));
         player.sendPacket(PlaySound.sound("SF_P_01"));
         player.sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
@@ -232,7 +226,7 @@ public class Fishing {
         }
 
         baitLocation = calculateBaitLocation();
-        if (!player.isInsideZone(ZoneType.FISHING) || (baitLocation == DEFAULT_BAIT_LOCATION)) {
+        if (!player.isInsideZone(ZoneType.FISHING) || (baitLocation == DEFAULT_BAIT_LOCATION) || !GeoEngine.getInstance().canSeeTarget(player, baitLocation)) {
             if (!isFishing) {
                 player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
             }
@@ -346,7 +340,6 @@ public class Fishing {
             player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
             return DEFAULT_BAIT_LOCATION;
         }
-
         return new Location(baitX, baitY, baitZ);
     }
 }

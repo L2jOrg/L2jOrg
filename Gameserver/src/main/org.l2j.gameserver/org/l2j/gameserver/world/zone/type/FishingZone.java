@@ -43,6 +43,7 @@ public class FishingZone extends Zone {
 
     private final Object taskLocker = new Object();
     private ScheduledFuture<?> task;
+
     public FishingZone(int id) {
         super(id);
     }
@@ -55,7 +56,7 @@ public class FishingZone extends Zone {
 
             synchronized (taskLocker) {
                 if(task == null) {
-                    task = ThreadPool.scheduleAtFixedRate(new FishingTask(), 1500, 1500);
+                    task = ThreadPool.scheduleAtFixedRate(new FishingTask(), 1500, 3000);
                 }
             }
         }
@@ -63,10 +64,8 @@ public class FishingZone extends Zone {
 
     private void checkFishing(Player player) {
         var fishing = player.getFishing();
-        if(fishing.canFish() && !fishing.isFishing()) {
-            player.sendPacket(ExAutoFishAvailable.YES);
-        } else  {
-            player.sendPacket(ExAutoFishAvailable.NO);
+        if(!fishing.isFishing()) {
+            player.sendPacket(fishing.canFish() ? ExAutoFishAvailable.YES : ExAutoFishAvailable.NO);
         }
     }
 

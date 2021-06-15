@@ -346,11 +346,11 @@ public class GeoEngine {
      * @param position : The target position.
      * @return {@code boolean} : True if object can see position
      */
-    public final boolean canSeeTarget(WorldObject origin, Location position) {
+    public final boolean canSeeTarget(WorldObject origin, ILocational position) {
         return canSeeTarget(origin, position, 0);
     }
 
-    private boolean canSeeTarget(WorldObject origin, Location position, double tHeight) {
+    private boolean canSeeTarget(WorldObject origin, ILocational position, double tHeight) {
         // get origin and target world coordinates
         final int ox = origin.getX();
         final int oy = origin.getY();
