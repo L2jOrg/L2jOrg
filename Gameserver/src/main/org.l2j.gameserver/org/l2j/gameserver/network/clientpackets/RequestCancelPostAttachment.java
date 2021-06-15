@@ -136,7 +136,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
         }
 
         // Proceed to the transfer
-        final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+        final InventoryUpdate playerIU =  new InventoryUpdate();
         for (Item item : attachments.getItems()) {
             final long count = item.getCount();
             final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), count, player.getInventory(), player, null);
@@ -144,27 +144,16 @@ public final class RequestCancelPostAttachment extends ClientPacket {
                 return;
             }
 
-            if (playerIU != null) {
-                if (newItem.getCount() > count) {
-                    playerIU.addModifiedItem(newItem);
-                } else {
-                    playerIU.addNewItem(newItem);
-                }
+            if (newItem.getCount() > count) {
+                playerIU.addModifiedItem(newItem);
+            } else {
+                playerIU.addNewItem(newItem);
             }
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
-            sm.addItemName(item.getId());
-            sm.addLong(count);
-            player.sendPacket(sm);
+            player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addLong(count));
         }
 
         mail.removeAttachments();
-
-        // Send updated item list to the player
-        if (playerIU != null) {
-            player.sendInventoryUpdate(playerIU);
-        } else {
-            player.sendItemList();
-        }
+        player.sendInventoryUpdate(playerIU);
 
         final Player receiver = World.getInstance().findPlayer(mail.getReceiver());
         if (receiver != null) {

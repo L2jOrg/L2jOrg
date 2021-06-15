@@ -22,6 +22,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.model.quest.Quest;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -186,7 +187,7 @@ public final class QuestManager {
             LOGGER.info("Replaced quest " + old.getName() + " (" + old.getId() + ") with a new version!");
         }
 
-        if (Config.ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS) {
+        if (GeneralSettings.logQuestsLoading()) {
             final String questName = quest.getName().contains("_") ? quest.getName().substring(quest.getName().indexOf('_') + 1) : quest.getName();
             LOGGER.info("Loaded quest " + CommonUtil.splitWords(questName) + ".");
         }
@@ -228,10 +229,6 @@ public final class QuestManager {
         if (old != null) {
             old.unload();
             LOGGER.info("Replaced script " + old.getName() + " with a new version!");
-        }
-
-        if (Config.ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS) {
-            LOGGER.info("Loaded script " + CommonUtil.splitWords(script.getClass().getSimpleName()) + ".");
         }
     }
 

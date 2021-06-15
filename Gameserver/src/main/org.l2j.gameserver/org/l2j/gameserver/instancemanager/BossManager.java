@@ -34,6 +34,7 @@ import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,7 +65,7 @@ public class BossManager {
     }
 
     private void load() {
-        if (Config.ALT_DEV_NO_SPAWNS) {
+        if (GeneralSettings.noSpawn()) {
             return;
         }
 

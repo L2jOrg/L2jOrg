@@ -862,7 +862,7 @@ public final class Formulas {
      * @return damage
      */
     public static double calcFallDam(Creature cha, int fallHeight) {
-        if (!Config.ENABLE_FALLING_DAMAGE || (fallHeight < 0)) {
+        if (fallHeight <= 0) {
             return 0;
         }
         return cha.getStats().getValue(Stat.FALL, (fallHeight * cha.getMaxHp()) / 1000.0);

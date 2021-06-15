@@ -458,25 +458,15 @@ public class TradeList {
             owner.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
         } else {
             // Prepare inventory update packet
-            final InventoryUpdate ownerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-            final InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+            final InventoryUpdate ownerIU = new InventoryUpdate();
+            final InventoryUpdate partnerIU = new InventoryUpdate();
 
             // Transfer items
             partnerList.TransferItems(owner, partnerIU, ownerIU);
             TransferItems(partnerList.getOwner(), ownerIU, partnerIU);
 
-            // Send inventory update packet
-            if (ownerIU != null) {
-                owner.sendInventoryUpdate(ownerIU);
-            } else {
-                owner.sendItemList();
-            }
-
-            if (partnerIU != null) {
-                partner.sendInventoryUpdate(partnerIU);
-            } else {
-                partner.sendItemList();
-            }
+            owner.sendInventoryUpdate(ownerIU);
+            partner.sendInventoryUpdate(partnerIU);
             success = true;
         }
         // Finish the trade

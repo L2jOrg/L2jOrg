@@ -141,33 +141,6 @@ public final class Config {
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
-
-    public static boolean LOG_ITEM_ENCHANTS;
-
-    public static boolean SKILL_CHECK_ENABLE;
-    public static boolean SKILL_CHECK_REMOVE;
-    public static boolean SKILL_CHECK_GM;
-    public static boolean HTML_ACTION_CACHE_DEBUG;
-    public static boolean DEVELOPER;
-    public static boolean ALT_DEV_NO_SPAWNS;
-    public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
-    public static boolean ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS;
-
-    public static boolean ALLOW_DISCARDITEM;
-
-    public static boolean LAZY_ITEMS_UPDATE;
-    public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
-    public static boolean DESTROY_ALL_ITEMS;
-
-    public static boolean AUTODELETE_INVALID_QUEST_DATA;
-    public static boolean FORCE_INVENTORY_UPDATE;
-
-    public static int MIN_NPC_ANIMATION;
-    public static int MAX_NPC_ANIMATION;
-    public static int MIN_MONSTER_ANIMATION;
-    public static int MAX_MONSTER_ANIMATION;
-    public static boolean ENABLE_FALLING_DAMAGE;
-
     public static int GRID_NEIGHBOR_TURNON_TIME;
     public static int GRID_NEIGHBOR_TURNOFF_TIME;
     public static int PEACE_ZONE_MODE;
@@ -679,30 +652,6 @@ public final class Config {
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 
-        LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
-
-        SKILL_CHECK_ENABLE = General.getBoolean("SkillCheckEnable", false);
-        SKILL_CHECK_REMOVE = General.getBoolean("SkillCheckRemove", false);
-        SKILL_CHECK_GM = General.getBoolean("SkillCheckGM", true);
-        HTML_ACTION_CACHE_DEBUG = General.getBoolean("HtmlActionCacheDebug", false);
-        DEVELOPER = General.getBoolean("Developer", false);
-        ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
-        ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
-        ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
-        ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
-
-        LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
-        UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
-        DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
-        AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
-
-        FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
-
-        MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
-        MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
-        MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
-        MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
-
         GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
         GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
         PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
@@ -754,7 +703,6 @@ public final class Config {
         BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
         BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000L;
         BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
-        ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 
         // Load FloodProtector config file
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);

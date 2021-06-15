@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 
@@ -106,7 +107,7 @@ public final class RequestDestroyItem extends ClientPacket {
             return;
         }
 
-        if (!Config.DESTROY_ALL_ITEMS && ((!player.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()))) {
+        if (!GeneralSettings.destroyAnyItem() && ((!player.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()))) {
             if (itemToRemove.isHeroItem()) {
                 client.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
             } else {

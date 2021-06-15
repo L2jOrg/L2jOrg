@@ -415,7 +415,7 @@ public final class Item extends WorldObject {
             if (existsInDb) {
                 if (cannotBeStored()) {
                     removeFromDb();
-                } else if (!Config.LAZY_ITEMS_UPDATE || force) {
+                } else if (force) {
                     updateInDb();
                 }
             } else {
