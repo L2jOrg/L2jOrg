@@ -58,26 +58,7 @@ public class MoveBackwardToLocation extends ClientPacket {
     public void runImpl() {
         final Player player = client.getPlayer();
 
-        if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ)) {
-            player.sendPacket(new StopMove(player));
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        if(player.isFishing()) {
-            player.sendPacket(YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
-            return;
-        }
-
-        if ((CharacterSettings.npcTalkBlockingTime() > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis())) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        // Mobius: Check for possible door logout and move over exploit. Also checked at ValidatePosition.
-        if (DoorDataManager.getInstance().checkIfDoorsBetween(player.getX(), player.getY(), player.getZ(), _targetX, _targetY, _targetZ, player.getInstanceWorld(), false)) {
-            player.stopMove(player.getLastServerPosition());
+        if (!checkCanMove(player)) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -94,24 +75,18 @@ public class MoveBackwardToLocation extends ClientPacket {
             player.setCursorKeyMovementActive(true);
         }
 
-        if (_movementMode == 1) {
-            player.setCursorKeyMovement(false);
-            final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(player, new Location(_targetX, _targetY, _targetZ)), player, TerminateReturn.class);
-            if ((terminate != null) && terminate.terminate()) {
-                player.sendPacket(ActionFailed.STATIC_PACKET);
-                return;
-            }
-        } else // 0
-        {
-            if (!CharacterSettings.enableKeyboardMovement()) {
-                return;
-            }
-            player.setCursorKeyMovement(true);
-            if (!player.isCursorKeyMovementActive()) {
-                return;
-            }
+        if (!checkMovementMode(player)) {
+            return;
         }
 
+        if (!moveWithTelePortType(player))  {
+            return;
+        }
+
+        player.onActionRequest();
+    }
+
+    private boolean moveWithTelePortType(Player player) {
         final AdminTeleportType teleMode = player.getTeleMode();
         switch (teleMode) {
             case DEMONIC -> {
@@ -133,12 +108,52 @@ public class MoveBackwardToLocation extends ClientPacket {
                 if (player.isControlBlocked() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
                 {
                     player.sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
+                    return false;
                 }
                 player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
             }
         }
+        return true;
+    }
 
-        player.onActionRequest();
+    private boolean checkMovementMode(Player player) {
+        if (_movementMode == 1) {
+            player.setCursorKeyMovement(false);
+            final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(player, new Location(_targetX, _targetY, _targetZ)), player, TerminateReturn.class);
+            if ((terminate != null) && terminate.terminate()) {
+                player.sendPacket(ActionFailed.STATIC_PACKET);
+                return false;
+            }
+        } else {
+            if (!CharacterSettings.enableKeyboardMovement()) {
+                return false;
+            }
+            player.setCursorKeyMovement(true);
+            return player.isCursorKeyMovementActive();
+        }
+        return true;
+    }
+
+    private boolean checkCanMove(Player player) {
+        if (_targetX == _originX && _targetY == _originY && _targetZ == _originZ) {
+            player.sendPacket(new StopMove(player));
+            return false;
+        }
+
+        if(player.isFishing()) {
+            player.sendPacket(YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
+            return false;
+        }
+
+        if ((CharacterSettings.npcTalkBlockingTime() > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis())) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
+            return false;
+        }
+
+        if (DoorDataManager.getInstance().checkIfDoorsBetween(player.getX(), player.getY(), player.getZ(), _targetX, _targetY, _targetZ, player.getInstanceWorld(), false)) {
+            player.stopMove(player.getLastServerPosition());
+            return false;
+        }
+        return true;
     }
 }

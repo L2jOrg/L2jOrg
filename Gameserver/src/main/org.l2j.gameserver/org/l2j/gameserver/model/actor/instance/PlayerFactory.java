@@ -98,40 +98,9 @@ public class PlayerFactory {
         player.setTeleportFavorites(playerDAO.findTeleportFavorites(playerId));
 
         player.setHeading(playerData.getHeading());
-        var stats = player.getStats();
-        stats.setExp(playerData.getExp());
-        stats.setStartingXp(playerData.getExp());
-        stats.setLevel(playerData.getLevel());
-        stats.setSp(playerData.getSp());
-        player.setNoble(playerData.isNobless());
-        stats.setVitalityPoints(playerData.getVitalityPoints());
+        loadStatus(playerId, playerData, player);
 
-        if(Olympiad.getInstance().isHero(playerId)) {
-            player.setHero(true);
-        }
-
-        if(player.getLevel() >= 40) {
-            player.initElementalSpirits();
-        }
-
-        if (playerData.getClanId() > 0) {
-            player.setClan(ClanEngine.getInstance().getClan(playerData.getClanId()));
-        }
-
-        if (player.getClan() != null) {
-            if (player.getClan().getLeaderId() != player.getObjectId()) {
-                if (player.getPowerGrade() == 0) {
-                    player.setPowerGrade(5);
-                }
-                player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
-            } else {
-                player.getClanPrivileges().setAll();
-                player.setPowerGrade(1);
-            }
-        }
-
-        Clan.updateSocialStatus(player);
-        player.setTitle(playerData.getTitle());
+        loadClanData(playerData, player);
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
@@ -163,33 +132,7 @@ public class PlayerFactory {
 
         EventDispatcher.getInstance().notifyEvent(new OnPlayerLoad(player), Listeners.players());
 
-        // Initialize status update cache
-        player.initStatusUpdateCache();
-
-        // Restore current Cp, HP and MP values
-        player.setCurrentCp(playerData.getCp());
-        player.setCurrentHp(playerData.getHp());
-        player.setCurrentMp(playerData.getMp());
-
-        player.setOriginalCpHpMp(playerData.getCp(), playerData.getHp(), playerData.getMp());
-
-        if (playerData.getHp() < 0.5) {
-            player.setIsDead(true);
-            player.stopHpMpRegeneration();
-        }
-
-        // Restore pet if exists in the world
-        player.setPet(World.getInstance().findPet(player.getObjectId()));
-        final Summon pet = player.getPet();
-        if (pet != null) {
-            pet.setOwner(player);
-        }
-
-        if (player.hasServitors()) {
-            for (Summon summon : player.getServitors().values()) {
-                summon.setOwner(player);
-            }
-        }
+        loadStats(playerData, player);
 
         // Recalculate all stats
         player.getStats().recalculateStats(false);
@@ -210,7 +153,79 @@ public class PlayerFactory {
                 player.getAccountChars().put(info.getObjectId(), info.getName());
             }
         }
+        loadSummons(player);
         return player;
+    }
+
+    private static void loadStatus(int playerId, PlayerData playerData, Player player) {
+        var stats = player.getStats();
+        stats.setExp(playerData.getExp());
+        stats.setStartingXp(playerData.getExp());
+        stats.setLevel(playerData.getLevel());
+        stats.setSp(playerData.getSp());
+        player.setNoble(playerData.isNobless());
+        stats.setVitalityPoints(playerData.getVitalityPoints());
+
+        if(Olympiad.getInstance().isHero(playerId)) {
+            player.setHero(true);
+        }
+
+        if(player.getLevel() >= 40) {
+            player.initElementalSpirits();
+        }
+    }
+
+    private static void loadSummons(Player player) {
+        // Restore pet if exists in the world
+        player.setPet(World.getInstance().findPet(player.getObjectId()));
+        final Summon pet = player.getPet();
+        if (pet != null) {
+            pet.setOwner(player);
+        }
+
+        if (player.hasServitors()) {
+            for (Summon summon : player.getServitors().values()) {
+                summon.setOwner(player);
+            }
+        }
+    }
+
+    private static void loadStats(PlayerData playerData, Player player) {
+        // Initialize status update cache
+        player.initStatusUpdateCache();
+
+        // Restore current Cp, HP and MP values
+        player.setCurrentCp(playerData.getCp());
+        player.setCurrentHp(playerData.getHp());
+        player.setCurrentMp(playerData.getMp());
+
+        player.setOriginalCpHpMp(playerData.getCp(), playerData.getHp(), playerData.getMp());
+
+        if (playerData.getHp() < 0.5) {
+            player.setIsDead(true);
+            player.stopHpMpRegeneration();
+        }
+    }
+
+    private static void loadClanData(PlayerData playerData, Player player) {
+        if (playerData.getClanId() > 0) {
+            player.setClan(ClanEngine.getInstance().getClan(playerData.getClanId()));
+        }
+
+        if (player.getClan() != null) {
+            if (player.getClan().getLeaderId() != player.getObjectId()) {
+                if (player.getPowerGrade() == 0) {
+                    player.setPowerGrade(5);
+                }
+                player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
+            } else {
+                player.getClanPrivileges().setAll();
+                player.setPowerGrade(1);
+            }
+        }
+
+        Clan.updateSocialStatus(player);
+        player.setTitle(playerData.getTitle());
     }
 
     public static void savePlayerData(PlayerTemplate template, PlayerData data) {

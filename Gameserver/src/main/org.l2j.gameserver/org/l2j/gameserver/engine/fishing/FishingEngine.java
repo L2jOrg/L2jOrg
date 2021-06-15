@@ -77,6 +77,7 @@ public final class FishingEngine extends GameXmlReader {
                         case "experience" -> parseExperience(node);
                         case "skill-points-rate" -> parseSkillPointsRate(node);
                         case "bait" -> parseBait(node);
+                        default -> LOGGER.warn("Unknown Attribute {}", node.getNodeName());
                     }
                 }
             }
