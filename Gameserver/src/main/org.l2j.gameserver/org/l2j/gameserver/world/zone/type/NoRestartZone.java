@@ -21,8 +21,11 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -36,21 +39,8 @@ public class NoRestartZone extends Zone {
     private int restartTime = 0;
     private boolean enabled = true;
 
-    public NoRestartZone(int id) {
+    private NoRestartZone(int id) {
         super(id);
-    }
-
-    @Override
-    public void setParameter(String name, String value) {
-        if (name.equalsIgnoreCase("default_enabled")) {
-            enabled = Boolean.parseBoolean(value);
-        } else if (name.equalsIgnoreCase("restartAllowedTime")) {
-            restartAllowedTime = Integer.parseInt(value) * 1000;
-        } else if (name.equalsIgnoreCase("restartTime")) {
-            restartTime = Integer.parseInt(value) * 1000;
-        } else if (!name.equalsIgnoreCase("instanceId")) {
-            super.setParameter(name, value);
-        }
     }
 
     @Override
@@ -83,6 +73,29 @@ public class NoRestartZone extends Zone {
 
         if (((System.currentTimeMillis() - player.getLastAccess()) > restartTime) && ((System.currentTimeMillis() - player.getLastAccess()) > restartAllowedTime)) {
             player.teleToLocation(TeleportWhereType.TOWN);
+        }
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var zone = new NoRestartZone(id);
+            for (var node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+                if (node.getNodeName().equals("attributes")) {
+                    var attr = node.getAttributes();
+                    zone.enabled = reader.parseBoolean(attr,"enabled");
+                    zone.restartAllowedTime = reader.parseInt(attr, "allow-time") * 1000;
+                    zone.restartTime = reader.parseInt(attr, "restart-time") * 1000;
+                    break;
+                }
+            }
+            return zone;
+        }
+
+        @Override
+        public String type() {
+            return "no-restart";
         }
     }
 }

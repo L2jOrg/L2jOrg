@@ -41,7 +41,7 @@ import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -225,7 +225,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Unload all scripts.
 			QuestManager.getInstance().unloadAllScripts();
 			// Unload all zones.
-			ZoneManager.getInstance().unload();
+			ZoneEngine.getInstance().unload();
 			// Delete all spawns.
 			for (Npc npc : BossManager.getInstance().getNpcs().values())
 			{
@@ -251,7 +251,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 			}
 			// Reload.
-			ZoneManager.getInstance().reload();
+			ZoneEngine.getInstance().reload();
 			QuestManager.getInstance().reloadAllScripts();
 			AdminData.getInstance().broadcastMessageToGMs("NPC unspawn completed!");
 		}
@@ -260,7 +260,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Unload all scripts.
 			QuestManager.getInstance().unloadAllScripts();
 			// Unload all zones.
-			ZoneManager.getInstance().unload();
+			ZoneEngine.getInstance().unload();
 			// Delete all spawns.
 			for (Npc npc : BossManager.getInstance().getNpcs().values())
 			{
@@ -288,7 +288,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			// Reload.
 			SpawnsData.init();
 			BossManager.init();
-			ZoneManager.getInstance().reload();
+			ZoneEngine.getInstance().reload();
 			QuestManager.getInstance().reloadAllScripts();
 			AdminData.getInstance().broadcastMessageToGMs("NPC respawn completed!");
 		}

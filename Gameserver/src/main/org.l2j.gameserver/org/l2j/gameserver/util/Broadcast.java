@@ -40,13 +40,13 @@ public final class Broadcast {
      * In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet<BR>
      * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
      *
-     * @param character
-     * @param mov
+     * @param creature
+     * @param packet
      */
-    public static void toKnownPlayers(Creature character, ServerPacket mov) {
-        World.getInstance().forEachVisibleObject(character, Player.class, player -> {
-            player.sendPacket(mov);
-            if (mov instanceof ExCharInfo && character instanceof Player broadcaster) {
+    public static void toKnownPlayers(Creature creature, ServerPacket packet) {
+        World.getInstance().forEachVisibleObject(creature, Player.class, player -> {
+            player.sendPacket(packet);
+            if (packet instanceof ExCharInfo && creature instanceof Player broadcaster) {
                 broadcaster.updateRelation(player);
             }
         });

@@ -25,12 +25,8 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
-
-import java.util.List;
 
 import static org.l2j.gameserver.util.GameUtils.isMonster;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -53,23 +49,20 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-		if (skills == null)
-		{
-			LOGGER.warn(": is missing skills!");
+		if (!item.hasSkills(ItemSkillType.NORMAL)) {
+			LOGGER.warn("item {} is missing skills!", item);
 			return false;
 		}
 		
-		final Player activeChar = playable.getActingPlayer();
-		final WorldObject target = activeChar.getTarget();
-		if (!isMonster(target) || !((Creature) target).isDead())
-		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+		var player = playable.getActingPlayer();
+		final WorldObject target = player.getTarget();
+		if (!isMonster(target) || !((Creature) target).isDead()) {
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
-		skills.forEach(holder -> activeChar.useSkill(holder.getSkill(), item, false, false));
+		item.forEachSkill(ItemSkillType.NORMAL, s -> player.useSkill(s.getSkill(), item, false, false));
 		return true;
 	}
 }

@@ -40,7 +40,7 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -618,7 +618,7 @@ public final class World {
     public static void init() {
         getInstance().initRegions();
         MapRegionManager.init();
-        ZoneManager.init();
+        ZoneEngine.init();
         GeoEngine.init();
 
         WorldTimeController.init();

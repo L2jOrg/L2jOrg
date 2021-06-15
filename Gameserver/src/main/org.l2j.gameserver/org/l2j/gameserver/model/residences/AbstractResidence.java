@@ -177,7 +177,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
         return zone;
     }
 
-    protected void setResidenceZone(ResidenceZone zone) {
+    public void setResidenceZone(ResidenceZone zone) {
         this.zone = zone;
     }
 

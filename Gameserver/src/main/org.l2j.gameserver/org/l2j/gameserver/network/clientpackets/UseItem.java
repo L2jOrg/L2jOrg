@@ -23,6 +23,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.NextAction;
+import org.l2j.gameserver.engine.item.EtcItem;
 import org.l2j.gameserver.data.xml.impl.VariationData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemSkillType;
@@ -33,9 +34,7 @@ import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.EtcItem;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
@@ -45,12 +44,10 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.isBetween;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isItem;
@@ -63,7 +60,6 @@ public final class UseItem extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(UseItem.class);
     private int objectId;
     private boolean ctrlPressed;
-    private int itemId;
 
     @Override
     public void readImpl() {
@@ -78,7 +74,6 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        // Flood protect UseItem
         if (!client.getFloodProtectors().getUseItem().tryPerformAction("use item")) {
             return;
         }
@@ -94,51 +89,8 @@ public final class UseItem extends ClientPacket {
         }
 
         final Item item = player.getInventory().getItemByObjectId(objectId);
-        if (isNull(item)) {
-            // gm can use other player item
-            if (player.isGM()) {
-                var obj = World.getInstance().findObject(objectId);
-                if (isItem(obj)) {
-                    AdminCommandHandler.getInstance().useAdminCommand(player, "admin_use_item " + objectId, true);
-                }
-            }
+        if (!checkUseItem(player, item)) {
             return;
-        }
-
-        if (item.isQuestItem())  {
-            player.sendPacket(YOU_CANNOT_USE_QUEST_ITEMS);
-            return;
-        }
-
-        // No UseItem is allowed while the player is in special conditions
-        if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead()) {
-            return;
-        }
-
-        // Char cannot use item when dead
-        if (player.isDead() || player.getInventory().isBlocked(item)) {
-            var sm = getSystemMessage(S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-            sm.addItemName(item);
-            player.sendPacket(sm);
-            return;
-        }
-
-        if (!item.isEquipped() && !item.getTemplate().checkCondition(player, player, true)) {
-            return;
-        }
-
-        itemId = item.getId();
-        if (player.isFishing() && !isBetween(itemId, 6535, 6540)) { // FIXME non existent ids
-            // You cannot do anything else while fishing
-            player.sendPacket(YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
-            return;
-        }
-
-        if (!CharacterSettings.allowPKTeleport() && player.getReputation() < 0) {
-            final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-            if (nonNull(skills) && skills.stream().anyMatch(holder -> holder.getSkill().hasAnyEffectType(EffectType.TELEPORT))) {
-                return;
-            }
         }
 
         // If the item has reuse time and it has not passed.
@@ -149,14 +101,14 @@ public final class UseItem extends ClientPacket {
             final long reuse = player.getItemRemainingReuseTime(item.getObjectId());
             if (reuse > 0) {
                 reuseData(player, item, reuse);
-                sendSharedGroupUpdate(player, sharedReuseGroup, reuse, reuseDelay);
+                sendSharedGroupUpdate(player, item, reuse);
                 return;
             }
 
             final long reuseOnGroup = player.getReuseDelayOnGroup(sharedReuseGroup);
             if (reuseOnGroup > 0) {
                 reuseData(player, item, reuseOnGroup);
-                sendSharedGroupUpdate(player, sharedReuseGroup, reuseOnGroup, reuseDelay);
+                sendSharedGroupUpdate(player, item, reuseOnGroup);
                 return;
             }
         }
@@ -181,14 +133,14 @@ public final class UseItem extends ClientPacket {
             final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
             if (isNull(handler)) {
                 if(nonNull(etcItem) && Util.isNotEmpty(etcItem.getHandlerName())) {
-                    LOGGER.warn("Unmanaged Item handler: {} for Item Id: {}!", etcItem.getHandlerName(), itemId);
+                    LOGGER.warn("Unmanaged Item handler: {} for Item: {}!", etcItem.getHandlerName(), item);
                 }
             } else if (handler.useItem(player, item, ctrlPressed)) {
                 // Item reuse time should be added if the item is successfully used.
                 // Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
                 if (reuseDelay > 0) {
                     player.addTimeStampItem(item, reuseDelay);
-                    sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
+                    sendSharedGroupUpdate(player, item, reuseDelay);
                 }
             }
             if (VariationData.getInstance().getVariation(itemId) != null)
@@ -196,6 +148,46 @@ public final class UseItem extends ClientPacket {
                 player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
             }
         }
+    }
+
+    private boolean checkUseItem(Player player, Item item) {
+        if (isNull(item)) {
+            // gm can use other player item
+            if (player.isGM()) {
+                var obj = World.getInstance().findObject(objectId);
+                if (isItem(obj)) {
+                    AdminCommandHandler.getInstance().useAdminCommand(player, "admin_use_item " + objectId, true);
+                }
+            }
+            return false;
+        }
+
+        if (item.isQuestItem())  {
+            player.sendPacket(YOU_CANNOT_USE_QUEST_ITEMS);
+            return false;
+        }
+
+        // No UseItem is allowed while the player is in special conditions
+        if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead()) {
+            return false;
+        }
+
+        // Char cannot use item when dead
+        if (player.isDead() || player.getInventory().isBlocked(item)) {
+            player.sendPacket(getSystemMessage(S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item));
+            return false;
+        }
+
+        if (!item.isEquipped() && !item.getTemplate().checkCondition(player, player, true)) {
+            return false;
+        }
+
+        if (player.isFishing()) {
+            player.sendPacket(YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
+            return false;
+        }
+
+        return CharacterSettings.allowPKTeleport() || player.getReputation() >= 0 || !item.hasSkills(ItemSkillType.NORMAL, s -> s.hasAnyEffectType(EffectType.TELEPORT));
     }
 
     private void handleEquipable(Player player, Item item) {
@@ -286,9 +278,9 @@ public final class UseItem extends ClientPacket {
         activeChar.sendPacket(sm);
     }
 
-    private void sendSharedGroupUpdate(Player activeChar, int group, long remaining, int reuse) {
-        if (group > 0) {
-            activeChar.sendPacket(new ExUseSharedGroupItem(itemId, group, remaining, reuse));
+    private void sendSharedGroupUpdate(Player activeChar, Item item, long remaining) {
+        if (item.getSharedReuseGroup() > 0) {
+            activeChar.sendPacket(new ExUseSharedGroupItem(item.getId(), item.getSharedReuseGroup(), remaining, item.getReuseDelay()));
         }
     }
 }

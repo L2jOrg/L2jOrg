@@ -41,8 +41,7 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndR
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndType;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingStart;
 import org.l2j.gameserver.network.serverpackets.fishing.ExUserInfoFishing;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.FishingZone;
 import org.l2j.gameserver.world.zone.type.WaterZone;
@@ -57,11 +56,13 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * @author bit
+ * @author JoeAlisson
  */
 public class Fishing {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Fishing.class);
+    private static final Location DEFAULT_BAIT_LOCATION = new Location(0, 0, 0);
     private final Player player;
-    private volatile ILocational baitLocation = new Location(0, 0, 0);
+    private ILocational baitLocation = DEFAULT_BAIT_LOCATION;
     private ScheduledFuture<?> reelInTask;
     private ScheduledFuture<?> startFishingTask;
     private boolean isFishing = false;
@@ -190,49 +191,8 @@ public class Fishing {
             return;
         }
 
-        final int minPlayerLevel = baitData.getMinPlayerLevel();
-        if (player.getLevel() < minPlayerLevel) {
-            if (minPlayerLevel == 20) {
-                player.sendPacket(SystemMessageId.FISHING_WILL_END_BECAUSE_THE_CONDITIONS_HAVE_NOT_BEEN_MET);
-            } else // In case of custom fishing level.
-            {
-                player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_FISHING_LEVEL_REQUIREMENTS);
-            }
+        if (!checkCastLine(baitData)) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
-            stopFishing(FishingEndType.ERROR);
-            return;
-        }
-
-        if (player.isTransformed() || player.isInBoat()) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_OR_TRANSFORMED);
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            stopFishing(FishingEndType.ERROR);
-            return;
-        }
-
-        if (player.isCrafting() || player.isInStoreMode()) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_WORKSHOP_OR_PRIVATE_STORE);
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            stopFishing(FishingEndType.ERROR);
-            return;
-        }
-
-        if (player.isInsideZone(ZoneType.WATER) || player.isInWater()) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_UNDER_WATER);
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            stopFishing(FishingEndType.ERROR);
-            return;
-        }
-
-        baitLocation = calculateBaitLocation();
-        if (!player.isInsideZone(ZoneType.FISHING) || (baitLocation == null)) {
-            if (isFishing) {
-                // _player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
-                player.sendPacket(ActionFailed.STATIC_PACKET);
-            } else {
-                player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
-                player.sendPacket(ActionFailed.STATIC_PACKET);
-            }
             stopFishing(FishingEndType.ERROR);
             return;
         }
@@ -246,6 +206,38 @@ public class Fishing {
         player.sendPacket(new ExUserInfoFishing(player, true, baitLocation));
         player.sendPacket(PlaySound.sound("SF_P_01"));
         player.sendPacket(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH);
+    }
+
+    private boolean checkCastLine(FishingBaitData baitData) {
+        final int minPlayerLevel = baitData.getMinPlayerLevel();
+        if (player.getLevel() < minPlayerLevel) {
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_FISHING_LEVEL_REQUIREMENTS);
+            return false;
+        }
+
+        if (player.isTransformed() || player.isInBoat()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_OR_TRANSFORMED);
+            return false;
+        }
+
+        if (player.isCrafting() || player.isInStoreMode()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_WORKSHOP_OR_PRIVATE_STORE);
+            return false;
+        }
+
+        if (player.isInsideZone(ZoneType.WATER) || player.isInWater()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_UNDER_WATER);
+            return false;
+        }
+
+        baitLocation = calculateBaitLocation();
+        if (!player.isInsideZone(ZoneType.FISHING) || (baitLocation == DEFAULT_BAIT_LOCATION)) {
+            if (!isFishing) {
+                player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
+            }
+            return false;
+        }
+        return true;
     }
 
     public void reelInWithReward() {
@@ -346,27 +338,12 @@ public class Fishing {
         int baitX = (int) (player.getX() + (cos * distance));
         int baitY = (int) (player.getY() + (sin * distance));
 
-        // search for fishing zone
-        FishingZone fishingZone = null;
-        for (Zone zone : ZoneManager.getInstance().getZones(player)) {
-            if (zone instanceof FishingZone) {
-                fishingZone = (FishingZone) zone;
-                break;
-            }
-        }
-        // search for water zone
-        WaterZone waterZone = null;
-        for (Zone zone : ZoneManager.getInstance().getZones(baitX, baitY)) {
-            if (zone instanceof WaterZone) {
-                waterZone = (WaterZone) zone;
-                break;
-            }
-        }
-
+        var fishingZone = ZoneEngine.getInstance().findFirstZone(player, FishingZone.class);
+        var waterZone = ZoneEngine.getInstance().findFirstZone(baitX, baitY, WaterZone.class);
         int baitZ = computeBaitZ(player, baitX, baitY, fishingZone, waterZone);
         if (baitZ == Integer.MIN_VALUE) {
             player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
-            return null;
+            return DEFAULT_BAIT_LOCATION;
         }
 
         return new Location(baitX, baitY, baitZ);

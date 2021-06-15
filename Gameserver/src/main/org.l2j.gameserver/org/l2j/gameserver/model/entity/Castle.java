@@ -53,7 +53,7 @@ import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.ResidenceTeleportZone;
 import org.l2j.gameserver.world.zone.type.SiegeZone;
@@ -67,7 +67,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Objects;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -93,22 +92,19 @@ public final class Castle extends AbstractResidence {
     private final List<Artefact> artefacts = new ArrayList<>(1);
     private final IntMap<CastleFunction> functions = new CHashIntMap<>();
 
-    int ownerId = 0;
-    private Siege siege = null;
-    private SiegeZone zone = null;
+    int ownerId;
+    private Siege siege;
+    private SiegeZone siegeZone;
     private ResidenceTeleportZone teleZone;
-    private Clan formerOwner = null;
+    private Clan formerOwner;
 
     private final CastleData data;
 
     public Castle(CastleData data){
         super(data.getId());
         setName(data.getName()); // tempfix
-
         this.data = data;
         load();
-        initResidenceZone();
-        spawnSideNpcs();
     }
 
     private void load() {
@@ -119,17 +115,8 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    private void initResidenceZone() {
-        for (CastleZone zone : ZoneManager.getInstance().getAllZones(CastleZone.class)) {
-            if (zone.getResidenceId() == getId()) {
-                setResidenceZone(zone);
-                break;
-            }
-        }
-    }
-
-    private void spawnSideNpcs() {
-        sideNpcs.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
+    public void spawnSideNpcs() {
+        sideNpcs.forEach(Npc::deleteMe);
         sideNpcs.clear();
 
         for (CastleSpawnHolder holder : getSideSpawns()) {
@@ -230,23 +217,19 @@ public final class Castle extends AbstractResidence {
     }
 
     public boolean checkIfInZone(int x, int y, int z) {
-        return getZone().isInsideZone(x, y, z);
+        return getSiegeZone().isInsideZone(x, y, z);
     }
 
     public boolean checkIfInZone(ILocational loc) {
-        return getZone().isInsideZone(loc);
+        return getSiegeZone().isInsideZone(loc);
     }
 
-    public SiegeZone getZone() {
-        if (isNull(zone)) {
-            for (SiegeZone zone : ZoneManager.getInstance().getAllZones(SiegeZone.class)) {
-                if (zone.getSiegeObjectId() == getId()) {
-                    this.zone = zone;
-                    break;
-                }
-            }
-        }
-        return zone;
+    public SiegeZone getSiegeZone() {
+        return siegeZone;
+    }
+
+    public void setSiegeZone(SiegeZone siegeZone) {
+        this.siegeZone = siegeZone;
     }
 
     @Override
@@ -256,7 +239,7 @@ public final class Castle extends AbstractResidence {
 
     public ResidenceTeleportZone getTeleZone() {
         if (isNull(teleZone)) {
-            for (ResidenceTeleportZone zone : ZoneManager.getInstance().getAllZones(ResidenceTeleportZone.class)) {
+            for (ResidenceTeleportZone zone : ZoneEngine.getInstance().getAllZones(ResidenceTeleportZone.class)) {
                 if (zone.getResidenceId() == getId()) {
                     teleZone = zone;
                     break;
@@ -271,7 +254,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public double getDistance(WorldObject obj) {
-        return getZone().getDistanceToZone(obj);
+        return getSiegeZone().getDistanceToZone(obj);
     }
 
     private void openCloseDoor(Player player, Door door, boolean open) {

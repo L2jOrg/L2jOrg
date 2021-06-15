@@ -27,7 +27,7 @@ import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 
@@ -38,14 +38,11 @@ import static java.util.Objects.isNull;
 /**
  * Small typo fix by Zoey76 24/02/2011
  */
-public class AdminZone implements IAdminCommandHandler
-{
-    private static final String[] ADMIN_COMMANDS =
-            {
-                    "admin_zone_check",
-                    "admin_zone_visual",
-                    "admin_zone_visual_clear"
-            };
+public class AdminZone implements IAdminCommandHandler {
+    private static final String[] ADMIN_COMMANDS = {
+        "admin_zone_check",
+        "admin_zone_visual",
+    };
 
     @Override
     public boolean useAdminCommand(String command, Player player)
@@ -90,82 +87,72 @@ public class AdminZone implements IAdminCommandHandler
             }
 
             final String next = st.nextToken();
-            if (next.equalsIgnoreCase("all"))
-            {
-                for (Zone zone : ZoneManager.getInstance().getZones(player))
-                {
-                    zone.visualizeZone(player.getZ());
-                }
-                for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(player))
-                {
-                    territory.visualizeZone(player.getZ());
+            if (next.equalsIgnoreCase("all")) {
+                ZoneEngine.getInstance().forEachZone(player, z -> z.visualizeZone(player));
+                for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(player)) {
+                    territory.visualizeZone(player);
                 }
                 showHtml(player);
             }
             else
             {
                 final int zoneId = Integer.parseInt(next);
-                ZoneManager.getInstance().getZoneById(zoneId).visualizeZone(player.getZ());
+                ZoneEngine.getInstance().getZoneById(zoneId).visualizeZone(player);
             }
-        }
-        else if (actualCommand.equalsIgnoreCase("admin_zone_visual_clear"))
-        {
-            ZoneManager.getInstance().clearDebugItems();
-            showHtml(player);
         }
         return true;
     }
 
-    private static void showHtml(Player activeChar)
-    {
-        final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/zone.htm");
-        final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
+    private static void showHtml(Player player) {
+        final var htmContent = HtmCache.getInstance().getHtm(player, "data/html/admin/zone.htm");
+        final var adminReply = new NpcHtmlMessage(0, 1);
         adminReply.setHtml(htmContent);
-        adminReply.replace("%PEACE%", activeChar.isInsideZone(ZoneType.PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%PVP%", activeChar.isInsideZone(ZoneType.PVP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SIEGE%", activeChar.isInsideZone(ZoneType.SIEGE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%CASTLE%", activeChar.isInsideZone(ZoneType.CASTLE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%FORT%", activeChar.isInsideZone(ZoneType.FORT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%HQ%", activeChar.isInsideZone(ZoneType.HQ) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%CLANHALL%", activeChar.isInsideZone(ZoneType.CLAN_HALL) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%LAND%", activeChar.isInsideZone(ZoneType.LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOLAND%", activeChar.isInsideZone(ZoneType.NO_LANDING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOSUMMON%", activeChar.isInsideZone(ZoneType.NO_SUMMON_FRIEND) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%WATER%", activeChar.isInsideZone(ZoneType.WATER) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%FISHING%", activeChar.isInsideZone(ZoneType.FISHING) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SWAMP%", activeChar.isInsideZone(ZoneType.SWAMP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%DANGER%", activeChar.isInsideZone(ZoneType.DANGER_AREA) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%NOSTORE%", activeChar.isInsideZone(ZoneType.NO_STORE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%SCRIPT%", activeChar.isInsideZone(ZoneType.SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
-        adminReply.replace("%TAX%", (activeChar.isInsideZone(ZoneType.TAX) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
+        adminReply.replace("%PEACE%", isInsideZoneHtml(player, ZoneType.PEACE));
+        adminReply.replace("%PVP%", isInsideZoneHtml(player, ZoneType.PVP));
+        adminReply.replace("%SIEGE%", isInsideZoneHtml(player, ZoneType.SIEGE));
+        adminReply.replace("%CASTLE%", isInsideZoneHtml(player, ZoneType.CASTLE));
+        adminReply.replace("%FORT%", isInsideZoneHtml(player, ZoneType.FORT));
+        adminReply.replace("%HQ%", isInsideZoneHtml(player, ZoneType.HQ));
+        adminReply.replace("%CLANHALL%", isInsideZoneHtml(player, ZoneType.CLAN_HALL));
+        adminReply.replace("%LAND%", isInsideZoneHtml(player, ZoneType.LANDING));
+        adminReply.replace("%NOLAND%", isInsideZoneHtml(player, ZoneType.NO_LANDING));
+        adminReply.replace("%NOSUMMON%", isInsideZoneHtml(player, ZoneType.NO_SUMMON_FRIEND));
+        adminReply.replace("%WATER%", isInsideZoneHtml(player, ZoneType.WATER));
+        adminReply.replace("%FISHING%", isInsideZoneHtml(player, ZoneType.FISHING));
+        adminReply.replace("%SWAMP%", isInsideZoneHtml(player, ZoneType.SWAMP));
+        adminReply.replace("%DANGER%", isInsideZoneHtml(player, ZoneType.DANGER_AREA));
+        adminReply.replace("%NOSTORE%", isInsideZoneHtml(player, ZoneType.NO_STORE));
+        adminReply.replace("%SCRIPT%", isInsideZoneHtml(player, ZoneType.SCRIPT));
+        adminReply.replace("%TAX%", isInsideZoneHtml(player, ZoneType.TAX));
 
         final StringBuilder zones = new StringBuilder(100);
-        for (Zone zone : ZoneManager.getInstance().getZones(activeChar))
-        {
-            if (zone.getName() != null)
-            {
-                zones.append(zone.getName());
-                if (zone.getId() < 300000)
-                {
-                    zones.append(" (");
-                    zones.append(zone.getId());
-                    zones.append(")");
-                }
-                zones.append("<br1>");
-            }
-            else
-            {
-                zones.append(zone.getId());
-            }
-            zones.append(" ");
-        }
-        for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+        ZoneEngine.getInstance().forEachZone(player, zone -> appendZoneInfo(zones, zone));
+        for (SpawnTerritory territory : ZoneEngine.getInstance().getSpawnTerritories(player))
         {
             zones.append(territory.getName());
             zones.append("<br1>");
         }
         adminReply.replace("%ZLIST%", zones.toString());
-        activeChar.sendPacket(adminReply);
+        player.sendPacket(adminReply);
+    }
+
+    private static String isInsideZoneHtml(Player player, ZoneType peace) {
+        return player.isInsideZone(peace) ? "<font color=\"LEVEL\">YES</font>" : "NO";
+    }
+
+    private static void appendZoneInfo(StringBuilder zones, Zone zone) {
+        if (zone.getName() != null) {
+            zones.append(zone.getName());
+            if (zone.getId() < 300000) {
+                zones.append(" (");
+                zones.append(zone.getId());
+                zones.append(")");
+            }
+            zones.append("<br1>");
+        } else {
+            zones.append(zone.getId());
+        }
+        zones.append(" ");
     }
 
     private static void getGeoRegionXY(Player activeChar)

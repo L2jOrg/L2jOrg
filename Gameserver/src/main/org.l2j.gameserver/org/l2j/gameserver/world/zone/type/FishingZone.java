@@ -20,66 +20,88 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.Fishing;
-import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.fishing.ExAutoFishAvailable;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
-import java.lang.ref.WeakReference;
+import java.util.concurrent.ScheduledFuture;
 
-import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * A fishing zone
  *
  * @author durgus
+ * @author JoeAlisson
  */
 public class FishingZone extends Zone {
+
+    private final Object taskLocker = new Object();
+    private ScheduledFuture<?> task;
     public FishingZone(int id) {
         super(id);
     }
 
     @Override
     protected void onEnter(Creature creature) {
-        if (isPlayer(creature) && (Config.ALLOW_FISHING || creature.canOverrideCond(PcCondOverride.ZONE_CONDITIONS)) && !creature.isInsideZone(ZoneType.FISHING)) {
+        if (Config.ALLOW_FISHING && creature instanceof Player player && !player.isInsideZone(ZoneType.FISHING)) {
+            player.setInsideZone(ZoneType.FISHING, true);
+            checkFishing(player);
 
-            final WeakReference<Player> weakPlayer = new WeakReference<>(creature.getActingPlayer());
-
-            ThreadPool.execute(new Runnable() {
-                @Override
-                public void run() {
-                    final Player player = weakPlayer.get();
-
-                    if (nonNull(player)) {
-
-                        if (player.isInsideZone(ZoneType.FISHING)) {
-
-                            final Fishing fishing = player.getFishing();
-
-                            if (fishing.canFish() && !fishing.isFishing()) {
-                                player.sendPacket( fishing.isAtValidLocation() ? ExAutoFishAvailable.YES : ExAutoFishAvailable.NO);
-                            }
-                            ThreadPool.schedule(this, 1500);
-                        } else {
-                            player.sendPacket(ExAutoFishAvailable.NO);
-                        }
-                    }
+            synchronized (taskLocker) {
+                if(task == null) {
+                    task = ThreadPool.scheduleAtFixedRate(new FishingTask(), 1500, 1500);
                 }
-            });
+            }
+        }
+    }
 
-            creature.setInsideZone(ZoneType.FISHING, true);
+    private void checkFishing(Player player) {
+        var fishing = player.getFishing();
+        if(fishing.canFish() && !fishing.isFishing()) {
+            player.sendPacket(ExAutoFishAvailable.YES);
+        } else  {
+            player.sendPacket(ExAutoFishAvailable.NO);
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.FISHING, false);
-            character.sendPacket(ExAutoFishAvailable.NO);
+    protected void onExit(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.FISHING, false);
+            creature.sendPacket(ExAutoFishAvailable.NO);
+
+            synchronized (taskLocker) {
+                if(isEmpty() && task != null) {
+                    task.cancel(false);
+                    task = null;
+                }
+            }
+        }
+    }
+
+    private class FishingTask implements Runnable {
+        @Override
+        public void run() {
+            forEachPlayer(FishingZone.this::checkFishing);
+        }
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            return new FishingZone(id);
+        }
+
+        @Override
+        public String type() {
+            return "fishing";
         }
     }
 }

@@ -27,15 +27,11 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.util.List;
-
 import static org.l2j.gameserver.util.GameUtils.isPet;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Kerberos, Zoey76
@@ -50,56 +46,43 @@ public class PetFood implements IItemHandler
 			playable.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 			return false;
 		}
-		
-		final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
-		if (skills != null)
-		{
-			skills.forEach(holder -> useFood(playable, holder.getSkillId(), holder.getLevel(), item));
-		}
+
+		item.forEachSkill(ItemSkillType.NORMAL, s -> useFood(playable, s.getSkillId(), s.getLevel(), item));
 		return true;
 	}
 	
-	private boolean useFood(Playable activeChar, int skillId, int skillLevel, Item item)
-	{
+	private void useFood(Playable playable, int skillId, int skillLevel, Item item) {
 		final Skill skill = SkillEngine.getInstance().getSkill(skillId, skillLevel);
-		if (skill != null)
-		{
-			if (isPet(activeChar))
-			{
-				final Pet pet = (Pet) activeChar;
-				if (pet.destroyItem("Consume", item.getObjectId(), 1, null, false))
-				{
-					pet.broadcastPacket(new MagicSkillUse(pet, pet, skillId, skillLevel, 0, 0));
-					skill.applyEffects(pet, pet);
-					pet.broadcastStatusUpdate();
-					if (pet.isHungry())
-					{
-						pet.sendPacket(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
-					}
-					return true;
-				}
+		if (skill != null) {
+			if (playable instanceof Pet pet) {
+				consumeItem(skillId, skillLevel, item, skill, pet);
 			}
-			else if (isPlayer(activeChar))
-			{
-				final Player player = activeChar.getActingPlayer();
-				if (player.isMounted())
-				{
-					final List<Integer> foodIds = PetDataTable.getInstance().getPetTemplate(player.getMountNpcId()).getFood();
-					if (foodIds.contains(item.getId()))
-					{
-						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
-						{
-							player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
-							skill.applyEffects(player, player);
-							return true;
-						}
-					}
-				}
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-				sm.addItemName(item);
-				player.sendPacket(sm);
+			else if (playable instanceof Player player) {
+				feedPet(skillId, skillLevel, item, skill, player);
 			}
 		}
-		return false;
+	}
+
+	private void feedPet(int skillId, int skillLevel, Item item, Skill skill, Player player) {
+		if (player.isMounted()) {
+			var foodIds = PetDataTable.getInstance().getPetTemplate(player.getMountNpcId()).getFood();
+			if (foodIds.contains(item.getId()) && player.destroyItem("Consume", item.getObjectId(), 1, null, false)) {
+				player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
+				skill.applyEffects(player, player);
+			}
+		} else {
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS));
+		}
+	}
+
+	private void consumeItem(int skillId, int skillLevel, Item item, Skill skill, Pet pet) {
+		if (pet.destroyItem("Consume", item.getObjectId(), 1, null, false)) {
+			pet.broadcastPacket(new MagicSkillUse(pet, pet, skillId, skillLevel, 0, 0));
+			skill.applyEffects(pet, pet);
+			pet.broadcastStatusUpdate();
+			if (pet.isHungry()) {
+				pet.sendPacket(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
+			}
+		}
 	}
 }

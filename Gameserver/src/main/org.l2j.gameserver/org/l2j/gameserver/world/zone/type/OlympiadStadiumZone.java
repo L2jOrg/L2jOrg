@@ -19,16 +19,15 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.olympiad.ExOlympiadMatchEnd;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
+import org.w3c.dom.Node;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
@@ -40,19 +39,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author durgus, DS
  */
 public class OlympiadStadiumZone extends SpawnZone {
-    private final List<Location> spectatorLocations = new ArrayList<>(1);
 
-    public OlympiadStadiumZone(int id) {
+    private OlympiadStadiumZone(int id) {
         super(id);
-    }
-
-    @Override
-    public void parseLoc(int x, int y, int z, String type) {
-        if (nonNull(type) && type.equals("spectatorSpawn")) {
-            spectatorLocations.add(new Location(x, y, z));
-        } else {
-            super.parseLoc(x, y, z, type);
-        }
     }
 
     @Override
@@ -60,7 +49,7 @@ public class OlympiadStadiumZone extends SpawnZone {
         if (isPlayable(creature)) {
             final Player player = creature.getActingPlayer();
             if (nonNull(player)) {
-                if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode()) {
+                if (!player.isInOlympiadMode()) {
                     ThreadPool.execute(new KickPlayer(player));
                 } else {
                     final Summon pet = player.getPet();
@@ -79,17 +68,25 @@ public class OlympiadStadiumZone extends SpawnZone {
         }
     }
 
-    private static final class KickPlayer implements Runnable {
-        private final Player player;
-
-        KickPlayer(Player player) {
-            this.player = player;
-        }
+    private record KickPlayer(Player player) implements Runnable {
 
         @Override
         public void run() {
             player.getServitors().values().forEach(s -> s.unSummon(player));
             player.teleToLocation(TeleportWhereType.TOWN, null);
+        }
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            return new OlympiadStadiumZone(id);
+        }
+
+        @Override
+        public String type() {
+            return "olympiad-stadium";
         }
     }
 }

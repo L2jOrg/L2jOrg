@@ -64,7 +64,8 @@ public final class BroochListener implements PlayerInventoryListener {
         for (InventorySlot slot : InventorySlot.brochesJewel()) {
             var item = inventory.getPaperdollItem(slot);
             if(nonNull(item) && hasSpecialEffect(item)) {
-                var itemLevel = item.getSkills(ItemSkillType.NORMAL).stream().mapToInt(SkillHolder::getLevel).max().orElse(-1);
+                var skill = item.getFirstSkill(ItemSkillType.NORMAL, (s1, s2) -> s2.getLevel() - s1.getLevel());
+                var itemLevel = skill != null ? skill.getLevel() : -1;
                 if(jewel == 0 || itemLevel > currentLevel) {
                     jewel = item.getId();
                     currentLevel = itemLevel;

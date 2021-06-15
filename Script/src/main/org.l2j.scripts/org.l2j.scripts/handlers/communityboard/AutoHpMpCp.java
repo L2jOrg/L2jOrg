@@ -35,7 +35,7 @@ import org.l2j.gameserver.model.events.annotations.RegisterType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import org.l2j.gameserver.model.events.impl.server.OnServerShutDown;
-import org.l2j.gameserver.model.item.EtcItem;
+import org.l2j.gameserver.engine.item.EtcItem;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

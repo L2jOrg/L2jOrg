@@ -1492,8 +1492,7 @@ public final class Config {
 
     private static class IPConfigData extends GameXmlReader {
         private static final List<String> _subnets = new ArrayList<>(5);
-        private static final List<String>
-                _hosts = new ArrayList<>(5);
+        private static final List<String> _hosts = new ArrayList<>(5);
 
         public IPConfigData() {
             load();

@@ -21,51 +21,42 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
-import org.l2j.gameserver.world.zone.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.zone.TaskZoneSettings;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
+import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import static java.util.Objects.*;
-import static org.l2j.commons.util.Util.isInteger;
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * another type of damage zone with skills
  *
  * @author kerberos
+ * @author JoeAlisson
  */
 public final class EffectZone extends Zone {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(EffectZone.class);
-
     private final Object taskLock = new Object();
     private boolean bypassConditions;
-    private List<SkillHolder> skills;
-    private int chance;
-    private int initialDelay;
-    private int reuse;
-    private boolean isShowDangerIcon;
+    private final List<Skill> skills = new ArrayList<>();
+    private float chance;
+    private int startTime;
+    private int delay;
+    private boolean showDangerIcon;
 
-    public EffectZone(int id) {
+    private EffectZone(int id) {
         super(id);
-
-        chance = 100;
-        reuse = 30000;
-
-        setTargetType(InstanceType.Playable); // default only playable
-
-        isShowDangerIcon = true;
-        AbstractZoneSettings settings = requireNonNullElseGet(ZoneManager.getSettings(getName()), TaskZoneSettings::new);
-        setSettings(settings);
+        setSettings(new TaskZoneSettings());
     }
 
     @Override
@@ -73,60 +64,33 @@ public final class EffectZone extends Zone {
         return (TaskZoneSettings) super.getSettings();
     }
 
+    public int getSkillLevel(int skillId) {
+        for (Skill skill : skills) {
+            if(skill.getId() == skillId) {
+                return skill.getLevel();
+            }
+        }
+        return 0;
+    }
+
     @Override
-    public void setParameter(String name, String value) {
-        switch (name) {
-            case "chance" -> chance = Integer.parseInt(value);
-            case "initialDelay" -> initialDelay = Integer.parseInt(value);
-            case "reuse" -> reuse = Integer.parseInt(value);
-            case "bypassSkillConditions" -> bypassConditions = Boolean.parseBoolean(value);
-            case "maxDynamicSkillCount" -> skills = new ArrayList<>(Integer.parseInt(value));
-            case "showDangerIcon" -> isShowDangerIcon = Boolean.parseBoolean(value);
-            case "skillIdLvl" -> parseSkills(value);
-            default -> super.setParameter(name, value);
-        }
-    }
-
-    private void parseSkills(String value) {
-        final String[] propertySplit = value.split(";");
-
-        skills = Arrays.stream(propertySplit)
-                .map(s -> s.split("-"))
-                .filter(this::validSkillProperty)
-                .map(s -> new SkillHolder(Integer.parseInt(s[0]), Integer.parseInt(s[1])))
-                .collect(Collectors.toList());
-    }
-
-    private boolean validSkillProperty(String[] skillIdLvl) {
-        if (skillIdLvl.length != 2 || !isInteger(skillIdLvl[0]) || !isInteger(skillIdLvl[1])) {
-            LOGGER.warn("invalid config property -> skillsIdLvl '{}'", (Object) skillIdLvl);
-            return false;
-        }
-        return true;
-    }
-
-    public int getSkillLevel(int skillId)
-    {
-        if ((skills == null) || skillId > skills.size() || skills.get(skillId) == null)
-        {
-            return 0;
-        }
-        return skills.get(skillId).getLevel();
+    protected boolean isAffected(Creature creature) {
+        return super.isAffected(creature) && isPlayable(creature);
     }
 
     @Override
     protected void onEnter(Creature creature) {
-        if (nonNull(skills) && isNull(getSettings().getTask())) {
+        if (!skills.isEmpty() && isNull(getSettings().getTask())) {
             synchronized (taskLock) {
                 if (getSettings().getTask() == null) {
-                    getSettings().setTask(ThreadPool.scheduleAtFixedRate(new ApplySkill(), initialDelay, reuse));
+                    getSettings().setTask(ThreadPool.scheduleAtFixedRate(new ApplySkill(), startTime, delay));
                 }
             }
         }
 
         if (isPlayer(creature)) {
             creature.setInsideZone(ZoneType.ALTERED, true);
-            if (isShowDangerIcon) {
+            if (showDangerIcon) {
                 creature.setInsideZone(ZoneType.DANGER_AREA, true);
                 creature.sendPacket(new EtcStatusUpdate(creature.getActingPlayer()));
             }
@@ -137,7 +101,7 @@ public final class EffectZone extends Zone {
     protected void onExit(Creature creature) {
         if (isPlayer(creature)) {
             creature.setInsideZone(ZoneType.ALTERED, false);
-            if (isShowDangerIcon) {
+            if (showDangerIcon) {
                 creature.setInsideZone(ZoneType.DANGER_AREA, false);
                 if (!creature.isInsideZone(ZoneType.DANGER_AREA)) {
                     creature.sendPacket(new EtcStatusUpdate(creature.getActingPlayer()));
@@ -151,18 +115,13 @@ public final class EffectZone extends Zone {
     }
 
     private final class ApplySkill implements Runnable {
-        ApplySkill() {
-            if (isNull(skills)) {
-                throw new IllegalStateException("No skills defined.");
-            }
-        }
 
         @Override
         public void run() {
             if (isEnabled()) {
-                skills.stream()
-                    .map(SkillHolder::getSkill)
-                    .forEach(s -> forEachCreature(c -> s.activateSkill(c, c), c -> canApplySkill(c) && checkSkillCondition(s, c)));
+                for (Skill skill : skills) {
+                    forEachCreature(c -> skill.activateSkill(c, c),  c -> canApplySkill(c, skill));
+                }
             }
         }
 
@@ -170,8 +129,41 @@ public final class EffectZone extends Zone {
             return nonNull(skill) && (bypassConditions || skill.checkCondition(creature, creature)) && creature.getAffectedSkillLevel(skill.getId()) < skill.getLevel();
         }
 
-        private boolean canApplySkill(Creature creature) {
-            return nonNull(creature) && !creature.isDead() && Rnd.chance(chance);
+        private boolean canApplySkill(Creature creature, Skill skill) {
+            return nonNull(creature) && !creature.isDead() && Rnd.chance(chance) && checkSkillCondition(skill, creature);
+        }
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var zone = new EffectZone(id);
+            for(var node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+                if(node.getNodeName().equals("attributes")) {
+                    parseAttributes(zone, node, reader);
+                } else if(node.getNodeName().equals("skill")) {
+                    var skill = reader.parseSkillInfo(node);
+                    if(nonNull(skill)) {
+                        zone.skills.add(skill);
+                    }
+                }
+            }
+            return zone;
+        }
+
+        private void parseAttributes(EffectZone zone, Node node, GameXmlReader reader) {
+            var attr = node.getAttributes();
+            zone.chance = reader.parseFloat(attr, "chance");
+            zone.bypassConditions = reader.parseBoolean(attr, "bypass-conditions");
+            zone.showDangerIcon = reader.parseBoolean(attr, "show-danger-icon");
+            zone.startTime = reader.parseInt(attr, "start-time");
+            zone.delay = reader.parseInt(attr, "delay");
+        }
+
+        @Override
+        public String type() {
+            return "effect";
         }
     }
 }

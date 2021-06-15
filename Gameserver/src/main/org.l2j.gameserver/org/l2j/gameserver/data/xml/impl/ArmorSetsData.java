@@ -21,7 +21,7 @@ package org.l2j.gameserver.data.xml.impl;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;

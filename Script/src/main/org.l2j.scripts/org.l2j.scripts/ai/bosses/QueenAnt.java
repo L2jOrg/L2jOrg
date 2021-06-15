@@ -39,7 +39,7 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 import java.util.Set;
@@ -90,7 +90,7 @@ public final class QueenAnt extends AbstractNpcAI
 		addAggroRangeEnterId(MOBS);
 		addFactionCallId(NURSE);
 		
-		_zone = ZoneManager.getInstance().getZoneById(12012);
+		_zone = ZoneEngine.getInstance().getZoneById(12012);
 		final var info = GrandBossManager.getInstance().getBossData(QUEEN);
 		final var status = GrandBossManager.getInstance().getBossStatus(QUEEN);
 		if (status == BossStatus.DEAD)

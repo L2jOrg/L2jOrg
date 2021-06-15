@@ -30,7 +30,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class WarehouseCacheManager {
     private final Map<Player, Long> _cachedWh = new ConcurrentHashMap<>();
-    private final long _cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000;
+    private final long cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000L;
 
     private WarehouseCacheManager() {
         ThreadPool.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
@@ -61,9 +61,8 @@ public class WarehouseCacheManager {
         public void run() {
             final long cTime = System.currentTimeMillis();
             for (Player pc : _cachedWh.keySet()) {
-                if ((cTime - _cachedWh.get(pc)) > _cacheTime) {
+                if ((cTime - _cachedWh.get(pc)) > cacheTime) {
                     pc.clearWarehouse();
-                    _cachedWh.remove(pc);
                 }
             }
         }

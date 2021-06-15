@@ -21,7 +21,6 @@ package org.l2j.gameserver.model.actor.stat;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.LevelData;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Party;
@@ -29,8 +28,6 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
@@ -106,21 +103,8 @@ public class PlayerStats extends PlayableStats {
         double bonusSp = 1.;
 
         if (useBonuses) {
-            if (activeChar.isFishing()) {
-                // rod fishing skills
-                final Item rod = activeChar.getActiveWeaponInstance();
-                if ((rod != null) && (rod.getItemType() == WeaponType.FISHING_ROD) && (rod.getTemplate().getAllSkills() != null)) {
-                    for (ItemSkillHolder s : rod.getTemplate().getAllSkills()) {
-                        if (s.getSkill().getId() == FANCY_FISHING_ROD_SKILL) {
-                            bonusExp *= 1.5;
-                            bonusSp *= 1.5;
-                        }
-                    }
-                }
-            } else {
-                bonusExp = getExpBonusMultiplier();
-                bonusSp = getSpBonusMultiplier();
-            }
+            bonusExp = getExpBonusMultiplier();
+            bonusSp = getSpBonusMultiplier();
         }
 
         addToExp *= bonusExp;
@@ -198,7 +182,7 @@ public class PlayerStats extends PlayableStats {
 
     @Override
     public final boolean addLevel(byte value) {
-        if ((getLevel() + value) > LevelData.getInstance().getMaxLevel()) {
+        if (getLevel() + value > LevelData.getInstance().getMaxLevel()) {
             return false;
         }
 
@@ -212,10 +196,8 @@ public class PlayerStats extends PlayableStats {
             player.notifyFriends(FriendStatus.LEVEL);
         }
 
-        // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(player, oldLevel, getLevel()), player);
 
-        // Give AutoGet skills and all normal skills if Auto-Learn is activated.
         player.rewardSkills();
 
         if (player.getClan() != null) {
@@ -225,37 +207,31 @@ public class PlayerStats extends PlayableStats {
             player.getParty().recalculatePartyLevel(); // Recalculate the party level
         }
 
-        // Maybe add some skills when player levels up in transformation.
         player.getTransformation().ifPresent(transform -> transform.onLevelUp(player));
 
-        // Synchronize level with pet if possible.
-        final Pet sPet = player.getPet();
-        if (sPet != null) {
-            if (sPet.getPetData().isSynchLevel() && (sPet.getLevel() != getLevel())) {
-                final byte availableLevel = (byte) Math.min(sPet.getPetData().getMaxLevel(), getLevel());
-                sPet.getStats().setLevel(availableLevel);
-                sPet.getStats().getExpForLevel(availableLevel);
-                sPet.setCurrentHp(sPet.getMaxHp());
-                sPet.setCurrentMp(sPet.getMaxMp());
-                sPet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
-                sPet.updateAndBroadcastStatus(1);
-            }
-        }
+        syncPetLevel(player);
 
         if (getLevel() >= 40) {
             player.initElementalSpirits();
         }
         player.updateCharacteristicPoints();
         player.broadcastStatusUpdate();
-        // Update the overloaded status of the Player
         player.refreshOverloaded(true);
-        // Send a Server->Client packet UserInfo to the Player
-        player.sendPacket(new UserInfo(player));
-        // Send acquirable skill list
-        player.sendPacket(new AcquireSkillList(player));
-        player.sendPacket(new ExVoteSystemInfo(player));
-        player.sendPacket(new ExOneDayReceiveRewardList(player, true));
+        player.sendPackets(new UserInfo(player), new AcquireSkillList(player), new ExVoteSystemInfo(player), new ExOneDayReceiveRewardList(player, true));
         return levelIncreased;
+    }
+
+    private void syncPetLevel(Player player) {
+        final Pet sPet = player.getPet();
+        if (sPet != null && sPet.getPetData().isSyncLevel() && sPet.getLevel() != getLevel()) {
+            final byte availableLevel = (byte) Math.min(sPet.getPetData().getMaxLevel(), getLevel());
+            sPet.getStats().setLevel(availableLevel);
+            sPet.getStats().getExpForLevel(availableLevel);
+            sPet.setCurrentHp(sPet.getMaxHp());
+            sPet.setCurrentMp(sPet.getMaxMp());
+            sPet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
+            sPet.updateAndBroadcastStatus(1);
+        }
     }
 
     @Override

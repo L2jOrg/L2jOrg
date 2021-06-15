@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.ScriptZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
@@ -73,7 +73,7 @@ public class FireCamp extends AbstractNpcAI {
             getFireCampInstances().forEach(fireCampNpc -> {
                 // LOGGER.info("Registering territory {} for Npc {}", "varka_camp_" + index, fireCampNpc);
                 try {
-                    final int zoneId = ZoneManager.getInstance().addCylinderZone(ScriptZone.class , "varka_camp_" + index, fireCampNpc.getLocation(), 70);
+                    final int zoneId = ZoneEngine.getInstance().addCylinderZone(ScriptZone.class , "varka_camp_" + index, fireCampNpc.getLocation(), 70);
                     addEnterZoneId(zoneId);
                     zoneIdNPC.put(zoneId, fireCampNpc);
                 } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {

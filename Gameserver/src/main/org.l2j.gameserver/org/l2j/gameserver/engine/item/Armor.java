@@ -16,10 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.item;
+package org.l2j.gameserver.engine.item;
 
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.EquipableItem;
 import org.l2j.gameserver.model.item.type.ArmorType;
-import org.l2j.gameserver.model.item.type.CrystalType;
 
 import static org.l2j.gameserver.model.item.BodyPart.*;
 
@@ -59,16 +60,6 @@ public final class Armor extends ItemTemplate implements EquipableItem {
     @Override
     public final int getItemMask() {
         return type.mask();
-    }
-
-    @Override
-    public void setCrystalType(CrystalType type) {
-        this.crystalType = type;
-    }
-
-    @Override
-    public void setCrystalCount(int count) {
-        this.crystalCount = count;
     }
 
     public void setEnchantable(Boolean enchantable) {

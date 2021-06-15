@@ -126,7 +126,7 @@ public final class WyvernManager extends AbstractNpcAI {
 		{
 			case CASTLE:
 			{
-				return npc.getCastle().getZone().isActive();
+				return npc.getCastle().getSiegeZone().isActive();
 			}
 			default:
 			{

@@ -40,7 +40,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.PetInventory;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -49,13 +49,11 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.ZoneManager;
-import org.l2j.gameserver.world.zone.ZoneRegion;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Arrays;
 
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 public abstract class Summon extends Playable {
@@ -368,9 +366,8 @@ public abstract class Summon extends Playable {
                 }
             }
 
-            final ZoneRegion oldRegion = ZoneManager.getInstance().getRegion(this);
             decayMe();
-            oldRegion.removeFromZones(this);
+            ZoneEngine.getInstance().removeFromZones(this);
 
             setTarget(null);
             if (nonNull(owner)) {
@@ -470,88 +467,88 @@ public abstract class Summon extends Playable {
      */
     @Override
     public boolean useSkill(Skill skill, Item item, boolean forceUse, boolean dontMove) {
-        // Null skill, dead summon or null owner are reasons to prevent casting.
-        if ((skill == null) || isDead() || (owner == null)) {
+        if (!checkUseSkillState(skill)) {
             return false;
         }
 
-        // Check if the skill is active
-        if (skill.isPassive()) {
-            // just ignore the passive skill request. why does the client send it anyway ??
+        final WorldObject target = getTarget(skill, forceUse, dontMove);
+
+        if (!validateTarget(skill, forceUse, target)) {
             return false;
         }
 
-        // If a skill is currently being used
-        if (isCastingNow(SkillCaster::isAnyNormalType)) {
-            return false;
-        }
+        getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target);
+        return true;
+    }
 
-        // Get the target for the skill
-        final WorldObject target;
-        if (skill.getTargetType() == TargetType.OWNER_PET) {
-            target = owner;
-        } else {
-            final WorldObject currentTarget = owner.getTarget();
-            if (currentTarget != null)
-            {
-                target = skill.getTarget(this, forceUse && (!GameUtils.isPlayable(currentTarget) || !currentTarget.isInsideZone(ZoneType.PEACE)), dontMove, false);
-                final Player currentTargetPlayer = currentTarget.getActingPlayer();
-                if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(owner))
-                {
-                    sendPacket(SystemMessageId.INVALID_TARGET);
-                    return false;
-                }
-            }
-            else
-            {
-                target = skill.getTarget(this, forceUse, dontMove, false);
-            }
-        }
-
-        // Check the validity of the target
+    private boolean validateTarget(Skill skill, boolean forceUse, WorldObject target) {
         if (target == null) {
             sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
             return false;
         }
 
-        // Check if this skill is enabled (e.g. reuse time)
+        var currentTargetPlayer = target.getActingPlayer();
+        if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(owner)) {
+            sendPacket(SystemMessageId.INVALID_TARGET);
+            return false;
+        }
+
+        if (!skill.checkCondition(this, target)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+
+        if (skill.isBad() && owner.isInOlympiadMode() && !owner.isOlympiadStart()) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+        return true;
+    }
+
+    private WorldObject getTarget(Skill skill, boolean forceUse, boolean dontMove) {
+        final WorldObject target;
+        if (skill.getTargetType() == TargetType.OWNER_PET) {
+            target = owner;
+        } else {
+            final WorldObject currentTarget = owner.getTarget();
+            if (currentTarget != null) {
+                target = skill.getTarget(this, forceUse && (!GameUtils.isPlayable(currentTarget) || !currentTarget.isInsideZone(ZoneType.PEACE)), dontMove, false);
+            }
+            else {
+                target = skill.getTarget(this, forceUse, dontMove, false);
+            }
+        }
+        return target;
+    }
+
+    private boolean checkUseSkillState(Skill skill) {
+        if (skill == null || isDead() || (owner == null)) {
+            return false;
+        }
+
+        if (skill.isPassive()) {
+            return false;
+        }
+
+        if (isCastingNow(SkillCaster::isAnyNormalType)) {
+            return false;
+        }
+
         if (isSkillDisabled(skill)) {
             sendPacket(SystemMessageId.THAT_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING);
             return false;
         }
 
-        // Check if the summon has enough MP
         if (getCurrentMp() < (getStats().getMpConsume(skill) + getStats().getMpInitialConsume(skill))) {
-            // Send a System Message to the caster
             sendPacket(SystemMessageId.NOT_ENOUGH_MP);
             return false;
         }
 
-        // Check if the summon has enough HP
         if (getCurrentHp() <= skill.getHpConsume()) {
-            // Send a System Message to the caster
             sendPacket(SystemMessageId.NOT_ENOUGH_HP);
             return false;
         }
 
-        // Check if all casting conditions are completed
-        if (!skill.checkCondition(this, target)) {
-            // Send a Server->Client packet ActionFailed to the Player
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        // Check if this is bad magic skill
-        if (skill.isBad()) {
-            // If Player is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
-            if (owner.isInOlympiadMode() && !owner.isOlympiadStart()) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                return false;
-            }
-        }
-
-        // Notify the AI with AI_INTENTION_CAST and target
-        getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target);
         return true;
     }
 
@@ -743,43 +740,15 @@ public abstract class Summon extends Playable {
      * @return {@code true} if the summon can attack, {@code false} otherwise
      */
     public final boolean canAttack(WorldObject target, boolean ctrlPressed) {
-        if (isNull(target) || isAttackingDisabled() || isNull(owner)  || (this == target) || (owner == target)) {
+        if (isAttackingDisabled() || !checkAttackingConditions(target)) {
             return false;
         }
 
-        // Sin eater, Big Boom, Wyvern can't attack with attack button.
-        final int npcId = getId();
-        if (Arrays.binarySearch(PASSIVE_SUMMONS, npcId) >= 0) {
-            owner.sendPacket(ActionFailed.STATIC_PACKET);
+        if (!checkAttackState()) {
             return false;
         }
 
-        if (isBetrayed()) {
-            sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (GameUtils.isPet(this) && ((getLevel() - owner.getLevel()) > 20)) {
-            sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (owner.isInOlympiadMode() && !owner.isOlympiadStart()) {
-            // If owner is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
-            owner.sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (owner.isSiegeFriend(target)) {
-            sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
-            sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        }
-
-        if (!owner.getAccessLevel().allowPeaceAttack() && owner.isInsidePeaceZone(this, target)) {
-            sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
+        if (!checkAttackZone(target)) {
             return false;
         }
 
@@ -798,6 +767,55 @@ public abstract class Summon extends Playable {
 
         // Siege golems AI doesn't support attacking other than doors/walls at the moment.
         return !GameUtils.isDoor(target) || (getTemplate().getRace() == Race.SIEGE_WEAPON);
+    }
+
+    private boolean checkAttackingConditions(WorldObject target) {
+        if(target == null || this == target || owner == null || owner == target) {
+            return false;
+        }
+        // Sin eater, Big Boom, Wyvern can't attack with attack button.
+        final int npcId = getId();
+        if (Arrays.binarySearch(PASSIVE_SUMMONS, npcId) >= 0) {
+            owner.sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean checkAttackZone(WorldObject target) {
+        if (owner.isInOlympiadMode() && !owner.isOlympiadStart()) {
+            // If owner is in Olympiad and the match isn't already start, send a Server->Client packet ActionFailed
+            owner.sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+
+        if (owner.isSiegeFriend(target)) {
+            sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+
+        if (!owner.getAccessLevel().allowPeaceAttack() && owner.isInsidePeaceZone(this, target)) {
+            sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean checkAttackState() {
+        if (isBetrayed()) {
+            sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+
+        if (GameUtils.isPet(this) && ((getLevel() - owner.getLevel()) > 20)) {
+            sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+        return true;
     }
 
 
