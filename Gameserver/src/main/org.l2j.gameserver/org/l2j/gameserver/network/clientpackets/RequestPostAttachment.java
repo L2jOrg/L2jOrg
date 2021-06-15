@@ -36,6 +36,8 @@ import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+
 /**
  * @author Migi, DS
  */
@@ -152,7 +154,7 @@ public final class RequestPostAttachment extends ClientPacket {
         }
 
         // Proceed to the transfer
-        final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+        final InventoryUpdate playerIU =  new InventoryUpdate();
         for (Item item : attachments.getItems()) {
             if (item.getOwnerId() != mail.getSender()) {
                 GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get item with owner != sender !");
@@ -165,26 +167,15 @@ public final class RequestPostAttachment extends ClientPacket {
                 return;
             }
 
-            if (playerIU != null) {
-                if (newItem.getCount() > count) {
-                    playerIU.addModifiedItem(newItem);
-                } else {
-                    playerIU.addNewItem(newItem);
-                }
+            if (newItem.getCount() > count) {
+                playerIU.addModifiedItem(newItem);
+            } else {
+                playerIU.addNewItem(newItem);
             }
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
-            sm.addItemName(item.getId());
-            sm.addLong(count);
-            client.sendPacket(sm);
+            client.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addLong(count));
         }
 
-        // Send updated item list to the player
-        if (playerIU != null) {
-            player.sendInventoryUpdate(playerIU);
-        } else {
-            player.sendItemList();
-        }
-
+        player.sendInventoryUpdate(playerIU);
         mail.removeAttachments();
 
         SystemMessage sm;
@@ -192,7 +183,7 @@ public final class RequestPostAttachment extends ClientPacket {
         if (adena > 0) {
             if (sender != null) {
                 sender.addAdena("PayMail", adena, player, false);
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL);
+                sm = getSystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL);
                 sm.addLong(adena);
                 sm.addString(player.getName());
                 sender.sendPacket(sm);
@@ -204,7 +195,7 @@ public final class RequestPostAttachment extends ClientPacket {
                 World.getInstance().removeObject(paidAdena);
             }
         } else if (sender != null) {
-            sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL);
+            sm = getSystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL);
             sm.addString(player.getName());
             sender.sendPacket(sm);
         }

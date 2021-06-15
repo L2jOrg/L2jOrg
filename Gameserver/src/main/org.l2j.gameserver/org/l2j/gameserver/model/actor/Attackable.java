@@ -1149,15 +1149,6 @@ public class Attackable extends Npc {
         return _seeded;
     }
 
-    /**
-     * Check if the server allows Random Animation.
-     */
-    // This is located here because L2Monster and L2FriendlyMob both extend this class. The other non-pc instances extend either Folk or Monster.
-    @Override
-    public boolean hasRandomAnimation() {
-        return ((Config.MAX_MONSTER_ANIMATION > 0) && isRandomAnimationEnabled() && !(this instanceof GrandBoss));
-    }
-
     public void setCommandChannelTimer(CommandChannelTimer commandChannelTimer) {
         _commandChannelTimer = commandChannelTimer;
     }

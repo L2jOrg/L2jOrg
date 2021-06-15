@@ -63,10 +63,7 @@ public class AdminHeal implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				if (Config.DEVELOPER)
-				{
-					LOGGER.warn("Heal error: " + e);
-				}
+				LOGGER.warn("Error Healing:", e);
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect target/radius specified.");
 			}
 		}

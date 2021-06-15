@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -70,7 +71,7 @@ public final class RequestDropItem extends ClientPacket {
 
         final Item item = player.getInventory().getItemByObjectId(_objectId);
 
-        if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) ||
+        if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop") || (!GeneralSettings.allowDiscardItem() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) ||
                 (!item.isDropable() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())
                 || player.isInsideZone(ZoneType.NO_ITEM_DROP)) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);

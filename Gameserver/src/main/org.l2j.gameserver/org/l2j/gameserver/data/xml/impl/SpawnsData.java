@@ -29,6 +29,7 @@ import org.l2j.gameserver.model.interfaces.ITerritorized;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
@@ -229,7 +230,7 @@ public class SpawnsData extends GameXmlReader {
     }
 
     public void spawnAll() {
-        if (Config.ALT_DEV_NO_SPAWNS) {
+        if (GeneralSettings.noSpawn()) {
             return;
         }
 

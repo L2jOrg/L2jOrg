@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Npc;
@@ -142,7 +141,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
         }
 
         // Proceed to the transfer
-        final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+        final InventoryUpdate playerIU = new InventoryUpdate();
         for (ItemHolder i : _items) {
             final Item oldItem = warehouse.getItemByObjectId(i.getId());
             if ((oldItem == null) || (oldItem.getCount() < i.getCount())) {
@@ -155,20 +154,12 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
                 return;
             }
 
-            if (playerIU != null) {
-                if (newItem.getCount() > i.getCount()) {
-                    playerIU.addModifiedItem(newItem);
-                } else {
-                    playerIU.addNewItem(newItem);
-                }
+            if (newItem.getCount() > i.getCount()) {
+                playerIU.addModifiedItem(newItem);
+            } else {
+                playerIU.addNewItem(newItem);
             }
         }
-
-        // Send updated item list to the player
-        if (playerIU != null) {
-            player.sendInventoryUpdate(playerIU);
-        } else {
-            player.sendItemList();
-        }
+        player.sendInventoryUpdate(playerIU);
     }
 }

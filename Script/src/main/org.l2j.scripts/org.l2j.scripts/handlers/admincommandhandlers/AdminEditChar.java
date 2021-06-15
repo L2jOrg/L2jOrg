@@ -100,31 +100,31 @@ public class AdminEditChar implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
+	public boolean useAdminCommand(String command, Player player)
 	{
 		if (command.equals("admin_current_player"))
 		{
-			showCharacterInfo(activeChar, activeChar);
+			showCharacterInfo(player, player);
 		}
 		else if (command.startsWith("admin_character_info"))
 		{
 			final String[] data = command.split(" ");
 			if ((data.length > 1))
 			{
-				showCharacterInfo(activeChar, World.getInstance().findPlayer(data[1]));
+				showCharacterInfo(player, World.getInstance().findPlayer(data[1]));
 			}
-			else if (isPlayer(activeChar.getTarget()))
+			else if (isPlayer(player.getTarget()))
 			{
-				showCharacterInfo(activeChar, activeChar.getTarget().getActingPlayer());
+				showCharacterInfo(player, player.getTarget().getActingPlayer());
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_character_list"))
 		{
-			listCharacters(activeChar, 0);
+			listCharacters(player, 0);
 		}
 		else if (command.startsWith("admin_show_characters"))
 		{
@@ -132,12 +132,12 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(22);
 				final int page = Integer.parseInt(val);
-				listCharacters(activeChar, page);
+				listCharacters(player, page);
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
 				// Case of empty page number
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //show_characters <page_number>");
+				BuilderUtil.sendSysMessage(player, "Usage: //show_characters <page_number>");
 			}
 		}
 		else if (command.startsWith("admin_find_character"))
@@ -145,12 +145,12 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(21);
-				findCharacter(activeChar, val);
+				findCharacter(player, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of empty character name
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //find_character <character_name>");
-				listCharacters(activeChar, 0);
+				BuilderUtil.sendSysMessage(player, "Usage: //find_character <character_name>");
+				listCharacters(player, 0);
 			}
 		}
 		else if (command.startsWith("admin_find_ip"))
@@ -158,12 +158,12 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(14);
-				findCharactersPerIp(activeChar, val);
+				findCharactersPerIp(player, val);
 			}
 			catch (Exception e)
 			{ // Case of empty or malformed IP number
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //find_ip <www.xxx.yyy.zzz>");
-				listCharacters(activeChar, 0);
+				BuilderUtil.sendSysMessage(player, "Usage: //find_ip <www.xxx.yyy.zzz>");
+				listCharacters(player, 0);
 			}
 		}
 		else if (command.startsWith("admin_find_account"))
@@ -171,12 +171,12 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(19);
-				findCharactersPerAccount(activeChar, val);
+				findCharactersPerAccount(player, val);
 			}
 			catch (Exception e)
 			{ // Case of empty or malformed player name
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //find_account <player_name>");
-				listCharacters(activeChar, 0);
+				BuilderUtil.sendSysMessage(player, "Usage: //find_account <player_name>");
+				listCharacters(player, 0);
 			}
 		}
 		else if (command.startsWith("admin_edit_character"))
@@ -184,45 +184,38 @@ public class AdminEditChar implements IAdminCommandHandler
 			final String[] data = command.split(" ");
 			if ((data.length > 1))
 			{
-				editCharacter(activeChar, data[1]);
+				editCharacter(player, data[1]);
 			}
-			else if (isPlayer(activeChar.getTarget()))
+			else if (isPlayer(player.getTarget()))
 			{
-				editCharacter(activeChar, null);
+				editCharacter(player, null);
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
-		else if (command.startsWith("admin_setreputation"))
-		{
-			try
-			{
+		else if (command.startsWith("admin_setreputation")) {
+			try {
 				final String val = command.substring(20);
 				final int reputation = Integer.parseInt(val);
-				setTargetReputation(activeChar, reputation);
-			}
-			catch (Exception e)
-			{
-				if (Config.DEVELOPER)
-				{
-					LOGGER.warn("Set reputation error: " + e);
-				}
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //setreputation <new_reputation_value>");
+				setTargetReputation(player, reputation);
+			} catch (Exception e) {
+				LOGGER.warn("Error setting reputation", e);
+				BuilderUtil.sendSysMessage(player, "Usage: //setreputation <new_reputation_value>");
 			}
 		}
 		else if (command.startsWith("admin_nokarma"))
 		{
-			if (!isPlayer(activeChar.getTarget()))
+			if (!isPlayer(player.getTarget()))
 			{
-				BuilderUtil.sendSysMessage(activeChar, "You must target a player.");
+				BuilderUtil.sendSysMessage(player, "You must target a player.");
 				return false;
 			}
 			
-			if (activeChar.getTarget().getActingPlayer().getReputation() < 0)
+			if (player.getTarget().getActingPlayer().getReputation() < 0)
 			{
-				setTargetReputation(activeChar, 0);
+				setTargetReputation(player, 0);
 			}
 		}
 		else if (command.startsWith("admin_setpk"))
@@ -231,28 +224,22 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(12);
 				final int pk = Integer.parseInt(val);
-				final WorldObject target = activeChar.getTarget();
-				if (isPlayer(target))
-				{
-					final Player player = target.getActingPlayer();
-					player.setPkKills(pk);
-					player.broadcastUserInfo();
-					player.sendPacket(new UserInfo(player));
-					player.sendMessage("A GM changed your PK count to " + pk);
-					activeChar.sendMessage(player.getName() + "'s PK count changed to " + pk);
+				if (player.getTarget() instanceof Player target) {
+					target.setPkKills(pk);
+					target.broadcastUserInfo();
+					target.sendPacket(new UserInfo(target));
+					target.sendMessage("A GM changed your PK count to " + pk);
+					player.sendMessage(target.getName() + "'s PK count changed to " + pk);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					player.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
 			{
-				if (Config.DEVELOPER)
-				{
-					LOGGER.warn("Set pk error: " + e);
-				}
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //setpk <pk_count>");
+				LOGGER.warn("Error setting PK", e);
+				BuilderUtil.sendSysMessage(player, "Usage: //setpk <pk_count>");
 			}
 		}
 		else if (command.startsWith("admin_setpvp"))
@@ -261,29 +248,24 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(13);
 				final int pvp = Integer.parseInt(val);
-				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && isPlayer(target))
-				{
-					final Player player = (Player) target;
-					player.setPvpKills(pvp);
-					player.updatePvpTitleAndColor(false);
-					player.broadcastUserInfo();
-					player.sendPacket(new UserInfo(player));
-					player.sendMessage("A GM changed your PVP count to " + pvp);
-					activeChar.sendMessage(player.getName() + "'s PVP count changed to " + pvp);
+
+				if (player.getTarget() instanceof Player target) {
+					target.setPvpKills(pvp);
+					target.updatePvpTitleAndColor(false);
+					target.broadcastUserInfo();
+					target.sendPacket(new UserInfo(target));
+					target.sendMessage("A GM changed your PVP count to " + pvp);
+					player.sendMessage(target.getName() + "'s PVP count changed to " + pvp);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					player.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
 			{
-				if (Config.DEVELOPER)
-				{
-					LOGGER.warn("Set pvp error: " + e);
-				}
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //setpvp <pvp_count>");
+				LOGGER.warn("Error setting pvp:", e);
+				BuilderUtil.sendSysMessage(player, "Usage: //setpvp <pvp_count>");
 			}
 		}
 		else if (command.startsWith("admin_setfame"))
@@ -292,28 +274,18 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(14);
 				final int fame = Integer.parseInt(val);
-				final WorldObject target = activeChar.getTarget();
-				if (isPlayer(target))
-				{
-					final Player player = (Player) target;
-					player.setFame(fame);
-					player.broadcastUserInfo();
-					player.sendPacket(new UserInfo(player));
-					player.sendMessage("A GM changed your Reputation points to " + fame);
-					activeChar.sendMessage(player.getName() + "'s Fame changed to " + fame);
+				if (player.getTarget() instanceof Player target) {
+					target.setFame(fame);
+					target.broadcastUserInfo();
+					target.sendPacket(new UserInfo(target));
+					target.sendMessage("A GM changed your Reputation points to " + fame);
+					player.sendMessage(target.getName() + "'s Fame changed to " + fame);
+				} else {
+					player.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
-				else
-				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-				}
-			}
-			catch (Exception e)
-			{
-				if (Config.DEVELOPER)
-				{
-					LOGGER.warn("Set Fame error: " + e);
-				}
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //setfame <new_fame_value>");
+			} catch (Exception e) {
+				LOGGER.warn("Set Fame error: " + e);
+				BuilderUtil.sendSysMessage(player, "Usage: //setfame <new_fame_value>");
 			}
 		}
 		else if (command.startsWith("admin_rec"))
@@ -322,23 +294,21 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(10);
 				final int recVal = Integer.parseInt(val);
-				final WorldObject target = activeChar.getTarget();
-				if (isPlayer(target))
+				if (player.getTarget() instanceof  Player target)
 				{
-					final Player player = (Player) target;
-					player.setRecommend(recVal);
-					player.broadcastUserInfo();
-					player.sendMessage("A GM changed your Recommend points to " + recVal);
-					activeChar.sendMessage(player.getName() + "'s Recommend changed to " + recVal);
+					target.setRecommend(recVal);
+					target.broadcastUserInfo();
+					target.sendMessage("A GM changed your Recommend points to " + recVal);
+					player.sendMessage(target.getName() + "'s Recommend changed to " + recVal);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					player.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //rec number");
+				BuilderUtil.sendSysMessage(player, "Usage: //rec number");
 			}
 		}
 		else if (command.startsWith("admin_setclass"))
@@ -347,39 +317,36 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				final String val = command.substring(15).trim();
 				final int classidval = Integer.parseInt(val);
-				final WorldObject target = activeChar.getTarget();
-				if ((target == null) || !isPlayer(target))
-				{
+				if (! (player.getTarget() instanceof Player target)) {
 					return false;
 				}
-				final Player player = target.getActingPlayer();
-				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
+				if ((ClassId.getClassId(classidval) != null) && (target.getClassId().getId() != classidval))
 				{
-					player.setClassId(classidval);
-					player.setBaseClass(player.getActiveClass());
+					target.setClassId(classidval);
+					target.setBaseClass(target.getActiveClass());
 					
-					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
+					final String newclass = ClassListData.getInstance().getClass(target.getClassId()).getClassName();
 
-					player.store(false);
-					player.broadcastUserInfo();
-					player.sendSkillList();
-					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
-					player.sendPacket(new ExUserInfoInvenWeight());
-					player.sendMessage("A GM changed your class to " + newclass + ".");
-					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
+					target.store(false);
+					target.broadcastUserInfo();
+					target.sendSkillList();
+					target.sendPacket(new ExSubjobInfo(target, SubclassInfoType.CLASS_CHANGED));
+					target.sendPacket(new ExUserInfoInvenWeight());
+					target.sendMessage("A GM changed your class to " + newclass + ".");
+					player.sendMessage(target.getName() + " is a " + newclass + ".");
 				}
 				else
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <valid_new_classid>");
+					BuilderUtil.sendSysMessage(player, "Usage: //setclass <valid_new_classid>");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				AdminHtml.showAdminHtml(activeChar, "setclass/human_fighter.htm");
+				AdminHtml.showAdminHtml(player, "setclass/human_fighter.htm");
 			}
 			catch (NumberFormatException e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <valid_new_classid>");
+				BuilderUtil.sendSysMessage(player, "Usage: //setclass <valid_new_classid>");
 			}
 		}
 		else if (command.startsWith("admin_settitle"))
@@ -387,23 +354,16 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(15);
-				final WorldObject target = activeChar.getTarget();
-				Player player;
-				if ((target != null) && isPlayer(target))
-				{
-					player = (Player) target;
-				}
-				else
-				{
+				if (!(player.getTarget() instanceof Player target)) {
 					return false;
 				}
-				player.setTitle(val);
-				player.sendPacket(YOUR_TITLE_HAS_BEEN_CHANGED);
-				player.broadcastTitleInfo();
+
+				target.setTitle(val);
+				target.sendPacket(YOUR_TITLE_HAS_BEEN_CHANGED);
+				target.broadcastTitleInfo();
 			}
-			catch (StringIndexOutOfBoundsException e)
-			{ // Case of empty character title
-				BuilderUtil.sendSysMessage(activeChar, "You need to specify the new title.");
+			catch (StringIndexOutOfBoundsException e) {
+				BuilderUtil.sendSysMessage(player, "You need to specify the new title.");
 			}
 		}
 		else if (command.startsWith("admin_changename"))
@@ -411,93 +371,75 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(17);
-				final WorldObject target = activeChar.getTarget();
-				Player player;
-				if ((target != null) && isPlayer(target))
-				{
-					player = (Player) target;
-				}
-				else
-				{
+				if(!(player.getTarget() instanceof Player target)) {
 					return false;
 				}
+
 				if (PlayerNameTable.getInstance().doesCharNameExist(val))
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Warning, player " + val + " already exists");
+					BuilderUtil.sendSysMessage(player, "Warning, player " + val + " already exists");
 					return false;
 				}
-				player.setName(val);
+				target.setName(val);
 				if (GeneralSettings.cachePlayersName())
 				{
-					PlayerNameTable.getInstance().addName(player);
+					PlayerNameTable.getInstance().addName(target);
 				}
-				player.storeMe();
+				target.storeMe();
 				
-				BuilderUtil.sendSysMessage(activeChar, "Changed name to " + val);
-				player.sendMessage("Your name has been changed by a GM.");
-				player.broadcastUserInfo();
+				BuilderUtil.sendSysMessage(target, "Changed name to " + val);
+				target.sendMessage("Your name has been changed by a GM.");
+				target.broadcastUserInfo();
 				
-				if (player.isInParty())
+				if (target.isInParty())
 				{
 					// Delete party window for other party members
-					player.getParty().broadcastToPartyMembers(player, PartySmallWindowDeleteAll.STATIC_PACKET);
-					for (Player member : player.getParty().getMembers())
+					target.getParty().broadcastToPartyMembers(target, PartySmallWindowDeleteAll.STATIC_PACKET);
+					for (Player member : target.getParty().getMembers())
 					{
 						// And re-add
-						if (member != player)
+						if (member != target)
 						{
-							member.sendPacket(new PartySmallWindowAll(member, player.getParty()));
+							member.sendPacket(new PartySmallWindowAll(member, target.getParty()));
 						}
 					}
 				}
-				if (player.getClan() != null)
+				if (target.getClan() != null)
 				{
-					player.getClan().broadcastClanStatus();
+					target.getClan().broadcastClanStatus();
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of empty character name
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //setname new_name_for_target");
+				BuilderUtil.sendSysMessage(player, "Usage: //setname new_name_for_target");
 			}
 		}
 		else if (command.startsWith("admin_setsex"))
 		{
-			final WorldObject target = activeChar.getTarget();
-			Player player;
-			if ((target != null) && isPlayer(target))
-			{
-				player = (Player) target;
-			}
-			else
-			{
+			if (!(player.getTarget() instanceof  Player target)) {
 				return false;
 			}
-			player.getAppearance().setFemale(!player.getAppearance().isFemale());
-			player.sendMessage("Your gender has been changed by a GM");
-			player.broadcastUserInfo();
+
+			target.getAppearance().setFemale(!target.getAppearance().isFemale());
+			target.sendMessage("Your gender has been changed by a GM");
+			target.broadcastUserInfo();
 		}
 		else if (command.startsWith("admin_setcolor"))
 		{
 			try
 			{
 				final String val = command.substring(15);
-				final WorldObject target = activeChar.getTarget();
-				Player player;
-				if ((target != null) && isPlayer(target))
-				{
-					player = (Player) target;
-				}
-				else
-				{
+				if(!(player.getTarget() instanceof Player target)) {
 					return false;
 				}
-				player.getAppearance().setNameColor(Integer.decode("0x" + val));
-				player.sendMessage("Your name color has been changed by a GM");
-				player.broadcastUserInfo();
+
+				target.getAppearance().setNameColor(Integer.decode("0x" + val));
+				target.sendMessage("Your name color has been changed by a GM");
+				target.broadcastUserInfo();
 			}
 			catch (Exception e)
 			{ // Case of empty color or invalid hex string
-				BuilderUtil.sendSysMessage(activeChar, "You need to specify a valid new color.");
+				BuilderUtil.sendSysMessage(player, "You need to specify a valid new color.");
 			}
 		}
 		else if (command.startsWith("admin_settcolor"))
@@ -505,37 +447,30 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(16);
-				final WorldObject target = activeChar.getTarget();
-				Player player;
-				if ((target != null) && isPlayer(target))
-				{
-					player = (Player) target;
-				}
-				else
-				{
+				if(!(player.getTarget() instanceof Player target)) {
 					return false;
 				}
-				player.getAppearance().setTitleColor(Integer.decode("0x" + val));
-				player.sendMessage("Your title color has been changed by a GM");
-				player.broadcastUserInfo();
+
+				target.getAppearance().setTitleColor(Integer.decode("0x" + val));
+				target.sendMessage("Your title color has been changed by a GM");
+				target.broadcastUserInfo();
 			}
 			catch (Exception e)
 			{ // Case of empty color or invalid hex string
-				BuilderUtil.sendSysMessage(activeChar, "You need to specify a valid new color.");
+				BuilderUtil.sendSysMessage(player, "You need to specify a valid new color.");
 			}
 		}
 		else if (command.startsWith("admin_fullfood"))
 		{
-			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && isPet(target))
+			final WorldObject target = player.getTarget();
+			if (player.getTarget() instanceof  Pet targetPet)
 			{
-				final Pet targetPet = (Pet) target;
 				targetPet.setCurrentFed(targetPet.getMaxFed());
 				targetPet.broadcastStatusUpdate();
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
 		else if (command.startsWith("admin_remove_clan_penalty"))
@@ -545,7 +480,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final StringTokenizer st = new StringTokenizer(command, " ");
 				if (st.countTokens() != 3)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Usage: //remove_clan_penalty join|create charname");
+					BuilderUtil.sendSysMessage(player, "Usage: //remove_clan_penalty join|create charname");
 					return false;
 				}
 				
@@ -554,22 +489,21 @@ public class AdminEditChar implements IAdminCommandHandler
 				final boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
 				
 				final String playerName = st.nextToken();
-				Player player;
-				player = World.getInstance().findPlayer(playerName);
+				var target = World.getInstance().findPlayer(playerName);
 				
-				if (player == null) {
+				if (target == null) {
 					getDAO(PlayerDAO.class).removeClanPenalty(playerName);
 				}
 				else if (changeCreateExpiryTime) // removing penalty
 				{
-					player.setClanCreateExpiryTime(0);
+					target.setClanCreateExpiryTime(0);
 				}
 				else
 				{
-					player.setClanJoinExpiryTime(0);
+					target.setClanJoinExpiryTime(0);
 				}
 				
-				BuilderUtil.sendSysMessage(activeChar, "Clan penalty successfully removed to character: " + playerName);
+				BuilderUtil.sendSysMessage(player, "Clan penalty successfully removed to character: " + playerName);
 			}
 			catch (Exception e)
 			{
@@ -585,14 +519,14 @@ public class AdminEditChar implements IAdminCommandHandler
 				multibox = Integer.parseInt(val);
 				if (multibox < 1)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Usage: //find_dualbox [number > 0]");
+					BuilderUtil.sendSysMessage(player, "Usage: //find_dualbox [number > 0]");
 					return false;
 				}
 			}
 			catch (Exception e)
 			{
 			}
-			findDualbox(activeChar, multibox);
+			findDualbox(player, multibox);
 		}
 		else if (command.startsWith("admin_strict_find_dualbox"))
 		{
@@ -603,14 +537,14 @@ public class AdminEditChar implements IAdminCommandHandler
 				multibox = Integer.parseInt(val);
 				if (multibox < 1)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Usage: //strict_find_dualbox [number > 0]");
+					BuilderUtil.sendSysMessage(player, "Usage: //strict_find_dualbox [number > 0]");
 					return false;
 				}
 			}
 			catch (Exception e)
 			{
 			}
-			findDualboxStrict(activeChar, multibox);
+			findDualboxStrict(player, multibox);
 		}
 		else if (command.startsWith("admin_tracert"))
 		{
@@ -622,8 +556,8 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && isPlayer(target))
+				final WorldObject target = player.getTarget();
+				if (isPlayer(target))
 				{
 					pl = (Player) target;
 				}
@@ -631,14 +565,14 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if (pl == null)
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			
 			final GameClient client = pl.getClient();
 			if (client == null)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Client is null.");
+				BuilderUtil.sendSysMessage(player, "Client is null.");
 				return false;
 			}
 			
@@ -655,37 +589,37 @@ public class AdminEditChar implements IAdminCommandHandler
 						ip = ip + ".";
 					}
 				}
-				BuilderUtil.sendSysMessage(activeChar, "Hop" + i + ": " + ip);
+				BuilderUtil.sendSysMessage(player, "Hop" + i + ": " + ip);
 			}
 		}
 		else if (command.startsWith("admin_summon_info"))
 		{
-			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && isSummon(target))
+			final WorldObject target = player.getTarget();
+			if (isSummon(target))
 			{
-				gatherSummonInfo((Summon) target, activeChar);
+				gatherSummonInfo((Summon) target, player);
 			}
 			else
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Invalid target.");
+				BuilderUtil.sendSysMessage(player, "Invalid target.");
 			}
 		}
 		else if (command.startsWith("admin_unsummon"))
 		{
-			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && isSummon(target))
+			final WorldObject target = player.getTarget();
+			if (isSummon(target))
 			{
 				((Summon) target).unSummon(((Summon) target).getOwner());
 			}
 			else
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usable only with Pets/Summons");
+				BuilderUtil.sendSysMessage(player, "Usable only with Pets/Summons");
 			}
 		}
 		else if (command.startsWith("admin_summon_setlvl"))
 		{
-			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && isPet(target))
+			final WorldObject target = player.getTarget();
+			if (isPet(target))
 			{
 				final Pet pet = (Pet) target;
 				try
@@ -709,7 +643,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usable only with Pets");
+				BuilderUtil.sendSysMessage(player, "Usable only with Pets");
 			}
 		}
 		else if (command.startsWith("admin_show_pet_inv"))
@@ -723,16 +657,16 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				target = activeChar.getTarget();
+				target = player.getTarget();
 			}
 			
-			if ((target != null) && isPet(target))
+			if (isPet(target))
 			{
-				activeChar.sendPacket(new GMViewItemList(1, (Pet) target));
+				player.sendPacket(new GMViewItemList(1, (Pet) target));
 			}
 			else
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usable only with Pets");
+				BuilderUtil.sendSysMessage(player, "Usable only with Pets");
 			}
 			
 		}
@@ -745,68 +679,69 @@ public class AdminEditChar implements IAdminCommandHandler
 				target = World.getInstance().findPlayer(val);
 				if (target == null)
 				{
-					target = activeChar.getTarget();
+					target = player.getTarget();
 				}
 			}
 			catch (Exception e)
 			{
-				target = activeChar.getTarget();
+				target = player.getTarget();
 			}
 			
 			if (isPlayer(target))
 			{
 				if (((Player) target).isInParty())
 				{
-					gatherPartyInfo((Player) target, activeChar);
+					gatherPartyInfo((Player) target, player);
 				}
 				else
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Not in party.");
+					BuilderUtil.sendSysMessage(player, "Not in party.");
 				}
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			
 		}
-		else if (command.equals("admin_setnoble"))
-		{
-			Player player;
-			if (isPlayer(activeChar.getTarget()))
+		else if (command.equals("admin_setnoble")) {
+
+			Player target;
+
+			if (isPlayer(player.getTarget()))
 			{
-				player = (Player) activeChar.getTarget();
+				target = (Player) player.getTarget();
 			}
 			else
 			{
-				player = activeChar;
+				target = player;
 			}
 
 
-			player.setNoble(!player.isNoble());
-			if (player.getObjectId() != activeChar.getObjectId())
+			target.setNoble(!target.isNoble());
+			if (target.getObjectId() != player.getObjectId())
 			{
-				BuilderUtil.sendSysMessage(activeChar, "You've changed nobless status of: " + player.getName());
+				BuilderUtil.sendSysMessage(player, "You've changed nobless status of: " + player.getName());
 			}
-			player.broadcastUserInfo();
-			player.sendMessage("GM changed your nobless status!");
+			target.broadcastUserInfo();
+			target.sendMessage("GM changed your nobless status!");
 		}
 		else if (command.startsWith("admin_set_hp"))
 		{
 			final String[] data = command.split(" ");
 			try
 			{
-				final WorldObject target = activeChar.getTarget();
+				final WorldObject target = player.getTarget();
 				if (!isCreature(target))
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					player.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((Creature) target).setCurrentHp(Double.parseDouble(data[1]));
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //set_hp 1000");
+				BuilderUtil.sendSysMessage(player, "Usage: //set_hp 1000");
 			}
 		}
 		else if (command.startsWith("admin_set_mp"))
@@ -814,17 +749,17 @@ public class AdminEditChar implements IAdminCommandHandler
 			final String[] data = command.split(" ");
 			try
 			{
-				final WorldObject target = activeChar.getTarget();
+				final WorldObject target = player.getTarget();
 				if (!isCreature(target))
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					player.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((Creature) target).setCurrentMp(Double.parseDouble(data[1]));
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //set_mp 1000");
+				BuilderUtil.sendSysMessage(player, "Usage: //set_mp 1000");
 			}
 		}
 		else if (command.startsWith("admin_set_cp"))
@@ -832,27 +767,27 @@ public class AdminEditChar implements IAdminCommandHandler
 			final String[] data = command.split(" ");
 			try
 			{
-				final WorldObject target = activeChar.getTarget();
+				final WorldObject target = player.getTarget();
 				if (!isCreature(target))
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					player.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				((Creature) target).setCurrentCp(Double.parseDouble(data[1]));
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //set_cp 1000");
+				BuilderUtil.sendSysMessage(player, "Usage: //set_cp 1000");
 			}
 		}
 		else if (command.startsWith("admin_set_pvp_flag"))
 		{
 			try
 			{
-				final WorldObject target = activeChar.getTarget();
+				final WorldObject target = player.getTarget();
 				if (!isPlayable(target))
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					player.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				final Playable playable = ((Playable) target);
@@ -860,28 +795,28 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //set_pvp_flag");
+				BuilderUtil.sendSysMessage(player, "Usage: //set_pvp_flag");
 			}
 		}
 		else if (command.startsWith("admin_setparam"))
 		{
-			final WorldObject target = activeChar.getTarget();
+			final WorldObject target = player.getTarget();
 			if (!isCreature(target))
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // admin_setparam
 			if (!st.hasMoreTokens())
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Syntax: //setparam <stat> <value>");
+				BuilderUtil.sendSysMessage(player, "Syntax: //setparam <stat> <value>");
 				return false;
 			}
 			final String statName = st.nextToken();
 			if (!st.hasMoreTokens())
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Syntax: //setparam <stat> <value>");
+				BuilderUtil.sendSysMessage(player, "Syntax: //setparam <stat> <value>");
 				return false;
 			}
 			
@@ -894,32 +829,32 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					targetCreature.getStats().addFixedValue(stat, value);
 					targetCreature.getStats().recalculateStats(true);
-					BuilderUtil.sendSysMessage(activeChar, "Fixed stat: " + stat + " has been set to " + value);
+					BuilderUtil.sendSysMessage(player, "Fixed stat: " + stat + " has been set to " + value);
 				}
 				else
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Non negative values are only allowed!");
+					BuilderUtil.sendSysMessage(player, "Non negative values are only allowed!");
 				}
 			}
 			catch (Exception e) {
-				BuilderUtil.sendSysMessage(activeChar, "Couldn't find such stat!");
-				BuilderUtil.sendSysMessage(activeChar, "Syntax: //setparam <stat> <value>");
+				BuilderUtil.sendSysMessage(player, "Couldn't find such stat!");
+				BuilderUtil.sendSysMessage(player, "Syntax: //setparam <stat> <value>");
 				return false;
 			}
 		}
 		else if (command.startsWith("admin_unsetparam"))
 		{
-			final WorldObject target = activeChar.getTarget();
+			final WorldObject target = player.getTarget();
 			if (!isCreature(target))
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // admin_setparam
 			if (!st.hasMoreTokens())
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Syntax: //unsetparam <stat>");
+				BuilderUtil.sendSysMessage(player, "Syntax: //unsetparam <stat>");
 				return false;
 			}
 			final String statName = st.nextToken();
@@ -929,9 +864,9 @@ public class AdminEditChar implements IAdminCommandHandler
 				final Creature targetCreature = (Creature) target;
 				targetCreature.getStats().removeFixedValue(stat);
 				targetCreature.getStats().recalculateStats(true);
-				BuilderUtil.sendSysMessage(activeChar, "Fixed stat: " + stat + " has been removed.");
+				BuilderUtil.sendSysMessage(player, "Fixed stat: " + stat + " has been removed.");
 			} catch (Exception e) {
-				BuilderUtil.sendSysMessage(activeChar, "Couldn't find such stat!");
+				BuilderUtil.sendSysMessage(player, "Couldn't find such stat!");
 				return false;
 			}
 		}

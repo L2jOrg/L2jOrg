@@ -20,6 +20,7 @@ package org.l2j.gameserver.settings;
 
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.configuration.SettingsFile;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 
 import java.time.Duration;
@@ -50,6 +51,16 @@ public class GeneralSettings {
     private static boolean destroyEquipableItem;
     private static IntSet protectedItems;
     private static boolean clearDroppedItemsAfterLoad;
+    private static boolean logItemEnchants;
+    private static boolean skillCheckEnabled;
+    private static boolean noSpawn;
+    private static boolean logQuestsLoading;
+    private static boolean allowDiscardItem;
+    private static boolean updateItemsOnCharStore;
+    private static boolean destroyAnyItem;
+    private static boolean deleteInvalidQuest;
+    private static int minNpcAnimation;
+    private static int maxNpcAnimation;
 
     private GeneralSettings() {
         // helper class
@@ -62,6 +73,8 @@ public class GeneralSettings {
         auditGM = settingsFile.getBoolean("AuditGM", false);
         logItems = settingsFile.getBoolean("LogItems", false);
         smallLogItems = settingsFile.getBoolean("LogItemsSmallLog", true);
+        logItemEnchants = settingsFile.getBoolean("LogItemEnchants", false);
+        logQuestsLoading = settingsFile.getBoolean("AltDevShowQuestsLoadInLogs", false);
 
         saveDroppedItems = settingsFile.getBoolean("SaveDroppedItem", false);
         autoDestroyItemTime = settingsFile.getInt("AutoDestroyDroppedItemAfter", 600) * 1000;
@@ -82,6 +95,19 @@ public class GeneralSettings {
         defaultPunishment = settingsFile.getEnum("DefaultPunish", IllegalActionPunishmentType.class, IllegalActionPunishmentType.KICK);
         disableChatInJail = settingsFile.getBoolean("JailDisableChat", true);
         autoSavePlayerTime = settingsFile.getInt("PlayerDataStoreInterval", 20);
+
+        skillCheckEnabled = settingsFile.getBoolean("SkillCheckEnable", false);
+        noSpawn = settingsFile.getBoolean("AltDevNoSpawns", false);
+
+        allowDiscardItem = settingsFile.getBoolean("AllowDiscardItem", true);
+        updateItemsOnCharStore = settingsFile.getBoolean("UpdateItemsOnCharStore", false);
+        destroyAnyItem = settingsFile.getBoolean("DestroyAllItems", false);
+
+        deleteInvalidQuest = settingsFile.getBoolean("AutoDeleteInvalidQuestData", false);
+
+        minNpcAnimation = settingsFile.getInt("MinNpcAnimation", 30);
+        maxNpcAnimation = settingsFile.getInt("MaxNpcAnimation", 120);
+
      }
 
     public static int banChatAdenaAdsReportCount() {
@@ -140,6 +166,14 @@ public class GeneralSettings {
         return smallLogItems;
     }
 
+    public static boolean logItemEnchants() {
+        return logItemEnchants;
+    }
+
+    public static boolean logQuestsLoading() {
+        return logQuestsLoading;
+    }
+
     public static boolean loadCustomBuyList() {
         return loadCustomBuyList;
     }
@@ -158,5 +192,37 @@ public class GeneralSettings {
 
     public static int autoSavePlayerTime() {
         return autoSavePlayerTime;
+    }
+
+    public static boolean skillCheckEnabled() {
+        return skillCheckEnabled;
+    }
+
+    public static boolean noSpawn() {
+        return noSpawn;
+    }
+
+    public static boolean allowDiscardItem() {
+        return allowDiscardItem;
+    }
+
+    public static boolean updateItemsOnCharStore() {
+        return updateItemsOnCharStore;
+    }
+
+    public static boolean destroyAnyItem() {
+        return destroyAnyItem;
+    }
+
+    public static boolean deleteInvalidQuest() {
+        return deleteInvalidQuest;
+    }
+
+    public static int randomNpcAnimation() {
+        return Rnd.get(minNpcAnimation, maxNpcAnimation);
+    }
+
+    public static int maxNpcAnimation() {
+        return maxNpcAnimation;
     }
 }

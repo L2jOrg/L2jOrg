@@ -52,6 +52,7 @@ import org.l2j.gameserver.network.serverpackets.ExQuestNpcLogList;
 import org.l2j.gameserver.network.serverpackets.QuestList;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.html.NpcQuestHtmlMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.Zone;
@@ -1642,7 +1643,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
             if (isNull(quest)) {
                 LOGGER.debug("Unknown quest {} for {}", data.getName(), player);
 
-                if (Config.AUTODELETE_INVALID_QUEST_DATA) {
+                if (GeneralSettings.deleteInvalidQuest()) {
                     questDAO.deleteQuest(player.getObjectId(), data.getName());
                 }
                 continue;
@@ -1655,7 +1656,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
             var questState = player.getQuestState(data.getName());
             if(isNull(questState)) {
                 LOGGER.debug("Lost variable {} in quest {} for {}", data.getVar(), data.getName(), player);
-                if (Config.AUTODELETE_INVALID_QUEST_DATA) {
+                if (GeneralSettings.deleteInvalidQuest()) {
                     questDAO.deleteQuestVar(player.getObjectId(), data.getName(), data.getVar());
                 }
                 continue;

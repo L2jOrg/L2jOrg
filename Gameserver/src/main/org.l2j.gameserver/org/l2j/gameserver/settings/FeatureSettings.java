@@ -41,8 +41,8 @@ public class FeatureSettings {
         alwaysAllowRideWyvern = settingsFile.getBoolean("AllowRideWyvernAlways", false);
         allowWyvernInSiege = settingsFile.getBoolean("AllowRideWyvernDuringSiege", true);
         allowRideInSiege = settingsFile.getBoolean("AllowRideMountsDuringSiege", false);
-        l2StoreEnabled = settingsFile.getBoolean("EnableL2Store", false);
-        lCoinStoreEnabled = settingsFile.getBoolean("EnableLCoinStore", false);
+        l2StoreEnabled = settingsFile.getBoolean("EnableL2Store", true);
+        lCoinStoreEnabled = settingsFile.getBoolean("EnableLCoinStore", true);
     }
 
     public static int[] siegeHours() {

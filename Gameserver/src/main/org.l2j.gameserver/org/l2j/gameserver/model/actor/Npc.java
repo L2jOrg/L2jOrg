@@ -205,7 +205,7 @@ public class Npc extends Creature {
      * @return true if the server allows Random Animation.
      */
     public boolean hasRandomAnimation() {
-        return ((Config.MAX_NPC_ANIMATION > 0) && _isRandomAnimationEnabled && (getAiType() != AIType.CORPSE));
+        return _isRandomAnimationEnabled && GeneralSettings.maxNpcAnimation() > 0  && (getAiType() != AIType.CORPSE);
     }
 
     /**
@@ -215,13 +215,6 @@ public class Npc extends Creature {
      */
     public void setRandomAnimation(boolean val) {
         _isRandomAnimationEnabled = val;
-    }
-
-    /**
-     * @return {@code true}, if random animation is enabled, {@code false} otherwise.
-     */
-    public boolean isRandomAnimationEnabled() {
-        return _isRandomAnimationEnabled;
     }
 
     public void setRandomWalking(boolean enabled) {

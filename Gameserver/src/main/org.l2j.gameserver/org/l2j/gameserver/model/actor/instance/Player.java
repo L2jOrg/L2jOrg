@@ -2520,19 +2520,10 @@ public final class Player extends Playable {
                 return false;
             }
 
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(adenaItem);
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
+            sendInventoryUpdate(new InventoryUpdate(adenaItem));
 
             if (sendMessage) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
-                sm.addLong(count);
-                sendPacket(sm);
+                sendPacket(getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(count));
             }
         }
 
@@ -2562,14 +2553,7 @@ public final class Player extends Playable {
                 return false;
             }
 
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(beautyTickets);
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
+            sendInventoryUpdate(new InventoryUpdate(beautyTickets));
 
             if (sendMessage) {
                 final SystemMessage sm;
@@ -2862,38 +2846,27 @@ public final class Player extends Playable {
             return null;
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
+        InventoryUpdate playerIU = new InventoryUpdate();
 
-            if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
-                playerIU.addModifiedItem(oldItem);
-            } else {
-                playerIU.addRemovedItem(oldItem);
-            }
-
-            sendInventoryUpdate(playerIU);
+        if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
+            playerIU.addModifiedItem(oldItem);
         } else {
-            sendItemList();
+            playerIU.addRemovedItem(oldItem);
         }
+
+        sendInventoryUpdate(playerIU);
 
         // Send target update packet
         if (target instanceof PlayerInventory) {
             final Player targetPlayer = ((PlayerInventory) target).getOwner();
+            playerIU = new InventoryUpdate();
 
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate playerIU = new InventoryUpdate();
-
-                if (newItem.getCount() > count) {
-                    playerIU.addModifiedItem(newItem);
-                } else {
-                    playerIU.addNewItem(newItem);
-                }
-
-                targetPlayer.sendPacket(playerIU);
+            if (newItem.getCount() > count) {
+                playerIU.addModifiedItem(newItem);
             } else {
-                targetPlayer.sendItemList();
+                playerIU.addNewItem(newItem);
             }
+            targetPlayer.sendPacket(playerIU);
         }
         return newItem;
     }
@@ -2928,24 +2901,12 @@ public final class Player extends Playable {
             item.setProtected(true);
         }
 
-        // retail drop protection
         if (protectItem) {
             item.getDropProtection().protect(this);
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
-            playerIU.addItem(item);
-            sendInventoryUpdate(playerIU);
-        } else {
-            sendItemList();
-        }
-
-        // Sends message to client if requested
-        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-        sm.addItemName(item);
-        sendPacket(sm);
+        sendInventoryUpdate(new InventoryUpdate(item));
+        sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(item));
     }
 
     private void dropItem(String process, Item item, WorldObject reference) {
@@ -4747,7 +4708,7 @@ public final class Player extends Playable {
         }
 
         storeRecommendations();
-        if (Config.UPDATE_ITEMS_ON_CHAR_STORE) {
+        if (GeneralSettings.updateItemsOnCharStore()) {
             inventory.updateDatabase();
             if(nonNull(warehouse)) {
                 warehouse.updateDatabase();
@@ -4928,12 +4889,10 @@ public final class Player extends Playable {
 
             addSkill(skill);
 
-            if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)) {
+            if (GeneralSettings.skillCheckEnabled() && !canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
                 if (!SkillTreesData.getInstance().isSkillAllowed(this, skill)) {
                     GameUtils.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() + " (" + skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), IllegalActionPunishmentType.BROADCAST);
-                    if (Config.SKILL_CHECK_REMOVE) {
-                        removeSkill(skill);
-                    }
+                    removeSkill(skill);
                 }
             }
         }
