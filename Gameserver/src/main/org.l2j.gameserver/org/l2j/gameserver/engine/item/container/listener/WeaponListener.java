@@ -21,38 +21,67 @@ package org.l2j.gameserver.engine.item.container.listener;
 import org.l2j.gameserver.api.item.PlayerInventoryListener;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
+import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
+import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
  * @author JoeAlisson
  */
-public final class BowCrossListener implements PlayerInventoryListener {
+public final class WeaponListener implements PlayerInventoryListener {
 
-    private BowCrossListener() {
-
+    private WeaponListener() {
+        // singleton
     }
 
     @Override
     public void notifyUnequipped(InventorySlot slot, Item item, Inventory inv) {
-    }
-
-    @Override
-    public void notifyEquipped(InventorySlot slot, Item item, Inventory inv) {
-        if (slot != InventorySlot.RIGHT_HAND && slot != InventorySlot.TWO_HAND  ) {
+        if (!isWeaponSlot(slot)) {
             return;
         }
 
         if(inv instanceof PlayerInventory inventory) {
-            inventory.findAmmunitionForCurrentWeapon();
+            updateConditionalItems(inventory);
         }
     }
 
-    public static BowCrossListener provider() {
+    private void updateConditionalItems(PlayerInventory inventory) {
+        var update = new InventoryUpdate();
+        inventory.forEachItem(Item::hasCondition, update::addModifiedItem);
+        if(update.hasItem()) {
+            inventory.getOwner().sendPacket(update);
+        }
+    }
+
+    private boolean isWeaponSlot(InventorySlot slot) {
+        return slot == InventorySlot.RIGHT_HAND || slot == InventorySlot.TWO_HAND;
+    }
+
+    @Override
+    public void notifyEquipped(InventorySlot slot, Item item, Inventory inv) {
+        if (!isWeaponSlot(slot)) {
+            return;
+        }
+
+        if(inv instanceof PlayerInventory inventory) {
+            onWeaponEquipped(inventory);
+        }
+    }
+
+    private void onWeaponEquipped(PlayerInventory inventory) {
+        inventory.findAmmunitionForCurrentWeapon();
+        var owner = inventory.getOwner();
+        owner.rechargeShot(ShotType.SOULSHOTS);
+        owner.rechargeShot(ShotType.SPIRITSHOTS);
+        updateConditionalItems(inventory);
+    }
+
+    public static WeaponListener provider() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final BowCrossListener INSTANCE = new BowCrossListener();
+        private static final WeaponListener INSTANCE = new WeaponListener();
     }
 }

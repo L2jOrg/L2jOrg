@@ -1079,6 +1079,10 @@ public final class Item extends WorldObject {
         return template instanceof Weapon weapon ? weapon.getConsumeShotsCount() : 0;
     }
 
+    public boolean hasCondition() {
+        return template.isConditionAttached();
+    }
+
     /**
      * Init a dropped Item and add it in the world as a visible object.<BR>
      * <BR>

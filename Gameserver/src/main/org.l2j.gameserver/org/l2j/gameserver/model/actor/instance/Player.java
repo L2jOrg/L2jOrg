@@ -2051,13 +2051,7 @@ public final class Player extends Playable {
                 } else {
                     sm = getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
                 }
-                sm.addItemName(item);
-                sendPacket(sm);
-
-                if (item.getBodyPart().isAnyOf(RIGHT_HAND, TWO_HAND)) {
-                    rechargeShot(ShotType.SOULSHOTS);
-                    rechargeShot(ShotType.SPIRITSHOTS);
-                }
+                sendPacket(sm.addItemName(item));
             } else {
                 sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
             }

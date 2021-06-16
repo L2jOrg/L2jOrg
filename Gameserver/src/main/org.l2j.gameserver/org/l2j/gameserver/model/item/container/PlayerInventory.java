@@ -189,7 +189,12 @@ public class PlayerInventory extends Inventory {
     }
 
     public final boolean haveItemForSelfResurrection() {
-        return items.values().stream().anyMatch(Item::isSelfResurrection);
+        for (Item item : items.values()) {
+            if(item.isSelfResurrection()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -365,6 +370,7 @@ public class PlayerInventory extends Inventory {
             itemIdLookup.putIfAbsent(item.getId(), item.getObjectId());
         } else {
             super.addItem(item);
+
         }
     }
 

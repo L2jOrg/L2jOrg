@@ -1,7 +1,7 @@
 import org.l2j.gameserver.data.database.dao.GlobalVariablesDAO;
 import org.l2j.gameserver.data.database.dao.ReuseInfoDAO;
 import org.l2j.gameserver.data.database.dao.SkillsDAO;
-import org.l2j.gameserver.engine.item.container.listener.BowCrossListener;
+import org.l2j.gameserver.engine.item.container.listener.WeaponListener;
 import org.l2j.gameserver.world.zone.NaiveZone;
 import org.l2j.gameserver.world.zone.type.*;
 
@@ -134,7 +134,7 @@ module org.l2j.gameserver {
             org.l2j.gameserver.engine.item.container.listener.ArmorSetListener,
             org.l2j.gameserver.engine.item.container.listener.AgathionBraceletListener,
             org.l2j.gameserver.engine.item.container.listener.ArtifactBookListener,
-                BowCrossListener,
+                WeaponListener,
             org.l2j.gameserver.engine.item.container.listener.BraceletListener,
             org.l2j.gameserver.engine.item.container.listener.BroochListener;
 
