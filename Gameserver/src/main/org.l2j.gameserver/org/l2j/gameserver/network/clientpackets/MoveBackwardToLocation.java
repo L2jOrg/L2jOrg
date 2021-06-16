@@ -32,6 +32,8 @@ import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.Broadcast;
 
+import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN;
+
 public class MoveBackwardToLocation extends ClientPacket {
     private int _targetX;
     private int _targetY;
@@ -55,14 +57,20 @@ public class MoveBackwardToLocation extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if ((CharacterSettings.npcTalkBlockingTime() > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis())) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
+
+        if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ)) {
+            player.sendPacket(new StopMove(player));
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ)) {
-            player.sendPacket(new StopMove(player));
+        if(player.isFishing()) {
+            player.sendPacket(YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
+            return;
+        }
+
+        if ((CharacterSettings.npcTalkBlockingTime() > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis())) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

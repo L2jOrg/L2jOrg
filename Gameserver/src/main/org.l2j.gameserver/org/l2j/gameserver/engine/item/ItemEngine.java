@@ -88,6 +88,10 @@ public final class ItemEngine extends GameXmlReader {
         return ServerSettings.dataPackDirectory().resolve("data/items/items.xsd");
     }
 
+    public void reload() {
+        load();
+    }
+
     public void load() {
         items.clear();
         parseDatapackDirectory("data/items", true);
@@ -158,6 +162,7 @@ public final class ItemEngine extends GameXmlReader {
 
             var temp = switch (n.getNodeName()) {
                 case "player" -> parsePlayerCondition(n);
+                case "weapon" -> parseWeaponCondition(n);
                 default -> condition;
             };
 
@@ -178,6 +183,11 @@ public final class ItemEngine extends GameXmlReader {
             }
             item.attachCondition(condition);
         }
+    }
+
+    private Condition parseWeaponCondition(Node node) {
+        var types = parseEnumSet(node.getAttributes(), WeaponType.class, "types");
+        return new ConditionWeaponTypes(types);
     }
 
     private Condition parsePlayerCondition(Node playerNode) {
@@ -300,11 +310,16 @@ public final class ItemEngine extends GameXmlReader {
                 case "skill-reducer" -> parseSkillReducer(item, node);
                 case "extract" -> parseItemExtract(item, node);
                 case "transformation-book" -> parseTransformationBook(item, node);
+                case "equip" -> parseItemEquip(item, node);
                 case "condition" -> parseItemCondition(item, node);
             }
         } );
         item.fillType2();
         items.put(item.getId(), item);
+    }
+
+    private void parseItemEquip(EtcItem item, Node node) {
+        item.setBodyPart(parseEnum(node.getAttributes(), BodyPart.class, "body-part"));
     }
 
     private void parseItemCrystal(EtcItem item, Node node) {
@@ -483,10 +498,6 @@ public final class ItemEngine extends GameXmlReader {
         getDAO(PetDAO.class).deleteByItem(item.getObjectId());
     }
 
-    public void reload() {
-        load();
-    }
-
     public Collection<ItemTemplate> getAllItems() {
         return items.values();
     }
@@ -505,6 +516,8 @@ public final class ItemEngine extends GameXmlReader {
         }
 
     }
+
+
 
     public static void init() {
         ServiceLoader.load(IItemHandler.class).forEach(ItemHandler.getInstance()::registerHandler);

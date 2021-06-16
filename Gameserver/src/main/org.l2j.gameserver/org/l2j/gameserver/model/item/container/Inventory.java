@@ -33,6 +33,8 @@ import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.type.EtcItemType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -371,12 +373,22 @@ public abstract class Inventory extends ItemContainer {
 
         if (nonNull(pdollSlot)) {
             if(pdollSlot == InventorySlot.TWO_HAND) {
-                paperdoll.remove(InventorySlot.TWO_HAND);
                 pdollSlot = InventorySlot.RIGHT_HAND;
+                unEquipTwoHands();
             }
             return setPaperdollItem(pdollSlot, null);
         }
         return null;
+    }
+
+    private void unEquipTwoHands() {
+        var item = paperdoll.remove(InventorySlot.TWO_HAND);
+        if(item.getItemType() == WeaponType.FISHING_ROD) {
+            var leftHand = paperdoll.get(InventorySlot.LEFT_HAND);
+            if(leftHand != null && leftHand.getItemType() == EtcItemType.LURE) {
+                setPaperdollItem(InventorySlot.LEFT_HAND, null);
+            }
+        }
     }
 
     /**
@@ -508,12 +520,16 @@ public abstract class Inventory extends ItemContainer {
     }
 
     private void equipLeftHand(Item item) {
-        if(item.getItemType() != SIGIL && nonNull(getPaperdollItem(InventorySlot.TWO_HAND))) {
+        if(!canBeUsedWithTwoHands(item) && nonNull(getPaperdollItem(InventorySlot.TWO_HAND))) {
             setPaperdollItem(InventorySlot.TWO_HAND, null);
             setPaperdollItem(InventorySlot.RIGHT_HAND, null);
         }
         checkEquippedDress();
         setPaperdollItem(InventorySlot.LEFT_HAND, item);
+    }
+
+    private boolean canBeUsedWithTwoHands(Item item) {
+        return item.getItemType() == SIGIL || item.getItemType() == EtcItemType.LURE;
     }
 
     private void checkEquippedDress() {

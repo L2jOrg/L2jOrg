@@ -84,6 +84,8 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
+import static org.l2j.gameserver.network.SystemMessageId.*;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author JoeAlisson
@@ -710,6 +712,51 @@ public final class Item extends WorldObject {
         }
     }
 
+    public boolean checkConditions(Player player, boolean sendMessage) {
+        if (isInReuseTime(player)) {
+            return false;
+        }
+        return template.checkCondition(player, player, sendMessage);
+    }
+
+    private boolean isInReuseTime(Player player) {
+        var reuseDelay = template.getReuseDelay();
+        if(reuseDelay > 0) {
+            var reuseTime = player.getItemRemainingReuseTime(objectId);
+            if(reuseTime > 0) {
+                sendReuseMessage(player, reuseTime);
+                return true;
+            }
+        }
+        var reuseGroup = template.getReuseGroup();
+        if(reuseGroup > 0) {
+            var reuseTime = player.getReuseDelayOnGroup(reuseGroup);
+            if(reuseTime > 0) {
+                sendReuseMessage(player, reuseTime);
+                player.sendPacket(new ExUseSharedGroupItem(getId(), reuseGroup, reuseTime, reuseDelay));
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void sendReuseMessage(Player player, long remainingTime) {
+        final int hours = (int) (remainingTime / 3600000);
+        final int minutes = (int) (remainingTime % 3600000) / 60000;
+        final int seconds = (int) ((remainingTime / 1000) % 60);
+        final SystemMessage sm;
+        if (hours > 0) {
+            sm = getSystemMessage(THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME)
+                    .addItemName(this).addInt(hours).addInt(minutes);
+        } else if (minutes > 0) {
+            sm = getSystemMessage(THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addItemName(this).addInt(minutes);
+        } else {
+            sm = getSystemMessage(THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addItemName(this);
+        }
+        sm.addInt(seconds);
+        player.sendPacket(sm);
+    }
+
     public int getOwnerId() {
         return data.getOwnerId();
     }
@@ -739,7 +786,7 @@ public final class Item extends WorldObject {
     }
 
     public boolean isEquipable() {
-        return template instanceof EquipableItem;
+        return template.isEquipable();
     }
 
     public boolean isEquipped() {
@@ -965,7 +1012,7 @@ public final class Item extends WorldObject {
     }
 
     public BodyPart getBodyPart() {
-        return template instanceof EquipableItem ? template.getBodyPart() : BodyPart.NONE;
+        return template.getBodyPart();
     }
 
     public int getItemMask() {

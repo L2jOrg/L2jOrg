@@ -45,7 +45,6 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import static java.util.Objects.requireNonNullElse;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
@@ -78,7 +77,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     protected boolean immediateEffect;
     protected boolean exImmediateEffect;
     protected ActionType _defaultAction = ActionType.NONE;
-    protected BodyPart bodyPart; // TODO should be on Weapon and Armor
+    protected BodyPart bodyPart;
 
     private Map<ItemSkillType, List<ItemSkillHolder>> skillsMap = Collections.emptyMap();
     private CommissionItemType commissionType;
@@ -314,7 +313,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     }
 
     public final BodyPart getBodyPart() {
-        return requireNonNullElse(bodyPart, BodyPart.NONE);
+        return bodyPart != null ? bodyPart : BodyPart.NONE;
     }
 
     public final int getType1() {
@@ -322,7 +321,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     }
 
     public boolean isEquipable() {
-        return bodyPart != BodyPart.NONE && !(getItemType() instanceof EtcItemType);
+        return bodyPart != null &&  bodyPart != BodyPart.NONE;
     }
 
     public final boolean isEnchantable() {
@@ -352,7 +351,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     }
 
     public boolean isConditionAttached() {
-        return (_preConditions != null) && !_preConditions.isEmpty();
+        return _preConditions != null && !_preConditions.isEmpty();
     }
 
     public boolean isQuestItem() {
