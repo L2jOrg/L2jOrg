@@ -16,12 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.item;
+package org.l2j.gameserver.model.conditions;
+
+import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.item.type.WeaponType;
+
+import java.util.EnumSet;
 
 /**
- * @author  JoeAlisson
+ * @author JoeAlisson
  */
-public interface EquipableItem {
+public class ConditionWeaponTypes extends Condition {
 
-    BodyPart getBodyPart();
+    private final EnumSet<WeaponType> types;
+
+    public ConditionWeaponTypes(EnumSet<WeaponType> types) {
+        this.types = types;
+    }
+
+    @Override
+    public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
+        var weapon = effected.getActiveWeaponItem();
+        return types.contains(weapon.getItemType());
+    }
 }

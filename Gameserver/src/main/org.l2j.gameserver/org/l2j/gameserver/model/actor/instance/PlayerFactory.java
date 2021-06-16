@@ -33,6 +33,7 @@ import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -45,8 +46,6 @@ import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
-import org.l2j.gameserver.model.item.EquipableItem;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.PcItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
@@ -269,25 +268,25 @@ public class PlayerFactory {
         int nextLocData = 0;
 
         final var initialItems = InitialEquipmentData.getInstance().getEquipmentList(data.getClassId());
-        for (PcItemTemplate ie : initialItems) {
-            ItemTemplate template = ItemEngine.getInstance().getTemplate(ie.getId());
+        for (PcItemTemplate initialItem : initialItems) {
+            ItemTemplate template = ItemEngine.getInstance().getTemplate(initialItem.getId());
 
             if(isNull(template)) {
-                LOGGER.warn("Could not create item during player creation: itemId {}, amount {}", ie.getId(), ie.getCount());
+                LOGGER.warn("Could not create item during player creation: itemId {}, amount {}", initialItem.getId(), initialItem.getCount());
                 continue;
             }
 
             ItemLocation loc;
             int locData;
-            if(ie.isEquipped() && template instanceof EquipableItem equipable) {
+            if(initialItem.isEquipped() && template.isEquipable()) {
                 loc = ItemLocation.PAPERDOLL;
-                locData = equipable.getBodyPart().slot().getId();
+                locData = template.getBodyPart().slot().getId();
             } else {
                 loc = ItemLocation.INVENTORY;
                 locData = nextLocData++;
             }
 
-            getDAO(ItemDAO.class).saveItem(data.getCharId(), IdFactory.getInstance().getNextId(), ie.getId(), ie.getCount(), loc, locData);
+            getDAO(ItemDAO.class).saveItem(data.getCharId(), IdFactory.getInstance().getNextId(), initialItem.getId(), initialItem.getCount(), loc, locData);
         }
     }
 

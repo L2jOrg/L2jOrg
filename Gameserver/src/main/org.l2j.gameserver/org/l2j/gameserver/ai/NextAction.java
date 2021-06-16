@@ -18,7 +18,7 @@
  */
 package org.l2j.gameserver.ai;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -26,89 +26,33 @@ import java.util.List;
  * Has 2 array list for "work" and "break".
  *
  * @author Yaroslav
+ * @author JoeAlisson
  */
 public class NextAction {
-    private List<CtrlEvent> _events;
-    private List<CtrlIntention> _intentions;
-    private NextActionCallback _callback;
+    private final List<CtrlEvent> events;
+    private final List<CtrlIntention> intentions;
+    private final NextActionCallback callback;
 
-    /**
-     * Main constructor.
-     *
-     * @param events
-     * @param intentions
-     * @param callback
-     */
-    public NextAction(List<CtrlEvent> events, List<CtrlIntention> intentions, NextActionCallback callback) {
-        _events = events;
-        _intentions = intentions;
-        setCallback(callback);
-    }
-
-    /**
-     * Single constructor.
-     *
-     * @param event
-     * @param intention
-     * @param callback
-     */
     public NextAction(CtrlEvent event, CtrlIntention intention, NextActionCallback callback) {
-        if (_events == null) {
-            _events = new ArrayList<>();
-        }
-
-        if (_intentions == null) {
-            _intentions = new ArrayList<>();
-        }
-
-        if (event != null) {
-            _events.add(event);
-        }
-
-        if (intention != null) {
-            _intentions.add(intention);
-        }
-        setCallback(callback);
+        events = List.of(event);
+        intentions = List.of(intention);
+        this.callback = callback;
     }
 
-    /**
-     * Do action.
-     */
     public void doAction() {
-        if (_callback != null) {
-            _callback.doWork();
+        if (callback != null) {
+            callback.doWork();
         }
     }
-
-    /**
-     * @return the _event
-     */
     public List<CtrlEvent> getEvents() {
-        // If null return empty list.
-        if (_events == null) {
-            _events = new ArrayList<>();
-        }
-        return _events;
+        return events != null ? events : Collections.emptyList();
     }
 
-    /**
-     * @param callback the callback to set.
-     */
-    public void setCallback(NextActionCallback callback) {
-        _callback = callback;
-    }
-
-    /**
-     * @return the _intentions
-     */
     public List<CtrlIntention> getIntentions() {
-        // If null return empty list.
-        if (_intentions == null) {
-            _intentions = new ArrayList<>();
-        }
-        return _intentions;
+        return intentions != null ? intentions : Collections.emptyList();
     }
 
+    @FunctionalInterface
     public interface NextActionCallback {
         void doWork();
     }

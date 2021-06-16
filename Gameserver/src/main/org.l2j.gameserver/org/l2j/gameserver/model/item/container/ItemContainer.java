@@ -114,15 +114,6 @@ public abstract class ItemContainer {
         items.values().forEach(action);
     }
 
-    public Item findAnyItem(Predicate<Item> filter) {
-        for (Item item : items.values()) {
-            if(filter.test(item)) {
-                return item;
-            }
-        }
-        return null;
-    }
-
     public final IntSet getItemsId(Predicate<Item> filter) {
         IntSet ids = new HashIntSet();
         for (IntMap.Entry<Item> entry : items.entrySet()) {

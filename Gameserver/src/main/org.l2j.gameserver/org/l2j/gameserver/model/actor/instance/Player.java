@@ -3619,6 +3619,9 @@ public final class Player extends Playable {
         return (Weapon) weapon.getTemplate();
     }
 
+    public Item getSecondaryWeapon() {
+        return inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
+    }
 
     /**
      * Return the secondary ItemTemplate item (always equipped in the left hand).<BR>
