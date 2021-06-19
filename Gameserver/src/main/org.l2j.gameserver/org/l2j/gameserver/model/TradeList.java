@@ -480,7 +480,7 @@ public class TradeList {
         for (var itemRequested : items) {
             if (!checkExists(itemRequested)) {
                 if (packaged) {
-                    GameUtils.handleIllegalPlayerAction(player, "[TradeList.privateStoreBuy()]  " + player.getName() + " tried to cheat the package sell and buy only a part of the package! Ban this player for bot usage!");
+                    GameUtils.handleIllegalPlayerAction(player, "[TradeList.privateStoreBuy()]  " + player + " tried to cheat the package sell and buy only a part of the package! Ban this player for bot usage!");
                     return TradeResult.FAILED;
                 }
 
@@ -488,10 +488,11 @@ public class TradeList {
                 continue;
             }
 
-            final var template =  ItemEngine.getInstance().getTemplate(itemRequested.getItemId());
-            if (template == null) {
+            var item = ownerInventory.getItemByObjectId(itemRequested.getObjectId());
+            if (item == null) {
                 return TradeResult.CANCELED;
             }
+            final var template = item.getTemplate();
 
             totalPrice += itemRequested.getCount() * itemRequested.getPrice();
 
@@ -547,7 +548,7 @@ public class TradeList {
 
             addItemToInventoryUpdate(ownerIU, playerIU, item, oldItem, newItem);
 
-            sendTransactionMessage(player, item, newItem);
+            sendTransactionMessage(player, owner, item, newItem);
             owner.sendPacket(new ExPrivateStoreSellingResult(item.getObjectId(), item.getCount(), player.getAppearance().getVisibleName()));
         }
 
@@ -641,18 +642,18 @@ public class TradeList {
         }
     }
 
-    private void sendTransactionMessage(Player player, ItemRequest item, Item newItem) {
-        var msg = getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S).addString(player.getName()).addItemName(newItem);
+    private void sendTransactionMessage(Player buyer, Player seller, ItemRequest item, Item newItem) {
+        var msg = getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S).addString(buyer.getName()).addItemName(newItem);
         if(newItem.isStackable()) {
             msg.addLong(item.getCount());
         }
-        owner.sendPacket(msg);
+        seller.sendPacket(msg);
 
-        msg = getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1).addString(owner.getName()).addItemName(newItem);
+        msg = getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1).addString(seller.getName()).addItemName(newItem);
         if(newItem.isStackable()) {
             msg.addLong(item.getCount());
         }
-        player.sendPacket(msg);
+        buyer.sendPacket(msg);
     }
 
     /**
@@ -677,7 +678,7 @@ public class TradeList {
         final TradeItem[] sellerItems = items.toArray(new TradeItem[0]);
         var ok = false;
         for (ItemRequest itemRequest : requestedItems) {
-            if(!checkExists(itemRequest)) {
+            if(!checkExistsSameId(itemRequest)) {
                 continue;
             }
 
@@ -707,7 +708,7 @@ public class TradeList {
             totalPrice = _totalPrice;
 
             addItemToInventoryUpdate(playerIU, ownerIU, itemRequest, oldItem, newItem);
-            sendTransactionMessage(player, itemRequest, newItem);
+            sendTransactionMessage(owner, player, itemRequest, newItem);
             owner.sendPacket(new ExPrivateStoreBuyingResult(newItem.getObjectId(), itemRequest.getCount(), player.getAppearance().getVisibleName()));
         }
 
@@ -716,6 +717,23 @@ public class TradeList {
         }
 
         return chargeTransaction(player, playerInventory, ownerIU, playerIU, totalPrice);
+    }
+
+    private boolean checkExistsSameId(ItemRequest itemRequested) {
+        boolean found = false;
+
+        for (var item : items) {
+            if (item.getItem().getId() == itemRequested.getItemId()) {
+                if (item.getPrice() == itemRequested.getPrice()) {
+                    if (item.getCount() < itemRequested.getCount()) {
+                        itemRequested.setCount(item.getCount());
+                    }
+                    found = item.getCount() > 0;
+                }
+                break;
+            }
+        }
+        return found;
     }
 
     private Item itemRequestToItem(Player player, TradeItem[] sellerItems, ItemRequest itemRequest, long totalPrice) {

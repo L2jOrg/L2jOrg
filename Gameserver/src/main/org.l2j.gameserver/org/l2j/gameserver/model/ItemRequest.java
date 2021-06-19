@@ -19,9 +19,6 @@
  */
 package org.l2j.gameserver.model;
 
-/**
- *
- */
 public class ItemRequest {
     int _objectId;
     int _itemId;
