@@ -22,7 +22,6 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ItemRequest;
 import org.l2j.gameserver.model.TradeList;
 import org.l2j.gameserver.model.TradeList.TradeResult;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -38,12 +37,6 @@ import java.util.Set;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
-
-/**
- * This class ...
- *
- * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
- */
 public final class RequestPrivateStoreBuy extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestPrivateStoreBuy.class);
     private static final int BATCH_LENGTH = 20; // length of the one item
@@ -76,53 +69,19 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
-
-        if (_items == null) {
-            client.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
-        if (player.isOnEvent()) // custom event message
-        {
-            player.sendMessage("You cannot open a private store while participating in an event.");
-            return;
-        }
-
         if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestorebuy")) {
-            player.sendMessage("You are buying items too fast.");
             return;
         }
 
-        final WorldObject object = World.getInstance().findPlayer(_storePlayerId);
-        if (object == null) {
-            return;
-        }
+        final Player player = client.getPlayer();
+        final Player storePlayer = World.getInstance().findPlayer(_storePlayerId);
 
-        final Player storePlayer = (Player) object;
-        if (!isInsideRadius3D(player, storePlayer, Npc.INTERACTION_DISTANCE)) {
-            return;
-        }
-
-        if (player.getInstanceWorld() != storePlayer.getInstanceWorld()) {
-            return;
-        }
-
-        if (!((storePlayer.getPrivateStoreType() == PrivateStoreType.SELL) || (storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL))) {
+        if (!canBuy(player, storePlayer)) {
             return;
         }
 
         final TradeList storeList = storePlayer.getSellList();
         if (storeList == null) {
-            return;
-        }
-
-        if (!player.getAccessLevel().allowTransaction()) {
-            player.sendMessage("Transactions are disabled for your Access Level.");
-            client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
@@ -147,5 +106,31 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
             storePlayer.setPrivateStoreType(PrivateStoreType.NONE);
             storePlayer.broadcastUserInfo();
         }
+    }
+
+    private boolean canBuy(Player player, Player storePlayer) {
+        if (player == null || storePlayer == null) {
+            return false;
+        }
+
+        if (player.isOnEvent()) // custom event message
+        {
+            player.sendMessage("You cannot open a private store while participating in an event.");
+            return false;
+        }
+
+        if (!player.getAccessLevel().allowTransaction()) {
+            player.sendMessage("Transactions are disabled for your Access Level.");
+            return false;
+        }
+
+        if (player.getInstanceWorld() != storePlayer.getInstanceWorld()) {
+            return false;
+        }
+
+        if(!(storePlayer.getPrivateStoreType() == PrivateStoreType.SELL || storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL)) {
+            return false;
+        }
+        return isInsideRadius3D(player, storePlayer, Npc.INTERACTION_DISTANCE);
     }
 }

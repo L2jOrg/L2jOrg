@@ -98,10 +98,10 @@ public final class RequestPostAttachment extends ClientPacket {
             return;
         }
 
-        receiveAttachment(player, mail, attachments);
+        receiveAttachments(player, mail, attachments);
     }
 
-    private void receiveAttachment(Player player, MailData mail, ItemContainer attachments) {
+    private void receiveAttachments(Player player, MailData mail, ItemContainer attachments) {
         final InventoryUpdate playerIU =  new InventoryUpdate();
         for (Item item : attachments.getItems()) {
             if (!receiveAttachment(player, mail, attachments, playerIU, item)){
@@ -112,6 +112,12 @@ public final class RequestPostAttachment extends ClientPacket {
         player.sendInventoryUpdate(playerIU);
         mail.removeAttachments();
 
+        chargeAttachmentsFee(player, mail);
+        client.sendPacket(ExChangePostState.reAdded(true, mailId));
+        client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED);
+    }
+
+    private void chargeAttachmentsFee(Player player, MailData mail) {
         final Player sender = World.getInstance().findPlayer(mail.getSender());
         var adena = mail.getFee();
         if (adena > 0) {
@@ -128,8 +134,6 @@ public final class RequestPostAttachment extends ClientPacket {
         } else if (sender != null) {
             sender.sendPacket(getSystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL).addString(player.getName()));
         }
-        client.sendPacket(ExChangePostState.reAdded(true, mailId));
-        client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED);
     }
 
     private boolean canReceiveAttachments(Player player, MailData mail, int weight, int slots) {
