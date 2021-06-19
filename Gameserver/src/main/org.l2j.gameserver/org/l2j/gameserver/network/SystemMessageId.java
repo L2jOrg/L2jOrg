@@ -314,9 +314,6 @@ public final class SystemMessageId {
     @ClientString(id = 174, message = "That person's inventory is full.")
     public static SystemMessageId THAT_PERSON_S_INVENTORY_IS_FULL;
 
-    @ClientString(id = 179, message = "You cannot discard those items here.")
-    public static SystemMessageId YOU_CANNOT_DISCARD_THOSE_ITEMS_HERE;
-
     @ClientString(id = 180, message = "You have $s1 day(s) left until deletion.  Do you wish to cancel this action?")
     public static SystemMessageId YOU_HAVE_S1_DAY_S_LEFT_UNTIL_DELETION_DO_YOU_WISH_TO_CANCEL_THIS_ACTION;
 
@@ -945,9 +942,6 @@ public final class SystemMessageId {
     @ClientString(id = 557, message = "As your pet is currently out, its summoning item cannot be destroyed.")
     public static SystemMessageId AS_YOUR_PET_IS_CURRENTLY_OUT_ITS_SUMMONING_ITEM_CANNOT_BE_DESTROYED;
 
-    @ClientString(id = 558, message = "As your pet is currently summoned, you cannot discard the summoning item.")
-    public static SystemMessageId AS_YOUR_PET_IS_CURRENTLY_SUMMONED_YOU_CANNOT_DISCARD_THE_SUMMONING_ITEM;
-
     @ClientString(id = 560, message = "You have purchased +$s2 $s3 from $c1.")
     public static SystemMessageId YOU_HAVE_PURCHASED_S2_S3_FROM_C1;
 
@@ -1243,9 +1237,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 728, message = "You cannot apply for dissolution again within seven days after a previous application for dissolution.")
     public static SystemMessageId YOU_CANNOT_APPLY_FOR_DISSOLUTION_AGAIN_WITHIN_SEVEN_DAYS_AFTER_A_PREVIOUS_APPLICATION_FOR_DISSOLUTION;
-
-    @ClientString(id = 729, message = "That item cannot be discarded.")
-    public static SystemMessageId THAT_ITEM_CANNOT_BE_DISCARDED;
 
     @ClientString(id = 731, message = "A petition has been received by the GM on behalf of $s1. The petition code is $s2.")
     public static SystemMessageId A_PETITION_HAS_BEEN_RECEIVED_BY_THE_GM_ON_BEHALF_OF_S1_THE_PETITION_CODE_IS_S2;
@@ -3957,7 +3948,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 2011, message = "The augmented item cannot be discarded.")
     public static SystemMessageId THE_AUGMENTED_ITEM_CANNOT_BE_DISCARDED;
-
 
     @ClientString(id = 2013, message = "Your seed or remaining purchase amount is inadequate.")
     public static SystemMessageId YOUR_SEED_OR_REMAINING_PURCHASE_AMOUNT_IS_INADEQUATE;
@@ -14372,6 +14362,9 @@ public final class SystemMessageId {
     @ClientString(id = 178, message = "Message acceptance mode.")
     public static SystemMessageId MESSAGE_ACCEPTANCE_MODE;
 
+    @ClientString(id = 179, message = "You cannot discard those items here.")
+    public static SystemMessageId YOU_CANNOT_DISCARD_THOSE_ITEMS_HERE;
+
     @ClientString(id = 181, message = "Cannot see target.")
     public static SystemMessageId CANNOT_SEE_TARGET;
 
@@ -14868,6 +14861,9 @@ public final class SystemMessageId {
     @ClientString(id = 554, message = "You cannot disperse the clans in your alliance.")
     public static SystemMessageId YOU_CANNOT_DISPERSE_THE_CLANS_IN_YOUR_ALLIANCE;
 
+    @ClientString(id = 558, message = "As your pet is currently summoned, you cannot discard the summoning item.")
+    public static SystemMessageId AS_YOUR_PET_IS_CURRENTLY_SUMMONED_YOU_CANNOT_DISCARD_THE_SUMMONING_ITEM;
+
     @ClientString(id = 559, message = "You have purchased $s2 from $c1.")
     public static SystemMessageId YOU_HAVE_PURCHASED_S2_FROM_C1;
 
@@ -15080,6 +15076,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 723, message = "The opposing clan is participating in a siege battle.")
     public static SystemMessageId THE_OPPOSING_CLAN_IS_PARTICIPATING_IN_A_SIEGE_BATTLE;
+
+    @ClientString(id = 729, message = "That item cannot be discarded.")
+    public static SystemMessageId THAT_ITEM_CANNOT_BE_DISCARDED;
 
     @ClientString(id = 730, message = "You have submitted $s1 petition(s). \\nYou may submit $s2 more petition(s) today.")
     public static SystemMessageId YOU_HAVE_SUBMITTED_S1_PETITION_S_NYOU_MAY_SUBMIT_S2_MORE_PETITION_S_TODAY;

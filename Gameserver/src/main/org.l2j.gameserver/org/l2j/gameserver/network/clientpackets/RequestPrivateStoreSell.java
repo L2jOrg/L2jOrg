@@ -121,7 +121,7 @@ public final class RequestPrivateStoreSell extends ClientPacket {
 
         if (!storeList.privateStoreSell(player, _items)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
-            LOGGER.warn("PrivateStore sell has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
+            LOGGER.warn("PrivateStore sell has failed due to invalid list or request. {}, Private store of: {}", player, storePlayer);
             return;
         }
 

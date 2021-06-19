@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.mail.MailEngine;
@@ -30,7 +31,6 @@ import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
@@ -55,51 +55,21 @@ public final class RequestPostAttachment extends ClientPacket {
             return;
         }
 
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("getattach")) {
+            return;
+        }
+
         final Player player = client.getPlayer();
         if (player == null) {
             return;
         }
 
-        if (!client.getFloodProtectors().getTransaction().tryPerformAction("getattach")) {
-            return;
-        }
-
-        if (!player.getAccessLevel().allowTransaction()) {
-            player.sendMessage("Transactions are disabled for your Access Level");
-            return;
-        }
-
-        if (!player.isInsideZone(ZoneType.PEACE)) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION);
-            return;
-        }
-
-        if (player.getActiveTradeList() != null) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE);
-            return;
-        }
-
-        if (player.hasItemRequest()) {
-            client.sendPacket(SystemMessageId.YOU_CAN_T_RECEIVE_WHILE_ENCHANTING_AN_ITEM_OR_ATTRIBUTE_COMBINING_JEWELS_OR_SEALING_UNSEALING_OR_COMBINING);
-            return;
-        }
-
-        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
+        if (!canReceiveMailAttachment(player)) {
             return;
         }
 
         final var mail = MailEngine.getInstance().getMail(mailId);
-        if (mail == null) {
-            return;
-        }
-
-        if (mail.getReceiver() != player.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get not own attachment!");
-            return;
-        }
-
-        if (!mail.hasAttachments()) {
+        if (!hasAttachment(player, mail)){
             return;
         }
 
@@ -112,18 +82,7 @@ public final class RequestPostAttachment extends ClientPacket {
         int slots = 0;
 
         for (Item item : attachments.getItems()) {
-            if (item.getOwnerId() != mail.getSender()) {
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get wrong item (ownerId != senderId) from attachment!");
-                return;
-            }
-
-            if (item.getItemLocation() != ItemLocation.MAIL) {
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get wrong item (Location != MAIL) from attachment!");
-                return;
-            }
-
-            if (item.getLocationSlot() != mail.getId()) {
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get items from different attachment!");
+            if (!canItemBeAttached(player, mail, item)) {
                 return;
             }
 
@@ -135,58 +94,30 @@ public final class RequestPostAttachment extends ClientPacket {
             }
         }
 
-        // Item Max Limit Check
-        if (!player.getInventory().validateCapacity(slots)) {
-            client.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+        if(!canReceiveAttachments(player, mail, weight, slots)) {
             return;
         }
 
-        // Weight limit Check
-        if (!player.getInventory().validateWeight(weight)) {
-            client.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
-            return;
-        }
+        receiveAttachment(player, mail, attachments);
+    }
 
-        final long adena = mail.getFee();
-        if ((adena > 0) && !player.reduceAdena("PayMail", adena, null, true)) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
-            return;
-        }
-
-        // Proceed to the transfer
+    private void receiveAttachment(Player player, MailData mail, ItemContainer attachments) {
         final InventoryUpdate playerIU =  new InventoryUpdate();
         for (Item item : attachments.getItems()) {
-            if (item.getOwnerId() != mail.getSender()) {
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get item with owner != sender !");
+            if (!receiveAttachment(player, mail, attachments, playerIU, item)){
                 return;
             }
-
-            final long count = item.getCount();
-            final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), item.getCount(), player.getInventory(), player, null);
-            if (newItem == null) {
-                return;
-            }
-
-            if (newItem.getCount() > count) {
-                playerIU.addModifiedItem(newItem);
-            } else {
-                playerIU.addNewItem(newItem);
-            }
-            client.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addLong(count));
         }
 
         player.sendInventoryUpdate(playerIU);
         mail.removeAttachments();
 
-        SystemMessage sm;
         final Player sender = World.getInstance().findPlayer(mail.getSender());
+        var adena = mail.getFee();
         if (adena > 0) {
             if (sender != null) {
                 sender.addAdena("PayMail", adena, player, false);
-                sm = getSystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL);
-                sm.addLong(adena);
-                sm.addString(player.getName());
-                sender.sendPacket(sm);
+                sender.sendPacket(getSystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL).addLong(adena).addString(player.getName()));
             } else {
                 final Item paidAdena = ItemEngine.getInstance().createItem("PayMail", CommonItem.ADENA, adena, player, null);
                 paidAdena.changeOwner(mail.getSender());
@@ -195,12 +126,110 @@ public final class RequestPostAttachment extends ClientPacket {
                 World.getInstance().removeObject(paidAdena);
             }
         } else if (sender != null) {
-            sm = getSystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL);
-            sm.addString(player.getName());
-            sender.sendPacket(sm);
+            sender.sendPacket(getSystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL).addString(player.getName()));
         }
-
         client.sendPacket(ExChangePostState.reAdded(true, mailId));
         client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED);
+    }
+
+    private boolean canReceiveAttachments(Player player, MailData mail, int weight, int slots) {
+        // Item Max Limit Check
+        if (!player.getInventory().validateCapacity(slots)) {
+            client.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+            return false;
+        }
+
+        // Weight limit Check
+        if (!player.getInventory().validateWeight(weight)) {
+            client.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+            return false;
+        }
+
+        final long adena = mail.getFee();
+        if ((adena > 0) && !player.reduceAdena("PayMail", adena, null, true)) {
+            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean receiveAttachment(Player player, MailData mail, ItemContainer attachments, InventoryUpdate playerIU, Item item) {
+        if (item.getOwnerId() != mail.getSender()) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get item with owner != sender !");
+            return false;
+        }
+
+        final long count = item.getCount();
+        final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), item.getCount(), player.getInventory(), player, null);
+        if (newItem == null) {
+            return false;
+        }
+
+        if (newItem.getCount() > count) {
+            playerIU.addModifiedItem(newItem);
+        } else {
+            playerIU.addNewItem(newItem);
+        }
+        client.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addLong(count));
+        return true;
+    }
+
+    private boolean canItemBeAttached(Player player, MailData mail, Item item) {
+        if (item.getOwnerId() != mail.getSender()) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get wrong item (ownerId != senderId) from attachment!");
+            return false;
+        }
+
+        if (item.getItemLocation() != ItemLocation.MAIL) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get wrong item (Location != MAIL) from attachment!");
+            return false;
+        }
+
+        if (item.getLocationSlot() != mail.getId()) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get items from different attachment!");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean hasAttachment(Player player, MailData mail) {
+        if (mail == null) {
+            return false;
+        }
+
+        if (mail.getReceiver() != player.getObjectId()) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get not own attachment!");
+            return false;
+        }
+
+        return mail.hasAttachments();
+    }
+
+    private boolean canReceiveMailAttachment(Player player) {
+        if (!player.getAccessLevel().allowTransaction()) {
+            player.sendMessage("Transactions are disabled for your Access Level");
+            return false;
+        }
+
+        if (!player.isInsideZone(ZoneType.PEACE)) {
+            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION);
+            return false;
+        }
+
+        if (player.getActiveTradeList() != null) {
+            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE);
+            return false;
+        }
+
+        if (player.hasItemRequest()) {
+            client.sendPacket(SystemMessageId.YOU_CAN_T_RECEIVE_WHILE_ENCHANTING_AN_ITEM_OR_ATTRIBUTE_COMBINING_JEWELS_OR_SEALING_UNSEALING_OR_COMBINING);
+            return false;
+        }
+
+        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
+            return false;
+        }
+        return true;
     }
 }

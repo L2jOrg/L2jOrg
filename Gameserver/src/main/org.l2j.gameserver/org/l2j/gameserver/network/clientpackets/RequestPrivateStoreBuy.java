@@ -21,6 +21,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ItemRequest;
 import org.l2j.gameserver.model.TradeList;
+import org.l2j.gameserver.model.TradeList.TradeResult;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -133,11 +134,11 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
             }
         }
 
-        final int result = storeList.privateStoreBuy(player, _items);
-        if (result > 0) {
+        var result = storeList.privateStoreBuy(player, _items);
+        if (result != TradeResult.OK) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
-            if (result > 1) {
-                LOGGER.warn("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
+            if (result != TradeResult.CANCELED) {
+                LOGGER.warn("PrivateStore buy has failed due to invalid list or request. {}, Private store of: {} ", player, storePlayer);
             }
             return;
         }

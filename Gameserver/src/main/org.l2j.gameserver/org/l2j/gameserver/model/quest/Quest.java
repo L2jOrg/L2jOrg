@@ -1158,95 +1158,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     }
 
     /**
-     * Use this method to get a random party member from a player's party.<br>
-     * Useful when distributing rewards after killing an NPC.
-     *
-     * @param player this parameter represents the player whom the party will taken.
-     * @return {@code null} if {@code player} is {@code null}, {@code player} itself if the player does not have a party, and a random party member in all other cases
-     */
-    public Player getRandomPartyMember(Player player) {
-        if (player == null) {
-            return null;
-        }
-        final Party party = player.getParty();
-        if ((party == null) || (party.getMembers().isEmpty())) {
-            return player;
-        }
-        return party.getMembers().get(Rnd.get(party.getMembers().size()));
-    }
-
-    /**
-     * Get a random party member with required cond value.
-     *
-     * @param player the instance of a player whose party is to be searched
-     * @param cond   the value of the "cond" variable that must be matched
-     * @return a random party member that matches the specified condition, or {@code null} if no match was found
-     */
-    public Player getRandomPartyMember(Player player, int cond) {
-        return getRandomPartyMember(player, "cond", String.valueOf(cond));
-    }
-
-    /**
-     * Auxiliary function for party quests.<br>
-     * Note: This function is only here because of how commonly it may be used by quest developers.<br>
-     * For any variations on this function, the quest script can always handle things on its own.
-     *
-     * @param player the instance of a player whose party is to be searched
-     * @param var    the quest variable to look for in party members. If {@code null}, it simply unconditionally returns a random party member
-     * @param value  the value of the specified quest variable the random party member must have
-     * @return a random party member that matches the specified conditions or {@code null} if no match was found.<br>
-     * If the {@code var} parameter is {@code null}, a random party member is selected without any conditions.<br>
-     * The party member must be within a range of 1500 ingame units of the target of the reference player, or, if no target exists, within the same range of the player itself
-     */
-    public Player getRandomPartyMember(Player player, String var, String value) {
-        // if no valid player instance is passed, there is nothing to check...
-        if (player == null) {
-            return null;
-        }
-
-        // for null var condition, return any random party member.
-        if (var == null) {
-            return getRandomPartyMember(player);
-        }
-
-        // normal cases...if the player is not in a party, check the player's state
-        QuestState temp;
-        final Party party = player.getParty();
-        // if this player is not in a party, just check if this player instance matches the conditions itself
-        if ((party == null) || (party.getMembers().isEmpty())) {
-            temp = player.getQuestState(getName());
-            if ((temp != null) && temp.isSet(var) && temp.get(var).equalsIgnoreCase(value)) {
-                return player; // match
-            }
-            return null; // no match
-        }
-
-        // if the player is in a party, gather a list of all matching party members (possibly including this player)
-        final List<Player> candidates = new ArrayList<>();
-        // get the target for enforcing distance limitations.
-        WorldObject target = player.getTarget();
-        if (target == null) {
-            target = player;
-        }
-
-        for (Player partyMember : party.getMembers()) {
-            if (partyMember == null) {
-                continue;
-            }
-            temp = partyMember.getQuestState(getName());
-            if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && isInsideRadius3D(partyMember, target, PartySettings.partyRange())) {
-                candidates.add(partyMember);
-            }
-        }
-        // if there was no match, return null...
-        if (candidates.isEmpty()) {
-            return null;
-        }
-        // if a match was found from the party, return one of them at random.
-        return candidates.get(Rnd.get(candidates.size()));
-    }
-
-    /**
      * Get a random party member from the specified player's party.<br>
      * If the player is not in a party, only the player himself is checked.<br>
      * The lucky member is chosen by standard loot roll rules -<br>
@@ -1279,6 +1190,91 @@ public class Quest extends AbstractScript implements IIdentifiable {
             }
         }
         return (luckyPlayer != null) && checkDistanceToTarget(luckyPlayer, npc) ? luckyPlayer : null;
+    }
+
+    /**
+     * Use this method to get a random party member from a player's party.<br>
+     * Useful when distributing rewards after killing an NPC.
+     *
+     * @param player this parameter represents the player whom the party will taken.
+     * @return {@code null} if {@code player} is {@code null}, {@code player} itself if the player does not have a party, and a random party member in all other cases
+     */
+    public Player getRandomPartyMember(Player player) {
+        if (player == null) {
+            return null;
+        }
+        final Party party = player.getParty();
+        if ((party == null) || (party.getMembers().isEmpty())) {
+            return player;
+        }
+        return Rnd.get(party.getMembers());
+    }
+
+    /**
+     * Get a random party member with required cond value.
+     *
+     * @param player the instance of a player whose party is to be searched
+     * @param cond   the value of the "cond" variable that must be matched
+     * @return a random party member that matches the specified condition, or {@code null} if no match was found
+     */
+    public Player getRandomPartyMember(Player player, int cond) {
+        return getRandomPartyMember(player, "cond", String.valueOf(cond));
+    }
+
+    /**
+     * Auxiliary function for party quests.<br>
+     * Note: This function is only here because of how commonly it may be used by quest developers.<br>
+     * For any variations on this function, the quest script can always handle things on its own.
+     *
+     * @param player the instance of a player whose party is to be searched
+     * @param var    the quest variable to look for in party members. If {@code null}, it simply unconditionally returns a random party member
+     * @param value  the value of the specified quest variable the random party member must have
+     * @return a random party member that matches the specified conditions or {@code null} if no match was found.<br>
+     * If the {@code var} parameter is {@code null}, a random party member is selected without any conditions.<br>
+     * The party member must be within a range of 1500 ingame units of the target of the reference player, or, if no target exists, within the same range of the player itself
+     */
+    public Player getRandomPartyMember(Player player, String var, String value) {
+        if (player == null) {
+            return null;
+        }
+
+        if (var == null) {
+            return getRandomPartyMember(player);
+        }
+
+        final Party party = player.getParty();
+        if (party == null) {
+            return hasQuestVariable(player, var, value) ? player : null;
+        }
+
+        return getRandomFromParty(player, var, value, party);
+    }
+
+    private Player getRandomFromParty(Player player, String var, String value, Party party) {
+        final List<Player> candidates = new ArrayList<>();
+        WorldObject target = player.getTarget();
+        if (target == null) {
+            target = player;
+        }
+
+        for (Player partyMember : party.getMembers()) {
+            if(hasQuestVariable(partyMember, var, value) && isInsideRadius3D(partyMember, target, PartySettings.partyRange())) {
+                candidates.add(partyMember);
+            }
+        }
+        if (candidates.isEmpty()) {
+            return null;
+        }
+        return Rnd.get(candidates);
+    }
+
+    private boolean hasQuestVariable(Player player, String var, String value) {
+        var temp = player.getQuestState(getName());
+        if(temp != null) {
+            var variable = temp.get(var);
+            return variable != null && variable.equalsIgnoreCase(value);
+        }
+        return false;
     }
 
     private boolean checkDistanceToTarget(Player player, Npc target) {

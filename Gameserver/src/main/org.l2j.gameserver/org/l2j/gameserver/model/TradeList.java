@@ -18,17 +18,15 @@
  */
 package org.l2j.gameserver.model;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSellingResult;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
@@ -42,6 +40,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author Advi
@@ -333,27 +333,19 @@ public class TradeList {
         confirmed = false;
     }
 
-    /**
-     * Validates TradeList with owner inventory
-     *
-     * @return
-     */
     private boolean validate() {
-        // Check for Owner validity
-        if ((owner == null) || (World.getInstance().findPlayer(owner.getObjectId()) == null)) {
+        if (owner == null || World.getInstance().findPlayer(owner.getObjectId()) == null) {
             LOGGER.warn("Invalid owner of TradeList");
             return false;
         }
 
-        // Check for Item validity
-        for (TradeItem titem : items) {
-            final Item item = owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
-            if ((item == null) || (item.getCount() < 1)) {
-                LOGGER.warn(owner.getName() + ": Invalid Item in TradeList");
+        for (var tradeItem : items) {
+            final Item item = owner.checkItemManipulation(tradeItem.getObjectId(), tradeItem.getCount(), "transfer");
+            if (item == null || item.getCount() < 1) {
+                LOGGER.warn("{}: Invalid Item in TradeList", owner);
                 return false;
             }
         }
-
         return true;
     }
 
@@ -474,25 +466,9 @@ public class TradeList {
         owner.onTradeFinish(success);
     }
 
-    /**
-     * Buy items from this PrivateStore list
-     *
-     * @param player
-     * @param items
-     * @return int: result of trading. 0 - ok, 1 - canceled (no adena), 2 - failed (item error)
-     */
-    public synchronized int privateStoreBuy(Player player, Set<ItemRequest> items) {
-        if (locked) {
-            return 1;
-        }
-
-        if (!validate()) {
-            lock();
-            return 1;
-        }
-
-        if (!owner.isOnline() || !player.isOnline()) {
-            return 1;
+    public synchronized TradeResult privateStoreBuy(Player player, Set<ItemRequest> items) {
+        if(!canBuy(player)) {
+            return TradeResult.CANCELED;
         }
 
         int slots = 0;
@@ -502,97 +478,53 @@ public class TradeList {
         final PlayerInventory ownerInventory = owner.getInventory();
         final PlayerInventory playerInventory = player.getInventory();
 
-        for (ItemRequest item : items) {
-            boolean found = false;
-
-            for (TradeItem ti : this.items) {
-                if (ti.getObjectId() == item.getObjectId()) {
-                    if (ti.getPrice() == item.getPrice()) {
-                        if (ti.getCount() < item.getCount()) {
-                            item.setCount(ti.getCount());
-                        }
-                        found = true;
-                    }
-                    break;
-                }
-            }
-            // item with this objectId and price not found in tradelist
-            if (!found) {
+        for (var itemRequested : items) {
+            if (!checkExists(itemRequested)) {
                 if (packaged) {
-                    GameUtils.handleIllegalPlayerAction(player, "[TradeList.privateStoreBuy()] Player " + player.getName() + " tried to cheat the package sell and buy only a part of the package! Ban this player for bot usage!");
-                    return 2;
+                    GameUtils.handleIllegalPlayerAction(player, "[TradeList.privateStoreBuy()]  " + player.getName() + " tried to cheat the package sell and buy only a part of the package! Ban this player for bot usage!");
+                    return TradeResult.FAILED;
                 }
 
-                item.setCount(0);
+                itemRequested.setCount(0);
                 continue;
             }
 
-            // check for overflow in the single item
-            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), CharacterSettings.maxAdena())) {
-                // private store attempting to overflow - disable it
-                lock();
-                return 1;
-            }
-
-            totalPrice += item.getCount() * item.getPrice();
-            // check for overflow of the total price
-            if ((CharacterSettings.maxAdena() < totalPrice) || (totalPrice < 0)) {
-                // private store attempting to overflow - disable it
-                lock();
-                return 1;
-            }
-
-            // Check if requested item is available for manipulation
-            final Item oldItem = owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
-            if ((oldItem == null) || !oldItem.isTradeable()) {
-                // private store sell invalid item - disable it
-                lock();
-                return 2;
-            }
-
-            final ItemTemplate template = ItemEngine.getInstance().getTemplate(item.getItemId());
+            final var template =  ItemEngine.getInstance().getTemplate(itemRequested.getItemId());
             if (template == null) {
-                continue;
+                return TradeResult.CANCELED;
             }
-            weight += item.getCount() * template.getWeight();
+
+            totalPrice += itemRequested.getCount() * itemRequested.getPrice();
+
+            if(!checkItemRequested(totalPrice, itemRequested)) {
+                return TradeResult.CANCELED;
+            }
+
+            weight += itemRequested.getCount() * template.getWeight();
+
             if (!template.isStackable()) {
-                slots += item.getCount();
-            } else if (playerInventory.getItemByItemId(item.getItemId()) == null) {
+                slots += itemRequested.getCount();
+            } else if (playerInventory.getItemByItemId(itemRequested.getItemId()) == null) {
                 slots++;
             }
         }
 
-        if (totalPrice > playerInventory.getAdena()) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
-            return 1;
+        if(!checkTransaction(player, slots, weight, totalPrice, playerInventory)) {
+            return TradeResult.CANCELED;
         }
 
-        if (!playerInventory.validateWeight(weight)) {
-            player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
-            return 1;
-        }
+        return doTransaction(player, items, totalPrice, ownerInventory, playerInventory);
+    }
 
-        if (!playerInventory.validateCapacity(slots)) {
-            player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
-            return 1;
-        }
+    private TradeResult doTransaction(Player player, Set<ItemRequest> items, long totalPrice, PlayerInventory ownerInventory, PlayerInventory playerInventory) {
+        final var ownerIU = new InventoryUpdate();
+        final var playerIU = new InventoryUpdate();
 
-        // Prepare inventory update packets
-        final InventoryUpdate ownerIU = new InventoryUpdate();
-        final InventoryUpdate playerIU = new InventoryUpdate();
-
-        final Item adenaItem = playerInventory.getAdenaInstance();
-        if (!playerInventory.reduceAdena("PrivateStore", totalPrice, player, owner)) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
-            return 1;
-        }
-        playerIU.addItem(adenaItem);
+        playerIU.addItem(playerInventory.getAdenaInstance());
         ownerInventory.addAdena("PrivateStore", totalPrice, owner, player);
-        // ownerIU.addItem(ownerInventory.getAdenaInstance());
 
-        boolean ok = true;
+        var result = TradeResult.OK;
 
-        // Transfer items
         for (ItemRequest item : items) {
             if (item.getCount() == 0) {
                 continue;
@@ -603,62 +535,128 @@ public class TradeList {
             if (oldItem == null) {
                 // should not happens - validation already done
                 lock();
-                ok = false;
+                result = TradeResult.FAILED;
                 break;
             }
 
             // Proceed with item transfer
             final Item newItem = ownerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), playerInventory, owner, player);
             if (newItem == null) {
-                ok = false;
+                result = TradeResult.FAILED;
                 break;
             }
             removeItem(item.getObjectId(), -1, item.getCount());
 
-            // Add changes to inventory update packets
-            if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
-                ownerIU.addModifiedItem(oldItem);
-            } else {
-                ownerIU.addRemovedItem(oldItem);
-            }
-            if (newItem.getCount() > item.getCount()) {
-                playerIU.addModifiedItem(newItem);
-            } else {
-                playerIU.addNewItem(newItem);
-            }
+            addItemToInventoryUpdate(ownerIU, playerIU, item, oldItem, newItem);
 
-            // Send messages about the transaction to both players
-            if (newItem.isStackable()) {
-                SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
-                msg.addString(player.getName());
-                msg.addItemName(newItem);
-                msg.addLong(item.getCount());
-                owner.sendPacket(msg);
-
-                msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
-                msg.addString(owner.getName());
-                msg.addItemName(newItem);
-                msg.addLong(item.getCount());
-                player.sendPacket(msg);
-            } else {
-                SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S2);
-                msg.addString(player.getName());
-                msg.addItemName(newItem);
-                owner.sendPacket(msg);
-
-                msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
-                msg.addString(owner.getName());
-                msg.addItemName(newItem);
-                player.sendPacket(msg);
-            }
-
+            sendTransactionMessage(player, item, newItem);
             owner.sendPacket(new ExPrivateStoreSellingResult(item.getObjectId(), item.getCount(), player.getAppearance().getVisibleName()));
         }
 
-        // Send inventory update packet
         owner.sendInventoryUpdate(ownerIU);
         player.sendInventoryUpdate(playerIU);
-        return ok ? 0 : 2;
+        return result;
+    }
+
+    private boolean checkTransaction(Player player, int slots, int weight, long totalPrice, PlayerInventory playerInventory) {
+        if (totalPrice > playerInventory.getAdena()) {
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
+            return false;
+        }
+
+        if (!playerInventory.validateWeight(weight)) {
+            player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+            return false;
+        }
+
+        if (!playerInventory.validateCapacity(slots)) {
+            player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+            return false;
+        }
+
+        if (!playerInventory.reduceAdena("PrivateStore", totalPrice, player, owner)) {
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean checkItemRequested(long totalPrice, ItemRequest itemRequested) {
+        if (MathUtil.checkMulOverFlow(itemRequested.getPrice(), itemRequested.getCount(), CharacterSettings.maxAdena())) {
+            lock();
+            return false;
+        }
+
+        if ((CharacterSettings.maxAdena() < totalPrice) || (totalPrice < 0)) {
+            lock();
+            return false;
+        }
+
+        // Check if requested item is available for manipulation
+        final Item oldItem = owner.checkItemManipulation(itemRequested.getObjectId(), itemRequested.getCount(), "sell");
+        if ((oldItem == null) || !oldItem.isTradeable()) {
+            // private store sell invalid item - disable it
+            lock();
+            return false;
+        }
+        return true;
+    }
+
+    private boolean checkExists(ItemRequest itemRequested) {
+        boolean found = false;
+
+        for (var item : items) {
+            if (item.getObjectId() == itemRequested.getObjectId()) {
+                if (item.getPrice() == itemRequested.getPrice()) {
+                    if (item.getCount() < itemRequested.getCount()) {
+                        itemRequested.setCount(item.getCount());
+                    }
+                    found = true;
+                }
+                break;
+            }
+        }
+        return found;
+    }
+
+    private boolean canBuy(Player player) {
+        if (locked) {
+            return false;
+        }
+
+        if (!validate()) {
+            lock();
+            return false;
+        }
+
+        return owner.isOnline() && player.isOnline();
+    }
+
+    private void addItemToInventoryUpdate(InventoryUpdate ownerIU, InventoryUpdate playerIU, ItemRequest item, Item oldItem, Item newItem) {
+        if (oldItem.getCount() > 0 && oldItem != newItem) {
+            ownerIU.addModifiedItem(oldItem);
+        } else {
+            ownerIU.addRemovedItem(oldItem);
+        }
+        if (newItem.getCount() > item.getCount()) {
+            playerIU.addModifiedItem(newItem);
+        } else {
+            playerIU.addNewItem(newItem);
+        }
+    }
+
+    private void sendTransactionMessage(Player player, ItemRequest item, Item newItem) {
+        var msg = getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S).addString(player.getName()).addItemName(newItem);
+        if(newItem.isStackable()) {
+            msg.addLong(item.getCount());
+        }
+        owner.sendPacket(msg);
+
+        msg = getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1).addString(owner.getName()).addItemName(newItem);
+        if(newItem.isStackable()) {
+            msg.addLong(item.getCount());
+        }
+        player.sendPacket(msg);
     }
 
     /**
@@ -686,129 +684,63 @@ public class TradeList {
 
         final TradeItem[] sellerItems = items.toArray(new TradeItem[0]);
 
-        for (ItemRequest item : requestedItems) {
-            // searching item in tradelist using itemId
-            boolean found = false;
-
-            for (TradeItem ti : sellerItems) {
-                if (ti.getItem().getId() == item.getItemId()) {
-                    // price should be the same
-                    if (ti.getPrice() == item.getPrice()) {
-                        // if requesting more than available - decrease count
-                        if (ti.getCount() < item.getCount()) {
-                            item.setCount(ti.getCount());
-                        }
-                        found = item.getCount() > 0;
-                    }
-                    break;
-                }
-            }
-            // not found any item in the tradelist with same itemId and price
-            // maybe another player already sold this item ?
-            if (!found) {
+        for (ItemRequest itemRequest : requestedItems) {
+            if(!checkExists(itemRequest)) {
                 continue;
             }
 
-            // check for overflow in the single item
-            if (MathUtil.checkMulOverFlow(item.getPrice(), item.getCount(), CharacterSettings.maxAdena())) {
-                lock();
+            final long _totalPrice = totalPrice + (itemRequest.getCount() * itemRequest.getPrice());
+
+            if (requestPriceOverflow(itemRequest, _totalPrice)) {
                 break;
             }
 
-            final long _totalPrice = totalPrice + (item.getCount() * item.getPrice());
-            if ((CharacterSettings.maxAdena() < _totalPrice) || (_totalPrice < 0)) {
-                lock();
-                break;
-            }
-
-            if (ownerInventory.getAdena() < _totalPrice) {
-                continue;
-            }
-
-            if ((item.getObjectId() < 1) || (item.getObjectId() > sellerItems.length)) {
-                continue;
-            }
-
-            final TradeItem tradeItem = sellerItems[item.getObjectId() - 1];
-            if ((tradeItem == null) || (tradeItem.getItem().getId() != item.getItemId())) {
+            final TradeItem tradeItem = itemRequestToTradeItem(ownerInventory, sellerItems, itemRequest, _totalPrice);
+            if (tradeItem == null) {
                 continue;
             }
 
             // Check if requested item is available for manipulation
             int objectId = tradeItem.getObjectId();
-            Item oldItem = player.checkItemManipulation(objectId, item.getCount(), "sell");
+            Item oldItem = player.checkItemManipulation(objectId, itemRequest.getCount(), "sell");
             // private store - buy use same objectId for buying several non-stackable items
             if (oldItem == null) {
                 // searching other items using same itemId
-                oldItem = playerInventory.getItemByItemId(item.getItemId());
+                oldItem = playerInventory.getItemByItemId(itemRequest.getItemId());
                 if (oldItem == null) {
                     continue;
                 }
                 objectId = oldItem.getObjectId();
-                oldItem = player.checkItemManipulation(objectId, item.getCount(), "sell");
+                oldItem = player.checkItemManipulation(objectId, itemRequest.getCount(), "sell");
                 if (oldItem == null) {
                     continue;
                 }
-            }
-            if (oldItem.getId() != item.getItemId()) {
-                GameUtils.handleIllegalPlayerAction(player, player + " is cheating with sell items");
-                return false;
             }
 
             if (!oldItem.isTradeable()) {
                 continue;
             }
 
+            if (oldItem.getId() != itemRequest.getItemId()) {
+                GameUtils.handleIllegalPlayerAction(player, player + " is cheating with sell items");
+                return false;
+            }
+
             // Proceed with item transfer
-            final Item newItem = playerInventory.transferItem("PrivateStore", objectId, item.getCount(), ownerInventory, player, owner);
+            final Item newItem = playerInventory.transferItem("PrivateStore", objectId, itemRequest.getCount(), ownerInventory, player, owner);
             if (newItem == null) {
                 continue;
             }
 
-            removeItem(-1, item.getItemId(), item.getCount());
+            removeItem(-1, itemRequest.getItemId(), itemRequest.getCount());
             ok = true;
 
             // increase total price only after successful transaction
             totalPrice = _totalPrice;
 
-            // Add changes to inventory update packets
-            if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
-                playerIU.addModifiedItem(oldItem);
-            } else {
-                playerIU.addRemovedItem(oldItem);
-            }
-            if (newItem.getCount() > item.getCount()) {
-                ownerIU.addModifiedItem(newItem);
-            } else {
-                ownerIU.addNewItem(newItem);
-            }
-
-            // Send messages about the transaction to both players
-            if (newItem.isStackable()) {
-                SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
-                msg.addString(player.getName());
-                msg.addItemName(newItem);
-                msg.addLong(item.getCount());
-                owner.sendPacket(msg);
-
-                msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
-                msg.addString(owner.getName());
-                msg.addItemName(newItem);
-                msg.addLong(item.getCount());
-                player.sendPacket(msg);
-            } else {
-                SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
-                msg.addString(player.getName());
-                msg.addItemName(newItem);
-                owner.sendPacket(msg);
-
-                msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S2);
-                msg.addString(owner.getName());
-                msg.addItemName(newItem);
-                player.sendPacket(msg);
-            }
-
-            owner.sendPacket(new ExPrivateStoreBuyingResult(newItem.getObjectId(), item.getCount(), player.getAppearance().getVisibleName()));
+            addItemToInventoryUpdate(playerIU, ownerIU, itemRequest, oldItem, newItem);
+            sendTransactionMessage(player, itemRequest, newItem);
+            owner.sendPacket(new ExPrivateStoreBuyingResult(newItem.getObjectId(), itemRequest.getCount(), player.getAppearance().getVisibleName()));
         }
 
         if (totalPrice > 0) {
@@ -825,11 +757,39 @@ public class TradeList {
         }
 
         if (ok) {
-            // Send inventory update packet
             owner.sendInventoryUpdate(ownerIU);
             player.sendInventoryUpdate(playerIU);
         }
         return ok;
+    }
+
+    private TradeItem itemRequestToTradeItem(PlayerInventory ownerInventory, TradeItem[] sellerItems, ItemRequest itemRequest, long totalPrice) {
+        if (ownerInventory.getAdena() < totalPrice) {
+            return null;
+        }
+
+        if (itemRequest.getObjectId() < 1 || itemRequest.getObjectId() > sellerItems.length) {
+            return null;
+        }
+
+        final TradeItem tradeItem = sellerItems[itemRequest.getObjectId() - 1];
+        if (tradeItem == null || tradeItem.getItem().getId() != itemRequest.getItemId()) {
+            return null;
+        }
+        return tradeItem;
+    }
+
+    private boolean requestPriceOverflow(ItemRequest itemRequest, long _totalPrice) {
+        if (MathUtil.checkMulOverFlow(itemRequest.getPrice(), itemRequest.getCount(), CharacterSettings.maxAdena())) {
+            lock();
+            return true;
+        }
+
+        if ((CharacterSettings.maxAdena() < _totalPrice) || (_totalPrice < 0)) {
+            lock();
+            return true;
+        }
+        return false;
     }
 
     public Player getOwner() {
@@ -869,5 +829,11 @@ public class TradeList {
      */
     public TradeItem[] getItems() {
         return items.toArray(TradeItem[]::new);
+    }
+
+    public enum TradeResult {
+        OK,
+        CANCELED,
+        FAILED
     }
 }
