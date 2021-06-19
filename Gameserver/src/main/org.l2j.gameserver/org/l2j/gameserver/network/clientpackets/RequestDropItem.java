@@ -81,7 +81,7 @@ public final class RequestDropItem extends ClientPacket {
             player.sendInventoryUpdate(new InventoryUpdate(modifiedItems));
         }
 
-        final Item droppedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
+        final var droppedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
         if(droppedItem != null) {
             if (player.isGM()) {
                 final String target = (player.getTarget() != null ? player.getTarget().getName() : "no-target");

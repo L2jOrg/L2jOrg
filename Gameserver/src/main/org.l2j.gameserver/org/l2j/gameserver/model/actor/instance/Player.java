@@ -2846,7 +2846,7 @@ public final class Player extends Playable {
             return null;
         }
 
-        InventoryUpdate playerIU = new InventoryUpdate();
+        var playerIU = new InventoryUpdate();
 
         if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
             playerIU.addModifiedItem(oldItem);

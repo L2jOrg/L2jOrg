@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.IntCollection;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.QuestDAO;
 import org.l2j.gameserver.data.database.data.QuestData;
@@ -1250,7 +1249,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         return getRandomFromParty(player, var, value, party);
     }
 
-    private Player getRandomFromParty(Player player, String var, String value, Party party) {
+    private Player getRandomFromParty(Player player, String key, String value, Party party) {
         final List<Player> candidates = new ArrayList<>();
         WorldObject target = player.getTarget();
         if (target == null) {
@@ -1258,7 +1257,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
         }
 
         for (Player partyMember : party.getMembers()) {
-            if(hasQuestVariable(partyMember, var, value) && isInsideRadius3D(partyMember, target, PartySettings.partyRange())) {
+            if(hasQuestVariable(partyMember, key, value) && isInsideRadius3D(partyMember, target, PartySettings.partyRange())) {
                 candidates.add(partyMember);
             }
         }
@@ -1268,10 +1267,10 @@ public class Quest extends AbstractScript implements IIdentifiable {
         return Rnd.get(candidates);
     }
 
-    private boolean hasQuestVariable(Player player, String var, String value) {
+    private boolean hasQuestVariable(Player player, String key, String value) {
         var temp = player.getQuestState(getName());
         if(temp != null) {
-            var variable = temp.get(var);
+            var variable = temp.get(key);
             return variable != null && variable.equalsIgnoreCase(value);
         }
         return false;

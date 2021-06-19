@@ -98,7 +98,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_setparam",
 		"admin_unsetparam"
 	};
-	
+	public static final String SYNTAX_SETPARAM_STAT_VALUE = "Syntax: //setparam <stat> <value>";
+
 	@Override
 	public boolean useAdminCommand(String command, Player player)
 	{
@@ -462,14 +463,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_fullfood"))
 		{
-			final WorldObject target = player.getTarget();
-			if (player.getTarget() instanceof  Pet targetPet)
-			{
+			if (player.getTarget() instanceof Pet targetPet) {
 				targetPet.setCurrentFed(targetPet.getMaxFed());
 				targetPet.broadcastStatusUpdate();
-			}
-			else
-			{
+			} else {
 				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
@@ -810,13 +807,13 @@ public class AdminEditChar implements IAdminCommandHandler
 			st.nextToken(); // admin_setparam
 			if (!st.hasMoreTokens())
 			{
-				BuilderUtil.sendSysMessage(player, "Syntax: //setparam <stat> <value>");
+				BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
 				return false;
 			}
 			final String statName = st.nextToken();
 			if (!st.hasMoreTokens())
 			{
-				BuilderUtil.sendSysMessage(player, "Syntax: //setparam <stat> <value>");
+				BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
 				return false;
 			}
 			
@@ -838,7 +835,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (Exception e) {
 				BuilderUtil.sendSysMessage(player, "Couldn't find such stat!");
-				BuilderUtil.sendSysMessage(player, "Syntax: //setparam <stat> <value>");
+				BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
 				return false;
 			}
 		}
@@ -872,7 +869,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		return true;
 	}
-	
+
 	@Override
 	public String[] getAdminCommandList()
 	{

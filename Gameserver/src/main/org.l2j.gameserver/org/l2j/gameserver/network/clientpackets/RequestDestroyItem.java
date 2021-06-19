@@ -120,13 +120,12 @@ public final class RequestDestroyItem extends ClientPacket {
             return false;
         }
 
-        // Cannot discard item that the skill is consuming
         if (player.isCastingNow(s -> s.getSkill().getItemConsumeId() == itemToRemove.getId())) {
             client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             return false;
         }
 
-        if (!GeneralSettings.destroyAnyItem() && ((!player.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()))) {
+        if (!GeneralSettings.destroyAnyItem() && !player.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) {
             if (itemToRemove.isHeroItem()) {
                 client.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
             } else {

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -143,8 +142,7 @@ public class RequestPackageSend extends ClientPacket {
             return;
         }
 
-        // Proceed to the transfer
-        final InventoryUpdate playerIU =  new InventoryUpdate();
+        final var playerIU =  new InventoryUpdate();
         for (ItemHolder i : _items) {
             // Check validity of requested item
             final Item oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
@@ -172,13 +170,7 @@ public class RequestPackageSend extends ClientPacket {
         }
 
         warehouse.deleteMe();
-
-        // Send updated item list to the player
-        if (playerIU != null) {
-            player.sendInventoryUpdate(playerIU);
-        } else {
-            player.sendItemList();
-        }
+        player.sendInventoryUpdate(playerIU);
     }
 
 }

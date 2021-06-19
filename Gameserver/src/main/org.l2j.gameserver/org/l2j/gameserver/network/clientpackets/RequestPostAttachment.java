@@ -42,6 +42,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
  * @author Migi, DS
  */
 public final class RequestPostAttachment extends ClientPacket {
+    public static final String PAY_MAIL = "PayMail";
     private int mailId;
 
     @Override
@@ -102,7 +103,7 @@ public final class RequestPostAttachment extends ClientPacket {
     }
 
     private void receiveAttachments(Player player, MailData mail, ItemContainer attachments) {
-        final InventoryUpdate playerIU =  new InventoryUpdate();
+        final var playerIU =  new InventoryUpdate();
         for (Item item : attachments.getItems()) {
             if (!receiveAttachment(player, mail, attachments, playerIU, item)){
                 return;
@@ -122,10 +123,10 @@ public final class RequestPostAttachment extends ClientPacket {
         var adena = mail.getFee();
         if (adena > 0) {
             if (sender != null) {
-                sender.addAdena("PayMail", adena, player, false);
+                sender.addAdena(PAY_MAIL, adena, player, false);
                 sender.sendPacket(getSystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL).addLong(adena).addString(player.getName()));
             } else {
-                final Item paidAdena = ItemEngine.getInstance().createItem("PayMail", CommonItem.ADENA, adena, player, null);
+                final Item paidAdena = ItemEngine.getInstance().createItem(PAY_MAIL, CommonItem.ADENA, adena, player, null);
                 paidAdena.changeOwner(mail.getSender());
                 paidAdena.changeItemLocation(ItemLocation.INVENTORY);
                 paidAdena.updateDatabase(true);
@@ -150,7 +151,7 @@ public final class RequestPostAttachment extends ClientPacket {
         }
 
         final long adena = mail.getFee();
-        if ((adena > 0) && !player.reduceAdena("PayMail", adena, null, true)) {
+        if ((adena > 0) && !player.reduceAdena(PAY_MAIL, adena, null, true)) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
             return false;
         }
@@ -159,7 +160,7 @@ public final class RequestPostAttachment extends ClientPacket {
 
     private boolean receiveAttachment(Player player, MailData mail, ItemContainer attachments, InventoryUpdate playerIU, Item item) {
         if (item.getOwnerId() != mail.getSender()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get item with owner != sender !");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to get item with owner != sender !");
             return false;
         }
 
@@ -180,17 +181,17 @@ public final class RequestPostAttachment extends ClientPacket {
 
     private boolean canItemBeAttached(Player player, MailData mail, Item item) {
         if (item.getOwnerId() != mail.getSender()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get wrong item (ownerId != senderId) from attachment!");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to get wrong item (ownerId != senderId) from attachment!");
             return false;
         }
 
         if (item.getItemLocation() != ItemLocation.MAIL) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get wrong item (Location != MAIL) from attachment!");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to get wrong item (Location != MAIL) from attachment!");
             return false;
         }
 
         if (item.getLocationSlot() != mail.getId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get items from different attachment!");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to get items from different attachment!");
             return false;
         }
         return true;
@@ -202,7 +203,7 @@ public final class RequestPostAttachment extends ClientPacket {
         }
 
         if (mail.getReceiver() != player.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get not own attachment!");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to get not own attachment!");
             return false;
         }
 
