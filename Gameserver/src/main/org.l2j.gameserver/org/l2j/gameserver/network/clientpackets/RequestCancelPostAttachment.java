@@ -135,8 +135,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
             return;
         }
 
-        // Proceed to the transfer
-        final InventoryUpdate playerIU =  new InventoryUpdate();
+        final var playerIU =  new InventoryUpdate();
         for (Item item : attachments.getItems()) {
             final long count = item.getCount();
             final Item newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), count, player.getInventory(), player, null);

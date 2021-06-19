@@ -20,7 +20,6 @@
 package org.l2j.scripts.handlers.admincommandhandlers;
 
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;

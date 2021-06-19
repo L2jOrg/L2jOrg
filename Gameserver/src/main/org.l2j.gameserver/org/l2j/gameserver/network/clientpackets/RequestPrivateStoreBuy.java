@@ -73,8 +73,8 @@ public final class RequestPrivateStoreBuy extends ClientPacket {
             return;
         }
 
-        final Player player = client.getPlayer();
-        final Player storePlayer = World.getInstance().findPlayer(_storePlayerId);
+        final var player = client.getPlayer();
+        final var storePlayer = World.getInstance().findPlayer(_storePlayerId);
 
         if (!canBuy(player, storePlayer)) {
             return;

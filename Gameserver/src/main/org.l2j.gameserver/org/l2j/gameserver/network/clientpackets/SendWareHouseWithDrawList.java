@@ -108,8 +108,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        // Proceed to the transfer
-        final InventoryUpdate playerIU = new InventoryUpdate();
+        final var playerIU = new InventoryUpdate();
         for (var holder : _items) {
             if (!transferItem(player, warehouse, manager, playerIU, holder)) {
                 return;
@@ -119,12 +118,12 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
     }
 
     private boolean transferItem(Player player, ItemContainer warehouse, Npc manager, InventoryUpdate playerIU, ItemHolder holder) {
-        final Item oldItem = warehouse.getItemByObjectId(holder.getId());
+        final var oldItem = warehouse.getItemByObjectId(holder.getId());
         if (oldItem == null || oldItem.getCount() < holder.getCount()) {
             LOGGER.warn("Error withdrawing a warehouse object for {} (olditem == null)", player);
             return false;
         }
-        final Item newItem = warehouse.transferItem(warehouse.getName(), holder.getId(), holder.getCount(), player.getInventory(), player, manager);
+        final var newItem = warehouse.transferItem(warehouse.getName(), holder.getId(), holder.getCount(), player.getInventory(), player, manager);
         if (newItem == null) {
             LOGGER.warn("Error withdrawing a warehouse object for {}  (newitem == null)", player);
             return false;
