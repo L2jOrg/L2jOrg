@@ -90,8 +90,7 @@ public class RequestPackageSend extends ClientPacket {
 
         final ItemContainer warehouse = new PlayerFreight(_objectId);
         for (ItemHolder holder : _items) {
-            // Check validity of requested item
-            final Item item = ItemRequestToItem(player, warehouse, holder);
+            final var item = itemRequestToItem(player, warehouse, holder);
             if(item == null) {
                 return;
             }
@@ -160,8 +159,8 @@ public class RequestPackageSend extends ClientPacket {
         return true;
     }
 
-    private Item ItemRequestToItem(Player player, ItemContainer warehouse, ItemHolder holder) {
-        final Item item = player.checkItemManipulation(holder.getId(), holder.getCount(), "freight");
+    private Item itemRequestToItem(Player player, ItemContainer warehouse, ItemHolder holder) {
+        final var item = player.checkItemManipulation(holder.getId(), holder.getCount(), "freight");
         if (item == null) {
             LOGGER.warn("Error depositing a warehouse object for {} (validity check)",  player);
             warehouse.deleteMe();

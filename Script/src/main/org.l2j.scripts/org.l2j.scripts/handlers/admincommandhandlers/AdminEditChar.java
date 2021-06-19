@@ -23,6 +23,7 @@ import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.enums.SubclassInfoType;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -49,6 +50,7 @@ import java.util.*;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.network.SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -101,65 +103,37 @@ public class AdminEditChar implements IAdminCommandHandler
 	public static final String SYNTAX_SETPARAM_STAT_VALUE = "Syntax: //setparam <stat> <value>";
 
 	@Override
-	public boolean useAdminCommand(String command, Player player)
-	{
-		if (command.equals("admin_current_player"))
-		{
-			currentPlayer(player, player);
-		}
-		else if (command.startsWith("admin_character_info"))
-		{
-			characterInfo(command, player);
-		}
-		else if (command.startsWith("admin_character_list"))
-		{
-			listCharacters(player, 0);
-		}
-		else if (command.startsWith("admin_show_characters"))
-		{
-			showCharacters(command, player);
-		}
-		else if (command.startsWith("admin_find_character"))
-		{
-			findCharacter(command, player);
-		}
-		else if (command.startsWith("admin_edit_character"))
-		{
-			editCharacter(command, player);
-		}
-		else if (command.startsWith("admin_setreputation")) {
+	public boolean useAdminCommand(String command, Player player) {
+		return infoCmd(player, command) || editCmd(player, command);
+	}
+
+	private boolean editCmd(Player player, String command) {
+		var result = false;
+		if (command.startsWith("admin_setreputation")) {
 			setReputation(command, player);
+			result = true;
 		}
-		else if (command.startsWith("admin_find_ip"))
-		{
-			findIP(command, player);
+		else if (command.startsWith("admin_nokarma")) {
+			noKarma(player);
+			result = true;
 		}
-		else if (command.startsWith("admin_find_account"))
-		{
-			findAccount(command, player);
-		}
-		else if (command.startsWith("admin_nokarma"))
-		{
-			return !noKarma(player);
-		}
-		else if (command.startsWith("admin_setpk"))
-		{
+		else if (command.startsWith("admin_setpk")) {
 			setPK(command, player);
+			result = true;
 		}
-		else if (command.startsWith("admin_setpvp"))
-		{
+		else if (command.startsWith("admin_setpvp")) {
 			setPvP(command, player);
+			result = true;
 		}
-		else if (command.startsWith("admin_setfame"))
-		{
+		else if (command.startsWith("admin_setfame")) {
 			setFame(command, player);
+			result = true;
 		}
-		else if (command.startsWith("admin_rec"))
-		{
+		else if (command.startsWith("admin_rec")) {
 			adminRec(command, player);
+			result = true;
 		}
-		else if (command.startsWith("admin_setclass"))
-		{
+		else if (command.startsWith("admin_setclass")) {
 			return setClass(command, player);
 		}
 		else if (command.startsWith("admin_settitle"))
@@ -185,47 +159,24 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_fullfood"))
 		{
 			fullFood(player);
+			result = true;
 		}
-		else if (command.startsWith("admin_remove_clan_penalty"))
-		{
+		else if (command.startsWith("admin_remove_clan_penalty")) {
 			return removeClanPenalty(command, player);
-		}
-		else if (command.startsWith("admin_find_dualbox"))
-		{
-			return findDualBox(command, player);
-		}
-		else if (command.startsWith("admin_strict_find_dualbox"))
-		{
-			return strictFindDualBox(command, player);
-		}
-		else if (command.startsWith("admin_tracert"))
-		{
-			return tracert(command, player);
-		}
-		else if (command.startsWith("admin_summon_info"))
-		{
-			summonInfo(player);
 		}
 		else if (command.startsWith("admin_unsummon"))
 		{
 			unSummon(player);
+			result = true;
 		}
 		else if (command.startsWith("admin_summon_setlvl"))
 		{
 			summonSetLevel(command, player);
-		}
-		else if (command.startsWith("admin_show_pet_inv"))
-		{
-			showPetInventory(command, player);
-
-		}
-		else if (command.startsWith("admin_partyinfo"))
-		{
-			partyInfo(command, player);
-
+			result = true;
 		}
 		else if (command.equals("admin_setnoble")) {
 			setNoble(player);
+			result = true;
 		}
 		else if (command.startsWith("admin_set_hp"))
 		{
@@ -251,20 +202,78 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			return unsetParam(command, player);
 		}
-		return true;
+		return result;
+	}
+
+	private boolean infoCmd(Player player, String command) {
+		var result = false;
+		if (command.equals("admin_current_player")) {
+			currentPlayer(player, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_character_info")) {
+			characterInfo(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_character_list")) {
+			listCharacters(player, 0);
+			result = true;
+		}
+		else if (command.startsWith("admin_show_characters")) {
+			showCharacters(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_find_character")) {
+			findCharacter(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_edit_character")) {
+			editCharacter(command, player);
+			result = true;
+		} else if (command.startsWith("admin_find_ip")) {
+			findIP(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_find_account")) {
+			findAccount(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_find_dualbox")) {
+			findDualBox(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_strict_find_dualbox")) {
+			strictFindDualBox(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_tracert")) {
+			tracert(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_summon_info")) {
+			summonInfo(player);
+			result = true;
+		}
+		else if (command.startsWith("admin_show_pet_inv")) {
+			showPetInventory(command, player);
+			result = true;
+		}
+		else if (command.startsWith("admin_partyinfo")) {
+			partyInfo(command, player);
+			result = true;
+		}
+		return result;
 	}
 
 	private boolean unsetParam(String command, Player player) {
 		final WorldObject target = player.getTarget();
-		if (!isCreature(target))
-		{
+		if (!isCreature(target)) {
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		st.nextToken(); // admin_setparam
-		if (!st.hasMoreTokens())
-		{
+		if (!st.hasMoreTokens()) {
 			BuilderUtil.sendSysMessage(player, "Syntax: //unsetparam <stat>");
 			return false;
 		}
@@ -583,44 +592,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		return true;
 	}
 
-	private boolean strictFindDualBox(String command, Player player) {
-		int multibox = 2;
-		try
-		{
-			final String val = command.substring(26);
-			multibox = Integer.parseInt(val);
-			if (multibox < 1)
-			{
-				BuilderUtil.sendSysMessage(player, "Usage: //strict_find_dualbox [number > 0]");
-				return false;
-			}
-		}
-		catch (Exception e)
-		{
-		}
-		findDualboxStrict(player, multibox);
-		return true;
-	}
-
-	private boolean findDualBox(String command, Player player) {
-		int multibox = 2;
-		try
-		{
-			final String val = command.substring(19);
-			multibox = Integer.parseInt(val);
-			if (multibox < 1)
-			{
-				BuilderUtil.sendSysMessage(player, "Usage: //find_dualbox [number > 0]");
-				return false;
-			}
-		}
-		catch (Exception e)
-		{
-		}
-		findDualbox(player, multibox);
-		return true;
-	}
-
 	private boolean removeClanPenalty(String command, Player player) {
 		try
 		{
@@ -785,15 +756,14 @@ public class AdminEditChar implements IAdminCommandHandler
 	}
 
 	private boolean setClass(String command, Player player) {
-		try
-		{
+		try {
 			final String val = command.substring(15).trim();
 			final int classidval = Integer.parseInt(val);
 			if (! (player.getTarget() instanceof Player target)) {
 				return false;
 			}
-			if ((ClassId.getClassId(classidval) != null) && (target.getClassId().getId() != classidval))
-			{
+
+			if (ClassId.getClassId(classidval) != null && target.getClassId().getId() != classidval) {
 				target.setClassId(classidval);
 				target.setBaseClass(target.getActiveClass());
 
@@ -806,37 +776,28 @@ public class AdminEditChar implements IAdminCommandHandler
 				target.sendPacket(new ExUserInfoInvenWeight());
 				target.sendMessage("A GM changed your class to " + newclass + ".");
 				player.sendMessage(target.getName() + " is a " + newclass + ".");
-			}
-			else
-			{
+			} else {
 				BuilderUtil.sendSysMessage(player, "Usage: //setclass <valid_new_classid>");
 			}
-		}
-		catch (StringIndexOutOfBoundsException e)
-		{
+		} catch (StringIndexOutOfBoundsException e) {
 			AdminHtml.showAdminHtml(player, "setclass/human_fighter.htm");
-		}
-		catch (NumberFormatException e)
-		{
+		} catch (NumberFormatException e) {
 			BuilderUtil.sendSysMessage(player, "Usage: //setclass <valid_new_classid>");
 		}
 		return true;
 	}
 
 	private void adminRec(String command, Player player) {
-		try
-		{
+		try {
 			final String val = command.substring(10);
 			final int recVal = Integer.parseInt(val);
-			if (player.getTarget() instanceof  Player target)
-			{
+
+			if (player.getTarget() instanceof  Player target) {
 				target.setRecommend(recVal);
-				target.broadcastUserInfo();
+				target.broadcastUserInfo(UserInfoType.SOCIAL);
 				target.sendMessage("A GM changed your Recommend points to " + recVal);
 				player.sendMessage(target.getName() + "'s Recommend changed to " + recVal);
-			}
-			else
-			{
+			} else {
 				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
@@ -847,87 +808,69 @@ public class AdminEditChar implements IAdminCommandHandler
 	}
 
 	private void setFame(String command, Player player) {
-		try
-		{
+		try {
 			final String val = command.substring(14);
 			final int fame = Integer.parseInt(val);
+
 			if (player.getTarget() instanceof Player target) {
 				target.setFame(fame);
-				target.broadcastUserInfo();
-				target.sendPacket(new UserInfo(target));
+				target.sendPacket(new UserInfo(target, UserInfoType.VITA_FAME));
 				target.sendMessage("A GM changed your Reputation points to " + fame);
 				player.sendMessage(target.getName() + "'s Fame changed to " + fame);
 			} else {
 				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		} catch (Exception e) {
-			LOGGER.warn("Set Fame error: " + e);
+			LOGGER.warn("Set Fame error", e);
 			BuilderUtil.sendSysMessage(player, "Usage: //setfame <new_fame_value>");
 		}
 	}
 
 	private void setPvP(String command, Player player) {
-		try
-		{
+		try {
 			final String val = command.substring(13);
 			final int pvp = Integer.parseInt(val);
 
 			if (player.getTarget() instanceof Player target) {
 				target.setPvpKills(pvp);
-				target.updatePvpTitleAndColor(false);
-				target.broadcastUserInfo();
-				target.sendPacket(new UserInfo(target));
+				if(target.updatePvpTitleAndColor(false)) {
+					target.broadcastUserInfo(UserInfoType.SOCIAL, UserInfoType.COLOR, UserInfoType.CLAN);
+				} else {
+					target.sendPacket(new UserInfo(target, UserInfoType.SOCIAL));
+				}
 				target.sendMessage("A GM changed your PVP count to " + pvp);
 				player.sendMessage(target.getName() + "'s PVP count changed to " + pvp);
-			}
-			else
-			{
+			} else {
 				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			LOGGER.warn("Error setting pvp:", e);
 			BuilderUtil.sendSysMessage(player, "Usage: //setpvp <pvp_count>");
 		}
 	}
 
 	private void setPK(String command, Player player) {
-		try
-		{
+		try {
 			final String val = command.substring(12);
 			final int pk = Integer.parseInt(val);
+
 			if (player.getTarget() instanceof Player target) {
 				target.setPkKills(pk);
-				target.broadcastUserInfo();
-				target.sendPacket(new UserInfo(target));
+				target.sendPacket(new UserInfo(target, UserInfoType.SOCIAL));
 				target.sendMessage("A GM changed your PK count to " + pk);
 				player.sendMessage(target.getName() + "'s PK count changed to " + pk);
-			}
-			else
-			{
+			} else {
 				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
-		catch (Exception e)
-		{
+		catch (Exception e) {
 			LOGGER.warn("Error setting PK", e);
 			BuilderUtil.sendSysMessage(player, "Usage: //setpk <pk_count>");
 		}
 	}
 
-	private boolean noKarma(Player player) {
-		if (!isPlayer(player.getTarget()))
-		{
-			BuilderUtil.sendSysMessage(player, "You must target a player.");
-			return true;
-		}
-
-		if (player.getTarget().getActingPlayer().getReputation() < 0)
-		{
-			setTargetReputation(player, 0);
-		}
-		return false;
+	private void noKarma(Player player) {
+		setTargetReputation(player, 0);
 	}
 
 	private void setReputation(String command, Player player) {
@@ -941,21 +884,49 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 	}
 
+	private void setTargetReputation(Player player, int newReputation) {
+		if(!(player.getTarget() instanceof  Player targetPlayer)) {
+			return;
+		}
+
+		if (newReputation > Config.MAX_REPUTATION) {
+			newReputation = Config.MAX_REPUTATION;
+		}
+
+		final var oldReputation = targetPlayer.getReputation();
+		if(oldReputation == newReputation) {
+			return;
+		}
+
+		targetPlayer.setReputation(newReputation);
+		targetPlayer.sendPacket(getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1).addInt(newReputation));
+		BuilderUtil.sendSysMessage(player, "Successfully Changed karma for " + targetPlayer + " from (" + oldReputation + ") to (" + newReputation + ").");
+	}
+
 	private void editCharacter(String command, Player player) {
 		final String[] data = command.split(" ");
-		if ((data.length > 1))
-		{
+		if (data.length > 1) {
 			editCharacter(player, data[1]);
-		}
-		else if (isPlayer(player.getTarget()))
-		{
+		} else if (isPlayer(player.getTarget())) {
 			editCharacter(player, null);
-		}
-		else
-		{
+		} else {
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 	}
+
+	private void editCharacter(Player activeChar, String targetName) {
+		WorldObject target;
+		if (targetName != null) {
+			target = World.getInstance().findPlayer(targetName);
+		} else {
+			target = activeChar.getTarget();
+		}
+
+		if (target instanceof Player player) {
+			gatherCharacterInfo(activeChar, player, "charedit.htm");
+		}
+	}
+
 
 	private void findAccount(String command, Player player) {
 		try
@@ -994,6 +965,65 @@ public class AdminEditChar implements IAdminCommandHandler
 			BuilderUtil.sendSysMessage(player, "Usage: //find_character <character_name>");
 			listCharacters(player, 0);
 		}
+	}
+
+	private void findCharacter(Player activeChar, String CharacterToFind)
+	{
+		int CharactersFound = 0;
+		String name;
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
+		adminReply.setFile(activeChar, "data/html/admin/charfind.htm");
+
+		final StringBuilder replyMSG = new StringBuilder(1000);
+
+		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
+		players.sort(Comparator.comparingLong(Player::getUptime));
+		for (Player player : players)
+		{ // Add player info into new Table row
+			name = player.getName();
+			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))
+			{
+				CharactersFound += 1;
+				replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info ");
+				replyMSG.append(name);
+				replyMSG.append("\">");
+				replyMSG.append(name);
+				replyMSG.append("</a></td><td width=110>");
+				replyMSG.append(ClassListData.getInstance().getClass(player.getClassId()).getClientCode());
+				replyMSG.append("</td><td width=40>");
+				replyMSG.append(player.getLevel());
+				replyMSG.append("</td></tr>");
+			}
+			if (CharactersFound > 20)
+			{
+				break;
+			}
+		}
+		adminReply.replace("%results%", replyMSG.toString());
+
+		final String replyMSG2;
+
+		if (CharactersFound == 0)
+		{
+			replyMSG2 = "s. Please try again.";
+		}
+		else if (CharactersFound > 20)
+		{
+			adminReply.replace("%number%", " more than 20");
+			replyMSG2 = "s.<br>Please refine your search to see all of the results.";
+		}
+		else if (CharactersFound == 1)
+		{
+			replyMSG2 = ".";
+		}
+		else
+		{
+			replyMSG2 = "s.";
+		}
+
+		adminReply.replace("%number%", String.valueOf(CharactersFound));
+		adminReply.replace("%end%", replyMSG2);
+		activeChar.sendPacket(adminReply);
 	}
 
 	private void showCharacters(String command, Player player) {
@@ -1147,120 +1177,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%noblesse%", player.isNoble() ? "Yes" : "No");
 		activeChar.sendPacket(adminReply);
 	}
-	
-	private void setTargetReputation(Player activeChar, int newReputation)
-	{
-		final WorldObject target = activeChar.getTarget();
-		Player player;
-		if (isPlayer(target))
-		{
-			player = (Player) target;
-		}
-		else
-		{
-			return;
-		}
-		
-		if (newReputation > Config.MAX_REPUTATION)
-		{
-			newReputation = Config.MAX_REPUTATION;
-		}
-		
-		final int oldReputation = player.getReputation();
-		player.setReputation(newReputation);
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1);
-		sm.addInt(newReputation);
-		player.sendPacket(sm);
-		BuilderUtil.sendSysMessage(activeChar, "Successfully Changed karma for " + player.getName() + " from (" + oldReputation + ") to (" + newReputation + ").");
-	}
-	
-	private void editCharacter(Player activeChar, String targetName)
-	{
-		WorldObject target;
-		if (targetName != null)
-		{
-			target = World.getInstance().findPlayer(targetName);
-		}
-		else
-		{
-			target = activeChar.getTarget();
-		}
-		
-		if ((target != null) && isPlayer(target))
-		{
-			final Player player = (Player) target;
-			gatherCharacterInfo(activeChar, player, "charedit.htm");
-		}
-	}
-	
-	/**
-	 * @param activeChar
-	 * @param CharacterToFind
-	 */
-	private void findCharacter(Player activeChar, String CharacterToFind)
-	{
-		int CharactersFound = 0;
-		String name;
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-		adminReply.setFile(activeChar, "data/html/admin/charfind.htm");
-		
-		final StringBuilder replyMSG = new StringBuilder(1000);
-		
-		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
-		players.sort(Comparator.comparingLong(Player::getUptime));
-		for (Player player : players)
-		{ // Add player info into new Table row
-			name = player.getName();
-			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))
-			{
-				CharactersFound += 1;
-				replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info ");
-				replyMSG.append(name);
-				replyMSG.append("\">");
-				replyMSG.append(name);
-				replyMSG.append("</a></td><td width=110>");
-				replyMSG.append(ClassListData.getInstance().getClass(player.getClassId()).getClientCode());
-				replyMSG.append("</td><td width=40>");
-				replyMSG.append(player.getLevel());
-				replyMSG.append("</td></tr>");
-			}
-			if (CharactersFound > 20)
-			{
-				break;
-			}
-		}
-		adminReply.replace("%results%", replyMSG.toString());
-		
-		final String replyMSG2;
-		
-		if (CharactersFound == 0)
-		{
-			replyMSG2 = "s. Please try again.";
-		}
-		else if (CharactersFound > 20)
-		{
-			adminReply.replace("%number%", " more than 20");
-			replyMSG2 = "s.<br>Please refine your search to see all of the results.";
-		}
-		else if (CharactersFound == 1)
-		{
-			replyMSG2 = ".";
-		}
-		else
-		{
-			replyMSG2 = "s.";
-		}
-		
-		adminReply.replace("%number%", String.valueOf(CharactersFound));
-		adminReply.replace("%end%", replyMSG2);
-		activeChar.sendPacket(adminReply);
-	}
-	
-	/**
-	 * @param activeChar
-	 * @param IpAdress
-	 * @throws IllegalArgumentException
-	 */
+
 	private void findCharactersPerIp(Player activeChar, String IpAdress) throws IllegalArgumentException
 	{
 		boolean findDisconnected = false;
@@ -1365,13 +1282,32 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 
-	private void findDualbox(Player activeChar, int multibox)
+	private boolean findDualBox(String command, Player player) {
+		int multibox = 2;
+		try
+		{
+			final String val = command.substring(19);
+			multibox = Integer.parseInt(val);
+			if (multibox < 1)
+			{
+				BuilderUtil.sendSysMessage(player, "Usage: //find_dualbox [number > 0]");
+				return false;
+			}
+		}
+		catch (Exception e)
+		{
+		}
+		findDualBox(player, multibox);
+		return true;
+	}
+
+	private void findDualBox(Player activeChar, int multibox)
 	{
 		final Map<String, List<Player>> ipMap = new HashMap<>();
 		String ip;
 		GameClient client;
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
-		
+
 		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(Player::getUptime));
 		for (Player player : players)
@@ -1381,14 +1317,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				continue;
 			}
-			
+
 			ip = client.getHostAddress();
-			if (ipMap.get(ip) == null)
-			{
-				ipMap.put(ip, new ArrayList<>());
-			}
-			ipMap.get(ip).add(player);
-			
+			ipMap.computeIfAbsent(ip, i -> new ArrayList<>()).add(player);
+
 			if (ipMap.get(ip).size() >= multibox)
 			{
 				final Integer count = dualboxIPs.get(ip);
@@ -1402,16 +1334,16 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 			}
 		}
-		
+
 		final List<String> keys = new ArrayList<>(dualboxIPs.keySet());
 		keys.sort(Comparator.comparing(s -> dualboxIPs.get(s)).reversed());
-		
+
 		final StringBuilder results = new StringBuilder();
 		for (String dualboxIP : keys)
 		{
 			results.append("<a action=\"bypass -h admin_find_ip " + dualboxIP + "\">" + dualboxIP + " (" + dualboxIPs.get(dualboxIP) + ")</a><br1>");
 		}
-		
+
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/dualbox.htm");
 		adminReply.replace("%multibox%", String.valueOf(multibox));
@@ -1419,8 +1351,27 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%strict%", "");
 		activeChar.sendPacket(adminReply);
 	}
+
+	private boolean strictFindDualBox(String command, Player player) {
+		int multibox = 2;
+		try
+		{
+			final String val = command.substring(26);
+			multibox = Integer.parseInt(val);
+			if (multibox < 1)
+			{
+				BuilderUtil.sendSysMessage(player, "Usage: //strict_find_dualbox [number > 0]");
+				return false;
+			}
+		}
+		catch (Exception e)
+		{
+		}
+		findDualBoxStrict(player, multibox);
+		return true;
+	}
 	
-	private void findDualboxStrict(Player activeChar, int multibox)
+	private void findDualBoxStrict(Player activeChar, int multibox)
 	{
 		final Map<IpPack, List<Player>> ipMap = new HashMap<>();
 		GameClient client;
@@ -1437,11 +1388,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			
 			final IpPack pack = new IpPack(client.getHostAddress(), client.getTrace());
-			if (ipMap.get(pack) == null)
-			{
-				ipMap.put(pack, new ArrayList<>());
-			}
-			ipMap.get(pack).add(player);
+			ipMap.computeIfAbsent(pack, p -> new ArrayList<>()).add(player);
 			
 			if (ipMap.get(pack).size() >= multibox)
 			{
