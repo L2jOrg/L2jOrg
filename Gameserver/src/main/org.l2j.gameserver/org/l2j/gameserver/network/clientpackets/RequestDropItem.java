@@ -38,6 +38,7 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 public final class RequestDropItem extends ClientPacket {
@@ -60,94 +61,18 @@ public final class RequestDropItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        if ((player == null) || player.isDead()) {
+        if (!client.getFloodProtectors().getDropItem().tryPerformAction("drop item")) {
             return;
         }
-        // Flood protect drop to avoid packet lag
-        if (!client.getFloodProtectors().getDropItem().tryPerformAction("drop item")) {
+
+        final Player player = client.getPlayer();
+        if (player == null || player.isDead()) {
             return;
         }
 
         final Item item = player.getInventory().getItemByObjectId(_objectId);
 
-        if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop") || (!GeneralSettings.allowDiscardItem() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) ||
-                (!item.isDropable() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())
-                || player.isInsideZone(ZoneType.NO_ITEM_DROP)) {
-            player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-            return;
-        }
-        if (item.isQuestItem() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) {
-            return;
-        }
-
-        if (_count > item.getCount()) {
-            player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-            return;
-        }
-
-        if ((CharacterSettings.spawnProtection() > 0) && player.isInvulnerable() && !player.isGM()) {
-            player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-            return;
-        }
-
-        if (_count < 0) {
-            GameUtils.handleIllegalPlayerAction(player, "[RequestDropItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to drop item with oid " + _objectId + " but has count < 0!");
-            return;
-        }
-
-        if (!item.isStackable() && (_count > 1)) {
-            GameUtils.handleIllegalPlayerAction(player, "[RequestDropItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to drop non-stackable item with oid " + _objectId + " but has count > 1!");
-            return;
-        }
-
-        if (Config.JAIL_DISABLE_TRANSACTION && player.isJailed()) {
-            player.sendMessage("You cannot drop items in Jail.");
-            return;
-        }
-
-        if (!player.getAccessLevel().allowTransaction()) {
-            player.sendMessage("Transactions are disabled for your Access Level.");
-            player.sendPacket(SystemMessageId.NOTHING_HAPPENED);
-            return;
-        }
-
-        if (player.isProcessingTransaction() || (player.getPrivateStoreType() != PrivateStoreType.NONE)) {
-            player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
-            return;
-        }
-        if (player.isFishing()) {
-            // You can't mount, dismount, break and drop items while fishing
-            player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
-            return;
-        }
-        if (player.isFlying()) {
-            return;
-        }
-
-        if (player.hasItemRequest()) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_DESTROY_OR_CRYSTALLIZE_ITEMS_WHILE_ENCHANTING_ATTRIBUTES);
-            return;
-        }
-
-        // Cannot discard item that the skill is consuming.
-        if (player.isCastingNow()) {
-            player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-            return;
-        }
-
-        if ((ItemTemplate.TYPE2_QUEST == item.getType2()) && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) {
-            player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
-            return;
-        }
-
-        if (!isInsideRadius2D(player, _x, _y, 150) || (Math.abs(_z - player.getZ()) > 50)) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_DISCARD_SOMETHING_THAT_FAR_AWAY_FROM_YOU);
-            return;
-        }
-
-        if (player.getInventory().isBlocked(item)) {
-            player.sendMessage("You cannot use this item.");
+        if (!canDropItem(player, item)) {
             return;
         }
 
@@ -156,17 +81,122 @@ public final class RequestDropItem extends ClientPacket {
             player.sendInventoryUpdate(new InventoryUpdate(modifiedItems));
         }
 
-        final Item dropedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
+        final Item droppedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
+        if(droppedItem != null) {
+            if (player.isGM()) {
+                final String target = (player.getTarget() != null ? player.getTarget().getName() : "no-target");
+                GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", "Drop", target, "(id: " + droppedItem.getId() + " name: " + droppedItem.getName() + " objId: " + droppedItem.getObjectId() + " x: " + player.getX() + " y: " + player.getY() + " z: " + player.getZ() + ")");
+            }
 
-        if (player.isGM()) {
-            final String target = (player.getTarget() != null ? player.getTarget().getName() : "no-target");
-            GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", "Drop", target, "(id: " + dropedItem.getId() + " name: " + dropedItem.getName() + " objId: " + dropedItem.getObjectId() + " x: " + player.getX() + " y: " + player.getY() + " z: " + player.getZ() + ")");
+            if (droppedItem.getId() == CommonItem.ADENA && droppedItem.getCount() >= 1000000) {
+                final String msg = "Character (" + player.getName() + ") has dropped (" + droppedItem.getCount() + ")adena at (" + _x + "," + _y + "," + _z + ")";
+                LOGGER.warn(msg);
+                AdminData.getInstance().broadcastMessageToGMs(msg);
+            }
+        }
+    }
+
+    private boolean canDropItem(Player player, Item item) {
+        if(item == null || player.isFlying() || (item.isQuestItem() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS))) {
+            return false;
         }
 
-        if ((dropedItem != null) && (dropedItem.getId() == CommonItem.ADENA) && (dropedItem.getCount() >= 1000000)) {
-            final String msg = "Character (" + player.getName() + ") has dropped (" + dropedItem.getCount() + ")adena at (" + _x + "," + _y + "," + _z + ")";
-            LOGGER.warn(msg);
-            AdminData.getInstance().broadcastMessageToGMs(msg);
+        if (!validateDropRequest(player, item)) {
+            return false;
         }
+
+        if (!canItemBeDiscarded(player, item)) {
+            player.sendPacket(THAT_ITEM_CANNOT_BE_DISCARDED);
+            return false;
+        }
+
+        if(player.isInsideZone(ZoneType.NO_ITEM_DROP)) {
+            player.sendPacket(YOU_CANNOT_DISCARD_THOSE_ITEMS_HERE);
+            return false;
+        }
+
+        if(item.getItemType() == EtcItemType.PET_COLLAR && player.havePetInvItems()) {
+            player.sendPacket(AS_YOUR_PET_IS_CURRENTLY_SUMMONED_YOU_CANNOT_DISCARD_THE_SUMMONING_ITEM);
+            return false;
+        }
+
+        if (!canPlayerDiscardItem(player)) {
+            return false;
+        }
+
+        if (!isInsideRadius2D(player, _x, _y, 150) || (Math.abs(_z - player.getZ()) > 50)) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_DISCARD_SOMETHING_THAT_FAR_AWAY_FROM_YOU);
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean validateDropRequest(Player player, Item item) {
+        if (_count < 0) {
+            GameUtils.handleIllegalPlayerAction(player, "[RequestDropItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to drop item with oid " + _objectId + " but has count < 0!");
+            return true;
+        }
+
+        if (!item.isStackable() && (_count > 1)) {
+            GameUtils.handleIllegalPlayerAction(player, "[RequestDropItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to drop non-stackable item with oid " + _objectId + " but has count > 1!");
+            return true;
+        }
+        return false;
+    }
+
+    private boolean canPlayerDiscardItem(Player player) {
+        if (Config.JAIL_DISABLE_TRANSACTION && player.isJailed()) {
+            player.sendMessage("You cannot drop items in Jail.");
+            return false;
+        }
+
+        if (!player.getAccessLevel().allowTransaction()) {
+            player.sendMessage("Transactions are disabled for your Access Level.");
+            player.sendPacket(SystemMessageId.NOTHING_HAPPENED);
+            return false;
+        }
+
+        if (player.isProcessingTransaction() || (player.getPrivateStoreType() != PrivateStoreType.NONE)) {
+            player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+            return false;
+        }
+
+        if (player.isFishing()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
+            return false;
+        }
+
+        if (player.hasItemRequest()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_DESTROY_OR_CRYSTALLIZE_ITEMS_WHILE_ENCHANTING_ATTRIBUTES);
+            return false;
+        }
+
+        if (player.isCastingNow()) {
+            player.sendPacket(THAT_ITEM_CANNOT_BE_DISCARDED);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean canItemBeDiscarded(Player player, Item item) {
+        if (_count == 0 || !player.validateItemManipulation(_objectId, "drop") || (!GeneralSettings.allowDiscardItem() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) ||
+                (!item.isDropable() && !player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS))) {
+            return false;
+        }
+
+        if (CharacterSettings.spawnProtection() > 0 && player.isInvulnerable() && !player.isGM()) {
+            return false;
+        }
+
+        if (_count > item.getCount()) {
+            return false;
+        }
+
+        if (player.getInventory().isBlocked(item)) {
+            return false;
+        }
+
+        return (ItemTemplate.TYPE2_QUEST != item.getType2()) || player.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS);
     }
 }
