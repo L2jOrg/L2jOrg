@@ -109,6 +109,50 @@ public class AdminEditChar implements IAdminCommandHandler
 
 	private boolean editCmd(Player player, String command) {
 		var result = false;
+		if (command.startsWith("admin_settitle"))
+		{
+			return setTitle(command, player);
+		}
+		else if (command.startsWith("admin_changename"))
+		{
+			return changeName(command, player);
+		}
+		else if (command.startsWith("admin_setsex"))
+		{
+			return setSex(player);
+		}
+		else if (command.startsWith("admin_setcolor"))
+		{
+			return setColor(command, player);
+		}
+		else if (command.startsWith("admin_settcolor"))
+		{
+			return setTitleColor(command, player);
+		}
+		else if (command.startsWith("admin_remove_clan_penalty")) {
+			return removeClanPenalty(command, player);
+		}
+		else if (command.startsWith("admin_set_pvp_flag"))
+		{
+			return setPvPFlag(player);
+		}
+		else if (command.startsWith("admin_fullfood"))
+		{
+			fullFood(player);
+			result = true;
+		}
+		else if (command.startsWith("admin_unsummon"))
+		{
+			unSummon(player);
+			result = true;
+		} else if(cmdChangeStats(player, command)) {
+			result = true;
+		}
+		return result;
+	}
+
+	private boolean cmdChangeStats(Player player, String command) {
+		var result = false;
 		if (command.startsWith("admin_setreputation")) {
 			setReputation(command, player);
 			result = true;
@@ -136,46 +180,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_setclass")) {
 			return setClass(command, player);
 		}
-		else if (command.startsWith("admin_settitle"))
-		{
-			return setTitle(command, player);
-		}
-		else if (command.startsWith("admin_changename"))
-		{
-			return changeName(command, player);
-		}
-		else if (command.startsWith("admin_setsex"))
-		{
-			return setSex(player);
-		}
-		else if (command.startsWith("admin_setcolor"))
-		{
-			return setColor(command, player);
-		}
-		else if (command.startsWith("admin_settcolor"))
-		{
-			return setTitleColor(command, player);
-		}
-		else if (command.startsWith("admin_fullfood"))
-		{
-			fullFood(player);
-			result = true;
-		}
-		else if (command.startsWith("admin_remove_clan_penalty")) {
-			return removeClanPenalty(command, player);
-		}
-		else if (command.startsWith("admin_unsummon"))
-		{
-			unSummon(player);
-			result = true;
-		}
 		else if (command.startsWith("admin_summon_setlvl"))
 		{
 			summonSetLevel(command, player);
-			result = true;
-		}
-		else if (command.equals("admin_setnoble")) {
-			setNoble(player);
 			result = true;
 		}
 		else if (command.startsWith("admin_set_hp"))
@@ -190,10 +197,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			return setCp(command, player);
 		}
-		else if (command.startsWith("admin_set_pvp_flag"))
-		{
-			return setPvPFlag(player);
-		}
 		else if (command.startsWith("admin_setparam"))
 		{
 			return setParam(command, player);
@@ -201,8 +204,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_unsetparam"))
 		{
 			return unsetParam(command, player);
+		} else if (command.equals("admin_setnoble")) {
+			setNoble(player);
+			result = true;
 		}
-		return result;
+		return  result;
 	}
 
 	private boolean infoCmd(Player player, String command) {

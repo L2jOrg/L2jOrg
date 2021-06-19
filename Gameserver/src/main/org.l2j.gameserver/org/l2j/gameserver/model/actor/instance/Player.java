@@ -3869,36 +3869,43 @@ public final class Player extends Playable {
     }
 
     public boolean updatePvpTitleAndColor(boolean broadcastInfo) {
-        var updated = false;
-        if (Config.PVP_COLOR_SYSTEM_ENABLED) {
-            final var pvpKills = data.getPvP();
-            if (pvpKills >= Config.PVP_AMOUNT1 && data.getPvP() < Config.PVP_AMOUNT2 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT1) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
-                updated = true;
-            } else if (pvpKills >= Config.PVP_AMOUNT2 && pvpKills < Config.PVP_AMOUNT3 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT2) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
-                updated = true;
-            } else if (pvpKills >= Config.PVP_AMOUNT3 && pvpKills < Config.PVP_AMOUNT4 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT3) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
-                updated = true;
-            } else if (pvpKills >= Config.PVP_AMOUNT4 && pvpKills < Config.PVP_AMOUNT5 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT4) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
-                updated = true;
-            } else if (pvpKills >= Config.PVP_AMOUNT5 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT5) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
-                updated = true;
-            }
+        if (!Config.PVP_COLOR_SYSTEM_ENABLED) {
+            return false;
+        }
 
-            if (updated && broadcastInfo) {
-                broadcastTitleInfo();
-            }
+        var updated = false;
+        final var pvpKills = data.getPvP();
+
+        if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT1, data.getPvP(), Config.PVP_AMOUNT2, Config.NAME_COLOR_FOR_PVP_AMOUNT1)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT2, pvpKills, Config.PVP_AMOUNT3, Config.NAME_COLOR_FOR_PVP_AMOUNT2)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT3, pvpKills, Config.PVP_AMOUNT4, Config.NAME_COLOR_FOR_PVP_AMOUNT3)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT4, pvpKills, Config.PVP_AMOUNT5, Config.NAME_COLOR_FOR_PVP_AMOUNT4)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
+            updated = true;
+        } else if (pvpKills >= Config.PVP_AMOUNT5 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT5) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
+            updated = true;
+        }
+
+        if (updated && broadcastInfo) {
+            broadcastTitleInfo();
         }
         return updated;
+    }
+
+    private boolean needChangeToAmount(int pvpKills, int pvpAmount1, int pvP, int pvpAmount2, int nameColorForPvpAmount1) {
+        return pvpKills >= pvpAmount1 && pvP < pvpAmount2 && appearance.getTitleColor() != nameColorForPvpAmount1;
     }
 
     public void updatePvPStatus() {
