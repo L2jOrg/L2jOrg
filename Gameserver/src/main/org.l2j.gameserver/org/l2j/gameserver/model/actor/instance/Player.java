@@ -3202,7 +3202,7 @@ public final class Player extends Playable {
     }
 
     public final void broadcastTitleInfo() {
-        broadcastUserInfo(UserInfoType.CLAN);
+        broadcastUserInfo(UserInfoType.CLAN, UserInfoType.COLOR);
         broadcastPacket(new NicknameChanged(this));
     }
 
@@ -3868,30 +3868,37 @@ public final class Player extends Playable {
         }
     }
 
-    public void updatePvpTitleAndColor(boolean broadcastInfo) {
+    public boolean updatePvpTitleAndColor(boolean broadcastInfo) {
+        var updated = false;
         if (Config.PVP_COLOR_SYSTEM_ENABLED) {
             final var pvpKills = data.getPvP();
-            if (pvpKills >= Config.PVP_AMOUNT1 && data.getPvP() < Config.PVP_AMOUNT2) {
+            if (pvpKills >= Config.PVP_AMOUNT1 && data.getPvP() < Config.PVP_AMOUNT2 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT1) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
-            } else if (pvpKills >= Config.PVP_AMOUNT2 && pvpKills < Config.PVP_AMOUNT3) {
+                updated = true;
+            } else if (pvpKills >= Config.PVP_AMOUNT2 && pvpKills < Config.PVP_AMOUNT3 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT2) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
-            } else if (pvpKills >= Config.PVP_AMOUNT3 && pvpKills < Config.PVP_AMOUNT4) {
+                updated = true;
+            } else if (pvpKills >= Config.PVP_AMOUNT3 && pvpKills < Config.PVP_AMOUNT4 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT3) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
-            } else if (pvpKills >= Config.PVP_AMOUNT4 && pvpKills < Config.PVP_AMOUNT5) {
+                updated = true;
+            } else if (pvpKills >= Config.PVP_AMOUNT4 && pvpKills < Config.PVP_AMOUNT5 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT4) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
-            } else if (pvpKills >= Config.PVP_AMOUNT5) {
+                updated = true;
+            } else if (pvpKills >= Config.PVP_AMOUNT5 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT5) {
                 setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
                 appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
+                updated = true;
             }
 
-            if (broadcastInfo) {
+            if (updated && broadcastInfo) {
                 broadcastTitleInfo();
             }
         }
+        return updated;
     }
 
     public void updatePvPStatus() {
