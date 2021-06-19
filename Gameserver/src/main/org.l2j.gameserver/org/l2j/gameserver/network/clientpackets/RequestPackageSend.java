@@ -70,78 +70,50 @@ public class RequestPackageSend extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        if ((_items == null) || (player == null) || !player.getAccountChars().containsKey(_objectId)) {
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit")) {
             return;
         }
 
-        if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit")) {
-            player.sendMessage("You depositing items too fast.");
+        final var player = client.getPlayer();
+        if (player == null || !player.getAccountChars().containsKey(_objectId)) {
             return;
         }
 
         final Npc manager = player.getLastFolkNPC();
-        if (((manager == null) || !isInsideRadius2D(player, manager, Npc.INTERACTION_DISTANCE))) {
+        if (!canSendPackage(player, manager)) {
             return;
         }
 
-        if (player.hasItemRequest()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!");
-            return;
-        }
-
-        // get current tradelist if any
-        if (player.getActiveTradeList() != null) {
-            return;
-        }
-
-        // Alt game - Karma punishment
-        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse()) {
-            return;
-        }
-
-        // Freight price from config per item slot.
         final int fee = _items.length * CharacterSettings.freightPrice();
         long currentAdena = player.getAdena();
         int slots = 0;
 
         final ItemContainer warehouse = new PlayerFreight(_objectId);
-        for (ItemHolder i : _items) {
+        for (ItemHolder holder : _items) {
             // Check validity of requested item
-            final Item item = player.checkItemManipulation(i.getId(), i.getCount(), "freight");
-            if (item == null) {
-                LOGGER.warn("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
-                warehouse.deleteMe();
-                return;
-            } else if (!item.isFreightable()) {
-                warehouse.deleteMe();
+            final Item item = ItemRequestToItem(player, warehouse, holder);
+            if(item == null) {
                 return;
             }
 
             // Calculate needed adena and slots
             if (item.getId() == CommonItem.ADENA) {
-                currentAdena -= i.getCount();
+                currentAdena -= holder.getCount();
             } else if (!item.isStackable()) {
-                slots += i.getCount();
+                slots += holder.getCount();
             } else if (warehouse.getItemByItemId(item.getId()) == null) {
                 slots++;
             }
         }
 
-        // Item Max Limit Check
-        if (!warehouse.validateCapacity(slots)) {
-            player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
-            warehouse.deleteMe();
+        if (!canDoTransaction(player, manager, fee, currentAdena, slots, warehouse)) {
             return;
         }
 
-        // Check if enough adena and charge the fee
-        if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
-            warehouse.deleteMe();
-            return;
-        }
+        doTransaction(player, warehouse);
+    }
 
+    private void doTransaction(Player player, ItemContainer warehouse) {
         final var playerIU =  new InventoryUpdate();
         for (ItemHolder i : _items) {
             // Check validity of requested item
@@ -171,6 +143,51 @@ public class RequestPackageSend extends ClientPacket {
 
         warehouse.deleteMe();
         player.sendInventoryUpdate(playerIU);
+    }
+
+    private boolean canDoTransaction(Player player, Npc manager, int fee, long currentAdena, int slots, ItemContainer warehouse) {
+        if (!warehouse.validateCapacity(slots)) {
+            player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+            warehouse.deleteMe();
+            return false;
+        }
+
+        if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
+            warehouse.deleteMe();
+            return false;
+        }
+        return true;
+    }
+
+    private Item ItemRequestToItem(Player player, ItemContainer warehouse, ItemHolder holder) {
+        final Item item = player.checkItemManipulation(holder.getId(), holder.getCount(), "freight");
+        if (item == null) {
+            LOGGER.warn("Error depositing a warehouse object for {} (validity check)",  player);
+            warehouse.deleteMe();
+            return null;
+        } else if (!item.isFreightable()) {
+            warehouse.deleteMe();
+            return null;
+        }
+        return item;
+    }
+
+    private boolean canSendPackage(Player player, Npc manager) {
+        if (manager == null || !isInsideRadius2D(player, manager, Npc.INTERACTION_DISTANCE)) {
+            return false;
+        }
+
+        if (player.hasItemRequest()) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!");
+            return false;
+        }
+
+        if (player.getActiveTradeList() != null) {
+            return false;
+        }
+
+        return player.getReputation() >= 0 || CharacterSettings.canPkUseWareHouse();
     }
 
 }

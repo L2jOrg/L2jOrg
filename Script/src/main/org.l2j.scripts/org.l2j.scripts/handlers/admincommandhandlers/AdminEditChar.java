@@ -105,23 +105,11 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		if (command.equals("admin_current_player"))
 		{
-			showCharacterInfo(player, player);
+			currentPlayer(player, player);
 		}
 		else if (command.startsWith("admin_character_info"))
 		{
-			final String[] data = command.split(" ");
-			if ((data.length > 1))
-			{
-				showCharacterInfo(player, World.getInstance().findPlayer(data[1]));
-			}
-			else if (isPlayer(player.getTarget()))
-			{
-				showCharacterInfo(player, player.getTarget().getActingPlayer());
-			}
-			else
-			{
-				player.sendPacket(SystemMessageId.INVALID_TARGET);
-			}
+			characterInfo(command, player);
 		}
 		else if (command.startsWith("admin_character_list"))
 		{
@@ -129,745 +117,913 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_show_characters"))
 		{
-			try
-			{
-				final String val = command.substring(22);
-				final int page = Integer.parseInt(val);
-				listCharacters(player, page);
-			}
-			catch (StringIndexOutOfBoundsException e)
-			{
-				// Case of empty page number
-				BuilderUtil.sendSysMessage(player, "Usage: //show_characters <page_number>");
-			}
+			showCharacters(command, player);
 		}
 		else if (command.startsWith("admin_find_character"))
 		{
-			try
-			{
-				final String val = command.substring(21);
-				findCharacter(player, val);
-			}
-			catch (StringIndexOutOfBoundsException e)
-			{ // Case of empty character name
-				BuilderUtil.sendSysMessage(player, "Usage: //find_character <character_name>");
-				listCharacters(player, 0);
-			}
-		}
-		else if (command.startsWith("admin_find_ip"))
-		{
-			try
-			{
-				final String val = command.substring(14);
-				findCharactersPerIp(player, val);
-			}
-			catch (Exception e)
-			{ // Case of empty or malformed IP number
-				BuilderUtil.sendSysMessage(player, "Usage: //find_ip <www.xxx.yyy.zzz>");
-				listCharacters(player, 0);
-			}
-		}
-		else if (command.startsWith("admin_find_account"))
-		{
-			try
-			{
-				final String val = command.substring(19);
-				findCharactersPerAccount(player, val);
-			}
-			catch (Exception e)
-			{ // Case of empty or malformed player name
-				BuilderUtil.sendSysMessage(player, "Usage: //find_account <player_name>");
-				listCharacters(player, 0);
-			}
+			findCharacter(command, player);
 		}
 		else if (command.startsWith("admin_edit_character"))
 		{
-			final String[] data = command.split(" ");
-			if ((data.length > 1))
-			{
-				editCharacter(player, data[1]);
-			}
-			else if (isPlayer(player.getTarget()))
-			{
-				editCharacter(player, null);
-			}
-			else
-			{
-				player.sendPacket(SystemMessageId.INVALID_TARGET);
-			}
+			editCharacter(command, player);
 		}
 		else if (command.startsWith("admin_setreputation")) {
-			try {
-				final String val = command.substring(20);
-				final int reputation = Integer.parseInt(val);
-				setTargetReputation(player, reputation);
-			} catch (Exception e) {
-				LOGGER.warn("Error setting reputation", e);
-				BuilderUtil.sendSysMessage(player, "Usage: //setreputation <new_reputation_value>");
-			}
+			setReputation(command, player);
+		}
+		else if (command.startsWith("admin_find_ip"))
+		{
+			findIP(command, player);
+		}
+		else if (command.startsWith("admin_find_account"))
+		{
+			findAccount(command, player);
 		}
 		else if (command.startsWith("admin_nokarma"))
 		{
-			if (!isPlayer(player.getTarget()))
-			{
-				BuilderUtil.sendSysMessage(player, "You must target a player.");
-				return false;
-			}
-			
-			if (player.getTarget().getActingPlayer().getReputation() < 0)
-			{
-				setTargetReputation(player, 0);
-			}
+			return !noKarma(player);
 		}
 		else if (command.startsWith("admin_setpk"))
 		{
-			try
-			{
-				final String val = command.substring(12);
-				final int pk = Integer.parseInt(val);
-				if (player.getTarget() instanceof Player target) {
-					target.setPkKills(pk);
-					target.broadcastUserInfo();
-					target.sendPacket(new UserInfo(target));
-					target.sendMessage("A GM changed your PK count to " + pk);
-					player.sendMessage(target.getName() + "'s PK count changed to " + pk);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.INVALID_TARGET);
-				}
-			}
-			catch (Exception e)
-			{
-				LOGGER.warn("Error setting PK", e);
-				BuilderUtil.sendSysMessage(player, "Usage: //setpk <pk_count>");
-			}
+			setPK(command, player);
 		}
 		else if (command.startsWith("admin_setpvp"))
 		{
-			try
-			{
-				final String val = command.substring(13);
-				final int pvp = Integer.parseInt(val);
-
-				if (player.getTarget() instanceof Player target) {
-					target.setPvpKills(pvp);
-					target.updatePvpTitleAndColor(false);
-					target.broadcastUserInfo();
-					target.sendPacket(new UserInfo(target));
-					target.sendMessage("A GM changed your PVP count to " + pvp);
-					player.sendMessage(target.getName() + "'s PVP count changed to " + pvp);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.INVALID_TARGET);
-				}
-			}
-			catch (Exception e)
-			{
-				LOGGER.warn("Error setting pvp:", e);
-				BuilderUtil.sendSysMessage(player, "Usage: //setpvp <pvp_count>");
-			}
+			setPvP(command, player);
 		}
 		else if (command.startsWith("admin_setfame"))
 		{
-			try
-			{
-				final String val = command.substring(14);
-				final int fame = Integer.parseInt(val);
-				if (player.getTarget() instanceof Player target) {
-					target.setFame(fame);
-					target.broadcastUserInfo();
-					target.sendPacket(new UserInfo(target));
-					target.sendMessage("A GM changed your Reputation points to " + fame);
-					player.sendMessage(target.getName() + "'s Fame changed to " + fame);
-				} else {
-					player.sendPacket(SystemMessageId.INVALID_TARGET);
-				}
-			} catch (Exception e) {
-				LOGGER.warn("Set Fame error: " + e);
-				BuilderUtil.sendSysMessage(player, "Usage: //setfame <new_fame_value>");
-			}
+			setFame(command, player);
 		}
 		else if (command.startsWith("admin_rec"))
 		{
+			adminRec(command, player);
+		}
+		else if (command.startsWith("admin_setclass"))
+		{
+			return setClass(command, player);
+		}
+		else if (command.startsWith("admin_settitle"))
+		{
+			return setTitle(command, player);
+		}
+		else if (command.startsWith("admin_changename"))
+		{
+			return changeName(command, player);
+		}
+		else if (command.startsWith("admin_setsex"))
+		{
+			return setSex(player);
+		}
+		else if (command.startsWith("admin_setcolor"))
+		{
+			return setColor(command, player);
+		}
+		else if (command.startsWith("admin_settcolor"))
+		{
+			return setTitleColor(command, player);
+		}
+		else if (command.startsWith("admin_fullfood"))
+		{
+			fullFood(player);
+		}
+		else if (command.startsWith("admin_remove_clan_penalty"))
+		{
+			return removeClanPenalty(command, player);
+		}
+		else if (command.startsWith("admin_find_dualbox"))
+		{
+			return findDualBox(command, player);
+		}
+		else if (command.startsWith("admin_strict_find_dualbox"))
+		{
+			return strictFindDualBox(command, player);
+		}
+		else if (command.startsWith("admin_tracert"))
+		{
+			return tracert(command, player);
+		}
+		else if (command.startsWith("admin_summon_info"))
+		{
+			summonInfo(player);
+		}
+		else if (command.startsWith("admin_unsummon"))
+		{
+			unSummon(player);
+		}
+		else if (command.startsWith("admin_summon_setlvl"))
+		{
+			summonSetLevel(command, player);
+		}
+		else if (command.startsWith("admin_show_pet_inv"))
+		{
+			showPetInventory(command, player);
+
+		}
+		else if (command.startsWith("admin_partyinfo"))
+		{
+			partyInfo(command, player);
+
+		}
+		else if (command.equals("admin_setnoble")) {
+			setNoble(player);
+		}
+		else if (command.startsWith("admin_set_hp"))
+		{
+			return setHp(command, player);
+		}
+		else if (command.startsWith("admin_set_mp"))
+		{
+			return setMp(command, player);
+		}
+		else if (command.startsWith("admin_set_cp"))
+		{
+			return setCp(command, player);
+		}
+		else if (command.startsWith("admin_set_pvp_flag"))
+		{
+			return setPvPFlag(player);
+		}
+		else if (command.startsWith("admin_setparam"))
+		{
+			return setParam(command, player);
+		}
+		else if (command.startsWith("admin_unsetparam"))
+		{
+			return unsetParam(command, player);
+		}
+		return true;
+	}
+
+	private boolean unsetParam(String command, Player player) {
+		final WorldObject target = player.getTarget();
+		if (!isCreature(target))
+		{
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+			return false;
+		}
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		st.nextToken(); // admin_setparam
+		if (!st.hasMoreTokens())
+		{
+			BuilderUtil.sendSysMessage(player, "Syntax: //unsetparam <stat>");
+			return false;
+		}
+		final String statName = st.nextToken();
+
+		try {
+			Stat stat = Stat.valueOf(statName);
+			final Creature targetCreature = (Creature) target;
+			targetCreature.getStats().removeFixedValue(stat);
+			targetCreature.getStats().recalculateStats(true);
+			BuilderUtil.sendSysMessage(player, "Fixed stat: " + stat + " has been removed.");
+		} catch (Exception e) {
+			BuilderUtil.sendSysMessage(player, "Couldn't find such stat!");
+			return false;
+		}
+		return true;
+	}
+
+	private boolean setParam(String command, Player player) {
+		final WorldObject target = player.getTarget();
+		if (!isCreature(target))
+		{
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+			return false;
+		}
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		st.nextToken(); // admin_setparam
+		if (!st.hasMoreTokens())
+		{
+			BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
+			return false;
+		}
+		final String statName = st.nextToken();
+		if (!st.hasMoreTokens())
+		{
+			BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
+			return false;
+		}
+
+		try {
+			Stat stat = Stat.valueOf(statName);
+
+			final double value = Double.parseDouble(st.nextToken());
+			final Creature targetCreature = (Creature) target;
+			if (value >= 0)
+			{
+				targetCreature.getStats().addFixedValue(stat, value);
+				targetCreature.getStats().recalculateStats(true);
+				BuilderUtil.sendSysMessage(player, "Fixed stat: " + stat + " has been set to " + value);
+			}
+			else
+			{
+				BuilderUtil.sendSysMessage(player, "Non negative values are only allowed!");
+			}
+		}
+		catch (Exception e) {
+			BuilderUtil.sendSysMessage(player, "Couldn't find such stat!");
+			BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
+			return false;
+		}
+		return true;
+	}
+
+	private boolean setPvPFlag(Player player) {
+		try
+		{
+			final WorldObject target = player.getTarget();
+			if (!isPlayable(target))
+			{
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
+				return false;
+			}
+			final Playable playable = ((Playable) target);
+			playable.updatePvPFlag(Math.abs(playable.getPvpFlag() - 1));
+		}
+		catch (Exception e)
+		{
+			BuilderUtil.sendSysMessage(player, "Usage: //set_pvp_flag");
+		}
+		return true;
+	}
+
+	private boolean setCp(String command, Player player) {
+		final String[] data = command.split(" ");
+		try
+		{
+			final WorldObject target = player.getTarget();
+			if (!isCreature(target))
+			{
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
+				return false;
+			}
+			((Creature) target).setCurrentCp(Double.parseDouble(data[1]));
+		}
+		catch (Exception e)
+		{
+			BuilderUtil.sendSysMessage(player, "Usage: //set_cp 1000");
+		}
+		return true;
+	}
+
+	private boolean setMp(String command, Player player) {
+		final String[] data = command.split(" ");
+		try
+		{
+			final WorldObject target = player.getTarget();
+			if (!isCreature(target))
+			{
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
+				return false;
+			}
+			((Creature) target).setCurrentMp(Double.parseDouble(data[1]));
+		}
+		catch (Exception e)
+		{
+			BuilderUtil.sendSysMessage(player, "Usage: //set_mp 1000");
+		}
+		return true;
+	}
+
+	private boolean setHp(String command, Player player) {
+		final String[] data = command.split(" ");
+		try
+		{
+			final WorldObject target = player.getTarget();
+			if (!isCreature(target))
+			{
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
+				return false;
+			}
+			((Creature) target).setCurrentHp(Double.parseDouble(data[1]));
+		}
+		catch (Exception e)
+		{
+			BuilderUtil.sendSysMessage(player, "Usage: //set_hp 1000");
+		}
+		return true;
+	}
+
+	private void setNoble(Player player) {
+		Player target;
+
+		if (isPlayer(player.getTarget()))
+		{
+			target = (Player) player.getTarget();
+		}
+		else
+		{
+			target = player;
+		}
+
+
+		target.setNoble(!target.isNoble());
+		if (target.getObjectId() != player.getObjectId())
+		{
+			BuilderUtil.sendSysMessage(player, "You've changed nobless status of: " + player.getName());
+		}
+		target.broadcastUserInfo();
+		target.sendMessage("GM changed your nobless status!");
+	}
+
+	private void partyInfo(String command, Player player) {
+		WorldObject target;
+		try
+		{
+			final String val = command.substring(16);
+			target = World.getInstance().findPlayer(val);
+			if (target == null)
+			{
+				target = player.getTarget();
+			}
+		}
+		catch (Exception e)
+		{
+			target = player.getTarget();
+		}
+
+		if (isPlayer(target))
+		{
+			if (((Player) target).isInParty())
+			{
+				gatherPartyInfo((Player) target, player);
+			}
+			else
+			{
+				BuilderUtil.sendSysMessage(player, "Not in party.");
+			}
+		}
+		else
+		{
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+		}
+	}
+
+	private void showPetInventory(String command, Player player) {
+		WorldObject target;
+		try
+		{
+			final String val = command.substring(19);
+			final int objId = Integer.parseInt(val);
+			target = World.getInstance().findPet(objId);
+		}
+		catch (Exception e)
+		{
+			target = player.getTarget();
+		}
+
+		if (isPet(target))
+		{
+			player.sendPacket(new GMViewItemList(1, (Pet) target));
+		}
+		else
+		{
+			BuilderUtil.sendSysMessage(player, "Usable only with Pets");
+		}
+	}
+
+	private void summonSetLevel(String command, Player player) {
+		final WorldObject target = player.getTarget();
+		if (isPet(target))
+		{
+			final Pet pet = (Pet) target;
 			try
 			{
-				final String val = command.substring(10);
-				final int recVal = Integer.parseInt(val);
-				if (player.getTarget() instanceof  Player target)
+				final String val = command.substring(20);
+				final int level = Integer.parseInt(val);
+				final long oldexp = pet.getStats().getExp();
+				final long newexp = pet.getStats().getExpForLevel(level);
+				if (oldexp > newexp)
 				{
-					target.setRecommend(recVal);
-					target.broadcastUserInfo();
-					target.sendMessage("A GM changed your Recommend points to " + recVal);
-					player.sendMessage(target.getName() + "'s Recommend changed to " + recVal);
+					pet.getStats().removeExp(oldexp - newexp);
 				}
-				else
+				else if (oldexp < newexp)
 				{
-					player.sendPacket(SystemMessageId.INVALID_TARGET);
+					pet.getStats().addExp(newexp - oldexp);
 				}
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(player, "Usage: //rec number");
 			}
 		}
-		else if (command.startsWith("admin_setclass"))
+		else
 		{
-			try
-			{
-				final String val = command.substring(15).trim();
-				final int classidval = Integer.parseInt(val);
-				if (! (player.getTarget() instanceof Player target)) {
-					return false;
-				}
-				if ((ClassId.getClassId(classidval) != null) && (target.getClassId().getId() != classidval))
-				{
-					target.setClassId(classidval);
-					target.setBaseClass(target.getActiveClass());
-					
-					final String newclass = ClassListData.getInstance().getClass(target.getClassId()).getClassName();
+			BuilderUtil.sendSysMessage(player, "Usable only with Pets");
+		}
+	}
 
-					target.store(false);
-					target.broadcastUserInfo();
-					target.sendSkillList();
-					target.sendPacket(new ExSubjobInfo(target, SubclassInfoType.CLASS_CHANGED));
-					target.sendPacket(new ExUserInfoInvenWeight());
-					target.sendMessage("A GM changed your class to " + newclass + ".");
-					player.sendMessage(target.getName() + " is a " + newclass + ".");
-				}
-				else
-				{
-					BuilderUtil.sendSysMessage(player, "Usage: //setclass <valid_new_classid>");
-				}
-			}
-			catch (StringIndexOutOfBoundsException e)
+	private void unSummon(Player player) {
+		final WorldObject target = player.getTarget();
+		if (isSummon(target))
+		{
+			((Summon) target).unSummon(((Summon) target).getOwner());
+		}
+		else
+		{
+			BuilderUtil.sendSysMessage(player, "Usable only with Pets/Summons");
+		}
+	}
+
+	private void summonInfo(Player player) {
+		final WorldObject target = player.getTarget();
+		if (isSummon(target))
+		{
+			gatherSummonInfo((Summon) target, player);
+		}
+		else
+		{
+			BuilderUtil.sendSysMessage(player, "Invalid target.");
+		}
+	}
+
+	private boolean tracert(String command, Player player) {
+		final String[] data = command.split(" ");
+		Player pl = null;
+		if ((data.length > 1))
+		{
+			pl = World.getInstance().findPlayer(data[1]);
+		}
+		else
+		{
+			final WorldObject target = player.getTarget();
+			if (isPlayer(target))
 			{
-				AdminHtml.showAdminHtml(player, "setclass/human_fighter.htm");
+				pl = (Player) target;
 			}
-			catch (NumberFormatException e)
+		}
+
+		if (pl == null)
+		{
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+			return false;
+		}
+
+		final GameClient client = pl.getClient();
+		if (client == null)
+		{
+			BuilderUtil.sendSysMessage(player, "Client is null.");
+			return false;
+		}
+
+		String ip;
+		final int[][] trace = client.getTrace();
+		for (int i = 0; i < trace.length; i++)
+		{
+			ip = "";
+			for (int o = 0; o < trace[0].length; o++)
+			{
+				ip = ip + trace[i][o];
+				if (o != (trace[0].length - 1))
+				{
+					ip = ip + ".";
+				}
+			}
+			BuilderUtil.sendSysMessage(player, "Hop" + i + ": " + ip);
+		}
+		return true;
+	}
+
+	private boolean strictFindDualBox(String command, Player player) {
+		int multibox = 2;
+		try
+		{
+			final String val = command.substring(26);
+			multibox = Integer.parseInt(val);
+			if (multibox < 1)
+			{
+				BuilderUtil.sendSysMessage(player, "Usage: //strict_find_dualbox [number > 0]");
+				return false;
+			}
+		}
+		catch (Exception e)
+		{
+		}
+		findDualboxStrict(player, multibox);
+		return true;
+	}
+
+	private boolean findDualBox(String command, Player player) {
+		int multibox = 2;
+		try
+		{
+			final String val = command.substring(19);
+			multibox = Integer.parseInt(val);
+			if (multibox < 1)
+			{
+				BuilderUtil.sendSysMessage(player, "Usage: //find_dualbox [number > 0]");
+				return false;
+			}
+		}
+		catch (Exception e)
+		{
+		}
+		findDualbox(player, multibox);
+		return true;
+	}
+
+	private boolean removeClanPenalty(String command, Player player) {
+		try
+		{
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			if (st.countTokens() != 3)
+			{
+				BuilderUtil.sendSysMessage(player, "Usage: //remove_clan_penalty join|create charname");
+				return false;
+			}
+
+			st.nextToken();
+
+			final boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
+
+			final String playerName = st.nextToken();
+			var target = World.getInstance().findPlayer(playerName);
+
+			if (target == null) {
+				getDAO(PlayerDAO.class).removeClanPenalty(playerName);
+			}
+			else if (changeCreateExpiryTime) // removing penalty
+			{
+				target.setClanCreateExpiryTime(0);
+			}
+			else
+			{
+				target.setClanJoinExpiryTime(0);
+			}
+
+			BuilderUtil.sendSysMessage(player, "Clan penalty successfully removed to character: " + playerName);
+		}
+		catch (Exception e)
+		{
+			LOGGER.error(e.getMessage(), e);
+		}
+		return true;
+	}
+
+	private void fullFood(Player player) {
+		if (player.getTarget() instanceof Pet targetPet) {
+			targetPet.setCurrentFed(targetPet.getMaxFed());
+			targetPet.broadcastStatusUpdate();
+		} else {
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+		}
+	}
+
+	private boolean setTitleColor(String command, Player player) {
+		try
+		{
+			final String val = command.substring(16);
+			if(!(player.getTarget() instanceof Player target)) {
+				return false;
+			}
+
+			target.getAppearance().setTitleColor(Integer.decode("0x" + val));
+			target.sendMessage("Your title color has been changed by a GM");
+			target.broadcastUserInfo();
+		}
+		catch (Exception e)
+		{ // Case of empty color or invalid hex string
+			BuilderUtil.sendSysMessage(player, "You need to specify a valid new color.");
+		}
+		return true;
+	}
+
+	private boolean setColor(String command, Player player) {
+		try
+		{
+			final String val = command.substring(15);
+			if(!(player.getTarget() instanceof Player target)) {
+				return false;
+			}
+
+			target.getAppearance().setNameColor(Integer.decode("0x" + val));
+			target.sendMessage("Your name color has been changed by a GM");
+			target.broadcastUserInfo();
+		}
+		catch (Exception e)
+		{ // Case of empty color or invalid hex string
+			BuilderUtil.sendSysMessage(player, "You need to specify a valid new color.");
+		}
+		return true;
+	}
+
+	private boolean setSex(Player player) {
+		if (!(player.getTarget() instanceof  Player target)) {
+			return false;
+		}
+
+		target.getAppearance().setFemale(!target.getAppearance().isFemale());
+		target.sendMessage("Your gender has been changed by a GM");
+		target.broadcastUserInfo();
+		return true;
+	}
+
+	private boolean changeName(String command, Player player) {
+		try
+		{
+			final String val = command.substring(17);
+			if(!(player.getTarget() instanceof Player target)) {
+				return false;
+			}
+
+			if (PlayerNameTable.getInstance().doesCharNameExist(val))
+			{
+				BuilderUtil.sendSysMessage(player, "Warning, player " + val + " already exists");
+				return false;
+			}
+			target.setName(val);
+			if (GeneralSettings.cachePlayersName())
+			{
+				PlayerNameTable.getInstance().addName(target);
+			}
+			target.storeMe();
+
+			BuilderUtil.sendSysMessage(target, "Changed name to " + val);
+			target.sendMessage("Your name has been changed by a GM.");
+			target.broadcastUserInfo();
+
+			if (target.isInParty())
+			{
+				// Delete party window for other party members
+				target.getParty().broadcastToPartyMembers(target, PartySmallWindowDeleteAll.STATIC_PACKET);
+				for (Player member : target.getParty().getMembers())
+				{
+					// And re-add
+					if (member != target)
+					{
+						member.sendPacket(new PartySmallWindowAll(member, target.getParty()));
+					}
+				}
+			}
+			if (target.getClan() != null)
+			{
+				target.getClan().broadcastClanStatus();
+			}
+		}
+		catch (StringIndexOutOfBoundsException e)
+		{ // Case of empty character name
+			BuilderUtil.sendSysMessage(player, "Usage: //setname new_name_for_target");
+		}
+		return true;
+	}
+
+	private boolean setTitle(String command, Player player) {
+		try
+		{
+			final String val = command.substring(15);
+			if (!(player.getTarget() instanceof Player target)) {
+				return false;
+			}
+
+			target.setTitle(val);
+			target.sendPacket(YOUR_TITLE_HAS_BEEN_CHANGED);
+			target.broadcastTitleInfo();
+		}
+		catch (StringIndexOutOfBoundsException e) {
+			BuilderUtil.sendSysMessage(player, "You need to specify the new title.");
+		}
+		return true;
+	}
+
+	private boolean setClass(String command, Player player) {
+		try
+		{
+			final String val = command.substring(15).trim();
+			final int classidval = Integer.parseInt(val);
+			if (! (player.getTarget() instanceof Player target)) {
+				return false;
+			}
+			if ((ClassId.getClassId(classidval) != null) && (target.getClassId().getId() != classidval))
+			{
+				target.setClassId(classidval);
+				target.setBaseClass(target.getActiveClass());
+
+				final String newclass = ClassListData.getInstance().getClass(target.getClassId()).getClassName();
+
+				target.store(false);
+				target.broadcastUserInfo();
+				target.sendSkillList();
+				target.sendPacket(new ExSubjobInfo(target, SubclassInfoType.CLASS_CHANGED));
+				target.sendPacket(new ExUserInfoInvenWeight());
+				target.sendMessage("A GM changed your class to " + newclass + ".");
+				player.sendMessage(target.getName() + " is a " + newclass + ".");
+			}
+			else
 			{
 				BuilderUtil.sendSysMessage(player, "Usage: //setclass <valid_new_classid>");
 			}
 		}
-		else if (command.startsWith("admin_settitle"))
+		catch (StringIndexOutOfBoundsException e)
 		{
-			try
-			{
-				final String val = command.substring(15);
-				if (!(player.getTarget() instanceof Player target)) {
-					return false;
-				}
-
-				target.setTitle(val);
-				target.sendPacket(YOUR_TITLE_HAS_BEEN_CHANGED);
-				target.broadcastTitleInfo();
-			}
-			catch (StringIndexOutOfBoundsException e) {
-				BuilderUtil.sendSysMessage(player, "You need to specify the new title.");
-			}
+			AdminHtml.showAdminHtml(player, "setclass/human_fighter.htm");
 		}
-		else if (command.startsWith("admin_changename"))
+		catch (NumberFormatException e)
 		{
-			try
-			{
-				final String val = command.substring(17);
-				if(!(player.getTarget() instanceof Player target)) {
-					return false;
-				}
+			BuilderUtil.sendSysMessage(player, "Usage: //setclass <valid_new_classid>");
+		}
+		return true;
+	}
 
-				if (PlayerNameTable.getInstance().doesCharNameExist(val))
-				{
-					BuilderUtil.sendSysMessage(player, "Warning, player " + val + " already exists");
-					return false;
-				}
-				target.setName(val);
-				if (GeneralSettings.cachePlayersName())
-				{
-					PlayerNameTable.getInstance().addName(target);
-				}
-				target.storeMe();
-				
-				BuilderUtil.sendSysMessage(target, "Changed name to " + val);
-				target.sendMessage("Your name has been changed by a GM.");
+	private void adminRec(String command, Player player) {
+		try
+		{
+			final String val = command.substring(10);
+			final int recVal = Integer.parseInt(val);
+			if (player.getTarget() instanceof  Player target)
+			{
+				target.setRecommend(recVal);
 				target.broadcastUserInfo();
-				
-				if (target.isInParty())
-				{
-					// Delete party window for other party members
-					target.getParty().broadcastToPartyMembers(target, PartySmallWindowDeleteAll.STATIC_PACKET);
-					for (Player member : target.getParty().getMembers())
-					{
-						// And re-add
-						if (member != target)
-						{
-							member.sendPacket(new PartySmallWindowAll(member, target.getParty()));
-						}
-					}
-				}
-				if (target.getClan() != null)
-				{
-					target.getClan().broadcastClanStatus();
-				}
+				target.sendMessage("A GM changed your Recommend points to " + recVal);
+				player.sendMessage(target.getName() + "'s Recommend changed to " + recVal);
 			}
-			catch (StringIndexOutOfBoundsException e)
-			{ // Case of empty character name
-				BuilderUtil.sendSysMessage(player, "Usage: //setname new_name_for_target");
-			}
-		}
-		else if (command.startsWith("admin_setsex"))
-		{
-			if (!(player.getTarget() instanceof  Player target)) {
-				return false;
-			}
-
-			target.getAppearance().setFemale(!target.getAppearance().isFemale());
-			target.sendMessage("Your gender has been changed by a GM");
-			target.broadcastUserInfo();
-		}
-		else if (command.startsWith("admin_setcolor"))
-		{
-			try
+			else
 			{
-				final String val = command.substring(15);
-				if(!(player.getTarget() instanceof Player target)) {
-					return false;
-				}
-
-				target.getAppearance().setNameColor(Integer.decode("0x" + val));
-				target.sendMessage("Your name color has been changed by a GM");
-				target.broadcastUserInfo();
-			}
-			catch (Exception e)
-			{ // Case of empty color or invalid hex string
-				BuilderUtil.sendSysMessage(player, "You need to specify a valid new color.");
+				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
-		else if (command.startsWith("admin_settcolor"))
+		catch (Exception e)
 		{
-			try
-			{
-				final String val = command.substring(16);
-				if(!(player.getTarget() instanceof Player target)) {
-					return false;
-				}
-
-				target.getAppearance().setTitleColor(Integer.decode("0x" + val));
-				target.sendMessage("Your title color has been changed by a GM");
-				target.broadcastUserInfo();
-			}
-			catch (Exception e)
-			{ // Case of empty color or invalid hex string
-				BuilderUtil.sendSysMessage(player, "You need to specify a valid new color.");
-			}
+			BuilderUtil.sendSysMessage(player, "Usage: //rec number");
 		}
-		else if (command.startsWith("admin_fullfood"))
+	}
+
+	private void setFame(String command, Player player) {
+		try
 		{
-			if (player.getTarget() instanceof Pet targetPet) {
-				targetPet.setCurrentFed(targetPet.getMaxFed());
-				targetPet.broadcastStatusUpdate();
+			final String val = command.substring(14);
+			final int fame = Integer.parseInt(val);
+			if (player.getTarget() instanceof Player target) {
+				target.setFame(fame);
+				target.broadcastUserInfo();
+				target.sendPacket(new UserInfo(target));
+				target.sendMessage("A GM changed your Reputation points to " + fame);
+				player.sendMessage(target.getName() + "'s Fame changed to " + fame);
 			} else {
 				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
+		} catch (Exception e) {
+			LOGGER.warn("Set Fame error: " + e);
+			BuilderUtil.sendSysMessage(player, "Usage: //setfame <new_fame_value>");
 		}
-		else if (command.startsWith("admin_remove_clan_penalty"))
+	}
+
+	private void setPvP(String command, Player player) {
+		try
 		{
-			try
-			{
-				final StringTokenizer st = new StringTokenizer(command, " ");
-				if (st.countTokens() != 3)
-				{
-					BuilderUtil.sendSysMessage(player, "Usage: //remove_clan_penalty join|create charname");
-					return false;
-				}
-				
-				st.nextToken();
-				
-				final boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
-				
-				final String playerName = st.nextToken();
-				var target = World.getInstance().findPlayer(playerName);
-				
-				if (target == null) {
-					getDAO(PlayerDAO.class).removeClanPenalty(playerName);
-				}
-				else if (changeCreateExpiryTime) // removing penalty
-				{
-					target.setClanCreateExpiryTime(0);
-				}
-				else
-				{
-					target.setClanJoinExpiryTime(0);
-				}
-				
-				BuilderUtil.sendSysMessage(player, "Clan penalty successfully removed to character: " + playerName);
-			}
-			catch (Exception e)
-			{
-				LOGGER.error(e.getMessage(), e);
-			}
-		}
-		else if (command.startsWith("admin_find_dualbox"))
-		{
-			int multibox = 2;
-			try
-			{
-				final String val = command.substring(19);
-				multibox = Integer.parseInt(val);
-				if (multibox < 1)
-				{
-					BuilderUtil.sendSysMessage(player, "Usage: //find_dualbox [number > 0]");
-					return false;
-				}
-			}
-			catch (Exception e)
-			{
-			}
-			findDualbox(player, multibox);
-		}
-		else if (command.startsWith("admin_strict_find_dualbox"))
-		{
-			int multibox = 2;
-			try
-			{
-				final String val = command.substring(26);
-				multibox = Integer.parseInt(val);
-				if (multibox < 1)
-				{
-					BuilderUtil.sendSysMessage(player, "Usage: //strict_find_dualbox [number > 0]");
-					return false;
-				}
-			}
-			catch (Exception e)
-			{
-			}
-			findDualboxStrict(player, multibox);
-		}
-		else if (command.startsWith("admin_tracert"))
-		{
-			final String[] data = command.split(" ");
-			Player pl = null;
-			if ((data.length > 1))
-			{
-				pl = World.getInstance().findPlayer(data[1]);
-			}
-			else
-			{
-				final WorldObject target = player.getTarget();
-				if (isPlayer(target))
-				{
-					pl = (Player) target;
-				}
-			}
-			
-			if (pl == null)
-			{
-				player.sendPacket(SystemMessageId.INVALID_TARGET);
-				return false;
-			}
-			
-			final GameClient client = pl.getClient();
-			if (client == null)
-			{
-				BuilderUtil.sendSysMessage(player, "Client is null.");
-				return false;
-			}
-			
-			String ip;
-			final int[][] trace = client.getTrace();
-			for (int i = 0; i < trace.length; i++)
-			{
-				ip = "";
-				for (int o = 0; o < trace[0].length; o++)
-				{
-					ip = ip + trace[i][o];
-					if (o != (trace[0].length - 1))
-					{
-						ip = ip + ".";
-					}
-				}
-				BuilderUtil.sendSysMessage(player, "Hop" + i + ": " + ip);
-			}
-		}
-		else if (command.startsWith("admin_summon_info"))
-		{
-			final WorldObject target = player.getTarget();
-			if (isSummon(target))
-			{
-				gatherSummonInfo((Summon) target, player);
-			}
-			else
-			{
-				BuilderUtil.sendSysMessage(player, "Invalid target.");
-			}
-		}
-		else if (command.startsWith("admin_unsummon"))
-		{
-			final WorldObject target = player.getTarget();
-			if (isSummon(target))
-			{
-				((Summon) target).unSummon(((Summon) target).getOwner());
-			}
-			else
-			{
-				BuilderUtil.sendSysMessage(player, "Usable only with Pets/Summons");
-			}
-		}
-		else if (command.startsWith("admin_summon_setlvl"))
-		{
-			final WorldObject target = player.getTarget();
-			if (isPet(target))
-			{
-				final Pet pet = (Pet) target;
-				try
-				{
-					final String val = command.substring(20);
-					final int level = Integer.parseInt(val);
-					final long oldexp = pet.getStats().getExp();
-					final long newexp = pet.getStats().getExpForLevel(level);
-					if (oldexp > newexp)
-					{
-						pet.getStats().removeExp(oldexp - newexp);
-					}
-					else if (oldexp < newexp)
-					{
-						pet.getStats().addExp(newexp - oldexp);
-					}
-				}
-				catch (Exception e)
-				{
-				}
-			}
-			else
-			{
-				BuilderUtil.sendSysMessage(player, "Usable only with Pets");
-			}
-		}
-		else if (command.startsWith("admin_show_pet_inv"))
-		{
-			WorldObject target;
-			try
-			{
-				final String val = command.substring(19);
-				final int objId = Integer.parseInt(val);
-				target = World.getInstance().findPet(objId);
-			}
-			catch (Exception e)
-			{
-				target = player.getTarget();
-			}
-			
-			if (isPet(target))
-			{
-				player.sendPacket(new GMViewItemList(1, (Pet) target));
-			}
-			else
-			{
-				BuilderUtil.sendSysMessage(player, "Usable only with Pets");
-			}
-			
-		}
-		else if (command.startsWith("admin_partyinfo"))
-		{
-			WorldObject target;
-			try
-			{
-				final String val = command.substring(16);
-				target = World.getInstance().findPlayer(val);
-				if (target == null)
-				{
-					target = player.getTarget();
-				}
-			}
-			catch (Exception e)
-			{
-				target = player.getTarget();
-			}
-			
-			if (isPlayer(target))
-			{
-				if (((Player) target).isInParty())
-				{
-					gatherPartyInfo((Player) target, player);
-				}
-				else
-				{
-					BuilderUtil.sendSysMessage(player, "Not in party.");
-				}
+			final String val = command.substring(13);
+			final int pvp = Integer.parseInt(val);
+
+			if (player.getTarget() instanceof Player target) {
+				target.setPvpKills(pvp);
+				target.updatePvpTitleAndColor(false);
+				target.broadcastUserInfo();
+				target.sendPacket(new UserInfo(target));
+				target.sendMessage("A GM changed your PVP count to " + pvp);
+				player.sendMessage(target.getName() + "'s PVP count changed to " + pvp);
 			}
 			else
 			{
 				player.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-			
 		}
-		else if (command.equals("admin_setnoble")) {
+		catch (Exception e)
+		{
+			LOGGER.warn("Error setting pvp:", e);
+			BuilderUtil.sendSysMessage(player, "Usage: //setpvp <pvp_count>");
+		}
+	}
 
-			Player target;
-
-			if (isPlayer(player.getTarget()))
-			{
-				target = (Player) player.getTarget();
+	private void setPK(String command, Player player) {
+		try
+		{
+			final String val = command.substring(12);
+			final int pk = Integer.parseInt(val);
+			if (player.getTarget() instanceof Player target) {
+				target.setPkKills(pk);
+				target.broadcastUserInfo();
+				target.sendPacket(new UserInfo(target));
+				target.sendMessage("A GM changed your PK count to " + pk);
+				player.sendMessage(target.getName() + "'s PK count changed to " + pk);
 			}
 			else
 			{
-				target = player;
-			}
-
-
-			target.setNoble(!target.isNoble());
-			if (target.getObjectId() != player.getObjectId())
-			{
-				BuilderUtil.sendSysMessage(player, "You've changed nobless status of: " + player.getName());
-			}
-			target.broadcastUserInfo();
-			target.sendMessage("GM changed your nobless status!");
-		}
-		else if (command.startsWith("admin_set_hp"))
-		{
-			final String[] data = command.split(" ");
-			try
-			{
-				final WorldObject target = player.getTarget();
-				if (!isCreature(target))
-				{
-					player.sendPacket(SystemMessageId.INVALID_TARGET);
-					return false;
-				}
-				((Creature) target).setCurrentHp(Double.parseDouble(data[1]));
-			}
-			catch (Exception e)
-			{
-				BuilderUtil.sendSysMessage(player, "Usage: //set_hp 1000");
-			}
-		}
-		else if (command.startsWith("admin_set_mp"))
-		{
-			final String[] data = command.split(" ");
-			try
-			{
-				final WorldObject target = player.getTarget();
-				if (!isCreature(target))
-				{
-					player.sendPacket(SystemMessageId.INVALID_TARGET);
-					return false;
-				}
-				((Creature) target).setCurrentMp(Double.parseDouble(data[1]));
-			}
-			catch (Exception e)
-			{
-				BuilderUtil.sendSysMessage(player, "Usage: //set_mp 1000");
-			}
-		}
-		else if (command.startsWith("admin_set_cp"))
-		{
-			final String[] data = command.split(" ");
-			try
-			{
-				final WorldObject target = player.getTarget();
-				if (!isCreature(target))
-				{
-					player.sendPacket(SystemMessageId.INVALID_TARGET);
-					return false;
-				}
-				((Creature) target).setCurrentCp(Double.parseDouble(data[1]));
-			}
-			catch (Exception e)
-			{
-				BuilderUtil.sendSysMessage(player, "Usage: //set_cp 1000");
-			}
-		}
-		else if (command.startsWith("admin_set_pvp_flag"))
-		{
-			try
-			{
-				final WorldObject target = player.getTarget();
-				if (!isPlayable(target))
-				{
-					player.sendPacket(SystemMessageId.INVALID_TARGET);
-					return false;
-				}
-				final Playable playable = ((Playable) target);
-				playable.updatePvPFlag(Math.abs(playable.getPvpFlag() - 1));
-			}
-			catch (Exception e)
-			{
-				BuilderUtil.sendSysMessage(player, "Usage: //set_pvp_flag");
-			}
-		}
-		else if (command.startsWith("admin_setparam"))
-		{
-			final WorldObject target = player.getTarget();
-			if (!isCreature(target))
-			{
 				player.sendPacket(SystemMessageId.INVALID_TARGET);
-				return false;
-			}
-			final StringTokenizer st = new StringTokenizer(command, " ");
-			st.nextToken(); // admin_setparam
-			if (!st.hasMoreTokens())
-			{
-				BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
-				return false;
-			}
-			final String statName = st.nextToken();
-			if (!st.hasMoreTokens())
-			{
-				BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
-				return false;
-			}
-			
-			try {
-				Stat stat = Stat.valueOf(statName);
-				
-				final double value = Double.parseDouble(st.nextToken());
-				final Creature targetCreature = (Creature) target;
-				if (value >= 0)
-				{
-					targetCreature.getStats().addFixedValue(stat, value);
-					targetCreature.getStats().recalculateStats(true);
-					BuilderUtil.sendSysMessage(player, "Fixed stat: " + stat + " has been set to " + value);
-				}
-				else
-				{
-					BuilderUtil.sendSysMessage(player, "Non negative values are only allowed!");
-				}
-			}
-			catch (Exception e) {
-				BuilderUtil.sendSysMessage(player, "Couldn't find such stat!");
-				BuilderUtil.sendSysMessage(player, SYNTAX_SETPARAM_STAT_VALUE);
-				return false;
 			}
 		}
-		else if (command.startsWith("admin_unsetparam"))
+		catch (Exception e)
 		{
-			final WorldObject target = player.getTarget();
-			if (!isCreature(target))
-			{
-				player.sendPacket(SystemMessageId.INVALID_TARGET);
-				return false;
-			}
-			final StringTokenizer st = new StringTokenizer(command, " ");
-			st.nextToken(); // admin_setparam
-			if (!st.hasMoreTokens())
-			{
-				BuilderUtil.sendSysMessage(player, "Syntax: //unsetparam <stat>");
-				return false;
-			}
-			final String statName = st.nextToken();
-
-			try {
-				Stat stat = Stat.valueOf(statName);
-				final Creature targetCreature = (Creature) target;
-				targetCreature.getStats().removeFixedValue(stat);
-				targetCreature.getStats().recalculateStats(true);
-				BuilderUtil.sendSysMessage(player, "Fixed stat: " + stat + " has been removed.");
-			} catch (Exception e) {
-				BuilderUtil.sendSysMessage(player, "Couldn't find such stat!");
-				return false;
-			}
+			LOGGER.warn("Error setting PK", e);
+			BuilderUtil.sendSysMessage(player, "Usage: //setpk <pk_count>");
 		}
-		return true;
+	}
+
+	private boolean noKarma(Player player) {
+		if (!isPlayer(player.getTarget()))
+		{
+			BuilderUtil.sendSysMessage(player, "You must target a player.");
+			return true;
+		}
+
+		if (player.getTarget().getActingPlayer().getReputation() < 0)
+		{
+			setTargetReputation(player, 0);
+		}
+		return false;
+	}
+
+	private void setReputation(String command, Player player) {
+		try {
+			final String val = command.substring(20);
+			final int reputation = Integer.parseInt(val);
+			setTargetReputation(player, reputation);
+		} catch (Exception e) {
+			LOGGER.warn("Error setting reputation", e);
+			BuilderUtil.sendSysMessage(player, "Usage: //setreputation <new_reputation_value>");
+		}
+	}
+
+	private void editCharacter(String command, Player player) {
+		final String[] data = command.split(" ");
+		if ((data.length > 1))
+		{
+			editCharacter(player, data[1]);
+		}
+		else if (isPlayer(player.getTarget()))
+		{
+			editCharacter(player, null);
+		}
+		else
+		{
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+		}
+	}
+
+	private void findAccount(String command, Player player) {
+		try
+		{
+			final String val = command.substring(19);
+			findCharactersPerAccount(player, val);
+		}
+		catch (Exception e)
+		{ // Case of empty or malformed player name
+			BuilderUtil.sendSysMessage(player, "Usage: //find_account <player_name>");
+			listCharacters(player, 0);
+		}
+	}
+
+	private void findIP(String command, Player player) {
+		try
+		{
+			final String val = command.substring(14);
+			findCharactersPerIp(player, val);
+		}
+		catch (Exception e)
+		{ // Case of empty or malformed IP number
+			BuilderUtil.sendSysMessage(player, "Usage: //find_ip <www.xxx.yyy.zzz>");
+			listCharacters(player, 0);
+		}
+	}
+
+	private void findCharacter(String command, Player player) {
+		try
+		{
+			final String val = command.substring(21);
+			findCharacter(player, val);
+		}
+		catch (StringIndexOutOfBoundsException e)
+		{ // Case of empty character name
+			BuilderUtil.sendSysMessage(player, "Usage: //find_character <character_name>");
+			listCharacters(player, 0);
+		}
+	}
+
+	private void showCharacters(String command, Player player) {
+		try
+		{
+			final String val = command.substring(22);
+			final int page = Integer.parseInt(val);
+			listCharacters(player, page);
+		}
+		catch (StringIndexOutOfBoundsException e)
+		{
+			// Case of empty page number
+			BuilderUtil.sendSysMessage(player, "Usage: //show_characters <page_number>");
+		}
+	}
+
+	private void characterInfo(String command, Player player) {
+		final String[] data = command.split(" ");
+		if ((data.length > 1))
+		{
+			currentPlayer(player, World.getInstance().findPlayer(data[1]));
+		}
+		else if (isPlayer(player.getTarget()))
+		{
+			currentPlayer(player, player.getTarget().getActingPlayer());
+		}
+		else
+		{
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+		}
 	}
 
 	@Override
@@ -905,7 +1061,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private void showCharacterInfo(Player activeChar, Player player) {
+	private void currentPlayer(Player activeChar, Player player) {
 		if (isNull(player)) {
 			final WorldObject target = activeChar.getTarget();
 			if (isPlayer(target)) {

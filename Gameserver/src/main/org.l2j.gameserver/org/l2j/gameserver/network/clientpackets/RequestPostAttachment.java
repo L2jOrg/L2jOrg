@@ -126,7 +126,7 @@ public final class RequestPostAttachment extends ClientPacket {
                 sender.addAdena(PAY_MAIL, adena, player, false);
                 sender.sendPacket(getSystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL).addLong(adena).addString(player.getName()));
             } else {
-                final Item paidAdena = ItemEngine.getInstance().createItem(PAY_MAIL, CommonItem.ADENA, adena, player, null);
+                final var paidAdena = ItemEngine.getInstance().createItem(PAY_MAIL, CommonItem.ADENA, adena, player, null);
                 paidAdena.changeOwner(mail.getSender());
                 paidAdena.changeItemLocation(ItemLocation.INVENTORY);
                 paidAdena.updateDatabase(true);

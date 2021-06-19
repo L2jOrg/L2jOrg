@@ -538,8 +538,7 @@ public class TradeList {
                 break;
             }
 
-            // Proceed with item transfer
-            final Item newItem = ownerInventory.transferItem(PRIVATE_STORE, item.getObjectId(), item.getCount(), playerInventory, owner, player);
+            final var newItem = ownerInventory.transferItem(PRIVATE_STORE, item.getObjectId(), item.getCount(), playerInventory, owner, player);
             if (newItem == null) {
                 result = TradeResult.FAILED;
                 break;

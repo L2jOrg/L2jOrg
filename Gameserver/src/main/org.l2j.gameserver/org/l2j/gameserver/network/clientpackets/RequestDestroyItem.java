@@ -104,15 +104,7 @@ public final class RequestDestroyItem extends ClientPacket {
     private boolean canItemBeDestroyed(Player player, Item itemToRemove) {
         // if we can't find the requested item, its actually a cheat
         if (itemToRemove == null) {
-            // gm can destroy other player items
-            if (player.isGM()) {
-                final WorldObject obj = World.getInstance().findObject(objectId);
-                if (isItem(obj)) {
-                    if (this.count > ((Item) obj).getCount()) {
-                        count = ((Item) obj).getCount();
-                    }
-                    AdminCommandHandler.getInstance().useAdminCommand(player, "admin_delete_item " + objectId + " " + count, true);
-                }
+            if (isGmDestroying(player)) {
                 return false;
             }
 
@@ -125,25 +117,44 @@ public final class RequestDestroyItem extends ClientPacket {
             return false;
         }
 
+        return checkItemRestrictions(player, itemToRemove);
+    }
+
+    private boolean checkItemRestrictions(Player player, Item itemToRemove) {
         if (!GeneralSettings.destroyAnyItem() && !player.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) {
             if (itemToRemove.isHeroItem()) {
                 client.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
             } else {
                 client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             }
-            return false;
+            return true;
         }
 
         if (!itemToRemove.isStackable() && (count > 1)) {
             GameUtils.handleIllegalPlayerAction(player, "[RequestDestroyItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to destroy a non-stackable item with oid " + objectId + " but has count > 1!");
-            return false;
+            return true;
         }
 
         if (player.getInventory().isBlocked(itemToRemove)) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-            return false;
+            return true;
         }
-        return true;
+        return false;
+    }
+
+    private boolean isGmDestroying(Player player) {
+        // gm can destroy other player items
+        if (player.isGM()) {
+            final WorldObject obj = World.getInstance().findObject(objectId);
+            if (isItem(obj)) {
+                if (this.count > ((Item) obj).getCount()) {
+                    count = ((Item) obj).getCount();
+                }
+                AdminCommandHandler.getInstance().useAdminCommand(player, "admin_delete_item " + objectId + " " + count, true);
+            }
+            return true;
+        }
+        return false;
     }
 
     private boolean canPlayerDestroyItem(Player player) {
