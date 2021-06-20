@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.container.ClanWarehouse;
 import org.l2j.gameserver.model.item.container.ItemContainer;
+import org.l2j.gameserver.model.item.container.PlayerFreight;
 import org.l2j.gameserver.model.item.container.PlayerWarehouse;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -142,7 +143,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return false;
         }
 
-        if ((manager == null || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM()) {
+        if (!(warehouse instanceof PlayerFreight) &&  ((manager == null || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())) {
             return false;
         }
 

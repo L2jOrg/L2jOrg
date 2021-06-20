@@ -79,8 +79,7 @@ public class RequestPackageSend extends ClientPacket {
             return;
         }
 
-        final Npc manager = player.getLastFolkNPC();
-        if (!canSendPackage(player, manager)) {
+        if (!canSendPackage(player)) {
             return;
         }
 
@@ -105,7 +104,7 @@ public class RequestPackageSend extends ClientPacket {
             }
         }
 
-        if (!canDoTransaction(player, manager, fee, currentAdena, slots, warehouse)) {
+        if (!canDoTransaction(player, fee, currentAdena, slots, warehouse)) {
             return;
         }
 
@@ -144,14 +143,14 @@ public class RequestPackageSend extends ClientPacket {
         player.sendInventoryUpdate(playerIU);
     }
 
-    private boolean canDoTransaction(Player player, Npc manager, int fee, long currentAdena, int slots, ItemContainer warehouse) {
+    private boolean canDoTransaction(Player player, int fee, long currentAdena, int slots, ItemContainer warehouse) {
         if (!warehouse.validateCapacity(slots)) {
             player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
             warehouse.deleteMe();
             return false;
         }
 
-        if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
+        if (currentAdena < fee || !player.reduceAdena(warehouse.getName(), fee, null, false)) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             warehouse.deleteMe();
             return false;
@@ -172,11 +171,7 @@ public class RequestPackageSend extends ClientPacket {
         return item;
     }
 
-    private boolean canSendPackage(Player player, Npc manager) {
-        if (manager == null || !isInsideRadius2D(player, manager, Npc.INTERACTION_DISTANCE)) {
-            return false;
-        }
-
+    private boolean canSendPackage(Player player) {
         if (player.hasItemRequest()) {
             GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!");
             return false;
