@@ -28,6 +28,9 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.network.SystemMessageId.CHARACTERISTICS_WERE_APPLIED_SUCCESSFULLY;
 
+/**
+ * @author JoeAlisson
+ */
 public class ExElementalSpiritSetTalent extends ClientPacket {
 
     private byte type;
@@ -58,37 +61,34 @@ public class ExElementalSpiritSetTalent extends ClientPacket {
     protected void runImpl()  {
         var spirit = client.getPlayer().getElementalSpirit(ElementalType.of(type));
 
-        var result = false;
+        var success = false;
 
         if(nonNull(spirit) ) {
             if(attackPoints > 0 && spirit.getAvailableCharacteristicsPoints() >= attackPoints) {
                 spirit.addAttackPoints(attackPoints);
-                result = true;
+                success = true;
             }
 
             if(defensePoints > 0 && spirit.getAvailableCharacteristicsPoints() >= defensePoints) {
                 spirit.addDefensePoints(defensePoints);
-                result = true;
+                success = true;
             }
 
             if(critRate > 0 && spirit.getAvailableCharacteristicsPoints() >= critRate) {
                 spirit.addCritRatePoints(critRate);
-                result = true;
+                success = true;
             }
 
             if(critDamage > 0 && spirit.getAvailableCharacteristicsPoints() >= critDamage) {
                 spirit.addCritDamage(critDamage);
-                result = true;
+                success = true;
             }
         }
 
-        if(result) {
-            var userInfo = new UserInfo(client.getPlayer());
-            userInfo.addComponentType(UserInfoType.SPIRITS);
-            client.sendPacket(userInfo);
-            client.sendPacket(SystemMessage.getSystemMessage(CHARACTERISTICS_WERE_APPLIED_SUCCESSFULLY));
+        if(success) {
+            client.sendPackets(new UserInfo(client.getPlayer(), UserInfoType.SPIRITS), SystemMessage.getSystemMessage(CHARACTERISTICS_WERE_APPLIED_SUCCESSFULLY));
         }
-        client.sendPacket(new ElementalSpiritSetTalent(type, result));
+        client.sendPacket(new ElementalSpiritSetTalent(type, success));
 
     }
 }
