@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.CommonItem;
@@ -33,8 +32,6 @@ import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
  * @author -Wooden-
