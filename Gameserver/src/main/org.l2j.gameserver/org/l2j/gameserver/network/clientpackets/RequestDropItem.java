@@ -135,14 +135,14 @@ public final class RequestDropItem extends ClientPacket {
     private boolean validateDropRequest(Player player, Item item) {
         if (_count < 0) {
             GameUtils.handleIllegalPlayerAction(player, "[RequestDropItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to drop item with oid " + _objectId + " but has count < 0!");
-            return true;
+            return false;
         }
 
         if (!item.isStackable() && (_count > 1)) {
             GameUtils.handleIllegalPlayerAction(player, "[RequestDropItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to drop non-stackable item with oid " + _objectId + " but has count > 1!");
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     private boolean canPlayerDiscardItem(Player player) {
