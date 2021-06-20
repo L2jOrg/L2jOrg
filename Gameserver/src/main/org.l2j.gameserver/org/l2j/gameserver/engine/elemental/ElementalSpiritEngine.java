@@ -38,7 +38,6 @@ public final class ElementalSpiritEngine extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(ElementalSpiritEngine.class);
 
     public static final long EXTRACT_FEE = 1000000;
-    public static final float FRAGMENT_XP_CONSUME = 50000.0f;
     public static final int TALENT_INIT_FEE = 50000;
     public static final int MAX_STAGE = 5;
 
@@ -76,36 +75,50 @@ public final class ElementalSpiritEngine extends GameXmlReader {
         var type = parseByte(attributes, "type");
         var stage = parseByte(attributes, "stage");
         var npcId = parseInt(attributes, "npc");
-        var extractItem = parseInt(attributes, "extract-item");
         var maxCharacteristics = parseInt(attributes, "max-characteristics");
-        ElementalSpiritTemplate template = new ElementalSpiritTemplate(type, stage, npcId, extractItem, maxCharacteristics);
+        ElementalSpiritTemplate template = new ElementalSpiritTemplate(type, stage, npcId, maxCharacteristics);
         spiritData.computeIfAbsent(type, HashMap::new).put(stage, template);
 
-        forEach(spiritNode, "level", levelNode -> {
-            var levelInfo = levelNode.getAttributes();
-            var level = parseInt(levelInfo, "id");
-            var attack = parseInt(levelInfo, "atk");
-            var defense = parseInt(levelInfo, "def");
-            var criticalRate = parseInt(levelInfo, "crit-rate");
-            var criticalDamage = parseInt(levelInfo, "crit-dam");
-            var maxExperience = parseLong(levelInfo, "max-exp");
-            template.addLevelInfo(level, attack, defense, criticalRate, criticalDamage, maxExperience);
-        });
+        for(var node = spiritNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+            switch (node.getNodeName()) {
+                case "level" -> parseSpiritLevel(template, node);
+                case "evolve-item" -> parseSpiritEvolve(template, node);
+                case "absorb-item" -> parseSpiritAbsorb(template, node);
+                case "extract-item" -> parseSpiritExtract(template, node);
+                default -> LOGGER.warn("Unknown node {}", node.getNodeName());
+            }
+        }
+    }
 
-        forEach(spiritNode, "evolve-item", itemNode -> {
-            var itemInfo = itemNode.getAttributes();
-            var itemId = parseInt(itemInfo, "id");
-            var count = parseInt(itemInfo, "count");
-            template.addItemToEvolve(itemId, count);
-        });
+    private void parseSpiritExtract(ElementalSpiritTemplate template, Node extractNode) {
+        var extractInfo = extractNode.getAttributes();
+        template.setExtractItem(parseInt(extractInfo, "id"));
+        template.setExtractExpConsume(parseInt(extractInfo, "experience"));
+    }
 
-        forEach(spiritNode, "absorb-item", absorbItemNode -> {
-            var absorbInfo = absorbItemNode.getAttributes();
-            var itemId = parseInt(absorbInfo, "id");
-            var experience = parseInt(absorbInfo, "experience");
-            template.addAbsorbItem(itemId, experience);
-        });
+    private void parseSpiritAbsorb(ElementalSpiritTemplate template, Node absorbItemNode) {
+        var absorbInfo = absorbItemNode.getAttributes();
+        var itemId = parseInt(absorbInfo, "id");
+        var experience = parseInt(absorbInfo, "experience");
+        template.addAbsorbItem(itemId, experience);
+    }
 
+    private void parseSpiritEvolve(ElementalSpiritTemplate template, Node itemNode) {
+        var itemInfo = itemNode.getAttributes();
+        var itemId = parseInt(itemInfo, "id");
+        var count = parseInt(itemInfo, "count");
+        template.addItemToEvolve(itemId, count);
+    }
+
+    private void parseSpiritLevel(ElementalSpiritTemplate template, Node levelNode) {
+        var levelInfo = levelNode.getAttributes();
+        var level = parseInt(levelInfo, "id");
+        var attack = parseInt(levelInfo, "atk");
+        var defense = parseInt(levelInfo, "def");
+        var criticalRate = parseInt(levelInfo, "crit-rate");
+        var criticalDamage = parseInt(levelInfo, "crit-dam");
+        var maxExperience = parseLong(levelInfo, "max-exp");
+        template.addLevelInfo(level, attack, defense, criticalRate, criticalDamage, maxExperience);
     }
 
     public static void init() {
