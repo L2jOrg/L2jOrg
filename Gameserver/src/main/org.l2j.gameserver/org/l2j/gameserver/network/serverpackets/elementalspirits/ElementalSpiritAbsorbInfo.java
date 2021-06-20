@@ -29,6 +29,9 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.network.ServerExPacketId.EX_ELEMENTAL_SPIRIT_ABSORB_INFO;
 
+/**
+ * @author JoeAlisson
+ */
 public class ElementalSpiritAbsorbInfo extends ServerPacket {
 
     private final byte type;
@@ -61,7 +64,7 @@ public class ElementalSpiritAbsorbInfo extends ServerPacket {
 
         var absorbItems = spirit.getAbsorbItems();
 
-        buffer.writeInt(absorbItems.size()); //AbsorbCount
+        buffer.writeInt(absorbItems.size());
         for (AbsorbItem absorbItem : absorbItems) {
             buffer.writeInt(absorbItem.getId());
             buffer.writeInt((int) Util.zeroIfNullOrElseLong( player.getInventory().getItemByItemId(absorbItem.getId()), Item::getCount));

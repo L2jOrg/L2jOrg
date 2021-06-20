@@ -75,12 +75,10 @@ public class ElementalSpirit {
         owner.sendPacket(SystemMessage.getSystemMessage(YOU_HAVE_ACQUIRED_S1S_S2_SKILL_XP).addInt((int) experience).addElementalSpirit(getType()));
         if(data.getExperience() > getExperienceToNextLevel()) {
             levelUp();
-            owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTACK_SPIRITS_HAVE_REACHED_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
-            owner.sendPacket(new ElementalSpiritInfo(owner.getActiveElementalSpiritType(), (byte) 0));
-            var userInfo = new UserInfo(owner);
-            userInfo.addComponentType(UserInfoType.SPIRITS);
-            owner.sendPacket(userInfo);
 
+            owner.sendPackets(new UserInfo(owner, UserInfoType.SPIRITS),
+                    SystemMessage.getSystemMessage(S1_ATTACK_SPIRITS_HAVE_REACHED_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()),
+                    new ElementalSpiritInfo(owner.getActiveElementalSpiritType(), (byte) 0));
         }
         owner.sendPacket(new ExElementalSpiritGetExp(getType(), data.getExperience()));
     }
@@ -116,10 +114,10 @@ public class ElementalSpirit {
         return Math.round((data.getExperience() - getExperienceToPreviousLevel()) / template.getExtractExpConsume());
     }
 
-    public void resetLevel() {
+    public void resetToPreviousLevel() {
+        data.decreaseLevel();
         data.setExperience(getExperienceToPreviousLevel());
         resetCharacteristics();
-        data.decreaseLevel();
     }
 
     public boolean canEvolve() {
