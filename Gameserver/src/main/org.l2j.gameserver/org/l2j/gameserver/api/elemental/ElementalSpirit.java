@@ -115,8 +115,8 @@ public class ElementalSpirit {
     }
 
     public void resetToPreviousLevel() {
-        data.decreaseLevel();
         data.setExperience(getExperienceToPreviousLevel());
+        data.decreaseLevel();
         resetCharacteristics();
     }
 
@@ -161,7 +161,7 @@ public class ElementalSpirit {
     }
 
     private long getExperienceToPreviousLevel() {
-        return data.getLevel() < 2 ? 0 : template.getMaxExperienceAtLevel((byte) (data.getLevel() -1));
+        return data.getLevel() < 3 ? 0 : template.getMaxExperienceAtLevel((byte) (data.getLevel() -2));
     }
 
     public byte getLevel() {
