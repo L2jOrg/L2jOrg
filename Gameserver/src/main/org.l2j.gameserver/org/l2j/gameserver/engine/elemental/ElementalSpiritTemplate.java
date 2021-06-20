@@ -37,20 +37,19 @@ public class ElementalSpiritTemplate {
     private final byte stage;
     private final int npcId;
     private final int maxCharacteristics;
-    private final int extractItem;
+    private int extractItem;
 
     private final IntMap<SpiritLevel> levels;
     private List<ItemHolder> itemsToEvolve;
     private List<AbsorbItem> absorbItems;
+    private int extractExpConsume;
 
-    ElementalSpiritTemplate(byte type, byte stage, int npcId, int extractItem, int maxCharacteristics) {
+    ElementalSpiritTemplate(byte type, byte stage, int npcId, int maxCharacteristics) {
         this.type = type;
         this.stage = stage;
         this.npcId = npcId;
-        this.extractItem = extractItem;
         this.maxCharacteristics = maxCharacteristics;
         this.levels = new HashIntMap<>(10);
-
     }
 
     void addLevelInfo(int level, int attack, int defense, int criticalRate, int criticalDamage, long maxExperience) {
@@ -127,6 +126,18 @@ public class ElementalSpiritTemplate {
 
     public int getExtractItem() {
         return extractItem;
+    }
+
+    void setExtractItem(int extractItem) {
+        this.extractItem = extractItem;
+    }
+
+    public float getExtractExpConsume() {
+        return extractExpConsume;
+    }
+
+    void setExtractExpConsume(int experience) {
+        this.extractExpConsume = experience;
     }
 
     private static class SpiritLevel {
