@@ -59,11 +59,9 @@ public final class RequestDestroyItem extends ClientPacket {
         }
 
         final Item itemToRemove = player.getInventory().getItemByObjectId(objectId);
-
         if (!canItemBeDestroyed(player, itemToRemove)) {
             return;
         }
-
         destroyItem(player, itemToRemove);
     }
 
@@ -127,19 +125,19 @@ public final class RequestDestroyItem extends ClientPacket {
             } else {
                 client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             }
-            return true;
+            return false;
         }
 
         if (!itemToRemove.isStackable() && (count > 1)) {
             GameUtils.handleIllegalPlayerAction(player, "[RequestDestroyItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to destroy a non-stackable item with oid " + objectId + " but has count > 1!");
-            return true;
+            return false;
         }
 
         if (player.getInventory().isBlocked(itemToRemove)) {
             player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     private boolean isGmDestroying(Player player) {
