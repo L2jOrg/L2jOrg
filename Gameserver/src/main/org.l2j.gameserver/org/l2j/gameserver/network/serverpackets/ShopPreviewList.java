@@ -70,5 +70,4 @@ public class ShopPreviewList extends ServerPacket {
             }
         }
     }
-
 }

@@ -50,6 +50,7 @@ import org.l2j.gameserver.model.item.PcItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -126,7 +127,7 @@ public class PlayerFactory {
         }
 
         player.getFreight().restore();
-        if (!Config.WAREHOUSE_CACHE) {
+        if (!GeneralSettings.cacheWarehouse()) {
             player.getWarehouse();
         }
 
