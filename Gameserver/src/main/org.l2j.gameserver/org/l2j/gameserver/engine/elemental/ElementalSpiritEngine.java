@@ -76,7 +76,7 @@ public final class ElementalSpiritEngine extends GameXmlReader {
         var stage = parseByte(attributes, "stage");
         var npcId = parseInt(attributes, "npc");
         var maxCharacteristics = parseInt(attributes, "max-characteristics");
-        ElementalSpiritTemplate template = new ElementalSpiritTemplate(type, stage, npcId, maxCharacteristics);
+        var template = new ElementalSpiritTemplate(type, stage, npcId, maxCharacteristics);
         spiritData.computeIfAbsent(type, HashMap::new).put(stage, template);
 
         for(var node = spiritNode.getFirstChild(); node != null; node = node.getNextSibling()) {
