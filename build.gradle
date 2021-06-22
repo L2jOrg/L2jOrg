@@ -6,7 +6,7 @@ plugins {
     id "org.sonarqube" version "3.1.1"
 }
 
-version '1.7.0'
+version '1.7.0-RC1'
 ext.revision = versioning.info.build
 ext.buildJDK = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
 
