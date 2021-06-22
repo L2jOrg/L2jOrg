@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -50,7 +49,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (!GeneralSettings.allowMail() || !Config.ALLOW_ATTACHMENTS) {
+        if (!GeneralSettings.allowMail() || !GeneralSettings.allowAttachments()) {
             return;
         }
 

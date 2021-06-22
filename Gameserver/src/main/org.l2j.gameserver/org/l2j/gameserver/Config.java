@@ -141,14 +141,7 @@ public final class Config {
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
-    public static int GRID_NEIGHBOR_TURNON_TIME;
-    public static int GRID_NEIGHBOR_TURNOFF_TIME;
-    public static int PEACE_ZONE_MODE;
 
-    public static boolean WAREHOUSE_CACHE;
-    public static int WAREHOUSE_CACHE_TIME;
-    public static boolean ALLOW_REFUND;
-    public static boolean ALLOW_ATTACHMENTS;
     public static boolean ALLOW_WEAR;
     public static int WEAR_DELAY;
     public static int WEAR_PRICE;
@@ -652,14 +645,6 @@ public final class Config {
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 
-        GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
-        GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
-        PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
-
-        WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
-        WAREHOUSE_CACHE_TIME = General.getInt("WarehouseCacheTime", 15);
-        ALLOW_REFUND = General.getBoolean("AllowRefund", true);
-        ALLOW_ATTACHMENTS = General.getBoolean("AllowAttachments", true);
         ALLOW_WEAR = General.getBoolean("AllowWear", true);
         WEAR_DELAY = General.getInt("WearDelay", 5);
         WEAR_PRICE = General.getInt("WearPrice", 10);

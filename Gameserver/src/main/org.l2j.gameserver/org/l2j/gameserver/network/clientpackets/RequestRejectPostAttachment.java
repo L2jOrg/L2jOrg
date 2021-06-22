@@ -43,7 +43,7 @@ public final class RequestRejectPostAttachment extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!GeneralSettings.allowMail() || !Config.ALLOW_ATTACHMENTS) {
+        if (!GeneralSettings.allowMail() || !GeneralSettings.allowAttachments()) {
             return;
         }
 

@@ -31,6 +31,7 @@ import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
 import java.util.EnumSet;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.Set;
 
@@ -186,9 +187,9 @@ public final class SettingsFile extends Properties {
             return defaultValue;
         }
         try {
-            return Enum.valueOf(enumClass, value);
+            return Enum.valueOf(enumClass, value.toUpperCase());
         } catch (Exception e) {
-            LOGGER.warn("Unknown enum constant {} of type {}", key, enumClass);
+            LOGGER.warn("Unknown enum constant {} of type {} using default value {}", key, enumClass, defaultValue);
         }
         return defaultValue;
     }

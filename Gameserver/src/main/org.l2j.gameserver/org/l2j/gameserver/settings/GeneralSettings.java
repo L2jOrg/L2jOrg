@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
+import org.l2j.gameserver.world.zone.type.PeaceZone;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
@@ -61,6 +62,13 @@ public class GeneralSettings {
     private static boolean deleteInvalidQuest;
     private static int minNpcAnimation;
     private static int maxNpcAnimation;
+    private static int neighborRegionTurnOnTime;
+    private static int neighborRegionTurnOffTime;
+    private static PeaceZone.Mode peaceZoneMode;
+    private static boolean cacheWarehouse;
+    private static long cacheWarehouseTime;
+    private static boolean allowRefund;
+    private static boolean allowAttachments;
 
     private GeneralSettings() {
         // helper class
@@ -107,6 +115,17 @@ public class GeneralSettings {
 
         minNpcAnimation = settingsFile.getInt("MinNpcAnimation", 30);
         maxNpcAnimation = settingsFile.getInt("MaxNpcAnimation", 120);
+
+        neighborRegionTurnOnTime = settingsFile.getInt("GridNeighborTurnOnTime", 1);
+        neighborRegionTurnOffTime = settingsFile.getInt("GridNeighborTurnOffTime", 90);
+
+        peaceZoneMode = settingsFile.getEnum("PeaceZoneMode", PeaceZone.Mode.class, PeaceZone.Mode.PEACE);
+
+        cacheWarehouse = settingsFile.getBoolean("WarehouseCache", false);
+        cacheWarehouseTime = settingsFile.getInt("WarehouseCacheTime", 15) * 60000L;
+
+        allowRefund = settingsFile.getBoolean("AllowRefund", true);
+        allowAttachments = settingsFile.getBoolean("AllowAttachments", true);
 
      }
 
@@ -224,5 +243,33 @@ public class GeneralSettings {
 
     public static int maxNpcAnimation() {
         return maxNpcAnimation;
+    }
+
+    public static int neighborRegionTurnOnTime() {
+        return neighborRegionTurnOnTime;
+    }
+
+    public static int neighborRegionTurnOffTime() {
+        return neighborRegionTurnOffTime;
+    }
+
+    public static PeaceZone.Mode peaceZoneMode() {
+        return peaceZoneMode;
+    }
+
+    public static boolean cacheWarehouse() {
+        return cacheWarehouse;
+    }
+
+    public static long cacheWarehouseTime() {
+        return cacheWarehouseTime;
+    }
+
+    public static boolean allowRefund() {
+        return allowRefund;
+    }
+
+    public static boolean allowAttachments() {
+        return allowAttachments;
     }
 }

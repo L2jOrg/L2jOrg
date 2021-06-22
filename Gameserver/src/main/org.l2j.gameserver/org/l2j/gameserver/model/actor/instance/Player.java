@@ -2408,7 +2408,7 @@ public final class Player extends Playable {
                 }
             }
         }
-        if (Config.WAREHOUSE_CACHE) {
+        if (GeneralSettings.cacheWarehouse()) {
             WarehouseCacheManager.getInstance().addCacheTask(this);
         }
         return warehouse;
@@ -2423,7 +2423,7 @@ public final class Player extends Playable {
         }
         warehouse = null;
 
-        if (Config.WAREHOUSE_CACHE) {
+        if (GeneralSettings.cacheWarehouse()) {
             WarehouseCacheManager.getInstance().remCacheTask(this);
         }
     }
@@ -2436,7 +2436,7 @@ public final class Player extends Playable {
      * @return true if refund list is not empty
      */
     public boolean hasRefund() {
-        return (refund != null) && (refund.getSize() > 0) && Config.ALLOW_REFUND;
+        return refund != null && refund.getSize() > 0 && GeneralSettings.allowRefund();
     }
 
     /**

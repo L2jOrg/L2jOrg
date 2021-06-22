@@ -32,6 +32,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 
@@ -141,7 +142,7 @@ public final class RequestSellItem extends ClientPacket {
                 return;
             }
 
-            if (Config.ALLOW_REFUND) {
+            if (GeneralSettings.allowRefund()) {
                 player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
             } else {
                 player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, merchant);
