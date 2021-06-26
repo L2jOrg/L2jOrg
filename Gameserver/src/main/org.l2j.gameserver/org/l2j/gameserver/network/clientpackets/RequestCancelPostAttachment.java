@@ -136,17 +136,17 @@ public final class RequestCancelPostAttachment extends ClientPacket {
 
     private boolean canBeRetrieveFromMail(Player player, MailData mail, Item item) {
         if (item.getOwnerId() != player.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get not own item from cancelled attachment!");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to get not own item from cancelled attachment!");
             return false;
         }
 
         if (item.getItemLocation() != ItemLocation.MAIL) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get items not from mail !");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to get items not from mail !");
             return false;
         }
 
         if (item.getLocationSlot() != mail.getId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get items from different attachment!");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to get items from different attachment!");
             return false;
         }
         return true;
@@ -157,7 +157,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
             return false;
         }
         if (mail.getSender() != player.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to cancel not own post!");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to cancel not own post!");
             return false;
         }
 
