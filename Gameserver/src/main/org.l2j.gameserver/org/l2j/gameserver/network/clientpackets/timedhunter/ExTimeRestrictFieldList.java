@@ -19,9 +19,12 @@
 package org.l2j.gameserver.network.clientpackets.timedhunter;
 
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.timedhunter.TimedHuntingZoneList;
+import org.l2j.gameserver.network.serverpackets.timedhunter.TimeRestrictFieldList;
 
-public class ExTimedHuntingZoneList extends ClientPacket {
+/**
+ * @author JoeAlisson
+ */
+public class ExTimeRestrictFieldList extends ClientPacket {
 
     @Override
     protected void readImpl() throws Exception {
@@ -30,6 +33,6 @@ public class ExTimedHuntingZoneList extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        client.sendPacket(new TimedHuntingZoneList());
+        client.sendPacket(new TimeRestrictFieldList());
     }
 }

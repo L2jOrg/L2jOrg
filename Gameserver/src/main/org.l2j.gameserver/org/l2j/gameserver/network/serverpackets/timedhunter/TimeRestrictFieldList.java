@@ -26,7 +26,10 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimedHuntingZoneList extends ServerPacket {
+/**
+ * @author JoeAlisson
+ */
+public class TimeRestrictFieldList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer)  {
@@ -46,7 +49,7 @@ public class TimedHuntingZoneList extends ServerPacket {
                 buffer.writeLong(item.count);
             }
 
-            buffer.writeInt(info.resetCycle);
+            buffer.writeInt(info.resetCycle.ordinal()); // 0 weekly, 1 Daily
             buffer.writeInt(info.fieldId);
             buffer.writeInt(info.minLevel);
             buffer.writeInt(info.maxLevel);
@@ -56,12 +59,17 @@ public class TimedHuntingZoneList extends ServerPacket {
             buffer.writeInt(info.remainRefillTime);
             buffer.writeInt(info.refillTimeMax);
             buffer.writeByte(info.fieldActivated);
+            buffer.writeByte(info.userBound);
+            buffer.writeByte(info.canReEnter);
+            buffer.writeByte(info.isVipOnly); // pc cafe only ?
+            buffer.writeByte(info.isVipUser); // pc cafe user ?
+            buffer.writeByte(info.worldInZone);
         }
     }
 
     private void addField(List<TimeRestrictedFieldInfo> infos) {
         var field = new TimeRestrictedFieldInfo();
-        field.resetCycle = 1;
+        field.resetCycle = ResetCycle.DAILY;
         field.fieldId = 2;
         field.minLevel = 78;
         field.maxLevel = 999;
@@ -76,13 +84,22 @@ public class TimedHuntingZoneList extends ServerPacket {
         item.itemId = 57;
         item.count = 10000;
 
-        field.requiredItems = List.of(item);
+       var item2 = new FieldRequiredItem();
+       item2.itemId = 100;
+       item.count = 2000;
+
+        field.requiredItems = List.of(item, item2);
         infos.add(field);
     }
 
     static class TimeRestrictedFieldInfo {
+        public byte userBound;
+        public byte canReEnter;
+        public byte isVipOnly;
+        public byte isVipUser;
+        public byte worldInZone;
         List<FieldRequiredItem> requiredItems;
-        int resetCycle;
+        ResetCycle resetCycle;
         int fieldId;
         int minLevel;
         int maxLevel;
@@ -92,13 +109,15 @@ public class TimedHuntingZoneList extends ServerPacket {
         int remainRefillTime;
         int refillTimeMax;
         boolean fieldActivated;
+    }
 
+    enum ResetCycle {
+        WEEKLY,
+        DAILY
     }
 
     static class FieldRequiredItem {
         int itemId;
         long count;
     }
-
-
 }

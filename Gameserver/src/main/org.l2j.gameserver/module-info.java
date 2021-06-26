@@ -174,6 +174,7 @@ module org.l2j.gameserver {
                 SiegeZone.Factory,
                 SwampZone.Factory,
                 TaxZone.Factory,
+                TimedZone.Factory,
                 WaterZone.Factory
             ;
 
