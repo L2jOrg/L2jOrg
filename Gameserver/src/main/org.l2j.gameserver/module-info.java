@@ -12,6 +12,8 @@ module org.l2j.gameserver {
     requires jdk.unsupported;
     requires java.management;
     requires java.compiler;
+    requires org.apache.commons.lang3;
+    requires trove;
 
     opens org.l2j.gameserver.settings to org.l2j.commons;
     opens org.l2j.gameserver.engine.geo.settings to org.l2j.commons;
@@ -117,6 +119,16 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.util.exp4j;
     exports org.l2j.gameserver.engine.olympiad;
     exports org.l2j.gameserver.engine.item.shop;
+<<<<<<< Updated upstream
+=======
+    exports org.l2j.gameserver.engine.rank;
+    exports org.l2j.gameserver.network.serverpackets.commission;
+    exports org.l2j.gameserver.model.events.impl.server;
+    exports org.l2j.gameserver.engine.clan.clanhall;
+    exports org.l2j.gameserver.engine.clan;
+    exports org.l2j.gameserver.engine.geoscripts;
+    exports org.l2j.gameserver.engine.geoscripts.utils;
+>>>>>>> Stashed changes
 
     uses org.l2j.gameserver.handler.IActionHandler;
     uses org.l2j.gameserver.handler.IActionShiftHandler;

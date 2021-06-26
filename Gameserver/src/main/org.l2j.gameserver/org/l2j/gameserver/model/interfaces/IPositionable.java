@@ -46,8 +46,9 @@ public interface IPositionable extends ILocational {
      * Sets the heading of this object.
      *
      * @param heading the new heading
+     * @return
      */
-    void setHeading(int heading);
+    Location setHeading(int heading);
 
     /**
      * Changes the location of this object.

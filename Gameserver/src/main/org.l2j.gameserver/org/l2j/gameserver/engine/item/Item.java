@@ -964,7 +964,8 @@ public final class Item extends WorldObject {
     }
 
     @Override
-    public void setHeading(int heading) {
+    public Location setHeading(int heading) {
+        return null;
     }
 
     public int getEquipReuseDelay() {

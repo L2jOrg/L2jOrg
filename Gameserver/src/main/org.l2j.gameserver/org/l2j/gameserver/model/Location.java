@@ -55,6 +55,14 @@ public class Location implements IPositionable {
         _heading = set.getInt("heading", 0);
     }
 
+    //TODO: to remove the commented lines in case the new geo-engine works.
+//    public Location set(int x, int y, int z, int _heading)
+//    {
+//        set(_x, _y, _z, _heading);
+//        this._heading = _heading;
+//        return this;
+//    }
+
     /**
      * Get the x coordinate.
      *
@@ -123,10 +131,12 @@ public class Location implements IPositionable {
      * Set the heading.
      *
      * @param heading the heading
+     * @return
      */
     @Override
-    public void setHeading(int heading) {
+    public Location setHeading(int heading) {
         _heading = heading;
+        return this;
     }
 
     @Override
@@ -142,12 +152,45 @@ public class Location implements IPositionable {
         _heading = loc.getHeading();
     }
 
+    public Location set(int x, int y, int z, int h)
+    {
+        set(_x, _y, _z, _heading);
+        this._heading = getHeading();
+        return this;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Location loc) {
             return (getX() == loc.getX()) && (getY() == loc.getY()) && (getZ() == loc.getZ()) && (getHeading() == loc.getHeading());
         }
         return false;
+    }
+
+    public boolean equals(int x, int y, int z)
+    {
+        return (this._x == x) && (this._y == y) && (this._z == z);
+    }
+
+    public Location world2geo()
+    {
+        _x = _x - org.l2j.gameserver.world.World.MAP_MIN_X >> 4;
+        _y = _y - org.l2j.gameserver.world.World.MAP_MIN_Y >> 4;
+        return this;
+    }
+
+    public Location geo2world()
+    {
+        // размер одного блока 16*16 точек, +8*+8 это его средина
+        _x = (_x << 4) + org.l2j.gameserver.world.World.MAP_MIN_X + 8;
+        _y = (_y << 4) + org.l2j.gameserver.world.World.MAP_MIN_Y + 8;
+        return this;
+    }
+
+    @Override
+    public Location clone()
+    {
+        return new Location(_x, _y, _z, _heading);
     }
 
     @Override

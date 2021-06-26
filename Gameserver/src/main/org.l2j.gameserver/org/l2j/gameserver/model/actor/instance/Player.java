@@ -36,6 +36,8 @@ import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.PlayerVariablesDAO;
 import org.l2j.gameserver.data.database.data.*;
+import org.l2j.gameserver.data.database.data.ManufactureItem;
+import org.l2j.gameserver.data.database.data.TeleportBookmark;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.CategoryManager;

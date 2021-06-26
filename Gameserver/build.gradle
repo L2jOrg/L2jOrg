@@ -29,6 +29,7 @@ configurations.all {
 
 dependencies {
     implementation project(':Commons')
+    implementation fileTree(dir: "../Gameserver/bin/GeoJars", include: "*.jar")
 
     runtimeOnly 'org.ehcache:ehcache:3.9.0'
     runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.13.3'

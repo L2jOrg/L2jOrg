@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.FenceDataManager;
@@ -72,6 +73,10 @@ public final class World {
     /**
      * Map dimensions.
      */
+    public static final int WORLD_SIZE_X = Config.GEO_X_LAST - Config.GEO_X_FIRST + 1;
+    public static final int WORLD_SIZE_Y = Config.GEO_Y_LAST - Config.GEO_Y_FIRST + 1;
+    public static final int MAP_MIN_Z = Config.MAP_MIN_Z;
+    public static final int MAP_MAX_Z = Config.MAP_MAX_Z;
     public static final int TILE_X_MIN = 11;
     public static final int TILE_X_MAX = 28;
     public static final int TILE_Y_MIN = 10;

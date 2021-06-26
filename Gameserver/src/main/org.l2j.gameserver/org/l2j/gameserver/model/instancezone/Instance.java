@@ -24,6 +24,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.InstanceDAO;
 import org.l2j.gameserver.data.xml.DoorDataManager;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceTeleportType;
 import org.l2j.gameserver.instancemanager.InstanceManager;

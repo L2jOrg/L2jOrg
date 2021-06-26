@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model;
 
+import org.l2j.gameserver.engine.geoscripts.GeoEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.ActionHandler;
 import org.l2j.gameserver.handler.ActionShiftHandler;
@@ -263,6 +264,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         return false;
     }
 
+    public int getGeoIndex()
+    {
+        return 0;
+    }
+
     public void removeStatusListener(Creature object) {
 
     }
@@ -314,6 +320,16 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         return z;
     }
 
+    public int getGeoZ(int x, int y, int z)
+    {
+        return GeoEngine.correctGeoZ(x, y, z, getGeoIndex());
+    }
+
+    public final int getGeoZ(Location loc)
+    {
+        return getGeoZ(loc.getX(), loc.getY(), loc.getZ());
+    }
+
     /**
      * Gets the heading.
      *
@@ -328,10 +344,12 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * Sets heading of object.
      *
      * @param newHeading the new heading
+     * @return
      */
     @Override
-    public void setHeading(int newHeading) {
+    public Location setHeading(int newHeading) {
         _heading = newHeading;
+        return null;
     }
 
     /**

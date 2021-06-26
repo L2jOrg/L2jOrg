@@ -22,6 +22,9 @@ module org.l2j.commons {
     exports org.l2j.commons.cache;
     exports org.l2j.commons.network;
     exports org.l2j.commons.util.filter;
+    exports org.l2j.commons.geometry;
+    exports org.l2j.commons.text;
+    exports org.l2j.commons.lang;
 
     uses TypeHandler;
     provides TypeHandler

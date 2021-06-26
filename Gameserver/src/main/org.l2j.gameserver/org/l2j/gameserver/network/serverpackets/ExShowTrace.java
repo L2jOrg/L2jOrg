@@ -43,6 +43,11 @@ public final class ExShowTrace extends ServerPacket {
         addLocation(loc.getX(), loc.getY(), loc.getZ());
     }
 
+    public void addTrace(int x, int y, int z, int time)
+    {
+        _locations.add(new Location(x, y, z, time));
+    }
+
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_SHOW_TRACE, buffer );

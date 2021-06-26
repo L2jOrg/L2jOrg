@@ -73,7 +73,7 @@ public final class Config {
     private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
-    private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
+    // private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
 
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
     private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
@@ -102,6 +102,7 @@ public final class Config {
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
     private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
+<<<<<<< Updated upstream
 
 
     public static boolean ENABLE_MODIFY_SKILL_DURATION;
@@ -192,6 +193,37 @@ public final class Config {
     public static boolean DISABLE_TUTORIAL;
     public static boolean STORE_RECIPE_SHOPLIST;
     public static boolean STORE_UI_SETTINGS;
+=======
+    private static final String GEODATA_CONFIG_FILE = "config/geodata.properties";
+    private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
+>>>>>>> Stashed changes
+
+    /** Geodata config */
+    public static File DATAPACK_ROOT;
+    public static File GEODATA_ROOT;
+    public static int GEO_X_FIRST, GEO_Y_FIRST, GEO_X_LAST, GEO_Y_LAST;
+    public static boolean ALLOW_GEODATA;
+    public static boolean ALLOW_FALL_FROM_WALLS;
+    public static boolean ALLOW_KEYBOARD_MOVE;
+    public static boolean COMPACT_GEO;
+    public static int MAX_Z_DIFF;
+    public static int MIN_LAYER_HEIGHT;
+    public static int REGION_EDGE_MAX_Z_DIFF;
+    public static int SHIFT_BY;
+    public static int SHIFT_BY_Z;
+    public static int MAP_MIN_Z;
+    public static int MAP_MAX_Z;
+
+    /** Geodata (Pathfind) config */
+    public static int PATHFIND_BOOST;
+    public static int PATHFIND_MAP_MUL;
+    public static boolean PATHFIND_DIAGONAL;
+    public static boolean PATH_CLEAN;
+    public static int PATHFIND_MAX_Z_DIFF;
+    public static long PATHFIND_MAX_TIME;
+    public static String PATHFIND_BUFFERS;
+    public static int NPC_PATH_FIND_MAX_HEIGHT;
+    public static int PLAYABLE_PATH_FIND_MAX_HEIGHT;
 
     // --------------------------------------------------
     // Castle Settings
@@ -1713,14 +1745,59 @@ public final class Config {
         TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
 
 
-        // Load althars config
-        final PropertiesParser althars = new PropertiesParser(ALTHARS_CONFIG_FILE);
+        // Load Geodata config file (if exists)
+            final PropertiesParser geodataSettings = new PropertiesParser(GEODATA_CONFIG_FILE);
 
-        ALTHARS_ACTIVATE_CHANCE_RATE = althars.getInt("althars_activation_chance_rate", 70);
-        ALTHARS_MAX_ACTIVE = althars.getInt("althars_max_active", 3);
-        ALTHARS_MIN_DURATION_CYCLE = althars.getInt("althars_min_duration_cycle", 240000);
-        ALTHARS_MAX_DURATION_CYCLE = althars.getInt("althars_max_duration_cycle", 480000);
-    }
+            GEO_X_FIRST = geodataSettings.getInt("GeoFirstX", 11);
+            GEO_Y_FIRST = geodataSettings.getInt("GeoFirstY", 10);
+            GEO_X_LAST = geodataSettings.getInt("GeoLastX", 26);
+            GEO_Y_LAST = geodataSettings.getInt("GeoLastY", 26);
+
+            ALLOW_GEODATA = geodataSettings.getBoolean("AllowGeodata", true);
+
+            try
+            {
+                GEODATA_ROOT = new File(geodataSettings.getString("GeodataRoot", "./geodata/")).getCanonicalFile();
+            }
+            catch(IOException e)
+            {
+                LOGGER.error("", e);
+            }
+
+        try
+        {
+            DATAPACK_ROOT = new File(geodataSettings.getString("DatapackRoot", ".")).getCanonicalFile();
+        }
+        catch(IOException e)
+        {
+            LOGGER.error("", e);
+        }
+
+            ALLOW_FALL_FROM_WALLS = geodataSettings.getBoolean("AllowFallFromWalls", false);
+            ALLOW_KEYBOARD_MOVE = geodataSettings.getBoolean("AllowMoveWithKeyboard", true);
+            COMPACT_GEO = geodataSettings.getBoolean("CompactGeoData", false);
+            PATHFIND_BOOST = geodataSettings.getInt("PathFindBoost", 2);
+            PATHFIND_DIAGONAL = geodataSettings.getBoolean("PathFindDiagonal", true);
+            PATHFIND_MAP_MUL = geodataSettings.getInt("PathFindMapMul", 2);
+            PATH_CLEAN = geodataSettings.getBoolean("PathClean", true);
+            PATHFIND_MAX_Z_DIFF = geodataSettings.getInt("PathFindMaxZDiff", 32);
+            MAX_Z_DIFF = geodataSettings.getInt("MaxZDiff", 64);
+            MIN_LAYER_HEIGHT = geodataSettings.getInt("MinLayerHeight", 64);
+            REGION_EDGE_MAX_Z_DIFF = geodataSettings.getInt("RegionEdgeMaxZDiff", 128);
+            PATHFIND_MAX_TIME = geodataSettings.getLong("PathFindMaxTime", 10000000);
+            PATHFIND_BUFFERS = geodataSettings.getString("PathFindBuffers", "8x96;8x128;8x160;8x192;4x224;4x256;4x288;2x320;2x384;2x352;1x512");
+            NPC_PATH_FIND_MAX_HEIGHT = geodataSettings.getInt("NPC_PATH_FIND_MAX_HEIGHT", 1024);
+            PLAYABLE_PATH_FIND_MAX_HEIGHT = geodataSettings.getInt("PLAYABLE_PATH_FIND_MAX_HEIGHT", 256);
+        }
+
+        // Load althars config
+        // final PropertiesParser althars = new PropertiesParser(ALTHARS_CONFIG_FILE);
+
+        // ALTHARS_ACTIVATE_CHANCE_RATE = althars.getInt("althars_activation_chance_rate", 70);
+        // ALTHARS_MAX_ACTIVE = althars.getInt("althars_max_active", 3);
+        // ALTHARS_MIN_DURATION_CYCLE = althars.getInt("althars_min_duration_cycle", 240000);
+        // ALTHARS_MAX_DURATION_CYCLE = althars.getInt("althars_max_duration_cycle", 480000);
+
 
     /**
      * Loads flood protector configurations.
