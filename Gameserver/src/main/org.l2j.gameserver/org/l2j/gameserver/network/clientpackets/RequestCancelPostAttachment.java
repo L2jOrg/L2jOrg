@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -27,13 +28,13 @@ import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import static java.util.Objects.isNull;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author Migi, DS
@@ -48,92 +49,31 @@ public final class RequestCancelPostAttachment extends ClientPacket {
 
     @Override
     public void runImpl() {
+        if (!isActionAllowed()) {
+            return;
+        }
+
         final Player player = client.getPlayer();
-        if (!GeneralSettings.allowMail() || !GeneralSettings.allowAttachments()) {
-            return;
-        }
-
-        if (!client.getFloodProtectors().getTransaction().tryPerformAction("cancelpost")) {
-            return;
-        }
-
         final var mail = MailEngine.getInstance().getMail(mailId);
-        if (isNull(mail)) {
-            return;
-        }
-        if (mail.getSender() != player.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to cancel not own post!");
-            return;
-        }
 
-        if (!player.isInsideZone(ZoneType.PEACE)) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_IN_A_NON_PEACE_ZONE_LOCATION);
-            return;
-        }
-
-        if (player.getActiveTradeList() != null) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_DURING_AN_EXCHANGE);
-            return;
-        }
-
-        if (player.hasItemRequest()) {
-            player.sendPacket(SystemMessageId.YOU_CAN_T_CANCEL_WHILE_ENCHANTING_AN_ITEM_OR_ATTRIBUTE);
-            return;
-        }
-
-        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
-            return;
-        }
-
-        if (!mail.hasAttachments()) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_SENT_MAIL_SINCE_THE_RECIPIENT_RECEIVED_IT);
+        if (!canCancelPostAttachment(player, mail)) {
             return;
         }
 
         final ItemContainer attachments = mail.getAttachment();
-        if ((attachments == null) || (attachments.getSize() == 0)) {
+        if (attachments == null || attachments.getSize() == 0) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_SENT_MAIL_SINCE_THE_RECIPIENT_RECEIVED_IT);
             return;
         }
 
-        int weight = 0;
-        int slots = 0;
-
-        for (Item item : attachments.getItems()) {
-            if (item.getOwnerId() != player.getObjectId()) {
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get not own item from cancelled attachment!");
-                return;
-            }
-
-            if (item.getItemLocation() != ItemLocation.MAIL) {
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get items not from mail !");
-                return;
-            }
-
-            if (item.getLocationSlot() != mail.getId()) {
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get items from different attachment!");
-                return;
-            }
-
-            weight += item.getCount() * item.getTemplate().getWeight();
-            if (!item.isStackable()) {
-                slots += item.getCount();
-            } else if (player.getInventory().getItemByItemId(item.getId()) == null) {
-                slots++;
-            }
-        }
-
-        if (!player.getInventory().validateCapacity(slots)) {
-            player.sendPacket(SystemMessageId.YOU_COULD_NOT_CANCEL_RECEIPT_BECAUSE_YOUR_INVENTORY_IS_FULL);
+        if (!checkInventoryLimits(player, mail, attachments)) {
             return;
         }
 
-        if (!player.getInventory().validateWeight(weight)) {
-            player.sendPacket(SystemMessageId.YOU_COULD_NOT_CANCEL_RECEIPT_BECAUSE_YOUR_INVENTORY_IS_FULL);
-            return;
-        }
+        cancelPostAttachment(player, mail, attachments);
+    }
 
+    private void cancelPostAttachment(Player player, MailData mail, ItemContainer attachments) {
         final var playerIU =  new InventoryUpdate();
         for (Item item : attachments.getItems()) {
             final long count = item.getCount();
@@ -147,7 +87,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
             } else {
                 playerIU.addNewItem(newItem);
             }
-            player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addLong(count));
+            player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addLong(count));
         }
 
         mail.removeAttachments();
@@ -155,15 +95,104 @@ public final class RequestCancelPostAttachment extends ClientPacket {
 
         final Player receiver = World.getInstance().findPlayer(mail.getReceiver());
         if (receiver != null) {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
-            sm.addString(player.getName());
-            receiver.sendPacket(sm);
-            receiver.sendPacket(ExChangePostState.deleted(true, mailId));
+            receiver.sendPackets(getSystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL).addString(player.getName()),
+                                 ExChangePostState.deleted(true, mailId));
         }
 
         MailEngine.getInstance().deleteMailInDb(mailId);
 
         player.sendPacket(ExChangePostState.deleted(false, mailId));
         player.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_CANCELLED);
+    }
+
+    private boolean checkInventoryLimits(Player player, MailData mail, ItemContainer attachments) {
+        int weight = 0;
+        int slots = 0;
+
+        for (Item item : attachments.getItems()) {
+            if (!canBeRetrieveFromMail(player, mail, item)) {
+                return false;
+            }
+
+            weight += item.getCount() * item.getTemplate().getWeight();
+            if (!item.isStackable()) {
+                slots += item.getCount();
+            } else if (player.getInventory().getItemByItemId(item.getId()) == null) {
+                slots++;
+            }
+        }
+
+        if (!player.getInventory().validateCapacity(slots)) {
+            player.sendPacket(SystemMessageId.YOU_COULD_NOT_CANCEL_RECEIPT_BECAUSE_YOUR_INVENTORY_IS_FULL);
+            return false;
+        }
+
+        if (!player.getInventory().validateWeight(weight)) {
+            player.sendPacket(SystemMessageId.YOU_COULD_NOT_CANCEL_RECEIPT_BECAUSE_YOUR_INVENTORY_IS_FULL);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean canBeRetrieveFromMail(Player player, MailData mail, Item item) {
+        if (item.getOwnerId() != player.getObjectId()) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get not own item from cancelled attachment!");
+            return false;
+        }
+
+        if (item.getItemLocation() != ItemLocation.MAIL) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get items not from mail !");
+            return false;
+        }
+
+        if (item.getLocationSlot() != mail.getId()) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to get items from different attachment!");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean canCancelPostAttachment(Player player, MailData mail) {
+        if (isNull(mail)) {
+            return false;
+        }
+        if (mail.getSender() != player.getObjectId()) {
+            GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to cancel not own post!");
+            return false;
+        }
+
+        if (!player.isInsideZone(ZoneType.PEACE)) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_IN_A_NON_PEACE_ZONE_LOCATION);
+            return false;
+        }
+
+        if (player.getActiveTradeList() != null) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_DURING_AN_EXCHANGE);
+            return false;
+        }
+
+        if (player.hasItemRequest()) {
+            player.sendPacket(SystemMessageId.YOU_CAN_T_CANCEL_WHILE_ENCHANTING_AN_ITEM_OR_ATTRIBUTE);
+            return false;
+        }
+
+        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
+            return false;
+        }
+
+        if (!mail.hasAttachments()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_SENT_MAIL_SINCE_THE_RECIPIENT_RECEIVED_IT);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isActionAllowed() {
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("cancelpost")) {
+            return false;
+        }
+
+        return GeneralSettings.allowMail() && GeneralSettings.allowAttachments();
     }
 }
