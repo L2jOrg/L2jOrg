@@ -22,102 +22,51 @@ import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.world.zone.ZoneEngine;
+import org.l2j.gameserver.world.zone.type.TimedZone;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 /**
  * @author JoeAlisson
  */
 public class TimeRestrictFieldList extends ServerPacket {
 
+    private final Collection<TimedZone> fieldList;
+
+    public TimeRestrictFieldList() {
+        fieldList = ZoneEngine.getInstance().getAllZones(TimedZone.class);
+    }
+
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer)  {
         writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_LIST, buffer );
+        var player = client.getPlayer();
+        buffer.writeInt(fieldList.size());
 
-        List<TimeRestrictedFieldInfo> infos = new ArrayList<>();
+        for(var field : fieldList) {
+            buffer.writeInt(field.requiredItemsAmount());
 
-        addField(infos);
+            field.forEachRequiredItem(item -> {
+                buffer.writeInt(item.getId());
+                buffer.writeLong(item.getCount());
+            });
 
-        buffer.writeInt(infos.size());
-
-        for(var info : infos) {
-            buffer.writeInt(info.requiredItems.size());
-
-            for (var item : info.requiredItems) {
-                buffer.writeInt(item.itemId);
-                buffer.writeLong(item.count);
-            }
-
-            buffer.writeInt(info.resetCycle.ordinal()); // 0 weekly, 1 Daily
-            buffer.writeInt(info.fieldId);
-            buffer.writeInt(info.minLevel);
-            buffer.writeInt(info.maxLevel);
-            buffer.writeInt(info.remainTimeBase);
-            buffer.writeInt(info.remainTime);
-            buffer.writeInt(info.remainTimeMax);
-            buffer.writeInt(info.remainRefillTime);
-            buffer.writeInt(info.refillTimeMax);
-            buffer.writeByte(info.fieldActivated);
-            buffer.writeByte(info.userBound);
-            buffer.writeByte(info.canReEnter);
-            buffer.writeByte(info.isVipOnly); // pc cafe only ?
-            buffer.writeByte(info.isVipUser); // pc cafe user ?
-            buffer.writeByte(info.worldInZone);
+            buffer.writeInt(field.getResetCycle());
+            buffer.writeInt(field.getId());
+            buffer.writeInt(field.getMinLevel());
+            buffer.writeInt(field.getMaxLevel());
+            buffer.writeInt(field.getTime());
+            buffer.writeInt(60 * 60 + 20 * 60); // player normal remain time + player recharged
+            buffer.writeInt(field.getMaxTime());
+            buffer.writeInt(field.getRechargeTime() - 20 * 60); // player remain refill time
+            buffer.writeInt(field.getRechargeTime());
+            buffer.writeByte(field.isEnabled());
+            buffer.writeByte(field.isUserBound());
+            buffer.writeByte(true); // player can reenter
+            buffer.writeByte(field.isVipOnly()); // pc cafe only ?
+            buffer.writeByte(player.getVipTier()); // pc cafe user ?
+            buffer.writeByte(field.worldInZone());
         }
-    }
-
-    private void addField(List<TimeRestrictedFieldInfo> infos) {
-        var field = new TimeRestrictedFieldInfo();
-        field.resetCycle = ResetCycle.DAILY;
-        field.fieldId = 2;
-        field.minLevel = 78;
-        field.maxLevel = 999;
-        field.remainTimeBase = 3600;
-        field.remainTime = 3600;
-        field.remainTimeMax =  21600;
-        field.remainRefillTime = 18000;
-        field.refillTimeMax = 18000;
-        field.fieldActivated = true;
-
-        var item = new FieldRequiredItem();
-        item.itemId = 57;
-        item.count = 10000;
-
-       var item2 = new FieldRequiredItem();
-       item2.itemId = 100;
-       item.count = 2000;
-
-        field.requiredItems = List.of(item, item2);
-        infos.add(field);
-    }
-
-    static class TimeRestrictedFieldInfo {
-        public byte userBound;
-        public byte canReEnter;
-        public byte isVipOnly;
-        public byte isVipUser;
-        public byte worldInZone;
-        List<FieldRequiredItem> requiredItems;
-        ResetCycle resetCycle;
-        int fieldId;
-        int minLevel;
-        int maxLevel;
-        int remainTimeBase;
-        int remainTime;
-        int remainTimeMax;
-        int remainRefillTime;
-        int refillTimeMax;
-        boolean fieldActivated;
-    }
-
-    enum ResetCycle {
-        WEEKLY,
-        DAILY
-    }
-
-    static class FieldRequiredItem {
-        int itemId;
-        long count;
     }
 }

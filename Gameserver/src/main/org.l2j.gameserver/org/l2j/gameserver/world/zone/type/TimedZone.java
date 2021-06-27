@@ -31,13 +31,14 @@ import org.w3c.dom.Node;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * @author JoeAlisson
  */
 public class TimedZone extends Zone {
 
-    private static final Attributes DEFAULT_ATTRIBUTES = new Attributes(60, 60, true, 1, 999, false, false, false, Collections.emptyList());
+    private static final Attributes DEFAULT_ATTRIBUTES = new Attributes(60, 60, true, 1, 999, false, false, false, ResetCycle.DAILY, Collections.emptyList());
 
     private final Attributes attributes;
 
@@ -77,6 +78,50 @@ public class TimedZone extends Zone {
         }
     }
 
+    public int requiredItemsAmount() {
+        return attributes.items.size();
+    }
+
+    public void forEachRequiredItem(Consumer<ItemHolder> action) {
+        attributes.items.forEach(action);
+    }
+
+    public int getResetCycle() {
+        return attributes.resetCycle.ordinal();
+    }
+
+    public int getMinLevel() {
+        return attributes.minLevel;
+    }
+
+    public int getMaxLevel() {
+        return attributes.maxLevel;
+    }
+
+    public int getTime() {
+        return attributes.time;
+    }
+
+    public int getRechargeTime() {
+        return attributes.rechargeTime;
+    }
+
+    public boolean isUserBound() {
+        return attributes.userBound;
+    }
+
+    public boolean isVipOnly() {
+        return attributes.vipOnly;
+    }
+
+    public boolean worldInZone() {
+        return attributes.worldInZone;
+    }
+
+    public int getMaxTime() {
+        return attributes.time + attributes.rechargeTime;
+    }
+
     public static class Factory implements ZoneFactory {
 
         @Override
@@ -89,16 +134,17 @@ public class TimedZone extends Zone {
             for(var node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
                 if(node.getNodeName().equals("attributes")) {
                     var attr = node.getAttributes();
-                    var time = reader.parseInt(attr, "time");
-                    var timeExtension = reader.parseInt(attr, "time-extension");
+                    var time = reader.parseInt(attr, "time") * 60;
+                    var timeExtension = reader.parseInt(attr, "recharge-time") * 60;
                     var allowPvP = reader.parseBoolean(attr, "allow-pvp");
                     var minLevel = reader.parseInt(attr, "min-level");
                     var maxLevel = reader.parseInt(attr, "max-level");
                     var userBound = reader.parseBoolean(attr, "user-bound");
                     var vipOnly = reader.parseBoolean(attr, "vip-only");
                     var worldInZone = reader.parseBoolean(attr, "world-in-zone");
+                    var resetCycle = reader.parseEnum(attr, ResetCycle.class, "reset-cycle");
                     var items = parseItems(node, reader);
-                    return new Attributes(time, timeExtension, allowPvP, minLevel, maxLevel, userBound, vipOnly, worldInZone, items);
+                    return new Attributes(time, timeExtension, allowPvP, minLevel, maxLevel, userBound, vipOnly, worldInZone, resetCycle, items);
                 }
             }
             return DEFAULT_ATTRIBUTES;
@@ -123,13 +169,18 @@ public class TimedZone extends Zone {
 
     private record Attributes(
             int time,
-            int timeExtension,
+            int rechargeTime,
             boolean allowPvP,
             int minLevel,
             int maxLevel,
             boolean userBound,
             boolean vipOnly,
             boolean worldInZone,
-            List<ItemHolder> items) {
+            ResetCycle resetCycle, List<ItemHolder> items) {
+    }
+
+    enum ResetCycle {
+        WEEKLY,
+        DAILY
     }
 }
