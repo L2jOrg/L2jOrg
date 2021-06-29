@@ -1052,10 +1052,10 @@ public class Npc extends Creature {
             // Randomize drop position.
             final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
             final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
-            final int newZ = getZ() + 20;
+            final int newZ = (int) (getZ() + _currentCollisionHeight + 20);
 
             if (ItemEngine.getInstance().getTemplate(itemId) == null) {
-                LOGGER.error("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
+                LOGGER.error("Item doesn't exist so cannot be dropped. Item ID: {} Quest: {}",  itemId,  getName());
                 return null;
             }
 
