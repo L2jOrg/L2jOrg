@@ -1125,14 +1125,13 @@ public final class Item extends WorldObject {
                 setInstance(null); // No dropper? Make it a global item...
             }
 
+            _item.setDropTime(System.currentTimeMillis());
+            _item.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
             synchronized (_item) {
                 // Set the x,y,z position of the Item dropped and update its _worldregion
                 _item.setSpawned(true);
                 _item.setXYZ(_x, _y, _z);
             }
-
-            _item.setDropTime(System.currentTimeMillis());
-            _item.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 
             // Add the Item dropped in the world as a visible object
             World.getInstance().addVisibleObject(_item, _item.getWorldRegion());
