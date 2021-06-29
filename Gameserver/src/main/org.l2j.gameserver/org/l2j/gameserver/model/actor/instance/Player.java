@@ -484,18 +484,6 @@ public final class Player extends Playable {
         return variables.getVitalityItemsUsed();
     }
 
-    private int getAbilityPointsMainClassUsed() {
-        return variables.getAbilityPointsMainClassUsed();
-    }
-
-    private int getRevelationSkillMainClass1() {
-        return variables.getRevelationSkillMainClass1();
-    }
-
-    private int getRevelationSkillMainClass2() {
-        return variables.getRevelationSkillMainClass2();
-    }
-
     private String getExtendDrop() {
         return variables.getExtendDrop();
     }
@@ -7015,17 +7003,6 @@ public final class Player extends Playable {
                 // Include transformation skills and those skills that are allowed during transformation.
                 currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
 
-                int revelationSkill = getRevelationSkillMainClass1();
-                if (revelationSkill != 0)
-                {
-                    addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                }
-                revelationSkill = getRevelationSkillMainClass2();
-                if (revelationSkill != 0)
-                {
-                    addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                }
-
                 // Include transformation skills.
                 currentSkills.addAll(transformSkills.values());
             }
@@ -7886,10 +7863,6 @@ public final class Player extends Playable {
             return false;
         }
         return nonNull(clan) && nonNull(target.getClan()) && clan.isAtWarWith(target.getClan());
-    }
-
-    public int getAbilityPointsUsed() {
-        return getAbilityPointsMainClassUsed();
     }
 
     /**

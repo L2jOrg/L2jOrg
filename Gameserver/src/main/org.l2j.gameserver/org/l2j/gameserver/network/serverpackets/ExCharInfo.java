@@ -185,7 +185,7 @@ public class ExCharInfo extends ServerPacket {
 
         buffer.writeByte(0); // ceremony of chaos position
         buffer.writeByte(player.isHairAccessoryEnabled());
-        buffer.writeByte(player.getAbilityPointsUsed());
+        buffer.writeByte(0x00); // ability points used
         buffer.writeInt(0x00); // cursed weapon equipped id
         buffer.writeInt(0x00); // wait action id
         buffer.writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);
