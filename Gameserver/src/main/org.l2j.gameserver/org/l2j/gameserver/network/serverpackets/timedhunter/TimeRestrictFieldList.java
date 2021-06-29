@@ -57,13 +57,16 @@ public class TimeRestrictFieldList extends ServerPacket {
             buffer.writeInt(field.getMinLevel());
             buffer.writeInt(field.getMaxLevel());
             buffer.writeInt(field.getTime());
-            buffer.writeInt(60 * 60 + 20 * 60); // player normal remain time + player recharged
+
+            var zoneInfo = field.getPlayerZoneInfo(client.getPlayer());
+
+            buffer.writeInt(zoneInfo.getRemainingTime());
             buffer.writeInt(field.getMaxTime());
-            buffer.writeInt(field.getRechargeTime() - 20 * 60); // player remain refill time
+            buffer.writeInt(field.getRechargeTime() - zoneInfo.getRechargedTime());
             buffer.writeInt(field.getRechargeTime());
             buffer.writeByte(field.isEnabled());
             buffer.writeByte(field.isUserBound());
-            buffer.writeByte(true); // player can reenter
+            buffer.writeByte(zoneInfo.getRemainingTime() > 0);
             buffer.writeByte(field.isVipOnly()); // pc cafe only ?
             buffer.writeByte(player.getVipTier()); // pc cafe user ?
             buffer.writeByte(field.worldInZone());

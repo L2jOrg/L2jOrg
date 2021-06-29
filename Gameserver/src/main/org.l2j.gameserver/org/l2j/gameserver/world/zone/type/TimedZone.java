@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
+import org.l2j.gameserver.engine.timedzone.TimedZoneEngine;
+import org.l2j.gameserver.engine.timedzone.TimedZoneInfo;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -120,6 +122,10 @@ public class TimedZone extends Zone {
 
     public int getMaxTime() {
         return attributes.time + attributes.rechargeTime;
+    }
+
+    public TimedZoneInfo getPlayerZoneInfo(Player player) {
+        return TimedZoneEngine.getInstance().getTimedZoneInfo(player, this);
     }
 
     public static class Factory implements ZoneFactory {
