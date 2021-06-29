@@ -3430,7 +3430,7 @@ public final class Player extends Playable {
         if (handler == null) {
             LOGGER.warn("No item handler registered for item ID: {}.", target.getId());
         } else {
-            handler.useItem(this, target, false);
+            handler.useItem(this, target, true);
         }
         ItemEngine.getInstance().destroyItem("Consume", target, this, null);
     }
