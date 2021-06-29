@@ -101,15 +101,8 @@ public class FileUtil {
     }
 
     private static String resolvePathFromResources(String filePath) {
-        var resource = toPath(ClassLoader.getSystemResource(filePath));
-        if(isNull(resource)) {
-            resource = toPath(FileUtil.class.getResource(filePath));
-        }
-        return isNull(resource) ? filePath : resource;
-    }
-
-    private static String toPath(URL url) {
-        return nonNull(url) ? url.getPath() : null;
+        var path = resolvePath(filePath);
+        return path == null ? filePath : path.toString();
     }
 
     public static BufferedReader reader(String filePath) throws IOException {
