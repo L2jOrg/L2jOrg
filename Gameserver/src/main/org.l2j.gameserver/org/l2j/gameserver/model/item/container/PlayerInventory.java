@@ -514,24 +514,6 @@ public class PlayerInventory extends Inventory {
         return item;
     }
 
-    /**
-     * Drop item from inventory by using its <B>objectID</B> and checks _adena and _ancientAdena
-     *
-     * @param process   : String Identifier of process triggering this action
-     * @param objectId  : int Item Instance identifier of the item to be dropped
-     * @param count     : int Quantity of items to be dropped
-     * @param actor     : Player Player requesting the item drop
-     * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-     * @return Item corresponding to the destroyed item or the updated item in inventory
-     */
-    @Override
-    public Item dropItem(String process, int objectId, long count, Player actor, WorldObject reference) {
-        final Item item = super.dropItem(process, objectId, count, actor, reference);
-
-        handleDropItemUpdate(actor, item);
-        return item;
-    }
-
     private void handleDropItemUpdate(Player actor, Item item) {
         if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId()))) {
             _adena = null;

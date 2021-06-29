@@ -46,12 +46,17 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
         0x00, // 152
     };
 
-    public ExUserInfoEquipSlot(Player cha) {
-        this(cha, true);
+    public ExUserInfoEquipSlot(Player player, InventorySlot... slots) {
+        this(player, false);
+        addComponentType(slots);
     }
 
-    public ExUserInfoEquipSlot(Player cha, boolean addAll) {
-        player = cha;
+    public ExUserInfoEquipSlot(Player player) {
+        this(player, true);
+    }
+
+    private ExUserInfoEquipSlot(Player player, boolean addAll) {
+        this.player = player;
 
         if (addAll) {
             addComponentType(InventorySlot.values());

@@ -2930,7 +2930,6 @@ public final class Player extends Playable {
      * TODO extract method and remove duplication
      */
     public Item dropItem(String process, int objectId, long count, int x, int y, int z, WorldObject reference, boolean sendMessage, boolean protectItem) {
-        final Item ownedItem = inventory.getItemByObjectId(objectId);
         final Item item = inventory.dropItem(process, objectId, count, this, reference);
 
         if (item == null) {
@@ -2960,7 +2959,7 @@ public final class Player extends Playable {
             item.getDropProtection().protect(this);
         }
 
-        sendInventoryUpdate( new InventoryUpdate(ownedItem));
+        sendInventoryUpdate( new InventoryUpdate(item));
 
         if (sendMessage) {
             sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(item));

@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
+import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -180,14 +181,10 @@ public abstract class Inventory extends ItemContainer {
      */
     @Override
     protected boolean removeItem(Item item) {
-        // Unequip item if equiped
+
         if(item.isEquipped()) {
-            for (var entry : paperdoll.entrySet()) {
-                if(entry.getValue().equals(item)) {
-                    unEquipItemInSlot(entry.getKey());
-                    break;
-                }
-            }
+            var changed = unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
+            getOwner().sendPacket(new InventoryUpdate(changed));
         }
         return super.removeItem(item);
     }
@@ -304,8 +301,8 @@ public abstract class Inventory extends ItemContainer {
                 item.updateDatabase();
             }
 
-            if (isPlayer(getOwner())) {
-                getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));
+            if (getOwner() instanceof Player player) {
+                player.sendPacket(new ExUserInfoEquipSlot(player, slot));
             }
         }
         return old;
