@@ -146,7 +146,7 @@ public class ItemSkillsTemplate implements IItemHandler {
 
     private boolean isSkillReducer(Item item) {
         return switch (item.getAction()) {
-            case CALL_SKILL, SKILL_REDUCE, SKILL_REDUCE_ON_SKILL_SUCCESS -> true;
+            case CALL_SKILL, SKILL_REDUCE, SKILL_REDUCE_ON_SKILL_SUCCESS, NONE -> true;
             default -> false;
         };
     }
