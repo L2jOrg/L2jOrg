@@ -164,6 +164,7 @@ open module org.l2j.scripts {
                 Relax.Factory,
                 ResistAbnormalByCategory.Factory,
                 ResistDispelByCategory.Factory,
+                TimeRestrictZoneRecharge.Factory,
                 Restoration.Factory,
                 RestorationRandom.Factory,
                 Resurrection.Factory,

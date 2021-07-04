@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.sessionzones;
+package org.l2j.gameserver.network.serverpackets.timedzone;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
@@ -26,18 +26,17 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 /**
  * @author Mobius
  */
-public class TimedHuntingZoneEnter extends ServerPacket
-{
-	private final int _remainingTime;
+public class TimeRestrictFieldUserEnter extends ServerPacket {
+	private final int remainingTime;
 	
-	public TimedHuntingZoneEnter(int remainingTime)
+	public TimeRestrictFieldUserEnter(int remainingTime)
 	{
-		_remainingTime = remainingTime;
+		this.remainingTime = remainingTime;
 	}
 
 	@Override
 	protected void writeImpl(GameClient client, WritableBuffer buffer)  {
 		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_ENTER, buffer );
-		buffer.writeInt(_remainingTime);
+		buffer.writeInt(remainingTime);
 	}
 }

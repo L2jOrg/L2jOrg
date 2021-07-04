@@ -23,7 +23,7 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.world.zone.ZoneEngine;
-import org.l2j.gameserver.world.zone.type.TimedZone;
+import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 
 import java.util.Collection;
 
@@ -32,10 +32,10 @@ import java.util.Collection;
  */
 public class TimeRestrictFieldList extends ServerPacket {
 
-    private final Collection<TimedZone> fieldList;
+    private final Collection<TimeRestrictZone> fieldList;
 
     public TimeRestrictFieldList() {
-        fieldList = ZoneEngine.getInstance().getAllZones(TimedZone.class);
+        fieldList = ZoneEngine.getInstance().getAllZones(TimeRestrictZone.class);
     }
 
     @Override

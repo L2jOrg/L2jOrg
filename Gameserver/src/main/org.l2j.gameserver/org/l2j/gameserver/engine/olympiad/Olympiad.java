@@ -52,7 +52,6 @@ import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.world.zone.type.TimedZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;

@@ -16,22 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.engine.timedzone;
+package org.l2j.gameserver.data.database.data;
 
-import org.l2j.gameserver.world.zone.type.TimedZone;
+import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.NonUpdatable;
+import org.l2j.commons.database.annotation.Table;
+import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 
 /**
  * @author JoeAlisson
  */
-public class TimedZoneInfo {
+@Table("player_time_restrict_zones")
+public class TimeRestrictZoneInfo {
 
+    private int zone;
+    @Column("player_id")
+    private int playerId;
+    @Column("remaining_time")
     private int remainingTime;
-    private int refillTime;
-    private long lastRemainingTimeUpdate;
+    @Column("recharged_time")
+    private int rechargedTime;
 
-    public int remainingTime() {
-        return remainingTime;
-    }
+    @NonUpdatable
+    private long lastRemainingTimeUpdate;
 
     public void updateRemainingTime() {
         if(lastRemainingTimeUpdate > 0) {
@@ -41,17 +48,29 @@ public class TimedZoneInfo {
         }
     }
 
+    public int remainingTime() {
+        return remainingTime;
+    }
+
+    public void rechargeTime(int recharge, int zoneMaxRecharge) {
+        var rechargeable = Math.min(zoneMaxRecharge - rechargedTime, recharge);
+        rechargedTime += rechargeable;
+        remainingTime += rechargeable;
+    }
+
     public int getRechargedTime() {
-        return refillTime;
+        return rechargedTime;
     }
 
     public void setLastRemainingTimeUpdate(long lastRemainingTimeUpdate) {
         this.lastRemainingTimeUpdate = lastRemainingTimeUpdate;
     }
 
-    public static TimedZoneInfo init(TimedZone timedZone) {
-        var info = new TimedZoneInfo();
-        info.remainingTime = timedZone.getTime();
+    public static TimeRestrictZoneInfo init(TimeRestrictZone timeRestrictZone, int playerId) {
+        var info = new TimeRestrictZoneInfo();
+        info.remainingTime = timeRestrictZone.getTime();
+        info.zone = timeRestrictZone.getId();
+        info.playerId = playerId;
         return info;
     }
 }

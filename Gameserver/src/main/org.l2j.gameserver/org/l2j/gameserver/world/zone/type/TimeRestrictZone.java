@@ -19,13 +19,14 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.engine.timedzone.TimedZoneEngine;
-import org.l2j.gameserver.engine.timedzone.TimedZoneInfo;
+import org.l2j.gameserver.engine.timedzone.TimeRestrictZoneEngine;
+import org.l2j.gameserver.data.database.data.TimeRestrictZoneInfo;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
+import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldUserEnter;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneEngine;
@@ -44,7 +45,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * @author JoeAlisson
  */
-public class TimedZone extends SpawnZone {
+public class TimeRestrictZone extends SpawnZone {
 
     private static final Attributes DEFAULT_ATTRIBUTES = new Attributes(60, 60, true, 1, 999, false, false, false, ResetCycle.DAILY, Collections.emptyList());
     private static final Object TASK_LOCKER = new Object();
@@ -52,7 +53,7 @@ public class TimedZone extends SpawnZone {
 
     private final Attributes attributes;
 
-    private TimedZone(int id, Attributes attributes) {
+    private TimeRestrictZone(int id, Attributes attributes) {
         super(id);
         this.attributes = attributes;
     }
@@ -73,11 +74,12 @@ public class TimedZone extends SpawnZone {
         if(creature instanceof Player player) {
             var info = getPlayerZoneInfo(player);
             info.setLastRemainingTimeUpdate(System.currentTimeMillis());
-            onPlayerEnter();
+            startZoneTask();
+            player.sendPacket(new TimeRestrictFieldUserEnter(info.remainingTime()));
         }
     }
 
-    private void onPlayerEnter() {
+    private void startZoneTask() {
         synchronized (TASK_LOCKER) {
             if(task == null) {
                 task = ThreadPool.scheduleAtFixedDelay(new TimedZoneTask(), 1, 1, TimeUnit.MINUTES);
@@ -152,15 +154,15 @@ public class TimedZone extends SpawnZone {
         return attributes.time + attributes.rechargeTime;
     }
 
-    public TimedZoneInfo getPlayerZoneInfo(Player player) {
-        return TimedZoneEngine.getInstance().getTimedZoneInfo(player, this);
+    public TimeRestrictZoneInfo getPlayerZoneInfo(Player player) {
+        return TimeRestrictZoneEngine.getInstance().getTimeRestrictZoneInfo(player, this);
     }
 
     public static class TimedZoneTask implements Runnable {
 
         @Override
         public void run() {
-            var zones = ZoneEngine.getInstance().getAllZones(TimedZone.class);
+            var zones = ZoneEngine.getInstance().getAllZones(TimeRestrictZone.class);
             var updated = new AtomicBoolean(false);
             for (var zone : zones) {
                 zone.forEachPlayer(player -> {
@@ -189,7 +191,7 @@ public class TimedZone extends SpawnZone {
         @Override
         public Zone create(int id, Node zoneNode, GameXmlReader reader) {
             var attributes = parseZoneAttributes(zoneNode, reader);
-            return new TimedZone(id, attributes);
+            return new TimeRestrictZone(id, attributes);
         }
 
         private Attributes parseZoneAttributes(Node zoneNode, GameXmlReader reader) {
@@ -197,7 +199,7 @@ public class TimedZone extends SpawnZone {
                 if(node.getNodeName().equals("attributes")) {
                     var attr = node.getAttributes();
                     var time = reader.parseInt(attr, "time") * 60;
-                    var timeExtension = reader.parseInt(attr, "recharge-time") * 60;
+                    var rechargeTime = reader.parseInt(attr, "recharge-time") * 60;
                     var allowPvP = reader.parseBoolean(attr, "allow-pvp");
                     var minLevel = reader.parseInt(attr, "min-level");
                     var maxLevel = reader.parseInt(attr, "max-level");
@@ -206,7 +208,7 @@ public class TimedZone extends SpawnZone {
                     var worldInZone = reader.parseBoolean(attr, "world-in-zone");
                     var resetCycle = reader.parseEnum(attr, ResetCycle.class, "reset-cycle");
                     var items = parseItems(node, reader);
-                    return new Attributes(time, timeExtension, allowPvP, minLevel, maxLevel, userBound, vipOnly, worldInZone, resetCycle, items);
+                    return new Attributes(time, rechargeTime, allowPvP, minLevel, maxLevel, userBound, vipOnly, worldInZone, resetCycle, items);
                 }
             }
             return DEFAULT_ATTRIBUTES;

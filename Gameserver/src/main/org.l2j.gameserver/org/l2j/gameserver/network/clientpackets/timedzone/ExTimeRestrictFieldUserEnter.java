@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.world.zone.ZoneEngine;
-import org.l2j.gameserver.world.zone.type.TimedZone;
+import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 
 import java.util.Collection;
 
@@ -53,7 +53,7 @@ public class ExTimeRestrictFieldUserEnter extends ClientPacket {
 			return;
 		}
 
-		var zone = ZoneEngine.getInstance().getZoneById(zoneId, TimedZone.class);
+		var zone = ZoneEngine.getInstance().getZoneById(zoneId, TimeRestrictZone.class);
 
 		if(!checkZoneRequirements(player, zone)) {
 			player.sendPacket(TIMED_HUNTING_ZONES_HAVE_ENTRY_LEVEL_REQUIREMENTS_AVAILABLE_TIMES_AND_ENTRY_FEES_THAT_MUST_BE_MET_IN_ORDER_TO_ENTER);
@@ -63,14 +63,14 @@ public class ExTimeRestrictFieldUserEnter extends ClientPacket {
 		player.teleToLocation(zone.getSpawnLoc());
 	}
 
-	private boolean checkZoneRequirements(Player player, TimedZone zone) {
+	private boolean checkZoneRequirements(Player player, TimeRestrictZone zone) {
 		if(zone == null || !zone.canEnter(player)) {
 			return false;
 		}
 		return consumeRequiredItems(player, zone);
 	}
 
-	private boolean consumeRequiredItems(Player player, TimedZone zone) {
+	private boolean consumeRequiredItems(Player player, TimeRestrictZone zone) {
 		var items = zone.requiredItems();
 		if(items.size() > 1) {
 			return consumeMultipleItems(player, items);

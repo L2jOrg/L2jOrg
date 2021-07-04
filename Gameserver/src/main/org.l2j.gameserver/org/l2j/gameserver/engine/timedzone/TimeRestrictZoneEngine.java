@@ -20,8 +20,9 @@ package org.l2j.gameserver.engine.timedzone;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.data.database.data.TimeRestrictZoneInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.type.TimedZone;
+import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,23 +30,23 @@ import java.util.Map;
 /**
  * @author JoeAlisson
  */
-public class TimedZoneEngine {
+public class TimeRestrictZoneEngine {
 
-    private final IntMap<Map<TimedZone, TimedZoneInfo>>  timedZoneInfo = new CHashIntMap<>();
+    private final IntMap<Map<TimeRestrictZone, TimeRestrictZoneInfo>> timedRestrictZoneInfos = new CHashIntMap<>();
 
-    private TimedZoneEngine() {
+    private TimeRestrictZoneEngine() {
         // singleton
     }
 
-    public TimedZoneInfo getTimedZoneInfo(Player player, TimedZone zone) {
-        return timedZoneInfo.computeIfAbsent(player.getObjectId(), i -> new HashMap<>()).computeIfAbsent(zone, TimedZoneInfo::init);
+    public TimeRestrictZoneInfo getTimeRestrictZoneInfo(Player player, TimeRestrictZone zone) {
+        return timedRestrictZoneInfos.computeIfAbsent(player.getObjectId(), i -> new HashMap<>()).computeIfAbsent(zone, z -> TimeRestrictZoneInfo.init(zone, player.getObjectId()));
     }
 
-    public static TimedZoneEngine getInstance() {
+    public static TimeRestrictZoneEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static final class Singleton {
-        private static final TimedZoneEngine INSTANCE = new TimedZoneEngine();
+        private static final TimeRestrictZoneEngine INSTANCE = new TimeRestrictZoneEngine();
     }
 }

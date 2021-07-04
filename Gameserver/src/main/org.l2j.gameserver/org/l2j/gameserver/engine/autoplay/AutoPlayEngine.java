@@ -50,7 +50,7 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 public final class AutoPlayEngine {
 
     private static final int AUTO_PLAY_INTERVAL = 500;
-    private static final int AUTO_SUPPLY_INTERVAL = 1000;
+    private static final int AUTO_SUPPLY_INTERVAL = 600;
     private static final int DEFAULT_ACTION = 2;
 
     private final Set<Player> players = ConcurrentHashMap.newKeySet();
