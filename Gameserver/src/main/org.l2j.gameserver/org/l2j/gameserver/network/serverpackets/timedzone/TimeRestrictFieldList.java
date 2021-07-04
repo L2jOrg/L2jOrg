@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.timedhunter;
+package org.l2j.gameserver.network.serverpackets.timedzone;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
@@ -45,12 +45,13 @@ public class TimeRestrictFieldList extends ServerPacket {
         buffer.writeInt(fieldList.size());
 
         for(var field : fieldList) {
-            buffer.writeInt(field.requiredItemsAmount());
+            var items = field.requiredItems();
 
-            field.forEachRequiredItem(item -> {
+            buffer.writeInt(items.size());
+            for (var item : items) {
                 buffer.writeInt(item.getId());
                 buffer.writeLong(item.getCount());
-            });
+            }
 
             buffer.writeInt(field.getResetCycle());
             buffer.writeInt(field.getId());
@@ -60,13 +61,13 @@ public class TimeRestrictFieldList extends ServerPacket {
 
             var zoneInfo = field.getPlayerZoneInfo(client.getPlayer());
 
-            buffer.writeInt(zoneInfo.getRemainingTime());
+            buffer.writeInt(zoneInfo.remainingTime());
             buffer.writeInt(field.getMaxTime());
             buffer.writeInt(field.getRechargeTime() - zoneInfo.getRechargedTime());
             buffer.writeInt(field.getRechargeTime());
             buffer.writeByte(field.isEnabled());
             buffer.writeByte(field.isUserBound());
-            buffer.writeByte(zoneInfo.getRemainingTime() > 0);
+            buffer.writeByte(zoneInfo.remainingTime() > 0);
             buffer.writeByte(field.isVipOnly()); // pc cafe only ?
             buffer.writeByte(player.getVipTier()); // pc cafe user ?
             buffer.writeByte(field.worldInZone());

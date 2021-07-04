@@ -313,18 +313,6 @@ public class EnterWorld extends ClientPacket {
             }, 5000);
         }
 
-        // Check if in time limited hunting zone.
-        if (player.isInTimedHuntingZone()) {
-            final long currentTime = System.currentTimeMillis();
-            final long pirateTombExitTime = player.getHuntingZoneResetTime(2);
-            if ((pirateTombExitTime > currentTime) && player.isInTimedHuntingZone(2)) {
-                player.startTimedHuntingZone(1, pirateTombExitTime - currentTime);
-            }
-            else
-            {
-                player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
-            }
-        }
         restoreItems(player);
         player.onEnter();
         Quest.playerEnter(player);

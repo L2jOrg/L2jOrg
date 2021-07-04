@@ -94,7 +94,6 @@ public final class Config {
     private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
-    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
     // --------------------------------------------------
@@ -565,10 +564,6 @@ public final class Config {
     // --------------------------------------------------
     // HUNTING ZONE
     // --------------------------------------------------
-    public static long TIME_LIMITED_ZONE_INITIAL_TIME;
-    public static long TIME_LIMITED_MAX_ADDED_TIME;
-    public static long TIME_LIMITED_ZONE_RESET_DELAY;
-    public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
     public static float L2_COIN_DROP_RATE;
 
     // --------------------------------------------------
@@ -1289,14 +1284,6 @@ public final class Config {
         }
         HOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("HopzoneDualboxesAllowed", 1);
         ALLOW_HOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowHopzoneGameServerReport", false);
-
-
-        // Load Time Limited Zone config file (if exists)
-        final PropertiesParser timeLimitedZoneSettings = new PropertiesParser(TIME_LIMITED_ZONE_CONFIG_FILE);
-        TIME_LIMITED_ZONE_INITIAL_TIME = timeLimitedZoneSettings.getLong("InitialTime", 3600000);
-        TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
-        TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
-        TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
 
         final PropertiesParser magicLampSettings = new PropertiesParser(MAGIC_LAMP_CONFIG_FILE);
         ENABLE_MAGIC_LAMP = magicLampSettings.getBoolean("MagicLampEnabled", false);

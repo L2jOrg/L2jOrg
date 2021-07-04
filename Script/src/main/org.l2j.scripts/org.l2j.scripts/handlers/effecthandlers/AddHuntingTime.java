@@ -19,7 +19,6 @@
 package org.l2j.scripts.handlers.effecthandlers;
 
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
@@ -27,7 +26,6 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneList;
 
 /**
  * @author Mobius
@@ -59,34 +57,14 @@ public class AddHuntingTime extends AbstractEffect
 		}
 		
 		final long currentTime = System.currentTimeMillis();
-		long endTime = player.getHuntingZoneResetTime(_zoneId);
-		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_TIME))
+		long endTime = 600000;
+		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= 18000000))
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, false);
 			player.sendMessage("You cannot exceed the time zone limit.");
-			return;
 		}
-		
-		if (player.isInTimedHuntingZone(_zoneId))
-		{
-			endTime = _time + player.getTimedHuntingZoneRemainingTime();
-			player.setHuntingZoneResetTime(_zoneId, currentTime + endTime);
-			player.startTimedHuntingZone(_zoneId, endTime);
-		}
-		else
-		{
-			if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
-			{
-				endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
-			}
-			else if (endTime < currentTime)
-			{
-				endTime = currentTime;
-			}
-			player.setHuntingZoneResetTime(_zoneId,  endTime + _time);
-		}
-		
-		player.sendPacket(new TimedHuntingZoneList(player));
+
+		// player.sendPacket(new TimeRestrictFieldList());
 	}
 
 	public static final class Factory implements SkillEffectFactory {

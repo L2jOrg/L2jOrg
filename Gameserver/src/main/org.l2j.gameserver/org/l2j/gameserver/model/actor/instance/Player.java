@@ -76,7 +76,9 @@ import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.*;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.Henna;
 import org.l2j.gameserver.model.item.container.Warehouse;
 import org.l2j.gameserver.model.item.container.*;
 import org.l2j.gameserver.model.item.type.ArmorType;
@@ -109,7 +111,6 @@ import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
-import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
@@ -118,7 +119,6 @@ import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.util.*;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.ZoneEngine;
@@ -138,7 +138,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
@@ -184,7 +183,6 @@ public final class Player extends Playable {
     private PlayerStatsData statsData;
     private AutoPlaySettings autoPlaySettings;
     private PlayerVariableData variables;
-    private ScheduledFuture<?> _timedHuntingZoneFinishTask;
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection;
     private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
@@ -496,17 +494,6 @@ public final class Player extends Playable {
         return variables.isFortuneTellingBlackCat();
     }
 
-    public long getHuntingZoneResetTime(int zoneId) {
-        String[] timeZones = variables.getHuntingZoneResetTime().split(";");
-
-        for(int i = 0 ; i < timeZones.length; i = i + 2) {
-            if (timeZones[i].equalsIgnoreCase("" + zoneId))
-                return Long.parseLong(timeZones[i + 1]);
-        }
-
-        return 0;
-    }
-
     public int getAutoCp() {
         return variables.getAutoCp();
     }
@@ -625,14 +612,6 @@ public final class Player extends Playable {
 
     public void setFortuneTellingBlackCat(boolean fortuneTellingBlackCat) {
         variables.setFortuneTellingBlackCat(fortuneTellingBlackCat);
-    }
-
-    public void setHuntingZoneResetTime(int zoneId, long huntingZoneResetTime) {
-        if(variables.getHuntingZoneResetTime().equalsIgnoreCase("")) {
-            variables.setHuntingZoneResetTime(zoneId + ";" + huntingZoneResetTime);
-        } else {
-            variables.setHuntingZoneResetTime(variables.getHuntingZoneResetTime() + ";" + zoneId + ";" + huntingZoneResetTime);
-        }
     }
 
     public void setAutoCp(int autoCp) {
@@ -8164,59 +8143,6 @@ public final class Player extends Playable {
 
         // Both are defenders, friends.
         return true;
-    }
-
-    public boolean isInTimedHuntingZone()
-    {
-        return isInTimedHuntingZone(2); // Storm Isle
-    }
-
-    public boolean isInTimedHuntingZone(int zoneId)
-    {
-        final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-        final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-
-        if (zoneId == 2) { // Ancient Pirates' Tomb.
-            return (x == 20) && (y == 15);
-        }
-        return false;
-    }
-
-    public void startTimedHuntingZone(int zoneId, long delay)
-    {
-        // Stop previous task.
-        stopTimedHuntingZoneTask();
-
-        // TODO: Delay window.
-        // sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
-        sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
-        _timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
-        {
-            if (isOnline() && isInTimedHuntingZone(zoneId))
-            {
-                sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-                abortCast();
-                stopMove(null);
-                teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
-            }
-        }, delay);
-    }
-
-    private void stopTimedHuntingZoneTask()
-    {
-        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
-        {
-            _timedHuntingZoneFinishTask.cancel(true);
-            _timedHuntingZoneFinishTask = null;
-        }
-        sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-    }
-
-    public long getTimedHuntingZoneRemainingTime() {
-        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone()) {
-            return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
-        }
-        return 0;
     }
 
     @Override

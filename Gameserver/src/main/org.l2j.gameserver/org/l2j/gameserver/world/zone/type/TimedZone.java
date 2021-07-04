@@ -18,29 +18,37 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.engine.timedzone.TimedZoneEngine;
 import org.l2j.gameserver.engine.timedzone.TimedZoneInfo;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
+import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.w3c.dom.Node;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * @author JoeAlisson
  */
-public class TimedZone extends Zone {
+public class TimedZone extends SpawnZone {
 
     private static final Attributes DEFAULT_ATTRIBUTES = new Attributes(60, 60, true, 1, 999, false, false, false, ResetCycle.DAILY, Collections.emptyList());
+    private static final Object TASK_LOCKER = new Object();
+    private static ScheduledFuture<?> task;
 
     private final Attributes attributes;
 
@@ -61,14 +69,31 @@ public class TimedZone extends Zone {
         if(!attributes.allowPvP) {
             creature.setInsideZone(ZoneType.PEACE, true);
         }
+
+        if(creature instanceof Player player) {
+            var info = getPlayerZoneInfo(player);
+            info.setLastRemainingTimeUpdate(System.currentTimeMillis());
+            onPlayerEnter();
+        }
     }
 
-    private boolean canEnter(Player player) {
+    private void onPlayerEnter() {
+        synchronized (TASK_LOCKER) {
+            if(task == null) {
+                task = ThreadPool.scheduleAtFixedDelay(new TimedZoneTask(), 1, 1, TimeUnit.MINUTES);
+            }
+        }
+    }
+
+    public  boolean canEnter(Player player) {
         if(player.getLevel() < attributes.minLevel || player.getLevel() > attributes.maxLevel) {
             return false;
         }
 
-        return !attributes.vipOnly || player.getVipTier() >= 1;
+        if(attributes.vipOnly && player.getVipTier() < 1) {
+            return false;
+        }
+        return getPlayerZoneInfo(player).remainingTime() > 0;
     }
 
     @Override
@@ -78,14 +103,17 @@ public class TimedZone extends Zone {
         if(!attributes.allowPvP) {
             creature.setInsideZone(ZoneType.PEACE, false);
         }
+
+        if(creature instanceof Player player) {
+            var info = getPlayerZoneInfo(player);
+            info.remainingTime();
+            info.setLastRemainingTimeUpdate(0);
+            player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+        }
     }
 
-    public int requiredItemsAmount() {
-        return attributes.items.size();
-    }
-
-    public void forEachRequiredItem(Consumer<ItemHolder> action) {
-        attributes.items.forEach(action);
+    public Collection<ItemHolder> requiredItems() {
+        return attributes.items;
     }
 
     public int getResetCycle() {
@@ -126,6 +154,34 @@ public class TimedZone extends Zone {
 
     public TimedZoneInfo getPlayerZoneInfo(Player player) {
         return TimedZoneEngine.getInstance().getTimedZoneInfo(player, this);
+    }
+
+    public static class TimedZoneTask implements Runnable {
+
+        @Override
+        public void run() {
+            var zones = ZoneEngine.getInstance().getAllZones(TimedZone.class);
+            var updated = new AtomicBoolean(false);
+            for (var zone : zones) {
+                zone.forEachPlayer(player -> {
+                    updated.set(true);
+                    var info = zone.getPlayerZoneInfo(player);
+                    info.updateRemainingTime();
+                    if(info.remainingTime() <= 0) {
+                        player.teleToLocation(TeleportWhereType.TOWN);
+                    }
+                });
+            }
+
+            if(!updated.get()) {
+                synchronized (TASK_LOCKER) {
+                    if(task != null) {
+                        task.cancel(false);
+                        task = null;
+                    }
+                }
+            }
+        }
     }
 
     public static class Factory implements ZoneFactory {

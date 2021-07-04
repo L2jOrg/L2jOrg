@@ -341,7 +341,7 @@ public abstract class OlympiadMatch extends AbstractEvent implements Runnable {
             final var msg = getSystemMessage(S1_ON_SCREEN).addString(player.getName() + " is currently fishing and cannot participate in the Olympiad");
             forEachParticipant(msg::sendTo);
             valid = false;
-        } else if(player.isInTimedHuntingZone() || player.isInInstance()) {
+        } else if(player.isInsideZone(ZoneType.TIMED) || player.isInInstance()) {
             final var msg = getSystemMessage(S1_ON_SCREEN).addString(player.getName() + " is currently in timed hunting zone and cannot participate in the Olympiad");
             forEachParticipant(msg::sendTo);
             valid = false;

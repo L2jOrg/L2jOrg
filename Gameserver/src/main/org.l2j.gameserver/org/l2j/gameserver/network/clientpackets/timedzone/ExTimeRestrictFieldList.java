@@ -16,30 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.sessionzones;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneList;
+package org.l2j.gameserver.network.clientpackets.timedzone;
 
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldList;
 
 /**
- * @author Mobius
+ * @author JoeAlisson
  */
-public class ExTimedHuntingZoneList extends ClientPacket
-{
-	@Override
-	public void readImpl()
-	{
-	}
-	
-	@Override
-	public void runImpl()
-	{
-		final Player player = client.getPlayer();
-		if (player == null)
-		{
-			return;
-		}
-		client.sendPacket(new TimedHuntingZoneList(player));
-	}
+public class ExTimeRestrictFieldList extends ClientPacket {
+
+    @Override
+    protected void readImpl() throws Exception {
+        // trigger packet
+    }
+
+    @Override
+    protected void runImpl() {
+        client.sendPacket(new TimeRestrictFieldList());
+    }
 }

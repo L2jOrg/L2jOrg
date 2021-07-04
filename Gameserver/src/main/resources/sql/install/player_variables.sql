@@ -9,7 +9,6 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
 	`extend_drop` VARCHAR(255),
 	`fortune_telling` INT DEFAULT 0,
 	`fortune_telling_black_cat` BOOLEAN DEFAULT FALSE,
-	`hunting_zone_reset_time` VARCHAR(255),
 	`autocp` INT DEFAULT 0,
 	`autohp` INT DEFAULT 0,
 	`automp` INT DEFAULT 0,

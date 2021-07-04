@@ -57,9 +57,6 @@ public class PlayerVariableData {
     @Column("fortune_telling_black_cat")
     private boolean fortuneTellingBlackCat;
 
-    @Column("hunting_zone_reset_time")
-    private String huntingZoneResetTime;
-
     private int autoCp;
 
     private int autoHp;
@@ -156,14 +153,6 @@ public class PlayerVariableData {
 
     public boolean isFortuneTellingBlackCat() {
         return fortuneTellingBlackCat;
-    }
-
-    public void setHuntingZoneResetTime(String huntingZoneResetTime) {
-        this.huntingZoneResetTime = huntingZoneResetTime;
-    }
-
-    public String getHuntingZoneResetTime() {
-        return huntingZoneResetTime;
     }
 
     public void setAutoCp(int autoCp) {

@@ -27,19 +27,26 @@ public class TimedZoneInfo {
 
     private int remainingTime;
     private int refillTime;
+    private long lastRemainingTimeUpdate;
 
-    public int getRemainingTime() {
+    public int remainingTime() {
         return remainingTime;
+    }
+
+    public void updateRemainingTime() {
+        if(lastRemainingTimeUpdate > 0) {
+            var currentTime = System.currentTimeMillis();
+            remainingTime -= (currentTime - lastRemainingTimeUpdate)  / 1000.0;
+            lastRemainingTimeUpdate = currentTime;
+        }
     }
 
     public int getRechargedTime() {
         return refillTime;
     }
 
-    public static TimedZoneInfo init(int time) {
-        var zoneInfo = new TimedZoneInfo();
-        zoneInfo.remainingTime = time;
-        return zoneInfo;
+    public void setLastRemainingTimeUpdate(long lastRemainingTimeUpdate) {
+        this.lastRemainingTimeUpdate = lastRemainingTimeUpdate;
     }
 
     public static TimedZoneInfo init(TimedZone timedZone) {

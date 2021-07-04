@@ -34,7 +34,7 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
 
     private byte type;
     private int itemId;
-    private int amount;
+    private long amount;
 
     @Override
     protected void readImpl() throws Exception {
@@ -65,11 +65,9 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
 
         var canAbsorb = checkConditions(player, spirit);
         if(canAbsorb) {
-            client.sendPacket(DRAIN_SUCCESSFUL);
             spirit.addExperience(absorbItem.getExperience() * amount);
-            var userInfo = new UserInfo(player);
-            userInfo.addComponentType(UserInfoType.SPIRITS);
-            client.sendPacket(userInfo);
+            client.sendPacket(DRAIN_SUCCESSFUL);
+            client.sendPacket(new UserInfo(player, UserInfoType.SPIRITS));
         }
         client.sendPacket(new ElementalSpiritAbsorb(type, canAbsorb));
 
