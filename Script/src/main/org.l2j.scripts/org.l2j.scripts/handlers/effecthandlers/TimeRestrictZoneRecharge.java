@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldList;
+import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldUserChargeResult;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 import org.slf4j.Logger;
@@ -57,7 +58,7 @@ public class TimeRestrictZoneRecharge extends AbstractEffect {
         if(effected instanceof Player player) {
             var info = zone.getPlayerZoneInfo(player);
             info.rechargeTime(time, zone.getRechargeTime());
-            player.sendPacket(new TimeRestrictFieldList());
+            player.sendPacket(new TimeRestrictFieldUserChargeResult(zoneId, time, info.remainingTime()));
         }
     }
 

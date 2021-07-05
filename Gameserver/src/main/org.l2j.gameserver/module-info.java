@@ -114,7 +114,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.classchange;
     exports org.l2j.gameserver.network.serverpackets.costume;
     exports org.l2j.gameserver.api.costume;
-    exports org.l2j.gameserver.network.serverpackets.sessionzones;
     exports org.l2j.gameserver.network.serverpackets.item;
     exports org.l2j.gameserver.api.item;
     exports org.l2j.gameserver.network.serverpackets.attendance;

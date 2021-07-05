@@ -20,29 +20,30 @@ package org.l2j.gameserver.network.serverpackets.timedzone;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+
+import static org.l2j.gameserver.network.ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_CHARGE_RESULT;
 
 /**
  * @author JoeAlisson
  */
-public class TimeRestrictFieldUserEnter extends ServerPacket {
-	private final int remainingTime;
-	private final int zoneId;
-	private final int enterTimestamp;
+public class TimeRestrictFieldUserChargeResult  extends ServerPacket {
 
-	public TimeRestrictFieldUserEnter(int zoneId, int remainingTime) {
-		this.zoneId = zoneId;
-		this.remainingTime = remainingTime;
-		this.enterTimestamp =  (int) (System.currentTimeMillis() / 1000);
-	}
+    private final int zoneId;
+    private final int rechargedTime;
+    private final int remainingTime;
 
-	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)  {
-		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_ENTER, buffer );
-		buffer.writeByte(true); // success ?
-		buffer.writeInt(zoneId);
-		buffer.writeInt(enterTimestamp);
-		buffer.writeInt(remainingTime);
-	}
+    public TimeRestrictFieldUserChargeResult(int zoneId, int rechargedTime, int remainingTime) {
+        this.zoneId = zoneId;
+        this.rechargedTime = rechargedTime;
+        this.remainingTime = remainingTime;
+    }
+
+    @Override
+    protected void writeImpl(GameClient client, WritableBuffer buffer) throws Exception {
+        writeId(EX_TIME_RESTRICT_FIELD_USER_CHARGE_RESULT, buffer);
+        buffer.writeInt(zoneId);
+        buffer.writeInt(remainingTime);
+        buffer.writeInt(rechargedTime);
+    }
 }

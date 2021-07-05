@@ -40,7 +40,7 @@ public class TimeRestrictFieldList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client, WritableBuffer buffer)  {
-        writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_LIST, buffer );
+        writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_LIST, buffer);
         var player = client.getPlayer();
         buffer.writeInt(fieldList.size());
 

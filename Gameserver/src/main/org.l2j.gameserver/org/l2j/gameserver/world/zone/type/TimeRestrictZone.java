@@ -25,7 +25,8 @@ import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
+import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldUserAlarm;
+import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldUserExit;
 import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldUserEnter;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
@@ -75,7 +76,8 @@ public class TimeRestrictZone extends SpawnZone {
             var info = getPlayerZoneInfo(player);
             info.setLastRemainingTimeUpdate(System.currentTimeMillis());
             startZoneTask();
-            player.sendPacket(new TimeRestrictFieldUserEnter(info.remainingTime()));
+            player.sendPackets(new TimeRestrictFieldUserEnter(getId(), info.remainingTime()),
+                               new TimeRestrictFieldUserAlarm(getId(), info.remainingTime()));
         }
     }
 
@@ -110,7 +112,7 @@ public class TimeRestrictZone extends SpawnZone {
             var info = getPlayerZoneInfo(player);
             info.remainingTime();
             info.setLastRemainingTimeUpdate(0);
-            player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+            player.sendPacket(TimeRestrictFieldUserExit.STATIC_PACKET);
         }
     }
 

@@ -24,25 +24,17 @@ import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * @author JoeAlisson
+ * @author Mobius
  */
-public class TimeRestrictFieldUserEnter extends ServerPacket {
-	private final int remainingTime;
-	private final int zoneId;
-	private final int enterTimestamp;
+public class TimeRestrictFieldUserExit extends ServerPacket {
+	public static final TimeRestrictFieldUserExit STATIC_PACKET = new TimeRestrictFieldUserExit();
 
-	public TimeRestrictFieldUserEnter(int zoneId, int remainingTime) {
-		this.zoneId = zoneId;
-		this.remainingTime = remainingTime;
-		this.enterTimestamp =  (int) (System.currentTimeMillis() / 1000);
+	private TimeRestrictFieldUserExit() {
+		// singleton
 	}
 
 	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)  {
-		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_ENTER, buffer );
-		buffer.writeByte(true); // success ?
-		buffer.writeInt(zoneId);
-		buffer.writeInt(enterTimestamp);
-		buffer.writeInt(remainingTime);
+	protected void writeImpl(GameClient client, WritableBuffer buffer) {
+		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_EXIT, buffer);
 	}
 }
