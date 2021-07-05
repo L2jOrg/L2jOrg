@@ -60,6 +60,7 @@ public class TimeRestrictFieldList extends ServerPacket {
             buffer.writeInt(field.getTime());
 
             var zoneInfo = field.getPlayerZoneInfo(client.getPlayer());
+            zoneInfo.updateRemainingTime();
 
             buffer.writeInt(zoneInfo.remainingTime());
             buffer.writeInt(field.getMaxTime());

@@ -24,17 +24,19 @@ import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * @author Mobius
+ * @author JoeAlisson
  */
 public class TimeRestrictFieldUserExit extends ServerPacket {
-	public static final TimeRestrictFieldUserExit STATIC_PACKET = new TimeRestrictFieldUserExit();
 
-	private TimeRestrictFieldUserExit() {
-		// singleton
+	private final int zoneId;
+
+	public TimeRestrictFieldUserExit(int zoneId) {
+		this.zoneId = zoneId;
 	}
 
 	@Override
 	protected void writeImpl(GameClient client, WritableBuffer buffer) {
 		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_EXIT, buffer);
+		buffer.writeInt(zoneId);
 	}
 }

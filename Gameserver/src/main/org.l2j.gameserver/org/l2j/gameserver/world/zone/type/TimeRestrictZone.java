@@ -110,9 +110,9 @@ public class TimeRestrictZone extends SpawnZone {
 
         if(creature instanceof Player player) {
             var info = getPlayerZoneInfo(player);
-            info.remainingTime();
+            info.updateRemainingTime();
             info.setLastRemainingTimeUpdate(0);
-            player.sendPacket(TimeRestrictFieldUserExit.STATIC_PACKET);
+            player.sendPackets(new TimeRestrictFieldUserExit(getId()));
         }
     }
 

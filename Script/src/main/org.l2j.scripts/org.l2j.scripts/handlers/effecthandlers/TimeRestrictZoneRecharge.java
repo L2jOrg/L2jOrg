@@ -25,7 +25,6 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldList;
 import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldUserChargeResult;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
@@ -50,15 +49,15 @@ public class TimeRestrictZoneRecharge extends AbstractEffect {
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
         var zone = ZoneEngine.getInstance().getZoneById(zoneId, TimeRestrictZone.class);
-        if(zone == null) {
+        if (zone == null) {
             LOGGER.warn("Timed Zone with id {} not found.", zoneId);
             return;
         }
 
-        if(effected instanceof Player player) {
+        if (effected instanceof Player player) {
             var info = zone.getPlayerZoneInfo(player);
             info.rechargeTime(time, zone.getRechargeTime());
-            player.sendPacket(new TimeRestrictFieldUserChargeResult(zoneId, time, info.remainingTime()));
+            player.sendPacket(new TimeRestrictFieldUserChargeResult(zoneId, zone.getRechargeTime() - info.getRechargedTime(), info.remainingTime()));
         }
     }
 
