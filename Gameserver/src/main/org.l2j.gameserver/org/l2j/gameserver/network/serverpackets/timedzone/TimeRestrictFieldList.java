@@ -70,8 +70,8 @@ public class TimeRestrictFieldList extends ServerPacket {
             buffer.writeByte(field.isEnabled());
             buffer.writeByte(field.isUserBound());
             buffer.writeByte(zoneInfo.remainingTime() > 0);
-            buffer.writeByte(field.isVipOnly()); // pc cafe only ?
-            buffer.writeByte(player.getVipTier()); // pc cafe user ?
+            buffer.writeByte(field.pcCafePoints() > 0);
+            buffer.writeByte(player.getPcCafePoints() >= field.pcCafePoints());
             buffer.writeByte(field.worldInZone());
         }
     }

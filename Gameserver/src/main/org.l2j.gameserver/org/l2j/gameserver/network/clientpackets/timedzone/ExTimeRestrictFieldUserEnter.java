@@ -72,12 +72,17 @@ public class ExTimeRestrictFieldUserEnter extends ClientPacket {
 
 	private boolean consumeRequiredItems(Player player, TimeRestrictZone zone) {
 		var items = zone.requiredItems();
-		if(items.size() > 1) {
-			return consumeMultipleItems(player, items);
-		}
 		var consumed = true;
-		for (var item : items) {
-			consumed = player.destroyItemByItemId("TimedZone", item.getId(), item.getCount(), player, true);
+		if(items.size() > 1) {
+			consumed = consumeMultipleItems(player, items);
+		} else {
+			for (var item : items) {
+				consumed = player.destroyItemByItemId("TimedZone", item.getId(), item.getCount(), player, true);
+			}
+		}
+
+		if(consumed && zone.pcCafePoints() > 0) {
+			player.setPcCafePoints(player.getPcCafePoints() - zone.pcCafePoints());
 		}
 		return consumed;
 	}

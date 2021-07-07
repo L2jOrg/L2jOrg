@@ -43,7 +43,7 @@ import java.util.List;
  */
 public class TimeRestrictZone extends SpawnZone {
 
-    private static final Attributes DEFAULT_ATTRIBUTES = new Attributes(60, 60, true, 1, 999, false, false, false, ResetCycle.DAILY, Collections.emptyList());
+    private static final Attributes DEFAULT_ATTRIBUTES = new Attributes(60, 60, true, 1, 999, false, 0, false, ResetCycle.DAILY, Collections.emptyList());
 
     private final Attributes attributes;
 
@@ -84,7 +84,7 @@ public class TimeRestrictZone extends SpawnZone {
             return false;
         }
 
-        if(attributes.vipOnly && player.getVipTier() < 1) {
+        if(attributes.pcCafe > player.getPcCafePoints()) {
             return false;
         }
         return getPlayerZoneInfo(player).remainingTime() > 0;
@@ -134,8 +134,8 @@ public class TimeRestrictZone extends SpawnZone {
         return attributes.userBound;
     }
 
-    public boolean isVipOnly() {
-        return attributes.vipOnly;
+    public int pcCafePoints() {
+        return attributes.pcCafe;
     }
 
     public boolean worldInZone() {
@@ -168,11 +168,11 @@ public class TimeRestrictZone extends SpawnZone {
                     var minLevel = reader.parseInt(attr, "min-level");
                     var maxLevel = reader.parseInt(attr, "max-level");
                     var userBound = reader.parseBoolean(attr, "user-bound");
-                    var vipOnly = reader.parseBoolean(attr, "vip-only");
+                    var pcCafe = reader.parseInt(attr, "pc-cafe");
                     var worldInZone = reader.parseBoolean(attr, "world-in-zone");
                     var resetCycle = reader.parseEnum(attr, ResetCycle.class, "reset-cycle");
                     var items = parseItems(node, reader);
-                    return new Attributes(time, rechargeTime, allowPvP, minLevel, maxLevel, userBound, vipOnly, worldInZone, resetCycle, items);
+                    return new Attributes(time, rechargeTime, allowPvP, minLevel, maxLevel, userBound, pcCafe, worldInZone, resetCycle, items);
                 }
             }
             return DEFAULT_ATTRIBUTES;
@@ -202,7 +202,7 @@ public class TimeRestrictZone extends SpawnZone {
             int minLevel,
             int maxLevel,
             boolean userBound,
-            boolean vipOnly,
+            int pcCafe,
             boolean worldInZone,
             ResetCycle resetCycle, List<ItemHolder> items) {
     }
