@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets.timedzone;
 
+import org.l2j.gameserver.engine.timedzone.TimeRestrictZoneEngine;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldList;
 
@@ -33,6 +34,6 @@ public class ExTimeRestrictFieldList extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        client.sendPacket(new TimeRestrictFieldList());
+        TimeRestrictZoneEngine.getInstance().showZones(client.getPlayer());
     }
 }

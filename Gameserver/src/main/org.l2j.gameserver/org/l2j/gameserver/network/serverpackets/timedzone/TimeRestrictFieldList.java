@@ -19,6 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.timedzone;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.timedzone.TimeRestrictZoneEngine;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -59,7 +60,7 @@ public class TimeRestrictFieldList extends ServerPacket {
             buffer.writeInt(field.getMaxLevel());
             buffer.writeInt(field.getTime());
 
-            var zoneInfo = field.getPlayerZoneInfo(client.getPlayer());
+            var zoneInfo = TimeRestrictZoneEngine.getInstance().getTimeRestrictZoneInfo(player, field);
             zoneInfo.updateRemainingTime();
 
             buffer.writeInt(zoneInfo.remainingTime());

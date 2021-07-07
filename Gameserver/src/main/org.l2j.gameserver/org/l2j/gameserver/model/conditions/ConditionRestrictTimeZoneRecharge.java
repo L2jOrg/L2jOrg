@@ -20,6 +20,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.timedzone.TimeRestrictZoneEngine;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.ZoneEngine;
@@ -43,7 +44,7 @@ public class ConditionRestrictTimeZoneRecharge extends Condition {
             return false;
         }
 
-        var info = zone.getPlayerZoneInfo(player);
+        var info = TimeRestrictZoneEngine.getInstance().getTimeRestrictZoneInfo(player, zone);
         return info.getRechargedTime() < zone.getRechargeTime();
     }
 }

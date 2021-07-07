@@ -263,4 +263,9 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("INSERT INTO clan_members (clan_id, player_id, last_reputation_level) VALUES (:clanId:, :playerId:, :level:) AS v ON DUPLICATE KEY UPDATE last_reputation_level = v.last_reputation_level")
     void saveLastReputationLevel(int clanId, int playerId, byte level);
+
+    @Query("SELECT zone, player_id, remaining_time, recharged_time FROM player_time_restrict_zones WHERE player_id = :playerId:")
+    IntMap<TimeRestrictZoneInfo> loadTimeRestrictZoneInfo(int playerId);
+
+    void saveRestrictZoneInfo(Collection<TimeRestrictZoneInfo> values);
 }
