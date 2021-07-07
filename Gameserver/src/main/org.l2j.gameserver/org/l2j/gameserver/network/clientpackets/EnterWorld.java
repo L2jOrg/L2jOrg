@@ -61,7 +61,6 @@ import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeWaitingListAlarm;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowMemberListAll;
 import org.l2j.gameserver.settings.*;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;

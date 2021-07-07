@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.clientpackets.timedzone;
 
 import org.l2j.gameserver.engine.timedzone.TimeRestrictZoneEngine;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldList;
 
 /**
  * @author JoeAlisson

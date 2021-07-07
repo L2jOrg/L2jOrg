@@ -69,14 +69,9 @@ public class TimeRestrictZone extends SpawnZone {
             var info = getPlayerZoneInfo(player);
             info.setLastRemainingTimeUpdate(System.currentTimeMillis());
             TimeRestrictZoneEngine.getInstance().startRemainingTimeCheck();
-            startZoneTask();
             player.sendPackets(new TimeRestrictFieldUserEnter(getId(), info.remainingTime()),
                                new TimeRestrictFieldUserAlarm(getId(), info.remainingTime()));
         }
-    }
-
-    private void startZoneTask() {
-
     }
 
     public  boolean canEnter(Player player) {

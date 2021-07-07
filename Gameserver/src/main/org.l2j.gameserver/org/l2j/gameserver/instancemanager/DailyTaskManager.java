@@ -42,13 +42,11 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone.ResetCycle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
-import java.sql.Time;
 import java.time.DayOfWeek;
 import java.time.Instant;
 import java.time.LocalDate;

@@ -47,7 +47,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 public class TimeRestrictZoneEngine {
 
     private final IntMap<IntMap<TimeRestrictZoneInfo>> timedRestrictZoneInfos = new CHashIntMap<>();
-    private final Object TASK_LOCKER = new Object();
+    private final Object taskLocker = new Object();
 
     private ScheduledFuture<?> taskTimeCheck;
 
@@ -71,7 +71,7 @@ public class TimeRestrictZoneEngine {
     }
 
     public void startRemainingTimeCheck() {
-        synchronized (TASK_LOCKER) {
+        synchronized (taskLocker) {
             if(taskTimeCheck == null) {
                 taskTimeCheck = ThreadPool.scheduleAtFixedDelay(new TimedZoneTask(), 1, 1, TimeUnit.MINUTES);
             }
@@ -110,7 +110,7 @@ public class TimeRestrictZoneEngine {
             }
 
             if(!updated.get()) {
-                synchronized (TASK_LOCKER) {
+                synchronized (taskLocker) {
                     if(taskTimeCheck != null) {
                         taskTimeCheck.cancel(false);
                         taskTimeCheck = null;

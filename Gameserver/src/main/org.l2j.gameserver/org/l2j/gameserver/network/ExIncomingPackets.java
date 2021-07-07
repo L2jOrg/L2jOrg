@@ -94,8 +94,6 @@ import java.util.EnumSet;
 import java.util.Objects;
 import java.util.function.Supplier;
 
-;
-
 /**
  * @author Sdw
  * @author JoeAlisson
