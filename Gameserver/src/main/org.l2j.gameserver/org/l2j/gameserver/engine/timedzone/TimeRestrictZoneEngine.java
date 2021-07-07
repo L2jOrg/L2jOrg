@@ -32,6 +32,7 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.network.serverpackets.timedzone.TimeRestrictFieldList;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
+import org.l2j.gameserver.world.zone.type.TimeRestrictZone.ResetCycle;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -80,6 +81,15 @@ public class TimeRestrictZoneEngine {
     public void showZones(Player player) {
         timedRestrictZoneInfos.computeIfAbsent(player.getObjectId(), this::loadPlayerTimeRestrictZoneInfo);
         player.sendPacket(new TimeRestrictFieldList());
+    }
+
+    public void resetTimes(ResetCycle resetCycle) {
+        if(resetCycle == ResetCycle.WEEKLY) {
+            getDAO(PlayerDAO.class).deleteRestrictZoneInfo();
+        } else {
+            getDAO(PlayerDAO.class).deleteRestrictZoneInfo(resetCycle);
+        }
+        timedRestrictZoneInfos.clear();
     }
 
     public class TimedZoneTask implements Runnable {

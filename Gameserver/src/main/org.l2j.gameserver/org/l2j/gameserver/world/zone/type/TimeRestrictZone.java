@@ -207,7 +207,7 @@ public class TimeRestrictZone extends SpawnZone {
             ResetCycle resetCycle, List<ItemHolder> items) {
     }
 
-    enum ResetCycle {
+    public enum ResetCycle {
         WEEKLY,
         DAILY
     }
