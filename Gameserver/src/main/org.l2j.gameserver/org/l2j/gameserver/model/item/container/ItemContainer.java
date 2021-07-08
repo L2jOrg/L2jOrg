@@ -165,13 +165,29 @@ public abstract class ItemContainer {
      * @return the inventory item count
      */
     public long getInventoryItemCount(int itemId, int enchantLevel, boolean includeEquipped) {
+        var item = getItemByItemId(itemId);
+        if(item == null) {
+            return 0;
+        }
+
+        if(item.isStackable()) {
+            if((enchantLevel < 0 || item.getEnchantLevel() == enchantLevel) && (includeEquipped || !item.isEquipped())) {
+                return item.getCount();
+            }
+            return 0;
+        }
+        return getSameItemCount(item, enchantLevel, includeEquipped);
+    }
+
+    long getSameItemCount(Item item, int enchantLevel, boolean includeEquipped) {
+        return getSameItemCount(item, enchantLevel, includeEquipped, items.values());
+    }
+
+    long getSameItemCount(Item item, int enchantLevel, boolean includeEquipped, Collection<Item> items) {
         long count = 0;
 
-        for (Item item : items.values()) {
-            if (item.getId() == itemId && (item.getEnchantLevel() == enchantLevel || enchantLevel < 0) && (includeEquipped || !item.isEquipped())) {
-                if (item.isStackable()) {
-                    return item.getCount();
-                }
+        for (var it : items) {
+            if (it.getId() == item.getId() && (item.getEnchantLevel() == enchantLevel || enchantLevel < 0) && (includeEquipped || !item.isEquipped())) {
                 count++;
             }
         }

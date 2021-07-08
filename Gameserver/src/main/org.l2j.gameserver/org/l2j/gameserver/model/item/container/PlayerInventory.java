@@ -383,6 +383,14 @@ public class PlayerInventory extends Inventory {
         return item;
     }
 
+    @Override
+    protected long getSameItemCount(Item item, int enchantLevel, boolean includeEquipped) {
+        if(item.isQuestItem()) {
+            return getSameItemCount(item, enchantLevel, includeEquipped, questItems.values());
+        }
+        return super.getSameItemCount(item, enchantLevel, includeEquipped);
+    }
+
     /**
      * Transfers item to another inventory and checks _adena and _ancientAdena
      *
