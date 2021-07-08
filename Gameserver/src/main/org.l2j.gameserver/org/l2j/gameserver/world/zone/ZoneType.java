@@ -50,6 +50,7 @@ public enum ZoneType {
     FISHING,
     UNDYING,
     TAX,
+    TIMED,
     RAID_LIMIT;
 
     private static final int ZONE_COUNT =  values().length;

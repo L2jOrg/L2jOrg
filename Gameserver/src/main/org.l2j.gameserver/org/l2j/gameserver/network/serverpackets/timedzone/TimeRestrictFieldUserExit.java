@@ -16,30 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.sessionzones;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneList;
+package org.l2j.gameserver.network.serverpackets.timedzone;
 
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
- * @author Mobius
+ * @author JoeAlisson
  */
-public class ExTimedHuntingZoneList extends ClientPacket
-{
-	@Override
-	public void readImpl()
-	{
+public class TimeRestrictFieldUserExit extends ServerPacket {
+
+	private final int zoneId;
+
+	public TimeRestrictFieldUserExit(int zoneId) {
+		this.zoneId = zoneId;
 	}
-	
+
 	@Override
-	public void runImpl()
-	{
-		final Player player = client.getPlayer();
-		if (player == null)
-		{
-			return;
-		}
-		client.sendPacket(new TimedHuntingZoneList(player));
+	protected void writeImpl(GameClient client, WritableBuffer buffer) {
+		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_EXIT, buffer);
+		buffer.writeInt(zoneId);
 	}
 }

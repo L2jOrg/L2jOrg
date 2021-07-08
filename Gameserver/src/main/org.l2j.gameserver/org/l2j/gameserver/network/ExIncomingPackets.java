@@ -71,8 +71,6 @@ import org.l2j.gameserver.network.clientpackets.raidserver.ExConnectToRaidServer
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankingCharRankers;
 import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;
-import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneEnter;
-import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
 import org.l2j.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2j.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
@@ -83,6 +81,8 @@ import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleport;
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoriteList;
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoritesAddDel;
 import org.l2j.gameserver.network.clientpackets.teleport.ExRequestTeleportFavoritesUIToggle;
+import org.l2j.gameserver.network.clientpackets.timedzone.ExTimeRestrictFieldList;
+import org.l2j.gameserver.network.clientpackets.timedzone.ExTimeRestrictFieldUserEnter;
 import org.l2j.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 import org.l2j.gameserver.network.clientpackets.upgrade.ExUpgradeSystemNormalRequest;
 import org.l2j.gameserver.network.clientpackets.upgrade.ExUpgradeSystemRequest;
@@ -482,8 +482,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_GACHA_SHOP_INFO(null, ConnectionState.IN_GAME_STATES),
     EX_GACHA_SHOP_GACHA_GROUP(null, ConnectionState.IN_GAME_STATES),
     EX_GACHA_SHOP_GACHA_ITEM(null, ConnectionState.IN_GAME_STATES),
-    EX_TIME_RESTRICT_FIELD_LIST(ExTimedHuntingZoneList::new, ConnectionState.IN_GAME_STATES),
-    EX_TIME_RESTRICT_FIELD_USER_ENTER(ExTimedHuntingZoneEnter::new, ConnectionState.IN_GAME_STATES),
+    EX_TIME_RESTRICT_FIELD_LIST(ExTimeRestrictFieldList::new, ConnectionState.IN_GAME_STATES),
+    EX_TIME_RESTRICT_FIELD_USER_ENTER(ExTimeRestrictFieldUserEnter::new, ConnectionState.IN_GAME_STATES),
     EX_RANKING_CHAR_INFO(ExRankCharInfo::new, ConnectionState.IN_GAME_STATES),
     EX_RANKING_CHAR_HISTORY(ExRequestRankingCharHistory::new, ConnectionState.IN_GAME_STATES),
     EX_RANKING_CHAR_RANKERS(ExRankingCharRankers::new, ConnectionState.IN_GAME_STATES),

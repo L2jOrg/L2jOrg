@@ -16,28 +16,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.sessionzones;
+package org.l2j.gameserver.network.serverpackets.timedzone;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-/**
- * @author Mobius
- */
-public class TimedHuntingZoneEnter extends ServerPacket
-{
-	private final int _remainingTime;
-	
-	public TimedHuntingZoneEnter(int remainingTime)
-	{
-		_remainingTime = remainingTime;
-	}
+import static org.l2j.gameserver.network.ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_ALARM;
 
-	@Override
-	protected void writeImpl(GameClient client, WritableBuffer buffer)  {
-		writeId(ServerExPacketId.EX_TIME_RESTRICT_FIELD_USER_ENTER, buffer );
-		buffer.writeInt(_remainingTime);
-	}
+/**
+ * @author JoeAlisson
+ */
+public class TimeRestrictFieldUserAlarm extends ServerPacket {
+
+    private final int zoneId;
+    private final int remainingTime;
+
+    public TimeRestrictFieldUserAlarm(int zoneId, int remainingTime) {
+        this.zoneId = zoneId;
+        this.remainingTime = remainingTime;
+    }
+
+    @Override
+    protected void writeImpl(GameClient client, WritableBuffer buffer) throws Exception {
+        writeId(EX_TIME_RESTRICT_FIELD_USER_ALARM, buffer);
+        buffer.writeInt(zoneId);
+        buffer.writeInt(remainingTime);
+    }
 }

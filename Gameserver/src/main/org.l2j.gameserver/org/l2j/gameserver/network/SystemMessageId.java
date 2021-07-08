@@ -13853,6 +13853,9 @@ public final class SystemMessageId {
     @ClientString(id = 13001, message = "KR Live/Classic new numbers (13001-19000)")
     public static SystemMessageId KR_LIVE_CLASSIC_NEW_NUMBERS_1300119000_;
 
+    @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
+    public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
+
     @ClientString(id = 13003, message = "Register a Potion on the Auto Use slots.")
     public static SystemMessageId REGISTER_A_POTION_ON_THE_AUTO_USE_SLOTS;
 
@@ -13876,9 +13879,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 13010, message = "Cannot move from the current location.")
     public static SystemMessageId CANNOT_MOVE_FROM_THE_CURRENT_LOCATION;
-
-    @ClientString(id = 13011, message = "Timed Hunting Zones have entry level requirements, available times, and entry fees that must be met in order to enter.")
-    public static SystemMessageId TIMED_HUNTING_ZONES_HAVE_ENTRY_LEVEL_REQUIREMENTS_AVAILABLE_TIMES_AND_ENTRY_FEES_THAT_MUST_BE_MET_IN_ORDER_TO_ENTER;
 
     @ClientString(id = 13012, message = "The hunting zone's use time has expired so you were moved outside.")
     public static SystemMessageId THE_HUNTING_ZONE_S_USE_TIME_HAS_EXPIRED_SO_YOU_WERE_MOVED_OUTSIDE;
@@ -17731,8 +17731,8 @@ public final class SystemMessageId {
     @ClientString(id = 7323, message = "Learned $s1 Lv. $s2.")
     public static SystemMessageId LEARNED_S1_LV_S2;
 
-    @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
-    public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
+    @ClientString(id = 13011, message = "Timed Hunting Zones have entry level requirements, available times, and entry fees that must be met in order to enter.")
+    public static SystemMessageId TIMED_HUNTING_ZONES_HAVE_ENTRY_LEVEL_REQUIREMENTS_AVAILABLE_TIMES_AND_ENTRY_FEES_THAT_MUST_BE_MET_IN_ORDER_TO_ENTER;
 
     @ClientString(id = 13019, message = "Cannot use timed hunting zones while waiting for the Olympiad.")
     public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;

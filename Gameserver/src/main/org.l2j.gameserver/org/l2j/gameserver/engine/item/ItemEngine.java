@@ -163,6 +163,7 @@ public final class ItemEngine extends GameXmlReader {
             var temp = switch (n.getNodeName()) {
                 case "player" -> parsePlayerCondition(n);
                 case "weapon" -> parseWeaponCondition(n);
+                case "restrict-time-recharge" -> parseRestrictTimeZoneCondition(n);
                 default -> condition;
             };
 
@@ -183,6 +184,10 @@ public final class ItemEngine extends GameXmlReader {
             }
             item.attachCondition(condition);
         }
+    }
+
+    private Condition parseRestrictTimeZoneCondition(Node node) {
+        return new ConditionRestrictTimeZoneRecharge(parseInt(node.getAttributes(), "zone"));
     }
 
     private Condition parseWeaponCondition(Node node) {

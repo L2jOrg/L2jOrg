@@ -16,12 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets.timedhunter;
+package org.l2j.gameserver.network.clientpackets.timedzone;
 
+import org.l2j.gameserver.engine.timedzone.TimeRestrictZoneEngine;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.timedhunter.TimedHuntingZoneList;
 
-public class ExTimedHuntingZoneList extends ClientPacket {
+/**
+ * @author JoeAlisson
+ */
+public class ExTimeRestrictFieldList extends ClientPacket {
 
     @Override
     protected void readImpl() throws Exception {
@@ -30,6 +33,6 @@ public class ExTimedHuntingZoneList extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        client.sendPacket(new TimedHuntingZoneList());
+        TimeRestrictZoneEngine.getInstance().showZones(client.getPlayer());
     }
 }

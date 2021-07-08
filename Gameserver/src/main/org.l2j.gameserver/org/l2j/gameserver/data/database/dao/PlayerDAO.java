@@ -25,6 +25,7 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 
 import java.sql.ResultSet;
 import java.util.Collection;
@@ -263,4 +264,15 @@ public interface PlayerDAO extends DAO<PlayerData> {
 
     @Query("INSERT INTO clan_members (clan_id, player_id, last_reputation_level) VALUES (:clanId:, :playerId:, :level:) AS v ON DUPLICATE KEY UPDATE last_reputation_level = v.last_reputation_level")
     void saveLastReputationLevel(int clanId, int playerId, byte level);
+
+    @Query("SELECT zone, player_id, remaining_time, recharged_time FROM player_time_restrict_zones WHERE player_id = :playerId:")
+    IntMap<TimeRestrictZoneInfo> loadTimeRestrictZoneInfo(int playerId);
+
+    void saveRestrictZoneInfo(Collection<TimeRestrictZoneInfo> values);
+
+    @Query("TRUNCATE player_time_restrict_zones")
+    void deleteRestrictZoneInfo();
+
+    @Query("DELETE FROM player_time_restrict_zones WHERE reset_cycle = :cycle:")
+    void deleteRestrictZoneInfo(TimeRestrictZone.ResetCycle cycle);
 }

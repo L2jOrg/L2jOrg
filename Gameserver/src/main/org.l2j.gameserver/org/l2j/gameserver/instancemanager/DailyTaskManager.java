@@ -29,6 +29,7 @@ import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.item.shop.LCoinShop;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.engine.rank.RankEngine;
+import org.l2j.gameserver.engine.timedzone.TimeRestrictZoneEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.stat.PlayerStats;
@@ -41,9 +42,16 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.type.TimeRestrictZone.ResetCycle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
+
+import java.time.DayOfWeek;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.temporal.TemporalAdjusters;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -81,6 +89,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
         RankEngine.getInstance().updateRankers();
         resetPlayersData();
         LCoinShop.getInstance().reloadShopHistory();
+        resetTimeRestrictZones();
         LOGGER.info("Daily task has been reset.");
     }
 
@@ -166,6 +175,15 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
         var scheduler = getScheduler("reset");
         long lastReset = nonNull(scheduler) ? scheduler.getLastRun() : 0;
         MissionData.getInstance().getMissions().forEach(mission -> mission.reset(lastReset));
+    }
+
+    private void resetTimeRestrictZones() {
+        var scheduler = getScheduler("reset");
+        var lastReset = nonNull(scheduler) ? scheduler.getLastRun() : 0;
+
+        var today = LocalDate.now();
+        var resetWeekly = today.getDayOfWeek() == DayOfWeek.SATURDAY || today.with(TemporalAdjusters.previous(DayOfWeek.SATURDAY)).isAfter(LocalDate.ofInstant(Instant.ofEpochMilli(lastReset), ZoneId.systemDefault()));
+        TimeRestrictZoneEngine.getInstance().resetTimes(resetWeekly ? ResetCycle.WEEKLY : ResetCycle.DAILY);
     }
 
     public static DailyTaskManager getInstance() {

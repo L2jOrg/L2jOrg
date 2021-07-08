@@ -65,7 +65,7 @@ class JDBCInvocation implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        if(method.getName().equalsIgnoreCase("save") && method.getParameterCount() == 1) {
+        if(method.getName().startsWith("save") && method.getParameterCount() == 1) {
             return save(method, args);
         }
 

@@ -679,6 +679,13 @@ public class PlayerInventory extends Inventory {
         blockItems = items;
     }
 
+    public void addToInventoryBlock(int itemId) {
+        if(blockMode == InventoryBlockType.NONE || blockItems == null) {
+            return;
+        }
+        blockItems.add(itemId);
+    }
+
     /**
      * Unblock blocked itemIds
      */

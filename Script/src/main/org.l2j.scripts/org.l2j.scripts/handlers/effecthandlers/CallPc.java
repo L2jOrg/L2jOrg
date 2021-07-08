@@ -105,7 +105,7 @@ public final class CallPc extends AbstractEffect {
             return false;
         }
 
-        if (target.isFlyingMounted() || target.isInTimedHuntingZone()) {
+        if (target.isFlyingMounted() || target.isInsideZone(ZoneType.TIMED)) {
             creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
             return false;
         }

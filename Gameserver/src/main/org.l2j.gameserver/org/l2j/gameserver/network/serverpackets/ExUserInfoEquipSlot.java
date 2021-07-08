@@ -73,7 +73,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
         writeId(ServerExPacketId.EX_USER_INFO_EQUIPSLOT, buffer );
 
         buffer.writeInt(player.getObjectId());
-        buffer.writeShort(InventorySlot.values().length); // 152
+        buffer.writeShort(InventorySlot.cachedValues().length); // 152
         buffer.writeBytes(masks);
 
         final PlayerInventory inventory = player.getInventory();
