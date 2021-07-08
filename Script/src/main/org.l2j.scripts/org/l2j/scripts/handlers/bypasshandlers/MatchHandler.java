@@ -15,7 +15,7 @@ public class MatchHandler implements IBypassHandler {
 
     @Override
     public boolean useBypass(String bypass, Player player, Creature bypassOrigin) {
-        bypass = bypass.substring(10).replaceAll("[\\w_]+=", "").trim();
+        bypass = bypass.substring(bypass.indexOf("=") + 1).trim();
         final var tokens = new StringTokenizer(bypass, "&");
         final var classId = Util.parseNextInt(tokens, 0);
         final var page = Util.parseNextInt(tokens, 1);

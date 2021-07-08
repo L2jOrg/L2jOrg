@@ -34,7 +34,7 @@ public class OlympiadHandler implements IBypassHandler {
 
     @Override
     public boolean useBypass(String bypass, Player player, Creature bypassOrigin) {
-        bypass = bypass.substring(10).replaceAll("[\\w_]+=", "").trim();
+        bypass = bypass.substring(bypass.indexOf("=") + 1).trim();
 
         var tokens = new StringTokenizer(bypass, "&");
         if(tokens.hasMoreTokens()) {
