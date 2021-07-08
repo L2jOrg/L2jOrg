@@ -24,7 +24,6 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
 import org.l2j.gameserver.handler.TargetHandler;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
@@ -41,7 +40,6 @@ import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * Trigger Skill By Attack effect implementation.
@@ -109,19 +107,17 @@ public final class TriggerSkillByAttack extends AbstractEffect {
         }
 
         final Skill triggerSkill = skill.getSkill();
-        WorldObject target = null;
         try {
-            target = TargetHandler.getInstance().getHandler(targetType).getTarget(event.getAttacker(), event.getTarget(), triggerSkill, false, false, false);
+            var target = TargetHandler.getInstance().getHandler(targetType).getTarget(event.getAttacker(), event.getTarget(), triggerSkill, false, false, false);
+            if (target instanceof Creature creature) {
+                final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(triggerSkill.getId());
+                if (isNull(info) || (info.getSkill().getLevel() < triggerSkill.getLevel()))
+                {
+                    SkillCaster.triggerCast(event.getAttacker(), creature, triggerSkill);
+                }
+            }
         } catch (Exception e) {
             LOGGER.warn("Exception in ITargetTypeHandler.getTarget(): {}", e.getMessage(), e);
-        }
-
-        if (isCreature(target)) {
-            final BuffInfo info = ((Creature) target).getEffectList().getBuffInfoBySkillId(triggerSkill.getId());
-            if (isNull(info) || (info.getSkill().getLevel() < triggerSkill.getLevel()))
-            {
-                SkillCaster.triggerCast(event.getAttacker(), (Creature) target, triggerSkill);
-            }
         }
     }
 

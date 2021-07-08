@@ -285,10 +285,10 @@ public final class HomeBoard implements IParseBoardHandler {
             final String[] buypassOptions = fullBypass.split(";");
             final int buffCount = buypassOptions.length - 1;
             final String page = buypassOptions[buffCount];
-            if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_BUFF_PRICE * buffCount)) {
+            if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < ((long) Config.COMMUNITYBOARD_BUFF_PRICE * buffCount)) {
                 activeChar.sendMessage("Not enough currency!");
             } else {
-                activeChar.destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, activeChar, true);
+                activeChar.destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, (long) Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, activeChar, true);
                 final Pet pet = activeChar.getPet();
                 List<Creature> targets = new ArrayList<>(4);
                 targets.add(activeChar);

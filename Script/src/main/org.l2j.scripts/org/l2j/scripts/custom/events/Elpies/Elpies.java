@@ -103,7 +103,7 @@ public final class Elpies extends Event
 		final EventLocation randomLoc = Rnd.get(EventLocation.values());
 		
 		CURRENT_ELPY_COUNT = 0;
-		final long despawnDelay = EVENT_DURATION_MINUTES * 60000;
+		final long despawnDelay = EVENT_DURATION_MINUTES * 60000L;
 		
 		for (int i = 0; i < ELPY_AMOUNT; i++)
 		{

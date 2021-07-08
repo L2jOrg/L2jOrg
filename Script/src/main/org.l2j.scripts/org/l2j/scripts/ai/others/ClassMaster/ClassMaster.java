@@ -587,7 +587,13 @@ public final class ClassMaster extends AbstractNpcAI
 		}
 		else
 		{
-			final ClassChangeData data = _classChangeData.stream().filter(ccd -> ccd.isInCategory(player)).findFirst().get();
+			ClassChangeData data = null;
+			for (var d : _classChangeData) {
+				if(d.isInCategory(player)) {
+					data = d;
+					break;
+				}
+			}
 			if (data != null)
 			{
 				// Required items.

@@ -580,14 +580,7 @@ public class WatermelonNinja extends LongTimeEvent
 			{
 				if (chance < drop[2])
 				{
-					if (drop[1] > 6000)
-					{
-						mob.dropItem(player, drop[1], 1);
-					}
-					else
-					{
-						mob.dropItem(player, drop[1], 1);
-					}
+					mob.dropItem(player, drop[1], 1);
 					continue;
 				}
 			}

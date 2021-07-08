@@ -238,7 +238,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 				{
 					for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
 					{
-						player.reduceCurrentHp(player.getMaxHp() + player.getMaxCp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
+						player.reduceCurrentHp(player.getMaxHp() + player.getMaxCp() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 					}
 				}
 				showEventControl(activeChar);

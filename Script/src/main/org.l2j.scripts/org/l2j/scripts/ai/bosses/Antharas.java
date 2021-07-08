@@ -338,7 +338,7 @@ public final class Antharas extends AbstractNpcAI
 				notifyEvent("DESPAWN_MINIONS", null, null);
 				zone.broadcastPacket(new SpecialCamera(npc, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
 				zone.broadcastPacket(PlaySound.sound("BS01_D"));
-				final long respawnTime = (Config.ANTHARAS_SPAWN_INTERVAL + Rnd.get(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM)) * 3600000;
+				final long respawnTime = (Config.ANTHARAS_SPAWN_INTERVAL + Rnd.get(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM)) * 3600000L;
 				setRespawn(respawnTime);
 				startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
 				cancelQuestTimer("SET_REGEN", npc, null);
@@ -654,7 +654,7 @@ public final class Antharas extends AbstractNpcAI
 					castOnTarget = true;
 					skillToCast = ANTH_NORM_ATTACK_EX;
 				}
-				else if (Rnd.get(100) < 5)
+				else if (Rnd.chance(5))
 				{
 					castOnTarget = true;
 					skillToCast = Rnd.nextBoolean() ? ANTH_FEAR : ANTH_FEAR_SHORT;

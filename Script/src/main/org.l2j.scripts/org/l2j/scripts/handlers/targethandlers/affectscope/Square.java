@@ -36,7 +36,7 @@ public class Square extends SquarePB {
 	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
 		final int squareLength = skill.getFanRadius();
 		final int squareWidth = skill.getFanAngle();
-		final int radius = (int) Math.sqrt((squareLength * squareLength) + (squareWidth * squareWidth));
+		final int radius = (int) Math.sqrt(((double)squareLength * squareLength) + ((double)squareWidth * squareWidth));
 		var filter = squareFilterOf(activeChar, skill, squareLength, squareWidth);
 
 		World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, action::accept, filter);

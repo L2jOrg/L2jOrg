@@ -522,7 +522,7 @@ public final class Baium extends AbstractNpcAI
             setStatus(BossStatus.DEAD);
             addSpawn(TELE_CUBE, TELEPORT_CUBIC_LOC, false, 900000);
             zone.broadcastPacket(PlaySound.sound("BS01_D"));
-            final long respawnTime = Config.BAIUM_SPAWN_INTERVAL * 3600000;
+            final long respawnTime = Config.BAIUM_SPAWN_INTERVAL * 3600000L;
             setRespawn(respawnTime);
             startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
             startQuestTimer("CLEAR_ZONE", 900000, null, null);
@@ -672,7 +672,7 @@ public final class Baium extends AbstractNpcAI
                 {
                     skillToCast = ENERGY_WAVE;
                 }
-                else if (Rnd.get(100) < 10)
+                else if (Rnd.chance(10))
                 {
                     skillToCast = EARTH_QUAKE;
                 }
@@ -683,15 +683,15 @@ public final class Baium extends AbstractNpcAI
             }
             else if (npc.getCurrentHp() > (npc.getMaxHp() * 0.5))
             {
-                if (Rnd.get(100) < 10)
+                if (Rnd.chance(12))
                 {
                     skillToCast = GROUP_HOLD;
                 }
-                else if (Rnd.get(100) < 10)
+                else if (Rnd.chance(11))
                 {
                     skillToCast = ENERGY_WAVE;
                 }
-                else if (Rnd.get(100) < 10)
+                else if (Rnd.chance(10))
                 {
                     skillToCast = EARTH_QUAKE;
                 }
@@ -702,15 +702,15 @@ public final class Baium extends AbstractNpcAI
             }
             else if (npc.getCurrentHp() > (npc.getMaxHp() * 0.25))
             {
-                if (Rnd.chance(10))
+                if (Rnd.chance(13))
                 {
                     skillToCast = THUNDERBOLT;
                 }
-                else if (Rnd.chance(10))
+                else if (Rnd.chance(12))
                 {
                     skillToCast = GROUP_HOLD;
                 }
-                else if (Rnd.chance(10))
+                else if (Rnd.chance(11))
                 {
                     skillToCast = ENERGY_WAVE;
                 }
@@ -723,15 +723,15 @@ public final class Baium extends AbstractNpcAI
                     skillToCast = BAIUM_ATTACK;
                 }
             }
-            else if (Rnd.chance(10))
+            else if (Rnd.chance(13))
             {
                 skillToCast = THUNDERBOLT;
             }
-            else if (Rnd.chance(10))
+            else if (Rnd.chance(12))
             {
                 skillToCast = GROUP_HOLD;
             }
-            else if (Rnd.chance(10))
+            else if (Rnd.chance(11))
             {
                 skillToCast = ENERGY_WAVE;
             }

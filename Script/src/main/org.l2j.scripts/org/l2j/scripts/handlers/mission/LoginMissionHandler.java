@@ -69,7 +69,7 @@ public class LoginMissionHandler extends AbstractMissionHandler {
         }
 
         final int currentDay = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
-        if(days != 0 && (days & 1 << currentDay) == 0) {
+        if(days != 0 && ((days & 0xff) & 1 << currentDay) == 0) {
             entry.setProgress(0);
             entry.setStatus(MissionStatus.NOT_AVAILABLE);
         } else {

@@ -56,8 +56,7 @@ public class PetFood implements IItemHandler
 		if (skill != null) {
 			if (playable instanceof Pet pet) {
 				consumeItem(skillId, skillLevel, item, skill, pet);
-			}
-			else if (playable instanceof Player player) {
+			} else if (playable instanceof Player player) {
 				feedPet(skillId, skillLevel, item, skill, player);
 			}
 		}

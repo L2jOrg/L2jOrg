@@ -37,7 +37,7 @@ import static org.l2j.gameserver.util.GameUtils.isNpc;
 
 public class ItemAuctionLink implements IBypassHandler
 {
-	private static final SimpleDateFormat fmt = new SimpleDateFormat("HH:mm:ss dd.MM.yyyy");
+	private final SimpleDateFormat fmt = new SimpleDateFormat("HH:mm:ss dd.MM.yyyy");
 	
 	private static final String[] COMMANDS =
 	{

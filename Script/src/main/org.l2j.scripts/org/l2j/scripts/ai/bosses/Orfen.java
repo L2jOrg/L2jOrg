@@ -320,8 +320,7 @@ public final class Orfen extends AbstractNpcAI
 			npc.broadcastPacket(PlaySound.music("BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, BossStatus.DEAD);
 			// Calculate Min and Max respawn times randomly.
-			long respawnTime = Config.ORFEN_SPAWN_INTERVAL + Rnd.get(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM);
-			respawnTime *= 3600000;
+			long respawnTime = (Config.ORFEN_SPAWN_INTERVAL + Rnd.get(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM)) * 3600000L;
 			startQuestTimer("orfen_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final var info = GrandBossManager.getInstance().getBossData(ORFEN);
