@@ -211,12 +211,12 @@ public class AdminMenu implements IAdminCommandHandler {
 		}
 		if (target != null) {
 			if (isPlayer(target)) {
-				target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
+				target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 				filename = "charmanage.htm";
 			} else if (Config.CHAMPION_ENABLE && target.isChampion()) {
-				target.reduceCurrentHp((target.getMaxHp() * Config.CHAMPION_HP) + 1, activeChar, null, DamageInfo.DamageType.OTHER);
+				target.reduceCurrentHp((target.getMaxHp() * Config.CHAMPION_HP) + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 			} else {
-				target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null, DamageInfo.DamageType.OTHER);
+				target.reduceCurrentHp(target.getMaxHp() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 			}
 		} else {
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

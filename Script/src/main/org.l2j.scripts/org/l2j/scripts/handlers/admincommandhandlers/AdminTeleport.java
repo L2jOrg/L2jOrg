@@ -378,26 +378,15 @@ public class AdminTeleport implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void teleportCharacter(Player activeChar, String Cords)
-	{
-		final WorldObject target = activeChar.getTarget();
-		Player player;
-		if ((target != null) && isPlayer(target))
-		{
-			player = (Player) target;
-		}
-		else
-		{
+	private void teleportCharacter(Player activeChar, String Cords) {
+		if(!(activeChar.getTarget() instanceof Player player)) {
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
-		if (player.getObjectId() == activeChar.getObjectId())
-		{
+		if (player.getObjectId() == activeChar.getObjectId()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
-		}
-		else
-		{
+		} else {
 			try
 			{
 				final StringTokenizer st = new StringTokenizer(Cords);
@@ -407,10 +396,10 @@ public class AdminTeleport implements IAdminCommandHandler
 				final int y = Integer.parseInt(y1);
 				final String z1 = st.nextToken();
 				final int z = Integer.parseInt(z1);
-				teleportCharacter(player, new Location(x, y, z), null);
+				teleportCharacter(player, new Location(x, y, z), activeChar);
 			}
-			catch (NoSuchElementException nsee)
-			{
+			catch (NoSuchElementException nsee) {
+				BuilderUtil.sendSysMessage(activeChar, "Wrong or no Coordinates given.");
 			}
 		}
 	}

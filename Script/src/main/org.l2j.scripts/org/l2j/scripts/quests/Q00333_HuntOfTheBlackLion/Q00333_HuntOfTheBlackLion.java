@@ -631,7 +631,7 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 					{
 						htmltext = "30736-08t.html";
 					}
-					takeItems(player, CommonItem.ADENA, 200 + (qs.getMemoState() * 200));
+					takeItems(player, CommonItem.ADENA, 200 + (qs.getMemoState() * 200L));
 					qs.setMemoState(qs.getMemoState() + 1);
 				}
 				break;

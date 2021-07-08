@@ -72,8 +72,8 @@ public class ResidenceOfKingProcella extends AbstractInstance {
             {
                 enterInstance(player, npc, TEMPLATE_ID);
                 _procella = (RaidBoss) addSpawn(PROCELLA, 212862, 179828, -15489, 49151, false, 0, true, player.getInstanceId());
-                startQuestTimer("SPAWN_MINION", 300000 + Rnd.get(-15000, 15000), _procella, player);
-                startQuestTimer("SPAWN_STORM", 5000, _procella, player);
+                startQuestTimer("SPAWN_MINION", 300000L + Rnd.get(-15000, 15000), _procella, player);
+                startQuestTimer("SPAWN_STORM", 5000L, _procella, player);
                 _procellaStormCount = 0;
                 break;
             }
@@ -111,7 +111,7 @@ public class ResidenceOfKingProcella extends AbstractInstance {
                 else
                 {
                     _procella.setInvisible(true);
-                    startQuestTimer("SPAWN_MINION", 300000 + Rnd.get(-15000, 15000), _procella, player);
+                    startQuestTimer("SPAWN_MINION", 300000L + Rnd.get(-15000, 15000), _procella, player);
                 }
                 break;
             }

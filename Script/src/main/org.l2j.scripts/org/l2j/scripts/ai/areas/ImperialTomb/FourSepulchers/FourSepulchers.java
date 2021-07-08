@@ -410,7 +410,7 @@ public class FourSepulchers extends AbstractNpcAI
 			npc.setTargetable(false);
 			npc.setIsInvul(true);
 			cancelQuestTimer("REMOVE_PETRIFY", npc, null);
-			startQuestTimer("REMOVE_PETRIFY", 5 * 60 * 1000, npc, null); // 5 minutes
+			startQuestTimer("REMOVE_PETRIFY", 5 * 60 * 1000L, npc, null); // 5 minutes
 		}
 		return super.onSpawn(npc);
 	}
@@ -506,14 +506,14 @@ public class FourSepulchers extends AbstractNpcAI
 		ThreadPool.schedule(() ->
 		{
 			ZoneEngine.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).oustAllPlayers();
-		}, TIME_ATTACK * 60 * 1000);
+		}, TIME_ATTACK * 60 * 1000L);
 		
 		// Save attack time
 		vars.set("FourSepulchers" + npcId, System.currentTimeMillis());
 		// Init progress
 		STORED_PROGRESS.put(sepulcherId, 1); // start from 1
 		// Start
-		startQuestTimer("SPAWN_MYSTERIOUS_CHEST", ENTRY_DELAY * 60 * 1000, npc, player);
+		startQuestTimer("SPAWN_MYSTERIOUS_CHEST", ENTRY_DELAY * 60 * 1000L, npc, player);
 	}
 
 	private void teleportPlayers(Npc npc, Player player, int npcId) {

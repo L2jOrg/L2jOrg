@@ -226,15 +226,15 @@ public class MonsterArena extends AbstractInstance {
 						}
 
 						// Rare reward.
-						if (Rnd.get(100) < 1) // 1% chance.
+						if (Rnd.chance(3))
 						{
 							giveItems(player, TICKET_L, 1);
 						}
-						else if (Rnd.get(100) < 1) // 1% chance.
+						else if (Rnd.chance(2))
 						{
 							giveItems(player, TICKET_M, 1);
 						}
-						else if (Rnd.get(100) < 1) // 1% chance.
+						else if (Rnd.chance(1))
 						{
 							giveItems(player, TICKET_H, 1);
 						}

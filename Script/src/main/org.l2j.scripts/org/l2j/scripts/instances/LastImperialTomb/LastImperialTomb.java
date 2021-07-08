@@ -435,8 +435,8 @@ public class LastImperialTomb extends AbstractInstance
 				frintezza.disableCoreAI(true);
 				frintezza.setIsInvul(true);
 				enablePlayers(world);
-				startQuestTimer("PLAY_RANDOM_SONG", RANDOM_SONG_INTERVAL * 1000, frintezza, null);
-				startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player);
+				startQuestTimer("PLAY_RANDOM_SONG", RANDOM_SONG_INTERVAL * 1000L, frintezza, null);
+				startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000L, null, player);
 				break;
 			}
 			case "SPAWN_DEMONS":
@@ -458,7 +458,7 @@ public class LastImperialTomb extends AbstractInstance
 							demons.add(demon);
 						}
 						world.setParameter("demons", demons);
-						startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000, null, player);
+						startQuestTimer("SPAWN_DEMONS", TIME_BETWEEN_DEMON_SPAWNS * 1000L, null, player);
 					}
 				}
 				break;
@@ -469,7 +469,7 @@ public class LastImperialTomb extends AbstractInstance
 				{
 					final Instance world = npc.getInstanceWorld();
 					playRandomSong(world);
-					startQuestTimer("PLAY_RANDOM_SONG", RANDOM_SONG_INTERVAL * 1000, null, player);
+					startQuestTimer("PLAY_RANDOM_SONG", RANDOM_SONG_INTERVAL * 1000L, null, player);
 				}
 				break;
 			}
@@ -822,7 +822,7 @@ public class LastImperialTomb extends AbstractInstance
 						{
 							world.openCloseDoor(doorId, true);
 						}
-						startQuestTimer("FRINTEZZA_INTRO_START", FRINTEZZA_WAIT_TIME * 60 * 1000, null, killer);
+						startQuestTimer("FRINTEZZA_INTRO_START", FRINTEZZA_WAIT_TIME * 60 * 1000L, null, killer);
 						break;
 					}
 				}

@@ -59,6 +59,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -120,8 +121,8 @@ public class TvT extends Event
 	private static final List<Player> PLAYER_LIST = new ArrayList<>();
 	private static final List<Player> BLUE_TEAM = new ArrayList<>();
 	private static final List<Player> RED_TEAM = new ArrayList<>();
-	private static volatile int BLUE_SCORE;
-	private static volatile int RED_SCORE;
+	private static final AtomicInteger BLUE_SCORE = new AtomicInteger();
+	private static final AtomicInteger RED_SCORE = new AtomicInteger();
 	private static Instance PVP_WORLD = null;
 	private static Npc MANAGER_NPC_INSTANCE = null;
 	private static boolean EVENT_ACTIVE = false;
@@ -323,20 +324,20 @@ public class TvT extends Event
 					}
 				}
 				// Spawn managers.
-				addSpawn(MANAGER, BLUE_BUFFER_SPAWN_LOC, false, (WAIT_TIME + FIGHT_TIME) * 60000, false, PVP_WORLD.getId());
-				addSpawn(MANAGER, RED_BUFFER_SPAWN_LOC, false, (WAIT_TIME + FIGHT_TIME) * 60000, false, PVP_WORLD.getId());
+				addSpawn(MANAGER, BLUE_BUFFER_SPAWN_LOC, false, (WAIT_TIME + FIGHT_TIME) * 60000L, false, PVP_WORLD.getId());
+				addSpawn(MANAGER, RED_BUFFER_SPAWN_LOC, false, (WAIT_TIME + FIGHT_TIME) * 60000L, false, PVP_WORLD.getId());
 				// Initialize scores.
-				BLUE_SCORE = 0;
-				RED_SCORE = 0;
+				BLUE_SCORE.set(0);
+				RED_SCORE.set(0);
 				// Initialize scoreboard.
 				PVP_WORLD.sendPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.INITIALIZE, GameUtils.sortByValue(PLAYER_SCORES)));
 				// Schedule start.
-				startQuestTimer("5", (WAIT_TIME * 60000) - 5000, null, null);
-				startQuestTimer("4", (WAIT_TIME * 60000) - 4000, null, null);
-				startQuestTimer("3", (WAIT_TIME * 60000) - 3000, null, null);
-				startQuestTimer("2", (WAIT_TIME * 60000) - 2000, null, null);
-				startQuestTimer("1", (WAIT_TIME * 60000) - 1000, null, null);
-				startQuestTimer("StartFight", WAIT_TIME * 60000, null, null);
+				startQuestTimer("5", (WAIT_TIME * 60000L) - 5000, null, null);
+				startQuestTimer("4", (WAIT_TIME * 60000L) - 4000, null, null);
+				startQuestTimer("3", (WAIT_TIME * 60000L) - 3000, null, null);
+				startQuestTimer("2", (WAIT_TIME * 60000L) - 2000, null, null);
+				startQuestTimer("1", (WAIT_TIME * 60000L) - 1000, null, null);
+				startQuestTimer("StartFight", WAIT_TIME * 60000L, null, null);
 				break;
 			}
 			case "StartFight":
@@ -347,17 +348,17 @@ public class TvT extends Event
 				// Send message.
 				broadcastScreenMessageWithEffect("The fight has began!", 5);
 				// Schedule finish.
-				startQuestTimer("10", (FIGHT_TIME * 60000) - 10000, null, null);
-				startQuestTimer("9", (FIGHT_TIME * 60000) - 9000, null, null);
-				startQuestTimer("8", (FIGHT_TIME * 60000) - 8000, null, null);
-				startQuestTimer("7", (FIGHT_TIME * 60000) - 7000, null, null);
-				startQuestTimer("6", (FIGHT_TIME * 60000) - 6000, null, null);
-				startQuestTimer("5", (FIGHT_TIME * 60000) - 5000, null, null);
-				startQuestTimer("4", (FIGHT_TIME * 60000) - 4000, null, null);
-				startQuestTimer("3", (FIGHT_TIME * 60000) - 3000, null, null);
-				startQuestTimer("2", (FIGHT_TIME * 60000) - 2000, null, null);
-				startQuestTimer("1", (FIGHT_TIME * 60000) - 1000, null, null);
-				startQuestTimer("EndFight", FIGHT_TIME * 60000, null, null);
+				startQuestTimer("10", (FIGHT_TIME * 60000L) - 10000, null, null);
+				startQuestTimer("9", (FIGHT_TIME * 60000L) - 9000, null, null);
+				startQuestTimer("8", (FIGHT_TIME * 60000L) - 8000, null, null);
+				startQuestTimer("7", (FIGHT_TIME * 60000L) - 7000, null, null);
+				startQuestTimer("6", (FIGHT_TIME * 60000L) - 6000, null, null);
+				startQuestTimer("5", (FIGHT_TIME * 60000L) - 5000, null, null);
+				startQuestTimer("4", (FIGHT_TIME * 60000L) - 4000, null, null);
+				startQuestTimer("3", (FIGHT_TIME * 60000L) - 3000, null, null);
+				startQuestTimer("2", (FIGHT_TIME * 60000L) - 2000, null, null);
+				startQuestTimer("1", (FIGHT_TIME * 60000L) - 1000, null, null);
+				startQuestTimer("EndFight", FIGHT_TIME * 60000L, null, null);
 				break;
 			}
 			case "EndFight":
@@ -387,7 +388,7 @@ public class TvT extends Event
 					}
 				}
 				// Team Blue wins.
-				if (BLUE_SCORE > RED_SCORE)
+				if (BLUE_SCORE.get() > RED_SCORE.get())
 				{
 					final Skill skill = CommonSkill.FIREWORK.getSkill();
 					broadcastScreenMessageWithEffect("Team Blue won the event!", 7);
@@ -402,7 +403,7 @@ public class TvT extends Event
 					}
 				}
 				// Team Red wins.
-				else if (RED_SCORE > BLUE_SCORE)
+				else if (RED_SCORE.get() > BLUE_SCORE.get())
 				{
 					final Skill skill = CommonSkill.FIREWORK.getSkill();
 					broadcastScreenMessageWithEffect("Team Red won the event!", 7);
@@ -792,7 +793,7 @@ public class TvT extends Event
 			if ((killer.getTeam() == Team.BLUE) && (killedPlayer.getTeam() == Team.RED))
 			{
 				PLAYER_SCORES.put(killer, PLAYER_SCORES.get(killer) + 1);
-				BLUE_SCORE++;
+				BLUE_SCORE.incrementAndGet();
 				broadcastScoreMessage();
 				PVP_WORLD.sendPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, GameUtils.sortByValue(PLAYER_SCORES)));
 			}
@@ -800,7 +801,7 @@ public class TvT extends Event
 			if ((killer.getTeam() == Team.RED) && (killedPlayer.getTeam() == Team.BLUE))
 			{
 				PLAYER_SCORES.put(killer, PLAYER_SCORES.get(killer) + 1);
-				RED_SCORE++;
+				RED_SCORE.incrementAndGet();
 				broadcastScoreMessage();
 				PVP_WORLD.sendPacket(new ExPVPMatchCCRecord(ExPVPMatchCCRecord.UPDATE, GameUtils.sortByValue(PLAYER_SCORES)));
 			}
@@ -826,8 +827,8 @@ public class TvT extends Event
 		BLUE_TEAM.clear();
 		RED_TEAM.clear();
 		// Spawn event manager.
-		MANAGER_NPC_INSTANCE = addSpawn(MANAGER, MANAGER_SPAWN_LOC, false, REGISTRATION_TIME * 60000);
-		startQuestTimer("TeleportToArena", REGISTRATION_TIME * 60000, null, null);
+		MANAGER_NPC_INSTANCE = addSpawn(MANAGER, MANAGER_SPAWN_LOC, false, REGISTRATION_TIME * 60000L);
+		startQuestTimer("TeleportToArena", REGISTRATION_TIME * 60000L, null, null);
 		// Send message to players.
 		Broadcast.toAllOnlinePlayers("TvT Event: Registration opened for " + REGISTRATION_TIME + " minutes.");
 		Broadcast.toAllOnlinePlayers("TvT Event: You can register at Giran TvT Event Manager.");

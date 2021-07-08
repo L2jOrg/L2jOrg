@@ -113,15 +113,15 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			case HALISHA2:
 			{
-				if (Rnd.get(100) < 10)
+				if (Rnd.chance(11))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 2);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (Rnd.chance(10))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 5);
 				}
-				else if (Rnd.get(100) < 2)
+				else if (Rnd.chance(2))
 				{
 					return getInstance().getSkill(YOKE_OF_SCARLET, 1);
 				}
@@ -132,27 +132,27 @@ public class ScarletVanHalisha extends AbstractNpcAI
 			}
 			case HALISHA3:
 			{
-				if (Rnd.get(100) < 10)
+				if (Rnd.chance(12))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 3);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (Rnd.chance(11))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 6);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (Rnd.chance(10))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 2);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (Rnd.get(100) < 10))
+				else if (_lastRangedSkillTime + _rangedSkillMinCoolTime < System.currentTimeMillis() && Rnd.chance(11))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_FIELD, 1);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (Rnd.get(100) < 10))
+				else if (_lastRangedSkillTime + _rangedSkillMinCoolTime < System.currentTimeMillis() && Rnd.chance(10))
 				{
 					return getInstance().getSkill(FRINTEZZA_DAEMON_MORPH, 1);
 				}
-				else if (Rnd.get(100) < 2)
+				else if (Rnd.chance(2))
 				{
 					return getInstance().getSkill(YOKE_OF_SCARLET, 1);
 				}

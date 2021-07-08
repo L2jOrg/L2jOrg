@@ -411,7 +411,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						{
 							AbstractScript.takeItems(activeChar, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
 							AbstractScript.giveItems(seller, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
-							seller.reduceCurrentMp(skillToBuy.getMpConsume() * Config.SELLBUFF_MP_MULTIPLER);
+							seller.reduceCurrentMp(skillToBuy.getMpConsume() * (double) Config.SELLBUFF_MP_MULTIPLER);
 							skillToBuy.activateSkill(seller, activeChar);
 						}
 						else

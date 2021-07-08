@@ -119,7 +119,7 @@ public class HappyHours extends LongTimeEvent
 	{
 		super.startEvent();
 		cancelQuestTimers("REWARD_SIBI_COINS");
-		startQuestTimer("REWARD_SIBI_COINS", REWARD_INTERVAL + 1000, null, null, true);
+		startQuestTimer("REWARD_SIBI_COINS", REWARD_INTERVAL + 1000L, null, null, true);
 	}
 
 	public static AbstractScript provider() {

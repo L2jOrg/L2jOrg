@@ -41,7 +41,7 @@ import java.util.Set;
  */
 public class AdminServerInfo implements IAdminCommandHandler
 {
-	private static final SimpleDateFormat fmt = new SimpleDateFormat("hh:mm a");
+	private final SimpleDateFormat fmt = new SimpleDateFormat("hh:mm a");
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
