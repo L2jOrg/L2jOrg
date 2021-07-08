@@ -527,7 +527,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
         for (DropHolder dropItem : list) {
 
-            if (dropOccurrenceCounter == 0 && dropItem.getChance() < 100) {
+            if (dropOccurrenceCounter == 0 && dropItem.getChance() < 100 && dropItem.getItemId() != CommonItem.ADENA) {
                 continue;
             }
 
