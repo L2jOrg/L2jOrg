@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.areas.DragonValley.Fellow;
+package org.l2j.scripts.ai.areas.dragonvalley.fellow;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.ChatType;
@@ -27,55 +27,42 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.NpcSay;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
+import java.util.Objects;
+
 /**
  * @author RobikBobik
  */
 public class Fellow extends AbstractNpcAI
 {
-    // NPC
-    private static final int FELLOW = 31713;
-    // Location - Antharas Heartx
-    private static final Location TELEPORT_LOC = new Location(154376, 121290, -3807);
-    // Misc
-    private static final NpcStringId[] TEXT =
-            {
-                    NpcStringId.LET_S_JOIN_OUR_FORCES_AND_FACE_THIS_TOGETHER,
-                    NpcStringId.BALTHUS_KNIGHTS_ARE_LOOKING_FOR_MERCENARIES
-            };
 
-    private Fellow()
-    {
-        addFirstTalkId(FELLOW);
-        addTalkId(FELLOW);
-        addSpawnId(FELLOW);
+    private static final int FELLOW_ID = 31713;
+    private static final Location TELEPORT_LOC = new Location(154376, 121290, -3807);
+    private static final NpcStringId[] TEXT = {
+        NpcStringId.LET_S_JOIN_OUR_FORCES_AND_FACE_THIS_TOGETHER,
+        NpcStringId.BALTHUS_KNIGHTS_ARE_LOOKING_FOR_MERCENARIES
+    };
+    public static final String CHAT_TIMER = "CHAT_TIMER";
+
+    private Fellow() {
+        addFirstTalkId(FELLOW_ID);
+        addTalkId(FELLOW_ID);
+        addSpawnId(FELLOW_ID);
     }
 
     @Override
-    public String onAdvEvent(String event, Npc npc, Player player)
-    {
-        switch (event)
-        {
-            case "teleToAntharas":
-            {
-                if ((player.getCommandChannel() == null) || (player.getCommandChannel().getLeader() != player) || (player.getCommandChannel().getMemberCount() < 27) || (player.getCommandChannel().getMemberCount() > 300))
-                {
-                    return "31713-01.html";
-                }
-                for (var member : player.getCommandChannel().getMembers())
-                {
-                    if ((member != null) && (member.getLevel() > 70))
-                    {
-                        member.teleToLocation(TELEPORT_LOC);
-                    }
-                }
-                break;
+    public String onAdvEvent(String event, Npc npc, Player player) {
+        if ("teleToAntharas".equals(event)) {
+            if ((player.getCommandChannel() == null) || (player.getCommandChannel().getLeader() != player) || (player.getCommandChannel().getMemberCount() < 27) || (player.getCommandChannel().getMemberCount() > 300)) {
+                return "31713-01.html";
             }
-            case "CHAT_TIMER":
-            {
-                npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, TEXT[Rnd.get(TEXT.length)]));
-                startQuestTimer("CHAT_TIMER", 30000, npc, null);
-                break;
+            for (var member : player.getCommandChannel().getMembers()) {
+                if ((member != null) && (member.getLevel() > 70)) {
+                    member.teleToLocation(TELEPORT_LOC);
+                }
             }
+        } else if (CHAT_TIMER.equals(event)) {
+            npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, Objects.requireNonNull(Rnd.get(TEXT))));
+            startQuestTimer(CHAT_TIMER, 30000, npc, null);
         }
         return null;
     }
@@ -89,7 +76,7 @@ public class Fellow extends AbstractNpcAI
     @Override
     public String onSpawn(Npc npc)
     {
-        startQuestTimer("CHAT_TIMER", 5000, npc, null);
+        startQuestTimer(CHAT_TIMER, 5000, npc, null);
         return super.onSpawn(npc);
     }
 

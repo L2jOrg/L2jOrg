@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.areas.DwarvenVillage.Toma;
+package org.l2j.scripts.ai.npc;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.Location;
@@ -28,33 +28,30 @@ import org.l2j.scripts.ai.AbstractNpcAI;
 /**
  * @author Mobius
  */
-public class Toma extends AbstractNpcAI
-{
-	// NPC
-	private static final int TOMA = 30556;
-	// Locations
-	private static final Location[] LOCATIONS =
-	{
+public class Toma extends AbstractNpcAI {
+
+	private static final int TOMA_ID = 30556;
+	private static final Location[] LOCATIONS = {
 		new Location(151680, -174891, -1782),
 		new Location(154153, -220105, -3402),
 		new Location(178834, -184336, -355, 41400)
 	};
-	// Misc
+
 	private static final int TELEPORT_DELAY = 1800000; // 30 minutes
-	
-	private Toma()
-	{
-		addFirstTalkId(TOMA);
-		onAdvEvent("RESPAWN_TOMA", null, null);
-		startQuestTimer("RESPAWN_TOMA", TELEPORT_DELAY, null, null, true);
+	public static final String RESPAWN_TOMA = "RESPAWN_TOMA";
+
+	private Toma() {
+		addFirstTalkId(TOMA_ID);
+		onAdvEvent(RESPAWN_TOMA, null, null);
+		startQuestTimer(RESPAWN_TOMA, TELEPORT_DELAY, null, null, true);
 	}
-	
+
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		if (event.equals("RESPAWN_TOMA"))
+		if (event.equals(RESPAWN_TOMA))
 		{
-			addSpawn(TOMA, Rnd.get(LOCATIONS), false, TELEPORT_DELAY);
+			addSpawn(TOMA_ID, Rnd.get(LOCATIONS), false, TELEPORT_DELAY);
 		}
 		return null;
 	}

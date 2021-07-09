@@ -17,37 +17,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.areas.DungeonOfAbyss.Tores;
+package org.l2j.scripts.ai.areas.dungeonofabyss.tores;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author QuangNguyen
+ * @author JoeAlisson
  */
-public class Tores extends AbstractNpcAI
-{
-	// NPC
-	private static final int TORES = 31778;
-	// Locations
-	private static final Map<String, Location> LOCATIONS = new HashMap<>();
-	static
-	{
-		// move from Tores
-		LOCATIONS.put("1", new Location(-120325, -182444, -6752)); // Move to Magrit
-		LOCATIONS.put("2", new Location(-109202, -180546, -6751)); // Move to Iris
-	}
-	
-	private Tores()
-	{
-		addStartNpc(TORES);
-		addTalkId(TORES);
-		addFirstTalkId(TORES);
+public class Tores extends AbstractNpcAI {
+
+	private static final int TORES_ID = 31778;
+
+	private static final Location MAGRIT_LOCATION = new Location(-120325, -182444, -6752);
+	private static final Location IRIS_LOCATION = new Location(-109202, -180546, -6751);
+
+	private Tores() {
+		addStartNpc(TORES_ID);
+		addTalkId(TORES_ID);
+		addFirstTalkId(TORES_ID);
 	}
 	
 	@Override
@@ -57,37 +48,19 @@ public class Tores extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		switch (event)
-		{
-			case "1":
-			{
-				final Location loc = LOCATIONS.get(event);
-				if ((player.getLevel() > 39) && (player.getLevel() < 45))
-				{
-					player.teleToLocation(loc, true);
-					
-				}
-				else
-				{
-					return "31778-no_level.htm";
-				}
-				break;
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		if ("1".equals(event)) {
+			if ((player.getLevel() > 39) && (player.getLevel() < 45)) {
+				player.teleToLocation(MAGRIT_LOCATION, true);
+			} else {
+				return "31778-no_level.htm";
 			}
-			case "2":
-			{
-				final Location loc = LOCATIONS.get(event);
-				if ((player.getLevel() > 44) && (player.getLevel() < 50))
-				{
-					player.teleToLocation(loc, true);
-					
-				}
-				else
-				{
-					return "31778-no_level01.htm";
-				}
-				break;
+		} else if ("2".equals(event)) {
+			if ((player.getLevel() > 44) && (player.getLevel() < 50)) {
+				player.teleToLocation(IRIS_LOCATION, true);
+
+			} else {
+				return "31778-no_level01.htm";
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
