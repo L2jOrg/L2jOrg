@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.l2j.scripts.ai.areas.DragonValley;
+package org.l2j.scripts.ai.areas.dragonvalley;
 
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.actor.Npc;
@@ -29,12 +29,12 @@ import org.l2j.gameserver.world.World;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 public class LordIshka extends AbstractNpcAI {
-    private static final int LORDISHKA = 22100;
+    private static final int LORD_ISHKA = 22100;
     private static final int SKILL = 50124;
 
     private LordIshka()
     {
-        addKillId(LORDISHKA);
+        addKillId(LORD_ISHKA);
     }
 
     @Override
@@ -42,9 +42,7 @@ public class LordIshka extends AbstractNpcAI {
     {
         npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.GLORY_TO_THE_HEROES_WHO_HAVE_DEFEATED_LORD_ISHKA, 2, 5000, true));
         if (killer.isInParty()){
-            World.getInstance().forEachPlayerInRange(killer, 1000, player -> {
-                SkillCaster.triggerCast(npc, player,  SkillEngine.getInstance().getSkill(SKILL, 1));
-            }, player -> killer.getParty().getMembers().contains(player));
+            World.getInstance().forEachPlayerInRange(killer, 1000, player -> SkillCaster.triggerCast(npc, player,  SkillEngine.getInstance().getSkill(SKILL, 1)), player -> killer.getParty().getMembers().contains(player));
         }
         SkillCaster.triggerCast(npc, killer,  SkillEngine.getInstance().getSkill(SKILL, 1));
         return super.onKill(npc, killer, isSummon);

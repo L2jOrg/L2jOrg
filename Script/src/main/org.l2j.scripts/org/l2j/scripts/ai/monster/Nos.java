@@ -16,21 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.areas.AligatorIsland;
-
+package org.l2j.scripts.ai.monster;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
-
 public class Nos extends AbstractNpcAI {
 
-    private final int MONSTER_CHANCE_SPAWN = 70;
-    private final int NOS = 20793;
-    private final int CROKIAN = 20804;
-    private final int MONSTER_DESPAWN_DELAY = 300000;
+    private static final int MONSTER_CHANCE_SPAWN = 70;
+    private static final int NOS = 20793;
+    private static final int CROKIAN = 20804;
+    private static final int MONSTER_DESPAWN_DELAY = 300000;
 
     private Nos()
     {
@@ -39,7 +37,7 @@ public class Nos extends AbstractNpcAI {
 
     @Override
     public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon) {
-        if(Rnd.get(100) <= MONSTER_CHANCE_SPAWN) {
+        if(Rnd.chance(MONSTER_CHANCE_SPAWN)) {
             addSpawn(NOS, npc, false, MONSTER_DESPAWN_DELAY);
             addSpawn(NOS, npc, false, MONSTER_DESPAWN_DELAY);
             addSpawn(NOS, npc, false, MONSTER_DESPAWN_DELAY);
@@ -49,6 +47,6 @@ public class Nos extends AbstractNpcAI {
 
     public static AbstractNpcAI provider()
     {
-        return new org.l2j.scripts.ai.areas.AligatorIsland.Nos();
+        return new Nos();
     }
 }

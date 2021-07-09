@@ -617,8 +617,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Provides instant callback operation when {@link Creature} Enters on a {@link Zone}.
      */
-    protected final List<AbstractEventListener> setCreatureZoneEnterId(Consumer<OnCreatureZoneEnter> callback, int... npcIds) {
-        return registerConsumer(callback, EventType.ON_CREATURE_ZONE_ENTER, ListenerRegisterType.ZONE, npcIds);
+    protected final List<AbstractEventListener> setCreatureZoneEnterId(Consumer<OnCreatureZoneEnter> callback, int... zoneIds) {
+        return registerConsumer(callback, EventType.ON_CREATURE_ZONE_ENTER, ListenerRegisterType.ZONE, zoneIds);
     }
 
     /**
@@ -743,8 +743,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Method that registers Function type of listeners (Listeners that need parameters but doesn't return objects)
      */
-    protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, int... npcIds) {
-        return registerListener((container) -> new ConsumerEventListener(container, type, callback, this), registerType, npcIds);
+    protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, int... ids) {
+        return registerListener((container) -> new ConsumerEventListener(container, type, callback, this), registerType, ids);
     }
 
     /**

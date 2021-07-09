@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.areas.CrumaTower;
+package org.l2j.scripts.ai.areas.cruma;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -36,10 +36,8 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
  */
 public final class SummonPc extends AbstractNpcAI
 {
-	// NPCs
 	private static final int PORTA = 20213;
 	private static final int PERUM = 20221;
-	// Skill
 	private static final SkillHolder SUMMON_PC = new SkillHolder(4161, 1);
 	
 	private SummonPc()
@@ -53,43 +51,43 @@ public final class SummonPc extends AbstractNpcAI
 	{
 		final int chance = Rnd.get(100);
 		final boolean attacked = npc.getVariables().getBoolean("attacked", false);
-		if (!isInsideRadius3D(npc,  attacker,  300) && !attacked)
-		{
-			if (chance < 50)
-			{
-				if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(SUMMON_PC.getSkill());
-				}
-				
-				if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(SUMMON_PC.getSkill());
-					npc.getVariables().set("attacked", true);
-				}
-			}
+		if (!attacked && !isInsideRadius3D(npc,  attacker,  300)) {
+			onDistantAttack(npc, attacker);
 		}
-		else if (!isInsideRadius3D(npc,  attacker, 100) && !attacked)
-		{
-			final Attackable monster = (Attackable) npc;
-			if (monster.getMostHated() != null)
-			{
-				if (((monster.getMostHated() == attacker) && (chance < 50)) || (chance < 10))
-				{
-					if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill()))
-					{
-						npc.setTarget(attacker);
-						npc.doCast(SUMMON_PC.getSkill());
-						npc.getVariables().set("attacked", true);
-					}
-				}
-			}
+		else if (!attacked && !isInsideRadius3D(npc,  attacker, 100)) {
+			onCloseAttack(npc, attacker, chance);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
-	
+
+	private void onCloseAttack(Npc npc, Player attacker, int chance) {
+		final Attackable monster = (Attackable) npc;
+		if (monster.getMostHated() != null) {
+			if (((monster.getMostHated() == attacker) && (chance < 50)) || (chance < 10))
+			{
+				castSummonPc(npc, attacker, true);
+			}
+		}
+	}
+
+	private void onDistantAttack(Npc npc, Player attacker) {
+		if (Rnd.chance(50)) {
+			castSummonPc(npc, attacker, false);
+			castSummonPc(npc, attacker, true);
+		}
+	}
+
+	private void castSummonPc(Npc npc, Player attacker, boolean attacked) {
+		if ((SUMMON_PC.getSkill().getMpConsume() < npc.getCurrentMp()) && (SUMMON_PC.getSkill().getHpConsume() < npc.getCurrentHp()) && !npc.isSkillDisabled(SUMMON_PC.getSkill())) {
+			npc.setTarget(attacker);
+			npc.doCast(SUMMON_PC.getSkill());
+
+			if(attacked) {
+				npc.getVariables().set("attacked", true);
+			}
+		}
+	}
+
 	@Override
 	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{

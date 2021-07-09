@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.areas.CallOfTheSpirits;
+package org.l2j.scripts.ai.areas.spirits;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
@@ -66,39 +66,19 @@ public class CallOfTheSpirits extends AbstractNpcAI {
         final Npc spawnMonster;
         final Playable attacker;
         if (Rnd.chance(10)){
-            switch (npc.getId()){
-                case MONSTEREYE:
-                case GRANITEGOLEM:
-                    spawnMonster = addSpawn(GUARDIANGOLEM, npc, false, 300000);
-                    break;
-                case GOUL:
-                case CORPSETRACKER:
-                    spawnMonster = addSpawn(GUARDIANDRECO, npc, false, 300000);
-                    break;
-                case LETOWARRIOR:
-                case LETOSHAMAN:
-                    spawnMonster = addSpawn(GUARDIANRAIDO, npc, false, 300000);
-                    break;
-                case GIANTMONSTEREYE:
-                case DIREWYRM:
-                    spawnMonster = addSpawn(GUARDIANWYRM, npc, false, 300000);
-                    break;
-                case LIZARDWARRIOR:
-                case LIZARDMATRIACH:
-                    spawnMonster = addSpawn(GUARDIANHARIT, npc, false, 300000);
-                    break;
-                case CRIMSONDRAKE:
-                case PALIBATI:
-                    spawnMonster = addSpawn(GUARDIANPALIBATI, npc, false, 300000);
-                    break;
-                default:
-                    spawnMonster = null;
-                    break;
-            }
-                attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
-                addAttackPlayerDesire(spawnMonster, attacker);
-                npc.deleteMe();
-            }
+            spawnMonster = switch (npc.getId()) {
+                case MONSTEREYE, GRANITEGOLEM -> addSpawn(GUARDIANGOLEM, npc, false, 300000);
+                case GOUL, CORPSETRACKER -> addSpawn(GUARDIANDRECO, npc, false, 300000);
+                case LETOWARRIOR, LETOSHAMAN -> addSpawn(GUARDIANRAIDO, npc, false, 300000);
+                case GIANTMONSTEREYE, DIREWYRM -> addSpawn(GUARDIANWYRM, npc, false, 300000);
+                case LIZARDWARRIOR, LIZARDMATRIACH -> addSpawn(GUARDIANHARIT, npc, false, 300000);
+                case CRIMSONDRAKE, PALIBATI -> addSpawn(GUARDIANPALIBATI, npc, false, 300000);
+                default -> null;
+            };
+            attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
+            addAttackPlayerDesire(spawnMonster, attacker);
+            npc.deleteMe();
+        }
         return super.onKill(npc, killer, isSummon);
     }
 

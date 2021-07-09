@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.quest.Quest;
  */
 public abstract class AbstractNpcAI extends Quest
 {
-	public AbstractNpcAI()
+	protected AbstractNpcAI()
 	{
 		super(-1);
 	}

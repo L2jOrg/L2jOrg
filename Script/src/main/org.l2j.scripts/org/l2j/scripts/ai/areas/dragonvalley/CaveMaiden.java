@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.ai.areas.DragonValley;
+package org.l2j.scripts.ai.areas.dragonvalley;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Npc;
@@ -31,14 +31,13 @@ import org.l2j.scripts.ai.AbstractNpcAI;
  */
 public final class CaveMaiden extends AbstractNpcAI
 {
-	// NPCs
-	private static final int CAVEMAIDEN = 20134;
-	private static final int CAVEKEEPER = 20246;
+	private static final int CAVE_MAIDEN = 20134;
+	private static final int CAVE_KEEPER = 20246;
 	private static final int BANSHEE = 20412;
 	
 	private CaveMaiden()
 	{
-		addKillId(CAVEMAIDEN, CAVEKEEPER);
+		addKillId(CAVE_MAIDEN, CAVE_KEEPER);
 	}
 	
 	@Override
