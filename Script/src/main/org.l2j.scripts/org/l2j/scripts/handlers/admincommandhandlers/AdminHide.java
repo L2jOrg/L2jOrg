@@ -27,6 +27,7 @@ import java.util.StringTokenizer;
 
 /**
  * @author lord_rex
+ * @author JoeAlisson
  */
 public final class AdminHide implements IAdminCommandHandler
 {
@@ -44,22 +45,9 @@ public final class AdminHide implements IAdminCommandHandler
 		{
 			final String param = st.nextToken();
 			switch (param) {
-				case "on": {
-					if (!BuilderUtil.setHiding(player, true)) {
-						BuilderUtil.sendSysMessage(player, "Currently, you cannot be seen.");
-					} else {
-						BuilderUtil.sendSysMessage(player, "Now, you cannot be seen.");
-					}
-				}
-				case "off": {
-					if (!BuilderUtil.setHiding(player, false)) {
-						BuilderUtil.sendSysMessage(player, "Currently, you can be seen.");
-					} else {
-						BuilderUtil.sendSysMessage(player, "Now, you can be seen.");
-					}
-				}
-				default:
-					BuilderUtil.sendSysMessage(player, "//hide [on|off]");
+				case "on" -> hide(player);
+				case "off" -> unHide(player);
+				default -> BuilderUtil.sendSysMessage(player, "//hide [on|off]");
 			}
 			return true;
 		}
@@ -68,7 +56,23 @@ public final class AdminHide implements IAdminCommandHandler
 			return false;
 		}
 	}
-	
+
+	private void unHide(Player player) {
+		if (!BuilderUtil.setHiding(player, false)) {
+			BuilderUtil.sendSysMessage(player, "Currently, you can be seen.");
+		} else {
+			BuilderUtil.sendSysMessage(player, "Now, you can be seen.");
+		}
+	}
+
+	private void hide(Player player) {
+		if (!BuilderUtil.setHiding(player, true)) {
+			BuilderUtil.sendSysMessage(player, "Currently, you cannot be seen.");
+		} else {
+			BuilderUtil.sendSysMessage(player, "Now, you cannot be seen.");
+		}
+	}
+
 	@Override
 	public String[] getAdminCommandList()
 	{

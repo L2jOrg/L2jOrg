@@ -81,8 +81,7 @@ public final class AdminInstance implements IAdminCommandHandler
         switch (actualCommand.toLowerCase())
         {
             case "admin_instance":
-            case "admin_instances":
-            {
+            case "admin_instances": {
                 final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
                 html.setFile(activeChar, "data/html/admin/instances.htm");
                 html.replace("%instCount%", InstanceManager.getInstance().getInstances().size());
@@ -142,7 +141,7 @@ public final class AdminInstance implements IAdminCommandHandler
                         default:
                         {
                             BuilderUtil.sendSysMessage(activeChar, "Wrong enter group usage! Please use those values: Alone, Party or CommandChannel.");
-                            return true;
+                            return false;
                         }
                     }
 
@@ -161,7 +160,7 @@ public final class AdminInstance implements IAdminCommandHandler
                 else
                 {
                     BuilderUtil.sendSysMessage(activeChar, "Wrong parameters! Please try again.");
-                    return true;
+                    return false;
                 }
                 break;
             }

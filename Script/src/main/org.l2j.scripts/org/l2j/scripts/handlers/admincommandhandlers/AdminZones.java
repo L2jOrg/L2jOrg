@@ -74,7 +74,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler {
 
         if (!st.hasMoreTokens()) {
             buildZonesEditorWindow(activeChar);
-            return false;
+            return true;
         }
 
         final String subCmd = st.nextToken();
@@ -157,7 +157,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler {
             case "list" -> {
                 final int page = Util.parseNextInt(st, 0);
                 buildHtmlWindow(activeChar, page);
-                return false;
+                return true;
             }
         }
 

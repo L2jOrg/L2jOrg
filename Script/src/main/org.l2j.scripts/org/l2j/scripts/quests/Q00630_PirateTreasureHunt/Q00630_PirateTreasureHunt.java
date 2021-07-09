@@ -50,11 +50,13 @@ public class Q00630_PirateTreasureHunt extends Quest {
     @Override
     public String onAdvEvent(String event, Npc npc, Player player){
         final QuestState qs = getQuestState(player, false);
-        if (isNull(qs)) {
-            return null;
+        if(qs != null) {
+            processEvent(event, player, qs);
         }
+        return null;
+    }
 
-        String htmltext = null;
+    private void processEvent(String event, Player player, QuestState qs) {
         if(event.equalsIgnoreCase("GAROM2.htm"))
         {
             qs.setCond(1);
@@ -85,67 +87,68 @@ public class Q00630_PirateTreasureHunt extends Quest {
             takeItems(player, 1, 90815);
             qs.exitQuest(false, true);
         }
-
-        return htmltext;
     }
 
     @Override
     public String onTalk(Npc npc, Player talker) {
         final QuestState qs = getQuestState(talker, true);
-        String htmltext = getNoQuestMsg(talker);
+        String htmlText = getNoQuestMsg(talker);
 
-        if(isNull(qs)) {
-            return htmltext;
+        if(qs != null) {
+            htmlText = processChat(npc, talker, qs, htmlText);
         }
+        return htmlText;
+    }
 
+    private String processChat(Npc npc, Player talker, QuestState qs, String htmltext) {
         int npcId = npc.getId();
-            int cond = qs.getCond();
+        int cond = qs.getCond();
 
-            if(npcId == GAROM) {
-                if(cond == 0 && getQuestItemsCount(talker, MAP) >= 1)
-                {
-                    htmltext = "GAROM.htm";
-                }
-                if(cond == 0 && getQuestItemsCount(talker,PIECEMAP) >= 25)
-                {
-                    htmltext = "GAROMCHANGE.htm";
-                }
-                if(cond == 0 && getQuestItemsCount(talker,MAP) < 1 && getQuestItemsCount(talker, PIECEMAP) < 25)
-                {
-                    htmltext = "NOITEMS.htm";
-                }
-                if(cond == 1)
-                {
-                    htmltext = "GAROM3.htm";
-                }
-                if(cond == 2)
-                {
-                    htmltext = "GAROM4.htm";
-                }
+        if(npcId == GAROM) {
+            if(cond == 0 && getQuestItemsCount(talker, MAP) >= 1)
+            {
+                htmltext = "GAROM.htm";
             }
-            if(npcId == CHEST) {
-                if(cond ==12){
-                    htmltext = "SUND.htm";
-                }
-
+            if(cond == 0 && getQuestItemsCount(talker,PIECEMAP) >= 25)
+            {
+                htmltext = "GAROMCHANGE.htm";
             }
-            if(npcId == TELEPORT1) {
-                if(cond ==2){
-                    htmltext = "TP.htm";
-                }
-                if(cond ==6){
-                    htmltext = "TP3.htm";
-                }
-                if(cond ==7){
-                    htmltext = "TP4.htm";
-                }
-                if(cond ==8){
-                    htmltext = "TP5.htm";
-                }
-
+            if(cond == 0 && getQuestItemsCount(talker,MAP) < 1 && getQuestItemsCount(talker, PIECEMAP) < 25)
+            {
+                htmltext = "NOITEMS.htm";
             }
-            return htmltext;
+            if(cond == 1)
+            {
+                htmltext = "GAROM3.htm";
+            }
+            if(cond == 2)
+            {
+                htmltext = "GAROM4.htm";
+            }
         }
+        if(npcId == CHEST) {
+            if(cond ==12){
+                htmltext = "SUND.htm";
+            }
+
+        }
+        if(npcId == TELEPORT1) {
+            if(cond ==2){
+                htmltext = "TP.htm";
+            }
+            if(cond ==6){
+                htmltext = "TP3.htm";
+            }
+            if(cond ==7){
+                htmltext = "TP4.htm";
+            }
+            if(cond ==8){
+                htmltext = "TP5.htm";
+            }
+
+        }
+        return htmltext;
+    }
 
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {

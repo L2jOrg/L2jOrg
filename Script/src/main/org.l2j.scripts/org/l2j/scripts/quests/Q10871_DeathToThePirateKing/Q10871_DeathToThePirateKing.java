@@ -89,11 +89,7 @@ public class Q10871_DeathToThePirateKing extends Quest
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
         final QuestState qs = getQuestState(killer, false);
-        if (qs == null)
-        {
-            return null;
-        }
-        if(qs.getCond() == 1)
+        if(qs != null && qs.getCond() == 1)
         {
             qs.setCond(2);
             giveItems(killer, ZAKEN_BLOOD, 1);

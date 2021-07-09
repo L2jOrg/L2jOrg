@@ -84,7 +84,7 @@ public class AdminMenu implements IAdminCommandHandler {
 				final Player player = World.getInstance().findPlayer(targetName);
 				if (player == null) {
 					playerGM.sendPacket(SystemMessageId.INVALID_TARGET);
-					return true;
+					return false;
 				}
 				if (!player.isInParty()) {
 					BuilderUtil.sendSysMessage(playerGM, "Player is not in party.");
@@ -103,7 +103,7 @@ public class AdminMenu implements IAdminCommandHandler {
 				final Player player = World.getInstance().findPlayer(targetName);
 				if (player == null) {
 					playerGM.sendPacket(SystemMessageId.INVALID_TARGET);
-					return true;
+					return false;
 				}
 				final Clan clan = player.getClan();
 				if (clan == null) {
