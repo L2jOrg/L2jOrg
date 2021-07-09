@@ -66,7 +66,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		if (command.equals("admin_mobmenu"))
 		{
 			showMainPage(activeChar);
-			return true;
 		}
 		else if (command.equals("admin_mobgroup_list"))
 		{

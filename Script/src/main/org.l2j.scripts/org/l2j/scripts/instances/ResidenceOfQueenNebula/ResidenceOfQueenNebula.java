@@ -169,57 +169,61 @@ public class ResidenceOfQueenNebula extends AbstractInstance
     @Override
     public String onKill(Npc npc, Player player, boolean isSummon)
     {
-        switch (npc.getId())
-        {
-            case NEBULA:
-            {
-                cancelQuestTimer("CAST_AQUA_RAGE", npc, player);
-                cancelQuestTimer("SPAWN_WATER_SLIME", npc, player);
-                final Instance world = npc.getInstanceWorld();
-                if (world != null)
-                {
-                    world.finishInstance();
-                }
-            }
-            case WATER_SLIME:
-            {
-                if (player.getAffectedSkillLevel(AQUA_RAGE) == 1)
-                {
-                    if (Rnd.get(100) < 50)
-                    {
-                        player.stopSkillEffects(AQUA_RAGE_1.getSkill());
-                    }
-                }
-                else if (player.getAffectedSkillLevel(AQUA_RAGE) == 2)
-                {
-                    if (Rnd.get(100) < 50)
-                    {
-                        player.stopSkillEffects(AQUA_RAGE_2.getSkill());
-                        final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 1);
-                        skill.applyEffects(player, player);
-                    }
-                }
-                else if (player.getAffectedSkillLevel(AQUA_RAGE) == 3)
-                {
-                    if (Rnd.get(100) < 50)
-                    {
-                        player.stopSkillEffects(AQUA_RAGE_3.getSkill());
-                        final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 2);
-                        skill.applyEffects(player, player);
-                    }
-                }
-                else if (player.getAffectedSkillLevel(AQUA_RAGE) == 4)
-                {
-                    if (Rnd.get(100) < 50)
-                    {
-                        player.stopSkillEffects(AQUA_RAGE_4.getSkill());
-                        final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 3);
-                        skill.applyEffects(player, player);
-                    }
-                }
-            }
+        int id = npc.getId();
+        if (id == NEBULA) {
+            onKillNebula(npc, player);
+            onKillWaterSlime(player);
+        } else if (id == WATER_SLIME) {
+            onKillWaterSlime(player);
         }
         return super.onKill(npc, player, isSummon);
+    }
+
+    private void onKillNebula(Npc npc, Player player) {
+        cancelQuestTimer("CAST_AQUA_RAGE", npc, player);
+        cancelQuestTimer("SPAWN_WATER_SLIME", npc, player);
+        final Instance world = npc.getInstanceWorld();
+        if (world != null)
+        {
+            world.finishInstance();
+        }
+    }
+
+    private void onKillWaterSlime(Player player) {
+        if (player.getAffectedSkillLevel(AQUA_RAGE) == 1)
+        {
+            if (Rnd.get(100) < 50)
+            {
+                player.stopSkillEffects(AQUA_RAGE_1.getSkill());
+            }
+        }
+        else if (player.getAffectedSkillLevel(AQUA_RAGE) == 2)
+        {
+            if (Rnd.get(100) < 50)
+            {
+                player.stopSkillEffects(AQUA_RAGE_2.getSkill());
+                final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 1);
+                skill.applyEffects(player, player);
+            }
+        }
+        else if (player.getAffectedSkillLevel(AQUA_RAGE) == 3)
+        {
+            if (Rnd.get(100) < 50)
+            {
+                player.stopSkillEffects(AQUA_RAGE_3.getSkill());
+                final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 2);
+                skill.applyEffects(player, player);
+            }
+        }
+        else if (player.getAffectedSkillLevel(AQUA_RAGE) == 4)
+        {
+            if (Rnd.get(100) < 50)
+            {
+                player.stopSkillEffects(AQUA_RAGE_4.getSkill());
+                final Skill skill = SkillEngine.getInstance().getSkill(AQUA_RAGE, 3);
+                skill.applyEffects(player, player);
+            }
+        }
     }
 
     public static ResidenceOfQueenNebula provider()
