@@ -227,7 +227,6 @@ public abstract class ArmorRewardQuest extends Quest {
             {
                 qs.set(KILL_COUNT_VAR, killCount);
                 playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-                sendNpcLogList(killer);
             }
             else 
             {
@@ -238,19 +237,6 @@ public abstract class ArmorRewardQuest extends Quest {
             }
         }
         return super.onKill(npc, killer, isSummon);
-    }
-
-    @Override
-    public Set<NpcLogListHolder> getNpcLogList(Player player)
-    {
-        final QuestState qs = getQuestState(player, false);
-        if ((qs != null) && qs.isCond(1))
-        {
-            final Set<NpcLogListHolder> holder = new HashSet<>();
-            holder.add(new NpcLogListHolder(inProgressStringId().getId(), true, qs.getInt(KILL_COUNT_VAR)));
-            return holder;
-        }
-        return super.getNpcLogList(player);
     }
 
     @Override
