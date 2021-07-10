@@ -38,9 +38,11 @@ import java.util.List;
  */
 public class Batur extends AbstractNpcAI
 {
-    private final int TIME_TO_LIVE = 60000;
-    private final int BATUR_ID = 24020;
-    private final long RESPAWN_DELAY = 900000; // 15 min
+    private static final int TIME_TO_LIVE = 60000;
+    private static final int BATUR_ID = 24020;
+    private static final long RESPAWN_DELAY = 900000; // 15 min
+    public static final String BATUR_DESPAWN_THREAD = "BATUR_DESPAWN_THREAD";
+    public static final String BATUR_SPAWN_THREAD = "BATUR_SPAWN_THREAD";
 
     private static Npc BATUR;
 
@@ -48,20 +50,20 @@ public class Batur extends AbstractNpcAI
     {
         addAttackId(BATUR_ID);
         addKillId(BATUR_ID);
-        startQuestTimer("BATUR_SPAWN_THREAD", 30000, null, null);
+        startQuestTimer(BATUR_SPAWN_THREAD, 30000, null, null);
     }
 
 
    @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
-        if (event.equals("BATUR_SPAWN_THREAD")) {
+        if (event.equals(BATUR_SPAWN_THREAD)) {
             final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npcSpawnTemplate -> npcSpawnTemplate.getId() == BATUR_ID);
             final List<ChanceLocation> locations = spawns.get(0).getLocation();
             final Location location = locations.get(Rnd.get(0, locations.size() - 1));
             BATUR = addSpawn(BATUR_ID, location);
-        } else if (event.equals("BATUR_DESPAWN_THREAD")) {
+        } else if (event.equals(BATUR_DESPAWN_THREAD)) {
             BATUR.scheduleDespawn(0);
-            startQuestTimer("BATUR_SPAWN_THREAD", RESPAWN_DELAY, null, null);
+            startQuestTimer(BATUR_SPAWN_THREAD, RESPAWN_DELAY, null, null);
         }
         return super.onAdvEvent(event, npc, player);
     }
@@ -69,8 +71,8 @@ public class Batur extends AbstractNpcAI
 
     @Override
     public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon) {
-        if(npc.getId() == BATUR_ID && !hasQuestTimer("BATUR_DESPAWN_THREAD", null, null)) {
-            startQuestTimer("BATUR_DESPAWN_THREAD", TIME_TO_LIVE, null, null);
+        if(npc.getId() == BATUR_ID && !hasQuestTimer(BATUR_DESPAWN_THREAD, null, null)) {
+            startQuestTimer(BATUR_DESPAWN_THREAD, TIME_TO_LIVE, null, null);
         }
         return super.onAttack(npc, attacker, damage, isSummon);
     }
@@ -79,7 +81,7 @@ public class Batur extends AbstractNpcAI
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
         if(npc.getId() == BATUR_ID) {
-            startQuestTimer("BATUR_SPAWN_THREAD", RESPAWN_DELAY, null, null);
+            startQuestTimer(BATUR_SPAWN_THREAD, RESPAWN_DELAY, null, null);
         }
         return super.onKill(npc, killer, isSummon);
     }

@@ -55,7 +55,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-
 /**
  * Four Selpuchers AI
  * @author Mobius
@@ -227,43 +226,32 @@ public class FourSepulchers extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
 		String htmltext = event;
-		
-		switch (event)
-		{
-			case "Enter":
-			{
+
+		switch (event) {
+			case "Enter" -> {
 				final QuestState qs = player.getQuestState(Q00620_FourGoblets.class.getSimpleName());
-				if (qs == null)
-				{
+				if (qs == null) {
 					return getNoQuestMsg(player);
 				}
-				if (qs.isStarted())
-				{
+				if (qs.isStarted()) {
 					tryEnter(npc, player);
 					return null;
 				}
-				break;
 			}
-			case "OpenGate":
-			{
+			case "OpenGate" -> {
 				final QuestState qs = player.getQuestState(Q00620_FourGoblets.class.getSimpleName());
-				if (qs == null)
-				{
+				if (qs == null) {
 					return getNoQuestMsg(player);
 				}
-				if (qs.isStarted() && (npc.getScriptValue() == 0))
-				{
-					if (hasQuestItems(player, CHAPEL_KEY))
-					{
+				if (qs.isStarted() && (npc.getScriptValue() == 0)) {
+					if (hasQuestItems(player, CHAPEL_KEY)) {
 						npc.setScriptValue(1);
 						takeItems(player, CHAPEL_KEY, -1);
 						final int sepulcherId = getSepulcherId(player);
 						final int currentWave = STORED_PROGRESS.get(sepulcherId) + 1;
 						STORED_PROGRESS.put(sepulcherId, currentWave); // update progress
-						for (int[] doorInfo : DOORS)
-						{
-							if ((doorInfo[0] == sepulcherId) && (doorInfo[1] == currentWave))
-							{
+						for (int[] doorInfo : DOORS) {
+							if ((doorInfo[0] == sepulcherId) && (doorInfo[1] == currentWave)) {
 								openDoor(doorInfo[2], 0);
 								ThreadPool.schedule(() ->
 								{
@@ -272,18 +260,13 @@ public class FourSepulchers extends AbstractNpcAI
 								break;
 							}
 						}
-						if (currentWave < 7)
-						{
+						if (currentWave < 7) {
 							spawnMysteriousChest(player);
-						}
-						else
-						{
+						} else {
 							spawnNextWave(player);
 						}
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_MONSTERS_HAVE_SPAWNED);
-					}
-					else
-					{
+					} else {
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 						html.setFile(player, "data/extension/html/ai/areas/ImperialTomb/FourSepulchers/Gatekeeper-no.html");
 						html.replace("%npcname%", npc.getName());
@@ -292,20 +275,15 @@ public class FourSepulchers extends AbstractNpcAI
 					return null;
 				}
 				htmltext = getNoQuestMsg(player); // TODO: Replace with proper html?
-				break;
 			}
-			case "SPAWN_MYSTERIOUS_CHEST":
-			{
+			case "SPAWN_MYSTERIOUS_CHEST" -> {
 				spawnMysteriousChest(player);
 				return null;
 			}
-			case "VICTIM_FLEE":
-			{
-				if ((npc != null) && !npc.isDead())
-				{
+			case "VICTIM_FLEE" -> {
+				if ((npc != null) && !npc.isDead()) {
 					final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), npc.getSpawn().getLocation().getX() + Rnd.get(-400, 400), npc.getSpawn().getLocation().getY() + Rnd.get(-400, 400), npc.getZ(), npc.getInstanceWorld());
-					if (MathUtil.isInsideRadius3D(npc, npc.getSpawn().getLocation(), 600))
-					{
+					if (MathUtil.isInsideRadius3D(npc, npc.getSpawn().getLocation(), 600)) {
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 					}
 					npc.broadcastSay(ChatType.NPC_GENERAL, VICTIM_MSG[Rnd.get(VICTIM_MSG.length)]);
@@ -313,47 +291,34 @@ public class FourSepulchers extends AbstractNpcAI
 				}
 				return null;
 			}
-			case "REMOVE_PETRIFY":
-			{
+			case "REMOVE_PETRIFY" -> {
 				npc.stopSkillEffects(PETRIFY.getSkill());
 				npc.setTargetable(true);
 				npc.setIsInvul(false);
 				return null;
 			}
-			case "WAVE_DEFEATED_CHECK":
-			{
+			case "WAVE_DEFEATED_CHECK" -> {
 				final int sepulcherId = getSepulcherId(player);
 				final int currentWave = STORED_PROGRESS.get(sepulcherId);
 				Location lastLocation = null;
-				for (Npc spawn : STORED_MONSTER_SPAWNS.get(sepulcherId))
-				{
+				for (Npc spawn : STORED_MONSTER_SPAWNS.get(sepulcherId)) {
 					lastLocation = spawn.getLocation();
-					if (spawn.isDead())
-					{
+					if (spawn.isDead()) {
 						STORED_MONSTER_SPAWNS.get(sepulcherId).remove(spawn);
 					}
 				}
-				if (STORED_MONSTER_SPAWNS.get(sepulcherId).isEmpty())
-				{
-					if (currentWave == 2)
-					{
-						if (Rnd.nextBoolean())
-						{
+				if (STORED_MONSTER_SPAWNS.get(sepulcherId).isEmpty()) {
+					if (currentWave == 2) {
+						if (Rnd.nextBoolean()) {
 							spawnNextWave(player);
-						}
-						else
-						{
+						} else {
 							spawnKeyChest(player, lastLocation);
 						}
-					}
-					else if (currentWave == 5)
-					{
+					} else if (currentWave == 5) {
 						STORED_PROGRESS.put(sepulcherId, currentWave + 1);
 						spawnNextWave(player);
 					}
-				}
-				else if (sepulcherId > 0)
-				{
+				} else if (sepulcherId > 0) {
 					startQuestTimer("WAVE_DEFEATED_CHECK", 5000, null, player);
 				}
 				return null;

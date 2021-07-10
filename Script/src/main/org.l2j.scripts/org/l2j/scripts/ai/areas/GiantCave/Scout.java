@@ -33,6 +33,7 @@ public class Scout extends AbstractNpcAI {
     private static final int SPAWN_DELAY = 10000; // milliseconds
     private static final int GAMLIN = 20651;
     private static final int LEOGUL = 20652;
+    public static final String GC_SCOUT_EVENT_AI = "GC_SCOUT_EVENT_AI";
 
     private Scout()
     {
@@ -41,7 +42,7 @@ public class Scout extends AbstractNpcAI {
 
     @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
-        if (event.equals("GC_SCOUT_EVENT_AI")) {
+        if (event.equals(GC_SCOUT_EVENT_AI)) {
             final Playable pAttacker = player.getServitors().size() > 0 ? player.getServitors().values().stream().findFirst().orElse(player.getPet()) : player;
             final Monster monster = (Monster) npc;
 
@@ -64,8 +65,8 @@ public class Scout extends AbstractNpcAI {
         {
             final Monster monster = (Monster) npc;
 
-            if (!monster.isTeleporting() && !monster.hasMinions() && !hasQuestTimer("GC_SCOUT_EVENT_AI", attacker, npc))
-                startQuestTimer("GC_SCOUT_EVENT_AI", SPAWN_DELAY, npc, attacker);
+            if (!monster.isTeleporting() && !monster.hasMinions() && !hasQuestTimer(GC_SCOUT_EVENT_AI, attacker, npc))
+                startQuestTimer(GC_SCOUT_EVENT_AI, SPAWN_DELAY, npc, attacker);
         }
 
         return super.onAttack(npc, attacker, damage, isSummon);

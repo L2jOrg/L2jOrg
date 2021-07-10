@@ -1,6 +1,8 @@
 import org.l2j.scripts.ai.bosses.*;
 import org.l2j.scripts.ai.monster.Nos;
 import org.l2j.scripts.ai.npc.Toma;
+import org.l2j.scripts.events.squash.common.CommonSquash;
+import org.l2j.scripts.events.squash.xmas.MerrySquashmas;
 import org.l2j.scripts.handlers.actionhandlers.*;
 import org.l2j.scripts.handlers.actionshifthandlers.*;
 import org.l2j.scripts.handlers.admincommandhandlers.AdminCoins;
@@ -285,8 +287,8 @@ open module org.l2j.scripts {
             org.l2j.scripts.events.EveTheFortuneTeller.EveTheFortuneTeller,
             org.l2j.scripts.events.HappyHours.HappyHours,
             org.l2j.scripts.events.LetterCollector.LetterCollector,
-            org.l2j.scripts.events.MerrySquashmas.MerrySquashmas,
-            org.l2j.scripts.events.SquashEvent.SquashEvent,
+                MerrySquashmas,
+                CommonSquash,
             org.l2j.scripts.events.ThePowerOfLove.ThePowerOfLove,
             org.l2j.scripts.events.TotalRecall.TotalRecall,
             org.l2j.scripts.events.WatermelonNinja.WatermelonNinja,
