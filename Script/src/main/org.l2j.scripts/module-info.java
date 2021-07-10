@@ -291,7 +291,7 @@ open module org.l2j.scripts {
                 CommonSquash,
             org.l2j.scripts.events.ThePowerOfLove.ThePowerOfLove,
             org.l2j.scripts.events.TotalRecall.TotalRecall,
-            org.l2j.scripts.events.WatermelonNinja.WatermelonNinja,
+            org.l2j.scripts.events.watermelon.WatermelonNinja,
 
             // custom
             org.l2j.scripts.custom.events.Elpies.Elpies,
