@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.events.watermelon;
+package org.l2j.scripts.events.squash.watermelon;
 
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.model.events.AbstractScript;
