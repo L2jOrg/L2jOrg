@@ -14,6 +14,7 @@ import org.l2j.scripts.handlers.effecthandlers.*;
 import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
+import org.l2j.scripts.quests.newbie.armor.q10982.SpiderHunt;
 import org.l2j.scripts.quests.newbie.armor.q10990.PoisonExtraction;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
 import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
@@ -744,7 +745,7 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q10966_ATripBegins.Q10966_ATripBegins,
              org.l2j.scripts.quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer,
              org.l2j.scripts.quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling,
-             org.l2j.scripts.quests.Q10982_SpiderHunt.Q10982_SpiderHunt,
+                SpiderHunt,
              org.l2j.scripts.quests.Q10983_TroubledForest.Q10983_TroubledForest,
              org.l2j.scripts.quests.Q10984_CollectSpiderweb.Q10984_CollectSpiderweb,
              org.l2j.scripts.quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround,
