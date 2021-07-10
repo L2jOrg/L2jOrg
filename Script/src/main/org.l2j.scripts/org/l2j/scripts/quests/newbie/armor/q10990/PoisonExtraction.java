@@ -21,16 +21,20 @@ package org.l2j.scripts.quests.newbie.armor.q10990;
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntCollection;
 import io.github.joealisson.primitive.IntIntMap;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.scripts.quests.newbie.armor.ArmorRewardQuest;
+import org.l2j.scripts.quests.newbie.armor.MoonArmorRewardQuest;
 
 /**
  * @author RobikBobik
  * @author JoeAlisson
  */
-public class PoisonExtraction extends ArmorRewardQuest {
+public class PoisonExtraction extends MoonArmorRewardQuest {
 
 	private static final int GERALD = 30650;
 	private static final int TARANTULA = 91653;
@@ -42,7 +46,25 @@ public class PoisonExtraction extends ArmorRewardQuest {
 	}
 	
 	public PoisonExtraction() {
-		super(10990, GERALD, TARANTULA, ClassId.DWARVEN_FIGHTER);
+		super(10990, GERALD, ClassId.DWARVEN_FIGHTER);
+		registerQuestItems(TARANTULA);
+	}
+
+	@Override
+	public String onKill(Npc npc, Player killer, boolean isSummon) {
+		var qs = getQuestState(killer, false);
+		if(qs != null && qs.isCond(1)) {
+			if(Rnd.chance(MONSTER_DROP_CHANCES.getOrDefault(npc.getId(), 0))) {
+				giveItems(killer, TARANTULA, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		return super.onKill(npc, killer, isSummon);
+	}
+
+	@Override
+	protected int questHuntProgress(Player player) {
+		return (int) getQuestItemsCount(player, TARANTULA);
 	}
 
 	@Override
@@ -60,13 +82,4 @@ public class PoisonExtraction extends ArmorRewardQuest {
 		return new Location(135382, -207694, -3704);
 	}
 
-	@Override
-	protected IntIntMap dropChances() {
-		return MONSTER_DROP_CHANCES;
-	}
-
-	@Override
-	protected NpcStringId inProgressStringId() {
-		return NpcStringId.LV_15_20_POISON_EXTRACTION_IN_PROGRESS;
-	}
 }

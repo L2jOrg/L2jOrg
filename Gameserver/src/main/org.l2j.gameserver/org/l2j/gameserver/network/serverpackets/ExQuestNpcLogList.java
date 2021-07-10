@@ -25,38 +25,46 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerExPacketId;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class ExQuestNpcLogList extends ServerPacket {
-    private final int _questId;
-    private final List<NpcLogListHolder> _npcLogList = new ArrayList<>();
+    private final int questId;
+    private final Collection<NpcLogListHolder> logList;
 
     public ExQuestNpcLogList(int questId) {
-        _questId = questId;
+        this.questId = questId;
+        this.logList = new ArrayList<>();
+    }
+
+    public ExQuestNpcLogList(int questId, Collection<NpcLogListHolder> logList) {
+        this.questId = questId;
+        this.logList = logList;
     }
 
     public void addNpc(int npcId, int count) {
-        _npcLogList.add(new NpcLogListHolder(npcId, false, count));
+        logList.add(new NpcLogListHolder(npcId, false, count));
     }
 
     public void addNpcString(NpcStringId npcStringId, int count) {
-        _npcLogList.add(new NpcLogListHolder(npcStringId.getId(), true, count));
+        logList.add(new NpcLogListHolder(npcStringId.getId(), true, count));
     }
 
     public void add(NpcLogListHolder holder) {
-        _npcLogList.add(holder);
+        logList.add(holder);
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_QUEST_NPC_LOG_LIST, buffer );
 
-        buffer.writeInt(_questId);
-        buffer.writeByte(_npcLogList.size());
-        for (NpcLogListHolder holder : _npcLogList) {
+        buffer.writeInt(questId);
+        buffer.writeByte(logList.size());
+        for (NpcLogListHolder holder : logList) {
             buffer.writeInt(holder.isNpcString() ? holder.getId() : holder.getId() + 1000000);
             buffer.writeByte(holder.isNpcString());
             buffer.writeInt(holder.getCount());

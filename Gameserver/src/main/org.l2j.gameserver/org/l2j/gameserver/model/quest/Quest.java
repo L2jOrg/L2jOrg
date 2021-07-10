@@ -59,10 +59,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -1289,7 +1286,8 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @return {@code true} if this party member passes the check, {@code false} otherwise
      */
     public boolean checkPartyMember(Player player, Npc npc) {
-        return true;
+        var qs = getQuestState(player, false);
+        return qs != null && qs.isStarted();
     }
 
     /**
@@ -1509,6 +1507,10 @@ public class Quest extends AbstractScript implements IIdentifiable {
             getNpcLogList(activeChar).forEach(packet::add);
             activeChar.sendPacket(packet);
         }
+    }
+
+    protected void sendNpcLogList(Player player, Collection<NpcLogListHolder> logList) {
+        player.sendPacket(new ExQuestNpcLogList(questId, logList));
     }
 
     /**
