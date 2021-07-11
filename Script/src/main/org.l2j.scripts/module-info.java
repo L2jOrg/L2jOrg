@@ -20,6 +20,7 @@ import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
 import org.l2j.scripts.quests.newbie.armor.q10986.SwampMonster;
 import org.l2j.scripts.quests.newbie.armor.q10988.Conspiracy;
 import org.l2j.scripts.quests.newbie.armor.q10990.PoisonExtraction;
+import org.l2j.scripts.quests.newbie.jewel.q10961.EffectiveTraining;
 import org.l2j.scripts.quests.newbie.jewel.q10981.UnbearableWolvesHowling;
 import org.l2j.scripts.quests.newbie.jewel.q10983.TroubledForest;
 import org.l2j.scripts.quests.newbie.jewel.q10985.CleaningUpTheGround;
@@ -746,7 +747,7 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss,
              org.l2j.scripts.quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend,
              org.l2j.scripts.quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle,
-             org.l2j.scripts.quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining,
+                EffectiveTraining,
                 NewHorizons,
              org.l2j.scripts.quests.Q10963_ExploringTheAntNest.Q10963_ExploringTheAntNest,
              org.l2j.scripts.quests.Q10964_SecretGarden.Q10964_SecretGarden,
