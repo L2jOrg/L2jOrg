@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.quests.newbie.armor.q10990;
+package org.l2j.scripts.quests.newbie.armor.q10984;
 
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.IntCollection;
@@ -30,19 +30,20 @@ import org.l2j.scripts.quests.newbie.armor.MoonArmorItemHunter;
  * @author RobikBobik
  * @author JoeAlisson
  */
-public class PoisonExtraction extends MoonArmorItemHunter {
+public class CollectSpiderweb extends MoonArmorItemHunter {
 
-	private static final int GERALD = 30650;
-	private static final int TARANTULA = 91653;
+	private static final int HERBIEL = 30150;
 
+	private static final int BIG_SPIDER_WEB = 91652;
 	private static final IntIntMap MONSTER_DROP_CHANCES = new HashIntIntMap();
 	static {
-		MONSTER_DROP_CHANCES.put(20403, 100);
-		MONSTER_DROP_CHANCES.put(20508, 100);
+		MONSTER_DROP_CHANCES.put(20308, 100);
+		MONSTER_DROP_CHANCES.put(20460, 100);
+		MONSTER_DROP_CHANCES.put(20466, 100);
 	}
-	
-	public PoisonExtraction() {
-		super(10990, GERALD, TARANTULA, ClassId.DWARVEN_FIGHTER);
+
+	public CollectSpiderweb() {
+		super(10984, HERBIEL, BIG_SPIDER_WEB, ClassId.ELVEN_FIGHTER, ClassId.ELVEN_MAGE);
 	}
 
 	@Override
@@ -52,12 +53,12 @@ public class PoisonExtraction extends MoonArmorItemHunter {
 
 	@Override
 	protected NpcStringId questName() {
-		return NpcStringId.LV_15_20_POISON_EXTRACTION;
+		return NpcStringId.LV_15_20_SPIDER_WEB;
 	}
 
 	@Override
 	protected Location huntingGroundLocation() {
-		return new Location(135382, -207694, -3704);
+		return new Location(5135, 68148, -3256);
 	}
 
 	@Override
