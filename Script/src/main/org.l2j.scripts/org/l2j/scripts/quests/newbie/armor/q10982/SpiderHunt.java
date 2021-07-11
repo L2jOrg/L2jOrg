@@ -24,13 +24,13 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.scripts.quests.newbie.armor.MoonArmorHuntingQuest;
+import org.l2j.scripts.quests.newbie.armor.MoonArmorHunting;
 
 /**
  * @author RobikBobik
  * @author JoeAlisson
  */
-public class SpiderHunt extends MoonArmorHuntingQuest {
+public class SpiderHunt extends MoonArmorHunting {
 
 	private static final int JACKSON = 30002;
 
