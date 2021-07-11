@@ -20,6 +20,7 @@ import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
 import org.l2j.scripts.quests.newbie.armor.q10986.SwampMonster;
 import org.l2j.scripts.quests.newbie.armor.q10988.Conspiracy;
 import org.l2j.scripts.quests.newbie.armor.q10990.PoisonExtraction;
+import org.l2j.scripts.quests.newbie.jewel.q10989.DangerousPredators;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
 import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
 import org.l2j.scripts.quests.tutorial.elf.Q203_Tutorial;
@@ -756,7 +757,7 @@ open module org.l2j.scripts {
                 SwampMonster,
              org.l2j.scripts.quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves,
                 Conspiracy,
-             org.l2j.scripts.quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
+                DangerousPredators,
                 PoisonExtraction,
              org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets,
              org.l2j.scripts.quests.Q00630_PirateTreasureHunt.Q00630_PirateTreasureHunt,
