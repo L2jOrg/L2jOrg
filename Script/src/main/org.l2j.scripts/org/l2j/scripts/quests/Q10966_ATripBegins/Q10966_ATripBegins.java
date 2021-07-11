@@ -32,6 +32,7 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.NpcSay;
 import org.l2j.gameserver.util.MathUtil;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -203,7 +204,7 @@ public class Q10966_ATripBegins extends Quest
 	}
 
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(Player player)
+	public Collection<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2))

@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.scripts.quests.newbie.armor.q10982;
+package org.l2j.scripts.quests.newbie.armor.q10988;
 
 import io.github.joealisson.primitive.IntCollection;
 import io.github.joealisson.primitive.IntSet;
@@ -30,36 +29,36 @@ import org.l2j.scripts.quests.newbie.armor.MoonArmorHuntingQuest;
  * @author RobikBobik
  * @author JoeAlisson
  */
-public class SpiderHunt extends MoonArmorHuntingQuest {
+public class Conspiracy extends MoonArmorHuntingQuest {
 
-	private static final int JACKSON = 30002;
+	private static final int USKA = 30560;
 
-	private static final int GIANT_SPIDER = 20103;
-	private static final int GIANT_FANG_SPIDER = 20106;
-	private static final int GIANT_BLADE_SPIDER = 20108;
+	private static final int KASHA_SPIDER = 20474;
+	private static final int KASHA_BLADE_SPIDER = 20478;
+	private static final int MARAKU_WEREVOLF_CHIEFTAIN = 20364;
+	private static final int EVIL_EYE_PATROL = 20428;
 	
-	public SpiderHunt() {
-		super(10982, JACKSON, ClassId.FIGHTER, ClassId.MAGE);
+	public Conspiracy() {
+		super(10988, USKA, ClassId.ORC_FIGHTER, ClassId.ORC_MAGE);
 	}
 
 	@Override
 	protected IntCollection huntMonsters() {
-		return IntSet.of(GIANT_SPIDER, GIANT_FANG_SPIDER, GIANT_BLADE_SPIDER);
+		return IntSet.of(KASHA_SPIDER, KASHA_BLADE_SPIDER, MARAKU_WEREVOLF_CHIEFTAIN, EVIL_EYE_PATROL);
 	}
 
 	@Override
 	protected NpcStringId questName() {
-		return NpcStringId.LV_15_20_SPIDER_HUNT;
+		return NpcStringId.LV_15_20_CONSPIRACY;
 	}
 
 	@Override
 	protected NpcStringId questHuntingProgressName() {
-		return NpcStringId.KILL_GIANT_SPIDERS;
+		return NpcStringId.EXPOSE_A_PLOT_OF_MARAKU_WEREWOLVES;
 	}
 
 	@Override
 	protected Location huntingGroundLocation() {
-		return new Location(-117409, 227185, -2896);
+		return new Location(13136, -131688, -1312);
 	}
-
 }

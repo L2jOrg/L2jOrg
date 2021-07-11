@@ -15,6 +15,7 @@ import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
 import org.l2j.scripts.quests.newbie.armor.q10982.SpiderHunt;
+import org.l2j.scripts.quests.newbie.armor.q10988.Conspiracy;
 import org.l2j.scripts.quests.newbie.armor.q10990.PoisonExtraction;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
 import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
@@ -751,7 +752,7 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround,
              org.l2j.scripts.quests.Q10986_SwampMonster.Q10986_SwampMonster,
              org.l2j.scripts.quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves,
-             org.l2j.scripts.quests.Q10988_Conspiracy.Q10988_Conspiracy,
+                Conspiracy,
              org.l2j.scripts.quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
                 PoisonExtraction,
              org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets,

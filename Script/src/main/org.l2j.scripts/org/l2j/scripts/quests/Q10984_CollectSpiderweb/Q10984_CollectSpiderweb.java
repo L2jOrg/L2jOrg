@@ -41,6 +41,7 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 import org.l2j.gameserver.settings.CharacterSettings;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -260,7 +261,7 @@ public class Q10984_CollectSpiderweb extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(Player player)
+	public Collection<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(1))
