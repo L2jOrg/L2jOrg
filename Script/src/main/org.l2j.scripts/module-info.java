@@ -14,6 +14,7 @@ import org.l2j.scripts.handlers.effecthandlers.*;
 import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
+import org.l2j.scripts.quests.newbie.armor.q10962.NewHorizons;
 import org.l2j.scripts.quests.newbie.armor.q10982.SpiderHunt;
 import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
 import org.l2j.scripts.quests.newbie.armor.q10986.SwampMonster;
@@ -741,7 +742,7 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend,
              org.l2j.scripts.quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle,
              org.l2j.scripts.quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining,
-             org.l2j.scripts.quests.Q10962_NewHorizons.Q10962_NewHorizons,
+                NewHorizons,
              org.l2j.scripts.quests.Q10963_ExploringTheAntNest.Q10963_ExploringTheAntNest,
              org.l2j.scripts.quests.Q10964_SecretGarden.Q10964_SecretGarden,
              org.l2j.scripts.quests.Q10965_DeathMysteries.Q10965_DeathMysteries,

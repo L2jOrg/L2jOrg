@@ -32,11 +32,11 @@ import java.util.Set;
 /**
  * @author JoeAlisson
  */
-public abstract class MoonArmorHuntingQuest extends MoonArmorRewardQuest {
+public abstract class MoonArmorHunting extends MoonArmorRewardQuest {
 
     private static final String QUEST_HUNT_PROGRESS = "hunt_progress";
 
-    protected MoonArmorHuntingQuest(int questId, int startNpc, ClassId... classIds) {
+    protected MoonArmorHunting(int questId, int startNpc, ClassId... classIds) {
         super(questId, startNpc, classIds);
     }
 
@@ -47,7 +47,6 @@ public abstract class MoonArmorHuntingQuest extends MoonArmorRewardQuest {
             qs.set(QUEST_HUNT_PROGRESS, qs.getInt(QUEST_HUNT_PROGRESS) +1);
             playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
             sendNpcLogList(killer, killCountLogList(qs));
-
         }
         return super.onKill(npc, killer, isSummon);
     }
