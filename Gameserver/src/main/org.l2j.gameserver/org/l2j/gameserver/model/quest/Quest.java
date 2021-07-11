@@ -1497,15 +1497,13 @@ public class Quest extends AbstractScript implements IIdentifiable {
         isCustom = custom;
     }
 
-    public Set<NpcLogListHolder> getNpcLogList(Player activeChar) {
+    public Collection<NpcLogListHolder> getNpcLogList(Player activeChar) {
         return Collections.emptySet();
     }
 
-    public void sendNpcLogList(Player activeChar) {
-        if (activeChar.getQuestState(getName()) != null) {
-            final ExQuestNpcLogList packet = new ExQuestNpcLogList(questId);
-            getNpcLogList(activeChar).forEach(packet::add);
-            activeChar.sendPacket(packet);
+    public void sendNpcLogList(Player player) {
+        if (player.getQuestState(getName()) != null) {
+            sendNpcLogList(player, getNpcLogList(player));
         }
     }
 

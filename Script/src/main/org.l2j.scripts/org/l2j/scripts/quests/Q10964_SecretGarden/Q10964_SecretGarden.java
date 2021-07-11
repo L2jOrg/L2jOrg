@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -141,7 +142,7 @@ public class Q10964_SecretGarden extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(Player player)
+	public Collection<NpcLogListHolder> getNpcLogList(Player player)
 	{
 		
 		final QuestState qs = getQuestState(player, false);
