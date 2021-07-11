@@ -21453,9 +21453,6 @@ public final class NpcStringId {
 	@ClientString(id = 1803777, message = "Lord Ishka, the Guardian of Dragon Valley, is near.")
 	public static NpcStringId LORD_ISHKA_THE_GUARDIAN_OF_DRAGON_VALLEY_IS_NEAR;
 
-	@ClientString(id = 1803778, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Trader Reahen.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_TRADER_REAHEN;
-
 	@ClientString(id = 1803779, message = "Reinforced")
 	public static NpcStringId REINFORCED;
 
@@ -24761,6 +24758,10 @@ public final class NpcStringId {
 
     @ClientString(id = 1803735, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Captain Bathis in Gludio.")
     public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_USE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_CAPTAIN_BATHIS_IN_GLUDIO;
+
+    @ClientString(id = 1803778, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Trader Reahen.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_TRADER_REAHEN;
+
 
 
     @ClientString(id = 1803770, message = "Glory to the heroes who have defeated Lord Ishka!")
