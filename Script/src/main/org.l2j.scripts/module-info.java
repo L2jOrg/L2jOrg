@@ -15,6 +15,7 @@ import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
 import org.l2j.scripts.quests.newbie.armor.q10982.SpiderHunt;
+import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
 import org.l2j.scripts.quests.newbie.armor.q10986.SwampMonster;
 import org.l2j.scripts.quests.newbie.armor.q10988.Conspiracy;
 import org.l2j.scripts.quests.newbie.armor.q10990.PoisonExtraction;
@@ -749,7 +750,7 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling,
                 SpiderHunt,
              org.l2j.scripts.quests.Q10983_TroubledForest.Q10983_TroubledForest,
-             org.l2j.scripts.quests.Q10984_CollectSpiderweb.Q10984_CollectSpiderweb,
+                CollectSpiderweb,
              org.l2j.scripts.quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround,
                 SwampMonster,
              org.l2j.scripts.quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves,
