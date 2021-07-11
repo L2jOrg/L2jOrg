@@ -21336,9 +21336,6 @@ public final class NpcStringId {
     @ClientString(id = 1803729, message = "Blue has ruined everything.")
     public static NpcStringId BLUE_HAS_RUINED_EVERYTHING;
 
-	@ClientString(id = 1803730, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Armor Merchant Jackson.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ARMOR_MERCHANT_JACKSON;
-
 	@ClientString(id = 1803736, message = "Do you think a talking cake is a miracle? It's only the beginning!")
 	public static NpcStringId DO_YOU_THINK_A_TALKING_CAKE_IS_A_MIRACLE_IT_S_ONLY_THE_BEGINNING;
 
@@ -24746,6 +24743,9 @@ public final class NpcStringId {
 
     @ClientString(id = 1803455, message = "Character $s1 has become a hero. Class: $s2. Congratulations!")
     public static NpcStringId CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS;
+
+    @ClientString(id = 1803730, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Armor Merchant Jackson.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ARMOR_MERCHANT_JACKSON;
 
     @ClientString(id = 1803731, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Grocer Herbiel.")
     public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_GROCER_HERBIEL;

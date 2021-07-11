@@ -20,6 +20,7 @@ import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
 import org.l2j.scripts.quests.newbie.armor.q10986.SwampMonster;
 import org.l2j.scripts.quests.newbie.armor.q10988.Conspiracy;
 import org.l2j.scripts.quests.newbie.armor.q10990.PoisonExtraction;
+import org.l2j.scripts.quests.newbie.jewel.q10981.UnbearableWolvesHowling;
 import org.l2j.scripts.quests.newbie.jewel.q10983.TroubledForest;
 import org.l2j.scripts.quests.newbie.jewel.q10985.CleaningUpTheGround;
 import org.l2j.scripts.quests.newbie.jewel.q10987.PlunderedGraves;
@@ -752,7 +753,7 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q10965_DeathMysteries.Q10965_DeathMysteries,
              org.l2j.scripts.quests.Q10966_ATripBegins.Q10966_ATripBegins,
              org.l2j.scripts.quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer,
-             org.l2j.scripts.quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling,
+                UnbearableWolvesHowling,
                 SpiderHunt,
                 TroubledForest,
                 CollectSpiderweb,
