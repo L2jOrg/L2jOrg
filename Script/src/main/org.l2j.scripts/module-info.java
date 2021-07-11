@@ -20,6 +20,7 @@ import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
 import org.l2j.scripts.quests.newbie.armor.q10986.SwampMonster;
 import org.l2j.scripts.quests.newbie.armor.q10988.Conspiracy;
 import org.l2j.scripts.quests.newbie.armor.q10990.PoisonExtraction;
+import org.l2j.scripts.quests.newbie.jewel.q10985.CleaningUpTheGround;
 import org.l2j.scripts.quests.newbie.jewel.q10987.PlunderedGraves;
 import org.l2j.scripts.quests.newbie.jewel.q10989.DangerousPredators;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
@@ -754,7 +755,7 @@ open module org.l2j.scripts {
                 SpiderHunt,
              org.l2j.scripts.quests.Q10983_TroubledForest.Q10983_TroubledForest,
                 CollectSpiderweb,
-             org.l2j.scripts.quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround,
+                CleaningUpTheGround,
                 SwampMonster,
                 PlunderedGraves,
                 Conspiracy,

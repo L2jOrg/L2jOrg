@@ -52,7 +52,7 @@ public abstract class NoviceJewelQuest extends Quest {
     private final int newbieGuide;
     private final int trader;
 
-    public NoviceJewelQuest(int questId, int newbieGuide, int trader) {
+    protected NoviceJewelQuest(int questId, int newbieGuide, int trader) {
         super(questId);
         addStartNpc(newbieGuide);
         addTalkId(newbieGuide, trader);
