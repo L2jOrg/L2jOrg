@@ -26,6 +26,7 @@ import org.l2j.scripts.quests.newbie.jewel.q10983.TroubledForest;
 import org.l2j.scripts.quests.newbie.jewel.q10985.CleaningUpTheGround;
 import org.l2j.scripts.quests.newbie.jewel.q10987.PlunderedGraves;
 import org.l2j.scripts.quests.newbie.jewel.q10989.DangerousPredators;
+import org.l2j.scripts.quests.q00620.FourGoblets;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
 import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
 import org.l2j.scripts.quests.tutorial.elf.Q203_Tutorial;
@@ -764,7 +765,7 @@ open module org.l2j.scripts {
                 Conspiracy,
                 DangerousPredators,
                 PoisonExtraction,
-             org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets,
+                FourGoblets,
              org.l2j.scripts.quests.Q00630_PirateTreasureHunt.Q00630_PirateTreasureHunt,
              org.l2j.scripts.quests.Q10871_DeathToThePirateKing.Q10871_DeathToThePirateKing;
 
