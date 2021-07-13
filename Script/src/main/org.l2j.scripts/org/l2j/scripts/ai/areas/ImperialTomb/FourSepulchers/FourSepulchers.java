@@ -40,7 +40,7 @@ import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.EffectZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
-import org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets;
+import org.l2j.scripts.quests.q00620.FourGoblets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -229,7 +229,7 @@ public class FourSepulchers extends AbstractNpcAI
 
 		switch (event) {
 			case "Enter" -> {
-				final QuestState qs = player.getQuestState(Q00620_FourGoblets.class.getSimpleName());
+				final QuestState qs = player.getQuestState(FourGoblets.class.getSimpleName());
 				if (qs == null) {
 					return getNoQuestMsg(player);
 				}
@@ -239,7 +239,7 @@ public class FourSepulchers extends AbstractNpcAI
 				}
 			}
 			case "OpenGate" -> {
-				final QuestState qs = player.getQuestState(Q00620_FourGoblets.class.getSimpleName());
+				final QuestState qs = player.getQuestState(FourGoblets.class.getSimpleName());
 				if (qs == null) {
 					return getNoQuestMsg(player);
 				}
@@ -417,7 +417,7 @@ public class FourSepulchers extends AbstractNpcAI
 					{
 						if (MathUtil.isInsideRadius3D(killer, mem, 1500))
 						{
-							final QuestState qs = killer.getQuestState(Q00620_FourGoblets.class.getSimpleName());
+							final QuestState qs = killer.getQuestState(FourGoblets.class.getSimpleName());
 							if ((qs != null) && qs.isStarted())
 							{
 								giveItems(mem, 7255 + sepulcherId, 1);
@@ -546,7 +546,7 @@ public class FourSepulchers extends AbstractNpcAI
 
 		for (Player mem : player.getParty().getMembers())
 		{
-			final QuestState qs = mem.getQuestState(Q00620_FourGoblets.class.getSimpleName());
+			final QuestState qs = mem.getQuestState(FourGoblets.class.getSimpleName());
 			if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
 			{
 				showHtmlFile(player, npcId + "-NS.html", npc, mem);
