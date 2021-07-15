@@ -14,6 +14,7 @@ import org.l2j.scripts.handlers.effecthandlers.*;
 import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
+import org.l2j.scripts.quests.hunting.q10964.SecretGarden;
 import org.l2j.scripts.quests.newbie.armor.q10962.NewHorizons;
 import org.l2j.scripts.quests.newbie.armor.q10982.SpiderHunt;
 import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
@@ -27,6 +28,7 @@ import org.l2j.scripts.quests.newbie.jewel.q10985.CleaningUpTheGround;
 import org.l2j.scripts.quests.newbie.jewel.q10987.PlunderedGraves;
 import org.l2j.scripts.quests.newbie.jewel.q10989.DangerousPredators;
 import org.l2j.scripts.quests.q00620.FourGoblets;
+import org.l2j.scripts.quests.hunting.q10963.ExploringTheAntNest;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
 import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
 import org.l2j.scripts.quests.tutorial.elf.Q203_Tutorial;
@@ -750,8 +752,8 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle,
                 EffectiveTraining,
                 NewHorizons,
-             org.l2j.scripts.quests.Q10963_ExploringTheAntNest.Q10963_ExploringTheAntNest,
-             org.l2j.scripts.quests.Q10964_SecretGarden.Q10964_SecretGarden,
+                ExploringTheAntNest,
+                SecretGarden,
              org.l2j.scripts.quests.Q10965_DeathMysteries.Q10965_DeathMysteries,
              org.l2j.scripts.quests.Q10966_ATripBegins.Q10966_ATripBegins,
              org.l2j.scripts.quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer,
