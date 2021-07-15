@@ -30,7 +30,7 @@ import java.util.function.Consumer;
  */
 public interface IAffectScopeHandler {
 
-    void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action);
+    void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action);
 
     Enum<AffectScope> getAffectScopeType();
 }

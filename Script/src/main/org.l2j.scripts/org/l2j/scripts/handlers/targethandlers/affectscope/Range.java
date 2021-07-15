@@ -47,7 +47,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 public class Range implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -66,11 +66,11 @@ public class Range implements IAffectScopeHandler
 			{
 				return false;
 			}
-			if ((c == activeChar) && (target != activeChar)) // Range skills appear to not affect you unless you are the main target.
+			if ((c == creature) && (target != creature)) // Range skills appear to not affect you unless you are the main target.
 			{
 				return false;
 			}
-			if ((c != target) && (affectObject != null) && !affectObject.checkAffectedObject(activeChar, c))
+			if ((c != target) && (affectObject != null) && !affectObject.checkAffectedObject(creature, c))
 			{
 				return false;
 			}
@@ -86,12 +86,12 @@ public class Range implements IAffectScopeHandler
 		// Check and add targets.
 		if (targetType == TargetType.GROUND)
 		{
-			if (isPlayable(activeChar))
+			if (isPlayable(creature))
 			{
-				final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
+				final Location worldPosition = creature.getActingPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)
 				{
-					World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, (int) (affectRange + calculateDistance2D(activeChar, worldPosition)), c ->
+					World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, (int) (affectRange + calculateDistance2D(creature, worldPosition)), c ->
 					{
 						if (!isInsideRadius3D(c, worldPosition, affectRange))
 						{

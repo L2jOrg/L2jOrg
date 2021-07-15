@@ -42,7 +42,7 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 public class RangeSortByHp implements IAffectScopeHandler
 {
     @Override
-    public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
+    public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
     {
         final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
         final int affectRange = skill.getAffectRange();
@@ -60,12 +60,12 @@ public class RangeSortByHp implements IAffectScopeHandler
 
 
             // Range skills appear to not affect you unless you are the main target.
-            if ((c == activeChar) && (target != activeChar))
+            if ((c == creature) && (target != creature))
             {
                 return false;
             }
 
-            if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, c))
+            if ((affectObject != null) && !affectObject.checkAffectedObject(creature, c))
             {
                 return false;
             }

@@ -43,8 +43,8 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 public class FanPB implements IAffectScopeHandler {
 
     @Override
-    public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
-        World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, skill.getFanRadius(), action::accept, fanFilterOf(activeChar, skill));
+    public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
+        World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, skill.getFanRadius(), action::accept, fanFilterOf(creature, skill));
     }
 
     protected Predicate<Creature> fanFilterOf(Creature activeChar, Skill skill) {

@@ -33,17 +33,17 @@ import java.util.function.Consumer;
 public class Square extends SquarePB {
 
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
 		final int squareLength = skill.getFanRadius();
 		final int squareWidth = skill.getFanAngle();
 		final int radius = (int) Math.sqrt(((double)squareLength * squareLength) + ((double)squareWidth * squareWidth));
-		var filter = squareFilterOf(activeChar, skill, squareLength, squareWidth);
+		var filter = squareFilterOf(creature, skill, squareLength, squareWidth);
 
-		World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, action::accept, filter);
+		World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, radius, action::accept, filter);
 
 		// Add object of origin since its skipped in the forEachVisibleObjectInRange method.
-		if (filter.test(activeChar)) {
-			action.accept(activeChar);
+		if (filter.test(creature)) {
+			action.accept(creature);
 		}
 
 	}

@@ -44,7 +44,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
 public class Party implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -60,7 +60,7 @@ public class Party implements IAffectScopeHandler
 			final Predicate<Playable> filter = plbl ->
 			{
 				// Range skills appear to not affect you unless you are the main target.
-				if ((plbl == activeChar) && (target != activeChar))
+				if ((plbl == creature) && (target != creature))
 				{
 					return false;
 				}
@@ -85,7 +85,7 @@ public class Party implements IAffectScopeHandler
 					}
 				}
 				
-				if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, p))
+				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, p))
 				{
 					return false;
 				}
@@ -129,7 +129,7 @@ public class Party implements IAffectScopeHandler
 				{
 					return false;
 				}
-				if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, n))
+				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, n))
 				{
 					return false;
 				}
@@ -147,7 +147,7 @@ public class Party implements IAffectScopeHandler
 			// Check and add targets.
 			World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, affectRange, n ->
 			{
-				if (n == activeChar)
+				if (n == creature)
 				{
 					return;
 				}

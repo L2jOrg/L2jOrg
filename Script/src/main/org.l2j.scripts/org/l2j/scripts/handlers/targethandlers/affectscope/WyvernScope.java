@@ -34,7 +34,7 @@ import java.util.function.Consumer;
 public class WyvernScope implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		// TODO Unknown affect scope.
 	}

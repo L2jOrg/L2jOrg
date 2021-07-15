@@ -46,7 +46,7 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 public class PointBlank implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -66,7 +66,7 @@ public class PointBlank implements IAffectScopeHandler
 				{
 					return false;
 				}
-				if (!affectObject.checkAffectedObject(activeChar, c))
+				if (!affectObject.checkAffectedObject(creature, c))
 				{
 					return false;
 				}
@@ -83,12 +83,12 @@ public class PointBlank implements IAffectScopeHandler
 		// Check and add targets.
 		if (skill.getTargetType() == TargetType.GROUND)
 		{
-			if (isPlayable(activeChar))
+			if (isPlayable(creature))
 			{
-				final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
+				final Location worldPosition = creature.getActingPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)
 				{
-					World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, (int) (affectRange + calculateDistance2D(activeChar, worldPosition)), c ->
+					World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, (int) (affectRange + calculateDistance2D(creature, worldPosition)), c ->
 					{
 						if (!isInsideRadius3D(c, worldPosition, affectRange))
 						{
