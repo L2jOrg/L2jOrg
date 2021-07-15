@@ -22,7 +22,6 @@ package org.l2j.scripts.handlers.punishmenthandlers;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
-import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.TeleportTask;
 import org.l2j.gameserver.model.events.EventType;
@@ -31,133 +30,36 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.JailZone;
+
+import java.util.Objects;
+import java.util.function.Consumer;
 
 /**
  * This class handles jail punishment.
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class JailHandler implements IPunishmentHandler
-{
-	public JailHandler()
-	{
-		// Register global listener
-		Listeners.Global().addListener(new ConsumerEventListener(Listeners.Global(), EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
+public class JailHandler extends PunishmentHandler {
+
+	public JailHandler() {
+		Listeners.Global().addListener(new ConsumerEventListener(Listeners.Global(), EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this));
 	}
 	
-	private void onPlayerLogin(OnPlayerLogin event)
-	{
-		final Player activeChar = event.getPlayer();
-		if (activeChar.isJailed() && !activeChar.isInsideZone(ZoneType.JAIL))
-		{
-			applyToPlayer(null, activeChar);
+	private void onPlayerLogin(OnPlayerLogin event) {
+		var player = event.getPlayer();
+		if (player.isJailed() && !player.isInsideZone(ZoneType.JAIL)) {
+			applyToPlayer(null, player);
 		}
-		else if (!activeChar.isJailed() && activeChar.isInsideZone(ZoneType.JAIL) && !activeChar.isGM())
-		{
-			removeFromPlayer(activeChar);
+		else if (!player.isJailed() && player.isInsideZone(ZoneType.JAIL) && !player.isGM()) {
+			removeFromPlayer(player);
 		}
 	}
-	
+
 	@Override
-	public void onStart(PunishmentTask task)
-	{
-		switch (task.getAffect())
-		{
-			case CHARACTER:
-			{
-				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = World.getInstance().findPlayer(objectId);
-				if (player != null)
-				{
-					applyToPlayer(task, player);
-				}
-				break;
-			}
-			case ACCOUNT:
-			{
-				final String account = String.valueOf(task.getKey());
-				final GameClient client = AuthServerCommunication.getInstance().getAuthedClient(account);
-				if (client != null)
-				{
-					final Player player = client.getPlayer();
-					if (player != null)
-					{
-						applyToPlayer(task, player);
-					}
-				}
-				break;
-			}
-			case IP:
-			{
-				final String ip = String.valueOf(task.getKey());
-				for (Player player : World.getInstance().getPlayers())
-				{
-					if (player.getIPAddress().equals(ip))
-					{
-						applyToPlayer(task, player);
-					}
-				}
-				break;
-			}
-		}
-	}
-	
-	@Override
-	public void onEnd(PunishmentTask task)
-	{
-		switch (task.getAffect())
-		{
-			case CHARACTER:
-			{
-				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = World.getInstance().findPlayer(objectId);
-				if (player != null)
-				{
-					removeFromPlayer(player);
-				}
-				break;
-			}
-			case ACCOUNT:
-			{
-				final String account = String.valueOf(task.getKey());
-				final GameClient client = AuthServerCommunication.getInstance().getAuthedClient(account);
-				if (client != null)
-				{
-					final Player player = client.getPlayer();
-					if (player != null)
-					{
-						removeFromPlayer(player);
-					}
-				}
-				break;
-			}
-			case IP:
-			{
-				final String ip = String.valueOf(task.getKey());
-				for (Player player : World.getInstance().getPlayers())
-				{
-					if (player.getIPAddress().equals(ip))
-					{
-						removeFromPlayer(player);
-					}
-				}
-				break;
-			}
-		}
-	}
-	
-	/**
-	 * Applies all punishment effects from the player.
-	 * @param task
-	 * @param player
-	 */
-	private static void applyToPlayer(PunishmentTask task, Player player)
-	{
+	protected void applyToPlayer(PunishmentTask task, Player player) {
 		player.setInstance(null);
 		
 		if (Olympiad.getInstance().isRegistered(player)) {
@@ -166,59 +68,38 @@ public class JailHandler implements IPunishmentHandler
 		
 		ThreadPool.schedule(new TeleportTask(player, JailZone.getLocationIn()), 2000);
 		
-		// Open a Html message to inform the player
-		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		String content = HtmCache.getInstance().getHtm(player, "data/html/jail_in.htm");
-		if (content != null)
-		{
+		var msg = new NpcHtmlMessage();
+		var content = HtmCache.getInstance().getHtm(player, "data/html/jail_in.htm");
+		if (content != null) {
 			content = content.replaceAll("%reason%", task != null ? task.getReason() : "");
 			content = content.replaceAll("%punishedBy%", task != null ? task.getPunishedBy() : "");
 			msg.setHtml(content);
-		}
-		else
-		{
+		} else {
 			msg.setHtml("<html><body>You have been put in jail by an admin.</body></html>");
 		}
 		player.sendPacket(msg);
-		if (task != null)
-		{
+		if (task != null) {
 			final long delay = ((task.getExpirationTime() - System.currentTimeMillis()) / 1000);
-			if (delay > 0)
-			{
+			if (delay > 0) {
 				player.sendMessage("You've been jailed for " + (delay > 60 ? ((delay / 60) + " minutes.") : delay + " seconds."));
-			}
-			else
-			{
+			} else {
 				player.sendMessage("You've been jailed forever.");
 			}
 		}
 	}
-	
-	/**
-	 * Removes any punishment effects from the player.
-	 * @param player
-	 */
-	private static void removeFromPlayer(Player player)
-	{
+
+	@Override
+	protected void removeFromPlayer(Player player) {
 		ThreadPool.schedule(new TeleportTask(player, JailZone.getLocationOut()), 2000);
 		
-		// Open a Html message to inform the player
-		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		final String content = HtmCache.getInstance().getHtm(player, "data/html/jail_out.htm");
-		if (content != null)
-		{
-			msg.setHtml(content);
-		}
-		else
-		{
-			msg.setHtml("<html><body>You are free for now, respect server rules!</body></html>");
-		}
+		var msg = new NpcHtmlMessage();
+		var content = HtmCache.getInstance().getHtm(player, "data/html/jail_out.htm");
+		msg.setHtml(Objects.requireNonNullElse(content, "<html><body>You are free for now, respect server rules!</body></html>"));
 		player.sendPacket(msg);
 	}
 	
 	@Override
-	public PunishmentType getType()
-	{
+	public PunishmentType getType() {
 		return PunishmentType.JAIL;
 	}
 }

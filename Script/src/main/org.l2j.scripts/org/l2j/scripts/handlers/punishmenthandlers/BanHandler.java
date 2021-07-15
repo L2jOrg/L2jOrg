@@ -19,87 +19,29 @@
  */
 package org.l2j.scripts.handlers.punishmenthandlers;
 
-import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.world.World;
 
 /**
  * This class handles ban punishment.
  * @author UnAfraid
  */
-public class BanHandler implements IPunishmentHandler
-{
+public class BanHandler extends PunishmentHandler {
+
 	@Override
-	public void onStart(PunishmentTask task)
-	{
-		switch (task.getAffect())
-		{
-			case CHARACTER:
-			{
-				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final Player player = World.getInstance().findPlayer(objectId);
-				if (player != null)
-				{
-					applyToPlayer(player);
-				}
-				break;
-			}
-			case ACCOUNT:
-			{
-				final String account = String.valueOf(task.getKey());
-				final GameClient client = AuthServerCommunication.getInstance().getAuthedClient(account);
-				if (client != null)
-				{
-					final Player player = client.getPlayer();
-					if (player != null)
-					{
-						applyToPlayer(player);
-					}
-					else
-					{
-						Disconnection.of(client).logout(false);
-					}
-				}
-				break;
-			}
-			case IP:
-			{
-				final String ip = String.valueOf(task.getKey());
-				for (Player player : World.getInstance().getPlayers())
-				{
-					if (player.getIPAddress().equals(ip))
-					{
-						applyToPlayer(player);
-					}
-				}
-				break;
-			}
-		}
-	}
-	
-	@Override
-	public void onEnd(PunishmentTask task)
-	{
-		
-	}
-	
-	/**
-	 * Applies all punishment effects from the player.
-	 * @param player
-	 */
-	private static void applyToPlayer(Player player)
-	{
+	protected void applyToPlayer(PunishmentTask task, Player player) {
 		Disconnection.of(player).logout(false);
 	}
-	
+
 	@Override
-	public PunishmentType getType()
-	{
+	protected void removeFromPlayer(Player player) {
+		// do nothing
+	}
+
+	@Override
+	public PunishmentType getType() {
 		return PunishmentType.BAN;
 	}
 }
