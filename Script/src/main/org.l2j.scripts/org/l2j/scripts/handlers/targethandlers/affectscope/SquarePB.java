@@ -42,12 +42,12 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 public class SquarePB implements IAffectScopeHandler {
 
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
 		final int squareLength = skill.getFanRadius();
 		final int squareWidth = skill.getFanAngle();
 		final int radius = (int) Math.sqrt((double) squareLength * squareLength + (double) squareWidth * squareWidth);
 
-		World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, action::accept, squareFilterOf(activeChar, skill, squareLength, squareWidth));
+		World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, radius, action::accept, squareFilterOf(creature, skill, squareLength, squareWidth));
 	}
 
 	protected Predicate<Creature> squareFilterOf(Creature activeChar, Skill skill, int squareLength, int squareWidth) {

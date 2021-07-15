@@ -34,13 +34,13 @@ import java.util.function.Consumer;
 public class Fan extends FanPB {
 
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
-		var filter = fanFilterOf(activeChar, skill);
-		World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, skill.getFanRadius(), action::accept, filter);
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action) {
+		var filter = fanFilterOf(creature, skill);
+		World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, skill.getFanRadius(), action::accept, filter);
 
 		// Add object of origin since its skipped in the forEachVisibleObjectInRange method.
-		if (filter.test(activeChar)) {
-			action.accept(activeChar);
+		if (filter.test(creature)) {
+			action.accept(creature);
 		}
 	}
 	

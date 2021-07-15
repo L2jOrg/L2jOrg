@@ -190,11 +190,11 @@ public final class WorldRegion {
         }
     }
 
-    <T extends WorldObject> void forEachObjectInSurroundingLimiting(Class<T> clazz, int limit, Predicate<T> filter, Consumer<T> action) {
+    <T extends WorldObject> void forEachObjectInSurroundingLimiting(Class<T> clazz, int limit, Predicate<T> filter, Consumer<? super T> action) {
         T casted;
         int accepted = 0;
-        for (WorldRegion region : surroundingRegions) {
-            for (WorldObject object : region.objects.values()) {
+        for (var region : surroundingRegions) {
+            for (var object : region.objects.values()) {
                 if(clazz.isInstance(object) && filter.test(casted = clazz.cast(object) )){
                     action.accept(casted);
                     if(++accepted > limit) {

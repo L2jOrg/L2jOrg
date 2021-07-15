@@ -40,7 +40,7 @@ import static org.l2j.gameserver.util.GameUtils.isItem;
 public class Single implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		
@@ -48,9 +48,9 @@ public class Single implements IAffectScopeHandler
 		{
 			if (skill.getTargetType() == TargetType.GROUND)
 			{
-				action.accept(activeChar); // Return yourself to mark that effects can use your current skill's world position.
+				action.accept(creature); // Return yourself to mark that effects can use your current skill's world position.
 			}
-			if (((affectObject == null) || affectObject.checkAffectedObject(activeChar, (Creature) target)))
+			if (((affectObject == null) || affectObject.checkAffectedObject(creature, (Creature) target)))
 			{
 				action.accept(target); // Return yourself to mark that effects can use your current skill's world position.
 			}

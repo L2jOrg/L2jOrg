@@ -43,7 +43,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayable;
 public class DeadParty implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(Creature activeChar, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -78,7 +78,7 @@ public class DeadParty implements IAffectScopeHandler
 					}
 				}
 				
-				if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, p))
+				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, p))
 				{
 					return false;
 				}

@@ -485,13 +485,17 @@ public final class World {
         region.forEachObjectInSurrounding(clazz, action, and(isVisibleInRange(reference, range, false), filter));
     }
 
-    public <T extends WorldObject> void forVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Consumer<T> action) {
+    public <T extends WorldObject> void forVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Consumer<? super T> action) {
+        forVisibleObjectsInRange(reference, clazz, range, maxObjects, false, filter, action);
+    }
+
+    public <T extends WorldObject> void forVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, boolean includeReference, Predicate<T> filter, Consumer<? super T> action) {
         var region = getRegion(reference);
         if(isNull(region)) {
             return;
         }
 
-        region.forEachObjectInSurroundingLimiting(clazz, maxObjects, and(isVisibleInRange(reference, range, false), filter), action);
+        region.forEachObjectInSurroundingLimiting(clazz, maxObjects, and(isVisibleInRange(reference, range, includeReference), filter), action);
     }
 
     public <T extends WorldObject> void forVisibleOrderedObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Comparator<T> comparator, Consumer<? super T> action) {
