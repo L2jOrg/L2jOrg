@@ -16,6 +16,7 @@ import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
 import org.l2j.scripts.quests.hunting.q10964.SecretGarden;
 import org.l2j.scripts.quests.hunting.q10966.ATripBegins;
+import org.l2j.scripts.quests.hunting.q10967.CulturedAdventurer;
 import org.l2j.scripts.quests.newbie.armor.q10962.NewHorizons;
 import org.l2j.scripts.quests.newbie.armor.q10982.SpiderHunt;
 import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
@@ -757,7 +758,7 @@ open module org.l2j.scripts {
                 SecretGarden,
              org.l2j.scripts.quests.Q10965_DeathMysteries.Q10965_DeathMysteries,
                 ATripBegins,
-             org.l2j.scripts.quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer,
+                CulturedAdventurer,
                 UnbearableWolvesHowling,
                 SpiderHunt,
                 TroubledForest,
