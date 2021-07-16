@@ -83,7 +83,17 @@ public class FourGoblets extends Quest {
 
 	private static final int MIN_LEVEL = 74;
 	private static final int MAX_LEVEL = 80;
-	
+
+	private static final int[][] ARMOR_PARTS_CHANCES = {{88, 6698}, {185, 6699 }, {238, 6670}, {262, 6671}, {292, 6672}, {356, 6673}, {420, 6674}, {482, 6675}, {554, 6676}, {576, 6677}, {640, 6678}, {704, 6679}, {777, 6680}, {799, 6681}, {863, 6682}, {927, 6683}, {1000, 6684}};
+	private static final int[][] WEAPON_PARTS_CHANCES = { {100, 6688}, {198, 6689}, {298, 6690}, {398, 6691}, {499, 7579}, {601, 6693}, {703, 6695}, {801, 6696}, {902, 6697}, {1000, 6698}};
+	private static final int[][] ARMOR_ENCHANT_CHANCES = { {223, 730}, {893, 948}, {1000, 960} };
+	private static final int[][] WEAPON_ENCHANT_CHANCES = { {202, 729}, {928, 967}, {1000, 959} };
+	private static final int[][] CRAFT_MATERIAL_CHANCES = { {148, 1878}, {175, 1882}, {273, 1879}, {322, 1880}, {357, 1885}, {554, 1875}, {685, 1883}, {803, 5220}, {901, 4039}, {1000, 4044}};
+	private static final int[][] CRAFT_STONES_CHANCES = { {350, 1887}, {587, 4042}, {798, 1886}, {922, 4041}, {966, 1892}, {996, 1891}, {1000, 4047}};
+	private static final int[][] MATERIAL_CHANCES = {{43, 1884}, {66, 1895}, {184, 1876}, {250, 1881}, {287, 5549}, {484, 1874}, {681, 1889}, {799, 1877}, {902, 1894}, {1000, 4043}};
+	private static final int[][] SYNTHETIC_MATERIAL_CHANCES = {{335, 1888}, {556, 4040}, {725, 1890}, {872, 5550}, {962, 1893}, {986, 4046}, {1000, 4048}};
+
+
 	public FourGoblets() {
 		super(620);
 		addStartNpc(NAMELESS_SPIRIT);
@@ -114,106 +124,142 @@ public class FourGoblets extends Quest {
 		}
 
 		switch (event) {
-			case "accept" -> {
-				if ((qs.getPlayer().getLevel() >= 74) && ((qs.getPlayer().getLevel() <= 80))) {
-					qs.startQuest();
-					htmlText = "31453-13.htm";
-					giveItems(player, ENTRANCE_PASS, 1);
-				} else {
-					htmlText = "31453-12.htm";
-				}
-			}
-			case "11" -> {
-				if (getQuestItemsCount(player, SEALED_BOX) >= 1) {
-					htmlText = "31454-13.htm";
-					if(!openSealedBox(player)) {
-						if (Rnd.nextBoolean()) {
-							htmlText = "31454-14.htm";
-						} else {
-							htmlText = "31454-15.htm";
-						}
-					}
-				}
-			}
-			case "19" -> {
-				if(getQuestItemsCount(player, SEALED_BOX) >= 1) {
-					htmlText = "31919-3.htm";
-					if(!openSealedBox(player)) {
-						if (Rnd.nextBoolean()) {
-							htmlText = "31919-4.htm";
-						} else {
-							htmlText = "31919-5.htm";
-						}
-					}
-				}
-			}
-			case "12" -> {
-				if (hasAllGoblets(player)) {
-					takeItems(player, GOBLETS[0], -1);
-					takeItems(player, GOBLETS[1], -1);
-					takeItems(player, GOBLETS[2], -1);
-					takeItems(player, GOBLETS[3], -1);
-					if (getQuestItemsCount(player, ANTIQUE_BROOCH) < 1) {
-						giveItems(player, ANTIQUE_BROOCH, 1);
-					}
-					qs.setCond(2, true);
-					htmlText = "31453-16.htm";
-				} else {
-					htmlText = "31453-14.htm";
-				}
-			}
-			case "13" -> {
-				qs.exitQuest(true, true);
-				htmlText = "31453-18.htm";
-			}
+			case "accept" -> htmlText = onAccept(player, qs);
+			case "11" -> htmlText = tryOpenSealedBox(player, htmlText);
+			case "19" -> htmlText = onGhostOfChamberlianOpenBox(player, htmlText);
+			case "12" -> htmlText = checkHasAllGoblets(player, qs);
+			case "13" -> htmlText = finishQuest(qs);
 			case "14" -> htmlText = qs.getCond() == 2 ? "31453-19.htm" : "31453-13.htm";
-			case "15" -> {
-				if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1) {
-					qs.getPlayer().teleToLocation(178298, -84574, -7216);
-					htmlText = null;
-				} else if (getQuestItemsCount(player, GRAVE_PASS) >= 1) {
-					takeItems(player, GRAVE_PASS, 1);
-					qs.getPlayer().teleToLocation(178298, -84574, -7216);
-					htmlText = null;
+			case "15" -> htmlText = onTeleport15(player, qs);
+			case "16" -> htmlText = onTeleport16(player, qs);
+			case "17" -> htmlText = onEscape(player, htmlText, qs);
+			case "18" -> htmlText = checkGobletsAmount(player, htmlText);
+			case "6881", "6899", "6897", "6895", "6893", "6891", "7580", "6887", "6885", "6883" -> htmlText = changeRelic(event, player, qs);
+		}
+		return htmlText;
+	}
+
+	private String changeRelic(String event, Player player, QuestState qs) {
+		String htmlText;
+		takeItems(player, RELIC, 1000);
+		giveItems(player, qs.getInt(event), 1);
+		htmlText = "31454-17.htm";
+		return htmlText;
+	}
+
+	private String onTeleport16(Player player, QuestState qs) {
+		String htmlText;
+		if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1) {
+			qs.getPlayer().teleToLocation(186942, -75602, -2834);
+			htmlText = null;
+		} else if (getQuestItemsCount(player, GRAVE_PASS) >= 1) {
+			takeItems(player, GRAVE_PASS, 1);
+			qs.getPlayer().teleToLocation(186942, -75602, -2834);
+			htmlText = null;
+		} else {
+			htmlText = "31920-0.htm";
+		}
+		return htmlText;
+	}
+
+	private String onTeleport15(Player player, QuestState qs) {
+		String htmlText;
+		if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1) {
+			qs.getPlayer().teleToLocation(178298, -84574, -7216);
+			htmlText = null;
+		} else if (getQuestItemsCount(player, GRAVE_PASS) >= 1) {
+			takeItems(player, GRAVE_PASS, 1);
+			qs.getPlayer().teleToLocation(178298, -84574, -7216);
+			htmlText = null;
+		} else {
+			htmlText = "31919-0.htm";
+		}
+		return htmlText;
+	}
+
+	private String checkGobletsAmount(Player player, String htmlText) {
+		if ((getQuestItemsCount(player, GOBLETS[0]) + getQuestItemsCount(player, GOBLETS[1]) + getQuestItemsCount(player, GOBLETS[2]) + getQuestItemsCount(player, GOBLETS[3])) < 3) {
+			htmlText = "31452-3.htm";
+		} else if ((getQuestItemsCount(player, GOBLETS[0]) + getQuestItemsCount(player, GOBLETS[1]) + getQuestItemsCount(player, GOBLETS[2]) + getQuestItemsCount(player, GOBLETS[3])) == 3) {
+			htmlText = "31452-4.htm";
+		} else if ((getQuestItemsCount(player, GOBLETS[0]) + getQuestItemsCount(player, GOBLETS[1]) + getQuestItemsCount(player, GOBLETS[2]) + getQuestItemsCount(player, GOBLETS[3])) >= 4) {
+			htmlText = "31452-5.htm";
+		}
+		return htmlText;
+	}
+
+	private String onEscape(Player player, String htmlText, QuestState qs) {
+		if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1) {
+			qs.getPlayer().teleToLocation(169590, -90218, -2914);
+		} else {
+			takeItems(player, GRAVE_PASS, 1);
+			qs.getPlayer().teleToLocation(169590, -90218, -2914);
+			htmlText = "31452-6.htm";
+		}
+		return htmlText;
+	}
+
+	private String finishQuest(QuestState qs) {
+		String htmlText;
+		qs.exitQuest(true, true);
+		htmlText = "31453-18.htm";
+		return htmlText;
+	}
+
+	private String checkHasAllGoblets(Player player, QuestState qs) {
+		String htmlText;
+		if (hasAllGoblets(player)) {
+			takeItems(player, GOBLETS[0], -1);
+			takeItems(player, GOBLETS[1], -1);
+			takeItems(player, GOBLETS[2], -1);
+			takeItems(player, GOBLETS[3], -1);
+			if (getQuestItemsCount(player, ANTIQUE_BROOCH) < 1) {
+				giveItems(player, ANTIQUE_BROOCH, 1);
+			}
+			qs.setCond(2, true);
+			htmlText = "31453-16.htm";
+		} else {
+			htmlText = "31453-14.htm";
+		}
+		return htmlText;
+	}
+
+	private String onGhostOfChamberlianOpenBox(Player player, String htmlText) {
+		if(getQuestItemsCount(player, SEALED_BOX) >= 1) {
+			htmlText = "31919-3.htm";
+			if(!openSealedBox(player)) {
+				if (Rnd.nextBoolean()) {
+					htmlText = "31919-4.htm";
 				} else {
-					htmlText = "31919-0.htm";
+					htmlText = "31919-5.htm";
 				}
 			}
-			case "16" -> {
-				if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1) {
-					qs.getPlayer().teleToLocation(186942, -75602, -2834);
-					htmlText = null;
-				} else if (getQuestItemsCount(player, GRAVE_PASS) >= 1) {
-					takeItems(player, GRAVE_PASS, 1);
-					qs.getPlayer().teleToLocation(186942, -75602, -2834);
-					htmlText = null;
+		}
+		return htmlText;
+	}
+
+	private String tryOpenSealedBox(Player player, String htmlText) {
+		if (getQuestItemsCount(player, SEALED_BOX) >= 1) {
+			htmlText = "31454-13.htm";
+			if(!openSealedBox(player)) {
+				if (Rnd.nextBoolean()) {
+					htmlText = "31454-14.htm";
 				} else {
-					htmlText = "31920-0.htm";
+					htmlText = "31454-15.htm";
 				}
 			}
-			case "17" -> {
-				if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1) {
-					qs.getPlayer().teleToLocation(169590, -90218, -2914);
-				} else {
-					takeItems(player, GRAVE_PASS, 1);
-					qs.getPlayer().teleToLocation(169590, -90218, -2914);
-					htmlText = "31452-6.htm";
-				}
-			}
-			case "18" -> {
-				if ((getQuestItemsCount(player, GOBLETS[0]) + getQuestItemsCount(player, GOBLETS[1]) + getQuestItemsCount(player, GOBLETS[2]) + getQuestItemsCount(player, GOBLETS[3])) < 3) {
-					htmlText = "31452-3.htm";
-				} else if ((getQuestItemsCount(player, GOBLETS[0]) + getQuestItemsCount(player, GOBLETS[1]) + getQuestItemsCount(player, GOBLETS[2]) + getQuestItemsCount(player, GOBLETS[3])) == 3) {
-					htmlText = "31452-4.htm";
-				} else if ((getQuestItemsCount(player, GOBLETS[0]) + getQuestItemsCount(player, GOBLETS[1]) + getQuestItemsCount(player, GOBLETS[2]) + getQuestItemsCount(player, GOBLETS[3])) >= 4) {
-					htmlText = "31452-5.htm";
-				}
-			}
-			case "6881", "6899", "6897", "6895", "6893", "6891", "7580", "6887", "6885", "6883" -> {
-				takeItems(player, RELIC, 1000);
-				giveItems(player, qs.getInt(event), 1);
-				htmlText = "31454-17.htm";
-			}
+		}
+		return htmlText;
+	}
+
+	private String onAccept(Player player, QuestState qs) {
+		String htmlText;
+		if ((qs.getPlayer().getLevel() >= 74) && ((qs.getPlayer().getLevel() <= 80))) {
+			qs.startQuest();
+			htmlText = "31453-13.htm";
+			giveItems(player, ENTRANCE_PASS, 1);
+		} else {
+			htmlText = "31453-12.htm";
 		}
 		return htmlText;
 	}
@@ -239,91 +285,31 @@ public class FourGoblets extends Quest {
 
 	private boolean giveRandomItemPart(Player player) {
 		if (Rnd.get(1000) < 329) {
-			final int i = Rnd.get(1000);
-			if (i < 88) {
-				giveItems(player, 6698, 1);
-			} else if (i < 185) {
-				giveItems(player, 6699, 1);
-			} else if (i < 238) {
-				giveItems(player, 6700, 1);
-			} else if (i < 262) {
-				giveItems(player, 6701, 1);
-			} else if (i < 292) {
-				giveItems(player, 6702, 1);
-			} else if (i < 356) {
-				giveItems(player, 6703, 1);
-			} else if (i < 420) {
-				giveItems(player, 6704, 1);
-			} else if (i < 482) {
-				giveItems(player, 6705, 1);
-			} else if (i < 554) {
-				giveItems(player, 6706, 1);
-			} else if (i < 576) {
-				giveItems(player, 6707, 1);
-			} else if (i < 640) {
-				giveItems(player, 6708, 1);
-			} else if (i < 704) {
-				giveItems(player, 6709, 1);
-			} else if (i < 777) {
-				giveItems(player, 6710, 1);
-			} else if (i < 799) {
-				giveItems(player, 6711, 1);
-			} else if (i < 863) {
-				giveItems(player, 6712, 1);
-			} else if (i < 927) {
-				giveItems(player, 6713, 1);
-			} else {
-				giveItems(player, 6714, 1);
-			}
+			giveRandomChancedItem(player, ARMOR_PARTS_CHANCES);
 			return true;
 		} else if (Rnd.get(1000) < 54) {
-			final int i = Rnd.get(1000);
-			if (i < 100) {
-				giveItems(player, 6688, 1);
-			} else if (i < 198) {
-				giveItems(player, 6689, 1);
-			} else if (i < 298) {
-				giveItems(player, 6690, 1);
-			} else if (i < 398) {
-				giveItems(player, 6691, 1);
-			} else if (i < 499) {
-				giveItems(player, 7579, 1);
-			} else if (i < 601) {
-				giveItems(player, 6693, 1);
-			} else if (i < 703) {
-				giveItems(player, 6694, 1);
-			} else if (i < 801) {
-				giveItems(player, 6695, 1);
-			} else if (i < 902) {
-				giveItems(player, 6696, 1);
-			} else {
-				giveItems(player, 6697, 1);
-			}
+			giveRandomChancedItem(player, WEAPON_PARTS_CHANCES);
 			return true;
 		}
 		return false;
 	}
 
+	private void giveRandomChancedItem(Player player, int[][] itemsChances) {
+		var chance = Rnd.get(1000);
+		for (int[] armorPartsChance : itemsChances) {
+			if(chance < armorPartsChance[0]) {
+				giveItems(player, armorPartsChance[1], 1);
+				break;
+			}
+		}
+	}
+
 	private boolean giveRandomEnchantmentScroll(Player player) {
 		if (Rnd.get(1000) < 31) {
-			final int i = Rnd.get(1000);
-			if (i < 223) {
-				giveItems(player, 730, 1);
-			} else if (i < 893) {
-				giveItems(player, 948, 1);
-			} else {
-				giveItems(player, 960, 1);
-			}
+			giveRandomChancedItem(player, ARMOR_ENCHANT_CHANCES);
 			return true;
 		} else if (Rnd.get(1000) < 50) {
-			final int i = Rnd.get(1000);
-			if (i < 202) {
-				giveItems(player, 729, 1);
-			} else if (i < 928) {
-				giveItems(player, 947, 1);
-			} else {
-				giveItems(player, 959, 1);
-			}
+			giveRandomChancedItem(player, WEAPON_ENCHANT_CHANCES);
 			return true;
 		}
 		return false;
@@ -331,46 +317,10 @@ public class FourGoblets extends Quest {
 
 	private boolean giveRandomCraftMaterial(Player player) {
 		if (Rnd.get(1000) < 847) {
-			final int i = Rnd.get(1000);
-			if (i < 148) {
-				giveItems(player, 1878, 8);
-			} else if (i < 175) {
-				giveItems(player, 1882, 24);
-			} else if (i < 273) {
-				giveItems(player, 1879, 4);
-			} else if (i < 322) {
-				giveItems(player, 1880, 6);
-			} else if (i < 357) {
-				giveItems(player, 1885, 6);
-			} else if (i < 554) {
-				giveItems(player, 1875, 1);
-			} else if (i < 685) {
-				giveItems(player, 1883, 1);
-			} else if (i < 803) {
-				giveItems(player, 5220, 1);
-			} else if (i < 901) {
-				giveItems(player, 4039, 1);
-			} else {
-				giveItems(player, 4044, 1);
-			}
+			giveRandomChancedItem(player, CRAFT_MATERIAL_CHANCES);
 			return true;
 		} else if (Rnd.get(1000) < 251) {
-			final int i = Rnd.get(1000);
-			if (i < 350) {
-				giveItems(player, 1887, 1);
-			} else if (i < 587) {
-				giveItems(player, 4042, 1);
-			} else if (i < 798) {
-				giveItems(player, 1886, 1);
-			} else if (i < 922) {
-				giveItems(player, 4041, 1);
-			} else if (i < 966) {
-				giveItems(player, 1892, 1);
-			} else if (i < 996) {
-				giveItems(player, 1891, 1);
-			} else {
-				giveItems(player, 4047, 1);
-			}
+			giveRandomChancedItem(player, CRAFT_STONES_CHANCES);
 			return true;
 		}
 		return false;
@@ -378,46 +328,10 @@ public class FourGoblets extends Quest {
 
 	private boolean giveRandomMaterial(Player player) {
 		if (Rnd.get(1000) < 848) {
-			final int i = Rnd.get(1000);
-			if (i < 43) {
-				giveItems(player, 1884, 42);
-			} else if (i < 66) {
-				giveItems(player, 1895, 36);
-			} else if (i < 184) {
-				giveItems(player, 1876, 4);
-			} else if (i < 250) {
-				giveItems(player, 1881, 6);
-			} else if (i < 287) {
-				giveItems(player, 5549, 8);
-			} else if (i < 484) {
-				giveItems(player, 1874, 1);
-			} else if (i < 681) {
-				giveItems(player, 1889, 1);
-			} else if (i < 799) {
-				giveItems(player, 1877, 1);
-			} else if (i < 902) {
-				giveItems(player, 1894, 1);
-			} else {
-				giveItems(player, 4043, 1);
-			}
+			giveRandomChancedItem(player, MATERIAL_CHANCES);
 			return true;
 		} else if (Rnd.get(1000) < 323) {
-			final int i = Rnd.get(1000);
-			if (i < 335) {
-				giveItems(player, 1888, 1);
-			} else if (i < 556) {
-				giveItems(player, 4040, 1);
-			} else if (i < 725) {
-				giveItems(player, 1890, 1);
-			} else if (i < 872) {
-				giveItems(player, 5550, 1);
-			} else if (i < 962) {
-				giveItems(player, 1893, 1);
-			} else if (i < 986) {
-				giveItems(player, 4046, 1);
-			} else {
-				giveItems(player, 4048, 1);
-			}
+			giveRandomChancedItem(player, SYNTHETIC_MATERIAL_CHANCES);
 			return true;
 		}
 		return false;
