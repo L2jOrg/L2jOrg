@@ -10590,9 +10590,6 @@ public final class NpcStringId {
 	@ClientString(id = 596710, message = "Talk to Captain Bathis.")
 	public static NpcStringId TALK_TO_CAPTAIN_BATHIS_4;
 
-	@ClientString(id = 596711, message = "Monsters of the Abandoned Camp are killed.\nUse the teleport to get to Bathis in Gludio.")
-	public static NpcStringId MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO;
-
 	@ClientString(id = 596801, message = "|Lv. 37 and higher| About the Magic Lantern")
 	public static NpcStringId LV_37_AND_HIGHER_ABOUT_THE_MAGIC_LANTERN;
 
@@ -24761,8 +24758,6 @@ public final class NpcStringId {
 
     @ClientString(id = 1803778, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Trader Reahen.")
     public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_TRADER_REAHEN;
-
-
 
     @ClientString(id = 1803770, message = "Glory to the heroes who have defeated Lord Ishka!")
     public static NpcStringId GLORY_TO_THE_HEROES_WHO_HAVE_DEFEATED_LORD_ISHKA;
