@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.scripts.quests.hunting.HuntingQuest;
+import org.l2j.scripts.quests.hunting.MonsterHunting;
 
 import static java.util.Objects.isNull;
 
@@ -32,7 +32,7 @@ import static java.util.Objects.isNull;
  * @author RobikBobik
  * @author JoeAlisson
  */
-public class SecretGarden extends HuntingQuest {
+public class SecretGarden extends MonsterHunting {
 
 	private static final int CAPTAIN_BATHIS = 30332;
 	private static final int RAYMOND = 30289;
@@ -85,27 +85,6 @@ public class SecretGarden extends HuntingQuest {
 	}
 
 	@Override
-	protected boolean hasHuntCondition(Player killer, QuestState qs) {
-		return qs.isCond(2);
-	}
-
-	@Override
-	protected int huntAmount() {
-		return 500;
-	}
-
-	@Override
-	protected void onCompleteHunting(Player killer, QuestState qs) {
-		qs.setCond(3, true);
-		killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_GORGON_FLOWER_GARDEN_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_HIGH_PRIEST_RAYMOND_IN_GLUDIO, 2, 5000));
-	}
-
-	@Override
-	protected NpcStringId questHuntingProgressName() {
-		return NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_GORGON_FLOWER_GARDEN;
-	}
-
-	@Override
 	public String onTalk(Npc npc, Player player) {
 		var qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -138,4 +117,26 @@ public class SecretGarden extends HuntingQuest {
 		}
 		return htmltext;
 	}
+
+	@Override
+	protected boolean hasHuntCondition(Player killer, Npc npc, QuestState qs) {
+		return qs.isCond(2);
+	}
+
+	@Override
+	protected int huntingAmount(Player killer, QuestState qs) {
+		return 500;
+	}
+
+	@Override
+	protected void onCompleteHunting(Player killer, QuestState qs) {
+		qs.setCond(3, true);
+		killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_GORGON_FLOWER_GARDEN_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_HIGH_PRIEST_RAYMOND_IN_GLUDIO, 2, 5000));
+	}
+
+	@Override
+	protected NpcStringId questHuntingProgressName() {
+		return NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_GORGON_FLOWER_GARDEN;
+	}
+
 }

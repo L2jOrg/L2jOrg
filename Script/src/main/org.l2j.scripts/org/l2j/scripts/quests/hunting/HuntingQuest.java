@@ -18,23 +18,21 @@
  */
 package org.l2j.scripts.quests.hunting;
 
-import org.l2j.gameserver.enums.QuestSound;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.NpcLogListHolder;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.network.NpcStringId;
+import org.l2j.gameserver.settings.PartySettings;
 
 import java.util.Collection;
-import java.util.Set;
+
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
  * @author JoeAlisson
  */
 public abstract class HuntingQuest extends Quest {
-
-    private static final String HUNT_PROGRESS = "hunt_progress";
 
     public HuntingQuest(int questId, int... huntIds) {
         super(questId);
@@ -43,19 +41,30 @@ public abstract class HuntingQuest extends Quest {
 
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
-        var qs = getQuestState(killer, false);
-        if(qs != null && hasHuntCondition(killer, qs)) {
-            var progress = qs.getInt(HUNT_PROGRESS) + 1;
-            if(progress < huntAmount()) {
-                qs.set(HUNT_PROGRESS, progress);
-                playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-                sendNpcLogList(killer, huntingLogList(qs));
-            } else {
-                onCompleteHunting(killer, qs);
-                qs.unset(HUNT_PROGRESS);
+        if(processQuestKill(killer, npc)) {
+            notifyKillerParty(killer, npc);
+        }
+        return null;
+    }
+
+    private void notifyKillerParty(Player killer, Npc npc) {
+        var party = killer.getParty();
+        if(party != null) {
+            for (var member : party.getMembers()) {
+                if(member != killer && isInsideRadius3D(member, npc, PartySettings.partyRange())) {
+                    processQuestKill(killer, npc);
+                }
             }
         }
-        return super.onKill(npc, killer, isSummon);
+    }
+
+    private boolean processQuestKill(Player killer, Npc npc) {
+        var qs = getQuestState(killer, false);
+        if(qs != null && hasHuntCondition(killer, npc, qs)) {
+            onHuntingProgress(killer, npc, qs);
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -67,15 +76,9 @@ public abstract class HuntingQuest extends Quest {
         return super.getNpcLogList(player);
     }
 
-    private Collection<NpcLogListHolder> huntingLogList(QuestState qs) {
-        return Set.of(new NpcLogListHolder(questHuntingProgressName().getId(), true, qs.getInt(HUNT_PROGRESS)));
-    }
+    public abstract void onHuntingProgress(Player killer, Npc npc, QuestState qs);
 
-    protected abstract NpcStringId questHuntingProgressName();
+    protected abstract Collection<NpcLogListHolder> huntingLogList(QuestState qs);
 
-    protected abstract void onCompleteHunting(Player killer, QuestState qs);
-
-    protected abstract int huntAmount();
-
-    protected abstract boolean hasHuntCondition(Player killer, QuestState qs);
+    protected abstract boolean hasHuntCondition(Player killer, Npc npc, QuestState qs);
 }

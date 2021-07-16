@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.scripts.quests.hunting.HuntingQuest;
+import org.l2j.scripts.quests.hunting.MonsterHunting;
 
 import static java.util.Objects.isNull;
 
@@ -32,7 +32,7 @@ import static java.util.Objects.isNull;
  * @author RobikBobik
  * @author JoeAlisson
  */
-public class ExploringTheAntNest extends HuntingQuest {
+public class ExploringTheAntNest extends MonsterHunting {
 
 	private static final int RAYMOND = 30289;
 
@@ -122,12 +122,12 @@ public class ExploringTheAntNest extends HuntingQuest {
 	}
 
 	@Override
-	protected int huntAmount() {
+	protected int huntingAmount(Player killer, QuestState qs) {
 		return 500;
 	}
 
 	@Override
-	protected boolean hasHuntCondition(Player killer, QuestState qs) {
+	protected boolean hasHuntCondition(Player killer, Npc npc, QuestState qs) {
 		return qs.isCond(1);
 	}
 
