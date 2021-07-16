@@ -15,6 +15,7 @@ import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
 import org.l2j.scripts.quests.hunting.q10964.SecretGarden;
+import org.l2j.scripts.quests.hunting.q10965.DeathMysteries;
 import org.l2j.scripts.quests.hunting.q10966.ATripBegins;
 import org.l2j.scripts.quests.hunting.q10967.CulturedAdventurer;
 import org.l2j.scripts.quests.newbie.armor.q10962.NewHorizons;
@@ -756,7 +757,7 @@ open module org.l2j.scripts {
                 NewHorizons,
                 ExploringTheAntNest,
                 SecretGarden,
-             org.l2j.scripts.quests.Q10965_DeathMysteries.Q10965_DeathMysteries,
+                DeathMysteries,
                 ATripBegins,
                 CulturedAdventurer,
                 UnbearableWolvesHowling,
