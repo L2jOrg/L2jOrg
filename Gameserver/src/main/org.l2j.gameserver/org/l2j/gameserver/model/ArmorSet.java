@@ -20,7 +20,6 @@ package org.l2j.gameserver.model;
 
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
-import io.github.joealisson.primitive.LinkedHashIntSet;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -35,7 +34,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.enums.InventorySlot.*;
 
 /**
- * @author UnAfraid
+ * @author UnAfraidX
  * @author JoeAlisson
  */
 public final class ArmorSet {
@@ -64,7 +63,6 @@ public final class ArmorSet {
     /**
      * Adds an item to the set
      *
-     * @param item
      * @return {@code true} if item was successfully added, {@code false} in case it already exists
      */
     public boolean addRequiredItem(int item) {
@@ -81,7 +79,6 @@ public final class ArmorSet {
     /**
      * Adds an shield to the set
      *
-     * @param item
      * @return {@code true} if shield was successfully added, {@code false} in case it already exists
      */
     public boolean addOptionalItem(int item) {
@@ -97,8 +94,6 @@ public final class ArmorSet {
 
     /**
      * Adds an skill to the set
-     *
-     * @param holder
      */
     public void addSkill(ArmorsetSkillHolder holder) {
         skills.add(holder);
@@ -106,8 +101,6 @@ public final class ArmorSet {
 
     /**
      * The list of skills that are activated when set reaches it's minimal equipped items condition
-     *
-     * @return
      */
     public List<ArmorsetSkillHolder> getSkills() {
         return skills;
@@ -115,16 +108,12 @@ public final class ArmorSet {
 
     /**
      * Adds stats bonus to the set activated when set reaches it's minimal equipped items condition
-     *
-     * @param stat
-     * @param value
      */
     public void addStatsBonus(BaseStats stat, double value) {
         _stats.putIfAbsent(stat, value);
     }
 
     /**
-     * @param stat
      * @return the stats bonus value or 0 if doesn't exists
      */
     public double getStatsBonus(BaseStats stat) {
@@ -148,7 +137,6 @@ public final class ArmorSet {
     }
 
     /**
-     * @param player
      * @return true if all parts of set are enchanted to +6 or more
      */
     public int getLowestSetEnchant(Player player) {
@@ -175,8 +163,6 @@ public final class ArmorSet {
     /**
      * Condition for 3 Lv. Set Effect Applied Skill
      *
-     * @param player
-     * @param bookSlot
      * @return total paperdoll(busy) count for 1 of 3 artifact book slots
      */
     public int getArtifactSlotMask(Player player, int bookSlot) {
@@ -204,8 +190,6 @@ public final class ArmorSet {
     }
 
     /**
-     * @param player
-     * @param idProvider
      * @return the amount of set visual items that player has equipped
      */
     public int getPiecesCount(Player player, ToIntFunction<Item> idProvider) {
