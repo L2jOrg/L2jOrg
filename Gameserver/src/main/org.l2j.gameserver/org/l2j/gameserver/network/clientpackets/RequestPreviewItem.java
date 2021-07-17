@@ -92,7 +92,7 @@ public final class RequestPreviewItem extends ClientPacket {
         }
 
         long totalPrice = 0;
-        final EnumMap<InventorySlot, Integer> items = new EnumMap<>(InventorySlot.class);
+        final EnumMap<InventorySlot, Integer> slotItems = new EnumMap<>(InventorySlot.class);
 
         for (int i = 0; i < count; i++) {
             final int itemId = this.items[i];
@@ -108,12 +108,12 @@ public final class RequestPreviewItem extends ClientPacket {
                 continue;
             }
 
-            if (items.containsKey(slot)) {
+            if (slotItems.containsKey(slot)) {
                 player.sendPacket(SystemMessageId.YOU_CAN_NOT_TRY_THOSE_ITEMS_ON_AT_THE_SAME_TIME);
                 return;
             }
 
-            items.put(slot, itemId);
+            slotItems.put(slot, itemId);
             totalPrice += GeneralSettings.wearPrice();
             if (totalPrice > CharacterSettings.maxAdena()) {
                 GameUtils.handleIllegalPlayerAction(player, "Warning!! " + player + " tried to purchase over " + CharacterSettings.maxAdena() + " adena worth of goods.");
@@ -126,8 +126,8 @@ public final class RequestPreviewItem extends ClientPacket {
             return;
         }
 
-        if (!items.isEmpty()) {
-            player.sendPacket(new ShopPreviewInfo(items));
+        if (!slotItems.isEmpty()) {
+            player.sendPacket(new ShopPreviewInfo(slotItems));
             ThreadPool.schedule(new RemoveWearItemsTask(player), GeneralSettings.wearDelay());
         }
     }
