@@ -20,7 +20,6 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.fishing.FishingBait;
 import org.l2j.gameserver.engine.fishing.FishingEngine;
 import org.l2j.gameserver.engine.geo.GeoEngine;
@@ -38,6 +37,7 @@ import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndType;
 import org.l2j.gameserver.network.serverpackets.fishing.ExFishingStart;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.FishingZone;
@@ -80,7 +80,7 @@ public class Fishing {
     }
 
     private void castLine() {
-        if (!Config.ALLOW_FISHING) {
+        if (!GeneralSettings.allowFishing()) {
             player.sendMessage("Fishing is disabled.");
             stopFishing(FishingEndType.ERROR);
             return;

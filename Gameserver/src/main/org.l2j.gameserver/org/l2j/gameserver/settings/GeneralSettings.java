@@ -75,6 +75,8 @@ public class GeneralSettings {
     private static int instanceFinishTime;
     private static boolean restoreInstance;
     private static int instanceEjectDeadTime;
+    private static boolean allowWater;
+    private static boolean allowFishing;
 
     private GeneralSettings() {
         // helper class
@@ -141,6 +143,8 @@ public class GeneralSettings {
         restoreInstance = settingsFile.getBoolean("RestoreInstance", false);
         instanceEjectDeadTime = settingsFile.getInt("EjectDeadPlayerTime", 1);
 
+        allowWater = settingsFile.getBoolean("AllowWater", true);
+        allowFishing = settingsFile.getBoolean("AllowFishing", true);
      }
 
     public static int banChatAdenaAdsReportCount() {
@@ -309,5 +313,13 @@ public class GeneralSettings {
 
     public static int instanceEjectDeadTime() {
         return instanceEjectDeadTime;
+    }
+
+    public static boolean allowWater() {
+        return allowWater;
+    }
+
+    public static boolean allowFishing() {
+        return allowFishing;
     }
 }
