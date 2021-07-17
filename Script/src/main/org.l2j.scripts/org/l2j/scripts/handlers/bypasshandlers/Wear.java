@@ -19,77 +19,52 @@
  */
 package org.l2j.scripts.handlers.bypasshandlers;
 
-import org.l2j.gameserver.Config;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.buylist.ProductList;
-import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ShopPreviewList;
+import org.l2j.gameserver.settings.GeneralSettings;
 
 import java.util.StringTokenizer;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
-public class Wear implements IBypassHandler
-{
-	private static final String[] COMMANDS =
-	{
-		"Wear"
-	};
+public class Wear implements IBypassHandler {
+
+	private static final String[] COMMANDS = { "Wear" };
 	
 	@Override
-	public boolean useBypass(String command, Player player, Creature target)
-	{
-		if (!isNpc(target))
-		{
+	public boolean useBypass(String command, Player player, Creature target) {
+		if (!GeneralSettings.allowWear() || !isNpc(target)) {
 			return false;
 		}
-		
-		if (!Config.ALLOW_WEAR)
-		{
+
+		var tokens = new StringTokenizer(command, " ");
+		tokens.nextToken();
+		if (tokens.countTokens() < 1) {
 			return false;
 		}
-		
-		try
-		{
-			final StringTokenizer st = new StringTokenizer(command, " ");
-			st.nextToken();
 			
-			if (st.countTokens() < 1)
-			{
-				return false;
-			}
-			
-			showWearWindow(player, Integer.parseInt(st.nextToken()));
-			return true;
-		}
-		catch (Exception e)
-		{
-			LOGGER.warn("Exception in " + getClass().getSimpleName(), e);
-		}
-		return false;
+		return showWearWindow(player, Util.parseNextInt(tokens, 0));
 	}
 	
-	private static void showWearWindow(Player player, int val)
-	{
+	private boolean showWearWindow(Player player, int val) {
 		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
-		if (buyList == null)
-		{
-			LOGGER.warn("BuyList not found! BuyListId:" + val);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+		if (buyList == null) {
+			LOGGER.warn("BuyList not found! BuyListId: {}", val);
+			return false;
 		}
 		
 		player.setInventoryBlockingStatus(true);
-		
 		player.sendPacket(new ShopPreviewList(buyList, player.getAdena()));
+		return true;
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
 }
