@@ -140,9 +140,6 @@ public final class Config {
     // General Settings
     // --------------------------------------------------
 
-    public static boolean ALLOW_WEAR;
-    public static int WEAR_DELAY;
-    public static int WEAR_PRICE;
     public static int INSTANCE_FINISH_TIME;
     public static boolean RESTORE_PLAYER_INSTANCE;
     public static int EJECT_DEAD_PLAYER_TIME;
@@ -638,9 +635,6 @@ public final class Config {
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 
-        ALLOW_WEAR = General.getBoolean("AllowWear", true);
-        WEAR_DELAY = General.getInt("WearDelay", 5);
-        WEAR_PRICE = General.getInt("WearPrice", 10);
         INSTANCE_FINISH_TIME = General.getInt("DefaultFinishTime", 5);
         RESTORE_PLAYER_INSTANCE = General.getBoolean("RestorePlayerInstance", false);
         EJECT_DEAD_PLAYER_TIME = General.getInt("EjectDeadPlayerTime", 1);

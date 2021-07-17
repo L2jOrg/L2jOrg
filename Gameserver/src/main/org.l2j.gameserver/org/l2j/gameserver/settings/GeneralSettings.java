@@ -69,6 +69,9 @@ public class GeneralSettings {
     private static long cacheWarehouseTime;
     private static boolean allowRefund;
     private static boolean allowAttachments;
+    private static boolean allowWear;
+    private static long wearDelay;
+    private static int wearPrice;
 
     private GeneralSettings() {
         // helper class
@@ -126,6 +129,10 @@ public class GeneralSettings {
 
         allowRefund = settingsFile.getBoolean("AllowRefund", true);
         allowAttachments = settingsFile.getBoolean("AllowAttachments", true);
+
+        allowWear = settingsFile.getBoolean("AllowWear", true);
+        wearDelay = settingsFile.getInt("WearDelay", 5) * 1000L;
+        wearPrice = settingsFile.getInt("WearPrice", 10);
 
      }
 
@@ -271,5 +278,17 @@ public class GeneralSettings {
 
     public static boolean allowAttachments() {
         return allowAttachments;
+    }
+
+    public static boolean allowWear() {
+        return allowWear;
+    }
+
+    public static long wearDelay() {
+        return wearDelay;
+    }
+
+    public static int wearPrice() {
+        return wearPrice;
     }
 }
