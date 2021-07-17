@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
 import io.github.joealisson.primitive.LinkedHashIntSet;
 import org.l2j.gameserver.engine.item.Item;
@@ -44,8 +45,8 @@ public final class ArmorSet {
     private static final EnumSet<InventorySlot> ARTIFACT_3_SLOTS = EnumSet.of(ARTIFACT9, ARTIFACT10, ARTIFACT11, ARTIFACT12, ARTIFACT15, ARTIFACT18, ARTIFACT21);
 
     private final int minimumPieces;
-    private final IntSet requiredItems = new LinkedHashIntSet();
-    private final IntSet optionalItems = new LinkedHashIntSet();
+    private final IntSet requiredItems = new HashIntSet();
+    private final IntSet optionalItems = new HashIntSet();
     private final List<ArmorsetSkillHolder> skills = new ArrayList<>();
     private final Map<BaseStats, Double> _stats = new LinkedHashMap<>();
 
@@ -130,6 +131,22 @@ public final class ArmorSet {
         return _stats.getOrDefault(stat, 0d);
     }
 
+    public int getFullSetLowestEnchant(Player player) {
+        var checked = 0;
+        int lowestEnchant = 0;
+        var inventory = player.getInventory();
+        for (var slot : armorset()) {
+            var item =  inventory.getPaperdollItem(slot);
+            if(item != null && requiredItems.contains(item.getId())) {
+                if(lowestEnchant == 0 || lowestEnchant > item.getEnchantLevel()) {
+                    lowestEnchant = item.getEnchantLevel();
+                }
+                checked++;
+            }
+        }
+        return checked < requiredItems.size() ? 0 : lowestEnchant;
+    }
+
     /**
      * @param player
      * @return true if all parts of set are enchanted to +6 or more
@@ -140,7 +157,7 @@ public final class ArmorSet {
         }
 
         final PlayerInventory inv = player.getInventory();
-        int enchantLevel = Byte.MAX_VALUE;
+        int enchantLevel = Short.MAX_VALUE;
         for (var armorSlot : InventorySlot.armorset()) {
             final Item itemPart = inv.getPaperdollItem(armorSlot);
             if ((itemPart != null) && requiredItems.contains(itemPart.getId())) {
@@ -149,7 +166,7 @@ public final class ArmorSet {
                 }
             }
         }
-        if (enchantLevel == Byte.MAX_VALUE) {
+        if (enchantLevel == Short.MAX_VALUE) {
             enchantLevel = 0;
         }
         return enchantLevel;
