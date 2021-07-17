@@ -21,7 +21,6 @@ package org.l2j.gameserver.model.instancezone;
 import io.github.joealisson.primitive.*;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.InstanceDAO;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.InstanceReenterType;
@@ -45,6 +44,7 @@ import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -173,13 +173,9 @@ public final class Instance implements IIdentifiable, INamable {
 
     /**
      * Increment instance world status
-     *
-     * @return new world status
      */
-    public int incStatus() {
-        final int status = getStatus() + 1;
-        setStatus(status);
-        return status;
+    public void incStatus() {
+        setStatus(getStatus() + 1);
     }
 
     /**
@@ -538,11 +534,11 @@ public final class Instance implements IIdentifiable, INamable {
 
     /**
      * Set instance world to finish state.<br>
-     * Calls method {@link Instance#finishInstance(int)} with {@link Config#INSTANCE_FINISH_TIME} as argument.<br>
+     * Calls method {@link Instance#finishInstance(int)} with {@link GeneralSettings#instanceFinishTime()} as argument.<br>
      * See {@link Instance#finishInstance(int)} for more details.
      */
     public void finishInstance() {
-        finishInstance(Config.INSTANCE_FINISH_TIME);
+        finishInstance(GeneralSettings.instanceFinishTime());
     }
 
     /**
@@ -574,7 +570,7 @@ public final class Instance implements IIdentifiable, INamable {
                 if (player.isDead()) {
                     ejectPlayer(player.getActingPlayer());
                 }
-            }, template.getEjectTime() * 60 * 1000)); // minutes to milliseconds
+            }, template.getEjectTime() * 60 * 1000L)); // minutes to milliseconds
         }
     }
 
@@ -642,7 +638,7 @@ public final class Instance implements IIdentifiable, INamable {
      */
     public void onPlayerLogout(Player player) {
         removePlayer(player);
-        if (Config.RESTORE_PLAYER_INSTANCE) {
+        if (GeneralSettings.restoreInstance()) {
             player.setInstanceRestore(id);
         } else {
             final Location loc = getExitLocation(player);

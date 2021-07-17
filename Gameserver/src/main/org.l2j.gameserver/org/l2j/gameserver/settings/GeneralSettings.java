@@ -72,6 +72,9 @@ public class GeneralSettings {
     private static boolean allowWear;
     private static long wearDelay;
     private static int wearPrice;
+    private static int instanceFinishTime;
+    private static boolean restoreInstance;
+    private static int instanceEjectDeadTime;
 
     private GeneralSettings() {
         // helper class
@@ -133,6 +136,10 @@ public class GeneralSettings {
         allowWear = settingsFile.getBoolean("AllowWear", true);
         wearDelay = settingsFile.getInt("WearDelay", 5) * 1000L;
         wearPrice = settingsFile.getInt("WearPrice", 10);
+
+        instanceFinishTime = settingsFile.getInt("InstanceFinishTime", 5);
+        restoreInstance = settingsFile.getBoolean("RestoreInstance", false);
+        instanceEjectDeadTime = settingsFile.getInt("EjectDeadPlayerTime", 1);
 
      }
 
@@ -290,5 +297,17 @@ public class GeneralSettings {
 
     public static int wearPrice() {
         return wearPrice;
+    }
+
+    public static int instanceFinishTime() {
+        return instanceFinishTime;
+    }
+
+    public static boolean restoreInstance() {
+        return restoreInstance;
+    }
+
+    public static int instanceEjectDeadTime() {
+        return instanceEjectDeadTime;
     }
 }
