@@ -140,8 +140,6 @@ public final class Config {
     // General Settings
     // --------------------------------------------------
 
-    public static boolean ALLOW_WATER;
-    public static boolean ALLOW_FISHING;
     public static boolean ALLOW_BOAT;
 
     public static boolean ALLOW_MANOR;
@@ -632,8 +630,6 @@ public final class Config {
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 
-        ALLOW_WATER = General.getBoolean("AllowWater", true);
-        ALLOW_FISHING = General.getBoolean("AllowFishing", true);
         ALLOW_MANOR = General.getBoolean("AllowManor", true);
         ALLOW_BOAT = General.getBoolean("AllowBoat", true);
         SERVER_NEWS = General.getBoolean("ShowServerNews", false);

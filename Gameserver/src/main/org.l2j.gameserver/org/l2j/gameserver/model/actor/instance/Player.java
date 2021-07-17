@@ -1772,7 +1772,7 @@ public final class Player extends Playable {
 
         ZoneEngine.getInstance().getRegion(this).revalidateZones(this);
 
-        if (Config.ALLOW_WATER) {
+        if (GeneralSettings.allowWater()) {
             checkWaterState();
         }
 
