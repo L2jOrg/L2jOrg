@@ -123,7 +123,7 @@ public class EnterWorld extends ClientPacket {
         client.setClientTracert(tracert);
 
         // Restore to instanced area if enabled
-        if (Config.RESTORE_PLAYER_INSTANCE) {
+        if (GeneralSettings.restoreInstance()) {
             final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
             if ((instance != null) && (instance.getId() == player.getInstanceRestore())) {
                 player.setInstance(instance);

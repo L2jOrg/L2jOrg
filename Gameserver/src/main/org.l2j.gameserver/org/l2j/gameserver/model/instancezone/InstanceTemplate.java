@@ -46,6 +46,7 @@ import org.l2j.gameserver.model.instancezone.conditions.ConditionGroupMin;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.PartySettings;
 
 import java.util.ArrayList;
@@ -72,7 +73,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     private int duration = -1;
     private long emptyDestroyTime = -1;
-    private int ejectTime = Config.EJECT_DEAD_PLAYER_TIME;
+    private int ejectTime = GeneralSettings.instanceEjectDeadTime();
     private boolean isPvP = false;
     private boolean allowPlayerSummon = false;
     private float expRate = Config.RATE_INSTANCE_XP;
@@ -183,7 +184,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * These data are used to restrict player buffs when he enters into instance.
      *
      * @param type          type of list like blacklist, whitelist, ... (see {@link InstanceRemoveBuffType} for more info)
-     * @param exceptionList
      */
     public void setRemoveBuff(InstanceRemoveBuffType type, IntSet exceptionList) {
         removeBuffType = type;
@@ -263,15 +263,10 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      */
     public Location getEnterLocation() {
         Location loc = null;
-        switch (enterLocationType) {
-            case RANDOM: {
-                loc = enterLocations.get(Rnd.get(enterLocations.size()));
-                break;
-            }
-            case FIXED: {
-                loc = enterLocations.get(0);
-                break;
-            }
+        if (enterLocationType == InstanceTeleportType.RANDOM) {
+            loc = enterLocations.get(Rnd.get(enterLocations.size()));
+        } else if (enterLocationType == InstanceTeleportType.FIXED) {
+            loc = enterLocations.get(0);
         }
         return loc;
     }
@@ -340,7 +335,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Set time after death player will be ejected from instance world.<br>
-     * Default: {@link Config#EJECT_DEAD_PLAYER_TIME}
+     * Default: {@link GeneralSettings#instanceEjectDeadTime()}
      *
      * @param ejectTime time in minutes
      */
@@ -500,7 +495,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
      * @param type type of group
      * @return {@code true} if mask contains given group, otherwise {@code false}
      */
-    private final boolean groupMaskContains(GroupType type) {
+    private boolean groupMaskContains(GroupType type) {
         final int flag = type.getMask();
         return (groupMask & flag) == flag;
     }
@@ -611,8 +606,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Sets the exp rate of the instance
-     *
-     * @param expRate
      **/
     public void setExpRate(float expRate) {
         this.expRate = expRate;
@@ -627,8 +620,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Sets the sp rate of the instance
-     *
-     * @param spRate
      **/
     public void setSPRate(float spRate) {
         this.spRate = spRate;
@@ -643,8 +634,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Sets the party exp rate of the instance
-     *
-     * @param expRate
      **/
     public void setExpPartyRate(float expRate) {
         expPartyRate = expRate;
@@ -659,8 +648,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 
     /**
      * Sets the party sp rate of the instance
-     *
-     * @param spRate
      **/
     public void setSPPartyRate(float spRate) {
         spPartyRate = spRate;
