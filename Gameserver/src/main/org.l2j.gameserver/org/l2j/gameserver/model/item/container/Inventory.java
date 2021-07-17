@@ -27,7 +27,6 @@ import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.WorldObject;
@@ -59,7 +58,6 @@ import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.model.item.CommonItem.WEDDING_BOUQUET;
 import static org.l2j.gameserver.model.item.type.ArmorType.SIGIL;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author JoeAlisson
@@ -715,18 +713,17 @@ public abstract class Inventory extends ItemContainer {
             }));
     }
 
-    public int getArmorMaxEnchant() {
-        if (!isPlayer(getOwner())) {
+    public int getArmorSetEnchant() {
+        if(!(getOwner() instanceof Player player)) {
             return 0;
         }
-
-        final Player player = getOwner().getActingPlayer();
         int maxSetEnchant = 0;
-        for (Item item : paperdoll.values()) {
-            for (ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
-                final int enchantEffect = set.getLowestSetEnchant(player);
-                if (enchantEffect > maxSetEnchant) {
-                    maxSetEnchant = enchantEffect;
+        var item = paperdoll.get(InventorySlot.CHEST);
+        if(item != null) {
+            for (var set : ArmorSetsData.getInstance().getSets(item.getId())) {
+                var setEnchant = set.getFullSetLowestEnchant(player);
+                if(setEnchant > maxSetEnchant) {
+                    maxSetEnchant = setEnchant;
                 }
             }
         }

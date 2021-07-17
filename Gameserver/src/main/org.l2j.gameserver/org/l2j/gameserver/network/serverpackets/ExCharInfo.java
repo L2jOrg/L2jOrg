@@ -80,7 +80,7 @@ public class ExCharInfo extends ServerPacket {
             buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
         }
 
-        buffer.writeByte(player.getInventory().getArmorMaxEnchant());
+        buffer.writeByte(player.getInventory().getArmorSetEnchant());
 
         buffer.writeShort(0x26); // slot item shape shift mask size
         buffer.writeInt(0x00); // right hand
