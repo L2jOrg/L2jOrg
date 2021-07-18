@@ -21,7 +21,6 @@ package org.l2j.gameserver.data.xml;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -29,14 +28,12 @@ import org.l2j.gameserver.util.IntervalValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.enums.ClanRewardType.ARENA;
@@ -65,6 +62,13 @@ public class ClanRewardManager extends GameXmlReader {
         parseDatapackFile("data/clan-reward.xml");
         clanRewards.forEach((type, rewards) -> LOGGER.info("Loaded {} rewards for {}",  nonNull(rewards) ? rewards.size() : 0, type));
         releaseResources();
+        sortRewards();
+    }
+
+    private void sortRewards() {
+        for (var value : clanRewards.values()) {
+            value.sort(Comparator.comparingInt(ClanRewardBonus::level));
+        }
     }
 
     @Override
@@ -96,42 +100,38 @@ public class ClanRewardManager extends GameXmlReader {
             if(minRaidBonus == 0 || progress < minRaidBonus) {
                 minRaidBonus = progress;
             }
-            final var bonus = new ClanRewardBonus(ARENA, progress , progress);
 
-            forEach(raidNode, "skill", skillNode -> {
-                final NamedNodeMap skillAttr = skillNode.getAttributes();
-                bonus.setSkillReward(new SkillHolder(parseInt(skillAttr, "id"), parseInt(skillAttr, "level")));
-            });
+            var skillNode = raidNode.getFirstChild();
+            var skill = parseSkillInfo(skillNode);
+            final var bonus = new ClanRewardBonus(ARENA, progress , progress, skill);
 
-            clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);
+            clanRewards.computeIfAbsent(bonus.type(), key -> new ArrayList<>()).add(bonus);
         });
     }
 
     private void parseMembersOnline(Node node) {
         forEach(node, "players", memberNode -> {
             final var attrs = memberNode.getAttributes();
-            final var bonus = new ClanRewardBonus(ClanRewardType.MEMBERS_ONLINE, parseInt(attrs, "level"), parseInt(attrs, "size"));
 
-            forEach(memberNode, "skill", skillNode -> {
-                final NamedNodeMap skillAttr = skillNode.getAttributes();
-                bonus.setSkillReward(new SkillHolder(parseInt(skillAttr, "id"), parseInt(skillAttr, "level")));
-            });
+            var skillNode = memberNode.getFirstChild();
+            var skill = parseSkillInfo(skillNode);
+            final var bonus = new ClanRewardBonus(ClanRewardType.MEMBERS_ONLINE, parseInt(attrs, "level"), parseInt(attrs, "size"), skill);
 
-            clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);
+            clanRewards.computeIfAbsent(bonus.type(), key -> new ArrayList<>()).add(bonus);
         });
     }
 
     private void parseHuntingBonus(Node node) {
         forEach(node, "hunting", hunting -> {
             final var attrs = hunting.getAttributes();
-            final var bonus = new ClanRewardBonus(ClanRewardType.HUNTING_MONSTERS, parseInt(attrs, "level"), parseInt(attrs, "points"));
 
-            forEach(hunting, "item", itemsNode -> {
-                final NamedNodeMap itemsAttr = itemsNode.getAttributes();
-                bonus.setItemReward(new ItemHolder(parseInt(itemsAttr, "id"), parseLong(itemsAttr, "count")));
-            });
+            var itemNode = hunting.getFirstChild();
+            var itemsAttr = itemNode.getAttributes();
+            var itemHolder = new ItemHolder(parseInt(itemsAttr, "id"), parseLong(itemsAttr, "count"));
 
-            clanRewards.computeIfAbsent(bonus.getType(), key -> new ArrayList<>()).add(bonus);
+            final var bonus = new ClanRewardBonus(ClanRewardType.HUNTING_MONSTERS, parseInt(attrs, "level"), parseInt(attrs, "points"), itemHolder);
+
+            clanRewards.computeIfAbsent(bonus.type(), key -> new ArrayList<>()).add(bonus);
         });
     }
 
@@ -140,7 +140,8 @@ public class ClanRewardManager extends GameXmlReader {
     }
 
     public ClanRewardBonus getHighestReward(ClanRewardType type) {
-        return clanRewards.getOrDefault(type, Collections.emptyList()).stream().max(Comparator.comparingInt(ClanRewardBonus::getLevel)).orElse(null);
+        var rewards = clanRewards.getOrDefault(type, Collections.emptyList());
+        return rewards.isEmpty() ? null : rewards.get(rewards.size() -1);
     }
 
     public void forEachReward(ClanRewardType type, Consumer<ClanRewardBonus> action) {
@@ -148,17 +149,30 @@ public class ClanRewardManager extends GameXmlReader {
     }
 
     public void checkArenaProgress(Clan clan) {
-        final var arenaRewards = clanRewards.get(ARENA);
-        final var anyReward = arenaRewards.get(0);
-        clan.removeSkill(anyReward.getSkillReward().getSkillId());
+        var it = clanRewards.get(ARENA).listIterator();
+        if(it.hasNext()) {
+            var reward = it.next();
+            clan.removeSkill(reward.skill().getId());
 
-        final var progress = clan.getArenaProgress();
-        if(progress >= minRaidBonus) {
-            final var reward = arenaRewards.stream().filter(r -> r.getLevel() < progress).max(Comparator.comparingInt(ClanRewardBonus::getLevel)).orElse(null);
-            if (nonNull(reward)) {
-                clan.addNewSkill(reward.getSkillReward().getSkill());
+            var progress = clan.getArenaProgress();
+            if(reward.level() < progress) {
+                reward = Objects.requireNonNullElse(getMaxReward(it, progress), reward);
+                clan.addNewSkill(reward.skill());
             }
         }
+    }
+
+    private ClanRewardBonus getMaxReward(Iterator<ClanRewardBonus> it, int progress) {
+        ClanRewardBonus reward = null;
+        while (it.hasNext()) {
+            var next = it.next();
+            if(next.level() < progress) {
+                reward = next;
+            } else {
+                break;
+            }
+        }
+        return reward;
     }
 
     public void resetArenaProgress(Clan clan) {
@@ -166,7 +180,9 @@ public class ClanRewardManager extends GameXmlReader {
         if(progress > 0) {
             clan.setArenaProgress(0);
             final var rewards = clanRewards.get(ARENA);
-            rewards.stream().map(reward -> reward.getSkillReward().getSkillId()).collect(Collectors.toSet()).forEach(clan::removeSkill);
+            for (ClanRewardBonus reward : rewards) {
+                clan.removeSkill(reward.skill().getId());
+            }
         }
     }
 
