@@ -1189,7 +1189,7 @@ public final class Player extends Playable {
     private ScheduledFuture<?> taskWater;
     private ScheduledFuture<?> skillListRefreshTask;
 
-    private SkillUseHolder queuedSkill;
+    private SkillUsedInfo queuedSkill;
     private int reviveRequested;
     private double revivePower;
     private boolean revivePet;
@@ -6698,7 +6698,7 @@ public final class Player extends Playable {
         mountObjectID = newID;
     }
 
-    public SkillUseHolder getQueuedSkill() {
+    public SkillUsedInfo getQueuedSkill() {
         return queuedSkill;
     }
 
@@ -6707,7 +6707,7 @@ public final class Player extends Playable {
             this.queuedSkill = null;
             return;
         }
-        this.queuedSkill = new SkillUseHolder(queuedSkill, null, ctrlPressed, shiftPressed);
+        this.queuedSkill = new SkillUsedInfo(queuedSkill, null, ctrlPressed, shiftPressed);
     }
 
     /**

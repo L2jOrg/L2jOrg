@@ -26,6 +26,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.NextActionType;
@@ -42,8 +43,7 @@ import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSkillUse;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
-import org.l2j.gameserver.model.holders.SkillUseHolder;
-import org.l2j.gameserver.engine.item.Weapon;
+import org.l2j.gameserver.model.holders.SkillUsedInfo;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;
@@ -89,7 +89,7 @@ public class SkillCaster implements Runnable {
     private ScheduledFuture<?> _task;
     private int phase;
 
-    private SkillCaster(Creature caster, WorldObject target, Skill skill, Item item, SkillCastingType castingType, boolean forceUse, boolean dontMove) {
+    private SkillCaster(Creature caster, WorldObject target, Skill skill, Item item, SkillCastingType castingType) {
         Objects.requireNonNull(caster);
         Objects.requireNonNull(skill);
         Objects.requireNonNull(castingType);
@@ -156,7 +156,7 @@ public class SkillCaster implements Runnable {
             return null;
         }
 
-        final SkillCaster skillCaster = new SkillCaster(caster, target, skill, item, castingType, forceUse, dontMove);
+        final SkillCaster skillCaster = new SkillCaster(caster, target, skill, item, castingType);
         skillCaster.run();
         return skillCaster;
     }
@@ -447,23 +447,17 @@ public class SkillCaster implements Runnable {
         long nextTaskDelay = 0;
         boolean hasNextPhase = false;
         switch (phase++) {
-            case 0: // Start skill casting.
-            {
+            case 0 -> { // Start skill casting.
                 hasNextPhase = startCasting();
                 nextTaskDelay = hitTime;
-                break;
             }
-            case 1: // Launch the skill.
-            {
+            case 1 -> { // Launch the skill.
                 hasNextPhase = launchSkill();
                 nextTaskDelay = cancelTime;
-                break;
             }
-            case 2: // Finish launching and apply effects.
-            {
+            case 2 -> {  // Finish launching and apply effects.
                 hasNextPhase = finishSkill();
                 nextTaskDelay = coolTime;
-                break;
             }
         }
 
@@ -715,13 +709,12 @@ public class SkillCaster implements Runnable {
         // If there is a queued skill, launch it and wipe the queue.
         if (isPlayer(caster)) {
             final Player currPlayer = caster.getActingPlayer();
-            final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
+            final SkillUsedInfo queuedSkill = currPlayer.getQueuedSkill();
 
             if (queuedSkill != null) {
-                ThreadPool.execute(() ->
-                {
+                ThreadPool.execute(() -> {
                     currPlayer.setQueuedSkill(null, false, false);
-                    currPlayer.useSkill(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());
+                    currPlayer.useSkill(queuedSkill.skill(), queuedSkill.item(), queuedSkill.ctrlPressed(), queuedSkill.shiftPressed());
                 });
 
                 return;
@@ -805,8 +798,7 @@ public class SkillCaster implements Runnable {
         int z = 0;
         FlyToLocation.FlyType flyType = FlyToLocation.FlyType.CHARGE;
         switch (skill.getOperateType()) {
-            case DA4:
-            case DA5: {
+            case DA4, DA5 -> {
                 final double course = skill.getOperateType() == SkillOperateType.DA4 ? Math.toRadians(270) : Math.toRadians(90);
                 final double radian = Math.toRadians(convertHeadingToDegree(target.getHeading()));
                 double nRadius = creature.getCollisionRadius();
@@ -816,18 +808,15 @@ public class SkillCaster implements Runnable {
                 x = target.getX() + (int) (Math.cos(Math.PI + radian + course) * nRadius);
                 y = target.getY() + (int) (Math.sin(Math.PI + radian + course) * nRadius);
                 z = target.getZ();
-                break;
             }
-            case DA3: {
+            case DA3 -> {
                 flyType = FlyToLocation.FlyType.WARP_BACK;
                 final double radian = Math.toRadians(convertHeadingToDegree(creature.getHeading()));
                 x = creature.getX() + (int) (Math.cos(Math.PI + radian) * skill.getCastRange());
                 y = creature.getY() + (int) (Math.sin(Math.PI + radian) * skill.getCastRange());
                 z = creature.getZ();
-                break;
             }
-            case DA2:
-            case DA1: {
+            case DA2, DA1 -> {
                 if (creature == target) {
                     final double course = Math.toRadians(180);
                     final double radian = Math.toRadians(convertHeadingToDegree(creature.getHeading()));
@@ -835,13 +824,12 @@ public class SkillCaster implements Runnable {
                     y = creature.getY() + (int) (Math.sin(Math.PI + radian + course) * skill.getCastRange());
                     z = creature.getZ();
                 } else {
-                    final var radius = creature.getCollisionRadius() + ( target instanceof Creature c ? c.getCollisionRadius() : 0);
+                    final var radius = creature.getCollisionRadius() + (target instanceof Creature c ? c.getCollisionRadius() : 0);
                     final var angle = MathUtil.calculateAngleFrom(creature, target);
                     x = (int) (target.getX() + (radius * Math.cos(angle)));
                     y = (int) (target.getY() + (radius * Math.sin(angle)));
                     z = target.getZ();
                 }
-                break;
             }
         }
 
