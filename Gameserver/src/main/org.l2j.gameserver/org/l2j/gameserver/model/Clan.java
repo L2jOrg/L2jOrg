@@ -1383,10 +1383,10 @@ public class Clan implements IIdentifiable, INamable {
         if (availableBonus != null) {
             if (_lastMembersOnlineBonus == null) {
                 _lastMembersOnlineBonus = availableBonus;
-                broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.getLevel()));
-            } else if (_lastMembersOnlineBonus.getLevel() < availableBonus.getLevel()) {
+                broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.level()));
+            } else if (_lastMembersOnlineBonus.level() < availableBonus.level()) {
                 _lastMembersOnlineBonus = availableBonus;
-                broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.getLevel()));
+                broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.level()));
             }
         }
 
@@ -1412,10 +1412,10 @@ public class Clan implements IIdentifiable, INamable {
             if (availableBonus != null) {
                 if (_lastHuntingBonus == null) {
                     _lastHuntingBonus = availableBonus;
-                    broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.getLevel()));
-                } else if (_lastHuntingBonus.getLevel() < availableBonus.getLevel()) {
+                    broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.level()));
+                } else if (_lastHuntingBonus.level() < availableBonus.level()) {
                     _lastHuntingBonus = availableBonus;
-                    broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.getLevel()));
+                    broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.level()));
                 }
             }
         }

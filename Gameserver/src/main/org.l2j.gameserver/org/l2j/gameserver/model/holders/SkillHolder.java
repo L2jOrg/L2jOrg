@@ -40,18 +40,6 @@ public class SkillHolder {
         _skillSubLevel = 0;
     }
 
-    public SkillHolder(int skillId, int skillLevel, int skillSubLevel) {
-        _skillId = skillId;
-        _skillLevel = skillLevel;
-        _skillSubLevel = skillSubLevel;
-    }
-
-    public SkillHolder(Skill skill) {
-        _skillId = skill.getId();
-        _skillLevel = skill.getLevel();
-        _skillSubLevel = skill.getSubLevel();
-    }
-
     public final int getSkillId() {
         return _skillId;
     }

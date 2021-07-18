@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets.pledge.bonus;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -50,13 +51,13 @@ public class RequestPledgeBonusReward extends ClientPacket {
 
         if (clan.canClaimBonusReward(player, type)) {
             var bonus = type.getAvailableBonus(player.getClan());
-            var itemReward = bonus.getItemReward();
-            var skillReward = bonus.getSkillReward();
+            var itemReward = bonus.item();
+            Skill skillReward = bonus.skill();
 
             if (itemReward != null) {
                 player.addItem("ClanReward", itemReward.getId(), itemReward.getCount(), player, true);
             } else if (skillReward != null) {
-                skillReward.getSkill().activateSkill(player, player);
+                skillReward.activateSkill(player, player);
             }
 
             int claimedRewards = player.getClaimedClanRewards(ClanRewardType.getDefaultMask());

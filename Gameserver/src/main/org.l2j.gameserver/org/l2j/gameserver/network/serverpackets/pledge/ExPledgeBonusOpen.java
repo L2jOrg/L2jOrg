@@ -62,10 +62,10 @@ public class ExPledgeBonusOpen extends ServerPacket {
         } else if (highestHuntingBonus == null) {
             LOGGER.warn("Couldn't find highest available clan hunting bonus!!");
             throw new InvalidDataPacketException();
-        } else if (highestMembersOnlineBonus.getSkillReward() == null) {
+        } else if (highestMembersOnlineBonus.skill() == null) {
             LOGGER.warn("Couldn't find skill reward for highest available members online bonus!!");
             throw new InvalidDataPacketException();
-        } else if (highestHuntingBonus.getItemReward() == null) {
+        } else if (highestHuntingBonus.item() == null) {
             LOGGER.warn("Couldn't find item reward for highest available hunting bonus!!");
             throw new InvalidDataPacketException();
         }
@@ -74,19 +74,19 @@ public class ExPledgeBonusOpen extends ServerPacket {
         writeId(ServerExPacketId.EX_PLEDGE_BONUS_UI_OPEN, buffer );
 
         // Members online bonus
-        buffer.writeInt(highestMembersOnlineBonus.getRequiredAmount());
+        buffer.writeInt(highestMembersOnlineBonus.requiredAmount());
         buffer.writeInt(clan.getMaxOnlineMembers());
         buffer.writeByte( 0x00); // progress ?
-        buffer.writeInt(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0x00);
-        buffer.writeByte((membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00));
+        buffer.writeInt(membersOnlineBonus != null ? highestMembersOnlineBonus.skill().getId() : 0x00);
+        buffer.writeByte((membersOnlineBonus != null ? membersOnlineBonus.level() : 0x00));
         buffer.writeByte((membersOnlineBonus != null ? 0x01 : 0x00));
 
         // Hunting bonus
-        buffer.writeInt(highestHuntingBonus.getRequiredAmount());
+        buffer.writeInt(highestHuntingBonus.requiredAmount());
         buffer.writeInt(clan.getHuntingPoints());
         buffer.writeByte(0x00); // progress
-        buffer.writeInt(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
-        buffer.writeByte((huntingBonus != null ? huntingBonus.getLevel() : 0x00));
+        buffer.writeInt(huntingBonus != null ? highestHuntingBonus.item().getId() : 0x00);
+        buffer.writeByte((huntingBonus != null ? huntingBonus.level() : 0x00));
         buffer.writeByte((huntingBonus != null ? 0x01 : 0x00));
     }
 
