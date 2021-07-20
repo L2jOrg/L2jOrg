@@ -88,7 +88,7 @@ public class Seed implements IItemHandler
 		}
 		
 		var player = playable.getActingPlayer();
-		item.forEachSkill(ItemSkillType.NORMAL, holder -> player.useSkill(holder.getSkill(), item, false, false));
+		item.forEachSkill(ItemSkillType.NORMAL, holder -> player.useSkill(holder.skill(), item, false, false));
 		return true;
 	}
 }
