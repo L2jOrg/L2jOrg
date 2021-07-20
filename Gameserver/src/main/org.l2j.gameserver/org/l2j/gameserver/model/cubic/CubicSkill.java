@@ -29,6 +29,7 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public record CubicSkill(
      Skill skill,
