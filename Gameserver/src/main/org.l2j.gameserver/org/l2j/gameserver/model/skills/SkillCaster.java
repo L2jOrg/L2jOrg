@@ -45,7 +45,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.SkillUsedInfo;
 import org.l2j.gameserver.model.item.type.ActionType;
-import org.l2j.gameserver.model.options.OptionsSkillHolder;
+import org.l2j.gameserver.model.options.OptionsSkillInfo;
 import org.l2j.gameserver.model.options.OptionsSkillType;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -259,10 +259,10 @@ public class SkillCaster implements Runnable {
         }
     }
 
-    private static void triggerCast(Creature caster, Skill skill, Creature creature, OptionsSkillHolder holder) {
-        if ((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK))) {
-            if (Rnd.chance(holder.getChance())) {
-                triggerCast(caster, creature, holder.getSkill(), null, false);
+    private static void triggerCast(Creature caster, Skill skill, Creature creature, OptionsSkillInfo holder) {
+        if ((skill.isMagic() && (holder.type() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.type() == OptionsSkillType.ATTACK))) {
+            if (Rnd.chance(holder.chance())) {
+                triggerCast(caster, creature, holder.skill(), null, false);
             }
         }
     }
