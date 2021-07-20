@@ -49,7 +49,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerAugment;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemPickup;
 import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
+import org.l2j.gameserver.model.holders.ItemSkillInfo;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.CommonItem;
@@ -266,7 +266,7 @@ public final class Item extends WorldObject {
         }
 
         doIfNonNull(getActingPlayer(), player -> template.forEachSkill(ItemSkillType.NORMAL, holder -> {
-            final Skill skill = holder.getSkill();
+            final Skill skill = holder.skill();
             if (skill.isPassive()) {
                 player.addSkill(skill, false);
             }
@@ -537,7 +537,7 @@ public final class Item extends WorldObject {
     }
 
     private Predicate<Item> hasRemovedSkill(IntSet removedSkills) {
-        return item -> item != this && item.hasPassiveSkills() && item.template.checkAnySkill(ItemSkillType.NORMAL, sk -> removedSkills.contains(sk.getSkillId()) );
+        return item -> item != this && item.hasPassiveSkills() && item.template.checkAnySkill(ItemSkillType.NORMAL, sk -> removedSkills.contains(sk.skill().getId()) );
     }
 
     private boolean hasPassiveSkills() {
@@ -1019,7 +1019,7 @@ public final class Item extends WorldObject {
         return template.getItemMask();
     }
 
-    public void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
+    public void forEachSkill(ItemSkillType type, Consumer<ItemSkillInfo> action) {
         template.forEachSkill(type, action);
     }
 
@@ -1039,7 +1039,7 @@ public final class Item extends WorldObject {
         return template.getDefaultAction();
     }
 
-    public List<ItemSkillHolder> getSkills(ItemSkillType type) {
+    public List<ItemSkillInfo> getSkills(ItemSkillType type) {
         return template.getSkills(type);
     }
 
@@ -1047,7 +1047,7 @@ public final class Item extends WorldObject {
         return template.getFirstSkill(type);
     }
 
-    public Skill getFirstSkill(ItemSkillType type, Comparator<ItemSkillHolder> comparator) {
+    public Skill getFirstSkill(ItemSkillType type, Comparator<ItemSkillInfo> comparator) {
         return template.getFirstSkill(type, comparator);
     }
 

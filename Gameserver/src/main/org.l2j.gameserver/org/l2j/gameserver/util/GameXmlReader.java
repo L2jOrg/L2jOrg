@@ -114,6 +114,6 @@ public abstract class GameXmlReader extends XmlReader {
 
     public Skill parseSkillInfo(Node node, String idAttribute, String levelAttribute) {
         var attrs = node.getAttributes();
-        return SkillEngine.getInstance().getSkill(parseInt(attrs, idAttribute), parseInt(attrs, levelAttribute));
+        return SkillEngine.getInstance().getSkill(parseInt(attrs, idAttribute), parseInt(attrs, levelAttribute, 1));
     }
 }

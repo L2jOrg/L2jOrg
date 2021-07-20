@@ -47,7 +47,7 @@ public class PetFood implements IItemHandler
 			return false;
 		}
 
-		item.forEachSkill(ItemSkillType.NORMAL, s -> useFood(playable, s.getSkillId(), s.getLevel(), item));
+		item.forEachSkill(ItemSkillType.NORMAL, s -> useFood(playable, s.skill().getId(), s.skill().getLevel(), item));
 		return true;
 	}
 	

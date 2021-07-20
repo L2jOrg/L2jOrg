@@ -43,7 +43,7 @@ import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.*;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
+import org.l2j.gameserver.model.holders.ItemSkillInfo;
 import org.l2j.gameserver.model.item.*;
 import org.l2j.gameserver.model.item.type.*;
 import org.l2j.gameserver.model.stats.Stat;
@@ -143,7 +143,8 @@ public final class ItemEngine extends GameXmlReader {
         forEach(node, "skill", skillNode -> {
             var attr = skillNode.getAttributes();
             var type = parseEnum(attr, ItemSkillType.class, "type");
-            item.addSkill(new ItemSkillHolder(parseInt(attr, "id"), parseInt(attr, "level"), type, parseInt(attr, "chance"), parseInt(attr, "value")));
+            var skill = parseSkillInfo(skillNode);
+            item.addSkill(new ItemSkillInfo(skill, type, parseInt(attr, "chance"), parseInt(attr, "value")));
         });
     }
 
@@ -333,7 +334,8 @@ public final class ItemEngine extends GameXmlReader {
 
     private void parseTransformationBook(EtcItem item, Node node) {
         item.setHandler("TransformationBook");
-        item.addSkill(new ItemSkillHolder(parseInt(node.getAttributes(), "skill"), 1, ItemSkillType.NORMAL, 100, 0));
+        var skill = parseSkillInfo(node, "skill", "level");
+        item.addSkill(new ItemSkillInfo(skill, ItemSkillType.NORMAL, 100, 0));
     }
 
     private void parseItemExtract(EtcItem item, Node node) {

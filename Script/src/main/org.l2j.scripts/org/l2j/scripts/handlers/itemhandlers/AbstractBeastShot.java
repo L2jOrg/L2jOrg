@@ -102,7 +102,7 @@ public abstract class AbstractBeastShot implements IItemHandler {
         sendUsesMessage(owner);
         summon.chargeShot(shotType, getBonus(summon));
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayeableChargeShots(summon, shotType, isBlessed()), owner);
-        item.forEachSkill(ItemSkillType.NORMAL, s -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(summon, s.getSkill(), 0), 600));
+        item.forEachSkill(ItemSkillType.NORMAL, s -> Broadcast.toSelfAndKnownPlayersInRadius(owner, new MagicSkillUse(summon, s.skill(), 0), 600));
     }
 
     protected abstract boolean isBlessed();
