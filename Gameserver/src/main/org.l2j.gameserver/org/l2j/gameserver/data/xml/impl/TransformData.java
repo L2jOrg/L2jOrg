@@ -24,7 +24,6 @@ import org.l2j.gameserver.model.actor.transform.TransformLevelData;
 import org.l2j.gameserver.model.actor.transform.TransformTemplate;
 import org.l2j.gameserver.model.holders.AdditionalItemHolder;
 import org.l2j.gameserver.model.holders.AdditionalSkillHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -114,10 +113,7 @@ public final class TransformData extends GameXmlReader {
                                             }
                                             for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
                                                 if ("skill".equals(s.getNodeName())) {
-                                                    attrs = s.getAttributes();
-                                                    final int skillId = parseInt(attrs, "id");
-                                                    final int skillLevel = parseInt(attrs, "level");
-                                                    templateData.addSkill(new SkillHolder(skillId, skillLevel));
+                                                    templateData.addSkill(parseSkillInfo(s));
                                                 }
                                             }
                                             break;
