@@ -136,10 +136,9 @@ public final class TransformData extends GameXmlReader {
                                             for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
                                                 if ("skill".equals(s.getNodeName())) {
                                                     attrs = s.getAttributes();
-                                                    final int skillId = parseInt(attrs, "id");
-                                                    final int skillLevel = parseInt(attrs, "level");
+                                                    var skill = parseSkillInfo(s);
                                                     final int minLevel = parseInt(attrs, "minLevel");
-                                                    templateData.addAdditionalSkill(new AdditionalSkillHolder(skillId, skillLevel, minLevel));
+                                                    templateData.addAdditionalSkill(new AdditionalSkillHolder(skill, minLevel));
                                                 }
                                             }
                                             break;

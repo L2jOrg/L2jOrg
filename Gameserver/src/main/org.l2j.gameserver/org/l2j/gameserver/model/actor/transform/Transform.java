@@ -31,7 +31,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerTransform;
 import org.l2j.gameserver.model.holders.AdditionalItemHolder;
 import org.l2j.gameserver.model.holders.AdditionalSkillHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -190,15 +189,13 @@ public final class Transform implements IIdentifiable {
 
                 if (addSkills) {
                     //@formatter:off
-                    // Add common skills.
                     template.getSkills().forEach(player::addTransformSkill);
 
-                    // Add skills depending on level.
-                    template.getAdditionalSkills()
-                            .stream()
-                            .filter(h -> player.getLevel() >= h.getMinLevel())
-                            .map(SkillHolder::getSkill)
-                            .forEach(player::addTransformSkill);
+                    for (var additionalSkill : template.getAdditionalSkills()) {
+                        if(player.getLevel() >= additionalSkill.minLevel()) {
+                            player.addTransformSkill(additionalSkill.skill());
+                        }
+                    }
                     //@formatter:on
                 }
 
@@ -306,9 +303,9 @@ public final class Transform implements IIdentifiable {
             // Add skills depending on level.
             if (!template.getAdditionalSkills().isEmpty()) {
                 for (AdditionalSkillHolder holder : template.getAdditionalSkills()) {
-                    if (player.getLevel() >= holder.getMinLevel()) {
-                        if (player.getSkillLevel(holder.getSkillId()) < holder.getLevel()) {
-                            player.addTransformSkill(holder.getSkill());
+                    if (player.getLevel() >= holder.minLevel()) {
+                        if (player.getSkillLevel(holder.skill().getId()) < holder.skill().getLevel()) {
+                            player.addTransformSkill(holder.skill());
                         }
                     }
                 }
