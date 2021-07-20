@@ -33,7 +33,6 @@ import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -208,17 +207,14 @@ public final class RequestAcquireSkill extends ClientPacket {
                     return true;
                 }
 
-                // Check for required skills.
-                if (!skillLearn.getPreReqSkills().isEmpty()) {
-                    for (SkillHolder skill : skillLearn.getPreReqSkills()) {
-                        if (player.getSkillLevel(skill.getSkillId()) < skill.getLevel()) {
-                            if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId()) {
-                                player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_LEARN_FURTHER_SKILLS);
-                            } else {
-                                player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
-                            }
-                            return false;
+                for (var skill : skillLearn.getPreReqSkills()) {
+                    if (player.getSkillLevel(skill.getId()) < skill.getLevel()) {
+                        if (skill.getId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId()) {
+                            player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_LEARN_FURTHER_SKILLS);
+                        } else {
+                            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
                         }
+                        return false;
                     }
                 }
 

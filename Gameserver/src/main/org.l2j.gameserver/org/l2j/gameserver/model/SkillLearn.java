@@ -23,7 +23,6 @@ import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -42,7 +41,7 @@ public final class SkillLearn {
     private final long _levelUpSp;
     private final List<ItemHolder> _requiredItems = new ArrayList<>();
     private final List<Race> _races = new ArrayList<>();
-    private final List<SkillHolder> _preReqSkills = new ArrayList<>();
+    private final List<Skill> preReqSkills = new ArrayList<>();
     private final boolean _residenceSkill;
     private final List<Integer> _residenceIds = new ArrayList<>();
     private final boolean _learnedByNpc;
@@ -145,8 +144,8 @@ public final class SkillLearn {
     /**
      * @return the list of skill holders required to acquire this skill.
      */
-    public List<SkillHolder> getPreReqSkills() {
-        return _preReqSkills;
+    public List<Skill> getPreReqSkills() {
+        return preReqSkills;
     }
 
     /**
@@ -154,8 +153,8 @@ public final class SkillLearn {
      *
      * @param skill the required skill holder.
      */
-    public void addPreReqSkill(SkillHolder skill) {
-        _preReqSkills.add(skill);
+    public void addPreReqSkill(Skill skill) {
+        preReqSkills.add(skill);
     }
 
     /**
