@@ -602,7 +602,7 @@ public final class Item extends WorldObject {
     private void removeSpecialAbility(EnsoulOption option, EnsoulType type) {
         final Player player = getActingPlayer();
         if (nonNull(player)) {
-            player.removeSkill(option.skill().getSkillId());
+            player.removeSkill(option.skill().getId());
         }
         if (type == EnsoulType.COMMON) {
             getDAO(ItemDAO.class).updateEnsoul(objectId, 0);
@@ -645,7 +645,7 @@ public final class Item extends WorldObject {
         if(isNull(option)) {
             return;
         }
-        final Skill skill = option.toSkill();
+        final Skill skill = option.skill();
         if (skill != null) {
             final Player player = getActingPlayer();
             if (player != null) {
@@ -660,7 +660,7 @@ public final class Item extends WorldObject {
         if(isNull(option)) {
             return;
         }
-        final Skill skill = option.toSkill();
+        final Skill skill = option.skill();
         if (skill != null) {
             final Player player = getActingPlayer();
             if (player != null) {

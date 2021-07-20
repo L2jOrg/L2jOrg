@@ -192,7 +192,7 @@ public final class SkillTreesData extends GameXmlReader {
 
         switch (node.getNodeName()) {
             case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
-            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(parseSkillInfo(node));
+            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(parseSkillInfo(node, "id", "lvl"));
             case "race" -> skillLearn.addRace(Race.valueOf(node.getTextContent()));
             case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(node.getTextContent()));
             case "social-status" -> skillLearn.setSocialStatus(parseEnum(node, SocialStatus.class));
