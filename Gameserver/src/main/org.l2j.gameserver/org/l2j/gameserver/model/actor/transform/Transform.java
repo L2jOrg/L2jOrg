@@ -191,10 +191,7 @@ public final class Transform implements IIdentifiable {
                 if (addSkills) {
                     //@formatter:off
                     // Add common skills.
-                    template.getSkills()
-                            .stream()
-                            .map(SkillHolder::getSkill)
-                            .forEach(player::addTransformSkill);
+                    template.getSkills().forEach(player::addTransformSkill);
 
                     // Add skills depending on level.
                     template.getAdditionalSkills()
