@@ -69,7 +69,7 @@ public class PetSkillData extends GameXmlReader {
                         final NamedNodeMap attrs = d.getAttributes();
 
                         final int npcId = parseInt(attrs, "npcId");
-                        var skill = parseSkillInfo(d);
+                        var skill = parseSkillInfo(d, "skillId", "skillLvl");
 
                         LongMap<Skill> skillTree = skillTrees.computeIfAbsent(npcId, k -> new HashLongMap<>());
 
