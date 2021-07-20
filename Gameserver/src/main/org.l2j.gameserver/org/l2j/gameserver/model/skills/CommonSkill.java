@@ -19,7 +19,7 @@
 package org.l2j.gameserver.model.skills;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 
 /**
  * An Enum to hold some important references to commonly used skills
@@ -99,18 +99,24 @@ public enum CommonSkill {
     REPUTATION_3(60004, 1),
     TELEPORT(60018, 1);
 
-    private final SkillHolder _holder;
+    private final int id;
+    private final int level;
+    private Skill skill;
 
     CommonSkill(int id, int level) {
-        _holder = new SkillHolder(id, level);
+        this.id = id;
+        this.level = level;
     }
 
     public int getId() {
-        return _holder.getSkillId();
+        return id;
     }
 
     public Skill getSkill() {
-        return _holder.getSkill();
+        if(skill == null) {
+            skill = SkillEngine.getInstance().getSkill(id, level);
+        }
+        return skill;
     }
 
 }
