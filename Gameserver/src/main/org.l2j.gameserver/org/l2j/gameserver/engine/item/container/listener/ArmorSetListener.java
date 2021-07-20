@@ -25,7 +25,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
+import org.l2j.gameserver.model.holders.ArmorsetSkillInfo;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
@@ -50,20 +50,14 @@ public final class ArmorSetListener implements PlayerInventoryListener {
             // Applying all skills that matching the conditions
             boolean updateTimeStamp = false;
             boolean update = false;
-            for (ArmorsetSkillHolder holder : armorSet.getSkills()) {
+            for (ArmorsetSkillInfo holder : armorSet.getSkills()) {
                 if (holder.validateConditions(player, armorSet, idProvider)) {
 
-                    if (player.getSkillLevel(holder.getSkillId()) >= holder.getLevel()) {
+                    if (player.getSkillLevel(holder.skill().getId()) >= holder.skill().getLevel()) {
                         continue;
                     }
 
-                    final Skill itemSkill = holder.getSkill();
-
-                    if (itemSkill == null) {
-                        LOGGER.warn("Inventory.ArmorSetListener.addSkills: Incorrect skill: " + holder);
-                        continue;
-                    }
-
+                    final Skill itemSkill = holder.skill();
                     if (itemSkill.isPassive() && !itemSkill.checkConditions(SkillConditionScope.PASSIVE, player, player))
                     {
                         continue;
@@ -107,9 +101,9 @@ public final class ArmorSetListener implements PlayerInventoryListener {
         final List<ArmorSet> armorSets = ArmorSetsData.getInstance().getSets(idProvider.applyAsInt(item));
         for (ArmorSet armorSet : armorSets) {
             // Remove all skills that doesn't matches the conditions
-            for (ArmorsetSkillHolder holder : armorSet.getSkills()) {
+            for (ArmorsetSkillInfo holder : armorSet.getSkills()) {
                 if (!holder.validateConditions(player, armorSet, idProvider)) {
-                    final Skill itemSkill = holder.getSkill();
+                    final Skill itemSkill = holder.skill();
                     if (itemSkill == null) {
                         LOGGER.warn("Inventory.ArmorSetListener.removeSkills: Incorrect skill: " + holder);
                         continue;
@@ -138,13 +132,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
         }
 
         final Player player = (Player) inventory.getOwner();
-        boolean update = false;
-
-        // Verify and apply normal set
-        if (verifyAndApply(player, item, Item::getId)) {
-            update = true;
-        }
-
+        boolean update = verifyAndApply(player, item, Item::getId);
         if (update) {
             player.sendSkillList();
         }
@@ -157,12 +145,7 @@ public final class ArmorSetListener implements PlayerInventoryListener {
         }
 
         final Player player = (Player) inventory.getOwner();
-        boolean remove = false;
-
-        // verify and remove normal set bonus
-        if (verifyAndRemove(player, item, Item::getId)) {
-            remove = true;
-        }
+        boolean remove = verifyAndRemove(player, item, Item::getId);
 
         if (remove) {
             player.checkItemRestriction();
