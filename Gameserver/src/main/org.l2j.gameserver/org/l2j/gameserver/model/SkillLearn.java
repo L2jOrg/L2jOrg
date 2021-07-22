@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.Race;
@@ -25,9 +27,7 @@ import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.holders.ItemHolder;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author Zoey76
@@ -46,7 +46,7 @@ public final class SkillLearn {
     private final List<Integer> _residenceIds = new ArrayList<>();
     private final boolean _learnedByNpc;
     private final boolean _learnedByFS;
-    private final Set<Integer> _removeSkills = new HashSet<>(1);
+    private final IntSet removeSkills = new HashIntSet(1);
     private final int _treeId;
     private final int _row;
     private final int _column;
@@ -213,11 +213,15 @@ public final class SkillLearn {
     }
 
     public void addRemoveSkills(int skillId) {
-        _removeSkills.add(skillId);
+        removeSkills.add(skillId);
     }
 
-    public Set<Integer> getRemoveSkills() {
-        return _removeSkills;
+    public IntSet getRemoveSkills() {
+        return removeSkills;
+    }
+
+    public boolean hasSkillsToRemove() {
+        return !removeSkills.isEmpty();
     }
 
     public Skill getSkill() {

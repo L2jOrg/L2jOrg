@@ -26,9 +26,8 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 /**
  * @author UnAfraid
@@ -56,7 +55,13 @@ public class ExAcquireSkillInfo extends ServerPacket {
         _spCost = skillLearn.getLevelUpSp();
         _minLevel = skillLearn.getGetLevel();
         _itemReq = skillLearn.getRequiredItems();
-        _skillRem = skillLearn.getRemoveSkills().stream().map(player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
+        _skillRem = new ArrayList<>();
+        skillLearn.getRemoveSkills().forEach(id -> {
+            var skill = player.getKnownSkill(id);
+            if(skill != null) {
+                _skillRem.add(skill);
+            }
+        });
     }
 
     @Override

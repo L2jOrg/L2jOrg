@@ -25,8 +25,10 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.engine.item.EtcItem;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.scripting.ManagedScript;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.QuestSound;
@@ -67,14 +69,11 @@ import org.l2j.gameserver.model.events.timers.IEventTimerCancel;
 import org.l2j.gameserver.model.events.timers.IEventTimerEvent;
 import org.l2j.gameserver.model.events.timers.TimerHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.engine.item.EtcItem;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
@@ -1552,7 +1551,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
      * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
      */
-    public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound) {
+    public boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound) {
         return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
     }
 
@@ -1565,10 +1564,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param playSound  if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
      * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
      */
-    public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound) {
+    public boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound) {
         final long currentCount = getQuestItemsCount(player, itemId);
 
-        if ((limit > 0) && (currentCount >= limit)) {
+        if (limit > 0 && currentCount >= limit) {
             return true;
         }
 
@@ -1588,28 +1587,32 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
 
         long amountToGive = (minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount);
-        final double random = Rnd.nextDouble();
-        // Inventory slot check (almost useless for non-stacking items)
-        if ((dropChance >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId)) {
-            if ((limit > 0) && ((currentCount + amountToGive) > limit)) {
-                amountToGive = limit - currentCount;
-            }
 
-            // Give the item to player
-            if (player.addItem("Quest", itemId, amountToGive, npc, true) != null) {
-                // limit reached (if there is no limit, this block doesn't execute)
-                if ((currentCount + amountToGive) == limit) {
-                    if (playSound) {
-                        playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-                    }
-                    return true;
-                }
+        if ( amountToGive > 0 && Rnd.chance(dropChance) && player.getInventory().validateCapacityByItemId(itemId)) {
+            return tryGiveItem(player, npc, itemId, limit, currentCount, amountToGive, playSound);
+        }
+        return false;
+    }
 
+    private boolean tryGiveItem(Player player, Npc npc, int itemId, long limit, long currentCount, long amountToGive, boolean playSound) {
+        if ((limit > 0) && ((currentCount + amountToGive) > limit)) {
+            amountToGive = limit - currentCount;
+        }
+
+        // Give the item to player
+        if (player.addItem("Quest", itemId, amountToGive, npc, true) != null) {
+            // limit reached (if there is no limit, this block doesn't execute)
+            if ((currentCount + amountToGive) == limit) {
                 if (playSound) {
-                    playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+                    playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
                 }
-                return limit <= 0;
+                return true;
             }
+
+            if (playSound) {
+                playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+            }
+            return limit <= 0;
         }
         return false;
     }
@@ -1640,20 +1643,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             player.broadcastUserInfo();
         }
         return player.destroyItemByItemId("Quest", itemId, amount, player, true);
-    }
-
-    /**
-     * Take a set amount of a specified item from player's inventory.
-     *
-     * @param player the player whose item to take
-     * @param holder the {@link ItemHolder} object containing the ID and count of the item to take
-     * @return {@code true} if the item was taken, {@code false} otherwise
-     */
-    protected static boolean takeItem(Player player, ItemHolder holder) {
-        if (holder == null) {
-            return false;
-        }
-        return takeItems(player, holder.getId(), holder.getCount());
     }
 
     /**

@@ -180,62 +180,7 @@ public final class Transform implements IIdentifiable {
             creature.setXYZ(creature.getX(), creature.getY(), (int) (creature.getZ() + getCollisionHeight(creature, 0)));
 
             if (isPlayer(creature)) {
-                if (_name != null) {
-                    player.getAppearance().setVisibleName(_name);
-                }
-                if (_title != null) {
-                    player.getAppearance().setVisibleTitle(_title);
-                }
-
-                if (addSkills) {
-                    //@formatter:off
-                    template.getSkills().forEach(player::addTransformSkill);
-
-                    for (var additionalSkill : template.getAdditionalSkills()) {
-                        if(player.getLevel() >= additionalSkill.minLevel()) {
-                            player.addTransformSkill(additionalSkill.skill());
-                        }
-                    }
-                    //@formatter:on
-                }
-
-                // Set inventory blocks if needed.
-                if (!template.getAdditionalItems().isEmpty()) {
-                    final IntSet allowed = new HashIntSet();
-                    final IntSet notAllowed = new HashIntSet();
-                    for (AdditionalItemHolder holder : template.getAdditionalItems()) {
-                        if (holder.isAllowedToUse()) {
-                            allowed.add(holder.getId());
-                        } else {
-                            notAllowed.add(holder.getId());
-                        }
-                    }
-
-                    if (!allowed.isEmpty()) {
-                        player.getInventory().setInventoryBlock(allowed, InventoryBlockType.WHITELIST);
-                    }
-
-                    if (!notAllowed.isEmpty()) {
-                        player.getInventory().setInventoryBlock(notAllowed, InventoryBlockType.BLACKLIST);
-                    }
-                }
-
-                // Send basic action list.
-                if (template.hasBasicActionList()) {
-                    player.sendPacket(template.getBasicActionList());
-                }
-
-                player.getEffectList().stopAllToggles();
-
-                if (player.hasTransformSkills()) {
-                    player.sendSkillList();
-                    player.sendPacket(new SkillCoolTime(player));
-                }
-
-                player.broadcastUserInfo();
-
-                // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, getId()), player);
+                onPlayerTransform(addSkills, player, template);
             } else {
                 creature.broadcastInfo();
             }
@@ -244,6 +189,65 @@ public final class Transform implements IIdentifiable {
             // Usually should be sent naturally after applying effect, but sometimes is sent before that... i just dont know...
             creature.updateAbnormalVisualEffects();
         }
+    }
+
+    private void onPlayerTransform(boolean addSkills, Player player, TransformTemplate template) {
+        if (_name != null) {
+            player.getAppearance().setVisibleName(_name);
+        }
+        if (_title != null) {
+            player.getAppearance().setVisibleTitle(_title);
+        }
+
+        if (addSkills) {
+            //@formatter:off
+            template.getSkills().forEach(player::addTransformSkill);
+
+            for (var additionalSkill : template.getAdditionalSkills()) {
+                if(player.getLevel() >= additionalSkill.minLevel()) {
+                    player.addTransformSkill(additionalSkill.skill());
+                }
+            }
+            //@formatter:on
+        }
+
+        // Set inventory blocks if needed.
+        if (!template.getAdditionalItems().isEmpty()) {
+            final IntSet allowed = new HashIntSet();
+            final IntSet notAllowed = new HashIntSet();
+            for (AdditionalItemHolder holder : template.getAdditionalItems()) {
+                if (holder.isAllowedToUse()) {
+                    allowed.add(holder.getId());
+                } else {
+                    notAllowed.add(holder.getId());
+                }
+            }
+
+            if (!allowed.isEmpty()) {
+                player.getInventory().setInventoryBlock(allowed, InventoryBlockType.WHITELIST);
+            }
+
+            if (!notAllowed.isEmpty()) {
+                player.getInventory().setInventoryBlock(notAllowed, InventoryBlockType.BLACKLIST);
+            }
+        }
+
+        // Send basic action list.
+        if (template.hasBasicActionList()) {
+            player.sendPacket(template.getBasicActionList());
+        }
+
+        player.getEffectList().stopAllToggles();
+
+        if (player.hasTransformSkills()) {
+            player.sendSkillList();
+            player.sendPacket(new SkillCoolTime(player));
+        }
+
+        player.broadcastUserInfo();
+
+        // Notify to scripts
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, getId()), player);
     }
 
     public void onUntransform(Creature creature) {
