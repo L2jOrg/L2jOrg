@@ -348,8 +348,11 @@ public final class SkillTreesData extends GameXmlReader {
 
             for (SkillLearn skillLearn : learnable) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
-                // Cleanup skills that has to be removed
-                for (int skillId : skillLearn.getRemoveSkills()) {
+
+                var it = skillLearn.getRemoveSkills().iterator();
+                while (it.hasNext()) {
+                    var skillId = it.nextInt();
+
                     // Mark skill as removed, so it doesn't gets added
                     removed.add(skillId);
 

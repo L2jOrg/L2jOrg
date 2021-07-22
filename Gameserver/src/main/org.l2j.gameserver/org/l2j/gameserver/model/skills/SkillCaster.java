@@ -519,6 +519,10 @@ public class SkillCaster implements Runnable {
             caster.stopEffectsOnAction();
         }
 
+        return doCast(caster, target, displayedCastTime, reuseDelay);
+    }
+
+    private boolean doCast(Creature caster, WorldObject target, int displayedCastTime, int reuseDelay) {
         // Consume skill initial MP needed for cast. Retail sends it regardless if > 0 or not.
         final int mpInitialConsume = caster.getStats().getMpInitialConsume(skill);
         if (mpInitialConsume > 0) {
@@ -628,19 +632,39 @@ public class SkillCaster implements Runnable {
     private boolean consumeSkill(Creature caster, WorldObject target) {
         final StatusUpdate su = new StatusUpdate(caster);
 
-        // Consume the required MP or stop casting if not enough.
-        final double mpConsume = skill.getMpConsume() > 0 ? caster.getStats().getMpConsume(skill) : 0;
-        if (mpConsume > 0) {
-            if (mpConsume > caster.getCurrentMp()) {
-                caster.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
+        if (!consumeMp(caster, su))  {
+            return false;
+        }
+
+        if (!consumeHp(caster, su)) {
+            return false;
+        }
+
+        // Send HP/MP consumption packet if any attribute is set.
+        if (su.hasUpdates()) {
+            caster.sendPacket(su);
+        }
+
+        if (caster instanceof Player player) {
+            // Consume Souls if necessary.
+            if ((skill.getMaxSoulConsumeCount() > 0) && !player.decreaseSouls(skill.getMaxSoulConsumeCount())) {
                 return false;
             }
 
-            caster.getStatus().reduceMp(mpConsume);
-            su.addUpdate(StatusUpdateType.CUR_MP, (int) caster.getCurrentMp());
+            // Consume charges if necessary.
+            if ((skill.getChargeConsumeCount() > 0) && !player.decreaseCharges(skill.getChargeConsumeCount())) {
+                return false;
+            }
         }
 
-        // Consume the required HP or stop casting if not enough.
+        // Consume skill reduced item on success.
+        if ((item != null) && (item.getAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (skill.getItemConsumeId() > 0) && (skill.getItemConsumeCount() > 0)) {
+            return caster.destroyItem(skill.toString(), item.getObjectId(), skill.getItemConsumeCount(), target, true);
+        }
+        return true;
+    }
+
+    private boolean consumeHp(Creature caster, StatusUpdate su) {
         final double consumeHp = skill.getHpConsume();
         if (consumeHp > 0) {
             if (consumeHp >= caster.getCurrentHp()) {
@@ -651,27 +675,19 @@ public class SkillCaster implements Runnable {
             caster.getStatus().reduceHp(consumeHp, caster, true);
             su.addUpdate(StatusUpdateType.CUR_HP, (int) caster.getCurrentHp());
         }
+        return true;
+    }
 
-        // Send HP/MP consumption packet if any attribute is set.
-        if (su.hasUpdates()) {
-            caster.sendPacket(su);
-        }
-
-        if (isPlayer(caster)) {
-            // Consume Souls if necessary.
-            if ((skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(skill.getMaxSoulConsumeCount())) {
+    private boolean consumeMp(Creature caster, StatusUpdate su) {
+        final double mpConsume = skill.getMpConsume() > 0 ? caster.getStats().getMpConsume(skill) : 0;
+        if (mpConsume > 0) {
+            if (mpConsume > caster.getCurrentMp()) {
+                caster.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
                 return false;
             }
 
-            // Consume charges if necessary.
-            if ((skill.getChargeConsumeCount() > 0) && !caster.getActingPlayer().decreaseCharges(skill.getChargeConsumeCount())) {
-                return false;
-            }
-        }
-
-        // Consume skill reduced item on success.
-        if ((item != null) && (item.getAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (skill.getItemConsumeId() > 0) && (skill.getItemConsumeCount() > 0)) {
-            return caster.destroyItem(skill.toString(), item.getObjectId(), skill.getItemConsumeCount(), target, true);
+            caster.getStatus().reduceMp(mpConsume);
+            su.addUpdate(StatusUpdateType.CUR_MP, (int) caster.getCurrentMp());
         }
         return true;
     }
@@ -706,38 +722,33 @@ public class SkillCaster implements Runnable {
             caster.sendPacket(ActionFailed.of(castingType)); // send an "action failed" packet to the caster
         }
 
+        doNextAction(caster, target);
+    }
+
+    private void doNextAction(Creature caster, WorldObject target) {
         // If there is a queued skill, launch it and wipe the queue.
-        if (isPlayer(caster)) {
-            final Player currPlayer = caster.getActingPlayer();
-            final SkillUsedInfo queuedSkill = currPlayer.getQueuedSkill();
+        if (caster instanceof Player player ) {
+            final SkillUsedInfo queuedSkill = player.getQueuedSkill();
 
             if (queuedSkill != null) {
                 ThreadPool.execute(() -> {
-                    currPlayer.setQueuedSkill(null, false, false);
-                    currPlayer.useSkill(queuedSkill.skill(), queuedSkill.item(), queuedSkill.ctrlPressed(), queuedSkill.shiftPressed());
+                    player.setQueuedSkill(null, false, false);
+                    player.useSkill(queuedSkill.skill(), queuedSkill.item(), queuedSkill.ctrlPressed(), queuedSkill.shiftPressed());
                 });
-
                 return;
             }
         }
-        // Attack target after skill use.
-        if ((skill.getNextAction() != NextActionType.NONE) && (caster.getAI().getNextIntention() == null))
-        {
-            if ((skill.getNextAction() == NextActionType.ATTACK) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
-            {
+
+        if (skill.getNextAction() != NextActionType.NONE && caster.getAI().getNextIntention() == null) {
+            if (skill.getNextAction() == NextActionType.ATTACK && target != null && target != caster && target.isAutoAttackable(caster)) {
                 caster.getAI().setIntention(AI_INTENTION_ATTACK, target);
             }
-            else if ((skill.getNextAction() == NextActionType.CAST) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
-            {
+            else if (skill.getNextAction() == NextActionType.CAST && target != null && target != caster && target.isAutoAttackable(caster)) {
                 caster.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target, item, false, false);
-            }
-            else
-            {
+            } else {
                 caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
             }
-        }
-        else
-        {
+        } else {
             caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
         }
     }
