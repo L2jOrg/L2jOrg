@@ -135,11 +135,10 @@ public class Q00935_ExploringTheEastWingOfTheDungeonOfAbyss extends Quest
 	public String onKill(Npc npc, Player killer, boolean isSummon) {
 		final QuestState qs = getQuestState(killer, false);
 		if (qs.getCond() == 1) {
-			if (getQuestItemsCount(killer, IMAGE_OF_EVIL.getId()) < 50) {
-				giveItems(killer, IMAGE_OF_EVIL);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			else if (getQuestItemsCount(killer, IMAGE_OF_EVIL.getId()) >= 50) {
+			giveItems(killer, IMAGE_OF_EVIL);
+			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+
+			if (getQuestItemsCount(killer, IMAGE_OF_EVIL.getId()) >= 50) {
 				qs.setCond(2);
 				killer.sendPacket(new ExShowScreenMessage("Iris and Rosammy are awaiting your return!", 5000));
 			}

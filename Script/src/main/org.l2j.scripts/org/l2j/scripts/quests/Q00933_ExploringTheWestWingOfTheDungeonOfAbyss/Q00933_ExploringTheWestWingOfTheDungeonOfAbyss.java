@@ -141,10 +141,10 @@ public class Q00933_ExploringTheWestWingOfTheDungeonOfAbyss extends Quest {
     public String onKill(Npc npc, Player killer, boolean isSummon) {
         final QuestState qs = getQuestState(killer, false);
         if ((qs != null) && qs.isCond(1)) {
-            if (getQuestItemsCount(killer, REMNANT_ASHES.getId()) < 50) {
-                giveItems(killer, REMNANT_ASHES);
-                playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-            } else {
+            giveItems(killer, REMNANT_ASHES);
+            playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+
+            if (getQuestItemsCount(killer, REMNANT_ASHES.getId()) >= 50) {
                 qs.setCond(2);
                 killer.sendPacket(new ExShowScreenMessage("Magrit and Ingrit are awaiting your return!", 5000));
             }
