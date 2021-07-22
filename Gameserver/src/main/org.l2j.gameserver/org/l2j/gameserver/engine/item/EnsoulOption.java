@@ -19,14 +19,8 @@
 package org.l2j.gameserver.engine.item;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.model.holders.SkillHolder;
 
 /**
  * @author JoeAlisson
  */
-public record EnsoulOption(int id, String name, String description, SkillHolder skill) {
-
-    public Skill toSkill() {
-        return skill.getSkill();
-    }
-}
+public record EnsoulOption(int id, String name, String description, Skill skill) {  }

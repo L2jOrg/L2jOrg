@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.Condition;
 import org.l2j.gameserver.model.events.ListenersContainer;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
+import org.l2j.gameserver.model.holders.ItemSkillInfo;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.type.ActionType;
@@ -79,7 +79,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     protected ActionType _defaultAction = ActionType.NONE;
     protected BodyPart bodyPart;
 
-    private Map<ItemSkillType, List<ItemSkillHolder>> skillsMap = Collections.emptyMap();
+    private Map<ItemSkillType, List<ItemSkillInfo>> skillsMap = Collections.emptyMap();
     private CommissionItemType commissionType;
     private int displayId;
     private int weight;
@@ -103,21 +103,21 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
         this.name = name;
     }
 
-    public void addSkill(ItemSkillHolder holder) {
+    public void addSkill(ItemSkillInfo holder) {
         if(skillsMap.equals(Collections.emptyMap())) {
             skillsMap = new EnumMap<>(ItemSkillType.class);
         }
-        skillsMap.computeIfAbsent(holder.getType(), t -> new ArrayList<>()).add(holder);
+        skillsMap.computeIfAbsent(holder.type(), t -> new ArrayList<>()).add(holder);
     }
 
-    public final List<ItemSkillHolder> getSkills(ItemSkillType type) {
+    public final List<ItemSkillInfo> getSkills(ItemSkillType type) {
         return skillsMap.getOrDefault(type, Collections.emptyList());
     }
 
     public Skill getFirstSkill(ItemSkillType type) {
         var skills = skillsMap.getOrDefault(type, Collections.emptyList());
         if(!skills.isEmpty()) {
-            return skills.get(0).getSkill();
+            return skills.get(0).skill();
         }
         return null;
     }
@@ -130,15 +130,15 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
      * @param comparator the comparator of Item Skill Holder
      * @return the min skills according to comparator
      */
-    public Skill getFirstSkill(ItemSkillType type, Comparator<ItemSkillHolder> comparator) {
+    public Skill getFirstSkill(ItemSkillType type, Comparator<ItemSkillInfo> comparator) {
         var skills = skillsMap.getOrDefault(type, Collections.emptyList());
-        ItemSkillHolder holder = null;
+        ItemSkillInfo holder = null;
         for (var skill : skills) {
             if (holder == null || comparator.compare(holder, skill) > 0) {
                 holder = skill;
             }
         }
-        return holder != null ?  holder.getSkill() : null;
+        return holder != null ?  holder.skill() : null;
     }
 
     public boolean hasSkill(ItemSkillType type) {
@@ -148,7 +148,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     public boolean hasSkill(ItemSkillType type, int skillId) {
         var skills = skillsMap.getOrDefault(type, Collections.emptyList());
         for (var skill : skills) {
-            if(skill.getSkillId() == skillId || skillId < 0) {
+            if(skill.skill().getId() == skillId || skillId < 0) {
                 return true;
             }
         }
@@ -158,27 +158,27 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     public boolean hasSkill(ItemSkillType type, Predicate<Skill> predicate) {
         var skills = skillsMap.getOrDefault(type, Collections.emptyList());
         for (var skill : skills) {
-            if(predicate.test(skill.getSkill())) {
+            if(predicate.test(skill.skill())) {
                 return true;
             }
         }
         return false;
     }
 
-    public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
+    public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillInfo> action) {
         skillsMap.getOrDefault(type, Collections.emptyList()).forEach(action);
     }
 
     public final void forEachSkill(ItemSkillType type, Predicate<Skill> filter, Consumer<Skill> action) {
         for (var holder : skillsMap.getOrDefault(type, Collections.emptyList())) {
-            var skill = holder.getSkill();
+            var skill = holder.skill();
             if(filter.test(skill)) {
                 action.accept(skill);
             }
         }
     }
 
-    public boolean checkAnySkill(ItemSkillType type, Predicate<ItemSkillHolder> predicate) {
+    public boolean checkAnySkill(ItemSkillType type, Predicate<ItemSkillInfo> predicate) {
         for (var holder : skillsMap.getOrDefault(type, Collections.emptyList())) {
             if(predicate.test(holder)) {
                 return true;

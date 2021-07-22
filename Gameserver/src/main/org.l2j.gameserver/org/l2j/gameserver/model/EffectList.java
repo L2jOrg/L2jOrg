@@ -213,7 +213,7 @@ public final class EffectList {
         for (BuffInfo info : actives) {
             if((nonNull(info.getItem()) && info.getItem().getId() == template.getId())
                  || template.checkAnySkill(ItemSkillType.NORMAL,
-                    s -> isSkillOrHasType(s.getSkillId(), s.getSkill().getAbnormalType(), info))) {
+                    s -> isSkillOrHasType(s.skill().getId(), s.skill().getAbnormalType(), info))) {
 
                 return info.getTime();
             }

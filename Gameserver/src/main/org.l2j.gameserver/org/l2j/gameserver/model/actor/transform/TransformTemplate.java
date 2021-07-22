@@ -21,11 +21,11 @@ package org.l2j.gameserver.model.actor.transform;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.LinkedHashIntMap;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.AdditionalItemHolder;
 import org.l2j.gameserver.model.holders.AdditionalSkillHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
@@ -47,7 +47,7 @@ public final class TransformTemplate {
     private final Double collisionHeight;
     private final WeaponType baseAttackType;
     private final IntMap<TransformLevelData> data = new LinkedHashIntMap<>(100);
-    private List<SkillHolder> skills;
+    private List<Skill> skills;
     private List<AdditionalSkillHolder> additionalSkills;
     private List<AdditionalItemHolder> additionalItems;
     private EnumMap<InventorySlot, Integer> baseDefense ;
@@ -206,14 +206,14 @@ public final class TransformTemplate {
         return baseAttackType;
     }
 
-    public void addSkill(SkillHolder holder) {
+    public void addSkill(Skill holder) {
         if (skills == null) {
             skills = new ArrayList<>();
         }
         skills.add(holder);
     }
 
-    public List<SkillHolder> getSkills() {
+    public List<Skill> getSkills() {
         return skills != null ? skills : Collections.emptyList();
     }
 

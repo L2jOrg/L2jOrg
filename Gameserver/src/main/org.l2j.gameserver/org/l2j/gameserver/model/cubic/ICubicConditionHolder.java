@@ -27,6 +27,4 @@ import org.l2j.gameserver.model.cubic.conditions.ICubicCondition;
  */
 public interface ICubicConditionHolder {
     boolean validateConditions(CubicInstance cubic, Creature owner, WorldObject target);
-
-    void addCondition(ICubicCondition condition);
 }

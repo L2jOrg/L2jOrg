@@ -107,7 +107,7 @@ public final class PetDataTable extends GameXmlReader {
                         for (Node s = p.getFirstChild(); s != null; s = s.getNextSibling()) {
                             if (s.getNodeName().equals("skill")) {
                                 attrs = s.getAttributes();
-                                data.addNewSkill(parseInt(attrs, "skillId"), parseInt(attrs, "skillLvl"), parseInt(attrs, "minLvl"));
+                                data.addNewSkill(parseSkillInfo(s, "skillId",  "skillLvl"), parseInt(attrs, "minLvl"));
                             }
                         }
                     } else if (p.getNodeName().equals("stats")) {

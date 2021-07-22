@@ -16,35 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.holders;
+package org.l2j.gameserver.model.options;
 
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class SkillUseHolder extends SkillHolder {
-    private final Item _item;
-    private final boolean _ctrlPressed;
-    private final boolean _shiftPressed;
-
-    public SkillUseHolder(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {
-        super(skill);
-        _item = item;
-        _ctrlPressed = ctrlPressed;
-        _shiftPressed = shiftPressed;
-    }
-
-    public Item getItem() {
-        return _item;
-    }
-
-    public boolean isCtrlPressed() {
-        return _ctrlPressed;
-    }
-
-    public boolean isShiftPressed() {
-        return _shiftPressed;
-    }
-}
+public record OptionsSkillInfo(Skill skill, double chance, OptionsSkillType type) {  }

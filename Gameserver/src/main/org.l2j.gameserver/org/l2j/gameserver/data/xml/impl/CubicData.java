@@ -22,10 +22,11 @@ import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.templates.CubicTemplate;
 import org.l2j.gameserver.model.cubic.CubicSkill;
-import org.l2j.gameserver.model.cubic.ICubicConditionHolder;
+import org.l2j.gameserver.model.cubic.CubicTargetType;
 import org.l2j.gameserver.model.cubic.conditions.HealthCondition;
 import org.l2j.gameserver.model.cubic.conditions.HpCondition;
 import org.l2j.gameserver.model.cubic.conditions.HpCondition.HpConditionType;
+import org.l2j.gameserver.model.cubic.conditions.ICubicCondition;
 import org.l2j.gameserver.model.cubic.conditions.RangeCondition;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -36,9 +37,7 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author UnAfraid
@@ -68,9 +67,7 @@ public class CubicData extends GameXmlReader {
     @Override
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "cubic", cubicNode ->
-        {
-            parseTemplate(cubicNode, new CubicTemplate(new StatsSet(parseAttributes(cubicNode))));
-        }));
+                parseTemplate(cubicNode, new CubicTemplate(new StatsSet(parseAttributes(cubicNode))))));
     }
 
     /**
@@ -78,11 +75,11 @@ public class CubicData extends GameXmlReader {
      * @param template
      */
     private void parseTemplate(Node cubicNode, CubicTemplate template) {
-        forEach(cubicNode, XmlReader::isNode, innerNode ->
-        {
+        forEach(cubicNode, XmlReader::isNode, innerNode -> {
             switch (innerNode.getNodeName()) {
                 case "conditions": {
-                    parseConditions(innerNode, template, template);
+                    var conditions = parseConditions(innerNode, template);
+                    template.setConditions(conditions);
                     break;
                 }
                 case "skills": {
@@ -94,50 +91,51 @@ public class CubicData extends GameXmlReader {
         _cubics.computeIfAbsent(template.getId(), key -> new HashMap<>()).put(template.getLevel(), template);
     }
 
-    /**
-     * @param cubicNode
-     * @param template
-     * @param holder
-     */
-    private void parseConditions(Node cubicNode, CubicTemplate template, ICubicConditionHolder holder) {
-        forEach(cubicNode, XmlReader::isNode, conditionNode ->
-        {
+    private List<ICubicCondition> parseConditions(Node cubicNode, CubicTemplate template) {
+        List<ICubicCondition> conditions = new ArrayList<>();
+        for(var conditionNode = cubicNode.getFirstChild(); conditionNode != null; conditionNode = conditionNode.getNextSibling()) {
             switch (conditionNode.getNodeName()) {
-                case "hp": {
+                case "hp" -> {
                     final HpConditionType type = parseEnum(conditionNode.getAttributes(), HpConditionType.class, "type");
                     final int hpPer = parseInt(conditionNode.getAttributes(), "percent");
-                    holder.addCondition(new HpCondition(type, hpPer));
-                    break;
+                    conditions.add(new HpCondition(type, hpPer));
                 }
-                case "range": {
+                case "range" -> {
                     final int range = parseInt(conditionNode.getAttributes(), "value");
-                    holder.addCondition(new RangeCondition(range));
-                    break;
+                    conditions.add(new RangeCondition(range));
                 }
-                case "healthPercent": {
+                case "healthPercent" -> {
                     final int min = parseInt(conditionNode.getAttributes(), "min");
                     final int max = parseInt(conditionNode.getAttributes(), "max");
-                    holder.addCondition(new HealthCondition(min, max));
-                    break;
+                    conditions.add(new HealthCondition(min, max));
                 }
-                default: {
-                    LOGGER.warn("Attempting to use not implemented condition: " + conditionNode.getNodeName() + " for cubic id: " + template.getId() + " level: " + template.getLevel());
-                    break;
-                }
+                default -> LOGGER.warn("Attempting to use not implemented condition: {} for cubic id: {} level: {}", conditionNode.getNodeName(), template.getId(),  template.getLevel());
             }
-        });
+        }
+        return conditions;
     }
 
-    /**
-     * @param cubicNode
-     * @param template
-     */
     private void parseSkills(Node cubicNode, CubicTemplate template) {
-        forEach(cubicNode, "skill", skillNode ->
-        {
-            final CubicSkill skill = new CubicSkill(new StatsSet(parseAttributes(skillNode)));
-            forEach(cubicNode, "conditions", conditionNode -> parseConditions(cubicNode, template, skill));
-            template.getSkills().add(skill);
+        forEach(cubicNode, "skill", skillNode -> {
+            var attr = skillNode.getAttributes();
+
+            var skill = parseSkillInfo(skillNode);
+            var triggerRate = parseInt(attr, "triggerRate", 100);
+            var successRate = parseInt(attr, "successRate", 100);
+            var canUseOnStaticObjects = parseBoolean(attr, "canUseOnStaticObjects", false);
+            var targetType = parseEnum(attr, CubicTargetType.class, "target", CubicTargetType.TARGET);
+            var targetDebuff = parseBoolean(attr,"targetDebuff", false);
+
+            List<ICubicCondition> conditions = Collections.emptyList();
+
+            for(var node = cubicNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+                if(node.getNodeName().equals("conditions")) {
+                    conditions = parseConditions(cubicNode, template);
+                }
+            }
+
+            final CubicSkill cubic = new CubicSkill(skill, triggerRate, successRate, canUseOnStaticObjects, targetType, targetDebuff, conditions);
+            template.getSkills().add(cubic);
         });
     }
 

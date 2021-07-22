@@ -16,29 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.options;
+package org.l2j.gameserver.model.holders;
 
-import org.l2j.gameserver.model.holders.SkillHolder;
+import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.skill.api.Skill;
 
 /**
  * @author UnAfraid
  * @author JoeAlisson
  */
-public class OptionsSkillHolder extends SkillHolder {
-    private final OptionsSkillType type;
-    private final double chance;
-
-    public OptionsSkillHolder(SkillHolder skill, double chance, OptionsSkillType type) {
-        super(skill.getSkillId(), skill.getLevel());
-        this.chance = chance;
-        this.type = type;
-    }
-
-    public OptionsSkillType getSkillType() {
-        return type;
-    }
-
-    public double getChance() {
-        return chance;
-    }
-}
+public record SkillUsedInfo(Skill skill, Item item, boolean ctrlPressed, boolean shiftPressed) {  }

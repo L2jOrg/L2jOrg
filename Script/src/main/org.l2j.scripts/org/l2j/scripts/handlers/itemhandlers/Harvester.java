@@ -62,7 +62,7 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		item.forEachSkill(ItemSkillType.NORMAL, s -> player.useSkill(s.getSkill(), item, false, false));
+		item.forEachSkill(ItemSkillType.NORMAL, s -> player.useSkill(s.skill(), item, false, false));
 		return true;
 	}
 }

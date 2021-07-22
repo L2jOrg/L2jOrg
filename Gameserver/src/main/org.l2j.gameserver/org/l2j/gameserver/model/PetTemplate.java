@@ -22,8 +22,8 @@ import io.github.joealisson.primitive.ArrayIntList;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
-import org.l2j.gameserver.model.holders.SkillHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -142,13 +142,8 @@ public class PetTemplate {
         syncLevel = val;
     }
 
-    /**
-     * @param skillId  the skill Id to add.
-     * @param skillLvl the skill level.
-     * @param petLvl   the pet's level when this skill is available.
-     */
-    public void addNewSkill(int skillId, int skillLvl, int petLvl) {
-        skills.add(new PetSkillLearn(skillId, skillLvl, petLvl));
+    public void addNewSkill(Skill skill, int petLvl) {
+        skills.add(new PetSkillLearn(skill, petLvl));
     }
 
     /**
@@ -161,12 +156,13 @@ public class PetTemplate {
     public int getAvailableLevel(int skillId, int petLvl) {
         int lvl = 0;
         boolean found = false;
-        for (PetSkillLearn temp : skills) {
-            if (temp.getSkillId() != skillId) {
+        for (var temp : skills) {
+            var skill = temp.skill();
+            if (skill.getId() != skillId) {
                 continue;
             }
             found = true;
-            if (temp.getLevel() == 0) {
+            if (skill.getLevel() == 0) {
                 if (petLvl < 70) {
                     lvl = (petLvl / 10);
                     if (lvl <= 0) {
@@ -177,14 +173,14 @@ public class PetTemplate {
                 }
 
                 // formula usable for skill that have 10 or more skill levels
-                final int maxLvl = SkillEngine.getInstance().getMaxLevel(temp.getSkillId());
+                final int maxLvl = SkillEngine.getInstance().getMaxLevel(skill.getId());
                 if (lvl > maxLvl) {
                     lvl = maxLvl;
                 }
                 break;
-            } else if (temp.getMinLevel() <= petLvl) {
-                if (temp.getLevel() > lvl) {
-                    lvl = temp.getLevel();
+            } else if (temp.minLevel() <= petLvl) {
+                if (skill.getLevel() > lvl) {
+                    lvl = skill.getLevel();
                 }
             }
         }
@@ -194,24 +190,5 @@ public class PetTemplate {
         return lvl;
     }
 
-    public static final class PetSkillLearn extends SkillHolder {
-        private final int _minLevel;
-
-        /**
-         * @param id     the skill Id.
-         * @param lvl    the skill level.
-         * @param minLvl the minimum level when this skill is available.
-         */
-        public PetSkillLearn(int id, int lvl, int minLvl) {
-            super(id, lvl);
-            _minLevel = minLvl;
-        }
-
-        /**
-         * @return the minimum level for the pet to get the skill.
-         */
-        public int getMinLevel() {
-            return _minLevel;
-        }
-    }
+    private static record PetSkillLearn(Skill skill, int minLevel) {  }
 }

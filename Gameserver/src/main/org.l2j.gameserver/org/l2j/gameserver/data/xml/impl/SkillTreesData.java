@@ -31,7 +31,6 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.PlayerSkillHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -193,7 +192,7 @@ public final class SkillTreesData extends GameXmlReader {
 
         switch (node.getNodeName()) {
             case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
-            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "lvl")));
+            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(parseSkillInfo(node, "id", "lvl"));
             case "race" -> skillLearn.addRace(Race.valueOf(node.getTextContent()));
             case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(node.getTextContent()));
             case "social-status" -> skillLearn.setSocialStatus(parseEnum(node, SocialStatus.class));
@@ -349,8 +348,11 @@ public final class SkillTreesData extends GameXmlReader {
 
             for (SkillLearn skillLearn : learnable) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
-                // Cleanup skills that has to be removed
-                for (int skillId : skillLearn.getRemoveSkills()) {
+
+                var it = skillLearn.getRemoveSkills().iterator();
+                while (it.hasNext()) {
+                    var skillId = it.nextInt();
+
                     // Mark skill as removed, so it doesn't gets added
                     removed.add(skillId);
 

@@ -42,7 +42,7 @@ public class ExRequestCostumeUseItem extends ClientPacket {
         var player = client.getPlayer();
         var item = player.getInventory().getItemByObjectId(itemObjectId);
         if(nonNull(item) && CostumeEngine.getInstance().checkCostumeAction(player)) {
-            item.forEachSkill(ItemSkillType.NORMAL, skill -> SkillCaster.triggerCast(player, player, skill.getSkill(), item, true));
+            item.forEachSkill(ItemSkillType.NORMAL, skill -> SkillCaster.triggerCast(player, player, skill.skill(), item, true));
         }
     }
 }

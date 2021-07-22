@@ -23,7 +23,7 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
+import org.l2j.gameserver.model.holders.ArmorsetSkillInfo;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.stats.BaseStats;
 
@@ -46,7 +46,7 @@ public final class ArmorSet {
     private final int minimumPieces;
     private final IntSet requiredItems = new HashIntSet();
     private final IntSet optionalItems = new HashIntSet();
-    private final List<ArmorsetSkillHolder> skills = new ArrayList<>();
+    private final List<ArmorsetSkillInfo> skills = new ArrayList<>();
     private final Map<BaseStats, Double> _stats = new LinkedHashMap<>();
 
     public ArmorSet(int minimumPieces) {
@@ -95,14 +95,14 @@ public final class ArmorSet {
     /**
      * Adds an skill to the set
      */
-    public void addSkill(ArmorsetSkillHolder holder) {
+    public void addSkill(ArmorsetSkillInfo holder) {
         skills.add(holder);
     }
 
     /**
      * The list of skills that are activated when set reaches it's minimal equipped items condition
      */
-    public List<ArmorsetSkillHolder> getSkills() {
+    public List<ArmorsetSkillInfo> getSkills() {
         return skills;
     }
 

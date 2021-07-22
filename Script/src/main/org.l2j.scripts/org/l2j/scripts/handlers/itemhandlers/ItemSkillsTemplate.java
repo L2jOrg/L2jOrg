@@ -25,7 +25,7 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.effects.EffectType;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
+import org.l2j.gameserver.model.holders.ItemSkillInfo;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -67,7 +67,7 @@ public class ItemSkillsTemplate implements IItemHandler {
             return false;
         }
 
-        final List<ItemSkillHolder> skills = item.getSkills(ItemSkillType.NORMAL);
+        final List<ItemSkillInfo> skills = item.getSkills(ItemSkillType.NORMAL);
         if(isNullOrEmpty(skills)) {
             LOGGER.info("Item {} does not have registered any skill for handler.", item);
             return false;
@@ -88,7 +88,7 @@ public class ItemSkillsTemplate implements IItemHandler {
                 continue;
             }
 
-            var itemSkill = skillInfo.getSkill();
+            var itemSkill = skillInfo.skill();
 
             if (nonNull(itemSkill)) {
 

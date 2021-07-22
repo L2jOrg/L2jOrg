@@ -20,7 +20,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.model.ArmorSet;
-import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
+import org.l2j.gameserver.model.holders.ArmorsetSkillInfo;
 import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -110,14 +110,13 @@ public final class ArmorSetsData extends GameXmlReader {
                                     forEach(innerSetNode, b -> "skill".equals(b.getNodeName()), node ->
                                     {
                                         final NamedNodeMap attrs = node.getAttributes();
-                                        final int skillId = parseInt(attrs, "id");
-                                        final int skillLevel = parseInt(attrs, "level");
+                                        var skill = parseSkillInfo(node);
                                         final int minPieces = parseInt(attrs, "minimumPieces", set.getMinimumPieces());
                                         final int minEnchant = parseInt(attrs, "minimumEnchant", 0);
                                         final boolean isOptional = parseBoolean(attrs, "optional", false);
                                         final int artifactSlotMask = parseInt(attrs, "slotMask", 0);
                                         final int artifactBookSlot = parseInt(attrs, "bookSlot", 0);
-                                        set.addSkill(new ArmorsetSkillHolder(skillId, skillLevel, minPieces, minEnchant, isOptional, artifactSlotMask, artifactBookSlot));
+                                        set.addSkill(new ArmorsetSkillInfo(skill, minPieces, minEnchant, isOptional, artifactSlotMask, artifactBookSlot));
                                     });
                                     break;
                                 }

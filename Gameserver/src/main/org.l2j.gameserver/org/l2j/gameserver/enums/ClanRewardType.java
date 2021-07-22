@@ -58,8 +58,8 @@ public enum ClanRewardType {
     public ClanRewardBonus getAvailableBonus(Clan clan) {
         ClanRewardBonus availableBonus = null;
         for (ClanRewardBonus bonus : ClanRewardManager.getInstance().getClanRewardBonuses(this)) {
-            if (bonus.getRequiredAmount() <= _pointsFunction.applyAsInt(clan)) {
-                if ((availableBonus == null) || (availableBonus.getLevel() < bonus.getLevel())) {
+            if (bonus.requiredAmount() <= _pointsFunction.applyAsInt(clan)) {
+                if ((availableBonus == null) || (availableBonus.level() < bonus.level())) {
                     availableBonus = bonus;
                 }
             }

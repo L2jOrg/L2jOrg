@@ -18,17 +18,16 @@
  */
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.HashIntSet;
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author Zoey76
@@ -42,12 +41,12 @@ public final class SkillLearn {
     private final long _levelUpSp;
     private final List<ItemHolder> _requiredItems = new ArrayList<>();
     private final List<Race> _races = new ArrayList<>();
-    private final List<SkillHolder> _preReqSkills = new ArrayList<>();
+    private final List<Skill> preReqSkills = new ArrayList<>();
     private final boolean _residenceSkill;
     private final List<Integer> _residenceIds = new ArrayList<>();
     private final boolean _learnedByNpc;
     private final boolean _learnedByFS;
-    private final Set<Integer> _removeSkills = new HashSet<>(1);
+    private final IntSet removeSkills = new HashIntSet(1);
     private final int _treeId;
     private final int _row;
     private final int _column;
@@ -145,8 +144,8 @@ public final class SkillLearn {
     /**
      * @return the list of skill holders required to acquire this skill.
      */
-    public List<SkillHolder> getPreReqSkills() {
-        return _preReqSkills;
+    public List<Skill> getPreReqSkills() {
+        return preReqSkills;
     }
 
     /**
@@ -154,8 +153,8 @@ public final class SkillLearn {
      *
      * @param skill the required skill holder.
      */
-    public void addPreReqSkill(SkillHolder skill) {
-        _preReqSkills.add(skill);
+    public void addPreReqSkill(Skill skill) {
+        preReqSkills.add(skill);
     }
 
     /**
@@ -214,11 +213,15 @@ public final class SkillLearn {
     }
 
     public void addRemoveSkills(int skillId) {
-        _removeSkills.add(skillId);
+        removeSkills.add(skillId);
     }
 
-    public Set<Integer> getRemoveSkills() {
-        return _removeSkills;
+    public IntSet getRemoveSkills() {
+        return removeSkills;
+    }
+
+    public boolean hasSkillsToRemove() {
+        return !removeSkills.isEmpty();
     }
 
     public Skill getSkill() {

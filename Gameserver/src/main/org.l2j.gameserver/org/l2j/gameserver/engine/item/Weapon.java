@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
+import org.l2j.gameserver.model.holders.ItemSkillInfo;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.stats.Formulas;
@@ -124,7 +125,7 @@ public final class Weapon extends ItemTemplate {
      */
     public void applyConditionalSkills(Creature caster, Creature target, Skill trigger, ItemSkillType type) {
         forEachSkill(type, holder -> {
-            var skill = holder.getSkill();
+            var skill = holder.skill();
             if (!checkSkillActivation(caster, target, trigger, type, holder, skill)) {
                 return;
             }
@@ -139,8 +140,8 @@ public final class Weapon extends ItemTemplate {
         });
     }
 
-    private boolean checkSkillActivation(Creature caster, Creature target, Skill trigger, ItemSkillType type, org.l2j.gameserver.model.holders.ItemSkillHolder holder, Skill skill) {
-        if (!Rnd.chance(holder.getChance())) {
+    private boolean checkSkillActivation(Creature caster, Creature target, Skill trigger, ItemSkillType type, ItemSkillInfo holder, Skill skill) {
+        if (!Rnd.chance(holder.chance())) {
             return false;
         }
 

@@ -24,9 +24,8 @@ import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.options.Options;
-import org.l2j.gameserver.model.options.OptionsSkillHolder;
+import org.l2j.gameserver.model.options.OptionsSkillInfo;
 import org.l2j.gameserver.model.options.OptionsSkillType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.EffectParser;
@@ -76,21 +75,21 @@ public class AugmentationEngine extends EffectParser {
             forEach(optionNode, XmlReader::isNode, innerNode -> {
                 switch (innerNode.getNodeName()) {
                     case "effects" -> parseEffects(innerNode, option);
-                    case "skill" -> parseSkills(option, innerNode);
+                    case "skill" -> parseSkill(option, innerNode);
                 }
             });
             augmentations.put(option.getId(), option);
         }));
     }
 
-    private void parseSkills(Options option, Node innerNode) {
-        var attr = innerNode.getAttributes();
-        var skill = new SkillHolder(parseInt(attr, "id"), parseInt(attr, "level"));
+    private void parseSkill(Options option, Node skillNode) {
+        var attr = skillNode.getAttributes();
+        var skill = parseSkillInfo(skillNode);
         var type = parseEnum(attr, OptionsSkillType.class, "type");
         switch (type) {
             case ACTIVE -> option.addActiveSkill(skill);
             case PASSIVE -> option.addPassiveSkill(skill);
-            default -> option.addActivationSkill(new OptionsSkillHolder(skill, parseDouble(attr, "chance"), type));
+            default -> option.addActivationSkill(new OptionsSkillInfo(skill, parseDouble(attr, "chance"), type));
         }
     }
 

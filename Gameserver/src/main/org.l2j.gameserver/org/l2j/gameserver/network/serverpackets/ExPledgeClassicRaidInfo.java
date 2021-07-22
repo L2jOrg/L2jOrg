@@ -20,6 +20,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.ClanRewardManager;
+import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
@@ -39,8 +40,8 @@ public class ExPledgeClassicRaidInfo extends ServerPacket {
         buffer.writeInt(0x05);
 
         ClanRewardManager.getInstance().forEachReward(ClanRewardType.ARENA, reward -> {
-            final var skill = reward.getSkillReward();
-            buffer.writeInt(skill.getSkillId());
+            final Skill skill = reward.skill();
+            buffer.writeInt(skill.getId());
             buffer.writeInt(skill.getLevel());
         });
     }
