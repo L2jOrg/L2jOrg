@@ -24,13 +24,13 @@ import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
+import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.residences.ResidenceFunctionTemplate;
 import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
@@ -218,14 +218,14 @@ public final class ClanHallManager extends AbstractNpcAI
 										else
 										{
 											final String[] skillData = st.nextToken().split("_");
-											final SkillHolder skill = new SkillHolder(Integer.parseInt(skillData[0]), Integer.parseInt(skillData[1]));
-											if (Util.contains(ALLOWED_BUFFS, skill.getSkillId()))
+											var skill = SkillEngine.getInstance().getSkill(Integer.parseInt(skillData[0]), Integer.parseInt(skillData[1]));
+											if (Util.contains(ALLOWED_BUFFS, skill.getId()))
 											{
-												if (npc.getCurrentMp() < (npc.getStats().getMpConsume(skill.getSkill()) + npc.getStats().getMpInitialConsume(skill.getSkill())))
+												if (npc.getCurrentMp() < (npc.getStats().getMpConsume(skill) + npc.getStats().getMpInitialConsume(skill)))
 												{
 													htmltext = getHtml(player, "ClanHallManager-funcBuffsNoMp.html");
 												}
-												else if (npc.isSkillDisabled(skill.getSkill()))
+												else if (npc.isSkillDisabled(skill))
 												{
 													htmltext = getHtml(player, "ClanHallManager-funcBuffsNoReuse.html");
 												}
