@@ -1131,16 +1131,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, loc);
     }
 
-    /**
-     * Instantly cast a skill upon the given target.
-     *
-     * @param npc    the caster NPC
-     * @param target the target of the cast
-     * @param skill  the skill to cast
-     */
-    protected void castSkill(Npc npc, Playable target, SkillHolder skill) {
+    protected void castSkill(Npc npc, Playable target, Skill skill) {
         npc.setTarget(target);
-        npc.doCast(skill.getSkill());
+        npc.doCast(skill);
     }
 
     /**
