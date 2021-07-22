@@ -29,32 +29,27 @@ import static java.util.Objects.isNull;
  * @author BiggBoss
  */
 public class SkillHolder {
-    private final int _skillId;
-    private final int _skillLevel;
-    private final int _skillSubLevel;
+    private final int skillId;
+    private final int skillLevel;
     private Skill skill;
 
     public SkillHolder(int skillId, int skillLevel) {
-        _skillId = skillId;
-        _skillLevel = skillLevel;
-        _skillSubLevel = 0;
+        this.skillId = skillId;
+        this.skillLevel = skillLevel;
     }
 
     public final int getSkillId() {
-        return _skillId;
+        return skillId;
     }
 
     public final int getLevel() {
-        return _skillLevel;
+        return skillLevel;
     }
 
-    public final int getSkillSubLevel() {
-        return _skillSubLevel;
-    }
 
     public final Skill getSkill() {
         if(isNull(skill)) {
-            skill = SkillEngine.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1));
+            skill = SkillEngine.getInstance().getSkill(skillId, Math.max(skillLevel, 1));
         }
         return skill;
     }
@@ -65,26 +60,23 @@ public class SkillHolder {
             return true;
         }
 
-        if (!(obj instanceof SkillHolder)) {
+        if (!(obj instanceof SkillHolder holder)) {
             return false;
         }
-
-        final SkillHolder holder = (SkillHolder) obj;
-        return (holder.getSkillId() == _skillId) && (holder.getLevel() == _skillLevel) && (holder.getSkillSubLevel() == _skillSubLevel);
+        return holder.getSkillId() == skillId && holder.getLevel() == skillLevel;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = (prime * result) + _skillId;
-        result = (prime * result) + _skillLevel;
-        result = (prime * result) + _skillSubLevel;
+        result = (prime * result) + skillId;
+        result = (prime * result) + skillLevel;
         return result;
     }
 
     @Override
     public String toString() {
-        return "[SkillId: " + _skillId + " Level: " + _skillLevel + "]";
+        return "[SkillId: " + skillId + " Level: " + skillLevel + "]";
     }
 }
