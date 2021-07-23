@@ -71,121 +71,142 @@ public final class TransformData extends GameXmlReader {
             if ("list".equalsIgnoreCase(n.getNodeName())) {
                 for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
                     if ("transform".equalsIgnoreCase(d.getNodeName())) {
-                        NamedNodeMap attrs = d.getAttributes();
-                        final StatsSet set = new StatsSet();
-                        for (int i = 0; i < attrs.getLength(); i++) {
-                            final Node att = attrs.item(i);
-                            set.set(att.getNodeName(), att.getNodeValue());
-                        }
-                        final Transform transform = new Transform(set);
-                        for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
-                            final boolean isMale = "Male".equalsIgnoreCase(cd.getNodeName());
-                            if ("Male".equalsIgnoreCase(cd.getNodeName()) || "Female".equalsIgnoreCase(cd.getNodeName())) {
-                                TransformTemplate templateData = null;
-                                for (Node z = cd.getFirstChild(); z != null; z = z.getNextSibling()) {
-                                    switch (z.getNodeName()) {
-                                        case "common": {
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
-                                                switch (s.getNodeName()) {
-                                                    case "base":
-                                                    case "stats":
-                                                    case "defense":
-                                                    case "magicDefense":
-                                                    case "collision":
-                                                    case "moving": {
-                                                        attrs = s.getAttributes();
-                                                        for (int i = 0; i < attrs.getLength(); i++) {
-                                                            final Node att = attrs.item(i);
-                                                            set.set(att.getNodeName(), att.getNodeValue());
-                                                        }
-                                                        break;
-                                                    }
-                                                }
-                                            }
-                                            templateData = new TransformTemplate(set);
-                                            transform.setTemplate(isMale, templateData);
-                                            break;
-                                        }
-                                        case "skills": {
-                                            if (templateData == null) {
-                                                templateData = new TransformTemplate(set);
-                                                transform.setTemplate(isMale, templateData);
-                                            }
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
-                                                if ("skill".equals(s.getNodeName())) {
-                                                    templateData.addSkill(parseSkillInfo(s));
-                                                }
-                                            }
-                                            break;
-                                        }
-                                        case "actions": {
-                                            if (templateData == null) {
-                                                templateData = new TransformTemplate(set);
-                                                transform.setTemplate(isMale, templateData);
-                                            }
-                                            set.set("actions", z.getTextContent());
-                                            final int[] actions = set.getIntArray("actions", " ");
-                                            templateData.setBasicActionList(new ExBasicActionList(actions));
-                                            break;
-                                        }
-                                        case "additionalSkills": {
-                                            if (templateData == null) {
-                                                templateData = new TransformTemplate(set);
-                                                transform.setTemplate(isMale, templateData);
-                                            }
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
-                                                if ("skill".equals(s.getNodeName())) {
-                                                    attrs = s.getAttributes();
-                                                    var skill = parseSkillInfo(s);
-                                                    final int minLevel = parseInt(attrs, "minLevel");
-                                                    templateData.addAdditionalSkill(new AdditionalSkillHolder(skill, minLevel));
-                                                }
-                                            }
-                                            break;
-                                        }
-                                        case "items": {
-                                            if (templateData == null) {
-                                                templateData = new TransformTemplate(set);
-                                                transform.setTemplate(isMale, templateData);
-                                            }
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
-                                                if ("item".equals(s.getNodeName())) {
-                                                    attrs = s.getAttributes();
-                                                    final int itemId = parseInt(attrs, "id");
-                                                    final boolean allowed = parseBoolean(attrs, "allowed");
-                                                    templateData.addAdditionalItem(new AdditionalItemHolder(itemId, allowed));
-                                                }
-                                            }
-                                            break;
-                                        }
-                                        case "levels": {
-                                            if (templateData == null) {
-                                                templateData = new TransformTemplate(set);
-                                                transform.setTemplate(isMale, templateData);
-                                            }
-
-                                            final StatsSet levelsSet = new StatsSet();
-                                            for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
-                                                if ("level".equals(s.getNodeName())) {
-                                                    attrs = s.getAttributes();
-                                                    for (int i = 0; i < attrs.getLength(); i++) {
-                                                        final Node att = attrs.item(i);
-                                                        levelsSet.set(att.getNodeName(), att.getNodeValue());
-                                                    }
-                                                }
-                                            }
-                                            templateData.addLevelData(new TransformLevelData(levelsSet));
-                                            break;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        _transformData.put(transform.getId(), transform);
+                        parseTransformNode(d);
                     }
                 }
             }
         }
+    }
+
+    private void parseTransformNode(Node d) {
+        NamedNodeMap attrs = d.getAttributes();
+        final StatsSet set = new StatsSet();
+        for (int i = 0; i < attrs.getLength(); i++) {
+            final Node att = attrs.item(i);
+            set.set(att.getNodeName(), att.getNodeValue());
+        }
+        final Transform transform = new Transform(set);
+        for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
+            final boolean isMale = "Male".equalsIgnoreCase(cd.getNodeName());
+            if ("Male".equalsIgnoreCase(cd.getNodeName()) || "Female".equalsIgnoreCase(cd.getNodeName())) {
+                parseTrasform(set, transform, cd, isMale);
+            }
+        }
+        _transformData.put(transform.getId(), transform);
+    }
+
+    private void parseTrasform(StatsSet set, Transform transform, Node cd, boolean isMale) {
+        TransformTemplate templateData = null;
+        for (Node z = cd.getFirstChild(); z != null; z = z.getNextSibling()) {
+            switch (z.getNodeName()) {
+                case "common" -> templateData = parseCommonTransform(set, transform, isMale, z);
+                case "skills" -> templateData = parseTransformSkills(set, transform, isMale, templateData, z);
+                case "actions" -> templateData = parseTransformActions(set, transform, isMale, templateData, z);
+                case "additionalSkills" -> templateData = parseAdditionalTransformSkills(set, transform, isMale, templateData, z);
+                case "items" -> templateData = parseItems(set, transform, isMale, templateData, z);
+                case "levels" -> templateData = parseLevels(set, transform, isMale, templateData, z);
+                default -> LOGGER.warn("Unknown transform node {}", z.getNodeName());
+            }
+        }
+    }
+
+    private TransformTemplate parseLevels(StatsSet set, Transform transform, boolean isMale, TransformTemplate templateData, Node z) {
+        NamedNodeMap attrs;
+        if (templateData == null) {
+            templateData = new TransformTemplate(set);
+            transform.setTemplate(isMale, templateData);
+        }
+
+        final StatsSet levelsSet = new StatsSet();
+        for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+            if ("level".equals(s.getNodeName())) {
+                attrs = s.getAttributes();
+                for (int i = 0; i < attrs.getLength(); i++) {
+                    final Node att = attrs.item(i);
+                    levelsSet.set(att.getNodeName(), att.getNodeValue());
+                }
+            }
+        }
+        templateData.addLevelData(new TransformLevelData(levelsSet));
+        return templateData;
+    }
+
+    private TransformTemplate parseItems(StatsSet set, Transform transform, boolean isMale, TransformTemplate templateData, Node z) {
+        NamedNodeMap attrs;
+        if (templateData == null) {
+            templateData = new TransformTemplate(set);
+            transform.setTemplate(isMale, templateData);
+        }
+        for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+            if ("item".equals(s.getNodeName())) {
+                attrs = s.getAttributes();
+                final int itemId = parseInt(attrs, "id");
+                final boolean allowed = parseBoolean(attrs, "allowed");
+                templateData.addAdditionalItem(new AdditionalItemHolder(itemId, allowed));
+            }
+        }
+        return templateData;
+    }
+
+    private TransformTemplate parseAdditionalTransformSkills(StatsSet set, Transform transform, boolean isMale, TransformTemplate templateData, Node z) {
+        NamedNodeMap attrs;
+        if (templateData == null) {
+            templateData = new TransformTemplate(set);
+            transform.setTemplate(isMale, templateData);
+        }
+        for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+            if ("skill".equals(s.getNodeName())) {
+                attrs = s.getAttributes();
+                var skill = parseSkillInfo(s);
+                final int minLevel = parseInt(attrs, "minLevel");
+                templateData.addAdditionalSkill(new AdditionalSkillHolder(skill, minLevel));
+            }
+        }
+        return templateData;
+    }
+
+    private TransformTemplate parseTransformActions(StatsSet set, Transform transform, boolean isMale, TransformTemplate templateData, Node z) {
+        if (templateData == null) {
+            templateData = new TransformTemplate(set);
+            transform.setTemplate(isMale, templateData);
+        }
+        set.set("actions", z.getTextContent());
+        final int[] actions = set.getIntArray("actions", " ");
+        templateData.setBasicActionList(new ExBasicActionList(actions));
+        return templateData;
+    }
+
+    private TransformTemplate parseTransformSkills(StatsSet set, Transform transform, boolean isMale, TransformTemplate templateData, Node z) {
+        if (templateData == null) {
+            templateData = new TransformTemplate(set);
+            transform.setTemplate(isMale, templateData);
+        }
+        for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+            if ("skill".equals(s.getNodeName())) {
+                templateData.addSkill(parseSkillInfo(s));
+            }
+        }
+        return templateData;
+    }
+
+    private TransformTemplate parseCommonTransform(StatsSet set, Transform transform, boolean isMale, Node z) {
+        NamedNodeMap attrs;
+        TransformTemplate templateData;
+        for (Node s = z.getFirstChild(); s != null; s = s.getNextSibling()) {
+            switch (s.getNodeName()) {
+                case "base", "stats", "defense", "magicDefense", "collision", "moving" -> {
+                    attrs = s.getAttributes();
+                    for (int i = 0; i < attrs.getLength(); i++) {
+                        final Node att = attrs.item(i);
+                        set.set(att.getNodeName(), att.getNodeValue());
+                    }
+                }
+                default -> LOGGER.warn("Unknown common transformation node {}", s.getNodeName());
+            }
+        }
+        templateData = new TransformTemplate(set);
+        transform.setTemplate(isMale, templateData);
+        return templateData;
     }
 
     public Transform getTransform(int id) {

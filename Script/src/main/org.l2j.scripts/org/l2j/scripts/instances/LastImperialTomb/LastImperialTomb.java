@@ -369,6 +369,30 @@ public class LastImperialTomb extends AbstractInstance
 		}
 	}
 
+	private void playRandomSong(Instance world) {
+		final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
+		final boolean isPlayingSong = world.getParameters().getBoolean("isPlayingSong");
+		if (isPlayingSong)
+		{
+			return;
+		}
+		world.setParameter("isPlayingSong", true);
+		final int random = Rnd.get(1, 5);
+		var skill = SkillEngine.getInstance().getSkill(5007, random);
+		var skillEffect = SkillEngine.getInstance().getSkill(5008, random);
+		broadCastPacket(world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, SKILL_MSG.get(random), null));
+		broadCastPacket(world, new MagicSkillUse(frintezza, skill, 0));
+		for (Player player : world.getPlayers())
+		{
+			if ((player != null) && player.isOnline())
+			{
+				frintezza.setTarget(player);
+				frintezza.doCast(skillEffect);
+			}
+		}
+		world.setParameter("isPlayingSong", false);
+	}
+
 	private void spawnDemons(Player player) {
 		final Instance world = player.getInstanceWorld();
 		if (world != null) {
@@ -808,30 +832,6 @@ public class LastImperialTomb extends AbstractInstance
 			// monster.moveToLocation(-87959, -141247, -9168, 0);
 			monster.reduceCurrentHp(1, killer, null, DamageType.ATTACK); // TODO: Find better way for attack
 		}
-	}
-
-	private void playRandomSong(Instance world) {
-		final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
-		final boolean isPlayingSong = world.getParameters().getBoolean("isPlayingSong");
-		if (isPlayingSong)
-		{
-			return;
-		}
-		world.setParameter("isPlayingSong", true);
-		final int random = Rnd.get(1, 5);
-		var skill = SkillEngine.getInstance().getSkill(5007, random);
-		var skillEffect = SkillEngine.getInstance().getSkill(5008, random);
-		broadCastPacket(world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, SKILL_MSG.get(random), null));
-		broadCastPacket(world, new MagicSkillUse(frintezza, skill, 0));
-		for (Player player : world.getPlayers())
-		{
-			if ((player != null) && player.isOnline())
-			{
-				frintezza.setTarget(player);
-				frintezza.doCast(skillEffect);
-			}
-		}
-		world.setParameter("isPlayingSong", false);
 	}
 	
 	private void disablePlayers(Instance world)
