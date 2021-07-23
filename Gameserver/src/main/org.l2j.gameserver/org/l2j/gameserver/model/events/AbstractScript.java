@@ -149,97 +149,93 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         final IntSet ids = new HashIntSet();
         for (Method method : getClass().getMethods()) {
             if (method.isAnnotationPresent(RegisterEvent.class) && method.isAnnotationPresent(RegisterType.class)) {
-                final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
-                final RegisterType regType = method.getAnnotation(RegisterType.class);
-
-                final ListenerRegisterType type = regType.value();
-                final EventType eventType = listener.value();
-                if (method.getParameterCount() != 1) {
-                    LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter count is 1 but found: {}", method.getName(), method.getParameterCount());
-                    continue;
-                } else if (!eventType.isEventClass(method.getParameterTypes()[0])) {
-                    LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter to be type of: {}  but found: {}", method.getName(), eventType.getEventClass().getSimpleName(), method.getParameterTypes()[0].getSimpleName());
-                    continue;
-                } else if (!eventType.isReturnClass(method.getReturnType())) {
-                    LOGGER.warn("Non properly defined annotation listener on method: {} expected return type to be one of: {} but found: {}", method.getName(), Arrays.toString(eventType.getReturnClasses()), method.getReturnType().getSimpleName());
-                    continue;
-                }
-
-                int priority = 0;
-                ids.clear();
-
-                for (Annotation annotation : method.getAnnotations()) {
-                    if (annotation instanceof Id npc) {
-                        for (int id : npc.value()) {
-                            ids.add(id);
-                        }
-                    } else if (annotation instanceof Ids npcs) {
-                        for (Id npc : npcs.value()) {
-                            for (int id : npc.value()) {
-                                ids.add(id);
-                            }
-                        }
-                    } else if (annotation instanceof Range range) {
-                        if (range.from() > range.to()) {
-                            LOGGER.warn("Wrong Range: from is higher then to!");
-                            continue;
-                        }
-
-                        for (int id = range.from(); id <= range.to(); id++) {
-                            ids.add(id);
-                        }
-                    } else if (annotation instanceof Ranges ranges) {
-                        for (Range range : ranges.value()) {
-                            if (range.from() > range.to()) {
-                                LOGGER.warn("Wrong Ranges: from is higher then to!");
-                                continue;
-                            }
-
-                            for (int id = range.from(); id <= range.to(); id++) {
-                                ids.add(id);
-                            }
-                        }
-                    } else if (annotation instanceof NpcLevelRange range) {
-                        if (range.from() > range.to()) {
-                            LOGGER.warn("Wrong NpcLevelRange: from is higher then to!");
-                            continue;
-                        } else if (type != ListenerRegisterType.NPC) {
-                            LOGGER.warn("ListenerRegisterType {} for NpcLevelRange, NPC is expected!", type);
-                            continue;
-                        }
-
-                        for (int level = range.from(); level <= range.to(); level++) {
-                            final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
-                            templates.forEach(template -> ids.add(template.getId()));
-                        }
-
-                    } else if (annotation instanceof NpcLevelRanges ranges) {
-                        for (NpcLevelRange range : ranges.value()) {
-                            if (range.from() > range.to()) {
-                                LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
-                                continue;
-                            } else if (type != ListenerRegisterType.NPC) {
-                                LOGGER.warn(": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
-                                continue;
-                            }
-
-                            for (int level = range.from(); level <= range.to(); level++) {
-                                final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
-                                templates.forEach(template -> ids.add(template.getId()));
-                            }
-                        }
-                    } else if (annotation instanceof Priority p) {
-                        priority = p.value();
-                    }
-                }
-
-                if (!ids.isEmpty()) {
-                    _registeredIds.computeIfAbsent(type, k -> CHashIntMap.newKeySet()).addAll(ids);
-                }
-
-                registerAnnotation(method, eventType, type, priority, ids);
+                registerListener(ids, method);
             }
         }
+    }
+
+    private void registerListener(IntSet ids, Method method) {
+        final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
+        final RegisterType regType = method.getAnnotation(RegisterType.class);
+
+        final ListenerRegisterType type = regType.value();
+        final EventType eventType = listener.value();
+        if(!validateMethod(method, eventType)) {
+            return;
+        }
+
+        int priority = 0;
+        ids.clear();
+
+        for (Annotation annotation : method.getAnnotations()) {
+            if (annotation instanceof Id npc) {
+                ids.addAll(npc.value());
+            } else if (annotation instanceof Ids npcs) {
+                for (Id npc : npcs.value()) {
+                    ids.addAll(npc.value());
+                }
+            } else if (annotation instanceof Range range) {
+                addIdsRange(ids, range);
+            } else if (annotation instanceof Ranges ranges) {
+                for (Range range : ranges.value()) {
+                    addIdsRange(ids, range);
+                }
+            } else if (annotation instanceof NpcLevelRange range) {
+                addNpcLevelRange(ids, type, range);
+            } else if (annotation instanceof NpcLevelRanges ranges) {
+                for (NpcLevelRange range : ranges.value()) {
+                    addNpcLevelRange(ids, type, range);
+                }
+            } else if (annotation instanceof Priority p) {
+                priority = p.value();
+            }
+        }
+
+        if (!ids.isEmpty()) {
+            _registeredIds.computeIfAbsent(type, k -> CHashIntMap.newKeySet()).addAll(ids);
+        }
+
+        registerAnnotation(method, eventType, type, priority, ids);
+    }
+
+    private void addNpcLevelRange(IntSet ids, ListenerRegisterType type, NpcLevelRange range) {
+        if (range.from() > range.to()) {
+            LOGGER.warn("Wrong NpcLevelRange: from is higher then to!");
+            return;
+        } else if (type != ListenerRegisterType.NPC) {
+            LOGGER.warn("ListenerRegisterType {} for NpcLevelRange, NPC is expected!", type);
+            return;
+        }
+
+        for (int level = range.from(); level <= range.to(); level++) {
+            final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
+            templates.forEach(template -> ids.add(template.getId()));
+        }
+    }
+
+    private void addIdsRange(IntSet ids, Range range) {
+        if (range.from() > range.to()) {
+            LOGGER.warn("Wrong Range: from is higher then to!");
+            return;
+        }
+
+        for (int id = range.from(); id <= range.to(); id++) {
+            ids.add(id);
+        }
+    }
+
+    private boolean validateMethod(Method method, EventType eventType) {
+        if (method.getParameterCount() != 1) {
+            LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter count is 1 but found: {}", method.getName(), method.getParameterCount());
+            return false;
+        } else if (!eventType.isEventClass(method.getParameterTypes()[0])) {
+            LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter to be type of: {}  but found: {}", method.getName(), eventType.getEventClass().getSimpleName(), method.getParameterTypes()[0].getSimpleName());
+            return false;
+        } else if (!eventType.isReturnClass(method.getReturnType())) {
+            LOGGER.warn("Non properly defined annotation listener on method: {} expected return type to be one of: {} but found: {}", method.getName(), Arrays.toString(eventType.getReturnClasses()), method.getReturnType().getSimpleName());
+            return false;
+        }
+        return true;
     }
 
     /**

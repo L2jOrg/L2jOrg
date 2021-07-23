@@ -113,13 +113,6 @@ public class CubicInstance {
         }
     }
 
-    private void tryToUseSkill(CubicSkill skill) {
-        final WorldObject target = _owner.getTarget();
-        if (target != null) {
-            tryToUseSkill(target, skill);
-        }
-    }
-
     private void actionHeal() {
         final double random = Rnd.nextDouble() * 100;
         double commulativeChance = 0;
@@ -155,6 +148,13 @@ public class CubicInstance {
         final CubicSkill skill = chooseSkill();
         if (skill != null) {
             tryToUseSkill(_owner, skill);
+        }
+    }
+
+    private void tryToUseSkill(CubicSkill skill) {
+        final WorldObject target = _owner.getTarget();
+        if (target != null) {
+            tryToUseSkill(target, skill);
         }
     }
 
