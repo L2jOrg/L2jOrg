@@ -36,7 +36,6 @@ import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
-import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -61,12 +60,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
@@ -115,8 +111,8 @@ public class Clan implements IIdentifiable, INamable {
     private int _hideoutId;
     private String notice;
     private boolean noticeEnabled = false;
-    private ClanRewardBonus _lastMembersOnlineBonus = null;
-    private ClanRewardBonus _lastHuntingBonus = null;
+    private ClanRewardBonus lastMembersOnlineBonus = null;
+    private ClanRewardBonus lastHuntingBonus = null;
 
     private final ClanData data;
 
@@ -128,13 +124,13 @@ public class Clan implements IIdentifiable, INamable {
         warehouse.restore();
 
         final ClanRewardBonus availableOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(this);
-        if ((_lastMembersOnlineBonus == null) && (availableOnlineBonus != null)) {
-            _lastMembersOnlineBonus = availableOnlineBonus;
+        if ((lastMembersOnlineBonus == null) && (availableOnlineBonus != null)) {
+            lastMembersOnlineBonus = availableOnlineBonus;
         }
 
         final ClanRewardBonus availableHuntingBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(this);
-        if ((_lastHuntingBonus == null) && (availableHuntingBonus != null)) {
-            _lastHuntingBonus = availableHuntingBonus;
+        if ((lastHuntingBonus == null) && (availableHuntingBonus != null)) {
+            lastHuntingBonus = availableHuntingBonus;
         }
     }
 
@@ -869,79 +865,83 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     /**
-     * @param activeChar the clan inviting player.
+     * @param player the clan inviting player.
      * @param target     the invited player.
      * @return {core true} if activeChar and target meet various conditions to join a clan.
      */
-    public boolean checkAllyJoinCondition(Player activeChar, Player target) {
-        if (activeChar == null) {
+    public boolean checkAllyJoinCondition(Player player, Player target) {
+        if (player == null) {
             return false;
         }
-        if ((activeChar.getAllyId() == 0) || !activeChar.isClanLeader() || (activeChar.getClanId() != activeChar.getAllyId())) {
-            activeChar.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+        if (player.getAllyId() == 0 || !player.isClanLeader() || player.getClanId() != player.getAllyId()) {
+            player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
             return false;
         }
-        final Clan leaderClan = activeChar.getClan();
-        if (leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis()) {
-            if (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN) {
-                activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_ACCEPT_ANY_CLAN_WITHIN_A_DAY_AFTER_EXPELLING_ANOTHER_CLAN);
-                return false;
-            }
+
+        final Clan leaderClan = player.getClan();
+        if (leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis() && leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN) {
+            player.sendPacket(SystemMessageId.YOU_MAY_NOT_ACCEPT_ANY_CLAN_WITHIN_A_DAY_AFTER_EXPELLING_ANOTHER_CLAN);
+            return false;
+
         }
-        if (target == null) {
-            activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+        if (player.getObjectId() == target.getObjectId()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN);
             return false;
         }
-        if (activeChar.getObjectId() == target.getObjectId()) {
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN);
+
+        final Clan targetClan = target.getClan();
+        if (!verifyInvitedTarget(player, target, targetClan)) {
             return false;
         }
-        if (target.getClan() == null) {
-            activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
+        if (player.isInsideZone(ZoneType.SIEGE) && target.isInsideZone(ZoneType.SIEGE)) {
+            player.sendPacket(SystemMessageId.THE_OPPOSING_CLAN_IS_PARTICIPATING_IN_A_SIEGE_BATTLE);
+            return false;
+        }
+        if (leaderClan.isAtWarWith(targetClan.getId())) {
+            player.sendPacket(SystemMessageId.YOU_MAY_NOT_ALLY_WITH_A_CLAN_YOU_ARE_CURRENTLY_AT_WAR_WITH_THAT_WOULD_BE_DIABOLICAL_AND_TREACHEROUS);
+            return false;
+        }
+
+        if (ClanEngine.getInstance().getClanAllies(player.getAllyId()).size() >= ClanSettings.maxClansInAlly()) {
+            player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_LIMIT);
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean verifyInvitedTarget(Player player, Player target, Clan targetClan) {
+        if (targetClan == null) {
+            player.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
             return false;
         }
         if (!target.isClanLeader()) {
-            final SystemMessage sm = getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
-            sm.addString(target.getName());
-            activeChar.sendPacket(sm);
+            player.sendPacket(getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER).addString(target.getName()));
             return false;
         }
-        final Clan targetClan = target.getClan();
+
         if (target.getAllyId() != 0) {
-            final SystemMessage sm = getSystemMessage(SystemMessageId.S1_CLAN_IS_ALREADY_A_MEMBER_OF_S2_ALLIANCE);
-            sm.addString(targetClan.getName());
-            sm.addString(targetClan.getAllyName());
-            activeChar.sendPacket(sm);
+            player.sendPacket(getSystemMessage(SystemMessageId.S1_CLAN_IS_ALREADY_A_MEMBER_OF_S2_ALLIANCE).addString(targetClan.getName()).addString(targetClan.getAllyName()));
             return false;
         }
+        return !hasAllyPenalty(player, target, targetClan);
+    }
+
+    private boolean hasAllyPenalty(Player player, Player target, Clan targetClan) {
         if (targetClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis()) {
             if (targetClan.getAllyPenaltyType() == PENALTY_TYPE_CLAN_LEAVED) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.S1_CLAN_CANNOT_JOIN_THE_ALLIANCE_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_ALLIANCE);
                 sm.addString(target.getClan().getName());
                 sm.addString(target.getClan().getAllyName());
-                activeChar.sendPacket(sm);
-                return false;
+                player.sendPacket(sm);
+                return true;
             }
             if (targetClan.getAllyPenaltyType() == PENALTY_TYPE_CLAN_DISMISSED) {
-                activeChar.sendPacket(SystemMessageId.A_CLAN_THAT_HAS_WITHDRAWN_OR_BEEN_EXPELLED_CANNOT_ENTER_INTO_AN_ALLIANCE_WITHIN_ONE_DAY_OF_WITHDRAWAL_OR_EXPULSION);
-                return false;
+                player.sendPacket(SystemMessageId.A_CLAN_THAT_HAS_WITHDRAWN_OR_BEEN_EXPELLED_CANNOT_ENTER_INTO_AN_ALLIANCE_WITHIN_ONE_DAY_OF_WITHDRAWAL_OR_EXPULSION);
+                return true;
             }
         }
-        if (activeChar.isInsideZone(ZoneType.SIEGE) && target.isInsideZone(ZoneType.SIEGE)) {
-            activeChar.sendPacket(SystemMessageId.THE_OPPOSING_CLAN_IS_PARTICIPATING_IN_A_SIEGE_BATTLE);
-            return false;
-        }
-        if (leaderClan.isAtWarWith(targetClan.getId())) {
-            activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_ALLY_WITH_A_CLAN_YOU_ARE_CURRENTLY_AT_WAR_WITH_THAT_WOULD_BE_DIABOLICAL_AND_TREACHEROUS);
-            return false;
-        }
-
-        if (ClanEngine.getInstance().getClanAllies(activeChar.getAllyId()).size() >= ClanSettings.maxClansInAlly()) {
-            activeChar.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_LIMIT);
-            return false;
-        }
-
-        return true;
+        return false;
     }
 
     public long getAllyPenaltyExpiryTime() {
@@ -1065,104 +1065,51 @@ public class Clan implements IIdentifiable, INamable {
             return false;
         }
 
-        boolean increaseClanLevel = false;
-
         // Such as https://l2wiki.com/classic/Clans_%E2%80%93_Clan_Level
-        switch (getLevel()) {
-            case 0 -> {
-                // Upgrade to 1
-                if ((player.getSp() >= 1000) && (player.getAdena() >= 150000) && (members.size() >= 1)) {
-                    if (player.reduceAdena("ClanLvl", 150000, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 1000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(1000);
-                        player.sendPacket(sp);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            case 1 -> {
-                // Upgrade to 2
-                if ((player.getSp() >= 15000) && (player.getAdena() >= 300000) && (members.size() >= 1)) {
-                    if (player.reduceAdena("ClanLvl", 300000, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 15000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(15000);
-                        player.sendPacket(sp);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            case 2 -> {
-                // Upgrade to 3
-                if ((player.getSp() >= 100000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
-                    // itemId 1419 == Blood Mark
-                    if (player.destroyItemByItemId("ClanLvl", 1419, 100, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 100000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(100000);
-                        player.sendPacket(sp);
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                        sm.addItemName(1419);
-                        player.sendPacket(sm);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            case 3 -> {
-                // Upgrade to 4
-                if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
-                    // itemId 1419 == Blood Mark
-                    if (player.destroyItemByItemId("ClanLvl", 1419, 5000, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 1000000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(1000000);
-                        player.sendPacket(sp);
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                        sm.addItemName(1419);
-                        player.sendPacket(sm);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            case 4 -> {
-                // Upgrade to 5
-                if ((player.getSp() >= 5000000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
-                    // itemId 1419 == Blood Mark
-                    if (player.destroyItemByItemId("ClanLvl", 1419, 10000, player.getTarget(), true)) {
-                        player.setSp(player.getSp() - 5000000);
-                        final SystemMessage sp = getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-                        sp.addInt(5000000);
-                        player.sendPacket(sp);
-                        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                        sm.addItemName(1419);
-                        player.sendPacket(sm);
-                        increaseClanLevel = true;
-                    }
-                }
-            }
-            default -> {
-                return false;
-            }
-        }
+        boolean increaseClanLevel = switch (getLevel()) {
+            case 0 -> tryIncreaseLevelWithAdena(player, 1000, 150000);
+            case 1 -> tryIncreaseLevelWithAdena(player, 15000, 300000);
+            case 2 -> tryIncreaseLevelWithBloodMark(player, 100000, 100);
+            case 3 -> tryIncreaseLevelWithBloodMark(player, 1000000, 5000);
+            case 4 -> tryIncreaseLevelWithBloodMark(player, 5000000, 10000);
+            default -> false;
+        };
 
         if (!increaseClanLevel) {
             player.sendPacket(SystemMessageId.THE_CONDITIONS_NECESSARY_TO_INCREASE_THE_CLAN_S_LEVEL_HAVE_NOT_BEEN_MET);
             return false;
         }
 
-        // the player should know that he has less sp now :p
-        final UserInfo ui = new UserInfo(player, false);
-        ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
-        player.sendPacket(ui);
-
+        player.sendPacket(new UserInfo(player, UserInfoType.CURRENT_HPMPCP_EXP_SP));
         player.sendItemList();
-
         changeLevel(getLevel() + 1);
-
-        // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLvlUp(player, this));
         return true;
+    }
+
+    private boolean tryIncreaseLevelWithBloodMark(Player player, int spRequired, int bloodMarkAmount) {
+        if ((player.getSp() >= spRequired) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
+            if (player.destroyItemByItemId("ClanLvl", 1419, bloodMarkAmount, player.getTarget(), true)) {
+                player.setSp(player.getSp() - spRequired);
+                player.sendPackets(
+                    getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(spRequired),
+                    getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(1419)
+                );
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean tryIncreaseLevelWithAdena(Player player, int spRequired, int adenaRequired) {
+        if (player.getSp() >= spRequired && player.getAdena() >= adenaRequired && members.size() >= 1) {
+            if (player.reduceAdena("ClanLvl", adenaRequired, player.getTarget(), true)) {
+                player.setSp(player.getSp() - spRequired);
+                player.sendPacket(getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(spRequired));
+                return true;
+            }
+        }
+        return false;
     }
 
     public void changeLevel(int level) {
@@ -1359,15 +1306,10 @@ public class Clan implements IIdentifiable, INamable {
             }
         }
 
-        final ClanRewardBonus availableBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(this);
-        if (availableBonus != null) {
-            if (_lastMembersOnlineBonus == null) {
-                _lastMembersOnlineBonus = availableBonus;
-                broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.level()));
-            } else if (_lastMembersOnlineBonus.level() < availableBonus.level()) {
-                _lastMembersOnlineBonus = availableBonus;
-                broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.level()));
-            }
+        var availableBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(this);
+        if (availableBonus != null && (lastMembersOnlineBonus == null || lastMembersOnlineBonus.level() < availableBonus.level())) {
+            lastMembersOnlineBonus = availableBonus;
+            broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.level()));
         }
 
         var onlineTimeForBonus = ClanSettings.onlineTimeForBonus();
@@ -1383,20 +1325,15 @@ public class Clan implements IIdentifiable, INamable {
         }
     }
 
-    public synchronized void addHuntingPoints(Player activeChar, Npc target, double value) {
+    public synchronized void addHuntingPoints(double value) {
         // TODO: Figure out the retail formula
         final int points = (int) value / 2960; // Reduced / 10 for Classic.
         if (points > 0) {
             data.addHuntingPoints(points);
-            final ClanRewardBonus availableBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(this);
-            if (availableBonus != null) {
-                if (_lastHuntingBonus == null) {
-                    _lastHuntingBonus = availableBonus;
-                    broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.level()));
-                } else if (_lastHuntingBonus.level() < availableBonus.level()) {
-                    _lastHuntingBonus = availableBonus;
-                    broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.level()));
-                }
+            var availableBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(this);
+            if (availableBonus != null && (lastHuntingBonus == null || lastHuntingBonus.level() < availableBonus.level())) {
+                lastHuntingBonus = availableBonus;
+                broadcastToOnlineMembers(getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.level()));
             }
         }
     }
