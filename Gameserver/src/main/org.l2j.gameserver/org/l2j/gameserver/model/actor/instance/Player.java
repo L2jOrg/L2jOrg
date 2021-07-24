@@ -142,7 +142,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
@@ -1717,11 +1716,7 @@ public final class Player extends Playable {
         if (su.hasUpdates()) {
             broadcastPacket(su);
         }
-        updateRelations();
-    }
-
-    private void updateRelations() {
-        World.getInstance().forEachVisibleObject(this, Player.class, this::updateRelation);
+        Broadcast.relationChanged(this);
     }
 
     public void updateRelation(Player player) {

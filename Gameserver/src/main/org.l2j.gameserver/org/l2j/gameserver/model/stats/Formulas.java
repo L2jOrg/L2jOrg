@@ -911,9 +911,7 @@ public final class Formulas {
                 final int cancelMagicLvl = skill.getMagicLevel();
                 target.getEffectList().forEachBuffOrDance(canceled::add, b -> calcBuffCancelSuccess(target, rate, cancelMagicLvl, b), max);
             }
-            case DEBUFF -> {
-                target.getEffectList().forEachDebuff(canceled::add, b -> b.getSkill().canBeDispelled() && Rnd.chance(rate), max);
-            }
+            case DEBUFF -> target.getEffectList().forEachDebuff(canceled::add, b -> b.getSkill().canBeDispelled() && Rnd.chance(rate), max);
         }
         return canceled;
     }

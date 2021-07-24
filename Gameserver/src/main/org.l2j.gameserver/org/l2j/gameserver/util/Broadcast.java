@@ -127,4 +127,8 @@ public final class Broadcast {
     public static void toAllOnlinePlayersOnScreen(String text) {
         toAllOnlinePlayers(new ExShowScreenMessage(text, 10000));
     }
+
+    public static void relationChanged(Player player) {
+        World.getInstance().forEachVisibleObject(player, Player.class, player::updateRelation);
+    }
 }

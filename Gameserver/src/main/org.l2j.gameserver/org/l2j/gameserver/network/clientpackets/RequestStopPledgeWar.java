@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2j.gameserver.util.Broadcast;
 
 public final class RequestStopPledgeWar extends ClientPacket {
     private String _pledgeName;
@@ -76,17 +77,9 @@ public final class RequestStopPledgeWar extends ClientPacket {
             }
         }
 
-        // Reduce reputation.
         playerClan.takeReputationScore(500, true);
-
         ClanEngine.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
-
-        for (Player member : playerClan.getOnlineMembers(0)) {
-            member.broadcastUserInfo();
-        }
-
-        for (Player member : clan.getOnlineMembers(0)) {
-            member.broadcastUserInfo();
-        }
+        playerClan.forEachOnlineMember(Broadcast::relationChanged);
+        clan.forEachOnlineMember(Broadcast::relationChanged);
     }
 }

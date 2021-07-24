@@ -326,11 +326,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		// Notify target and active char
 		clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-		for (Player member : clan.getOnlineMembers(0))
-		{
-			member.sendSkillList();
-		}
-		
+		clan.forEachOnlineMember(Player::sendSkillList);
 		BuilderUtil.sendSysMessage(activeChar, "You gave " + skills.size() + " skills to " + player.getName() + "'s clan " + clan.getName() + ".");
 		player.sendMessage("Your clan received " + skills.size() + " skills.");
 	}
@@ -621,11 +617,7 @@ public class AdminSkill implements IAdminCommandHandler
 		BuilderUtil.sendSysMessage(activeChar, "You gave the Clan Skill: " + skillname + " to the clan " + clan.getName() + ".");
 		
 		clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-		for (Player member : clan.getOnlineMembers(0))
-		{
-			member.sendSkillList();
-		}
-		
+		clan.forEachOnlineMember(Player::sendSkillList);
 		showMainPage(activeChar);
 	}
 	

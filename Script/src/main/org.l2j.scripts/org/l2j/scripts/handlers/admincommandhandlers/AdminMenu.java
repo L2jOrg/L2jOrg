@@ -111,12 +111,12 @@ public class AdminMenu implements IAdminCommandHandler {
 					teleportCharacter(player, playerGM.getLocation(), playerGM, "Admin is teleporting you.");
 					return true;
 				}
-				
-				for (Player member : clan.getOnlineMembers(0)) {
+
+				clan.forEachOnlineMember(member -> {
 					teleportCharacter(member, playerGM.getLocation(), playerGM, "Your clan is being teleported by an Admin.");
-				}
+				});
 			} catch (Exception e) {
-				LOGGER.warn("", e);
+				LOGGER.warn(e.getMessage(), e);
 			}
 		}
 		else if(command.startsWith("admin_recall_all")) {
