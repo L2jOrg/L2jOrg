@@ -84,9 +84,10 @@ public class CubicInstance {
 
     private CubicSkill chooseSkill() {
         final double random = Rnd.nextDouble() * 100;
-        double commulativeChance = 0;
+        double chance = 0;
         for (CubicSkill cubicSkill : _template.getSkills()) {
-            if ((commulativeChance += cubicSkill.triggerRate()) > random) {
+            chance += cubicSkill.triggerRate();
+            if (chance > random) {
                 return cubicSkill;
             }
         }
@@ -106,18 +107,20 @@ public class CubicInstance {
         final CubicSkill skill = chooseSkill();
         if (skill != null) {
             switch (skill.targetType()) {
-                case TARGET -> tryToUseSkill(skill);
+                case TARGET -> tryToUseSkill(_owner.getTarget(), skill);
                 case HEAL -> actionHeal();
                 case MASTER -> tryToUseSkill(_owner, skill);
+                case BY_SKILL -> tryToUseSkill(skill);
             }
         }
     }
 
     private void actionHeal() {
         final double random = Rnd.nextDouble() * 100;
-        double commulativeChance = 0;
+        double chance = 0;
         for (CubicSkill cubicSkill : _template.getSkills()) {
-            if ((commulativeChance += cubicSkill.triggerRate()) > random) {
+            chance += cubicSkill.triggerRate();
+            if (chance > random) {
                 final Skill skill = cubicSkill.skill();
                 if ((skill != null) && (Rnd.get(100) < cubicSkill.successRate())) {
                     final Party party = _owner.getParty();
@@ -152,7 +155,7 @@ public class CubicInstance {
     }
 
     private void tryToUseSkill(CubicSkill skill) {
-        final WorldObject target = _owner.getTarget();
+        final WorldObject target = skill.skill().getTarget(_owner, _owner.getTarget(), false, false, false);
         if (target != null) {
             tryToUseSkill(target, skill);
         }
@@ -169,10 +172,8 @@ public class CubicInstance {
                 return;
             }
 
-            if (_template.validateConditions(this, _owner, target) && cubicSkill.validateConditions(this, _owner, target)) {
-                if (Rnd.get(100) < cubicSkill.successRate()) {
-                    activateCubicSkill(skill, target);
-                }
+            if (_template.validateConditions(this, _owner, target) && cubicSkill.validateConditions(this, _owner, target) && Rnd.get(100) < cubicSkill.successRate()) {
+                activateCubicSkill(skill, target);
             }
         }
     }

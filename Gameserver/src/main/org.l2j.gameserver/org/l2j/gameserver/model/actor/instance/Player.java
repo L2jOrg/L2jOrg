@@ -1559,18 +1559,17 @@ public final class Player extends Playable {
         return quests.values();
     }
 
-    /**
-     * @return a table containing all Quest in progress from the table _quests.
-     */
     public List<Quest> getAllActiveQuests() {
-        //@formatter:off
-        return quests.values().stream()
-                .filter(QuestState::isStarted)
-                .map(QuestState::getQuest)
-                .filter(Objects::nonNull)
-                .filter(q -> q.getId() > 1)
-                .collect(Collectors.toList());
-        //@formatter:on
+        List<Quest> activeQuests = new ArrayList<>();
+        for (var questState : quests.values()) {
+            if(questState.isStarted()) {
+                var quest = questState.getQuest();
+                if(quest.getId() > 1) {
+                    activeQuests.add(quest);
+                }
+            }
+        }
+        return activeQuests;
     }
 
     public void processQuestEvent(String questName, String event) {
@@ -5801,13 +5800,9 @@ public final class Player extends Playable {
 
     public void setHero(boolean hero) {
         if (hero && (data.getBaseClass() == data.getClassId())) {
-            for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
-                addSkill(skill, false); // Don't persist hero skills into database
-            }
+            SkillTreesData.getInstance().forEachHeroSkill(s -> addSkill(s, false));
         } else {
-            for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
-                removeSkill(skill, false, true); // Just remove skills from non-hero players
-            }
+            SkillTreesData.getInstance().forEachHeroSkill(s -> removeSkill(s, false, true));
         }
         this.hero = hero;
         sendSkillList();
@@ -5935,9 +5930,9 @@ public final class Player extends Playable {
 
     public void setNoble(boolean val) {
         if (val) {
-            SkillTreesData.getInstance().getNobleSkillAutoGetTree().forEach(skill -> addSkill(skill, false));
+            SkillTreesData.getInstance().forEachAutoGetNobleSkill(skill -> addSkill(skill, false));
         } else {
-            SkillTreesData.getInstance().getNobleSkillTree().forEach(skill -> removeSkill(skill, false, true));
+            SkillTreesData.getInstance().forEachNobleSkill(s -> removeSkill(s, false, true));
         }
         data.setNobless(val);
         sendSkillList();
@@ -6975,23 +6970,19 @@ public final class Player extends Playable {
      */
     public Collection<Skill> getSkillList() {
         Collection<Skill> currentSkills = getAllSkills();
+        List<Skill> skills = new ArrayList<>(currentSkills.size());
 
-        if (isTransformed()) {
-            if (nonNull(transformSkills)) {
-                // Include transformation skills and those skills that are allowed during transformation.
-                currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
-
-                // Include transformation skills.
-                currentSkills.addAll(transformSkills.values());
+        for (Skill skill : currentSkills) {
+            if(!skill.isBlockActionUseSkill() && (skill.allowOnTransform() || !isTransformed())) {
+                skills.add(skill);
             }
         }
 
-        //@formatter:off
-        return currentSkills.stream()
-                .filter(Objects::nonNull)
-                .filter(s -> !s.isBlockActionUseSkill()) // Skills that are blocked from player use are not shown in skill list.
-                .collect(Collectors.toList());
-        //@formatter:on
+        if(isTransformed() && transformSkills != null) {
+            skills.addAll(transformSkills.values());
+        }
+
+        return skills;
     }
 
     private void startFeed(int npcId) {

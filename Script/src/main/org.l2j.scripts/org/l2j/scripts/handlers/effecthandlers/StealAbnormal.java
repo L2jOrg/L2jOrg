@@ -65,7 +65,7 @@ public final class StealAbnormal extends AbstractEffect {
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
 		if (isPlayer(effected) && effector != effected) {
-			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(effector, effected, skill, slot, rate, power);
+			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(effected, skill, slot, rate, power);
 			if (toSteal.isEmpty()) {
 				return;
 			}
