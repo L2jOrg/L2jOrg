@@ -178,6 +178,45 @@ public class LastImperialTomb extends AbstractInstance
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player) {
+		if (event.startsWith("FRINTEZZA_INTRO")) {
+			showIntroCinematic(event, player);
+		} else if (event.startsWith("SCARLET_SECOND_MORPH")) {
+			showSecondMorphCinematic(event, npc);
+		} else {
+			processGeneralEvent(event, npc, player);
+		}
+		return null;
+	}
+
+	private void processGeneralEvent(String event, Npc npc, Player player) {
+		switch (event) {
+			case SPAWN_DEMONS -> spawnDemons(player);
+			case PLAY_RANDOM_SONG -> playRandomSong(npc, player);
+			case "SCARLET_FIRST_MORPH" -> scarletFirstMorph(npc);
+			case "FINISH_CAMERA_1" -> finishCamera1(npc);
+			case "FINISH_CAMERA_2" -> finishCamera2(npc, player);
+			case "FINISH_CAMERA_3" -> finishCamera3(npc);
+			case "FINISH_CAMERA_4" -> finishCamera4(npc);
+			case "FINISH_CAMERA_5" -> finishCamera5(npc);
+		}
+	}
+
+	private void showSecondMorphCinematic(String event, Npc npc) {
+		switch (event) {
+			case "SCARLET_SECOND_MORPH" -> scarletSecondMorth(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_1" -> scarletSecondMorthCamera1(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_2" -> scarletSecondMorphCamera2(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_3" -> scarletSecondMorphCamera3(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_4" -> scarletSecondMorphCamera4(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_5" -> scarletSecondMorphCamera5(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_6" -> scarletSecondMorphCamera6(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_7" -> scarletSecondMorphCamera7(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_8" -> scarletSecondMorphCamera8(npc);
+			case "SCARLET_SECOND_MORPH_CAMERA_9" -> scarletSecondMorphCamera9(npc);
+		}
+	}
+
+	private void showIntroCinematic(String event, Player player) {
 		switch (event) {
 			case "FRINTEZZA_INTRO_START" -> onIntroStart(player);
 			case "FRINTEZZA_INTRO_1" -> onIntro1(player);
@@ -200,26 +239,7 @@ public class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_18" -> onIntro18(player);
 			case "FRINTEZZA_INTRO_19" -> onIntro19(player);
 			case "FRINTEZZA_INTRO_20" -> onIntro20(player);
-			case SPAWN_DEMONS -> spawnDemons(player);
-			case PLAY_RANDOM_SONG -> playRandomSong(npc, player);
-			case "SCARLET_FIRST_MORPH" -> scarletFirstMorph(npc);
-			case "SCARLET_SECOND_MORPH" -> scarletSecondMorth(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_1" -> scarletSecondMorthCamera1(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_2" -> scarletSecondMorphCamera2(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_3" -> scarletSecondMorphCamera3(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_4" -> scarletSecondMorphCamera4(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_5" -> scarletSecondMorphCamera5(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_6" -> scarletSecondMorphCamera6(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_7" -> scarletSecondMorphCamera7(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_8" -> scarletSecondMorphCamera8(npc);
-			case "SCARLET_SECOND_MORPH_CAMERA_9" -> scarletSecondMorphCamera9(npc);
-			case "FINISH_CAMERA_1" -> finishCamera1(npc);
-			case "FINISH_CAMERA_2" -> finishCamera2(npc, player);
-			case "FINISH_CAMERA_3" -> finishCamera3(npc);
-			case "FINISH_CAMERA_4" -> finishCamera4(npc);
-			case "FINISH_CAMERA_5" -> finishCamera5(npc);
 		}
-		return null;
 	}
 
 	private void finishCamera5(Npc npc) {
@@ -774,12 +794,8 @@ public class LastImperialTomb extends AbstractInstance
 		}
 
 		switch (world.getStatus()) {
-			case 1 -> {
-				openNextRoom(world, 2, "room2_part1", FIRST_ROUTE_DOORS);
-			}
-			case 2 -> {
-				openNextRoom(world, 3, "room2_part2", SECOND_ROOM_DOORS);
-			}
+			case 1 -> openNextRoom(world, 2, "room2_part1", FIRST_ROUTE_DOORS);
+			case 2 -> openNextRoom(world, 3, "room2_part2", SECOND_ROOM_DOORS);
 			case 3 -> {
 				world.setStatus(4);
 				for (int doorId : SECOND_ROUTE_DOORS) {

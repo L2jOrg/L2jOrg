@@ -368,21 +368,6 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     /**
-     * @param exclude the object Id to exclude from list.
-     * @return all online members excluding the one with object id {code exclude}.
-     */
-    public List<Player> getOnlineMembers(int exclude) {
-        //@formatter:off
-        return members.values().stream()
-                .filter(member -> member.getObjectId() != exclude)
-                .filter(ClanMember::isOnline)
-                .map(ClanMember::getPlayerInstance)
-                .filter(Objects::nonNull)
-                .collect(Collectors.toList());
-        //@formatter:on
-    }
-
-    /**
      * @return the online clan member count.
      */
     public int getOnlineMembersCount() {
@@ -734,9 +719,9 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastClanStatus() {
-        forEachOnlineMember(p -> {
-            p.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
-            PledgeShowMemberListAll.sendAllTo(p);
+        forEachOnlineMember(player -> {
+            player.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
+            PledgeShowMemberListAll.sendAllTo(player);
         });
     }
 
@@ -1231,18 +1216,13 @@ public class Clan implements IIdentifiable, INamable {
             getDAO(ClanDAO.class).updateAllyCrest(data.getId(), crestId);
         }
 
-
         if (onlyThisClan) {
             setAllyCrestId(crestId);
-            for (Player member : getOnlineMembers(0)) {
-                member.broadcastUserInfo();
-            }
+            forEachOnlineMember(player -> player.broadcastUserInfo(UserInfoType.SOCIAL));
         } else {
             for (Clan clan : ClanEngine.getInstance().getClanAllies(getAllyId())) {
                 clan.setAllyCrestId(crestId);
-                for (Player member : clan.getOnlineMembers(0)) {
-                    member.broadcastUserInfo();
-                }
+                forEachOnlineMember(player -> player.broadcastUserInfo(UserInfoType.SOCIAL));
             }
         }
     }

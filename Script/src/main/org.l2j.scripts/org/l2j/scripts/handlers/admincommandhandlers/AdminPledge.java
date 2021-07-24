@@ -162,10 +162,7 @@ public class AdminPledge implements IAdminCommandHandler
                         if ((level >= 0) && (level < 12))
                         {
                             clan.changeLevel(level);
-                            for (Player member : clan.getOnlineMembers(0))
-                            {
-                                member.broadcastUserInfo(UserInfoType.RELATION, UserInfoType.CLAN);
-                            }
+                            clan.forEachOnlineMember(member -> member.broadcastUserInfo(UserInfoType.SOCIAL));
                             BuilderUtil.sendSysMessage(activeChar, "You set level " + level + " for clan " + clan.getName());
                         }
                         else

@@ -69,14 +69,13 @@ public class SiegeStatus implements IUserCommandHandler
 			
 			final SiegeZone siegeZone = siege.getCastle().getSiegeZone();
 			final StringBuilder sb = new StringBuilder();
-			for (Player member : clan.getOnlineMembers(0))
-			{
+			clan.forEachOnlineMember(member -> {
 				sb.append("<tr><td width=170>");
 				sb.append(member.getName());
 				sb.append("</td><td width=100>");
 				sb.append(siegeZone.isInsideZone(member) ? INSIDE_SIEGE_ZONE : OUTSIDE_SIEGE_ZONE);
 				sb.append("</td></tr>");
-			}
+			});
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage();
 			html.setFile(player, "data/html/siege/siege_status.htm");

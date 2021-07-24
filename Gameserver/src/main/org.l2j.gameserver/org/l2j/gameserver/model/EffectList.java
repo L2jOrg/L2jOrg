@@ -178,16 +178,6 @@ public final class EffectList {
         }
     }
 
-
-    /**
-     * Gets all the active negative effects on this effect list.
-     *
-     * @return all the debuffs on this effect list
-     */
-    public List<BuffInfo> getDebuffs() {
-        return actives.stream().filter(b -> b.getSkill().isDebuff()).collect(Collectors.toList());
-    }
-
     /**
      * Verifies if this effect list contains the given skill ID.<br>
      *

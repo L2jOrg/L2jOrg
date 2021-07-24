@@ -61,19 +61,18 @@ public class SiegeMissionHandler extends AbstractMissionHandler {
 		event.getSiege().getDefenderClans().values().forEach(this::processSiegeClan);
 	}
 	
-	private void processSiegeClan(SiegeClanData siegeClan)
-	{
+	private void processSiegeClan(SiegeClanData siegeClan) {
 		final Clan clan = ClanEngine.getInstance().getClan(siegeClan.getClanId());
-		if (clan != null)
-		{
-			clan.getOnlineMembers(0).forEach(player ->
-			{
-				final MissionPlayerData entry = getPlayerEntry(player, true);
-				entry.setStatus(MissionStatus.AVAILABLE);
-				notifyAvailablesReward(player);
-				storePlayerEntry(entry);
-			});
+		if (clan != null) {
+			clan.forEachOnlineMember(this::updateMissionStatus);
 		}
+	}
+
+	private void updateMissionStatus(Player player) {
+		final MissionPlayerData entry = getPlayerEntry(player, true);
+		entry.setStatus(MissionStatus.AVAILABLE);
+		notifyAvailablesReward(player);
+		storePlayerEntry(entry);
 	}
 
 	public static class Factory implements MissionHandlerFactory {

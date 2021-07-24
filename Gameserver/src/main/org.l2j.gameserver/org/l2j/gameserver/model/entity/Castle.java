@@ -291,10 +291,12 @@ public final class Castle extends AbstractResidence {
             if (CharacterSettings.removeCastleCirclets()) {
                 CastleManager.getInstance().removeCirclet(formerOwner, getId());
             }
-            for (Player member : clan.getOnlineMembers(0)) {
-                removeResidentialSkills(member);
-                member.sendSkillList();
-            }
+
+            clan.forEachOnlineMember(player -> {
+                removeResidentialSkills(player);
+                player.sendSkillList();
+            });
+
             clan.setCastleId(0);
             clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
         }
