@@ -154,50 +154,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
     }
 
-    private void registerListener(IntSet ids, Method method) {
-        final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
-        final RegisterType regType = method.getAnnotation(RegisterType.class);
-
-        final ListenerRegisterType type = regType.value();
-        final EventType eventType = listener.value();
-        if(!validateMethod(method, eventType)) {
-            return;
-        }
-
-        int priority = 0;
-        ids.clear();
-
-        for (Annotation annotation : method.getAnnotations()) {
-            if (annotation instanceof Id npc) {
-                ids.addAll(npc.value());
-            } else if (annotation instanceof Ids npcs) {
-                for (Id npc : npcs.value()) {
-                    ids.addAll(npc.value());
-                }
-            } else if (annotation instanceof Range range) {
-                addIdsRange(ids, range);
-            } else if (annotation instanceof Ranges ranges) {
-                for (Range range : ranges.value()) {
-                    addIdsRange(ids, range);
-                }
-            } else if (annotation instanceof NpcLevelRange range) {
-                addNpcLevelRange(ids, type, range);
-            } else if (annotation instanceof NpcLevelRanges ranges) {
-                for (NpcLevelRange range : ranges.value()) {
-                    addNpcLevelRange(ids, type, range);
-                }
-            } else if (annotation instanceof Priority p) {
-                priority = p.value();
-            }
-        }
-
-        if (!ids.isEmpty()) {
-            _registeredIds.computeIfAbsent(type, k -> CHashIntMap.newKeySet()).addAll(ids);
-        }
-
-        registerAnnotation(method, eventType, type, priority, ids);
-    }
-
     private void addNpcLevelRange(IntSet ids, ListenerRegisterType type, NpcLevelRange range) {
         if (range.from() > range.to()) {
             LOGGER.warn("Wrong NpcLevelRange: from is higher then to!");
@@ -784,25 +740,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return registerListener((container) -> new DummyEventListener(container, type, this), registerType, npcIds);
     }
 
-    /**
-     * Generic listener register method
-     */
-    protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, int... ids) {
-        final List<AbstractEventListener> listeners = new ArrayList<>(ids.length > 0 ? ids.length : 1);
-        if (ids.length > 0) {
-            for (int id : ids) {
-                registerListenrWithId(action, registerType, listeners, id);
-
-                _registeredIds.computeIfAbsent(registerType, k -> CHashIntMap.newKeySet()).add(id);
-            }
-        } else {
-            registerListenerWithoutId(action, registerType, listeners);
-        }
-
-        _listeners.addAll(listeners);
-        return listeners;
-    }
-
     private void registerListenerWithoutId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners) {
         switch (registerType) {
             case OLYMPIAD: {
@@ -837,9 +774,22 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
     }
 
-    /**
-     * Generic listener register method
-     */
+    protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, int... ids) {
+        final List<AbstractEventListener> listeners = new ArrayList<>(ids.length > 0 ? ids.length : 1);
+        if (ids.length > 0) {
+            for (int id : ids) {
+                registerListenrWithId(action, registerType, listeners, id);
+
+                _registeredIds.computeIfAbsent(registerType, k -> CHashIntMap.newKeySet()).add(id);
+            }
+        } else {
+            registerListenerWithoutId(action, registerType, listeners);
+        }
+
+        _listeners.addAll(listeners);
+        return listeners;
+    }
+
     protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, IntCollection ids) {
         final List<AbstractEventListener> listeners = new ArrayList<>(!ids.isEmpty() ? ids.size() : 1);
         if (!ids.isEmpty()) {
@@ -851,6 +801,56 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
         _listeners.addAll(listeners);
         return listeners;
+    }
+
+    private void registerListener(IntSet ids, Method method) {
+        final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
+        final RegisterType regType = method.getAnnotation(RegisterType.class);
+
+        final ListenerRegisterType type = regType.value();
+        final EventType eventType = listener.value();
+        if(!validateMethod(method, eventType)) {
+            return;
+        }
+
+        int priority = 0;
+        ids.clear();
+
+        for (Annotation annotation : method.getAnnotations()) {
+            priority = registerListenerWithPriority(ids, type, annotation);
+        }
+
+        if (!ids.isEmpty()) {
+            _registeredIds.computeIfAbsent(type, k -> CHashIntMap.newKeySet()).addAll(ids);
+        }
+
+        registerAnnotation(method, eventType, type, priority, ids);
+    }
+
+    private int registerListenerWithPriority(IntSet ids, ListenerRegisterType type, Annotation annotation) {
+        var priority = 0;
+        if (annotation instanceof Id npcId) {
+            ids.addAll(npcId.value());
+        } else if (annotation instanceof Ids npcsIds) {
+            for (Id npc : npcsIds.value()) {
+                ids.addAll(npc.value());
+            }
+        } else if (annotation instanceof Range range) {
+            addIdsRange(ids, range);
+        } else if (annotation instanceof Ranges ranges) {
+            for (Range range : ranges.value()) {
+                addIdsRange(ids, range);
+            }
+        } else if (annotation instanceof NpcLevelRange range) {
+            addNpcLevelRange(ids, type, range);
+        } else if (annotation instanceof NpcLevelRanges ranges) {
+            for (NpcLevelRange range : ranges.value()) {
+                addNpcLevelRange(ids, type, range);
+            }
+        } else if (annotation instanceof Priority p) {
+            priority = p.value();
+        }
+        return priority;
     }
 
     private void registerListenrWithId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners, int id) {
@@ -1543,12 +1543,12 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * Give the specified player a set amount of items if he is lucky enough.<br>
      * Not recommended to use this for non-stacking items.
      * @param limit        the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
-     * @param dropChance   the drop chance as a decimal digit from 0 to 1
+     * @param chance   the drop chance as a decimal digit from 0 to 1
      * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
      * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
      */
-    public boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound) {
-        return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
+    public boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double chance, boolean playSound) {
+        return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, chance, playSound);
     }
 
     /**

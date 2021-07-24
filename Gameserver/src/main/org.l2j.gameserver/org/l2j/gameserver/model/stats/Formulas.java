@@ -24,6 +24,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.HitConditionBonusData;
 import org.l2j.gameserver.data.xml.impl.KarmaData;
+import org.l2j.gameserver.engine.item.Armor;
+import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillType;
 import org.l2j.gameserver.enums.*;
@@ -38,9 +41,6 @@ import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.engine.item.Armor;
-import org.l2j.gameserver.engine.item.ItemTemplate;
-import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -904,60 +904,25 @@ public final class Formulas {
         return Rnd.get(100) < Math.min(rate, 80);
     }
 
-    public static List<BuffInfo> calcCancelStealEffects(Creature activeChar, Creature target, Skill skill, DispelSlotType slot, int rate, int max) {
+    public static List<BuffInfo> calcCancelStealEffects(Creature target, Skill skill, DispelSlotType slot, int rate, int max) {
         final List<BuffInfo> canceled = new ArrayList<>(max);
         switch (slot) {
             case BUFF -> {
-                // Resist Modifier.
                 final int cancelMagicLvl = skill.getMagicLevel();
-
-                // Prevent initialization.
-                final List<BuffInfo> dances = target.getEffectList().getDances();
-                for (int i = dances.size() - 1; i >= 0; i--) // reverse order
-                {
-                    final BuffInfo info = dances.get(i);
-                    if (!info.getSkill().canBeStolen() || ((rate < 100) && !calcCancelSuccess(info, cancelMagicLvl, rate, skill, target))) {
-                        continue;
-                    }
-                    canceled.add(info);
-                    if (canceled.size() >= max) {
-                        break;
-                    }
-                }
-
-                if (canceled.size() < max) {
-                    // Prevent initialization.
-                    final List<BuffInfo> buffs = target.getEffectList().getBuffs();
-                    for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
-                    {
-                        final BuffInfo info = buffs.get(i);
-                        if (!info.getSkill().canBeStolen() || ((rate < 100) && !calcCancelSuccess(info, cancelMagicLvl, rate, skill, target))) {
-                            continue;
-                        }
-                        canceled.add(info);
-                        if (canceled.size() >= max) {
-                            break;
-                        }
-                    }
-                }
+                target.getEffectList().forEachBuffOrDance(canceled::add, b -> calcBuffCancelSuccess(target, rate, cancelMagicLvl, b), max);
             }
             case DEBUFF -> {
-                final List<BuffInfo> debuffs = target.getEffectList().getDebuffs();
-                for (int i = debuffs.size() - 1; i >= 0; i--) {
-                    final BuffInfo info = debuffs.get(i);
-                    if (info.getSkill().canBeDispelled() && (Rnd.get(100) <= rate)) {
-                        canceled.add(info);
-                        if (canceled.size() >= max) {
-                            break;
-                        }
-                    }
-                }
+                target.getEffectList().forEachDebuff(canceled::add, b -> b.getSkill().canBeDispelled() && Rnd.chance(rate), max);
             }
         }
         return canceled;
     }
 
-    public static boolean calcCancelSuccess(BuffInfo info, int cancelMagicLvl, int rate, Skill skill, Creature target) {
+    private static boolean calcBuffCancelSuccess(Creature target, int rate, int cancelMagicLvl, BuffInfo info) {
+        return info.getSkill().canBeStolen() && (rate >= 100 || calcCancelSuccess(info, cancelMagicLvl, rate, target));
+    }
+
+    public static boolean calcCancelSuccess(BuffInfo info, int cancelMagicLvl, int rate, Creature target) {
         final var resist =  2d - target.getStats().getValue(Stat.RESIST_DISPEL_BUFF, 1);
         final int chance = (int) (rate + ((cancelMagicLvl - info.getSkill().getMagicLevel()) * 2) + ((info.getAbnormalTime() / 120) * resist));
         return Rnd.get(100) < CommonUtil.constrain(chance, 25, 75); // TODO: i_dispel_by_slot_probability min = 40, max = 95.
@@ -968,11 +933,10 @@ public final class Formulas {
      * The abnormal time is taken from the skill definition, and it's global for all effects present in the skills.
      *
      * @param caster the caster
-     * @param target the target
      * @param skill  the skill
      * @return the time that the effect will last
      */
-    public static int calcEffectAbnormalTime(Creature caster, Creature target, Skill skill) {
+    public static int calcEffectAbnormalTime(Creature caster, Skill skill) {
         int time = (skill == null) || skill.isPassive() || skill.isToggle() ? -1 : skill.getAbnormalTime();
 
         // If the skill is a mastery skill, the effect will last twice the default time.

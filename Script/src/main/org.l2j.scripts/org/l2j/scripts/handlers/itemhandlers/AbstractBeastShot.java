@@ -22,7 +22,6 @@ import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.handler.IItemHandler;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -32,8 +31,9 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.util.Broadcast;
 
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -57,7 +57,7 @@ public abstract class AbstractBeastShot implements IItemHandler {
             return false;
         }
 
-        var aliveServitors = playable.getServitors().values().stream().filter(Predicate.not(Creature::isDead)).collect(Collectors.toList());
+        var aliveServitors = getAliveServitors(playable);
         if (isNull(pet) && aliveServitors.isEmpty()) {
             owner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_SERVITOR_SAD_ISN_T_IT);
             return false;
@@ -69,8 +69,37 @@ public abstract class AbstractBeastShot implements IItemHandler {
             return false;
         }
 
-        short shotConsumption = 0;
         var shotType = getShotType();
+        if (!checkConsumeAmount(item, pet, aliveServitors, shotType)) {
+            return false;
+        }
+
+        if (nonNull(pet)) {
+            chargeShot(owner, item, shotType, pet);
+        }
+
+        for (var servitor : aliveServitors) {
+            chargeShot(owner, item, shotType, servitor);
+        }
+        return true;
+    }
+
+    private List<Summon> getAliveServitors(Playable playable) {
+        var servitors = playable.getServitors().values();
+        if(servitors.isEmpty()) {
+            return Collections.emptyList();
+        }
+        List<Summon> alive = new ArrayList<>();
+        for (var servitor : servitors) {
+            if(!servitor.isDead()) {
+                alive.add(servitor);
+            }
+        }
+        return alive;
+    }
+
+    private boolean checkConsumeAmount(Item item, Summon pet, List<Summon> aliveServitors, ShotType shotType) {
+        short shotConsumption = 0;
 
         if (nonNull(pet)) {
             if (!pet.isChargedShot(shotType)) {
@@ -84,18 +113,7 @@ public abstract class AbstractBeastShot implements IItemHandler {
             }
         }
 
-        if(item.getCount() < shotConsumption) {
-            return false;
-        }
-
-        if (nonNull(pet)) {
-            chargeShot(owner, item, shotType, pet);
-        }
-
-        for (var servitor : aliveServitors) {
-            chargeShot(owner, item, shotType, servitor);
-        }
-        return true;
+        return item.getCount() >= shotConsumption;
     }
 
     private void chargeShot(Player owner, Item item, ShotType shotType, Summon summon) {

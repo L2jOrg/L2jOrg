@@ -155,37 +155,35 @@ public class PetTemplate {
      */
     public int getAvailableLevel(int skillId, int petLvl) {
         int lvl = 0;
-        boolean found = false;
         for (var temp : skills) {
             var skill = temp.skill();
-            if (skill.getId() != skillId) {
-                continue;
-            }
-            found = true;
-            if (skill.getLevel() == 0) {
-                if (petLvl < 70) {
-                    lvl = (petLvl / 10);
-                    if (lvl <= 0) {
-                        lvl = 1;
-                    }
-                } else {
-                    lvl = (7 + ((petLvl - 70) / 5));
-                }
-
-                // formula usable for skill that have 10 or more skill levels
-                final int maxLvl = SkillEngine.getInstance().getMaxLevel(skill.getId());
-                if (lvl > maxLvl) {
-                    lvl = maxLvl;
-                }
-                break;
-            } else if (temp.minLevel() <= petLvl) {
-                if (skill.getLevel() > lvl) {
+            if(skill.getId() == skillId) {
+                if (skill.getLevel() == 0) {
+                    lvl = calcAvailableLevel(petLvl, skill);
+                    break;
+                } else if (temp.minLevel() <= petLvl && skill.getLevel() > lvl) {
                     lvl = skill.getLevel();
                 }
             }
         }
-        if (found && (lvl == 0)) {
-            return 1;
+        return lvl;
+    }
+
+    private int calcAvailableLevel(int petLvl, Skill skill) {
+        int lvl;
+        if (petLvl < 70) {
+            lvl = (petLvl / 10);
+            if (lvl <= 0) {
+                lvl = 1;
+            }
+        } else {
+            lvl = (7 + ((petLvl - 70) / 5));
+        }
+
+        // formula usable for skill that have 10 or more skill levels
+        final int maxLvl = SkillEngine.getInstance().getMaxLevel(skill.getId());
+        if (lvl > maxLvl) {
+            lvl = maxLvl;
         }
         return lvl;
     }

@@ -92,32 +92,34 @@ public class PetSkillData extends GameXmlReader {
         }
 
         for (var skill : skillTrees.get(pet.getId()).values()) {
-            if (skill.getId() != skillId) {
-                continue;
-            }
-            if (skill.getLevel() == 0) {
-                if (pet.getLevel() < 70) {
-                    lvl = pet.getLevel() / 10;
-                    if (lvl <= 0) {
-                        lvl = 1;
-                    }
-                } else {
-                    lvl = 7 + ((pet.getLevel() - 70) / 5);
-                }
-
-                // formula usable for skill that have 10 or more skill levels
-                final int maxLvl = SkillEngine.getInstance().getMaxLevel(skill.getId());
-                if (lvl > maxLvl) {
-                    lvl = maxLvl;
-                }
-                break;
-            } else if (1 <= pet.getLevel()) {
-                if (skill.getLevel() > lvl) {
+            if (skill.getId() == skillId) {
+                if (skill.getLevel() == 0) {
+                    lvl = calculateLevel(pet, skill);
+                    break;
+                } else if (1 <= pet.getLevel() && skill.getLevel() > lvl) {
                     lvl = skill.getLevel();
                 }
             }
         }
+        return lvl;
+    }
 
+    private int calculateLevel(Summon pet, Skill skill) {
+        int lvl;
+        if (pet.getLevel() < 70) {
+            lvl = pet.getLevel() / 10;
+            if (lvl <= 0) {
+                lvl = 1;
+            }
+        } else {
+            lvl = 7 + ((pet.getLevel() - 70) / 5);
+        }
+
+        // formula usable for skill that have 10 or more skill levels
+        final int maxLvl = SkillEngine.getInstance().getMaxLevel(skill.getId());
+        if (lvl > maxLvl) {
+            lvl = maxLvl;
+        }
         return lvl;
     }
 

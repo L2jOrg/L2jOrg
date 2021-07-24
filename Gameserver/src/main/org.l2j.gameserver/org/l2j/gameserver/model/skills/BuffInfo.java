@@ -92,7 +92,7 @@ public final class BuffInfo {
         _effector = effector;
         _effected = effected;
         this.skill = skill;
-        _abnormalTime = Formulas.calcEffectAbnormalTime(effector, effected, skill);
+        _abnormalTime = Formulas.calcEffectAbnormalTime(effector, skill);
         _periodStartTicks = WorldTimeController.getInstance().getGameTicks();
         _hideStartMessage = hideStartMessage;
         _item = item;

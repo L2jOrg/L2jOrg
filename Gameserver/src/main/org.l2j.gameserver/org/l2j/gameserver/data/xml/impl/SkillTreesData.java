@@ -44,7 +44,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.stream.Collectors;
+import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -231,32 +231,24 @@ public final class SkillTreesData extends GameXmlReader {
         return fishingSkillTree;
     }
 
-
-    /**
-     * Gets the noble skill tree.
-     *
-     * @return the complete Noble Skill Tree
-     */
-    public List<Skill> getNobleSkillTree() {
-        return nobleSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+    public void forEachNobleSkill(Consumer<Skill> action) {
+        for (var learn : nobleSkillTree.values()) {
+            action.accept(learn.getSkill());
+        }
     }
 
-    /**
-     * Gets the noble skill tree.
-     *
-     * @return the complete Noble Skill Tree
-     */
-    public List<Skill> getNobleSkillAutoGetTree() {
-        return nobleSkillTree.values().stream().filter(SkillLearn::isAutoGet).map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+    public void forEachAutoGetNobleSkill(Consumer<Skill> action) {
+        for (var learn : nobleSkillTree.values()) {
+            if(learn.isAutoGet()) {
+                action.accept(learn.getSkill());
+            }
+        }
     }
 
-    /**
-     * Gets the hero skill tree.
-     *
-     * @return the complete Hero Skill Tree
-     */
-    public List<Skill> getHeroSkillTree() {
-        return heroSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+    public void forEachHeroSkill(Consumer<Skill> action) {
+        for (var learn : heroSkillTree.values()) {
+            action.accept(learn.getSkill());
+        }
     }
 
     public boolean hasAvailableSkills(Player player, ClassId classId) {
@@ -502,7 +494,13 @@ public final class SkillTreesData extends GameXmlReader {
      * @return all the available Residential skills for a given {@code residenceId}
      */
     public List<SkillLearn> getAvailableResidentialSkills(int residenceId) {
-        return pledgeSkillTree.values().stream().filter( s -> s.isResidencialSkill() && s.getResidenceIds().contains(residenceId)).collect(Collectors.toList());
+        List<SkillLearn> list = new ArrayList<>();
+        for (var s : pledgeSkillTree.values()) {
+            if (s.isResidencialSkill() && s.getResidenceIds().contains(residenceId)) {
+                list.add(s);
+            }
+        }
+        return list;
     }
 
     /**

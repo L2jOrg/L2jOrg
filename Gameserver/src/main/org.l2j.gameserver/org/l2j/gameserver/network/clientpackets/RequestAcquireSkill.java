@@ -120,45 +120,44 @@ public final class RequestAcquireSkill extends ClientPacket {
                 if (!player.isClanLeader()) {
                     return;
                 }
-
-                final Clan clan = player.getClan();
-                final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
-                if (clan.getReputationScore() >= repCost) {
-                    if (CharacterSettings.pledgeSkillsItemNeeded()) {
-                        for (ItemHolder item : skillLearn.getRequiredItems()) {
-                            if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
-                                // Doesn't have required item.
-                                player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
-                                VillageMaster.showPledgeSkillList(player);
-                                return;
-                            }
-
-                            final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-                            sm.addItemName(item.getId());
-                            sm.addLong(item.getCount());
-                            player.sendPacket(sm);
-                        }
-                    }
-
-                    clan.takeReputationScore(repCost, true);
-
-                    final SystemMessage cr = getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-                    cr.addInt(repCost);
-                    player.sendPacket(cr);
-
-                    clan.addNewSkill(skill);
-
-                    clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-
-                    player.sendPacket(new AcquireSkillDone());
-
-                } else {
-                    player.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
-                }
-                VillageMaster.showPledgeSkillList(player);
+                acquirePledgeSkill(player, trainer, skill, skillLearn);
             }
             default -> LOGGER.warn("Received Wrong Packet Data in Acquired Skill, unknown skill type: {}", skillType);
         }
+    }
+
+    private void acquirePledgeSkill(Player player, Npc trainer, Skill skill, SkillLearn skillLearn) {
+        final Clan clan = player.getClan();
+        final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
+        if (clan.getReputationScore() >= repCost) {
+            if (!consumeRequiredItems(player, trainer, skillLearn)) {
+                return;
+            }
+
+            clan.takeReputationScore(repCost, true);
+            player.sendPacket(getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION).addInt(repCost));
+            clan.addNewSkill(skill);
+            clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
+            player.sendPacket(new AcquireSkillDone());
+        } else {
+            player.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
+        }
+        VillageMaster.showPledgeSkillList(player);
+    }
+
+    private boolean consumeRequiredItems(Player player, Npc trainer, SkillLearn skillLearn) {
+        if (CharacterSettings.pledgeSkillsItemNeeded()) {
+            for (ItemHolder item : skillLearn.getRequiredItems()) {
+                if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
+                    VillageMaster.showPledgeSkillList(player);
+                    return false;
+                }
+
+                player.sendPacket(getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(item.getId()).addLong(item.getCount()));
+            }
+        }
+        return true;
     }
 
     /**

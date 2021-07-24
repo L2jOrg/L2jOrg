@@ -41,6 +41,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -152,28 +153,37 @@ public final class EffectList {
         return Collections.unmodifiableCollection(actives);
     }
 
+    public void forEachBuffOrDance(Consumer<BuffInfo> action, Predicate<BuffInfo> filter, int amount) {
+        var consumed = 0;
+        for (var active : actives) {
+            var buffType = active.getSkill().getBuffType();
+            if((buffType.isBuff() || buffType.isDance()) && filter.test(active)) {
+                action.accept(active);
+            }
+            if(consumed >= amount) {
+                return;
+            }
+        }
+    }
+
+    public void forEachDebuff(Consumer<BuffInfo> action, Predicate<BuffInfo> filter, int amount) {
+        var consumed = 0;
+        for (var active : actives) {
+            if(active.getSkill().isDebuff() && filter.test(active)) {
+                action.accept(active);
+            }
+            if(consumed >= amount) {
+                return;
+            }
+        }
+    }
+
+
     /**
-     * Gets all the active positive effects on this effect list.
+     * Gets all the active negative effects on this effect list.
      *
-     * @return all the buffs on this effect list
+     * @return all the debuffs on this effect list
      */
-    public List<BuffInfo> getBuffs() {
-        return actives.stream().filter(b -> b.getSkill().getBuffType().isBuff()).collect(Collectors.toList());
-    }
-
-    /**
-     * Gets all the active positive effects on this effect list.
-     * @return all the dances songs on this effect list
-     */
-    public List<BuffInfo> getDances() {
-        return actives.stream().filter(b -> b.getSkill().getBuffType().isDance()).collect(Collectors.toList());
-    }
-
-        /**
-         * Gets all the active negative effects on this effect list.
-         *
-         * @return all the debuffs on this effect list
-         */
     public List<BuffInfo> getDebuffs() {
         return actives.stream().filter(b -> b.getSkill().isDebuff()).collect(Collectors.toList());
     }

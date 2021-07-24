@@ -45,6 +45,7 @@ import java.util.Map;
  */
 public final class TransformData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(TransformData.class);
+    public static final String ACTIONS = "actions";
 
     private final Map<Integer, Transform> _transformData = new HashMap<>();
 
@@ -89,24 +90,24 @@ public final class TransformData extends GameXmlReader {
         for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
             final boolean isMale = "Male".equalsIgnoreCase(cd.getNodeName());
             if ("Male".equalsIgnoreCase(cd.getNodeName()) || "Female".equalsIgnoreCase(cd.getNodeName())) {
-                parseTrasform(set, transform, cd, isMale);
+                parseTransform(set, transform, cd, isMale);
             }
         }
         _transformData.put(transform.getId(), transform);
     }
 
-    private void parseTrasform(StatsSet set, Transform transform, Node cd, boolean isMale) {
+    private void parseTransform(StatsSet set, Transform transform, Node cd, boolean isMale) {
         TransformTemplate templateData = null;
         for (Node z = cd.getFirstChild(); z != null; z = z.getNextSibling()) {
-            switch (z.getNodeName()) {
-                case "common" -> templateData = parseCommonTransform(set, transform, isMale, z);
-                case "skills" -> templateData = parseTransformSkills(set, transform, isMale, templateData, z);
-                case "actions" -> templateData = parseTransformActions(set, transform, isMale, templateData, z);
-                case "additionalSkills" -> templateData = parseAdditionalTransformSkills(set, transform, isMale, templateData, z);
-                case "items" -> templateData = parseItems(set, transform, isMale, templateData, z);
-                case "levels" -> templateData = parseLevels(set, transform, isMale, templateData, z);
-                default -> LOGGER.warn("Unknown transform node {}", z.getNodeName());
-            }
+            templateData = switch (z.getNodeName()) {
+                case "common" ->   parseCommonTransform(set, transform, isMale, z);
+                case "skills" ->   parseTransformSkills(set, transform, isMale, templateData, z);
+                case ACTIONS ->  parseTransformActions(set, transform, isMale, templateData, z);
+                case "items" ->    parseItems(set, transform, isMale, templateData, z);
+                case "levels" ->   parseLevels(set, transform, isMale, templateData, z);
+                case "additionalSkills" ->  parseAdditionalTransformSkills(set, transform, isMale, templateData, z);
+                default -> templateData;
+            };
         }
     }
 
@@ -170,8 +171,8 @@ public final class TransformData extends GameXmlReader {
             templateData = new TransformTemplate(set);
             transform.setTemplate(isMale, templateData);
         }
-        set.set("actions", z.getTextContent());
-        final int[] actions = set.getIntArray("actions", " ");
+        set.set(ACTIONS, z.getTextContent());
+        final int[] actions = set.getIntArray(ACTIONS, " ");
         templateData.setBasicActionList(new ExBasicActionList(actions));
         return templateData;
     }

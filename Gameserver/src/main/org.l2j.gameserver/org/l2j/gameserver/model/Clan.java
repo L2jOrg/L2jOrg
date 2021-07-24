@@ -734,10 +734,10 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastClanStatus() {
-        for (Player member : getOnlineMembers(0)) {
-            member.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
-            PledgeShowMemberListAll.sendAllTo(member);
-        }
+        forEachOnlineMember(p -> {
+            p.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
+            PledgeShowMemberListAll.sendAllTo(p);
+        });
     }
 
     private void restoreRankPrivs() {
