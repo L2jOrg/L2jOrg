@@ -34,6 +34,8 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.scripts.instances.AbstractInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
@@ -43,8 +45,10 @@ import java.util.*;
  * @author RobikBobik (Updated to Classic: The Kamael)
  * TODO: When halisha uses second transform, Halisha Breath need to stop attack.
  */
-public class LastImperialTomb extends AbstractInstance
-{
+public class LastImperialTomb extends AbstractInstance {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(LastImperialTomb.class);
+
 	// NPCs
 	private static final int GUIDE = 32011;
 	private static final int CUBE = 29061;
@@ -137,6 +141,7 @@ public class LastImperialTomb extends AbstractInstance
 	public static final String FRINTEZZA_DUMMY = "frintezzaDummy";
 	public static final String MONSTERS_COUNT = "monstersCount";
 	public static final String KEY_PARAM_FRINTEZZA = "frintezza";
+	public static final String SCARLET_SECOND_MORPH = "SCARLET_SECOND_MORPH";
 
 	static
 	{
@@ -180,7 +185,7 @@ public class LastImperialTomb extends AbstractInstance
 	public String onAdvEvent(String event, Npc npc, Player player) {
 		if (event.startsWith("FRINTEZZA_INTRO")) {
 			showIntroCinematic(event, player);
-		} else if (event.startsWith("SCARLET_SECOND_MORPH")) {
+		} else if (event.startsWith(SCARLET_SECOND_MORPH)) {
 			showSecondMorphCinematic(event, npc);
 		} else {
 			processGeneralEvent(event, npc, player);
@@ -198,12 +203,13 @@ public class LastImperialTomb extends AbstractInstance
 			case "FINISH_CAMERA_3" -> finishCamera3(npc);
 			case "FINISH_CAMERA_4" -> finishCamera4(npc);
 			case "FINISH_CAMERA_5" -> finishCamera5(npc);
+			default -> LOGGER.warn("Unknown event {}", event);
 		}
 	}
 
 	private void showSecondMorphCinematic(String event, Npc npc) {
 		switch (event) {
-			case "SCARLET_SECOND_MORPH" -> scarletSecondMorth(npc);
+			case SCARLET_SECOND_MORPH -> scarletSecondMorth(npc);
 			case "SCARLET_SECOND_MORPH_CAMERA_1" -> scarletSecondMorthCamera1(npc);
 			case "SCARLET_SECOND_MORPH_CAMERA_2" -> scarletSecondMorphCamera2(npc);
 			case "SCARLET_SECOND_MORPH_CAMERA_3" -> scarletSecondMorphCamera3(npc);
@@ -213,6 +219,7 @@ public class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_7" -> scarletSecondMorphCamera7(npc);
 			case "SCARLET_SECOND_MORPH_CAMERA_8" -> scarletSecondMorphCamera8(npc);
 			case "SCARLET_SECOND_MORPH_CAMERA_9" -> scarletSecondMorphCamera9(npc);
+			default -> LOGGER.warn("Unknown second morph event {}", event);
 		}
 	}
 
@@ -239,6 +246,7 @@ public class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_18" -> onIntro18(player);
 			case "FRINTEZZA_INTRO_19" -> onIntro19(player);
 			case "FRINTEZZA_INTRO_20" -> onIntro20(player);
+			default -> LOGGER.warn("Unknown intro event {}", event);
 		}
 	}
 
@@ -745,7 +753,7 @@ public class LastImperialTomb extends AbstractInstance
 			if ((npc.isScriptValue(1)) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20)))
 			{
 				npc.setScriptValue(2);
-				startQuestTimer("SCARLET_SECOND_MORPH", 1000, npc, null);
+				startQuestTimer(SCARLET_SECOND_MORPH, 1000, npc, null);
 			}
 		}
 		if (skill != null)

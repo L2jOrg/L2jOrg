@@ -38,7 +38,6 @@ import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.PcCafePointsManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Servitor;
@@ -433,7 +432,7 @@ public class Attackable extends Npc {
                                         if (useVitalityRate()) {
                                             finalExp *= attacker.getStats().getExpBonusMultiplier();
                                         }
-                                        clan.addHuntingPoints(attacker, this, finalExp);
+                                        clan.addHuntingPoints(finalExp);
                                     }
                                     attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true);
                                     PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
