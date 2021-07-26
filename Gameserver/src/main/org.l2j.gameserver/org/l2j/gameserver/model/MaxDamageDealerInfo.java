@@ -21,35 +21,27 @@ package org.l2j.gameserver.model;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**
- * @author xban1x
+ * @author JoeAlisson
  */
-public final class DamageDoneInfo {
-    private final Player _attacker;
-    private long _damage = 0;
+@Deprecated
+public final class MaxDamageDealerInfo {
+    private final Player player;
+    private long damage = 0;
 
-    public DamageDoneInfo(Player attacker) {
-        _attacker = attacker;
+    public MaxDamageDealerInfo(Player attacker) {
+        player = attacker;
     }
 
     public Player getAttacker() {
-        return _attacker;
+        return player;
     }
 
     public void addDamage(long damage) {
-        _damage += damage;
+        this.damage += damage;
     }
 
     public long getDamage() {
-        return _damage;
+        return damage;
     }
 
-    @Override
-    public final boolean equals(Object obj) {
-        return (this == obj) || ((obj instanceof DamageDoneInfo) && (((DamageDoneInfo) obj).getAttacker() == _attacker));
-    }
-
-    @Override
-    public final int hashCode() {
-        return _attacker.getObjectId();
-    }
 }
