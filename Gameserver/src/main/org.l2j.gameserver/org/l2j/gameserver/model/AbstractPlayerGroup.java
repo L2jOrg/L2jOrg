@@ -25,6 +25,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
@@ -71,8 +72,7 @@ public abstract class AbstractPlayerGroup {
      * @param packet the packet to broadcast
      */
     public void broadcastPacket(ServerPacket packet) {
-        checkEachMember(m ->
-        {
+        checkEachMember(m -> {
             if (m != null) {
                 m.sendPacket(packet);
             }

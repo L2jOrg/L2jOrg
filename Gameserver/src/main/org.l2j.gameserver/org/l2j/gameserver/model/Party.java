@@ -42,18 +42,18 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.PartySettings;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.Future;
-import java.util.stream.Collectors;
+import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+import static org.l2j.gameserver.util.GameUtils.checkIfInRange;
 
 /**
  * This class serves as a container for player parties.
@@ -138,10 +138,17 @@ public class Party extends AbstractPlayerGroup {
      * @param target the object of which the member must be within a certain range (must not be null)
      * @return a random member from this party or {@code null} if none of the members have inventory space for the specified item
      */
-    private Player getCheckedRandomMember(int itemId, Creature target) {
-        return Rnd.get(members.stream()
-                .filter(member -> member.getInventory().validateCapacityByItemId(itemId) && GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true))
-                .collect(Collectors.toList()));
+    private Player getRandomLooterMember(int itemId, Creature target) {
+        Player player = null;
+        int maxChance = 0;
+        for (Player member : members) {
+            var chance = Rnd.get(100);
+            if(chance >= maxChance && member.getInventory().validateCapacityByItemId(itemId) && checkIfInRange(PartySettings.partyRange(), target, member, true)) {
+                maxChance = chance;
+                player = member;
+            }
+        }
+        return player;
     }
 
     private Player getCheckedNextLooter(int ItemId, Creature target) {
@@ -151,7 +158,7 @@ public class Party extends AbstractPlayerGroup {
             }
 
             var member = members.get(itemLastLoot);
-            if (member.getInventory().validateCapacityByItemId(ItemId) && GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true)) {
+            if (member.getInventory().validateCapacityByItemId(ItemId) && checkIfInRange(PartySettings.partyRange(), target, member, true)) {
                 return member;
             }
         }
@@ -164,10 +171,10 @@ public class Party extends AbstractPlayerGroup {
         switch (distributionType) {
             case RANDOM -> {
                 if (!spoil) {
-                    looter = getCheckedRandomMember(ItemId, target);
+                    looter = getRandomLooterMember(ItemId, target);
                 }
             }
-            case RANDOM_INCLUDING_SPOIL -> looter = getCheckedRandomMember(ItemId, target);
+            case RANDOM_INCLUDING_SPOIL -> looter = getRandomLooterMember(ItemId, target);
             case BY_TURN -> {
                 if (!spoil) {
                     looter = getCheckedNextLooter(ItemId, target);
@@ -505,7 +512,7 @@ public class Party extends AbstractPlayerGroup {
         // (The party member must be in range to receive its reward)
         final List<Player> toReward = new LinkedList<>();
         for (Player member : members) {
-            if (GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true)) {
+            if (checkIfInRange(PartySettings.partyRange(), target, member, true)) {
                 toReward.add(member);
             }
         }
@@ -535,7 +542,7 @@ public class Party extends AbstractPlayerGroup {
      * @param partyDmg
      * @param target
      */
-    public void distributeXpAndSp(double xpReward, double spReward, List<Player> rewardedMembers, int topLvl, long partyDmg, Attackable target) {
+    public void distributeXpAndSp(double xpReward, double spReward, Collection<Player> rewardedMembers, int topLvl, long partyDmg, Attackable target) {
 
         xpReward *= getExpBonus(rewardedMembers.size(), target.getInstanceWorld());
         spReward *= getSpBonus(rewardedMembers.size(), target.getInstanceWorld());
@@ -758,6 +765,10 @@ public class Party extends AbstractPlayerGroup {
 
     public boolean isMember(Player player) {
         return members.contains(player);
+    }
+
+    public void forEachMember(Consumer<Player> action) {
+        members.forEach(action);
     }
 
     /**

@@ -31,6 +31,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
@@ -41,7 +42,7 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author chris_00
  */
 public class CommandChannel extends AbstractPlayerGroup {
-    private final Collection<Party> _parties = ConcurrentHashMap.newKeySet();
+    private final Collection<Party> parties = ConcurrentHashMap.newKeySet();
     private Player _commandLeader;
     private int _channelLvl;
 
@@ -53,7 +54,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     public CommandChannel(Player leader) {
         _commandLeader = leader;
         final Party party = leader.getParty();
-        _parties.add(party);
+        parties.add(party);
         _channelLvl = party.getLevel();
         party.setCommandChannel(this);
         party.broadcastMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED);
@@ -72,7 +73,7 @@ public class CommandChannel extends AbstractPlayerGroup {
         // Update the CCinfo for existing players
         broadcastPacket(new ExMPCCPartyInfoUpdate(party, 1));
 
-        _parties.add(party);
+        parties.add(party);
         if (party.getLevel() > _channelLvl) {
             _channelLvl = party.getLevel();
         }
@@ -91,16 +92,16 @@ public class CommandChannel extends AbstractPlayerGroup {
             return;
         }
 
-        _parties.remove(party);
+        parties.remove(party);
         _channelLvl = 0;
-        for (Party pty : _parties) {
+        for (Party pty : parties) {
             if (pty.getLevel() > _channelLvl) {
                 _channelLvl = pty.getLevel();
             }
         }
         party.setCommandChannel(null);
         party.broadcastPacket(ExCloseMPCC.STATIC_PACKET);
-        if (_parties.size() < 2) {
+        if (parties.size() < 2) {
             broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
             disbandChannel();
         } else {
@@ -113,14 +114,12 @@ public class CommandChannel extends AbstractPlayerGroup {
      * Disband this command channel.
      */
     public void disbandChannel() {
-        if (_parties != null) {
-            for (Party party : _parties) {
-                if (party != null) {
-                    removeParty(party);
-                }
+        for (Party party : parties) {
+            if (party != null) {
+                removeParty(party);
             }
-            _parties.clear();
         }
+        parties.clear();
     }
 
     /**
@@ -129,7 +128,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     @Override
     public int getMemberCount() {
         int count = 0;
-        for (Party party : _parties) {
+        for (Party party : parties) {
             if (party != null) {
                 count += party.getMemberCount();
             }
@@ -141,7 +140,7 @@ public class CommandChannel extends AbstractPlayerGroup {
      * @return a list of all parties in this command channel
      */
     public Collection<Party> getPartys() {
-        return _parties;
+        return parties;
     }
 
     /**
@@ -150,7 +149,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     @Override
     public List<Player> getMembers() {
         final List<Player> members = new LinkedList<>();
-        for (Party party : _parties) {
+        for (Party party : parties) {
             members.addAll(party.getMembers());
         }
         return members;
@@ -196,13 +195,17 @@ public class CommandChannel extends AbstractPlayerGroup {
      */
     @Override
     public boolean checkEachMember(Function<Player, Boolean> function) {
-        if ((_parties != null) && !_parties.isEmpty()) {
-            for (Party party : _parties) {
-                if (!party.checkEachMember(function)) {
-                    return false;
-                }
+        for (Party party : parties) {
+            if (!party.checkEachMember(function)) {
+                return false;
             }
         }
         return true;
+    }
+
+    public void forEachMember(Consumer<Player> action) {
+        for (var party : parties) {
+            party.forEachMember(action);
+        }
     }
 }

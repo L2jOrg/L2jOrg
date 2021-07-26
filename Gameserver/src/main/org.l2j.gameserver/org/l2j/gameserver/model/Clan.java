@@ -1088,26 +1088,26 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     private boolean tryIncreaseLevelWithBloodMark(Player player, int spRequired, int bloodMarkAmount) {
-        if ((player.getSp() >= spRequired) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
-            if (player.destroyItemByItemId("ClanLvl", 1419, bloodMarkAmount, player.getTarget(), true)) {
-                player.setSp(player.getSp() - spRequired);
-                player.sendPackets(
-                    getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(spRequired),
-                    getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(1419)
-                );
-                return true;
-            }
+        if(player.getSp() >= spRequired && player.getInventory().getItemByItemId(1419) != null && members.size() >= 1
+                && player.destroyItemByItemId("ClanLvl", 1419, bloodMarkAmount, player.getTarget(), true)) {
+
+            player.setSp(player.getSp() - spRequired);
+            player.sendPackets(
+                getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(spRequired),
+                getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(1419)
+            );
+            return true;
         }
         return false;
     }
 
     private boolean tryIncreaseLevelWithAdena(Player player, int spRequired, int adenaRequired) {
-        if (player.getSp() >= spRequired && player.getAdena() >= adenaRequired && members.size() >= 1) {
-            if (player.reduceAdena("ClanLvl", adenaRequired, player.getTarget(), true)) {
-                player.setSp(player.getSp() - spRequired);
-                player.sendPacket(getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(spRequired));
-                return true;
-            }
+        if (player.getSp() >= spRequired && player.getAdena() >= adenaRequired && members.size() >= 1 &&
+                player.reduceAdena("ClanLvl", adenaRequired, player.getTarget(), true)) {
+
+            player.setSp(player.getSp() - spRequired);
+            player.sendPacket(getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(spRequired));
+            return true;
         }
         return false;
     }
