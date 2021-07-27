@@ -20,7 +20,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.IntLongMap;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
