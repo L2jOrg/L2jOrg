@@ -151,14 +151,14 @@ public class Party extends AbstractPlayerGroup {
         return player;
     }
 
-    private Player getCheckedNextLooter(int ItemId, Creature target) {
+    private Player getCheckedNextLooter(int itemId, Creature target) {
         for (int i = 0; i < members.size(); i++) {
             if (++itemLastLoot >= members.size()) {
                 itemLastLoot = 0;
             }
 
             var member = members.get(itemLastLoot);
-            if (member.getInventory().validateCapacityByItemId(ItemId) && checkIfInRange(PartySettings.partyRange(), target, member, true)) {
+            if (member.getInventory().validateCapacityByItemId(itemId) && checkIfInRange(PartySettings.partyRange(), target, member, true)) {
                 return member;
             }
         }
