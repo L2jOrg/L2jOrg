@@ -379,19 +379,7 @@ public class MultiSellChoose extends ClientPacket {
     }
 
     private boolean validateItemEnchantment(Player player, ItemInfo itemEnchantment, PlayerInventory inventory) {
-        // Validate the requested item with its full stats.
-        //@formatter:off
-        if ((itemEnchantment != null) && ((count > 1)
-                || (itemEnchantment.getEnchantLevel() != enchantLevel)
-                || ((itemEnchantment.getAugmentation() == null) && ((augmentOption1 != 0) || (augmentOption2 != 0)))
-                || ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getOption1Id() != augmentOption1) || (itemEnchantment.getAugmentation().getOption2Id() != augmentOption2)))
-                || ((soulCrystalOptions.length > 0) && !CommonUtil.contains(soulCrystalOptions, itemEnchantment.getSoulCrystalOption()))
-                || ((soulCrystalOptions.length == 0) && nonNull(itemEnchantment.getSoulCrystalOption()))
-                || ((soulCrystalSpecialOptions.length > 0) && !CommonUtil.contains(soulCrystalSpecialOptions, itemEnchantment.getSoulCrystalSpecialOption()))
-                || ((soulCrystalSpecialOptions.length == 0) && nonNull(itemEnchantment.getSoulCrystalSpecialOption()))
-        ))
-        //@formatter:on
-        {
+        if (isInvalidItemAttributes(itemEnchantment)) {
             LOGGER.warn("Player {} is trying to upgrade equippable item, but the stats doesn't match. multisell {} entry {}", player, listId, entryId);
             player.setMultiSell(null);
             return false;
@@ -402,6 +390,24 @@ public class MultiSellChoose extends ClientPacket {
             return false;
         }
         return true;
+    }
+
+    private boolean isInvalidItemAttributes(ItemInfo itemEnchantment) {
+        return itemEnchantment != null &&
+                (count > 1 || itemEnchantment.getEnchantLevel() != enchantLevel || invalidAugmentation(itemEnchantment) || invalidSoulCrystal(itemEnchantment));
+    }
+
+    private boolean invalidSoulCrystal(ItemInfo itemEnchantment) {
+        return (soulCrystalOptions.length > 0 && !CommonUtil.contains(soulCrystalOptions, itemEnchantment.getSoulCrystalOption()))
+                || (soulCrystalOptions.length == 0 && nonNull(itemEnchantment.getSoulCrystalOption()))
+                || (soulCrystalSpecialOptions.length > 0 && !CommonUtil.contains(soulCrystalSpecialOptions, itemEnchantment.getSoulCrystalSpecialOption()))
+                || (soulCrystalSpecialOptions.length == 0 && nonNull(itemEnchantment.getSoulCrystalSpecialOption()));
+    }
+
+    private boolean invalidAugmentation(ItemInfo itemEnchantment) {
+        return (itemEnchantment.getAugmentation() == null && (augmentOption1 != 0 || augmentOption2 != 0))
+                || (itemEnchantment.getAugmentation() != null &&
+                    (itemEnchantment.getAugmentation().getOption1Id() != augmentOption1 || itemEnchantment.getAugmentation().getOption2Id() != augmentOption2));
     }
 
     private boolean validateItem(Player player, MultisellItem entry) {
