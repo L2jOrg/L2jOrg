@@ -18,9 +18,8 @@
  */
 package org.l2j.scripts.handlers.playeractions;
 
-import org.l2j.gameserver.engine.skill.api.PetSkillEngine;
 import org.l2j.gameserver.data.xml.model.ActionData;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.skill.api.PetSkillEngine;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
