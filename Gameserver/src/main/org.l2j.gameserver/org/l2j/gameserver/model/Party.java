@@ -165,24 +165,24 @@ public class Party extends AbstractPlayerGroup {
         return null;
     }
 
-    private Player getActualLooter(Player player, int ItemId, boolean spoil, Creature target) {
+    private Player getActualLooter(Player player, int itemId, boolean spoil, Creature target) {
         Player looter = switch (distributionType) {
-            case RANDOM -> getRandomLooter(ItemId, spoil, target);
-            case BY_TURN -> getCheckNextLooter(ItemId, spoil, target);
-            case RANDOM_INCLUDING_SPOIL -> getRandomLooterMember(ItemId, target);
-            case BY_TURN_INCLUDING_SPOIL -> getCheckedNextLooter(ItemId, target);
+            case RANDOM -> getRandomLooter(itemId, spoil, target);
+            case BY_TURN -> getCheckNextLooter(itemId, spoil, target);
+            case RANDOM_INCLUDING_SPOIL -> getRandomLooterMember(itemId, target);
+            case BY_TURN_INCLUDING_SPOIL -> getCheckedNextLooter(itemId, target);
             default -> null;
         };
 
         return looter != null ? looter : player;
     }
 
-    private Player getRandomLooter(int ItemId, boolean spoil, Creature target) {
-        return !spoil ? getRandomLooterMember(ItemId, target) : null;
+    private Player getRandomLooter(int itemId, boolean spoil, Creature target) {
+        return !spoil ? getRandomLooterMember(itemId, target) : null;
     }
 
-    private Player getCheckNextLooter(int ItemId, boolean spoil, Creature target) {
-        return !spoil ? getCheckedNextLooter(ItemId, target): null;
+    private Player getCheckNextLooter(int itemId, boolean spoil, Creature target) {
+        return !spoil ? getCheckedNextLooter(itemId, target): null;
     }
 
     /**
