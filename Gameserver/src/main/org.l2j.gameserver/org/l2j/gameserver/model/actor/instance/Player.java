@@ -563,10 +563,6 @@ public final class Player extends Playable {
         return variables.getMonsterReturn();
     }
 
-    public String getUiKeyMapping() {
-        return variables.getUiKeyMapping();
-    }
-
     public void setHairAccessoryEnabled(boolean hairAccessory_Enabled) {
         variables.setHairAccessoryEnabled(hairAccessory_Enabled);
     }
@@ -667,10 +663,6 @@ public final class Player extends Playable {
 
     public void setMonsterReturn(int monsterReturn) {
         variables.setMonsterReturn(monsterReturn);
-    }
-
-    public void setUiKeyMapping(String uiKeyMapping) {
-        variables.setUiKeyMapping(uiKeyMapping);
     }
 
     public int getRevengeUsableLocation() {
