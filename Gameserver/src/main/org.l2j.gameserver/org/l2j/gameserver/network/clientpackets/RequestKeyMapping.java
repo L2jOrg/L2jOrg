@@ -18,12 +18,18 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.network.serverpackets.ExUISetting;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 /**
  * @author KenM / mrTJO
+ * @author JoeAlisson
  */
 public class RequestKeyMapping extends ClientPacket {
     @Override
@@ -32,14 +38,15 @@ public class RequestKeyMapping extends ClientPacket {
     }
 
     @Override
-    public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
-            return;
-        }
-
+    public void runImpl() throws IOException {
         if (CharacterSettings.storeUISettings()) {
-            client.sendPacket(new ExUISetting(activeChar));
+            var mappingPath = ServerSettings.dataPackDirectory().resolve(Path.of("client_store", "key", client.getAccountName()));
+            if(Files.exists(mappingPath)) {
+                var bytes = Files.readAllBytes(mappingPath);
+                client.sendPacket(new ExUISetting(bytes));
+            } else {
+                client.sendPacket(new ExUISetting(Util.BYTE_ARRAY_EMPTY));
+            }
         }
     }
 }

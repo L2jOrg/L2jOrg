@@ -23,7 +23,6 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
 	`instance_restore` INT DEFAULT 0,
 	`claimed_clan_rewards` INT DEFAULT 0,
 	`cond_override_key` VARCHAR(255),
-	`ui_key_mapping` VARCHAR(255),
 	`monster_return` INT DEFAULT -1,
 	`lamp_xp` INT DEFAULT 0,
 	`lamp_count` INT DEFAULT 0,

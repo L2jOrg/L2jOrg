@@ -96,9 +96,6 @@ public class PlayerVariableData {
     @Column("cond_override_key")
     private String condOverrideKey;
 
-    @Column("ui_key_mapping")
-    private String uiKeyMapping;
-
     @Column("monster_return")
     private int monsterReturn;
 
@@ -273,14 +270,6 @@ public class PlayerVariableData {
 
     public int getMonsterReturn() {
         return monsterReturn;
-    }
-
-    public void setUiKeyMapping(String uiKeyMapping) {
-        this.uiKeyMapping = uiKeyMapping;
-    }
-
-    public String getUiKeyMapping() {
-        return uiKeyMapping;
     }
 
     public byte getRevengeTeleports() {
