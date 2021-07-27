@@ -336,7 +336,6 @@ public class Attackable extends Npc {
 
     private void rewardKillerGroup(Player attacker, long damage, List<Player> groupMembers, MaxDamageDealer maxDealerInfo, MapToLong<Player> playersDamage) {
         long partyDmg = 0;
-        double partyMul = 1;
         var attackerParty = attacker.getParty();
         int partyLvl = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getLevel() : 0;
 
@@ -355,12 +354,16 @@ public class Attackable extends Npc {
                     partyLvl = player.getLevel();
                 }
                 rewardedPlayers.add(player);
+                rewardAttributeExp(player, damage, maxDealerInfo.totalDamage);
             }
         }
 
-        if (partyDmg > 0) {
+        distributeRewardToGroup(attacker, maxDealerInfo, partyDmg, partyLvl, rewardedPlayers);
+    }
 
-            // If the party didn't killed this Attackable alone
+    private void distributeRewardToGroup(Player attacker, MaxDamageDealer maxDealerInfo, long partyDmg, int partyLvl, List<Player> rewardedPlayers) {
+        if (partyDmg > 0) {
+            double partyMul = 1;
             if (partyDmg < maxDealerInfo.totalDamage) {
                 partyMul = ((double) partyDmg / maxDealerInfo.totalDamage);
             }
@@ -384,11 +387,7 @@ public class Attackable extends Npc {
                 exp += calculateOverhitExp(exp);
             }
 
-            attackerParty.distributeXpAndSp(exp, sp, rewardedPlayers, partyLvl, partyDmg, this);
-
-            for (Player rewardedMember : rewardedPlayers) {
-                rewardAttributeExp(rewardedMember, damage, maxDealerInfo.totalDamage);
-            }
+            attacker.getParty().distributeXpAndSp(exp, sp, rewardedPlayers, partyLvl, this);
         }
     }
 

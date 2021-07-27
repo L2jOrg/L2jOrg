@@ -166,24 +166,23 @@ public class Party extends AbstractPlayerGroup {
     }
 
     private Player getActualLooter(Player player, int ItemId, boolean spoil, Creature target) {
-        Player looter = null;
-
-        switch (distributionType) {
-            case RANDOM -> {
-                if (!spoil) {
-                    looter = getRandomLooterMember(ItemId, target);
-                }
-            }
-            case RANDOM_INCLUDING_SPOIL -> looter = getRandomLooterMember(ItemId, target);
-            case BY_TURN -> {
-                if (!spoil) {
-                    looter = getCheckedNextLooter(ItemId, target);
-                }
-            }
-            case BY_TURN_INCLUDING_SPOIL -> looter = getCheckedNextLooter(ItemId, target);
-        }
+        Player looter = switch (distributionType) {
+            case RANDOM -> getRandomLooter(ItemId, spoil, target);
+            case BY_TURN -> getCheckNextLooter(ItemId, spoil, target);
+            case RANDOM_INCLUDING_SPOIL -> getRandomLooterMember(ItemId, target);
+            case BY_TURN_INCLUDING_SPOIL -> getCheckedNextLooter(ItemId, target);
+            default -> null;
+        };
 
         return looter != null ? looter : player;
+    }
+
+    private Player getRandomLooter(int ItemId, boolean spoil, Creature target) {
+        return !spoil ? getRandomLooterMember(ItemId, target) : null;
+    }
+
+    private Player getCheckNextLooter(int ItemId, boolean spoil, Creature target) {
+        return !spoil ? getCheckedNextLooter(ItemId, target): null;
     }
 
     /**
@@ -539,10 +538,9 @@ public class Party extends AbstractPlayerGroup {
      * @param spReward        The SP reward to distribute
      * @param rewardedMembers The list of Player to reward
      * @param topLvl
-     * @param partyDmg
      * @param target
      */
-    public void distributeXpAndSp(double xpReward, double spReward, Collection<Player> rewardedMembers, int topLvl, long partyDmg, Attackable target) {
+    public void distributeXpAndSp(double xpReward, double spReward, Collection<Player> rewardedMembers, int topLvl, Attackable target) {
 
         xpReward *= getExpBonus(rewardedMembers.size(), target.getInstanceWorld());
         spReward *= getSpBonus(rewardedMembers.size(), target.getInstanceWorld());

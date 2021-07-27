@@ -25,7 +25,6 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
