@@ -121,14 +121,11 @@ public class Q00933_ExploringTheWestWingOfTheDungeonOfAbyss extends Quest {
             }
         } else if (qs.isCompleted()) {
             if (qs.isNowAvailable()) {
-                switch (npc.getId()) {
-                    case MAGRIT: {
-                        htmltext = "31774-01.htm";
-                        break;
-                    }
-                    case INGRIT: {
-                        htmltext = "31775-01.htm";
-                    }
+                int id = npc.getId();
+                if (id == MAGRIT) {
+                    htmltext = "31774-01.htm";
+                } else if (id == INGRIT) {
+                    htmltext = "31775-01.htm";
                 }
             } else {
                 htmltext = getAlreadyCompletedMsg(player);
@@ -140,11 +137,11 @@ public class Q00933_ExploringTheWestWingOfTheDungeonOfAbyss extends Quest {
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon) {
         final QuestState qs = getQuestState(killer, false);
-        if ((qs != null) && qs.isCond(1)) {
-            if (getQuestItemsCount(killer, REMNANT_ASHES.getId()) < 50) {
-                giveItems(killer, REMNANT_ASHES);
-                playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-            } else {
+        if (qs != null && qs.isCond(1)) {
+            giveItems(killer, REMNANT_ASHES);
+            playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+
+            if (getQuestItemsCount(killer, REMNANT_ASHES.getId()) >= 50) {
                 qs.setCond(2);
                 killer.sendPacket(new ExShowScreenMessage("Magrit and Ingrit are awaiting your return!", 5000));
             }
