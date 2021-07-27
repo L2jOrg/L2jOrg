@@ -2637,7 +2637,7 @@ public final class Player extends Playable {
         if (handler == null) {
             LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
         } else {
-            handler.useItem(this, ItemEngine.getInstance().createTempItem(template), false);
+            handler.useItem(this, ItemEngine.getInstance().createTempItem(template), true);
         }
     }
 
