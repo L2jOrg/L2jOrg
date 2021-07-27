@@ -23,6 +23,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.engine.item.*;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
+import org.l2j.gameserver.engine.item.shop.multisell.MultisellIngredient;
 import org.l2j.gameserver.engine.item.shop.multisell.MultisellItem;
 import org.l2j.gameserver.engine.item.shop.multisell.MultisellProduct;
 import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
@@ -262,36 +263,52 @@ public class MultiSellChoose extends ClientPacket {
                 itemEnchantmentProcessed = true;
                 iu.addItem(destroyedItem);
             } else {
-                final Item destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.id(), totalCount, player, npc);
-                iu.addItem(destroyedItem);
+                consumeItems(player, npc, iu, inventory, ingredient, totalCount);
             }
         }
         return itemEnchantmentProcessed;
     }
 
+    private void consumeItems(Player player, Npc npc, InventoryUpdate iu, PlayerInventory inventory, MultisellIngredient ingredient, long totalCount) {
+        var template = ItemEngine.getInstance().getTemplate(ingredient.id());
+        if(template.isStackable() || totalCount == 1) {
+            final Item destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.id(), totalCount, player, npc);
+            iu.addItem(destroyedItem);
+        } else {
+            try {
+                inventory.addToInventoryBlock(ingredient.id());
+                if(inventory.getInventoryItemCount(ingredient.id(), -1, false) >= totalCount) {
+                    for (int i = 0; i < totalCount; i++) {
+                        final Item destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.id(), 1, player, npc);
+                        iu.addItem(destroyedItem);
+                    }
+                } else {
+                    player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
+                }
+            } finally {
+                inventory.unblock();
+            }
+        }
+    }
+
     private void consumeSpecialItem(Player player, Clan clan, long totalCount, SpecialItemType specialItem) {
         switch (specialItem) {
-            case CLAN_REPUTATION: {
+            case CLAN_REPUTATION -> {
                 clan.takeReputationScore((int) totalCount, true);
                 player.sendPacket(getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION).addLong(totalCount));
-                break;
             }
-            case FAME: {
+            case FAME -> {
                 player.setFame(player.getFame() - (int) totalCount);
                 player.sendPacket(new UserInfo(player));
-                // player.sendPacket(new ExBrExtraUserInfo(player));
-                break;
             }
-            case RAIDBOSS_POINTS: {
+            case RAIDBOSS_POINTS -> {
                 player.setRaidbossPoints(player.getRaidbossPoints() - (int) totalCount);
                 player.sendPacket(new UserInfo(player));
                 player.sendPacket(getSystemMessage(SystemMessageId.YOU_CONSUMED_S1_RAID_POINTS).addLong(totalCount));
-                break;
             }
-            case PC_CAFE_POINTS: {
+            case PC_CAFE_POINTS -> {
                 player.setPcCafePoints((int) (player.getPcCafePoints() - totalCount));
                 player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) -totalCount, 1));
-                break;
             }
         }
     }
