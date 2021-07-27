@@ -20,7 +20,6 @@ package org.l2j.gameserver.engine.skill.api;
 
 import io.github.joealisson.primitive.*;
 import io.github.joealisson.primitive.function.IntBiConsumer;
-import org.l2j.gameserver.data.xml.impl.PetSkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.enums.AttributeType;
@@ -529,7 +528,7 @@ public class SkillEngine extends EffectParser {
         ServiceLoader.load(SkillEffectFactory.class).forEach(EffectHandler.getInstance()::registerFactory);
         getInstance().load();
         SkillTreesData.init();
-        PetSkillData.init();
+        PetSkillEngine.init();
     }
 
     public void reload() {
