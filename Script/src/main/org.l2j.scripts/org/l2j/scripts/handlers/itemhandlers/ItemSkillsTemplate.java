@@ -58,7 +58,7 @@ public class ItemSkillsTemplate implements IItemHandler {
             return false;
         }
 
-        if(playable.isAttackingNow() || playable.isCastingNow()) {
+        if((playable.isAttackingNow() || playable.isCastingNow()) && !isAutoConsumeItem(item, forceUse)) {
             return false;
         }
 
