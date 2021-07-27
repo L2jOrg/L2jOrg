@@ -132,7 +132,7 @@ class JDBCInvocation implements InvocationHandler {
         var table = clazz.getAnnotation(Table.class);
 
         if(isNull(table)) {
-            LOGGER.error("The class {} must be annotated with @Table to save it", args[0].getClass());
+            LOGGER.error("The class {} used in {}#{} must be annotated with @Table to save it", args[0].getClass(), method.getDeclaringClass(), method.getName());
             return false;
         }
 

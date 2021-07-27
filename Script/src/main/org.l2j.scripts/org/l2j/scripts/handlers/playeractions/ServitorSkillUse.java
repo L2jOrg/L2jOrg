@@ -18,7 +18,7 @@
  */
 package org.l2j.scripts.handlers.playeractions;
 
-import org.l2j.gameserver.data.xml.impl.PetSkillData;
+import org.l2j.gameserver.engine.skill.api.PetSkillEngine;
 import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
@@ -49,12 +49,11 @@ public final class ServitorSkillUse implements IPlayerActionHandler
 				player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 				return;
 			}
-			
-			final int skillLevel = PetSkillData.getInstance().getAvailableLevel(servitor, action.getOptionId());
-			if (skillLevel > 0)
-			{
+
+			var skill = PetSkillEngine.getInstance().getAvailableSkill(servitor, action.getOptionId());
+			if(skill != null) {
 				servitor.setTarget(player.getTarget());
-				servitor.useSkill(SkillEngine.getInstance().getSkill(action.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
+				servitor.useSkill(skill, null, ctrlPressed, shiftPressed);
 			}
 		});
 	}
