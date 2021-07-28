@@ -91,7 +91,6 @@ public class PlayerData {
 
     @Column("power_grade")
     private int powerGrade;
-    private boolean nobless; // TODO should be removed
 
     private int apprentice;
     private int sponsor;
@@ -245,14 +244,6 @@ public class PlayerData {
 
     public long getOnlineTime() {
         return onlineTime;
-    }
-
-    public boolean isNobless() {
-        return nobless;
-    }
-
-    public void setNobless(boolean nobless) {
-        this.nobless = nobless;
     }
 
     public long getClanJoinExpiryTime() {

@@ -79,8 +79,7 @@ public final class SkillTreesData extends GameXmlReader {
     private static final LongMap<SkillLearn> pledgeSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> transformSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> commonSkillTree = new HashLongMap<>();
-    // Other skill trees
-    private static final LongMap<SkillLearn> nobleSkillTree = new HashLongMap<>();
+
     private static final LongMap<SkillLearn> heroSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> gameMasterSkillTree = new HashLongMap<>();
 
@@ -111,7 +110,6 @@ public final class SkillTreesData extends GameXmlReader {
         fishingSkillTree.clear();
         pledgeSkillTree.clear();
         transformSkillTree.clear();
-        nobleSkillTree.clear();
         heroSkillTree.clear();
         gameMasterSkillTree.clear();
         removeSkillCache.clear();
@@ -180,7 +178,6 @@ public final class SkillTreesData extends GameXmlReader {
             case "fishingSkillTree" -> fishingSkillTree.put(skillHashCode, skillLearn);
             case "pledgeSkillTree" -> pledgeSkillTree.put(skillHashCode, skillLearn);
             case "transformSkillTree" -> transformSkillTree.put(skillHashCode, skillLearn);
-            case "nobleSkillTree" -> nobleSkillTree.put(skillHashCode, skillLearn);
             case "heroSkillTree" -> heroSkillTree.put(skillHashCode, skillLearn);
             case "gameMasterSkillTree" -> gameMasterSkillTree.put(skillHashCode, skillLearn);
             default -> LOGGER.warn("Unknown Skill Tree type: {}", type);
@@ -229,20 +226,6 @@ public final class SkillTreesData extends GameXmlReader {
      */
     public LongMap<SkillLearn> getFishingSkillTree() {
         return fishingSkillTree;
-    }
-
-    public void forEachNobleSkill(Consumer<Skill> action) {
-        for (var learn : nobleSkillTree.values()) {
-            action.accept(learn.getSkill());
-        }
-    }
-
-    public void forEachAutoGetNobleSkill(Consumer<Skill> action) {
-        for (var learn : nobleSkillTree.values()) {
-            if(learn.isAutoGet()) {
-                action.accept(learn.getSkill());
-            }
-        }
     }
 
     public void forEachHeroSkill(Consumer<Skill> action) {
@@ -789,7 +772,6 @@ public final class SkillTreesData extends GameXmlReader {
         LOGGER.info("Loaded {} Fishing Skills, {} Dwarven only Fishing Skills",  fishingSkillTree.size(), dwarvenOnlyFishingSkillCount);
         LOGGER.info("Loaded {} Pledge Skills, {} for Pledge and {} Residential",  pledgeSkillTree.size(), pledgeSkillTree.size() - resSkillCount, resSkillCount);
         LOGGER.info("Loaded {} Transform Skills.", transformSkillTree.size());
-        LOGGER.info("Loaded {} Noble Skills.", nobleSkillTree.size());
         LOGGER.info("Loaded {} Hero Skills.", heroSkillTree.size());
         LOGGER.info("Loaded {} Game Master Skills.", gameMasterSkillTree.size());
         LOGGER.info("Loaded {} Common Skills to all classes.", commonSkillTree.size());

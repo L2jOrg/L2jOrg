@@ -42,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `characters`(
     `clan_privs`              INT UNSIGNED                DEFAULT 0,
     `wantspeace`              TINYINT UNSIGNED            DEFAULT 0,
     `power_grade`             TINYINT UNSIGNED            DEFAULT NULL,
-    `nobless`                 TINYINT UNSIGNED   NOT NULL DEFAULT 0,
     `apprentice`              INT UNSIGNED       NOT NULL DEFAULT 0,
     `sponsor`                 INT UNSIGNED       NOT NULL DEFAULT 0,
     `clan_join_expiry_time`   BIGINT UNSIGNED    NOT NULL DEFAULT '0',

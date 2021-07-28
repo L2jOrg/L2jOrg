@@ -62,12 +62,12 @@ public final class SiegeManager {
     private SiegeManager() {
     }
 
-    public final void addSiegeSkills(Player player) {
+    public void addSiegeSkills(Player player) {
         SkillEngine.getInstance().addSiegeSkills(player);
 
     }
 
-    public final boolean checkIsRegistered(Clan clan, int castleId) {
+    public boolean checkIsRegistered(Clan clan, int castleId) {
         if (clan == null) {
             return false;
         }
@@ -79,7 +79,7 @@ public final class SiegeManager {
         return getDAO(SiegeDAO.class).isRegistered(clan.getId(), castleId);
     }
 
-    public final void removeSiegeSkills(Player player) {
+    public void removeSiegeSkills(Player player) {
         SkillEngine.getInstance().removeSiegeSkills(player);
     }
 

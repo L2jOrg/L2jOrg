@@ -5476,10 +5476,10 @@ public final class Player extends Playable {
 
     private void setMount(int npcId, int npcLevel) {
         final MountType type = MountType.findByNpcId(npcId);
-        switch (type) {
-            case NONE -> setIsFlying(false);
-            case STRIDER -> addStriderAssaultSkill();
-            case WYVERN -> setIsFlying(true);
+        if (type == MountType.NONE) {
+            setIsFlying(false);
+        } else if (type == MountType.WYVERN) {
+            setIsFlying(true);
         }
 
         mountType = type;
@@ -5487,11 +5487,6 @@ public final class Player extends Playable {
         mountLevel = npcLevel;
     }
 
-    private void addStriderAssaultSkill() {
-        if (isNoble()) {
-            addSkill(CommonSkill.STRIDER_SIEGE_ASSAULT.getSkill(), false);
-        }
-    }
 
     /**
      * @return the type of Pet mounted (0 : none, 1 : Strider, 2 : Wyvern, 3: Wolf).
@@ -5501,13 +5496,13 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final void stopAllEffects() {
+    public void stopAllEffects() {
         super.stopAllEffects();
         updateAndBroadcastStatus();
     }
 
     @Override
-    public final void stopAllEffectsExceptThoseThatLastThroughDeath() {
+    public void stopAllEffectsExceptThoseThatLastThroughDeath() {
         super.stopAllEffectsExceptThoseThatLastThroughDeath();
         updateAndBroadcastStatus();
     }
@@ -5902,20 +5897,6 @@ public final class Player extends Playable {
             return false;
         }
         return true;
-    }
-
-    public boolean isNoble() {
-        return data.isNobless();
-    }
-
-    public void setNoble(boolean val) {
-        if (val) {
-            SkillTreesData.getInstance().forEachAutoGetNobleSkill(skill -> addSkill(skill, false));
-        } else {
-            SkillTreesData.getInstance().forEachNobleSkill(s -> removeSkill(s, false, true));
-        }
-        data.setNobless(val);
-        sendSkillList();
     }
 
     @Override

@@ -76,10 +76,8 @@ public class SkillEngine extends EffectParser {
         player.addSkill(CommonSkill.IMPRIT_OF_LIGHT.getSkill(), false);
         player.addSkill(CommonSkill.IMPRIT_OF_DARKNESS.getSkill(), false);
         player.addSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill(), false);
+        player.addSkill(CommonSkill.BUILD_ADVANCED_HEADQUARTERS.getSkill(), false);
 
-        if(player.isNoble()) {
-            player.addSkill(CommonSkill.BUILD_ADVANCED_HEADQUARTERS.getSkill(), false);
-        }
         if(player.getClan().getCastleId() > 0) {
             player.addSkill(CommonSkill.OUTPOST_CONSTRUCTION.getSkill(), false);
             player.addSkill(CommonSkill.OUTPOST_DEMOLITION.getSkill(), false);
