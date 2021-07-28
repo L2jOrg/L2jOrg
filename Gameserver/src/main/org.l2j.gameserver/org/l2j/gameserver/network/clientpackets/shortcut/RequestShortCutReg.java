@@ -16,12 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.network.clientpackets.shortcut;
 
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShortcutType;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 import static java.util.Objects.isNull;
 

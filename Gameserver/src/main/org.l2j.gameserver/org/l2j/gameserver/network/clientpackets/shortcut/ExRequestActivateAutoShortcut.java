@@ -16,30 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets.autoplay;
+package org.l2j.gameserver.network.clientpackets.shortcut;
 
-import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerExPacketId;
-import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
+import org.l2j.gameserver.network.serverpackets.shortcut.ExActivateAutoShortcut;
 
 /**
  * @author JoeAlisson
  */
-public class ExActivateAutoShortcut extends ServerPacket {
+public class ExRequestActivateAutoShortcut extends ClientPacket {
 
-    private final int room;
-    private final boolean activate;
+    private boolean activate;
+    private int room;
 
-    public ExActivateAutoShortcut(int room, boolean activate) {
-        this.room = room;
-        this.activate = activate;
+    @Override
+    protected void readImpl()  {
+        room = readShort();
+        activate = readBoolean();
     }
 
     @Override
-    protected void writeImpl(GameClient client, WritableBuffer buffer) {
-        writeId(ServerExPacketId.EX_ACTIVATE_AUTO_SHORTCUT, buffer );
-        buffer.writeShort(room);
-        buffer.writeByte(activate);
+    protected void runImpl() {
+        if(!AutoPlayEngine.getInstance().setActiveAutoShortcut(client.getPlayer(), room, activate)) {
+            client.sendPacket(new ExActivateAutoShortcut(room, false));
+        }
     }
 }
