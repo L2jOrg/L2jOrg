@@ -20,11 +20,9 @@ package org.l2j.gameserver.network.clientpackets.shortcut;
 
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShortcutType;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-
-import static java.util.Objects.isNull;
 
 /**
  * @author JoeAlisson
@@ -57,12 +55,7 @@ public final class RequestShortCutReg extends ClientPacket {
         }
 
         var player = client.getPlayer();
-        Item item = null;
-        if(type == ShortcutType.ITEM && isNull(item = player.getInventory().getItemByObjectId(id))) {
-            return;
-        }
-
-        if(room == Shortcut.AUTO_POTION_ROOM && (isNull(item) || !item.isAutoPotion())) {
+        if (!validatedShortcut(player)) {
             return;
         }
 
@@ -70,5 +63,16 @@ public final class RequestShortCutReg extends ClientPacket {
         if(room == Shortcut.AUTO_POTION_ROOM) {
             AutoPlayEngine.getInstance().setActiveAutoShortcut(player, room, true);
         }
+    }
+
+    private boolean validatedShortcut(Player player) {
+        if(type == ShortcutType.ITEM  || room == Shortcut.AUTO_POTION_ROOM) {
+            var item = player.getInventory().getItemByObjectId(id);
+            if(item == null) {
+                return false;
+            }
+            return room != Shortcut.AUTO_POTION_ROOM || item.isAutoPotion();
+        }
+        return true;
     }
 }

@@ -35,7 +35,7 @@ public abstract class AbstractShortcutPacket extends ServerPacket {
         switch (shortcut.getType()) {
             case ITEM -> writeShortcutItem(shortcut, buffer);
             case SKILL -> writeShortcutSkill(shortcut, buffer);
-            case ACTION, MACRO, RECIPE, BOOKMARK -> {
+            default -> {
                 buffer.writeInt(shortcut.getShortcutId());
                 buffer.writeInt(shortcut.getCharacterType());
             }
