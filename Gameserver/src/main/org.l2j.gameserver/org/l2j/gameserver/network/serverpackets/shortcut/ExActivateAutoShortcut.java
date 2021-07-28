@@ -16,27 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.network.serverpackets.shortcut;
 
-import org.l2j.gameserver.data.database.data.Shortcut;
+import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author JoeAlisson
  */
-public final class RequestShortCutDel extends ClientPacket {
-    private int room;
+public class ExActivateAutoShortcut extends ServerPacket {
 
-    @Override
-    public void readImpl() {
-        room = readInt();
+    private final int room;
+    private final boolean activate;
+
+    public ExActivateAutoShortcut(int room, boolean activate) {
+        this.room = room;
+        this.activate = activate;
     }
 
     @Override
-    public void runImpl() {
-        if(room < 0 || (room > Shortcut.MAX_ROOM && room != Shortcut.AUTO_POTION_ROOM)) {
-            return;
-        }
-
-        client.getPlayer().deleteShortcut(room);
+    protected void writeImpl(GameClient client, WritableBuffer buffer) {
+        writeId(ServerExPacketId.EX_ACTIVATE_AUTO_SHORTCUT, buffer );
+        buffer.writeShort(room);
+        buffer.writeByte(activate);
     }
 }

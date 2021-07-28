@@ -21,6 +21,8 @@ package org.l2j.gameserver.network;
 import io.github.joealisson.mmocore.ReadableBuffer;
 import org.l2j.gameserver.network.clientpackets.*;
 import org.l2j.gameserver.network.clientpackets.friend.*;
+import org.l2j.gameserver.network.clientpackets.shortcut.RequestShortCutDel;
+import org.l2j.gameserver.network.clientpackets.shortcut.RequestShortCutReg;
 
 import java.util.EnumSet;
 import java.util.function.Supplier;

@@ -104,7 +104,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangeAccessLevel;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
@@ -4612,12 +4611,6 @@ public final class Player extends Playable {
 
     private void restoreShortCuts() {
         shortcuts.restoreMe();
-        sendPacket(new ShortCutInit());
-        forEachShortcut(s -> {
-            if(s.isActive()) {
-                client.sendPacket(new ExActivateAutoShortcut(s.getClientId(), true));
-            }
-        });
     }
 
     private void restoreRecipeBook() {
@@ -6063,7 +6056,6 @@ public final class Player extends Playable {
     public void onEnter() {
         startWarnUserTakeBreak();
         restoreItemReuse();
-        restoreShortCuts();
         restoreEffects();
 
         // TODO : Need to fix that hack!
@@ -6085,7 +6077,7 @@ public final class Player extends Playable {
         if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
             checkPlayerSkills();
         }
-
+        restoreShortCuts();
         ZoneEngine.getInstance().forEachZone(this, z -> z.onPlayerLoginInside(this));
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogin(this), this);
     }

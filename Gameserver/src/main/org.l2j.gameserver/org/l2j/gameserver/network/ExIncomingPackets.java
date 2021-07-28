@@ -29,7 +29,7 @@ import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAtt
 import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import org.l2j.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
 import org.l2j.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
-import org.l2j.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
+import org.l2j.gameserver.network.clientpackets.shortcut.ExRequestActivateAutoShortcut;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;
 import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarInfo;

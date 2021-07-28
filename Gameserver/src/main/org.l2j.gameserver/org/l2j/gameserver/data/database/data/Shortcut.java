@@ -61,14 +61,14 @@ public class Shortcut {
     @Column("sub_level")
     private int subLevel;
 
-    @NonUpdatable
-    private int sharedReuseGroup = -1;
-
     /**
      * Character type: 1 player, 2 summon.
      */
-    @NonUpdatable
+    @Column("character_type")
     private int characterType;
+
+    @NonUpdatable
+    private int sharedReuseGroup = -1;
 
     /**
      * auto use shortcut is active

@@ -16,30 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.shortcut;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.database.data.Shortcut;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
-public final class ShortCutRegister extends ServerPacket {
-    private final Shortcut shortcut;
+/**
+ * @author JoeAlisson
+ */
+public abstract class AbstractShortcutPacket extends ServerPacket {
 
-    public ShortCutRegister(Shortcut shortcut) {
-        this.shortcut = shortcut;
-    }
-
-    @Override
-    public void writeImpl(GameClient client, WritableBuffer buffer) {
-        writeId(ServerPacketId.SHORTCUT_REG, buffer );
-
+    protected void writeShortcut(Shortcut shortcut, WritableBuffer buffer) {
         buffer.writeInt(shortcut.getType().ordinal());
         buffer.writeInt(shortcut.getClientId());
         buffer.writeByte(shortcut.isActive());
+
         switch (shortcut.getType()) {
-            case ITEM -> writeShortcutItem(buffer);
-            case SKILL -> writeShortcutSkill(buffer);
+            case ITEM -> writeShortcutItem(shortcut, buffer);
+            case SKILL -> writeShortcutSkill(shortcut, buffer);
             case ACTION, MACRO, RECIPE, BOOKMARK -> {
                 buffer.writeInt(shortcut.getShortcutId());
                 buffer.writeInt(shortcut.getCharacterType());
@@ -47,26 +42,23 @@ public final class ShortCutRegister extends ServerPacket {
         }
     }
 
-    private void writeShortcutSkill(WritableBuffer buffer) {
-        buffer.writeInt(shortcut.getShortcutId());
-        buffer.writeShort(shortcut.getLevel());
-        buffer.writeShort(shortcut.getSubLevel());
-        buffer.writeInt(shortcut.getSharedReuseGroup());
-        buffer.writeByte(0x00); // C5
-        buffer.writeInt(shortcut.getCharacterType());
-        buffer.writeInt(0x00); // TODO: Find me
-        buffer.writeInt(0x00); // TODO: Find me
+    protected void writeShortcutSkill(Shortcut sc, WritableBuffer buffer) {
+        buffer.writeInt(sc.getShortcutId());
+        buffer.writeShort(sc.getLevel());
+        buffer.writeShort(sc.getSubLevel());
+        buffer.writeInt(sc.getSharedReuseGroup());
+        buffer.writeByte(0x00);
+        buffer.writeInt(sc.getCharacterType());
     }
 
-    private void writeShortcutItem(WritableBuffer buffer) {
-        buffer.writeInt(shortcut.getShortcutId());
-        buffer.writeInt(shortcut.getCharacterType());
-        buffer.writeInt(shortcut.getSharedReuseGroup());
+    protected void writeShortcutItem(Shortcut sc, WritableBuffer buffer) {
+        buffer.writeInt(sc.getShortcutId());
+        buffer.writeInt(sc.getCharacterType());
+        buffer.writeInt(sc.getSharedReuseGroup());
         buffer.writeInt(0x00); // Remaining time
         buffer.writeInt(0x00); // Cool down time
         buffer.writeInt(0x00); // item augment effect 1
         buffer.writeInt(0x00); // item augment effect 2
-        buffer.writeInt(0x00); // unk
+        buffer.writeInt(0x00); // visual Id
     }
-
 }

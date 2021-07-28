@@ -323,7 +323,7 @@ public final class AutoPlayEngine {
             while (it.hasNext()) {
                 var player = it.next();
 
-                if(!canDoAutoAction(player)) {
+                if(player.getAutoPlaySettings() == null || !canDoAutoAction(player)) {
                     continue;
                 }
 

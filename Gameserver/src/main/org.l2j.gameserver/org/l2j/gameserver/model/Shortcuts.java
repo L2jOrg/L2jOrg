@@ -26,8 +26,9 @@ import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
+import org.l2j.gameserver.network.serverpackets.shortcut.ShortCutInit;
+import org.l2j.gameserver.network.serverpackets.shortcut.ShortCutRegister;
+import org.l2j.gameserver.network.serverpackets.shortcut.ExActivateAutoShortcut;
 
 import java.util.BitSet;
 import java.util.Set;
@@ -218,6 +219,7 @@ public class Shortcuts {
         if(!suppliesShortcuts.isEmpty()) {
             autoPlayEngine.setActiveAutoShortcut(owner, suppliesShortcuts.iterator().next().getClientId(), true);
         }
+        owner.sendPacket(new ShortCutInit());
     }
 
     private void processActiveShortcut(AutoPlayEngine autoPlayEngine, Shortcut shortcut) {

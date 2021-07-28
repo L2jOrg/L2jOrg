@@ -127,6 +127,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.engine.clan;
     exports org.l2j.gameserver.engine.fishing;
     exports org.l2j.gameserver.network.serverpackets.timedzone;
+    exports org.l2j.gameserver.network.serverpackets.shortcut;
 
     uses org.l2j.gameserver.api.item.PlayerInventoryListener;
     provides org.l2j.gameserver.api.item.PlayerInventoryListener
