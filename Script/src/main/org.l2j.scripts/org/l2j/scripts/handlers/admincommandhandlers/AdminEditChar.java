@@ -93,7 +93,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_summon_setlvl",
 		"admin_show_pet_inv",
 		"admin_partyinfo",
-		"admin_setnoble",
 		"admin_set_hp",
 		"admin_set_mp",
 		"admin_set_cp",
@@ -204,9 +203,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_unsetparam"))
 		{
 			return unsetParam(command, player);
-		} else if (command.equals("admin_setnoble")) {
-			setNoble(player);
-			result = true;
 		}
 		return  result;
 	}
@@ -417,28 +413,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			BuilderUtil.sendSysMessage(player, "Usage: //set_hp 1000");
 		}
 		return true;
-	}
-
-	private void setNoble(Player player) {
-		Player target;
-
-		if (isPlayer(player.getTarget()))
-		{
-			target = (Player) player.getTarget();
-		}
-		else
-		{
-			target = player;
-		}
-
-
-		target.setNoble(!target.isNoble());
-		if (target.getObjectId() != player.getObjectId())
-		{
-			BuilderUtil.sendSysMessage(player, "You've changed nobless status of: " + player.getName());
-		}
-		target.broadcastUserInfo();
-		target.sendMessage("GM changed your nobless status!");
 	}
 
 	private void partyInfo(String command, Player player) {
@@ -1180,7 +1154,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%hwid%", (player.getClient() != null) && (player.getClient().getHardwareInfo() != null) ? player.getClient().getHardwareInfo().getMacAddress() : "Unknown");
 		adminReply.replace("%ai%", player.getAI().getIntention().name());
 		adminReply.replace("%inst%", player.isInInstance() ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns " + player.getInstanceId() + "\">" + player.getInstanceId() + "</a></td></tr>" : "");
-		adminReply.replace("%noblesse%", player.isNoble() ? "Yes" : "No");
 		activeChar.sendPacket(adminReply);
 	}
 

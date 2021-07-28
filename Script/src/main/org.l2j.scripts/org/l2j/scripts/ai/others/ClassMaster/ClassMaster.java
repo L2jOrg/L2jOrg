@@ -229,11 +229,7 @@ public final class ClassMaster extends AbstractNpcAI
 								giveItems(player, ri);
 							}
 						}
-						// Give possible nobless status reward.
-						if (data.isRewardNoblesse())
-						{
-							player.setNoble(true);
-						}
+
 						// Give possible hero status reward.
 						if (data.isRewardHero())
 						{
@@ -620,11 +616,6 @@ public final class ClassMaster extends AbstractNpcAI
 						giveItems(player, ri);
 					}
 				}
-				// Give possible nobless status reward.
-				if (data.isRewardNoblesse())
-				{
-					player.setNoble(true);
-				}
 				// Give possible hero status reward.
 				if (data.isRewardHero())
 				{
@@ -763,17 +754,12 @@ public final class ClassMaster extends AbstractNpcAI
 			sb.append("<tr><td>Rewards:</td></tr>");
 			if (option.getItemsRewarded().isEmpty())
 			{
-				if (option.isRewardNoblesse())
-				{
-					sb.append("<tr><td><font color=\"LEVEL\">Noblesse status.</font></td></tr>");
-				}
-				
 				if (option.isRewardHero())
 				{
 					sb.append("<tr><td><font color=\"LEVEL\">Hero status.</font></td></tr>");
 				}
 				
-				if (!option.isRewardNoblesse() && !option.isRewardHero())
+				if (!option.isRewardHero())
 				{
 					sb.append("<tr><td><font color=LEVEL>none</font></td></tr>");
 				}
@@ -784,11 +770,7 @@ public final class ClassMaster extends AbstractNpcAI
 				{
 					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemEngine.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
 				});
-				
-				if (option.isRewardNoblesse())
-				{
-					sb.append("<tr><td><font color=\"LEVEL\">Noblesse status.</font></td></tr>");
-				}
+
 				if (option.isRewardHero())
 				{
 					sb.append("<tr><td><font color=\"LEVEL\">Hero status.</font></td></tr>");
@@ -806,7 +788,6 @@ public final class ClassMaster extends AbstractNpcAI
 	{
 		private final String _name;
 		private final List<CategoryType> _appliedCategories;
-		private boolean _rewardNoblesse;
 		private boolean _rewardHero;
 		private List<ItemHolder> _itemsRequired;
 		private List<ItemHolder> _itemsRewarded;
@@ -841,16 +822,6 @@ public final class ClassMaster extends AbstractNpcAI
 			}
 			
 			return false;
-		}
-		
-		public boolean isRewardNoblesse()
-		{
-			return _rewardNoblesse;
-		}
-		
-		public void setRewardNoblesse(boolean rewardNoblesse)
-		{
-			_rewardNoblesse = rewardNoblesse;
 		}
 		
 		public boolean isRewardHero()
@@ -952,7 +923,6 @@ public final class ClassMaster extends AbstractNpcAI
 									final List<CategoryType> appliedCategories = new LinkedList<>();
 									final List<ItemHolder> requiredItems = new LinkedList<>();
 									final List<ItemHolder> rewardedItems = new LinkedList<>();
-									boolean setNoble = false;
 									boolean setHero = false;
 									final String optionName = parseString(attrs, "name", "");
 									for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
@@ -986,10 +956,6 @@ public final class ClassMaster extends AbstractNpcAI
 
 													rewardedItems.add(new ItemHolder(itemId, count));
 												}
-												else if ("setNoble".equals(r.getNodeName()))
-												{
-													setNoble = true;
-												}
 												else if ("setHero".equals(r.getNodeName()))
 												{
 													setHero = true;
@@ -1022,7 +988,6 @@ public final class ClassMaster extends AbstractNpcAI
 									classChangeData.setItemsRequired(requiredItems);
 									classChangeData.setItemsRewarded(rewardedItems);
 									classChangeData.setRewardHero(setHero);
-									classChangeData.setRewardNoblesse(setNoble);
 
 									_classChangeData.add(classChangeData);
 								}

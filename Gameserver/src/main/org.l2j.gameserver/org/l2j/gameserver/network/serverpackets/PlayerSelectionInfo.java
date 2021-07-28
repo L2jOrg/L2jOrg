@@ -172,7 +172,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeInt((int)  RateSettings.rateVitalityExpMul() * 100); // Vitality Percent
             buffer.writeInt(playerInfo.getVitalityItemsUsed()); // Remaining vitality item uses
             buffer.writeInt(data.getAccessLevel() != -100); // Char is active or not
-            buffer.writeByte(data.isNobless());
+            buffer.writeByte(0x00); // is nobles
             buffer.writeByte(Olympiad.getInstance().isHero(data.getCharId()) ? 0x02 : 0x00); // Hero glow
             buffer.writeByte(playerInfo.isHairAccessoryEnabled()); // Show hair accessory if enabled
             buffer.writeInt(playerInfo.getRemainBanExpireTime()); // ban time in secs

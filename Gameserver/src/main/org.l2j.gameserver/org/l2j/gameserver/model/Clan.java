@@ -306,9 +306,7 @@ public class Clan implements IIdentifiable, INamable {
         }
         if (exMember.isOnline()) {
             final Player player = exMember.getPlayerInstance();
-            if (!player.isNoble()) {
-                player.setTitle("");
-            }
+            player.setTitle("");
             player.setApprentice(0);
             player.setSponsor(0);
 

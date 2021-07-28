@@ -164,7 +164,6 @@ public class PlayerFactory {
         stats.setStartingXp(playerData.getExp());
         stats.setLevel(playerData.getLevel());
         stats.setSp(playerData.getSp());
-        player.setNoble(playerData.isNobless());
         stats.setVitalityPoints(playerData.getVitalityPoints());
 
         if(Olympiad.getInstance().isHero(playerId)) {

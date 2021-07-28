@@ -148,7 +148,7 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeByte(player.getTeam().getId());
 
         buffer.writeInt(appearence.getVisibleClanLargeCrestId());
-        buffer.writeByte(player.isNoble());
+        buffer.writeByte(0x00); // is nobles
         buffer.writeByte((player.isHero() || (player.isGM() && AdminSettings.showAura()) ? 2 : 0));
 
         buffer.writeByte(player.isFishing());
