@@ -1,0 +1,21 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/class-master.xsd">
+
+	<classMaster>
+		<classChangeOption name="Free" apply-to="SECOND_CLASS_GROUP"/>
+		<classChangeOption name="Free" apply-to="SECOND_CLASS_GROUP"/>
+		<classChangeOption name="Pay Adena" apply-to="THIRD_CLASS_GROUP">
+			<conditions>
+				<item id="57" count="1000000" /> <!-- 1,000,000 Adena for third class -->
+			</conditions>
+		</classChangeOption>
+		<!--
+		You can add alternative payment methods.
+		<classChangeOption name="Pay Coin of Luck" apply-to="THIRD_CLASS_GROUP">
+			<conditions>
+				<item id="4037" count="100" />
+			</conditions>
+		</classChangeOption>
+		-->
+	</classMaster>
+
+</list>
