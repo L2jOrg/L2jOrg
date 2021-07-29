@@ -19,6 +19,7 @@
 package org.l2j.scripts.ai.others.ClassMaster;
 
 import io.github.joealisson.primitive.IntSet;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -26,6 +27,7 @@ import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
+import org.l2j.gameserver.model.base.ClassInfo;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -42,7 +44,6 @@ import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
@@ -61,11 +62,11 @@ public final class ClassMaster extends AbstractNpcAI
 	private static final IntSet CLASS_MASTERS = IntSet.of(31756, 31757); // Mr. Cat, Queen of Hearts
 
 	// Misc
-	private boolean _isEnabled;
-	private boolean _spawnClassMasters;
-	private boolean _showPopupWindow;
+	private boolean isEnabled;
+	private boolean spawnClassMasters;
+	private boolean showPopupWindow;
 
-	private final List<ClassChangeData> _classChangeData = new LinkedList<>();
+	private final List<ClassChangeData> classChangeData = new LinkedList<>();
 	
 	public ClassMaster() {
 		new DataLoader().load();
@@ -77,7 +78,7 @@ public final class ClassMaster extends AbstractNpcAI
 	@Override
 	public void onSpawnActivate(SpawnTemplate template)
 	{
-		if (_spawnClassMasters)
+		if (spawnClassMasters)
 		{
 			template.spawnAllIncludingNotDefault(null);
 		}
@@ -96,469 +97,215 @@ public final class ClassMaster extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		if (!_isEnabled)
-		{
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		if (!isEnabled) {
 			return null;
 		}
 		
-		String htmltext = null;
 		final StringTokenizer st = new StringTokenizer(event);
 		event = st.nextToken();
-		switch (event)
-		{
-			case "buyitems":
-			{
-				htmltext = npc.getId() == 31756 ? "test_server_helper001a.html" : "test_server_helper001b.html";
-				break;
-			}
-			/*
-			 * case "setnoble": { if (player.isNoble()) { htmltext = "test_server_helper025b.html"; } else if (player.getLevel() < 75) { htmltext = "test_server_helper025a.html"; } else { player.setNoble(true); player.broadcastUserInfo(); // TODO: SetOneTimeQuestFlag(talker, 10385, 1); htmltext =
-			 * "test_server_helper025.html"; } break; }
-			 */
-			case "firstclass":
-			{
-				htmltext = getFirstOccupationChangeHtml(player);
-				break;
-			}
-			case "secondclass":
-			{
-				htmltext = getSecondOccupationChangeHtml(player);
-				break;
-			}
-			case "thirdclass":
-			{
-				if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() > 75))
-				{
-					if (changeToNextClass(player))
-					{
-						player.sendPacket(PlaySound.sound("ItemSound.quest_fanfare_2"));
-						player.broadcastUserInfo();
-						htmltext = "test_server_helper021.html";
-					}
-				}
-				else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-				{
-					htmltext = "test_server_helper011.html";
-				}
-				// else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-				// {
-				// htmltext = "test_server_helper011a.html";
-				// }
-				else
-				{
-					htmltext = "test_server_helper024.html";
-				}
-				break;
-			}
-			/*
-			 * case "awaken": { if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() > 84)) { if (changeToNextClass(player)) { player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2")); player.broadcastUserInfo(); player.store(false); // Save player cause if server
-			 * crashes before this char is saved, he will lose class and the money payed for class change. htmltext = "test_server_helper021.html"; } } else if (player.isInCategory(CategoryType.AWAKEN_GROUP)) { htmltext = "test_server_helper011a.html"; } else { htmltext =
-			 * "test_server_helper011b.html"; } break; }
-			 */
-			case "setclass":
-			{
-				if (!st.hasMoreTokens())
-				{
-					return null;
-				}
-				
-				final int classId = Integer.parseInt(st.nextToken());
-				boolean canChange = false;
-				if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
-				{
-					canChange = CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && CategoryManager.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId));
-				}
-				else if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20))
-				{
-					canChange = CategoryManager.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId);
-				}
-				else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76))
-				{
-					canChange = CategoryManager.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId);
-				}
-				// else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85)) // 9
-				// {
-				// canChange = CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, classId); // 11
-				// }
-				
-				if (canChange)
-				{
-					int classDataIndex = -1;
-					if (st.hasMoreTokens())
-					{
-						classDataIndex = Integer.parseInt(st.nextToken());
-					}
-					
-					if (checkIfClassChangeHasOptions(player))
-					{
-						if (classDataIndex == -1)
-						{
-							htmltext = getHtml(player, "cc_options.html");
-							htmltext = htmltext.replace("%name%", ClassListData.getInstance().getClass(classId).getClassName()); // getEscapedClientCode());
-							htmltext = htmltext.replace("%options%", getClassChangeOptions(player, classId));
-							return htmltext;
-						}
-					}
-					
-					final ClassChangeData data = getClassChangeData(classDataIndex);
-					if (data != null)
-					{
-						// Required items.
-						if (!data.getItemsRequired().isEmpty())
-						{
-							for (ItemHolder ri : data.getItemsRequired())
-							{
-								if (player.getInventory().getInventoryItemCount(ri.getId(), -1) < ri.getCount())
-								{
-									player.sendMessage("You do not have enough items.");
-									return null; // No class change if payment failed.
-								}
-							}
-							for (ItemHolder ri : data.getItemsRequired())
-							{
-								player.destroyItemByItemId(getClass().getSimpleName(), ri.getId(), ri.getCount(), npc, true);
-							}
-						}
-						// Give possible rewards.
-						if (!data.getItemsRewarded().isEmpty())
-						{
-							for (ItemHolder ri : data.getItemsRewarded())
-							{
-								giveItems(player, ri);
-							}
-						}
+		return switch (event) {
+			case "buyitems" -> npc.getId() == 31756 ? "test_server_helper001a.html" : "test_server_helper001b.html";
+			case "firstclass" -> getFirstOccupationChangeHtml(player);
+			case "secondclass" -> getSecondOccupationChangeHtml(player);
+			case "thirdclass" -> getThirdOccupationChangeHtml(player);
+			case "setclass" -> setClassHtml(player, npc, st);
+			case "clanlevel" -> player.isClanLeader() ? "test_server_helper022.html" : "pl014.html";
+			case "learnskills" -> onLearnSkill(player);
+			case "clanlevelup" -> clanLevelUpHtml(player);
+			case "test_server_helper001.html" -> CLASS_MASTERS.contains(npc.getId()) ? event : null;
+			default -> null;
+		};
+	}
 
-						// Give possible hero status reward.
-						if (data.isRewardHero())
-						{
-							player.setHero(true);
-						}
-					}
-					
-					player.setClassId(classId);
-					player.setBaseClass(player.getActiveClass());
-					if (CharacterSettings.autoLearnSkillEnabled()) {
-						player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled(), true);
-					}
-					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
-					player.broadcastUserInfo();
-					player.sendSkillList();
-					player.sendPacket(PlaySound.sound("ItemSound.quest_fanfare_2"));
-					return "test_server_helper021.html";
-				}
-				break;
-			}
-			case "clanlevel":
-			{
-				htmltext = player.isClanLeader() ? "test_server_helper022.html" : "pl014.html";
-				break;
-			}
-			case "learnskills":
-			{
-				player.giveAvailableSkills(true, true);
-				break;
-			}
-			case "clanlevelup":
-			{
-				if ((player.getClan() == null) || !player.isClanLeader())
-				{
-					return null;
-				}
-				
-				if (player.getClan().getLevel() >= 10)
-				{
-					htmltext = "test_server_helper022a.html";
-				}
-				else
-				{
-					player.getClan().setLevel(player.getClan().getLevel() + 1);
-					player.getClan().broadcastClanStatus();
-				}
-				break;
-			}
-			case "test_server_helper001.html":
-			{
-				if (CLASS_MASTERS.contains(npc.getId()))
-				{
-					htmltext = event;
-				}
-				break;
-			}
-		}
-		
-		return htmltext;
+	private String onLearnSkill(Player player) {
+		player.giveAvailableSkills(true, true);
+		return null;
 	}
-	
-	private String getFirstOccupationChangeHtml(Player player)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
-		{
 
-			if (player.getLevel() < 20)
-			{
-				htmltext = "test_server_helper027.html";
+	private String clanLevelUpHtml(Player player) {
+		String htmlText = null;
+		if ((player.getClan() == null) || !player.isClanLeader()) {
+			return null;
+		}
+
+		if (player.getClan().getLevel() >= 10) {
+			htmlText = "test_server_helper022a.html";
+		} else {
+			player.getClan().setLevel(player.getClan().getLevel() + 1);
+			player.getClan().broadcastClanStatus();
+		}
+		return htmlText;
+	}
+
+	private String setClassHtml(Player player, Npc npc, StringTokenizer st) {
+		if (!st.hasMoreTokens()) {
+			return null;
+		}
+
+		final int classId = Integer.parseInt(st.nextToken());
+		boolean canChange = false;
+		if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
+		{
+			canChange = CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && CategoryManager.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId));
+		} else if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20)) {
+			canChange = CategoryManager.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId);
+		} else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76)) {
+			canChange = CategoryManager.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId);
+		}
+
+		if (canChange) {
+			int classDataIndex = -1;
+			if (st.hasMoreTokens()) {
+				classDataIndex = Integer.parseInt(st.nextToken());
 			}
-			else
-			{
-				switch (player.getClassId())
-				{
-					case FIGHTER:
-					{
-						htmltext = "test_server_helper026a.html";
-						break;
-					}
-					case MAGE:
-					{
-						htmltext = "test_server_helper026b.html";
-						break;
-					}
-					case ELVEN_FIGHTER:
-					{
-						htmltext = "test_server_helper026c.html";
-						break;
-					}
-					case ELVEN_MAGE:
-					{
-						htmltext = "test_server_helper026d.html";
-						break;
-					}
-					case DARK_FIGHTER:
-					{
-						htmltext = "test_server_helper026e.html";
-						break;
-					}
-					case DARK_MAGE:
-					{
-						htmltext = "test_server_helper026f.html";
-						break;
-					}
-					case ORC_FIGHTER:
-					{
-						htmltext = "test_server_helper026g.html";
-						break;
-					}
-					case ORC_MAGE:
-					{
-						htmltext = "test_server_helper026h.html";
-						break;
-					}
-					case DWARVEN_FIGHTER:
-					{
-						htmltext = "test_server_helper026i.html";
-						break;
-					}
-					case JIN_KAMAEL_SOLDIER:
-					{
-						htmltext = "test_server_helper026j.html";
-						break;
-					}
+
+			if (checkIfClassChangeHasOptions(player)) {
+				if (classDataIndex == -1) {
+					String htmlText = getHtml(player, "cc_options.html");
+					htmlText = htmlText.replace("%name%", Util.emptyIfNullOrElse(ClassListData.getInstance().getClass(classId), ClassInfo::getClassName)); // getEscapedClientCode());
+					htmlText = htmlText.replace("%options%", getClassChangeOptions(player, classId));
+					return htmlText;
 				}
 			}
-		}
-		else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
-		{
-			htmltext = "test_server_helper028.html";
-		}
-		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-		{
-			htmltext = "test_server_helper010.html";
-		}
-		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-		{
-			htmltext = "test_server_helper011.html";
-		}
-		// else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-		// {
-		// htmltext = "test_server_helper011a.html";
-		// }
-		return htmltext;
-	}
-	
-	private String getSecondOccupationChangeHtml(Player player)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
-		{
-			if (player.getLevel() < 40)
-			{
-				htmltext = "test_server_helper023.html";
-			}
-			else
-			{
-				switch (player.getClassId())
-				{
-					case FIGHTER:
-					{
-						htmltext = "test_server_helper012.html";
-						break;
-					}
-					case WARRIOR:
-					{
-						htmltext = "test_server_helper012a.html";
-						break;
-					}
-					case KNIGHT:
-					{
-						htmltext = "test_server_helper012b.html";
-						break;
-					}
-					case ROGUE:
-					{
-						htmltext = "test_server_helper012c.html";
-						break;
-					}
-					case MAGE:
-					{
-						htmltext = "test_server_helper013.html";
-						break;
-					}
-					case WIZARD:
-					{
-						htmltext = "test_server_helper013a.html";
-						break;
-					}
-					case CLERIC:
-					{
-						htmltext = "test_server_helper013b.html";
-						break;
-					}
-					case ELVEN_FIGHTER:
-					{
-						htmltext = "test_server_helper014.html";
-						break;
-					}
-					case ELVEN_KNIGHT:
-					{
-						htmltext = "test_server_helper014a.html";
-						break;
-					}
-					case ELVEN_SCOUT:
-					{
-						htmltext = "test_server_helper014b.html";
-						break;
-					}
-					case ELVEN_MAGE:
-					{
-						htmltext = "test_server_helper015.html";
-						break;
-					}
-					case ELVEN_WIZARD:
-					{
-						htmltext = "test_server_helper015a.html";
-						break;
-					}
-					case ORACLE:
-					{
-						htmltext = "test_server_helper015b.html";
-						break;
-					}
-					case DARK_FIGHTER:
-					{
-						htmltext = "test_server_helper016.html";
-						break;
-					}
-					case PALUS_KNIGHT:
-					{
-						htmltext = "test_server_helper016a.html";
-						break;
-					}
-					case ASSASSIN:
-					{
-						htmltext = "test_server_helper016b.html";
-						break;
-					}
-					case DARK_MAGE:
-					{
-						htmltext = "test_server_helper017.html";
-						break;
-					}
-					case DARK_WIZARD:
-					{
-						htmltext = "test_server_helper017a.html";
-						break;
-					}
-					case SHILLIEN_ORACLE:
-					{
-						htmltext = "test_server_helper017b.html";
-						break;
-					}
-					case ORC_FIGHTER:
-					{
-						htmltext = "test_server_helper018.html";
-						break;
-					}
-					case ORC_RAIDER:
-					{
-						htmltext = "test_server_helper018a.html";
-						break;
-					}
-					case ORC_MONK:
-					{
-						htmltext = "test_server_helper018b.html";
-						break;
-					}
-					case ORC_MAGE:
-					case ORC_SHAMAN:
-					{
-						htmltext = "test_server_helper019.html";
-						break;
-					}
-					case DWARVEN_FIGHTER:
-					{
-						htmltext = "test_server_helper020.html";
-						break;
-					}
-					case ARTISAN:
-					{
-						htmltext = "test_server_helper020b.html";
-						break;
-					}
-					case SCAVENGER:
-					{
-						htmltext = "test_server_helper020a.html";
-						break;
-					}
-					case JIN_KAMAEL_SOLDIER:
-					case TROOPER:
-					{
-						htmltext = "test_server_helper020c.html";
-						break;
-					}
-					case SOUL_FINDER:
-					{
-						htmltext = "test_server_helper020d.html";
-						break;
-					}
-					case WARDER:
-					{
-						htmltext = "test_server_helper030c.html";
-						break;
+
+			final ClassChangeData data = getClassChangeData(classDataIndex);
+			if (data != null) {
+				for (var ri : data.requiredItems()) {
+					if (player.getInventory().getInventoryItemCount(ri.getId(), -1) < ri.getCount()) {
+						player.sendMessage("You do not have enough items.");
+						return null;
 					}
 				}
+				for (var ri : data.requiredItems()) {
+					player.destroyItemByItemId(getClass().getSimpleName(), ri.getId(), ri.getCount(), npc, true);
+				}
+
+				for (ItemHolder ri : data.rewardedItems()) {
+					giveItems(player, ri);
+				}
 			}
+
+			player.setClassId(classId);
+			player.setBaseClass(player.getActiveClass());
+			if (CharacterSettings.autoLearnSkillEnabled()) {
+				player.giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled(), true);
+			}
+			player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
+			player.broadcastUserInfo();
+			player.sendSkillList();
+			player.sendPacket(PlaySound.sound("ItemSound.quest_fanfare_2"));
+			return "test_server_helper021.html";
 		}
-		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-		{
-			htmltext = "test_server_helper010.html";
-		}
-		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-		{
-			htmltext = "test_server_helper011.html";
-		}
-		// else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-		// {
-		// htmltext = "test_server_helper011a.html";
-		// }
-		else
-		{
-			htmltext = "test_server_helper029.html";
-		}
-		return htmltext;
+		return null;
 	}
-	
+
+	private String getThirdOccupationChangeHtml(Player player) {
+		String htmlText = null;
+		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() > 75)) {
+			if (changeToNextClass(player)) {
+				player.sendPacket(PlaySound.sound("ItemSound.quest_fanfare_2"));
+				player.broadcastUserInfo();
+				htmlText = "test_server_helper021.html";
+			}
+		} else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) {
+			htmlText = "test_server_helper011.html";
+		}
+		else {
+			htmlText = "test_server_helper024.html";
+		}
+		return htmlText;
+	}
+
+	private String getFirstOccupationChangeHtml(Player player) {
+		String htmlText = null;
+		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) {
+			if (player.getLevel() < 20) {
+				htmlText = "test_server_helper027.html";
+			} else {
+				htmlText = firstOccupationHtmlOfClassId(player);
+			}
+		} else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)) {
+			htmlText = "test_server_helper028.html";
+		} else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
+			htmlText = "test_server_helper010.html";
+		} else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) {
+			htmlText = "test_server_helper011.html";
+		}
+		return htmlText;
+	}
+
+	private String firstOccupationHtmlOfClassId(Player player) {
+		String htmlText;
+		htmlText = switch (player.getClassId()) {
+			case FIGHTER -> "test_server_helper026a.html";
+			case MAGE -> "test_server_helper026b.html";
+			case ELVEN_FIGHTER -> "test_server_helper026c.html";
+			case ELVEN_MAGE -> "test_server_helper026d.html";
+			case DARK_FIGHTER -> "test_server_helper026e.html";
+			case DARK_MAGE -> "test_server_helper026f.html";
+			case ORC_FIGHTER -> "test_server_helper026g.html";
+			case ORC_MAGE -> "test_server_helper026h.html";
+			case DWARVEN_FIGHTER -> "test_server_helper026i.html";
+			case JIN_KAMAEL_SOLDIER -> "test_server_helper026j.html";
+			default -> null;
+		};
+		return htmlText;
+	}
+
+	private String getSecondOccupationChangeHtml(Player player) {
+		String htmlText;
+		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)) {
+			if (player.getLevel() < 40) {
+				htmlText = "test_server_helper023.html";
+			} else {
+				htmlText = secondOccupationHtmlOfClassId(player);
+			}
+		} else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
+			htmlText = "test_server_helper010.html";
+		} else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) {
+			htmlText = "test_server_helper011.html";
+		} else {
+			htmlText = "test_server_helper029.html";
+		}
+		return htmlText;
+	}
+
+	private String secondOccupationHtmlOfClassId(Player player) {
+		return switch (player.getClassId()) {
+			case FIGHTER -> "test_server_helper012.html";
+			case WARRIOR -> "test_server_helper012a.html";
+			case KNIGHT -> "test_server_helper012b.html";
+			case ROGUE -> "test_server_helper012c.html";
+			case MAGE -> "test_server_helper013.html";
+			case WIZARD -> "test_server_helper013a.html";
+			case CLERIC -> "test_server_helper013b.html";
+			case ELVEN_FIGHTER -> "test_server_helper014.html";
+			case ELVEN_KNIGHT -> "test_server_helper014a.html";
+			case ELVEN_SCOUT -> "test_server_helper014b.html";
+			case ELVEN_MAGE -> "test_server_helper015.html";
+			case ELVEN_WIZARD -> "test_server_helper015a.html";
+			case ORACLE -> "test_server_helper015b.html";
+			case DARK_FIGHTER -> "test_server_helper016.html";
+			case PALUS_KNIGHT -> "test_server_helper016a.html";
+			case ASSASSIN -> "test_server_helper016b.html";
+			case DARK_MAGE -> "test_server_helper017.html";
+			case DARK_WIZARD -> "test_server_helper017a.html";
+			case SHILLIEN_ORACLE -> "test_server_helper017b.html";
+			case ORC_FIGHTER -> "test_server_helper018.html";
+			case ORC_RAIDER -> "test_server_helper018a.html";
+			case ORC_MONK -> "test_server_helper018b.html";
+			case ORC_MAGE, ORC_SHAMAN -> "test_server_helper019.html";
+			case DWARVEN_FIGHTER -> "test_server_helper020.html";
+			case ARTISAN -> "test_server_helper020b.html";
+			case SCAVENGER -> "test_server_helper020a.html";
+			case JIN_KAMAEL_SOLDIER, TROOPER -> "test_server_helper020c.html";
+			case SOUL_FINDER -> "test_server_helper020d.html";
+			case WARDER -> "test_server_helper030c.html";
+			default -> null;
+		};
+	}
+
 	private boolean changeToNextClass(Player player)
 	{
 		ClassId newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
@@ -576,7 +323,7 @@ public final class ClassMaster extends AbstractNpcAI
 		else if (checkIfClassChangeHasOptions(player))
 		{
 			String html = getHtml(player, "cc_options.html");
-			html = html.replace("%name%", ClassListData.getInstance().getClass(newClass.getId()).getClassName()); // getEscapedClientCode());
+			html = html.replace("%name%", Util.emptyIfNullOrElse(ClassListData.getInstance().getClass(newClass.getId()), ClassInfo::getClassName)); // getEscapedClientCode());
 			html = html.replace("%options%", getClassChangeOptions(player, newClass.getId()));
 			showResult(player, html);
 			return false;
@@ -584,42 +331,27 @@ public final class ClassMaster extends AbstractNpcAI
 		else
 		{
 			ClassChangeData data = null;
-			for (var d : _classChangeData) {
-				if(d.isInCategory(player)) {
+			for (var d : classChangeData) {
+				if(player.isInCategory(d.category())) {
 					data = d;
 					break;
 				}
 			}
 			if (data != null)
 			{
-				// Required items.
-				if (!data.getItemsRequired().isEmpty())
-				{
-					for (ItemHolder ri : data.getItemsRequired())
-					{
-						if (player.getInventory().getInventoryItemCount(ri.getId(), -1) < ri.getCount())
-						{
-							player.sendMessage("You do not have enough items.");
-							return false; // No class change if payment failed.
-						}
-					}
-					for (ItemHolder ri : data.getItemsRequired())
-					{
-						player.destroyItemByItemId(getClass().getSimpleName(), ri.getId(), ri.getCount(), player, true);
+
+				for (var ri : data.requiredItems()) {
+					if (player.getInventory().getInventoryItemCount(ri.getId(), -1) < ri.getCount()) {
+						player.sendMessage("You do not have enough items.");
+						return false; // No class change if payment failed.
 					}
 				}
-				// Give possible rewards.
-				if (!data.getItemsRewarded().isEmpty())
-				{
-					for (ItemHolder ri : data.getItemsRewarded())
-					{
-						giveItems(player, ri);
-					}
+				for (var ri : data.requiredItems()) {
+					player.destroyItemByItemId(getClass().getSimpleName(), ri.getId(), ri.getCount(), player, true);
 				}
-				// Give possible hero status reward.
-				if (data.isRewardHero())
-				{
-					player.setHero(true);
+
+				for (var ri : data.rewardedItems()) {
+					giveItems(player, ri);
 				}
 			}
 			
@@ -639,7 +371,7 @@ public final class ClassMaster extends AbstractNpcAI
 	
 	private void showPopupWindow(Player player)
 	{
-		if (!_showPopupWindow)
+		if (!showPopupWindow)
 		{
 			return;
 		}
@@ -647,8 +379,7 @@ public final class ClassMaster extends AbstractNpcAI
 		//@formatter:off
 		if ((player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20)) ||
 			((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) ||
-			(player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76)) /*||
-			(player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85))*/)
+			(player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76)))
 		//@formatter:on
 		{
 			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET); // mark id was 1001 - used 2 for quest text
@@ -661,7 +392,7 @@ public final class ClassMaster extends AbstractNpcAI
 	{
 		final Player player = event.getPlayer();
 		
-		if (!_showPopupWindow || (event.getMarkId() != 2)) // mark id was 1001 - used 2 for quest text
+		if (!showPopupWindow || (event.getMarkId() != 2)) // mark id was 1001 - used 2 for quest text
 		{
 			return;
 		}
@@ -679,10 +410,6 @@ public final class ClassMaster extends AbstractNpcAI
 		{
 			html = getHtml(player, "qm_thirdclass.html");
 		}
-		// else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85)) // 9
-		// {
-		// html = getHtm(player, "qm_awaken.html");
-		// }
 		
 		if (html != null)
 		{
@@ -723,59 +450,31 @@ public final class ClassMaster extends AbstractNpcAI
 		showPopupWindow(event.getPlayer());
 	}
 	
-	private String getClassChangeOptions(Player player, int selectedClassId)
-	{
+	private String getClassChangeOptions(Player player, int selectedClassId) {
 		final StringBuilder sb = new StringBuilder();
 		
-		for (int i = 0; i < _classChangeData.size(); i++)
-		{
+		for (int i = 0; i < classChangeData.size(); i++) {
 			final ClassChangeData option = getClassChangeData(i);
-			if ((option == null) || !option.getCategories().stream().anyMatch(ct -> player.isInCategory(ct)))
-			{
+			if (option == null || !player.isInCategory(option.category())) {
 				continue;
 			}
 			
 			sb.append("<tr><td><img src=L2UI_CT1.ChatBalloon_DF_TopCenter width=276 height=1 /></td></tr>");
 			sb.append("<tr><td><table bgcolor=3f3f3f width=100%>");
-			sb.append("<tr><td align=center><a action=\"bypass -h Quest ClassMaster setclass " + selectedClassId + " " + i + "\">" + option.getName() + ":</a></td></tr>");
+			sb.append("<tr><td align=center><a action=\"bypass -h Quest ClassMaster setclass ").append(selectedClassId).append(" ").append(i).append("\">").append(option.name()).append(":</a></td></tr>");
 			sb.append("<tr><td><table width=276>");
 			sb.append("<tr><td>Requirements:</td></tr>");
-			if (option.getItemsRequired().isEmpty())
-			{
+
+			if (!option.hasRequiredItems()) {
 				sb.append("<tr><td><font color=LEVEL>Free</font></td></tr>");
 			}
 			else
 			{
-				option.getItemsRequired().forEach(ih ->
-				{
-					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemEngine.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
-				});
+				option.requiredItems().forEach(ih -> sb.append("<tr><td><font color=\"LEVEL\">").append(ih.getCount()).append("</font></td><td>").append(ItemEngine.getInstance().getTemplate(ih.getId()).getName()).append("</td><td width=30></td></tr>"));
 			}
 			sb.append("<tr><td>Rewards:</td></tr>");
-			if (option.getItemsRewarded().isEmpty())
-			{
-				if (option.isRewardHero())
-				{
-					sb.append("<tr><td><font color=\"LEVEL\">Hero status.</font></td></tr>");
-				}
-				
-				if (!option.isRewardHero())
-				{
-					sb.append("<tr><td><font color=LEVEL>none</font></td></tr>");
-				}
-			}
-			else
-			{
-				option.getItemsRewarded().forEach(ih ->
-				{
-					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemEngine.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
-				});
+			option.rewardedItems().forEach(ih -> sb.append("<tr><td><font color=\"LEVEL\">").append(ih.getCount()).append("</font></td><td>").append(ItemEngine.getInstance().getTemplate(ih.getId()).getName()).append("</td><td width=30></td></tr>"));
 
-				if (option.isRewardHero())
-				{
-					sb.append("<tr><td><font color=\"LEVEL\">Hero status.</font></td></tr>");
-				}
-			}
 			sb.append("</table></td></tr>");
 			sb.append("</table></td></tr>");
 			sb.append("<tr><td><img src=L2UI_CT1.ChatBalloon_DF_TopCenter width=276 height=1 /></td></tr>");
@@ -783,96 +482,38 @@ public final class ClassMaster extends AbstractNpcAI
 		
 		return sb.toString();
 	}
+
+	private record ClassChangeData(String name, CategoryType category, List<ItemHolder> requiredItems, List<ItemHolder> rewardedItems) {
+
+		public boolean hasRequiredItems() {
+			return !requiredItems.isEmpty();
+		}
+
+		public boolean hasRewards() {
+			return !rewardedItems.isEmpty();
+		}
+	}
 	
-	private static class ClassChangeData
-	{
-		private final String _name;
-		private final List<CategoryType> _appliedCategories;
-		private boolean _rewardHero;
-		private List<ItemHolder> _itemsRequired;
-		private List<ItemHolder> _itemsRewarded;
-		
-		public ClassChangeData(String name, List<CategoryType> appliedCategories)
-		{
-			_name = name;
-			_appliedCategories = appliedCategories != null ? appliedCategories : Collections.emptyList();
-		}
-		
-		public String getName()
-		{
-			return _name;
-		}
-		
-		public List<CategoryType> getCategories()
-		{
-			return _appliedCategories != null ? _appliedCategories : Collections.emptyList();
-		}
-		
-		public boolean isInCategory(Player player)
-		{
-			if (_appliedCategories != null)
-			{
-				for (CategoryType category : _appliedCategories)
-				{
-					if (player.isInCategory(category))
-					{
-						return true;
-					}
+	private boolean checkIfClassChangeHasOptions(Player player) {
+		int amount = 0;
+		for (ClassChangeData data : classChangeData) {
+			if(player.isInCategory(data.category())) {
+				if(data.hasRewards()) {
+					amount++;
+				}
+
+				if(data.hasRequiredItems() || amount > 1) {
+					return true;
 				}
 			}
-			
-			return false;
 		}
-		
-		public boolean isRewardHero()
-		{
-			return _rewardHero;
-		}
-		
-		public void setRewardHero(boolean rewardHero)
-		{
-			_rewardHero = rewardHero;
-		}
-		
-		void setItemsRequired(List<ItemHolder> itemsRequired)
-		{
-			_itemsRequired = itemsRequired;
-		}
-		
-		public List<ItemHolder> getItemsRequired()
-		{
-			return _itemsRequired != null ? _itemsRequired : Collections.emptyList();
-		}
-		
-		void setItemsRewarded(List<ItemHolder> itemsRewarded)
-		{
-			_itemsRewarded = itemsRewarded;
-		}
-		
-		public List<ItemHolder> getItemsRewarded()
-		{
-			return _itemsRewarded != null ? _itemsRewarded : Collections.emptyList();
-		}
+		return false;
 	}
 	
-	private boolean checkIfClassChangeHasOptions(Player player)
-	{
-		boolean showOptions = _classChangeData.stream().filter(ccd -> !ccd.getItemsRequired().isEmpty()).anyMatch(ccd -> ccd.isInCategory(player)); // Check if there are requirements
-		if (!showOptions)
-		{
-			showOptions = _classChangeData.stream().filter(ccd -> !ccd.getItemsRewarded().isEmpty()).filter(ccd -> ccd.isInCategory(player)).count() > 1; // Check if there is more than 1 reward to chose.
+	private ClassChangeData getClassChangeData(int index) {
+		if ((index >= 0) && (index < classChangeData.size())) {
+			return classChangeData.get(index);
 		}
-		
-		return showOptions;
-	}
-	
-	private ClassChangeData getClassChangeData(int index)
-	{
-		if ((index >= 0) && (index < _classChangeData.size()))
-		{
-			return _classChangeData.get(index);
-		}
-		
 		return null;
 	}
 
@@ -880,127 +521,68 @@ public final class ClassMaster extends AbstractNpcAI
 
 		@Override
 		protected Path getSchemaFilePath() {
-			return Path.of("config/xsd/classMaster.xsd");
+			return Path.of("config/xsd/class-master.xsd");
 		}
 
 		@Override
-		public void load()
-		{
-			_classChangeData.clear();
-			parseFile("config/ClassMaster.xml");
+		public void load() {
+			classChangeData.clear();
+			parseFile("config/class-master.xml");
 
-			LOGGER.info("Loaded {} class change options.", _classChangeData.size());
+			LOGGER.info("Loaded {} class change options.", classChangeData.size());
 			releaseResources();
 		}
 
 		@Override
-		public void parseDocument(Document doc, File f)
-		{
-			NamedNodeMap attrs;
-			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
-			{
-				if ("list".equals(n.getNodeName()))
-				{
-					for (Node cm = n.getFirstChild(); cm != null; cm = cm.getNextSibling())
-					{
-						attrs = cm.getAttributes();
-						if ("classMaster".equals(cm.getNodeName()))
-						{
-							_isEnabled = parseBoolean(attrs, "classChangeEnabled", false);
-							if (!_isEnabled)
-							{
-								return;
-							}
+		public void parseDocument(Document doc, File f) {
+			var listNode = doc.getFirstChild();
+			var classMasterNode = listNode.getFirstChild();
+			parseClassMaster(classMasterNode);
+		}
 
-							_spawnClassMasters = parseBoolean(attrs, "spawnClassMasters", true);
-							_showPopupWindow = parseBoolean(attrs, "showPopupWindow", false);
+		private void parseClassMaster(Node node) {
+			var attrs = node.getAttributes();
+			isEnabled = parseBoolean(attrs, "enable");
+			if(!isEnabled) {
+				return;
+			}
 
-							for (Node c = cm.getFirstChild(); c != null; c = c.getNextSibling())
-							{
-								attrs = c.getAttributes();
-								if ("classChangeOption".equals(c.getNodeName()))
-								{
-									final List<CategoryType> appliedCategories = new LinkedList<>();
-									final List<ItemHolder> requiredItems = new LinkedList<>();
-									final List<ItemHolder> rewardedItems = new LinkedList<>();
-									boolean setHero = false;
-									final String optionName = parseString(attrs, "name", "");
-									for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
-									{
-										if ("appliesTo".equals(b.getNodeName()))
-										{
-											for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
-											{
-												if ("category".equals(r.getNodeName()))
-												{
-													final CategoryType category = CategoryType.findByName(r.getTextContent().trim());
-													if (category == null)
-													{
-														LOGGER.error(": Incorrect category type: " + r.getNodeValue());
-														continue;
-													}
+			spawnClassMasters = parseBoolean(attrs, "spawn");
+			showPopupWindow = parseBoolean(attrs, "show-popup");
 
-													appliedCategories.add(category);
-												}
-											}
-										}
-										if ("rewards".equals(b.getNodeName()))
-										{
-											for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
-											{
-												attrs = r.getAttributes();
-												if ("item".equals(r.getNodeName()))
-												{
-													final int itemId = parseInt(attrs, "id");
-													final int count = parseInt(attrs, "count", 1);
+			for (var optionNode = node.getFirstChild(); optionNode != null; optionNode = optionNode.getNextSibling()) {
+				parseClassChangeOption(optionNode);
+			}
+		}
 
-													rewardedItems.add(new ItemHolder(itemId, count));
-												}
-												else if ("setHero".equals(r.getNodeName()))
-												{
-													setHero = true;
-												}
-											}
-										}
-										else if ("conditions".equals(b.getNodeName()))
-										{
-											for (Node r = b.getFirstChild(); r != null; r = r.getNextSibling())
-											{
-												attrs = r.getAttributes();
-												if ("item".equals(r.getNodeName()))
-												{
-													final int itemId = parseInt(attrs, "id");
-													final int count = parseInt(attrs, "count", 1);
+		private void parseClassChangeOption(Node optionNode) {
+			var attrs = optionNode.getAttributes();
+			List<ItemHolder> requiredItems = null;
+			List<ItemHolder> rewardedItems = null;
 
-													requiredItems.add(new ItemHolder(itemId, count));
-												}
-											}
-										}
-									}
+			var optionName = parseString(attrs, "name", "");
+			var category = parseEnum(attrs, CategoryType.class, "apply-to");
 
-									if (appliedCategories.isEmpty())
-									{
-										LOGGER.warn(": Class change option: " + optionName + " has no categories to be applied on. Skipping!");
-										continue;
-									}
-
-									final ClassChangeData classChangeData = new ClassChangeData(optionName, appliedCategories);
-									classChangeData.setItemsRequired(requiredItems);
-									classChangeData.setItemsRewarded(rewardedItems);
-									classChangeData.setRewardHero(setHero);
-
-									_classChangeData.add(classChangeData);
-								}
-							}
-						}
-					}
+			for (var node = optionNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+				if ("rewards".equals(node.getNodeName())) {
+					rewardedItems = parseItems(node);
+				} else if ("conditions".equals(node.getNodeName())) {
+					requiredItems = parseItems(node);
 				}
 			}
+
+			ClassMaster.this.classChangeData.add(new ClassChangeData(optionName, category, requiredItems, rewardedItems));
+		}
+
+		private List<ItemHolder> parseItems(Node node) {
+			List<ItemHolder> items = new ArrayList<>();
+			for (var itemNode = node.getFirstChild(); itemNode != null; itemNode = itemNode.getNextSibling()) {
+				items.add(parseItemHolder(itemNode));
+			}
+			return items;
 		}
 	}
 
-
-	
 	public static AbstractNpcAI provider()
 	{
 		return new ClassMaster();
