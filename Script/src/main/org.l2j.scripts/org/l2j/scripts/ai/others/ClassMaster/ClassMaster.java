@@ -114,7 +114,7 @@ public final class ClassMaster extends AbstractNpcAI
 			case "clanlevel" -> player.isClanLeader() ? "test_server_helper022.html" : "pl014.html";
 			case "learnskills" -> onLearnSkill(player);
 			case "clanlevelup" -> clanLevelUpHtml(player);
-			case "test_server_helper001.html" -> CLASS_MASTERS.contains(npc.getId()) ? event : null;
+			case "test_server_helper001.html" -> npc != null && CLASS_MASTERS.contains(npc.getId()) ? event : null;
 			default -> null;
 		};
 	}
