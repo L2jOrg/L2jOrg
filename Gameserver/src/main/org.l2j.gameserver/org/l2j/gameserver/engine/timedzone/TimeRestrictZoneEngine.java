@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
+import org.l2j.gameserver.data.database.dao.TimeRestrictDAO;
 import org.l2j.gameserver.data.database.data.TimeRestrictZoneInfo;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -34,6 +35,7 @@ import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone.ResetCycle;
 
+import java.sql.Time;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -59,7 +61,7 @@ public class TimeRestrictZoneEngine {
     private void onPlayerLogout(OnPlayerLogout event) {
         var player = event.getPlayer();
         var infos = timedRestrictZoneInfos.remove(player.getObjectId());
-        getDAO(PlayerDAO.class).saveRestrictZoneInfo(infos.values());
+        getDAO(TimeRestrictDAO.class).save(infos.values());
     }
 
     public TimeRestrictZoneInfo getTimeRestrictZoneInfo(Player player, TimeRestrictZone zone) {
@@ -67,7 +69,7 @@ public class TimeRestrictZoneEngine {
     }
 
     private IntMap<TimeRestrictZoneInfo> loadPlayerTimeRestrictZoneInfo(int playerId) {
-        return getDAO(PlayerDAO.class).loadTimeRestrictZoneInfo(playerId);
+        return getDAO(TimeRestrictDAO.class).loadTimeRestrictZoneInfo(playerId);
     }
 
     public void startRemainingTimeCheck() {
@@ -85,9 +87,9 @@ public class TimeRestrictZoneEngine {
 
     public void resetTimes(ResetCycle resetCycle) {
         if(resetCycle == ResetCycle.WEEKLY) {
-            getDAO(PlayerDAO.class).deleteRestrictZoneInfo();
+            getDAO(TimeRestrictDAO.class).deleteRestrictZoneInfo();
         } else {
-            getDAO(PlayerDAO.class).deleteRestrictZoneInfo(resetCycle);
+            getDAO(TimeRestrictDAO.class).deleteRestrictZoneInfo(resetCycle);
         }
         timedRestrictZoneInfos.clear();
     }
