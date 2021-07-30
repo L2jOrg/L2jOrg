@@ -21,7 +21,6 @@ package org.l2j.gameserver.engine.timedzone;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.database.dao.TimeRestrictDAO;
 import org.l2j.gameserver.data.database.data.TimeRestrictZoneInfo;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -35,7 +34,6 @@ import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone.ResetCycle;
 
-import java.sql.Time;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;

@@ -25,7 +25,6 @@ import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.*;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.world.zone.type.TimeRestrictZone;
 
 import java.sql.ResultSet;
 import java.util.Collection;
