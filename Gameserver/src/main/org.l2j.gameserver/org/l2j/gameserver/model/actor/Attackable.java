@@ -57,7 +57,6 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
@@ -74,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.checkIfInRange;
 import static org.l2j.gameserver.util.GameUtils.doIfIsCreature;
 
@@ -84,7 +84,7 @@ public class Attackable extends Npc {
     private final AtomicReference<Collection<ItemHolder>> _sweepItems = new AtomicReference<>();
     private final Set<WeakReference<Creature>> attackByList = ConcurrentHashMap.newKeySet();
     // Raid
-    private boolean _isRaid = false;
+    private boolean isRaid = false;
     private boolean _isRaidMinion = false;
     //
     private boolean _champion = false;
@@ -216,7 +216,7 @@ public class Attackable extends Npc {
     }
 
     private void checkCommandChannelLooting(Creature attacker) {
-        if (_isRaid && !isMinion() && (attacker != null) && (attacker.getParty() != null) && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this)) {
+        if (isRaid && !isMinion() && (attacker != null) && (attacker.getParty() != null) && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this)) {
             if (_firstCommandChannelAttacked == null) // looting right isn't set
             {
                 synchronized (this) {
@@ -299,7 +299,7 @@ public class Attackable extends Npc {
         MapToLong<Player> playersDamage = new HashMapToLong<>();
         var maxDealerInfo = calculateMaxDamageDealer(playersDamage);
 
-        if (_isRaid && !_isRaidMinion) {
+        if (isRaid && !_isRaidMinion) {
             calculateRaidRewards(lastAttacker, maxDealerInfo.player);
         }
 
@@ -425,7 +425,7 @@ public class Attackable extends Npc {
                     }
                     clan.addHuntingPoints(finalExp);
                 }
-                attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true);
+                attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, isRaid), true);
                 PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
                 MagicLampData.getInstance().addLampExp(attacker, exp, true);
             }
@@ -464,7 +464,7 @@ public class Attackable extends Npc {
 
     private void calculateRaidRewards(Creature lastAttacker, Player maxDealer) {
         final Player player = (maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker.getActingPlayer();
-        broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
+        broadcastPacket(getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
         final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS);
         final Party party = player.getParty();
 
@@ -473,7 +473,7 @@ public class Attackable extends Npc {
         } else {
             final int points = Math.max(raidbossPoints, 1);
             player.increaseRaidbossPoints(points);
-            player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
+            player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
         }
     }
 
@@ -493,7 +493,7 @@ public class Attackable extends Npc {
     private void addRaidPoints(int points, Player player) {
         if (checkIfInRange(PartySettings.partyRange(), this, player, true)) {
             player.increaseRaidbossPoints(points);
-            player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
+            player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
         }
     }
 
@@ -777,24 +777,32 @@ public class Attackable extends Npc {
     private void dropItems(NpcTemplate npcTemplate, Player player) {
         final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropType.DROP, this, player);
         for (ItemHolder drop : deathItems) {
-            final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
-            // Check if the autoLoot mode is active
-            if (CharacterSettings.isAutoLoot(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && CharacterSettings.autoLoot())
-                    || (_isRaid && CharacterSettings.autoLootRaid()))) || (item.hasExImmediateEffect() && CharacterSettings.autoLootHerbs())) {
+            if (isAutoLootItem(drop.getId())) {
                 player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
             } else {
                 dropItem(player, drop); // drop the item on the ground
             }
 
             // Broadcast message if RaidBoss was defeated
-            if (_isRaid && !_isRaidMinion) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S);
-                sm.addString(getName());
-                sm.addItemName(item);
-                sm.addLong(drop.getCount());
-                broadcastPacket(sm);
+            if (isRaid && !_isRaidMinion) {
+                broadcastPacket(getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S).addString(getName()).addItemName(drop.getId()).addLong(drop.getCount()));
             }
         }
+    }
+
+    private boolean isAutoLootItem(int itemId) {
+        if((isRaid && CharacterSettings.autoLootRaid()) || (!isRaid && CharacterSettings.autoLoot())) {
+            return true;
+        }
+
+        if(CharacterSettings.autoLootHerbs()) {
+            var item = ItemEngine.getInstance().getTemplate(itemId);
+            if(item.hasExImmediateEffect()) {
+                return true;
+            }
+        }
+
+        return CharacterSettings.isAutoLoot(itemId);
     }
 
     /**
@@ -820,11 +828,7 @@ public class Attackable extends Npc {
         final Player player = lastAttacker.getActingPlayer();
 
         // Don't drop anything if the last attacker or owner isn't Player
-        if (player == null) {
-            return;
-        }
-
-        if ((player.getLevel() - getLevel()) > 9) {
+        if (player == null || player.getLevel() - getLevel() > 0) {
             return;
         }
 
@@ -834,7 +838,7 @@ public class Attackable extends Npc {
                 final var itemId = drop.getItemId();
                 final var itemCount = Rnd.get(drop.getMin(), drop.getMax());
 
-                if (CharacterSettings.autoLoot() || isFlying() || CharacterSettings.isAutoLoot(itemId)) {
+                if (isAutoLootItem(itemId)) {
                     player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the Player that has killed the Attackable
                 } else {
                     dropItem(player, itemId, itemCount); // drop the item on the ground
@@ -1051,7 +1055,7 @@ public class Attackable extends Npc {
 
         if (Config.CHAMPION_ENABLE) {
             // Set champion on next spawn
-            if (GameUtils.isMonster(this) && !isQuestMonster() && !getTemplate().isUndying() && !_isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0))) {
+            if (GameUtils.isMonster(this) && !isQuestMonster() && !getTemplate().isUndying() && !isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0))) {
                 if (Rnd.get(100) < Config.CHAMPION_FREQUENCY) {
                     _champion = true;
                     if (Config.SHOW_CHAMPION_AURA) {
@@ -1158,7 +1162,7 @@ public class Attackable extends Npc {
      */
     @Override
     public boolean isRaid() {
-        return _isRaid;
+        return isRaid;
     }
 
     /**
@@ -1167,7 +1171,7 @@ public class Attackable extends Npc {
      * @param isRaid
      */
     public void setIsRaid(boolean isRaid) {
-        _isRaid = isRaid;
+        this.isRaid = isRaid;
     }
 
     /**
@@ -1176,7 +1180,7 @@ public class Attackable extends Npc {
      * @param val
      */
     public void setIsRaidMinion(boolean val) {
-        _isRaid = val;
+        isRaid = val;
         _isRaidMinion = val;
     }
 
