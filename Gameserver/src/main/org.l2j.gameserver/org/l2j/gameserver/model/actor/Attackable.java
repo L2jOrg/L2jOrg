@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isBetween;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.checkIfInRange;
@@ -1053,15 +1054,10 @@ public class Attackable extends Npc {
         // Reset champion state
         _champion = false;
 
-        if (Config.CHAMPION_ENABLE) {
-            // Set champion on next spawn
-            if (GameUtils.isMonster(this) && !isQuestMonster() && !getTemplate().isUndying() && !isRaid && !_isRaidMinion && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0))) {
-                if (Rnd.get(100) < Config.CHAMPION_FREQUENCY) {
-                    _champion = true;
-                    if (Config.SHOW_CHAMPION_AURA) {
-                        setTeam(Team.RED);
-                    }
-                }
+        if (isRandomChampion()) {
+            _champion = true;
+            if (Config.SHOW_CHAMPION_AURA) {
+                setTeam(Team.RED);
             }
         }
 
@@ -1070,6 +1066,19 @@ public class Attackable extends Npc {
 
         // Reset the rest of NPC related states
         super.onRespawn();
+    }
+
+    private boolean isRandomChampion() {
+        return Config.CHAMPION_ENABLE &&
+                GameUtils.isMonster(this) &&
+                !isQuestMonster() &&
+                !getTemplate().isUndying() &&
+                !isRaid &&
+                !_isRaidMinion &&
+                (Config.CHAMPION_FREQUENCY > 0) &&
+                isBetween(getLevel(), Config.CHAMP_MIN_LVL, Config.CHAMP_MAX_LVL) &&
+                (Config.CHAMPION_ENABLE_IN_INSTANCES || getInstanceId() == 0) &&
+                Rnd.get(100) < Config.CHAMPION_FREQUENCY;
     }
 
     /**
