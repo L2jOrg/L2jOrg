@@ -829,7 +829,7 @@ public class Attackable extends Npc {
         final Player player = lastAttacker.getActingPlayer();
 
         // Don't drop anything if the last attacker or owner isn't Player
-        if (player == null || player.getLevel() - getLevel() > 0) {
+        if (player == null || player.getLevel() - getLevel() > 9) {
             return;
         }
 
