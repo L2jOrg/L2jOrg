@@ -31,7 +31,6 @@ import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 /**
  * TODO: This class is a copy of AttackRequest, we should get proper structure for both.
