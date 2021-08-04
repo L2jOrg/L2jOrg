@@ -23,7 +23,6 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.AdminForgePacket;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
@@ -38,7 +37,6 @@ import java.util.LinkedList;
 import java.util.StringTokenizer;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
-import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 /**
  * This class handles commands for gm to forge packets
@@ -412,26 +410,12 @@ public final class AdminPForge implements IAdminCommandHandler
 						}
 						
 						WorldObject target;
-						Boat boat;
 						String value = st.nextToken();
 						switch (value)
 						{
 							case "$oid":
 							{
 								value = String.valueOf(activeChar.getObjectId());
-								break;
-							}
-							case "$boid":
-							{
-								boat = activeChar.getBoat();
-								if (boat != null)
-								{
-									value = String.valueOf(boat.getObjectId());
-								}
-								else
-								{
-									value = "0";
-								}
 								break;
 							}
 							case "$title":
@@ -467,23 +451,6 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$toid":
 							{
 								value = String.valueOf(activeChar.getTargetId());
-								break;
-							}
-							case "$tboid":
-							{
-								target = activeChar.getTarget();
-								if (isPlayable(target))
-								{
-									boat = target.getActingPlayer().getBoat();
-									if (boat != null)
-									{
-										value = String.valueOf(boat.getObjectId());
-									}
-									else
-									{
-										value = "0";
-									}
-								}
 								break;
 							}
 							case "$ttitle":

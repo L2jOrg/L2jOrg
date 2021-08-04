@@ -75,19 +75,6 @@ public class ValidatePosition extends ClientPacket {
         int dz;
         double diffSq;
 
-        if (player.isInBoat()) {
-            if (GeoEngineSettings.isSyncMode(SyncMode.SERVER)) {
-                dx = _x - player.getInVehiclePosition().getX();
-                dy = _y - player.getInVehiclePosition().getY();
-
-                diffSq = ((dx * dx) + (dy * dy));
-                if (diffSq > 250000) {
-                    client.sendPacket(new GetOnVehicle(player.getObjectId(), _data, player.getInVehiclePosition()));
-                }
-            }
-            return;
-        }
-
         if (player.isFalling(_z)) {
             return; // disable validations during fall to avoid "jumping"
         }

@@ -5853,7 +5853,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isMounted() || isInBoat()) {
+        if (isMounted()) {
             noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
             return false;
         }
@@ -6396,17 +6396,6 @@ public final class Player extends Playable {
         }
 
         return !isProcessingItem(objectId);
-    }
-
-    /**
-     * @return Returns the inBoat.
-     */
-    public boolean isInBoat() {
-        return (vehicle != null) && vehicle.isBoat();
-    }
-
-    public Boat getBoat() {
-        return (Boat) vehicle;
     }
 
     public boolean isInShuttle() {
@@ -7181,7 +7170,7 @@ public final class Player extends Playable {
         } else if ((type == 1) && (isInsideZone(ZoneType.SIEGE) || isInsideZone(ZoneType.CLAN_HALL) || isInsideZone(ZoneType.JAIL) || isInsideZone(ZoneType.CASTLE) || isInsideZone(ZoneType.NO_SUMMON_FRIEND) || isInsideZone(ZoneType.FORT))) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
             valid = false;
-        } else if (isInsideZone(ZoneType.NO_BOOKMARK) || isInBoat()) {
+        } else if (isInsideZone(ZoneType.NO_BOOKMARK)) {
             if (type == 0) {
                 sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_THIS_AREA);
             } else if (type == 1) {
@@ -7253,11 +7242,6 @@ public final class Player extends Playable {
     public void sendInfo(Player player) {
         if(!isInvisible() || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
             player.sendPacket(new ExCharInfo(this));
-        }
-
-        if (isInBoat() && isInvisible()) {
-            setXYZ(getBoat().getLocation());
-            player.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), inVehiclePosition));
         }
 
         updateRelation(player);

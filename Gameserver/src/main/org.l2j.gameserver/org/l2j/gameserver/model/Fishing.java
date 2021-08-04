@@ -160,7 +160,7 @@ public class Fishing {
             return false;
         }
 
-        if (player.isTransformed() || player.isInBoat()) {
+        if (player.isTransformed()) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_OR_TRANSFORMED);
             return false;
         }

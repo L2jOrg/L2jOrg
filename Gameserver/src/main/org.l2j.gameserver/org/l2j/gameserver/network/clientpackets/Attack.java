@@ -64,13 +64,6 @@ public final class Attack extends ClientPacket {
             return;
         }
 
-        // Avoid Attacks in Boat.
-        if (isPlayable(player) && player.isInBoat()) {
-            player.sendPacket(SystemMessageId.THIS_IS_NOT_ALLOWED_WHILE_RIDING_A_FERRY_OR_BOAT);
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
-
         final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
         if (nonNull(info)) {
             for (AbstractEffect effect : info.getEffects()) {
