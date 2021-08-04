@@ -183,7 +183,7 @@ public final class SocialAction implements IPlayerActionHandler
 			player.sendPacket(sm);
 		}
 		
-		if (player.isMounted() || player.isFlyingMounted() || player.isInBoat())
+		if (player.isMounted() || player.isFlyingMounted())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
@@ -273,7 +273,7 @@ public final class SocialAction implements IPlayerActionHandler
 			return;
 		}
 		
-		if (partner.isMounted() || partner.isFlyingMounted() || partner.isInBoat())
+		if (partner.isMounted() || partner.isFlyingMounted())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
