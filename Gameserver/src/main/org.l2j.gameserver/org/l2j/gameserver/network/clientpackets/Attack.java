@@ -38,22 +38,14 @@ import static java.util.Objects.nonNull;
 public final class Attack extends ClientPacket {
     // cddddc
     private int _objectId;
-    @SuppressWarnings("unused")
-    private int _originX;
-    @SuppressWarnings("unused")
-    private int _originY;
-    @SuppressWarnings("unused")
-    private int _originZ;
-    @SuppressWarnings("unused")
-    private int _attackId;
 
     @Override
     public void readImpl() {
         _objectId = readInt();
-        _originX = readInt();
-        _originY = readInt();
-        _originZ = readInt();
-        _attackId = readByte(); // 0 for simple click 1 for shift-click
+        readInt(); // origin x
+        readInt(); // origin y
+        readInt(); // origin z
+        readByte(); // 0 for simple click 1 for shift-click
     }
 
     @Override
@@ -63,38 +55,13 @@ public final class Attack extends ClientPacket {
             return;
         }
 
-        final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
-        if (nonNull(info)) {
-            for (AbstractEffect effect : info.getEffects()) {
-                if (!effect.checkCondition(-1)) {
-                    player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-                    player.sendPacket(ActionFailed.STATIC_PACKET);
-                    return;
-                }
-            }
-        }
-
-        // avoid using expensive operations if not needed
-        final WorldObject target;
-        if (player.getTargetId() == _objectId) {
-            target = player.getTarget();
-        } else {
-            target = World.getInstance().findObject(_objectId);
-        }
-
-        if (isNull(target )) {
+        if (hasBotPenaltyAttack(player)) {
             return;
         }
 
-        if ((!target.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PcCondOverride.TARGET_ALL)) {
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return;
-        }
+        final WorldObject target = getTarget(player);
 
-        // Players can't attack objects in the other instances
-        // Only GMs can directly attack invisible characters
-        else if (target.getInstanceWorld() != player.getInstanceWorld() || !target.isVisibleFor(player)) {
-            player.sendPacket(ActionFailed.STATIC_PACKET);
+        if(!validateAttack(player, target)) {
             return;
         }
 
@@ -107,5 +74,47 @@ public final class Attack extends ClientPacket {
         } else {
             player.sendPacket(ActionFailed.STATIC_PACKET);
         }
+    }
+
+    private boolean validateAttack(Player player, WorldObject target) {
+        if (isNull(target)) {
+            return false;
+        }
+
+        if ((!target.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PcCondOverride.TARGET_ALL)) {
+            player.sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        } else if (target.getInstanceWorld() != player.getInstanceWorld() || !target.isVisibleFor(player)) {
+            // Players can't attack objects in the other instances
+            // Only GMs can directly attack invisible characters
+            player.sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+        return true;
+    }
+
+    private WorldObject getTarget(Player player) {
+        // avoid using expensive operations if not needed
+        final WorldObject target;
+        if (player.getTargetId() == _objectId) {
+            target = player.getTarget();
+        } else {
+            target = World.getInstance().findObject(_objectId);
+        }
+        return target;
+    }
+
+    private boolean hasBotPenaltyAttack(Player player) {
+        final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+        if (nonNull(info)) {
+            for (AbstractEffect effect : info.getEffects()) {
+                if (!effect.checkCondition(-1)) {
+                    player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
+                    player.sendPacket(ActionFailed.STATIC_PACKET);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
