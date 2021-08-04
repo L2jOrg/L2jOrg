@@ -140,15 +140,6 @@ public final class Config {
     // General Settings
     // --------------------------------------------------
 
-    public static boolean ALLOW_BOAT;
-
-    public static boolean ALLOW_MANOR;
-    public static boolean SERVER_NEWS;
-    public static boolean ENABLE_COMMUNITY_BOARD;
-    public static String BBS_DEFAULT;
-
-    public static int WORLD_CHAT_POINTS_PER_DAY;
-
     public static int ALT_MANOR_REFRESH_TIME;
     public static int ALT_MANOR_REFRESH_MIN;
     public static int ALT_MANOR_APPROVE_TIME;
@@ -630,13 +621,6 @@ public final class Config {
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 
-        ALLOW_MANOR = General.getBoolean("AllowManor", true);
-        ALLOW_BOAT = General.getBoolean("AllowBoat", true);
-        SERVER_NEWS = General.getBoolean("ShowServerNews", false);
-        ENABLE_COMMUNITY_BOARD = General.getBoolean("EnableCommunityBoard", true);
-        BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");
-
-        WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
         ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
         ALT_MANOR_REFRESH_MIN = General.getInt("AltManorRefreshMin", 0);
         ALT_MANOR_APPROVE_TIME = General.getInt("AltManorApproveTime", 4);

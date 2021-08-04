@@ -38,6 +38,7 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.interfaces.IStorable;
 import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -75,7 +76,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
     private Calendar nextModeChange = null;
 
     private CastleManorManager() {
-        if (Config.ALLOW_MANOR) {
+        if (GeneralSettings.allowManor()) {
             load(); // Load seed data (XML)
             loadDb(); // Load castle manor data (DB)
 
@@ -95,7 +96,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
             scheduleModeChange();
 
             // Schedule autosave
-            ThreadPool.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
+            ThreadPool.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000L, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000L);
         } else {
             mode = ManorMode.DISABLED;
             LOGGER.info("Manor system is deactivated.");
@@ -369,8 +370,8 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
         return true;
     }
 
-    public final void resetManorData(int castleId) {
-        if (!Config.ALLOW_MANOR) {
+    public void resetManorData(int castleId) {
+        if (!GeneralSettings.allowManor()) {
             return;
         }
 

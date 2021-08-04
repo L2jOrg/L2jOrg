@@ -38,6 +38,7 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -181,7 +182,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 }
             } else if (bypass.startsWith("manor_menu_select")) {
                 final Npc lastNpc = player.getLastFolkNPC();
-                if (Config.ALLOW_MANOR && (lastNpc != null) && lastNpc.canInteract(player)) {
+                if (GeneralSettings.allowManor() && (lastNpc != null) && lastNpc.canInteract(player)) {
                     final String[] split = bypass.substring(bypass.indexOf("?") + 1).split("&");
                     final int ask = Integer.parseInt(split[0].split("=")[1]);
                     final int state = Integer.parseInt(split[1].split("=")[1]);
