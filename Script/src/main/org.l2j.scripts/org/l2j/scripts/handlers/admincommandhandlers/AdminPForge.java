@@ -83,7 +83,8 @@ public final class AdminPForge implements IAdminCommandHandler
 		if (opCodes == null || opCodes.length == 0 || opCodes.length > 3) {
 			return true;
 		}
-		
+
+		long[] maxValues = {255, 65535, 4294967295L};
 		for (int i = 0; i < opCodes.length; ++i) {
 			final String opCode = opCodes[i];
 			long opCodeLong;
@@ -94,17 +95,7 @@ public final class AdminPForge implements IAdminCommandHandler
 				return i <= 0;
 			}
 			
-			if (opCodeLong < 0) {
-				return true;
-			}
-			
-			if ((i == 0) && (opCodeLong > 255)) {
-				return true;
-			}
-			else if ((i == 1) && (opCodeLong > 65535)) {
-				return true;
-			}
-			else if ((i == 2) && (opCodeLong > 4294967295L)) {
+			if (opCodeLong < 0 || opCodeLong > maxValues[i]) {
 				return true;
 			}
 		}
@@ -288,7 +279,7 @@ public final class AdminPForge implements IAdminCommandHandler
 		} else if (method.equals("sb")) {
 			activeChar.broadcastPacket(afp);
 		}
-		return false;
+		return true;
 	}
 
 	private boolean addPacketContent(Player activeChar, StringTokenizer st, String format, AdminForgePacket afp) {
