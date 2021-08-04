@@ -26,7 +26,6 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
@@ -71,26 +70,19 @@ public final class Attack extends ClientPacket {
             target.onAction(player);
         } else if ((target.getObjectId() != player.getObjectId()) && (player.getPrivateStoreType() == PrivateStoreType.NONE) && (player.getActiveRequester() == null)) {
             target.onForcedAttack(player);
-        } else {
-            player.sendPacket(ActionFailed.STATIC_PACKET);
         }
     }
 
     private boolean validateAttack(Player player, WorldObject target) {
-        if (isNull(target)) {
+        if (target == null) {
             return false;
         }
 
         if ((!target.isTargetable() || player.isTargetingDisabled()) && !player.canOverrideCond(PcCondOverride.TARGET_ALL)) {
-            player.sendPacket(ActionFailed.STATIC_PACKET);
-            return false;
-        } else if (target.getInstanceWorld() != player.getInstanceWorld() || !target.isVisibleFor(player)) {
-            // Players can't attack objects in the other instances
-            // Only GMs can directly attack invisible characters
-            player.sendPacket(ActionFailed.STATIC_PACKET);
             return false;
         }
-        return true;
+
+        return target.getInstanceWorld() == player.getInstanceWorld() && target.isVisibleFor(player);
     }
 
     private WorldObject getTarget(Player player) {
@@ -110,7 +102,6 @@ public final class Attack extends ClientPacket {
             for (AbstractEffect effect : info.getEffects()) {
                 if (!effect.checkCondition(-1)) {
                     player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-                    player.sendPacket(ActionFailed.STATIC_PACKET);
                     return true;
                 }
             }
