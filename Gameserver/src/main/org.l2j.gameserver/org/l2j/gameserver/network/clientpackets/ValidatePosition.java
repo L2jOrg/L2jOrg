@@ -22,23 +22,16 @@ import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.13.4.7 $ $Date: 2005/03/27 15:29:30 $
- */
 public class ValidatePosition extends ClientPacket {
 
     private int _x;
     private int _y;
     private int _z;
     private int _heading;
-    private int _data; // vehicle id
 
     @Override
     public void readImpl() {
@@ -46,7 +39,7 @@ public class ValidatePosition extends ClientPacket {
         _y = readInt();
         _z = readInt();
         _heading = readInt();
-        _data = readInt();
+        readInt(); // vehicle id
     }
 
     @Override
