@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.handlers.itemhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -27,6 +26,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.settings.GeneralSettings;
 
 import static org.l2j.gameserver.util.GameUtils.isMonster;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -39,7 +39,7 @@ public final class Harvester implements IItemHandler
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (!Config.ALLOW_MANOR)
+		if (!GeneralSettings.allowManor())
 		{
 			return false;
 		}

@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.settings.GeneralSettings;
 
 import static org.l2j.gameserver.util.GameUtils.*;
 
@@ -42,7 +43,7 @@ public class Seed implements IItemHandler
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (!Config.ALLOW_MANOR)
+		if (!GeneralSettings.allowManor())
 		{
 			return false;
 		}

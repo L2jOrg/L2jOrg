@@ -77,6 +77,10 @@ public class GeneralSettings {
     private static int instanceEjectDeadTime;
     private static boolean allowWater;
     private static boolean allowFishing;
+    private static boolean allowManor;
+    private static boolean enableCommunity;
+    private static String bbsDefault;
+    private static int worldChatPointsPerDay;
 
     private GeneralSettings() {
         // helper class
@@ -145,6 +149,10 @@ public class GeneralSettings {
 
         allowWater = settingsFile.getBoolean("AllowWater", true);
         allowFishing = settingsFile.getBoolean("AllowFishing", true);
+        allowManor = settingsFile.getBoolean("AllowManor", true);
+        enableCommunity = settingsFile.getBoolean("EnableCommunityBoard", true);
+        bbsDefault = settingsFile.getString("BBSDefault", "_bbshome");
+        worldChatPointsPerDay = settingsFile.getInt("WorldChatPointsPerDay", 10);
      }
 
     public static int banChatAdenaAdsReportCount() {
@@ -321,5 +329,21 @@ public class GeneralSettings {
 
     public static boolean allowFishing() {
         return allowFishing;
+    }
+
+    public static boolean allowManor() {
+        return allowManor;
+    }
+
+    public static boolean enableCommunity() {
+        return enableCommunity;
+    }
+
+    public static String bbsDefault() {
+        return bbsDefault;
+    }
+
+    public static int worldChatPointsPerDay() {
+        return worldChatPointsPerDay;
     }
 }

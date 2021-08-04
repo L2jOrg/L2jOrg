@@ -7782,7 +7782,7 @@ public final class Player extends Playable {
      * @return The amount of times player can use world chat
      */
     public int getWorldChatPoints() {
-        return (int) getStats().getValue(Stat.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
+        return (int) getStats().getValue(Stat.WORLD_CHAT_POINTS, GeneralSettings.worldChatPointsPerDay());
     }
 
     /**

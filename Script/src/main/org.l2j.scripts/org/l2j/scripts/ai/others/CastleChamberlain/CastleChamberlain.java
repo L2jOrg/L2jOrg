@@ -46,6 +46,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
@@ -1014,7 +1015,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 			}
 			case "manor":
 			{
-				if (Config.ALLOW_MANOR)
+				if (GeneralSettings.allowManor())
 				{
 					htmltext = (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN)) ? "manor.html" : "chamberlain-21.html";
 				}

@@ -250,11 +250,6 @@ public class EnterWorld extends ClientPacket {
             notice.replace("%notice_text%", player.getClan().getNotice().replaceAll("\r\n", "<br>"));
             notice.disableValidation();
             client.sendPacket(notice);
-        } else if (Config.SERVER_NEWS) {
-            final String serverNews = HtmCache.getInstance().getHtm(player, "data/html/servnews.htm");
-            if (serverNews != null) {
-                client.sendPacket(new NpcHtmlMessage(serverNews));
-            }
         }
 
         if (CharacterSettings.petitionAllowed()) {
