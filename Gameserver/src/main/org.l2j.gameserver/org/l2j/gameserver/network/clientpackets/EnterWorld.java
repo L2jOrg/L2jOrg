@@ -109,20 +109,9 @@ public class EnterWorld extends ClientPacket {
         }
 
         client.setConnectionState(ConnectionState.IN_GAME);
-
-/*
-        TODO send address to authserver
-        final String[] address = new String[5];
-        for (int i = 0; i < 5; i++) {
-            address[i] = tracert[i][0] + "." + tracert[i][1] + "." + tracert[i][2] + "." + tracert[i][3];
-        }
-
-        AuthServerCommunication.getInstance().sendClientTracert(activeChar.getAccountName(), adress);*/
-
         client.setClientTracert(tracert);
 
         restoreInstance(player);
-
         player.updatePvpTitleAndColor(false);
 
         if (player.isGM()) {
@@ -141,8 +130,7 @@ public class EnterWorld extends ClientPacket {
             player.sendPacket(new ExVitalityEffectInfo(player));
         }
 
-        if (Config.ENABLE_MAGIC_LAMP)
-        {
+        if (Config.ENABLE_MAGIC_LAMP) {
             player.sendPacket(new ExMagicLampExpInfoUI(player));
         }
 
