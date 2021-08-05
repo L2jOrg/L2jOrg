@@ -193,120 +193,123 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
         // Schedule mode change
         ThreadPool.schedule(this::changeMode, (nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
     }
-    public final void changeMode() {
+    public void changeMode() {
         switch (mode) {
-            case APPROVED: {
-                // Change mode
-                mode = ManorMode.MAINTENANCE;
-
-                // Update manor period
-                for (Castle castle : CastleManager.getInstance().getCastles()) {
-                    final Clan owner = castle.getOwner();
-                    if (owner == null) {
-                        continue;
-                    }
-
-                    final int castleId = castle.getId();
-                    final ItemContainer cwh = owner.getWarehouse();
-                    for (CropProcure crop : procures.get(castleId)) {
-                        if (crop.getStartAmount() > 0) {
-                            // Adding bought crops to clan warehouse
-                            if (crop.getStartAmount() != crop.getAmount()) {
-                                long count = (long) ((crop.getStartAmount() - crop.getAmount()) * 0.9);
-                                if ((count < 1) && (Rnd.get(99) < 90)) {
-                                    count = 1;
-                                }
-
-                                if (count > 0) {
-                                    cwh.addItem("Manor", getSeedByCrop(crop.getSeedId()).getMatureId(), count, null, null);
-                                }
-                            }
-                            // Reserved and not used money giving back to treasury
-                            if (crop.getAmount() > 0) {
-                                castle.addToTreasuryNoTax(crop.getAmount() * crop.getPrice());
-                            }
-                        }
-                    }
-
-                    // Change next period to current and prepare next period data
-                    final List<SeedProduction> _nextProduction = productionsNext.get(castleId);
-                    final List<CropProcure> _nextProcure = procuresNext.get(castleId);
-
-                    productions.put(castleId, _nextProduction);
-                    procures.put(castleId, _nextProcure);
-
-                    if (castle.getTreasury() < getManorCost(castleId, false)) {
-                        productionsNext.put(castleId, Collections.emptyList());
-                        procuresNext.put(castleId, Collections.emptyList());
-                    } else {
-                        final List<SeedProduction> production = new ArrayList<>(_nextProduction);
-                        for (SeedProduction s : production) {
-                            s.setAmount(s.getStartAmount());
-                        }
-                        productionsNext.put(castleId, production);
-
-                        final List<CropProcure> procure = new ArrayList<>(_nextProcure);
-                        for (CropProcure cr : procure) {
-                            cr.setAmount(cr.getStartAmount());
-                        }
-                        procuresNext.put(castleId, procure);
-                    }
-                }
-
-                // Save changes
-                storeMe();
-                break;
-            }
-            case MAINTENANCE: {
-                // Notify clan leader about manor mode change
-                for (Castle castle : CastleManager.getInstance().getCastles()) {
-                    final Clan owner = castle.getOwner();
-                    if (owner != null) {
-                        final ClanMember clanLeader = owner.getLeader();
-                        if ((clanLeader != null) && clanLeader.isOnline()) {
-                            clanLeader.getPlayerInstance().sendPacket(SystemMessageId.THE_MANOR_INFORMATION_HAS_BEEN_UPDATED);
-                        }
-                    }
-                }
-                mode = ManorMode.MODIFIABLE;
-                break;
-            }
-            case MODIFIABLE: {
-                mode = ManorMode.APPROVED;
-
-                for (Castle castle : CastleManager.getInstance().getCastles()) {
-                    final Clan owner = castle.getOwner();
-                    if (owner == null) {
-                        continue;
-                    }
-
-                    int slots = 0;
-                    final int castleId = castle.getId();
-                    final ItemContainer cwh = owner.getWarehouse();
-                    for (CropProcure crop : procuresNext.get(castleId)) {
-                        if ((crop.getStartAmount() > 0) && (cwh.getItemsByItemId(getSeedByCrop(crop.getSeedId()).getMatureId()) == null)) {
-                            slots++;
-                        }
-                    }
-
-                    final long manorCost = getManorCost(castleId, true);
-                    if (!cwh.validateCapacity(slots) && (castle.getTreasury() < manorCost)) {
-                        productionsNext.get(castleId).clear();
-                        procuresNext.get(castleId).clear();
-
-                        // Notify clan leader
-                        final ClanMember clanLeader = owner.getLeader();
-                        if ((clanLeader != null) && clanLeader.isOnline()) {
-                            clanLeader.getPlayerInstance().sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE);
-                        }
-                    } else {
-                        castle.addToTreasuryNoTax(-manorCost);
-                    }
-                }
-                break;
-            }
+            case APPROVED -> changeToMaintance();
+            case MAINTENANCE -> changeToModifiable();
+            case MODIFIABLE -> changeToApproved();
         }
         scheduleModeChange();
+    }
+
+    private void changeToApproved() {
+        mode = ManorMode.APPROVED;
+
+        for (Castle castle : CastleManager.getInstance().getCastles()) {
+            final Clan owner = castle.getOwner();
+            if (owner == null) {
+                continue;
+            }
+
+            int slots = 0;
+            final int castleId = castle.getId();
+            final ItemContainer cwh = owner.getWarehouse();
+            for (CropProcure crop : procuresNext.get(castleId)) {
+                if ((crop.getStartAmount() > 0) && (cwh.getItemsByItemId(getSeedByCrop(crop.getSeedId()).getMatureId()) == null)) {
+                    slots++;
+                }
+            }
+
+            final long manorCost = getManorCost(castleId, true);
+            if (!cwh.validateCapacity(slots) && (castle.getTreasury() < manorCost)) {
+                productionsNext.get(castleId).clear();
+                procuresNext.get(castleId).clear();
+
+                // Notify clan leader
+                final ClanMember clanLeader = owner.getLeader();
+                if ((clanLeader != null) && clanLeader.isOnline()) {
+                    clanLeader.getPlayerInstance().sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE);
+                }
+            } else {
+                castle.addToTreasuryNoTax(-manorCost);
+            }
+        }
+    }
+
+    private void changeToModifiable() {
+        // Notify clan leader about manor mode change
+        for (Castle castle : CastleManager.getInstance().getCastles()) {
+            final Clan owner = castle.getOwner();
+            if (owner != null) {
+                final ClanMember clanLeader = owner.getLeader();
+                if ((clanLeader != null) && clanLeader.isOnline()) {
+                    clanLeader.getPlayerInstance().sendPacket(SystemMessageId.THE_MANOR_INFORMATION_HAS_BEEN_UPDATED);
+                }
+            }
+        }
+        mode = ManorMode.MODIFIABLE;
+    }
+
+    private void changeToMaintance() {
+        // Change mode
+        mode = ManorMode.MAINTENANCE;
+
+        // Update manor period
+        for (Castle castle : CastleManager.getInstance().getCastles()) {
+            final Clan owner = castle.getOwner();
+            if (owner == null) {
+                continue;
+            }
+
+            final int castleId = castle.getId();
+            final ItemContainer cwh = owner.getWarehouse();
+            for (CropProcure crop : procures.get(castleId)) {
+                if (crop.getStartAmount() > 0) {
+                    // Adding bought crops to clan warehouse
+                    if (crop.getStartAmount() != crop.getAmount()) {
+                        long count = (long) ((crop.getStartAmount() - crop.getAmount()) * 0.9);
+                        if ((count < 1) && (Rnd.get(99) < 90)) {
+                            count = 1;
+                        }
+
+                        if (count > 0) {
+                            cwh.addItem("Manor", getSeedByCrop(crop.getSeedId()).getMatureId(), count, null, null);
+                        }
+                    }
+                    // Reserved and not used money giving back to treasury
+                    if (crop.getAmount() > 0) {
+                        castle.addToTreasuryNoTax(crop.getAmount() * crop.getPrice());
+                    }
+                }
+            }
+
+            // Change next period to current and prepare next period data
+            final List<SeedProduction> _nextProduction = productionsNext.get(castleId);
+            final List<CropProcure> _nextProcure = procuresNext.get(castleId);
+
+            productions.put(castleId, _nextProduction);
+            procures.put(castleId, _nextProcure);
+
+            if (castle.getTreasury() < getManorCost(castleId, false)) {
+                productionsNext.put(castleId, Collections.emptyList());
+                procuresNext.put(castleId, Collections.emptyList());
+            } else {
+                final List<SeedProduction> production = new ArrayList<>(_nextProduction);
+                for (SeedProduction s : production) {
+                    s.setAmount(s.getStartAmount());
+                }
+                productionsNext.put(castleId, production);
+
+                final List<CropProcure> procure = new ArrayList<>(_nextProcure);
+                for (CropProcure cr : procure) {
+                    cr.setAmount(cr.getStartAmount());
+                }
+                procuresNext.put(castleId, procure);
+            }
+        }
+
+        // Save changes
+        storeMe();
     }
 
     public final void setNextSeedProduction(List<SeedProduction> list, int castleId) {
