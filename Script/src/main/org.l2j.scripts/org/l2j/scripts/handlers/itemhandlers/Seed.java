@@ -19,7 +19,6 @@
  */
 package org.l2j.scripts.handlers.itemhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;

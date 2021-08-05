@@ -91,6 +91,10 @@ public final class RequestBypassToServer extends ClientPacket {
 
     @Override
     public void runImpl() {
+        if (!client.getFloodProtectors().getServerBypass().tryPerformAction(bypass)) {
+            return;
+        }
+
         var player = client.getPlayer();
 
         if (bypass.isEmpty()) {
@@ -120,15 +124,15 @@ public final class RequestBypassToServer extends ClientPacket {
             }
         }
 
-        if (!client.getFloodProtectors().getServerBypass().tryPerformAction(bypass)) {
-            return;
-        }
-
         final TerminateReturn terminateReturn = EventDispatcher.getInstance().notifyEvent(new OnPlayerBypass(player, bypass), player, TerminateReturn.class);
         if ((terminateReturn != null) && terminateReturn.terminate()) {
             return;
         }
 
+        useBypass(player, bypassOriginId);
+    }
+
+    private void useBypass(Player player, int bypassOriginId) {
         try {
             if (bypass.startsWith("admin_")) {
                 AdminCommandHandler.getInstance().useAdminCommand(player, bypass, true);
@@ -137,81 +141,17 @@ public final class RequestBypassToServer extends ClientPacket {
             } else if (bypass.equals("come_here") && player.isGM()) {
                 comeHere(player);
             } else if (bypass.startsWith("npc_")) {
-                final int endOfId = bypass.indexOf('_', 5);
-                String id;
-                if (endOfId > 0) {
-                    id = bypass.substring(4, endOfId);
-                } else {
-                    id = bypass.substring(4);
-                }
-
-                if (isInteger(id)) {
-                    final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
-
-                    if (object instanceof Npc npc && (endOfId > 0) && isInsideRadius2D(player, object, Npc.INTERACTION_DISTANCE)) {
-                        npc.onBypassFeedback(player, bypass.substring(endOfId + 1));
-                    }
-                }
-
-                player.sendPacket(ActionFailed.STATIC_PACKET);
+                onNpcBypass(player);
             } else if (bypass.startsWith("item_")) {
-                final int endOfId = bypass.indexOf('_', 5);
-                String id;
-                if (endOfId > 0) {
-                    id = bypass.substring(5, endOfId);
-                } else {
-                    id = bypass.substring(5);
-                }
-                try {
-                    final Item item = player.getInventory().getItemByObjectId(Integer.parseInt(id));
-                    if ((item != null) && (endOfId > 0)) {
-                        item.onBypassFeedback(player, bypass.substring(endOfId + 1));
-                    }
-
-                    player.sendPacket(ActionFailed.STATIC_PACKET);
-                } catch (NumberFormatException nfe) {
-                    LOGGER.warn("NFE for command [" + bypass + "]", nfe);
-                }
+                onItemBypass(player);
             } else if (bypass.startsWith("menu_select")) {
-                final Npc lastNpc = player.getLastFolkNPC();
-                if ((lastNpc != null) && lastNpc.canInteract(player)) {
-                    final String[] split = bypass.substring(bypass.indexOf("?") + 1).split("&");
-                    final int ask = Integer.parseInt(split[0].split("=")[1]);
-                    final int reply = Integer.parseInt(split[1].split("=")[1]);
-                    EventDispatcher.getInstance().notifyEventAsync(new OnNpcMenuSelect(player, lastNpc, ask, reply), lastNpc);
-                }
+                onMenuSelect(player);
             } else if (bypass.startsWith("manor_menu_select")) {
-                final Npc lastNpc = player.getLastFolkNPC();
-                if (GeneralSettings.allowManor() && (lastNpc != null) && lastNpc.canInteract(player)) {
-                    final String[] split = bypass.substring(bypass.indexOf("?") + 1).split("&");
-                    final int ask = Integer.parseInt(split[0].split("=")[1]);
-                    final int state = Integer.parseInt(split[1].split("=")[1]);
-                    final boolean time = split[2].split("=")[1].equals("1");
-                    EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(player, lastNpc, ask, state, time), lastNpc);
-                }
+                onManorMenuSelect(player);
             } else if (bypass.startsWith("pccafe")) {
-                if (!Config.PC_CAFE_ENABLED) {
-                    return;
-                }
-                final int multisellId = Integer.parseInt(bypass.substring(10).trim());
-                MultisellEngine.getInstance().separateAndSend(multisellId, player, null, false);
+                onPcCafeBypass(player);
             } else {
-                bypass = bypass.replace("?", " ");
-                final IBypassHandler handler = BypassHandler.getInstance().getHandler(bypass);
-                if (nonNull(handler)) {
-                    if (bypassOriginId > 0) {
-                        final WorldObject bypassOrigin = World.getInstance().findObject(bypassOriginId);
-                        if (isCreature(bypassOrigin)) {
-                            handler.useBypass(bypass, player, (Creature) bypassOrigin);
-                        } else {
-                            handler.useBypass(bypass, player, null);
-                        }
-                    } else {
-                        handler.useBypass(bypass, player, null);
-                    }
-                } else {
-                    LOGGER.warn("{} sent not handled RequestBypassToServer: [{}]", client, bypass);
-                }
+                useBypassHandler(player, bypassOriginId);
             }
         } catch (Exception e) {
             LOGGER.error("Exception processing bypass from player {} : {}", player, bypass, e);
@@ -232,5 +172,93 @@ public final class RequestBypassToServer extends ClientPacket {
                 player.sendPacket(msg);
             }
         }
+    }
+
+    private void useBypassHandler(Player player, int bypassOriginId) {
+        bypass = bypass.replace("?", " ");
+        final IBypassHandler handler = BypassHandler.getInstance().getHandler(bypass);
+        if (nonNull(handler)) {
+            if (bypassOriginId > 0) {
+                final WorldObject bypassOrigin = World.getInstance().findObject(bypassOriginId);
+                if (isCreature(bypassOrigin)) {
+                    handler.useBypass(bypass, player, (Creature) bypassOrigin);
+                } else {
+                    handler.useBypass(bypass, player, null);
+                }
+            } else {
+                handler.useBypass(bypass, player, null);
+            }
+        } else {
+            LOGGER.warn("{} sent not handled RequestBypassToServer: [{}]", client, bypass);
+        }
+    }
+
+    private void onPcCafeBypass(Player player) {
+        if (!Config.PC_CAFE_ENABLED) {
+            return;
+        }
+        final int multisellId = Integer.parseInt(bypass.substring(10).trim());
+        MultisellEngine.getInstance().separateAndSend(multisellId, player, null, false);
+    }
+
+    private void onManorMenuSelect(Player player) {
+        final Npc lastNpc = player.getLastFolkNPC();
+        if (GeneralSettings.allowManor() && (lastNpc != null) && lastNpc.canInteract(player)) {
+            final String[] split = bypass.substring(bypass.indexOf("?") + 1).split("&");
+            final int ask = Integer.parseInt(split[0].split("=")[1]);
+            final int state = Integer.parseInt(split[1].split("=")[1]);
+            final boolean time = split[2].split("=")[1].equals("1");
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(player, lastNpc, ask, state, time), lastNpc);
+        }
+    }
+
+    private void onMenuSelect(Player player) {
+        final Npc lastNpc = player.getLastFolkNPC();
+        if ((lastNpc != null) && lastNpc.canInteract(player)) {
+            final String[] split = bypass.substring(bypass.indexOf("?") + 1).split("&");
+            final int ask = Integer.parseInt(split[0].split("=")[1]);
+            final int reply = Integer.parseInt(split[1].split("=")[1]);
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcMenuSelect(player, lastNpc, ask, reply), lastNpc);
+        }
+    }
+
+    private void onItemBypass(Player player) {
+        final int endOfId = bypass.indexOf('_', 5);
+        String id;
+        if (endOfId > 0) {
+            id = bypass.substring(5, endOfId);
+        } else {
+            id = bypass.substring(5);
+        }
+        try {
+            final Item item = player.getInventory().getItemByObjectId(Integer.parseInt(id));
+            if ((item != null) && (endOfId > 0)) {
+                item.onBypassFeedback(player, bypass.substring(endOfId + 1));
+            }
+
+            player.sendPacket(ActionFailed.STATIC_PACKET);
+        } catch (NumberFormatException nfe) {
+            LOGGER.warn("NFE for command [" + bypass + "]", nfe);
+        }
+    }
+
+    private void onNpcBypass(Player player) {
+        final int endOfId = bypass.indexOf('_', 5);
+        String id;
+        if (endOfId > 0) {
+            id = bypass.substring(4, endOfId);
+        } else {
+            id = bypass.substring(4);
+        }
+
+        if (isInteger(id)) {
+            final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
+
+            if (object instanceof Npc npc && (endOfId > 0) && isInsideRadius2D(player, object, Npc.INTERACTION_DISTANCE)) {
+                npc.onBypassFeedback(player, bypass.substring(endOfId + 1));
+            }
+        }
+
+        player.sendPacket(ActionFailed.STATIC_PACKET);
     }
 }
