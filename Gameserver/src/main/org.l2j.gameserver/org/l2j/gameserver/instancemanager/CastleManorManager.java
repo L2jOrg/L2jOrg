@@ -118,29 +118,27 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
 
     @Override
     public void parseDocument(Document doc, File f) {
+        var listNode = doc.getFirstChild();
+        var castleNode = listNode.getFirstChild();
+        parseCastle(castleNode);
+    }
+
+    private void parseCastle(Node d) {
         StatsSet set;
         NamedNodeMap attrs;
         Node att;
-        for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
-            if ("list".equalsIgnoreCase(n.getNodeName())) {
-                for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                    if ("castle".equalsIgnoreCase(d.getNodeName())) {
-                        final int castleId = parseInt(d.getAttributes(), "id");
-                        for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
-                            if ("crop".equalsIgnoreCase(c.getNodeName())) {
-                                set = new StatsSet();
-                                set.set("castleId", castleId);
+        final int castleId = parseInt(d.getAttributes(), "id");
+        for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
+            if ("crop".equalsIgnoreCase(c.getNodeName())) {
+                set = new StatsSet();
+                set.set("castleId", castleId);
 
-                                attrs = c.getAttributes();
-                                for (int i = 0; i < attrs.getLength(); i++) {
-                                    att = attrs.item(i);
-                                    set.set(att.getNodeName(), att.getNodeValue());
-                                }
-                                seeds.put(set.getInt("seedId"), new Seed(set));
-                            }
-                        }
-                    }
+                attrs = c.getAttributes();
+                for (int i = 0; i < attrs.getLength(); i++) {
+                    att = attrs.item(i);
+                    set.set(att.getNodeName(), att.getNodeValue());
                 }
+                seeds.put(set.getInt("seedId"), new Seed(set));
             }
         }
     }
@@ -318,23 +316,29 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
     private void giveLastPeriodMatureCrops(Castle castle, Clan owner, int castleId) {
         final ItemContainer cwh = owner.getWarehouse();
         for (CropProcure crop : procures.get(castleId)) {
-            if (crop.getStartAmount() > 0) {
-                // Adding bought crops to clan warehouse
-                if (crop.getStartAmount() != crop.getAmount()) {
-                    long count = (long) ((crop.getStartAmount() - crop.getAmount()) * 0.9);
-                    if ((count < 1) && (Rnd.get(99) < 90)) {
-                        count = 1;
-                    }
+            giveMatureCrop(castle, cwh, crop);
+        }
+    }
 
-                    if (count > 0) {
-                        cwh.addItem("Manor", getMatureIdByCrop(crop), count, null, null);
-                    }
-                }
-                // Reserved and not used money giving back to treasury
-                if (crop.getAmount() > 0) {
-                    castle.addToTreasuryNoTax(crop.getAmount() * crop.getPrice());
-                }
+    private void giveMatureCrop(Castle castle, ItemContainer cwh, CropProcure crop) {
+        if(crop.getStartAmount() <= 0) {
+            return;
+        }
+
+        // Adding bought crops to clan warehouse
+        if (crop.getStartAmount() != crop.getAmount()) {
+            long count = (long) ((crop.getStartAmount() - crop.getAmount()) * 0.9);
+            if ((count < 1) && (Rnd.get(99) < 90)) {
+                count = 1;
             }
+
+            if (count > 0) {
+                cwh.addItem("Manor", getMatureIdByCrop(crop), count, null, null);
+            }
+        }
+        // Reserved and not used money giving back to treasury
+        if (crop.getAmount() > 0) {
+            castle.addToTreasuryNoTax(crop.getAmount() * crop.getPrice());
         }
     }
 
