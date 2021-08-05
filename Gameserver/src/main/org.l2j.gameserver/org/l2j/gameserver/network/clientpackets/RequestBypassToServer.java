@@ -154,23 +154,27 @@ public final class RequestBypassToServer extends ClientPacket {
                 useBypassHandler(player, bypassOriginId);
             }
         } catch (Exception e) {
-            LOGGER.error("Exception processing bypass from player {} : {}", player, bypass, e);
+            showExcptionToGM(player, e);
+        }
+    }
 
-            if (player.isGM()) {
-                final StringBuilder sb = new StringBuilder(200);
-                sb.append("<html><body>").append("Bypass error: ").append(e).append("<br1>")
-                .append("Bypass command: ").append(bypass).append("<br1>")
-                .append("StackTrace:<br1>");
+    private void showExcptionToGM(Player player, Exception e) {
+        LOGGER.error("Exception processing bypass from player {} : {}", player, bypass, e);
 
-                for (StackTraceElement ste : e.getStackTrace()) {
-                    sb.append(ste).append("<br1>");
-                }
-                sb.append("</body></html>");
-                // item html
-                final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1, sb.toString());
-                msg.disableValidation();
-                player.sendPacket(msg);
+        if (player.isGM()) {
+            final StringBuilder sb = new StringBuilder(200);
+            sb.append("<html><body>").append("Bypass error: ").append(e).append("<br1>")
+            .append("Bypass command: ").append(bypass).append("<br1>")
+            .append("StackTrace:<br1>");
+
+            for (StackTraceElement ste : e.getStackTrace()) {
+                sb.append(ste).append("<br1>");
             }
+            sb.append("</body></html>");
+            // item html
+            final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1, sb.toString());
+            msg.disableValidation();
+            player.sendPacket(msg);
         }
     }
 
