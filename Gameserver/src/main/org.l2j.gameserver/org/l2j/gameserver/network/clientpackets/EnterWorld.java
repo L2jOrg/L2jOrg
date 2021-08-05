@@ -121,14 +121,7 @@ public class EnterWorld extends ClientPacket {
 
         client.setClientTracert(tracert);
 
-        // Restore to instanced area if enabled
-        if (GeneralSettings.restoreInstance()) {
-            final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
-            if ((instance != null) && (instance.getId() == player.getInstanceRestore())) {
-                player.setInstance(instance);
-            }
-            player.setInstanceRestore(-1);
-        }
+        restoreInstance(player);
 
         player.updatePvpTitleAndColor(false);
 
@@ -166,49 +159,6 @@ public class EnterWorld extends ClientPacket {
         player.sendSkillList();
         player.sendPacket(new EtcStatusUpdate(player));
 
-        boolean showClanNotice = false;
-
-        // Clan related checks are here
-        final Clan clan = player.getClan();
-        // Clan packets
-        if (clan != null) {
-            clan.onMemberLogin(player);
-            notifySponsorOrApprentice(player);
-
-            for (Siege siege : SiegeManager.getInstance().getSieges()) {
-                if (!siege.isInProgress()) {
-                    continue;
-                }
-
-                if (siege.checkIsAttacker(clan)) {
-                    player.setSiegeState((byte) 1);
-                    player.setSiegeSide(siege.getCastle().getId());
-                } else if (siege.checkIsDefender(clan)) {
-                    player.setSiegeState((byte) 2);
-                    player.setSiegeSide(siege.getCastle().getId());
-                }
-            }
-
-            // Residential skills support
-            if (player.getClan().getCastleId() > 0) {
-                CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
-            }
-
-            showClanNotice = clan.isNoticeEnabled();
-
-            clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(player));
-            PledgeShowMemberListAll.sendAllTo(player);
-            clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
-            player.sendPacket(new PledgeSkillList(clan));
-            final ClanHall ch = ClanHallEngine.getInstance().getClanHallByClan(clan);
-            if ((ch != null) && (ch.getCostFailDay() > 0)) {
-                var sm = getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(ch.getLease());
-                player.sendPacket(sm);
-            }
-        } else {
-            player.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
-        }
-
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExDressRoomUiOpen());
 
@@ -242,14 +192,7 @@ public class EnterWorld extends ClientPacket {
 
         AnnouncementsManager.getInstance().showAnnouncements(player);
 
-        if (showClanNotice) {
-            final NpcHtmlMessage notice = new NpcHtmlMessage();
-            notice.setFile(player, "data/html/clanNotice.htm");
-            notice.replace("%clan_name%", player.getClan().getName());
-            notice.replace("%notice_text%", player.getClan().getNotice().replaceAll("\r\n", "<br>"));
-            notice.disableValidation();
-            client.sendPacket(notice);
-        }
+        onClanMemberLogin(player);
 
         if (CharacterSettings.petitionAllowed()) {
             PetitionManager.getInstance().checkPetitionMessages(player);
@@ -298,6 +241,25 @@ public class EnterWorld extends ClientPacket {
 
         player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 
+        checkHardwareInfo();
+
+        restoreItems(player);
+        player.onEnter();
+        Quest.playerEnter(player);
+    }
+
+    private void restoreInstance(Player player) {
+        // Restore to instanced area if enabled
+        if (GeneralSettings.restoreInstance()) {
+            final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
+            if ((instance != null) && (instance.getId() == player.getInstanceRestore())) {
+                player.setInstance(instance);
+            }
+            player.setInstanceRestore(-1);
+        }
+    }
+
+    private void checkHardwareInfo() {
         if (ServerSettings.isHardwareInfoEnabled()) {
             ThreadPool.schedule(() -> {
                 if (client.getHardwareInfo() == null) {
@@ -305,10 +267,59 @@ public class EnterWorld extends ClientPacket {
                 }
             }, 5000);
         }
+    }
 
-        restoreItems(player);
-        player.onEnter();
-        Quest.playerEnter(player);
+    private void onClanMemberLogin(Player player) {
+        boolean showClanNotice = false;
+
+        // Clan related checks are here
+        final Clan clan = player.getClan();
+        // Clan packets
+        if (clan != null) {
+            clan.onMemberLogin(player);
+            notifySponsorOrApprentice(player);
+
+            for (Siege siege : SiegeManager.getInstance().getSieges()) {
+                if (!siege.isInProgress()) {
+                    continue;
+                }
+
+                if (siege.checkIsAttacker(clan)) {
+                    player.setSiegeState((byte) 1);
+                    player.setSiegeSide(siege.getCastle().getId());
+                } else if (siege.checkIsDefender(clan)) {
+                    player.setSiegeState((byte) 2);
+                    player.setSiegeSide(siege.getCastle().getId());
+                }
+            }
+
+            // Residential skills support
+            if (player.getClan().getCastleId() > 0) {
+                CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
+            }
+
+            showClanNotice = clan.isNoticeEnabled();
+
+            clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(player));
+            PledgeShowMemberListAll.sendAllTo(player);
+            clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
+            player.sendPacket(new PledgeSkillList(clan));
+            final ClanHall ch = ClanHallEngine.getInstance().getClanHallByClan(clan);
+            if ((ch != null) && (ch.getCostFailDay() > 0)) {
+                player.sendPacket(getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(ch.getLease()));
+            }
+        } else {
+            player.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
+        }
+
+        if (showClanNotice) {
+            final NpcHtmlMessage notice = new NpcHtmlMessage();
+            notice.setFile(player, "data/html/clanNotice.htm");
+            notice.replace("%clan_name%", player.getClan().getName());
+            notice.replace("%notice_text%", player.getClan().getNotice().replaceAll("\r\n", "<br>"));
+            notice.disableValidation();
+            client.sendPacket(notice);
+        }
     }
 
     private void restoreItems(Player player) {
