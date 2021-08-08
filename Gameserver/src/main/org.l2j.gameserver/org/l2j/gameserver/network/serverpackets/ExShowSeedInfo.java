@@ -29,25 +29,25 @@ import java.util.List;
  * @author l3x
  */
 public class ExShowSeedInfo extends ServerPacket {
-    private final List<Object> _seeds = Collections.emptyList();
-    private final int _manorId;
-    private final boolean _hideButtons;
+    private final List<Object> seeds = Collections.emptyList();
+    private final int manorId;
+    private final boolean hideButtons;
 
-    public ExShowSeedInfo(int manorId, boolean nextPeriod, boolean hideButtons) {
-        _manorId = manorId;
-        _hideButtons = hideButtons;
+    public ExShowSeedInfo(int manorId, boolean hideButtons) {
+        this.manorId = manorId;
+        this.hideButtons = hideButtons;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_SHOW_SEED_INFO, buffer );
 
-        buffer.writeByte(_hideButtons); // Hide "Seed Purchase" button
-        buffer.writeInt(_manorId); // Manor ID
+        buffer.writeByte(hideButtons); // Hide "Seed Purchase" button
+        buffer.writeInt(manorId); // Manor ID
         buffer.writeInt(0x00); // Unknown
 
-        buffer.writeInt(_seeds.size());
-        for (var ignored : _seeds) {
+        buffer.writeInt(seeds.size());
+        // for each seed
             buffer.writeInt(0x00); // Seed id
             buffer.writeLong(0x00); // amount Left to buy
             buffer.writeLong(0x00); // Started amount
@@ -58,7 +58,6 @@ public class ExShowSeedInfo extends ServerPacket {
             buffer.writeInt(0); // Reward 1 - item id
             buffer.writeByte(0x01); // Reward 2
             buffer.writeInt(0); // Reward 2 - item id
-        }
     }
 
 }

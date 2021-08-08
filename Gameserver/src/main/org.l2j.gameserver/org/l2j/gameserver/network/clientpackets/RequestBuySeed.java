@@ -18,12 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.settings.CharacterSettings;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author l3x
@@ -39,17 +35,17 @@ public class RequestBuySeed extends ClientPacket {
             throw new InvalidDataPacketException();
         }
 
-        List<ItemHolder> _items = new ArrayList<>(count);
         for (int i = 0; i < count; i++) {
             final int itemId = readInt();
             final long cnt = readLong();
             if ((cnt < 1) || (itemId < 1)) {
                 throw new InvalidDataPacketException();
             }
-            _items.add(new ItemHolder(itemId, cnt));
         }
     }
 
     @Override
-    public void runImpl() { }
+    public void runImpl() {
+        // do nothing
+    }
 }

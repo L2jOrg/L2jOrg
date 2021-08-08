@@ -29,11 +29,11 @@ import java.util.List;
  * @author l3x
  */
 public class ExShowCropInfo extends ServerPacket {
-    private final List<Object> _crops = Collections.emptyList();
+    private final List<Object> crops = Collections.emptyList();
     private final int _manorId;
     private final boolean _hideButtons;
 
-    public ExShowCropInfo(int manorId, boolean nextPeriod, boolean hideButtons) {
+    public ExShowCropInfo(int manorId, boolean hideButtons) {
         _manorId = manorId;
         _hideButtons = hideButtons;
 
@@ -47,8 +47,8 @@ public class ExShowCropInfo extends ServerPacket {
         buffer.writeInt(_manorId); // Manor ID
         buffer.writeInt(0x00);
 
-        buffer.writeInt(_crops.size());
-        for (var ignored : _crops) {
+        buffer.writeInt(crops.size());
+        // for each crop
             buffer.writeInt(0x00); // Crop id
             buffer.writeLong(0x00); // Buy amount residual
             buffer.writeLong(0x00); // Buy start amount
@@ -60,7 +60,6 @@ public class ExShowCropInfo extends ServerPacket {
             buffer.writeInt(0); // Reward 1 - item id
             buffer.writeByte(0x01); // Reward 2
             buffer.writeInt(0); // Reward 2 - item id
-        }
     }
 
 }

@@ -30,7 +30,7 @@ import java.util.Set;
  */
 public class ExShowCropSetting extends ServerPacket {
     private final int _manorId;
-    private final Set<Object> _seeds = Collections.emptySet();
+    private final Set<Object> seeds = Collections.emptySet();
 
     public ExShowCropSetting(int manorId) {
         _manorId = manorId;
@@ -41,9 +41,9 @@ public class ExShowCropSetting extends ServerPacket {
         writeId(ServerExPacketId.EX_SHOW_CROP_SETTING, buffer );
 
         buffer.writeInt(_manorId); // manor id
-        buffer.writeInt(_seeds.size()); // size
+        buffer.writeInt(seeds.size()); // size
 
-        for (var ignored : _seeds) {
+        // for each seed
             buffer.writeInt(0x00); // crop id
             buffer.writeInt(0x00); // seed level
             buffer.writeByte(1);
@@ -64,7 +64,6 @@ public class ExShowCropSetting extends ServerPacket {
             buffer.writeLong(0); // start amount
             buffer.writeLong(0); // price
             buffer.writeByte(0); // reward
-        }
     }
 
 }
