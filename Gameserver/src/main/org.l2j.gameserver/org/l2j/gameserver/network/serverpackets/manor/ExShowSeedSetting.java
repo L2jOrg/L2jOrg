@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.manor;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
@@ -28,7 +28,7 @@ import java.util.Set;
 /**
  * @author l3x
  */
-public class ExShowSeedSetting extends ServerPacket {
+public class ExShowSeedSetting extends ManorSetting {
     private final int manorId;
     private final Set<Object> seeds = Collections.emptySet();
 
@@ -39,28 +39,7 @@ public class ExShowSeedSetting extends ServerPacket {
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_SHOW_SEED_SETTING, buffer );
-
-        buffer.writeInt(manorId); // manor id
-        buffer.writeInt(seeds.size()); // size
-
-        // for each seed
-            buffer.writeInt(0x00); // seed id
-            buffer.writeInt(0x00); // level
-            buffer.writeByte(1);
-            buffer.writeInt(0x00); // reward 1 id
-            buffer.writeByte(1);
-            buffer.writeInt(0x00); // reward 2 id
-            buffer.writeInt(0x00); // next sale limit
-            buffer.writeInt(0x00); // price for castle to produce 1
-            buffer.writeInt(0x00); // min seed price
-            buffer.writeInt(0x00); // max seed price
-            // Current period
-            buffer.writeLong(0); // start amount
-            buffer.writeLong(0); // price
-            // Next period
-            buffer.writeLong(0); // start amount sale
-            buffer.writeLong(0); // price
-
+        writeSeeds(buffer, manorId, seeds);
     }
 
 }

@@ -43,11 +43,12 @@ public class SellListProcure extends ServerPacket {
         buffer.writeInt(0x00); // lease ?
         buffer.writeShort(sellList.size()); // list size
 
-        for (Item item : sellList.keySet()) {
+        for (var entry : sellList.entrySet()) {
+            var item = entry.getKey();
             buffer.writeShort(item.getTemplate().getType1());
             buffer.writeInt(item.getObjectId());
             buffer.writeInt(item.getDisplayId());
-            buffer.writeLong(sellList.get(item)); // count
+            buffer.writeLong(entry.getValue()); // count
             buffer.writeShort(item.getType2());
             buffer.writeShort(0); // unknown
             buffer.writeLong(0); // price, u shouldnt get any adena for crops, only raw materials
