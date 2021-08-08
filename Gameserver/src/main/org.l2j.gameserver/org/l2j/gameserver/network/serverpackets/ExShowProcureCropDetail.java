@@ -19,14 +19,10 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.database.data.CropProcure;
-import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.CastleManorManager;
-import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -34,17 +30,10 @@ import java.util.Map;
  */
 public class ExShowProcureCropDetail extends ServerPacket {
     private final int _cropId;
-    private final Map<Integer, CropProcure> _castleCrops = new HashMap<>();
+    private final Map<Integer, Object> _castleCrops = Collections.emptyMap();
 
     public ExShowProcureCropDetail(int cropId) {
         _cropId = cropId;
-
-        for (Castle c : CastleManager.getInstance().getCastles()) {
-            final CropProcure cropItem = CastleManorManager.getInstance().getCropProcure(c.getId(), cropId, false);
-            if ((cropItem != null) && (cropItem.getAmount() > 0)) {
-                _castleCrops.put(c.getId(), cropItem);
-            }
-        }
     }
 
     @Override
@@ -54,12 +43,11 @@ public class ExShowProcureCropDetail extends ServerPacket {
         buffer.writeInt(_cropId); // crop id
         buffer.writeInt(_castleCrops.size()); // size
 
-        for (Map.Entry<Integer, CropProcure> entry : _castleCrops.entrySet()) {
-            final CropProcure crop = entry.getValue();
+        for (Map.Entry<Integer, Object> entry : _castleCrops.entrySet()) {
             buffer.writeInt(entry.getKey()); // manor name
-            buffer.writeLong(crop.getAmount()); // buy residual
-            buffer.writeLong(crop.getPrice()); // buy price
-            buffer.writeByte(crop.getReward()); // reward type
+            buffer.writeLong(0x00); // buy residual amount
+            buffer.writeLong(0x00); // buy price
+            buffer.writeByte(0x00); // reward type
         }
     }
 

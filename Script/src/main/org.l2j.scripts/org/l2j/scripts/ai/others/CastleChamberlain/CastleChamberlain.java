@@ -24,7 +24,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.CastleSide;
-import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.PcCondOverride;
@@ -33,24 +32,14 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Merchant;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
-import org.l2j.gameserver.model.events.EventType;
-import org.l2j.gameserver.model.events.ListenerRegisterType;
-import org.l2j.gameserver.model.events.annotations.Id;
-import org.l2j.gameserver.model.events.annotations.RegisterEvent;
-import org.l2j.gameserver.model.events.annotations.RegisterType;
-import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
-import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.scripts.ai.AbstractNpcAI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
 import java.util.StringTokenizer;
@@ -63,7 +52,6 @@ import static org.l2j.commons.util.Util.parseNextInt;
  */
 public final class CastleChamberlain extends AbstractNpcAI
 {
-	private static final Logger LOGGER = LoggerFactory.getLogger(CastleChamberlain.class);
 	// NPCs
 	//@formatter:off
 	private static final int[] NPC =
@@ -372,7 +360,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 		final boolean isMyLord = player.isClanLeader() && (player.getClan().getCastleId() == (npc.getCastle() != null ? npc.getCastle().getId() : -1));
 
 		return switch (st.nextToken()) {
-			case CHAMBERLAIN_01_HTML, "manor-help-01.html", "manor-help-02.html", "manor-help-03.html", "manor-help-04.html" -> event;
+			case CHAMBERLAIN_01_HTML -> event;
 			case "siege_functions" -> siegeFunctions(npc, player, castle);
 			case "manage_doors" -> manageDoors(npc, player, st);
 			case "upgrade_doors" -> upgradeDoors(event, npc, player, st);
@@ -406,7 +394,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 			case "buffer" -> buffer(npc, player, castle);
 			case "cast_buff" -> castBuff(npc, player, castle, st);
 			case "list_siege_clans" -> listSiegeClans(npc, player, castle);
-			case "manor" -> manor(npc, player);
 			case "products" -> products(npc, player);
 			case "buy" -> buy(npc, player, st);
 			case "give_cloak" -> giveCloak(npc, player, castle, isMyLord);
@@ -498,16 +485,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 			player.sendPacket(html);
 		} else {
 			htmlText = "chamberlain-21.html";
-		}
-		return htmlText;
-	}
-
-	private String manor(Npc npc, Player player) {
-		String htmlText = null;
-		if (GeneralSettings.allowManor()) {
-			htmlText = (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN)) ? "manor.html" : "chamberlain-21.html";
-		} else {
-			player.sendMessage("Manor system is deactivated.");
 		}
 		return htmlText;
 	}
@@ -1009,70 +986,6 @@ public final class CastleChamberlain extends AbstractNpcAI
 	public String onFirstTalk(Npc npc, Player player)
 	{
 		return (isOwner(player, npc)) ? CHAMBERLAIN_01_HTML : "chamberlain-04.html";
-	}
-	
-	// @formatter:off
-	@RegisterEvent(EventType.ON_NPC_MANOR_BYPASS)
-	@RegisterType(ListenerRegisterType.NPC)
-	@Id({35100, 35142, 35184, 35226, 35274,	35316, 35363, 35509, 35555, 36653, 36654, 36655, 36656, 36657, 36658, 36659, 36660, 36661})
-	// @formatter:on
-	public final void onNpcManorBypass(OnNpcManorBypass evt)
-	{
-		final Player player = evt.getActiveChar();
-		final Npc npc = evt.getTarget();
-		if (isOwner(player, npc))
-		{
-			final CastleManorManager manor = CastleManorManager.getInstance();
-			if (manor.isUnderMaintenance())
-			{
-				player.sendPacket(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE);
-				return;
-			}
-			
-			final int castleId = (evt.getManorId() == -1) ? npc.getCastle().getId() : evt.getManorId();
-			switch (evt.getRequest())
-			{
-				case 3: // Seed info
-				{
-					player.sendPacket(new ExShowSeedInfo(castleId, evt.isNextPeriod(), true));
-					break;
-				}
-				case 4: // Crop info
-				{
-					player.sendPacket(new ExShowCropInfo(castleId, evt.isNextPeriod(), true));
-					break;
-				}
-				case 5: // Basic info
-				{
-					player.sendPacket(new ExShowManorDefaultInfo(true));
-					break;
-				}
-				case 7: // Seed settings
-				{
-					if (manor.isManorApproved())
-					{
-						player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM);
-						return;
-					}
-					player.sendPacket(new ExShowSeedSetting(castleId));
-					break;
-				}
-				case 8: // Crop settings
-				{
-					if (manor.isManorApproved())
-					{
-						player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM);
-						return;
-					}
-					player.sendPacket(new ExShowCropSetting(castleId));
-					break;
-				}
-				default:
-				{
-					LOGGER.warn(": Player " + player.getName() + " (" + player.getObjectId() + ") send unknown request id " + evt.getRequest() + "!");
-				}
-			}
-		}
 	}
 	
 	public static AbstractNpcAI provider()

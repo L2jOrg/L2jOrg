@@ -31,14 +31,12 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
-import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -68,7 +66,6 @@ public final class RequestBypassToServer extends ClientPacket {
         "_match",
         "_olympiad?command",
         "menu_select",
-        "manor_menu_select",
         "pccafe",
         "dimensional"
     };
@@ -146,8 +143,6 @@ public final class RequestBypassToServer extends ClientPacket {
                 onItemBypass(player);
             } else if (bypass.startsWith("menu_select")) {
                 onMenuSelect(player);
-            } else if (bypass.startsWith("manor_menu_select")) {
-                onManorMenuSelect(player);
             } else if (bypass.startsWith("pccafe")) {
                 onPcCafeBypass(player);
             } else {
@@ -203,17 +198,6 @@ public final class RequestBypassToServer extends ClientPacket {
         }
         final int multisellId = Integer.parseInt(bypass.substring(10).trim());
         MultisellEngine.getInstance().separateAndSend(multisellId, player, null, false);
-    }
-
-    private void onManorMenuSelect(Player player) {
-        final Npc lastNpc = player.getLastFolkNPC();
-        if (GeneralSettings.allowManor() && (lastNpc != null) && lastNpc.canInteract(player)) {
-            final String[] split = bypass.substring(bypass.indexOf("?") + 1).split("&");
-            final int ask = Integer.parseInt(split[0].split("=")[1]);
-            final int state = Integer.parseInt(split[1].split("=")[1]);
-            final boolean time = split[2].split("=")[1].equals("1");
-            EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(player, lastNpc, ask, state, time), lastNpc);
-        }
     }
 
     private void onMenuSelect(Player player) {

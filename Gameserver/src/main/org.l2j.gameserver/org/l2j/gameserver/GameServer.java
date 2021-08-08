@@ -203,7 +203,6 @@ public class GameServer {
         SiegeManager.init();
         CastleManager.getInstance().activateInstances();
         SiegeScheduleData.getInstance();
-        CastleManorManager.getInstance();
         SiegeGuardManager.init();
         QuestManager.getInstance().report();
 

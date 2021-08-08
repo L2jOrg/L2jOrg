@@ -139,13 +139,6 @@ public final class Config {
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
-
-    public static int ALT_MANOR_REFRESH_TIME;
-    public static int ALT_MANOR_REFRESH_MIN;
-    public static int ALT_MANOR_APPROVE_TIME;
-    public static int ALT_MANOR_APPROVE_MIN;
-    public static int ALT_MANOR_MAINTENANCE_MIN;
-    public static int ALT_MANOR_SAVE_PERIOD_RATE;
     public static boolean ALT_ITEM_AUCTION_ENABLED;
     public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
     public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
@@ -180,7 +173,6 @@ public final class Config {
     public static FloodProtectorConfig FLOOD_PROTECTOR_MULTISELL;
     public static FloodProtectorConfig FLOOD_PROTECTOR_TRANSACTION;
     public static FloodProtectorConfig FLOOD_PROTECTOR_MANUFACTURE;
-    public static FloodProtectorConfig FLOOD_PROTECTOR_MANOR;
     public static FloodProtectorConfig FLOOD_PROTECTOR_SENDMAIL;
     public static FloodProtectorConfig FLOOD_PROTECTOR_CHARACTER_SELECT;
     public static FloodProtectorConfig FLOOD_PROTECTOR_ITEM_AUCTION;
@@ -564,7 +556,6 @@ public final class Config {
         FLOOD_PROTECTOR_MULTISELL = new FloodProtectorConfig("MultiSellFloodProtector");
         FLOOD_PROTECTOR_TRANSACTION = new FloodProtectorConfig("TransactionFloodProtector");
         FLOOD_PROTECTOR_MANUFACTURE = new FloodProtectorConfig("ManufactureFloodProtector");
-        FLOOD_PROTECTOR_MANOR = new FloodProtectorConfig("ManorFloodProtector");
         FLOOD_PROTECTOR_SENDMAIL = new FloodProtectorConfig("SendMailFloodProtector");
         FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
         FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
@@ -621,12 +612,6 @@ public final class Config {
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 
-        ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
-        ALT_MANOR_REFRESH_MIN = General.getInt("AltManorRefreshMin", 0);
-        ALT_MANOR_APPROVE_TIME = General.getInt("AltManorApproveTime", 4);
-        ALT_MANOR_APPROVE_MIN = General.getInt("AltManorApproveMin", 30);
-        ALT_MANOR_MAINTENANCE_MIN = General.getInt("AltManorMaintenanceMin", 6);
-        ALT_MANOR_SAVE_PERIOD_RATE = General.getInt("AltManorSavePeriodRate", 2);
         ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
         ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
         ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
@@ -1265,7 +1250,6 @@ public final class Config {
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MULTISELL, "MultiSell", 1);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_TRANSACTION, "Transaction", 10);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MANUFACTURE, "Manufacture", 3);
-        loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MANOR, "Manor", 30);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SENDMAIL, "SendMail", 100);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_CHARACTER_SELECT, "CharacterSelect", 30);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_ITEM_AUCTION, "ItemAuction", 9);
