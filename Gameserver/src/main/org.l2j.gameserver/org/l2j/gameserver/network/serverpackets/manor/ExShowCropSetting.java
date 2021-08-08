@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.manor;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.GameClient;
@@ -28,42 +28,30 @@ import java.util.Set;
 /**
  * @author l3x
  */
-public class ExShowCropSetting extends ServerPacket {
-    private final int _manorId;
+public class ExShowCropSetting extends ManorSetting {
+
+    private final int manorId;
     private final Set<Object> seeds = Collections.emptySet();
 
     public ExShowCropSetting(int manorId) {
-        _manorId = manorId;
+        this.manorId = manorId;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_SHOW_CROP_SETTING, buffer );
-
-        buffer.writeInt(_manorId); // manor id
-        buffer.writeInt(seeds.size()); // size
-
-        // for each seed
-            buffer.writeInt(0x00); // crop id
-            buffer.writeInt(0x00); // seed level
-            buffer.writeByte(1);
-            buffer.writeInt(0x00); // reward 1 id
-            buffer.writeByte(1);
-            buffer.writeInt(0x00); // reward 2 id
-            buffer.writeInt(0x00); // next sale limit
-            buffer.writeInt(0); // ???
-            buffer.writeInt(0x00); // min crop price
-            buffer.writeInt(0x00); // max crop price
-            // Current period
-
-            buffer.writeLong(0); // start amount
-            buffer.writeLong(0); // price
-            buffer.writeByte(0); // reward
-
-            // Next period
-            buffer.writeLong(0); // start amount
-            buffer.writeLong(0); // price
-            buffer.writeByte(0); // reward
+        writeSeeds(buffer, manorId, seeds);
     }
 
+    @Override
+    protected void writeCurrentPeriod(WritableBuffer buffer) {
+        super.writeCurrentPeriod(buffer);
+        buffer.writeByte(0); // reward
+    }
+
+    @Override
+    protected void writeNextPeriod(WritableBuffer buffer) {
+        super.writeNextPeriod(buffer);
+        buffer.writeByte(0); // reward
+    }
 }
