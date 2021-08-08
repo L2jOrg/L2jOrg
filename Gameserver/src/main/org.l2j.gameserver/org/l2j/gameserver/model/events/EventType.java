@@ -95,7 +95,6 @@ public enum EventType {
     ON_NPC_SPAWN(OnNpcSpawn.class, void.class),
     ON_NPC_TALK(null, void.class),
     ON_NPC_TELEPORT(OnNpcTeleport.class, void.class),
-    ON_NPC_MANOR_BYPASS(OnNpcManorBypass.class, void.class),
     ON_NPC_MENU_SELECT(OnNpcMenuSelect.class, void.class),
     ON_NPC_DESPAWN(OnNpcDespawn.class, void.class),
     ON_NPC_TELEPORT_REQUEST(OnNpcTeleportRequest.class, void.class, TerminateReturn.class),

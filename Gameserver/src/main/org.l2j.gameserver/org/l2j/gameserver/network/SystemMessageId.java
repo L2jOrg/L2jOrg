@@ -1660,6 +1660,9 @@ public final class SystemMessageId {
     @ClientString(id = 934, message = "It is a deleted recipe.")
     public static SystemMessageId IT_IS_A_DELETED_RECIPE;
 
+    @ClientString(id = 935, message = "You do not have enough funds in the clan warehouse for the Manor to operate.")
+    public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE;
+
     @ClientString(id = 936, message = "Use $s1.")
     public static SystemMessageId USE_S1;
 
@@ -2943,6 +2946,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 1490, message = "Traded $s2 of $s1 crops.")
     public static SystemMessageId TRADED_S2_OF_S1_CROPS;
+
+    @ClientString(id = 1491, message = "Failed in trading $s2 of $s1 crops.")
+    public static SystemMessageId FAILED_IN_TRADING_S2_OF_S1_CROPS;
 
     @ClientString(id = 1500, message = "$c1 does not meet the participation requirements. Subclasses and Duel Classes cannot participate in the Olympiad.")
     public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASSES_AND_DUEL_CLASSES_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
@@ -15272,9 +15278,6 @@ public final class SystemMessageId {
     @ClientString(id = 927, message = "The current time is $s1:$s2.")
     public static SystemMessageId THE_CURRENT_TIME_IS_S1_S2;
 
-    @ClientString(id = 935, message = "You do not have enough funds in the clan warehouse for the Manor to operate.")
-    public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE;
-
     @ClientString(id = 938, message = "The community server is currently offline.")
     public static SystemMessageId THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE;
 
@@ -15652,9 +15655,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1479, message = "That is the wrong grade of soulshot for that fishing pole.")
     public static SystemMessageId THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE;
-
-    @ClientString(id = 1491, message = "Failed in trading $s2 of $s1 crops.")
-    public static SystemMessageId FAILED_IN_TRADING_S2_OF_S1_CROPS;
 
     @ClientString(id = 1492, message = "You will be moved to the Olympiad Stadium in $s1 second(s).")
     public static SystemMessageId YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S;

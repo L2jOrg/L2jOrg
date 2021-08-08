@@ -344,9 +344,6 @@
 	<admin command="admin_mammon_find" accessLevel="100" />
 	<admin command="admin_mammon_respawn" accessLevel="100" />
 
-	<!-- ADMIN MANOR -->
-	<admin command="admin_manor" accessLevel="100" />
-
 	<!-- ADMIN MENU -->
 	<admin command="admin_char_manage" accessLevel="100" />
 	<admin command="admin_teleport_character_to_menu" accessLevel="100" />

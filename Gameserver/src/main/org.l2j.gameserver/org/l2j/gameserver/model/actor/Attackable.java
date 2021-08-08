@@ -81,7 +81,6 @@ import static org.l2j.gameserver.util.GameUtils.doIfIsCreature;
 public class Attackable extends Npc {
     private static final Logger  LOGGER = LoggerFactory.getLogger(Attackable.class);
 
-    private final AtomicReference<ItemHolder> _harvestItem = new AtomicReference<>();
     private final AtomicReference<Collection<ItemHolder>> _sweepItems = new AtomicReference<>();
     private final Set<WeakReference<Creature>> attackByList = ConcurrentHashMap.newKeySet();
     // Raid
@@ -93,8 +92,6 @@ public class Attackable extends Npc {
 
     private boolean _canReturnToSpawnPoint = true;
     private boolean _seeThroughSilentMove = false;
-
-    private boolean _seeded = false;
 
     private int _spoilerObjectId;
     private boolean _plundered = false;
@@ -1032,16 +1029,10 @@ public class Attackable extends Npc {
         // Clear all aggro list and overhit
         clearAggroList();
 
-        // Clear Harvester reward
-        _harvestItem.set(null);
         _sweepItems.set(null);
         _plundered = false;
 
         setWalking();
-
-
-        // Clear mod Seeded stat
-        _seeded = false;
 
         // check the region where this mob is, do not activate the AI if region is inactive.
          if (hasAI() && !isInActiveRegion()) {
@@ -1097,14 +1088,6 @@ public class Attackable extends Npc {
      */
     public final void setSpoilerObjectId(int spoilerObjectId) {
         _spoilerObjectId = spoilerObjectId;
-    }
-
-    public final void setSeeded() {
-        _seeded = true;
-    }
-
-    public final boolean isSeeded() {
-        return _seeded;
     }
 
     public void setCommandChannelTimer(CommandChannelTimer commandChannelTimer) {

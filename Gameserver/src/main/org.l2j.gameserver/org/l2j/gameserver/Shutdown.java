@@ -262,10 +262,6 @@ public class Shutdown extends Thread {
         ClanEngine.getInstance().shutdown();
         LOGGER.info("Clan System: Data saved.");
 
-        // Save all manor data
-        CastleManorManager.getInstance().storeMe();
-        LOGGER.info("Castle Manor Manager: Data saved.");
-
         // Save all global (non-player specific) Quest data that needs to persist after reboot
         QuestManager.getInstance().save();
         LOGGER.info("Quest Manager: Data saved.");
