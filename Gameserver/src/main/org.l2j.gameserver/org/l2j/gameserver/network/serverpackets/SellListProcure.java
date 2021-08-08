@@ -28,26 +28,26 @@ import java.util.Collections;
 import java.util.Map;
 
 public class SellListProcure extends ServerPacket {
-    private final long _money;
-    private final Map<Item, Long> _sellList = Collections.emptyMap();
+    private final long money;
+    private final Map<Item, Long> sellList = Collections.emptyMap();
 
-    public SellListProcure(Player player, int castleId) {
-        _money = player.getAdena();
+    public SellListProcure(Player player) {
+        money = player.getAdena();
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.SELL_LIST_PROCURE, buffer );
 
-        buffer.writeLong(_money); // money
+        buffer.writeLong(money); // money
         buffer.writeInt(0x00); // lease ?
-        buffer.writeShort(_sellList.size()); // list size
+        buffer.writeShort(sellList.size()); // list size
 
-        for (Item item : _sellList.keySet()) {
+        for (Item item : sellList.keySet()) {
             buffer.writeShort(item.getTemplate().getType1());
             buffer.writeInt(item.getObjectId());
             buffer.writeInt(item.getDisplayId());
-            buffer.writeLong(_sellList.get(item)); // count
+            buffer.writeLong(sellList.get(item)); // count
             buffer.writeShort(item.getType2());
             buffer.writeShort(0); // unknown
             buffer.writeLong(0); // price, u shouldnt get any adena for crops, only raw materials

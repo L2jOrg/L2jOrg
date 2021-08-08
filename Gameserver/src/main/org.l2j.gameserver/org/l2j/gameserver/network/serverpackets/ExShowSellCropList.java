@@ -31,20 +31,20 @@ import java.util.Map;
  * @author l3x
  */
 public final class ExShowSellCropList extends ServerPacket {
-    private final int _manorId;
-    private final Map<Integer, Item> _cropsItems = Collections.emptyMap();
+    private final int manorId;
+    private final Map<Integer, Item> cropsItems = Collections.emptyMap();
 
-    public ExShowSellCropList(PlayerInventory inventory, int manorId) {
-        _manorId = manorId;
+    public ExShowSellCropList(int manorId) {
+        this.manorId = manorId;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_SHOW_SELL_CROP_LIST, buffer );
 
-        buffer.writeInt(_manorId); // manor id
-        buffer.writeInt(_cropsItems.size()); // size
-        for (Item item : _cropsItems.values()) {
+        buffer.writeInt(manorId); // manor id
+        buffer.writeInt(cropsItems.size()); // size
+        for (Item item : cropsItems.values()) {
             buffer.writeInt(item.getObjectId()); // Object id
             buffer.writeInt(item.getId()); // crop id
             buffer.writeInt(0x00); // seed level

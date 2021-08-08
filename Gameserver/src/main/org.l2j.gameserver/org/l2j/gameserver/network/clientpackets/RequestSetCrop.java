@@ -39,7 +39,7 @@ public final class RequestSetCrop extends ClientPacket {
             final int itemId = readInt();
             final long sales = readLong();
             final long price = readLong();
-            final int type = readByte();
+            readByte(); // type
             if ((itemId < 1) || (sales < 0) || (price < 0)) {
                 throw new InvalidDataPacketException();
             }
@@ -48,6 +48,6 @@ public final class RequestSetCrop extends ClientPacket {
 
     @Override
     public void runImpl() {
-
+        // do nothingnR
     }
 }

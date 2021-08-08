@@ -29,21 +29,21 @@ import java.util.Set;
  * @author l3x
  */
 public class ExShowSeedSetting extends ServerPacket {
-    private final int _manorId;
-    private final Set<Object> _seeds = Collections.emptySet();
+    private final int manorId;
+    private final Set<Object> seeds = Collections.emptySet();
 
     public ExShowSeedSetting(int manorId) {
-        _manorId = manorId;
+        this.manorId = manorId;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_SHOW_SEED_SETTING, buffer );
 
-        buffer.writeInt(_manorId); // manor id
-        buffer.writeInt(_seeds.size()); // size
+        buffer.writeInt(manorId); // manor id
+        buffer.writeInt(seeds.size()); // size
 
-        for (var ignored : _seeds) {
+        // for each seed
             buffer.writeInt(0x00); // seed id
             buffer.writeInt(0x00); // level
             buffer.writeByte(1);
@@ -60,7 +60,7 @@ public class ExShowSeedSetting extends ServerPacket {
             // Next period
             buffer.writeLong(0); // start amount sale
             buffer.writeLong(0); // price
-        }
+
     }
 
 }

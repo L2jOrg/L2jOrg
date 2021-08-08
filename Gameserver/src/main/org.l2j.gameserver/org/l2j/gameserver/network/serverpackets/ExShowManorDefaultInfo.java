@@ -29,7 +29,7 @@ import java.util.List;
  * @author l3x
  */
 public final class ExShowManorDefaultInfo extends ServerPacket {
-    private final List<Object> _crops = Collections.emptyList();
+    private final List<Object> crops = Collections.emptyList();
     private final boolean _hideButtons;
 
     public ExShowManorDefaultInfo(boolean hideButtons) {
@@ -41,8 +41,8 @@ public final class ExShowManorDefaultInfo extends ServerPacket {
         writeId(ServerExPacketId.EX_SHOW_MANOR_DEFAULT_INFO, buffer );
 
         buffer.writeByte(_hideButtons); // Hide "Seed Purchase" and "Crop Sales" buttons
-        buffer.writeInt(_crops.size());
-        for (var ignored : _crops) {
+        buffer.writeInt(crops.size());
+        // for each crop
             buffer.writeInt(0x00); // crop Id
             buffer.writeInt(0x00); // level
             buffer.writeInt(0x00); // seed price
@@ -51,7 +51,7 @@ public final class ExShowManorDefaultInfo extends ServerPacket {
             buffer.writeInt(0x00); // Reward 1 itemId
             buffer.writeByte(1); // Reward 2 type
             buffer.writeInt(0x00); // Reward 2 itemId
-        }
+
     }
 
 }

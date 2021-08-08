@@ -29,21 +29,21 @@ import java.util.Map;
  * @author l3x
  */
 public class ExShowProcureCropDetail extends ServerPacket {
-    private final int _cropId;
-    private final Map<Integer, Object> _castleCrops = Collections.emptyMap();
+    private final int cropId;
+    private final Map<Integer, Object> castleCrops = Collections.emptyMap();
 
     public ExShowProcureCropDetail(int cropId) {
-        _cropId = cropId;
+        this.cropId = cropId;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_SHOW_PROCURE_CROP_DETAIL, buffer );
 
-        buffer.writeInt(_cropId); // crop id
-        buffer.writeInt(_castleCrops.size()); // size
+        buffer.writeInt(cropId); // crop id
+        buffer.writeInt(castleCrops.size()); // size
 
-        for (Map.Entry<Integer, Object> entry : _castleCrops.entrySet()) {
+        for (Map.Entry<Integer, Object> entry : castleCrops.entrySet()) {
             buffer.writeInt(entry.getKey()); // manor name
             buffer.writeLong(0x00); // buy residual amount
             buffer.writeLong(0x00); // buy price

@@ -47,5 +47,6 @@ public class RequestProcureCropList extends ClientPacket {
 
     @Override
     public void runImpl() {
+        // do nothing
     }
 }
