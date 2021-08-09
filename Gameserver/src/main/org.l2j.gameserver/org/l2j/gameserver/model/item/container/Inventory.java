@@ -27,14 +27,16 @@ import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.model.ArmorSet;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.type.EtcItemType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExUserInfoEquipSlot;
+import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -56,7 +58,6 @@ import static org.l2j.commons.util.Util.*;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.model.item.CommonItem.WEDDING_BOUQUET;
 import static org.l2j.gameserver.model.item.type.ArmorType.SIGIL;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author JoeAlisson
@@ -179,14 +180,10 @@ public abstract class Inventory extends ItemContainer {
      */
     @Override
     protected boolean removeItem(Item item) {
-        // Unequip item if equiped
+
         if(item.isEquipped()) {
-            for (var entry : paperdoll.entrySet()) {
-                if(entry.getValue().equals(item)) {
-                    unEquipItemInSlot(entry.getKey());
-                    break;
-                }
-            }
+            var changed = unEquipItemInSlotAndRecord(InventorySlot.fromId(item.getLocationSlot()));
+            getOwner().sendPacket(new InventoryUpdate(changed));
         }
         return super.removeItem(item);
     }
@@ -303,8 +300,8 @@ public abstract class Inventory extends ItemContainer {
                 item.updateDatabase();
             }
 
-            if (isPlayer(getOwner())) {
-                getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));
+            if (getOwner() instanceof Player player) {
+                player.sendPacket(new ExUserInfoEquipSlot(player, slot));
             }
         }
         return old;
@@ -372,12 +369,22 @@ public abstract class Inventory extends ItemContainer {
 
         if (nonNull(pdollSlot)) {
             if(pdollSlot == InventorySlot.TWO_HAND) {
-                paperdoll.remove(InventorySlot.TWO_HAND);
                 pdollSlot = InventorySlot.RIGHT_HAND;
+                unEquipTwoHands();
             }
             return setPaperdollItem(pdollSlot, null);
         }
         return null;
+    }
+
+    private void unEquipTwoHands() {
+        var item = paperdoll.remove(InventorySlot.TWO_HAND);
+        if(item.getItemType() == WeaponType.FISHING_ROD) {
+            var leftHand = paperdoll.get(InventorySlot.LEFT_HAND);
+            if(leftHand != null && leftHand.getItemType() == EtcItemType.LURE) {
+                setPaperdollItem(InventorySlot.LEFT_HAND, null);
+            }
+        }
     }
 
     /**
@@ -411,6 +418,10 @@ public abstract class Inventory extends ItemContainer {
             }
         }
 
+        equipInBodyPart(item, bodyPart);
+    }
+
+    private void equipInBodyPart(Item item, BodyPart bodyPart) {
         switch (bodyPart) {
             case TWO_HAND -> equipTwoHand(item);
             case LEFT_HAND -> equipLeftHand(item);
@@ -509,12 +520,16 @@ public abstract class Inventory extends ItemContainer {
     }
 
     private void equipLeftHand(Item item) {
-        if(item.getItemType() != SIGIL && nonNull(getPaperdollItem(InventorySlot.TWO_HAND))) {
+        if(!canBeUsedWithTwoHands(item) && nonNull(getPaperdollItem(InventorySlot.TWO_HAND))) {
             setPaperdollItem(InventorySlot.TWO_HAND, null);
             setPaperdollItem(InventorySlot.RIGHT_HAND, null);
         }
         checkEquippedDress();
         setPaperdollItem(InventorySlot.LEFT_HAND, item);
+    }
+
+    private boolean canBeUsedWithTwoHands(Item item) {
+        return item.getItemType() == SIGIL || item.getItemType() == EtcItemType.LURE;
     }
 
     private void checkEquippedDress() {
@@ -699,18 +714,17 @@ public abstract class Inventory extends ItemContainer {
             }));
     }
 
-    public int getArmorMaxEnchant() {
-        if (!isPlayer(getOwner())) {
+    public int getArmorSetEnchant() {
+        if(!(getOwner() instanceof Player player)) {
             return 0;
         }
-
-        final Player player = getOwner().getActingPlayer();
         int maxSetEnchant = 0;
-        for (Item item : paperdoll.values()) {
-            for (ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId())) {
-                final int enchantEffect = set.getLowestSetEnchant(player);
-                if (enchantEffect > maxSetEnchant) {
-                    maxSetEnchant = enchantEffect;
+        var item = paperdoll.get(InventorySlot.CHEST);
+        if(item != null) {
+            for (var set : ArmorSetsData.getInstance().getSets(item.getId())) {
+                var setEnchant = set.getFullSetLowestEnchant(player);
+                if(setEnchant > maxSetEnchant) {
+                    maxSetEnchant = setEnchant;
                 }
             }
         }

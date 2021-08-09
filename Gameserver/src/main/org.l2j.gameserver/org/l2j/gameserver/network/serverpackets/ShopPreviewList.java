@@ -19,24 +19,20 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
-
-import java.util.Collection;
+import org.l2j.gameserver.settings.GeneralSettings;
 
 public class ShopPreviewList extends ServerPacket {
-    private final int _listId;
-    private final Collection<Product> _list;
-    private final long _money;
+    private final long money;
+    private final ProductList list;
 
     public ShopPreviewList(ProductList list, long currentMoney) {
-        _listId = list.getListId();
-        _list = list.getProducts();
-        _money = currentMoney;
+        this.list = list;
+        money = currentMoney;
     }
 
     @Override
@@ -44,31 +40,29 @@ public class ShopPreviewList extends ServerPacket {
         writeId(ServerPacketId.BUY_PREVIEW_LIST, buffer );
 
         buffer.writeInt(5056);
-        buffer.writeLong(_money); // current money
-        buffer.writeInt(_listId);
+        buffer.writeLong(money);
+        buffer.writeInt(list.getListId());
 
-        int newlength = 0;
-        for (Product product : _list) {
+        int newLength = 0;
+        for (Product product : list.getProducts()) {
             if (product.isEquipable()) {
-                newlength++;
+                newLength++;
             }
         }
-        buffer.writeShort(newlength);
+        buffer.writeShort(newLength);
 
-        for (Product product : _list) {
+        for (Product product : list.getProducts()) {
             if (product.isEquipable()) {
                 buffer.writeInt(product.getItemId());
-                buffer.writeShort(product.getType2()); // item type2
+                buffer.writeShort(product.getType2());
 
                 if (product.getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA) {
-                    buffer.writeLong(product.getBodyPart().getId()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+                    buffer.writeLong(product.getBodyPart().getId());
                 } else {
-                    buffer.writeLong(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+                    buffer.writeLong(0x00);
                 }
-
-                buffer.writeLong(Config.WEAR_PRICE);
+                buffer.writeLong(GeneralSettings.wearPrice());
             }
         }
     }
-
 }

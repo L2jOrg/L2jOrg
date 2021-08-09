@@ -25,6 +25,7 @@ import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -244,9 +245,7 @@ public class ExShowScreenMessage extends ServerPacket {
         if (_parameters == null) {
             _parameters = new ArrayList<>();
         }
-        for (String param : params) {
-            _parameters.add(param);
-        }
+        _parameters.addAll(Arrays.asList(params));
     }
 
     @Override
@@ -260,9 +259,9 @@ public class ExShowScreenMessage extends ServerPacket {
         buffer.writeInt(_size);
         buffer.writeInt(_unk2);
         buffer.writeInt(_unk3);
-        buffer.writeInt(_effect ? 0x01 : 0x00);
+        buffer.writeInt(_effect);
         buffer.writeInt(_time);
-        buffer.writeInt(_fade ? 0x01 : 0x00);
+        buffer.writeInt(_fade);
         buffer.writeInt(_npcString);
         if (_npcString == -1) {
             buffer.writeString(_text);

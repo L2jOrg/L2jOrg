@@ -67,7 +67,7 @@ import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.type.WeaponType;
-import org.l2j.gameserver.model.options.OptionsSkillHolder;
+import org.l2j.gameserver.model.options.OptionsSkillInfo;
 import org.l2j.gameserver.model.options.OptionsSkillType;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.model.stats.*;
@@ -168,7 +168,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private SkillChannelizer channelizer;
     private SkillChannelized channelized;
     private ScheduledFuture<?> hitTask;
-    private IntMap<OptionsSkillHolder> triggerSkills;
+    private IntMap<OptionsSkillInfo> triggerSkills;
 
     private double hpUpdateIncCheck;
     private double hpUpdateDecCheck;
@@ -2703,10 +2703,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, hitTarget, null), hitTarget);
 
         if (triggerSkills != null) {
-            for (OptionsSkillHolder holder : triggerSkills.values()) {
-                if ((!hit.isCritical() && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && hit.isCritical())) {
-                    if (Rnd.get(100) < holder.getChance()) {
-                        SkillCaster.triggerCast(this, hitTarget, holder.getSkill(), null, false);
+            for (OptionsSkillInfo holder : triggerSkills.values()) {
+                if ((!hit.isCritical() && (holder.type() == OptionsSkillType.ATTACK)) || ((holder.type() == OptionsSkillType.CRITICAL) && hit.isCritical())) {
+                    if (Rnd.chance(holder.chance())) {
+                        SkillCaster.triggerCast(this, hitTarget, holder.skill(), null, false);
                     }
                 }
             }
@@ -3141,16 +3141,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
         }
 
-        // Check if damage should be reflected or absorbed. When killing blow is made, the target doesn't reflect (vamp too?).
-        if (!reflect && !isDOT && !target.isDead()) {
+        if (!reflect && !isDOT) {
             absorbHP(damage, target);
-            if (skill != null && Rnd.chance(30)) {
-                absorbMana(damage, target);
-            }
+            absorbMana(damage);
 
-            int reflectedDamage = calcReflectDamage(damage, target, skill);
-            if (reflectedDamage > 0) {
-                target.doAttack(reflectedDamage, this, skill, isDOT, directlyToHp, critical, true);
+            if(!target.isDead()) {
+                int reflectedDamage = calcReflectDamage(damage, target, skill);
+                if (reflectedDamage > 0) {
+                    target.doAttack(reflectedDamage, this, skill, isDOT, directlyToHp, critical, true);
+                }
             }
         }
 
@@ -3160,14 +3159,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    private void absorbMana(double damage, Creature target) {
+    private void absorbMana(double damage) {
         var absorbPercent = stats.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
-        if (absorbPercent > 0)
-        {
+        if (absorbPercent > 0) {
             int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, stats.getMaxRecoverableMp() - status.getCurrentMp());
-            absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
-            if (absorbDamage > 0)
-            {
+            if (absorbDamage > 0) {
                 setCurrentMp(status.getCurrentMp() + absorbDamage);
             }
         }
@@ -3175,12 +3171,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     private void absorbHP(double damage, Creature target) {
         double absorbPercent = getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStats().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
-        if ((absorbPercent > 0) && (Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
-        {
+        if (absorbPercent > 0 && Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)) {
             int absorbDamage = (int) Math.min(absorbPercent * damage, stats.getMaxRecoverableHp() - status.getCurrentHp());
             absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
-            if (absorbDamage > 0)
-            {
+            if (absorbDamage > 0) {
                 setCurrentHp(status.getCurrentHp() + absorbDamage);
             }
         }
@@ -3497,25 +3491,25 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         lethalable = val;
     }
 
-    public void forEachTriggerSkill(Consumer<OptionsSkillHolder> action) {
+    public void forEachTriggerSkill(Consumer<OptionsSkillInfo> action) {
         if(nonNull(triggerSkills)) {
             triggerSkills.values().forEach(action);
         }
     }
 
-    public void addTriggerSkill(OptionsSkillHolder holder) {
-        triggerSkills().put(holder.getSkillId(), holder);
+    public void addTriggerSkill(OptionsSkillInfo holder) {
+        triggerSkills().put(holder.skill().getId(), holder);
     }
 
-    private synchronized IntMap<OptionsSkillHolder> triggerSkills() {
+    private synchronized IntMap<OptionsSkillInfo> triggerSkills() {
         if(isNull(triggerSkills)) {
             triggerSkills = new CHashIntMap<>();
         }
         return triggerSkills;
     }
-    public void removeTriggerSkill(OptionsSkillHolder holder) {
+    public void removeTriggerSkill(OptionsSkillInfo holder) {
         if(nonNull(triggerSkills)) {
-            triggerSkills.remove(holder.getSkillId());
+            triggerSkills.remove(holder.skill().getId());
         }
     }
 
@@ -3653,8 +3647,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return skillCasters.values();
     }
 
-    public SkillCaster addSkillCaster(SkillCastingType castingType, SkillCaster skillCaster) {
-        return skillCasters.put(castingType, skillCaster);
+    public void addSkillCaster(SkillCastingType castingType, SkillCaster skillCaster) {
+        skillCasters.put(castingType, skillCaster);
     }
 
     public void removeSkillCaster(SkillCastingType castingType) {

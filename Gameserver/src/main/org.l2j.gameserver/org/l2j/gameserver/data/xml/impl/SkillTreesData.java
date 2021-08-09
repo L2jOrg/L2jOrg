@@ -31,7 +31,6 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.PlayerSkillHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -45,7 +44,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.stream.Collectors;
+import java.util.function.Consumer;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -80,8 +79,7 @@ public final class SkillTreesData extends GameXmlReader {
     private static final LongMap<SkillLearn> pledgeSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> transformSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> commonSkillTree = new HashLongMap<>();
-    // Other skill trees
-    private static final LongMap<SkillLearn> nobleSkillTree = new HashLongMap<>();
+
     private static final LongMap<SkillLearn> heroSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> gameMasterSkillTree = new HashLongMap<>();
 
@@ -112,7 +110,6 @@ public final class SkillTreesData extends GameXmlReader {
         fishingSkillTree.clear();
         pledgeSkillTree.clear();
         transformSkillTree.clear();
-        nobleSkillTree.clear();
         heroSkillTree.clear();
         gameMasterSkillTree.clear();
         removeSkillCache.clear();
@@ -181,7 +178,6 @@ public final class SkillTreesData extends GameXmlReader {
             case "fishingSkillTree" -> fishingSkillTree.put(skillHashCode, skillLearn);
             case "pledgeSkillTree" -> pledgeSkillTree.put(skillHashCode, skillLearn);
             case "transformSkillTree" -> transformSkillTree.put(skillHashCode, skillLearn);
-            case "nobleSkillTree" -> nobleSkillTree.put(skillHashCode, skillLearn);
             case "heroSkillTree" -> heroSkillTree.put(skillHashCode, skillLearn);
             case "gameMasterSkillTree" -> gameMasterSkillTree.put(skillHashCode, skillLearn);
             default -> LOGGER.warn("Unknown Skill Tree type: {}", type);
@@ -193,7 +189,7 @@ public final class SkillTreesData extends GameXmlReader {
 
         switch (node.getNodeName()) {
             case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
-            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(new SkillHolder(parseInt(attrs, "id"), parseInt(attrs, "lvl")));
+            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(parseSkillInfo(node, "id", "lvl"));
             case "race" -> skillLearn.addRace(Race.valueOf(node.getTextContent()));
             case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(node.getTextContent()));
             case "social-status" -> skillLearn.setSocialStatus(parseEnum(node, SocialStatus.class));
@@ -232,32 +228,10 @@ public final class SkillTreesData extends GameXmlReader {
         return fishingSkillTree;
     }
 
-
-    /**
-     * Gets the noble skill tree.
-     *
-     * @return the complete Noble Skill Tree
-     */
-    public List<Skill> getNobleSkillTree() {
-        return nobleSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
-    }
-
-    /**
-     * Gets the noble skill tree.
-     *
-     * @return the complete Noble Skill Tree
-     */
-    public List<Skill> getNobleSkillAutoGetTree() {
-        return nobleSkillTree.values().stream().filter(SkillLearn::isAutoGet).map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
-    }
-
-    /**
-     * Gets the hero skill tree.
-     *
-     * @return the complete Hero Skill Tree
-     */
-    public List<Skill> getHeroSkillTree() {
-        return heroSkillTree.values().stream().map(entry -> SkillEngine.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+    public void forEachHeroSkill(Consumer<Skill> action) {
+        for (var learn : heroSkillTree.values()) {
+            action.accept(learn.getSkill());
+        }
     }
 
     public boolean hasAvailableSkills(Player player, ClassId classId) {
@@ -349,8 +323,11 @@ public final class SkillTreesData extends GameXmlReader {
 
             for (SkillLearn skillLearn : learnable) {
                 final Skill skill = SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
-                // Cleanup skills that has to be removed
-                for (int skillId : skillLearn.getRemoveSkills()) {
+
+                var it = skillLearn.getRemoveSkills().iterator();
+                while (it.hasNext()) {
+                    var skillId = it.nextInt();
+
                     // Mark skill as removed, so it doesn't gets added
                     removed.add(skillId);
 
@@ -500,7 +477,13 @@ public final class SkillTreesData extends GameXmlReader {
      * @return all the available Residential skills for a given {@code residenceId}
      */
     public List<SkillLearn> getAvailableResidentialSkills(int residenceId) {
-        return pledgeSkillTree.values().stream().filter( s -> s.isResidencialSkill() && s.getResidenceIds().contains(residenceId)).collect(Collectors.toList());
+        List<SkillLearn> list = new ArrayList<>();
+        for (var s : pledgeSkillTree.values()) {
+            if (s.isResidencialSkill() && s.getResidenceIds().contains(residenceId)) {
+                list.add(s);
+            }
+        }
+        return list;
     }
 
     /**
@@ -789,7 +772,6 @@ public final class SkillTreesData extends GameXmlReader {
         LOGGER.info("Loaded {} Fishing Skills, {} Dwarven only Fishing Skills",  fishingSkillTree.size(), dwarvenOnlyFishingSkillCount);
         LOGGER.info("Loaded {} Pledge Skills, {} for Pledge and {} Residential",  pledgeSkillTree.size(), pledgeSkillTree.size() - resSkillCount, resSkillCount);
         LOGGER.info("Loaded {} Transform Skills.", transformSkillTree.size());
-        LOGGER.info("Loaded {} Noble Skills.", nobleSkillTree.size());
         LOGGER.info("Loaded {} Hero Skills.", heroSkillTree.size());
         LOGGER.info("Loaded {} Game Master Skills.", gameMasterSkillTree.size());
         LOGGER.info("Loaded {} Common Skills to all classes.", commonSkillTree.size());

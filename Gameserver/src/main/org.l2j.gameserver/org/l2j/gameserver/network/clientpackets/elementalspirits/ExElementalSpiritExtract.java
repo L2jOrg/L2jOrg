@@ -56,12 +56,9 @@ public class ExElementalSpiritExtract extends ClientPacket {
         if(canExtract) {
             var amount = spirit.getExtractAmount();
             client.sendPacket(SystemMessage.getSystemMessage(EXTRACTED_S1_S2_SUCCESSFULLY).addItemName(spirit.getExtractItem()).addInt(amount));
-            spirit.resetLevel();
+            spirit.resetToPreviousLevel();
             player.addItem("Extract", spirit.getExtractItem(), amount, player, true);
-
-            var userInfo = new UserInfo(player);
-            userInfo.addComponentType(UserInfoType.SPIRITS);
-            client.sendPacket(userInfo);
+            client.sendPacket( new UserInfo(player, UserInfoType.SPIRITS));
         }
 
         client.sendPacket(new ElementalSpiritExtract(type, canExtract));

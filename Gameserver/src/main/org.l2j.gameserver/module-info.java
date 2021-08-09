@@ -1,7 +1,7 @@
 import org.l2j.gameserver.data.database.dao.GlobalVariablesDAO;
 import org.l2j.gameserver.data.database.dao.ReuseInfoDAO;
 import org.l2j.gameserver.data.database.dao.SkillsDAO;
-import org.l2j.gameserver.engine.item.container.listener.BowCrossListener;
+import org.l2j.gameserver.engine.item.container.listener.WeaponListener;
 import org.l2j.gameserver.world.zone.NaiveZone;
 import org.l2j.gameserver.world.zone.type.*;
 
@@ -114,7 +114,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.classchange;
     exports org.l2j.gameserver.network.serverpackets.costume;
     exports org.l2j.gameserver.api.costume;
-    exports org.l2j.gameserver.network.serverpackets.sessionzones;
     exports org.l2j.gameserver.network.serverpackets.item;
     exports org.l2j.gameserver.api.item;
     exports org.l2j.gameserver.network.serverpackets.attendance;
@@ -127,6 +126,10 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.events.impl.server;
     exports org.l2j.gameserver.engine.clan.clanhall;
     exports org.l2j.gameserver.engine.clan;
+    exports org.l2j.gameserver.engine.fishing;
+    exports org.l2j.gameserver.network.serverpackets.timedzone;
+    exports org.l2j.gameserver.network.serverpackets.shortcut;
+    exports org.l2j.gameserver.network.serverpackets.manor;
 
     uses org.l2j.gameserver.api.item.PlayerInventoryListener;
     provides org.l2j.gameserver.api.item.PlayerInventoryListener
@@ -134,7 +137,7 @@ module org.l2j.gameserver {
             org.l2j.gameserver.engine.item.container.listener.ArmorSetListener,
             org.l2j.gameserver.engine.item.container.listener.AgathionBraceletListener,
             org.l2j.gameserver.engine.item.container.listener.ArtifactBookListener,
-                BowCrossListener,
+                WeaponListener,
             org.l2j.gameserver.engine.item.container.listener.BraceletListener,
             org.l2j.gameserver.engine.item.container.listener.BroochListener;
 
@@ -174,6 +177,7 @@ module org.l2j.gameserver {
                 SiegeZone.Factory,
                 SwampZone.Factory,
                 TaxZone.Factory,
+                TimeRestrictZone.Factory,
                 WaterZone.Factory
             ;
 

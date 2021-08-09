@@ -25,14 +25,14 @@ package org.l2j.gameserver.model.holders;
  * @author JoeAlisson
  */
 public class ItemChanceHolder extends ItemHolder {
-    private final double chance;
+    private final float chance;
 
-    public ItemChanceHolder(int id, double chance, long count) {
+    public ItemChanceHolder(int id, float chance, long count) {
         super(id, count);
         this.chance = chance;
     }
 
-    public double getChance() {
+    public float getChance() {
         return chance;
     }
 

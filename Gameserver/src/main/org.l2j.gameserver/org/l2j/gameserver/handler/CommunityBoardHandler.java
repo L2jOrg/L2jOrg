@@ -20,9 +20,9 @@ package org.l2j.gameserver.handler;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -100,7 +100,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
             return;
         }
 
-        if (!Config.ENABLE_COMMUNITY_BOARD) {
+        if (!GeneralSettings.enableCommunity()) {
             player.sendPacket(SystemMessageId.THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE);
             return;
         }
@@ -133,7 +133,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
             return;
         }
 
-        if (!Config.ENABLE_COMMUNITY_BOARD) {
+        if (!GeneralSettings.enableCommunity()) {
             player.sendPacket(SystemMessageId.THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE);
             return;
         }

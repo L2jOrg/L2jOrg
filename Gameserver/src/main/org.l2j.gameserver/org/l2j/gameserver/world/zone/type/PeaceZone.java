@@ -18,12 +18,12 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneEnter;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerPeaceZoneExit;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneFactory;
@@ -57,12 +57,12 @@ public class PeaceZone extends Zone {
             final Player player = creature.getActingPlayer();
             // PVP possible during siege, now for siege participants only
             // Could also check if this town is in siege, or if any siege is going on
-            if ((player.getSiegeState() != 0) && (Config.PEACE_ZONE_MODE == 1)) {
+            if (player.getSiegeState() != 0 && GeneralSettings.peaceZoneMode() == Mode.PVP_IN_SIEGE) {
                 return;
             }
         }
 
-        if (Config.PEACE_ZONE_MODE != 2) {
+        if (GeneralSettings.peaceZoneMode() != Mode.PVP) {
             creature.setInsideZone(ZoneType.PEACE, true);
             if(isPlayer(creature)) {
                 EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPeaceZoneEnter(creature.getActingPlayer(), this), creature);
@@ -76,7 +76,7 @@ public class PeaceZone extends Zone {
 
     @Override
     protected void onExit(Creature creature) {
-        if (Config.PEACE_ZONE_MODE != 2) {
+        if (GeneralSettings.peaceZoneMode() != Mode.PVP) {
             creature.setInsideZone(ZoneType.PEACE, false);
             if(isPlayer(creature)) {
                 EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPeaceZoneExit(creature.getActingPlayer()), creature);
@@ -106,6 +106,13 @@ public class PeaceZone extends Zone {
         }
 
         player.getServitors().values().forEach(this::revalidateInZone);
+    }
+
+
+    public enum Mode {
+        PEACE,
+        PVP_IN_SIEGE,
+        PVP
     }
 
     public static class Factory implements ZoneFactory {

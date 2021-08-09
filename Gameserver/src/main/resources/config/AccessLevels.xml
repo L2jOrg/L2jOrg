@@ -140,7 +140,6 @@
 	<admin command="admin_summon_setlvl" accessLevel="100" />
 	<admin command="admin_show_pet_inv" accessLevel="100" />
 	<admin command="admin_partyinfo" accessLevel="100" />
-	<admin command="admin_setnoble" accessLevel="100" confirmDlg="true" />
 	<admin command="admin_set_hp" accessLevel="100" />
 	<admin command="admin_set_mp" accessLevel="100" />
 	<admin command="admin_set_cp" accessLevel="100" />
@@ -344,9 +343,6 @@
 	<!-- ADMIN MAMMON -->
 	<admin command="admin_mammon_find" accessLevel="100" />
 	<admin command="admin_mammon_respawn" accessLevel="100" />
-
-	<!-- ADMIN MANOR -->
-	<admin command="admin_manor" accessLevel="100" />
 
 	<!-- ADMIN MENU -->
 	<admin command="admin_char_manage" accessLevel="100" />

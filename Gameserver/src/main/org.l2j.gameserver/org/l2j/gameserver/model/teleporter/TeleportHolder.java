@@ -105,12 +105,6 @@ public final class TeleportHolder {
      * @param bypass bypass used while building message
      */
     public void showTeleportList(Player player, Npc npc, String bypass) {
-        if (isNoblesse() && !player.isNoble()) {
-            LOGGER.warn("Player {} requested noblesse teleport without being noble!", player.getObjectId());
-            return;
-        }
-
-        // Load variables
         final int questZoneId = isNormalTeleport() ? player.getQuestZoneId() : -1;
 
         // Build html
@@ -153,11 +147,6 @@ public final class TeleportHolder {
      * @param locId  destination
      */
     public void doTeleport(Player player, Npc npc, int locId) {
-        if (isNoblesse() && !player.isNoble()) {
-            LOGGER.warn("Player {} requested noblesse teleport without being noble!", player.getObjectId());
-            return;
-        }
-
         final TeleportLocation loc = getLocation(locId);
         if (isNull(loc)) {
             LOGGER.warn("Player {} requested unknown teleport location {} within list {}!", player.getObjectId(), locId, name);
@@ -276,14 +265,4 @@ public final class TeleportHolder {
     public TeleportLocation getLocation(int locationId) {
         return teleportData.get(locationId);
     }
-
-    /**
-     * Check if teleport list is for noblesse or not.
-     *
-     * @return {@code true} if is for noblesse otherwise {@code false}
-     */
-    public boolean isNoblesse() {
-        return (type == TeleportType.NOBLES_ADENA) || (type == TeleportType.NOBLES_TOKEN);
-    }
-
 }

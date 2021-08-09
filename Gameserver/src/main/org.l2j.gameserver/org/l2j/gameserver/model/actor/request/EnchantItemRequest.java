@@ -33,6 +33,7 @@ public final class EnchantItemRequest extends AbstractRequest {
     public EnchantItemRequest(Player player, int enchantingScrollObjectId) {
         super(player);
         this.enchantingScrollObjectId = enchantingScrollObjectId;
+        setTimestamp(System.currentTimeMillis());
     }
 
     public Item getEnchantingItem() {

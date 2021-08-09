@@ -120,6 +120,10 @@ public class ElementalSpiritData {
         level++;
     }
 
+    public void decreaseLevel() {
+        level--;
+    }
+
     public boolean isInUse() {
         return inUse;
     }

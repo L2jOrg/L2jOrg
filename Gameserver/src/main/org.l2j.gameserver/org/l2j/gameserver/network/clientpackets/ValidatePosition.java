@@ -22,23 +22,16 @@ import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.13.4.7 $ $Date: 2005/03/27 15:29:30 $
- */
 public class ValidatePosition extends ClientPacket {
 
     private int _x;
     private int _y;
     private int _z;
     private int _heading;
-    private int _data; // vehicle id
 
     @Override
     public void readImpl() {
@@ -46,13 +39,13 @@ public class ValidatePosition extends ClientPacket {
         _y = readInt();
         _z = readInt();
         _heading = readInt();
-        _data = readInt();
+        readInt(); // vehicle id
     }
 
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if ((player == null) || player.isTeleporting() || player.isInObserverMode()) {
+        if (player == null || player.isTeleporting() || player.isInObserverMode()) {
             return;
         }
 
@@ -60,37 +53,14 @@ public class ValidatePosition extends ClientPacket {
         final int realY = player.getY();
         int realZ = player.getZ();
 
-        if(realX == _x && realY == _y && realZ == _z) {
+        if (!checkPositions(player, realX, realY, realZ)) {
             return;
-        }
-
-        if ((_x == 0) && (_y == 0)) {
-            if (realX != 0) {
-                return;
-            }
         }
 
         int dx;
         int dy;
         int dz;
         double diffSq;
-
-        if (player.isInBoat()) {
-            if (GeoEngineSettings.isSyncMode(SyncMode.SERVER)) {
-                dx = _x - player.getInVehiclePosition().getX();
-                dy = _y - player.getInVehiclePosition().getY();
-
-                diffSq = ((dx * dx) + (dy * dy));
-                if (diffSq > 250000) {
-                    client.sendPacket(new GetOnVehicle(player.getObjectId(), _data, player.getInVehiclePosition()));
-                }
-            }
-            return;
-        }
-
-        if (player.isFalling(_z)) {
-            return; // disable validations during fall to avoid "jumping"
-        }
 
         dx = _x - realX;
         dy = _y - realY;
@@ -107,51 +77,12 @@ public class ValidatePosition extends ClientPacket {
         }
 
         if (player.isFlying() || player.isInsideZone(ZoneType.WATER)) {
-            player.setXYZ(realX, realY, _z);
-            if (diffSq > 90000) {
-                player.sendPacket(new ValidateLocation(player));
-            }
-        } else if (diffSq < 360000) // if too large, messes observation
-        {
-            if (GeoEngineSettings.isSyncMode(SyncMode.Z_ONLY))
-            // mainly used when no geodata but can be used also with geodata
-            {
-                player.setXYZ(realX, realY, _z);
+            onMoveNoTerrainEnv(player, realX, realY, diffSq);
+        } else if (diffSq < 360000) { // if too large, messes observation
+            if (checkNonGeoEngineMovement(player, realX, realY, diffSq)) {
                 return;
             }
-            if (GeoEngineSettings.isSyncMode(SyncMode.CLIENT)) // Trusting also client x,y coordinates (should not be used with geodata)
-            {
-                if (!player.isMoving() || !player.validateMovementHeading(_heading)) // Heading changed on client = possible obstacle
-                {
-                    // character is not moving, take coordinates from client
-                    if (diffSq < 2500) {
-                        player.setXYZ(realX, realY, _z);
-                    } else {
-                        player.setXYZ(_x, _y, _z);
-                    }
-                } else {
-                    player.setXYZ(realX, realY, _z);
-                }
-
-                player.setHeading(_heading);
-                return;
-            }
-            // Sync 2 (or other),
-            // intended for geodata. Sends a validation packet to client
-            // when too far from server calculated true coordinate.
-            // Due to geodata/zone errors, some Z axis checks are made. (maybe a temporary solution)
-            // Important: this code part must work together with Creature.updatePosition
-            if ((diffSq > 250000) || (Math.abs(dz) > 200)) {
-               if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - player.getClientZ()) < 800)) {
-                    player.setXYZ(realX, realY, _z);
-                    realZ = _z;
-                } else {
-                    if(player.isFalling(_z)) {
-                        player.setXYZ(realX, realY, _z);
-                    }
-                    player.sendPacket(new ValidateLocation(player));
-                }
-            }
+            realZ = updateZPosition(player, realX, realY, realZ, dz, diffSq);
         }
 
         player.setClientZ(_z);
@@ -160,5 +91,73 @@ public class ValidatePosition extends ClientPacket {
         if (!DoorDataManager.getInstance().checkIfDoorsBetween(realX, realY, realZ, _x, _y, _z, player.getInstanceWorld(), false)) {
             player.setLastServerPosition(realX, realY, realZ);
         }
+    }
+
+    private int updateZPosition(Player player, int realX, int realY, int realZ, int dz, double diffSq) {
+        // Sync 2 (or other),
+        // intended for geodata. Sends a validation packet to client
+        // when too far from server calculated true coordinate.
+        // Due to geodata/zone errors, some Z axis checks are made. (maybe a temporary solution)
+        // Important: this code part must work together with Creature.updatePosition
+        if ((diffSq > 250000) || (Math.abs(dz) > 200)) {
+           if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - player.getClientZ()) < 800)) {
+                player.setXYZ(realX, realY, _z);
+                realZ = _z;
+            } else {
+                if(player.isFalling(_z)) {
+                    player.setXYZ(realX, realY, _z);
+                }
+                player.sendPacket(new ValidateLocation(player));
+            }
+        }
+        return realZ;
+    }
+
+    private boolean checkNonGeoEngineMovement(Player player, int realX, int realY, double diffSq) {
+        if (GeoEngineSettings.isSyncMode(SyncMode.Z_ONLY)) {  // mainly used when no geodata but can be used also with geodata
+            player.setXYZ(realX, realY, _z);
+            return true;
+        }
+        if (GeoEngineSettings.isSyncMode(SyncMode.CLIENT)) { // Trusting also client x,y coordinates (should not be used with geodata)
+            checkClientMovement(player, realX, realY, diffSq);
+            return true;
+        }
+        return false;
+    }
+
+    private void onMoveNoTerrainEnv(Player player, int realX, int realY, double diffSq) {
+        player.setXYZ(realX, realY, _z);
+        if (diffSq > 90000) {
+            player.sendPacket(new ValidateLocation(player));
+        }
+    }
+
+    private void checkClientMovement(Player player, int realX, int realY, double diffSq) {
+        if (!player.isMoving() || !player.validateMovementHeading(_heading)) { // Heading changed on client = possible obstacle
+            // character is not moving, take coordinates from client
+            if (diffSq < 2500) {
+                player.setXYZ(realX, realY, _z);
+            } else {
+                player.setXYZ(_x, _y, _z);
+            }
+        } else {
+            player.setXYZ(realX, realY, _z);
+        }
+
+        player.setHeading(_heading);
+    }
+
+    private boolean checkPositions(Player player, int realX, int realY, int realZ) {
+        if(realX == _x && realY == _y && realZ == _z) {
+            return false;
+        }
+
+        if (_x == 0 && _y == 0) {
+            if (realX != 0) {
+                return false;
+            }
+        }
+
+        return !player.isFalling(_z);
     }
 }

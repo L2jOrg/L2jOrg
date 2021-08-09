@@ -43,7 +43,6 @@ public class ExFishingEnd extends ServerPacket {
         buffer.writeByte(_reason.getReason());
     }
 
-
     public enum FishingEndReason {
         LOSE(0),
         WIN(1),

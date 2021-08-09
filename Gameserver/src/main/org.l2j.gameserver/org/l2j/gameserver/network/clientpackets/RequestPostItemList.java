@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExReplyPostItemList;
@@ -36,7 +35,7 @@ public final class RequestPostItemList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!GeneralSettings.allowMail() || !Config.ALLOW_ATTACHMENTS) {
+        if (!GeneralSettings.allowMail() || !GeneralSettings.allowAttachments()) {
             return;
         }
 

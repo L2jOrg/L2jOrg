@@ -20,7 +20,6 @@ package org.l2j.gameserver.engine.skill.api;
 
 import io.github.joealisson.primitive.*;
 import io.github.joealisson.primitive.function.IntBiConsumer;
-import org.l2j.gameserver.data.xml.impl.PetSkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.SkillAutoUseType;
 import org.l2j.gameserver.enums.AttributeType;
@@ -77,10 +76,8 @@ public class SkillEngine extends EffectParser {
         player.addSkill(CommonSkill.IMPRIT_OF_LIGHT.getSkill(), false);
         player.addSkill(CommonSkill.IMPRIT_OF_DARKNESS.getSkill(), false);
         player.addSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill(), false);
+        player.addSkill(CommonSkill.BUILD_ADVANCED_HEADQUARTERS.getSkill(), false);
 
-        if(player.isNoble()) {
-            player.addSkill(CommonSkill.BUILD_ADVANCED_HEADQUARTERS.getSkill(), false);
-        }
         if(player.getClan().getCastleId() > 0) {
             player.addSkill(CommonSkill.OUTPOST_CONSTRUCTION.getSkill(), false);
             player.addSkill(CommonSkill.OUTPOST_DEMOLITION.getSkill(), false);
@@ -529,7 +526,7 @@ public class SkillEngine extends EffectParser {
         ServiceLoader.load(SkillEffectFactory.class).forEach(EffectHandler.getInstance()::registerFactory);
         getInstance().load();
         SkillTreesData.init();
-        PetSkillData.init();
+        PetSkillEngine.init();
     }
 
     public void reload() {

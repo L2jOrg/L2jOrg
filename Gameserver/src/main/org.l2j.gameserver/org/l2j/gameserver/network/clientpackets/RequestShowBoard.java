@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
+import org.l2j.gameserver.settings.GeneralSettings;
 
 /**
  * RequestShowBoard client packet implementation.
@@ -37,6 +37,6 @@ public final class RequestShowBoard extends ClientPacket {
 
     @Override
     public void runImpl() {
-        CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, client.getPlayer());
+        CommunityBoardHandler.getInstance().handleParseCommand(GeneralSettings.bbsDefault(), client.getPlayer());
     }
 }

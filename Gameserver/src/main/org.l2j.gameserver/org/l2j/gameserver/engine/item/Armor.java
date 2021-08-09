@@ -19,7 +19,6 @@
 package org.l2j.gameserver.engine.item;
 
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.EquipableItem;
 import org.l2j.gameserver.model.item.type.ArmorType;
 
 import static org.l2j.gameserver.model.item.BodyPart.*;
@@ -29,7 +28,7 @@ import static org.l2j.gameserver.model.item.BodyPart.*;
  *
  * @author JoeAlisson
  */
-public final class Armor extends ItemTemplate implements EquipableItem {
+public final class Armor extends ItemTemplate {
     private final ArmorType type;
 
     public Armor(int id, String name, ArmorType type, BodyPart bodyPart) {

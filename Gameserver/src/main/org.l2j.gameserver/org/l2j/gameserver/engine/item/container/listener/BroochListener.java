@@ -22,7 +22,6 @@ import org.l2j.gameserver.api.item.PlayerInventoryListener;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemSkillType;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
@@ -64,7 +63,7 @@ public final class BroochListener implements PlayerInventoryListener {
         for (InventorySlot slot : InventorySlot.brochesJewel()) {
             var item = inventory.getPaperdollItem(slot);
             if(nonNull(item) && hasSpecialEffect(item)) {
-                var skill = item.getFirstSkill(ItemSkillType.NORMAL, (s1, s2) -> s2.getLevel() - s1.getLevel());
+                var skill = item.getFirstSkill(ItemSkillType.NORMAL, (s1, s2) -> s2.skill().getLevel() - s1.skill().getLevel());
                 var itemLevel = skill != null ? skill.getLevel() : -1;
                 if(jewel == 0 || itemLevel > currentLevel) {
                     jewel = item.getId();

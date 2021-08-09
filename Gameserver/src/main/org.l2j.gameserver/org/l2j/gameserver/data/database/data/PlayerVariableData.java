@@ -48,15 +48,6 @@ public class PlayerVariableData {
     @Column("sayha_grace_items_used")
     private int sayhaGraceItemsUsed;
 
-    @Column("ability_points_main_class_used")
-    private int abilityPointsMainClassUsed;
-
-    @Column("revelation_skill_main_class_1")
-    private int revelationSkillMainClass1;
-
-    @Column("revelation_skill_main_class_2")
-    private int revelationSkillMainClass2;
-
     @Column("extend_drop")
     private String extendDrop;
 
@@ -65,9 +56,6 @@ public class PlayerVariableData {
 
     @Column("fortune_telling_black_cat")
     private boolean fortuneTellingBlackCat;
-
-    @Column("hunting_zone_reset_time")
-    private String huntingZoneResetTime;
 
     private int autoCp;
 
@@ -108,9 +96,6 @@ public class PlayerVariableData {
     @Column("cond_override_key")
     private String condOverrideKey;
 
-    @Column("ui_key_mapping")
-    private String uiKeyMapping;
-
     @Column("monster_return")
     private int monsterReturn;
 
@@ -139,110 +124,34 @@ public class PlayerVariableData {
 
     public int getSayhaGraceItemsUsed() {
         return sayhaGraceItemsUsed;
-    }
 
-    public int getAbilityPointsMainClassUsed() {
-        return abilityPointsMainClassUsed;
-    }
-
-    public int getRevelationSkillMainClass1() {
-        return revelationSkillMainClass1;
-    }
-
-    public int getRevelationSkillMainClass2() {
-        return revelationSkillMainClass2;
-    }
-
-    public String getExtendDrop() {
-        return extendDrop;
-    }
-
-    public int getFortuneTelling() {
-        return fortuneTelling;
-    }
-
-    public boolean isFortuneTellingBlackCat() {
-        return fortuneTellingBlackCat;
-    }
-
-    public String getHuntingZoneResetTime() {
-        return huntingZoneResetTime;
-    }
-
-    public int getAutoCp() {
-        return autoCp;
-    }
-
-    public int getAutoHp() {
-        return autoHp;
-    }
-
-    public int getAutoMp() {
-        return autoMp;
-    }
-
-    public boolean getExpOff() {
-        return expOff;
-    }
-
-    public boolean isItemsRewarded() {
-        return itemsRewarded;
-    }
-
-    public long getHenna1Duration() {
-        return henna1Duration;
-    }
-
-    public long getHenna2Duration() {
-        return henna2Duration;
-    }
-
-    public long getHenna3Duration() {
-        return henna3Duration;
-    }
-
-    public int getVisualHairId() {
-        return visualHairId;
-    }
-
-    public int getVisualHairColorId() {
-        return visualHairColorId;
-    }
-
-    public int getVisualFaceId() {
-        return visualFaceId;
-    }
-
-    public int getInstanceRestore() {
-        return instanceRestore;
-    }
-
-    public int getClaimedClanRewards() {
-        return claimedClanRewards;
-    }
-
-    public String getCondOverrideKey() {
-        return condOverrideKey;
-    }
-
-    public String getUiKeyMapping() {
-        return uiKeyMapping;
-    }
-
-    public int getMonsterReturn() {
-        return monsterReturn;
-    }
 
     public void setHairAccessoryEnabled(boolean hairAccessoryEnabled) {
         this.hairAccessoryEnabled = hairAccessoryEnabled;
+    }
+
+    public boolean isHairAccessoryEnabled() {
+        return hairAccessoryEnabled;
     }
 
     public void setWorldChatUsed(int worldChatUsed) {
         this.worldChatUsed = worldChatUsed;
     }
 
+    public int getWorldChatUsed() {
+        return worldChatUsed;
+    }
+
+    public String getExtendDrop() {
+        return extendDrop;
+    }
+
     public void setExtendDrop(String extendDrop) {
         this.extendDrop = extendDrop;
+    }
+
+    public int getFortuneTelling() {
+        return fortuneTelling;
     }
 
     public void setFortuneTelling(int fortuneTelling) {
@@ -253,72 +162,128 @@ public class PlayerVariableData {
         this.fortuneTellingBlackCat = fortuneTellingBlackCat;
     }
 
-    public void setHuntingZoneResetTime(String huntingZoneResetTime) {
-        this.huntingZoneResetTime = huntingZoneResetTime;
+    public boolean isFortuneTellingBlackCat() {
+        return fortuneTellingBlackCat;
     }
 
     public void setAutoCp(int autoCp) {
         this.autoCp = autoCp;
     }
 
+    public int getAutoCp() {
+        return autoCp;
+    }
+
     public void setAutoHp(int autoHp) {
         this.autoHp = autoHp;
+    }
+
+    public int getAutoHp() {
+        return autoHp;
     }
 
     public void setAutoMp(int autoMp) {
         this.autoMp = autoMp;
     }
 
+    public int getAutoMp() {
+        return autoMp;
+    }
+
     public void setExpOff(boolean expOff) {
         this.expOff = expOff;
+    }
+
+    public boolean getExpOff() {
+        return expOff;
     }
 
     public void setItemsRewarded(boolean itemsRewarded) {
         this.itemsRewarded = itemsRewarded;
     }
 
+    public boolean isItemsRewarded() {
+        return itemsRewarded;
+    }
+
     public void setHenna1Duration(long hennaDuration) {
         this.henna1Duration = hennaDuration;
+    }
+
+    public long getHenna1Duration() {
+        return henna1Duration;
     }
 
     public void setHenna2Duration(long hennaDuration) {
         this.henna2Duration = hennaDuration;
     }
 
+    public long getHenna2Duration() {
+        return henna2Duration;
+    }
+
     public void setHenna3Duration(long hennaDuration) {
         this.henna3Duration = hennaDuration;
+    }
+
+    public long getHenna3Duration() {
+        return henna3Duration;
     }
 
     public void setVisualHairId(int visualHairId) {
         this.visualHairId = visualHairId;
     }
 
+    public int getVisualHairId() {
+        return visualHairId;
+    }
+
     public void setVisualHairColorId(int visualHairColorId) {
         this.visualHairColorId = visualHairColorId;
+    }
+
+    public int getVisualHairColorId() {
+        return visualHairColorId;
     }
 
     public void setVisualFaceId(int visualFaceId) {
         this.visualFaceId = visualFaceId;
     }
 
+    public int getVisualFaceId() {
+        return visualFaceId;
+    }
+
     public void setInstanceRestore(int instanceRestore) {
         this.instanceRestore = instanceRestore;
+    }
+
+    public int getInstanceRestore() {
+        return instanceRestore;
     }
 
     public void setClaimedClanRewards(int claimedClanRewards) {
         this.claimedClanRewards = claimedClanRewards;
     }
 
+    public int getClaimedClanRewards() {
+        return claimedClanRewards;
+    }
+
     public void setCondOverrideKey(String condOverrideKey) {
         this.condOverrideKey = condOverrideKey;
+    }
+
+    public String getCondOverrideKey() {
+        return condOverrideKey;
     }
 
     public void setMonsterReturn(int monsterReturn) {
         this.monsterReturn = monsterReturn;
     }
 
-    public void setUiKeyMapping(String uiKeyMapping) {
-        this.uiKeyMapping = uiKeyMapping;
+    public int getMonsterReturn() {
+        return monsterReturn;
     }
 
     public byte getRevengeTeleports() {

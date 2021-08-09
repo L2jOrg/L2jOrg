@@ -20,6 +20,7 @@ package org.l2j.gameserver.engine.item;
 
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.item.AutoUseType;
+import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
@@ -102,30 +103,30 @@ public final class EtcItem extends ItemTemplate {
         return isInfinite;
     }
 
-    public void addCapsuledItem(ExtractableProduct extractableProduct) {
+    void addCapsuledItem(ExtractableProduct extractableProduct) {
         if (extractableItems == null) {
             extractableItems = new ArrayList<>();
         }
         extractableItems.add(extractableProduct);
     }
 
-    public void setImmediateEffect(boolean immediateEffect) {
+    void setImmediateEffect(boolean immediateEffect) {
         this.immediateEffect = immediateEffect;
     }
 
-    public void setExImmediateEffect(boolean exImmediateEffect) {
+    void setExImmediateEffect(boolean exImmediateEffect) {
         this.exImmediateEffect = exImmediateEffect;
     }
 
-    public void setQuestItem(boolean questItem) {
+    void setQuestItem(boolean questItem) {
         this.questItem = questItem;
     }
 
-    public void setInfinite(boolean infinite) {
+    void setInfinite(boolean infinite) {
         this.isInfinite = infinite;
     }
 
-    public void setSelfResurrection(boolean selfResurrection) {
+    void setSelfResurrection(boolean selfResurrection) {
         this.selfResurrection = selfResurrection;
     }
 
@@ -133,15 +134,15 @@ public final class EtcItem extends ItemTemplate {
         return selfResurrection;
     }
 
-    public void setHandler(String handler) {
+    void setHandler(String handler) {
         this.handler = handler;
     }
 
-    public void setAction(ActionType action) {
+    void setAction(ActionType action) {
         _defaultAction = action;
     }
 
-    public void setAutoUseType(AutoUseType autoUseType) {
+    void setAutoUseType(AutoUseType autoUseType) {
         this.autoUseType = autoUseType;
     }
 
@@ -153,7 +154,11 @@ public final class EtcItem extends ItemTemplate {
         return autoUseType == AutoUseType.SUPPLY;
     }
 
-    public void setExtractableMax(int maxExtractable) {
+    void setExtractableMax(int maxExtractable) {
         this.maxExtractable = maxExtractable;
+    }
+
+    void setBodyPart(BodyPart bodyPart) {
+        this.bodyPart = bodyPart;
     }
 }

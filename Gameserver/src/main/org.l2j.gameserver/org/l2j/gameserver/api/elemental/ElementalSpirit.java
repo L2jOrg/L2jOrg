@@ -75,12 +75,10 @@ public class ElementalSpirit {
         owner.sendPacket(SystemMessage.getSystemMessage(YOU_HAVE_ACQUIRED_S1S_S2_SKILL_XP).addInt((int) experience).addElementalSpirit(getType()));
         if(data.getExperience() > getExperienceToNextLevel()) {
             levelUp();
-            owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTACK_SPIRITS_HAVE_REACHED_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
-            owner.sendPacket(new ElementalSpiritInfo(owner.getActiveElementalSpiritType(), (byte) 0));
-            var userInfo = new UserInfo(owner);
-            userInfo.addComponentType(UserInfoType.SPIRITS);
-            owner.sendPacket(userInfo);
 
+            owner.sendPackets(new UserInfo(owner, UserInfoType.SPIRITS),
+                    SystemMessage.getSystemMessage(S1_ATTACK_SPIRITS_HAVE_REACHED_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()),
+                    new ElementalSpiritInfo(owner.getActiveElementalSpiritType(), (byte) 0));
         }
         owner.sendPacket(new ExElementalSpiritGetExp(getType(), data.getExperience()));
     }
@@ -113,13 +111,12 @@ public class ElementalSpirit {
     }
 
     public int getExtractAmount() {
-        //must be Math.abs, else it glitches out
-        return (int) Math.abs((data.getExperience() - getExperienceToPreviousLevel()) / ElementalSpiritEngine.FRAGMENT_XP_CONSUME);
+        return Math.round((data.getExperience() - getExperienceToPreviousLevel()) / template.getExtractExpConsume());
     }
 
-    public void resetLevel() {
-        //TODO refine the calculation so that it returns the same percentage
-        data.setExperience((int) (getExperienceToPreviousLevel() + ((data.getExperience() - getExperienceToPreviousLevel()) % ElementalSpiritEngine.FRAGMENT_XP_CONSUME)));
+    public void resetToPreviousLevel() {
+        data.setExperience(getExperienceToPreviousLevel());
+        data.decreaseLevel();
         resetCharacteristics();
     }
 
@@ -164,7 +161,7 @@ public class ElementalSpirit {
     }
 
     private long getExperienceToPreviousLevel() {
-        return data.getLevel() < 2 ? 0 : template.getMaxExperienceAtLevel((byte) (data.getLevel() -1));
+        return data.getLevel() < 3 ? 0 : template.getMaxExperienceAtLevel((byte) (data.getLevel() -2));
     }
 
     public byte getLevel() {

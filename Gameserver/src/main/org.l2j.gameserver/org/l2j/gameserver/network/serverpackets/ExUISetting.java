@@ -19,61 +19,24 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
-import java.util.Objects;
-
 /**
  * @author Mobius
+ * @author JoeAlisson
  */
 public class ExUISetting extends ServerPacket {
-    public static final String UI_KEY_MAPPING_VAR = "UI_KEY_MAPPING";
-    public static final String SPLIT_VAR = "	";
-    private final byte[] _uiKeyMapping;
+    private final byte[] uiKeyMapping;
 
-    public ExUISetting(Player player) {
-        if (player.getUiKeyMapping() != null && !player.getUiKeyMapping().trim().equalsIgnoreCase("")) {
-            _uiKeyMapping = getByteArray(player.getUiKeyMapping(), UI_KEY_MAPPING_VAR, SPLIT_VAR);
-        } else {
-            _uiKeyMapping = null;
-        }
+    public ExUISetting(byte[] keyMapping) {
+        uiKeyMapping = keyMapping;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
-        writeId(ServerExPacketId.EX_UI_SETTING, buffer );
-        if (_uiKeyMapping != null) {
-            buffer.writeInt(_uiKeyMapping.length);
-            buffer.writeBytes(_uiKeyMapping);
-        } else {
-            buffer.writeInt(0);
-        }
+        writeId(ServerExPacketId.EX_UI_SETTING, buffer);
+        buffer.writeInt(uiKeyMapping.length);
+        buffer.writeBytes(uiKeyMapping);
     }
-
-    public byte[] getByteArray(Object val, String key, String splitOn) {
-        Objects.requireNonNull(key);
-        Objects.requireNonNull(splitOn);
-        if (val == null) {
-            throw new IllegalArgumentException("Byte value required, but not specified");
-        }
-        if (val instanceof Number) {
-            return new byte[] {
-                    ((Number) val).byteValue()
-            };
-        }
-        int c = 0;
-        final String[] vals = ((String) val).split(splitOn);
-        final byte[] result = new byte[vals.length];
-        for (String v : vals) {
-            try {
-                result[c++] = Byte.parseByte(v);
-            } catch (Exception e) {
-                throw new IllegalArgumentException("Byte value required, but found: " + val);
-            }
-        }
-        return result;
-    }
-
 }

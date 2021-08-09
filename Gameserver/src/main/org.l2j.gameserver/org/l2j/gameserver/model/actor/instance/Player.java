@@ -76,7 +76,9 @@ import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.*;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.Henna;
 import org.l2j.gameserver.model.item.container.Warehouse;
 import org.l2j.gameserver.model.item.container.*;
 import org.l2j.gameserver.model.item.type.ArmorType;
@@ -102,7 +104,6 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangeAccessLevel;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.grace.ExVitalExInfo;
@@ -110,7 +111,6 @@ import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
-import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
@@ -119,7 +119,6 @@ import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.util.*;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.ZoneEngine;
@@ -139,12 +138,10 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
@@ -185,7 +182,6 @@ public final class Player extends Playable {
     private PlayerStatsData statsData;
     private AutoPlaySettings autoPlaySettings;
     private PlayerVariableData variables;
-    private ScheduledFuture<?> _timedHuntingZoneFinishTask;
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection;
     private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
@@ -489,18 +485,6 @@ public final class Player extends Playable {
         return variables.getSayhaGraceItemsUsed();
     }
 
-    private int getAbilityPointsMainClassUsed() {
-        return variables.getAbilityPointsMainClassUsed();
-    }
-
-    private int getRevelationSkillMainClass1() {
-        return variables.getRevelationSkillMainClass1();
-    }
-
-    private int getRevelationSkillMainClass2() {
-        return variables.getRevelationSkillMainClass2();
-    }
-
     private String getExtendDrop() {
         return variables.getExtendDrop();
     }
@@ -511,17 +495,6 @@ public final class Player extends Playable {
 
     public boolean isFortuneTellingBlackCat() {
         return variables.isFortuneTellingBlackCat();
-    }
-
-    public long getHuntingZoneResetTime(int zoneId) {
-        String[] timeZones = variables.getHuntingZoneResetTime().split(";");
-
-        for(int i = 0 ; i < timeZones.length; i = i + 2) {
-            if (timeZones[i].equalsIgnoreCase("" + zoneId))
-                return Long.parseLong(timeZones[i + 1]);
-        }
-
-        return 0;
     }
 
     public int getAutoCp() {
@@ -594,10 +567,6 @@ public final class Player extends Playable {
         return variables.getMonsterReturn();
     }
 
-    public String getUiKeyMapping() {
-        return variables.getUiKeyMapping();
-    }
-
     public void setHairAccessoryEnabled(boolean hairAccessory_Enabled) {
         variables.setHairAccessoryEnabled(hairAccessory_Enabled);
     }
@@ -642,14 +611,6 @@ public final class Player extends Playable {
 
     public void setFortuneTellingBlackCat(boolean fortuneTellingBlackCat) {
         variables.setFortuneTellingBlackCat(fortuneTellingBlackCat);
-    }
-
-    public void setHuntingZoneResetTime(int zoneId, long huntingZoneResetTime) {
-        if(variables.getHuntingZoneResetTime().equalsIgnoreCase("")) {
-            variables.setHuntingZoneResetTime(zoneId + ";" + huntingZoneResetTime);
-        } else {
-            variables.setHuntingZoneResetTime(variables.getHuntingZoneResetTime() + ";" + zoneId + ";" + huntingZoneResetTime);
-        }
     }
 
     public void setAutoCp(int autoCp) {
@@ -706,10 +667,6 @@ public final class Player extends Playable {
 
     public void setMonsterReturn(int monsterReturn) {
         variables.setMonsterReturn(monsterReturn);
-    }
-
-    public void setUiKeyMapping(String uiKeyMapping) {
-        variables.setUiKeyMapping(uiKeyMapping);
     }
 
     public int getRevengeUsableLocation() {
@@ -1232,7 +1189,7 @@ public final class Player extends Playable {
     private ScheduledFuture<?> taskWater;
     private ScheduledFuture<?> skillListRefreshTask;
 
-    private SkillUseHolder queuedSkill;
+    private SkillUsedInfo queuedSkill;
     private int reviveRequested;
     private double revivePower;
     private boolean revivePet;
@@ -1602,18 +1559,17 @@ public final class Player extends Playable {
         return quests.values();
     }
 
-    /**
-     * @return a table containing all Quest in progress from the table _quests.
-     */
     public List<Quest> getAllActiveQuests() {
-        //@formatter:off
-        return quests.values().stream()
-                .filter(QuestState::isStarted)
-                .map(QuestState::getQuest)
-                .filter(Objects::nonNull)
-                .filter(q -> q.getId() > 1)
-                .collect(Collectors.toList());
-        //@formatter:on
+        List<Quest> activeQuests = new ArrayList<>();
+        for (var questState : quests.values()) {
+            if(questState.isStarted()) {
+                var quest = questState.getQuest();
+                if(quest.getId() > 1) {
+                    activeQuests.add(quest);
+                }
+            }
+        }
+        return activeQuests;
     }
 
     public void processQuestEvent(String questName, String event) {
@@ -1761,11 +1717,7 @@ public final class Player extends Playable {
         if (su.hasUpdates()) {
             broadcastPacket(su);
         }
-        updateRelations();
-    }
-
-    private void updateRelations() {
-        World.getInstance().forEachVisibleObject(this, Player.class, this::updateRelation);
+        Broadcast.relationChanged(this);
     }
 
     public void updateRelation(Player player) {
@@ -1815,7 +1767,7 @@ public final class Player extends Playable {
 
         ZoneEngine.getInstance().getRegion(this).revalidateZones(this);
 
-        if (Config.ALLOW_WATER) {
+        if (GeneralSettings.allowWater()) {
             checkWaterState();
         }
 
@@ -2061,13 +2013,7 @@ public final class Player extends Playable {
                 } else {
                     sm = getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
                 }
-                sm.addItemName(item);
-                sendPacket(sm);
-
-                if (item.getBodyPart().isAnyOf(RIGHT_HAND, TWO_HAND)) {
-                    rechargeShot(ShotType.SOULSHOTS);
-                    rechargeShot(ShotType.SPIRITSHOTS);
-                }
+                sendPacket(sm.addItemName(item));
             } else {
                 sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
             }
@@ -2424,7 +2370,7 @@ public final class Player extends Playable {
                 }
             }
         }
-        if (Config.WAREHOUSE_CACHE) {
+        if (GeneralSettings.cacheWarehouse()) {
             WarehouseCacheManager.getInstance().addCacheTask(this);
         }
         return warehouse;
@@ -2439,7 +2385,7 @@ public final class Player extends Playable {
         }
         warehouse = null;
 
-        if (Config.WAREHOUSE_CACHE) {
+        if (GeneralSettings.cacheWarehouse()) {
             WarehouseCacheManager.getInstance().remCacheTask(this);
         }
     }
@@ -2452,7 +2398,7 @@ public final class Player extends Playable {
      * @return true if refund list is not empty
      */
     public boolean hasRefund() {
-        return (refund != null) && (refund.getSize() > 0) && Config.ALLOW_REFUND;
+        return refund != null && refund.getSize() > 0 && GeneralSettings.allowRefund();
     }
 
     /**
@@ -2536,19 +2482,10 @@ public final class Player extends Playable {
                 return false;
             }
 
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(adenaItem);
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
+            sendInventoryUpdate(new InventoryUpdate(adenaItem));
 
             if (sendMessage) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
-                sm.addLong(count);
-                sendPacket(sm);
+                sendPacket(getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(count));
             }
         }
 
@@ -2578,14 +2515,7 @@ public final class Player extends Playable {
                 return false;
             }
 
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(beautyTickets);
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
+            sendInventoryUpdate(new InventoryUpdate(beautyTickets));
 
             if (sendMessage) {
                 final SystemMessage sm;
@@ -2708,7 +2638,7 @@ public final class Player extends Playable {
         if (handler == null) {
             LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
         } else {
-            handler.useItem(this, ItemEngine.getInstance().createTempItem(template), false);
+            handler.useItem(this, ItemEngine.getInstance().createTempItem(template), true);
         }
     }
 
@@ -2878,38 +2808,27 @@ public final class Player extends Playable {
             return null;
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
+        var playerIU = new InventoryUpdate();
 
-            if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
-                playerIU.addModifiedItem(oldItem);
-            } else {
-                playerIU.addRemovedItem(oldItem);
-            }
-
-            sendInventoryUpdate(playerIU);
+        if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
+            playerIU.addModifiedItem(oldItem);
         } else {
-            sendItemList();
+            playerIU.addRemovedItem(oldItem);
         }
+
+        sendInventoryUpdate(playerIU);
 
         // Send target update packet
         if (target instanceof PlayerInventory) {
             final Player targetPlayer = ((PlayerInventory) target).getOwner();
+            playerIU = new InventoryUpdate();
 
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate playerIU = new InventoryUpdate();
-
-                if (newItem.getCount() > count) {
-                    playerIU.addModifiedItem(newItem);
-                } else {
-                    playerIU.addNewItem(newItem);
-                }
-
-                targetPlayer.sendPacket(playerIU);
+            if (newItem.getCount() > count) {
+                playerIU.addModifiedItem(newItem);
             } else {
-                targetPlayer.sendItemList();
+                playerIU.addNewItem(newItem);
             }
+            targetPlayer.sendPacket(playerIU);
         }
         return newItem;
     }
@@ -2944,24 +2863,12 @@ public final class Player extends Playable {
             item.setProtected(true);
         }
 
-        // retail drop protection
         if (protectItem) {
             item.getDropProtection().protect(this);
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
-            playerIU.addItem(item);
-            sendInventoryUpdate(playerIU);
-        } else {
-            sendItemList();
-        }
-
-        // Sends message to client if requested
-        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-        sm.addItemName(item);
-        sendPacket(sm);
+        sendInventoryUpdate(new InventoryUpdate(item));
+        sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(item));
     }
 
     private void dropItem(String process, Item item, WorldObject reference) {
@@ -2985,7 +2892,6 @@ public final class Player extends Playable {
      * TODO extract method and remove duplication
      */
     public Item dropItem(String process, int objectId, long count, int x, int y, int z, WorldObject reference, boolean sendMessage, boolean protectItem) {
-        final Item ownedItem = inventory.getItemByObjectId(objectId);
         final Item item = inventory.dropItem(process, objectId, count, this, reference);
 
         if (item == null) {
@@ -3015,7 +2921,7 @@ public final class Player extends Playable {
             item.getDropProtection().protect(this);
         }
 
-        sendInventoryUpdate( new InventoryUpdate(ownedItem));
+        sendInventoryUpdate( new InventoryUpdate(item));
 
         if (sendMessage) {
             sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(item));
@@ -3251,7 +3157,7 @@ public final class Player extends Playable {
     }
 
     public final void broadcastTitleInfo() {
-        broadcastUserInfo(UserInfoType.CLAN);
+        broadcastUserInfo(UserInfoType.CLAN, UserInfoType.COLOR);
         broadcastPacket(new NicknameChanged(this));
     }
 
@@ -3486,7 +3392,7 @@ public final class Player extends Playable {
         if (handler == null) {
             LOGGER.warn("No item handler registered for item ID: {}.", target.getId());
         } else {
-            handler.useItem(this, target, false);
+            handler.useItem(this, target, true);
         }
         ItemEngine.getInstance().destroyItem("Consume", target, this, null);
     }
@@ -3629,6 +3535,9 @@ public final class Player extends Playable {
         return (Weapon) weapon.getTemplate();
     }
 
+    public Item getSecondaryWeapon() {
+        return inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
+    }
 
     /**
      * Return the secondary ItemTemplate item (always equipped in the left hand).<BR>
@@ -3917,30 +3826,44 @@ public final class Player extends Playable {
         }
     }
 
-    public void updatePvpTitleAndColor(boolean broadcastInfo) {
-        if (Config.PVP_COLOR_SYSTEM_ENABLED) {
-            final var pvpKills = data.getPvP();
-            if (pvpKills >= Config.PVP_AMOUNT1 && data.getPvP() < Config.PVP_AMOUNT2) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
-            } else if (pvpKills >= Config.PVP_AMOUNT2 && pvpKills < Config.PVP_AMOUNT3) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
-            } else if (pvpKills >= Config.PVP_AMOUNT3 && pvpKills < Config.PVP_AMOUNT4) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
-            } else if (pvpKills >= Config.PVP_AMOUNT4 && pvpKills < Config.PVP_AMOUNT5) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
-            } else if (pvpKills >= Config.PVP_AMOUNT5) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
-            }
-
-            if (broadcastInfo) {
-                broadcastTitleInfo();
-            }
+    public boolean updatePvpTitleAndColor(boolean broadcastInfo) {
+        if (!Config.PVP_COLOR_SYSTEM_ENABLED) {
+            return false;
         }
+
+        var updated = false;
+        final var pvpKills = data.getPvP();
+
+        if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT1, data.getPvP(), Config.PVP_AMOUNT2, Config.NAME_COLOR_FOR_PVP_AMOUNT1)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT2, pvpKills, Config.PVP_AMOUNT3, Config.NAME_COLOR_FOR_PVP_AMOUNT2)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT3, pvpKills, Config.PVP_AMOUNT4, Config.NAME_COLOR_FOR_PVP_AMOUNT3)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT4, pvpKills, Config.PVP_AMOUNT5, Config.NAME_COLOR_FOR_PVP_AMOUNT4)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
+            updated = true;
+        } else if (pvpKills >= Config.PVP_AMOUNT5 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT5) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
+            updated = true;
+        }
+
+        if (updated && broadcastInfo) {
+            broadcastTitleInfo();
+        }
+        return updated;
+    }
+
+    private boolean needChangeToAmount(int pvpKills, int pvpAmount1, int pvP, int pvpAmount2, int nameColorForPvpAmount1) {
+        return pvpKills >= pvpAmount1 && pvP < pvpAmount2 && appearance.getTitleColor() != nameColorForPvpAmount1;
     }
 
     public void updatePvPStatus() {
@@ -4698,12 +4621,6 @@ public final class Player extends Playable {
 
     private void restoreShortCuts() {
         shortcuts.restoreMe();
-        sendPacket(new ShortCutInit());
-        forEachShortcut(s -> {
-            if(s.isActive()) {
-                client.sendPacket(new ExActivateAutoShortcut(s.getClientId(), true));
-            }
-        });
     }
 
     private void restoreRecipeBook() {
@@ -4765,7 +4682,7 @@ public final class Player extends Playable {
         }
 
         storeRecommendations();
-        if (Config.UPDATE_ITEMS_ON_CHAR_STORE) {
+        if (GeneralSettings.updateItemsOnCharStore()) {
             inventory.updateDatabase();
             if(nonNull(warehouse)) {
                 warehouse.updateDatabase();
@@ -4946,12 +4863,10 @@ public final class Player extends Playable {
 
             addSkill(skill);
 
-            if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)) {
+            if (GeneralSettings.skillCheckEnabled() && !canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
                 if (!SkillTreesData.getInstance().isSkillAllowed(this, skill)) {
                     GameUtils.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() + " (" + skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), IllegalActionPunishmentType.BROADCAST);
-                    if (Config.SKILL_CHECK_REMOVE) {
-                        removeSkill(skill);
-                    }
+                    removeSkill(skill);
                 }
             }
         }
@@ -5576,10 +5491,10 @@ public final class Player extends Playable {
 
     private void setMount(int npcId, int npcLevel) {
         final MountType type = MountType.findByNpcId(npcId);
-        switch (type) {
-            case NONE -> setIsFlying(false);
-            case STRIDER -> addStriderAssaultSkill();
-            case WYVERN -> setIsFlying(true);
+        if (type == MountType.NONE) {
+            setIsFlying(false);
+        } else if (type == MountType.WYVERN) {
+            setIsFlying(true);
         }
 
         mountType = type;
@@ -5587,11 +5502,6 @@ public final class Player extends Playable {
         mountLevel = npcLevel;
     }
 
-    private void addStriderAssaultSkill() {
-        if (isNoble()) {
-            addSkill(CommonSkill.STRIDER_SIEGE_ASSAULT.getSkill(), false);
-        }
-    }
 
     /**
      * @return the type of Pet mounted (0 : none, 1 : Strider, 2 : Wyvern, 3: Wolf).
@@ -5601,13 +5511,13 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final void stopAllEffects() {
+    public void stopAllEffects() {
         super.stopAllEffects();
         updateAndBroadcastStatus();
     }
 
     @Override
-    public final void stopAllEffectsExceptThoseThatLastThroughDeath() {
+    public void stopAllEffectsExceptThoseThatLastThroughDeath() {
         super.stopAllEffectsExceptThoseThatLastThroughDeath();
         updateAndBroadcastStatus();
     }
@@ -5880,13 +5790,9 @@ public final class Player extends Playable {
 
     public void setHero(boolean hero) {
         if (hero && (data.getBaseClass() == data.getClassId())) {
-            for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
-                addSkill(skill, false); // Don't persist hero skills into database
-            }
+            SkillTreesData.getInstance().forEachHeroSkill(s -> addSkill(s, false));
         } else {
-            for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
-                removeSkill(skill, false, true); // Just remove skills from non-hero players
-            }
+            SkillTreesData.getInstance().forEachHeroSkill(s -> removeSkill(s, false, true));
         }
         this.hero = hero;
         sendSkillList();
@@ -5962,7 +5868,7 @@ public final class Player extends Playable {
             return false;
         }
 
-        if (isMounted() || isInBoat()) {
+        if (isMounted()) {
             noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
             return false;
         }
@@ -6006,20 +5912,6 @@ public final class Player extends Playable {
             return false;
         }
         return true;
-    }
-
-    public boolean isNoble() {
-        return data.isNobless();
-    }
-
-    public void setNoble(boolean val) {
-        if (val) {
-            SkillTreesData.getInstance().getNobleSkillAutoGetTree().forEach(skill -> addSkill(skill, false));
-        } else {
-            SkillTreesData.getInstance().getNobleSkillTree().forEach(skill -> removeSkill(skill, false, true));
-        }
-        data.setNobless(val);
-        sendSkillList();
     }
 
     @Override
@@ -6160,7 +6052,6 @@ public final class Player extends Playable {
     public void onEnter() {
         startWarnUserTakeBreak();
         restoreItemReuse();
-        restoreShortCuts();
         restoreEffects();
 
         // TODO : Need to fix that hack!
@@ -6182,7 +6073,7 @@ public final class Player extends Playable {
         if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
             checkPlayerSkills();
         }
-
+        restoreShortCuts();
         ZoneEngine.getInstance().forEachZone(this, z -> z.onPlayerLoginInside(this));
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogin(this), this);
     }
@@ -6522,17 +6413,6 @@ public final class Player extends Playable {
         return !isProcessingItem(objectId);
     }
 
-    /**
-     * @return Returns the inBoat.
-     */
-    public boolean isInBoat() {
-        return (vehicle != null) && vehicle.isBoat();
-    }
-
-    public Boat getBoat() {
-        return (Boat) vehicle;
-    }
-
     public boolean isInShuttle() {
         return vehicle instanceof Shuttle;
     }
@@ -6777,7 +6657,7 @@ public final class Player extends Playable {
         mountObjectID = newID;
     }
 
-    public SkillUseHolder getQueuedSkill() {
+    public SkillUsedInfo getQueuedSkill() {
         return queuedSkill;
     }
 
@@ -6786,7 +6666,7 @@ public final class Player extends Playable {
             this.queuedSkill = null;
             return;
         }
-        this.queuedSkill = new SkillUseHolder(queuedSkill, null, ctrlPressed, shiftPressed);
+        this.queuedSkill = new SkillUsedInfo(queuedSkill, null, ctrlPressed, shiftPressed);
     }
 
     /**
@@ -7095,34 +6975,19 @@ public final class Player extends Playable {
      */
     public Collection<Skill> getSkillList() {
         Collection<Skill> currentSkills = getAllSkills();
+        List<Skill> skills = new ArrayList<>(currentSkills.size());
 
-        if (isTransformed()) {
-            if (nonNull(transformSkills)) {
-                // Include transformation skills and those skills that are allowed during transformation.
-                currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
-
-                int revelationSkill = getRevelationSkillMainClass1();
-                if (revelationSkill != 0)
-                {
-                    addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                }
-                revelationSkill = getRevelationSkillMainClass2();
-                if (revelationSkill != 0)
-                {
-                    addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                }
-
-                // Include transformation skills.
-                currentSkills.addAll(transformSkills.values());
+        for (Skill skill : currentSkills) {
+            if(!skill.isBlockActionUseSkill() && (skill.allowOnTransform() || !isTransformed())) {
+                skills.add(skill);
             }
         }
 
-        //@formatter:off
-        return currentSkills.stream()
-                .filter(Objects::nonNull)
-                .filter(s -> !s.isBlockActionUseSkill()) // Skills that are blocked from player use are not shown in skill list.
-                .collect(Collectors.toList());
-        //@formatter:on
+        if(isTransformed() && transformSkills != null) {
+            skills.addAll(transformSkills.values());
+        }
+
+        return skills;
     }
 
     private void startFeed(int npcId) {
@@ -7361,7 +7226,7 @@ public final class Player extends Playable {
         } else if ((type == 1) && (isInsideZone(ZoneType.SIEGE) || isInsideZone(ZoneType.CLAN_HALL) || isInsideZone(ZoneType.JAIL) || isInsideZone(ZoneType.CASTLE) || isInsideZone(ZoneType.NO_SUMMON_FRIEND) || isInsideZone(ZoneType.FORT))) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
             valid = false;
-        } else if (isInsideZone(ZoneType.NO_BOOKMARK) || isInBoat()) {
+        } else if (isInsideZone(ZoneType.NO_BOOKMARK)) {
             if (type == 0) {
                 sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_THIS_AREA);
             } else if (type == 1) {
@@ -7433,11 +7298,6 @@ public final class Player extends Playable {
     public void sendInfo(Player player) {
         if(!isInvisible() || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
             player.sendPacket(new ExCharInfo(this));
-        }
-
-        if (isInBoat() && isInvisible()) {
-            setXYZ(getBoat().getLocation());
-            player.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), inVehiclePosition));
         }
 
         updateRelation(player);
@@ -7974,15 +7834,11 @@ public final class Player extends Playable {
         return nonNull(clan) && nonNull(target.getClan()) && clan.isAtWarWith(target.getClan());
     }
 
-    public int getAbilityPointsUsed() {
-        return getAbilityPointsMainClassUsed();
-    }
-
     /**
      * @return The amount of times player can use world chat
      */
     public int getWorldChatPoints() {
-        return (int) getStats().getValue(Stat.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
+        return (int) getStats().getValue(Stat.WORLD_CHAT_POINTS, GeneralSettings.worldChatPointsPerDay());
     }
 
     /**

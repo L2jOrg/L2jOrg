@@ -37,6 +37,7 @@ import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.item.ExItemAnnounce;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
@@ -279,7 +280,7 @@ public class EnchantItemEngine extends GameXmlReader {
 
             player.sendPacket(result);
 
-            if (Config.LOG_ITEM_ENCHANTS) {
+            if (GeneralSettings.logItemEnchants()) {
                 LOGGER.info("Safe Fail, Player: {}, +{} {}, {}", player, item.getEnchantLevel(), item, scroll);
             }
 
@@ -291,7 +292,7 @@ public class EnchantItemEngine extends GameXmlReader {
             inventoryUpdate.addModifiedItem(item);
             player.sendPacket(EnchantResult.blessed(item));
 
-            if (Config.LOG_ITEM_ENCHANTS) {
+            if (GeneralSettings.logItemEnchants()) {
                 LOGGER.info("Blessed Fail, Player: {}, +{} {}, {}", player, item.getEnchantLevel(), item, scroll);
             }
         } else {
@@ -330,7 +331,7 @@ public class EnchantItemEngine extends GameXmlReader {
 
             player.sendPacket(result);
 
-            if (Config.LOG_ITEM_ENCHANTS) {
+            if (GeneralSettings.logItemEnchants()) {
                 LOGGER.info("Fail, Player: {}, +{} {}, {}", player, item.getEnchantLevel(), item, scroll);
             }
         }
@@ -350,7 +351,7 @@ public class EnchantItemEngine extends GameXmlReader {
         player.sendPacket(EnchantResult.success(item));
 
 
-        if (Config.LOG_ITEM_ENCHANTS) {
+        if (GeneralSettings.logItemEnchants()) {
             LOGGER.info("Success, {} Enchant {} {}, with scroll {}", player, item.getEnchantLevel(), item, scroll);
         }
 

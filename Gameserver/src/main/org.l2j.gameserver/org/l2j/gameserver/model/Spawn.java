@@ -404,7 +404,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
 
         if (!npc.isFlying())
         {
-            int geoZ = GeoEngine.getInstance().getHeight(newLocX, newLocY, newLocZ);
+            int geoZ = GeoEngine.getInstance().getHeight(newLocX, newLocY, newLocZ) + 64;
 
             if (MathUtil.isInsideRadius3D(newLocX, newLocY, newLocZ, newLocX, newLocY, geoZ, 300))
             {

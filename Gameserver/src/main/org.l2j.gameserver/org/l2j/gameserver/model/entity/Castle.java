@@ -35,7 +35,6 @@ import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.Npc;
@@ -291,10 +290,12 @@ public final class Castle extends AbstractResidence {
             if (CharacterSettings.removeCastleCirclets()) {
                 CastleManager.getInstance().removeCirclet(formerOwner, getId());
             }
-            for (Player member : clan.getOnlineMembers(0)) {
-                removeResidentialSkills(member);
-                member.sendSkillList();
-            }
+
+            clan.forEachOnlineMember(player -> {
+                removeResidentialSkills(player);
+                player.sendSkillList();
+            });
+
             clan.setCastleId(0);
             clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
         }
@@ -413,7 +414,6 @@ public final class Castle extends AbstractResidence {
             ownerId = clan.getId(); // Update owner id property
         } else {
             ownerId = 0; // Remove owner
-            CastleManorManager.getInstance().resetManorData(getId());
         }
 
         var clanDao =getDAO(ClanDAO.class);

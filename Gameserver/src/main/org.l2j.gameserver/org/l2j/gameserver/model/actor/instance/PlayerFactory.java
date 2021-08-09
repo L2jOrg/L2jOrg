@@ -33,6 +33,7 @@ import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -46,12 +47,11 @@ import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
-import org.l2j.gameserver.model.item.EquipableItem;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.PcItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -100,40 +100,9 @@ public class PlayerFactory {
         player.setTeleportFavorites(playerDAO.findTeleportFavorites(playerId));
 
         player.setHeading(playerData.getHeading());
-        var stats = player.getStats();
-        stats.setExp(playerData.getExp());
-        stats.setStartingXp(playerData.getExp());
-        stats.setLevel(playerData.getLevel());
-        stats.setSp(playerData.getSp());
-        player.setNoble(playerData.isNobless());
-        player.getStats().setSayhaGracePoints(playerData.getSayhaGracePoints());
+        loadStatus(playerId, playerData, player);
 
-        if(Olympiad.getInstance().isHero(playerId)) {
-            player.setHero(true);
-        }
-
-        if(player.getLevel() >= 40) {
-            player.initElementalSpirits();
-        }
-
-        if (playerData.getClanId() > 0) {
-            player.setClan(ClanEngine.getInstance().getClan(playerData.getClanId()));
-        }
-
-        if (player.getClan() != null) {
-            if (player.getClan().getLeaderId() != player.getObjectId()) {
-                if (player.getPowerGrade() == 0) {
-                    player.setPowerGrade(5);
-                }
-                player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
-            } else {
-                player.getClanPrivileges().setAll();
-                player.setPowerGrade(1);
-            }
-        }
-
-        Clan.updateSocialStatus(player);
-        player.setTitle(playerData.getTitle());
+        loadClanData(playerData, player);
 
         player.setFistsWeaponItem(player.findFistsWeaponItem());
         player.setUptime(System.currentTimeMillis());
@@ -159,39 +128,13 @@ public class PlayerFactory {
         }
 
         player.getFreight().restore();
-        if (!Config.WAREHOUSE_CACHE) {
+        if (!GeneralSettings.cacheWarehouse()) {
             player.getWarehouse();
         }
 
         EventDispatcher.getInstance().notifyEvent(new OnPlayerLoad(player), Listeners.players());
 
-        // Initialize status update cache
-        player.initStatusUpdateCache();
-
-        // Restore current Cp, HP and MP values
-        player.setCurrentCp(playerData.getCp());
-        player.setCurrentHp(playerData.getHp());
-        player.setCurrentMp(playerData.getMp());
-
-        player.setOriginalCpHpMp(playerData.getCp(), playerData.getHp(), playerData.getMp());
-
-        if (playerData.getHp() < 0.5) {
-            player.setIsDead(true);
-            player.stopHpMpRegeneration();
-        }
-
-        // Restore pet if exists in the world
-        player.setPet(World.getInstance().findPet(player.getObjectId()));
-        final Summon pet = player.getPet();
-        if (pet != null) {
-            pet.setOwner(player);
-        }
-
-        if (player.hasServitors()) {
-            for (Summon summon : player.getServitors().values()) {
-                summon.setOwner(player);
-            }
-        }
+        loadStats(playerData, player);
 
         // Recalculate all stats
         player.getStats().recalculateStats(false);
@@ -214,7 +157,78 @@ public class PlayerFactory {
                 player.getAccountChars().put(info.getObjectId(), info.getName());
             }
         }
+        loadSummons(player);
         return player;
+    }
+
+    private static void loadStatus(int playerId, PlayerData playerData, Player player) {
+        var stats = player.getStats();
+        stats.setExp(playerData.getExp());
+        stats.setStartingXp(playerData.getExp());
+        stats.setLevel(playerData.getLevel());
+        stats.setSp(playerData.getSp());
+        player.getStats().setSayhaGracePoints(playerData.getSayhaGracePoints());
+
+        if(Olympiad.getInstance().isHero(playerId)) {
+            player.setHero(true);
+        }
+
+        if(player.getLevel() >= 40) {
+            player.initElementalSpirits();
+        }
+    }
+
+    private static void loadSummons(Player player) {
+        // Restore pet if exists in the world
+        player.setPet(World.getInstance().findPet(player.getObjectId()));
+        final Summon pet = player.getPet();
+        if (pet != null) {
+            pet.setOwner(player);
+        }
+
+        if (player.hasServitors()) {
+            for (Summon summon : player.getServitors().values()) {
+                summon.setOwner(player);
+            }
+        }
+    }
+
+    private static void loadStats(PlayerData playerData, Player player) {
+        // Initialize status update cache
+        player.initStatusUpdateCache();
+
+        // Restore current Cp, HP and MP values
+        player.setCurrentCp(playerData.getCp());
+        player.setCurrentHp(playerData.getHp());
+        player.setCurrentMp(playerData.getMp());
+
+        player.setOriginalCpHpMp(playerData.getCp(), playerData.getHp(), playerData.getMp());
+
+        if (playerData.getHp() < 0.5) {
+            player.setIsDead(true);
+            player.stopHpMpRegeneration();
+        }
+    }
+
+    private static void loadClanData(PlayerData playerData, Player player) {
+        if (playerData.getClanId() > 0) {
+            player.setClan(ClanEngine.getInstance().getClan(playerData.getClanId()));
+        }
+
+        if (player.getClan() != null) {
+            if (player.getClan().getLeaderId() != player.getObjectId()) {
+                if (player.getPowerGrade() == 0) {
+                    player.setPowerGrade(5);
+                }
+                player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
+            } else {
+                player.getClanPrivileges().setAll();
+                player.setPowerGrade(1);
+            }
+        }
+
+        Clan.updateSocialStatus(player);
+        player.setTitle(playerData.getTitle());
     }
 
     public static void savePlayerData(PlayerTemplate template, PlayerData data) {
@@ -276,25 +290,25 @@ public class PlayerFactory {
         int nextLocData = 0;
 
         final var initialItems = InitialEquipmentData.getInstance().getEquipmentList(data.getClassId());
-        for (PcItemTemplate ie : initialItems) {
-            ItemTemplate template = ItemEngine.getInstance().getTemplate(ie.getId());
+        for (PcItemTemplate initialItem : initialItems) {
+            ItemTemplate template = ItemEngine.getInstance().getTemplate(initialItem.getId());
 
             if(isNull(template)) {
-                LOGGER.warn("Could not create item during player creation: itemId {}, amount {}", ie.getId(), ie.getCount());
+                LOGGER.warn("Could not create item during player creation: itemId {}, amount {}", initialItem.getId(), initialItem.getCount());
                 continue;
             }
 
             ItemLocation loc;
             int locData;
-            if(ie.isEquipped() && template instanceof EquipableItem equipable) {
+            if(initialItem.isEquipped() && template.isEquipable()) {
                 loc = ItemLocation.PAPERDOLL;
-                locData = equipable.getBodyPart().slot().getId();
+                locData = template.getBodyPart().slot().getId();
             } else {
                 loc = ItemLocation.INVENTORY;
                 locData = nextLocData++;
             }
 
-            getDAO(ItemDAO.class).saveItem(data.getCharId(), IdFactory.getInstance().getNextId(), ie.getId(), ie.getCount(), loc, locData);
+            getDAO(ItemDAO.class).saveItem(data.getCharId(), IdFactory.getInstance().getNextId(), initialItem.getId(), initialItem.getCount(), loc, locData);
         }
     }
 

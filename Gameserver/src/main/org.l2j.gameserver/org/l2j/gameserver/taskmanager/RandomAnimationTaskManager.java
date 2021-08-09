@@ -20,14 +20,12 @@ package org.l2j.gameserver.taskmanager;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.settings.GeneralSettings;
 
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-
-import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
  * @author Mobius
@@ -40,7 +38,7 @@ public class RandomAnimationTaskManager
     {
         ThreadPool.scheduleAtFixedRate(() ->
         {
-            final long time = System.currentTimeMillis();
+            long time = System.currentTimeMillis();
             for (Entry<Npc, Long> entry : PENDING_ANIMATIONS.entrySet())
             {
                 if (time > entry.getValue())
@@ -50,18 +48,15 @@ public class RandomAnimationTaskManager
                     {
                         npc.onRandomAnimation(Rnd.get(2, 3));
                     }
-
-                    PENDING_ANIMATIONS.put(npc, time + (Rnd.get((isAttackable(npc) ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (isAttackable(npc) ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
+                    PENDING_ANIMATIONS.put(npc, time + GeneralSettings.randomNpcAnimation() * 1000L);
                 }
             }
         }, 0, 1000);
     }
 
-    public void add(Npc npc)
-    {
-        if (npc.hasRandomAnimation())
-        {
-            PENDING_ANIMATIONS.putIfAbsent(npc, System.currentTimeMillis() + (Rnd.get((isAttackable(npc) ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (isAttackable(npc) ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
+    public void add(Npc npc) {
+        if (npc.hasRandomAnimation()) {
+            PENDING_ANIMATIONS.putIfAbsent(npc, System.currentTimeMillis() + GeneralSettings.randomNpcAnimation() * 1000L);
         }
     }
 

@@ -51,6 +51,7 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
@@ -315,7 +316,7 @@ public class Olympiad extends AbstractEventManager<OlympiadMatch> {
             return false;
         }
 
-        if(player.isInInstance() || player.isInTimedHuntingZone()) {
+        if(player.isInInstance() || player.isInsideZone(ZoneType.TIMED)) {
             player.sendPacket(CANNOT_APPLY_TO_PARTICIPATE_IN_A_MATCH_WHILE_IN_AN_INSTANCED_ZONE);
             return false;
         }

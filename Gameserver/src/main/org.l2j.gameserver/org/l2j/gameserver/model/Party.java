@@ -42,18 +42,18 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.PartySettings;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.Future;
-import java.util.stream.Collectors;
+import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+import static org.l2j.gameserver.util.GameUtils.checkIfInRange;
 
 /**
  * This class serves as a container for player parties.
@@ -138,45 +138,51 @@ public class Party extends AbstractPlayerGroup {
      * @param target the object of which the member must be within a certain range (must not be null)
      * @return a random member from this party or {@code null} if none of the members have inventory space for the specified item
      */
-    private Player getCheckedRandomMember(int itemId, Creature target) {
-        return Rnd.get(members.stream()
-                .filter(member -> member.getInventory().validateCapacityByItemId(itemId) && GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true))
-                .collect(Collectors.toList()));
+    private Player getRandomLooterMember(int itemId, Creature target) {
+        Player player = null;
+        int maxChance = 0;
+        for (Player member : members) {
+            var chance = Rnd.get(100);
+            if(chance >= maxChance && member.getInventory().validateCapacityByItemId(itemId) && checkIfInRange(PartySettings.partyRange(), target, member, true)) {
+                maxChance = chance;
+                player = member;
+            }
+        }
+        return player;
     }
 
-    private Player getCheckedNextLooter(int ItemId, Creature target) {
+    private Player getCheckedNextLooter(int itemId, Creature target) {
         for (int i = 0; i < members.size(); i++) {
             if (++itemLastLoot >= members.size()) {
                 itemLastLoot = 0;
             }
 
             var member = members.get(itemLastLoot);
-            if (member.getInventory().validateCapacityByItemId(ItemId) && GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true)) {
+            if (member.getInventory().validateCapacityByItemId(itemId) && checkIfInRange(PartySettings.partyRange(), target, member, true)) {
                 return member;
             }
         }
         return null;
     }
 
-    private Player getActualLooter(Player player, int ItemId, boolean spoil, Creature target) {
-        Player looter = null;
-
-        switch (distributionType) {
-            case RANDOM -> {
-                if (!spoil) {
-                    looter = getCheckedRandomMember(ItemId, target);
-                }
-            }
-            case RANDOM_INCLUDING_SPOIL -> looter = getCheckedRandomMember(ItemId, target);
-            case BY_TURN -> {
-                if (!spoil) {
-                    looter = getCheckedNextLooter(ItemId, target);
-                }
-            }
-            case BY_TURN_INCLUDING_SPOIL -> looter = getCheckedNextLooter(ItemId, target);
-        }
+    private Player getActualLooter(Player player, int itemId, boolean spoil, Creature target) {
+        Player looter = switch (distributionType) {
+            case RANDOM -> getRandomLooter(itemId, spoil, target);
+            case BY_TURN -> getCheckNextLooter(itemId, spoil, target);
+            case RANDOM_INCLUDING_SPOIL -> getRandomLooterMember(itemId, target);
+            case BY_TURN_INCLUDING_SPOIL -> getCheckedNextLooter(itemId, target);
+            default -> null;
+        };
 
         return looter != null ? looter : player;
+    }
+
+    private Player getRandomLooter(int itemId, boolean spoil, Creature target) {
+        return !spoil ? getRandomLooterMember(itemId, target) : null;
+    }
+
+    private Player getCheckNextLooter(int itemId, boolean spoil, Creature target) {
+        return !spoil ? getCheckedNextLooter(itemId, target): null;
     }
 
     /**
@@ -505,7 +511,7 @@ public class Party extends AbstractPlayerGroup {
         // (The party member must be in range to receive its reward)
         final List<Player> toReward = new LinkedList<>();
         for (Player member : members) {
-            if (GameUtils.checkIfInRange(PartySettings.partyRange(), target, member, true)) {
+            if (checkIfInRange(PartySettings.partyRange(), target, member, true)) {
                 toReward.add(member);
             }
         }
@@ -532,10 +538,9 @@ public class Party extends AbstractPlayerGroup {
      * @param spReward        The SP reward to distribute
      * @param rewardedMembers The list of Player to reward
      * @param topLvl
-     * @param partyDmg
      * @param target
      */
-    public void distributeXpAndSp(double xpReward, double spReward, List<Player> rewardedMembers, int topLvl, long partyDmg, Attackable target) {
+    public void distributeXpAndSp(double xpReward, double spReward, Collection<Player> rewardedMembers, int topLvl, Attackable target) {
 
         xpReward *= getExpBonus(rewardedMembers.size(), target.getInstanceWorld());
         spReward *= getSpBonus(rewardedMembers.size(), target.getInstanceWorld());
@@ -573,7 +578,7 @@ public class Party extends AbstractPlayerGroup {
                     if (target.useSayhaGraceRate()) {
                         finalExp *= member.getStats().getExpBonusMultiplier();
                     }
-                    clan.addHuntingPoints(member, target, finalExp);
+                    clan.addHuntingPoints(finalExp);
                 }
                 member.updateSayhaGracePoints(target.getSayhaGracePoints(member.getLevel(), exp, target.isRaid()), true, false);
                 PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
@@ -758,6 +763,10 @@ public class Party extends AbstractPlayerGroup {
 
     public boolean isMember(Player player) {
         return members.contains(player);
+    }
+
+    public void forEachMember(Consumer<Player> action) {
+        members.forEach(action);
     }
 
     /**

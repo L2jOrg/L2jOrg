@@ -46,7 +46,7 @@ public final class TeleportToLocation extends ServerPacket {
         buffer.writeInt(_x);
         buffer.writeInt(_y);
         buffer.writeInt(_z);
-        buffer.writeInt(0x00); // isValidation ??
+        buffer.writeInt(0); // instant
         buffer.writeInt(_heading);
         buffer.writeInt(0x00); // Unknown
     }

@@ -54,8 +54,8 @@ public class CubicInstance {
     }
 
     private void activate() {
-        _skillUseTask = ThreadPool.scheduleAtFixedRate(this::readyToUseSkill, 0, _template.getDelay() * 1000);
-        _expireTask = ThreadPool.schedule(this::deactivate, _template.getDuration() * 1000);
+        _skillUseTask = ThreadPool.scheduleAtFixedRate(this::readyToUseSkill, 0, _template.getDelay() * 1000L);
+        _expireTask = ThreadPool.schedule(this::deactivate, _template.getDuration() * 1000L);
     }
 
     public void deactivate() {
@@ -75,30 +75,19 @@ public class CubicInstance {
 
     private void readyToUseSkill() {
         switch (_template.getTargetType()) {
-            case TARGET: {
-                actionToCurrentTarget();
-                break;
-            }
-            case BY_SKILL: {
-                actionToTargetBySkill();
-                break;
-            }
-            case HEAL: {
-                actionHeal();
-                break;
-            }
-            case MASTER: {
-                actionToMaster();
-                break;
-            }
+            case TARGET -> actionToCurrentTarget();
+            case BY_SKILL -> actionToTargetBySkill();
+            case HEAL -> actionHeal();
+            case MASTER -> actionToMaster();
         }
     }
 
     private CubicSkill chooseSkill() {
         final double random = Rnd.nextDouble() * 100;
-        double commulativeChance = 0;
+        double chance = 0;
         for (CubicSkill cubicSkill : _template.getSkills()) {
-            if ((commulativeChance += cubicSkill.getTriggerRate()) > random) {
+            chance += cubicSkill.triggerRate();
+            if (chance > random) {
                 return cubicSkill;
             }
         }
@@ -117,33 +106,23 @@ public class CubicInstance {
     private void actionToTargetBySkill() {
         final CubicSkill skill = chooseSkill();
         if (skill != null) {
-            switch (skill.getTargetType()) {
-                case TARGET: {
-                    final WorldObject target = _owner.getTarget();
-                    if (target != null) {
-                        tryToUseSkill(target, skill);
-                    }
-                    break;
-                }
-                case HEAL: {
-                    actionHeal();
-                    break;
-                }
-                case MASTER: {
-                    tryToUseSkill(_owner, skill);
-                    break;
-                }
+            switch (skill.targetType()) {
+                case TARGET -> tryToUseSkill(_owner.getTarget(), skill);
+                case HEAL -> actionHeal();
+                case MASTER -> tryToUseSkill(_owner, skill);
+                case BY_SKILL -> tryToUseSkill(skill);
             }
         }
     }
 
     private void actionHeal() {
         final double random = Rnd.nextDouble() * 100;
-        double commulativeChance = 0;
+        double chance = 0;
         for (CubicSkill cubicSkill : _template.getSkills()) {
-            if ((commulativeChance += cubicSkill.getTriggerRate()) > random) {
-                final Skill skill = cubicSkill.getSkill();
-                if ((skill != null) && (Rnd.get(100) < cubicSkill.getSuccessRate())) {
+            chance += cubicSkill.triggerRate();
+            if (chance > random) {
+                final Skill skill = cubicSkill.skill();
+                if ((skill != null) && (Rnd.get(100) < cubicSkill.successRate())) {
                     final Party party = _owner.getParty();
 
                     Stream<Creature> stream;
@@ -175,9 +154,16 @@ public class CubicInstance {
         }
     }
 
+    private void tryToUseSkill(CubicSkill skill) {
+        final WorldObject target = skill.skill().getTarget(_owner, _owner.getTarget(), false, false, false);
+        if (target != null) {
+            tryToUseSkill(target, skill);
+        }
+    }
+
     private void tryToUseSkill(WorldObject target, CubicSkill cubicSkill) {
-        final Skill skill = cubicSkill.getSkill();
-        if ((_template.getTargetType() != CubicTargetType.MASTER) && !((_template.getTargetType() == CubicTargetType.BY_SKILL) && (cubicSkill.getTargetType() == CubicTargetType.MASTER))) {
+        final Skill skill = cubicSkill.skill();
+        if ((_template.getTargetType() != CubicTargetType.MASTER) && !((_template.getTargetType() == CubicTargetType.BY_SKILL) && (cubicSkill.targetType() == CubicTargetType.MASTER))) {
             target = skill.getTarget(_owner, target, false, false, false);
         }
 
@@ -186,10 +172,8 @@ public class CubicInstance {
                 return;
             }
 
-            if (_template.validateConditions(this, _owner, target) && cubicSkill.validateConditions(this, _owner, target)) {
-                if (Rnd.get(100) < cubicSkill.getSuccessRate()) {
-                    activateCubicSkill(skill, target);
-                }
+            if (_template.validateConditions(this, _owner, target) && cubicSkill.validateConditions(this, _owner, target) && Rnd.get(100) < cubicSkill.successRate()) {
+                activateCubicSkill(skill, target);
             }
         }
     }

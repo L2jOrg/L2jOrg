@@ -19,25 +19,23 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import io.github.joealisson.primitive.CHashIntMap;
-import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.model.ItemInfo;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @author UnAfraid
  * @author JoeAlisson
  */
 public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
-    private final IntMap<ItemInfo> items;
+    private final Collection<ItemInfo> items;
 
     protected AbstractInventoryUpdate() {
-        items = new CHashIntMap<>();
+        items = new ArrayList<>();
     }
 
     protected AbstractInventoryUpdate(Item item) {
@@ -46,38 +44,41 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket {
     }
 
     protected AbstractInventoryUpdate(List<ItemInfo> items) {
-        this.items = streamToMap(items.stream());
+        this.items = items;
     }
 
     protected AbstractInventoryUpdate(Collection<Item> items) {
-        this.items = streamToMap(items.stream().map(ItemInfo::new));
-    }
-
-    private static IntMap<ItemInfo> streamToMap(Stream<ItemInfo> stream) {
-        return stream.collect(CHashIntMap::new, (map, item) -> map.put(item.getObjectId(), item), IntMap::putAll);
+        this();
+        for (Item item : items) {
+            this.items.add(new ItemInfo(item));
+        }
     }
 
     public final void addItem(Item item) {
-        items.put(item.getObjectId(), new ItemInfo(item));
+        items.add(new ItemInfo(item));
     }
 
     public final void addNewItem(Item item) {
-        items.put(item.getObjectId(), new ItemInfo(item, ItemChangeType.ADDED));
+        items.add(new ItemInfo(item, ItemChangeType.ADDED));
     }
 
     public final void addModifiedItem(Item item) {
-        items.put(item.getObjectId(), new ItemInfo(item, ItemChangeType.MODIFIED));
+        items.add(new ItemInfo(item, ItemChangeType.MODIFIED));
     }
 
     public final void addRemovedItem(Item item) {
-        items.put(item.getObjectId(), new ItemInfo(item, ItemChangeType.REMOVED));
+        items.add(new ItemInfo(item, ItemChangeType.REMOVED));
+    }
+
+    public final boolean hasItem() {
+        return !items.isEmpty();
     }
 
     protected final void writeItems(WritableBuffer buffer) {
         buffer.writeByte( 0); // 140
         buffer.writeInt(items.size()); // 140
         buffer.writeInt(items.size()); // 140
-        for (ItemInfo item : items.values()) {
+        for (ItemInfo item : items) {
             buffer.writeShort(item.getChange().ordinal());
             writeItem(item, buffer);
         }

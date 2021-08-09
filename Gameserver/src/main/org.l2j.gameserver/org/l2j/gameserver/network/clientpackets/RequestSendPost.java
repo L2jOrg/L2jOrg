@@ -99,7 +99,7 @@ public final class RequestSendPost extends ClientPacket {
 
         final Player player = client.getPlayer();
 
-        if (!Config.ALLOW_ATTACHMENTS) {
+        if (!GeneralSettings.allowAttachments()) {
             items = Collections.emptyList();
             _isCod = false;
             _reqAdena = 0;

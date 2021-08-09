@@ -90,11 +90,9 @@ public final class Config {
     private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
     private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
     private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
-    private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
     private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
-    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
     private static final String RANDOM_CRAFT_CONFIG_FILE = "./config/random-craft.properties";
 
@@ -145,64 +143,6 @@ public final class Config {
     // --------------------------------------------------
     // General Settings
     // --------------------------------------------------
-
-    public static boolean LOG_ITEM_ENCHANTS;
-
-    public static boolean SKILL_CHECK_ENABLE;
-    public static boolean SKILL_CHECK_REMOVE;
-    public static boolean SKILL_CHECK_GM;
-    public static boolean HTML_ACTION_CACHE_DEBUG;
-    public static boolean DEVELOPER;
-    public static boolean ALT_DEV_NO_SPAWNS;
-    public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
-    public static boolean ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS;
-
-    public static boolean ALLOW_DISCARDITEM;
-
-    public static boolean LAZY_ITEMS_UPDATE;
-    public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
-    public static boolean DESTROY_ALL_ITEMS;
-
-    public static boolean AUTODELETE_INVALID_QUEST_DATA;
-    public static boolean FORCE_INVENTORY_UPDATE;
-
-    public static int MIN_NPC_ANIMATION;
-    public static int MAX_NPC_ANIMATION;
-    public static int MIN_MONSTER_ANIMATION;
-    public static int MAX_MONSTER_ANIMATION;
-    public static boolean ENABLE_FALLING_DAMAGE;
-
-    public static int GRID_NEIGHBOR_TURNON_TIME;
-    public static int GRID_NEIGHBOR_TURNOFF_TIME;
-    public static int PEACE_ZONE_MODE;
-
-    public static boolean WAREHOUSE_CACHE;
-    public static int WAREHOUSE_CACHE_TIME;
-    public static boolean ALLOW_REFUND;
-    public static boolean ALLOW_ATTACHMENTS;
-    public static boolean ALLOW_WEAR;
-    public static int WEAR_DELAY;
-    public static int WEAR_PRICE;
-    public static int INSTANCE_FINISH_TIME;
-    public static boolean RESTORE_PLAYER_INSTANCE;
-    public static int EJECT_DEAD_PLAYER_TIME;
-    public static boolean ALLOW_WATER;
-    public static boolean ALLOW_FISHING;
-    public static boolean ALLOW_BOAT;
-
-    public static boolean ALLOW_MANOR;
-    public static boolean SERVER_NEWS;
-    public static boolean ENABLE_COMMUNITY_BOARD;
-    public static String BBS_DEFAULT;
-
-    public static int WORLD_CHAT_POINTS_PER_DAY;
-
-    public static int ALT_MANOR_REFRESH_TIME;
-    public static int ALT_MANOR_REFRESH_MIN;
-    public static int ALT_MANOR_APPROVE_TIME;
-    public static int ALT_MANOR_APPROVE_MIN;
-    public static int ALT_MANOR_MAINTENANCE_MIN;
-    public static int ALT_MANOR_SAVE_PERIOD_RATE;
     public static boolean ALT_ITEM_AUCTION_ENABLED;
     public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
     public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
@@ -237,7 +177,6 @@ public final class Config {
     public static FloodProtectorConfig FLOOD_PROTECTOR_MULTISELL;
     public static FloodProtectorConfig FLOOD_PROTECTOR_TRANSACTION;
     public static FloodProtectorConfig FLOOD_PROTECTOR_MANUFACTURE;
-    public static FloodProtectorConfig FLOOD_PROTECTOR_MANOR;
     public static FloodProtectorConfig FLOOD_PROTECTOR_SENDMAIL;
     public static FloodProtectorConfig FLOOD_PROTECTOR_CHARACTER_SELECT;
     public static FloodProtectorConfig FLOOD_PROTECTOR_ITEM_AUCTION;
@@ -490,7 +429,6 @@ public final class Config {
     public static double DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
     public static int ALT_CLAN_MEMBERS_FOR_WAR;
 
-    public static boolean DISPLAY_SERVER_TIME;
     public static int BUFFER_MAX_SCHEMES;
     public static int BUFFER_STATIC_BUFF_COST;
     public static boolean WELCOME_MESSAGE_ENABLED;
@@ -620,10 +558,6 @@ public final class Config {
     // --------------------------------------------------
     // HUNTING ZONE
     // --------------------------------------------------
-    public static long TIME_LIMITED_ZONE_INITIAL_TIME;
-    public static long TIME_LIMITED_MAX_ADDED_TIME;
-    public static long TIME_LIMITED_ZONE_RESET_DELAY;
-    public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
     public static float L2_COIN_DROP_RATE;
 
     // --------------------------------------------------
@@ -659,7 +593,6 @@ public final class Config {
         FLOOD_PROTECTOR_MULTISELL = new FloodProtectorConfig("MultiSellFloodProtector");
         FLOOD_PROTECTOR_TRANSACTION = new FloodProtectorConfig("TransactionFloodProtector");
         FLOOD_PROTECTOR_MANUFACTURE = new FloodProtectorConfig("ManufactureFloodProtector");
-        FLOOD_PROTECTOR_MANOR = new FloodProtectorConfig("ManorFloodProtector");
         FLOOD_PROTECTOR_SENDMAIL = new FloodProtectorConfig("SendMailFloodProtector");
         FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
         FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
@@ -728,59 +661,6 @@ public final class Config {
         // Load General config file (if exists)
         final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 
-        LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
-
-        SKILL_CHECK_ENABLE = General.getBoolean("SkillCheckEnable", false);
-        SKILL_CHECK_REMOVE = General.getBoolean("SkillCheckRemove", false);
-        SKILL_CHECK_GM = General.getBoolean("SkillCheckGM", true);
-        HTML_ACTION_CACHE_DEBUG = General.getBoolean("HtmlActionCacheDebug", false);
-        DEVELOPER = General.getBoolean("Developer", false);
-        ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
-        ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
-        ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
-        ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
-
-        LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
-        UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
-        DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
-        AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
-
-        FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
-
-        MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
-        MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
-        MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
-        MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
-
-        GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
-        GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
-        PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
-
-        WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
-        WAREHOUSE_CACHE_TIME = General.getInt("WarehouseCacheTime", 15);
-        ALLOW_REFUND = General.getBoolean("AllowRefund", true);
-        ALLOW_ATTACHMENTS = General.getBoolean("AllowAttachments", true);
-        ALLOW_WEAR = General.getBoolean("AllowWear", true);
-        WEAR_DELAY = General.getInt("WearDelay", 5);
-        WEAR_PRICE = General.getInt("WearPrice", 10);
-        INSTANCE_FINISH_TIME = General.getInt("DefaultFinishTime", 5);
-        RESTORE_PLAYER_INSTANCE = General.getBoolean("RestorePlayerInstance", false);
-        EJECT_DEAD_PLAYER_TIME = General.getInt("EjectDeadPlayerTime", 1);
-        ALLOW_WATER = General.getBoolean("AllowWater", true);
-        ALLOW_FISHING = General.getBoolean("AllowFishing", true);
-        ALLOW_MANOR = General.getBoolean("AllowManor", true);
-        ALLOW_BOAT = General.getBoolean("AllowBoat", true);
-        SERVER_NEWS = General.getBoolean("ShowServerNews", false);
-        ENABLE_COMMUNITY_BOARD = General.getBoolean("EnableCommunityBoard", true);
-        BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");
-
-        WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
-        ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
-        ALT_MANOR_REFRESH_MIN = General.getInt("AltManorRefreshMin", 0);
-        ALT_MANOR_APPROVE_TIME = General.getInt("AltManorApproveTime", 4);
-        ALT_MANOR_APPROVE_MIN = General.getInt("AltManorApproveMin", 30);
-        ALT_MANOR_MAINTENANCE_MIN = General.getInt("AltManorMaintenanceMin", 6);
-        ALT_MANOR_SAVE_PERIOD_RATE = General.getInt("AltManorSavePeriodRate", 2);
         ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
         ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
         ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
@@ -803,7 +683,6 @@ public final class Config {
         BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
         BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000L;
         BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
-        ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 
         // Load FloodProtector config file
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
@@ -1343,11 +1222,6 @@ public final class Config {
         SELLBUFF_MAX_PRICE = SellBuffs.getLong("MaximalPrice", 100000000);
         SELLBUFF_MAX_BUFFS = SellBuffs.getInt("MaxBuffs", 15);
 
-        // Load ServerTime config file (if exists)
-        final PropertiesParser ServerTime = new PropertiesParser(CUSTOM_SERVER_TIME_CONFIG_FILE);
-
-        DISPLAY_SERVER_TIME = ServerTime.getBoolean("DisplayServerTime", false);
-
         // Load SchemeBuffer config file (if exists)
         final PropertiesParser SchemeBuffer = new PropertiesParser(CUSTOM_SCHEME_BUFFER_CONFIG_FILE);
 
@@ -1402,15 +1276,6 @@ public final class Config {
         HOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("HopzoneDualboxesAllowed", 1);
         ALLOW_HOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowHopzoneGameServerReport", false);
 
-
-        // Load Time Limited Zone config file (if exists)
-        final PropertiesParser timeLimitedZoneSettings = new PropertiesParser(TIME_LIMITED_ZONE_CONFIG_FILE);
-        TIME_LIMITED_ZONE_INITIAL_TIME = timeLimitedZoneSettings.getLong("InitialTime", 3600000);
-        TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
-        TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
-        TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
-
-        // Magic Lamp
         final PropertiesParser magicLampSettings = new PropertiesParser(MAGIC_LAMP_CONFIG_FILE);
         ENABLE_MAGIC_LAMP = magicLampSettings.getBoolean("MagicLampEnabled", false);
         MAGIC_LAMP_MAX_GAME_COUNT = magicLampSettings.getInt("MagicLampMaxGames", 127);
@@ -1454,7 +1319,6 @@ public final class Config {
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MULTISELL, "MultiSell", 1);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_TRANSACTION, "Transaction", 10);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MANUFACTURE, "Manufacture", 3);
-        loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MANOR, "Manor", 30);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SENDMAIL, "SendMail", 100);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_CHARACTER_SELECT, "CharacterSelect", 30);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_ITEM_AUCTION, "ItemAuction", 9);

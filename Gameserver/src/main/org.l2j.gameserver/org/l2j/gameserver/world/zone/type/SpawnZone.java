@@ -31,7 +31,8 @@ import java.util.List;
 /**
  * Abstract zone with spawn locations
  *
- * @author DS, Nyaran (rework 10/07/2011)
+ * @author DS, Nyaran
+ * @author JoeAlisson
  */
 public abstract class SpawnZone extends Zone {
 
@@ -47,7 +48,7 @@ public abstract class SpawnZone extends Zone {
     }
 
     public void parseLoc(int x, int y, int z, String type) {
-        if ((type == null) || type.isEmpty()) {
+        if (type == null || type.isEmpty()) {
             addSpawn(x, y, z);
         } else {
             switch (type) {
@@ -59,11 +60,10 @@ public abstract class SpawnZone extends Zone {
         }
     }
 
-    public final void addSpawn(int x, int y, int z) {
+    private void addSpawn(int x, int y, int z) {
         if (spawnLocs == null) {
             spawnLocs = new ArrayList<>();
         }
-
         spawnLocs.add(new Location(x, y, z));
     }
 
@@ -71,7 +71,6 @@ public abstract class SpawnZone extends Zone {
         if (otherSpawnLocs == null) {
             otherSpawnLocs = new ArrayList<>();
         }
-
         otherSpawnLocs.add(new Location(x, y, z));
     }
 
@@ -79,7 +78,6 @@ public abstract class SpawnZone extends Zone {
         if (chaoticSpawnLocs == null) {
             chaoticSpawnLocs = new ArrayList<>();
         }
-
         chaoticSpawnLocs.add(new Location(x, y, z));
     }
 
@@ -87,17 +85,12 @@ public abstract class SpawnZone extends Zone {
         if (banishSpawnLocs == null) {
             banishSpawnLocs = new ArrayList<>();
         }
-
         banishSpawnLocs.add(new Location(x, y, z));
-    }
-
-    public final List<Location> getSpawns() {
-        return spawnLocs;
     }
 
     public final Location getSpawnLoc() {
         if (CharacterSettings.randomRespawnEnabled()) {
-            return spawnLocs.get(Rnd.get(spawnLocs.size()));
+            return Rnd.get(spawnLocs);
         }
         return spawnLocs.get(0);
     }
@@ -105,7 +98,7 @@ public abstract class SpawnZone extends Zone {
     public final Location getOtherSpawnLoc() {
         if (otherSpawnLocs != null) {
             if (CharacterSettings.randomRespawnEnabled()) {
-                return otherSpawnLocs.get(Rnd.get(otherSpawnLocs.size()));
+                return Rnd.get(otherSpawnLocs);
             }
             return otherSpawnLocs.get(0);
         }
@@ -115,7 +108,7 @@ public abstract class SpawnZone extends Zone {
     public final Location getChaoticSpawnLoc() {
         if (chaoticSpawnLocs != null) {
             if (CharacterSettings.randomRespawnEnabled()) {
-                return chaoticSpawnLocs.get(Rnd.get(chaoticSpawnLocs.size()));
+                return Rnd.get(chaoticSpawnLocs);
             }
             return chaoticSpawnLocs.get(0);
         }
@@ -125,7 +118,7 @@ public abstract class SpawnZone extends Zone {
     public Location getBanishSpawnLoc() {
         if (banishSpawnLocs != null) {
             if (CharacterSettings.randomRespawnEnabled()) {
-                return banishSpawnLocs.get(Rnd.get(banishSpawnLocs.size()));
+                return Rnd.get(banishSpawnLocs);
             }
             return banishSpawnLocs.get(0);
         }

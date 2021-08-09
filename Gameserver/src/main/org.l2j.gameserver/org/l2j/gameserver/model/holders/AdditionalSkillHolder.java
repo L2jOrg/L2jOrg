@@ -19,18 +19,10 @@
  */
 package org.l2j.gameserver.model.holders;
 
+import org.l2j.gameserver.engine.skill.api.Skill;
+
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class AdditionalSkillHolder extends SkillHolder {
-    private final int _minLevel;
-
-    public AdditionalSkillHolder(int skillId, int skillLevel, int minLevel) {
-        super(skillId, skillLevel);
-        _minLevel = minLevel;
-    }
-
-    public int getMinLevel() {
-        return _minLevel;
-    }
-}
+public record AdditionalSkillHolder(Skill skill, int minLevel) {  }

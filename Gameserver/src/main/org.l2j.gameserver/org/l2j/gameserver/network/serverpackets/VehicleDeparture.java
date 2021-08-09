@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -27,32 +26,17 @@ import org.l2j.gameserver.network.ServerPacketId;
  * @author Maktakien
  */
 public class VehicleDeparture extends ServerPacket {
-    private final int _objId;
-    private final int _x;
-    private final int _y;
-    private final int _z;
-    private final int _moveSpeed;
-    private final int _rotationSpeed;
-
-    public VehicleDeparture(Boat boat) {
-        _objId = boat.getObjectId();
-        _x = boat.getXdestination();
-        _y = boat.getYdestination();
-        _z = boat.getZdestination();
-        _moveSpeed = (int) boat.getMoveSpeed();
-        _rotationSpeed = (int) boat.getStats().getRotationSpeed();
-    }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.VEHICLE_DEPARTURE, buffer );
 
-        buffer.writeInt(_objId);
-        buffer.writeInt(_moveSpeed);
-        buffer.writeInt(_rotationSpeed);
-        buffer.writeInt(_x);
-        buffer.writeInt(_y);
-        buffer.writeInt(_z);
+        buffer.writeInt(0); // boat objectId
+        buffer.writeInt(0); // speed
+        buffer.writeInt(0); // rotation Speed
+        buffer.writeInt(0); // x
+        buffer.writeInt(0); // y
+        buffer.writeInt(0 ); // z
     }
 
 }

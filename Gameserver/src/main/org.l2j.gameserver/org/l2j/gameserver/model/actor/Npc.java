@@ -205,7 +205,7 @@ public class Npc extends Creature {
      * @return true if the server allows Random Animation.
      */
     public boolean hasRandomAnimation() {
-        return ((Config.MAX_NPC_ANIMATION > 0) && _isRandomAnimationEnabled && (getAiType() != AIType.CORPSE));
+        return _isRandomAnimationEnabled && GeneralSettings.maxNpcAnimation() > 0  && (getAiType() != AIType.CORPSE);
     }
 
     /**
@@ -215,13 +215,6 @@ public class Npc extends Creature {
      */
     public void setRandomAnimation(boolean val) {
         _isRandomAnimationEnabled = val;
-    }
-
-    /**
-     * @return {@code true}, if random animation is enabled, {@code false} otherwise.
-     */
-    public boolean isRandomAnimationEnabled() {
-        return _isRandomAnimationEnabled;
     }
 
     public void setRandomWalking(boolean enabled) {
@@ -1059,10 +1052,10 @@ public class Npc extends Creature {
             // Randomize drop position.
             final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
             final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
-            final int newZ = getZ() + 20;
+            final int newZ = (int) (getZ() + _currentCollisionHeight + 20);
 
             if (ItemEngine.getInstance().getTemplate(itemId) == null) {
-                LOGGER.error("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
+                LOGGER.error("Item doesn't exist so cannot be dropped. Item ID: {} Quest: {}",  itemId,  getName());
                 return null;
             }
 

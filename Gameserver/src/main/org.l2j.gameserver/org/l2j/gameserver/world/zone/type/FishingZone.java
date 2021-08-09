@@ -19,10 +19,10 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.fishing.ExAutoFishAvailable;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneFactory;
@@ -43,19 +43,20 @@ public class FishingZone extends Zone {
 
     private final Object taskLocker = new Object();
     private ScheduledFuture<?> task;
+
     public FishingZone(int id) {
         super(id);
     }
 
     @Override
     protected void onEnter(Creature creature) {
-        if (Config.ALLOW_FISHING && creature instanceof Player player && !player.isInsideZone(ZoneType.FISHING)) {
+        if (GeneralSettings.allowFishing() && creature instanceof Player player && !player.isInsideZone(ZoneType.FISHING)) {
             player.setInsideZone(ZoneType.FISHING, true);
             checkFishing(player);
 
             synchronized (taskLocker) {
                 if(task == null) {
-                    task = ThreadPool.scheduleAtFixedRate(new FishingTask(), 1500, 1500);
+                    task = ThreadPool.scheduleAtFixedRate(new FishingTask(), 1500, 3000);
                 }
             }
         }
@@ -63,10 +64,8 @@ public class FishingZone extends Zone {
 
     private void checkFishing(Player player) {
         var fishing = player.getFishing();
-        if(fishing.canFish() && !fishing.isFishing()) {
-            player.sendPacket(ExAutoFishAvailable.YES);
-        } else  {
-            player.sendPacket(ExAutoFishAvailable.NO);
+        if(!fishing.isFishing()) {
+            player.sendPacket(fishing.canFish() ? ExAutoFishAvailable.YES : ExAutoFishAvailable.NO);
         }
     }
 

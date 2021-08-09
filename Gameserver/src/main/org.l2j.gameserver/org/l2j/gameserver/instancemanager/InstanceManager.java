@@ -54,7 +54,6 @@ import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -493,7 +492,13 @@ public final class InstanceManager extends GameXmlReader {
     }
 
     public List<Instance> getInstances(int templateId) {
-        return instanceWorlds.values().stream().filter(i -> i.getTemplateId() == templateId).collect(Collectors.toList());
+        List<Instance> instances = new ArrayList<>();
+        for (Instance instance : instanceWorlds.values()) {
+            if(instance.getTemplateId() == templateId) {
+                instances.add(instance);
+            }
+        }
+        return instances;
     }
 
     public static void init() {

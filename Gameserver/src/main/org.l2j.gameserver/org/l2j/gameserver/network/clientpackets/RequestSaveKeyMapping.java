@@ -18,42 +18,42 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.ConnectionState;
-import org.l2j.gameserver.network.serverpackets.ExUISetting;
+import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 
 /**
  * Request Save Key Mapping client packet.
  *
  * @author Mobius
+ * @author JoeAlisson
  */
 public class RequestSaveKeyMapping extends ClientPacket {
-    private byte[] _uiKeyMapping;
+    private byte[] uiKeyMapping;
 
     @Override
-    public void readImpl() {
+    public void readImpl() throws Exception {
         final int dataSize = readInt();
         if (dataSize > 0) {
-            _uiKeyMapping = new byte[dataSize];
-            readBytes(_uiKeyMapping);
+            uiKeyMapping = new byte[dataSize];
+            readBytes(uiKeyMapping);
+        } else {
+            throw new InvalidDataPacketException("The ui key mapping is empty");
         }
     }
 
     @Override
-    public void runImpl() {
-        final Player player = client.getPlayer();
-        if (!CharacterSettings.storeUISettings() || //
-                (player == null) || //
-                (_uiKeyMapping == null) || //
-                (client.getConnectionState() != ConnectionState.IN_GAME)) {
+    public void runImpl() throws Exception {
+        if (!CharacterSettings.storeUISettings()) {
             return;
         }
+        var mappingPath = ServerSettings.dataPackDirectory().resolve(Path.of("client_store", "key", client.getAccountName()));
+        Files.createDirectories(mappingPath.getParent());
 
-        String uiKeyMapping = "";
-        for (Byte b : _uiKeyMapping) {
-            uiKeyMapping += b + ExUISetting.SPLIT_VAR;
-        }
-        player.setUiKeyMapping(uiKeyMapping);
+        Files.write(mappingPath, uiKeyMapping, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.WRITE);
     }
 }

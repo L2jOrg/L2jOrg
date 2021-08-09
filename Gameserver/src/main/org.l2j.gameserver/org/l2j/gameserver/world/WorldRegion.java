@@ -26,6 +26,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.RandomAnimationTaskManager;
 import org.l2j.gameserver.util.MathUtil;
 
@@ -85,7 +86,7 @@ public final class WorldRegion {
      */
     private void startActivation() {
         setActive(true);
-        startNeighborsTask(true, Config.GRID_NEIGHBOR_TURNON_TIME);
+        startNeighborsTask(true, GeneralSettings.neighborRegionTurnOnTime());
     }
 
     private void setActive(boolean active) {
@@ -148,12 +149,12 @@ public final class WorldRegion {
             }
 
             // Then, set a timer to activate the neighbors.
-            neighborsTask = ThreadPool.schedule(new NeighborsTask(activating), 1000 * taskStartTime);
+            neighborsTask = ThreadPool.schedule(new NeighborsTask(activating), 1000L * taskStartTime);
         }
     }
 
     private void startDeactivation() {
-        startNeighborsTask(false, Config.GRID_NEIGHBOR_TURNOFF_TIME);
+        startNeighborsTask(false, GeneralSettings.neighborRegionTurnOffTime());
     }
 
     void removeVisibleObject(WorldObject object) {
@@ -189,11 +190,11 @@ public final class WorldRegion {
         }
     }
 
-    <T extends WorldObject> void forEachObjectInSurroundingLimiting(Class<T> clazz, int limit, Predicate<T> filter, Consumer<T> action) {
+    <T extends WorldObject> void forEachObjectInSurroundingLimiting(Class<T> clazz, int limit, Predicate<T> filter, Consumer<? super T> action) {
         T casted;
         int accepted = 0;
-        for (WorldRegion region : surroundingRegions) {
-            for (WorldObject object : region.objects.values()) {
+        for (var region : surroundingRegions) {
+            for (var object : region.objects.values()) {
                 if(clazz.isInstance(object) && filter.test(casted = clazz.cast(object) )){
                     action.accept(casted);
                     if(++accepted > limit) {

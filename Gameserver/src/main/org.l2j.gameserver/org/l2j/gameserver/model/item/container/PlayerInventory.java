@@ -204,7 +204,12 @@ public class PlayerInventory extends Inventory {
     }
 
     public final boolean haveItemForSelfResurrection() {
-        return items.values().stream().anyMatch(Item::isSelfResurrection);
+        for (Item item : items.values()) {
+            if(item.isSelfResurrection()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -380,6 +385,7 @@ public class PlayerInventory extends Inventory {
             itemIdLookup.putIfAbsent(item.getId(), item.getObjectId());
         } else {
             super.addItem(item);
+
         }
     }
 
@@ -390,6 +396,14 @@ public class PlayerInventory extends Inventory {
             return questItems.get(itemIdLookup.get(itemId));
         }
         return item;
+    }
+
+    @Override
+    protected long getSameItemCount(Item item, int enchantLevel, boolean includeEquipped) {
+        if(item.isQuestItem()) {
+            return getSameItemCount(item, enchantLevel, includeEquipped, questItems.values());
+        }
+        return super.getSameItemCount(item, enchantLevel, includeEquipped);
     }
 
     /**
@@ -519,24 +533,6 @@ public class PlayerInventory extends Inventory {
     @Override
     public Item dropItem(String process, Item item, Player actor, WorldObject reference) {
         item = super.dropItem(process, item, actor, reference);
-        handleDropItemUpdate(actor, item);
-        return item;
-    }
-
-    /**
-     * Drop item from inventory by using its <B>objectID</B> and checks _adena and _ancientAdena
-     *
-     * @param process   : String Identifier of process triggering this action
-     * @param objectId  : int Item Instance identifier of the item to be dropped
-     * @param count     : int Quantity of items to be dropped
-     * @param actor     : Player Player requesting the item drop
-     * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-     * @return Item corresponding to the destroyed item or the updated item in inventory
-     */
-    @Override
-    public Item dropItem(String process, int objectId, long count, Player actor, WorldObject reference) {
-        final Item item = super.dropItem(process, objectId, count, actor, reference);
-
         handleDropItemUpdate(actor, item);
         return item;
     }
@@ -704,6 +700,13 @@ public class PlayerInventory extends Inventory {
     public void setInventoryBlock(IntCollection items, InventoryBlockType mode) {
         blockMode = mode;
         blockItems = items;
+    }
+
+    public void addToInventoryBlock(int itemId) {
+        if(blockMode == InventoryBlockType.NONE || blockItems == null) {
+            return;
+        }
+        blockItems.add(itemId);
     }
 
     /**

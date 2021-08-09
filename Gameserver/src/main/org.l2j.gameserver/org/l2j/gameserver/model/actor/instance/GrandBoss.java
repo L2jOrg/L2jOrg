@@ -67,4 +67,9 @@ public final class GrandBoss extends Monster {
     public boolean giveRaidCurse() {
         return true;
     }
+
+    @Override
+    public boolean hasRandomAnimation() {
+        return false;
+    }
 }

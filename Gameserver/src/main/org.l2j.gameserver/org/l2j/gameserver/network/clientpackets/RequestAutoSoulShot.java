@@ -23,7 +23,9 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
+import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 
@@ -61,7 +63,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
     @Override
     public void runImpl() {
         var player = client.getPlayer();
-        if (player.isDead() || isNull(player.getActiveWeaponInstance()) || nonNull(player.getActiveRequester()) || player.getPrivateStoreType() != PrivateStoreType.NONE) {
+        if (player.isDead() || nonNull(player.getActiveRequester()) || player.getPrivateStoreType() != PrivateStoreType.NONE) {
             return;
         }
 
@@ -88,6 +90,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
             player.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
             return false;
         }
+        var weapon = player.getActiveWeaponInstance();
 
         if(isSummonShot(shot)) {
             if(!player.hasSummon()) {
@@ -96,12 +99,18 @@ public final class RequestAutoSoulShot extends ClientPacket {
             } else if(!hasShotCount(player, shot)) {
                 return false;
             }
-        } else if(!isPlayerShot(shot)) {
+        } else if(isFishingShot(shot)) {
+            return weapon != null && weapon.getItemType() == WeaponType.FISHING_ROD;
+        }else if(isPlayerShot(shot) && (weapon == null ||  weapon.getItemType() == WeaponType.FISHING_ROD)) {
             return false;
         }
         //@TEMP_FIX When using blessed soulshots the client doesn't update the count in the UI,
         // but in the inventory it is updated. as a work around we need to force a new ExAutoSoulShot
         return updateType != UPDATE_TYPE_AUTO || !player.tryEnableActualAutoShot(shotType);
+    }
+
+    private boolean isFishingShot(Item shot) {
+        return shot.getAction() == ActionType.FISHINGSHOT;
     }
 
     private boolean hasShotCount(Player player, Item item) {
@@ -122,7 +131,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
     private boolean isPlayerShot(Item item) {
         return switch (item.getAction()) {
             case SPIRITSHOT -> shotType == ShotType.SPIRITSHOTS;
-            case SOULSHOT, FISHINGSHOT -> shotType == ShotType.SOULSHOTS;
+            case SOULSHOT -> shotType == ShotType.SOULSHOTS;
             default -> false;
         };
     }

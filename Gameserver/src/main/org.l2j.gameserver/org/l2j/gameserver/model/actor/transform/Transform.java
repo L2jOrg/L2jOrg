@@ -31,7 +31,6 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerTransform;
 import org.l2j.gameserver.model.holders.AdditionalItemHolder;
 import org.l2j.gameserver.model.holders.AdditionalSkillHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -181,67 +180,7 @@ public final class Transform implements IIdentifiable {
             creature.setXYZ(creature.getX(), creature.getY(), (int) (creature.getZ() + getCollisionHeight(creature, 0)));
 
             if (isPlayer(creature)) {
-                if (_name != null) {
-                    player.getAppearance().setVisibleName(_name);
-                }
-                if (_title != null) {
-                    player.getAppearance().setVisibleTitle(_title);
-                }
-
-                if (addSkills) {
-                    //@formatter:off
-                    // Add common skills.
-                    template.getSkills()
-                            .stream()
-                            .map(SkillHolder::getSkill)
-                            .forEach(player::addTransformSkill);
-
-                    // Add skills depending on level.
-                    template.getAdditionalSkills()
-                            .stream()
-                            .filter(h -> player.getLevel() >= h.getMinLevel())
-                            .map(SkillHolder::getSkill)
-                            .forEach(player::addTransformSkill);
-                    //@formatter:on
-                }
-
-                // Set inventory blocks if needed.
-                if (!template.getAdditionalItems().isEmpty()) {
-                    final IntSet allowed = new HashIntSet();
-                    final IntSet notAllowed = new HashIntSet();
-                    for (AdditionalItemHolder holder : template.getAdditionalItems()) {
-                        if (holder.isAllowedToUse()) {
-                            allowed.add(holder.getId());
-                        } else {
-                            notAllowed.add(holder.getId());
-                        }
-                    }
-
-                    if (!allowed.isEmpty()) {
-                        player.getInventory().setInventoryBlock(allowed, InventoryBlockType.WHITELIST);
-                    }
-
-                    if (!notAllowed.isEmpty()) {
-                        player.getInventory().setInventoryBlock(notAllowed, InventoryBlockType.BLACKLIST);
-                    }
-                }
-
-                // Send basic action list.
-                if (template.hasBasicActionList()) {
-                    player.sendPacket(template.getBasicActionList());
-                }
-
-                player.getEffectList().stopAllToggles();
-
-                if (player.hasTransformSkills()) {
-                    player.sendSkillList();
-                    player.sendPacket(new SkillCoolTime(player));
-                }
-
-                player.broadcastUserInfo();
-
-                // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, getId()), player);
+                onPlayerTransform(addSkills, player, template);
             } else {
                 creature.broadcastInfo();
             }
@@ -249,6 +188,71 @@ public final class Transform implements IIdentifiable {
             // I don't know why, but you need to broadcast this to trigger the transformation client-side.
             // Usually should be sent naturally after applying effect, but sometimes is sent before that... i just dont know...
             creature.updateAbnormalVisualEffects();
+        }
+    }
+
+    private void onPlayerTransform(boolean addSkills, Player player, TransformTemplate template) {
+        changeNameAndTitle(player);
+        addSkills(addSkills, player, template);
+        blockItems(player, template);
+
+        if (template.hasBasicActionList()) {
+            player.sendPacket(template.getBasicActionList());
+        }
+
+        player.getEffectList().stopAllToggles();
+
+        if (player.hasTransformSkills()) {
+            player.sendSkillList();
+            player.sendPacket(new SkillCoolTime(player));
+        }
+
+        player.broadcastUserInfo();
+
+        // Notify to scripts
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, getId()), player);
+    }
+
+    private void blockItems(Player player, TransformTemplate template) {
+        if (!template.getAdditionalItems().isEmpty()) {
+            final IntSet allowed = new HashIntSet();
+            final IntSet notAllowed = new HashIntSet();
+            for (AdditionalItemHolder holder : template.getAdditionalItems()) {
+                if (holder.isAllowedToUse()) {
+                    allowed.add(holder.getId());
+                } else {
+                    notAllowed.add(holder.getId());
+                }
+            }
+
+            if (!allowed.isEmpty()) {
+                player.getInventory().setInventoryBlock(allowed, InventoryBlockType.WHITELIST);
+            }
+
+            if (!notAllowed.isEmpty()) {
+                player.getInventory().setInventoryBlock(notAllowed, InventoryBlockType.BLACKLIST);
+            }
+        }
+    }
+
+    private void addSkills(boolean addSkills, Player player, TransformTemplate template) {
+        if (addSkills) {
+            template.getSkills().forEach(player::addTransformSkill);
+
+            for (var additionalSkill : template.getAdditionalSkills()) {
+                if(player.getLevel() >= additionalSkill.minLevel()) {
+                    player.addTransformSkill(additionalSkill.skill());
+                }
+            }
+        }
+    }
+
+    private void changeNameAndTitle(Player player) {
+        if (_name != null) {
+            player.getAppearance().setVisibleName(_name);
+        }
+        if (_title != null) {
+            player.getAppearance().setVisibleTitle(_title);
         }
     }
 
@@ -306,13 +310,10 @@ public final class Transform implements IIdentifiable {
     public void onLevelUp(Player player) {
         final TransformTemplate template = getTemplate(player);
         if (template != null) {
-            // Add skills depending on level.
             if (!template.getAdditionalSkills().isEmpty()) {
                 for (AdditionalSkillHolder holder : template.getAdditionalSkills()) {
-                    if (player.getLevel() >= holder.getMinLevel()) {
-                        if (player.getSkillLevel(holder.getSkillId()) < holder.getLevel()) {
-                            player.addTransformSkill(holder.getSkill());
-                        }
+                    if (player.getLevel() >= holder.minLevel() && player.getSkillLevel(holder.skill().getId()) < holder.skill().getLevel()) {
+                        player.addTransformSkill(holder.skill());
                     }
                 }
             }
@@ -351,7 +352,6 @@ public final class Transform implements IIdentifiable {
     }
 
     /**
-     * @param creature
      * @return {@code -1} if this transformation doesn't alter levelmod, otherwise a new levelmod will be returned.
      */
     public double getLevelMod(Creature creature) {
