@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS `characters`
 CREATE TABLE IF NOT EXISTS `characters`(
-    `charId`                  INT UNSIGNED       NOT NULL,
+    `charId`                  INT UNSIGNED       DEFAULT NOT NULL,
     `account_name`            VARCHAR(45)                 DEFAULT NULL,
     `char_name`               VARCHAR(35)        NOT NULL,
     `level`                   TINYINT UNSIGNED            DEFAULT NULL,
