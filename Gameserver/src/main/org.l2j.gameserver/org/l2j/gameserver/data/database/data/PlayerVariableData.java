@@ -124,22 +124,14 @@ public class PlayerVariableData {
 
     public int getSayhaGraceItemsUsed() {
         return sayhaGraceItemsUsed;
-
+    }
 
     public void setHairAccessoryEnabled(boolean hairAccessoryEnabled) {
         this.hairAccessoryEnabled = hairAccessoryEnabled;
     }
 
-    public boolean isHairAccessoryEnabled() {
-        return hairAccessoryEnabled;
-    }
-
     public void setWorldChatUsed(int worldChatUsed) {
         this.worldChatUsed = worldChatUsed;
-    }
-
-    public int getWorldChatUsed() {
-        return worldChatUsed;
     }
 
     public String getExtendDrop() {
@@ -321,22 +313,6 @@ public class PlayerVariableData {
 
     public void setLampCount(int count) {
         this.lampCount = count;
-    }
-
-    public long getSayaGraceSupportEndTime (){
-        return sayaSupportXp;
-    }
-
-    public long getLimitedSayaGraceEndTime(){
-        return sayaLimitedXp;
-    }
-
-    public void setSayaGraceSupportEndTime(long endTime){
-        this.sayaSupportXp = endTime;
-    }
-
-    public void setLimitedSayaGraceEndTime(long endTime){
-        this.sayaLimitedXp = endTime;
     }
 
     public int getSoulshot() {

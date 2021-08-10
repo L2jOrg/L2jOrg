@@ -29,7 +29,6 @@ import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAtt
 import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import org.l2j.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
 import org.l2j.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
-import org.l2j.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
 import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionCancel;
 import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionEnchant;
 import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionPutItem;
@@ -75,8 +74,6 @@ import org.l2j.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerIn
 import org.l2j.gameserver.network.clientpackets.raidserver.ExConnectToRaidServer;
 import org.l2j.gameserver.network.clientpackets.randomcraft.*;
 import org.l2j.gameserver.network.clientpackets.rank.*;
-import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneEnter;
-import org.l2j.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankCharInfo;
 import org.l2j.gameserver.network.clientpackets.rank.ExRankingCharRankers;
 import org.l2j.gameserver.network.clientpackets.rank.ExRequestRankingCharHistory;

@@ -7618,8 +7618,9 @@ public final class Player extends Playable {
      * Restore Pet's inventory items from database.
      */
     private void restorePetInventoryItems() {
-       // setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
+        setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
     }
+
 
     public String getAdminConfirmCmd() {
         return adminConfirmCmd;
@@ -8133,59 +8134,6 @@ public final class Player extends Playable {
 
         // Both are defenders, friends.
         return true;
-    }
-
-    public boolean isInTimedHuntingZone()
-    {
-        return isInTimedHuntingZone(2); // Storm Isle
-    }
-
-    public boolean isInTimedHuntingZone(int zoneId)
-    {
-        final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-        final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-
-        if (zoneId == 2) { // Ancient Pirates' Tomb.
-            return (x == 20) && (y == 15);
-        }
-        return false;
-    }
-
-    public void startTimedHuntingZone(int zoneId, long delay)
-    {
-        // Stop previous task.
-        stopTimedHuntingZoneTask();
-
-        // TODO: Delay window.
-        // sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
-        sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
-        _timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
-        {
-            if (isOnline() && isInTimedHuntingZone(zoneId))
-            {
-                sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-                abortCast();
-                stopMove(null);
-                teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
-            }
-        }, delay);
-    }
-
-    private void stopTimedHuntingZoneTask()
-    {
-        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
-        {
-            _timedHuntingZoneFinishTask.cancel(true);
-            _timedHuntingZoneFinishTask = null;
-        }
-        sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-    }
-
-    public long getTimedHuntingZoneRemainingTime() {
-        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone()) {
-            return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
-        }
-        return 0;
     }
 
     public void restoreRandomCraft()

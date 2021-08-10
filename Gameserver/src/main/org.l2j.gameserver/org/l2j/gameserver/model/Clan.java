@@ -35,6 +35,7 @@ import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ClanRewardType;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -61,9 +62,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
@@ -403,6 +407,17 @@ public class Clan implements IIdentifiable, INamable {
         return Config.CLAN_LIMIT.get(data.getLevel());
     }
 
+    /**
+     * @param exclude the object Id to exclude from list.
+     *
+     * @return all online members excluding the one with object id {code exclude}.
+     */
+    public List<Player> getOnlineMembers(int exclude)
+    {
+        //@formatter:off
+        return members.values().stream().filter(member -> member.getObjectId() != exclude).filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance).filter(Objects::nonNull).collect(Collectors.toList());
+        //@formatter:on
+    }
 
     /**
      * @return the online clan member count.
@@ -1096,72 +1111,17 @@ public class Clan implements IIdentifiable, INamable {
         updateClanInDB();
     }
 
-    public boolean levelUpClan(Player player) {
-        if (!player.isClanLeader()) {
-            player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-            return false;
-        }
-        if (System.currentTimeMillis() < data.getDissolvingExpiryTime()) {
-            player.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_YOUR_CLAN_LEVEL_CANNOT_BE_INCREASED);
-            return false;
-        }
 
-        // Such as https://l2wiki.com/classic/Clans_%E2%80%93_Clan_Level
-        boolean increaseClanLevel = switch (getLevel()) {
-            case 0 -> tryIncreaseLevelWithAdena(player, 1000, 150000);
-            case 1 -> tryIncreaseLevelWithAdena(player, 15000, 300000);
-            case 2 -> tryIncreaseLevelWithBloodMark(player, 100000, 100);
-            case 3 -> tryIncreaseLevelWithBloodMark(player, 1000000, 5000);
-            case 4 -> tryIncreaseLevelWithBloodMark(player, 5000000, 10000);
-            default -> false;
-        };
-
-        if (!increaseClanLevel) {
-            player.sendPacket(SystemMessageId.THE_CONDITIONS_NECESSARY_TO_INCREASE_THE_CLAN_S_LEVEL_HAVE_NOT_BEEN_MET);
-            return false;
-        }
-
-        player.sendPacket(new UserInfo(player, UserInfoType.CURRENT_HPMPCP_EXP_SP));
-        player.sendItemList();
     public boolean levelUpClan()
     {
         changeLevel(getLevel() + 1);
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLvlUp(player, this));
         for (Player member : getOnlineMembers(0))
         {
             member.broadcastPacket(new MagicSkillUse(member, 5103, 1, 0, 0));
             member.broadcastPacket(new MagicSkillLaunched(member, 5103, 1));
-            // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLvlUp(member, this));
         }
         return true;
     }
-
-    private boolean tryIncreaseLevelWithBloodMark(Player player, int spRequired, int bloodMarkAmount) {
-        if(player.getSp() >= spRequired && player.getInventory().getItemByItemId(1419) != null && members.size() >= 1
-                && player.destroyItemByItemId("ClanLvl", 1419, bloodMarkAmount, player.getTarget(), true)) {
-
-            player.setSp(player.getSp() - spRequired);
-            player.sendPackets(
-                getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(spRequired),
-                getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(1419)
-            );
-            return true;
-        }
-        return false;
-    }
-
-    private boolean tryIncreaseLevelWithAdena(Player player, int spRequired, int adenaRequired) {
-        if (player.getSp() >= spRequired && player.getAdena() >= adenaRequired && members.size() >= 1 &&
-                player.reduceAdena("ClanLvl", adenaRequired, player.getTarget(), true)) {
-
-            player.setSp(player.getSp() - spRequired);
-            player.sendPacket(getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(spRequired));
-            return true;
-        }
-        return false;
-    }
-
 
     public void changeLevel(int level) {
         getDAO(ClanDAO.class).updateClanLevel(data.getId(), level);

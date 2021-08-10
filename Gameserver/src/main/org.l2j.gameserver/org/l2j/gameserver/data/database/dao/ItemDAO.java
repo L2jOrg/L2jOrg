@@ -129,4 +129,7 @@ public interface ItemDAO extends DAO<Object> {
 
     @Query("UPDATE items SET is_blessed = :isBlessed: WHERE object_id = :objectId:")
     void updateIsBlessed(int objectId, int isBlessed);
+
+    @Query("SELECT EXISTS (SELECT 1 FROM `items` WHERE `owner_id`=:playerId: AND object_id > 0 AND (`loc`='PET' OR `loc`='PET_EQUIP'))")
+    boolean hasPetItems(int playerId);
 }

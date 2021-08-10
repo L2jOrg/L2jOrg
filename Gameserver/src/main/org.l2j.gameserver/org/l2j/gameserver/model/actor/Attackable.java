@@ -306,10 +306,6 @@ public class Attackable extends Npc {
         if (!getMustRewardExpSP()) {
             return;
         }
-        if (this instanceof Monster && player.getClan() != null && player.getLevel() - getLevel() <= 15)
-        {
-            player.getClan().increaseClanExp(player, 1, false);
-        }
         rewardKillers(maxDealerInfo, playersDamage);
     }
 
@@ -392,6 +388,7 @@ public class Attackable extends Npc {
         }
     }
 
+
     private void rewardSoloKiller(MaxDamageDealer maxDealerInfo, Player attacker, long damage) {
         float expMultiplier = calculateRewardExpMultiplier(attacker);
 
@@ -416,49 +413,75 @@ public class Attackable extends Npc {
             exp = attacker.getStats().getValue(Stat.EXPSP_RATE, exp);
             sp = attacker.getStats().getValue(Stat.EXPSP_RATE, sp);
 
-                                attacker.addExpAndSp(exp, sp, useSayhaGraceRate());
-                                if (exp > 0) {
-                                    final Clan clan = attacker.getClan();
-                                    if (clan != null) {
-                                        double finalExp = exp;
-                                        if (useSayhaGraceRate()) {
-                                            finalExp *= attacker.getStats().getSayhaGraceExpBonus();
-                                            if (attacker.getSayhaGraceSupportEndTime() < System.currentTimeMillis())
-                                            {
-                                                attacker.updateSayhaGracePoints(getSayhaGracePoints(attacker.getLevel(), exp, _isRaid), true, false);
-                                            }
-                                            PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
-                                            MagicLampData.getInstance().addLampExp(attacker, exp, true);
-                                        }
-                                        clan.addHuntingPoints(attacker, this, finalExp);
-                                    }
-                                }
-                                rewardAttributeExp(attacker, damage, totalDamage);
-                            }
+
+            attacker.addExpAndSp(exp, sp, useSayhaGraceRate());
+            if (exp > 0) {
+                final Clan clan = attacker.getClan();
+                if (clan != null) {
+                    double finalExp = exp;
+                    if (useSayhaGraceRate()) {
+                        finalExp *= attacker.getStats().getSayhaGraceExpBonus();
+                        if (attacker.getSayhaGraceSupportEndTime() < System.currentTimeMillis())
+                        {
+                            attacker.updateSayhaGracePoints(getSayhaGracePoints(attacker.getLevel(), exp, isRaid), true, false);
                         }
-                    } else {
-                        // share with party members
-                        long partyDmg = 0;
-                        double partyMul = 1;
-                        int partyLvl = 0;
+                        PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+                        MagicLampData.getInstance().addLampExp(attacker, exp, true);
+                    }
+                    clan.addHuntingPoints(finalExp);
+                }
+            }
+            if (this instanceof Monster && attacker.getClan() != null && attacker.getLevel() - getLevel() <= 15)
+            {
+                attacker.getClan().increaseClanExp(attacker, 1, false);
+            }
+            rewardAttributeExp(attacker, damage, maxDealerInfo.totalDamage);
+        }
+    }
 
-                        // Get all Creature that can be rewarded in the party
-                        final List<Player> rewardedMembers = new ArrayList<>();
-                        // Go through all Player in the party
-                        final List<Player> groupMembers = attackerParty.isInCommandChannel() ? attackerParty.getCommandChannel().getMembers() : attackerParty.getMembers();
-                        for (Player partyPlayer : groupMembers) {
-                            if ((partyPlayer == null) || partyPlayer.isDead()) {
-                                continue;
-                            }
+    private float calculateRewardExpMultiplier(Player attacker) {
+        for (var summon : attacker.getServitors().values()) {
+            if(summon instanceof Servitor servitor && servitor.getExpMultiplier() > 1) {
+                return servitor.getExpMultiplier();
+            }
+        }
+        return 1;
+    }
 
-                            // Get the RewardInfo of this Player from Attackable rewards
-                            final DamageDoneInfo reward2 = rewards.get(partyPlayer);
+    private MaxDamageDealer calculateMaxDamageDealer(MapToLong<Player> playersDamage) {
+        MaxDamageDealer maxDamageDealer = new MaxDamageDealer();
 
-                            // If the Player is in the Attackable rewards add its damages to party damages
-                            if (reward2 != null) {
-                                if (GameUtils.checkIfInRange(PartySettings.partyRange(), this, partyPlayer, true)) {
-                                    partyDmg += reward2.getDamage(); // Add Player damages to party damages
-                                    rewardedMembers.add(partyPlayer);
+        for (AggroInfo info : _aggroList.values()) {
+            long damage = info.getDamage();
+            maxDamageDealer.totalDamage += damage;
+
+            final Player attacker = info.getAttacker().getActingPlayer();
+            if (attacker != null && damage > 1 && GameUtils.checkIfInRange(PartySettings.partyRange(), this, attacker, true)) {
+                damage = playersDamage.merge(attacker, damage, Long::sum);
+
+                if (damage > maxDamageDealer.dealerMaxDamage) {
+                    maxDamageDealer.player = attacker;
+                    maxDamageDealer.dealerMaxDamage = damage;
+                }
+            }
+        }
+        return maxDamageDealer;
+    }
+
+    private void calculateRaidRewards(Creature lastAttacker, Player maxDealer) {
+        final Player player = (maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker.getActingPlayer();
+        broadcastPacket(getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
+        final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS);
+        final Party party = player.getParty();
+
+        if (party != null) {
+            rewardRaidGroup(raidbossPoints, party);
+        } else {
+            final int points = Math.max(raidbossPoints, 1);
+            player.increaseRaidbossPoints(points);
+            player.sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
+        }
+    }
 
     private void rewardRaidGroup(int raidbossPoints, Party party) {
         if(party.isInCommandChannel()) {
