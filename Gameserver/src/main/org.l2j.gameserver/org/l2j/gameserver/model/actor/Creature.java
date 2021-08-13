@@ -339,7 +339,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public int getTransformationDisplayId() {
-        return nonNull(transform) && !transform.isStance() ? transform.getDisplayId() : 0;
+        return nonNull(transform) ? transform.getDisplayId() : 0;
     }
 
     public double getCollisionRadius() {
