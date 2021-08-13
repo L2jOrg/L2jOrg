@@ -184,10 +184,6 @@ public final class Transform implements IIdentifiable {
             } else {
                 creature.broadcastInfo();
             }
-
-            // I don't know why, but you need to broadcast this to trigger the transformation client-side.
-            // Usually should be sent naturally after applying effect, but sometimes is sent before that... i just dont know...
-            creature.updateAbnormalVisualEffects();
         }
     }
 
@@ -207,7 +203,7 @@ public final class Transform implements IIdentifiable {
             player.sendPacket(new SkillCoolTime(player));
         }
 
-        player.broadcastUserInfo();
+        player.updateAbnormalVisualEffects();
 
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, getId()), player);
