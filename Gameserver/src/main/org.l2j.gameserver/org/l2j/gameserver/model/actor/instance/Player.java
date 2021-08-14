@@ -58,7 +58,7 @@ import org.l2j.gameserver.model.actor.status.PlayerStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2j.gameserver.model.actor.transform.Transform;
+import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.cubic.CubicInstance;

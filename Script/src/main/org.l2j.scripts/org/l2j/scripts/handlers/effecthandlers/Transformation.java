@@ -22,6 +22,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEffectFactory;
+import org.l2j.gameserver.engine.transform.TransformEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -48,7 +49,7 @@ public final class Transformation extends AbstractEffect {
     @Override
     public void onStart(Creature effector, Creature effected, Skill skill, Item item) {
         if (id.length > 0) {
-            effected.transform(Rnd.get(id), true);
+            TransformEngine.getInstance().transform(effected, Rnd.get(id), true);
         }
     }
 

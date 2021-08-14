@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
+import org.l2j.gameserver.engine.transform.TransformEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -108,7 +109,7 @@ public class AdminTransform implements IAdminCommandHandler
 			}
 			
 			final int id = Integer.parseInt(parts[1]);
-			if (!player.transform(id, true))
+			if (!TransformEngine.getInstance().transform(player, id, true))
 			{
 				player.sendMessage("Unknown transformation ID: " + id);
 				return false;

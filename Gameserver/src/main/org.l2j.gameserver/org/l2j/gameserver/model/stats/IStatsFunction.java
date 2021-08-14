@@ -22,7 +22,7 @@ import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
-import org.l2j.gameserver.model.actor.transform.TransformType;
+import org.l2j.gameserver.engine.transform.TransformType;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
 
@@ -66,13 +66,13 @@ public interface IStatsFunction {
 
     default double calcWeaponBaseValue(Creature creature, Stat stat) {
         final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
-        double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
+        double baseValue = baseTemplateValue;
         if (isPet(creature)) {
             final Pet pet = (Pet) creature;
             final Item weapon = pet.getActiveWeaponInstance();
             final double baseVal = stat == Stat.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stat.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
             baseValue = baseVal + (weapon != null ? weapon.getTemplate().getStats(stat, baseVal) : 0);
-        } else if (isPlayer(creature) && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE))) {
+        } else if (isPlayer(creature) && (!creature.isTransformed() || (creature.getTransformation().get().type() == TransformType.COMBAT) || (creature.getTransformation().get().type() == TransformType.MODE_CHANGE))) {
             final Item weapon = creature.getActiveWeaponInstance();
             baseValue = (weapon != null ? weapon.getTemplate().getStats(stat, baseTemplateValue) : baseTemplateValue);
         }
@@ -81,8 +81,7 @@ public interface IStatsFunction {
     }
 
     default double calcWeaponPlusBaseValue(Creature creature, Stat stat) {
-        final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
-        double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
+        double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 
         if (isPlayable(creature)) {
             final Inventory inv = creature.getInventory();

@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
+import org.l2j.gameserver.engine.transform.TransformEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -79,13 +80,11 @@ public class AdminRide implements IAdminCommandHandler
 			}
 			else if (command.startsWith("admin_ride_horse")) // handled using transformation
 			{
-				if (player.isTransformed())
-				{
+				if (player.isTransformed()) {
 					activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				}
-				else
-				{
-					player.transform(PURPLE_MANED_HORSE_TRANSFORMATION_ID, true);
+				else {
+					TransformEngine.getInstance().transform(player, PURPLE_MANED_HORSE_TRANSFORMATION_ID, true);
 				}
 				
 				return true;
@@ -96,9 +95,8 @@ public class AdminRide implements IAdminCommandHandler
 				{
 					activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				}
-				else
-				{
-					player.transform(JET_BIKE_TRANSFORMATION_ID, true);
+				else {
+					TransformEngine.getInstance().transform(player, JET_BIKE_TRANSFORMATION_ID, true);
 				}
 				
 				return true;

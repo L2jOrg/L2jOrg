@@ -29,7 +29,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.CategoryManager;
-import org.l2j.gameserver.data.xml.impl.TransformData;
+import org.l2j.gameserver.engine.transform.TransformEngine;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
@@ -48,7 +48,7 @@ import org.l2j.gameserver.model.actor.stat.CreatureStats;
 import org.l2j.gameserver.model.actor.status.CreatureStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
-import org.l2j.gameserver.model.actor.transform.Transform;
+import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
@@ -281,7 +281,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@code true} if this creature is transformed including stance transformation {@code false} otherwise.
      */
     public boolean isTransformed() {
-        return nonNull(transform);
+        return transform != null;
     }
 
     /**
@@ -289,33 +289,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@code true} if this creature is transformed under the given filter conditions, {@code false} otherwise.
      */
     public boolean checkTransformed(Predicate<Transform> filter) {
-        return nonNull(transform) && filter.test(transform);
+        return isTransformed() && filter.test(transform);
     }
 
-    /**
-     * Tries to transform this creature with the specified template id.
-     *
-     * @param id        the id of the transformation template
-     * @param addSkills {@code true} if skills of this transformation template should be added, {@code false} otherwise.
-     * @return {@code true} if template is found and transformation is done, {@code false} otherwise.
-     */
-    public boolean transform(int id, boolean addSkills) {
-        final var transformation = TransformData.getInstance().getTransform(id);
-        if (nonNull(transformation)) {
-            transform(transformation, addSkills);
-            return true;
-        }
-
-        return false;
-    }
-
-    public void transform(Transform transformation, boolean addSkills) {
-        if (!FeatureSettings.allowRideInSiege() && transformation.isRiding() && isInsideZone(ZoneType.SIEGE)) {
-            return;
-        }
-
-        transform = transformation;
-        transformation.onTransform(this, addSkills);
+    public void setTransform(Transform transform) {
+        this.transform = transform;
     }
 
     public void untransform() {
@@ -335,11 +313,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return Transformation Id
      */
     public int getTransformationId() {
-        return nonNull(transform)  ? transform.getId() : 0;
+        return nonNull(transform)  ? transform.id() : 0;
     }
 
     public int getTransformationDisplayId() {
-        return nonNull(transform) ? transform.getDisplayId() : 0;
+        return nonNull(transform) ? transform.displayId() : 0;
     }
 
     public double getCollisionRadius() {
@@ -2945,8 +2923,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public double getLevelMod() {
-        final double defaultLevelMod = ((getLevel() + 89) / 100d);
-        return nonNull(transform) && !transform.isStance() ? transform.getLevelMod(this) : defaultLevelMod;
+        return (getLevel() + 89) / 100d;
     }
 
     /**
@@ -3581,7 +3558,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         final WeaponType defaultWeaponType = template.getBaseAttackType();
-        return nonNull(transform) ? transform.getBaseAttackType(this, defaultWeaponType) : defaultWeaponType;
+        return nonNull(transform) ? transform.attackType() : defaultWeaponType;
     }
 
     public final boolean isInCategory(CategoryType type) {
