@@ -21,6 +21,7 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.engine.transform.TransformEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.DamageInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -274,9 +275,9 @@ public class AdminEventEngine implements IAdminCommandHandler {
 				for (Player player : Event._teams.get(teamId))
 				{
 					final int transId = transIds[Rnd.get(transIds.length)];
-					if (!player.transform(transId, true))
+					if (!TransformEngine.getInstance().transform(player, transId, true))
 					{
-						AdminData.getInstance().broadcastMessageToGMs("EventEngine: Unknow transformation id: " + transId);
+						AdminData.getInstance().broadcastMessageToGMs("EventEngine: Unknown transformation id: " + transId);
 					}
 				}
 				showEventControl(activeChar);

@@ -31,6 +31,7 @@ import org.l2j.gameserver.engine.item.shop.L2Store;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.transform.TransformEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DailyTaskManager;
 import org.l2j.gameserver.instancemanager.InstanceManager;
@@ -151,7 +152,7 @@ public class AdminReload implements IAdminCommandHandler {
     }
 
     private void reloadTransform(Player player) {
-        TransformData.getInstance().load();
+        TransformEngine.getInstance().load();
         AdminData.getInstance().broadcastMessageToGMs(player.getName() + ": Reloaded transform data.");
     }
 

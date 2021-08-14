@@ -51,6 +51,7 @@ import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.rank.RankEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.transform.TransformEngine;
 import org.l2j.gameserver.engine.upgrade.UpgradeItemEngine;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -189,7 +190,7 @@ public class GameServer {
         HtmCache.getInstance();
         CrestTable.getInstance();
         TeleportersData.getInstance();
-        TransformData.getInstance();
+        TransformEngine.init();
         ReportTable.getInstance();
         if (Config.SELLBUFF_ENABLED) {
             SellBuffsManager.getInstance();

@@ -1264,7 +1264,7 @@ public final class Formulas {
         }
 
         var defaultWeaponType = weapon.getItemType();
-        var weaponType = creature.getTransformation().map(transform -> transform.getBaseAttackType(creature, defaultWeaponType)).orElse(defaultWeaponType);
+        var weaponType = creature.getTransformation().map(transform -> transform.attackType()).orElse(defaultWeaponType);
 
         int reuse = weaponType.isRanged() ?  weapon.getReuseDelay() : 0;
         return reuse * creature.getStats().getWeaponReuseModifier();
