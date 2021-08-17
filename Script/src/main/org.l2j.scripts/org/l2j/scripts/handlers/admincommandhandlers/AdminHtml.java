@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import java.util.Objects;
 import java.util.StringTokenizer;
 
 /**
@@ -43,32 +44,22 @@ public class AdminHtml implements IAdminCommandHandler
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
-		switch (actualCommand.toLowerCase())
-		{
-			case "admin_html":
-			{
-				if (!st.hasMoreTokens())
-				{
-					BuilderUtil.sendSysMessage(activeChar, "Usage: //html path");
-					return false;
-				}
-				
-				final String path = st.nextToken();
-				showAdminHtml(activeChar, path);
-				break;
+		if ("admin_html".equals(actualCommand.toLowerCase())) {
+			if (!st.hasMoreTokens()) {
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //html path");
+				return false;
 			}
-			case "admin_loadhtml":
-			{
-				if (!st.hasMoreTokens())
-				{
-					BuilderUtil.sendSysMessage(activeChar, "Usage: //loadhtml path");
-					return false;
-				}
-				
-				final String path = st.nextToken();
-				showHtml(activeChar, path, true);
-				break;
+
+			final String path = st.nextToken();
+			showAdminHtml(activeChar, path);
+		} else if ("admin_loadhtml".equals(actualCommand.toLowerCase())) {
+			if (!st.hasMoreTokens()) {
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //loadhtml path");
+				return false;
 			}
+
+			final String path = st.nextToken();
+			showHtml(activeChar, path, true);
 		}
 		return true;
 	}
@@ -100,14 +91,7 @@ public class AdminHtml implements IAdminCommandHandler
 			content = HtmCache.getInstance().getHtm(null, path);
 		}
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-		if (content != null)
-		{
-			html.setHtml(content);
-		}
-		else
-		{
-			html.setHtml("<html><body>My text is missing:<br>" + path + "</body></html>");
-		}
+		html.setHtml(Objects.requireNonNullElseGet(content, () -> "<html><body>My text is missing:<br>" + path + "</body></html>"));
 		activeChar.sendPacket(html);
 	}
 	

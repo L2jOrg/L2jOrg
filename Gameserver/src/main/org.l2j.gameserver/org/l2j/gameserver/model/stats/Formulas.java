@@ -77,9 +77,6 @@ public final class Formulas {
 
     /**
      * Return the period between 2 regeneration task (3s for Creature, 5 min for Door).
-     *
-     * @param cha
-     * @return
      */
     public static int getRegeneratePeriod(Creature cha) {
         return isDoor(cha) ? HP_REGENERATE_PERIOD * 100 : HP_REGENERATE_PERIOD;
@@ -170,12 +167,6 @@ public final class Formulas {
 
     /**
      * Returns true in case of critical hit
-     *
-     * @param rate
-     * @param skill
-     * @param activeChar
-     * @param target
-     * @return
      */
     public static boolean calcCrit(double rate, Creature activeChar, Creature target, Skill skill) {
         // Skill critical rate is calculated up to the first decimal, thats why multiply by 10 and compare to 1000.
@@ -236,35 +227,23 @@ public final class Formulas {
     /**
      * Gets the default (10% for side, 30% for back) positional critical rate bonus and multiplies it by any buffs that give positional critical rate bonus.
      *
-     * @param activeChar the attacker.
+     * @param creature the attacker.
      * @param target     the target.
      * @return a multiplier representing the positional critical rate bonus. Autoattacks for example get this bonus on top of the already capped critical rate of 500.
      */
-    public static double calcCriticalPositionBonus(Creature activeChar, Creature target) {
-        // final Position position = activeChar.getStat().has(Stats.ATTACK_BEHIND) ? Position.BACK : Position.getPosition(activeChar, target);
-        switch (Position.getPosition(activeChar, target)) {
-            case SIDE: // 10% Critical Chance bonus when attacking from side.
-            {
-                return 1.1 * activeChar.getStats().getPositionTypeValue(Stat.CRITICAL_RATE, Position.SIDE);
-            }
-            case BACK: // 30% Critical Chance bonus when attacking from back.
-            {
-                return 1.3 * activeChar.getStats().getPositionTypeValue(Stat.CRITICAL_RATE, Position.BACK);
-            }
-            default: // No Critical Chance bonus when attacking from front.
-            {
-                return activeChar.getStats().getPositionTypeValue(Stat.CRITICAL_RATE, Position.FRONT);
-            }
-        }
+    public static double calcCriticalPositionBonus(Creature creature, Creature target) {
+        return switch (Position.getPosition(creature, target)) {
+            case SIDE -> 1.1 * creature.getStats().getPositionTypeValue(Stat.CRITICAL_RATE, Position.SIDE);
+            case BACK -> 1.3 * creature.getStats().getPositionTypeValue(Stat.CRITICAL_RATE, Position.BACK);
+            default -> creature.getStats().getPositionTypeValue(Stat.CRITICAL_RATE, Position.FRONT);
+        };
     }
 
     public static double calcCriticalHeightBonus(ILocational from, ILocational target) {
-        return ((((CommonUtil.constrain(from.getZ() - target.getZ(), -25, 25) * 4) / 5) + 10) / 100) + 1;
+        return ((((CommonUtil.constrain(from.getZ() - target.getZ(), -25, 25) * 4) / 5d) + 10) / 100) + 1;
     }
 
     /**
-     * @param attacker
-     * @param target
      * @param skill    {@code skill} to be used in the calculation, else calculation will result for autoattack.
      * @return regular critical damage bonus. Positional bonus is excluded!
      */
@@ -291,8 +270,6 @@ public final class Formulas {
     }
 
     /**
-     * @param attacker
-     * @param target
      * @param skill    {@code skill} to be used in the calculation, else calculation will result for autoattack.
      * @return critical damage additional bonus, not multiplier!
      */
@@ -319,8 +296,6 @@ public final class Formulas {
     }
 
     /**
-     * @param target
-     * @param dmg
      * @return true in case when ATTACK is canceled due to hit
      */
     public static boolean calcAtkBreak(Creature target, double dmg) {
@@ -383,8 +358,6 @@ public final class Formulas {
     }
 
     /**
-     * @param creature
-     * @param skill
      * @return factor divisor for skill hit time and cancel time.
      */
     public static double calcSkillTimeFactor(Creature creature, Skill skill) {
@@ -417,8 +390,6 @@ public final class Formulas {
     /**
      * Formula based on http://l2p.l2wh.com/nonskillattacks.html
      *
-     * @param attacker
-     * @param target
      * @return {@code true} if hit missed (target evaded), {@code false} otherwise.
      */
     public static boolean calcHitMiss(Creature attacker, Creature target) {
@@ -438,11 +409,6 @@ public final class Formulas {
      * 0 = shield defense doesn't succeed<br>
      * 1 = shield defense succeed<br>
      * 2 = perfect block<br>
-     *
-     * @param attacker
-     * @param target
-     * @param sendSysMsg
-     * @return
      */
     public static byte calcShldUse(Creature attacker, Creature target, boolean sendSysMsg) {
         final ItemTemplate item = target.getSecondaryWeaponItem();
