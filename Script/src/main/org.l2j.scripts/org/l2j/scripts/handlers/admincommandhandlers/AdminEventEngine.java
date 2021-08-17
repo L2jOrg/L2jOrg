@@ -45,8 +45,7 @@ public class AdminEventEngine implements IAdminCommandHandler {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AdminEventEngine.class);
 	
-	private static final String[] ADMIN_COMMANDS =
-	{
+	private static final String[] ADMIN_COMMANDS = {
 		"admin_event",
 		"admin_event_new",
 		"admin_event_choose",
@@ -77,266 +76,271 @@ public class AdminEventEngine implements IAdminCommandHandler {
 	private static String tempName = "";
 	
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
-	{
+	public boolean useAdminCommand(String command, Player gm) {
 		StringTokenizer st = new StringTokenizer(command);
 		final String actualCommand = st.nextToken();
-		try
+
+		if (actualCommand.equals("admin_event")) {
+			showEventMainPage(gm);
+		} else if (actualCommand.equals("admin_event_new")) {
+			showNewEventPage(gm);
+		}
+		else if (actualCommand.startsWith("admin_add")) {
+			// There is an exception here for not using the ST. We use spaces (ST delim) for the event info.
+			tempBuffer += command.substring(10);
+			showNewEventPage(gm);
+
+		} else if (actualCommand.startsWith("admin_event_see")) {
+			adminEventSee(command, gm);
+		}
+		else if (actualCommand.startsWith("admin_event_del")) {
+			deleteEvent(command, gm);
+		}
+		else if (actualCommand.startsWith("admin_event_name")) {
+			// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
+			tempName += command.substring(17);
+			showNewEventPage(gm);
+		} else if (actualCommand.equalsIgnoreCase("adin_delete_buffer")) {
+			tempBuffer = "";
+			showNewEventPage(gm);
+		} else if (actualCommand.startsWith("admin_event_store")) {
+			eventStore(gm);
+		}
+		else if (actualCommand.startsWith("admin_event_set")) {
+			// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
+			Event._eventName = command.substring(16);
+			showEventParameters(gm, 2);
+		}
+		else if (actualCommand.startsWith("admin_event_change_teams_number")) {
+			showEventParameters(gm, Integer.parseInt(st.nextToken()));
+		}
+		else if (actualCommand.startsWith("admin_event_panel")) {
+			showEventControl(gm);
+		}
+		else if (actualCommand.startsWith("admin_event_announce")) {
+			announceEvent(gm, st);
+		}
+		else if (actualCommand.startsWith("admin_event_control_begin")) {
+			gm.sendMessage(Event.startEvent());
+			showEventControl(gm);
+		}
+		else if (actualCommand.startsWith("admin_event_control_finish")) {
+			gm.sendMessage(Event.finishEvent());
+		}
+		else if (actualCommand.startsWith("admin_event_control_teleport")) {
+			controlTeleportEvent(gm, st);
+		}
+		else if (actualCommand.startsWith("admin_event_control_sit")) {
+			controlEventSit(gm, st);
+		}
+		else if (actualCommand.startsWith("admin_event_control_kill")) {
+			controlKill(gm, st);
+		}
+		else if (actualCommand.startsWith("admin_event_control_res")) {
+			controlRes(gm, st);
+		}
+		else if (actualCommand.startsWith("admin_event_control_transform")) {
+			controlTransform(gm, st);
+		}
+		else if (actualCommand.startsWith("admin_event_control_untransform")) {
+			controlUntrasform(gm, st);
+		}
+		else if (actualCommand.startsWith("admin_event_control_kick")) {
+			controlKick(gm, st);
+		}
+		else if (actualCommand.startsWith("admin_event_control_prize")) {
+			controlPrize(gm, st);
+		}
+		return true;
+	}
+
+	private void controlPrize(Player gm, StringTokenizer st) {
+		final int[] teamIds = new int[st.countTokens() - 2];
+		int i = 0;
+		while ((st.countTokens() - 2) > 0) // The last 2 tokens are used for "n" and "item id"
 		{
-			if (actualCommand.equals("admin_event"))
+			teamIds[i++] = Integer.parseInt(st.nextToken());
+		}
+
+		final String[] n = st.nextToken().split("\\*");
+		final int itemId = Integer.parseInt(st.nextToken());
+
+		for (int teamId : teamIds)
+		{
+			rewardTeam(gm, teamId, Integer.parseInt(n[0]), itemId, n.length == 2 ? n[1] : "");
+		}
+		showEventControl(gm);
+	}
+
+	private void controlKick(Player gm, StringTokenizer st) {
+		if (st.hasMoreElements()) // If has next token, it should be player name.
+		{
+			while (st.hasMoreElements())
 			{
-				if (Event.eventState != EventState.OFF)
+				final Player player = World.getInstance().findPlayer(st.nextToken());
+				if (player != null)
 				{
-					showEventControl(activeChar);
+					Event.removeAndResetPlayer(player);
+				}
+			}
+		}
+		else if (isPlayer(gm.getTarget()))
+		{
+			Event.removeAndResetPlayer((Player) gm.getTarget());
+		}
+		showEventControl(gm);
+	}
+
+	private void controlUntrasform(Player gm, StringTokenizer st) {
+		while (st.hasMoreElements()) // Every next ST should be a team number
+		{
+			for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
+			{
+				player.stopTransformation(true);
+			}
+		}
+		showEventControl(gm);
+	}
+
+	private void controlTransform(Player gm, StringTokenizer st) {
+		final int teamId = Integer.parseInt(st.nextToken());
+		final int[] transIds = new int[st.countTokens()];
+		int i = 0;
+		while (st.hasMoreElements()) // Every next ST should be a transform ID
+		{
+			transIds[i++] = Integer.parseInt(st.nextToken());
+		}
+
+		for (Player player : Event._teams.get(teamId))
+		{
+			final int transId = transIds[Rnd.get(transIds.length)];
+			if (!TransformEngine.getInstance().transform(player, transId, true))
+			{
+				AdminData.getInstance().broadcastMessageToGMs("EventEngine: Unknown transformation id: " + transId);
+			}
+		}
+		showEventControl(gm);
+	}
+
+	private void controlRes(Player gm, StringTokenizer st) {
+		while (st.hasMoreElements()) // Every next ST should be a team number
+		{
+			for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
+			{
+				if ((player == null) || !player.isDead())
+				{
+					continue;
+				}
+				player.restoreExp(100.0);
+				player.doRevive();
+				player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
+				player.setCurrentCp(player.getMaxCp());
+			}
+		}
+		showEventControl(gm);
+	}
+
+	private void controlKill(Player gm, StringTokenizer st) {
+		while (st.hasMoreElements()) // Every next ST should be a team number
+		{
+			for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
+			{
+				player.reduceCurrentHp(player.getMaxHp() + player.getMaxCp() + 1d, gm, null, DamageInfo.DamageType.OTHER);
+			}
+		}
+		showEventControl(gm);
+	}
+
+	private void controlEventSit(Player gm, StringTokenizer st) {
+		while (st.hasMoreElements()) // Every next ST should be a team number
+		{
+			// Integer.parseInt(st.nextToken()) == teamId
+			for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
+			{
+				if (player.getEventStatus() == null)
+				{
+					continue;
+				}
+
+				player.getEventStatus().setSitForced(!player.getEventStatus().isSitForced());
+				if (player.getEventStatus().isSitForced())
+				{
+					player.sitDown();
 				}
 				else
 				{
-					showMainPage(activeChar);
+					player.standUp();
 				}
-			}
-			
-			else if (actualCommand.equals("admin_event_new"))
-			{
-				showNewEventPage(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_add"))
-			{
-				// There is an exception here for not using the ST. We use spaces (ST delim) for the event info.
-				tempBuffer += command.substring(10);
-				showNewEventPage(activeChar);
-				
-			}
-			else if (actualCommand.startsWith("admin_event_see"))
-			{
-				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
-				adminEventSee(command, activeChar);
-
-			}
-			else if (actualCommand.startsWith("admin_event_del"))
-			{
-				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
-				final String eventName = command.substring(16);
-				Files.deleteIfExists(ServerSettings.dataPackDirectory().resolve("/data/events/" + eventName));
-				showMainPage(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_name"))
-			{
-				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
-				tempName += command.substring(17);
-				showNewEventPage(activeChar);
-			}
-			else if (actualCommand.equalsIgnoreCase("admin_delete_buffer"))
-			{
-				tempBuffer = "";
-				showNewEventPage(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_store"))
-			{
-				eventStore(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_set"))
-			{
-				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
-				Event._eventName = command.substring(16);
-				showEventParameters(activeChar, 2);
-			}
-			else if (actualCommand.startsWith("admin_event_change_teams_number"))
-			{
-				showEventParameters(activeChar, Integer.parseInt(st.nextToken()));
-			}
-			else if (actualCommand.startsWith("admin_event_panel"))
-			{
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_announce"))
-			{
-				Event._npcId = Integer.parseInt(st.nextToken());
-				Event._teamsNumber = Integer.parseInt(st.nextToken());
-				String temp = " ";
-				String temp2;
-				while (st.hasMoreElements())
-				{
-					temp += st.nextToken() + " ";
-				}
-				
-				st = new StringTokenizer(temp, "-");
-				
-				Integer i = 1;
-				
-				while (st.hasMoreElements())
-				{
-					temp2 = st.nextToken();
-					if (!temp2.equals(" "))
-					{
-						Event._teamNames.put(i++, temp2.substring(1, temp2.length() - 1));
-					}
-				}
-				
-				activeChar.sendMessage(Event.startEventParticipation());
-				Broadcast.toAllOnlinePlayers(activeChar.getName() + " has started an event. You will find a participation NPC somewhere around you.");
-
-				activeChar.broadcastPacket(PlaySound.music( "B03_F"));
-				
-				final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-				
-				final String replyMSG = "<html><title>[ L2J EVENT ENGINE ]</title><body><br><center>The event <font color=\"LEVEL\">" + Event._eventName + "</font> has been announced, now you can type //event_panel to see the event panel control</center><br></body></html>";
-				adminReply.setHtml(replyMSG);
-				activeChar.sendPacket(adminReply);
-			}
-			else if (actualCommand.startsWith("admin_event_control_begin"))
-			{
-				// Starts the event and sends a message of the result
-				activeChar.sendMessage(Event.startEvent());
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_control_finish"))
-			{
-				// Finishes the event and sends a message of the result
-				activeChar.sendMessage(Event.finishEvent());
-			}
-			else if (actualCommand.startsWith("admin_event_control_teleport"))
-			{
-				while (st.hasMoreElements()) // Every next ST should be a team number
-				{
-					final int teamId = Integer.parseInt(st.nextToken());
-					
-					for (Player player : Event._teams.get(teamId))
-					{
-						player.setTitle(Event._teamNames.get(teamId));
-						player.teleToLocation(activeChar.getLocation(), true, activeChar.getInstanceWorld());
-					}
-				}
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_control_sit"))
-			{
-				while (st.hasMoreElements()) // Every next ST should be a team number
-				{
-					// Integer.parseInt(st.nextToken()) == teamId
-					for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
-					{
-						if (player.getEventStatus() == null)
-						{
-							continue;
-						}
-						
-						player.getEventStatus().setSitForced(!player.getEventStatus().isSitForced());
-						if (player.getEventStatus().isSitForced())
-						{
-							player.sitDown();
-						}
-						else
-						{
-							player.standUp();
-						}
-					}
-				}
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_control_kill"))
-			{
-				while (st.hasMoreElements()) // Every next ST should be a team number
-				{
-					for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
-					{
-						player.reduceCurrentHp(player.getMaxHp() + player.getMaxCp() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
-					}
-				}
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_control_res"))
-			{
-				while (st.hasMoreElements()) // Every next ST should be a team number
-				{
-					for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
-					{
-						if ((player == null) || !player.isDead())
-						{
-							continue;
-						}
-						player.restoreExp(100.0);
-						player.doRevive();
-						player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
-						player.setCurrentCp(player.getMaxCp());
-					}
-				}
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_control_transform"))
-			{
-				final int teamId = Integer.parseInt(st.nextToken());
-				final int[] transIds = new int[st.countTokens()];
-				int i = 0;
-				while (st.hasMoreElements()) // Every next ST should be a transform ID
-				{
-					transIds[i++] = Integer.parseInt(st.nextToken());
-				}
-				
-				for (Player player : Event._teams.get(teamId))
-				{
-					final int transId = transIds[Rnd.get(transIds.length)];
-					if (!TransformEngine.getInstance().transform(player, transId, true))
-					{
-						AdminData.getInstance().broadcastMessageToGMs("EventEngine: Unknown transformation id: " + transId);
-					}
-				}
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_control_untransform"))
-			{
-				while (st.hasMoreElements()) // Every next ST should be a team number
-				{
-					for (Player player : Event._teams.get(Integer.parseInt(st.nextToken())))
-					{
-						player.stopTransformation(true);
-					}
-				}
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_control_kick"))
-			{
-				if (st.hasMoreElements()) // If has next token, it should be player name.
-				{
-					while (st.hasMoreElements())
-					{
-						final Player player = World.getInstance().findPlayer(st.nextToken());
-						if (player != null)
-						{
-							Event.removeAndResetPlayer(player);
-						}
-					}
-				}
-				else if (isPlayer(activeChar.getTarget()))
-				{
-					Event.removeAndResetPlayer((Player) activeChar.getTarget());
-				}
-				showEventControl(activeChar);
-			}
-			else if (actualCommand.startsWith("admin_event_control_prize"))
-			{
-				final int[] teamIds = new int[st.countTokens() - 2];
-				int i = 0;
-				while ((st.countTokens() - 2) > 0) // The last 2 tokens are used for "n" and "item id"
-				{
-					teamIds[i++] = Integer.parseInt(st.nextToken());
-				}
-				
-				final String[] n = st.nextToken().split("\\*");
-				final int itemId = Integer.parseInt(st.nextToken());
-				
-				for (int teamId : teamIds)
-				{
-					rewardTeam(activeChar, teamId, Integer.parseInt(n[0]), itemId, n.length == 2 ? n[1] : "");
-				}
-				showEventControl(activeChar);
 			}
 		}
-		catch (Exception e)
+		showEventControl(gm);
+	}
+
+	private void controlTeleportEvent(Player gm, StringTokenizer st) {
+		while (st.hasMoreElements()) // Every next ST should be a team number
 		{
-			LOGGER.error(e.getMessage(), e);
-			AdminData.getInstance().broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?");
+			final int teamId = Integer.parseInt(st.nextToken());
+
+			for (Player player : Event._teams.get(teamId))
+			{
+				player.setTitle(Event._teamNames.get(teamId));
+				player.teleToLocation(gm.getLocation(), true, gm.getInstanceWorld());
+			}
 		}
-		return true;
+		showEventControl(gm);
+	}
+
+	private void announceEvent(Player gm, StringTokenizer st) {
+		Event._npcId = Integer.parseInt(st.nextToken());
+		Event._teamsNumber = Integer.parseInt(st.nextToken());
+		StringBuilder temp = new StringBuilder(" ");
+		String temp2;
+		while (st.hasMoreElements())
+		{
+			temp.append(st.nextToken()).append(" ");
+		}
+
+		st = new StringTokenizer(temp.toString(), "-");
+
+		int i = 1;
+
+		while (st.hasMoreElements())
+		{
+			temp2 = st.nextToken();
+			if (!temp2.equals(" "))
+			{
+				Event._teamNames.put(i++, temp2.substring(1, temp2.length() - 1));
+			}
+		}
+
+		gm.sendMessage(Event.startEventParticipation());
+		Broadcast.toAllOnlinePlayers(gm.getName() + " has started an event. You will find a participation NPC somewhere around you.");
+
+		gm.broadcastPacket(PlaySound.music( "B03_F"));
+
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
+
+		final String replyMSG = "<html><title>[ L2J EVENT ENGINE ]</title><body><br><center>The event <font color=\"LEVEL\">" + Event._eventName + "</font> has been announced, now you can type //event_panel to see the event panel control</center><br></body></html>";
+		adminReply.setHtml(replyMSG);
+		gm.sendPacket(adminReply);
+	}
+
+	private void deleteEvent(String command, Player gm)  {
+		final String eventName = command.substring(16);
+		showMainPage(gm);
+		try {
+			Files.deleteIfExists(ServerSettings.dataPackDirectory().resolve("/data/events/" + eventName));
+		} catch (IOException e) {
+			LOGGER.warn("could not delete event file {}", eventName, e);
+		}
+	}
+
+	private void showEventMainPage(Player gm) {
+		if (Event.eventState != EventState.OFF) {
+			showEventControl(gm);
+		} else {
+			showMainPage(gm);
+		}
 	}
 
 	private void eventStore(Player activeChar) {
@@ -402,26 +406,29 @@ public class AdminEventEngine implements IAdminCommandHandler {
 				return note;
 			}
 		}
-		
+
 		final String[] files = dir.list();
-		final StringBuilder result = new StringBuilder(files.length * 500);
-		result.append("<table>");
-		for (String fileName : files)
-		{
-			result.append("<tr><td align=center>");
-			result.append(fileName);
-			result.append(" </td></tr><tr><td><table cellspacing=0><tr><td><button value=\"Select Event\" action=\"bypass -h admin_event_set ");
-			result.append(fileName);
-			result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"View Event\" action=\"bypass -h admin_event_see ");
-			result.append(fileName);
-			result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Delete Event\" action=\"bypass -h admin_event_del ");
-			result.append(fileName);
-			result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>");
+		if(files != null) {
+			final StringBuilder result = new StringBuilder(files.length * 500);
+			result.append("<table>");
+			for (String fileName : files) {
+				result.append("<tr><td align=center>");
+				result.append(fileName);
+				result.append(" </td></tr><tr><td><table cellspacing=0><tr><td><button value=\"Select Event\" action=\"bypass -h admin_event_set ");
+				result.append(fileName);
+				result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"View Event\" action=\"bypass -h admin_event_see ");
+				result.append(fileName);
+				result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Delete Event\" action=\"bypass -h admin_event_del ");
+				result.append(fileName);
+				result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>");
+			}
+
+			result.append("</table>");
+
+			note += result;
 		}
-		
-		result.append("</table>");
-		
-		return note + result;
+		return note;
+
 	}
 	
 	private void showMainPage(Player activeChar)
@@ -516,17 +523,15 @@ public class AdminEventEngine implements IAdminCommandHandler {
 	{
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-		final StringBuilder sb = new StringBuilder();
-		sb.append("<html><title>[ EVENT ENGINE ]</title><body><br><center>Current event: <font color=\"LEVEL\">");
-		sb.append(Event._eventName);
-		sb.append("</font></center><br><table cellspacing=-1 width=280><tr><td align=center>Type the team ID(s) that will be affected by the commands. Commands with '*' work with only 1 team ID in the field, while '!' - none.</td></tr><tr><td align=center><edit var=\"team_number\" width=100 height=15></td></tr>");
-		sb.append("<tr><td>&nbsp;</td></tr><tr><td><table width=200>");
 
-		sb.append("<tr><td><button value=\"Start!\" action=\"bypass -h admin_event_control_begin\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Destroys all event npcs so no more people can't participate now on</font></td></tr>");
+		String sb = "<html><title>[ EVENT ENGINE ]</title><body><br><center>Current event: <font color=\"LEVEL\">" +
+				Event._eventName +
+				"</font></center><br><table cellspacing=-1 width=280><tr><td align=center>Type the team ID(s) that will be affected by the commands. Commands with '*' work with only 1 team ID in the field, while '!' - none.</td></tr><tr><td align=center><edit var=\"team_number\" width=100 height=15></td></tr>" +
+				"<tr><td>&nbsp;</td></tr><tr><td><table width=200>" +
+				"<tr><td><button value=\"Start!\" action=\"bypass -h admin_event_control_begin\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Destroys all event npcs so no more people can't participate now on</font></td></tr>" +
+				"<tr><td>&nbsp;</td></tr><tr><td><button value=\"Teleport\" action=\"bypass -h admin_event_control_teleport $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Teleports the specified team to your position</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Sit/Stand\" action=\"bypass -h admin_event_control_sit $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Sits/Stands up the team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Kill\" action=\"bypass -h admin_event_control_kill $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Finish with the life of all the players in the selected team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Resurrect\" action=\"bypass -h admin_event_control_res $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Resurrect Team's members</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Transform*\" action=\"bypass -h admin_event_control_transform $team_number $transf_id\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td><edit var=\"transf_id\" width=98 height=15></td></tr></table></td><td><font color=\"LEVEL\">Transforms the team into the transformation with the ID specified. Multiple IDs result in randomly chosen one for each player.</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"UnTransform\" action=\"bypass -h admin_event_control_untransform $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Untransforms the team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Give Item\" action=\"bypass -h admin_event_control_prize $team_number $n $id\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><table><tr><td width=32>Num</td><td><edit var=\"n\" width=60 height=15></td></tr><tr><td>ID</td><td><edit var=\"id\" width=60 height=15></td></tr></table></td><td><font color=\"LEVEL\">Give the specified item id to every single member of the team, you can put 5*level, 5*kills or 5 in the number field for example</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Kick Player\" action=\"bypass -h admin_event_control_kick $player_name\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td><edit var=\"player_name\" width=98 height=15></td></tr></table></td><td><font color=\"LEVEL\">Kicks the specified player(s) from the event. Blank field kicks target.</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"End!\" action=\"bypass -h admin_event_control_finish\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Will finish the event teleporting back all the players</font></td></tr><tr><td>&nbsp;</td></tr></table></td></tr></table></body></html>";
 		
-		sb.append("<tr><td>&nbsp;</td></tr><tr><td><button value=\"Teleport\" action=\"bypass -h admin_event_control_teleport $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Teleports the specified team to your position</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Sit/Stand\" action=\"bypass -h admin_event_control_sit $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Sits/Stands up the team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Kill\" action=\"bypass -h admin_event_control_kill $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Finish with the life of all the players in the selected team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Resurrect\" action=\"bypass -h admin_event_control_res $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Resurrect Team's members</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Transform*\" action=\"bypass -h admin_event_control_transform $team_number $transf_id\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td><edit var=\"transf_id\" width=98 height=15></td></tr></table></td><td><font color=\"LEVEL\">Transforms the team into the transformation with the ID specified. Multiple IDs result in randomly chosen one for each player.</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"UnTransform\" action=\"bypass -h admin_event_control_untransform $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Untransforms the team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Give Item\" action=\"bypass -h admin_event_control_prize $team_number $n $id\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><table><tr><td width=32>Num</td><td><edit var=\"n\" width=60 height=15></td></tr><tr><td>ID</td><td><edit var=\"id\" width=60 height=15></td></tr></table></td><td><font color=\"LEVEL\">Give the specified item id to every single member of the team, you can put 5*level, 5*kills or 5 in the number field for example</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Kick Player\" action=\"bypass -h admin_event_control_kick $player_name\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td><edit var=\"player_name\" width=98 height=15></td></tr></table></td><td><font color=\"LEVEL\">Kicks the specified player(s) from the event. Blank field kicks target.</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"End!\" action=\"bypass -h admin_event_control_finish\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Will finish the event teleporting back all the players</font></td></tr><tr><td>&nbsp;</td></tr></table></td></tr></table></body></html>");
-		
-		adminReply.setHtml(sb.toString());
+		adminReply.setHtml(sb);
 		activeChar.sendPacket(adminReply);
 	}
 	

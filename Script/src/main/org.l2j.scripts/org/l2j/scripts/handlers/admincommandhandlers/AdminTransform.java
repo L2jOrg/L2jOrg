@@ -21,104 +21,100 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.gameserver.engine.transform.TransformEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
 import static org.l2j.commons.util.Util.isDigit;
-import static org.l2j.gameserver.util.GameUtils.isCreature;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Mobius
  */
-public class AdminTransform implements IAdminCommandHandler
-{
-	private static final String[] ADMIN_COMMANDS =
-	{
+public class AdminTransform implements IAdminCommandHandler {
+
+	private static final String[] ADMIN_COMMANDS = {
 		"admin_transform",
 		"admin_untransform",
 		"admin_transform_menu",
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
-	{
-		if (command.equals("admin_transform_menu"))
-		{
-			AdminHtml.showAdminHtml(activeChar, "transform.htm");
+	public boolean useAdminCommand(String command, Player gm) {
+		if (command.equals("admin_transform_menu")) {
+			AdminHtml.showAdminHtml(gm, "transform.htm");
 			return true;
+		} else if (command.startsWith("admin_untransform")) {
+			return untransform(gm);
 		}
-		else if (command.startsWith("admin_untransform"))
-		{
-			final WorldObject obj = activeChar.getTarget() == null ? activeChar : activeChar.getTarget();
-			if (!isCreature(obj) || !((Creature) obj).isTransformed())
-			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-				return false;
-			}
-
-			((Creature) obj).stopTransformation(true);
-		}
-		else if (command.startsWith("admin_transform"))
-		{
-			final WorldObject obj = activeChar.getTarget();
-			if (!isPlayer(obj))
-			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-				return false;
-			}
-			
-			final Player player = obj.getActingPlayer();
-			if (activeChar.isSitting())
-			{
-				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_SITTING);
-				return false;
-			}
-			
-			if (player.isTransformed())
-			{
-				if (!command.contains(" "))
-				{
-					player.untransform();
-					return true;
-				}
-				activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
-				return false;
-			}
-			
-			if (player.isInWater())
-			{
-				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
-				return false;
-			}
-			
-			if (player.isFlyingMounted() || player.isMounted())
-			{
-				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_RIDING_A_PET);
-				return false;
-			}
-			
-			final String[] parts = command.split(" ");
-			if ((parts.length != 2) || !isDigit(parts[1]))
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //transform <id>");
-				return false;
-			}
-			
-			final int id = Integer.parseInt(parts[1]);
-			if (!TransformEngine.getInstance().transform(player, id, true))
-			{
-				player.sendMessage("Unknown transformation ID: " + id);
-				return false;
-			}
+		else if (command.startsWith("admin_transform")) {
+			return transform(gm, command);
 		}
 		
+		return false;
+	}
+
+	private boolean transform(Player gm, String command) {
+		final var obj = gm.getTarget();
+		if (!(obj instanceof Player player)) {
+			gm.sendPacket(SystemMessageId.INVALID_TARGET);
+			return false;
+		}
+
+		if (!isInTransformableState(gm, player)) {
+			return false;
+		}
+
+		if (player.isTransformed()) {
+			if (!command.contains(" ")) {
+				player.stopTransformation(true);
+				return true;
+			}
+			return false;
+		}
+
+		final String[] parts = command.split(" ");
+		if ((parts.length != 2) || !isDigit(parts[1])) {
+			BuilderUtil.sendSysMessage(gm, "Usage: //transform <id>");
+			return false;
+		}
+
+		final int id = Integer.parseInt(parts[1]);
+		if (!TransformEngine.getInstance().transform(player, id, true)) {
+			player.sendMessage("Unknown transformation ID: " + id);
+			return false;
+		}
 		return true;
 	}
-	
+
+	private boolean isInTransformableState(Player gm, Player player) {
+		if (player.isSitting()) {
+			gm.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_SITTING);
+			return false;
+		}
+
+		if (player.isInWater()) {
+			gm.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
+			return false;
+		}
+
+		if (player.isFlyingMounted() || player.isMounted()) {
+			gm.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_RIDING_A_PET);
+			return false;
+		}
+		return true;
+	}
+
+	private boolean untransform(Player gm) {
+		final var target = gm.getTarget() == null ? gm : gm.getTarget();
+		if (!(target instanceof Creature creature) || !creature.isTransformed()) {
+			gm.sendPacket(SystemMessageId.INVALID_TARGET);
+			return false;
+		}
+		creature.stopTransformation(true);
+		return true;
+	}
+
 	@Override
 	public String[] getAdminCommandList()
 	{
