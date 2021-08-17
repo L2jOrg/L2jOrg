@@ -2237,9 +2237,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         final int curZ = getZ();
 
         // TODO: improve Z axis move/follow support when dx,dy are small compared to dz
-        double dx = x - curX;
-        double dy = y - curY;
-        double dz = z - curZ;
+        var dx = x - curX;
+        var dy = y - curY;
+        var dz = z - curZ;
         double distance = Math.hypot(dx, dy);
 
         if (!cursorKeyMovementActive && distance > 200) {
