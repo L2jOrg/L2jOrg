@@ -29,6 +29,7 @@ import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillType;
+import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.Creature;
@@ -1264,7 +1265,7 @@ public final class Formulas {
         }
 
         var defaultWeaponType = weapon.getItemType();
-        var weaponType = creature.getTransformation().map(transform -> transform.attackType()).orElse(defaultWeaponType);
+        var weaponType = creature.getTransformation().map(Transform::attackType).orElse(defaultWeaponType);
 
         int reuse = weaponType.isRanged() ?  weapon.getReuseDelay() : 0;
         return reuse * creature.getStats().getWeaponReuseModifier();

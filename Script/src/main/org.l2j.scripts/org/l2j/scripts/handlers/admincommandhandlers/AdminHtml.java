@@ -78,8 +78,7 @@ public class AdminHtml implements IAdminCommandHandler
 	 * @param activeChar activeChar where html is shown
 	 * @param path relative path from directory data/html/admin/ to html
 	 */
-	static void showAdminHtml(Player activeChar, String path)
-	{
+	static void showAdminHtml(Player activeChar, String path) {
 		showHtml(activeChar, "data/html/admin/" + path, false);
 	}
 	
