@@ -20,6 +20,7 @@
 package org.l2j.gameserver.engine.mail;
 
 import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.MailDAO;
@@ -33,17 +34,18 @@ import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.container.Attachment;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExNoticePostArrived;
-import org.l2j.gameserver.network.serverpackets.ExUnReadMailCount;
-import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
@@ -60,110 +62,111 @@ public final class MailEngine {
     public static final int MAIL_FEE_PER_SLOT = 1000;
 
     private IntMap<MailData> mails = Containers.emptyIntMap();
+    private IntMap<List<MailData>> inboxes = Containers.emptyIntMap();
+    private IntMap<List<MailData>> outBoxes = Containers.emptyIntMap();
 
     private MailEngine() {
     }
 
     private void load() {
         mails = getDAO(MailDAO.class).findAll();
+        inboxes = new HashIntMap<>();
+        outBoxes = new HashIntMap<>();
         final var currentTime = System.currentTimeMillis();
         mails.values().forEach(m -> {
             if(m.getExpiration() < currentTime) {
-                ThreadPool.schedule(new MessageDeletionTask(m.getId()), 10, TimeUnit.SECONDS);
+                ThreadPool.schedule(new MessageDeletionTask(m.getId()), 5, TimeUnit.SECONDS);
             } else {
                 ThreadPool.schedule(new MessageDeletionTask(m.getId()), m.getExpiration() - System.currentTimeMillis());
+                addMailToBoxes(m);
             }
         });
     }
 
-    public final MailData getMail(int mailId) {
+    private void addMailToBoxes(MailData m) {
+        if(!m.isDeletedByReceiver()) {
+            inboxes.computeIfAbsent(m.getReceiver(), i -> new ArrayList<>()).add(m);
+        }
+
+        if(!m.isDeletedBySender()) {
+            outBoxes.computeIfAbsent(m.getSender(), i -> new ArrayList<>()).add(m);
+        }
+    }
+
+    public MailData getMail(int mailId) {
         return mails.get(mailId);
     }
 
-    public final void sendUnreadCount(Player player) {
+    public List<MailData> getInbox(int playerId) {
+        return inboxes.getOrDefault(playerId, Collections.emptyList());
+    }
+
+    public int getInboxSize(int playerId) {
+        return getInbox(playerId).size();
+    }
+
+    public List<MailData> getOutbox(int playerId) {
+        return outBoxes.getOrDefault(playerId, Collections.emptyList());
+    }
+
+    public int getOutboxSize(int playerId) {
+        return getOutbox(playerId).size();
+    }
+
+    public void sendUnreadCount(Player player) {
         final var unread = getUnreadCount(player);
         if(unread > 0) {
             player.sendPacket(ExNoticePostArrived.valueOf(false));
         }
-        player.sendPacket(new ExUnReadMailCount((int) unread));
+        player.sendPacket(new ExUnReadMailCount(unread));
     }
 
-    public final int getInboxSize(int objectId) {
-        return (int) inboxStream(objectId).count();
-    }
-
-    public final int getOutboxSize(int objectId) {
-        int size = 0;
-        for (var mail : mails.values()) {
-            if (mail.getSender() == objectId && !mail.isDeletedBySender()) {
-                size++;
+    private int getUnreadCount(Player player) {
+        var count = 0;
+        for (var mail : getInbox(player.getObjectId())) {
+            if(mail.isUnread()) {
+                count++;
             }
         }
-        return size;
+        return count;
     }
 
-    public final List<MailData> getInbox(int objectId) {
-        return inboxStream(objectId).collect(Collectors.toList());
+    public boolean hasMailInProgress(int playerId) {
+        return hasMailInProgress(getInbox(playerId)) || hasMailInProgress(getOutbox(playerId));
     }
 
-    public Stream<MailData> inboxStream(int objectId) {
-        return mails.values().stream().filter(m -> m.getReceiver() == objectId && !m.isDeletedByReceiver());
-    }
-
-    public final long getUnreadCount(Player player) {
-        return inboxStream(player.getObjectId()).filter(MailData::isUnread).count();
-    }
-
-    public boolean hasMailInProgress(int objectId) {
-        for (var mail : mails.values()) {
-            if (mail.getType() == MailType.REGULAR) {
-                if ((mail.getReceiver() == objectId) && !mail.isDeletedByReceiver() && !mail.isReturned() && mail.hasAttachments()) {
-                    return true;
-                } else if ((mail.getSender() == objectId) && !mail.isDeletedBySender() && !mail.isReturned() && mail.hasAttachments()) {
-                    return true;
-                }
+    private boolean hasMailInProgress(List<MailData> inbox) {
+        for (var mail : inbox) {
+            if (mail.getType() == MailType.REGULAR && !mail.isReturned() && mail.hasAttachments()) {
+                return true;
             }
         }
         return false;
-    }
-
-    public final List<MailData> getOutbox(int objectId) {
-        return mails.values().stream().filter(m -> m.getSender() == objectId && !m.isDeletedBySender()).collect(Collectors.toList());
     }
 
     public void sendMail(MailData mail) {
         getDAO(MailDAO.class).save(mail);
         mails.put(mail.getId(), mail);
 
-        doIfNonNull(World.getInstance().findPlayer(mail.getReceiver()), receiver -> {
-            receiver.sendPackets(ExNoticePostArrived.valueOf(true), new ExUnReadMailCount((int) getUnreadCount(receiver)));
-        });
+        doIfNonNull(World.getInstance().findPlayer(mail.getReceiver()), receiver ->
+                receiver.sendPackets(ExNoticePostArrived.valueOf(true), new ExUnReadMailCount(getUnreadCount(receiver))));
 
         ThreadPool.schedule(new MessageDeletionTask(mail.getId()), mail.getExpiration() - System.currentTimeMillis());
     }
 
-    public final void markAsRead(Player player, MailData mail) {
-        if(mail.isUnread()) {
-            mail.markAsRead();
-            getDAO(MailDAO.class).markAsRead(mail.getId());
-            player.sendPacket(new ExUnReadMailCount((int) getUnreadCount(player)));
-
-        }
-    }
-
-    public final void markAsDeletedBySenderInDb(int mailId) {
+    public void markAsDeletedBySenderInDb(int mailId) {
         getDAO(MailDAO.class).markAsDeletedBySender(mailId);
     }
 
-    public final void markAsDeletedByReceiverInDb(int mailId) {
+    public void markAsDeletedByReceiverInDb(int mailId) {
         getDAO(MailDAO.class).markAsDeletedByReceiver(mailId);
     }
 
-    public final void removeAttachmentsInDb(int mailId) {
+    public void removeAttachmentsInDb(int mailId) {
         getDAO(MailDAO.class).deleteAttachment(mailId);
     }
 
-    public final void deleteMailInDb(int mailId) {
+    public void deleteMailInDb(int mailId) {
         getDAO(MailDAO.class).deleteById(mailId);
         mails.remove(mailId);
         IdFactory.getInstance().releaseId(mailId);
@@ -236,6 +239,76 @@ public final class MailEngine {
             return false;
         }
         return true;
+    }
+
+    public void receiveMail(Player player, int mailId) {
+        if (!GeneralSettings.allowMail()) {
+            return;
+        }
+
+        final var mail = MailEngine.getInstance().getMail(mailId);
+        if (mail == null) {
+            return;
+        }
+
+        if (mail.getReceiver() != player.getObjectId()) {
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to receive not own post!");
+            return;
+        }
+
+        if (!player.isInsideZone(ZoneType.PEACE) && mail.hasAttachments()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
+            return;
+        }
+
+        if (mail.isDeletedByReceiver()) {
+            return;
+        }
+
+        player.sendPackets(new ExReplyReceivedPost(mail), ExChangePostState.reAdded(true, mailId));
+        markAsRead(player, mail);
+    }
+
+    private void markAsRead(Player player, MailData mail) {
+        if(mail.isUnread()) {
+            mail.markAsRead();
+            getDAO(MailDAO.class).markAsRead(mail.getId());
+            player.sendPacket(new ExUnReadMailCount(getUnreadCount(player)));
+        }
+    }
+
+    public void deleteSentMails(Player player, int[] mailIds) {
+        if (!GeneralSettings.allowMail()) {
+            return;
+        }
+
+        if (!player.isInsideZone(ZoneType.PEACE)) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
+            return;
+        }
+
+        for (int mailId : mailIds) {
+            final var mail = MailEngine.getInstance().getMail(mailId);
+            if (mail == null) {
+                continue;
+            }
+            if (mail.getSender() != player.getObjectId()) {
+                GameUtils.handleIllegalPlayerAction(player, player + " tried to delete not own post!");
+                return;
+            }
+
+            if (mail.hasAttachments() || mail.isDeletedBySender()) {
+                return;
+            }
+
+            mail.setDeletedBySender();
+            if (mail.isDeletedByReceiver()) {
+                deleteMailInDb(mailId);
+            } else {
+                markAsDeletedBySenderInDb(mailId);
+            }
+        }
+        player.sendPacket(ExChangePostState.deleted(false, mailIds));
     }
 
     public static void init() {

@@ -1670,7 +1670,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!isPlayer(this)) {
             getAI().notifyEvent(CtrlEvent.EVT_THINK);
         }
-        updateAbnormalVisualEffects();
+
     }
 
     /**

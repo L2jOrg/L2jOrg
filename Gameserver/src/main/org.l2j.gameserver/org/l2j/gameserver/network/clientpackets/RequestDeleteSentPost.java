@@ -21,17 +21,11 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.settings.CharacterSettings;
-import org.l2j.gameserver.settings.GeneralSettings;
-import org.l2j.gameserver.util.GameUtils;
-import org.l2j.gameserver.world.zone.ZoneType;
-
-import static java.util.Objects.isNull;
 
 /**
  * @author Migi, DS
+ * @author JoeAlisson
  */
 public final class RequestDeleteSentPost extends ClientPacket {
     private static final int BATCH_LENGTH = 4; // length of the one item
@@ -54,31 +48,6 @@ public final class RequestDeleteSentPost extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (isNull(player) || isNull(mailIds) || !GeneralSettings.allowMail()) {
-            return;
-        }
-
-        if (!player.isInsideZone(ZoneType.PEACE)) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
-            return;
-        }
-
-        for (int mailId : mailIds) {
-            final var mail = MailEngine.getInstance().getMail(mailId);
-            if (mail == null) {
-                continue;
-            }
-            if (mail.getSender() != player.getObjectId()) {
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player + " tried to delete not own post!");
-                return;
-            }
-
-            if (mail.hasAttachments() || mail.isDeletedBySender()) {
-                return;
-            }
-
-            mail.setDeletedBySender();
-        }
-        client.sendPacket(ExChangePostState.deleted(false, mailIds));
+        MailEngine.getInstance().deleteSentMails(player, mailIds);
     }
 }
