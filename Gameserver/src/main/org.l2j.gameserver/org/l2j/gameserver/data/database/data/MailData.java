@@ -163,14 +163,7 @@ public class MailData {
     }
 
     public final void setDeletedBySender() {
-        if (!deletedBySender) {
-            deletedBySender = true;
-            if (deletedByReceiver) {
-                MailEngine.getInstance().deleteMailInDb(id);
-            } else {
-                MailEngine.getInstance().markAsDeletedBySenderInDb(id);
-            }
-        }
+        deletedBySender = true;
     }
 
     public final String getSenderName() {
