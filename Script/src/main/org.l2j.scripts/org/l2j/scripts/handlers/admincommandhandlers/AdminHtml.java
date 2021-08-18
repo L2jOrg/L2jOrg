@@ -44,7 +44,7 @@ public class AdminHtml implements IAdminCommandHandler
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
-		if ("admin_html".equals(actualCommand.toLowerCase())) {
+		if ("admin_html".equalsIgnoreCase(actualCommand)) {
 			if (!st.hasMoreTokens()) {
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //html path");
 				return false;
@@ -52,7 +52,7 @@ public class AdminHtml implements IAdminCommandHandler
 
 			final String path = st.nextToken();
 			showAdminHtml(activeChar, path);
-		} else if ("admin_loadhtml".equals(actualCommand.toLowerCase())) {
+		} else if ("admin_loadhtml".equalsIgnoreCase(actualCommand)) {
 			if (!st.hasMoreTokens()) {
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //loadhtml path");
 				return false;
