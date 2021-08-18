@@ -503,26 +503,9 @@ public final class Formulas {
             return false;
         }
 
-        if (skill.isDebuff()) {
-            boolean resisted = target.isCastingNow(s -> s.getSkill().getAbnormalResists().contains(skill.getAbnormalType()));
-            if (!resisted) {
-                if (target.getAbnormalShieldBlocks() > 0) {
-                    target.decrementAbnormalShieldBlocks();
-                    resisted = true;
-                }
-            }
-
-            if (!resisted) {
-                final double sphericBarrierRange = target.getStats().getValue(Stat.SPHERIC_BARRIER_RANGE, 0);
-                if (sphericBarrierRange > 0) {
-                    resisted = !MathUtil.isInsideRadius3D(attacker, target, (int) sphericBarrierRange);
-                }
-            }
-
-            if (resisted) {
-                attacker.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(skill));
-                return false;
-            }
+        if (skill.isDebuff() && calcDebuffResist(attacker, target, skill)) {
+            attacker.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(skill));
+            return false;
         }
 
         final int activateRate = skill.getActivateRate();
@@ -551,6 +534,24 @@ public final class Formulas {
             return false;
         }
         return true;
+    }
+
+    private static boolean calcDebuffResist(Creature attacker, Creature target, Skill skill) {
+        boolean resisted = target.isCastingNow(s -> s.getSkill().getAbnormalResists().contains(skill.getAbnormalType()));
+        if (!resisted) {
+            if (target.getAbnormalShieldBlocks() > 0) {
+                target.decrementAbnormalShieldBlocks();
+                resisted = true;
+            }
+        }
+
+        if (!resisted) {
+            final double sphericBarrierRange = target.getStats().getValue(Stat.SPHERIC_BARRIER_RANGE, 0);
+            if (sphericBarrierRange > 0) {
+                resisted = !MathUtil.isInsideRadius3D(attacker, target, (int) sphericBarrierRange);
+            }
+        }
+        return resisted;
     }
 
     public static boolean calcCubicSkillSuccess(CubicInstance attacker, Creature target, Skill skill, byte shld) {
