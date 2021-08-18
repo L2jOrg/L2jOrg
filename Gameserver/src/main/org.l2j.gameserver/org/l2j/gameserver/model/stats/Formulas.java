@@ -38,7 +38,6 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.SiegeFlag;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
-import org.l2j.gameserver.model.cubic.CubicInstance;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -137,9 +136,9 @@ public final class Formulas {
         double damage = ( (77 *  attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, power)  * Math.sqrt(mAtk) ) / mDef) * shotsBonus;
 
         // Failure calculation
-        if (CharacterSettings.magicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
+        if (CharacterSettings.magicFailureAllowed() && !calcMagicSuccess(attacker, target)) {
             if (isPlayer(attacker)) {
-                if (calcMagicSuccess(attacker, target, skill)) {
+                if (calcMagicSuccess(attacker, target)) {
                     if (skill.hasAnyEffectType(EffectType.HP_DRAIN)) {
                         attacker.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_SUCCESSFUL);
                     } else {
@@ -443,15 +442,10 @@ public final class Formulas {
         if (sendSysMsg && isPlayer(target)) {
             final Player enemy = target.getActingPlayer();
 
-            switch (shldSuccess) {
-                case SHIELD_DEFENSE_SUCCEED: {
-                    enemy.sendPacket(SystemMessageId.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED);
-                    break;
-                }
-                case SHIELD_DEFENSE_PERFECT_BLOCK: {
-                    enemy.sendPacket(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS);
-                    break;
-                }
+            if (shldSuccess == SHIELD_DEFENSE_SUCCEED) {
+                enemy.sendPacket(SystemMessageId.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED);
+            } else if (shldSuccess == SHIELD_DEFENSE_PERFECT_BLOCK) {
+                enemy.sendPacket(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS);
             }
         }
 
@@ -481,13 +475,6 @@ public final class Formulas {
 
         d += 0.5 * Rnd.nextGaussian();
         return d > 0;
-    }
-
-    public static double calcLvlBonusMod(Creature attacker, Creature target, Skill skill) {
-        final int attackerLvl = skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel();
-        final double skillLvlBonusRateMod = 1 + (skill.getLevelBonusRate() / 100.);
-        final double lvlMod = 1 + ((attackerLvl - target.getLevel()) / 100.);
-        return skillLvlBonusRateMod * lvlMod;
     }
 
     /**
@@ -554,57 +541,7 @@ public final class Formulas {
         return resisted;
     }
 
-    public static boolean calcCubicSkillSuccess(CubicInstance attacker, Creature target, Skill skill, byte shld) {
-        if (skill.isDebuff()) {
-            if (skill.getActivateRate() == -1) {
-                return true;
-            }
-
-            if (target.getAbnormalShieldBlocks() > 0) {
-                target.decrementAbnormalShieldBlocks();
-                return false;
-            }
-        }
-
-        // Perfect Shield Block.
-        if (shld == SHIELD_DEFENSE_PERFECT_BLOCK) {
-            return false;
-        }
-
-        // if target reflect this skill then the effect will fail
-        if (calcBuffDebuffReflection(target, skill)) {
-            return false;
-        }
-
-        final double targetBasicProperty = getAbnormalResist(skill.getBasicProperty(), target);
-
-        // Calculate BaseRate.
-        final double baseRate = skill.getActivateRate();
-        final double statMod = 1 + (targetBasicProperty / 100);
-        double rate = (baseRate / statMod);
-
-        // Resist Modifier.
-        final double resMod = calcGeneralTraitBonus(attacker.getOwner(), target, skill.getTrait(), false);
-        rate *= resMod;
-
-        // Lvl Bonus Modifier.
-        final double lvlBonusMod = calcLvlBonusMod(attacker.getOwner(), target, skill);
-        rate *= lvlBonusMod;
-
-        // Element Modifier.
-        final double elementMod = calcAttributeBonus(attacker.getOwner(), target, skill);
-        rate *= elementMod;
-
-        final double basicPropertyResist = getBasicPropertyResistBonus(skill.getBasicProperty(), target);
-
-        // Add Matk/Mdef Bonus (TODO: Pending)
-
-        final double finalRate = rate * basicPropertyResist;
-
-        return Rnd.chance(finalRate);
-    }
-
-    public static boolean calcMagicSuccess(Creature attacker, Creature target, Skill skill) {
+    public static boolean calcMagicSuccess(Creature attacker, Creature target) {
         final int mAccDiff = attacker.getMagicAccuracy() - target.getMagicEvasionRate();
         int mAccModifier = 100;
         if (mAccDiff > -20) {
@@ -653,7 +590,7 @@ public final class Formulas {
         damage *= calculatePvpPveBonus(attacker, target, skill, mcrit);
 
         // Failure calculation
-        if (CharacterSettings.magicFailureAllowed() && !calcMagicSuccess(attacker, target, skill)) {
+        if (CharacterSettings.magicFailureAllowed() && !calcMagicSuccess(attacker, target)) {
             if (isPlayer(attacker)) {
                 final SystemMessage sm = getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
                 sm.addString(target.getName());
@@ -694,7 +631,7 @@ public final class Formulas {
         return restorePercent;
     }
 
-    public static boolean calcPhysicalFailure(Creature activeChar, Creature target, Skill skill ) {
+    public static boolean calcPhysicalFailure(Creature activeChar, Creature target) {
         if (target instanceof Player || target instanceof Summon)
             return false;
         if ((target.getLevel() - activeChar.getActingPlayer().getLevel()) >= 11 ) {
@@ -710,7 +647,7 @@ public final class Formulas {
     }
 
     public static boolean calcPhysicalSkillEvasion(Creature activeChar, Creature target, Skill skill) {
-        if (calcPhysicalFailure(activeChar, target, skill))
+        if (calcPhysicalFailure(activeChar, target))
             return true;
         if (Rnd.get(100) < target.getStats().getSkillEvasionTypeValue(skill.getSkillType())) {
             if (isPlayer(activeChar)) {
@@ -728,7 +665,7 @@ public final class Formulas {
         return false;
     }
 
-    public static boolean calcSkillMastery(Creature actor, Skill skill) {
+    public static boolean calcSkillMastery(Creature actor) {
         // Static Skills and Item skills  are not affected by Skill Mastery.
         if (!isPlayer(actor)) {
             return false;
@@ -753,8 +690,6 @@ public final class Formulas {
      * It has been tested that physical skills do get affected by attack attribute even<br>
      * if they don't have any attribute. In that case only the biggest attack attribute is taken.
      *
-     * @param attacker
-     * @param target
      * @param skill    Can be {@code null} if there is no skill used for the attack.
      * @return The attribute bonus
      */
@@ -780,7 +715,7 @@ public final class Formulas {
         return 1;
     }
 
-    public static void calcCounterAttack(Creature attacker, Creature target, Skill skill, boolean crit) {
+    public static void calcCounterAttack(Creature attacker, Creature target, Skill skill) {
         // Only melee skills can be reflected
         if (skill.isMagic() || (skill.getCastRange() > MELEE_ATTACK_RANGE)) {
             return;
@@ -811,8 +746,6 @@ public final class Formulas {
     /**
      * Calculate buff/debuff reflection.
      *
-     * @param target
-     * @param skill
      * @return {@code true} if reflect, {@code false} otherwise.
      */
     public static boolean calcBuffDebuffReflection(Creature target, Skill skill) {
@@ -824,10 +757,6 @@ public final class Formulas {
 
     /**
      * Calculate damage caused by falling
-     *
-     * @param cha
-     * @param fallHeight
-     * @return damage
      */
     public static double calcFallDam(Creature cha, int fallHeight) {
         if (fallHeight <= 0) {
@@ -847,12 +776,6 @@ public final class Formulas {
      * <li>effect_bonus = (p2 + 100) / 100, p2 - 2nd param of effect. Blow chance of effect.</li>
      * </ul>
      * Chance cannot be higher than 80%.
-     *
-     * @param activeChar
-     * @param target
-     * @param skill
-     * @param chanceBoost
-     * @return
      */
     public static boolean calcBlowSuccess(Creature activeChar, Creature target, Skill skill, double chanceBoost) {
         if(skill.getActivateRate() == -1) {
@@ -906,7 +829,7 @@ public final class Formulas {
         int time = (skill == null) || skill.isPassive() || skill.isToggle() ? -1 : skill.getAbnormalTime();
 
         // If the skill is a mastery skill, the effect will last twice the default time.
-        if ((skill != null) && calcSkillMastery(caster, skill)) {
+        if ((skill != null) && calcSkillMastery(caster)) {
             time *= 2;
         }
 
@@ -930,9 +853,6 @@ public final class Formulas {
      * Pull<br>
      *
      * @param baseChance chance from effect parameter
-     * @param attacker
-     * @param target
-     * @param skill
      * @return chance for effect to succeed
      */
     public static boolean calcProbability(double baseChance, Creature attacker, Creature target, Skill skill) {
@@ -948,9 +868,6 @@ public final class Formulas {
 
     /**
      * Calculates karma lost upon death.
-     *
-     * @param player
-     * @param finalExp
      * @return the amount of karma player has loosed.
      */
     public static int calculateKarmaLost(Player player, double finalExp) {
@@ -965,9 +882,6 @@ public final class Formulas {
     /**
      * Calculates karma gain upon playable kill.</br>
      * Updated to High Five on 10.09.2014 by Zealar tested in retail.
-     *
-     * @param pkCount
-     * @param isSummon
      * @return karma points that will be added to the player.
      */
     public static int calculateKarmaGain(int pkCount, boolean isSummon) {
@@ -999,22 +913,16 @@ public final class Formulas {
             return 0;
         }
 
-        switch (traitType.getType()) {
-            case 2: {
-                if (!attacker.getStats().hasAttackTrait(traitType) || !target.getStats().hasDefenceTrait(traitType)) {
-                    return 1.0;
-                }
-                break;
-            }
-            case 3: {
-                if (ignoreResistance) {
-                    return 1.0;
-                }
-                break;
-            }
-            default: {
+        if (traitType.getType() == 2) {
+            if (!attacker.getStats().hasAttackTrait(traitType) || !target.getStats().hasDefenceTrait(traitType)) {
                 return 1.0;
             }
+        } else if (traitType.getType() == 3) {
+            if (ignoreResistance) {
+                return 1.0;
+            }
+        } else {
+            return 1.0;
         }
 
         return max(attacker.getStats().getAttackTrait(traitType) - target.getStats().getDefenceTrait(traitType), 0.05);
@@ -1062,20 +970,12 @@ public final class Formulas {
         }
 
         final BasicPropertyResist resist = target.getBasicPropertyResist(basicProperty);
-        switch (resist.getResistLevel()) {
-            case 0: {
-                return 1.0;
-            }
-            case 1: {
-                return 0.6;
-            }
-            case 2: {
-                return 0.3;
-            }
-            default: {
-                return 0;
-            }
-        }
+        return switch (resist.getResistLevel()) {
+            case 0 -> 1.0;
+            case 1 -> 0.6;
+            case 2 -> 0.3;
+            default -> 0;
+        };
     }
 
     /**
@@ -1083,23 +983,17 @@ public final class Formulas {
      *
      * @param attacker player or NPC that makes ATTACK
      * @param target   player or NPC, target of ATTACK
-     * @param shld
      * @param crit     if the ATTACK have critical success
      * @param ss       if weapon item was charged by soulshot
-     * @return
      */
     public static double calcAutoAttackDamage(Creature attacker, Creature target, byte shld, boolean crit, boolean ss) {
         // DEFENCE CALCULATION (pDef + sDef)
         double defence = target.getPDef();
 
-        switch (shld) {
-            case SHIELD_DEFENSE_SUCCEED: {
-                defence += target.getShldDef();
-                break;
-            }
-            case SHIELD_DEFENSE_PERFECT_BLOCK: {
-                return 1.;
-            }
+        if (shld == SHIELD_DEFENSE_SUCCEED) {
+            defence += target.getShldDef();
+        } else if (shld == SHIELD_DEFENSE_PERFECT_BLOCK) {
+            return 1.;
         }
 
         final Weapon weapon = attacker.getActiveWeaponItem();
@@ -1130,17 +1024,11 @@ public final class Formulas {
     }
 
     public static double getAbnormalResist(BasicProperty basicProperty, Creature target) {
-        switch (basicProperty) {
-            case PHYSIC: {
-                return target.getStats().getValue(Stat.ABNORMAL_RESIST_PHYSICAL);
-            }
-            case MAGIC: {
-                return target.getStats().getValue(Stat.ABNORMAL_RESIST_MAGICAL);
-            }
-            default: {
-                return 0;
-            }
-        }
+        return switch (basicProperty) {
+            case PHYSIC -> target.getStats().getValue(Stat.ABNORMAL_RESIST_PHYSICAL);
+            case MAGIC -> target.getStats().getValue(Stat.ABNORMAL_RESIST_MAGICAL);
+            default -> 0;
+        };
     }
 
     public static double calcPveDamagePenalty(Creature attacker, Creature target, Skill skill, boolean crit) {
@@ -1195,30 +1083,23 @@ public final class Formulas {
         // Due to retail packet delay, we are unable to gather too accurate results. Therefore the below formulas are based on original Gracia Final values.
         // Any original values that appear higher than tested have been replaced with the tested values, because even with packet delay its obvious they are wrong.
         // All other original values are compared with the test results and differences are considered to be too insignificant and mostly caused due to packet delay.
-        switch (attackType) {
-            case BOW:
-            case CROSSBOW:
-            case TWO_HAND_CROSSBOW: {
-                return (int) (totalAttackTime * 0.6);
-            }
-            case DUAL_BLUNT:
-            case DUAL_DAGGER:
-            case DUAL:
-            case FIST: {
+        return switch (attackType) {
+            case BOW, CROSSBOW, TWO_HAND_CROSSBOW -> (int) (totalAttackTime * 0.6);
+            case DUAL_BLUNT, DUAL_DAGGER, DUAL, FIST -> {
                 if (secondHit) {
-                    return (int) (totalAttackTime * 0.6);
+                    yield  (int) (totalAttackTime * 0.6);
                 }
 
-                return (int) (totalAttackTime * 0.2726);
+                yield (int) (totalAttackTime * 0.2726);
             }
-            default: {
+            default -> {
                 if (twoHanded) {
-                    return (int) (totalAttackTime * 0.735);
+                    yield  (int) (totalAttackTime * 0.735);
                 }
 
-                return (int) (totalAttackTime * 0.644);
+                yield (int) (totalAttackTime * 0.644);
             }
-        }
+        };
     }
 
     public static int calculateTimeBetweenAttacks(Creature creature, Weapon weapon) {
