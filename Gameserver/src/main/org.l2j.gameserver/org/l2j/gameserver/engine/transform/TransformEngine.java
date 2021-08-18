@@ -122,10 +122,10 @@ public final class TransformEngine extends GameXmlReader {
         var randomDamage = parseInt(attrs, "random-damage");
 
         attrs = collisionNode.getAttributes();
-        var radius = parseInt(attrs, "radius");
-        var femaleRadius = parseInt(attrs, "female-radius", radius);
-        var height = parseInt(attrs, "height");
-        var femaleHeight = parseInt(attrs, "female-height", height);
+        var radius = parseFloat(attrs, "radius");
+        var femaleRadius = parseFloat(attrs, "female-radius", radius);
+        var height = parseFloat(attrs, "height");
+        var femaleHeight = parseFloat(attrs, "female-height", height);
 
         attrs = movingNode.getAttributes();
         var walk = parseInt(attrs, "walk");
