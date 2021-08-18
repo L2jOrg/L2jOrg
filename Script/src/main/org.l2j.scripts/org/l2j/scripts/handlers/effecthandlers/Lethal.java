@@ -115,7 +115,7 @@ public final class Lethal extends AbstractEffect {
         }
 
         // No matter if lethal succeeded or not, its reflected.
-        Formulas.calcCounterAttack(effector, effected, skill, false);
+        Formulas.calcCounterAttack(effector, effected, skill);
     }
 
     public static class Factory implements SkillEffectFactory {

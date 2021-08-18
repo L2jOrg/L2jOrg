@@ -3178,7 +3178,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     private boolean counterAttackReflect(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical) {
         if (!target.isDead() && nonNull(skill)) {
-            Formulas.calcCounterAttack(this, target, skill, true);
+            Formulas.calcCounterAttack(this, target, skill);
 
             if (skill.isMagic() && Rnd.chance(target.getStats().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0))) {
                 reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true, DamageType.REFLECT);
