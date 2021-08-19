@@ -2276,8 +2276,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // (curx,cury)
         // @formatter:on
 
-        double cos = dy / distance;
-        double sin = dx / distance;
+        double cos = dx / distance;
+        double sin = dy / distance;
 
         // Check if a movement offset is defined or no distance to go through
         if (offset > 0 || distance < 1) {
