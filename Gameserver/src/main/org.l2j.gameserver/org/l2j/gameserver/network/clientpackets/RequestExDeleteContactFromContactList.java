@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.settings.GeneralSettings;
 
 /**
  * Format: (ch)S S: Character Name
