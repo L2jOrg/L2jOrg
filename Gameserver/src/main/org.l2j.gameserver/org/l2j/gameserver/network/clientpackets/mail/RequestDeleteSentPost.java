@@ -16,33 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.network.clientpackets.mail;
 
 import org.l2j.gameserver.engine.mail.MailEngine;
-import org.l2j.gameserver.network.InvalidDataPacketException;
-import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * @author Migi, DS
  * @author JoeAlisson
  */
-public final class RequestDeleteSentPost extends ClientPacket {
-    private static final int BATCH_LENGTH = 4; // length of the one item
-
-    int[] mailIds = null;
-
-    @Override
-    public void readImpl() throws InvalidDataPacketException {
-        final int count = readInt();
-        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
-            throw new InvalidDataPacketException();
-        }
-
-        mailIds = new int[count];
-        for (int i = 0; i < count; i++) {
-            mailIds[i] = readInt();
-        }
-    }
+public final class RequestDeleteSentPost extends AbstractDeleteMails {
 
     @Override
     public void runImpl() {

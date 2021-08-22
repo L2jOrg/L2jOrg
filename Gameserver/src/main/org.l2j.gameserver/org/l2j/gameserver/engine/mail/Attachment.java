@@ -32,11 +32,11 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author DS
  */
 public class Attachment extends ItemContainer {
-    private final int _ownerId;
+    private final int ownerId;
     private final int mailId;
 
     public Attachment(int objectId, int mailId) {
-        _ownerId = objectId;
+        ownerId = objectId;
         this.mailId = mailId;
     }
 
@@ -84,7 +84,7 @@ public class Attachment extends ItemContainer {
 
     @Override
     public void restore() {
-        for (ItemData data : getDAO(ItemDAO.class).findItemsAttachment(_ownerId, mailId)) {
+        for (ItemData data : getDAO(ItemDAO.class).findItemsAttachment(ownerId, mailId)) {
             final Item item = new Item(data);
             World.getInstance().addObject(item);
 
@@ -110,6 +110,6 @@ public class Attachment extends ItemContainer {
 
     @Override
     public int getOwnerId() {
-        return _ownerId;
+        return ownerId;
     }
 }
