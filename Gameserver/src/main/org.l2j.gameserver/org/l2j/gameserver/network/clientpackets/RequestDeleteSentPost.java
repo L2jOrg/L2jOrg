@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.engine.mail.MailEngine;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.settings.CharacterSettings;
 
@@ -47,7 +46,6 @@ public final class RequestDeleteSentPost extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        MailEngine.getInstance().deleteSentMails(player, mailIds);
+        MailEngine.getInstance().deleteSentMails(client.getPlayer(), mailIds);
     }
 }

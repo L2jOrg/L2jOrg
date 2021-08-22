@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.network.clientpackets.mail;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.ExReplyPostItemList;
-import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
@@ -35,10 +35,6 @@ public final class RequestPostItemList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!GeneralSettings.allowMail() || !GeneralSettings.allowAttachments()) {
-            return;
-        }
-
         final Player activeChar = client.getPlayer();
         if (activeChar == null) {
             return;

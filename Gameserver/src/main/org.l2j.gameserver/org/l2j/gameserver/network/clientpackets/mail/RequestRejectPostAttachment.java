@@ -16,22 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.clientpackets;
+package org.l2j.gameserver.network.clientpackets.mail;
 
-import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
+import org.l2j.gameserver.engine.mail.MailEngine;
+import org.l2j.gameserver.network.clientpackets.ClientPacket;
 
 /**
- * @author mrTJO & UnAfraid
- * @author JoeAlisson
+ * @author Migi, DS
  */
-public final class RequestExFriendListExtended extends ClientPacket {
+public final class RequestRejectPostAttachment extends ClientPacket {
+    private int mailId;
+
     @Override
     public void readImpl() {
-
+        mailId = readInt();
     }
 
     @Override
     public void runImpl() {
-        client.sendPacket(new FriendListPacket(client.getPlayer()));
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("rejectattach")) {
+            return;
+        }
+
+        MailEngine.getInstance().rejectMailAttachment(client.getPlayer(), mailId);
     }
 }

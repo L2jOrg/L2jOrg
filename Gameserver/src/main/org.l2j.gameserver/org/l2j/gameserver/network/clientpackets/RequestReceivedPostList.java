@@ -19,9 +19,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.network.serverpackets.ExShowReceivedPostList;
-import org.l2j.gameserver.settings.GeneralSettings;
-
-import static java.util.Objects.isNull;
 
 /**
  * @author Migi, DS
@@ -35,10 +32,6 @@ public final class RequestReceivedPostList extends ClientPacket {
     @Override
     public void runImpl() {
         var player = client.getPlayer();
-        if (isNull(player) || !GeneralSettings.allowMail()) {
-            return;
-        }
-
         client.sendPacket(new ExShowReceivedPostList(player.getObjectId()));
     }
 }
