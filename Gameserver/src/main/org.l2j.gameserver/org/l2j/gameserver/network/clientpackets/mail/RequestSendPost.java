@@ -50,9 +50,6 @@ public final class RequestSendPost extends ClientPacket {
     private List<ItemHolder> items = Collections.emptyList();
     private long reqAdena;
 
-    public RequestSendPost() {
-    }
-
     @Override
     public void readImpl() throws InvalidDataPacketException {
         receiver = readString();

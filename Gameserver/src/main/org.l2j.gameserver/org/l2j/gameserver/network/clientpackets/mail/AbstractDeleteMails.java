@@ -18,34 +18,28 @@
  */
 package org.l2j.gameserver.network.clientpackets.mail;
 
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.ExReplyPostItemList;
-import org.l2j.gameserver.world.zone.ZoneType;
+import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
- * @author Migi, DS
+ * @author JoeAlisson
  */
-public final class RequestPostItemList extends ClientPacket {
-    @Override
-    public void readImpl() {
-        // trigger packet
-    }
+abstract class AbstractDeleteMails extends ClientPacket {
+    private static final int BATCH_LENGTH = 4;
+
+    protected int[] mailIds = null;
 
     @Override
-    public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
-            return;
+    protected void readImpl() throws Exception {
+        var count = readInt();
+        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
+            throw new InvalidDataPacketException();
         }
 
-        if (!activeChar.isInsideZone(ZoneType.PEACE)) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
-            return;
+        mailIds = new int[count];
+        for (int i = 0; i < count; i++) {
+            mailIds[i] = readInt();
         }
-
-        client.sendPacket(new ExReplyPostItemList(1, activeChar));
-        client.sendPacket(new ExReplyPostItemList(2, activeChar));
     }
 }

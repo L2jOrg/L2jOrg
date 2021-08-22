@@ -191,31 +191,7 @@ public final class MailEngine {
     }
 
     private boolean canSendMail(Player player, String receiver, int receiverId, List<ItemHolder> items, long requireAdena, boolean isPayment) {
-        if (!player.getAccessLevel().allowTransaction()) {
-            player.sendMessage("Transactions are disabled for your Access Level.");
-            return false;
-        }
-
-        if (!player.isInsideZone(ZoneType.PEACE) && !items.isEmpty()) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
-            return false;
-        }
-
-        if (player.getActiveTradeList() != null) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_DURING_AN_EXCHANGE);
-            return false;
-        }
-
-        if (player.hasItemRequest()) {
-            player.sendPacket(SystemMessageId.YOU_CAN_T_SEND_WHILE_ENCHANTING_AN_ITEM_OR_ATTRIBUTE_COMBINING_JEWELS_OR_SEALING_UNSEALING_OR_COMBINING);
-            return false;
-        }
-
-        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
-            return false;
-        }
-
+        if (isBlockedToSendMail(player, items)) return false;
 
         if ((requireAdena < 0) || (requireAdena > CharacterSettings.maxAdena())) {
             return false;
@@ -232,48 +208,81 @@ public final class MailEngine {
             }
         }
 
+        if (isBlockedReceiver(player, receiver, receiverId)) return false;
+
+        return !isMailBoxFull(player, receiverId);
+    }
+
+    private boolean isBlockedToSendMail(Player player, List<ItemHolder> items) {
+        if (!player.isInsideZone(ZoneType.PEACE) && !items.isEmpty()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
+            return true;
+        }
+
+        if (player.isJailed() && ((Config.JAIL_DISABLE_TRANSACTION && !items.isEmpty()) || GeneralSettings.disableChatInJail())) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
+            return true;
+        }
+
+        if (!player.getAccessLevel().allowTransaction()) {
+            player.sendMessage("Transactions are disabled for your Access Level.");
+            return true;
+        }
+
+        if (player.getActiveTradeList() != null) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_DURING_AN_EXCHANGE);
+            return true;
+        }
+
+        if (player.hasItemRequest()) {
+            player.sendPacket(SystemMessageId.YOU_CAN_T_SEND_WHILE_ENCHANTING_AN_ITEM_OR_ATTRIBUTE_COMBINING_JEWELS_OR_SEALING_UNSEALING_OR_COMBINING);
+            return true;
+        }
+
+        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isBlockedReceiver(Player player, String receiver, int receiverId) {
         if (receiverId <= 0) {
             player.sendPacket(SystemMessageId.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE);
-            return false;
+            return true;
         }
 
         if (receiverId == player.getObjectId()) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_SEND_A_MAIL_TO_YOURSELF);
-            return false;
+            return true;
         }
 
         final int level = PlayerNameTable.getInstance().getAccessLevelById(receiverId);
         final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 
         if ((accessLevel != null) && accessLevel.isGM() && !player.getAccessLevel().isGM()) {
-            final SystemMessage sm = getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
-            sm.addString(receiver);
-            player.sendPacket(sm);
-            return false;
-        }
-
-        if (player.isJailed() && ((Config.JAIL_DISABLE_TRANSACTION && !items.isEmpty()) || GeneralSettings.disableChatInJail())) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
-            return false;
+            player.sendPacket(getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF).addString(receiver));
+            return true;
         }
 
         if (BlockList.isInBlockList(receiverId, player.getObjectId())) {
-            final SystemMessage sm = getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
-            sm.addString(receiver);
-            player.sendPacket(sm);
-            return false;
+            player.sendPacket(getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1).addString(receiver));
+            return true;
         }
+        return false;
+    }
 
+    private boolean isMailBoxFull(Player player, int receiverId) {
         if (MailEngine.getInstance().getOutboxSize(player.getObjectId()) >= OUTBOX_SIZE) {
             player.sendPacket(SystemMessageId.THE_MAIL_LIMIT_240_HAS_BEEN_EXCEEDED_AND_THIS_CANNOT_BE_FORWARDED);
-            return false;
+            return true;
         }
 
         if (MailEngine.getInstance().getInboxSize(receiverId) >= INBOX_SIZE) {
             player.sendPacket(SystemMessageId.THE_MAIL_LIMIT_240_HAS_BEEN_EXCEEDED_AND_THIS_CANNOT_BE_FORWARDED);
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     private boolean attach(Player sender, MailData mail, List<ItemHolder> items) {

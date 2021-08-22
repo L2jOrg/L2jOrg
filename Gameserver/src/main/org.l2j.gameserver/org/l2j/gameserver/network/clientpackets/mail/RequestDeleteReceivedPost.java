@@ -19,31 +19,12 @@
 package org.l2j.gameserver.network.clientpackets.mail;
 
 import org.l2j.gameserver.engine.mail.MailEngine;
-import org.l2j.gameserver.network.InvalidDataPacketException;
-import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.settings.CharacterSettings;
 
 /**
  * @author Migi, DS
  * @author JoeAlisson
  */
-public final class RequestDeleteReceivedPost extends ClientPacket {
-    private static final int BATCH_LENGTH = 4; // length of the one item
-
-    int[] mailIds = null;
-
-    @Override
-    public void readImpl() throws InvalidDataPacketException {
-        final int count = readInt();
-        if (count <= 0 || count > CharacterSettings.maxItemInPacket() || count * BATCH_LENGTH != available()) {
-            throw new InvalidDataPacketException();
-        }
-
-        mailIds = new int[count];
-        for (int i = 0; i < count; i++) {
-            mailIds[i] = readInt();
-        }
-    }
+public final class RequestDeleteReceivedPost extends AbstractDeleteMails {
 
     @Override
     public void runImpl() {
