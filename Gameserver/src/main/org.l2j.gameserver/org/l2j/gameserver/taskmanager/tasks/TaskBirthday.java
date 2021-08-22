@@ -24,7 +24,7 @@ import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
-import org.l2j.gameserver.model.item.container.Attachment;
+import org.l2j.gameserver.engine.mail.Attachment;
 import org.l2j.gameserver.taskmanager.Task;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.taskmanager.TaskManager.ExecutableTask;

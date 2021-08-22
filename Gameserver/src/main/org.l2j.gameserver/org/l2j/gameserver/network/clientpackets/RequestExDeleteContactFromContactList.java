@@ -38,10 +38,6 @@ public class RequestExDeleteContactFromContactList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!GeneralSettings.allowMail()) {
-            return;
-        }
-
         if (Util.isNullOrEmpty(name)) {
             return;
         }

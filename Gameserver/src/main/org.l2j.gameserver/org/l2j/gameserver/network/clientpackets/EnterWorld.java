@@ -199,10 +199,6 @@ public class EnterWorld extends ClientPacket {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
 
-        if (GeneralSettings.allowMail()) {
-            MailEngine.getInstance().sendUnreadCount(player);
-        }
-
         if (Config.WELCOME_MESSAGE_ENABLED) {
             player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
         }
@@ -234,6 +230,7 @@ public class EnterWorld extends ClientPacket {
         restoreItems(player);
         player.onEnter();
         Quest.playerEnter(player);
+        MailEngine.getInstance().sendUnreadCount(player);
     }
 
     private void restoreInstance(Player player) {

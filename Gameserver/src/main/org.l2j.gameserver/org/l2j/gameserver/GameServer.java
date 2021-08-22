@@ -218,10 +218,7 @@ public class GameServer {
         TaskManager.getInstance();
 
         AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
-
-        if (GeneralSettings.allowMail()) {
-            MailEngine.init();
-        }
+        MailEngine.init();
 
         PunishmentManager.getInstance();
 

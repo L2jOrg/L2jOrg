@@ -39,10 +39,6 @@ public class RequestExAddContactToContactList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!GeneralSettings.allowMail()) {
-            return;
-        }
-
         if (isNullOrEmpty(name)) {
             return;
         }
