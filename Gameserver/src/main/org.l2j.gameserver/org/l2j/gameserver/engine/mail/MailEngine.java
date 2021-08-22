@@ -167,6 +167,7 @@ public final class MailEngine {
     public void sendMail(MailData mail) {
         getDAO(MailDAO.class).save(mail);
         mails.put(mail.getId(), mail);
+        addMailToBoxes(mail);
 
         doIfNonNull(World.getInstance().findPlayer(mail.getReceiver()), receiver ->
                 receiver.sendPackets(ExNoticePostArrived.valueOf(true), new ExUnReadMailCount(getUnreadCount(receiver))));
@@ -426,6 +427,7 @@ public final class MailEngine {
                 deleteMail(mail);
             } else {
                 getDAO(MailDAO.class).markAsDeletedByReceiver(mailId);
+                getInbox(mail.getReceiver()).remove(mail);
             }
         }
         player.sendPacket(ExChangePostState.deleted(true, mailIds));
