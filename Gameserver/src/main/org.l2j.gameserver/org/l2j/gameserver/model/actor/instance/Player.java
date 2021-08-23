@@ -5528,6 +5528,7 @@ public final class Player extends Playable {
      */
     @Override
     public void updateAbnormalVisualEffects() {
+        sendPacket(new UserInfo(this, UserInfoType.POSITION));
         sendPacket(new ExUserInfoAbnormalVisualEffect(this));
         broadcastCharInfo();
     }
