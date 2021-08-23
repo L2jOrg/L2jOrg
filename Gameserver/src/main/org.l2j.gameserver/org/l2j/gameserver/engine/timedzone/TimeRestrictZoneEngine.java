@@ -59,7 +59,9 @@ public class TimeRestrictZoneEngine {
     private void onPlayerLogout(OnPlayerLogout event) {
         var player = event.getPlayer();
         var infos = timedRestrictZoneInfos.remove(player.getObjectId());
-        getDAO(TimeRestrictDAO.class).save(infos.values());
+        if(infos != null) {
+            getDAO(TimeRestrictDAO.class).save(infos.values());
+        }
     }
 
     public TimeRestrictZoneInfo getTimeRestrictZoneInfo(Player player, TimeRestrictZone zone) {
