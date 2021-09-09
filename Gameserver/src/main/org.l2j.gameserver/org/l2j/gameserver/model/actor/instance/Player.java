@@ -4595,7 +4595,6 @@ public final class Player extends Playable {
      * </ul>
      */
     void restoreCharData() {
-        restoreSkills();
         macros.restoreMe();
         restoreHennas();
         restoreTeleportBookmark();
@@ -6038,6 +6037,8 @@ public final class Player extends Playable {
     public void onEnter() {
         startWarnUserTakeBreak();
         restoreItemReuse();
+        restoreSkills();
+        rewardSkills();
         restoreEffects();
 
         // TODO : Need to fix that hack!
