@@ -501,7 +501,7 @@ public class AttackableAI extends CreatureAI {
             }
         }
 
-        if (npc.isRaid() && npc.isInCombat()){
+        if (npc.isRaid() && npc.isInCombat() && !npc.isDead()){
             npc.setRaidBossStatus(BossStatus.FIGHTING);
         }
 
