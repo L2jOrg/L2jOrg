@@ -172,8 +172,6 @@ public class EnterWorld extends ClientPacket {
 
         AnnouncementsManager.getInstance().showAnnouncements(player);
 
-        onClanMemberLogin(player);
-
         if (CharacterSettings.petitionAllowed()) {
             PetitionManager.getInstance().checkPetitionMessages(player);
         }
@@ -230,6 +228,7 @@ public class EnterWorld extends ClientPacket {
         if (Event.isParticipant(player)) {
             Event.restorePlayerEventStatus(player);
         }
+        onClanMemberLogin(player);
     }
 
     private void restoreInstance(Player player) {
