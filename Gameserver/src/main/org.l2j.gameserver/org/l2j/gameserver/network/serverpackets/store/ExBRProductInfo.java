@@ -22,6 +22,7 @@ import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreItem;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -39,7 +40,7 @@ public class ExBRProductInfo extends ServerPacket {
         this.item = item;
         points = player.getNCoins();
         adenas = player.getAdena();
-        coins = player.getInventory().getInventoryItemCount(23805, -1);
+        coins = player.getInventory().getInventoryItemCount(CommonItem.GOLD_COIN, -1);
     }
 
     @Override
