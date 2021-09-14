@@ -125,6 +125,9 @@ public final class ItemEngine extends GameXmlReader {
                 case "condition" -> parseItemCondition(weapon, node);
                 case "stats" -> parseItemStats(weapon, node);
                 case "skills"-> parseItemSkills(weapon, node);
+                case "random_craft" -> {
+                    // ignore
+                }
                 default -> LOGGER.warn("unknown weapon node {}", node.getNodeName());
             }
         });
@@ -288,6 +291,9 @@ public final class ItemEngine extends GameXmlReader {
                 case "condition" -> parseItemCondition(armor, node);
                 case "stats" -> parseItemStats(armor, node);
                 case "skills"-> parseItemSkills(armor, node);
+                case "random_craft" -> {
+                    // ignore
+                }
                 default -> LOGGER.warn("unknown armor node {}", node.getNodeName());
             }
         } );
@@ -320,6 +326,9 @@ public final class ItemEngine extends GameXmlReader {
                 case "transformation-book" -> parseTransformationBook(item, node);
                 case "equip" -> parseItemEquip(item, node);
                 case "condition" -> parseItemCondition(item, node);
+                case "random_craft" -> {
+                    // ignore
+                }
                 default -> LOGGER.warn("Unknown node {}", node.getNodeName());
             }
         } );
