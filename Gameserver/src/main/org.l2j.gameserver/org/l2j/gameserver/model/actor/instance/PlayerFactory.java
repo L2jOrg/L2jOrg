@@ -120,9 +120,6 @@ public class PlayerFactory {
 
         player.restoreCharData();
 
-        // Reward auto-get skills and all available skills if auto-learn skills is true.
-        player.rewardSkills();
-
         if(playerData.getLastAccess() == 0){
             InitialShortcutData.getInstance().registerAllShortcuts(player);
         }

@@ -37,7 +37,6 @@ public class GeneralSettings {
     private static boolean saveDroppedItems;
     private static int autoDestroyItemTime;
     private static int autoDestroyHerbTime;
-    private static boolean allowMail;
     private static boolean logItems;
     private static boolean smallLogItems;
     private static boolean loadCustomBuyList;
@@ -70,7 +69,6 @@ public class GeneralSettings {
     private static boolean cacheWarehouse;
     private static long cacheWarehouseTime;
     private static boolean allowRefund;
-    private static boolean allowAttachments;
     private static boolean allowWear;
     private static long wearDelay;
     private static int wearPrice;
@@ -107,8 +105,6 @@ public class GeneralSettings {
         protectedItems = settingsFile.getIntSet("ListOfProtectedItems", ",");
         clearDroppedItemsAfterLoad = settingsFile.getBoolean("EmptyDroppedItemTableAfterLoad", false);
 
-        allowMail = settingsFile.getBoolean("AllowMail", true);
-
         loadCustomBuyList = settingsFile.getBoolean("CustomBuyListLoad", false);
 
         cachePlayersName = settingsFile.getBoolean("CacheCharNames", true);
@@ -140,7 +136,6 @@ public class GeneralSettings {
         cacheWarehouseTime = settingsFile.getInt("WarehouseCacheTime", 15) * 60000L;
 
         allowRefund = settingsFile.getBoolean("AllowRefund", true);
-        allowAttachments = settingsFile.getBoolean("AllowAttachments", true);
 
         allowWear = settingsFile.getBoolean("AllowWear", true);
         wearDelay = settingsFile.getInt("WearDelay", 5) * 1000L;
@@ -199,10 +194,6 @@ public class GeneralSettings {
 
     public static int autoDestroyHerbTime() {
         return autoDestroyHerbTime;
-    }
-
-    public static boolean allowMail() {
-        return allowMail;
     }
 
     public static boolean logItems() {
@@ -299,10 +290,6 @@ public class GeneralSettings {
 
     public static boolean allowRefund() {
         return allowRefund;
-    }
-
-    public static boolean allowAttachments() {
-        return allowAttachments;
     }
 
     public static boolean allowWear() {

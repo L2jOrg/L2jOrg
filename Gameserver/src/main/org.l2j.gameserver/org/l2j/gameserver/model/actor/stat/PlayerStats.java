@@ -207,8 +207,6 @@ public class PlayerStats extends PlayableStats {
             player.getParty().recalculatePartyLevel(); // Recalculate the party level
         }
 
-        player.getTransformation().ifPresent(transform -> transform.onLevelUp(player));
-
         syncPetLevel(player);
 
         if (getLevel() >= 40) {

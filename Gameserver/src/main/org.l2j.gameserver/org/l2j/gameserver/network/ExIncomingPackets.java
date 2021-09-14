@@ -32,6 +32,7 @@ import org.l2j.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
 import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionCancel;
 import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionEnchant;
 import org.l2j.gameserver.network.clientpackets.bless.RequestBlessOptionPutItem;
+import org.l2j.gameserver.network.clientpackets.mail.*;
 import org.l2j.gameserver.network.clientpackets.shortcut.ExRequestActivateAutoShortcut;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;

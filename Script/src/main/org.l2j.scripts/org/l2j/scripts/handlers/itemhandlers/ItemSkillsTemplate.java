@@ -165,11 +165,7 @@ public class ItemSkillsTemplate implements IItemHandler {
         }
 
         // Verify that skill is not under reuse.
-        if (!isAvailableToUse(playable, itemSkill, item)) {
-            return false;
-        }
-
-        return item.isPotion() || item.isElixir() || item.isScroll() || !playable.isCastingNow();
+        return isAvailableToUse(playable, itemSkill, item);
     }
 
     /**

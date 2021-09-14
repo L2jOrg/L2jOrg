@@ -29,12 +29,14 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.CategoryManager;
-import org.l2j.gameserver.data.xml.impl.TransformData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.geo.SyncMode;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.engine.skill.api.Skill;
+import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.TimersManager;
@@ -48,7 +50,6 @@ import org.l2j.gameserver.model.actor.stat.CreatureStats;
 import org.l2j.gameserver.model.actor.status.CreatureStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.templates.CreatureTemplate;
-import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
@@ -63,8 +64,6 @@ import org.l2j.gameserver.model.interfaces.IDeletable;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.engine.item.ItemTemplate;
-import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.options.OptionsSkillInfo;
@@ -74,7 +73,6 @@ import org.l2j.gameserver.model.stats.*;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.CharacterSettings;
-import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.MapRegionManager;
@@ -281,7 +279,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@code true} if this creature is transformed including stance transformation {@code false} otherwise.
      */
     public boolean isTransformed() {
-        return nonNull(transform);
+        return transform != null;
     }
 
     /**
@@ -289,33 +287,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {@code true} if this creature is transformed under the given filter conditions, {@code false} otherwise.
      */
     public boolean checkTransformed(Predicate<Transform> filter) {
-        return nonNull(transform) && filter.test(transform);
+        return isTransformed() && filter.test(transform);
     }
 
-    /**
-     * Tries to transform this creature with the specified template id.
-     *
-     * @param id        the id of the transformation template
-     * @param addSkills {@code true} if skills of this transformation template should be added, {@code false} otherwise.
-     * @return {@code true} if template is found and transformation is done, {@code false} otherwise.
-     */
-    public boolean transform(int id, boolean addSkills) {
-        final var transformation = TransformData.getInstance().getTransform(id);
-        if (nonNull(transformation)) {
-            transform(transformation, addSkills);
-            return true;
-        }
-
-        return false;
-    }
-
-    public void transform(Transform transformation, boolean addSkills) {
-        if (!FeatureSettings.allowRideInSiege() && transformation.isRiding() && isInsideZone(ZoneType.SIEGE)) {
-            return;
-        }
-
-        transform = transformation;
-        transformation.onTransform(this, addSkills);
+    public void setTransform(Transform transform) {
+        this.transform = transform;
     }
 
     public void untransform() {
@@ -335,11 +311,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return Transformation Id
      */
     public int getTransformationId() {
-        return nonNull(transform)  ? transform.getId() : 0;
+        return nonNull(transform)  ? transform.id() : 0;
     }
 
     public int getTransformationDisplayId() {
-        return nonNull(transform) && !transform.isStance() ? transform.getDisplayId() : 0;
+        return nonNull(transform) ? transform.displayId() : 0;
     }
 
     public double getCollisionRadius() {
@@ -1694,7 +1670,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!isPlayer(this)) {
             getAI().notifyEvent(CtrlEvent.EVT_THINK);
         }
-        updateAbnormalVisualEffects();
+
     }
 
     /**
@@ -2251,43 +2227,40 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param offset The size of the interaction area of the Creature targeted
      */
     public void moveToLocation(int x, int y, int z, int offset) {
-        // Get the Move Speed of the L2Charcater
         final double speed = stats.getMoveSpeed();
-        if ((speed <= 0) || isMovementDisabled()) {
+        if (speed <= 0 || isMovementDisabled()) {
             return;
         }
 
-        // Get current position of the Creature
         final int curX = getX();
         final int curY = getY();
         final int curZ = getZ();
 
-        // Calculate distance (dx,dy) between current position and destination
         // TODO: improve Z axis move/follow support when dx,dy are small compared to dz
-        double dx = (x - curX);
-        double dy = (y - curY);
-        double dz = (z - curZ);
+        var dx = x - curX;
+        var dy = y - curY;
+        var dz = z - curZ;
         double distance = Math.hypot(dx, dy);
 
-        if (!cursorKeyMovementActive && (distance > 200)) {
+        if (!cursorKeyMovementActive && distance > 200) {
             return;
         }
 
-        final boolean verticalMovementOnly = isFlying && (distance == 0) && (dz != 0);
+        final boolean verticalMovementOnly = isFlying && distance == 0 && dz != 0;
         if (verticalMovementOnly) {
             distance = Math.abs(dz);
         }
 
         // Make water move short and use no geodata checks for swimming chars distance in a click can easily be over 3000.
         final boolean isInWater = isInsideZone(ZoneType.WATER);
-        if (isInWater && (distance > 700)) {
+        if (isInWater && distance > 700) {
             final double divider = 700 / distance;
             x = curX + (int) (divider * dx);
             y = curY + (int) (divider * dy);
             z = curZ + (int) (divider * dz);
-            dx = (x - curX);
-            dy = (y - curY);
-            dz = (z - curZ);
+            dx = x - curX;
+            dy = y - curY;
+            dz = z - curZ;
             distance = Math.hypot(dx, dy);
         }
 
@@ -2303,11 +2276,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // (curx,cury)
         // @formatter:on
 
-        double cos;
-        double sin;
+        double cos = dx / distance;
+        double sin = dy / distance;
 
         // Check if a movement offset is defined or no distance to go through
-        if ((offset > 0) || (distance < 1)) {
+        if (offset > 0 || distance < 1) {
             // approximation for moving closer when z coordinates are different
             // TODO: handle Z axis movement better
             offset -= Math.abs(dz);
@@ -2315,26 +2288,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 offset = 5;
             }
 
-            // If no distance to go through, the movement is canceled
-            if ((distance < 1) || ((distance - offset) <= 0)) {
-                // Notify the AI that the Creature is arrived at destination
+            if (distance < 1 || distance - offset <= 0) {
                 getAI().notifyEvent(CtrlEvent.EVT_ARRIVED);
                 return;
             }
 
-            // Calculate movement angles needed
-            sin = dy / distance;
-            cos = dx / distance;
-
-            distance -= (offset - 5); // due to rounding error, we have to move a bit closer to be in range
+            distance -= offset - 5; // due to rounding error, we have to move a bit closer to be in range
 
             // Calculate the new destination with offset included
             x = curX + (int) (distance * cos);
             y = curY + (int) (distance * sin);
-        } else {
-            // Calculate movement angles needed
-            sin = dy / distance;
-            cos = dx / distance;
         }
 
         // Create and Init a MoveData object
@@ -2470,7 +2433,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if ((ticksToMove * WorldTimeController.MILLIS_IN_TICK) > 3000) {
             ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
         }
-        // the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeController
     }
 
     public boolean moveToNextRoutePoint() {
@@ -2945,8 +2907,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public double getLevelMod() {
-        final double defaultLevelMod = ((getLevel() + 89) / 100d);
-        return nonNull(transform) && !transform.isStance() ? transform.getLevelMod(this) : defaultLevelMod;
+        return (getLevel() + 89) / 100d;
     }
 
     /**
@@ -3217,7 +3178,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     private boolean counterAttackReflect(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical) {
         if (!target.isDead() && nonNull(skill)) {
-            Formulas.calcCounterAttack(this, target, skill, true);
+            Formulas.calcCounterAttack(this, target, skill);
 
             if (skill.isMagic() && Rnd.chance(target.getStats().getValue(Stat.VENGEANCE_SKILL_MAGIC_DAMAGE, 0))) {
                 reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true, DamageType.REFLECT);
@@ -3581,7 +3542,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         final WeaponType defaultWeaponType = template.getBaseAttackType();
-        return nonNull(transform) ? transform.getBaseAttackType(this, defaultWeaponType) : defaultWeaponType;
+        return nonNull(transform) ? transform.attackType() : defaultWeaponType;
     }
 
     public final boolean isInCategory(CategoryType type) {

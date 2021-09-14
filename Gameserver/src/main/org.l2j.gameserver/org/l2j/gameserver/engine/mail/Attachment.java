@@ -16,13 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.item.container;
+package org.l2j.gameserver.engine.mail;
 
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.item.container.ItemContainer;
 import org.l2j.gameserver.world.World;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -31,11 +32,11 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  * @author DS
  */
 public class Attachment extends ItemContainer {
-    private final int _ownerId;
+    private final int ownerId;
     private final int mailId;
 
     public Attachment(int objectId, int mailId) {
-        _ownerId = objectId;
+        ownerId = objectId;
         this.mailId = mailId;
     }
 
@@ -83,7 +84,7 @@ public class Attachment extends ItemContainer {
 
     @Override
     public void restore() {
-        for (ItemData data : getDAO(ItemDAO.class).findItemsAttachment(_ownerId, mailId)) {
+        for (ItemData data : getDAO(ItemDAO.class).findItemsAttachment(ownerId, mailId)) {
             final Item item = new Item(data);
             World.getInstance().addObject(item);
 
@@ -109,6 +110,6 @@ public class Attachment extends ItemContainer {
 
     @Override
     public int getOwnerId() {
-        return _ownerId;
+        return ownerId;
     }
 }

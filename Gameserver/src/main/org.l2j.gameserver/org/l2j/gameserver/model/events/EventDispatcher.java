@@ -141,19 +141,15 @@ public final class EventDispatcher {
                 if (rb == null) {
                     continue;
                 }
-                if ((callback == null) || rb.override()) // Let's check if this listener wants to override previous return object or we simply don't have one
-                {
+                if (callback == null || rb.override()) {
                     callback = rb;
-                } else if (rb.abort()) // This listener wants to abort the notification to others.
-                {
+                } else if (rb.abort()) {
                     break;
                 }
             } catch (Exception e) {
-                LOGGER.warn("Exception during notification of event: {} listener {} : {}", event.getClass().getSimpleName(),listener.getClass().getSimpleName(), e.getCause());
-
+                LOGGER.warn("Exception during notification of event: {} listener {}:", event.getClass().getSimpleName(), listener.getClass().getSimpleName(), e);
             }
         }
-
         return callback;
     }
 

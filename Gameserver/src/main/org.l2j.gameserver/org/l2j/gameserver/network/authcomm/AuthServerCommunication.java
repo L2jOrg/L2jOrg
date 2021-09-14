@@ -69,7 +69,6 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         }
         if(nonNull(client)) {
             client.close();
-            client = null;
         }
         LOGGER.info("Connecting to auth server on {}", address);
         client = connector.connect(address);

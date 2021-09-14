@@ -160,14 +160,6 @@ public class EnterWorld extends ClientPacket {
             player.setSpawnProtection(true);
         }
 
-        player.sendPacket(new UserInfo(player));
-        player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
-        player.spawnMe();
-
-        if (Event.isParticipant(player)) {
-            Event.restorePlayerEventStatus(player);
-        }
-
         if (Config.PC_CAFE_ENABLED) {
             if (player.getPcCafePoints() > 0) {
                 player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), 0, 1));
@@ -186,8 +178,6 @@ public class EnterWorld extends ClientPacket {
 
         AnnouncementsManager.getInstance().showAnnouncements(player);
 
-        onClanMemberLogin(player);
-
         if (CharacterSettings.petitionAllowed()) {
             PetitionManager.getInstance().checkPetitionMessages(player);
         }
@@ -205,10 +195,6 @@ public class EnterWorld extends ClientPacket {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
 
-        if (GeneralSettings.allowMail()) {
-            MailEngine.getInstance().sendUnreadCount(player);
-        }
-
         if (Config.WELCOME_MESSAGE_ENABLED) {
             player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
         }
@@ -217,16 +203,8 @@ public class EnterWorld extends ClientPacket {
             client.sendPacket(new ElementalSpiritInfo(player.getActiveElementalSpiritType(), (byte) 2));
         }
 
-        player.sendPacket(StatusUpdate.of(player, StatusUpdateType.CUR_HP, (int) player.getCurrentHp()).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()));
-        player.sendPacket(new ExUserInfoEquipSlot(player));
-
         if (ChatSettings.worldChatEnabled()) {
             player.sendPacket(new ExWorldChatCnt(player));
-        }
-
-        // Fix for equipped item skills
-        if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
-            player.updateAbnormalVisualEffects();
         }
 
         if (AttendanceSettings.enabled()) {
@@ -237,9 +215,26 @@ public class EnterWorld extends ClientPacket {
 
         checkHardwareInfo();
 
+        player.sendPacket(new UserInfo(player));
+        player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
         restoreItems(player);
         player.onEnter();
+        player.spawnMe();
+
+        // Fix for equipped item skills
+        if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty()) {
+            player.updateAbnormalVisualEffects();
+        }
+
+        player.sendPacket(StatusUpdate.of(player, StatusUpdateType.CUR_HP, (int) player.getCurrentHp()).addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp()));
+        player.sendPacket(new ExUserInfoEquipSlot(player));
+
         Quest.playerEnter(player);
+        MailEngine.getInstance().sendUnreadCount(player);
+        if (Event.isParticipant(player)) {
+            Event.restorePlayerEventStatus(player);
+        }
+        onClanMemberLogin(player);
     }
 
     private void restoreInstance(Player player) {

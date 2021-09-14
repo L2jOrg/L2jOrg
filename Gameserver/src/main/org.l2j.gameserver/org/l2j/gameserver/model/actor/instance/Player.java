@@ -58,7 +58,7 @@ import org.l2j.gameserver.model.actor.status.PlayerStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2j.gameserver.model.actor.transform.Transform;
+import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.cubic.CubicInstance;
@@ -4605,7 +4605,6 @@ public final class Player extends Playable {
      * </ul>
      */
     void restoreCharData() {
-        restoreSkills();
         macros.restoreMe();
         restoreHennas();
         restoreTeleportBookmark();
@@ -5543,6 +5542,7 @@ public final class Player extends Playable {
      */
     @Override
     public void updateAbnormalVisualEffects() {
+        sendPacket(new UserInfo(this, UserInfoType.POSITION));
         sendPacket(new ExUserInfoAbnormalVisualEffect(this));
         broadcastCharInfo();
     }
@@ -6052,6 +6052,8 @@ public final class Player extends Playable {
     public void onEnter() {
         startWarnUserTakeBreak();
         restoreItemReuse();
+        restoreSkills();
+        rewardSkills();
         restoreEffects();
 
         // TODO : Need to fix that hack!
