@@ -80,6 +80,7 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
     protected BodyPart bodyPart;
 
     private Map<ItemSkillType, List<ItemSkillInfo>> skillsMap = Collections.emptyMap();
+    private List<ItemSkillInfo> skills;
     private CommissionItemType commissionType;
     private int displayId;
     private int weight;
@@ -109,6 +110,15 @@ public abstract sealed class ItemTemplate extends ListenersContainer implements 
             skillsMap = new EnumMap<>(ItemSkillType.class);
         }
         skillsMap.computeIfAbsent(holder.type(), t -> new ArrayList<>()).add(holder);
+    }
+
+    /**
+     * Method to retrieve skills linked to this item armor and weapon: passive skills etcitem: skills used on item use <-- ???
+     *
+     * @return Skills linked to this item as SkillHolder[]
+     */
+    public final List<ItemSkillInfo> getAllSkills() {
+        return skills;
     }
 
     public final List<ItemSkillInfo> getSkills(ItemSkillType type) {

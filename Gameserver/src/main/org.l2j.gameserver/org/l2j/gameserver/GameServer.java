@@ -103,6 +103,9 @@ public class GameServer {
         printSection("Items");
         ItemEngine.init();
 
+        printSection("Items parser");
+        ItemChecker.test();
+
         printSection("NPCs");
         NpcData.init();
 
