@@ -1,5 +1,6 @@
-/*
- * Copyright © 2019-2020 L2JOrg
+package org.l2j.gameserver;
+
+/* Copyright © 2019-2020 L2JOrg
  *
  * This file is part of the L2JOrg project.
  *
@@ -15,9 +16,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
- *//*
+*/
 
-package org.l2j.gameserver;
 
 import io.github.joealisson.primitive.HashIntIntMap;
 import io.github.joealisson.primitive.HashIntMap;
@@ -32,7 +32,9 @@ import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.*;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
+
+import org.l2j.gameserver.model.holders.ItemSkillInfo;
+import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.ArmorType;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
@@ -56,7 +58,7 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class ItemChecker {
 
-    //static Logger LOGGER = LoggerFactory.getLogger(ItemChecker.class);
+    static Logger LOGGER = LoggerFactory.getLogger(ItemChecker.class);
     static IntMap<Item> items = new HashIntMap<>(13000);
     static IntIntMap autoUse = new HashIntIntMap();
 
@@ -234,8 +236,7 @@ public class ItemChecker {
         itemTypes.put("89", "VITAL_LEGACY_ITEM_7D");
         itemTypes.put("90", "VITAL_LEGACY_ITEM_30D");
         itemTypes.put("bless_upgrade_wp", "BLESSED_SCROLL");
-        */
-/*itemTypes.put("", "NONE");
+itemTypes.put("", "NONE");
         itemTypes.put("none", "NONE");
         itemTypes.put("scroll", "SCROLL");
         itemTypes.put("arrow", "ARROW");
@@ -327,7 +328,7 @@ public class ItemChecker {
         itemTypes.put("88", "VITAL_LEGACY_ITEM_1D");
         itemTypes.put("89", "VITAL_LEGACY_ITEM_7D");
         itemTypes.put("90", "VITAL_LEGACY_ITEM_30D");
-        itemTypes.put("bless_upgrade_wp", "BLESSED_SCROLL");*//*
+        itemTypes.put("bless_upgrade_wp", "BLESSED_SCROLL");
 
 
         weaponTypes.put("", "NONE"); // 0
@@ -352,8 +353,10 @@ public class ItemChecker {
         weaponTypes.put("dualdagger", "DUAL_DAGGER"); // 20
         weaponTypes.put("twohandcrossbow", "TWO_HAND_CROSSBOW"); // 22
         weaponTypes.put("dualblunt", "DUAL_BLUNT"); // 23
-        weaponTypes.put("25", "SHOOTER"); // 25F
-        weaponTypes.put("shooter", "SHOOTER"); // 25F
+        weaponTypes.put("25", "PISTOLS"); // 25F
+        weaponTypes.put("shooter", "PISTOLS"); // 25F
+        weaponTypes.put("pistols", "PISTOLS"); // 25F
+
     }
 
     static int step = 100;
@@ -377,10 +380,9 @@ public class ItemChecker {
             LOGGER.info("fillArmor");
             fillWeapon();
             LOGGER.info("fillWeapon");
-          */
-/*  fillCraft();
-            LOGGER.info("fillCraft");*//*
-
+  /*fillCraft();
+            LOGGER.info("fillCraft");
+*/
 
 
             Files.createDirectories(Path.of("new-items"));
@@ -547,8 +549,8 @@ public class ItemChecker {
                 content.append(String.format(" reuse-delay=\"%d\"", template.getReuseDelay()));
             }
 
-            if (template.getSharedReuseGroup() > 0) {
-                content.append(String.format(" reuse-group=\"%d\"", template.getSharedReuseGroup()));
+            if (template.getReuseGroup() > 0) {
+                content.append(String.format(" reuse-group=\"%d\"", template.getReuseGroup()));
             }
 
             if (template.getDuration() > 0) {
@@ -627,33 +629,37 @@ public class ItemChecker {
 
     private static void parseSkillReducer(EtcItem template, StringBuilder content) {
         content.append("\t\t<skill-reducer type=\"").append(template.getHandlerName()).append("\">\n");
-        parseSkills(content, template.getAllSkills());
+        for(ItemSkillType itemSkillType : ItemSkillType.values())
+        {
+            parseSkills(content, template.getSkills(itemSkillType), itemSkillType);
+        }
         content.append("\t\t</skill-reducer>\n");
     }
 
-    private static void parseSkills(StringBuilder content, List<ItemSkillHolder> allSkills) {
-        for (ItemSkillHolder skill : allSkills) {
-            if (skill.getLevel() != 1)
-                content.append("\t\t\t<skill id=\"").append(skill.getSkillId()).append("\" level=\"").append(skill.getLevel()).append("\"");
+    private static void parseSkills(StringBuilder content, List<ItemSkillInfo> allSkills, ItemSkillType itemSkillType) {
+        for (ItemSkillInfo skill : allSkills) {
+            if(skill.skill() == null) continue;
+            if (skill.skill().getLevel() != 1)
+                content.append("\t\t\t<skill id=\"").append(skill.skill().getId()).append("\" level=\"").append(skill.skill().getLevel()).append("\"");
             else
-                content.append("\t\t\t<skill id=\"").append(skill.getSkillId()).append("\"");
+                content.append("\t\t\t<skill id=\"").append(skill.skill().getId()).append("\"");
 
-            if (skill.getType() != ItemSkillType.NORMAL) {
-                content.append(" type=\"").append(skill.getType()).append("\"");
+           if (itemSkillType != ItemSkillType.NORMAL) {
+                content.append(" type=\"").append(itemSkillType).append("\"");
             }
 
-            if (skill.getChance() != 100) {
-                content.append(" chance=\"").append(skill.getChance()).append("\"");
+            if (skill.chance() != 100) {
+                content.append(" chance=\"").append(skill.chance()).append("\"");
             }
 
-            if (skill.getValue() != 0) {
-                content.append(" value=\"").append(skill.getValue()).append("\"");
+            if (skill.value() != 0) {
+                content.append(" value=\"").append(skill.value()).append("\"");
             }
 
             content.append("/>");
 
-            if (nonNull(skill.getSkill())) {
-                content.append("  <!-- ").append(skill.getSkill().getName()).append(" -->\n");
+            if (nonNull(skill.skill())) {
+                content.append("  <!-- ").append(skill.skill().getName()).append(" -->\n");
             } else {
                 content.append("  <!-- TODO Skill not found -->\n");
             }
@@ -786,8 +792,8 @@ public class ItemChecker {
                 content.append(String.format(" reuse-delay=\"%d\"", template.getReuseDelay()));
             }
 
-            if (template.getSharedReuseGroup() > 0) {
-                content.append(String.format(" reuse-group=\"%d\"", template.getSharedReuseGroup()));
+            if (template.getReuseGroup() > 0) {
+                content.append(String.format(" reuse-group=\"%d\"", template.getReuseGroup()));
             }
 
             if (template.getDuration() > 0) {
@@ -847,12 +853,13 @@ public class ItemChecker {
             content.append("\t\t</stats>\n");
         }
 
-
-        if (nonNull(template)) {
-            if (!isNullOrEmpty(template.getAllSkills())) {
-                content.append("\t\t<skills>\n");
-                parseSkills(content, template.getAllSkills());
-                content.append("\t\t</skills>\n");
+        for(ItemSkillType itemSkillType : ItemSkillType.values()) {
+            if (nonNull(template)) {
+                if (!isNullOrEmpty(template.getSkills(itemSkillType))) {
+                    content.append("\t\t<skills>\n");
+                    parseSkills(content, template.getSkills(itemSkillType), itemSkillType);
+                    content.append("\t\t</skills>\n");
+                }
             }
         }
         content.append("\t</armor>\n\n");
@@ -965,8 +972,8 @@ public class ItemChecker {
                 content.append(String.format(" reuse-delay=\"%d\"", template.getReuseDelay()));
             }
 
-            if (template.getSharedReuseGroup() > 0) {
-                content.append(String.format(" reuse-group=\"%d\"", template.getSharedReuseGroup()));
+            if (template.getReuseGroup() > 0) {
+                content.append(String.format(" reuse-group=\"%d\"", template.getReuseGroup()));
             }
 
             if (template.getDuration() > 0) {
@@ -1044,11 +1051,13 @@ public class ItemChecker {
             content.append("\t\t</stats>\n");
         }
 
-        if (nonNull(template)) {
-            if (!isNullOrEmpty(template.getAllSkills())) {
-                content.append("\t\t<skills>\n");
-                parseSkills(content, template.getAllSkills());
-                content.append("\t\t</skills>\n");
+        for(ItemSkillType itemSkillType : ItemSkillType.values()) {
+            if (nonNull(template)) {
+                if (!isNullOrEmpty(template.getSkills(itemSkillType))) {
+                    content.append("\t\t<skills>\n");
+                    parseSkills(content, template.getSkills(itemSkillType), itemSkillType);
+                    content.append("\t\t</skills>\n");
+                }
             }
         }
         content.append("\t</weapon>\n\n");
@@ -1323,10 +1332,9 @@ public class ItemChecker {
                 var hideMask = matcher.group(9);
                 var bodyPart = matcher.group(5);
 
-               */
-/* if (bodyPart.equalsIgnoreCase("underwear")) {
+ if (bodyPart.equalsIgnoreCase("underwear")) {
                     bodyPart = bodyPart + "_" + hideMask;
-                }*//*
+                }
 
 
                 item.bodyPart = bodyParts.get(bodyPart);
@@ -1404,4 +1412,4 @@ public class ItemChecker {
         ETC,
         NONE,
     }
-}*/
+}
