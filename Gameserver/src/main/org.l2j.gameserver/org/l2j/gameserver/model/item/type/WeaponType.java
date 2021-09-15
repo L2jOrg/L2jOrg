@@ -50,7 +50,8 @@ public enum WeaponType implements ItemType {
     DUAL_DAGGER(TraitType.DUAL_DAGGER),
     OWN_THING(TraitType.NONE),
     TWO_HAND_CROSSBOW(TraitType.TWO_HAND_CROSSBOW),
-    DUAL_BLUNT(TraitType.DUAL_BLUNT);
+    DUAL_BLUNT(TraitType.DUAL_BLUNT),
+    PISTOLS(TraitType.PISTOLS);
 
     private final int _mask;
     private final TraitType _traitType;
