@@ -30,7 +30,7 @@ public enum Race {
     ORC,
     DWARF,
     JIN_KAMAEL,
-    SYLPH,
+    ERTHEIA,
     ANIMAL,
     BEAST,
     BUG,
@@ -49,5 +49,10 @@ public enum Race {
     PLANT,
     SIEGE_WEAPON,
     UNDEAD,
-    FRIEND// FRIEND ordinal has to be confirmed
+    FRIEND,
+    UNK_26,
+    UNK_27,
+    UNK_28,
+    UNK_29,
+    SYLPH;
 }
