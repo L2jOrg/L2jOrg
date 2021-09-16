@@ -995,7 +995,15 @@ public final class Player extends Playable {
 
         if (!inventory.findAmmunitionForCurrentWeapon()) {
             getAI().setIntention(AI_INTENTION_ACTIVE);
-            sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+
+            if (weapon.getItemType().isPistols())
+            {
+                sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+            }
+            else
+            {
+                sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+            }
             return false;
         }
 

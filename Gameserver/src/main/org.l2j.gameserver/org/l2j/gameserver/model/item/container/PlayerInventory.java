@@ -51,8 +51,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.model.item.type.EtcItemType.ARROW;
-import static org.l2j.gameserver.model.item.type.EtcItemType.BOLT;
+import static org.l2j.gameserver.model.item.type.EtcItemType.*;
 
 /**
  * @author JoeAlisson
@@ -856,7 +855,7 @@ public class PlayerInventory extends Inventory {
         final var itemType = weapon.getItemType();
 
         return (ammunition.getItemType() == ARROW && itemType == WeaponType.BOW) ||
-               (ammunition.getItemType() == BOLT && itemType == WeaponType.CROSSBOW || itemType == WeaponType.TWO_HAND_CROSSBOW);
+               (ammunition.getItemType() == BOLT && itemType == WeaponType.CROSSBOW || itemType == WeaponType.TWO_HAND_CROSSBOW) || (ammunition.getItemType() == ELEMENTAL_ORB && itemType == WeaponType.PISTOLS);
     }
 
     public Collection<Item> getQuestItems() {

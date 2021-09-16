@@ -778,6 +778,8 @@ public abstract class Inventory extends ItemContainer {
         return paperdoll.values().stream().anyMatch(predicate);
     }
 
+
+
     private static final class ChangeRecorder implements InventoryListener {
         private final Set<Item> changed = ConcurrentHashMap.newKeySet();
 
