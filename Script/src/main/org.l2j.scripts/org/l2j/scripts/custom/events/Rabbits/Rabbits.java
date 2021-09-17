@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.Event;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.ArrayList;
@@ -101,7 +102,7 @@ public final class Rabbits extends Event
 		}
 		
 		// Check starting conditions
-		if (!Config.CUSTOM_NPC_DATA)
+		if (!GeneralSettings.loadCustomNPC())
 		{
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPCs are disabled!");
 			return false;

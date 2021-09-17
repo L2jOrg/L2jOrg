@@ -143,12 +143,6 @@ public final class Config {
     public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
     public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
 
-    public static int DEFAULT_PUNISH_PARAM;
-    public static boolean ONLY_GM_ITEMS_FREE;
-    public static boolean JAIL_IS_PVP;
-    public static boolean JAIL_DISABLE_TRANSACTION;
-    public static boolean CUSTOM_NPC_DATA;
-
     public static int ALT_BIRTHDAY_GIFT;
     public static String ALT_BIRTHDAY_MAIL_SUBJECT;
     public static String ALT_BIRTHDAY_MAIL_TEXT;
@@ -615,13 +609,6 @@ public final class Config {
         ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
         ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
         ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
-
-        DEFAULT_PUNISH_PARAM = General.getInt("DefaultPunishParam", 0);
-        ONLY_GM_ITEMS_FREE = General.getBoolean("OnlyGMItemsFree", true);
-        JAIL_IS_PVP = General.getBoolean("JailIsPvp", false);
-
-        JAIL_DISABLE_TRANSACTION = General.getBoolean("JailDisableTransaction", false);
-        CUSTOM_NPC_DATA = General.getBoolean("CustomNpcData", false);
 
         ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
         ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
