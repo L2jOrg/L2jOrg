@@ -21,7 +21,6 @@ package org.l2j.scripts.custom.events.Elpies;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
@@ -33,6 +32,8 @@ import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.concurrent.ScheduledFuture;
+
+import static java.util.Objects.requireNonNullElse;
 
 public final class Elpies extends Event
 {
@@ -101,7 +102,7 @@ public final class Elpies extends Event
 		
 		EVENT_ACTIVE = true;
 
-		final EventLocation randomLoc = Rnd.get(EventLocation.values());
+		final EventLocation randomLoc = requireNonNullElse(Rnd.get(EventLocation.values()), EventLocation.ADEN);
 		
 		CURRENT_ELPY_COUNT = 0;
 		final long despawnDelay = EVENT_DURATION_MINUTES * 60000L;
