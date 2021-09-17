@@ -151,12 +151,6 @@ public final class RequestBuyItem extends ClientPacket {
                 return;
             }
 
-            if ((price == 0) && !player.isGM() && Config.ONLY_GM_ITEMS_FREE) {
-                player.sendMessage("Ohh Cheat dont work? You have a problem now!");
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried buy item for 0 adena.");
-                return;
-            }
-
             if (product.hasLimitedStock()) {
                 // trying to buy more then available
                 if (i.getCount() > product.getCount()) {

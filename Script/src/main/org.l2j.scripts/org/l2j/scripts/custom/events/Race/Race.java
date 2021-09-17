@@ -32,6 +32,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.ArrayList;
@@ -127,7 +128,7 @@ public final class Race extends Event
 			return false;
 		}
 		// Check Custom Table - we use custom NPCs
-		if (!Config.CUSTOM_NPC_DATA)
+		if (!GeneralSettings.loadCustomNPC())
 		{
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPC table is disabled!");
 			return false;

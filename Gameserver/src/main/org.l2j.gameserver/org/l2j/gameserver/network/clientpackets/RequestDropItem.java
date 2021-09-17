@@ -139,7 +139,7 @@ public final class RequestDropItem extends ClientPacket {
     }
 
     private boolean canPlayerDiscardItem(Player player) {
-        if (Config.JAIL_DISABLE_TRANSACTION && player.isJailed()) {
+        if (GeneralSettings.disableTransactionInJail() && player.isJailed()) {
             player.sendMessage("You cannot drop items in Jail.");
             return false;
         }

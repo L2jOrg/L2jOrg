@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.TeleportTask;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneFactory;
@@ -59,11 +60,11 @@ public class JailZone extends Zone {
         if (isPlayer(creature)) {
             creature.setInsideZone(ZoneType.JAIL, true);
             creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true);
-            if (Config.JAIL_IS_PVP) {
+            if (GeneralSettings.allowPvPInJail()) {
                 creature.setInsideZone(ZoneType.PVP, true);
                 creature.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
             }
-            if (Config.JAIL_DISABLE_TRANSACTION) {
+            if (GeneralSettings.disableTransactionInJail()) {
                 creature.setInsideZone(ZoneType.NO_STORE, true);
             }
         }
@@ -76,7 +77,7 @@ public class JailZone extends Zone {
             player.setInsideZone(ZoneType.JAIL, false);
             player.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false);
 
-            if (Config.JAIL_IS_PVP) {
+            if (GeneralSettings.allowPvPInJail()) {
                 creature.setInsideZone(ZoneType.PVP, false);
                 creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
             }
@@ -86,7 +87,7 @@ public class JailZone extends Zone {
                 ThreadPool.schedule(new TeleportTask(player, JAIL_IN_LOC), 2000);
                 creature.sendMessage("You cannot cheat your way out of here. You must wait until your jail time is over.");
             }
-            if (Config.JAIL_DISABLE_TRANSACTION) {
+            if (GeneralSettings.disableTransactionInJail()) {
                 creature.setInsideZone(ZoneType.NO_STORE, false);
             }
         }
