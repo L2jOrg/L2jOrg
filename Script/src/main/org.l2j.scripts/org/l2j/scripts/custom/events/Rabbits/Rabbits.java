@@ -168,13 +168,13 @@ public final class Rabbits extends Event
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player) {
-		String htmltext = null;
+		String htmlText = null;
 		switch (event) {
-			case "900101-1.htm" -> htmltext = "900101-1.htm";
 			case "transform" -> transform(player);
 			case "END_RABBITS_EVENT" -> eventStop();
+			default -> htmlText = event;
 		}
-		return htmltext;
+		return htmlText;
 	}
 
 	private void transform(Player player) {
