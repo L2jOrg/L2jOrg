@@ -69,6 +69,8 @@ import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.cache.expiry.Duration;
+import javax.cache.expiry.TouchedExpiryPolicy;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.net.InetSocketAddress;
@@ -286,7 +288,7 @@ public class GameServer {
     }
 
     private static void configureCache() {
-        CacheFactory.getInstance().initialize("config/ehcache.xml");
+        CacheFactory.getInstance().build("html", String.class, String.class).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.TEN_MINUTES));
     }
 
     private static void configureNetworkPackets() {
