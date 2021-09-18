@@ -46,20 +46,20 @@ public final class CacheFactory {
         return config;
     }
 
-    public <K, V> Cache<K, V> getCache(String alias) {
-        Cache<K, V> cache = manager.getCache(alias);
-        if(isNull(cache)) {
-           cache =  manager.createCache(alias, defaultConfiguration());
-        }
-        return cache;
-    }
-
     private <K, V> MutableConfiguration<K, V> defaultConfiguration() {
         return new MutableConfiguration<K, V>().setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.THIRTY_MINUTES));
     }
 
     private <K, V> MutableConfiguration<K, V> defaultConfiguration(Class<K> keyClass, Class<V> valueClass) {
         return new MutableConfiguration<K, V>().setTypes(keyClass, valueClass).setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.THIRTY_MINUTES));
+    }
+
+    public <K, V> Cache<K, V> getCache(String alias) {
+        Cache<K, V> cache = manager.getCache(alias);
+        if(isNull(cache)) {
+            cache =  manager.createCache(alias, defaultConfiguration());
+        }
+        return cache;
     }
 
     public <K, V> Cache<K, V> getCache(String alias, Class<K> keyClass, Class<V> valueClass) {
