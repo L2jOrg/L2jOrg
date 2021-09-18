@@ -18,8 +18,6 @@
  */
 package org.l2j.commons.cache;
 
-import org.l2j.commons.util.FileUtil;
-
 import javax.cache.Cache;
 import javax.cache.CacheManager;
 import javax.cache.Caching;
@@ -29,51 +27,47 @@ import javax.cache.expiry.TouchedExpiryPolicy;
 import javax.cache.spi.CachingProvider;
 
 import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
 
 /**
  * @author JoeAlisson
  */
 public final class CacheFactory {
 
-    private CacheManager manager;
+    private final CacheManager manager;
 
     private CacheFactory() {
-
+        CachingProvider cachingProvider = Caching.getCachingProvider();
+        manager = cachingProvider.getCacheManager();
     }
 
-    public void initialize(String configurationFilePath) {
-        CachingProvider cachingProvider = Caching.getCachingProvider();
-        var config = FileUtil.readToURI(configurationFilePath);
-        if(nonNull(config)) {
-            manager = cachingProvider.getCacheManager(config, getClass().getClassLoader());
-        } else {
-            manager = cachingProvider.getCacheManager();
-        }
+    public <K, V> MutableConfiguration<K, V> build(String cacheName, Class<K> keyClass, Class<V> valueClass) {
+        var config = defaultConfiguration(keyClass, valueClass);
+        manager.createCache(cacheName, config);
+        return config;
     }
 
     public <K, V> Cache<K, V> getCache(String alias) {
-        checkInitilized();
         Cache<K, V> cache = manager.getCache(alias);
         if(isNull(cache)) {
-           cache = manager.createCache(alias, new MutableConfiguration<K, V>().setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.ONE_HOUR)));
+           cache =  manager.createCache(alias, defaultConfiguration());
         }
         return cache;
+    }
+
+    private <K, V> MutableConfiguration<K, V> defaultConfiguration() {
+        return new MutableConfiguration<K, V>().setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.THIRTY_MINUTES));
+    }
+
+    private <K, V> MutableConfiguration<K, V> defaultConfiguration(Class<K> keyClass, Class<V> valueClass) {
+        return new MutableConfiguration<K, V>().setTypes(keyClass, valueClass).setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.THIRTY_MINUTES));
     }
 
     public <K, V> Cache<K, V> getCache(String alias, Class<K> keyClass, Class<V> valueClass) {
-        checkInitilized();
         Cache<K, V> cache = manager.getCache(alias, keyClass, valueClass);
         if(isNull(cache)) {
-            cache = manager.createCache(alias, new MutableConfiguration<K, V>().setTypes(keyClass, valueClass).setStoreByValue(false).setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(Duration.ONE_HOUR)));
+            cache = manager.createCache(alias, defaultConfiguration(keyClass, valueClass));
         }
         return cache;
-    }
-
-    private void checkInitilized() {
-        if (isNull(manager)) {
-            throw new IllegalStateException("CacheFactory not initialized. Call initialize method before use it");
-        }
     }
 
     private static final class Singleton {
