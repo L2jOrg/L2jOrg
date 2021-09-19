@@ -65,7 +65,7 @@ public final class ServerList extends AuthServerPacket {
             byte[] address = server.getAddressFor(client.getHostAddress());
 
             buffer.writeBytes(address);
-            buffer.writeInt(server.getPort());
+            buffer.writeInt(server.getNextPort());
             buffer.writeByte(server.getAgeLimit()); // minimum age
             buffer.writeByte(server.isPvp());
             buffer.writeShort(server.getOnlinePlayersCount());

@@ -16,31 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.gs2as;
+package org.l2j.gameserver.network.auth.as2gs;
 
-import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.authcomm.AuthServerClient;
-import org.l2j.gameserver.network.authcomm.SendablePacket;
+import org.l2j.gameserver.data.database.dao.PlayerDAO;
+import org.l2j.gameserver.network.NetworkService;
+import org.l2j.gameserver.network.auth.ReceivablePacket;
+import org.l2j.gameserver.network.auth.gs2as.SetAccountInfo;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author VISTALL
- * @date 21:07/25.03.2011
+ * @author JoeAlisson
  */
-public class SetAccountInfo extends SendablePacket
-{
-	private final String _account;
-	private final int _size;
+public class GetAccountInfo extends ReceivablePacket {
 
-	public SetAccountInfo(String account, int size)
+	private String account;
+
+	@Override
+	protected void readImpl()
 	{
-		_account = account;
-		_size = size;
+		account = readString();
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
-		buffer.writeByte(0x05);
-		buffer.writeString(_account);
-		buffer.writeByte(_size);
+	protected void runImpl() {
+		int playerSize = getDAO(PlayerDAO.class).playerCountByAccount(account);
+		NetworkService.getInstance().sendPacketToAuthServer(new SetAccountInfo(account, playerSize)); //TODO send to specific authserver ?
 	}
 }

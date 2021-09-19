@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.as2gs;
+package org.l2j.gameserver.network.auth.as2gs;
 
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.ReceivablePacket;
-import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
+import org.l2j.gameserver.network.auth.AuthNetworkService;
+import org.l2j.gameserver.network.auth.ReceivablePacket;
+import org.l2j.gameserver.network.auth.gs2as.PlayerInGame;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,7 +40,7 @@ public class AuthResponse extends ReceivablePacket {
 
     @Override
     protected void runImpl() {
-        String[] accounts = AuthServerCommunication.getInstance().getAccounts();
+        String[] accounts = new String[0]; //AuthNetworkService.getInstance().getAccounts(); // todo
         sendPacket(new PlayerInGame(accounts));
         ServerSettings.setServerId(serverId);
         LOGGER.info("Registered on authserver as {} [{}]", serverId, serverName);

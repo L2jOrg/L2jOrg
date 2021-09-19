@@ -16,26 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm;
+package org.l2j.gameserver.network.auth;
 
 import io.github.joealisson.mmocore.Buffer;
 import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
-import org.l2j.gameserver.network.authcomm.gs2as.AuthRequest;
+import org.l2j.gameserver.network.auth.gs2as.AuthRequest;
 
 /**
  * @author JoeAlisson
  */
 public class AuthServerClient extends Client<Connection<AuthServerClient>> {
 
-    AuthServerClient(Connection<AuthServerClient> connection) {
+    private final AuthNetworkService networkService;
+
+    AuthServerClient(Connection<AuthServerClient> connection, AuthNetworkService networkService) {
         super(connection);
+        this.networkService = networkService;
     }
 
     public void sendPacket(SendablePacket packet) {
         writePacket(packet);
     }
-
 
     @Override
     public boolean encrypt(Buffer data, int offset, int size) {
@@ -49,11 +51,11 @@ public class AuthServerClient extends Client<Connection<AuthServerClient>> {
 
     @Override
     protected void onDisconnection() {
-        AuthServerCommunication.getInstance().restart();
+        networkService.restart();
     }
 
     @Override
     public void onConnected() {
-        writePacket(new AuthRequest());
+        writePacket(new AuthRequest(networkService.network()));
     }
 }

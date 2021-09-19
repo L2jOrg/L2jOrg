@@ -18,8 +18,6 @@
  */
 package org.l2j.gameserver;
 
-import io.github.joealisson.mmocore.ConnectionBuilder;
-import io.github.joealisson.mmocore.ConnectionHandler;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.configuration.Configurator;
 import org.l2j.commons.database.DatabaseAccess;
@@ -57,9 +55,7 @@ import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
 import org.l2j.gameserver.model.votereward.VoteSystem;
-import org.l2j.gameserver.network.ClientPacketHandler;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -73,7 +69,6 @@ import javax.cache.expiry.Duration;
 import javax.cache.expiry.TouchedExpiryPolicy;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
-import java.net.InetSocketAddress;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
@@ -94,7 +89,6 @@ public class GameServer {
     private static Logger LOGGER;
     private static GameServer INSTANCE;
     public static String fullVersion;
-    private final ConnectionHandler<GameClient> connectionHandler;
 
     public GameServer() throws Exception {
         final var serverLoadStart = Instant.now();
@@ -237,9 +231,6 @@ public class GameServer {
 
         printSection("Setting All characters to offline status!");
         getDAO(PlayerDAO.class).setAllCharactersOffline();
-
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(ServerSettings.port()), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
-        connectionHandler.start();
     }
 
     public static void main(String[] args) throws Exception {
@@ -266,9 +257,9 @@ public class GameServer {
         ScriptEngineManager.init();
         ExtensionBoot.initializers();
 
-        INSTANCE = new GameServer();
+      //  INSTANCE = new GameServer();
+        NetworkService.init();
 
-        ThreadPool.execute(AuthServerCommunication.getInstance());
         scheduleDeadLockDetector();
 
         printSection("Extensions Pos Loaders");
@@ -334,10 +325,6 @@ public class GameServer {
         } catch (IOException e) {
             LOGGER.warn(e.getMessage(), e);
         }
-    }
-
-    public ConnectionHandler<GameClient> getConnectionHandler() {
-        return connectionHandler;
     }
 
     public String getUptime() {

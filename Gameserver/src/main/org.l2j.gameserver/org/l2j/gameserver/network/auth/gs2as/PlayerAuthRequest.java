@@ -16,27 +16,36 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.gs2as;
+package org.l2j.gameserver.network.auth.gs2as;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.authcomm.AuthServerClient;
-import org.l2j.gameserver.network.authcomm.SendablePacket;
+import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.auth.AuthServerClient;
+import org.l2j.gameserver.network.auth.SendablePacket;
 
-public class ChangeAllowedHwid extends SendablePacket
+public class PlayerAuthRequest extends SendablePacket
 {
 	private final String account;
-	private final String hwid;
+	private final int playOkID1;
+    private final int playOkID2;
+    private final int loginOkID1;
+    private final int loginOkID2;
 
-	public ChangeAllowedHwid(String account, String hwid)
+	public PlayerAuthRequest(GameClient client)
 	{
-		this.account = account;
-		this.hwid = hwid;
+		account = client.getAccountName();
+		playOkID1 = client.getSessionKey().getGameServerSessionId();
+		playOkID2 = client.getSessionKey().getGameServerAccountId();
+		loginOkID1 = client.getSessionKey().getAuthAccountId();
+		loginOkID2 = client.getSessionKey().getAuthKey();
 	}
 
-	@Override
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
-		buffer.writeByte(0x09);
+		buffer.writeByte(0x02);
 		buffer.writeString(account);
-		buffer.writeString(hwid);
+		buffer.writeInt(playOkID1);
+		buffer.writeInt(playOkID2);
+		buffer.writeInt(loginOkID1);
+		buffer.writeInt(loginOkID2);
 	}
 }

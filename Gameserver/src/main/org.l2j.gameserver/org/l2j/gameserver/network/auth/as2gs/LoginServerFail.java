@@ -16,10 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.as2gs;
+package org.l2j.gameserver.network.auth.as2gs;
 
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.ReceivablePacket;
+import org.l2j.gameserver.network.NetworkService;
+import org.l2j.gameserver.network.auth.AuthNetworkService;
+import org.l2j.gameserver.network.auth.ReceivablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -55,6 +56,6 @@ public class LoginServerFail extends ReceivablePacket {
     protected void runImpl() {
         logger.warn(_reason);
         if(!_restartConnection)
-            AuthServerCommunication.getInstance().shutdown();
+            NetworkService.getInstance().closeAuthServerConnection(); // TODO do for specific authserver
     }
 }

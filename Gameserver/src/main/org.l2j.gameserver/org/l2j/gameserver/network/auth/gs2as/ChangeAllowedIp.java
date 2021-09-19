@@ -16,34 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.gs2as;
+package org.l2j.gameserver.network.auth.gs2as;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.authcomm.AuthServerClient;
-import org.l2j.gameserver.network.authcomm.SendablePacket;
+import org.l2j.gameserver.network.auth.AuthServerClient;
+import org.l2j.gameserver.network.auth.SendablePacket;
 
-/**
- * @Author: SYS -> changed by Iqman 02.02.2012 12:12
- * @Date: 10/4/2008
- */
-public class LockAccountIP extends SendablePacket
+public class ChangeAllowedIp extends SendablePacket
 {
-	String _account;
-	String _IP;
-	int _time;
+	private final String account;
+	private final String ip;
 
-	public LockAccountIP(String account, String IP, int time)
+	public ChangeAllowedIp(String account, String ip)
 	{
-		_account = account;
-		_IP = IP;
-		_time = time;
+		this.account = account;
+		this.ip = ip;
 	}
 
 	@Override
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
-		buffer.writeByte(0x0b);
-		buffer.writeString(_account);
-		buffer.writeString(_IP);
-		buffer.writeInt(_time);
+		buffer.writeByte(0x07);
+		buffer.writeString(account);
+		buffer.writeString(ip);
 	}
 }

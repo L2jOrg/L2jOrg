@@ -16,41 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm;
+package org.l2j.gameserver.network.auth;
 
-import io.github.joealisson.mmocore.ReadablePacket;
+import io.github.joealisson.mmocore.WritableBuffer;
+import io.github.joealisson.mmocore.WritablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class ReceivablePacket extends ReadablePacket<AuthServerClient> {
-	private static final Logger logger = LoggerFactory.getLogger(ReceivablePacket.class);
+public abstract class SendablePacket extends WritablePacket<AuthServerClient> {
+    private static final Logger logger = LoggerFactory.getLogger(SendablePacket.class);
 
-	@Override
-	public final boolean read() {
-		try {
-			readImpl();
-		} catch(Exception e) {
-			logger.error(e.getLocalizedMessage(), e);
-			return false;
-		}
-		return true;
-	}
+    @Override
+    public boolean write(AuthServerClient client, WritableBuffer buffer) {
+        try {
+            writeImpl(client, buffer);
+        } catch(Exception e) {
+            logger.error(e.getLocalizedMessage(), e);
+            return false;
+        }
+        return true;
+    }
 
-	@Override
-	public final void run() {
-		try {
-			runImpl();
-		} catch(Exception e) {
-			logger.error(e.getLocalizedMessage(), e);
-		}
-	}
-
-	protected abstract void readImpl();
-
-	protected abstract void runImpl();
-
-	protected void sendPacket(SendablePacket sp)
-	{
-		client.sendPacket(sp);
-	}
+    protected abstract void writeImpl(AuthServerClient client, WritableBuffer buffer);
 }

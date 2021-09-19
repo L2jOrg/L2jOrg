@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
+import org.l2j.gameserver.network.NetworkService;
+import org.l2j.gameserver.network.auth.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.serverpackets.KeyPacket;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
@@ -48,7 +48,7 @@ public final class ProtocolVersion extends ClientPacket {
             client.close();
         } else if (!contains(ServerSettings.acceptedProtocols(), version)) {
             LOGGER_ACCOUNTING.warn("Wrong protocol version {}, {}", version, client);
-            AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(client.getAccountName()));
+            NetworkService.getInstance().sendPacketToAuthServer(new PlayerLogout(client.getAccountName())); // TODO to specific authserver
             client.setProtocolOk(false);
             client.close(new KeyPacket(client.enableCrypt(), 0));
         } else {

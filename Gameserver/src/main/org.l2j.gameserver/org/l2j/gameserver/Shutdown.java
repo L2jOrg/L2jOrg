@@ -30,9 +30,9 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.server.OnServerShutDown;
 import org.l2j.gameserver.network.Disconnection;
+import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.gs2as.OnlineStatus;
+import org.l2j.gameserver.network.auth.gs2as.OnlineStatus;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.World;
@@ -100,7 +100,7 @@ public class Shutdown extends Thread {
                     getInstance().setMode(ShutdownMode.GM_RESTART);
                     System.exit(2);
                 }
-                case ABORT -> AuthServerCommunication.getInstance().sendPacket(new OnlineStatus(true));
+                case ABORT -> NetworkService.getInstance().sendPacketToAuthServer(new OnlineStatus(true));
             }
         }
     }
@@ -115,7 +115,7 @@ public class Shutdown extends Thread {
             case GM_RESTART -> LOGGER.info("GM restart received. Restarting NOW!");
         }
 
-        AuthServerCommunication.getInstance().shutdown();
+        NetworkService.getInstance().closeAuthServerConnection();
         LOGGER.info("Auth server communication has been shut down.");
 
         // last byebye, save all data and quit this server
@@ -123,8 +123,8 @@ public class Shutdown extends Thread {
 
         // saveData sends messages to exit players, so shutdown selector after it
         try {
-            GameServer.getInstance().getConnectionHandler().shutdown();
-            LOGGER.info("Game Server: Networking has been shut down.");
+            NetworkService.getInstance().shutdown();
+            LOGGER.info("Networking has been shut down.");
 
             WorldTimeController.getInstance().stopTimer();
             LOGGER.info("Game Time Controller: Timer stopped.");
@@ -222,7 +222,7 @@ public class Shutdown extends Thread {
                 switch (secondsShut) {
                     case 540, 480, 420, 360, 300, 240, 180, 120, 30, 10, 5, 1 -> SendServerQuit(secondsShut);
                     case 60 -> {
-                        AuthServerCommunication.getInstance().sendPacket(new OnlineStatus(false));
+                        NetworkService.getInstance().sendPacketToAuthServer(new OnlineStatus(false));
                         SendServerQuit(60);
                     }
                 }

@@ -16,23 +16,38 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.gs2as;
+package org.l2j.gameserver.network.auth.gs2as;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.authcomm.AuthServerClient;
-import org.l2j.gameserver.network.authcomm.SendablePacket;
+import org.l2j.gameserver.network.auth.AuthServerClient;
+import org.l2j.gameserver.network.auth.SendablePacket;
 
-public class OnlineStatus extends SendablePacket
+/**
+ * @Author: Death
+ * @Date: 8/2/2007
+ * @Time: 14:35:35
+ */
+public class ChangePassword extends SendablePacket
 {
-	private final boolean _online;
+	public String _account;
+	public String _oldPass;
+	public String _newPass;
+	public String _hwid;
 
-	public OnlineStatus(boolean online)
+	public ChangePassword(String account, String oldPass, String newPass, String hwid)
 	{
-		_online = online;
+		_account = account;
+		_oldPass = oldPass;
+		_newPass = newPass;
+		_hwid = hwid;
 	}
 
+	@Override
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
-		buffer.writeByte(0x01);
-		buffer.writeByte(_online);
+		buffer.writeByte(0x08);
+		buffer.writeString(_account);
+		buffer.writeString(_oldPass);
+		buffer.writeString(_newPass);
+		buffer.writeString(_hwid);
 	}
 }

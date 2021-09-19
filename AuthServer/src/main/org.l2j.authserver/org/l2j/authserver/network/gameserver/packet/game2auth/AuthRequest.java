@@ -34,31 +34,35 @@ public class AuthRequest extends GameserverReadablePacket {
 	private  int desiredId;
     private  boolean acceptAlternativeId;
 	private  int maxPlayers;
-	private  int port;
 	private  String[] hosts;
 	private  int serverType;
     private byte ageLimit;
     private boolean showBrackets;
     private boolean isPvp;
+    private short[] ports;
 
     @Override
 	protected void readImpl() {
 
 		desiredId = readByte();
-        acceptAlternativeId = readByte() == 0x01;
+        acceptAlternativeId = readBoolean();
         serverType = readInt();
         maxPlayers = readInt();
         ageLimit = readByte();
-        showBrackets = readByte() == 0x01;
-        isPvp = readByte() == 0x01;
+        showBrackets = readBoolean();
+        isPvp = readBoolean();
 
-        hosts = new String[readShort() * 2];
+        hosts = new String[readByte() * 2];
         for (int i = 0; i < hosts.length; i+=2) {
             hosts[i] =  readString();
             hosts[i+1] = readString();
         }
 
-        port = readShort();
+        var portsSize = readByte();
+        ports = new short[portsSize];
+        for (byte i = 0; i < portsSize; i++) {
+            ports[i] = readShort();
+        }
     }
 
 	@Override
@@ -105,7 +109,7 @@ public class AuthRequest extends GameserverReadablePacket {
         client.setGameServerInfo(gsi);
         client.setState(ServerClientState.AUTHED);
         gsi.setClient(client);
-        gsi.setPort(port);
+        gsi.setPorts(ports);
         gsi.setHosts(hosts);
         gsi.setMaxPlayers(maxPlayers);
         gsi.setAuthed(true);

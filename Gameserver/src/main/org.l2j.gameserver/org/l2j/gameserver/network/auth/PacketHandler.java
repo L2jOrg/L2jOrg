@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm;
+package org.l2j.gameserver.network.auth;
 
 import io.github.joealisson.mmocore.ReadableBuffer;
 import io.github.joealisson.mmocore.ReadablePacket;
-import org.l2j.gameserver.network.authcomm.as2gs.*;
+import org.l2j.gameserver.network.auth.as2gs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

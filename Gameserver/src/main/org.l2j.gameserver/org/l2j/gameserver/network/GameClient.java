@@ -37,8 +37,8 @@ import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.PlayerFactory;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
+import org.l2j.gameserver.network.auth.AuthNetworkService;
+import org.l2j.gameserver.network.auth.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.FloodProtectors;
@@ -106,11 +106,11 @@ public final class GameClient extends Client<Connection<GameClient>> {
 
         if(nonNull(account)) {
             if (state == ConnectionState.AUTHENTICATED) {
-                AuthServerCommunication.getInstance().removeAuthedClient(account.getAccountName());
+                NetworkService.getInstance().removeAuthedClient(account.getAccountName());
             } else {
-                AuthServerCommunication.getInstance().removeWaitingClient(account.getAccountName());
+                NetworkService.getInstance().removeWaitingClient(account.getAccountName());
             }
-            AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(account.getAccountName()));
+            NetworkService.getInstance().sendPacketToAuthServer(new PlayerLogout(account.getAccountName())); // TODO send to specific auth server
         }
         state = ConnectionState.DISCONNECTED;
         Disconnection.of(this).onDisconnection();
