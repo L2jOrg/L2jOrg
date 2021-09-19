@@ -16,29 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.gs2as;
+package org.l2j.gameserver.network.auth.gs2as;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.authcomm.AuthServerClient;
-import org.l2j.gameserver.network.authcomm.SendablePacket;
+import org.l2j.gameserver.network.auth.AuthServerClient;
+import org.l2j.gameserver.network.auth.SendablePacket;
 
-public class ChangeAccessLevel extends SendablePacket
-{
-	private final String account;
-	private final int level;
-	private final int banExpire;
+public class PlayerInGame extends SendablePacket {
+    private final String[] accounts;
 
-	public ChangeAccessLevel(String account, int level, int banExpire)
-	{
-		this.account = account;
-		this.level = level;
-		this.banExpire = banExpire;
-	}
+    public PlayerInGame(String... accounts) {
+        this.accounts = accounts;
+    }
 
-	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
-		buffer.writeByte(0x11);
-		buffer.writeString(account);
-		buffer.writeInt(level);
-		buffer.writeInt(banExpire);
-	}
+    @Override
+    protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+        buffer.writeByte(0x03);
+        buffer.writeShort(accounts.length);
+        for (String account : accounts) {
+            buffer.writeString(account);
+        }
+    }
 }

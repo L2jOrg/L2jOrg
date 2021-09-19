@@ -16,17 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.as2gs;
+package org.l2j.gameserver.network.auth.as2gs;
 
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.ConnectionState;
-import org.l2j.gameserver.network.Disconnection;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.ReceivablePacket;
-import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
+import org.l2j.gameserver.network.*;
+import org.l2j.gameserver.network.auth.AuthNetworkService;
+import org.l2j.gameserver.network.auth.ReceivablePacket;
+import org.l2j.gameserver.network.auth.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.serverpackets.LoginFail;
 import org.l2j.gameserver.network.serverpackets.PlayerSelectionInfo;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
@@ -59,7 +56,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
 
     @Override
     protected void runImpl() {
-        GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
+        GameClient client = NetworkService.getInstance().removeWaitingClient(account); // TODO to specific authserver
         if(isNull(client)) {
             return;
         }
@@ -69,7 +66,7 @@ public class PlayerAuthResponse extends ReceivablePacket {
             client.setConnectionState(ConnectionState.AUTHENTICATED);
             client.sendPacket(LoginFail.LOGIN_SUCCESS);
 
-            GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);
+            GameClient oldClient =  null; // TODO AuthNetworkService.getInstance().addAuthedClient(client);
             if(nonNull(oldClient))  {
                 oldClient.setConnectionState(ConnectionState.DISCONNECTED);
                 Player activeChar = oldClient.getPlayer();

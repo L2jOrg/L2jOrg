@@ -49,7 +49,8 @@ public class GameServerInfo {
 
     // network
     private IPAddress[] hosts;
-    private int _port;
+    private short[] ports;
+    private int nextPort;
 
     private boolean isPvp;
     private boolean _isShowingBrackets;
@@ -98,7 +99,7 @@ public class GameServerInfo {
 
     public void setDown() {
         setAuthed(false);
-        setPort(0);
+        setPorts(new short[] { 0 });
         setStatus(ServerStatus.STATUS_DOWN);
         accounts.clear();
     }
@@ -144,12 +145,12 @@ public class GameServerInfo {
         return _status;
     }
 
-    public int getPort() {
-        return _port;
+    public int getNextPort() {
+        return ports[nextPort++ % ports.length];
     }
 
-    public void setPort(int port) {
-        _port = port;
+    public void setPorts(short[] port) {
+        ports = port;
     }
 
     public void setMaxPlayers(int maxPlayers) {

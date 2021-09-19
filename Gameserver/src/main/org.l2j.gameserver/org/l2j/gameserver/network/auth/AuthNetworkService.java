@@ -16,16 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm;
+package org.l2j.gameserver.network.auth;
 
+import io.github.joealisson.mmocore.Connection;
 import io.github.joealisson.mmocore.Connector;
-import io.github.joealisson.mmocore.PacketExecutor;
-import io.github.joealisson.mmocore.ReadablePacket;
+import io.github.joealisson.mmocore.PacketHandler;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.authcomm.gs2as.ChangePassword;
-import org.l2j.gameserver.network.authcomm.gs2as.ServerStatus;
-import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.network.NetworkService;
+import org.l2j.gameserver.network.auth.gs2as.ChangePassword;
+import org.l2j.gameserver.network.auth.gs2as.ServerStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,33 +39,39 @@ import java.util.concurrent.TimeUnit;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
-import static org.l2j.gameserver.network.authcomm.gs2as.ServerStatus.SERVER_LIST_TYPE;
+import static org.l2j.gameserver.network.auth.gs2as.ServerStatus.SERVER_LIST_TYPE;
 
 /**
  * @author JoeAlisson
  */
-public class AuthServerCommunication implements Runnable, PacketExecutor<AuthServerClient> {
+public class AuthNetworkService implements Runnable {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(AuthServerCommunication.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthNetworkService.class);
 
     private final Map<String, GameClient> waitingClients = new ConcurrentHashMap<>();
     private final Map<String, GameClient> authedClients = new ConcurrentHashMap<>();
+    private final NetworkService.Network network;
 
     private AuthServerClient client;
     private final Connector<AuthServerClient> connector;
     private volatile boolean shutdown = false;
 
-    private AuthServerCommunication() {
-        connector = Connector.create(AuthServerClient::new, new PacketHandler(), this);
+    public AuthNetworkService(NetworkService.Network network, PacketHandler<AuthServerClient> packetHandler) {
+        this.network = network;
+        connector = Connector.create(this::createClient, packetHandler, ThreadPool::execute);
+    }
+
+    private AuthServerClient createClient(Connection<AuthServerClient> tConnection) {
+        return new AuthServerClient(tConnection, this);
     }
 
     public void connect() throws IOException, ExecutionException, InterruptedException {
         InetSocketAddress address;
-        if(isNullOrEmpty(ServerSettings.authServerAddress())) {
+        if(isNullOrEmpty(network.authServerHost())) {
             LOGGER.warn("Auth server address not configured trying to connect to localhost");
-            address = new InetSocketAddress(ServerSettings.authServerPort());
+            address = new InetSocketAddress(network.authServerPort());
         } else {
-            address =  new InetSocketAddress(ServerSettings.authServerAddress(), ServerSettings.authServerPort());
+            address = new InetSocketAddress(network.authServerHost(), network.authServerPort());
         }
         if(nonNull(client)) {
             client.close();
@@ -111,11 +117,6 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         return authedClients.keySet().toArray(String[]::new);
     }
 
-    @Override
-    public void execute(ReadablePacket<AuthServerClient> packet) {
-        ThreadPool.execute(packet);
-    }
-
     public void shutdown() {
         shutdown = true;
         if(nonNull(client) && client.isConnected()) {
@@ -149,11 +150,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
         sendPacket(new ServerStatus().add(SERVER_LIST_TYPE, type));
     }
 
-    public static AuthServerCommunication getInstance() {
-        return Singleton.INSTANCE;
-    }
-
-    private static class Singleton {
-        private static final AuthServerCommunication INSTANCE = new AuthServerCommunication();
+    public NetworkService.Network network() {
+        return network;
     }
 }

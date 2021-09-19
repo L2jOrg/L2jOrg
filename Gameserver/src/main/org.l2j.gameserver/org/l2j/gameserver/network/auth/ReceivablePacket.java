@@ -16,32 +16,41 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.as2gs;
+package org.l2j.gameserver.network.auth;
 
-import org.l2j.gameserver.data.database.dao.PlayerDAO;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.ReceivablePacket;
-import org.l2j.gameserver.network.authcomm.gs2as.SetAccountInfo;
+import io.github.joealisson.mmocore.ReadablePacket;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import static org.l2j.commons.database.DatabaseAccess.getDAO;
-
-/**
- * @author VISTALL
- * @author JoeAlisson
- */
-public class GetAccountInfo extends ReceivablePacket {
-
-	private String account;
+public abstract class ReceivablePacket extends ReadablePacket<AuthServerClient> {
+	private static final Logger logger = LoggerFactory.getLogger(ReceivablePacket.class);
 
 	@Override
-	protected void readImpl()
-	{
-		account = readString();
+	public final boolean read() {
+		try {
+			readImpl();
+		} catch(Exception e) {
+			logger.error(e.getLocalizedMessage(), e);
+			return false;
+		}
+		return true;
 	}
 
 	@Override
-	protected void runImpl() {
-		int playerSize = getDAO(PlayerDAO.class).playerCountByAccount(account);
-		AuthServerCommunication.getInstance().sendPacket(new SetAccountInfo(account, playerSize));
+	public final void run() {
+		try {
+			runImpl();
+		} catch(Exception e) {
+			logger.error(e.getLocalizedMessage(), e);
+		}
+	}
+
+	protected abstract void readImpl();
+
+	protected abstract void runImpl();
+
+	protected void sendPacket(SendablePacket sp)
+	{
+		client.sendPacket(sp);
 	}
 }

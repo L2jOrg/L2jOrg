@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.as2gs;
+package org.l2j.gameserver.network.auth.as2gs;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.ReceivablePacket;
+import org.l2j.gameserver.network.auth.ReceivablePacket;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
 
 public class KickPlayer extends ReceivablePacket {
@@ -36,9 +36,9 @@ public class KickPlayer extends ReceivablePacket {
 
     @Override
     protected void runImpl() {
-        GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
+        GameClient client = NetworkService.getInstance().removeWaitingClient(account);
         if (client == null)
-            client = AuthServerCommunication.getInstance().removeAuthedClient(account);
+            client = NetworkService.getInstance().removeAuthedClient(account);
         if (client == null)
             return;
 

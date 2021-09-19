@@ -16,26 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm;
+package org.l2j.gameserver.network.auth.gs2as;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import io.github.joealisson.mmocore.WritablePacket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.l2j.gameserver.network.auth.AuthServerClient;
+import org.l2j.gameserver.network.auth.SendablePacket;
 
-public abstract class SendablePacket extends WritablePacket<AuthServerClient> {
-    private static final Logger logger = LoggerFactory.getLogger(SendablePacket.class);
+public class ReduceAccountPoints extends SendablePacket
+{
+	private final String account;
+	private final int count;
 
-    @Override
-    public boolean write(AuthServerClient client, WritableBuffer buffer) {
-        try {
-            writeImpl(client, buffer);
-        } catch(Exception e) {
-            logger.error(e.getLocalizedMessage(), e);
-            return false;
-        }
-        return true;
-    }
+	public ReduceAccountPoints(String account, int count)
+	{
+		this.account = account;
+		this.count = count;
+	}
 
-    protected abstract void writeImpl(AuthServerClient client, WritableBuffer buffer);
+	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
+		buffer.writeByte(0x12);
+		buffer.writeString(account);
+		buffer.writeInt(count);
+	}
 }

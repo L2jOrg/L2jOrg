@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<networks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org"  xsi:schemaLocation="http://l2j.org xsd/networking.xsd" >
+
+    <network ports="7777" auth-server-host="localhost" auth-server-port="9014">
+        <auto-discovery/>
+    </network>
+
+<!--
+    <network ports="7778" auth-server-host="localhost" auth-server-port="9014">
+        <subnet address="0.0.0.0/0" host="$external"/>
+        <subnet address="127.0.0.0/0" host="127.0.0.1"/>
+
+        <subnet address="10.0.0.0/8" host="10.0.0.0" />
+        <subnet address="172.16.0.0/19" host="172.16.0.1" />
+        <subnet address="192.168.0.0/16" host="192.168.0.2" />
+        <subnet address="192.168.100.0/24" host="192.168.100.3" />
+    </network>
+-->
+
+</networks>

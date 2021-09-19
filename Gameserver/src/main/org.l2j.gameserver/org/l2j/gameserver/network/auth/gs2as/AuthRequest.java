@@ -16,15 +16,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.gs2as;
+package org.l2j.gameserver.network.auth.gs2as;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.network.authcomm.AuthServerClient;
-import org.l2j.gameserver.network.authcomm.SendablePacket;
+import org.l2j.gameserver.network.NetworkService;
+import org.l2j.gameserver.network.auth.AuthServerClient;
+import org.l2j.gameserver.network.auth.SendablePacket;
 import org.l2j.gameserver.settings.ServerSettings;
 
+/**
+ * @author JoeAlisson
+ */
 public class AuthRequest extends SendablePacket {
+
+	private final NetworkService.Network network;
+
+	public AuthRequest(NetworkService.Network network) {
+		this.network = network;
+	}
 
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x00);
@@ -37,13 +46,14 @@ public class AuthRequest extends SendablePacket {
 		buffer.writeByte(ServerSettings.isShowingBrackets());
 		buffer.writeByte(ServerSettings.isPvP());
 
-		var hosts = Config.GAME_SERVER_HOSTS.size();
-		buffer.writeShort(hosts);
-
-		for (int i = 0; i < Config.GAME_SERVER_HOSTS.size(); i++) {
-			buffer.writeString(Config.GAME_SERVER_HOSTS.get(i));
-			buffer.writeString(Config.GAME_SERVER_SUBNETS.get(i));
+		buffer.writeByte(network.subnets().size());
+		for (NetworkService.Subnet subnet : network.subnets()) {
+			buffer.writeString(subnet.host());
+			buffer.writeString(subnet.address());
 		}
-		buffer.writeShort(ServerSettings.port());
+		buffer.writeByte(network.ports().length);
+		for (var port : network.ports()) {
+			buffer.writeShort(port);
+		}
 	}
 }

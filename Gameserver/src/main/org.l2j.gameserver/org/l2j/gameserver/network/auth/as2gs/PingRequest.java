@@ -16,23 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.gs2as;
+package org.l2j.gameserver.network.auth.as2gs;
 
-import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.authcomm.AuthServerClient;
-import org.l2j.gameserver.network.authcomm.SendablePacket;
+import org.l2j.gameserver.network.NetworkService;
+import org.l2j.gameserver.network.auth.AuthNetworkService;
+import org.l2j.gameserver.network.auth.ReceivablePacket;
+import org.l2j.gameserver.network.auth.gs2as.PingResponse;
 
-public class PlayerLogout extends SendablePacket {
-	private final String account;
+public class PingRequest extends ReceivablePacket {
 
-	public PlayerLogout(String account)
-	{
-		this.account = account;
+	@Override
+	public void readImpl() {
+
 	}
 
 	@Override
-	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
-		buffer.writeByte(0x04);
-		buffer.writeString(account);
+	protected void runImpl() {
+		NetworkService.getInstance().sendPacketToAuthServer(new PingResponse()); // TODO send to specific authserver
 	}
 }

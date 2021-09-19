@@ -76,7 +76,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.conditions;
     exports org.l2j.gameserver.model.item.type;
     exports org.l2j.gameserver.model.events.returns;
-    exports org.l2j.gameserver.network.authcomm;
+    exports org.l2j.gameserver.network.auth;
     exports org.l2j.gameserver.model.teleporter;
     exports org.l2j.gameserver.model.buylist;
     exports org.l2j.gameserver.taskmanager;

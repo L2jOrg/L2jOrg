@@ -16,36 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.authcomm.gs2as;
+package org.l2j.gameserver.network.auth.gs2as;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.network.GameClient;
-import org.l2j.gameserver.network.authcomm.AuthServerClient;
-import org.l2j.gameserver.network.authcomm.SendablePacket;
+import org.l2j.gameserver.network.auth.AuthServerClient;
+import org.l2j.gameserver.network.auth.SendablePacket;
 
-public class PlayerAuthRequest extends SendablePacket
+public class ChangeAccessLevel extends SendablePacket
 {
 	private final String account;
-	private final int playOkID1;
-    private final int playOkID2;
-    private final int loginOkID1;
-    private final int loginOkID2;
+	private final int level;
+	private final int banExpire;
 
-	public PlayerAuthRequest(GameClient client)
+	public ChangeAccessLevel(String account, int level, int banExpire)
 	{
-		account = client.getAccountName();
-		playOkID1 = client.getSessionKey().getGameServerSessionId();
-		playOkID2 = client.getSessionKey().getGameServerAccountId();
-		loginOkID1 = client.getSessionKey().getAuthAccountId();
-		loginOkID2 = client.getSessionKey().getAuthKey();
+		this.account = account;
+		this.level = level;
+		this.banExpire = banExpire;
 	}
 
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
-		buffer.writeByte(0x02);
+		buffer.writeByte(0x11);
 		buffer.writeString(account);
-		buffer.writeInt(playOkID1);
-		buffer.writeInt(playOkID2);
-		buffer.writeInt(loginOkID1);
-		buffer.writeInt(loginOkID2);
+		buffer.writeInt(level);
+		buffer.writeInt(banExpire);
 	}
 }

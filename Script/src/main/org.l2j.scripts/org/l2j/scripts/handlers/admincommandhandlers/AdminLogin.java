@@ -22,7 +22,8 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ServerType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.network.NetworkService;
+import org.l2j.gameserver.network.auth.AuthNetworkService;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -111,7 +112,7 @@ public class AdminLogin implements IAdminCommandHandler
 				if (ServerSettings.type() != newType)
 				{
 					ServerSettings.setType(newType);
-					AuthServerCommunication.getInstance().sendServerType(newType);
+					NetworkService.getInstance().sendServerType(newType);
 					BuilderUtil.sendSysMessage(activeChar, "Server Type changed to " + getServerTypeName(newType));
 					showMainPage(activeChar);
 				}

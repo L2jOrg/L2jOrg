@@ -52,6 +52,7 @@ public class Util {
     public static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     public static final Predicate<String> ANY_PATTERN = Pattern.compile(".*").asMatchPredicate();
     public static final int[] INT_ARRAY_EMPTY = new int[0];
+    public static final short[] SHORT_ARRAY_EMPTY = new short[0];
     public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
 
     private Util() {
