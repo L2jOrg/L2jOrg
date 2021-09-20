@@ -19,43 +19,32 @@
 package org.l2j.gameserver.network.auth.as2gs;
 
 import org.l2j.gameserver.network.NetworkService;
-import org.l2j.gameserver.network.auth.AuthNetworkService;
 import org.l2j.gameserver.network.auth.ReceivablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class LoginServerFail extends ReceivablePacket {
+public class AuthFail extends ReceivablePacket {
 
-    private static final Logger logger = LoggerFactory.getLogger(LoginServerFail.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthFail.class);
 
     private static final String[] REASONS = {
-        "none",
         "IP banned",
         "IP reserved",
-        "wrong hexid",
         "ID reserved",
         "no free ID",
         "not authed",
         "already logged in"
     };
 
-    private String _reason;
-    private boolean _restartConnection = true;
+    private byte reasonId;
 
     @Override
     protected void readImpl() {
-        int reasonId = readByte();
-        if(available() <= 0) {
-            _reason = "Authserver registration failed! Reason: " + REASONS[reasonId];
-        } else {
-            _reason = readString();
-            _restartConnection = readByte() > 0;
-        }
+        reasonId = readByte();
     }
 
     protected void runImpl() {
-        logger.warn(_reason);
-        if(!_restartConnection)
-            NetworkService.getInstance().closeAuthServerConnection(); // TODO do for specific authserver
+        LOGGER.error("Auth server registration failed! Reason: {}", REASONS[reasonId]);
+        NetworkService.getInstance().closeAuthServerConnection(); // TODO do for specific authserver
     }
 }

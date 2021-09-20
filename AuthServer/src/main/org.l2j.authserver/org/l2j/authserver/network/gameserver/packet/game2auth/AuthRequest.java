@@ -23,28 +23,30 @@ import org.l2j.authserver.data.database.dao.GameserverDAO;
 import org.l2j.authserver.network.GameServerInfo;
 import org.l2j.authserver.network.gameserver.ServerClientState;
 import org.l2j.authserver.network.gameserver.packet.auth2game.AuthResponse;
+import org.l2j.authserver.settings.AuthServerSettings;
 
 import static java.util.Objects.nonNull;
-import static org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail.*;
+import static org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail.*;
 import static org.l2j.authserver.settings.AuthServerSettings.acceptNewGameServerEnabled;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public class AuthRequest extends GameserverReadablePacket {
 
-	private  int desiredId;
-    private  boolean acceptAlternativeId;
-	private  int maxPlayers;
-	private  String[] hosts;
-	private  int serverType;
+	private int desiredId;
+    private boolean acceptAlternativeId;
+	private int maxPlayers;
+	private String[] hosts;
+	private int serverType;
     private byte ageLimit;
     private boolean showBrackets;
     private boolean isPvp;
     private short[] ports;
+    private String authKey;
 
     @Override
 	protected void readImpl() {
-
 		desiredId = readByte();
+        authKey = readSizedString();
         acceptAlternativeId = readBoolean();
         serverType = readInt();
         maxPlayers = readInt();
@@ -67,6 +69,10 @@ public class AuthRequest extends GameserverReadablePacket {
 
 	@Override
 	protected void runImpl()  {
+        if(!AuthServerSettings.acceptKey(authKey)) {
+            client.close(FailReason.NOT_AUTHED);
+            return;
+        }
         GameServerManager gameServerManager = GameServerManager.getInstance();
         GameServerInfo gsi = gameServerManager.getRegisteredGameServerById(desiredId);
 
@@ -83,7 +89,7 @@ public class AuthRequest extends GameserverReadablePacket {
 
     private void authenticGameServer(GameServerInfo gsi) {
         if (gsi.isAuthed()) {
-            client.close(REASON_ALREADY_LOGGED);
+            client.close(FailReason.REASON_ALREADY_LOGGED);
         } else {
             updateGameServerInfo(gsi);
         }
@@ -97,10 +103,10 @@ public class AuthRequest extends GameserverReadablePacket {
                 gameServerManager.registerServerOnDB(gsi);
                 return  gsi;
             } else {
-                client.close(REASON_NO_FREE_ID);
+                client.close(FailReason.REASON_NO_FREE_ID);
             }
         } else {
-            client.close(NOT_AUTHED);
+            client.close(FailReason.NOT_AUTHED);
         }
         return null;
     }

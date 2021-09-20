@@ -25,7 +25,8 @@ import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.GameServerInfo;
 import org.l2j.authserver.network.crypt.AuthServerCrypt;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;
-import org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail;
+import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail;
+import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail.FailReason;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -71,8 +72,8 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
         return state;
     }
 
-    public void close(int reason) {
-        close(new LoginGameServerFail(reason));
+    public void close(FailReason reason) {
+        close(new GameServerAuthFail(reason));
     }
 
     public void setGameServerInfo(GameServerInfo gsi) {

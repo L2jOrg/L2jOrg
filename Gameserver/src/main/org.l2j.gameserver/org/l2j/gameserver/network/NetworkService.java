@@ -88,8 +88,9 @@ public class NetworkService extends XmlReader {
         var ports = parseShortArray(attr, "ports");
         var authServerHost = parseString(attr, "auth-server-host");
         var authServerPort = parseShort(attr, "auth-server-port");
+        var authServerKey = parseString(attr, "auth-server-key");
 
-        var network = new Network(ports, authServerHost, authServerPort, subnets);
+        var network = new Network(ports, authServerHost, authServerPort, authServerKey, subnets);
 
         if(networks.add(network)) {
             LOGGER.info("add new network on ports {} to auth server {}:{}",  Arrays.toString(ports), authServerHost, authServerPort);
@@ -277,5 +278,5 @@ public class NetworkService extends XmlReader {
 
     public static record Subnet(String address, String host) { }
 
-    public static record Network(short[] ports, String authServerHost, short authServerPort, Collection<Subnet> subnets) { }
+    public static record Network(short[] ports, String authServerHost, short authServerPort, String authServerKey, Collection<Subnet> subnets) { }
 }
