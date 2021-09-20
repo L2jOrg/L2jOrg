@@ -38,6 +38,7 @@ public class AuthRequest extends SendablePacket {
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x00);
 		buffer.writeByte(ServerSettings.serverId());
+		buffer.writeSizedString(network.authServerKey());
 		buffer.writeByte(ServerSettings.acceptAlternativeId());
 		buffer.writeInt(ServerSettings.type());
 		buffer.writeInt(ServerSettings.maximumOnlineUsers());

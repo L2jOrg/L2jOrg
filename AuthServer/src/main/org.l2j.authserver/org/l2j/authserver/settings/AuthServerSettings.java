@@ -19,6 +19,7 @@
 package org.l2j.authserver.settings;
 
 import org.l2j.commons.configuration.SettingsFile;
+import org.l2j.commons.util.Util;
 
 public class AuthServerSettings {
 
@@ -32,6 +33,7 @@ public class AuthServerSettings {
     private static boolean acceptNewGameServer;
     private static String usernameTemplate;
     private static int gmMinimumLevel;
+    private static String authKey;
 
     private AuthServerSettings() {
         // helper class
@@ -48,6 +50,7 @@ public class AuthServerSettings {
         acceptNewGameServer = settingsFile.getBoolean("AcceptNewGameServer", false);
         usernameTemplate = settingsFile.getString("UsernameTemplate", "[A-Za-z0-9_]{5,32}");
         gmMinimumLevel = settingsFile.getInt("GMMinLevel", 100);
+        authKey = settingsFile.getString("AuthKey", "");
     }
 
     public static String gameServerListenHost() {
@@ -90,4 +93,7 @@ public class AuthServerSettings {
         return gmMinimumLevel;
     }
 
+    public static boolean acceptKey(String key) {
+        return Util.isNullOrEmpty(authKey) || authKey.equals(key);
+    }
 }

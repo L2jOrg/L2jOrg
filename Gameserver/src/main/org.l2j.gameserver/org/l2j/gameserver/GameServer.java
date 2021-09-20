@@ -257,7 +257,7 @@ public class GameServer {
         ScriptEngineManager.init();
         ExtensionBoot.initializers();
 
-      //  INSTANCE = new GameServer();
+        INSTANCE = new GameServer();
         NetworkService.init();
 
         scheduleDeadLockDetector();

@@ -22,13 +22,13 @@ import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.PacketHandler;
 import io.github.joealisson.mmocore.ReadableBuffer;
 import io.github.joealisson.mmocore.ReadablePacket;
+import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail.FailReason;
 import org.l2j.authserver.network.gameserver.packet.game2auth.*;
 import org.l2j.commons.threading.ThreadPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static java.lang.Byte.toUnsignedInt;
-import static org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail.NOT_AUTHED;
 
 public final class GameServerPacketHandler implements PacketHandler<ServerClient>, PacketExecutor<ServerClient> {
 
@@ -91,7 +91,7 @@ public final class GameServerPacketHandler implements PacketHandler<ServerClient
 
     private void handleUnkownOpcode(ServerClient client, int opcode) {
         logger.warn("Unknown Opcode ({}) on state {} from ServerInfo, closing socket.", Integer.toHexString(opcode).toUpperCase(), client.getState());
-        client.close(NOT_AUTHED);
+        client.close(FailReason.NOT_AUTHED);
     }
 
     @Override

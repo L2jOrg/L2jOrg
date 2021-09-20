@@ -34,7 +34,7 @@ public class PacketHandler implements io.github.joealisson.mmocore.PacketHandler
 		int id = buf.readByte() & 0xff;
 		return switch(id) {
 			case 0x00 -> new AuthResponse();
-			case 0x01 -> new LoginServerFail();
+			case 0x01 -> new AuthFail();
 			case 0x02 -> new PlayerAuthResponse();
 			case 0x03 -> new KickPlayer();
 			case 0x04 -> new GetAccountInfo();

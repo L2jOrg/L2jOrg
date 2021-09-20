@@ -21,25 +21,28 @@ package org.l2j.authserver.network.gameserver.packet.auth2game;
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.network.gameserver.ServerClient;
 
-public class LoginGameServerFail extends GameServerWritablePacket {
+/**
+ * @author JoeAlisson
+ */
+public class GameServerAuthFail extends GameServerWritablePacket {
+	private final FailReason reason;
 
-	public static final int REASON_IP_BANNED = 1;
-	public static final int REASON_IP_RESERVED = 2;
-	public static final int REASON_ID_RESERVED = 4;
-	public static final int REASON_NO_FREE_ID = 5;
-	public static final int NOT_AUTHED = 6;
-	public static final int REASON_ALREADY_LOGGED = 7;
-
-	private final int reason;
-
-	public LoginGameServerFail(int reason) {
+	public GameServerAuthFail(FailReason reason) {
 		this.reason = reason;
 	}
 
 	@Override
 	protected void writeImpl(ServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x01);
-		buffer.writeByte(reason);
+		buffer.writeByte(reason.ordinal());
 	}
 
+	public enum FailReason {
+		REASON_IP_BANNED,
+		REASON_IP_RESERVED,
+		REASON_ID_RESERVED,
+		REASON_NO_FREE_ID,
+		NOT_AUTHED,
+		REASON_ALREADY_LOGGED,
+	}
 }
