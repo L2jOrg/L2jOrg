@@ -20,7 +20,6 @@ package org.l2j.scripts.custom.events.Race;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.ChatType;
@@ -32,6 +31,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.ArrayList;
@@ -127,7 +127,7 @@ public final class Race extends Event
 			return false;
 		}
 		// Check Custom Table - we use custom NPCs
-		if (!Config.CUSTOM_NPC_DATA)
+		if (!GeneralSettings.loadCustomNPC())
 		{
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPC table is disabled!");
 			return false;
@@ -138,7 +138,7 @@ public final class Race extends Event
 		// Set Event active
 		_isactive = true;
 		// Spawn Manager
-		_npc = recordSpawn(_start_npc, 18429, 145861, -3090, 0, false, 0);
+		_npc = recordSpawn(_start_npc, 18429, 145861, -3090, 0);
 		
 		// Announce event start
 		Broadcast.toAllOnlinePlayers("* Race Event started! *");
@@ -151,7 +151,7 @@ public final class Race extends Event
 		
 	}
 	
-	protected void StartRace()
+	private void StartRace()
 	{
 		// Abort race if no players signup
 		if (_players.isEmpty())
@@ -168,7 +168,7 @@ public final class Race extends Event
 		final int location = Rnd.get(_locations.length);
 		_randspawn = _coords[location];
 		// And spawn NPC
-		recordSpawn(_stop_npc, _randspawn[0], _randspawn[1], _randspawn[2], _randspawn[3], false, 0);
+		recordSpawn(_stop_npc, _randspawn[0], _randspawn[1], _randspawn[2], _randspawn[3]);
 		// Transform players and send message
 		for (Player player : _players)
 		{
@@ -280,7 +280,6 @@ public final class Race extends Event
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final String htmltext = event;
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
@@ -326,7 +325,7 @@ public final class Race extends Event
 			}
 			return "900104-notrans.htm";
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
@@ -354,9 +353,9 @@ public final class Race extends Event
 		return _players.contains(player) ? 1 : 0;
 	}
 	
-	private Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private Npc recordSpawn(int npcId, int x, int y, int z, int heading)
 	{
-		final Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
+		final Npc npc = addSpawn(npcId, x, y, z, heading, false, 0);
 		if (npc != null)
 		{
 			_npclist.add(npc);
@@ -394,7 +393,7 @@ public final class Race extends Event
 		activeChar.sendPacket(html);
 	}
 	
-	protected void timeUp()
+	private void timeUp()
 	{
 		Broadcast.toAllOnlinePlayers("Time up, nobody wins!");
 		eventStop();

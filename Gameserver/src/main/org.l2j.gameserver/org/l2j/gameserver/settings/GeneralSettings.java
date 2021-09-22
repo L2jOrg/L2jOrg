@@ -80,6 +80,10 @@ public class GeneralSettings {
     private static boolean enableCommunity;
     private static String bbsDefault;
     private static int worldChatPointsPerDay;
+    private static long punishTime;
+    private static boolean allowPvPInJail;
+    private static boolean disableTransactionInJail;
+    private static boolean loadCustomNPC;
 
     private GeneralSettings() {
         // helper class
@@ -150,6 +154,13 @@ public class GeneralSettings {
         enableCommunity = settingsFile.getBoolean("EnableCommunityBoard", true);
         bbsDefault = settingsFile.getString("BBSDefault", "_bbshome");
         worldChatPointsPerDay = settingsFile.getInt("WorldChatPointsPerDay", 10);
+
+        punishTime = settingsFile.getInt("PunishTime", 0) * 1000L;
+        allowPvPInJail = settingsFile.getBoolean("JailIsPvp", false);
+
+        disableTransactionInJail = settingsFile.getBoolean("JailDisableTransaction", false);
+
+        loadCustomNPC = settingsFile.getBoolean("CustomNpcData", false);
      }
 
     public static int banChatAdenaAdsReportCount() {
@@ -334,5 +345,21 @@ public class GeneralSettings {
 
     public static int worldChatPointsPerDay() {
         return worldChatPointsPerDay;
+    }
+
+    public static long punishTime() {
+        return punishTime;
+    }
+
+    public static boolean allowPvPInJail() {
+        return allowPvPInJail;
+    }
+
+    public static boolean disableTransactionInJail() {
+        return disableTransactionInJail;
+    }
+
+    public static boolean loadCustomNPC() {
+        return loadCustomNPC;
     }
 }
