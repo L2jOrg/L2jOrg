@@ -33,7 +33,6 @@ import java.util.regex.PatternSyntaxException;
 public class ServerSettings {
 
     private static int serverId;
-    private static boolean acceptAlternativeId;
 
     private static byte ageLimit;
     private static boolean showBrackets;
@@ -65,7 +64,6 @@ public class ServerSettings {
 
     public static void load(SettingsFile settingsFile) {
         serverId = settingsFile.getInt("RequestServerID", 1);
-        acceptAlternativeId = settingsFile.getBoolean("AcceptAlternateID", true);
         type = ServerType.maskOf(settingsFile.getStringArray("ServerListType"));
 
         maximumOnlineUsers = Math.max(1, settingsFile.getInt("MaximumOnlineUsers", 20));
@@ -120,10 +118,6 @@ public class ServerSettings {
         return serverId;
     }
 
-    public static void setServerId(int id) {
-        serverId = id;
-    }
-
     public static byte ageLimit() {
         return ageLimit;
     }
@@ -146,10 +140,6 @@ public class ServerSettings {
 
     public static int maximumOnlineUsers() {
         return maximumOnlineUsers;
-    }
-
-    public static boolean acceptAlternativeId() {
-        return acceptAlternativeId;
     }
 
     public static Path dataPackDirectory() {

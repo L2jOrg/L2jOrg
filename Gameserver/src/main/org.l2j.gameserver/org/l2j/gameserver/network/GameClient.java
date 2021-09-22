@@ -37,7 +37,6 @@ import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.PlayerFactory;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
-import org.l2j.gameserver.network.auth.AuthNetworkService;
 import org.l2j.gameserver.network.auth.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.CharacterSettings;

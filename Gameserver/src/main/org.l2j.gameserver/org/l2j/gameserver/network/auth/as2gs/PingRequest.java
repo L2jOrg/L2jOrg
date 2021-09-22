@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.auth.as2gs;
 
 import org.l2j.gameserver.network.NetworkService;
-import org.l2j.gameserver.network.auth.AuthNetworkService;
 import org.l2j.gameserver.network.auth.ReceivablePacket;
 import org.l2j.gameserver.network.auth.gs2as.PingResponse;
 

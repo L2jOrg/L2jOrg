@@ -22,7 +22,7 @@ import io.github.joealisson.mmocore.Buffer;
 import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
 import org.l2j.authserver.controller.GameServerManager;
-import org.l2j.authserver.network.GameServerInfo;
+import org.l2j.authserver.network.SingleServerInfo;
 import org.l2j.authserver.network.crypt.AuthServerCrypt;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail;
@@ -45,7 +45,7 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
     private RSAPublicKey publicKey;
     private AuthServerCrypt crypt;
     private ServerClientState state;
-    private GameServerInfo gameServerInfo;
+    private SingleServerInfo singleServerInfo;
 
     public ServerClient(Connection<ServerClient> con) {
 		super(con);
@@ -76,12 +76,12 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
         close(new GameServerAuthFail(reason));
     }
 
-    public void setGameServerInfo(GameServerInfo gsi) {
-        this.gameServerInfo = gsi;
+    public void setGameServerInfo(SingleServerInfo gsi) {
+        this.singleServerInfo = gsi;
     }
 
-    public GameServerInfo getGameServerInfo() {
-        return gameServerInfo;
+    public SingleServerInfo getGameServerInfo() {
+        return singleServerInfo;
     }
 
     @Override
@@ -129,19 +129,8 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
 
 	@Override
 	protected void onDisconnection() {
-
-        String serverName = getHostAddress();
-
-        var serverId = nonNull(gameServerInfo) ?  gameServerInfo.getId() : -1;
-
-        if(serverId != -1) {
-            serverName = String.format("[%d] %s", serverId, GameServerManager.getInstance().getServerNameById(serverId));
-        }
-        LOGGER.info("ServerInfo {}: Connection Lost", serverName);
-
-        if (AUTHED == state) {
-            gameServerInfo.setDown();
-            LOGGER.info("Server [{}] {} is now set as disconnect", serverId, GameServerManager.getInstance().getServerNameById(serverId));
+        if(singleServerInfo != null) {
+            GameServerManager.getInstance().onDisconnection(singleServerInfo, getHostAddress());
         }
 	}
 }

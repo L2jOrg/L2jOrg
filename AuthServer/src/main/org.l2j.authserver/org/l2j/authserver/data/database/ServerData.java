@@ -18,21 +18,21 @@
  */
 package org.l2j.authserver.data.database;
 
-import org.l2j.commons.database.annotation.Column;
+public class ServerData {
 
-public class ServerInfo {
-
-    @Column("server_id")
-    private int serverId;
-    private String host;
-    @Column("server_type")
-    private int serverType;
+    private int id;
+    private String key;
+    private int type;
 
     public int getId() {
-        return serverId;
+        return id;
     }
 
     public int getServerType() {
-        return serverType;
+        return type;
+    }
+
+    public String key() {
+        return key;
     }
 }

@@ -22,20 +22,20 @@ import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.gameserver.ServerClient;
 
+/**
+ * @author JoeAlisson
+ */
 public class AuthResponse extends GameServerWritablePacket {
 
-	private final int serverId;
 	private final String serverName;
 
 	public AuthResponse(int serverId) {
-		this.serverId = serverId;
         serverName = GameServerManager.getInstance().getServerNameById(serverId);
 	}
 
 	@Override
 	protected void writeImpl(ServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x00);
-		buffer.writeByte(serverId);
 		buffer.writeString(serverName);
 	}
 

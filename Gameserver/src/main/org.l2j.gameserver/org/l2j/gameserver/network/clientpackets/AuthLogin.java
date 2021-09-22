@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NetworkService;
-import org.l2j.gameserver.network.auth.AuthNetworkService;
 import org.l2j.gameserver.network.auth.gs2as.PlayerAuthRequest;
 import org.l2j.gameserver.network.serverpackets.ServerClose;
 

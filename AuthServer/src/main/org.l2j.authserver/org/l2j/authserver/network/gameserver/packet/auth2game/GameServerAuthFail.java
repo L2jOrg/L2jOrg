@@ -38,11 +38,11 @@ public class GameServerAuthFail extends GameServerWritablePacket {
 	}
 
 	public enum FailReason {
-		REASON_IP_BANNED,
-		REASON_IP_RESERVED,
-		REASON_ID_RESERVED,
-		REASON_NO_FREE_ID,
+		IP_BANNED,
+		IP_RESERVED,
+		ID_RESERVED,
 		NOT_AUTHED,
-		REASON_ALREADY_LOGGED,
+		BAD_DATA,
+		MISSING_KEY,
 	}
 }

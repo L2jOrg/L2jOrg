@@ -18,31 +18,38 @@
  */
 package org.l2j.gameserver.network.auth.as2gs;
 
-import org.l2j.gameserver.network.auth.AuthNetworkService;
+import org.l2j.commons.util.Util;
+import org.l2j.gameserver.network.auth.AuthServerClient;
 import org.l2j.gameserver.network.auth.ReceivablePacket;
 import org.l2j.gameserver.network.auth.gs2as.PlayerInGame;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
+
+/**
+ * @author JoeAlisson
+ */
 public class AuthResponse extends ReceivablePacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthResponse.class);
 
-    private int serverId;
     private String serverName;
 
     @Override
     protected void readImpl() {
-        serverId = readByte();
         serverName = readString();
     }
 
     @Override
     protected void runImpl() {
-        String[] accounts = new String[0]; //AuthNetworkService.getInstance().getAccounts(); // todo
-        sendPacket(new PlayerInGame(accounts));
-        ServerSettings.setServerId(serverId);
-        LOGGER.info("Registered on authserver as {} [{}]", serverId, serverName);
+        String[] accounts = client.authService().getAccounts();
+        if(!isNullOrEmpty(accounts)) {
+            sendPacket(new PlayerInGame(accounts));
+        }
+        LOGGER.info("Registered on authserver as {} [{}]", ServerSettings.serverId(), serverName);
     }
 }

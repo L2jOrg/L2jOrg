@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.auth.as2gs;
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.*;
-import org.l2j.gameserver.network.auth.AuthNetworkService;
 import org.l2j.gameserver.network.auth.ReceivablePacket;
 import org.l2j.gameserver.network.auth.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.serverpackets.LoginFail;

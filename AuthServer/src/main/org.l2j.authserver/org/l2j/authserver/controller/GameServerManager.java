@@ -21,10 +21,13 @@ package org.l2j.authserver.controller;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.authserver.data.database.ServerInfo;
+import org.l2j.authserver.data.database.ServerData;
 import org.l2j.authserver.data.database.dao.GameserverDAO;
 import org.l2j.authserver.data.xml.ServerNameReader;
-import org.l2j.authserver.network.GameServerInfo;
+import org.l2j.authserver.network.ClusterServerInfo;
+import org.l2j.authserver.network.ServerInfo;
+import org.l2j.authserver.network.SingleServerInfo;
+import org.l2j.authserver.network.gameserver.ServerClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +40,7 @@ public class GameServerManager {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GameServerManager.class);
 
-    private final IntMap<GameServerInfo> gameservers = new CHashIntMap<>();
+    private final IntMap<ServerInfo> gameservers = new CHashIntMap<>();
 
     private IntMap<String> serverNames = new HashIntMap<>();
 
@@ -62,50 +65,60 @@ public class GameServerManager {
     }
 
     private void loadRegisteredGameServers() {
-        for (ServerInfo serverInfo : getDAO(GameserverDAO.class).findAll()) {
-            GameServerInfo gsi = new GameServerInfo(serverInfo);
-            gameservers.put(serverInfo.getId(), gsi);
+        for (ServerData serverData : getDAO(GameserverDAO.class).findAll()) {
+            SingleServerInfo gsi = new SingleServerInfo(serverData);
+            gameservers.put(serverData.getId(), gsi);
         }
         LOGGER.info("Loaded {} registered Game Servers", gameservers.size());
     }
 
-    public IntMap<GameServerInfo> getRegisteredGameServers() {
+    public IntMap<ServerInfo> getRegisteredGameServers() {
         return gameservers;
     }
 
-    public GameServerInfo getRegisteredGameServerById(int id) {
+    public ServerInfo getRegisteredGameServerById(int id) {
         return gameservers.get(id);
     }
 
-    public boolean registerWithFirstAvaliableId(GameServerInfo gsi) {
-        // avoid two servers registering with the same "free" id
-        synchronized (gameservers) {
-            for (var entry : serverNames.entrySet()) {
-                if (!gameservers.containsKey(entry.getKey())) {
-                    gameservers.put(entry.getKey(), gsi);
-                    gsi.setId(entry.getKey());
-                    return true;
-                }
-            }
-        }
-        return false;
+    public SingleServerInfo register(String key, int id, ServerClient client, int type) {
+        var gsi = new SingleServerInfo(key, id, client, type);
+        gameservers.put(id, gsi);
+        getDAO(GameserverDAO.class).save(id, key, type);
+        return gsi;
     }
 
-    public void registerServerOnDB(GameServerInfo gsi) {
-        registerServerOnDB(gsi.getId(), gsi.getServerHost(), gsi.getServerType());
-    }
-
-    public void registerServerOnDB(int id, String externalHost, int serverType) {
-        getDAO(GameserverDAO.class).save(id, externalHost, serverType);
+    public SingleServerInfo registerInCluster(ServerInfo authedServer, ServerClient client) {
+        var gsi = new SingleServerInfo(authedServer.key(), authedServer.id(), client, authedServer.type());
+        gameservers.put(gsi.id(), ClusterServerInfo.of(authedServer, gsi));
+        return gsi;
     }
 
     public String getServerNameById(int id) {
         return serverNames.get(id);
     }
 
+    public void onDisconnection(SingleServerInfo info, String hostAddress) {
+        var serverInfo =  gameservers.get(info.id());
+        var name = serverNames.get(info.id());
+        if(serverInfo instanceof ClusterServerInfo cluster) {
+            info.setDown();
+            cluster.out(hostAddress);
+            LOGGER.info("Server host {} was disconnected from Cluster {}", hostAddress, name);
+            if(!cluster.isAuthed()) {
+                LOGGER.info("Server [{}] {} is now set as disconnected", info.id(), name);
+            }
+        } else {
+            if (info.isAuthed()) {
+                info.setDown();
+                LOGGER.info("Server [{}] {} is now set as disconnected", info.id(), name);
+            }
+        }
+    }
+
     public static GameServerManager getInstance() {
         return Singleton.INSTANCE;
     }
+
 
     private static class Singleton {
         private static final GameServerManager INSTANCE = new GameServerManager();

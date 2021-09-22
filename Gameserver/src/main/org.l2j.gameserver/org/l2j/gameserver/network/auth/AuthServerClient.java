@@ -28,11 +28,11 @@ import org.l2j.gameserver.network.auth.gs2as.AuthRequest;
  */
 public class AuthServerClient extends Client<Connection<AuthServerClient>> {
 
-    private final AuthNetworkService networkService;
+    private final AuthService authService;
 
-    AuthServerClient(Connection<AuthServerClient> connection, AuthNetworkService networkService) {
+    AuthServerClient(Connection<AuthServerClient> connection, AuthService authService) {
         super(connection);
-        this.networkService = networkService;
+        this.authService = authService;
     }
 
     public void sendPacket(SendablePacket packet) {
@@ -51,11 +51,15 @@ public class AuthServerClient extends Client<Connection<AuthServerClient>> {
 
     @Override
     protected void onDisconnection() {
-        networkService.restart();
+        authService.restart();
     }
 
     @Override
     public void onConnected() {
-        writePacket(new AuthRequest(networkService.network()));
+        writePacket(new AuthRequest(authService.network()));
+    }
+
+    public AuthService authService() {
+        return authService;
     }
 }

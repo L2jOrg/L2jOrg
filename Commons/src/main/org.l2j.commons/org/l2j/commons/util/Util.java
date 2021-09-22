@@ -79,6 +79,10 @@ public class Util {
         return isNull(data) || data.length == 0;
     }
 
+    public static <T> boolean isNullOrEmpty(T[] array) {
+        return array == null || array.length == 0;
+    }
+
     public static <T> int zeroIfNullOrElse(T obj, ToIntFunction<T> function) {
         return isNull(obj) ? 0 : function.applyAsInt(obj);
     }
@@ -286,5 +290,4 @@ public class Util {
     public static String formatDateTime(long epochMilli) {
         return  DEFAULT_DATE_TIME_FORMATTER.format(Instant.ofEpochMilli(epochMilli).atZone(ZoneId.systemDefault()));
     }
-
 }
