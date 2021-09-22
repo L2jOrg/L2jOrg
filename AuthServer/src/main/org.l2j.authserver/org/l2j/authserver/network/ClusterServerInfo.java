@@ -42,16 +42,28 @@ public final class ClusterServerInfo implements ServerInfo {
         if(!servers.isEmpty()) {
             referenceServer = servers.values().iterator().next();
         }
-
     }
-
 
     @Override
     public void requestAccountInfo(String account) {
-        var server = serverFromAccount(account);
+        var server = minLoadServer();
         if(server != null) {
             server.requestAccountInfo(account);
+        } else {
+            referenceServer.requestAccountInfo(account);
         }
+    }
+
+    private SingleServerInfo minLoadServer() {
+        float minLoad = Float.MAX_VALUE;
+        SingleServerInfo server = null;
+        for (var info : servers.values()) {
+            if(info.currentLoad() < minLoad) {
+                minLoad = info.currentLoad();
+                server = info;
+            }
+        }
+        return server;
     }
 
     private SingleServerInfo serverFromAccount(String account) {
@@ -109,7 +121,6 @@ public final class ClusterServerInfo implements ServerInfo {
                 minLoad = server.currentLoad();
             }
         }
-
         return endpoint;
     }
 

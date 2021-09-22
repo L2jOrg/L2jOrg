@@ -30,8 +30,12 @@ import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Array;
 import java.net.UnknownHostException;
+import java.util.Arrays;
+import java.util.Comparator;
 
+import static java.util.Arrays.sort;
 import static org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail.FailReason;
 import static org.l2j.authserver.settings.AuthServerSettings.acceptNewGameServerEnabled;
 
@@ -162,7 +166,6 @@ public class AuthRequest extends GameserverReadablePacket {
     }
 
     private void updateServerInfo(SingleServerInfo gsi) {
-
         client.setGameServerInfo(gsi);
         client.setState(ServerClientState.AUTHED);
         gsi.setClient(client);
@@ -185,7 +188,15 @@ public class AuthRequest extends GameserverReadablePacket {
                 LOGGER.warn("Could not resolve hostname", e);
             }
         }
-
+        Arrays.sort(endpoints, Comparator.comparingInt(this::mask).reversed());
         gsi.setEndpoints(endpoints);
+    }
+
+    private int mask(Endpoint e) {
+        int mask = 0;
+        for (var b : e.mask()) {
+            mask += ((int) b) & 0xFF;
+        }
+        return mask;
     }
 }
