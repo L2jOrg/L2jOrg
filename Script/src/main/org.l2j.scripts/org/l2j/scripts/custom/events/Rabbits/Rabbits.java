@@ -20,7 +20,6 @@ package org.l2j.scripts.custom.events.Rabbits;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
@@ -28,6 +27,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.quest.Event;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.ArrayList;
@@ -101,7 +101,7 @@ public final class Rabbits extends Event
 		}
 		
 		// Check starting conditions
-		if (!Config.CUSTOM_NPC_DATA)
+		if (!GeneralSettings.loadCustomNPC())
 		{
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPCs are disabled!");
 			return false;
@@ -111,11 +111,11 @@ public final class Rabbits extends Event
 		_isActive = true;
 		
 		// Spawn Manager
-		recordSpawn(_npcs, NPC_MANAGER, -59227, -56939, -2039, 64106, false, 0);
+		recordSpawn(_npcs, NPC_MANAGER, -59227, -56939, -2039, 64106, 0);
 		// Spawn Chests
 		for (int i = 0; i <= TOTAL_CHEST_COUNT; i++)
 		{
-			recordSpawn(_npcs, CHEST, Rnd.get(-60653, -58772), Rnd.get(-55830, -58146), -2030, 0, false, EVENT_TIME * 60000L);
+			recordSpawn(_npcs, CHEST, Rnd.get(-60653, -58772), Rnd.get(-55830, -58146), -2030, 0, EVENT_TIME * 60000L);
 		}
 		
 		// Announce event start
@@ -129,14 +129,12 @@ public final class Rabbits extends Event
 	}
 	
 	@Override
-	public boolean eventStop()
-	{
-		// Don't stop inactive event
-		if (!_isActive)
-		{
+	public boolean eventStop() {
+		if (!_isActive) {
 			return false;
 		}
-		
+		Broadcast.toAllOnlinePlayers("Rabbits Event: Time up!");
+
 		// Set inactive
 		_isActive = false;
 		
@@ -169,40 +167,27 @@ public final class Rabbits extends Event
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		String htmltext = null;
-		switch (event)
-		{
-			case "900101-1.htm":
-			{
-				htmltext = "900101-1.htm";
-				break;
-			}
-			case "transform":
-			{
-				if (player.isTransformed())
-				{
-					player.untransform();
-				}
-				if (player.isSitting())
-				{
-					player.standUp();
-				}
-				RABBIT_TRANSFORMATION.getSkill().applyEffects(player, player);
-				_players.add(player);
-				break;
-			}
-			case "END_RABBITS_EVENT":
-			{
-				Broadcast.toAllOnlinePlayers("Rabbits Event: Time up!");
-				eventStop();
-				break;
-			}
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		String htmlText = null;
+		switch (event) {
+			case "transform" -> transform(player);
+			case "END_RABBITS_EVENT" -> eventStop();
+			default -> htmlText = event;
 		}
-		return htmltext;
+		return htmlText;
 	}
-	
+
+	private void transform(Player player) {
+		if (player.isTransformed()) {
+			player.untransform();
+		}
+		if (player.isSitting()) {
+			player.standUp();
+		}
+		RABBIT_TRANSFORMATION.getSkill().applyEffects(player, player);
+		_players.add(player);
+	}
+
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
@@ -216,7 +201,7 @@ public final class Rabbits extends Event
 		{
 			if (!npc.isInvisible() && CommonUtil.contains(targets, npc))
 			{
-				dropItem(npc, caster, DROPLIST);
+				dropItem(npc, caster);
 				npc.deleteMe();
 				_npcs.remove(npc);
 				
@@ -247,10 +232,10 @@ public final class Rabbits extends Event
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	private static void dropItem(Npc npc, Player player, int[][] droplist)
+	private static void dropItem(Npc npc, Player player)
 	{
 		final int chance = Rnd.get(100);
-		for (int[] drop : droplist)
+		for (int[] drop : Rabbits.DROPLIST)
 		{
 			if (chance > drop[1])
 			{
@@ -260,9 +245,9 @@ public final class Rabbits extends Event
 		}
 	}
 	
-	private static void recordSpawn(Collection<Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private static void recordSpawn(Collection<Npc> npcs, int npcId, int x, int y, int z, int heading, long despawnDelay)
 	{
-		final Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
+		final Npc npc = addSpawn(npcId, x, y, z, heading, false, despawnDelay);
 		if (npc.getId() == CHEST)
 		{
 			npc.setIsImmobilized(true);

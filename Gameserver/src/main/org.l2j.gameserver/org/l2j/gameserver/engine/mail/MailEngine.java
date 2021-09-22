@@ -23,7 +23,6 @@ import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.MailDAO;
 import org.l2j.gameserver.data.database.data.MailData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
@@ -219,7 +218,7 @@ public final class MailEngine {
             return true;
         }
 
-        if (player.isJailed() && ((Config.JAIL_DISABLE_TRANSACTION && !items.isEmpty()) || GeneralSettings.disableChatInJail())) {
+        if (player.isJailed() && ((GeneralSettings.disableTransactionInJail() && !items.isEmpty()) || GeneralSettings.disableChatInJail())) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
             return true;
         }

@@ -27,14 +27,17 @@ configurations.all {
 dependencies {
     implementation project(':Commons')
 
+    runtimeOnly 'mysql:mysql-connector-java:8.0.26'
     runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.14.1'
-    runtimeOnly 'org.ehcache:ehcache:3.9.2'
+    runtimeOnly 'org.ehcache:ehcache:3.9.6'
 }
 
 jar {
 
     exclude('config/**')
     exclude('*.cfg')
+    exclude("sql/**")
+    exclude("servername.*")
 
     manifest {
         attributes('Built-By'    : System.getProperty('user.name'),
