@@ -19,7 +19,8 @@
             <xs:element name="auto-discovery"/>
             <xs:element name="subnet" type="SubNet" maxOccurs="unbounded"/>
         </xs:choice>
-        <xs:attribute name="ports" type="PortList" use="required"/>
+        <xs:attribute name="port" type="Port" use="required"/>
+        <xs:attribute name="key" type="xs:token" default=""/>
         <xs:attribute name="auth-server-host" type="IPv4" use="required"/>
         <xs:attribute name="auth-server-port" type="Port" use="required"/>
         <xs:attribute name="auth-server-key" type="xs:token" default=""/>
@@ -51,7 +52,4 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="PortList">
-        <xs:list itemType="Port"/>
-    </xs:simpleType>
 </xs:schema>

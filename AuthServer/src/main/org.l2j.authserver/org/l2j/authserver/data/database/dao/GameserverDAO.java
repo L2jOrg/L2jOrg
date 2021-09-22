@@ -18,20 +18,20 @@
  */
 package org.l2j.authserver.data.database.dao;
 
-import org.l2j.authserver.data.database.ServerInfo;
+import org.l2j.authserver.data.database.ServerData;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 
 import java.util.List;
 
-public interface GameserverDAO extends DAO<ServerInfo> {
+/**
+ * @author JoeAlisson
+ */
+public interface GameserverDAO extends DAO<ServerData> {
 
     @Query("SELECT * FROM gameservers")
-    List<ServerInfo> findAll();
+    List<ServerData> findAll();
 
-    @Query("INSERT INTO gameservers VALUES (:id:, :host:, :serverType:)")
-    void save(int id, String host, int serverType);
-
-    @Query("UPDATE gameservers  SET server_type = :serverType: WHERE server_id = :id:")
-    void updateServerType(int id, int serverType);
+    @Query("INSERT INTO gameservers VALUES (:id:, :key:, :type:)")
+    void save(int id, String key, int type);
 }

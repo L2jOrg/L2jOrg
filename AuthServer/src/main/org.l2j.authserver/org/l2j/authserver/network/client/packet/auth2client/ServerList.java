@@ -60,31 +60,31 @@ public final class ServerList extends AuthServerPacket {
         buffer.writeByte(client.getLastServer());
 
         for (var server : servers.values()) {
-            buffer.writeByte(server.getId());
+            buffer.writeByte(server.id());
 
-            byte[] address = server.getAddressFor(client.getHostAddress());
+            var endpoint = server.endpointFrom(client.getHostAddress());
 
-            buffer.writeBytes(address);
-            buffer.writeInt(server.getNextPort());
-            buffer.writeByte(server.getAgeLimit()); // minimum age
+            buffer.writeBytes(endpoint.host());
+            buffer.writeInt(endpoint.port());
+            buffer.writeByte(server.ageLimit()); // minimum age
             buffer.writeByte(server.isPvp());
-            buffer.writeShort(server.getOnlinePlayersCount());
-            buffer.writeShort(server.getMaxPlayers());
+            buffer.writeShort(server.onlineAccounts());
+            buffer.writeShort(server.maxAccounts());
 
-            var status = server.getStatus();
+            var status = server.status();
             if(ServerStatus.STATUS_GM_ONLY == status && client.getAccessLevel() < AuthServerSettings.gmMinimumLevel()) {
                 status = ServerStatus.STATUS_DOWN;
             }
 
             buffer.writeByte(ServerStatus.STATUS_DOWN != status);
-            buffer.writeInt(server.getServerType());
+            buffer.writeInt(server.type());
             buffer.writeByte(server.isShowingBrackets()); // Region
         }
 
-        buffer.writeShort(0xa4);
+        buffer.writeShort(0xA4);
         for (var server : servers.values()) {
-            buffer.writeByte(server.getId());
-            buffer.writeByte(client.getPlayersOnServer(server.getId()));
+            buffer.writeByte(server.id());
+            buffer.writeByte(client.getPlayersOnServer(server.id()));
         }
     }
 }

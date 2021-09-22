@@ -38,8 +38,8 @@ public class AuthRequest extends SendablePacket {
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x00);
 		buffer.writeByte(ServerSettings.serverId());
+		buffer.writeSizedString(network.key());
 		buffer.writeSizedString(network.authServerKey());
-		buffer.writeByte(ServerSettings.acceptAlternativeId());
 		buffer.writeInt(ServerSettings.type());
 		buffer.writeInt(ServerSettings.maximumOnlineUsers());
 		buffer.writeByte(ServerSettings.ageLimit());
@@ -52,9 +52,6 @@ public class AuthRequest extends SendablePacket {
 			buffer.writeString(subnet.host());
 			buffer.writeString(subnet.address());
 		}
-		buffer.writeByte(network.ports().length);
-		for (var port : network.ports()) {
-			buffer.writeShort(port);
-		}
+		buffer.writeShort(network.port());
 	}
 }

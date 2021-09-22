@@ -25,7 +25,7 @@ import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.xml.XmlReader;
-import org.l2j.gameserver.network.auth.AuthNetworkService;
+import org.l2j.gameserver.network.auth.AuthService;
 import org.l2j.gameserver.network.auth.PacketHandler;
 import org.l2j.gameserver.network.auth.SendablePacket;
 import org.l2j.gameserver.network.auth.gs2as.ServerStatus;
@@ -55,7 +55,7 @@ public class NetworkService extends XmlReader {
     private String ipServiceDiscovery;
     private final Set<Network> networks = new HashSet<>();
     private final Collection<ConnectionHandler<GameClient>> connectionHandlers = new ArrayList<>();
-    private final Collection<AuthNetworkService> authServers = new ArrayList<>();
+    private final Collection<AuthService> authServers = new ArrayList<>();
 
     private NetworkService() {
         // singleton
@@ -85,15 +85,16 @@ public class NetworkService extends XmlReader {
         var subnets = parseNetworkAddress(node.getFirstChild());
 
         var attr = node.getAttributes();
-        var ports = parseShortArray(attr, "ports");
+        var port = parseShort(attr, "port");
+        var key = parseString(attr, "key");
         var authServerHost = parseString(attr, "auth-server-host");
         var authServerPort = parseShort(attr, "auth-server-port");
         var authServerKey = parseString(attr, "auth-server-key");
 
-        var network = new Network(ports, authServerHost, authServerPort, authServerKey, subnets);
+        var network = new Network(key, port, authServerHost, authServerPort, authServerKey, subnets);
 
         if(networks.add(network)) {
-            LOGGER.info("add new network on ports {} to auth server {}:{}",  Arrays.toString(ports), authServerHost, authServerPort);
+            LOGGER.info("add new network on port {} to auth server {}:{}",  port, authServerHost, authServerPort);
         }
     }
 
@@ -195,7 +196,7 @@ public class NetworkService extends XmlReader {
     }
 
     public void closeAuthServerConnection() {
-        authServers.forEach(AuthNetworkService::shutdown);
+        authServers.forEach(AuthService::shutdown);
     }
 
     public void sendPacketToAuthServer(SendablePacket packet) {
@@ -247,16 +248,14 @@ public class NetworkService extends XmlReader {
         var authPacketHandler = new PacketHandler();
         for (Network network : instance.networks) {
 
-            for (short port : network.ports) {
-                if(!usedPorts.contains(port)) {
-                    var handler = ConnectionBuilder.create(new InetSocketAddress(port), GameClient::new,  packetHandler, ThreadPool::execute).build();
-                    handler.start();
-                    instance.connectionHandlers.add(handler);
-                    usedPorts.add(port);
-                }
+            if(!usedPorts.contains(network.port())) {
+                var handler = ConnectionBuilder.create(new InetSocketAddress(network.port()), GameClient::new,  packetHandler, ThreadPool::execute).build();
+                handler.start();
+                instance.connectionHandlers.add(handler);
+                usedPorts.add(network.port());
             }
 
-            var authServer = new AuthNetworkService(network, authPacketHandler);
+            var authServer = new AuthService(network, authPacketHandler);
             instance.authServers.add(authServer);
             ThreadPool.execute(authServer);
         }
@@ -267,7 +266,7 @@ public class NetworkService extends XmlReader {
     }
 
     public void sendChangePassword(String accountName, String curpass, String newpass) {
-        for (AuthNetworkService authServer : authServers) {
+        for (AuthService authServer : authServers) {
             authServer.sendChangePassword(accountName, curpass, newpass);
         }
     }
@@ -278,5 +277,5 @@ public class NetworkService extends XmlReader {
 
     public static record Subnet(String address, String host) { }
 
-    public static record Network(short[] ports, String authServerHost, short authServerPort, String authServerKey, Collection<Subnet> subnets) { }
+    public static record Network(String key, short port, String authServerHost, short authServerPort, String authServerKey, Collection<Subnet> subnets) { }
 }

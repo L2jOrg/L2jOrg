@@ -31,9 +31,9 @@ public class AuthFail extends ReceivablePacket {
         "IP banned",
         "IP reserved",
         "ID reserved",
-        "no free ID",
-        "not authed",
-        "already logged in"
+        "Not authed",
+        "Bad data",
+        "Missing Key"
     };
 
     private byte reasonId;

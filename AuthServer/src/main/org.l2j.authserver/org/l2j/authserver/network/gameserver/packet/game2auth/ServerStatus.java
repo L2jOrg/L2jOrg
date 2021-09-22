@@ -59,10 +59,10 @@ public class ServerStatus extends GameserverReadablePacket {
                         gameServerInfo.setShowingBrackets(value == ON);
                         break;
                     case MAX_PLAYERS:
-                        gameServerInfo.setMaxPlayers(value);
+                        gameServerInfo.setMaxAccounts(value);
                         break;
                     case SERVER_LIST_TYPE:
-                        gameServerInfo.setServerType(value);
+                        gameServerInfo.setType(value);
                 }
             });
 		}

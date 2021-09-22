@@ -22,6 +22,7 @@ import io.github.joealisson.mmocore.Connection;
 import io.github.joealisson.mmocore.Connector;
 import io.github.joealisson.mmocore.PacketHandler;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.network.auth.gs2as.ChangePassword;
@@ -44,9 +45,9 @@ import static org.l2j.gameserver.network.auth.gs2as.ServerStatus.SERVER_LIST_TYP
 /**
  * @author JoeAlisson
  */
-public class AuthNetworkService implements Runnable {
+public class AuthService implements Runnable {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(AuthNetworkService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthService.class);
 
     private final Map<String, GameClient> waitingClients = new ConcurrentHashMap<>();
     private final Map<String, GameClient> authedClients = new ConcurrentHashMap<>();
@@ -56,7 +57,7 @@ public class AuthNetworkService implements Runnable {
     private final Connector<AuthServerClient> connector;
     private volatile boolean shutdown = false;
 
-    public AuthNetworkService(NetworkService.Network network, PacketHandler<AuthServerClient> packetHandler) {
+    public AuthService(NetworkService.Network network, PacketHandler<AuthServerClient> packetHandler) {
         this.network = network;
         connector = Connector.create(this::createClient, packetHandler, ThreadPool::execute);
     }
@@ -114,7 +115,7 @@ public class AuthNetworkService implements Runnable {
     }
 
     public String[] getAccounts() {
-        return authedClients.keySet().toArray(String[]::new);
+        return authedClients.isEmpty() ? Util.STRING_ARRAY_EMPTY : authedClients.keySet().toArray(String[]::new);
     }
 
     public void shutdown() {

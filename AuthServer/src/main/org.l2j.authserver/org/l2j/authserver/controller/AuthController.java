@@ -20,7 +20,7 @@ package org.l2j.authserver.controller;
 
 import org.l2j.authserver.data.database.Account;
 import org.l2j.authserver.data.database.dao.AccountDAO;
-import org.l2j.authserver.network.GameServerInfo;
+import org.l2j.authserver.network.ServerInfo;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.auth2client.LoginOk;
 import org.l2j.authserver.network.crypt.AuthCrypt;
@@ -188,9 +188,9 @@ public class AuthController {
             result = true;
         }
 
-        for (GameServerInfo gameServer : GameServerManager.getInstance().getRegisteredGameServers().values()) {
-            if(nonNull(gameServer) && gameServer.accountIsConnected(account.getLogin())) {
-                gameServer.sendKickPlayer(account.getLogin());
+        for (var gameServer : GameServerManager.getInstance().getRegisteredGameServers().values()) {
+            if(nonNull(gameServer) && gameServer.isAccountInUse(account.getLogin())) {
+                gameServer.disconnectAccount(account.getLogin());
                 result = true;
             }
         }
@@ -208,7 +208,7 @@ public class AuthController {
     }
 
     private void requestAccountInfo(AuthClient client, Account account) {
-        var gameservers = GameServerManager.getInstance().getRegisteredGameServers().values().stream().filter(GameServerInfo::isAuthed).collect(Collectors.toList());
+        var gameservers = GameServerManager.getInstance().getRegisteredGameServers().values().stream().filter(ServerInfo::isAuthed).collect(Collectors.toList());
         client.setRequestedServerInfo(gameservers.size());
         gameservers.forEach(gameServer -> gameServer.requestAccountInfo(account.getLogin()));
     }
@@ -251,10 +251,10 @@ public class AuthController {
     }
 
     public boolean isLoginPossible(AuthClient client, int serverId) {
-        GameServerInfo gsi = GameServerManager.getInstance().getRegisteredGameServerById(serverId);
+        var gsi = GameServerManager.getInstance().getRegisteredGameServerById(serverId);
         int access = client.getAccessLevel();
         if (nonNull(gsi) && gsi.isAuthed()) {
-            boolean loginOk = ((gsi.getOnlinePlayersCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access >= AuthServerSettings.gmMinimumLevel());
+            boolean loginOk = ((gsi.onlineAccounts() < gsi.maxAccounts()) && (gsi.status() != ServerStatus.STATUS_GM_ONLY)) || (access >= AuthServerSettings.gmMinimumLevel());
 
             if (loginOk && (client.getLastServer() != serverId)) {
                 if(getDAO(AccountDAO.class).updateLastServer(client.getAccount().getLogin(), serverId) < 1) {
