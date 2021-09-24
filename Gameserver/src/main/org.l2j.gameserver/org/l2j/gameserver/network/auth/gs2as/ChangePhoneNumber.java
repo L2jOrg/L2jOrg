@@ -24,19 +24,19 @@ import org.l2j.gameserver.network.auth.SendablePacket;
 
 public class ChangePhoneNumber extends SendablePacket
 {
-    private final String _account;
-    private final long _phoneNumber;
+    private final String account;
+    private final long phoneNumber;
 
     public ChangePhoneNumber(String account, long phoneNumber)
     {
-        _account = account;
-        _phoneNumber = phoneNumber;
+        this.account = account;
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
     protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
         buffer.writeByte(0x0c);
-        buffer.writeString(_account);
-        buffer.writeLong(_phoneNumber);
+        buffer.writeString(account);
+        buffer.writeLong(phoneNumber);
     }
 }

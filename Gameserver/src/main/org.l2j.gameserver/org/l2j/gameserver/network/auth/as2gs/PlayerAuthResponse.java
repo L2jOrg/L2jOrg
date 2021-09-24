@@ -37,9 +37,6 @@ public class PlayerAuthResponse extends ReceivablePacket {
     private int gameserverAccountId;
     private int authAccountId;
     private int authKey;
-    private int points;
-    private String hwid;
-    private long phoneNumber;
 
     @Override
     public void readImpl() {

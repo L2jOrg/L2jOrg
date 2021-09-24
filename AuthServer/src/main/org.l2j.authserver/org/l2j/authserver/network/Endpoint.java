@@ -21,6 +21,7 @@ package org.l2j.authserver.network;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * @author JoeAlisson
@@ -76,6 +77,33 @@ public record Endpoint(byte[] host, short port, byte[] subnet, byte[] mask, bool
         return true;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Endpoint endpoint = (Endpoint) o;
+        return port == endpoint.port && isIPv4 == endpoint.isIPv4 && Arrays.equals(host, endpoint.host) && Arrays.equals(subnet, endpoint.subnet) && Arrays.equals(mask, endpoint.mask);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(port, isIPv4);
+        result = 31 * result + Arrays.hashCode(host);
+        result = 31 * result + Arrays.hashCode(subnet);
+        result = 31 * result + Arrays.hashCode(mask);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Endpoint{" +
+                "host=" + Arrays.toString(host) +
+                ", port=" + port +
+                ", subnet=" + Arrays.toString(subnet) +
+                ", mask=" + Arrays.toString(mask) +
+                ", isIPv4=" + isIPv4 +
+                '}';
+    }
 
     public static Endpoint of(String host, short port, String subnet) throws UnknownHostException {
         var hostAddress = InetAddress.getByName(host).getAddress();

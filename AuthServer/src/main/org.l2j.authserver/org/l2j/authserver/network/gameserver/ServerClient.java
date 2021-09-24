@@ -24,9 +24,9 @@ import io.github.joealisson.mmocore.Connection;
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.SingleServerInfo;
 import org.l2j.authserver.network.crypt.AuthServerCrypt;
-import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail.FailReason;
+import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,13 +34,10 @@ import java.security.PrivateKey;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 
-import static java.util.Objects.nonNull;
-import static org.l2j.authserver.network.gameserver.ServerClientState.AUTHED;
 import static org.l2j.authserver.network.gameserver.ServerClientState.CONNECTED;
 
 public final class ServerClient extends Client<Connection<ServerClient>> {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(ServerClient.class);
+    
     private RSAPrivateKey privateKey;
     private RSAPublicKey publicKey;
     private AuthServerCrypt crypt;

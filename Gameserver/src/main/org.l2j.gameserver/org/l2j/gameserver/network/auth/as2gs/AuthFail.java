@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.auth.as2gs;
 
-import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.network.auth.ReceivablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

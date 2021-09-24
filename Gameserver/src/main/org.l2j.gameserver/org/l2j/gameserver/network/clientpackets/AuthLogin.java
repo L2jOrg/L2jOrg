@@ -63,7 +63,6 @@ public final class AuthLogin extends ClientPacket {
                 oldClient.close(ServerClose.STATIC_PACKET);
 
             NetworkService.getInstance().sendPacketToAuth(authKey, new PlayerAuthRequest(client));
-
         }
     }
 }

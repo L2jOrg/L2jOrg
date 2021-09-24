@@ -24,15 +24,15 @@ import org.l2j.gameserver.network.auth.SendablePacket;
 
 public class OnlineStatus extends SendablePacket
 {
-	private final boolean _online;
+	private final boolean online;
 
 	public OnlineStatus(boolean online)
 	{
-		_online = online;
+		this.online = online;
 	}
 
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x01);
-		buffer.writeByte(_online);
+		buffer.writeByte(online);
 	}
 }

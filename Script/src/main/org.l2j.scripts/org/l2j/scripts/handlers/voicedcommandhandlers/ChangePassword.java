@@ -84,7 +84,7 @@ public class ChangePassword implements IVoicedCommandHandler
 						return false;
 					}
 					
-					NetworkService.getInstance().sendChangePassword(activeChar.getAccountName(), curpass, newpass);
+					NetworkService.getInstance().sendChangePassword(activeChar.getClient().getSessionKey().getAuthKey(), activeChar.getAccountName(), curpass, newpass);
 				}
 				else
 				{

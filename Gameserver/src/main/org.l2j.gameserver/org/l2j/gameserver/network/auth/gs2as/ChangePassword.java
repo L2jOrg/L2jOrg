@@ -23,31 +23,31 @@ import org.l2j.gameserver.network.auth.AuthServerClient;
 import org.l2j.gameserver.network.auth.SendablePacket;
 
 /**
- * @Author: Death
- * @Date: 8/2/2007
- * @Time: 14:35:35
+ * @author Death
+ * Date: 8/2/2007
+ * Time: 14:35:35
  */
 public class ChangePassword extends SendablePacket
 {
-	public String _account;
-	public String _oldPass;
-	public String _newPass;
-	public String _hwid;
+	private final String account;
+	private final String oldPass;
+	private final String newPass;
+	private final String hwid;
 
 	public ChangePassword(String account, String oldPass, String newPass, String hwid)
 	{
-		_account = account;
-		_oldPass = oldPass;
-		_newPass = newPass;
-		_hwid = hwid;
+		this.account = account;
+		this.oldPass = oldPass;
+		this.newPass = newPass;
+		this.hwid = hwid;
 	}
 
 	@Override
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x08);
-		buffer.writeString(_account);
-		buffer.writeString(_oldPass);
-		buffer.writeString(_newPass);
-		buffer.writeString(_hwid);
+		buffer.writeString(account);
+		buffer.writeString(oldPass);
+		buffer.writeString(newPass);
+		buffer.writeString(hwid);
 	}
 }

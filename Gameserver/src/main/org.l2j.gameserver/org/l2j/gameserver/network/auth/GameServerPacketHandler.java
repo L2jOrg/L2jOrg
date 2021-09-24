@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.auth;
 
+import io.github.joealisson.mmocore.PacketHandler;
 import io.github.joealisson.mmocore.ReadableBuffer;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.gameserver.network.auth.as2gs.*;
@@ -27,8 +28,8 @@ import org.slf4j.LoggerFactory;
 /**
  * @author JoeAlisson
  */
-public class PacketHandler implements io.github.joealisson.mmocore.PacketHandler<AuthServerClient> {
-	private static final Logger LOGGER = LoggerFactory.getLogger(PacketHandler.class);
+public class GameServerPacketHandler implements PacketHandler<AuthServerClient> {
+	private static final Logger LOGGER = LoggerFactory.getLogger(GameServerPacketHandler.class);
 
 	public ReadablePacket<AuthServerClient> handlePacket(ReadableBuffer buf, AuthServerClient client) {
 		int id = buf.readByte() & 0xff;
@@ -38,10 +39,9 @@ public class PacketHandler implements io.github.joealisson.mmocore.PacketHandler
 			case 0x02 -> new PlayerAuthResponse();
 			case 0x03 -> new KickPlayer();
 			case 0x04 -> new GetAccountInfo();
-			case 0x06 -> null; // new ChangePasswordResponse();
 			case 0xff -> new PingRequest();
 			default -> {
-				LOGGER.error("Received unknown packet: {}", Integer.toHexString(id));
+				LOGGER.error("Received unknown packet: {}", id);
 				yield null;
 			}
 		};
