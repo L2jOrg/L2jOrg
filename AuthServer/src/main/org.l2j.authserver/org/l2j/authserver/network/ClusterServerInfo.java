@@ -18,29 +18,29 @@
  */
 package org.l2j.authserver.network;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author JoeAlisson
  */
 public final class ClusterServerInfo implements ServerInfo {
 
-    private final Map<String, SingleServerInfo> servers = new ConcurrentHashMap<>();
+    private final List<SingleServerInfo> servers = new ArrayList<>();
     private SingleServerInfo referenceServer;
 
     private ClusterServerInfo join(SingleServerInfo incoming) {
-        servers.put(incoming.serverAddress(), incoming);
+        servers.add(incoming);
         if(!referenceServer.isAuthed()) {
             referenceServer = incoming;
         }
         return this;
     }
 
-    public void out(String hostAddress) {
-        servers.remove(hostAddress);
+    public void out(SingleServerInfo info) {
+        servers.remove(info);
         if(!servers.isEmpty()) {
-            referenceServer = servers.values().iterator().next();
+            referenceServer = servers.get(0);
         }
     }
 
@@ -57,7 +57,7 @@ public final class ClusterServerInfo implements ServerInfo {
     private SingleServerInfo minLoadServer() {
         float minLoad = Float.MAX_VALUE;
         SingleServerInfo server = null;
-        for (var info : servers.values()) {
+        for (var info : servers) {
             if(info.currentLoad() < minLoad) {
                 minLoad = info.currentLoad();
                 server = info;
@@ -67,7 +67,7 @@ public final class ClusterServerInfo implements ServerInfo {
     }
 
     private SingleServerInfo serverFromAccount(String account) {
-        for (var server : servers.values()) {
+        for (var server : servers) {
             if(server.isAccountInUse(account)) {
                 return server;
             }
@@ -78,7 +78,7 @@ public final class ClusterServerInfo implements ServerInfo {
     @Override
     public int onlineAccounts() {
         int accounts = 0;
-        for (var server : servers.values()) {
+        for (var server : servers) {
             accounts += server.onlineAccounts();
         }
         return accounts;
@@ -87,7 +87,7 @@ public final class ClusterServerInfo implements ServerInfo {
     @Override
     public int maxAccounts() {
         int accounts = 0;
-        for (var server : servers.values()) {
+        for (var server : servers) {
             accounts += server.maxAccounts();
         }
         return accounts;
@@ -110,10 +110,8 @@ public final class ClusterServerInfo implements ServerInfo {
     public Endpoint endpointFrom(String hostAddress) {
         Endpoint endpoint = Endpoint.LOCALHOST;
 
-        var it = servers.values().iterator();
         var minLoad = Float.MAX_VALUE;
-        while (it.hasNext()) {
-            var server = it.next();
+        for (var server : servers) {
             var selectedEndpoint = server.endpointFrom(hostAddress);
 
             if(server.currentLoad() < minLoad && selectedEndpoint != Endpoint.LOCALHOST) {
@@ -174,8 +172,8 @@ public final class ClusterServerInfo implements ServerInfo {
     private static ClusterServerInfo clusterFrom(SingleServerInfo authedServer, SingleServerInfo incoming) {
         var cluster = new ClusterServerInfo();
         cluster.referenceServer = authedServer;
-        cluster.servers.put(authedServer.serverAddress(), authedServer);
-        cluster.servers.put(incoming.serverAddress(), authedServer);
+        cluster.servers.add(authedServer);
+        cluster.servers.add(incoming);
         return cluster;
     }
 }

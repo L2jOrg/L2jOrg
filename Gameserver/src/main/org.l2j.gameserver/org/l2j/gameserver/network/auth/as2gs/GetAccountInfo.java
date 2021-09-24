@@ -42,6 +42,6 @@ public class GetAccountInfo extends ReceivablePacket {
 	@Override
 	protected void runImpl() {
 		int playerSize = getDAO(PlayerDAO.class).playerCountByAccount(account);
-		NetworkService.getInstance().sendPacketToAuthServer(new SetAccountInfo(account, playerSize)); //TODO send to specific authserver ?
+		NetworkService.getInstance().sendPacketToAuth(client.getAuthKey(), new SetAccountInfo(account, playerSize));
 	}
 }

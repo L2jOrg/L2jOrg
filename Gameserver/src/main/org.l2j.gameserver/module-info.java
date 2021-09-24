@@ -203,4 +203,5 @@ module org.l2j.gameserver {
     uses org.l2j.gameserver.model.events.AbstractScript;
     uses org.l2j.gameserver.handler.IParseBoardHandler;
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
+    uses org.l2j.gameserver.network.NetworkServiceProvider;
 }

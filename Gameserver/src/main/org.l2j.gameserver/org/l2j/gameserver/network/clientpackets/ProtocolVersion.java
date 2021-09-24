@@ -18,8 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.network.NetworkService;
-import org.l2j.gameserver.network.auth.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.serverpackets.KeyPacket;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
@@ -42,13 +40,8 @@ public final class ProtocolVersion extends ClientPacket {
 
     @Override
     public void runImpl() {
-        // this packet is never encrypted
-        if (version == -2) {
-            // this is just a ping attempt from the new C2 client
-            client.close();
-        } else if (!contains(ServerSettings.acceptedProtocols(), version)) {
+        if (!contains(ServerSettings.acceptedProtocols(), version)) {
             LOGGER_ACCOUNTING.warn("Wrong protocol version {}, {}", version, client);
-            NetworkService.getInstance().sendPacketToAuthServer(new PlayerLogout(client.getAccountName())); // TODO to specific authserver
             client.setProtocolOk(false);
             client.close(new KeyPacket(client.enableCrypt(), 0));
         } else {

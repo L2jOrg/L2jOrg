@@ -59,6 +59,9 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.hash;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
+/**
+ * @author JoeAlisson
+ */
 public class AuthController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
@@ -70,6 +73,7 @@ public class AuthController {
     private final Map<String, AuthClient> authedClients = new ConcurrentHashMap<>();
     private final Map<String, FailedLoginAttempt> bruteForceProtection = new HashMap<>();
     private final BanManager banManager;
+    private final int key;
 
     private KeyGenerator blowfishKeysGenerator;
     private ScheduledFuture<?> scheduledPurge;
@@ -83,6 +87,7 @@ public class AuthController {
         } catch (GeneralSecurityException e) {
             LOGGER.error(e.getMessage(), e);
         }
+        key = Rnd.nextSecureInt();
     }
 
     private void load() throws GeneralSecurityException {
@@ -126,8 +131,8 @@ public class AuthController {
     }
 
     private void assignSessionKeyToClient(AuthClient client) {
-        var key = new SessionKey(Rnd.nextSecureInt(), Rnd.nextSecureInt(), Rnd.nextSecureInt(), Rnd.nextSecureInt());
-        client.setSessionKey(key);
+        var sessionKey = new SessionKey(Rnd.nextSecureInt(), this.key, Rnd.nextSecureInt(), Rnd.nextSecureInt());
+        client.setSessionKey(sessionKey);
         authedClients.put(client.getAccount().getLogin(), client);
     }
 
@@ -305,6 +310,10 @@ public class AuthController {
 
     public static AuthController getInstance() {
         return Singleton.INSTANCE;
+    }
+
+    public int getKey() {
+        return key;
     }
 
     private static class Singleton {

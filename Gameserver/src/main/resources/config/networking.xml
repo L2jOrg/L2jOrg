@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<networks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org"  xsi:schemaLocation="http://l2j.org xsd/networking.xsd" >
+<networks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/networking.xsd">
 
     <network port="7777" key="982b758c-3a42-4624-a9da-203ac97e00c2" auth-server-host="localhost" auth-server-port="9014" auth-server-key="5ed5aea2-ec7a-4465-9784-421a74478ae9">
         <auto-discovery/>
     </network>
 
     <network port="7778" key="982b758c-3a42-4624-a9da-203ac97e00c2" auth-server-host="localhost" auth-server-port="9014" auth-server-key="5ed5aea2-ec7a-4465-9784-421a74478ae9">
-        <subnet address="0.0.0.0/0" host="$external"/>
+        <subnet address="0.0.0.0/0" host="#external"/>
         <subnet address="127.0.0.0/8" host="127.0.0.1"/>
         <subnet address="192.168.100.0/24" host="192.168.100.3" />
     </network>

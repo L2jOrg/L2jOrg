@@ -31,6 +31,6 @@ public class PingRequest extends ReceivablePacket {
 
 	@Override
 	protected void runImpl() {
-		NetworkService.getInstance().sendPacketToAuthServer(new PingResponse()); // TODO send to specific authserver
+		NetworkService.getInstance().sendPacketToAuth(client.getAuthKey(), new PingResponse());
 	}
 }

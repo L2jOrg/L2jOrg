@@ -4557,7 +4557,7 @@ public final class Player extends Playable {
 
 
     public void setAccountAccessLevel(int level) {
-        NetworkService.getInstance().sendPacketToAuthServer(new ChangeAccessLevel(getAccountName(), level, 0));
+        NetworkService.getInstance().sendPacketToAuth(new ChangeAccessLevel(getAccountName(), level, 0));
     }
 
     @Override

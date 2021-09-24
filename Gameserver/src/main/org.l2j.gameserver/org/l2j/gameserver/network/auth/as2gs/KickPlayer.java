@@ -36,18 +36,18 @@ public class KickPlayer extends ReceivablePacket {
 
     @Override
     protected void runImpl() {
-        GameClient client = NetworkService.getInstance().removeWaitingClient(account);
-        if (client == null)
-            client = NetworkService.getInstance().removeAuthedClient(account);
-        if (client == null)
+        GameClient gameClient = NetworkService.getInstance().removeWaitingClient(client.getAuthKey(), account);
+        if (gameClient == null)
+            gameClient = NetworkService.getInstance().removeAuthedClient(client.getAuthKey(), account);
+        if (gameClient == null)
             return;
 
-        Player activeChar = client.getPlayer();
+        Player activeChar = gameClient.getPlayer();
         if (activeChar != null) {
             activeChar.sendPacket(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE);
             Disconnection.of(activeChar).logout(false);
         } else {
-            client.close(ServerClose.STATIC_PACKET);
+            gameClient.close(ServerClose.STATIC_PACKET);
         }
     }
 }

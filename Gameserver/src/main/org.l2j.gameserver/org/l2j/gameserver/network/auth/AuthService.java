@@ -56,6 +56,7 @@ public class AuthService implements Runnable {
     private AuthServerClient client;
     private final Connector<AuthServerClient> connector;
     private volatile boolean shutdown = false;
+    private int authKey;
 
     public AuthService(NetworkService.Network network, PacketHandler<AuthServerClient> packetHandler) {
         this.network = network;
@@ -153,5 +154,13 @@ public class AuthService implements Runnable {
 
     public NetworkService.Network network() {
         return network;
+    }
+
+    public int getAuthKey() {
+        return authKey;
+    }
+
+    public void setAuthKey(int authKey) {
+        this.authKey = authKey;
     }
 }

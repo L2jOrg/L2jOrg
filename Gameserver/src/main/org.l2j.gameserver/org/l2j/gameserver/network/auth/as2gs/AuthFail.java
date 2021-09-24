@@ -45,6 +45,6 @@ public class AuthFail extends ReceivablePacket {
 
     protected void runImpl() {
         LOGGER.error("Auth server registration failed! Reason: {}", REASONS[reasonId]);
-        NetworkService.getInstance().closeAuthServerConnection(); // TODO do for specific authserver
+        client.authService().shutdown();
     }
 }

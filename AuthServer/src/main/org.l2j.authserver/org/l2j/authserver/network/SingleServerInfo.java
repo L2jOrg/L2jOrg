@@ -188,4 +188,5 @@ public final class SingleServerInfo implements ServerInfo {
     public void setEndpoints(Endpoint[] endpoints) {
         this.endpoints = endpoints;
     }
+
 }

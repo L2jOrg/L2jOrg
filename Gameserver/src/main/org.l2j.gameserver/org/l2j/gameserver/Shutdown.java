@@ -100,7 +100,7 @@ public class Shutdown extends Thread {
                     getInstance().setMode(ShutdownMode.GM_RESTART);
                     System.exit(2);
                 }
-                case ABORT -> NetworkService.getInstance().sendPacketToAuthServer(new OnlineStatus(true));
+                case ABORT -> NetworkService.getInstance().sendPacketToAuth(new OnlineStatus(true));
             }
         }
     }
@@ -115,7 +115,7 @@ public class Shutdown extends Thread {
             case GM_RESTART -> LOGGER.info("GM restart received. Restarting NOW!");
         }
 
-        NetworkService.getInstance().closeAuthServerConnection();
+        NetworkService.getInstance().closeAuthConnection();
         LOGGER.info("Auth server communication has been shut down.");
 
         // last byebye, save all data and quit this server
@@ -222,7 +222,7 @@ public class Shutdown extends Thread {
                 switch (secondsShut) {
                     case 540, 480, 420, 360, 300, 240, 180, 120, 30, 10, 5, 1 -> SendServerQuit(secondsShut);
                     case 60 -> {
-                        NetworkService.getInstance().sendPacketToAuthServer(new OnlineStatus(false));
+                        NetworkService.getInstance().sendPacketToAuth(new OnlineStatus(false));
                         SendServerQuit(60);
                     }
                 }

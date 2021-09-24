@@ -35,6 +35,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author KenM
+ * @author JoeAlisson
  */
 public class GameServerManager {
 
@@ -102,7 +103,7 @@ public class GameServerManager {
         var name = serverNames.get(info.id());
         if(serverInfo instanceof ClusterServerInfo cluster) {
             info.setDown();
-            cluster.out(hostAddress);
+            cluster.out(info);
             LOGGER.info("Server host {} was disconnected from Cluster {}", hostAddress, name);
             if(!cluster.isAuthed()) {
                 LOGGER.info("Server [{}] {} is now set as disconnected", info.id(), name);
@@ -118,7 +119,6 @@ public class GameServerManager {
     public static GameServerManager getInstance() {
         return Singleton.INSTANCE;
     }
-
 
     private static class Singleton {
         private static final GameServerManager INSTANCE = new GameServerManager();
