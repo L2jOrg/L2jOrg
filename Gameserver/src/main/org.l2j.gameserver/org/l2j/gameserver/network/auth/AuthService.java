@@ -25,7 +25,6 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NetworkService;
-import org.l2j.gameserver.network.auth.gs2as.ChangePassword;
 import org.l2j.gameserver.network.auth.gs2as.ServerStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

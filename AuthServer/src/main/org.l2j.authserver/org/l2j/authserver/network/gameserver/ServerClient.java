@@ -27,8 +27,6 @@ import org.l2j.authserver.network.crypt.AuthServerCrypt;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail.FailReason;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.security.PrivateKey;
 import java.security.interfaces.RSAPrivateKey;
@@ -37,7 +35,7 @@ import java.security.interfaces.RSAPublicKey;
 import static org.l2j.authserver.network.gameserver.ServerClientState.CONNECTED;
 
 public final class ServerClient extends Client<Connection<ServerClient>> {
-    
+
     private RSAPrivateKey privateKey;
     private RSAPublicKey publicKey;
     private AuthServerCrypt crypt;
