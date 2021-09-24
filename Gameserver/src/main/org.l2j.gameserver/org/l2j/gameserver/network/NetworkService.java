@@ -20,9 +20,9 @@ package org.l2j.gameserver.network;
 
 import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.xml.XmlReader;
-import org.l2j.gameserver.network.auth.AuthService;
-import org.l2j.gameserver.network.auth.PacketHandler;
+import org.l2j.gameserver.network.auth.GameServerPacketHandler;
 import org.l2j.gameserver.network.auth.SendablePacket;
+import org.l2j.gameserver.network.auth.gs2as.ChangePassword;
 import org.l2j.gameserver.network.provider.multi.MultiNetworkProvider;
 import org.l2j.gameserver.network.provider.single.SingleNetworkProvider;
 import org.slf4j.Logger;
@@ -51,8 +51,6 @@ public class NetworkService extends XmlReader {
     private String ipServiceDiscovery;
     private String providerType;
     private NetworkServiceProvider provider;
-
-    private final Collection<AuthService> authServers = new ArrayList<>();
 
     private NetworkService() {
         // singleton
@@ -92,9 +90,8 @@ public class NetworkService extends XmlReader {
 
         var network = new Network(key, port, authServerHost, authServerPort, authServerKey, subnets);
 
-        if(networks.add(network)) {
-            LOGGER.info("add new network on port {} to auth server {}:{}",  port, authServerHost, authServerPort);
-        }
+        networks.add(network);
+        LOGGER.info("add new network on port {} to auth server {}:{}",  port, authServerHost, authServerPort);
     }
 
     private Collection<Subnet> parseNetworkAddress(Node node) {
@@ -226,10 +223,8 @@ public class NetworkService extends XmlReader {
         return provider.addWaitingClient(authKey, client);
     }
 
-    public void sendChangePassword(String accountName, String curpass, String newpass) {
-        for (AuthService authServer : authServers) {
-            authServer.sendChangePassword(accountName, curpass, newpass);
-        }
+    public void sendChangePassword(int authKey, String accountName, String curpass, String newpass) {
+        provider.sendPacketToAuth(authKey, new ChangePassword(accountName, curpass, newpass, ""));
     }
 
     public static void init() throws IOException {
@@ -248,7 +243,7 @@ public class NetworkService extends XmlReader {
             throw new IllegalStateException("There is no Network Service Provider. check the networking.xml file");
         }
 
-        instance.provider.init(instance.networks, instance.ipServiceDiscovery, new PacketHandler(), new ClientPacketHandler());
+        instance.provider.init(instance.networks, instance.ipServiceDiscovery, new GameServerPacketHandler(), new ClientPacketHandler());
     }
 
     public static NetworkService getInstance() {

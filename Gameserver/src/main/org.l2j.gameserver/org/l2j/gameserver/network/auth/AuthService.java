@@ -89,9 +89,12 @@ public class AuthService implements Runnable {
             if(!shutdown && (isNull(client) || !client.isConnected())) {
                 connect();
             }
-        } catch (IOException | ExecutionException | InterruptedException e) {
+        } catch (IOException | ExecutionException e) {
             LOGGER.debug(e.getMessage(), e);
             restart();
+        } catch (InterruptedException e) {
+            LOGGER.warn(e.getMessage(), e);
+            Thread.currentThread().interrupt();
         }
     }
 
@@ -142,10 +145,6 @@ public class AuthService implements Runnable {
         }
         client = null;
         ThreadPool.schedule(this, waitSeconds, TimeUnit.SECONDS);
-    }
-
-    public void sendChangePassword(String accountName, String oldPass, String curpass) {
-        sendPacket(new ChangePassword(accountName, oldPass, curpass, ""));
     }
 
     public void sendServerType(int type) {

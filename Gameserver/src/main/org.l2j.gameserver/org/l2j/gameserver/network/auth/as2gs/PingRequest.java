@@ -26,7 +26,7 @@ public class PingRequest extends ReceivablePacket {
 
 	@Override
 	public void readImpl() {
-
+		// trigger packet
 	}
 
 	@Override

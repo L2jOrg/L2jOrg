@@ -213,7 +213,7 @@ public class AuthController {
     }
 
     private void requestAccountInfo(AuthClient client, Account account) {
-        var gameservers = GameServerManager.getInstance().getRegisteredGameServers().values().stream().filter(ServerInfo::isAuthed).collect(Collectors.toList());
+        var gameservers = GameServerManager.getInstance().getRegisteredGameServers().values().stream().filter(ServerInfo::isAuthed).toList();
         client.setRequestedServerInfo(gameservers.size());
         gameservers.forEach(gameServer -> gameServer.requestAccountInfo(account.getLogin()));
     }

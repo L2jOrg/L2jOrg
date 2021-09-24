@@ -24,23 +24,23 @@ import org.l2j.gameserver.network.auth.SendablePacket;
 
 /**
  * @author VISTALL
- * @date 21:07/25.03.2011
+ * date 21:07/25.03.2011
  */
 public class SetAccountInfo extends SendablePacket
 {
-	private final String _account;
-	private final int _size;
+	private final String account;
+	private final int size;
 
 	public SetAccountInfo(String account, int size)
 	{
-		_account = account;
-		_size = size;
+		this.account = account;
+		this.size = size;
 	}
 
 	@Override
 	protected void writeImpl(AuthServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x05);
-		buffer.writeString(_account);
-		buffer.writeByte(_size);
+		buffer.writeString(account);
+		buffer.writeByte(size);
 	}
 }

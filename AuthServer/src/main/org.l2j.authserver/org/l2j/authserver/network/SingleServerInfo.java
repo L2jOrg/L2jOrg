@@ -36,11 +36,11 @@ public final class SingleServerInfo implements ServerInfo {
     private final Set<String> accounts = new HashSet<>();
     private final String key;
     private int id;
-    private volatile boolean _isAuthed;
+    private volatile boolean isAuthed;
     private int status = ServerStatus.STATUS_DOWN;
 
     private boolean isPvp;
-    private boolean _isShowingBrackets;
+    private boolean isShowingBrackets;
     private int maxAccounts;
     private int type;
     private byte ageLimit;
@@ -106,11 +106,11 @@ public final class SingleServerInfo implements ServerInfo {
     }
 
     public void setAuthed(boolean isAuthed) {
-        _isAuthed = isAuthed;
+        this.isAuthed = isAuthed;
     }
 
     public boolean isAuthed() {
-        return _isAuthed;
+        return isAuthed;
     }
 
     public void setStatus(int status) {
@@ -135,11 +135,11 @@ public final class SingleServerInfo implements ServerInfo {
     }
 
     public void setShowingBrackets(boolean val) {
-        _isShowingBrackets = val;
+        isShowingBrackets = val;
     }
 
     public boolean isShowingBrackets() {
-        return _isShowingBrackets;
+        return isShowingBrackets;
     }
 
     public void setType(int type) {
