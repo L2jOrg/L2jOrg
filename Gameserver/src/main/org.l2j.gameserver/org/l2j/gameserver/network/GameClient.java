@@ -105,11 +105,11 @@ public final class GameClient extends Client<Connection<GameClient>> {
 
         if(nonNull(account)) {
             if (state == ConnectionState.AUTHENTICATED) {
-                NetworkService.getInstance().removeAuthedClient(account.getAccountName());
+                NetworkService.getInstance().removeAuthedClient(sessionKey.getAuthKey(), account.getAccountName());
             } else {
-                NetworkService.getInstance().removeWaitingClient(account.getAccountName());
+                NetworkService.getInstance().removeWaitingClient(sessionKey.getAuthKey(), account.getAccountName());
             }
-            NetworkService.getInstance().sendPacketToAuthServer(new PlayerLogout(account.getAccountName())); // TODO send to specific auth server
+            NetworkService.getInstance().sendPacketToAuth(sessionKey.getAuthKey(), new PlayerLogout(account.getAccountName()));
         }
         state = ConnectionState.DISCONNECTED;
         Disconnection.of(this).onDisconnection();

@@ -27,18 +27,12 @@ import org.l2j.gameserver.network.serverpackets.ServerClose;
 import static java.util.Objects.isNull;
 
 /**
- * This class ...
- *
- * @version $Revision: 1.9.2.3.2.4 $ $Date: 2005/03/27 15:29:30 $
+ * @author JoeAlisson
  */
 public final class AuthLogin extends ClientPacket {
 
-    // account + keys must match what the loginserver used.
     private String account;
-    /*
-     * private final long _key1; private final long _key2; private final long _key3; private final long _key4;
-     */
-    private int sessionId;
+     private int sessionId;
     private int accountId;
     private int authAccountId;
     private int authKey;
@@ -59,20 +53,16 @@ public final class AuthLogin extends ClientPacket {
             return;
         }
 
-
-        // avoid potential exploits
         if (isNull(client.getAccount())) {
-            // Preventing duplicate login in case client login server socket was disconnected or this packet was not sent yet
-
             client.loadAccount(account);
             final SessionKey key = new SessionKey(authAccountId, authKey, sessionId, accountId);
             client.setSessionKey(key);
 
-            GameClient oldClient = null; // TODO AuthNetworkService.getInstance().addWaitingClient(client);
+            GameClient oldClient =  NetworkService.getInstance().addWaitingClient(authKey, client);
             if(oldClient != null)
                 oldClient.close(ServerClose.STATIC_PACKET);
 
-            NetworkService.getInstance().sendPacketToAuthServer(new PlayerAuthRequest(client)); // TODO to specific authserver
+            NetworkService.getInstance().sendPacketToAuth(authKey, new PlayerAuthRequest(client));
 
         }
     }

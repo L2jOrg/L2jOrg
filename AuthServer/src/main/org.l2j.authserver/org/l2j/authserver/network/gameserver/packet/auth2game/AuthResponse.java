@@ -19,6 +19,7 @@
 package org.l2j.authserver.network.gameserver.packet.auth2game;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.gameserver.ServerClient;
 
@@ -37,6 +38,7 @@ public class AuthResponse extends GameServerWritablePacket {
 	protected void writeImpl(ServerClient client, WritableBuffer buffer) {
 		buffer.writeByte(0x00);
 		buffer.writeString(serverName);
+		buffer.writeInt(AuthController.getInstance().getKey());
 	}
 
 }

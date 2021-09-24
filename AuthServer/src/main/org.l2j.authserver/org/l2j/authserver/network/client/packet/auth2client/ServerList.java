@@ -63,7 +63,7 @@ public final class ServerList extends AuthServerPacket {
             buffer.writeByte(server.id());
 
             var endpoint = server.endpointFrom(client.getHostAddress());
-
+            System.out.println("Using port " + endpoint.port());
             buffer.writeBytes(endpoint.host());
             buffer.writeInt(endpoint.port());
             buffer.writeByte(server.ageLimit()); // minimum age

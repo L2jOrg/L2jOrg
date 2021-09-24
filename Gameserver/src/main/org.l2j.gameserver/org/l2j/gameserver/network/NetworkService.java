@@ -18,17 +18,13 @@
  */
 package org.l2j.gameserver.network;
 
-import io.github.joealisson.mmocore.ConnectionBuilder;
-import io.github.joealisson.mmocore.ConnectionHandler;
-import io.github.joealisson.primitive.ArrayIntList;
-import io.github.joealisson.primitive.IntList;
-import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.network.auth.AuthService;
 import org.l2j.gameserver.network.auth.PacketHandler;
 import org.l2j.gameserver.network.auth.SendablePacket;
-import org.l2j.gameserver.network.auth.gs2as.ServerStatus;
+import org.l2j.gameserver.network.provider.multi.MultiNetworkProvider;
+import org.l2j.gameserver.network.provider.single.SingleNetworkProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -43,8 +39,6 @@ import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.IntStream;
 
-import static org.l2j.gameserver.network.auth.gs2as.ServerStatus.SERVER_LIST_TYPE;
-
 /**
  * @author JoeAlisson
  */
@@ -52,9 +46,12 @@ public class NetworkService extends XmlReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(NetworkService.class);
 
+    private final List<Network> networks = new ArrayList<>();
+
     private String ipServiceDiscovery;
-    private final Set<Network> networks = new HashSet<>();
-    private final Collection<ConnectionHandler<GameClient>> connectionHandlers = new ArrayList<>();
+    private String providerType;
+    private NetworkServiceProvider provider;
+
     private final Collection<AuthService> authServers = new ArrayList<>();
 
     private NetworkService() {
@@ -75,6 +72,8 @@ public class NetworkService extends XmlReader {
     protected void parseDocument(Document doc, File f) {
         var networksNode = doc.getFirstChild();
         this.ipServiceDiscovery = parseString(networksNode.getAttributes(), "ip-service-discovery");
+        this.providerType = parseString(networksNode.getAttributes(), "provider-type");
+
 
         for(var node = networksNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             parseNetwork(node);
@@ -113,7 +112,7 @@ public class NetworkService extends XmlReader {
             var address = parseString(attr, "address");
             var host = parseString(attr, "host");
 
-            if("$external".equals(host)) {
+            if("#external".equals(host)) {
                 host = internetAddress();
             }
 
@@ -192,83 +191,68 @@ public class NetworkService extends XmlReader {
     }
 
     public void shutdown() {
-        connectionHandlers.forEach(ConnectionHandler::shutdown);
+        provider.shutdown();
     }
 
-    public void closeAuthServerConnection() {
-        authServers.forEach(AuthService::shutdown);
+    public void closeAuthConnection() {
+        provider.closeAuthConnection();
     }
 
-    public void sendPacketToAuthServer(SendablePacket packet) {
-        for (var authServer : authServers) {
-            authServer.sendPacket(packet);
-        }
+    public void sendPacketToAuth(SendablePacket packet) {
+        provider.sendPacketToAuth(-1, packet);
     }
 
-    public GameClient removeAuthedClient(String account) {
-        for (var authServer : authServers) {
-            var client = authServer.removeAuthedClient(account);
-            if(client != null) {
-                return client;
-            }
-        }
-        return null;
+    public void sendPacketToAuth(int authKey, SendablePacket packet) {
+        provider.sendPacketToAuth(authKey, packet);
     }
 
-    public GameClient removeWaitingClient(String account) {
-        for (var authServer : authServers) {
-            var client = authServer.removeWaitingClient(account);
-            if(client != null) {
-                return client;
-            }
-        }
-        return null;
+    public GameClient removeAuthedClient(int authKey, String account) {
+        return provider.removeAuthedClient(authKey, account);
     }
 
-    public GameClient getAuthedClient(String account) {
-        for (var authServer : authServers) {
-            var client = authServer.getAuthedClient(account);
-            if(client != null) {
-                return client;
-            }
-        }
-        return null;
+    public GameClient removeWaitingClient(int authKey, String account) {
+        return provider.removeWaitingClient(authKey, account);
     }
 
-    public void sendServerType(int type) {
-        sendPacketToAuthServer(new ServerStatus().add(SERVER_LIST_TYPE, type));
+    public GameClient getAuthedClient(int authKey, String account) {
+        return provider.getAuthedClient(authKey, account);
     }
 
-    public static void init() throws IOException {
-        var instance = getInstance();
-        instance.load();
-
-        IntList usedPorts = new ArrayIntList(instance.networks.size());
-        var packetHandler = new ClientPacketHandler();
-        var authPacketHandler = new PacketHandler();
-        for (Network network : instance.networks) {
-
-            if(!usedPorts.contains(network.port())) {
-                var handler = ConnectionBuilder.create(new InetSocketAddress(network.port()), GameClient::new,  packetHandler, ThreadPool::execute).build();
-                handler.start();
-                instance.connectionHandlers.add(handler);
-                usedPorts.add(network.port());
-            }
-
-            var authServer = new AuthService(network, authPacketHandler);
-            instance.authServers.add(authServer);
-            ThreadPool.execute(authServer);
-        }
+    public GameClient addAuthedClient(int authKey, GameClient client) {
+        return provider.addAuthedClient(authKey, client);
     }
 
-    public static NetworkService getInstance() {
-        return Singleton.INSTANCE;
+    public GameClient addWaitingClient(int authKey, GameClient client) {
+        return provider.addWaitingClient(authKey, client);
     }
 
     public void sendChangePassword(String accountName, String curpass, String newpass) {
         for (AuthService authServer : authServers) {
             authServer.sendChangePassword(accountName, curpass, newpass);
         }
+    }
+
+    public static void init() throws IOException {
+        var instance = getInstance();
+        instance.load();
+        if(instance.networks.isEmpty()) {
+            throw new IllegalStateException("There is no Networking defined. Check the networking.xml file");
+        }
+        instance.provider = switch (instance.providerType) {
+            case "single-networking" -> new SingleNetworkProvider();
+            case "multi-networking" -> new MultiNetworkProvider();
+            default -> ServiceLoader.load(NetworkServiceProvider.class).findFirst().orElse(null);
+        };
+
+        if(instance.provider == null) {
+            throw new IllegalStateException("There is no Network Service Provider. check the networking.xml file");
+        }
+
+        instance.provider.init(instance.networks, instance.ipServiceDiscovery, new PacketHandler(), new ClientPacketHandler());
+    }
+
+    public static NetworkService getInstance() {
+        return Singleton.INSTANCE;
     }
 
     private static class Singleton {

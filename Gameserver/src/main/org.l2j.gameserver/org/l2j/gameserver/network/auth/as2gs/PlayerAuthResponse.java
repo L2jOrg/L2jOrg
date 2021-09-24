@@ -55,17 +55,17 @@ public class PlayerAuthResponse extends ReceivablePacket {
 
     @Override
     protected void runImpl() {
-        GameClient client = NetworkService.getInstance().removeWaitingClient(account); // TODO to specific authserver
-        if(isNull(client)) {
+        GameClient gameClient = NetworkService.getInstance().removeWaitingClient(authKey, account);
+        if(isNull(gameClient)) {
             return;
         }
 
         SessionKey skey = new SessionKey(authAccountId, authKey, gameserverSession, gameserverAccountId);
-        if(authed && client.getSessionKey().equals(skey)) {
-            client.setConnectionState(ConnectionState.AUTHENTICATED);
-            client.sendPacket(LoginFail.LOGIN_SUCCESS);
+        if(authed && gameClient.getSessionKey().equals(skey)) {
+            gameClient.setConnectionState(ConnectionState.AUTHENTICATED);
+            gameClient.sendPacket(LoginFail.LOGIN_SUCCESS);
 
-            GameClient oldClient =  null; // TODO AuthNetworkService.getInstance().addAuthedClient(client);
+            GameClient oldClient =  NetworkService.getInstance().addAuthedClient(authKey, gameClient);
             if(nonNull(oldClient))  {
                 oldClient.setConnectionState(ConnectionState.DISCONNECTED);
                 Player activeChar = oldClient.getPlayer();
@@ -78,10 +78,10 @@ public class PlayerAuthResponse extends ReceivablePacket {
                 }
             }
 
-            sendPacket(new PlayerInGame(client.getAccountName()));
-            client.sendPacket(new PlayerSelectionInfo(client));
+            sendPacket(new PlayerInGame(gameClient.getAccountName()));
+            gameClient.sendPacket(new PlayerSelectionInfo(gameClient));
         } else {
-            client.close(new LoginFail(LoginFail.ACCESS_FAILED_TRY_LATER));
+            gameClient.close(new LoginFail(LoginFail.ACCESS_FAILED_TRY_LATER));
         }
     }
 

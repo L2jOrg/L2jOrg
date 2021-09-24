@@ -18,6 +18,7 @@
  */
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
+import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.ClusterServerInfo;
 import org.l2j.authserver.network.Endpoint;

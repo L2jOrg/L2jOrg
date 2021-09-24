@@ -62,4 +62,8 @@ public class AuthServerClient extends Client<Connection<AuthServerClient>> {
     public AuthService authService() {
         return authService;
     }
+
+    public int getAuthKey() {
+        return authService().getAuthKey();
+    }
 }

@@ -49,7 +49,7 @@ public abstract class PunishmentHandler implements IPunishmentHandler {
 
     private void punishAccount(PunishmentTask task) {
         var account = String.valueOf(task.getKey());
-        var client = NetworkService.getInstance().getAuthedClient(account);
+        var client = NetworkService.getInstance().getAuthedClient(-1, account);
         if (client != null) {
             var player = client.getPlayer();
             if (player != null) {
@@ -86,7 +86,7 @@ public abstract class PunishmentHandler implements IPunishmentHandler {
 
     private void stopAccountPunishment(PunishmentTask task) {
         var account = String.valueOf(task.getKey());
-        var client = NetworkService.getInstance().getAuthedClient(account);
+        var client = NetworkService.getInstance().getAuthedClient(-1, account);
         if (client != null) {
             var player = client.getPlayer();
             if (player != null) {

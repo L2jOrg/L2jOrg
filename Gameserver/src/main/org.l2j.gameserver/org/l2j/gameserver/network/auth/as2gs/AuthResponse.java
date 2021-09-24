@@ -18,15 +18,11 @@
  */
 package org.l2j.gameserver.network.auth.as2gs;
 
-import org.l2j.commons.util.Util;
-import org.l2j.gameserver.network.auth.AuthServerClient;
 import org.l2j.gameserver.network.auth.ReceivablePacket;
 import org.l2j.gameserver.network.auth.gs2as.PlayerInGame;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Arrays;
 
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -38,14 +34,17 @@ public class AuthResponse extends ReceivablePacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthResponse.class);
 
     private String serverName;
+    private int authKey;
 
     @Override
     protected void readImpl() {
         serverName = readString();
+        authKey = readInt();
     }
 
     @Override
     protected void runImpl() {
+        client.authService().setAuthKey(authKey);
         String[] accounts = client.authService().getAccounts();
         if(!isNullOrEmpty(accounts)) {
             sendPacket(new PlayerInGame(accounts));
