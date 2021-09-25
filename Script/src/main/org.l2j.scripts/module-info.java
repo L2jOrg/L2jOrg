@@ -39,22 +39,22 @@ import org.l2j.scripts.quests.tutorial.fighter.Q201_Tutorial;
 import org.l2j.scripts.quests.tutorial.kamael.Q10960_Tutorial;
 import org.l2j.scripts.quests.tutorial.mage.Q202_Tutorial;
 import org.l2j.scripts.quests.tutorial.orc.Q205_Tutorial;
-import org.l2j.scripts.village.master.Alliance.Alliance;
-import org.l2j.scripts.village.master.Clan.Clan;
-import org.l2j.scripts.village.master.DarkElfChange1.DarkElfChange1;
-import org.l2j.scripts.village.master.DarkElfChange2.DarkElfChange2;
-import org.l2j.scripts.village.master.DwarfBlacksmithChange1.DwarfBlacksmithChange1;
-import org.l2j.scripts.village.master.DwarfBlacksmithChange2.DwarfBlacksmithChange2;
-import org.l2j.scripts.village.master.DwarfWarehouseChange1.DwarfWarehouseChange1;
-import org.l2j.scripts.village.master.DwarfWarehouseChange2.DwarfWarehouseChange2;
-import org.l2j.scripts.village.master.ElfHumanClericChange2.ElfHumanClericChange2;
-import org.l2j.scripts.village.master.ElfHumanFighterChange1.ElfHumanFighterChange1;
-import org.l2j.scripts.village.master.ElfHumanFighterChange2.ElfHumanFighterChange2;
-import org.l2j.scripts.village.master.ElfHumanWizardChange1.ElfHumanWizardChange1;
-import org.l2j.scripts.village.master.ElfHumanWizardChange2.ElfHumanWizardChange2;
-import org.l2j.scripts.village.master.FirstClassTransferTalk.FirstClassTransferTalk;
-import org.l2j.scripts.village.master.OrcChange1.OrcChange1;
-import org.l2j.scripts.village.master.OrcChange2.OrcChange2;
+import org.l2j.scripts.village.master.alliance.Alliance;
+import org.l2j.scripts.village.master.clan.Clan;
+import org.l2j.scripts.village.master.job.darkelf.first.DarkElfChange1;
+import org.l2j.scripts.village.master.job.darkelf.second.DarkElfChange2;
+import org.l2j.scripts.village.master.job.dwarf.blacksmith.first.DwarfBlacksmithChange1;
+import org.l2j.scripts.village.master.job.dwarf.blacksmith.second.DwarfBlacksmithChange2;
+import org.l2j.scripts.village.master.job.dwarf.warehouse.first.DwarfWarehouseChange1;
+import org.l2j.scripts.village.master.job.dwarf.warehouse.second.DwarfWarehouseChange2;
+import org.l2j.scripts.village.master.job.cleric.second.ElfHumanClericChange2;
+import org.l2j.scripts.village.master.job.fighter.first.ElfHumanFighterChange1;
+import org.l2j.scripts.village.master.job.fighter.second.ElfHumanFighterChange2;
+import org.l2j.scripts.village.master.job.wizard.first.ElfHumanWizardChange1;
+import org.l2j.scripts.village.master.job.wizard.second.ElfHumanWizardChange2;
+import org.l2j.scripts.village.master.job.first.FirstClassTransferTalk;
+import org.l2j.scripts.village.master.job.orc.first.OrcChange1;
+import org.l2j.scripts.village.master.job.orc.second.OrcChange2;
 
 open module org.l2j.scripts {
 
