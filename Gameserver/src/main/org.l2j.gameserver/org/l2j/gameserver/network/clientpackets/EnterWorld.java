@@ -144,9 +144,6 @@ public class EnterWorld extends ClientPacket {
         }
 
         player.sendPacket(new HennaInfo(player));
-        player.sendSkillList();
-        player.sendPacket(new EtcStatusUpdate(player));
-
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExDressRoomUiOpen());
 
@@ -213,6 +210,7 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
         restoreItems(player);
         player.onEnter();
+        player.sendPacket(new EtcStatusUpdate(player));
         player.spawnMe();
 
         // Fix for equipped item skills
