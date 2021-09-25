@@ -60,51 +60,50 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player) {
-		String htmltext = null;
-		switch (event) {
+		return switch (event) {
 			case "30037-01.htm", "30037-02.htm", "30037-03.htm", "30037-04.htm", "30037-05.htm", "30037-06.htm", "30037-07.htm", "30037-08.htm", "30037-09.htm", "30037-10.htm", "30037-11.htm",
 					"30037-12.htm", "30037-13.htm", "30037-14.htm", "30070-01.htm", "30070-02.htm", "30070-03.htm", "30070-04.htm", "30070-05.htm", "30070-06.htm", "30070-07.htm", "30070-08.htm",
 					"30070-09.htm", "30070-10.htm", "30070-11.htm", "30070-12.htm", "30070-13.htm", "30070-14.htm", "30289-01.htm", "30289-02.htm", "30289-03.htm", "30289-04.htm", "30289-05.htm",
 					"30289-06.htm", "30289-07.htm", "30289-08.htm", "30289-09.htm", "30289-10.htm", "30289-11.htm", "30289-12.htm", "30289-13.htm", "30289-14.htm", "32095-01.htm", "32095-02.htm",
 					"32095-03.htm", "32095-04.htm", "32095-05.htm", "32095-06.htm", "32095-07.htm", "32095-08.htm", "32095-09.htm", "32095-10.htm", "32095-11.htm", "32095-12.htm", "32095-13.htm",
 					"32095-14.htm", "32098-01.htm", "32098-02.htm", "32098-03.htm", "32098-04.htm", "32098-05.htm", "32098-06.htm", "32098-07.htm", "32098-08.htm", "32098-09.htm", "32098-10.htm",
-					"32098-11.htm", "32098-12.htm", "32098-13.htm", "32098-14.htm" -> htmltext = event;
-			case "11", "15", "26", "29" -> htmltext = classChangeRequested(player, npc, Integer.parseInt(event));
-		}
-		return htmltext;
+					"32098-11.htm", "32098-12.htm", "32098-13.htm", "32098-14.htm" -> event;
+			case "11", "15", "26", "29" -> classChangeRequested(player, npc, Integer.parseInt(event));
+			default -> null;
+		};
 	}
 	
 	private String classChangeRequested(Player player, Npc npc, int classId) {
-		String htmltext = null;
+		String htmlText = null;
 		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)) {
-			htmltext = npc.getId() + "-16.htm";
+			htmlText = npc.getId() + "-16.htm";
 		} else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
-			htmltext = npc.getId() + "-17.htm";
+			htmlText = npc.getId() + "-17.htm";
 		} else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) {
-			htmltext = "30037-34.htm";
+			htmlText = "30037-34.htm";
 		} else if (classId == WIZARD && player.getClassId() == ClassId.MAGE) {
-			htmltext = changeClassToWizard(player, npc);
+			htmlText = changeClassToWizard(player, npc);
 		} else if (classId == CLERIC && player.getClassId() == ClassId.MAGE) {
-			htmltext = changeClassToCleric(player, npc);
+			htmlText = changeClassToCleric(player, npc);
 		} else if (classId == ELVEN_WIZARD && player.getClassId() == ClassId.ELVEN_MAGE) {
-			htmltext = changeClassToElvenWizard(player, npc);
+			htmlText = changeClassToElvenWizard(player, npc);
 		} else if (classId == ORACLE && player.getClassId() == ClassId.ELVEN_MAGE) {
-			htmltext = changeClassToOracle(player, npc);
+			htmlText = changeClassToOracle(player, npc);
 		}
-		return htmltext;
+		return htmlText;
 	}
 
 	private String changeClassToOracle(Player player, Npc npc) {
-		String htmltext;
+		String htmlText;
 		if (player.getLevel() < 20)
 		{
 			if (hasQuestItems(player, LEAF_OF_ORACLE))
 			{
-				htmltext = npc.getId() + "-30.htm"; // fnLowLevel22
+				htmlText = npc.getId() + "-30.htm"; // fnLowLevel22
 			}
 			else
 			{
-				htmltext = npc.getId() + "-31.htm"; // fnLowLevelNoProof22
+				htmlText = npc.getId() + "-31.htm"; // fnLowLevelNoProof22
 			}
 		}
 		else if (hasQuestItems(player, LEAF_OF_ORACLE))
@@ -115,13 +114,13 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 			// SystemMessage and cast skill is done by setClassId
 			player.broadcastUserInfo();
 			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
-			htmltext = npc.getId() + "-32.htm"; // fnAfterClassChange22
+			htmlText = npc.getId() + "-32.htm"; // fnAfterClassChange22
 		}
 		else
 		{
-			htmltext = npc.getId() + "-33.htm"; // fnNoProof22
+			htmlText = npc.getId() + "-33.htm"; // fnNoProof22
 		}
-		return htmltext;
+		return htmlText;
 	}
 
 	private String changeClassToElvenWizard(Player player, Npc npc) {

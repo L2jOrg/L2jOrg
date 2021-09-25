@@ -86,31 +86,63 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 	}
 	
 	private String classChangeRequested(Player player, int classId) {
-		String htmltext = null;
 		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
-			htmltext = "30109-39.htm";
-		} else if (classId == GLADIATOR && player.getClassId() == ClassId.WARRIOR) {
-			htmltext = changeClassToGladiator(player);
-		} else if (classId == WARLORD && player.getClassId() == ClassId.WARRIOR) {
-			htmltext = changeClassToWarlord(player);
-		} else if (classId == PALADIN && player.getClassId() == ClassId.KNIGHT) {
-			htmltext = changeClassToPaladin(player);
-		} else if (classId == DARK_AVENGER && player.getClassId() == ClassId.KNIGHT) {
-			htmltext = changeClassToDarkAvenger(player);
-		} else if (classId == TREASURE_HUNTER && player.getClassId() == ClassId.ROGUE) {
-			htmltext = changeClassToTreasureHunter(player);
-		} else if (classId == HAWKEYE && player.getClassId() == ClassId.ROGUE) {
-			htmltext = changeClassToHawkeye(player);
-		} else if (classId == TEMPLE_KNIGHT && player.getClassId() == ClassId.ELVEN_KNIGHT) {
-			htmltext = changeClassToTempleKnight(player);
-		} else if (classId == SWORDSINGER && player.getClassId() == ClassId.ELVEN_KNIGHT) {
-			htmltext = changeClassSwordSinger(player);
-		} else if (classId == PLAINS_WALKER && player.getClassId() == ClassId.ELVEN_SCOUT) {
-			htmltext = changeClassToPlainsWalker(player);
-		} else if (classId == SILVER_RANGER && player.getClassId() == ClassId.ELVEN_SCOUT) {
-			htmltext = changeClassToSilverRanger(player);
+			return "30109-39.htm";
 		}
-		return htmltext;
+
+		return switch (player.getClassId()) {
+			case WARRIOR -> changeClassFromWarrior(player, classId);
+			case KNIGHT -> changeClassFromKnight(player, classId);
+			case ROGUE -> changeClassFromRogue(player, classId);
+			case ELVEN_KNIGHT -> changeClassFromElvenKnight(player, classId);
+			case ELVEN_SCOUT -> changeClassFromScout(player, classId);
+			default -> null;
+		};
+	}
+
+	private String changeClassFromScout(Player player, int classId) {
+		if (classId == PLAINS_WALKER) {
+			return changeClassToPlainsWalker(player);
+		} else if (classId == SILVER_RANGER) {
+			return changeClassToSilverRanger(player);
+		}
+		return null;
+	}
+
+	private String changeClassFromElvenKnight(Player player, int classId) {
+		if (classId == TEMPLE_KNIGHT) {
+			return changeClassToTempleKnight(player);
+		} else if (classId == SWORDSINGER) {
+			return changeClassSwordSinger(player);
+		}
+		return null;
+	}
+
+	private String changeClassFromRogue(Player player, int classId) {
+		if (classId == TREASURE_HUNTER) {
+			return changeClassToTreasureHunter(player);
+		} else if (classId == HAWKEYE) {
+			return changeClassToHawkeye(player);
+		}
+		return null;
+	}
+
+	private String changeClassFromKnight(Player player, int classId) {
+		if (classId == PALADIN) {
+			return changeClassToPaladin(player);
+		} else if (classId == DARK_AVENGER) {
+			return changeClassToDarkAvenger(player);
+		}
+		return null;
+	}
+
+	private String changeClassFromWarrior(Player player, int classId) {
+		if(classId == GLADIATOR) {
+			return changeClassToGladiator(player);
+		} else if(classId == WARLORD) {
+			return changeClassToWarlord(player);
+		}
+		return null;
 	}
 
 	private String changeClassToSilverRanger(Player player) {

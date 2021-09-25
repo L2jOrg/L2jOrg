@@ -69,13 +69,12 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 			return htmlText + NO_HTML;
 		}
 
-		switch (MASTERS.get(npc.getId())) {
-			case HUMAN -> htmlText = onHumanTalk(npc, player, htmlText);
-			case DWARF -> htmlText = onDwarfTalk(player, htmlText);
-			case ELF, DARK_ELF, ORC -> htmlText = onElvenOrOrcsTalk(player, htmlText);
-			default -> htmlText += NO_HTML;
-		}
-		return htmlText;
+		return switch (MASTERS.get(npc.getId())) {
+			case HUMAN -> onHumanTalk(npc, player, htmlText);
+			case DWARF -> onDwarfTalk(player, htmlText);
+			case ELF, DARK_ELF, ORC -> onElvenOrOrcsTalk(player, htmlText);
+			default -> htmlText + NO_HTML;
+		};
 	}
 
 	private String onElvenOrOrcsTalk(Player player, String htmlText) {
