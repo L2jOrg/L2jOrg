@@ -64,162 +64,146 @@ public final class OrcChange2 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		return switch (event) {
+			case "30513-03.htm", "30513-04.htm", "30513-05.htm", "30513-07.htm", "30513-08.htm", "30513-09.htm", "30513-10.htm",
+					"30513-11.htm", "30513-12.htm", "30513-13.htm", "30513-14.htm", "30513-15.htm", "30513-16.htm" -> event;
+			case "46", "48", "51", "52" ->  classChangeRequested(player, Integer.parseInt(event));
+			default -> null;
+		};
+	}
+	
+	private String classChangeRequested(Player player, int classId) {
 		String htmltext = null;
-		switch (event)
-		{
-			case "30513-03.htm": // master_lv3_orc006ra
-			case "30513-04.htm": // master_lv3_orc007ra
-			case "30513-05.htm": // master_lv3_orc007rat
-			case "30513-07.htm": // master_lv3_orc006ma
-			case "30513-08.htm": // master_lv3_orc007ma
-			case "30513-09.htm": // master_lv3_orc007mat
-			case "30513-10.htm": // master_lv3_orc003s
-			case "30513-11.htm": // master_lv3_orc006sa
-			case "30513-12.htm": // master_lv3_orc007sa
-			case "30513-13.htm": // master_lv3_orc007sat
-			case "30513-14.htm": // master_lv3_orc006sb
-			case "30513-15.htm": // master_lv3_orc007sb
-			case "30513-16.htm": // master_lv3_orc007sbt
-			{
-				htmltext = event;
-				break;
-			}
-			case "46":
-			case "48":
-			case "51":
-			case "52":
-			{
-				htmltext = ClassChangeRequested(player, Integer.valueOf(event));
-				break;
-			}
+		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
+			htmltext = "30513-19.htm";
+		} else if (classId == DESTROYER && player.getClassId() == ClassId.ORC_RAIDER) {
+			htmltext = changeClassToDestroyer(player);
+		} else if (classId == TYRANT && player.getClassId() == ClassId.ORC_MONK) {
+			htmltext = changeClassToTyrant(player);
+		} else if (classId == OVERLORD && player.getClassId() == ClassId.ORC_SHAMAN) {
+			htmltext = changeClassToOverlord(player);
+		} else if (classId == WARCRYER && player.getClassId() == ClassId.ORC_SHAMAN) {
+			htmltext = changeClassToWarCryer(player);
 		}
 		return htmltext;
 	}
-	
-	private String ClassChangeRequested(Player player, int classId)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
+
+	private String changeClassToWarCryer(Player player) {
+		String htmlText;
+		if (player.getLevel() < 40)
 		{
-			htmltext = "30513-19.htm"; // fnYouAreThirdClass
-		}
-		else if ((classId == DESTROYER) && (player.getClassId() == ClassId.ORC_RAIDER))
-		{
-			if (player.getLevel() < 40)
+			if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_WARSPIRIT))
 			{
-				if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_CHAMPION))
-				{
-					htmltext = "30513-20.htm"; // fnLowLevel11
-				}
-				else
-				{
-					htmltext = "30513-21.htm"; // fnLowLevelNoProof11
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_CHAMPION))
-			{
-				takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_CHAMPION);
-				player.setClassId(DESTROYER);
-				player.setBaseClass(DESTROYER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30513-22.htm"; // fnAfterClassChange11
+				htmlText = "30513-32.htm"; // fnLowLevel32
 			}
 			else
 			{
-				htmltext = "30513-23.htm"; // fnNoProof11
+				htmlText = "30513-33.htm"; // fnLowLevelNoProof32
 			}
 		}
-		else if ((classId == TYRANT) && (player.getClassId() == ClassId.ORC_MONK))
+		else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_WARSPIRIT))
 		{
-			if (player.getLevel() < 40)
+			takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_WARSPIRIT);
+			player.setClassId(WARCRYER);
+			player.setBaseClass(WARCRYER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmlText = "30513-34.htm"; // fnAfterClassChange32
+		}
+		else
+		{
+			htmlText = "30513-35.htm"; // fnNoProof32
+		}
+		return htmlText;
+	}
+
+	private String changeClassToOverlord(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40) {
+			if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_LORD))
 			{
-				if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_DUELIST))
-				{
-					htmltext = "30513-24.htm"; // fnLowLevel21
-				}
-				else
-				{
-					htmltext = "30513-25.htm"; // fnLowLevelNoProof21
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_DUELIST))
-			{
-				takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_DUELIST);
-				player.setClassId(TYRANT);
-				player.setBaseClass(TYRANT);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30513-26.htm"; // fnAfterClassChange21
+				htmltext = "30513-28.htm"; // fnLowLevel31
 			}
 			else
 			{
-				htmltext = "30513-27.htm"; // fnNoProof21
+				htmltext = "30513-29.htm"; // fnLowLevelNoProof31
 			}
 		}
-		else if ((classId == OVERLORD) && (player.getClassId() == ClassId.ORC_SHAMAN))
+		else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_LORD))
 		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_LORD))
-				{
-					htmltext = "30513-28.htm"; // fnLowLevel31
-				}
-				else
-				{
-					htmltext = "30513-29.htm"; // fnLowLevelNoProof31
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_LORD))
-			{
-				takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_LORD);
-				player.setClassId(OVERLORD);
-				player.setBaseClass(OVERLORD);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30513-30.htm"; // fnAfterClassChange31
-			}
-			else
-			{
-				htmltext = "30513-31.htm"; // fnNoProof31
-			}
+			takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_LORD);
+			player.setClassId(OVERLORD);
+			player.setBaseClass(OVERLORD);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30513-30.htm"; // fnAfterClassChange31
 		}
-		else if ((classId == WARCRYER) && (player.getClassId() == ClassId.ORC_SHAMAN))
+		else
 		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_WARSPIRIT))
-				{
-					htmltext = "30513-32.htm"; // fnLowLevel32
-				}
-				else
-				{
-					htmltext = "30513-33.htm"; // fnLowLevelNoProof32
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_WARSPIRIT))
-			{
-				takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_GLORY, MARK_OF_WARSPIRIT);
-				player.setClassId(WARCRYER);
-				player.setBaseClass(WARCRYER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30513-34.htm"; // fnAfterClassChange32
-			}
-			else
-			{
-				htmltext = "30513-35.htm"; // fnNoProof32
-			}
+			htmltext = "30513-31.htm"; // fnNoProof31
 		}
 		return htmltext;
 	}
-	
+
+	private String changeClassToTyrant(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40) {
+			if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_DUELIST)) {
+				htmltext = "30513-24.htm";
+			} else {
+				htmltext = "30513-25.htm";
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_DUELIST))
+		{
+			takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_DUELIST);
+			player.setClassId(TYRANT);
+			player.setBaseClass(TYRANT);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30513-26.htm"; // fnAfterClassChange21
+		}
+		else
+		{
+			htmltext = "30513-27.htm"; // fnNoProof21
+		}
+		return htmltext;
+	}
+
+	private String changeClassToDestroyer(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_CHAMPION))
+			{
+				htmltext = "30513-20.htm"; // fnLowLevel11
+			}
+			else
+			{
+				htmltext = "30513-21.htm"; // fnLowLevelNoProof11
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_CHAMPION))
+		{
+			takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_GLORY, MARK_OF_CHAMPION);
+			player.setClassId(DESTROYER);
+			player.setBaseClass(DESTROYER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30513-22.htm"; // fnAfterClassChange11
+		}
+		else
+		{
+			htmltext = "30513-23.htm"; // fnNoProof11
+		}
+		return htmltext;
+	}
+
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{

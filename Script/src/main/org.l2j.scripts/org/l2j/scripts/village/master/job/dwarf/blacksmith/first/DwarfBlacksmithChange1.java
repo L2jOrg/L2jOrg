@@ -29,122 +29,80 @@ import org.l2j.scripts.ai.AbstractNpcAI;
  * Dwarf class transfer AI.
  * @author Adry_85
  */
-public final class DwarfBlacksmithChange1 extends AbstractNpcAI
-{
-	// NPCs
-	private static final int[] NPCS =
-	{
+public final class DwarfBlacksmithChange1 extends AbstractNpcAI {
+
+	private static final int[] NPCS = {
 		30499, // Tapoy
 		30504, // Mendio
 		30595, // Opix
 	};
-	
-	// Items
+
 	private static final int SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE = 8869;
 	private static final int FINAL_PASS_CERTIFICATE = 1635;
-	// Class
+
 	private static final int ARTISAN = 56;
 	
-	private DwarfBlacksmithChange1()
-	{
+	private DwarfBlacksmithChange1() {
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		String htmltext = null;
-		switch (event)
-		{
-			case "30499-01.htm": // head_blacksmith_tapoy003f
-			case "30499-02.htm": // head_blacksmith_tapoy006fa
-			case "30499-03.htm": // head_blacksmith_tapoy007fa
-			case "30499-04.htm": // head_blacksmith_tapoy006fb
-			case "30504-01.htm": // head_blacksmith_mendio003f
-			case "30504-02.htm": // head_blacksmith_mendio006fa
-			case "30504-03.htm": // head_blacksmith_mendio007fa
-			case "30504-04.htm": // head_blacksmith_mendio006fb
-			case "30595-01.htm": // head_blacksmith_opix003f
-			case "30595-02.htm": // head_blacksmith_opix006fa
-			case "30595-03.htm": // head_blacksmith_opix007fa
-			case "30595-04.htm": // head_blacksmith_opix006fb
-			case "32093-01.htm": // head_blacksmith_boillin003f
-			case "32093-02.htm": // head_blacksmith_boillin006fa
-			case "32093-03.htm": // head_blacksmith_boillin007fa
-			case "32093-04.htm": // head_blacksmith_boillin006fb
-			{
-				htmltext = event;
-				break;
-			}
-			case "56":
-			{
-				htmltext = ClassChangeRequested(player, npc, Integer.valueOf(event));
-				break;
-			}
-		}
-		return htmltext;
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		return switch (event) {
+			case "30499-01.htm", "30499-02.htm", "30499-03.htm", "30499-04.htm", "30504-01.htm", "30504-02.htm", "30504-03.htm", "30504-04.htm", "30595-01.htm", "30595-02.htm",
+				"30595-03.htm", "30595-04.htm", "32093-01.htm", "32093-02.htm", "32093-03.htm", "32093-04.htm" -> event;
+			case "56" -> classChangeRequested(player, npc, Integer.parseInt(event));
+			default -> null;
+		};
 	}
 	
-	private String ClassChangeRequested(Player player, Npc npc, int classId)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
-		{
-			htmltext = npc.getId() + "-06.htm"; // fnYouAreSecondClass
+	private String classChangeRequested(Player player, Npc npc, int classId) {
+		String htmlText = null;
+		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)) {
+			htmlText = npc.getId() + "-06.htm";
+		} else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
+			htmlText = npc.getId() + "-07.htm";
+		} else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) {
+			htmlText = "30499-12.htm";
 		}
-		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-		{
-			htmltext = npc.getId() + "-07.htm"; // fnYouAreThirdClass
+		else if (classId == ARTISAN && player.getClassId() == ClassId.DWARVEN_FIGHTER) {
+			htmlText = classChangeToArtisan(player, npc);
 		}
-		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-		{
-			htmltext = "30499-12.htm"; // fnYouAreFourthClass
-		}
-		else if ((classId == ARTISAN) && (player.getClassId() == ClassId.DWARVEN_FIGHTER))
-		{
-			if (player.getLevel() < 20)
-			{
-				if (hasQuestItems(player, FINAL_PASS_CERTIFICATE))
-				{
-					htmltext = npc.getId() + "-08.htm"; // fnLowLevel11
-				}
-				else
-				{
-					htmltext = npc.getId() + "-09.htm"; // fnLowLevelNoProof11
-				}
-			}
-			else if (hasQuestItems(player, FINAL_PASS_CERTIFICATE))
-			{
-				takeItems(player, FINAL_PASS_CERTIFICATE, -1);
-				player.setClassId(ARTISAN);
-				player.setBaseClass(ARTISAN);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
-				htmltext = npc.getId() + "-10.htm"; // fnAfterClassChange11
-			}
-			else
-			{
-				htmltext = npc.getId() + "-11.htm"; // fnNoProof11
-			}
-		}
-		return htmltext;
+		return htmlText;
 	}
-	
+
+	private String classChangeToArtisan(Player player, Npc npc) {
+		String htmlText;
+		if (player.getLevel() < 20) {
+			if (hasQuestItems(player, FINAL_PASS_CERTIFICATE)) {
+				htmlText = npc.getId() + "-08.htm";
+			} else {
+				htmlText = npc.getId() + "-09.htm";
+			}
+		}
+		else if (hasQuestItems(player, FINAL_PASS_CERTIFICATE)) {
+			takeItems(player, FINAL_PASS_CERTIFICATE, -1);
+			player.setClassId(ARTISAN);
+			player.setBaseClass(ARTISAN);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
+			htmlText = npc.getId() + "-10.htm";
+		} else {
+			htmlText = npc.getId() + "-11.htm";
+		}
+		return htmlText;
+	}
+
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
-		String htmltext;
-		if (player.isInCategory(CategoryType.WARSMITH_GROUP))
-		{
-			htmltext = npc.getId() + "-01.htm"; // fnClassList1
+	public String onTalk(Npc npc, Player player) {
+		String htmlText;
+		if (player.isInCategory(CategoryType.WARSMITH_GROUP)) {
+			htmlText = npc.getId() + "-01.htm";
+		} else {
+			htmlText = npc.getId() + "-05.htm";
 		}
-		else
-		{
-			htmltext = npc.getId() + "-05.htm"; // fnClassMismatch
-		}
-		return htmltext;
+		return htmlText;
 	}
 	
 	public static DwarfBlacksmithChange1 provider()

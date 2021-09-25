@@ -53,160 +53,122 @@ public final class OrcChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		return switch (event) {
+			case "30500-01.htm", "30500-02.htm", "30500-03.htm", "30500-04.htm", "30500-05.htm", "30500-06.htm", "30500-07.htm", "30500-08.htm", "30505-01.htm", "30505-02.htm",
+				 "30505-03.htm", "30505-04.htm", "30505-05.htm", "30505-06.htm", "30505-07.htm", "30505-08.htm", "30508-01.htm", "30508-02.htm", "30508-03.htm", "30508-04.htm",
+				 "30508-05.htm", "30508-06.htm", "30508-07.htm", "30508-08.htm", "32097-01.htm", "32097-02.htm", "32097-03.htm", "32097-04.htm", "32097-05.htm", "32097-06.htm",
+					"32097-07.htm", "32097-08.htm" -> event;
+			case "45", "47", "50" ->  classChangeRequested(player, npc, Integer.parseInt(event));
+			default -> null;
+		};
+	}
+	
+	private String classChangeRequested(Player player, Npc npc, int classId) {
 		String htmltext = null;
-		switch (event)
-		{
-			case "30500-01.htm": // high_prefect_osborn003f
-			case "30500-02.htm": // high_prefect_osborn006fa
-			case "30500-03.htm": // high_prefect_osborn007fa
-			case "30500-04.htm": // high_prefect_osborn006fb
-			case "30500-05.htm": // high_prefect_osborn007fb
-			case "30500-06.htm": // high_prefect_osborn003m
-			case "30500-07.htm": // high_prefect_osborn006ma
-			case "30500-08.htm": // high_prefect_osborn007ma
-			case "30505-01.htm": // high_prefect_drikus003f
-			case "30505-02.htm": // high_prefect_drikus006fa
-			case "30505-03.htm": // high_prefect_drikus007fa
-			case "30505-04.htm": // high_prefect_drikus006fb
-			case "30505-05.htm": // high_prefect_drikus007fb
-			case "30505-06.htm": // high_prefect_drikus003m
-			case "30505-07.htm": // high_prefect_drikus006ma
-			case "30505-08.htm": // high_prefect_drikus007ma
-			case "30508-01.htm": // high_prefect_cional003f
-			case "30508-02.htm": // high_prefect_cional006fa
-			case "30508-03.htm": // high_prefect_cional007fa
-			case "30508-04.htm": // high_prefect_cional006fb
-			case "30508-05.htm": // high_prefect_cional007fb
-			case "30508-06.htm": // high_prefect_cional003m
-			case "30508-07.htm": // high_prefect_cional006ma
-			case "30508-08.htm": // high_prefect_cional007ma
-			case "32097-01.htm": // high_prefect_finker003f
-			case "32097-02.htm": // high_prefect_finker006fa
-			case "32097-03.htm": // high_prefect_finker007fa
-			case "32097-04.htm": // high_prefect_finker006fb
-			case "32097-05.htm": // high_prefect_finker007fb
-			case "32097-06.htm": // high_prefect_finker003m
-			case "32097-07.htm": // high_prefect_finker006ma
-			case "32097-08.htm": // high_prefect_finker007ma
-			{
-				htmltext = event;
-				break;
-			}
-			case "45":
-			case "47":
-			case "50":
-			{
-				htmltext = ClassChangeRequested(player, npc, Integer.valueOf(event));
-				break;
-			}
+		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)) {
+			htmltext = npc.getId() + "-09.htm";
+		} else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
+			htmltext = npc.getId() + "-10.htm";
+		} else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) {
+			htmltext = "30500-24.htm";
+		} else if (classId == 45 && player.getClassId() == ClassId.ORC_FIGHTER) {
+			htmltext = changeClassToRaider(player, npc);
+		} else if (classId == 47 && player.getClassId() == ClassId.ORC_FIGHTER) {
+			htmltext = changeClassToMonk(player, npc);
+		} else if (classId == 50 && player.getClassId() == ClassId.ORC_MAGE) {
+			htmltext = changeClassToShaman(player, npc);
 		}
 		return htmltext;
 	}
-	
-	private String ClassChangeRequested(Player player, Npc npc, int classId)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
+
+	private String changeClassToShaman(Player player, Npc npc) {
+		String htmlText;
+		if (player.getLevel() < 20)
 		{
-			htmltext = npc.getId() + "-09.htm"; // fnYouAreSecondClass
-		}
-		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-		{
-			htmltext = npc.getId() + "-10.htm"; // fnYouAreThirdClass
-		}
-		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-		{
-			htmltext = "30500-24.htm"; // fnYouAreFourthClass
-		}
-		else if ((classId == 45) && (player.getClassId() == ClassId.ORC_FIGHTER))
-		{
-			if (player.getLevel() < 20)
+			if (hasQuestItems(player, MASK_OF_MEDIUM))
 			{
-				if (hasQuestItems(player, MARK_OF_RAIDER))
-				{
-					htmltext = npc.getId() + "-11.htm"; // fnLowLevel11
-				}
-				else
-				{
-					htmltext = npc.getId() + "-12.htm"; // fnLowLevelNoProof11
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_RAIDER))
-			{
-				takeItems(player, MARK_OF_RAIDER, -1);
-				player.setClassId(45);
-				player.setBaseClass(45);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
-				htmltext = npc.getId() + "-14.htm"; // fnAfterClassChange11
+				htmlText = npc.getId() + "-19.htm";
 			}
 			else
 			{
-				htmltext = npc.getId() + "-13.htm"; // fnNoProof11
+				htmlText = npc.getId() + "-20.htm";
 			}
 		}
-		else if ((classId == 47) && (player.getClassId() == ClassId.ORC_FIGHTER))
+		else if (hasQuestItems(player, MASK_OF_MEDIUM))
 		{
-			if (player.getLevel() < 20)
+			takeItems(player, MASK_OF_MEDIUM, -1);
+			player.setClassId(50);
+			player.setBaseClass(50);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
+			htmlText = npc.getId() + "-22.htm"; // fnAfterClassChange21
+		}
+		else
+		{
+			htmlText = npc.getId() + "-21.htm"; // fnNoProof21
+		}
+		return htmlText;
+	}
+
+	private String changeClassToMonk(Player player, Npc npc) {
+		String htmltext;
+		if (player.getLevel() < 20)
+		{
+			if (hasQuestItems(player, KHAVATARI_TOTEM))
 			{
-				if (hasQuestItems(player, KHAVATARI_TOTEM))
-				{
-					htmltext = npc.getId() + "-15.htm"; // fnLowLevel12
-				}
-				else
-				{
-					htmltext = npc.getId() + "-16.htm"; // fnLowLevelNoProof12
-				}
-			}
-			else if (hasQuestItems(player, KHAVATARI_TOTEM))
-			{
-				takeItems(player, KHAVATARI_TOTEM, -1);
-				player.setClassId(47);
-				player.setBaseClass(47);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
-				htmltext = npc.getId() + "-18.htm"; // fnAfterClassChange12
+				htmltext = npc.getId() + "-15.htm";
 			}
 			else
 			{
-				htmltext = npc.getId() + "-17.htm"; // fnNoProof12
+				htmltext = npc.getId() + "-16.htm"; // fnLowLevelNoProof12
 			}
 		}
-		else if ((classId == 50) && (player.getClassId() == ClassId.ORC_MAGE))
+		else if (hasQuestItems(player, KHAVATARI_TOTEM))
 		{
-			if (player.getLevel() < 20)
-			{
-				if (hasQuestItems(player, MASK_OF_MEDIUM))
-				{
-					htmltext = npc.getId() + "-19.htm"; // fnLowLevel21
-				}
-				else
-				{
-					htmltext = npc.getId() + "-20.htm"; // fnLowLevelNoProof21
-				}
-			}
-			else if (hasQuestItems(player, MASK_OF_MEDIUM))
-			{
-				takeItems(player, MASK_OF_MEDIUM, -1);
-				player.setClassId(50);
-				player.setBaseClass(50);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
-				htmltext = npc.getId() + "-22.htm"; // fnAfterClassChange21
-			}
-			else
-			{
-				htmltext = npc.getId() + "-21.htm"; // fnNoProof21
-			}
+			takeItems(player, KHAVATARI_TOTEM, -1);
+			player.setClassId(47);
+			player.setBaseClass(47);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
+			htmltext = npc.getId() + "-18.htm"; // fnAfterClassChange12
+		}
+		else
+		{
+			htmltext = npc.getId() + "-17.htm"; // fnNoProof12
 		}
 		return htmltext;
 	}
-	
+
+	private String changeClassToRaider(Player player, Npc npc) {
+		String htmltext;
+		if (player.getLevel() < 20)
+		{
+			if (hasQuestItems(player, MARK_OF_RAIDER))
+			{
+				htmltext = npc.getId() + "-11.htm";
+			}
+			else
+			{
+				htmltext = npc.getId() + "-12.htm";
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_RAIDER))
+		{
+			takeItems(player, MARK_OF_RAIDER, -1);
+			player.setClassId(45);
+			player.setBaseClass(45);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
+			htmltext = npc.getId() + "-14.htm";
+		}
+		else
+		{
+			htmltext = npc.getId() + "-13.htm";
+		}
+		return htmltext;
+	}
+
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{

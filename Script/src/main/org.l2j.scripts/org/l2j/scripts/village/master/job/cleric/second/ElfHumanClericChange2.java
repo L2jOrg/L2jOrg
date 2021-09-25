@@ -60,130 +60,94 @@ public final class ElfHumanClericChange2 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		String htmltext = null;
-		switch (event)
-		{
-			case "30120-02.htm": // master_lv3_hec003h
-			case "30120-03.htm": // master_lv3_hec006ha
-			case "30120-04.htm": // master_lv3_hec007ha
-			case "30120-05.htm": // master_lv3_hec007hat
-			case "30120-06.htm": // master_lv3_hec006hb
-			case "30120-07.htm": // master_lv3_hec007hb
-			case "30120-08.htm": // master_lv3_hec007hbt
-			case "30120-10.htm": // master_lv3_hec006ea
-			case "30120-11.htm": // master_lv3_hec007ea
-			case "30120-12.htm": // master_lv3_hec007eat
-			{
-				htmltext = event;
-				break;
-			}
-			case "16":
-			case "17":
-			case "30":
-			{
-				htmltext = ClassChangeRequested(player, Integer.valueOf(event));
-				break;
-			}
-		}
-		return htmltext;
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		return switch (event) {
+			case "30120-02.htm", "30120-03.htm", "30120-04.htm", "30120-05.htm", "30120-06.htm", "30120-07.htm",
+				 "30120-08.htm", "30120-10.htm", "30120-11.htm", "30120-12.htm" ->  event;
+			case "16", "17", "30" ->  classChangeRequested(player, Integer.parseInt(event));
+			default -> null;
+		};
 	}
 	
-	private String ClassChangeRequested(Player player, int classId)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-		{
-			htmltext = "30120-15.htm"; // fnYouAreThirdClass
+	private String classChangeRequested(Player player, int classId){
+		String htmlText = null;
+		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)){
+			htmlText = "30120-15.htm";
+		} else if (classId == BISHOP && player.getClassId() == ClassId.CLERIC) {
+			htmlText = classChangeToBishop(player);
 		}
-		else if ((classId == BISHOP) && (player.getClassId() == ClassId.CLERIC))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_HEALER))
-				{
-					htmltext = "30120-16.htm"; // fnLowLevel11
-				}
-				else
-				{
-					htmltext = "30120-17.htm"; // fnLowLevelNoProof11
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_HEALER))
-			{
-				takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_HEALER);
-				player.setClassId(BISHOP);
-				player.setBaseClass(BISHOP);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30120-18.htm"; // fnAfterClassChange11
-			}
-			else
-			{
-				htmltext = "30120-19.htm"; // fnNoProof11
-			}
+		else if (classId == PROPHET && player.getClassId() == ClassId.CLERIC) {
+			htmlText = classChangeToProphet(player);
 		}
-		else if ((classId == PROPHET) && (player.getClassId() == ClassId.CLERIC))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_REFORMER))
-				{
-					htmltext = "30120-20.htm"; // fnLowLevel12
-				}
-				else
-				{
-					htmltext = "30120-21.htm"; // fnLowLevelNoProof12
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_REFORMER))
-			{
-				takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_REFORMER);
-				player.setClassId(PROPHET);
-				player.setBaseClass(PROPHET);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30120-22.htm"; // fnAfterClassChange12
-			}
-			else
-			{
-				htmltext = "30120-23.htm"; // fnNoProof12
-			}
+		else if (classId == ELDER && player.getClassId() == ClassId.ORACLE) {
+			htmlText = classChangeToElder(player);
 		}
-		else if ((classId == ELDER) && (player.getClassId() == ClassId.ORACLE))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_LIFE, MARK_OF_HEALER))
-				{
-					htmltext = "30120-24.htm"; // fnLowLevel21
-				}
-				else
-				{
-					htmltext = "30120-25.htm"; // fnLowLevelNoProof21
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_LIFE, MARK_OF_HEALER))
-			{
-				takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_LIFE, MARK_OF_HEALER);
-				player.setClassId(ELDER);
-				player.setBaseClass(ELDER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30120-26.htm"; // fnAfterClassChange21
-			}
-			else
-			{
-				htmltext = "30120-27.htm"; // fnNoProof21
-			}
-		}
-		return htmltext;
+		return htmlText;
 	}
-	
+
+	private String classChangeToElder(Player player) {
+		String htmlText;
+		if (player.getLevel() < 40) {
+			if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_LIFE, MARK_OF_HEALER)) {
+				htmlText = "30120-24.htm";
+			} else {
+				htmlText = "30120-25.htm";
+			}
+		} else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_LIFE, MARK_OF_HEALER)) {
+			takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_LIFE, MARK_OF_HEALER);
+			player.setClassId(ELDER);
+			player.setBaseClass(ELDER);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmlText = "30120-26.htm";
+		} else {
+			htmlText = "30120-27.htm";
+		}
+		return htmlText;
+	}
+
+	private String classChangeToProphet(Player player) {
+		String htmlText;
+		if (player.getLevel() < 40) {
+			if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_REFORMER)) {
+				htmlText = "30120-20.htm";
+			} else {
+				htmlText = "30120-21.htm";
+			}
+		} else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_REFORMER)) {
+			takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_REFORMER);
+			player.setClassId(PROPHET);
+			player.setBaseClass(PROPHET);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmlText = "30120-22.htm";
+		} else {
+			htmlText = "30120-23.htm";
+		}
+		return htmlText;
+	}
+
+	private String classChangeToBishop(Player player) {
+		String htmlText;
+		if (player.getLevel() < 40) {
+			if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_HEALER)) {
+				htmlText = "30120-16.htm";
+			} else {
+				htmlText = "30120-17.htm";
+			}
+		} else if (hasQuestItems(player, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_HEALER)) {
+			takeItems(player, -1, MARK_OF_PILGRIM, MARK_OF_TRUST, MARK_OF_HEALER);
+			player.setClassId(BISHOP);
+			player.setBaseClass(BISHOP);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmlText = "30120-18.htm";
+		} else {
+			htmlText = "30120-19.htm";
+		}
+		return htmlText;
+	}
+
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{

@@ -57,202 +57,189 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 	private static final int SPELLSINGER = 27;
 	private static final int ELEMENTAL_SUMMONER = 28;
 	
-	private ElfHumanWizardChange2()
-	{
+	private ElfHumanWizardChange2() {
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		return switch (event) {
+			case "30115-02.htm", "30115-03.htm", "30115-04.htm", "30115-05.htm", "30115-06.htm", "30115-07.htm", "30115-08.htm", "30115-09.htm", "30115-10.htm", "30115-11.htm",
+				"30115-12.htm", "30115-13.htm", "30115-14.htm", "30115-15.htm", "30115-16.htm", "30115-17.htm", "30115-18.htm" -> event;
+			case "12", "13", "14", "27", "28" -> classChangeRequested(player, Integer.parseInt(event));
+			default -> null;
+		};
+	}
+	
+	private String classChangeRequested(Player player, int classId) {
 		String htmltext = null;
-		switch (event)
-		{
-			case "30115-02.htm": // master_lv3_hew003h
-			case "30115-03.htm": // master_lv3_hew006ha
-			case "30115-04.htm": // master_lv3_hew007ha
-			case "30115-05.htm": // master_lv3_hew007hat
-			case "30115-06.htm": // master_lv3_hew006hb
-			case "30115-07.htm": // master_lv3_hew007hb
-			case "30115-08.htm": // master_lv3_hew007hbt
-			case "30115-09.htm": // master_lv3_hew006hc
-			case "30115-10.htm": // master_lv3_hew007hc
-			case "30115-11.htm": // master_lv3_hew007hct
-			case "30115-12.htm": // master_lv3_hew003e
-			case "30115-13.htm": // master_lv3_hew006ea
-			case "30115-14.htm": // master_lv3_hew007ea
-			case "30115-15.htm": // master_lv3_hew007eat
-			case "30115-16.htm": // master_lv3_hew006eb
-			case "30115-17.htm": // master_lv3_hew007eb
-			case "30115-18.htm": // master_lv3_hew007ebt
-			{
-				htmltext = event;
-				break;
-			}
-			case "12":
-			case "13":
-			case "14":
-			case "27":
-			case "28":
-			{
-				htmltext = ClassChangeRequested(player, Integer.valueOf(event));
-				break;
-			}
+		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
+			htmltext = "30115-21.htm";
+		} else if (classId == SORCERER && player.getClassId() == ClassId.WIZARD) {
+			htmltext = changeClassToSorcerer(player);
+		} else if (classId == NECROMANCER && player.getClassId() == ClassId.WIZARD) {
+			htmltext = changeClassToNecromancer(player);
+		} else if (classId == WARLOCK && player.getClassId() == ClassId.WIZARD) {
+			htmltext = changeClassToWarlock(player);
+		} else if (classId == SPELLSINGER && player.getClassId() == ClassId.ELVEN_WIZARD) {
+			htmltext = changeClassToSpellSinger(player);
+		} else if (classId == ELEMENTAL_SUMMONER && player.getClassId() == ClassId.ELVEN_WIZARD) {
+			htmltext = changeClassToElementalSummoner(player);
 		}
 		return htmltext;
 	}
-	
-	private String ClassChangeRequested(Player player, int classId)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
+
+	private String changeClassToElementalSummoner(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
 		{
-			htmltext = "30115-21.htm"; // fnYouAreThirdClass
-		}
-		else if ((classId == SORCERER) && (player.getClassId() == ClassId.WIZARD))
-		{
-			if (player.getLevel() < 40)
+			if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_SUMMONER))
 			{
-				if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_MAGUS))
-				{
-					htmltext = "30115-22.htm"; // fnLowLevel11
-				}
-				else
-				{
-					htmltext = "30115-23.htm"; // fnLowLevelNoProof11
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_MAGUS))
-			{
-				takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_MAGUS);
-				player.setClassId(SORCERER);
-				player.setBaseClass(SORCERER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30115-24.htm"; // fnAfterClassChange11
+				htmltext = "30115-38.htm"; // fnLowLevel22
 			}
 			else
 			{
-				htmltext = "30115-25.htm"; // fnNoProof11
+				htmltext = "30115-39.htm"; // fnLowLevelNoProof22
 			}
 		}
-		else if ((classId == NECROMANCER) && (player.getClassId() == ClassId.WIZARD))
+		else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_SUMMONER))
 		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_WITCHCRAFT))
-				{
-					htmltext = "30115-26.htm"; // fnLowLevel12
-				}
-				else
-				{
-					htmltext = "30115-27.htm"; // fnLowLevelNoProof12
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_WITCHCRAFT))
-			{
-				takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_WITCHCRAFT);
-				player.setClassId(NECROMANCER);
-				player.setBaseClass(NECROMANCER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30115-28.htm"; // fnAfterClassChange12
-			}
-			else
-			{
-				htmltext = "30115-29.htm"; // fnNoProof12
-			}
+			takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_SUMMONER);
+			player.setClassId(ELEMENTAL_SUMMONER);
+			player.setBaseClass(ELEMENTAL_SUMMONER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30115-40.htm"; // fnAfterClassChange22
 		}
-		else if ((classId == WARLOCK) && (player.getClassId() == ClassId.WIZARD))
+		else
 		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_SUMMONER))
-				{
-					htmltext = "30115-30.htm"; // fnLowLevel13
-				}
-				else
-				{
-					htmltext = "30115-31.htm"; // fnLowLevelNoProof13
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_SUMMONER))
-			{
-				takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_SUMMONER);
-				player.setClassId(WARLOCK);
-				player.setBaseClass(WARLOCK);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30115-32.htm"; // fnAfterClassChange13
-			}
-			else
-			{
-				htmltext = "30115-33.htm"; // fnNoProof13
-			}
-		}
-		else if ((classId == SPELLSINGER) && (player.getClassId() == ClassId.ELVEN_WIZARD))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_MAGUS))
-				{
-					htmltext = "30115-34.htm"; // fnLowLevel21
-				}
-				else
-				{
-					htmltext = "30115-35.htm"; // fnLowLevelNoProof21
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_MAGUS))
-			{
-				takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_MAGUS);
-				player.setClassId(SPELLSINGER);
-				player.setBaseClass(SPELLSINGER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30115-36.htm"; // fnAfterClassChange21
-			}
-			else
-			{
-				htmltext = "30115-37.htm"; // fnNoProof21
-			}
-		}
-		else if ((classId == ELEMENTAL_SUMMONER) && (player.getClassId() == ClassId.ELVEN_WIZARD))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_SUMMONER))
-				{
-					htmltext = "30115-38.htm"; // fnLowLevel22
-				}
-				else
-				{
-					htmltext = "30115-39.htm"; // fnLowLevelNoProof22
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_SUMMONER))
-			{
-				takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_SUMMONER);
-				player.setClassId(ELEMENTAL_SUMMONER);
-				player.setBaseClass(ELEMENTAL_SUMMONER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30115-40.htm"; // fnAfterClassChange22
-			}
-			else
-			{
-				htmltext = "30115-41.htm"; // fnNoProof22
-			}
+			htmltext = "30115-41.htm"; // fnNoProof22
 		}
 		return htmltext;
 	}
-	
+
+	private String changeClassToSpellSinger(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_MAGUS))
+			{
+				htmltext = "30115-34.htm"; // fnLowLevel21
+			}
+			else
+			{
+				htmltext = "30115-35.htm"; // fnLowLevelNoProof21
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_MAGUS))
+		{
+			takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_LIFE, MARK_OF_MAGUS);
+			player.setClassId(SPELLSINGER);
+			player.setBaseClass(SPELLSINGER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30115-36.htm"; // fnAfterClassChange21
+		}
+		else
+		{
+			htmltext = "30115-37.htm"; // fnNoProof21
+		}
+		return htmltext;
+	}
+
+	private String changeClassToWarlock(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_SUMMONER))
+			{
+				htmltext = "30115-30.htm"; // fnLowLevel13
+			}
+			else
+			{
+				htmltext = "30115-31.htm"; // fnLowLevelNoProof13
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_SUMMONER))
+		{
+			takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_SUMMONER);
+			player.setClassId(WARLOCK);
+			player.setBaseClass(WARLOCK);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30115-32.htm"; // fnAfterClassChange13
+		}
+		else
+		{
+			htmltext = "30115-33.htm"; // fnNoProof13
+		}
+		return htmltext;
+	}
+
+	private String changeClassToNecromancer(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_WITCHCRAFT))
+			{
+				htmltext = "30115-26.htm"; // fnLowLevel12
+			}
+			else
+			{
+				htmltext = "30115-27.htm"; // fnLowLevelNoProof12
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_WITCHCRAFT))
+		{
+			takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_WITCHCRAFT);
+			player.setClassId(NECROMANCER);
+			player.setBaseClass(NECROMANCER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30115-28.htm"; // fnAfterClassChange12
+		}
+		else
+		{
+			htmltext = "30115-29.htm"; // fnNoProof12
+		}
+		return htmltext;
+	}
+
+	private String changeClassToSorcerer(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_MAGUS))
+			{
+				htmltext = "30115-22.htm"; // fnLowLevel11
+			}
+			else
+			{
+				htmltext = "30115-23.htm"; // fnLowLevelNoProof11
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_MAGUS))
+		{
+			takeItems(player, -1, MARK_OF_SCHOLAR, MARK_OF_TRUST, MARK_OF_MAGUS);
+			player.setClassId(SORCERER);
+			player.setBaseClass(SORCERER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30115-24.htm"; // fnAfterClassChange11
+		}
+		else
+		{
+			htmltext = "30115-25.htm"; // fnNoProof11
+		}
+		return htmltext;
+	}
+
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{

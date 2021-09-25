@@ -77,102 +77,67 @@ public final class DarkElfChange2 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		if (isInteger(event))
-		{
-			final int i = Integer.valueOf(event);
-			final ClassId cid = player.getClassId();
-			if ((cid.getRace() == Race.DARK_ELF) && (cid.getId() == CLASSES[i][1]))
-			{
-				int suffix;
-				final boolean item1 = hasQuestItems(player, CLASSES[i][6]);
-				final boolean item2 = hasQuestItems(player, CLASSES[i][7]);
-				final boolean item3 = hasQuestItems(player, CLASSES[i][8]);
-				if (player.getLevel() < 40)
-				{
-					suffix = (!item1 || !item2 || !item3) ? CLASSES[i][2] : CLASSES[i][3];
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		if(!isInteger(event)) return null;
+
+		final int i = Integer.parseInt(event);
+		final ClassId cid = player.getClassId();
+		if (cid.getRace() == Race.DARK_ELF && cid.getId() == CLASSES[i][1]) {
+			int suffix;
+			final boolean item1 = hasQuestItems(player, CLASSES[i][6]);
+			final boolean item2 = hasQuestItems(player, CLASSES[i][7]);
+			final boolean item3 = hasQuestItems(player, CLASSES[i][8]);
+			if (player.getLevel() < 40) {
+				suffix = (!item1 || !item2 || !item3) ? CLASSES[i][2] : CLASSES[i][3];
+			} else {
+				if (!item1 || !item2 || !item3) {
+					suffix = CLASSES[i][4];
+				} else {
+					suffix = CLASSES[i][5];
+					takeItems(player, CLASSES[i][6], -1);
+					takeItems(player, CLASSES[i][7], -1);
+					takeItems(player, CLASSES[i][8], -1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_2);
+					player.setClassId(CLASSES[i][0]);
+					player.setBaseClass(CLASSES[i][0]);
+					player.broadcastUserInfo();
 				}
-				else
-				{
-					if (!item1 || !item2 || !item3)
-					{
-						suffix = CLASSES[i][4];
-					}
-					else
-					{
-						suffix = CLASSES[i][5];
-						takeItems(player, CLASSES[i][6], -1);
-						takeItems(player, CLASSES[i][7], -1);
-						takeItems(player, CLASSES[i][8], -1);
-						playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_2);
-						player.setClassId(CLASSES[i][0]);
-						player.setBaseClass(CLASSES[i][0]);
-						player.broadcastUserInfo();
-					}
-				}
-				event = "30474-" + suffix + ".html";
 			}
+			event = "30474-" + suffix + ".html";
 		}
+
 		return event;
 	}
 	
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
-		String htmltext;
+	public String onTalk(Npc npc, Player player) {
 		final ClassId cid = player.getClassId();
-		if (cid.getRace() == Race.DARK_ELF)
-		{
-			switch (cid)
-			{
-				case PALUS_KNIGHT:
-				{
-					htmltext = "30474-01.html";
-					break;
-				}
-				case SHILLIEN_ORACLE:
-				{
-					htmltext = "30474-08.html";
-					break;
-				}
-				case ASSASSIN:
-				{
-					htmltext = "30474-12.html";
-					break;
-				}
-				case DARK_WIZARD:
-				{
-					htmltext = "30474-19.html";
-					break;
-				}
-				default:
-				{
-					if (cid.level() == 0)
-					{
-						// first occupation not made yet
-						htmltext = "30474-55.html";
-					}
-					else if (cid.level() >= 2)
-					{
-						// second/third occupation change already made
-						htmltext = "30474-54.html";
-					}
-					else
-					{
-						htmltext = "30474-56.html";
-					}
-					
-				}
-			}
+		if (cid.getRace() == Race.DARK_ELF) {
+			return switch (cid) {
+				case PALUS_KNIGHT -> "30474-01.html";
+				case SHILLIEN_ORACLE -> "30474-08.html";
+				case ASSASSIN ->  "30474-12.html";
+				case DARK_WIZARD ->  "30474-19.html";
+				default -> classAlreadyChanged(cid);
+			};
 		}
-		else
-		{
-			htmltext = "30474-56.html"; // other races
-		}
-		return htmltext;
+		return "30474-56.html";
 	}
-	
+
+	private String classAlreadyChanged(ClassId cid) {
+		String htmlText;
+		if (cid.level() == 0) {
+			// first occupation not made yet
+			htmlText = "30474-55.html";
+		} else if (cid.level() >= 2) {
+			// second/third occupation change already made
+			htmlText = "30474-54.html";
+		} else {
+			htmlText = "30474-56.html";
+		}
+		return htmlText;
+	}
+
 	public static DarkElfChange2 provider()
 	{
 		return new DarkElfChange2();
