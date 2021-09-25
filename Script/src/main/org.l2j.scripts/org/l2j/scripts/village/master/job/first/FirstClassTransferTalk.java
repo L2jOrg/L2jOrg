@@ -34,6 +34,11 @@ import org.l2j.scripts.ai.AbstractNpcAI;
 public final class FirstClassTransferTalk extends AbstractNpcAI
 {
 	private static final IntMap<Race> MASTERS = new HashIntMap<>();
+	public static final String NO_HTML = "no.html";
+	public static final String FIGHTER_HTML = "fighter.html";
+	public static final String TRANSFER_1_HTML = "transfer_1.html";
+	public static final String TRANSFER_2_HTML = "transfer_2.html";
+
 	static
 	{
 		MASTERS.put(30026, Race.HUMAN); // Blitz, TI Fighter Guild Head Master
@@ -57,90 +62,69 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
-		String htmltext = npc.getId() + "_";
+	public String onTalk(Npc npc, Player player) {
+		String htmlText = npc.getId() + "_";
 		
 		if (MASTERS.get(npc.getId()) != player.getRace()) {
-			return htmltext + "no.html";
+			return htmlText + NO_HTML;
 		}
-		
+
 		switch (MASTERS.get(npc.getId())) {
-			case HUMAN: {
-				if (player.getClassId().level() == 0) {
-					if (player.isMageClass()) {
-						if (npc.getId() == 30031) {
-							htmltext += "mystic.html";
-						} else {
-							htmltext += "no.html";
-						}
-					}
-					else if (npc.getId() == 30026) {
-						htmltext += "fighter.html";
-					} else {
-						htmltext += "no.html";
-					}
-				}
-				else if (player.getClassId().level() == 1)
-				{
-					htmltext += "transfer_1.html";
-				}
-				else
-				{
-					htmltext += "transfer_2.html";
-				}
-				break;
-			}
-			case ELF:
-			case DARK_ELF:
-			case ORC:
-			{
-				if (player.getClassId().level() == 0)
-				{
-					if (player.isMageClass())
-					{
-						htmltext += "mystic.html";
-					}
-					else
-					{
-						htmltext += "fighter.html";
-					}
-				}
-				else if (player.getClassId().level() == 1)
-				{
-					htmltext += "transfer_1.html";
-				}
-				else
-				{
-					htmltext += "transfer_2.html";
-				}
-				break;
-			}
-			case DWARF:
-			{
-				if (player.getClassId().level() == 0)
-				{
-					htmltext += "fighter.html";
-				}
-				else if (player.getClassId().level() == 1)
-				{
-					htmltext += "transfer_1.html";
-				}
-				else
-				{
-					htmltext += "transfer_2.html";
-				}
-				break;
-			}
-			default:
-			{
-				htmltext += "no.html";
-				break;
-			}
+			case HUMAN -> htmlText = onHumanTalk(npc, player, htmlText);
+			case DWARF -> htmlText = onDwarfTalk(player, htmlText);
+			case ELF, DARK_ELF, ORC -> htmlText = onElvenOrOrcsTalk(player, htmlText);
+			default -> htmlText += NO_HTML;
 		}
-		return htmltext;
+		return htmlText;
 	}
-	
+
+	private String onElvenOrOrcsTalk(Player player, String htmlText) {
+		if (player.getClassId().level() == 0) {
+			if (player.isMageClass()) {
+				htmlText += "mystic.html";
+			} else {
+				htmlText += FIGHTER_HTML;
+			}
+		} else if (player.getClassId().level() == 1) {
+			htmlText += TRANSFER_1_HTML;
+		} else {
+			htmlText += TRANSFER_2_HTML;
+		}
+		return htmlText;
+	}
+
+	private String onHumanTalk(Npc npc, Player player, String htmlText) {
+		if (player.getClassId().level() == 0) {
+			if (player.isMageClass()) {
+				if (npc.getId() == 30031) {
+					htmlText += "mystic.html";
+				} else {
+					htmlText += NO_HTML;
+				}
+			} else if (npc.getId() == 30026) {
+				htmlText += FIGHTER_HTML;
+			} else {
+				htmlText += NO_HTML;
+			}
+		} else if (player.getClassId().level() == 1) {
+			htmlText += TRANSFER_1_HTML;
+		} else {
+			htmlText += TRANSFER_2_HTML;
+		}
+		return htmlText;
+	}
+
+	private String onDwarfTalk(Player player, String htmlText) {
+		if (player.getClassId().level() == 0) {
+			htmlText += FIGHTER_HTML;
+		} else if (player.getClassId().level() == 1) {
+			htmlText += TRANSFER_1_HTML;
+		} else {
+			htmlText += TRANSFER_2_HTML;
+		}
+		return htmlText;
+	}
+
 	public static FirstClassTransferTalk provider()
 	{
 		return new FirstClassTransferTalk();

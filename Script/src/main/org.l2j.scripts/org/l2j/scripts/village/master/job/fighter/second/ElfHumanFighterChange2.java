@@ -75,401 +75,393 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		return switch (event) {
+			case "30109-02.htm", "30109-03.htm", "30109-04.htm", "30109-05.htm", "30109-06.htm", "30109-07.htm", "30109-08.htm", "30109-09.htm", "30109-10.htm", "30109-11.htm", "30109-12.htm", "30109-13.htm",
+				 "30109-14.htm", "30109-15.htm", "30109-16.htm", "30109-17.htm", "30109-18.htm", "30109-19.htm", "30109-20.htm", "30109-21.htm", "30109-22.htm", "30109-23.htm", "30109-24.htm", "30109-25.htm",
+				  "30109-26.htm", "30109-27.htm", "30109-28.htm", "30109-29.htm", "30109-30.htm", "30109-31.htm", "30109-32.htm", "30109-33.htm", "30109-34.htm", "30109-35.htm", "30109-36.htm" -> event;
+			case "2", "3", "5", "6", "8", "9", "20", "21", "23", "24" -> classChangeRequested(player, Integer.parseInt(event));
+			default -> null;
+		};
+	}
+	
+	private String classChangeRequested(Player player, int classId) {
 		String htmltext = null;
-		switch (event)
-		{
-			case "30109-02.htm": // master_lv3_hef003w
-			case "30109-03.htm": // master_lv3_hef006wa
-			case "30109-04.htm": // master_lv3_hef007wa
-			case "30109-05.htm": // master_lv3_hef007wat
-			case "30109-06.htm": // master_lv3_hef006wb
-			case "30109-07.htm": // master_lv3_hef007wb
-			case "30109-08.htm": // master_lv3_hef007wbt
-			case "30109-09.htm": // master_lv3_hef003k
-			case "30109-10.htm": // master_lv3_hef006ka
-			case "30109-11.htm": // master_lv3_hef007ka
-			case "30109-12.htm": // master_lv3_hef007kat
-			case "30109-13.htm": // master_lv3_hef006kb
-			case "30109-14.htm": // master_lv3_hef007kb
-			case "30109-15.htm": // master_lv3_hef007kbt
-			case "30109-16.htm": // master_lv3_hef003r
-			case "30109-17.htm": // master_lv3_hef006ra
-			case "30109-18.htm": // master_lv3_hef007ra
-			case "30109-19.htm": // master_lv3_hef007rat
-			case "30109-20.htm": // master_lv3_hef006rb
-			case "30109-21.htm": // master_lv3_hef007rb
-			case "30109-22.htm": // master_lv3_hef007rbt
-			case "30109-23.htm": // master_lv3_hef003e
-			case "30109-24.htm": // master_lv3_hef006ea
-			case "30109-25.htm": // master_lv3_hef007ea
-			case "30109-26.htm": // master_lv3_hef007eat
-			case "30109-27.htm": // master_lv3_hef006eb
-			case "30109-28.htm": // master_lv3_hef007eb
-			case "30109-29.htm": // master_lv3_hef007ebt
-			case "30109-30.htm": // master_lv3_hef003s
-			case "30109-31.htm": // master_lv3_hef006sa
-			case "30109-32.htm": // master_lv3_hef007sa
-			case "30109-33.htm": // master_lv3_hef007sat
-			case "30109-34.htm": // master_lv3_hef006sb
-			case "30109-35.htm": // master_lv3_hef007sb
-			case "30109-36.htm": // master_lv3_hef007sbt
-			{
-				htmltext = event;
-				break;
-			}
-			case "2":
-			case "3":
-			case "5":
-			case "6":
-			case "8":
-			case "9":
-			case "20":
-			case "21":
-			case "23":
-			case "24":
-			{
-				htmltext = ClassChangeRequested(player, Integer.valueOf(event));
-				break;
-			}
+		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
+			htmltext = "30109-39.htm";
+		} else if (classId == GLADIATOR && player.getClassId() == ClassId.WARRIOR) {
+			htmltext = changeClassToGladiator(player);
+		} else if (classId == WARLORD && player.getClassId() == ClassId.WARRIOR) {
+			htmltext = changeClassToWarlord(player);
+		} else if (classId == PALADIN && player.getClassId() == ClassId.KNIGHT) {
+			htmltext = changeClassToPaladin(player);
+		} else if (classId == DARK_AVENGER && player.getClassId() == ClassId.KNIGHT) {
+			htmltext = changeClassToDarkAvenger(player);
+		} else if (classId == TREASURE_HUNTER && player.getClassId() == ClassId.ROGUE) {
+			htmltext = changeClassToTreasureHunter(player);
+		} else if (classId == HAWKEYE && player.getClassId() == ClassId.ROGUE) {
+			htmltext = changeClassToHawkeye(player);
+		} else if (classId == TEMPLE_KNIGHT && player.getClassId() == ClassId.ELVEN_KNIGHT) {
+			htmltext = changeClassToTempleKnight(player);
+		} else if (classId == SWORDSINGER && player.getClassId() == ClassId.ELVEN_KNIGHT) {
+			htmltext = changeClassSwordSinger(player);
+		} else if (classId == PLAINS_WALKER && player.getClassId() == ClassId.ELVEN_SCOUT) {
+			htmltext = changeClassToPlainsWalker(player);
+		} else if (classId == SILVER_RANGER && player.getClassId() == ClassId.ELVEN_SCOUT) {
+			htmltext = changeClassToSilverRanger(player);
 		}
 		return htmltext;
 	}
-	
-	private String ClassChangeRequested(Player player, int classId)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-		{
-			htmltext = "30109-39.htm"; // fnYouAreThirdClass
-		}
-		else if ((classId == GLADIATOR) && (player.getClassId() == ClassId.WARRIOR))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_DUELIST))
-				{
-					htmltext = "30109-40.htm"; // fnLowLevel11
-				}
-				else
-				{
-					htmltext = "30109-41.htm"; // fnLowLevelNoProof11
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_DUELIST))
-			{
-				takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_DUELIST);
-				player.setClassId(GLADIATOR);
-				player.setBaseClass(GLADIATOR);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-42.htm"; // fnAfterClassChange11
-			}
-			else
-			{
-				htmltext = "30109-43.htm"; // fnNoProof11
-			}
-		}
-		else if ((classId == WARLORD) && (player.getClassId() == ClassId.WARRIOR))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_CHAMPION))
-				{
-					htmltext = "30109-44.htm"; // fnLowLevel12
-				}
-				else
-				{
-					htmltext = "30109-45.htm"; // fnLowLevelNoProof12
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_CHAMPION))
-			{
-				takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_CHAMPION);
-				player.setClassId(WARLORD);
-				player.setBaseClass(WARLORD);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-46.htm"; // fnAfterClassChange12
-			}
-			else
-			{
-				htmltext = "30109-47.htm"; // fnNoProof12
-			}
-		}
-		else if ((classId == PALADIN) && (player.getClassId() == ClassId.KNIGHT))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_HEALER))
-				{
-					htmltext = "30109-48.htm"; // fnLowLevel21
-				}
-				else
-				{
-					htmltext = "30109-49.htm"; // fnLowLevelNoProof21
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_HEALER))
-			{
-				takeItems(player, -1, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_HEALER);
-				player.setClassId(PALADIN);
-				player.setBaseClass(PALADIN);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-50.htm"; // fnAfterClassChange21
-			}
-			else
-			{
-				htmltext = "30109-51.htm"; // fnNoProof21
-			}
-		}
-		else if ((classId == DARK_AVENGER) && (player.getClassId() == ClassId.KNIGHT))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_WITCHCRAFT))
-				{
-					htmltext = "30109-52.htm"; // fnLowLevel22
-				}
-				else
-				{
-					htmltext = "30109-53.htm"; // fnLowLevelNoProof22
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_WITCHCRAFT))
-			{
-				takeItems(player, -1, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_WITCHCRAFT);
-				player.setClassId(DARK_AVENGER);
-				player.setBaseClass(DARK_AVENGER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-54.htm"; // fnAfterClassChange22
-			}
-			else
-			{
-				htmltext = "30109-55.htm"; // fnNoProof22
-			}
-		}
-		else if ((classId == TREASURE_HUNTER) && (player.getClassId() == ClassId.ROGUE))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SEARCHER))
-				{
-					htmltext = "30109-56.htm"; // fnLowLevel31
-				}
-				else
-				{
-					htmltext = "30109-57.htm"; // fnLowLevelNoProof31
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SEARCHER))
-			{
-				takeItems(player, -1, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SEARCHER);
-				player.setClassId(TREASURE_HUNTER);
-				player.setBaseClass(TREASURE_HUNTER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-58.htm"; // fnAfterClassChange31
-			}
-			else
-			{
-				htmltext = "30109-59.htm"; // fnNoProof31
-			}
-		}
-		else if ((classId == HAWKEYE) && (player.getClassId() == ClassId.ROGUE))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SAGITTARIUS))
-				{
-					htmltext = "30109-60.htm"; // fnLowLevel32
-				}
-				else
-				{
-					htmltext = "30109-61.htm"; // fnLowLevelNoProof32
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SAGITTARIUS))
-			{
-				takeItems(player, -1, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SAGITTARIUS);
-				player.setClassId(HAWKEYE);
-				player.setBaseClass(HAWKEYE);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-62.htm"; // fnAfterClassChange32
-			}
-			else
-			{
-				htmltext = "30109-63.htm"; // fnNoProof32
-			}
-		}
-		else if ((classId == TEMPLE_KNIGHT) && (player.getClassId() == ClassId.ELVEN_KNIGHT))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_LIFE, MARK_OF_HEALER))
-				{
-					htmltext = "30109-64.htm"; // fnLowLevel41
-				}
-				else
-				{
-					htmltext = "30109-65.htm"; // fnLowLevelNoProof41
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_LIFE, MARK_OF_HEALER))
-			{
-				takeItems(player, -1, MARK_OF_DUTY, MARK_OF_LIFE, MARK_OF_HEALER);
-				player.setClassId(TEMPLE_KNIGHT);
-				player.setBaseClass(TEMPLE_KNIGHT);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-66.htm"; // fnAfterClassChange41
-			}
-			else
-			{
-				htmltext = "30109-67.htm"; // fnNoProof41
-			}
-		}
-		else if ((classId == SWORDSINGER) && (player.getClassId() == ClassId.ELVEN_KNIGHT))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_LIFE, MARK_OF_DUELIST))
-				{
-					htmltext = "30109-68.htm"; // fnLowLevel42
-				}
-				else
-				{
-					htmltext = "30109-69.htm"; // fnLowLevelNoProof42
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_LIFE, MARK_OF_DUELIST))
-			{
-				takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_LIFE, MARK_OF_DUELIST);
-				player.setClassId(SWORDSINGER);
-				player.setBaseClass(SWORDSINGER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-70.htm"; // fnAfterClassChange42
-			}
-			else
-			{
-				htmltext = "30109-71.htm"; // fnNoProof42
-			}
-		}
-		else if ((classId == PLAINS_WALKER) && (player.getClassId() == ClassId.ELVEN_SCOUT))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SEARCHER))
-				{
-					htmltext = "30109-72.htm"; // fnLowLevel51
-				}
-				else
-				{
-					htmltext = "30109-73.htm"; // fnLowLevelNoProof51
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SEARCHER))
-			{
-				takeItems(player, -1, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SEARCHER);
-				player.setClassId(PLAINS_WALKER);
-				player.setBaseClass(PLAINS_WALKER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-74.htm"; // fnAfterClassChange51
-			}
-			else
-			{
-				htmltext = "30109-75.htm"; // fnNoProof51
-			}
-		}
-		else if ((classId == SILVER_RANGER) && (player.getClassId() == ClassId.ELVEN_SCOUT))
-		{
-			if (player.getLevel() < 40)
-			{
-				if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SAGITTARIUS))
-				{
-					htmltext = "30109-76.htm"; // fnLowLevel52
-				}
-				else
-				{
-					htmltext = "30109-77.htm"; // fnLowLevelNoProof52
-				}
-			}
-			else if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SAGITTARIUS))
-			{
-				takeItems(player, -1, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SAGITTARIUS);
-				player.setClassId(SILVER_RANGER);
-				player.setBaseClass(SILVER_RANGER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
-				htmltext = "30109-78.htm"; // fnAfterClassChange52
-			}
-			else
-			{
-				htmltext = "30109-79.htm"; // fnNoProof52
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(Npc npc, Player player)
-	{
+
+	private String changeClassToSilverRanger(Player player) {
 		String htmltext;
-		if (player.isInCategory(CategoryType.FIGHTER_GROUP) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.isInCategory(CategoryType.HUMAN_FALL_CLASS) || player.isInCategory(CategoryType.ELF_FALL_CLASS)))
+		if (player.getLevel() < 40)
 		{
-			htmltext = "30109-01.htm"; // fnYouAreFourthClass
-		}
-		else if (player.isInCategory(CategoryType.FIGHTER_GROUP) && (player.isInCategory(CategoryType.HUMAN_FALL_CLASS) || player.isInCategory(CategoryType.ELF_FALL_CLASS)))
-		{
-			final ClassId classId = player.getClassId();
-			if ((classId == ClassId.WARRIOR) || (classId == ClassId.GLADIATOR) || (classId == ClassId.WARLORD))
+			if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SAGITTARIUS))
 			{
-				htmltext = "30109-02.htm"; // fnClassList1
-			}
-			else if ((classId == ClassId.KNIGHT) || (classId == ClassId.PALADIN) || (classId == ClassId.DARK_AVENGER))
-			{
-				htmltext = "30109-09.htm"; // fnClassList2
-			}
-			else if ((classId == ClassId.ROGUE) || (classId == ClassId.TREASURE_HUNTER) || (classId == ClassId.HAWKEYE))
-			{
-				htmltext = "30109-16.htm"; // fnClassList3
-			}
-			else if ((classId == ClassId.ELVEN_KNIGHT) || (classId == ClassId.TEMPLE_KNIGHT) || (classId == ClassId.SWORDSINGER))
-			{
-				htmltext = "30109-23.htm"; // fnClassList4
-			}
-			else if ((classId == ClassId.ELVEN_SCOUT) || (classId == ClassId.PLAINS_WALKER) || (classId == ClassId.SILVER_RANGER))
-			{
-				htmltext = "30109-30.htm"; // fnClassList5
+				htmltext = "30109-76.htm"; // fnLowLevel52
 			}
 			else
 			{
-				htmltext = "30109-37.htm"; // fnYouAreFirstClass
+				htmltext = "30109-77.htm"; // fnLowLevelNoProof52
 			}
+		}
+		else if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SAGITTARIUS))
+		{
+			takeItems(player, -1, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SAGITTARIUS);
+			player.setClassId(SILVER_RANGER);
+			player.setBaseClass(SILVER_RANGER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-78.htm"; // fnAfterClassChange52
 		}
 		else
 		{
-			htmltext = "30109-38.htm"; // fnClassMismatch
+			htmltext = "30109-79.htm"; // fnNoProof52
 		}
 		return htmltext;
 	}
-	
+
+	private String changeClassToPlainsWalker(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SEARCHER))
+			{
+				htmltext = "30109-72.htm"; // fnLowLevel51
+			}
+			else
+			{
+				htmltext = "30109-73.htm"; // fnLowLevelNoProof51
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SEARCHER))
+		{
+			takeItems(player, -1, MARK_OF_SEEKER, MARK_OF_LIFE, MARK_OF_SEARCHER);
+			player.setClassId(PLAINS_WALKER);
+			player.setBaseClass(PLAINS_WALKER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-74.htm"; // fnAfterClassChange51
+		}
+		else
+		{
+			htmltext = "30109-75.htm"; // fnNoProof51
+		}
+		return htmltext;
+	}
+
+	private String changeClassSwordSinger(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_LIFE, MARK_OF_DUELIST))
+			{
+				htmltext = "30109-68.htm"; // fnLowLevel42
+			}
+			else
+			{
+				htmltext = "30109-69.htm"; // fnLowLevelNoProof42
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_LIFE, MARK_OF_DUELIST))
+		{
+			takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_LIFE, MARK_OF_DUELIST);
+			player.setClassId(SWORDSINGER);
+			player.setBaseClass(SWORDSINGER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-70.htm"; // fnAfterClassChange42
+		}
+		else
+		{
+			htmltext = "30109-71.htm"; // fnNoProof42
+		}
+		return htmltext;
+	}
+
+	private String changeClassToTempleKnight(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_LIFE, MARK_OF_HEALER))
+			{
+				htmltext = "30109-64.htm"; // fnLowLevel41
+			}
+			else
+			{
+				htmltext = "30109-65.htm"; // fnLowLevelNoProof41
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_LIFE, MARK_OF_HEALER))
+		{
+			takeItems(player, -1, MARK_OF_DUTY, MARK_OF_LIFE, MARK_OF_HEALER);
+			player.setClassId(TEMPLE_KNIGHT);
+			player.setBaseClass(TEMPLE_KNIGHT);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-66.htm"; // fnAfterClassChange41
+		}
+		else
+		{
+			htmltext = "30109-67.htm"; // fnNoProof41
+		}
+		return htmltext;
+	}
+
+	private String changeClassToHawkeye(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SAGITTARIUS))
+			{
+				htmltext = "30109-60.htm"; // fnLowLevel32
+			}
+			else
+			{
+				htmltext = "30109-61.htm"; // fnLowLevelNoProof32
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SAGITTARIUS))
+		{
+			takeItems(player, -1, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SAGITTARIUS);
+			player.setClassId(HAWKEYE);
+			player.setBaseClass(HAWKEYE);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-62.htm"; // fnAfterClassChange32
+		}
+		else
+		{
+			htmltext = "30109-63.htm"; // fnNoProof32
+		}
+		return htmltext;
+	}
+
+	private String changeClassToTreasureHunter(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SEARCHER))
+			{
+				htmltext = "30109-56.htm"; // fnLowLevel31
+			}
+			else
+			{
+				htmltext = "30109-57.htm"; // fnLowLevelNoProof31
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SEARCHER))
+		{
+			takeItems(player, -1, MARK_OF_SEEKER, MARK_OF_TRUST, MARK_OF_SEARCHER);
+			player.setClassId(TREASURE_HUNTER);
+			player.setBaseClass(TREASURE_HUNTER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-58.htm"; // fnAfterClassChange31
+		}
+		else
+		{
+			htmltext = "30109-59.htm"; // fnNoProof31
+		}
+		return htmltext;
+	}
+
+	private String changeClassToDarkAvenger(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_WITCHCRAFT))
+			{
+				htmltext = "30109-52.htm"; // fnLowLevel22
+			}
+			else
+			{
+				htmltext = "30109-53.htm"; // fnLowLevelNoProof22
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_WITCHCRAFT))
+		{
+			takeItems(player, -1, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_WITCHCRAFT);
+			player.setClassId(DARK_AVENGER);
+			player.setBaseClass(DARK_AVENGER);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-54.htm"; // fnAfterClassChange22
+		}
+		else
+		{
+			htmltext = "30109-55.htm"; // fnNoProof22
+		}
+		return htmltext;
+	}
+
+	private String changeClassToPaladin(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_HEALER))
+			{
+				htmltext = "30109-48.htm"; // fnLowLevel21
+			}
+			else
+			{
+				htmltext = "30109-49.htm"; // fnLowLevelNoProof21
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_HEALER))
+		{
+			takeItems(player, -1, MARK_OF_DUTY, MARK_OF_TRUST, MARK_OF_HEALER);
+			player.setClassId(PALADIN);
+			player.setBaseClass(PALADIN);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-50.htm"; // fnAfterClassChange21
+		}
+		else
+		{
+			htmltext = "30109-51.htm"; // fnNoProof21
+		}
+		return htmltext;
+	}
+
+	private String changeClassToWarlord(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_CHAMPION))
+			{
+				htmltext = "30109-44.htm";
+			}
+			else
+			{
+				htmltext = "30109-45.htm";
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_CHAMPION))
+		{
+			takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_CHAMPION);
+			player.setClassId(WARLORD);
+			player.setBaseClass(WARLORD);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-46.htm";
+		}
+		else
+		{
+			htmltext = "30109-47.htm";
+		}
+		return htmltext;
+	}
+
+	private String changeClassToGladiator(Player player) {
+		String htmltext;
+		if (player.getLevel() < 40)
+		{
+			if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_DUELIST))
+			{
+				htmltext = "30109-40.htm"; // fnLowLevel11
+			}
+			else
+			{
+				htmltext = "30109-41.htm"; // fnLowLevelNoProof11
+			}
+		}
+		else if (hasQuestItems(player, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_DUELIST))
+		{
+			takeItems(player, -1, MARK_OF_CHALLENGER, MARK_OF_TRUST, MARK_OF_DUELIST);
+			player.setClassId(GLADIATOR);
+			player.setBaseClass(GLADIATOR);
+			// SystemMessage and cast skill is done by setClassId
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_C_GRADE, 15);
+			htmltext = "30109-42.htm"; // fnAfterClassChange11
+		}
+		else
+		{
+			htmltext = "30109-43.htm"; // fnNoProof11
+		}
+		return htmltext;
+	}
+
+	@Override
+	public String onTalk(Npc npc, Player player) {
+		String htmlText;
+		if (player.isInCategory(CategoryType.FIGHTER_GROUP) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.isInCategory(CategoryType.HUMAN_FALL_CLASS) || player.isInCategory(CategoryType.ELF_FALL_CLASS))) {
+			htmlText = "30109-01.htm";
+		} else if (isFighter(player)) {
+			final ClassId classId = player.getClassId();
+			if (isWarrior(classId)) {
+				htmlText = "30109-02.htm";
+			} else if (isKnight(classId)) {
+				htmlText = "30109-09.htm";
+			} else if (isRogue(classId)) {
+				htmlText = "30109-16.htm";
+			} else if (isElvenKnight(classId)) {
+				htmlText = "30109-23.htm";
+			} else if (isScout(classId)) {
+				htmlText = "30109-30.htm";
+			} else {
+				htmlText = "30109-37.htm";
+			}
+		} else 	{
+			htmlText = "30109-38.htm";
+		}
+		return htmlText;
+	}
+
+	private boolean isScout(ClassId classId) {
+		return (classId == ClassId.ELVEN_SCOUT) || (classId == ClassId.PLAINS_WALKER) || (classId == ClassId.SILVER_RANGER);
+	}
+
+	private boolean isElvenKnight(ClassId classId) {
+		return (classId == ClassId.ELVEN_KNIGHT) || (classId == ClassId.TEMPLE_KNIGHT) || (classId == ClassId.SWORDSINGER);
+	}
+
+	private boolean isRogue(ClassId classId) {
+		return (classId == ClassId.ROGUE) || (classId == ClassId.TREASURE_HUNTER) || (classId == ClassId.HAWKEYE);
+	}
+
+	private boolean isKnight(ClassId classId) {
+		return (classId == ClassId.KNIGHT) || (classId == ClassId.PALADIN) || (classId == ClassId.DARK_AVENGER);
+	}
+
+	private boolean isWarrior(ClassId classId) {
+		return (classId == ClassId.WARRIOR) || (classId == ClassId.GLADIATOR) || (classId == ClassId.WARLORD);
+	}
+
+	private boolean isFighter(Player player) {
+		return player.isInCategory(CategoryType.FIGHTER_GROUP) && (player.isInCategory(CategoryType.HUMAN_FALL_CLASS) || player.isInCategory(CategoryType.ELF_FALL_CLASS));
+	}
+
 	public static ElfHumanFighterChange2 provider()
 	{
 		return new ElfHumanFighterChange2();

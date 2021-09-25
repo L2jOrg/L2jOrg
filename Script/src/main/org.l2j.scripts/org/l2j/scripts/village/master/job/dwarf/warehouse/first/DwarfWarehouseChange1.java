@@ -29,11 +29,9 @@ import org.l2j.scripts.ai.AbstractNpcAI;
  * Dwarf class transfer AI.
  * @author Adry_85
  */
-public final class DwarfWarehouseChange1 extends AbstractNpcAI
-{
-	// NPCs
-	private static final int[] NPCS =
-	{
+public final class DwarfWarehouseChange1 extends AbstractNpcAI {
+
+	private static final int[] NPCS = {
 		30498, // Moke
 		30503, // Rikadio
 		30594, // Ranspo
@@ -45,93 +43,56 @@ public final class DwarfWarehouseChange1 extends AbstractNpcAI
 	// Class
 	private static final int SCAVENGER = 54;
 	
-	private DwarfWarehouseChange1()
-	{
+	private DwarfWarehouseChange1() {
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		String htmltext = null;
-		switch (event)
-		{
-			case "30498-01.htm": // warehouse_chief_moke003f
-			case "30498-02.htm": // warehouse_chief_moke006fa
-			case "30498-03.htm": // warehouse_chief_moke007fa
-			case "30498-04.htm": // warehouse_chief_moke006fb
-			case "30503-01.htm": // warehouse_chief_rikadio003f
-			case "30503-02.htm": // warehouse_chief_rikadio006fa
-			case "30503-03.htm": // warehouse_chief_rikadio007fa
-			case "30503-04.htm": // warehouse_chief_rikadio006fb
-			case "30594-01.htm": // warehouse_chief_ranspo003f
-			case "30594-02.htm": // warehouse_chief_ranspo006fa
-			case "30594-03.htm": // warehouse_chief_ranspo007fa
-			case "30594-04.htm": // warehouse_chief_ranspo006fb
-			case "32092-01.htm": // warehouse_chief_older003f
-			case "32092-02.htm": // warehouse_chief_older006fa
-			case "32092-03.htm": // warehouse_chief_older007fa
-			case "32092-04.htm": // warehouse_chief_older006fb
-			{
-				htmltext = event;
-				break;
-			}
-			case "54":
-			{
-				htmltext = ClassChangeRequested(player, npc, Integer.valueOf(event));
-				break;
-			}
-		}
-		return htmltext;
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		return switch (event) {
+			case "30498-01.htm", "30498-02.htm", "30498-03.htm", "30498-04.htm", "30503-01.htm", "30503-02.htm", "30503-03.htm", "30503-04.htm", "30594-01.htm",
+					"30594-02.htm", "30594-03.htm", "30594-04.htm", "32092-01.htm", "32092-02.htm", "32092-03.htm", "32092-04.htm" ->  event;
+			case "54" -> classChangeRequested(player, npc, Integer.parseInt(event));
+			default -> null;
+		};
 	}
 	
-	private String ClassChangeRequested(Player player, Npc npc, int classId)
-	{
-		String htmltext = null;
-		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
-		{
-			htmltext = npc.getId() + "-06.htm"; // fnYouAreSecondClass
+	private String classChangeRequested(Player player, Npc npc, int classId) {
+		String htmlText = null;
+		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)) {
+			htmlText = npc.getId() + "-06.htm";
+		} else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)) {
+			htmlText = npc.getId() + "-07.htm";
+		} else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) {
+			htmlText = "30498-12.htm";
+		} else if (classId == SCAVENGER && player.getClassId() == ClassId.DWARVEN_FIGHTER) {
+			htmlText = changeClassToScavenger(player, npc);
 		}
-		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-		{
-			htmltext = npc.getId() + "-07.htm"; // fnYouAreThirdClass
-		}
-		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-		{
-			htmltext = "30498-12.htm"; // fnYouAreFourthClass
-		}
-		else if ((classId == SCAVENGER) && (player.getClassId() == ClassId.DWARVEN_FIGHTER))
-		{
-			if (player.getLevel() < 20)
-			{
-				if (hasQuestItems(player, RING_OF_RAVEN))
-				{
-					htmltext = npc.getId() + "-08.htm"; // fnLowLevel11
-				}
-				else
-				{
-					htmltext = npc.getId() + "-09.htm"; // fnLowLevelNoProof11
-				}
-			}
-			else if (hasQuestItems(player, RING_OF_RAVEN))
-			{
-				takeItems(player, RING_OF_RAVEN, -1);
-				player.setClassId(SCAVENGER);
-				player.setBaseClass(SCAVENGER);
-				// SystemMessage and cast skill is done by setClassId
-				player.broadcastUserInfo();
-				giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
-				htmltext = npc.getId() + "-10.htm"; // fnAfterClassChange11
-			}
-			else
-			{
-				htmltext = npc.getId() + "-11.htm"; // fnNoProof11
-			}
-		}
-		return htmltext;
+		return htmlText;
 	}
-	
+
+	private String changeClassToScavenger(Player player, Npc npc) {
+		String htmlText;
+		if (player.getLevel() < 20) {
+			if (hasQuestItems(player, RING_OF_RAVEN)) {
+				htmlText = npc.getId() + "-08.htm";
+			} else {
+				htmlText = npc.getId() + "-09.htm";
+			}
+		} else if (hasQuestItems(player, RING_OF_RAVEN)) {
+			takeItems(player, RING_OF_RAVEN, -1);
+			player.setClassId(SCAVENGER);
+			player.setBaseClass(SCAVENGER);
+			player.broadcastUserInfo();
+			giveItems(player, SHADOW_ITEM_EXCHANGE_COUPON_D_GRADE, 15);
+			htmlText = npc.getId() + "-10.htm";
+		} else {
+			htmlText = npc.getId() + "-11.htm";
+		}
+		return htmlText;
+	}
+
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{

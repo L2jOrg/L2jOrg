@@ -64,84 +64,58 @@ public final class DarkElfChange1 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		if (isDigit(event))
-		{
-			final int i = Integer.valueOf(event);
-			final ClassId cid = player.getClassId();
-			if ((cid.getRace() == Race.DARK_ELF) && (cid.getId() == CLASSES[i][1]))
-			{
-				int suffix;
-				final boolean item = hasQuestItems(player, CLASSES[i][6]);
-				if (player.getLevel() < 20)
-				{
-					suffix = (!item) ? CLASSES[i][2] : CLASSES[i][3];
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		if(!isDigit(event)) return event;
+
+		final int i = Integer.parseInt(event);
+		final ClassId cid = player.getClassId();
+		if (cid.getRace() == Race.DARK_ELF && cid.getId() == CLASSES[i][1]) {
+			int suffix;
+			final boolean item = hasQuestItems(player, CLASSES[i][6]);
+			if (player.getLevel() < 20) {
+				suffix = (!item) ? CLASSES[i][2] : CLASSES[i][3];
+			} else {
+				if (!item) {
+					suffix = CLASSES[i][4];
+				} else {
+					suffix = CLASSES[i][5];
+					giveItems(player, SHADOW_WEAPON_COUPON_DGRADE, 15);
+					takeItems(player, CLASSES[i][6], -1);
+					player.setClassId(CLASSES[i][0]);
+					player.setBaseClass(CLASSES[i][0]);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_2);
+					player.broadcastUserInfo();
 				}
-				else
-				{
-					if (!item)
-					{
-						suffix = CLASSES[i][4];
-					}
-					else
-					{
-						suffix = CLASSES[i][5];
-						giveItems(player, SHADOW_WEAPON_COUPON_DGRADE, 15);
-						takeItems(player, CLASSES[i][6], -1);
-						player.setClassId(CLASSES[i][0]);
-						player.setBaseClass(CLASSES[i][0]);
-						playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_2);
-						player.broadcastUserInfo();
-					}
-				}
-				event = npc.getId() + "-" + suffix + ".html";
 			}
+			event = npc.getId() + "-" + suffix + ".html";
 		}
 		return event;
 	}
 	
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
-		String htmltext = getNoQuestMsg(player);
+	public String onTalk(Npc npc, Player player) {
 		final ClassId cid = player.getClassId();
-		if (cid.getRace() == Race.DARK_ELF)
-		{
-			switch (cid)
-			{
-				case DARK_FIGHTER:
-				{
-					htmltext = npc.getId() + "-01.html";
-					break;
-				}
-				case DARK_MAGE:
-				{
-					htmltext = npc.getId() + "-08.html";
-					break;
-				}
-				default:
-				{
-					if (cid.level() == 1)
-					{
-						// first occupation change already made
-						return npc.getId() + "-32.html";
-					}
-					else if (cid.level() >= 2)
-					{
-						// second/third occupation change already made
-						return npc.getId() + "-31.html";
-					}
-				}
-			}
+		if (cid.getRace() == Race.DARK_ELF) {
+			return switch (cid) {
+				case DARK_FIGHTER ->  npc.getId() + "-01.html";
+				case DARK_MAGE ->  npc.getId() + "-08.html";
+				default -> alreadyCompleted(npc, player, cid);
+			};
 		}
-		else
-		{
-			htmltext = npc.getId() + "-33.html"; // other races
-		}
-		return htmltext;
+		return npc.getId() + "-33.html";
 	}
-	
+
+	private String alreadyCompleted(Npc npc, Player player, ClassId cid) {
+		if (cid.level() == 1) {
+			// first occupation change already made
+			return npc.getId() + "-32.html";
+		} else if (cid.level() >= 2) {
+			// second/third occupation change already made
+			return npc.getId() + "-31.html";
+		}
+		return getNoQuestMsg(player);
+	}
+
 	public static DarkElfChange1 provider()
 	{
 		return new DarkElfChange1();
