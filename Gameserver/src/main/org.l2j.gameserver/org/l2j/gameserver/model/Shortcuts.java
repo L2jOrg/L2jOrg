@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.ShortcutDAO;
 import org.l2j.gameserver.data.database.data.Shortcut;
+import org.l2j.gameserver.data.xml.impl.InitialShortcutData;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.ShortcutType;
@@ -218,6 +219,9 @@ public class Shortcuts {
         }
         if(!suppliesShortcuts.isEmpty()) {
             autoPlayEngine.setActiveAutoShortcut(owner, suppliesShortcuts.iterator().next().getClientId(), true);
+        }
+        if(shortcuts.isEmpty() && owner.getLastAccess() == 0) {
+            InitialShortcutData.getInstance().registerAllShortcuts(owner);
         }
         owner.sendPacket(new ShortCutInit());
     }

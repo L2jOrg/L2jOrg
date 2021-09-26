@@ -71,4 +71,9 @@ public final class EffectiveTraining extends NoviceJewelQuest {
 	protected int scrollEscapeToTrader() {
 		return 91917;
 	}
+
+	@Override
+	protected String nextQuest() {
+		return "NewHorizons";
+	}
 }

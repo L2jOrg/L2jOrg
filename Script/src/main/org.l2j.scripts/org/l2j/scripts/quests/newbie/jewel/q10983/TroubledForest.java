@@ -67,4 +67,9 @@ public class TroubledForest extends NoviceJewelQuest {
 	protected int scrollEscapeToTrader() {
 		return 91647;
 	}
+
+	@Override
+	protected String nextQuest() {
+		return "CollectSpiderweb";
+	}
 }

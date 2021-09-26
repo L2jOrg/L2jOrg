@@ -19,6 +19,7 @@
 package org.l2j.scripts.quests.newbie.jewel;
 
 import org.l2j.gameserver.enums.QuestSound;
+import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -82,7 +83,9 @@ public abstract class NoviceJewelQuest extends Quest {
             player.teleToLocation(huntingGroundLocation());
         } else if(event.equals(trader + "-02.htm")) {
             finishQuest(player, qs);
-            return event;
+            var nextQuest = QuestManager.getInstance().getQuest(nextQuest());
+            nextQuest.newQuestState(player);
+            return nextQuest.getId() + ":" + event;
         }
         return null;
     }
@@ -183,4 +186,6 @@ public abstract class NoviceJewelQuest extends Quest {
     protected abstract NpcStringId finishHuntingMessage();
 
     protected abstract int scrollEscapeToTrader();
+
+    protected abstract String nextQuest();
 }

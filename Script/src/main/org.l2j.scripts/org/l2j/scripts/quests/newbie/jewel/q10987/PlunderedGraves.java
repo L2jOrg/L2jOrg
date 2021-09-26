@@ -71,4 +71,9 @@ public class PlunderedGraves extends NoviceJewelQuest {
 	protected NpcStringId questHuntingProgressName() {
 		return NpcStringId.TRACK_DOWN_GRAVE_ROBBERS;
 	}
+
+	@Override
+	protected String nextQuest() {
+		return "Conspiracy";
+	}
 }
