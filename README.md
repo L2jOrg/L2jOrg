@@ -1,6 +1,6 @@
 # L2jOrg
 ![Code Badge](https://img.shields.io/badge/Project-L2J-red.svg?logo=github&logoColor=white)
-![Code Badge](https://img.shields.io/badge/Java-_16-blue.svg?logo=java&logoColor=white)
+![Code Badge](https://img.shields.io/badge/Java-_17-blue.svg?logo=java&logoColor=white)
 ![Code Badge](https://img.shields.io/badge/MySQL-_8-orange.svg?logo=mysql&logoColor=white)
 
 ![CI Gradle](https://github.com/L2jOrg/L2jOrg/workflows/CI%20Gradle/badge.svg)
