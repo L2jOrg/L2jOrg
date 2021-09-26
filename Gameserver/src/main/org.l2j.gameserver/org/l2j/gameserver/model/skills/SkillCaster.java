@@ -259,14 +259,6 @@ public class SkillCaster implements Runnable {
         }
     }
 
-    private static void triggerCast(Creature caster, Skill skill, Creature creature, OptionsSkillInfo holder) {
-        if ((skill.isMagic() && (holder.type() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.type() == OptionsSkillType.ATTACK))) {
-            if (Rnd.chance(holder.chance())) {
-                triggerCast(caster, creature, holder.skill(), null, false);
-            }
-        }
-    }
-
     private static void checkRaidCurse(Creature caster, Skill skill, Creature creature) {
         if (!Config.RAID_DISABLE_CURSE && creature.isRaid() && creature.giveRaidCurse() && (caster.getLevel() >= (creature.getLevel() + 9))) {
             if (skill.isBad() || ((creature.getTarget() == caster) && ((Attackable) creature).getAggroList().containsKey(caster))) {
@@ -276,6 +268,14 @@ public class SkillCaster implements Runnable {
                 if (curseSkill != null) {
                     curseSkill.applyEffects(creature, caster);
                 }
+            }
+        }
+    }
+
+    private static void triggerCast(Creature caster, Skill skill, Creature creature, OptionsSkillInfo holder) {
+        if ((skill.isMagic() && (holder.type() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.type() == OptionsSkillType.ATTACK))) {
+            if (Rnd.chance(holder.chance())) {
+                triggerCast(caster, creature, holder.skill(), null, false, true);
             }
         }
     }
