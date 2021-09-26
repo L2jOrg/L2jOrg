@@ -1504,11 +1504,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     private Set<QuestCondition> getStartConditions() {
         if (startConditions == null) {
-            synchronized (this) {
-                if (startConditions == null) {
-                    startConditions = ConcurrentHashMap.newKeySet(1);
-                }
-            }
+            startConditions = ConcurrentHashMap.newKeySet(1);
         }
         return startConditions;
     }
