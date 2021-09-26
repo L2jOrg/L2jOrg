@@ -51,7 +51,6 @@ public final class Config {
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-    private static final String GENERAL_CONFIG_FILE = "config/general.properties";
 
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
@@ -126,23 +125,6 @@ public final class Config {
     public static int TAKE_CASTLE_POINTS;
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
-
-    // --------------------------------------------------
-    // General Settings
-    // --------------------------------------------------
-    public static boolean ALT_ITEM_AUCTION_ENABLED;
-    public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
-    public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-
-    public static int ALT_BIRTHDAY_GIFT;
-    public static String ALT_BIRTHDAY_MAIL_SUBJECT;
-    public static String ALT_BIRTHDAY_MAIL_TEXT;
-    public static boolean ENABLE_BLOCK_CHECKER_EVENT;
-    public static boolean HBCE_FAIR_PLAY;
-    public static boolean BOTREPORT_ENABLE;
-    public static String[] BOTREPORT_RESETPOINT_HOUR;
-    public static long BOTREPORT_REPORT_DELAY;
-    public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
 
     // --------------------------------------------------
     // FloodProtector Settings
@@ -441,8 +423,6 @@ public final class Config {
     public static List<Integer> AUTO_CP_ITEM_IDS;
     public static List<Integer> AUTO_HP_ITEM_IDS;
     public static List<Integer> AUTO_MP_ITEM_IDS;
-    public static boolean AUTO_USE_ITEM;
-    public static boolean AUTO_USE_BUFF;
 
     public static boolean ENABLE_DONATION;
     public static boolean CUSTOM_STARTING_LOC;
@@ -586,25 +566,6 @@ public final class Config {
         TAKE_CASTLE_POINTS = Feature.getInt("TakeCastlePoints", 1500);
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
-
-        // Load General config file (if exists)
-        final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
-
-        ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
-        ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
-        ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
-
-        ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
-        ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
-        ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + System.lineSeparator().repeat(2) + "Sincerely, Alegria");
-        ENABLE_BLOCK_CHECKER_EVENT = General.getBoolean("EnableBlockCheckerEvent", false);
-
-        HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
-
-        BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
-        BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
-        BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000L;
-        BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
 
         // Load FloodProtector config file
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
@@ -1053,9 +1014,6 @@ public final class Config {
         {
             AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
-
-        AUTO_USE_BUFF = General.getBoolean("EnableAutoBuff", true);
-        AUTO_USE_ITEM = General.getBoolean("EnableAutoItem", true);
 
         final PropertiesParser Donations = new PropertiesParser(CUSTOM_DONATION_CONFIG_FILE);
         ENABLE_DONATION = Donations.getBoolean("EnableDonate", false);

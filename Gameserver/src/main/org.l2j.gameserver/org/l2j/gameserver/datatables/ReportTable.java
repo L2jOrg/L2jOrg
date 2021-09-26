@@ -23,7 +23,6 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.FileUtil;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BotReportDAO;
 import org.l2j.gameserver.data.database.data.BotReportData;
 import org.l2j.gameserver.engine.captcha.CaptchaEngine;
@@ -88,7 +87,7 @@ public final class ReportTable {
     private Map<Integer, PunishHolder> _punishments;
 
     private ReportTable() {
-        if (Config.BOTREPORT_ENABLE) {
+        if (GeneralSettings.botReportEnabled()) {
             reports = new CHashIntMap<>();
             ipRegistry = new HashMap<>();
             reporters = new CHashIntMap<>();
@@ -122,7 +121,7 @@ public final class ReportTable {
      */
     private static boolean timeHasPassed(Map<Integer, Long> map, int objectId) {
         if (map.containsKey(objectId)) {
-            return (System.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY;
+            return (System.currentTimeMillis() - map.get(objectId)) > GeneralSettings.botReportDelay();
         }
         return true;
     }
@@ -207,7 +206,7 @@ public final class ReportTable {
                 return false;
             }
 
-            if (!Config.BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS && rcd.reportedBySameClan(reporter.getClan())) {
+            if (!GeneralSettings.allowReportsFromSameClan() && rcd.reportedBySameClan(reporter.getClan())) {
                 reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
                 return false;
             }
@@ -220,7 +219,7 @@ public final class ReportTable {
             }
 
             final long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
-            if (reuse < Config.BOTREPORT_REPORT_DELAY) {
+            if (reuse < GeneralSettings.botReportDelay()) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MINUTE_S_YOU_HAVE_S2_POINT_S_REMAINING_ON_THIS_ACCOUNT);
                 sm.addInt((int) (reuse / 60000));
                 sm.addInt(rcdRep.getPointsLeft());
@@ -330,7 +329,7 @@ public final class ReportTable {
 
     private void scheduleResetPointTask() {
         try {
-            final String[] hour = Config.BOTREPORT_RESETPOINT_HOUR;
+            final String[] hour =  GeneralSettings.botReportPointsResetHour();
             final Calendar c = Calendar.getInstance();
             c.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
             c.set(Calendar.MINUTE, Integer.parseInt(hour[1]));

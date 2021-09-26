@@ -281,8 +281,7 @@ public class Shutdown extends Thread {
             LOGGER.info("Items On Ground Manager: Cleaned up.");
         }
 
-        // Save bot reports to database
-        if (Config.BOTREPORT_ENABLE) {
+        if (GeneralSettings.botReportEnabled()) {
             ReportTable.getInstance().saveReportedCharData();
             LOGGER.info("Bot Report Table: Successfully saved reports to database!");
         }

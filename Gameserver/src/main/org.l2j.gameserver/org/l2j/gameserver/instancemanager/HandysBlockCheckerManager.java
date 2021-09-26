@@ -20,7 +20,6 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
@@ -28,6 +27,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameChangeTeam;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.*;
@@ -40,7 +40,7 @@ import java.util.*;
  */
 public final class HandysBlockCheckerManager {
     // All the participants and their team classified by arena
-    private static final ArenaParticipantsHolder[] _arenaPlayers = new ArenaParticipantsHolder[4];
+    private static final ArenaParticipantsHolder[] arenaPlayers = new ArenaParticipantsHolder[4];
 
     // Arena votes to start the game
     private static final Map<Integer, Integer> _arenaVotes = new HashMap<>();
@@ -49,7 +49,7 @@ public final class HandysBlockCheckerManager {
     private static final Map<Integer, Boolean> _arenaStatus = new HashMap<>();
 
     // Registration request penalty (10 seconds)
-    protected static Set<Integer> _registrationPenalty = Collections.synchronizedSet(new HashSet<>());
+    private static final Set<Integer> registrationPenalty = Collections.synchronizedSet(new HashSet<>());
 
     private HandysBlockCheckerManager() {
         // Initialize arena status
@@ -67,19 +67,17 @@ public final class HandysBlockCheckerManager {
 
     /**
      * Add a new vote to start the event for the specified arena id
-     *
-     * @param arena
      */
     public synchronized void increaseArenaVotes(int arena) {
         final int newVotes = _arenaVotes.get(arena) + 1;
-        final ArenaParticipantsHolder holder = _arenaPlayers[arena];
+        final ArenaParticipantsHolder holder = arenaPlayers[arena];
 
         if ((newVotes > (holder.getAllPlayers().size() / 2)) && !holder.getEvent().isStarted()) {
             clearArenaVotes(arena);
             if ((holder.getBlueTeamSize() == 0) || (holder.getRedTeamSize() == 0)) {
                 return;
             }
-            if (Config.HBCE_FAIR_PLAY) {
+            if (GeneralSettings.hbceFairPlay()) {
                 holder.checkAndShuffle();
             }
             ThreadPool.execute(holder.getEvent().new StartEvent());
@@ -90,8 +88,6 @@ public final class HandysBlockCheckerManager {
 
     /**
      * Will clear the votes queue (of event start) for the specified arena id
-     *
-     * @param arena
      */
     public synchronized void clearArenaVotes(int arena) {
         _arenaVotes.put(arena, 0);
@@ -100,22 +96,17 @@ public final class HandysBlockCheckerManager {
     /**
      * Returns the players holder
      *
-     * @param arena
      * @return ArenaParticipantsHolder
      */
     public ArenaParticipantsHolder getHolder(int arena) {
-        return _arenaPlayers[arena];
+        return arenaPlayers[arena];
     }
 
     /**
      * Will remove the specified player from the specified team and arena and will send the needed packet to all his team mates / enemy team mates
-     *
-     * @param player
-     * @param arenaId
-     * @param team
      */
     public void removePlayer(Player player, int arenaId, int team) {
-        final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
+        final ArenaParticipantsHolder holder = arenaPlayers[arenaId];
         synchronized (holder) {
             final boolean isRed = team == 0;
 
@@ -128,20 +119,16 @@ public final class HandysBlockCheckerManager {
                 holder.getEvent().endEventAbnormally();
             }
 
-            _registrationPenalty.add(player.getObjectId());
+            registrationPenalty.add(player.getObjectId());
             schedulePenaltyRemoval(player.getObjectId());
         }
     }
 
     /**
      * Will change the player from one team to other (if possible) and will send the needed packets
-     *
-     * @param player
-     * @param arena
-     * @param team
      */
     public void changePlayerToTeam(Player player, int arena, int team) {
-        final ArenaParticipantsHolder holder = _arenaPlayers[arena];
+        final ArenaParticipantsHolder holder = arenaPlayers[arena];
 
         synchronized (holder) {
             final boolean isFromRed = holder.getRedPlayers().contains(player);
@@ -168,18 +155,13 @@ public final class HandysBlockCheckerManager {
 
     /**
      * Will erase all participants from the specified holder
-     *
-     * @param arenaId
      */
     public synchronized void clearPaticipantQueueByArenaId(int arenaId) {
-        _arenaPlayers[arenaId].clearPlayers();
+        arenaPlayers[arenaId].clearPlayers();
     }
 
     /**
      * Returns true if arena is holding an event at this momment
-     *
-     * @param arenaId
-     * @return boolean
      */
     public boolean arenaIsBeingUsed(int arenaId) {
         if ((arenaId < 0) || (arenaId > 3)) {
@@ -190,8 +172,6 @@ public final class HandysBlockCheckerManager {
 
     /**
      * Set the specified arena as being used
-     *
-     * @param arenaId
      */
     public void setArenaBeingUsed(int arenaId) {
         _arenaStatus.put(arenaId, true);
@@ -199,8 +179,6 @@ public final class HandysBlockCheckerManager {
 
     /**
      * Set as free the specified arena for future events
-     *
-     * @param arenaId
      */
     public void setArenaFree(int arenaId) {
         _arenaStatus.put(arenaId, false);
@@ -208,8 +186,6 @@ public final class HandysBlockCheckerManager {
 
     /**
      * Called when played logs out while participating in Block Checker Event
-     *
-     * @param player
      */
     public void onDisconnect(Player player) {
         final int arena = player.getBlockCheckerArena();
@@ -238,7 +214,7 @@ public final class HandysBlockCheckerManager {
     }
 
     public void removePenalty(int objectId) {
-        _registrationPenalty.remove(objectId);
+        registrationPenalty.remove(objectId);
     }
 
     private void schedulePenaltyRemoval(int objId) {

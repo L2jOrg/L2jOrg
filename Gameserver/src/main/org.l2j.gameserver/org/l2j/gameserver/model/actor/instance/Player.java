@@ -6527,7 +6527,7 @@ public final class Player extends Playable {
     }
 
     private void stopActionsInProgress() {
-        if (Config.ENABLE_BLOCK_CHECKER_EVENT && (handysBlockCheckerEventArena != -1)) {
+        if (GeneralSettings.enableBlockCheckerEvent() && (handysBlockCheckerEventArena != -1)) {
             HandysBlockCheckerManager.getInstance().onDisconnect(this);
         }
 

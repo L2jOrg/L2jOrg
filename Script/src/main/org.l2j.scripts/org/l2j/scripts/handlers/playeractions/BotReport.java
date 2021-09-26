@@ -19,11 +19,11 @@
  */
 package org.l2j.scripts.handlers.playeractions;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.GeneralSettings;
 
 /**
  * Bot Report button player action handler.
@@ -32,14 +32,10 @@ import org.l2j.gameserver.model.actor.instance.Player;
 public final class BotReport implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed)
-	{
-		if (Config.BOTREPORT_ENABLE)
-		{
+	public void useAction(Player player, ActionData action, boolean ctrlPressed, boolean shiftPressed) {
+		if (GeneralSettings.botReportEnabled()) {
 			ReportTable.getInstance().reportBot(player);
-		}
-		else
-		{
+		} else {
 			player.sendMessage("This feature is disabled.");
 		}
 	}
