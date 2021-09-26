@@ -87,7 +87,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     private static final int RESET_MINUTES = 30;
     private static final byte INITIAL_STATE = State.CREATED;
 
-    private volatile Set<QuestCondition> startConditions = null;
+    private Set<QuestCondition> startConditions = null;
     private NpcStringId questNameNpcStringId;
 
     private final int questId;
