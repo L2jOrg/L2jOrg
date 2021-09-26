@@ -1377,7 +1377,14 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     public String showHtmlFile(Player player, String filename, Npc npc) {
         final boolean questwindow = !filename.endsWith(".html");
-
+        int showQuestId = questId;
+        if(questwindow) {
+            var split = filename.split(":");
+            if(split.length > 1) {
+                filename = split[1];
+                showQuestId = Integer.parseInt(split[0]);
+            }
+        }
         String content = getHtml(player, filename);
 
         // Send message to client if message not empty
@@ -1386,8 +1393,9 @@ public class Quest extends AbstractScript implements IIdentifiable {
                 content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
             }
 
-            if (questwindow && (questId > 0) && (questId < 20000) && (questId != 999)) {
-                final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
+            if (questwindow && (showQuestId > 0) && (showQuestId < 20000) && (showQuestId != 999)) {
+
+                final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, showQuestId);
                 npcReply.setHtml(content);
                 npcReply.replace("%playername%", player.getName());
                 player.sendPacket(npcReply);

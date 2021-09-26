@@ -119,10 +119,6 @@ public class PlayerFactory {
 
         player.restoreCharData();
 
-        if(playerData.getLastAccess() == 0){
-            InitialShortcutData.getInstance().registerAllShortcuts(player);
-        }
-
         player.getFreight().restore();
         if (!GeneralSettings.cacheWarehouse()) {
             player.getWarehouse();

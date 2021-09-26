@@ -69,4 +69,9 @@ public class CleaningUpTheGround extends NoviceJewelQuest {
 	protected NpcStringId questHuntingProgressName() {
 		return NpcStringId.KILL_MONSTERS_NEAR_THE_VILLAGE;
 	}
+
+	@Override
+	protected String nextQuest() {
+		return "SwampMonster";
+	}
 }

@@ -271,7 +271,6 @@ public final class InitialShortcutData extends GameXmlReader {
                 }
                 // Register shortcut
                 final Shortcut newShortcut = new Shortcut(shortcut.getClientId(), shortcut.getType(), shortcutId, shortcut.getLevel(), shortcut.getSubLevel(), shortcut.getCharacterType());
-                player.sendPacket(new ShortCutRegister(newShortcut));
                 player.registerShortCut(newShortcut);
             }
         }
