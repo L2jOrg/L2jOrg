@@ -38,9 +38,11 @@ import static java.util.Objects.nonNull;
 public final class CallSkill extends AbstractEffect {
 
 	private final SkillHolder skill;
-	
+	private final boolean broadcast;
+
 	private CallSkill(StatsSet params) {
 		skill = new SkillHolder(params.getInt("skill"), params.getInt("power", 1));
+		broadcast = params.getBoolean("broadcast");
 	}
 	
 	@Override
@@ -66,7 +68,7 @@ public final class CallSkill extends AbstractEffect {
 		}
 		
 		if (nonNull(triggerSkill)) {
-			SkillCaster.triggerCast(effector, effected, triggerSkill, item, true);
+			SkillCaster.triggerCast(effector, effected, triggerSkill, item, true, broadcast);
 		} else {
 			LOGGER.warn("Skill not found effect called from {}", skill);
 		}

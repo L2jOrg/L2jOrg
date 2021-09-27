@@ -24,24 +24,16 @@ import org.l2j.commons.util.StringUtil;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.FloodProtectorConfig;
-import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.*;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -59,7 +51,6 @@ public final class Config {
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-    private static final String GENERAL_CONFIG_FILE = "config/general.properties";
 
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
@@ -69,7 +60,6 @@ public final class Config {
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
 
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-    private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 
     // --------------------------------------------------
     // Custom Config File Definitions
@@ -139,23 +129,6 @@ public final class Config {
     public static int TAKE_CASTLE_POINTS;
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
-
-    // --------------------------------------------------
-    // General Settings
-    // --------------------------------------------------
-    public static boolean ALT_ITEM_AUCTION_ENABLED;
-    public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
-    public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-
-    public static int ALT_BIRTHDAY_GIFT;
-    public static String ALT_BIRTHDAY_MAIL_SUBJECT;
-    public static String ALT_BIRTHDAY_MAIL_TEXT;
-    public static boolean ENABLE_BLOCK_CHECKER_EVENT;
-    public static boolean HBCE_FAIR_PLAY;
-    public static boolean BOTREPORT_ENABLE;
-    public static String[] BOTREPORT_RESETPOINT_HOUR;
-    public static long BOTREPORT_REPORT_DELAY;
-    public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
 
     // --------------------------------------------------
     // FloodProtector Settings
@@ -332,8 +305,6 @@ public final class Config {
     // --------------------------------------------------
     // No classification assigned to the following yet
     // --------------------------------------------------
-    public static List<String> GAME_SERVER_SUBNETS;
-    public static List<String> GAME_SERVER_HOSTS;
     public static int PVP_NORMAL_TIME;
     public static int PVP_PVP_TIME;
     public static int MAX_REPUTATION;
@@ -480,8 +451,6 @@ public final class Config {
     public static List<Integer> AUTO_CP_ITEM_IDS;
     public static List<Integer> AUTO_HP_ITEM_IDS;
     public static List<Integer> AUTO_MP_ITEM_IDS;
-    public static boolean AUTO_USE_ITEM;
-    public static boolean AUTO_USE_BUFF;
 
     public static boolean ENABLE_DONATION;
     public static boolean CUSTOM_STARTING_LOC;
@@ -590,11 +559,6 @@ public final class Config {
         FLOOD_PROTECTOR_SENDMAIL = new FloodProtectorConfig("SendMailFloodProtector");
         FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
         FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
-
-        // Hosts and Subnets
-        final IPConfigData ipcd = new IPConfigData();
-        GAME_SERVER_SUBNETS = ipcd.getSubnets();
-        GAME_SERVER_HOSTS = ipcd.getHosts();
 
         // Load Feature config file (if exists)
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
@@ -1130,9 +1094,6 @@ public final class Config {
             AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
 
-        AUTO_USE_BUFF = General.getBoolean("EnableAutoBuff", true);
-        AUTO_USE_ITEM = General.getBoolean("EnableAutoItem", true);
-
         final PropertiesParser Donations = new PropertiesParser(CUSTOM_DONATION_CONFIG_FILE);
         ENABLE_DONATION = Donations.getBoolean("EnableDonate", false);
 
@@ -1339,132 +1300,5 @@ public final class Config {
             ret.put(i++, Float.parseFloat(value));
         }
         return ret;
-    }
-
-    private static class IPConfigData extends GameXmlReader {
-        private static final List<String> _subnets = new ArrayList<>(5);
-        private static final List<String> _hosts = new ArrayList<>(5);
-
-        public IPConfigData() {
-            load();
-        }
-
-        @Override
-        protected Path getSchemaFilePath() {
-            return Path.of("./config/xsd/ipconfig.xsd");
-        }
-
-        @Override
-        public void load() {
-            if (Files.isRegularFile(Path.of(IPCONFIG_FILE))) {
-                LOGGER.info("Network Config: ipconfig.xml exists using manual configuration...");
-                parseFile(IPCONFIG_FILE);
-            } else
-            // Auto configuration...
-            {
-                LOGGER.info("Network Config: ipconfig.xml doesn't exists using automatic configuration...");
-                autoIpConfig();
-            }
-            releaseResources();
-        }
-
-        @Override
-        public void parseDocument(Document doc, File f) {
-            NamedNodeMap attrs;
-            for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
-                if ("gameserver".equalsIgnoreCase(n.getNodeName())) {
-                    for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                        if ("define".equalsIgnoreCase(d.getNodeName())) {
-                            attrs = d.getAttributes();
-                            _subnets.add(attrs.getNamedItem("subnet").getNodeValue());
-                            _hosts.add(attrs.getNamedItem("address").getNodeValue());
-
-                            if (_hosts.size() != _subnets.size()) {
-                                LOGGER.warn("Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
-                            }
-                        }
-                    }
-
-                    final Node att = n.getAttributes().getNamedItem("address");
-                    if (att == null) {
-                        LOGGER.warn("Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
-                        _hosts.add("127.0.0.1");
-                    } else {
-                        _hosts.add(att.getNodeValue());
-                    }
-                    _subnets.add("0.0.0.0/0");
-                }
-            }
-        }
-
-        protected void autoIpConfig() {
-            String externalIp;
-            try {
-                final URL autoIp = new URL("https://api.ipify.org/");
-                try (BufferedReader in = new BufferedReader(new InputStreamReader(autoIp.openStream()))) {
-                    externalIp = in.readLine();
-                }
-            } catch (IOException e) {
-                LOGGER.info("Failed to connect to api.ipify.org please check your internet connection! using 127.0.0.1!");
-                externalIp = "127.0.0.1";
-            }
-
-            try {
-                final Enumeration<NetworkInterface> niList = NetworkInterface.getNetworkInterfaces();
-
-                while (niList.hasMoreElements()) {
-                    final NetworkInterface ni = niList.nextElement();
-
-                    if (!ni.isUp() || ni.isVirtual()) {
-                        continue;
-                    }
-
-                    if (!ni.isLoopback() && ((ni.getHardwareAddress() == null) || (ni.getHardwareAddress().length != 6))) {
-                        continue;
-                    }
-
-                    for (InterfaceAddress ia : ni.getInterfaceAddresses()) {
-                        if (ia.getAddress() instanceof Inet6Address) {
-                            continue;
-                        }
-
-                        final String hostAddress = ia.getAddress().getHostAddress();
-                        final int subnetPrefixLength = ia.getNetworkPrefixLength();
-                        final int subnetMaskInt = IntStream.rangeClosed(1, subnetPrefixLength).reduce((r, e) -> (r << 1) + 1).orElse(0) << (32 - subnetPrefixLength);
-                        final int hostAddressInt = Arrays.stream(hostAddress.split("\\.")).mapToInt(Integer::parseInt).reduce((r, e) -> (r << 8) + e).orElse(0);
-                        final int subnetAddressInt = hostAddressInt & subnetMaskInt;
-                        final String subnetAddress = ((subnetAddressInt >> 24) & 0xFF) + "." + ((subnetAddressInt >> 16) & 0xFF) + "." + ((subnetAddressInt >> 8) & 0xFF) + "." + (subnetAddressInt & 0xFF);
-                        final String subnet = subnetAddress + '/' + subnetPrefixLength;
-                        if (!_subnets.contains(subnet) && !subnet.equals("0.0.0.0/0")) {
-                            _subnets.add(subnet);
-                            _hosts.add(hostAddress);
-                            LOGGER.info("Network Config: Adding new subnet: " + subnet + " address: " + hostAddress);
-                        }
-                    }
-                }
-
-                // External host and subnet
-                _hosts.add(externalIp);
-                _subnets.add("0.0.0.0/0");
-                LOGGER.info("Network Config: Adding new subnet: 0.0.0.0/0 address: " + externalIp);
-            } catch (SocketException e) {
-                LOGGER.info("Network Config: Configuration failed please configure manually using ipconfig.xml", e);
-                System.exit(0);
-            }
-        }
-
-        protected List<String> getSubnets() {
-            if (_subnets.isEmpty()) {
-                return Collections.singletonList("0.0.0.0/0");
-            }
-            return _subnets;
-        }
-
-        protected List<String> getHosts() {
-            if (_hosts.isEmpty()) {
-                return Collections.singletonList("127.0.0.1");
-            }
-            return _hosts;
-        }
     }
 }

@@ -21,7 +21,6 @@ package org.l2j.scripts.handlers.admincommandhandlers;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -267,10 +266,6 @@ public class AdminPunishment implements IAdminCommandHandler
 						if (addr.isLoopbackAddress())
 						{
 							throw new UnknownHostException("You cannot ban any local address!");
-						}
-						else if (Config.GAME_SERVER_HOSTS.contains(addr.getHostAddress()))
-						{
-							throw new UnknownHostException("You cannot ban your gameserver's address!");
 						}
 					}
 					catch (UnknownHostException e)

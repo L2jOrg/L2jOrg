@@ -25,6 +25,7 @@ import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.engine.mail.Attachment;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.Task;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.taskmanager.TaskManager.ExecutableTask;
@@ -77,11 +78,11 @@ public class TaskBirthday extends Task {
             }
 
             var age = year - characterData.getCreateDate().getYear();
-            var text = Config.ALT_BIRTHDAY_MAIL_TEXT.replace("$c1", name).replace("$s1", String.valueOf(age));
+            var text = GeneralSettings.birthdayMailText().replace("$c1", name).replace("$s1", String.valueOf(age));
 
-            final var mail = MailData.of(characterData.getCharId(), Config.ALT_BIRTHDAY_MAIL_SUBJECT, text, MailType.BIRTHDAY);
+            final var mail = MailData.of(characterData.getCharId(), GeneralSettings.birthdayMailSubject(), text, MailType.BIRTHDAY);
             final Attachment attachments = new Attachment(mail.getSender(), mail.getId());
-            attachments.addItem("Birthday", Config.ALT_BIRTHDAY_GIFT, 1, null, null);
+            attachments.addItem("Birthday", GeneralSettings.birthdayGift(), 1, null, null);
             mail.attach(attachments);
             MailEngine.getInstance().sendMail(mail);
             _count++;

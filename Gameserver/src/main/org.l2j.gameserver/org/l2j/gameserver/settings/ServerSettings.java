@@ -33,15 +33,11 @@ import java.util.regex.PatternSyntaxException;
 public class ServerSettings {
 
     private static int serverId;
-    private static boolean acceptAlternativeId;
-    private static String authServerAddress;
-    private static short authServerPort;
 
     private static byte ageLimit;
     private static boolean showBrackets;
     private static boolean isPvP;
     private static int type;
-    private static short port;
     private static int maximumOnlineUsers;
     private static Path dataPackDirectory;
 
@@ -68,11 +64,6 @@ public class ServerSettings {
 
     public static void load(SettingsFile settingsFile) {
         serverId = settingsFile.getInt("RequestServerID", 1);
-        acceptAlternativeId = settingsFile.getBoolean("AcceptAlternateID", true);
-
-        authServerAddress = settingsFile.getString("LoginHost", "127.0.0.1");
-        authServerPort = settingsFile.getShort("LoginPort", (short) 9014);
-        port = settingsFile.getShort("GameserverPort", (short) 7777);
         type = ServerType.maskOf(settingsFile.getStringArray("ServerListType"));
 
         maximumOnlineUsers = Math.max(1, settingsFile.getInt("MaximumOnlineUsers", 20));
@@ -127,22 +118,6 @@ public class ServerSettings {
         return serverId;
     }
 
-    public static void setServerId(int id) {
-        serverId = id;
-    }
-
-    public static short port() {
-        return port;
-    }
-
-    public static String authServerAddress() {
-        return authServerAddress;
-    }
-
-    public static int authServerPort() {
-        return authServerPort;
-    }
-
     public static byte ageLimit() {
         return ageLimit;
     }
@@ -165,10 +140,6 @@ public class ServerSettings {
 
     public static int maximumOnlineUsers() {
         return maximumOnlineUsers;
-    }
-
-    public static boolean acceptAlternativeId() {
-        return acceptAlternativeId;
     }
 
     public static Path dataPackDirectory() {

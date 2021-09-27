@@ -43,6 +43,7 @@ import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
 import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -58,7 +59,6 @@ import org.l2j.gameserver.model.actor.status.PlayerStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.cubic.CubicInstance;
@@ -100,9 +100,9 @@ import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.gs2as.ChangeAccessLevel;
+import org.l2j.gameserver.network.auth.gs2as.ChangeAccessLevel;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
@@ -4567,7 +4567,7 @@ public final class Player extends Playable {
 
 
     public void setAccountAccessLevel(int level) {
-        AuthServerCommunication.getInstance().sendPacket(new ChangeAccessLevel(getAccountName(), level, 0));
+        NetworkService.getInstance().sendPacketToAuth(new ChangeAccessLevel(getAccountName(), level, 0));
     }
 
     @Override
@@ -6542,7 +6542,7 @@ public final class Player extends Playable {
     }
 
     private void stopActionsInProgress() {
-        if (Config.ENABLE_BLOCK_CHECKER_EVENT && (handysBlockCheckerEventArena != -1)) {
+        if (GeneralSettings.enableBlockCheckerEvent() && (handysBlockCheckerEventArena != -1)) {
             HandysBlockCheckerManager.getInstance().onDisconnect(this);
         }
 

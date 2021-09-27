@@ -18,11 +18,9 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ServerType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -43,7 +41,6 @@ public class AdminLogin implements IAdminCommandHandler
 		"admin_server_gm_only",
 		"admin_server_all",
 		"admin_server_max_player",
-		"admin_server_list_type",
 		"admin_server_list_age",
 		"admin_server_login"
 	};
@@ -84,46 +81,6 @@ public class AdminLogin implements IAdminCommandHandler
 			else
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Format is server_max_player <max>");
-			}
-		}
-		else if (command.startsWith("admin_server_list_type")) {
-			final StringTokenizer st = new StringTokenizer(command);
-			final int tokens = st.countTokens();
-			if (tokens > 1) {
-				st.nextToken();
-				final String[] modes = new String[tokens - 1];
-
-				boolean isNumeric = true;
-				for (int i = 0; i < (tokens - 1); i++)
-				{
-					isNumeric &= Util.isInteger(modes[i] = st.nextToken().trim());
-				}
-				int newType = 0;
-
-				if(isNumeric) {
-					for (String mode : modes) {
-						newType |= Integer.parseInt(mode);
-					}
-				} else {
-					newType = ServerType.maskOf(modes);
-				}
-
-				if (ServerSettings.type() != newType)
-				{
-					ServerSettings.setType(newType);
-					AuthServerCommunication.getInstance().sendServerType(newType);
-					BuilderUtil.sendSysMessage(activeChar, "Server Type changed to " + getServerTypeName(newType));
-					showMainPage(activeChar);
-				}
-				else
-				{
-					BuilderUtil.sendSysMessage(activeChar, "Server Type is already " + getServerTypeName(newType));
-					showMainPage(activeChar);
-				}
-			}
-			else
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Format is server_list_type <Normal | Relax | Test | Restricted | Event | Free | New |Classic>");
 			}
 		}
 		else if (command.startsWith("admin_server_list_age"))

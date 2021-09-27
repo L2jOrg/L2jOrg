@@ -28,7 +28,6 @@ import org.l2j.gameserver.data.database.data.PlayerStatsData;
 import org.l2j.gameserver.data.database.data.PlayerVariableData;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.InitialEquipmentData;
-import org.l2j.gameserver.data.xml.impl.InitialShortcutData;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2j.gameserver.engine.clan.ClanEngine;
@@ -119,10 +118,6 @@ public class PlayerFactory {
         }
 
         player.restoreCharData();
-
-        if(playerData.getLastAccess() == 0){
-            InitialShortcutData.getInstance().registerAllShortcuts(player);
-        }
 
         player.getFreight().restore();
         if (!GeneralSettings.cacheWarehouse()) {

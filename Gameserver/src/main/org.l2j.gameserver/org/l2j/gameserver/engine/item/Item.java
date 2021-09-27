@@ -200,7 +200,7 @@ public final class Item extends WorldObject {
      *
      * @param creature Character that pick up the item
      */
-    public final void pickupMe(Creature creature) {
+    public void pickupMe(Creature creature) {
         final WorldRegion oldRegion = getWorldRegion();
         creature.broadcastPacket(new GetItem(this, creature.getObjectId()));
         synchronized (this) {
@@ -264,17 +264,21 @@ public final class Item extends WorldObject {
         });
     }
 
-    public void giveSkillsToOwner() {
-        if (!hasPassiveSkills()) {
+    public void giveSkillsToPlayer(Player player) {
+        if(!hasPassiveSkills()) {
             return;
         }
 
-        doIfNonNull(getActingPlayer(), player -> template.forEachSkill(ItemSkillType.NORMAL, holder -> {
-            final Skill skill = holder.skill();
-            if (skill.isPassive()) {
+        template.forEachSkill(ItemSkillType.NORMAL, holder -> {
+            var skill = holder.skill();
+            if(skill.isPassive()) {
                 player.addSkill(skill, false);
             }
-        }));
+        });
+    }
+
+    public void giveSkillsToOwner() {
+        doIfNonNull(getActingPlayer(), this::giveSkillsToPlayer);
     }
 
     public void changeItemLocation(ItemLocation loc) {
@@ -406,7 +410,7 @@ public final class Item extends WorldObject {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augment, false), template);
     }
 
-    public final void dropMe(Creature dropper, int x, int y, int z) {
+    public void dropMe(Creature dropper, int x, int y, int z) {
         ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
     }
 
@@ -916,7 +920,7 @@ public final class Item extends WorldObject {
         return null;
     }
 
-    public final int getCrystalCount() {
+    public int getCrystalCount() {
         return template.getCrystalCount(data.getEnchantLevel());
     }
 
@@ -1042,7 +1046,7 @@ public final class Item extends WorldObject {
         dropperObjectId = id;
     }
 
-    public final DropProtection getDropProtection() {
+    public DropProtection getDropProtection() {
         return dropProtection;
     }
 

@@ -437,7 +437,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * @param npc      the NPC that sees the creature
      * @param creature the creature seen by the NPC
-     * @param isSummon
      */
     public final void notifySeeCreature(Npc npc, Creature creature, boolean isSummon) {
         Player player = null;
@@ -506,7 +505,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param attacker this parameter contains a reference to the exact instance of the player who attacked.
      * @param damage   this parameter represents the total damage that this attack has inflicted to the NPC.
      * @param isSummon this parameter if it's {@code false} it denotes that the attacker was indeed the player, else it specifies that the damage was actually dealt by the player's pet.
-     * @return
      */
     public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon) {
         return null;
@@ -521,7 +519,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param damage   this parameter represents the total damage that this attack has inflicted to the NPC.
      * @param isSummon this parameter if it's {@code false} it denotes that the attacker was indeed the player, else it specifies that the damage was actually dealt by the player's summon
      * @param skill    parameter is the skill that player used to attack NPC.
-     * @return
      */
     public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill) {
         return onAttack(npc, attacker, damage, isSummon);
@@ -529,12 +526,11 @@ public class Quest extends AbstractScript implements IIdentifiable {
 
     /**
      * This function is called whenever an <b>exact instance</b> of a character who was previously registered for this event dies.<br>
-     * The registration for {@link #onDeath(Creature, Creature, QuestState)} events <b>is not</b> done via the quest itself, but it is instead handled by the QuestState of a particular player.
+     * The registration for {@code onDeath(Creature, Creature, QuestState)} events <b>is not</b> done via the quest itself, but it is instead handled by the QuestState of a particular player.
      *
      * @param killer this parameter contains a reference to the exact instance of the NPC that <b>killed</b> the character.
      * @param victim this parameter contains a reference to the exact instance of the character that got killed.
      * @param qs     this parameter contains a reference to the QuestState of whomever was interested (waiting) for this kill.
-     * @return
      */
     public String onDeath(Creature killer, Creature victim, QuestState qs) {
         return onAdvEvent("", (killer instanceof Npc) ? (Npc) killer : null, qs.getPlayer());
@@ -667,7 +663,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param npc    this parameter contains a reference to the exact instance of the NPC that the player requested the skill list.
      * @param player this parameter contains a reference to the exact instance of the player who requested the skill list.
-     * @return
      */
     public String onAcquireSkillList(Npc npc, Player player) {
         return null;
@@ -679,7 +674,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc    this parameter contains a reference to the exact instance of the NPC that the player requested the skill info.
      * @param player this parameter contains a reference to the exact instance of the player who requested the skill info.
      * @param skill  this parameter contains a reference to the skill that the player requested its info.
-     * @return
      */
     public String onAcquireSkillInfo(Npc npc, Player player, Skill skill) {
         return null;
@@ -698,7 +692,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param skill    the actual skill that was used
      * @param targets  an array of all objects (can be any type of object, including mobs and players) that were affected by the skill
      * @param isSummon if {@code true}, the skill was actually cast by the player's summon, not the player himself
-     * @return
      */
     public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isSummon) {
         return null;
@@ -710,7 +703,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc    the NPC that casted the skill.
      * @param player the player who is the target of the skill. Can be {@code null}.
      * @param skill  the actual skill that was used by the NPC.
-     * @return
      */
     public String onSpellFinished(Npc npc, Player player, Skill skill) {
         return null;
@@ -722,7 +714,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * It is useful for initializations, starting quest timers, displaying chat (NpcSay), and more.
      *
      * @param npc this parameter contains a reference to the exact instance of the NPC who just (re)spawned.
-     * @return
      */
     public String onSpawn(Npc npc) {
         return null;
@@ -735,7 +726,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param caller   this parameter contains a reference to the exact instance of the NPC who is asking for help.<br>
      * @param attacker this parameter contains a reference to the exact instance of the player who attacked.
      * @param isSummon this parameter if it's {@code false} it denotes that the attacker was indeed the player, else it specifies that the attacker was the player's summon.
-     * @return
      */
     public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon) {
         return null;
@@ -747,7 +737,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc      this parameter contains a reference to the exact instance of the NPC whose aggression range is being transgressed.
      * @param player   this parameter contains a reference to the exact instance of the player who is entering the NPC's aggression range.
      * @param isSummon this parameter if it's {@code false} it denotes that the character that entered the aggression range was indeed the player, else it specifies that the character was the player's summon.
-     * @return
      */
     public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon) {
         return null;
@@ -759,7 +748,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param npc      the NPC who sees the creature
      * @param creature the creature seen by the NPC
      * @param isSummon this parameter if it's {@code false} it denotes that the character seen by the NPC was indeed the player, else it specifies that the character was the player's summon
-     * @return
      */
     public String onSeeCreature(Npc npc, Creature creature, boolean isSummon) {
         return null;
@@ -770,7 +758,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param character this parameter contains a reference to the exact instance of the character who is entering the zone.
      * @param zone      this parameter contains a reference to the zone.
-     * @return
      */
     public String onEnterZone(Creature character, Zone zone) {
         return null;
@@ -781,7 +768,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      *
      * @param character this parameter contains a reference to the exact instance of the character who is exiting the zone.
      * @param zone      this parameter contains a reference to the zone.
-     * @return
      */
     public String onExitZone(Creature character, Zone zone) {
         return null;
@@ -792,7 +778,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * @param sender    - NPC, who sent event
      * @param receiver  - NPC, who received event
      * @param reference - WorldObject to pass, if needed
-     * @return
      */
     public String onEventReceived(String eventName, Npc sender, Npc receiver, WorldObject reference) {
         return null;
@@ -985,7 +970,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * Add this quest to the list of quests that the passed mob will respond to for kill events.
      *
-     * @param npcIds
      */
     public void addKillId(int... npcIds) {
         setAttackableKillId(kill -> notifyKill(kill.getTarget(), kill.getAttacker(), kill.isSummon(), kill.getPayload()), npcIds);
@@ -1120,7 +1104,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * Register onSummonSpawn trigger when summon is spawned.
      *
-     * @param npcIds
      */
     public void addSummonSpawnId(int... npcIds) {
         setPlayerSummonSpawnId(event -> onSummonSpawn(event.getSummon()), npcIds);
@@ -1129,7 +1112,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * Register onSummonTalk trigger when master talked to summon.
      *
-     * @param npcIds
      */
     public void addSummonTalkId(int... npcIds) {
         setPlayerSummonTalkId(event -> onSummonTalk(event.getSummon()), npcIds);
@@ -1138,7 +1120,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * Register onInstanceEnter trigger when player enter into instance.
      *
-     * @param templateIds
      */
     public void addInstanceEnterId(int... templateIds) {
         setInstanceEnterId(event -> onInstanceEnter(event.getPlayer(), event.getInstanceWorld()), templateIds);
@@ -1147,7 +1128,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * Register onInstanceEnter trigger when player leave from instance.
      *
-     * @param templateIds
      */
     public void addInstanceLeaveId(int... templateIds) {
         setInstanceLeaveId(event -> onInstanceLeave(event.getPlayer(), event.getInstanceWorld()), templateIds);
@@ -1377,29 +1357,36 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     public String showHtmlFile(Player player, String filename, Npc npc) {
         final boolean questwindow = !filename.endsWith(".html");
-
+        int showQuestId = questId;
+        if(questwindow) {
+            var split = filename.split(":");
+            if(split.length > 1) {
+                filename = split[1];
+                showQuestId = Integer.parseInt(split[0]);
+            }
+        }
         String content = getHtml(player, filename);
-
-        // Send message to client if message not empty
-        if (content != null) {
+        if(content != null) {
             if (npc != null) {
                 content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
             }
-
-            if (questwindow && (questId > 0) && (questId < 20000) && (questId != 999)) {
-                final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
-                npcReply.setHtml(content);
-                npcReply.replace("%playername%", player.getName());
-                player.sendPacket(npcReply);
-            } else {
-                final NpcHtmlMessage npcReply = new NpcHtmlMessage(npc != null ? npc.getObjectId() : 0, content);
-                npcReply.replace("%playername%", player.getName());
-                player.sendPacket(npcReply);
-            }
-            player.sendPacket(ActionFailed.STATIC_PACKET);
+            sendHtmlPacket(player, npc, questwindow, showQuestId, content);
         }
 
         return content;
+    }
+
+    private void sendHtmlPacket(Player player, Npc npc, boolean questwindow, int showQuestId, String content) {
+        if (questwindow && (showQuestId > 0) && (showQuestId < 20000) && (showQuestId != 999)) {
+            var npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, showQuestId);
+            npcReply.setHtml(content);
+            npcReply.replace("%playername%", player.getName());
+            player.sendPacket(npcReply);
+        } else {
+            var npcReply = new NpcHtmlMessage(npc != null ? npc.getObjectId() : 0, content);
+            npcReply.replace("%playername%", player.getName());
+            player.sendPacket(npcReply);
+        }
     }
 
     /**
@@ -1429,7 +1416,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
     /**
      * Registers all items that have to be destroyed in case player abort the quest or finish it.
      *
-     * @param items
      */
     public void registerQuestItems(int... items) {
         for (int id : items) {
@@ -1518,11 +1504,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     private Set<QuestCondition> getStartConditions() {
         if (startConditions == null) {
-            synchronized (this) {
-                if (startConditions == null) {
-                    startConditions = ConcurrentHashMap.newKeySet(1);
-                }
-            }
+            startConditions = ConcurrentHashMap.newKeySet(1);
         }
         return startConditions;
     }
@@ -1550,7 +1532,6 @@ public class Quest extends AbstractScript implements IIdentifiable {
      * Gets the HTML for the first starting condition not met.
      *
      * @param player the player
-     * @param npc
      * @return the HTML
      */
     public String getStartConditionHtml(Player player, Npc npc) {
