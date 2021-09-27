@@ -19,41 +19,43 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.database.data.ManufactureItem;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+/**
+ * @author JoeAlisson
+ */
 public class RecipeShopSellList extends ServerPacket {
-    private final Player _buyer;
-    private final Player _manufacturer;
+    private final Player buyer;
+    private final Player manufacturer;
 
     public RecipeShopSellList(Player buyer, Player manufacturer) {
-        _buyer = buyer;
-        _manufacturer = manufacturer;
+        this.buyer = buyer;
+        this.manufacturer = manufacturer;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.RECIPE_SHOP_SELL_LIST, buffer );
 
-        buffer.writeInt(_manufacturer.getObjectId());
-        buffer.writeInt((int) _manufacturer.getCurrentMp()); // Creator's MP
-        buffer.writeInt(_manufacturer.getMaxMp()); // Creator's MP
-        buffer.writeLong(_buyer.getAdena()); // Buyer Adena
-        if (!_manufacturer.hasManufactureShop()) {
-            buffer.writeInt(0x00);
-        } else {
-            buffer.writeInt(_manufacturer.getManufactureItems().size());
-            for (ManufactureItem temp : _manufacturer.getManufactureItems().values()) {
-                buffer.writeInt(temp.getRecipeId());
-                buffer.writeInt(0x00); // unknown
-                buffer.writeLong(temp.getPrice());
+        buffer.writeInt(manufacturer.getObjectId());
+        buffer.writeInt((int) manufacturer.getCurrentMp());
+        buffer.writeInt(manufacturer.getMaxMp());
+        buffer.writeLong(buyer.getAdena());
 
-                buffer.writeLong(0x00); // Classic - 166
-                buffer.writeLong(0x00); // Classic - 166
-                buffer.writeByte(0x00); // Classic - 166
-            }
+        var items = manufacturer.getManufactureItems();
+        buffer.writeInt(items.size());
+
+        for (var item : items.values()) {
+            buffer.writeInt(item.getRecipeId());
+            buffer.writeInt(0x00); // unknown
+            buffer.writeLong(item.getPrice());
+
+            buffer.writeDouble(manufacturer.getStats().getValue(Stat.CRAFT_RATE_MASTER));
+            buffer.writeByte(0x01); // show crit rate
+            buffer.writeDouble(manufacturer.getStats().getValue(Stat.CRAFT_RATE_CRITICAL));
         }
     }
 
