@@ -616,25 +616,6 @@ public final class Config {
         CLAN_EXP_MONSTER_MUL = Feature.getInt("ClanExpMonsterMul", 1);
         CLAN_EXP_QUEST_MUL = Feature.getInt("ClanExpQuestMul", 100);
 
-        // Load General config file (if exists)
-        final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
-
-        ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
-        ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
-        ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
-
-        ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
-        ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
-        ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + System.lineSeparator().repeat(2) + "Sincerely, Alegria");
-        ENABLE_BLOCK_CHECKER_EVENT = General.getBoolean("EnableBlockCheckerEvent", false);
-
-        HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
-
-        BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
-        BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
-        BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000L;
-        BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
-
         // Load FloodProtector config file
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
 
