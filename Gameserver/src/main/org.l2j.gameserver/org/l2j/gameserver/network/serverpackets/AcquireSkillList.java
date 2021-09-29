@@ -22,7 +22,6 @@ import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -30,22 +29,22 @@ import java.util.List;
 
 /**
  * @author Sdw, Mobius
- * @version Classic 2.0
+ * @author JoeAlisson
  */
 public class AcquireSkillList extends ServerPacket {
-    final List<SkillLearn> _learnable;
+    final List<SkillLearn> skills;
 
     public AcquireSkillList(Player player) {
-        _learnable = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false, false);
-        _learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false, false));
+        skills = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false, false);
+        skills.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false, false));
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.ACQUIRE_SKILL_LIST, buffer );
 
-        buffer.writeShort(_learnable.size());
-        for (SkillLearn skill : _learnable) {
+        buffer.writeShort(skills.size());
+        for (SkillLearn skill : skills) {
             if (skill == null) {
                 continue;
             }
@@ -53,17 +52,16 @@ public class AcquireSkillList extends ServerPacket {
             buffer.writeShort(skill.getSkillLevel());
             buffer.writeLong(skill.getLevelUpSp());
             buffer.writeByte(skill.getGetLevel());
-            buffer.writeShort(0x00); // Salvation: Changed from byte to short.
-            if (skill.getRequiredItems().size() > 0) {
-                for (ItemHolder item : skill.getRequiredItems()) {
-                    buffer.writeByte(0x01);
-                    buffer.writeInt(item.getId());
-                    buffer.writeLong(item.getCount());
-                }
-            } else {
-                buffer.writeByte( 0x00);
+            buffer.writeByte(0x00); // dual class level requirement
+            buffer.writeByte(skill.getSkillLevel() == 1);// new skill
+
+            buffer.writeByte(skill.getRequiredItems().size());
+            for (var requiredItem : skill.getRequiredItems()) {
+                buffer.writeInt(requiredItem.getId());
+                buffer.writeLong(requiredItem.getCount());
             }
-            buffer.writeByte(0x00);
+
+            buffer.writeByte(0x00); // skills to be removed
         }
     }
 
