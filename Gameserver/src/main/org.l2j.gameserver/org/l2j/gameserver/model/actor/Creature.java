@@ -658,6 +658,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         boolean crossbow = false;
         switch (weaponType) {
             case CROSSBOW:
+            case PISTOLS:
             case TWO_HAND_CROSSBOW:
                 crossbow = true;
             case BOW: {

@@ -1084,7 +1084,7 @@ public final class Formulas {
         // Any original values that appear higher than tested have been replaced with the tested values, because even with packet delay its obvious they are wrong.
         // All other original values are compared with the test results and differences are considered to be too insignificant and mostly caused due to packet delay.
         return switch (attackType) {
-            case BOW, CROSSBOW, TWO_HAND_CROSSBOW -> (int) (totalAttackTime * 0.6);
+            case BOW, CROSSBOW, TWO_HAND_CROSSBOW, PISTOLS -> (int) (totalAttackTime * 0.6);
             case DUAL_BLUNT, DUAL_DAGGER, DUAL, FIST -> {
                 if (secondHit) {
                     yield  (int) (totalAttackTime * 0.6);

@@ -268,7 +268,7 @@ public class CreatureAI extends AbstractAI {
         {
             final Item rhand = ((Player) actor).getInventory().getPaperdollItem(InventorySlot.RIGHT_HAND);
 
-            if ((actor.isAttackingNow() && (rhand != null) && (rhand.getItemType() == WeaponType.BOW)) || (actor.isCastingNow() && !actor.isMoving()))
+            if ((actor.isAttackingNow() && (rhand != null) && ((rhand.getItemType() == WeaponType.BOW) || (rhand.getItemType() == WeaponType.PISTOLS)) || (actor.isCastingNow() && !actor.isMoving())))
             {
                 clientActionFailed();
                 return;
@@ -277,7 +277,7 @@ public class CreatureAI extends AbstractAI {
 
             // Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
             clientStopAutoAttack();
-            if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)))
+            if (((rhand != null) && ((rhand.getItemType() == WeaponType.BOW) || (rhand.getItemType() == WeaponType.PISTOLS))))
 
             {
                 if (!actor.isAttackingNow())

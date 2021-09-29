@@ -995,15 +995,12 @@ public final class Player extends Playable {
 
         if (!inventory.findAmmunitionForCurrentWeapon()) {
             getAI().setIntention(AI_INTENTION_ACTIVE);
-
             if (weapon.getItemType().isPistols())
             {
-                sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+                sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_BECAUSE_YOU_DON_T_HAVE_AN_ELEMENTAL_ORB);
             }
-            else
-            {
                 sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
-            }
+            
             return false;
         }
 
@@ -3355,7 +3352,7 @@ public final class Player extends Playable {
             final EtcItem etcItem = target.getEtcItem();
             if (etcItem != null) {
                 final EtcItemType itemType = etcItem.getItemType();
-                if ((weapon.getItemType() == WeaponType.BOW && itemType == EtcItemType.ARROW) || ((weapon.getItemType() == WeaponType.CROSSBOW || weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW) && itemType == EtcItemType.BOLT)) {
+                if ((weapon.getItemType() == WeaponType.BOW && itemType == EtcItemType.ARROW) || ((weapon.getItemType() == WeaponType.CROSSBOW || weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW) && itemType == EtcItemType.BOLT) || (weapon.getItemType() == WeaponType.PISTOLS && itemType == EtcItemType.ELEMENTAL_ORB)) {
                     inventory.findAmmunitionForCurrentWeapon();
                 }
             }

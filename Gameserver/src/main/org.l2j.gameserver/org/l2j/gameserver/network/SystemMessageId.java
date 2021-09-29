@@ -17767,6 +17767,9 @@ public final class SystemMessageId {
     @ClientString(id = 13280, message = "You cannot use any more Elixirs.")
     public static SystemMessageId YOU_CANNOT_USE_ANY_MORE_ELIXIRS;
 
+    @ClientString(id = 13393, message = "You cannot attack, because you don't have an Elemental Orb.")
+    public static SystemMessageId YOU_CANNOT_ATTACK_BECAUSE_YOU_DON_T_HAVE_AN_ELEMENTAL_ORB;
+
     @ClientString(id = 13406, message = "$s1 Honor Coins have been used.")
     public static        SystemMessageId         HONOR_COINS_USED;
 
