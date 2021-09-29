@@ -741,7 +741,7 @@ public class PlayerInventory extends Inventory {
     public void applyItemSkills() {
         for (Item item : items.values()) {
             item.giveSkillsToPlayer(owner);
-            item.applyEnchantStats();
+            item.applyEnchantStats(owner);
             if (item.isEquipped()) {
                 item.applySpecialAbilities();
             }

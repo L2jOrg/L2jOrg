@@ -203,14 +203,14 @@ public class EnterWorld extends ClientPacket {
 
         checkHardwareInfo();
 
+        if (player.isGM()) {
+            onGameMasterEnter(player);
+        }
         player.sendPacket(new UserInfo(player));
         player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
         restoreItems(player);
         player.onEnter();
         player.sendPacket(new EtcStatusUpdate(player));
-        if (player.isGM()) {
-            onGameMasterEnter(player);
-        }
         player.spawnMe();
 
         // Fix for equipped item skills
