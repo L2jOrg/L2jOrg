@@ -854,8 +854,8 @@ public class PlayerInventory extends Inventory {
 
         final var itemType = weapon.getItemType();
 
-        return (ammunition.getItemType() == ARROW && itemType == WeaponType.BOW) ||
-               (ammunition.getItemType() == BOLT && itemType == WeaponType.CROSSBOW || itemType == WeaponType.TWO_HAND_CROSSBOW) || (ammunition.getItemType() == ELEMENTAL_ORB && itemType == WeaponType.PISTOLS);
+        return (ammunition.getItemType() == ARROW && itemType == WeaponType.BOW )|| ( ammunition.getItemType() == ELEMENTAL_ORB && itemType == WeaponType.PISTOLS) ||
+               (ammunition.getItemType() == BOLT && itemType == WeaponType.CROSSBOW || itemType == WeaponType.TWO_HAND_CROSSBOW);
     }
 
     public Collection<Item> getQuestItems() {
