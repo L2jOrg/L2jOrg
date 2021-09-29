@@ -176,9 +176,6 @@ public class Attackable extends Npc {
     /**
      * Reduce the current HP of the Attackable, update its _aggroList and launch the doDie Task if necessary.
      *  @param attacker The Creature who attacks
-     * @param skill
-     * @param isDOT
-     * @param drown
      */
     @Override
     public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect, DamageInfo.DamageType drown) {
@@ -347,7 +344,7 @@ public class Attackable extends Npc {
             var playerDamage = playersDamage.getOrDefault(player, 0);
             partyDmg += playerDamage;
 
-            if (playerDamage > 0 && GameUtils.checkIfInRange(PartySettings.partyRange(), this, player, true)) {
+            if (GameUtils.checkIfInRange(PartySettings.partyRange(), this, player, true)) {
                 if (!attackerParty.isInCommandChannel() && player.getLevel() > partyLvl) {
                     partyLvl = player.getLevel();
                 }
@@ -518,7 +515,6 @@ public class Attackable extends Npc {
      *
      * @param attacker The Creature that gave damages to this Attackable
      * @param damage   The number of damages given by the attacker Creature
-     * @param skill
      */
     public void addDamage(Creature attacker, int damage, Skill skill) {
         if (attacker == null) {
@@ -652,8 +648,6 @@ public class Attackable extends Npc {
 
     /**
      * Clears _aggroList hate of the Creature without removing from the list.
-     *
-     * @param target
      */
     public void stopHating(Creature target) {
         if (target == null) {
@@ -747,9 +741,6 @@ public class Attackable extends Npc {
      * Create this or these Item corresponding to each Item Identifier dropped.<br>
      * If the autoLoot mode is actif and if the Creature that has killed the Attackable is a Player, Give the item(s) to the Player that has killed the Attackable.<br>
      * If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last.
-     *
-     * @param npcTemplate
-     * @param mainDamageDealer
      */
     public void doItemDrop(NpcTemplate npcTemplate, Creature mainDamageDealer) {
         if (mainDamageDealer == null) {
@@ -1159,8 +1150,6 @@ public class Attackable extends Npc {
 
     /**
      * Set this Npc as a Raid instance.
-     *
-     * @param isRaid
      */
     public void setIsRaid(boolean isRaid) {
         this.isRaid = isRaid;
@@ -1168,8 +1157,6 @@ public class Attackable extends Npc {
 
     /**
      * Set this Npc as a Minion instance.
-     *
-     * @param val
      */
     public void setIsRaidMinion(boolean val) {
         isRaid = val;
