@@ -51,6 +51,8 @@ import org.l2j.gameserver.network.serverpackets.ExCastleState;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.FeatureSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.CastleZone;
@@ -84,7 +86,7 @@ public final class Castle extends AbstractResidence {
     public static final int FUNC_RESTORE_EXP = 4;
     public static final int FUNC_SUPPORT = 5;
 
-    protected static final Logger LOGGER = LoggerFactory.getLogger(Castle.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Castle.class);
 
     private final IntMap<Door> doors = new HashIntMap<>();
     private final List<Npc> sideNpcs = new ArrayList<>();
@@ -430,24 +432,24 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    public final Door getDoor(int doorId) {
+    public Door getDoor(int doorId) {
         return doors.get(doorId);
     }
 
-    public final Door getDoor(String doorName) {
+    public Door getDoor(String doorName) {
         return doors.values().stream().filter(d -> d.getTemplate().getName().equals(doorName)).findFirst().orElse(null);
     }
 
-    public final Collection<Door> getDoors() {
+    public Collection<Door> getDoors() {
         return doors.values();
     }
 
     @Override
-    public final int getOwnerId() {
+    public int getOwnerId() {
         return ownerId;
     }
 
-    public final Clan getOwner() {
+    public Clan getOwner() {
         return (ownerId != 0) ? ClanEngine.getInstance().getClan(ownerId) : null;
     }
 
@@ -495,14 +497,14 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    public final Siege getSiege() {
+    public Siege getSiege() {
         if (isNull(siege)) {
             siege = new Siege(this);
         }
         return siege;
     }
 
-    public final LocalDateTime getSiegeDate() {
+    public LocalDateTime getSiegeDate() {
         return data.getSiegeDate();
     }
 
@@ -518,27 +520,23 @@ public final class Castle extends AbstractResidence {
         data.setSiegeTimeRegistrationEnd(date);
     }
 
-    public final int getTaxPercent(TaxType type) {
-        return switch (data.getSide()) {
-            case LIGHT -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_LIGHT : Config.CASTLE_SELL_TAX_LIGHT;
-            case DARK -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_DARK : Config.CASTLE_SELL_TAX_DARK;
-            default -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_NEUTRAL : Config.CASTLE_SELL_TAX_NEUTRAL;
-        };
+    public int getTaxPercent(TaxType type) {
+        return FeatureSettings.taxFor(data.getSide(), type);
     }
 
-    public final double getTaxRate(TaxType taxType) {
+    public double getTaxRate(TaxType taxType) {
         return getTaxPercent(taxType) / 100.0;
     }
 
-    public final long getTreasury() {
+    public long getTreasury() {
         return data.getTreasury();
     }
 
-    public final boolean isShowNpcCrest() {
+    public boolean isShowNpcCrest() {
         return data.isShowNpcCrest();
     }
 
-    public final void setShowNpcCrest(boolean showNpcCrest) {
+    public void setShowNpcCrest(boolean showNpcCrest) {
         if (data.isShowNpcCrest() != showNpcCrest) {
             data.setShowNpcCrest(showNpcCrest);
             updateShowNpcCrest();

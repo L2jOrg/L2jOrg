@@ -41,6 +41,8 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Objects;
+
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
@@ -180,9 +182,6 @@ public final class RequestAcquireSkill extends ClientPacket {
         if(!checkSkillRequirements(player, trainer, skillLearn)) {
             return false;
         }
-        if (!skillLearn.hasSkillsToRemove()) {
-            skillLearn.getRemoveSkills().forEach(skillId -> giveSkillToPlayer(player, skillId));
-        }
 
         // If the player has SP and all required items then consume SP.
         if (skillLearn.getLevelUpSp() > 0) {
@@ -269,7 +268,6 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @param player  the player acquiring a skill.
      * @param trainer the Npc teaching a skill.
      * @param skill   the skill to be learn.
-     * @param store
      */
     private void giveSkill(Player player, Npc trainer, Skill skill, boolean store) {
         // Send message.
@@ -287,12 +285,7 @@ public final class RequestAcquireSkill extends ClientPacket {
             player.sendPacket(new ExStorageMaxCount(player));
         }
 
-        // Notify scripts of the skill learn.
-        if (trainer != null) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, skillType), trainer);
-        } else {
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, skillType), player);
-        }
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, skillType), Objects.requireNonNullElse(trainer, player));
     }
 
     /**

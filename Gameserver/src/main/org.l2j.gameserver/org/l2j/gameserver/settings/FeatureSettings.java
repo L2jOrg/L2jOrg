@@ -19,6 +19,9 @@
 package org.l2j.gameserver.settings;
 
 import org.l2j.commons.configuration.SettingsFile;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.enums.CastleSide;
+import org.l2j.gameserver.enums.TaxType;
 
 /**
  * @author JoeAlisson
@@ -31,6 +34,12 @@ public class FeatureSettings {
     private static boolean allowRideInSiege;
     private static boolean l2StoreEnabled;
     private static boolean lCoinStoreEnabled;
+    private static int buyTaxForNeutralSide;
+    private static int buyTaxForLightSide;
+    private static int buyTaxForDarkSide;
+    private static int sellTaxForNeutralSide;
+    private static int sellTaxForLightSide;
+    private static int sellTaxForDarkSide;
 
     private FeatureSettings() {
         // helper class
@@ -43,6 +52,12 @@ public class FeatureSettings {
         allowRideInSiege = settingsFile.getBoolean("AllowRideMountsDuringSiege", false);
         l2StoreEnabled = settingsFile.getBoolean("EnableL2Store", true);
         lCoinStoreEnabled = settingsFile.getBoolean("EnableLCoinStore", true);
+        buyTaxForNeutralSide = settingsFile.getInt("BuyTaxForNeutralSide", 15);
+        buyTaxForLightSide = settingsFile.getInt("BuyTaxForLightSide", 0);
+        buyTaxForDarkSide = settingsFile.getInt("BuyTaxForDarkSide", 30);
+        sellTaxForNeutralSide = settingsFile.getInt("SellTaxForNeutralSide", 0);
+        sellTaxForLightSide = settingsFile.getInt("SellTaxForLightSide", 0);
+        sellTaxForDarkSide = settingsFile.getInt("SellTaxForDarkSide", 20);
     }
 
     public static int[] siegeHours() {
@@ -67,5 +82,14 @@ public class FeatureSettings {
 
     public static boolean isLCoinStoreEnabled() {
         return lCoinStoreEnabled;
+    }
+
+
+    public static int taxFor(CastleSide side, TaxType type) {
+        return switch (side) {
+            case LIGHT -> type == TaxType.BUY ? buyTaxForLightSide : sellTaxForLightSide;
+            case DARK -> type == TaxType.BUY ? buyTaxForDarkSide : sellTaxForDarkSide;
+            case NEUTRAL -> type == TaxType.BUY ? buyTaxForNeutralSide : sellTaxForNeutralSide;
+        };
     }
 }

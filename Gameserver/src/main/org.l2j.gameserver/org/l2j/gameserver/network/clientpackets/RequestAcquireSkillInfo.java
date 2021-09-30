@@ -81,7 +81,7 @@ public final class RequestAcquireSkillInfo extends ClientPacket {
 
         switch (_skillType) {
             case TRANSFORM, FISHING -> client.sendPacket(new AcquireSkillInfo(_skillType, s));
-            case CLASS -> client.sendPacket(new ExAcquireSkillInfo(activeChar, s));
+            case CLASS -> client.sendPacket(new ExAcquireSkillInfo(s));
             case PLEDGE -> {
                 if (!activeChar.isClanLeader()) {
                     return;
