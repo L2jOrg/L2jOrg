@@ -21,7 +21,6 @@ package org.l2j.gameserver.network.serverpackets;
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.SkillLearn;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -45,10 +44,9 @@ public class ExAcquireSkillInfo extends ServerPacket {
      * Special constructor for Alternate Skill Learning system.<br>
      * Sets a custom amount of SP.
      *
-     * @param player
      * @param skillLearn the skill learn.
      */
-    public ExAcquireSkillInfo(Player player, SkillLearn skillLearn) {
+    public ExAcquireSkillInfo(SkillLearn skillLearn) {
         _id = skillLearn.getSkillId();
         _level = skillLearn.getSkillLevel();
         _dualClassLevel = 0;
@@ -56,12 +54,6 @@ public class ExAcquireSkillInfo extends ServerPacket {
         _minLevel = skillLearn.getGetLevel();
         _itemReq = skillLearn.getRequiredItems();
         _skillRem = new ArrayList<>();
-        skillLearn.getRemoveSkills().forEach(id -> {
-            var skill = player.getKnownSkill(id);
-            if(skill != null) {
-                _skillRem.add(skill);
-            }
-        });
     }
 
     @Override

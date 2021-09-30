@@ -83,7 +83,6 @@ public final class SkillTreesData extends GameXmlReader {
     private static final LongMap<SkillLearn> heroSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> gameMasterSkillTree = new HashLongMap<>();
 
-    private static final Map<ClassId, IntSet> removeSkillCache = new HashMap<>();
     /**
      * Parent class Ids are read from XML and stored in this map, to allow easy customization.
      */
@@ -112,7 +111,6 @@ public final class SkillTreesData extends GameXmlReader {
         transformSkillTree.clear();
         heroSkillTree.clear();
         gameMasterSkillTree.clear();
-        removeSkillCache.clear();
 
         parseDatapackDirectory("data/skillTrees/", true);
         generateCheckArrays();
@@ -193,11 +191,6 @@ public final class SkillTreesData extends GameXmlReader {
             case "race" -> skillLearn.addRace(Race.valueOf(node.getTextContent()));
             case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(node.getTextContent()));
             case "social-status" -> skillLearn.setSocialStatus(parseEnum(node, SocialStatus.class));
-            case "removeSkill" -> {
-                final int removeSkillId = parseInt(attrs, "id");
-                skillLearn.addRemoveSkills(removeSkillId);
-                removeSkillCache.computeIfAbsent(classId, k -> new HashIntSet()).add(removeSkillId);
-            }
             default -> LOGGER.warn("Unknown skill learn attribute {}", node.getNodeName());
         }
     }
@@ -287,7 +280,7 @@ public final class SkillTreesData extends GameXmlReader {
         for (var entry : skills.entrySet()) {
             final SkillLearn skill = entry.getValue();
 
-            if(skill.isAutoGet() && !includeAutoGet || skill.isLearnedByFS() && !includeByFs || isRemoveSkill(classId, skill.getSkillId())) {
+            if(skill.isAutoGet() && !includeAutoGet || skill.isLearnedByFS() && !includeByFs) {
                 continue;
             }
 
@@ -305,51 +298,10 @@ public final class SkillTreesData extends GameXmlReader {
     }
 
     public Collection<Skill> getAllAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
-        // Get available skills
         final PlayerSkillHolder holder = new PlayerSkillHolder(player);
-        final Set<Integer> removed = new HashSet<>();
-        for (int i = 0; i < 1000; i++) // Infinite loop warning
-        {
-            final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
-            if (learnable.isEmpty()) {
-                // No more skills to learn
-                break;
-            }
-
-            if (learnable.stream().allMatch(skillLearn -> removed.contains(skillLearn.getSkillId()))) {
-                // All remaining skills has been removed
-                break;
-            }
-
-            for (SkillLearn skillLearn : learnable) {
-                final Skill skill = SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
-
-                var it = skillLearn.getRemoveSkills().iterator();
-                while (it.hasNext()) {
-                    var skillId = it.nextInt();
-
-                    // Mark skill as removed, so it doesn't gets added
-                    removed.add(skillId);
-
-                    // Remove skill from player's skill list or prepared holder's skill list
-                    final Skill playerSkillToRemove = player.getKnownSkill(skillId);
-                    final Skill holderSkillToRemove = holder.getKnownSkill(skillId);
-
-                    // If player has the skill remove it
-                    if (playerSkillToRemove != null) {
-                        player.removeSkill(playerSkillToRemove);
-                    }
-
-                    // If holder already contains the skill remove it
-                    if (holderSkillToRemove != null) {
-                        holder.removeSkill(holderSkillToRemove);
-                    }
-                }
-
-                if (!removed.contains(skill.getId())) {
-                    holder.addSkill(skill);
-                }
-            }
+        final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
+        for (SkillLearn skillLearn : learnable) {
+            holder.addSkill(skillLearn.getSkill());
         }
         return holder.getSkills().values();
     }
@@ -496,26 +448,13 @@ public final class SkillTreesData extends GameXmlReader {
      * @return the skill learn for the specified parameters
      */
     public SkillLearn getSkillLearn(AcquireSkillType skillType, int id, int lvl, Player player) {
-        SkillLearn sl = null;
-        switch (skillType) {
-            case CLASS: {
-                sl = getClassSkill(id, lvl, player.getClassId());
-                break;
-            }
-            case TRANSFORM: {
-                sl = getTransformSkill(id, lvl);
-                break;
-            }
-            case FISHING: {
-                sl = getFishingSkill(id, lvl);
-                break;
-            }
-            case PLEDGE: {
-                sl = getPledgeSkill(id, lvl);
-                break;
-            }
-        }
-        return sl;
+        return switch (skillType) {
+            case CLASS -> getClassSkill(id, lvl, player.getClassId());
+            case TRANSFORM -> getTransformSkill(id, lvl);
+            case FISHING ->  getFishingSkill(id, lvl);
+            case PLEDGE -> getPledgeSkill(id, lvl);
+            default -> null;
+        };
     }
 
     /**
@@ -642,10 +581,6 @@ public final class SkillTreesData extends GameXmlReader {
     public boolean isClanSkill(int skillId, int skillLevel) {
         final long hashCode = SkillEngine.skillHashCode(skillId, skillLevel);
         return pledgeSkillTree.containsKey(hashCode);
-    }
-
-    public boolean isRemoveSkill(ClassId classId, int skillId) {
-        return removeSkillCache.getOrDefault(classId, Containers.emptyIntSet()).contains(skillId);
     }
 
     public void addGMSkills(Player gm) {
