@@ -46,6 +46,7 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExShowCommission;
+import org.l2j.gameserver.network.serverpackets.skill.AcquireSkillList;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;

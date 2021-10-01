@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.serverpackets.AcquireSkillInfo;
-import org.l2j.gameserver.network.serverpackets.ExAcquireSkillInfo;
+import org.l2j.gameserver.network.serverpackets.skill.ExAcquireSkillInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

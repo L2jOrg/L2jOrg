@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.skill;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
@@ -31,7 +31,7 @@ import java.util.List;
  * @author Sdw, Mobius
  * @author JoeAlisson
  */
-public class AcquireSkillList extends ServerPacket {
+public class AcquireSkillList extends AbstractAcquireSkill {
     final List<SkillLearn> skills;
 
     public AcquireSkillList(Player player) {
@@ -44,25 +44,8 @@ public class AcquireSkillList extends ServerPacket {
         writeId(ServerPacketId.ACQUIRE_SKILL_LIST, buffer );
 
         buffer.writeShort(skills.size());
-        for (SkillLearn skill : skills) {
-            if (skill == null) {
-                continue;
-            }
-            buffer.writeInt(skill.getSkillId());
-            buffer.writeShort(skill.getSkillLevel());
-            buffer.writeLong(skill.getLevelUpSp());
-            buffer.writeByte(skill.requiredLevel());
-            buffer.writeByte(0x00); // dual class level requirement
-            buffer.writeByte(skill.getSkillLevel() == 1);// new skill
-
-            buffer.writeByte(skill.getRequiredItems().size());
-            for (var requiredItem : skill.getRequiredItems()) {
-                buffer.writeInt(requiredItem.getId());
-                buffer.writeLong(requiredItem.getCount());
-            }
-
-            buffer.writeByte(0x00); // skills to be removed
+        for (var skillLearn : skills) {
+            writeSkillLearn(skillLearn, buffer);
         }
     }
-
 }

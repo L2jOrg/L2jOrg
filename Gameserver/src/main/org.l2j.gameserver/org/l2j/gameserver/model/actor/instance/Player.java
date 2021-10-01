@@ -110,6 +110,7 @@ import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
+import org.l2j.gameserver.network.serverpackets.skill.AcquireSkillList;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;

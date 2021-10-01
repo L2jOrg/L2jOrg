@@ -29,6 +29,7 @@ import java.util.List;
 
 /**
  * @author Zoey76
+ * @author JoeAlisson
  */
 public final class SkillLearn {
     private final int _skillId;
@@ -38,7 +39,7 @@ public final class SkillLearn {
     private final long _levelUpSp;
     private final List<ItemHolder> _requiredItems = new ArrayList<>();
     private final List<Race> _races = new ArrayList<>();
-    private final List<Skill> preReqSkills = new ArrayList<>();
+    private final List<Skill> replacedSkills = new ArrayList<>();
     private final boolean _residenceSkill;
     private final List<Integer> _residenceIds = new ArrayList<>();
     private final boolean _learnedByNpc;
@@ -129,8 +130,8 @@ public final class SkillLearn {
     /**
      * @return the list of skill holders required to acquire this skill.
      */
-    public List<Skill> getPreReqSkills() {
-        return preReqSkills;
+    public List<Skill> getReplacedSkills() {
+        return replacedSkills;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class SkillLearn {
      *
      * @param skill the required skill holder.
      */
-    public void addPreReqSkill(Skill skill) {
-        preReqSkills.add(skill);
+    public void addReplacedSkill(Skill skill) {
+        replacedSkills.add(skill);
     }
 
     /**
