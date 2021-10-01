@@ -34,7 +34,6 @@ public final class SkillLearn {
     private final int _skillId;
     private final int _skillLvl;
     private final int _getLevel;
-    private final int _getDualClassLevel;
     private final boolean _autoGet;
     private final long _levelUpSp;
     private final List<ItemHolder> _requiredItems = new ArrayList<>();
@@ -59,7 +58,6 @@ public final class SkillLearn {
         _skillId = set.getInt("skillId");
         _skillLvl = set.getInt("skillLvl");
         _getLevel = set.getInt("getLevel");
-        _getDualClassLevel = set.getInt("getDualClassLevel", 0);
         _autoGet = set.getBoolean("autoGet", false);
         _levelUpSp = set.getLong("levelUpSp", 0);
         _residenceSkill = set.getBoolean("residenceSkill", false);
