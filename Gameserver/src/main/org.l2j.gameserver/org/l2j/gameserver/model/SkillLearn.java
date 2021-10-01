@@ -33,7 +33,7 @@ import java.util.List;
 public final class SkillLearn {
     private final int _skillId;
     private final int _skillLvl;
-    private final int _getLevel;
+    private final int requiredLevel;
     private final boolean _autoGet;
     private final long _levelUpSp;
     private final List<ItemHolder> _requiredItems = new ArrayList<>();
@@ -52,7 +52,7 @@ public final class SkillLearn {
     public SkillLearn(StatsSet set) {
         _skillId = set.getInt("skillId");
         _skillLvl = set.getInt("skillLvl");
-        _getLevel = set.getInt("getLevel");
+        requiredLevel = set.getInt("required-level");
         _autoGet = set.getBoolean("autoGet", false);
         _levelUpSp = set.getLong("levelUpSp", 0);
         _residenceSkill = set.getBoolean("residenceSkill", false);
@@ -76,8 +76,8 @@ public final class SkillLearn {
     /**
      * @return the minimum level required to acquire this skill.
      */
-    public int getGetLevel() {
-        return _getLevel;
+    public int requiredLevel() {
+        return requiredLevel;
     }
 
     /**

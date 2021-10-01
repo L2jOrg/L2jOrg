@@ -48,7 +48,7 @@ public class ExAcquirableSkillListByClass extends ServerPacket {
             buffer.writeInt(skill.getSkillId());
             buffer.writeShort(skill.getSkillLevel());
             buffer.writeShort(skill.getSkillLevel());
-            buffer.writeByte(skill.getGetLevel());
+            buffer.writeByte(skill.requiredLevel());
             buffer.writeLong(skill.getLevelUpSp());
             buffer.writeByte(skill.getRequiredItems().size());
             if (_type == AcquireSkillType.SUBPLEDGE) {

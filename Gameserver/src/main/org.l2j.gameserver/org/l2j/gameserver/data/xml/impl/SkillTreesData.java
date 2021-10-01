@@ -157,7 +157,7 @@ public final class SkillTreesData extends GameXmlReader {
         SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
 
         for (var node = skillNode.getFirstChild(); node != null; node = node.getNextSibling()) {
-            parseSkillLearnAttributes(classId, skillLearn, node);
+            parseSkillLearnAttributes(skillLearn, node);
         }
 
         addToSkillTree(classSkillTree, classId, type, skillLearn);
@@ -182,7 +182,7 @@ public final class SkillTreesData extends GameXmlReader {
         }
     }
 
-    private void parseSkillLearnAttributes(ClassId classId, SkillLearn skillLearn, Node node) {
+    private void parseSkillLearnAttributes(SkillLearn skillLearn, Node node) {
         var attrs = node.getAttributes();
 
         switch (node.getNodeName()) {
@@ -231,7 +231,7 @@ public final class SkillTreesData extends GameXmlReader {
         final LongMap<SkillLearn> skills = getCompleteClassSkillTree(classId);
 
         for (SkillLearn skill : skills.values()) {
-            if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || (skill.getGetLevel() > player.getLevel())) {
+            if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || (skill.requiredLevel() > player.getLevel())) {
                 continue;
             }
             final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
@@ -282,7 +282,7 @@ public final class SkillTreesData extends GameXmlReader {
                 continue;
             }
 
-            if (player.getLevel() >= skill.getGetLevel()) {
+            if (player.getLevel() >= skill.requiredLevel()) {
                 if (skill.getSkillLevel() > SkillEngine.getInstance().getMaxLevel(skill.getSkillId())) {
                     LOGGER.warn("SkillTreesData found learnable skill {} with level higher than max skill level!", skill.getSkillId());
                     continue;
@@ -326,7 +326,7 @@ public final class SkillTreesData extends GameXmlReader {
                 continue;
             }
 
-            if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel())) {
+            if (skill.isAutoGet() && (player.getLevel() >= skill.requiredLevel())) {
                 final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
                 if (oldSkill != null) {
                     if (oldSkill.getLevel() < skill.getSkillLevel()) {
@@ -355,7 +355,7 @@ public final class SkillTreesData extends GameXmlReader {
                 continue;
             }
 
-            if (skill.isLearnedByNpc() && (player.getLevel() >= skill.getGetLevel())) {
+            if (skill.isLearnedByNpc() && (player.getLevel() >= skill.requiredLevel())) {
                 final Skill oldSkill = player.getSkills().get(skill.getSkillId());
                 checkSkillLevel(result, skill, oldSkill);
             }
@@ -383,7 +383,7 @@ public final class SkillTreesData extends GameXmlReader {
         final List<SkillLearn> result = new ArrayList<>();
 
         for (SkillLearn skill : pledgeSkillTree.values()) {
-            if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.getGetLevel())) {
+            if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.requiredLevel())) {
                 final Skill oldSkill = clan.getSkills().get(skill.getSkillId());
                 if (oldSkill != null) {
                     if ((oldSkill.getLevel() + 1) == skill.getSkillLevel()) {
@@ -406,7 +406,7 @@ public final class SkillTreesData extends GameXmlReader {
     public IntMap<SkillLearn> getMaxPledgeSkills(Clan clan) {
         final IntMap<SkillLearn> result = new HashIntMap<>();
         for (SkillLearn skill : pledgeSkillTree.values()) {
-            if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.getGetLevel())) {
+            if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.requiredLevel())) {
                 checkClanSkillLevel(clan, result, skill);
             }
         }
@@ -513,9 +513,9 @@ public final class SkillTreesData extends GameXmlReader {
             LOGGER.warn(": SkillTree is not defined for getMinLevelForNewSkill!");
         } else {
             for (SkillLearn s : skillTree.values()) {
-                if (player.getLevel() < s.getGetLevel()) {
-                    if ((minLevel == 0) || (minLevel > s.getGetLevel())) {
-                        minLevel = s.getGetLevel();
+                if (player.getLevel() < s.requiredLevel()) {
+                    if ((minLevel == 0) || (minLevel > s.requiredLevel())) {
+                        minLevel = s.requiredLevel();
                     }
                 }
             }
@@ -536,7 +536,7 @@ public final class SkillTreesData extends GameXmlReader {
                 if (!includeAutoGet && skill.isAutoGet()) {
                     continue;
                 }
-                if (minLevelForNewSkill <= skill.getGetLevel()) {
+                if (minLevelForNewSkill <= skill.requiredLevel()) {
                     final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
                     checkSkillLevel(result, skill, oldSkill);
                 }

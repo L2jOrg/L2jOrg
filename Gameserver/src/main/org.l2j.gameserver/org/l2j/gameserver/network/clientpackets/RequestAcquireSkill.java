@@ -173,9 +173,9 @@ public final class RequestAcquireSkill extends ClientPacket {
      * @return {@code true} if all requirements are meet, {@code false} otherwise.
      */
     private boolean checkPlayerSkill(Player player, Npc trainer, SkillLearn skillLearn) {
-        if (skillLearn.getGetLevel() > player.getLevel()) {
+        if (skillLearn.requiredLevel() > player.getLevel()) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
-            GameUtils.handleIllegalPlayerAction(player, player + ", level " + player.getLevel() + " is requesting skill Id: " + id + " level " + level + " without having minimum required level, " + skillLearn.getGetLevel() + "!", IllegalActionPunishmentType.NONE);
+            GameUtils.handleIllegalPlayerAction(player, player + ", level " + player.getLevel() + " is requesting skill Id: " + id + " level " + level + " without having minimum required level, " + skillLearn.requiredLevel() + "!", IllegalActionPunishmentType.NONE);
             return false;
         }
 

@@ -7497,7 +7497,7 @@ public final class Player extends Playable {
             learn = SkillTreesData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
             if (learn != null) {
                 final int lvlDiff = e.getKey() == CommonSkill.EXPERTISE.getId() ? 0 : 9;
-                if (getLevel() < (learn.getGetLevel() - lvlDiff)) {
+                if (getLevel() < (learn.requiredLevel() - lvlDiff)) {
                     decreaseSkillLevel(e.getValue(), lvlDiff);
                 }
             }
@@ -7508,7 +7508,7 @@ public final class Player extends Playable {
         int nextLevel = -1;
         final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(getClassId());
         for (SkillLearn sl : skillTree.values()) {
-            if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.getGetLevel() - lvlDiff))) {
+            if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.requiredLevel() - lvlDiff))) {
                 nextLevel = sl.getSkillLevel(); // next possible skill level
             }
         }
