@@ -42,10 +42,6 @@ public final class SkillLearn {
     private final boolean _residenceSkill;
     private final List<Integer> _residenceIds = new ArrayList<>();
     private final boolean _learnedByNpc;
-    private final int _treeId;
-    private final int _row;
-    private final int _column;
-    private final int _pointsRequired;
     private SocialStatus socialStatus;
 
     /**
@@ -61,10 +57,6 @@ public final class SkillLearn {
         _levelUpSp = set.getLong("levelUpSp", 0);
         _residenceSkill = set.getBoolean("residenceSkill", false);
         _learnedByNpc = set.getBoolean("learnedByNpc", false);
-        _treeId = set.getInt("treeId", 0);
-        _row = set.getInt("row", 0);
-        _column = set.getInt("row", 0);
-        _pointsRequired = set.getInt("pointsRequired", 0);
     }
 
     /**
@@ -204,6 +196,6 @@ public final class SkillLearn {
 
     @Override
     public String toString() {
-        return "[" + getSkill() + " treeId: " + _treeId + " row: " + _row + " column: " + _column + " pointsRequired:" + _pointsRequired + "]";
+        return "[" + getSkill() + "]";
     }
 }
