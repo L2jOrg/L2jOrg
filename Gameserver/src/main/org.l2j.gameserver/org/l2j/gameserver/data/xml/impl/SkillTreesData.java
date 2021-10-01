@@ -187,7 +187,7 @@ public final class SkillTreesData extends GameXmlReader {
 
         switch (node.getNodeName()) {
             case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
-            case "preRequisiteSkill" -> skillLearn.addPreReqSkill(parseSkillInfo(node, "id", "lvl"));
+            case "replace-skill" -> skillLearn.addReplacedSkill(parseSkillInfo(node, "id", "lvl"));
             case "race" -> skillLearn.addRace(Race.valueOf(node.getTextContent()));
             case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(node.getTextContent()));
             case "social-status" -> skillLearn.setSocialStatus(parseEnum(node, SocialStatus.class));
@@ -298,10 +298,28 @@ public final class SkillTreesData extends GameXmlReader {
     public Collection<Skill> getAllAvailableSkills(Player player, ClassId classId, boolean includeAutoGet) {
         final PlayerSkillHolder holder = new PlayerSkillHolder(player);
         final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeAutoGet, holder);
-        for (SkillLearn skillLearn : learnable) {
-            holder.addSkill(skillLearn.getSkill());
+        for (var skillLearn : learnable) {
+            var skill = skillLearn.getSkill();
+            if(!checkReplacement(learnable, skillLearn, skill)) {
+                holder.addSkill(skill);
+            }
         }
         return holder.getSkills().values();
+    }
+
+    private boolean checkReplacement(List<SkillLearn> learnable, SkillLearn skillLearn, Skill skill) {
+        var replaced = false;
+        var it = learnable.iterator();
+        while (it.hasNext()) {
+            var next = it.next();
+            if(next.getReplacedSkills().contains(skill)) {
+                replaced = true;
+            }
+            if(skillLearn.getReplacedSkills().contains(next.getSkill())) {
+                it.remove();
+            }
+        }
+        return replaced;
     }
 
     /**

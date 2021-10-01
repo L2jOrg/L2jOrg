@@ -8817,9 +8817,6 @@ public final class SystemMessageId {
     @ClientString(id = 4264, message = "You can experiment $s1 times.")
     public static SystemMessageId YOU_CAN_EXPERIMENT_S1_TIMES;
 
-    @ClientString(id = 4265, message = "You must learn the necessary skills first.")
-    public static SystemMessageId YOU_MUST_LEARN_THE_NECESSARY_SKILLS_FIRST;
-
     @ClientString(id = 4266, message = "Experiment failed. Please try again.")
     public static SystemMessageId EXPERIMENT_FAILED_PLEASE_TRY_AGAIN;
 
@@ -17403,6 +17400,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 4255, message = "Current location: $s1 / $s2 / $s3 (near Faeron Village)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_NEAR_FAERON_VILLAGE;
+
+    @ClientString(id = 4265, message = "You must learn the necessary skills first.")
+    public static SystemMessageId YOU_MUST_LEARN_THE_NECESSARY_SKILLS_FIRST;
 
     @ClientString(id = 4271, message = "Current location: $s1 / $s2 / $s3")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3;
