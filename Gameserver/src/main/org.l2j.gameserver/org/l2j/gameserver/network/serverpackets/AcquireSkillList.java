@@ -51,7 +51,7 @@ public class AcquireSkillList extends ServerPacket {
             buffer.writeInt(skill.getSkillId());
             buffer.writeShort(skill.getSkillLevel());
             buffer.writeLong(skill.getLevelUpSp());
-            buffer.writeByte(skill.getGetLevel());
+            buffer.writeByte(skill.requiredLevel());
             buffer.writeByte(0x00); // dual class level requirement
             buffer.writeByte(skill.getSkillLevel() == 1);// new skill
 
