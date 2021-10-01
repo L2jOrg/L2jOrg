@@ -35,8 +35,8 @@ public class AcquireSkillList extends ServerPacket {
     final List<SkillLearn> skills;
 
     public AcquireSkillList(Player player) {
-        skills = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false, false);
-        skills.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false, false));
+        skills = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false);
+        skills.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false));
     }
 
     @Override

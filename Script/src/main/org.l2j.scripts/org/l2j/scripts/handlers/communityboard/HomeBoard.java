@@ -659,7 +659,7 @@ public final class HomeBoard implements IParseBoardHandler {
         }
         final Player player = activeChar.getActingPlayer();
         // Notify player and admin
-        BuilderUtil.sendSysMessage(activeChar, "You gave " + player.giveAvailableSkills(includedByFs, true) + " skills to " + player.getName());
+        BuilderUtil.sendSysMessage(activeChar, "You gave " + player.giveAvailableSkills(true) + " skills to " + player.getName());
         player.sendSkillList();
         player.sendPacket(new AcquireSkillList(player));
     }

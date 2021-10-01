@@ -48,7 +48,7 @@ public class Folk extends Npc {
      */
     public static void showSkillList(Player player, Npc npc, ClassId classId) {
         // Normal skills, No LearnedByFS, no AutoGet skills.
-        final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false, false);
+        final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false);
         if (skills.isEmpty()) {
             final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(classId);
             final int minLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, skillTree);
