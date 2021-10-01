@@ -42,7 +42,6 @@ public final class SkillLearn {
     private final boolean _residenceSkill;
     private final List<Integer> _residenceIds = new ArrayList<>();
     private final boolean _learnedByNpc;
-    private final boolean _learnedByFS;
     private final int _treeId;
     private final int _row;
     private final int _column;
@@ -62,7 +61,6 @@ public final class SkillLearn {
         _levelUpSp = set.getLong("levelUpSp", 0);
         _residenceSkill = set.getBoolean("residenceSkill", false);
         _learnedByNpc = set.getBoolean("learnedByNpc", false);
-        _learnedByFS = set.getBoolean("learnedByFS", false);
         _treeId = set.getInt("treeId", 0);
         _row = set.getInt("row", 0);
         _column = set.getInt("row", 0);
@@ -198,13 +196,6 @@ public final class SkillLearn {
      */
     public boolean isLearnedByNpc() {
         return _learnedByNpc;
-    }
-
-    /**
-     * @return {@code true} if this skill is learned by Forgotten Scroll.
-     */
-    public boolean isLearnedByFS() {
-        return _learnedByFS;
     }
 
     public Skill getSkill() {

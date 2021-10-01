@@ -231,7 +231,7 @@ public final class SkillTreesData extends GameXmlReader {
         final LongMap<SkillLearn> skills = getCompleteClassSkillTree(classId);
 
         for (SkillLearn skill : skills.values()) {
-            if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || skill.isLearnedByFS() || (skill.getGetLevel() > player.getLevel())) {
+            if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || (skill.getGetLevel() > player.getLevel())) {
                 continue;
             }
             final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
@@ -249,12 +249,11 @@ public final class SkillTreesData extends GameXmlReader {
      *
      * @param player         the learning skill player
      * @param classId        the learning skill class Id
-     * @param includeByFs    if {@code true} skills from Forgotten Scroll will be included
      * @param includeAutoGet if {@code true} Auto-Get skills will be included
      * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
      */
-    public List<SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
-        return getAvailableSkills(player, classId, includeByFs, includeAutoGet, player);
+    public List<SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeAutoGet) {
+        return getAvailableSkills(player, classId, includeAutoGet, player);
     }
 
     /**
@@ -262,12 +261,11 @@ public final class SkillTreesData extends GameXmlReader {
      *
      * @param player         the learning skill player
      * @param classId        the learning skill class Id
-     * @param includeByFs    if {@code true} skills from Forgotten Scroll will be included
      * @param includeAutoGet if {@code true} Auto-Get skills will be included
      * @param holder         the skill holder
      * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
      */
-    private List<SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet, ISkillsHolder holder) {
+    private List<SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeAutoGet, ISkillsHolder holder) {
         final List<SkillLearn> result = new LinkedList<>();
         final LongMap<SkillLearn> skills = getCompleteClassSkillTree(classId);
 
@@ -280,7 +278,7 @@ public final class SkillTreesData extends GameXmlReader {
         for (var entry : skills.entrySet()) {
             final SkillLearn skill = entry.getValue();
 
-            if(skill.isAutoGet() && !includeAutoGet || skill.isLearnedByFS() && !includeByFs) {
+            if(skill.isAutoGet() && !includeAutoGet) {
                 continue;
             }
 
@@ -297,9 +295,9 @@ public final class SkillTreesData extends GameXmlReader {
         return result;
     }
 
-    public Collection<Skill> getAllAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
+    public Collection<Skill> getAllAvailableSkills(Player player, ClassId classId, boolean includeAutoGet) {
         final PlayerSkillHolder holder = new PlayerSkillHolder(player);
-        final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
+        final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeAutoGet, holder);
         for (SkillLearn skillLearn : learnable) {
             holder.addSkill(skillLearn.getSkill());
         }
@@ -525,7 +523,7 @@ public final class SkillTreesData extends GameXmlReader {
         return minLevel;
     }
 
-    public List<SkillLearn> getNextAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeAutoGet) {
+    public List<SkillLearn> getNextAvailableSkills(Player player, ClassId classId, boolean includeAutoGet) {
         final LongMap<SkillLearn> completeClassSkillTree = getCompleteClassSkillTree(classId);
         final List<SkillLearn> result = new LinkedList<>();
         if (completeClassSkillTree.isEmpty()) {
@@ -535,7 +533,7 @@ public final class SkillTreesData extends GameXmlReader {
 
         if (minLevelForNewSkill > 0) {
             for (SkillLearn skill : completeClassSkillTree.values()) {
-                if ((!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS())) {
+                if (!includeAutoGet && skill.isAutoGet()) {
                     continue;
                 }
                 if (minLevelForNewSkill <= skill.getGetLevel()) {
