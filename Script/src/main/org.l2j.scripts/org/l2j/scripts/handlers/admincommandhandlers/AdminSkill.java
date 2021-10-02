@@ -25,7 +25,7 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -315,7 +315,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final var skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan);
 		for (SkillLearn s : skills.values())
 		{
-			clan.addNewSkill(SkillEngine.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
+			clan.addNewSkill(SkillEngine.getInstance().getSkill(s.id(), s.level()));
 		}
 		
 		// Notify target and active char

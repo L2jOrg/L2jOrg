@@ -24,7 +24,7 @@ import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Fisherman;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -121,7 +121,7 @@ public final class RequestAcquireSkill extends ClientPacket {
 
     private void acquirePlayerSkill(Player player, Npc trainer, Skill skill, SkillLearn skillLearn) {
         if (checkPlayerSkill(player, trainer, skillLearn)) {
-            for (var replacedSkill : skillLearn.getReplacedSkills()) {
+            for (var replacedSkill : skillLearn.replaceSkills()) {
                 player.removeSkill(replacedSkill, true);
             }
             giveSkill(player, trainer, skill);
@@ -134,7 +134,7 @@ public final class RequestAcquireSkill extends ClientPacket {
         }
 
         final Clan clan = player.getClan();
-        final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
+        final int repCost = skillLearn.sp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.sp();
         if (clan.getReputationScore() >= repCost) {
             if (!consumeRequiredItems(player, trainer, skillLearn)) {
                 return;
@@ -153,7 +153,7 @@ public final class RequestAcquireSkill extends ClientPacket {
 
     private boolean consumeRequiredItems(Player player, Npc trainer, SkillLearn skillLearn) {
         if (CharacterSettings.pledgeSkillsItemNeeded()) {
-            for (ItemHolder item : skillLearn.getRequiredItems()) {
+            for (ItemHolder item : skillLearn.requiredItems()) {
                 if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
                     player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
                     VillageMaster.showPledgeSkillList(player);
@@ -187,22 +187,22 @@ public final class RequestAcquireSkill extends ClientPacket {
             return false;
         }
 
-        if (skillLearn.getLevelUpSp() > 0) {
-            player.setSp(player.getSp() - skillLearn.getLevelUpSp());
+        if (skillLearn.sp() > 0) {
+            player.setSp(player.getSp() - skillLearn.sp());
             player.sendPacket(new UserInfo(player, UserInfoType.CURRENT_HPMPCP_EXP_SP));
         }
         return true;
     }
 
     private boolean checkSkillRequirements(Player player, Npc trainer, SkillLearn skillLearn) {
-        var levelUpSp = skillLearn.getLevelUpSp();
+        var levelUpSp = skillLearn.sp();
         if ((levelUpSp > 0) && (levelUpSp > player.getSp())) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
             showSkillList(trainer, player);
             return false;
         }
 
-        for (var skill : skillLearn.getReplacedSkills()) {
+        for (var skill : skillLearn.replaceSkills()) {
             if (player.getSkillLevel(skill.getId()) < skill.getLevel()) {
                 player.sendPacket(YOU_MUST_LEARN_THE_NECESSARY_SKILLS_FIRST);
                 return false;
@@ -218,10 +218,10 @@ public final class RequestAcquireSkill extends ClientPacket {
 
     private boolean checkItemRequirements(Player player, Npc trainer, SkillLearn skillLearn) {
         // Check for required items.
-        if (!skillLearn.getRequiredItems().isEmpty()) {
+        if (!skillLearn.requiredItems().isEmpty()) {
             // Then checks that the player has all the items
             long reqItemCount;
-            for (ItemHolder item : skillLearn.getRequiredItems()) {
+            for (ItemHolder item : skillLearn.requiredItems()) {
                 reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
                 if (reqItemCount < item.getCount()) {
                     // Player doesn't have required item.
@@ -232,7 +232,7 @@ public final class RequestAcquireSkill extends ClientPacket {
             }
 
             // If the player has all required items, they are consumed.
-            for (ItemHolder itemIdCount : skillLearn.getRequiredItems()) {
+            for (ItemHolder itemIdCount : skillLearn.requiredItems()) {
                 if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true)) {
                     GameUtils.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + id + " level " + level + "!", IllegalActionPunishmentType.NONE);
                 }

@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
@@ -45,12 +45,12 @@ public class ExAcquirableSkillListByClass extends ServerPacket {
         buffer.writeShort(_type.getId());
         buffer.writeShort(_learnable.size());
         for (SkillLearn skill : _learnable) {
-            buffer.writeInt(skill.getSkillId());
-            buffer.writeShort(skill.getSkillLevel());
-            buffer.writeShort(skill.getSkillLevel());
+            buffer.writeInt(skill.id());
+            buffer.writeShort(skill.level());
+            buffer.writeShort(skill.level());
             buffer.writeByte(skill.requiredLevel());
-            buffer.writeLong(skill.getLevelUpSp());
-            buffer.writeByte(skill.getRequiredItems().size());
+            buffer.writeLong(skill.sp());
+            buffer.writeByte(skill.requiredItems().size());
             if (_type == AcquireSkillType.SUBPLEDGE) {
                 buffer.writeShort(0x00);
             }

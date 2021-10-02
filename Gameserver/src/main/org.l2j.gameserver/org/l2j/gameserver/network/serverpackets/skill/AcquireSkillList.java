@@ -20,7 +20,7 @@ package org.l2j.gameserver.network.serverpackets.skill;
 
 import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -46,21 +46,21 @@ public class AcquireSkillList extends ServerPacket {
 
         buffer.writeShort(skills.size());
         for (var skillLearn : skills) {
-            buffer.writeInt(skillLearn.getSkillId());
-            buffer.writeShort(skillLearn.getSkillLevel());
-            buffer.writeLong(skillLearn.getLevelUpSp());
+            buffer.writeInt(skillLearn.id());
+            buffer.writeShort(skillLearn.level());
+            buffer.writeLong(skillLearn.sp());
             buffer.writeByte(skillLearn.requiredLevel());
             buffer.writeByte(0x00); // dual class level
-            buffer.writeByte(skillLearn.getSkillLevel() == 1); // new skill
+            buffer.writeByte(skillLearn.level() == 1); // new skill
 
-            buffer.writeByte(skillLearn.getRequiredItems().size());
-            for (var item : skillLearn.getRequiredItems()) {
+            buffer.writeByte(skillLearn.requiredItems().size());
+            for (var item : skillLearn.requiredItems()) {
                 buffer.writeInt(item.getId());
                 buffer.writeLong(item.getCount());
             }
 
-            buffer.writeByte(skillLearn.getReplacedSkills().size());
-            for (var skill : skillLearn.getReplacedSkills()) {
+            buffer.writeByte(skillLearn.replaceSkills().size());
+            for (var skill : skillLearn.replaceSkills()) {
                 buffer.writeInt(skill.getId());
                 buffer.writeShort(skill.getLevel());
             }
