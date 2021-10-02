@@ -29,19 +29,19 @@ public abstract class AbstractAcquireSkill extends ServerPacket {
 
     protected void writeSkillLearn(SkillLearn skillLearn, WritableBuffer buffer) {
         buffer.writeInt(skillLearn.getSkillId());
-        buffer.writeInt(skillLearn.getSkillLevel());
+        buffer.writeShort(skillLearn.getSkillLevel());
         buffer.writeLong(skillLearn.getLevelUpSp());
-        buffer.writeShort(skillLearn.requiredLevel());
+        buffer.writeByte(skillLearn.requiredLevel());
         buffer.writeByte(0x00); // dual class level
         buffer.writeByte(skillLearn.getSkillLevel() == 1); // new skill
-        buffer.writeInt(skillLearn.getRequiredItems().size());
 
+        buffer.writeByte(skillLearn.getRequiredItems().size());
         for (var item : skillLearn.getRequiredItems()) {
             buffer.writeInt(item.getId());
             buffer.writeLong(item.getCount());
         }
 
-        buffer.writeInt(skillLearn.getReplacedSkills().size());
+        buffer.writeByte(skillLearn.getReplacedSkills().size());
         for (var skill : skillLearn.getReplacedSkills()) {
             buffer.writeInt(skill.getId());
             buffer.writeShort(skill.getLevel());
