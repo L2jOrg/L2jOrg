@@ -152,23 +152,23 @@ public final class HomeBoard implements IParseBoardHandler {
     }
 
     private String getSchemesListAsHtml(Map<String, IntList> schemes) {
-        String result = "<tr><td height=4></td></tr>";
+        StringBuilder result = new StringBuilder("<tr><td height=4></td></tr>");
         int schemesCount = 0;
 
         if ((schemes == null) || schemes.isEmpty())
         {
-            result += "<tr><td><center><font color=\"LEVEL\">You haven't defined any scheme.</font></center></td></tr>";
+            result.append("<tr><td><center><font color=\"LEVEL\">You haven't defined any scheme.</font></center></td></tr>");
         }
         else
         {
             for (var scheme : schemes.entrySet()) {
                 if(schemesCount == 0 || schemesCount == 2)
-                    result += "<tr>";
+                    result.append("<tr>");
 
-                result += getSchemeTD(scheme);
+                result.append(getSchemeTD(scheme));
 
                 if(schemesCount == 1 || schemesCount == 3)
-                    result += "</tr><tr><td height=4></td></tr>";
+                    result.append("</tr><tr><td height=4></td></tr>");
 
                 schemesCount++;
             }
@@ -176,9 +176,9 @@ public final class HomeBoard implements IParseBoardHandler {
 
         // Case of even number of schemes, need to close <TR> tag
         if(schemesCount == 1 || schemesCount == 3)
-                result += "</tr>";
+                result.append("</tr>");
 
-        return result;
+        return result.toString();
     }
 
     private String getSchemeTD(Map.Entry<String, IntList> scheme) {
@@ -245,7 +245,7 @@ public final class HomeBoard implements IParseBoardHandler {
         } else if (command.startsWith("_bbstop")) {
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
             final String path = command.replace("_bbstop ", "");
-            if ((path.length() > 0) && path.endsWith(".html")) {
+            if (path.endsWith(".html")) {
                 returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
             }
         } else if (command.startsWith("_bbsmultisell")) {
@@ -255,7 +255,7 @@ public final class HomeBoard implements IParseBoardHandler {
             final int multisellId = Integer.parseInt(buypassOptions[0]);
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, false);
-            if ((fullBypass.length() > 0) && fullBypass.endsWith(".html")) {
+            if (fullBypass.endsWith(".html")) {
                 final String path = buypassOptions[1];
                 returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
             }
@@ -508,14 +508,14 @@ public final class HomeBoard implements IParseBoardHandler {
                     level = level - playableTarget.getLevel();
                     playableTarget.getStats().addLevel((byte) min(maxAddLevel, level));
                     removeAllSkills(activeChar);
-                    giveAllSkills(activeChar, true);
+                    giveAllSkills(activeChar);
                 }
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
             }
         else if (command.startsWith("_cbbsobtgiveskill")) {
-            giveAllSkills(activeChar, true);
+            giveAllSkills(activeChar);
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
@@ -576,7 +576,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 final String val = command.substring(14).trim();
                 final int classidval = Integer.parseInt(val);
                 final WorldObject target = activeChar.getTarget();
-                if ((target == null) || !isPlayer(target))
+                if (!isPlayer(target))
                 {
                     return false;
                 }
@@ -651,7 +651,7 @@ public final class HomeBoard implements IParseBoardHandler {
         activeChar.sendPacket(new AcquireSkillList(activeChar));
         }
 
-    private void giveAllSkills(Player activeChar, boolean includedByFs)
+    private void giveAllSkills(Player activeChar)
     {
         if (!isPlayer(activeChar))
         {
@@ -762,11 +762,11 @@ public final class HomeBoard implements IParseBoardHandler {
             final Skill skill = SkillEngine.getInstance().getSkill(skillId, 1);
             if (schemeSkills.contains(skillId))
             {
-                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_NewTex.SideBar.SideBar_Btn_Reduce_n\" fore=\"L2UI_NewTex.SideBar.SideBar_Btn_Reduce_n\"></td>");
+                sb.append("<td><img src=\"").append(skill.getIcon()).append("\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillunselect ").append(groupType).append(" ").append(schemeName).append(" ").append(skillId).append(" ").append(page).append("\" width=32 height=32 back=\"L2UI_NewTex.SideBar.SideBar_Btn_Reduce_n\" fore=\"L2UI_NewTex.SideBar.SideBar_Btn_Reduce_n\"></td>");
             }
             else
             {
-                sb.append("<td><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_NewTex.Button.BTN_Plus_Normal\" fore=\"L2UI_NewTex.Button.BTN_Plus_Normal\"></td>");
+                sb.append("<td><img src=\"").append(skill.getIcon()).append("\" width=32 height=32></td><td><button value=\" \" action=\"bypass _bbsskillselect ").append(groupType).append(" ").append(schemeName).append(" ").append(skillId).append(" ").append(page).append("\" width=32 height=32 back=\"L2UI_NewTex.Button.BTN_Plus_Normal\" fore=\"L2UI_NewTex.Button.BTN_Plus_Normal\"></td>");
             }
 
             column++;
@@ -815,11 +815,11 @@ public final class HomeBoard implements IParseBoardHandler {
 
             if (groupType.equalsIgnoreCase(type))
             {
-                sb.append("<td width=65>" + type + "</td>");
+                sb.append("<td width=65>").append(type).append("</td>");
             }
             else
             {
-                sb.append("<td width=65><a action=\"bypass _bbseditscheme " + type + " " + schemeName + " 1\">" + type + "</a></td>");
+                sb.append("<td width=65><a action=\"bypass _bbseditscheme ").append(type).append(" ").append(schemeName).append(" 1\">").append(type).append("</a></td>");
             }
 
             count++;

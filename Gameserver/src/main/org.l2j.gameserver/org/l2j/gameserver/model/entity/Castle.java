@@ -52,7 +52,6 @@ import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.FeatureSettings;
-import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.CastleZone;

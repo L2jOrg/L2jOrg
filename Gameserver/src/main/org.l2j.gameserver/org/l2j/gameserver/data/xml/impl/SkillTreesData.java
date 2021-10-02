@@ -74,9 +74,7 @@ import static java.util.Objects.nonNull;
 public final class SkillTreesData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillTreesData.class);
 
-    // ClassId, Map of Skill Hash Code, SkillLearn
-    private static final Map<ClassId, LongMap<SkillLearn>> classSkillTrees = new HashMap<>();
-    // Skill Hash Code, SkillLearn
+    private static final Map<ClassId, LongMap<SkillLearn>> classSkillTrees = new EnumMap<>(ClassId.class);
     private static final LongMap<SkillLearn> fishingSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> pledgeSkillTree = new HashLongMap<>();
     private static final LongMap<SkillLearn> transformSkillTree = new HashLongMap<>();
@@ -91,8 +89,8 @@ public final class SkillTreesData extends GameXmlReader {
     private static final Map<ClassId, ClassId> parentClassMap = new HashMap<>();
     private final AtomicBoolean isLoading = new AtomicBoolean();
     // Checker, sorted arrays of hash codes
-    private IntMap<long[]> _skillsByClassIdHashCodes; // Occupation skills
-    private IntMap<long[]> _skillsByRaceHashCodes; // Race-specific Transformations
+    private IntMap<long[]> skillsByClassIdHashCodes; // Occupation skills
+    private IntMap<long[]> skillsByRaceHashCodes; // Race-specific Transformations
     private long[] allSkillsHashCodes; // Fishing, Collection, Transformations, Common Skills.
 
     private SkillTreesData() {
@@ -252,9 +250,7 @@ public final class SkillTreesData extends GameXmlReader {
                 continue;
             }
             final Skill oldSkill = player.getKnownSkill(skill.id());
-            if ((oldSkill != null) && (oldSkill.getLevel() == (skill.level() - 1))) {
-                return true;
-            } else if ((oldSkill == null) && (skill.level() == 1)) {
+            if ((oldSkill != null && oldSkill.getLevel() == skill.level() - 1) || (oldSkill == null && skill.level() == 1)) {
                 return true;
             }
         }
@@ -548,10 +544,8 @@ public final class SkillTreesData extends GameXmlReader {
             LOGGER.warn(": SkillTree is not defined for getMinLevelForNewSkill!");
         } else {
             for (SkillLearn s : skillTree.values()) {
-                if (player.getLevel() < s.requiredLevel()) {
-                    if ((minLevel == 0) || (minLevel > s.requiredLevel())) {
-                        minLevel = s.requiredLevel();
-                    }
+                if (player.getLevel() < s.requiredLevel() && (minLevel == 0 || minLevel > s.requiredLevel())) {
+                    minLevel = s.requiredLevel();
                 }
             }
         }
@@ -632,18 +626,18 @@ public final class SkillTreesData extends GameXmlReader {
         // Class specific skills:
         LongMap<SkillLearn> tempMap;
         final Set<ClassId> keySet = classSkillTrees.keySet();
-        _skillsByClassIdHashCodes = new HashIntMap<>(keySet.size());
+        skillsByClassIdHashCodes = new HashIntMap<>(keySet.size());
         for (ClassId cls : keySet) {
             tempMap = getCompleteClassSkillTree(cls);
             array = tempMap.keySet().toArray();
             tempMap.clear();
             Arrays.sort(array);
-            _skillsByClassIdHashCodes.put(cls.getId(), array);
+            skillsByClassIdHashCodes.put(cls.getId(), array);
         }
 
         // Race specific skills from Fishing and Transformation skill trees.
         final List<Long> list = new ArrayList<>();
-        _skillsByRaceHashCodes = new HashIntMap<>(Race.values().length);
+        skillsByRaceHashCodes = new HashIntMap<>(Race.values().length);
         for (Race r : Race.values()) {
             for (SkillLearn s : fishingSkillTree.values()) {
                 if (s.races().contains(r)) {
@@ -663,7 +657,7 @@ public final class SkillTreesData extends GameXmlReader {
                 array[i++] = s;
             }
             Arrays.sort(array);
-            _skillsByRaceHashCodes.put(r.ordinal(), array);
+            skillsByRaceHashCodes.put(r.ordinal(), array);
             list.clear();
         }
 
@@ -719,11 +713,11 @@ public final class SkillTreesData extends GameXmlReader {
         final int maxLvl = SkillEngine.getInstance().getMaxLevel(skill.getId());
         final long hashCode = SkillEngine.skillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLvl));
 
-        if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().getId()), hashCode) >= 0) {
+        if (Arrays.binarySearch(skillsByClassIdHashCodes.get(player.getClassId().getId()), hashCode) >= 0) {
             return true;
         }
 
-        if (Arrays.binarySearch(_skillsByRaceHashCodes.get(player.getRace().ordinal()), hashCode) >= 0) {
+        if (Arrays.binarySearch(skillsByRaceHashCodes.get(player.getRace().ordinal()), hashCode) >= 0) {
             return true;
         }
 

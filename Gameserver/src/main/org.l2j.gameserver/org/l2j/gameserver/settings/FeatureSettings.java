@@ -19,7 +19,6 @@
 package org.l2j.gameserver.settings;
 
 import org.l2j.commons.configuration.SettingsFile;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.TaxType;
 
