@@ -24,6 +24,7 @@ import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ import java.util.List;
  * @author Sdw, Mobius
  * @author JoeAlisson
  */
-public class AcquireSkillList extends AbstractAcquireSkill {
+public class AcquireSkillList extends ServerPacket {
     final List<SkillLearn> skills;
 
     public AcquireSkillList(Player player) {
@@ -45,7 +46,24 @@ public class AcquireSkillList extends AbstractAcquireSkill {
 
         buffer.writeShort(skills.size());
         for (var skillLearn : skills) {
-            writeSkillLearn(skillLearn, buffer);
+            buffer.writeInt(skillLearn.getSkillId());
+            buffer.writeShort(skillLearn.getSkillLevel());
+            buffer.writeLong(skillLearn.getLevelUpSp());
+            buffer.writeByte(skillLearn.requiredLevel());
+            buffer.writeByte(0x00); // dual class level
+            buffer.writeByte(skillLearn.getSkillLevel() == 1); // new skill
+
+            buffer.writeByte(skillLearn.getRequiredItems().size());
+            for (var item : skillLearn.getRequiredItems()) {
+                buffer.writeInt(item.getId());
+                buffer.writeLong(item.getCount());
+            }
+
+            buffer.writeByte(skillLearn.getReplacedSkills().size());
+            for (var skill : skillLearn.getReplacedSkills()) {
+                buffer.writeInt(skill.getId());
+                buffer.writeShort(skill.getLevel());
+            }
         }
     }
 }

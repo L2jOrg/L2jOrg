@@ -22,12 +22,13 @@ import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author UnAfraid
  * @author JoeAlisson
  */
-public class ExAcquireSkillInfo extends AbstractAcquireSkill {
+public class ExAcquireSkillInfo extends ServerPacket {
 
     private final SkillLearn skillLearn;
 
@@ -44,6 +45,22 @@ public class ExAcquireSkillInfo extends AbstractAcquireSkill {
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerExPacketId.EX_ACQUIRE_SKILL_INFO, buffer );
-        writeSkillLearn(skillLearn, buffer);
+        buffer.writeInt(skillLearn.getSkillId());
+        buffer.writeInt(skillLearn.getSkillLevel());
+        buffer.writeLong(skillLearn.getLevelUpSp());
+        buffer.writeShort(skillLearn.requiredLevel());
+        buffer.writeShort(0x00); // dual class level
+
+        buffer.writeInt(skillLearn.getRequiredItems().size());
+        for (var item : skillLearn.getRequiredItems()) {
+            buffer.writeInt(item.getId());
+            buffer.writeLong(item.getCount());
+        }
+
+        buffer.writeInt(skillLearn.getReplacedSkills().size());
+        for (var skill : skillLearn.getReplacedSkills()) {
+            buffer.writeInt(skill.getId());
+            buffer.writeInt(skill.getLevel());
+        }
     }
 }
