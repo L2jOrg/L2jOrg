@@ -19,8 +19,6 @@
 package org.l2j.gameserver.engine.skill.api;
 
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.holders.ItemHolder;
