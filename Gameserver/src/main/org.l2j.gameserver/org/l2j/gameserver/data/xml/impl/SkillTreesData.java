@@ -310,13 +310,16 @@ public final class SkillTreesData extends GameXmlReader {
 
     public Collection<Skill> getAllAvailableSkills(Player player, ClassId classId, boolean includeAutoGet) {
         final PlayerSkillHolder holder = new PlayerSkillHolder(player);
-        final List<SkillLearn> learnable = getAvailableSkills(player, classId, includeAutoGet, holder);
-        for (var skillLearn : learnable) {
-            var skill = skillLearn.getSkill();
-            if(!checkReplacement(learnable, skillLearn, skill)) {
-                holder.addSkill(skill);
+        List<SkillLearn> learnable;
+        do {
+            learnable = getAvailableSkills(player, classId, includeAutoGet, holder);
+            for (var skillLearn : learnable) {
+                var skill = skillLearn.getSkill();
+                if (!checkReplacement(learnable, skillLearn, skill)) {
+                    holder.addSkill(skill);
+                }
             }
-        }
+        } while (!learnable.isEmpty());
         return holder.getSkills().values();
     }
 
