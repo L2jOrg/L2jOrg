@@ -122,6 +122,8 @@ public final class HomeBoard implements IParseBoardHandler {
     };
 
     private static final Predicate<Player> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
+    public static final String TABLE_CLOSE_TR = "</tr>";
+    public static final String HTML_EXT = ".html";
 
     /**
      * Gets the count Favorite links for the given player.
@@ -176,7 +178,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
         // Case of even number of schemes, need to close <TR> tag
         if(schemesCount == 1 || schemesCount == 3)
-                result.append("</tr>");
+                result.append(TABLE_CLOSE_TR);
 
         return result.toString();
     }
@@ -203,7 +205,7 @@ public final class HomeBoard implements IParseBoardHandler {
         result += "<td align=right>";
         result += "<button value=\" \" action=\"bypass _bbsdeletescheme " + scheme.getKey()  + "\" width=36 height=40 back=\"L2UI_CH3.InventoryWnd.inventory_trash\" fore=\"L2UI_CH3.InventoryWnd.inventory_trash\">";
         result += "</td>";
-        result += "</tr>";
+        result += TABLE_CLOSE_TR;
         result += "</table>";
         result += "<table>";
         result += "<tr>";
@@ -213,10 +215,10 @@ public final class HomeBoard implements IParseBoardHandler {
         result += "<td>";
         result += "<button value=\"Use on pet\" action=\"bypass _bbsgivebuffs " + scheme.getKey()  + " " + cost + " pet\" width=120 height=33 back=\"L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button\" fore=\"L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button\">";
         result += "</td>";
-        result += "</tr>";
+        result += TABLE_CLOSE_TR;
         result += "</table>";
         result += "</td>";
-        result += "</tr>";
+        result += TABLE_CLOSE_TR;
         result += "<tr><td height=6></td></tr>";
         result += "</table>";
         result += "</center>";
@@ -245,7 +247,7 @@ public final class HomeBoard implements IParseBoardHandler {
         } else if (command.startsWith("_bbstop")) {
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
             final String path = command.replace("_bbstop ", "");
-            if (path.endsWith(".html")) {
+            if (path.endsWith(HTML_EXT)) {
                 returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
             }
         } else if (command.startsWith("_bbsmultisell")) {
@@ -255,7 +257,7 @@ public final class HomeBoard implements IParseBoardHandler {
             final int multisellId = Integer.parseInt(buypassOptions[0]);
             final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
             MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, false);
-            if (fullBypass.endsWith(".html")) {
+            if (fullBypass.endsWith(HTML_EXT)) {
                 final String path = buypassOptions[1];
                 returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
             }
@@ -266,7 +268,7 @@ public final class HomeBoard implements IParseBoardHandler {
             MultisellEngine.getInstance().separateAndSend(multisellId, activeChar, null, true);
         } else if (command.startsWith("_bbssell")) {
             final String page = command.replace("_bbssell ", "");
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + HTML_EXT);
             activeChar.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), activeChar, 0));
             activeChar.sendPacket(new ExBuySellList(activeChar, false));
         } else if (command.startsWith("_bbsteleport")) {
@@ -312,7 +314,7 @@ public final class HomeBoard implements IParseBoardHandler {
                     });
                 }
             }
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + HTML_EXT);
         } else if (command.startsWith("_bbsheal")) {
             final String page = command.replace("_bbsheal ", "");
             if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_HEAL_PRICE)) {
@@ -335,7 +337,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 activeChar.sendMessage("You used heal!");
             }
 
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + HTML_EXT);
         }
         else if (command.startsWith("_bbscleanup"))
         {
@@ -348,7 +350,7 @@ public final class HomeBoard implements IParseBoardHandler {
                 summon.stopAllEffects();
             }
             activeChar.sendMessage("You removed all buffs!");
-            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + HTML_EXT);
         }
 
         else if (command.startsWith("_bbspremium")) {
@@ -773,15 +775,15 @@ public final class HomeBoard implements IParseBoardHandler {
 
             if (column == maxColumn)
             {
-                sb.append("</tr>");
+                sb.append(TABLE_CLOSE_TR);
                 column = 0;
             }
 
         }
 
-        if (!sb.toString().endsWith("</tr>"))
+        if (!sb.toString().endsWith(TABLE_CLOSE_TR))
         {
-            sb.append("</tr>");
+            sb.append(TABLE_CLOSE_TR);
         }
 
         sb.append("</table>");
@@ -825,14 +827,14 @@ public final class HomeBoard implements IParseBoardHandler {
             count++;
             if (count == 4)
             {
-                sb.append("</tr>");
+                sb.append(TABLE_CLOSE_TR);
                 count = 0;
             }
         }
 
-        if (!sb.toString().endsWith("</tr>"))
+        if (!sb.toString().endsWith(TABLE_CLOSE_TR))
         {
-            sb.append("</tr>");
+            sb.append(TABLE_CLOSE_TR);
         }
 
         sb.append("</table>");
