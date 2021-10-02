@@ -43,6 +43,7 @@ import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
 import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
@@ -2216,7 +2217,7 @@ public final class Player extends Playable {
         final SkillEngine st = SkillEngine.getInstance();
         Skill skill;
         for (SkillLearn s : autoGetSkills) {
-            skill = st.getSkill(s.getSkillId(), s.getSkillLevel());
+            skill = st.getSkill(s.id(), s.level());
             if (skill != null) {
                 addSkill(skill, true);
             } else {
@@ -7509,8 +7510,8 @@ public final class Player extends Playable {
         int nextLevel = -1;
         final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(getClassId());
         for (SkillLearn sl : skillTree.values()) {
-            if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.requiredLevel() - lvlDiff))) {
-                nextLevel = sl.getSkillLevel(); // next possible skill level
+            if ((sl.id() == skill.getId()) && (nextLevel < sl.level()) && (getLevel() >= (sl.requiredLevel() - lvlDiff))) {
+                nextLevel = sl.level(); // next possible skill level
             }
         }
 

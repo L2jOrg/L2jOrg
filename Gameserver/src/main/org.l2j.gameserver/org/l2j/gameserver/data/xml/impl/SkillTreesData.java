@@ -18,13 +18,15 @@
  */
 package org.l2j.gameserver.data.xml.impl;
 
-import io.github.joealisson.primitive.*;
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.HashLongMap;
+import io.github.joealisson.primitive.IntMap;
+import io.github.joealisson.primitive.LongMap;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SkillLearn;
-import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.base.ClassId;
@@ -91,7 +93,7 @@ public final class SkillTreesData extends GameXmlReader {
     // Checker, sorted arrays of hash codes
     private IntMap<long[]> _skillsByClassIdHashCodes; // Occupation skills
     private IntMap<long[]> _skillsByRaceHashCodes; // Race-specific Transformations
-    private long[] _allSkillsHashCodes; // Fishing, Collection, Transformations, Common Skills.
+    private long[] allSkillsHashCodes; // Fishing, Collection, Transformations, Common Skills.
 
     private SkillTreesData() {
     }
@@ -152,19 +154,47 @@ public final class SkillTreesData extends GameXmlReader {
     }
 
     private void parseSkill(Node skillNode, LongMap<SkillLearn> classSkillTree, ClassId classId, String type) {
-        final SkillLearn skillLearn = new SkillLearn(new StatsSet(parseAttributes(skillNode)));
-
-        SkillEngine.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
+        List<Skill> replaceSkills = null;
+        List<ItemHolder> items = null;
 
         for (var node = skillNode.getFirstChild(); node != null; node = node.getNextSibling()) {
-            parseSkillLearnAttributes(skillLearn, node);
+            if("replace-skill".equals(node.getNodeName())) {
+                if(replaceSkills == null) {
+                    replaceSkills = new ArrayList<>();
+                }
+                replaceSkills.add(parseSkillInfo(node));
+            } else if("item".equals(node.getNodeName())) {
+                if(items == null) {
+                    items = new ArrayList<>();
+                }
+                items.add(parseItemHolder(node));
+            }
         }
+        createNewSkillLearn(skillNode, classSkillTree, classId, type, replaceSkills, items);
+    }
+
+    private void createNewSkillLearn(Node skillNode, LongMap<SkillLearn> classSkillTree, ClassId classId, String type, List<Skill> replaceSkills, List<ItemHolder> items) {
+        var attrs = skillNode.getAttributes();
+        var id = parseInt(attrs,"id");
+        var level = parseInt(attrs, "level");
+        var requiredLevel = parseInt(attrs, "required-level");
+        var autoLearn = parseBoolean(attrs, "auto-learn");
+        var sp = parseLong(attrs, "sp");
+        var learnedByNpc = parseBoolean(attrs, "learned-by-npc");
+        var socialStatus = parseEnum(attrs, SocialStatus.class, "social-status");
+        Set<Race> races = Collections.unmodifiableSet(parseEnumSet(attrs, Race.class, "races"));
+        var residences = parseIntSet(attrs, "residences");
+
+        items = items == null ? Collections.emptyList() : Collections.unmodifiableList(items);
+        replaceSkills = replaceSkills == null ? Collections.emptyList() : Collections.unmodifiableList(replaceSkills);
+
+        var skillLearn = new SkillLearn(id, level, requiredLevel, autoLearn, sp, learnedByNpc, socialStatus, races, items, replaceSkills, residences);
 
         addToSkillTree(classSkillTree, classId, type, skillLearn);
     }
 
     private void addToSkillTree(LongMap<SkillLearn> classSkillTree, ClassId classId, String type, SkillLearn skillLearn) {
-        final long skillHashCode = SkillEngine.skillHashCode(skillLearn.getSkillId(), skillLearn.getSkillLevel());
+        final long skillHashCode = SkillEngine.skillHashCode(skillLearn.id(), skillLearn.level());
         switch (type) {
             case "classSkillTree" -> {
                 if (nonNull(classId)) {
@@ -179,19 +209,6 @@ public final class SkillTreesData extends GameXmlReader {
             case "heroSkillTree" -> heroSkillTree.put(skillHashCode, skillLearn);
             case "gameMasterSkillTree" -> gameMasterSkillTree.put(skillHashCode, skillLearn);
             default -> LOGGER.warn("Unknown Skill Tree type: {}", type);
-        }
-    }
-
-    private void parseSkillLearnAttributes(SkillLearn skillLearn, Node node) {
-        var attrs = node.getAttributes();
-
-        switch (node.getNodeName()) {
-            case "item" -> skillLearn.addRequiredItem(new ItemHolder(parseInt(attrs, "id"), parseInt(attrs, "count")));
-            case "replace-skill" -> skillLearn.addReplacedSkill(parseSkillInfo(node, "id", "lvl"));
-            case "race" -> skillLearn.addRace(Race.valueOf(node.getTextContent()));
-            case "residenceId" -> skillLearn.addResidenceId(Integer.valueOf(node.getTextContent()));
-            case "social-status" -> skillLearn.setSocialStatus(parseEnum(node, SocialStatus.class));
-            default -> LOGGER.warn("Unknown skill learn attribute {}", node.getNodeName());
         }
     }
 
@@ -231,13 +248,13 @@ public final class SkillTreesData extends GameXmlReader {
         final LongMap<SkillLearn> skills = getCompleteClassSkillTree(classId);
 
         for (SkillLearn skill : skills.values()) {
-            if ((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.isAutoGet() || (skill.requiredLevel() > player.getLevel())) {
+            if ((skill.id() == CommonSkill.DIVINE_INSPIRATION.getId()) || skill.autoLearn() || (skill.requiredLevel() > player.getLevel())) {
                 continue;
             }
-            final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
-            if ((oldSkill != null) && (oldSkill.getLevel() == (skill.getSkillLevel() - 1))) {
+            final Skill oldSkill = player.getKnownSkill(skill.id());
+            if ((oldSkill != null) && (oldSkill.getLevel() == (skill.level() - 1))) {
                 return true;
-            } else if ((oldSkill == null) && (skill.getSkillLevel() == 1)) {
+            } else if ((oldSkill == null) && (skill.level() == 1)) {
                 return true;
             }
         }
@@ -278,17 +295,17 @@ public final class SkillTreesData extends GameXmlReader {
         for (var entry : skills.entrySet()) {
             final SkillLearn skill = entry.getValue();
 
-            if(skill.isAutoGet() && !includeAutoGet) {
+            if(skill.autoLearn() && !includeAutoGet) {
                 continue;
             }
 
             if (player.getLevel() >= skill.requiredLevel()) {
-                if (skill.getSkillLevel() > SkillEngine.getInstance().getMaxLevel(skill.getSkillId())) {
-                    LOGGER.warn("SkillTreesData found learnable skill {} with level higher than max skill level!", skill.getSkillId());
+                if (skill.level() > SkillEngine.getInstance().getMaxLevel(skill.id())) {
+                    LOGGER.warn("SkillTreesData found learnable skill {} with level higher than max skill level!", skill.id());
                     continue;
                 }
 
-                final Skill oldSkill = holder.getKnownSkill(skill.getSkillId());
+                final Skill oldSkill = holder.getKnownSkill(skill.id());
                 checkSkillLevel(result, skill, oldSkill);
             }
         }
@@ -312,10 +329,10 @@ public final class SkillTreesData extends GameXmlReader {
         var it = learnable.iterator();
         while (it.hasNext()) {
             var next = it.next();
-            if(next.getReplacedSkills().contains(skill)) {
+            if(next.replaceSkills().contains(skill)) {
                 replaced = true;
             }
-            if(skillLearn.getReplacedSkills().contains(next.getSkill())) {
+            if(skillLearn.replaceSkills().contains(next.getSkill())) {
                 it.remove();
             }
         }
@@ -340,14 +357,14 @@ public final class SkillTreesData extends GameXmlReader {
         final Race race = player.getRace();
 
         for (SkillLearn skill : skills.values()) {
-            if (!skill.getRaces().isEmpty() && !skill.getRaces().contains(race)) {
+            if (!skill.races().isEmpty() && !skill.races().contains(race)) {
                 continue;
             }
 
-            if (skill.isAutoGet() && (player.getLevel() >= skill.requiredLevel())) {
-                final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
+            if (skill.autoLearn() && (player.getLevel() >= skill.requiredLevel())) {
+                final Skill oldSkill = player.getKnownSkill(skill.id());
                 if (oldSkill != null) {
-                    if (oldSkill.getLevel() < skill.getSkillLevel()) {
+                    if (oldSkill.getLevel() < skill.level()) {
                         result.add(skill);
                     }
                 } else {
@@ -369,12 +386,12 @@ public final class SkillTreesData extends GameXmlReader {
         final Race playerRace = player.getRace();
         for (SkillLearn skill : fishingSkillTree.values()) {
             // If skill is Race specific and the player's race isn't allowed, skip it.
-            if (!skill.getRaces().isEmpty() && !skill.getRaces().contains(playerRace)) {
+            if (!skill.races().isEmpty() && !skill.races().contains(playerRace)) {
                 continue;
             }
 
-            if (skill.isLearnedByNpc() && (player.getLevel() >= skill.requiredLevel())) {
-                final Skill oldSkill = player.getSkills().get(skill.getSkillId());
+            if (skill.learnedByNpc() && (player.getLevel() >= skill.requiredLevel())) {
+                final Skill oldSkill = player.getSkills().get(skill.id());
                 checkSkillLevel(result, skill, oldSkill);
             }
         }
@@ -383,10 +400,10 @@ public final class SkillTreesData extends GameXmlReader {
 
     private void checkSkillLevel(List<SkillLearn> result, SkillLearn skill, Skill oldSkill) {
         if (oldSkill != null) {
-            if (oldSkill.getLevel() == (skill.getSkillLevel() - 1)) {
+            if (oldSkill.getLevel() == (skill.level() - 1)) {
                 result.add(skill);
             }
-        } else if (skill.getSkillLevel() == 1) {
+        } else if (skill.level() == 1) {
             result.add(skill);
         }
     }
@@ -401,13 +418,13 @@ public final class SkillTreesData extends GameXmlReader {
         final List<SkillLearn> result = new ArrayList<>();
 
         for (SkillLearn skill : pledgeSkillTree.values()) {
-            if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.requiredLevel())) {
-                final Skill oldSkill = clan.getSkills().get(skill.getSkillId());
+            if (!skill.isResidential() && clan.getLevel() >= skill.requiredLevel()) {
+                final Skill oldSkill = clan.getSkills().get(skill.id());
                 if (oldSkill != null) {
-                    if ((oldSkill.getLevel() + 1) == skill.getSkillLevel()) {
+                    if ((oldSkill.getLevel() + 1) == skill.level()) {
                         result.add(skill);
                     }
-                } else if (skill.getSkillLevel() == 1) {
+                } else if (skill.level() == 1) {
                     result.add(skill);
                 }
             }
@@ -424,7 +441,7 @@ public final class SkillTreesData extends GameXmlReader {
     public IntMap<SkillLearn> getMaxPledgeSkills(Clan clan) {
         final IntMap<SkillLearn> result = new HashIntMap<>();
         for (SkillLearn skill : pledgeSkillTree.values()) {
-            if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.requiredLevel())) {
+            if (!skill.isResidential() && clan.getLevel() >= skill.requiredLevel()) {
                 checkClanSkillLevel(clan, result, skill);
             }
         }
@@ -432,9 +449,9 @@ public final class SkillTreesData extends GameXmlReader {
     }
 
     private void checkClanSkillLevel(Clan clan, IntMap<SkillLearn> result, SkillLearn skill) {
-        final Skill oldSkill = clan.getSkills().get(skill.getSkillId());
-        if ((oldSkill == null) || (oldSkill.getLevel() < skill.getSkillLevel())) {
-            result.put(skill.getSkillId(), skill);
+        final Skill oldSkill = clan.getSkills().get(skill.id());
+        if ((oldSkill == null) || (oldSkill.getLevel() < skill.level())) {
+            result.put(skill.id(), skill);
         }
     }
 
@@ -447,7 +464,7 @@ public final class SkillTreesData extends GameXmlReader {
     public List<SkillLearn> getAvailableResidentialSkills(int residenceId) {
         List<SkillLearn> list = new ArrayList<>();
         for (var s : pledgeSkillTree.values()) {
-            if (s.isResidencialSkill() && s.getResidenceIds().contains(residenceId)) {
+            if (s.residences().contains(residenceId)) {
                 list.add(s);
             }
         }
@@ -551,11 +568,11 @@ public final class SkillTreesData extends GameXmlReader {
 
         if (minLevelForNewSkill > 0) {
             for (SkillLearn skill : completeClassSkillTree.values()) {
-                if (!includeAutoGet && skill.isAutoGet()) {
+                if (!includeAutoGet && skill.autoLearn()) {
                     continue;
                 }
                 if (minLevelForNewSkill <= skill.requiredLevel()) {
-                    final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
+                    final Skill oldSkill = player.getKnownSkill(skill.id());
                     checkSkillLevel(result, skill, oldSkill);
                 }
             }
@@ -629,14 +646,14 @@ public final class SkillTreesData extends GameXmlReader {
         _skillsByRaceHashCodes = new HashIntMap<>(Race.values().length);
         for (Race r : Race.values()) {
             for (SkillLearn s : fishingSkillTree.values()) {
-                if (s.getRaces().contains(r)) {
-                    list.add(SkillEngine.skillHashCode(s.getSkillId(), s.getSkillLevel()));
+                if (s.races().contains(r)) {
+                    list.add(SkillEngine.skillHashCode(s.id(), s.level()));
                 }
             }
 
             for (SkillLearn s : transformSkillTree.values()) {
-                if (s.getRaces().contains(r)) {
-                    list.add(SkillEngine.skillHashCode(s.getSkillId(), s.getSkillLevel()));
+                if (s.races().contains(r)) {
+                    list.add(SkillEngine.skillHashCode(s.id(), s.level()));
                 }
             }
 
@@ -652,29 +669,29 @@ public final class SkillTreesData extends GameXmlReader {
 
         // Skills available for all classes and races
         for (SkillLearn s : commonSkillTree.values()) {
-            if (s.getRaces().isEmpty()) {
-                list.add(SkillEngine.skillHashCode(s.getSkillId(), s.getSkillLevel()));
+            if (s.races().isEmpty()) {
+                list.add(SkillEngine.skillHashCode(s.id(), s.level()));
             }
         }
 
         for (SkillLearn s : fishingSkillTree.values()) {
-            if (s.getRaces().isEmpty()) {
-                list.add(SkillEngine.skillHashCode(s.getSkillId(), s.getSkillLevel()));
+            if (s.races().isEmpty()) {
+                list.add(SkillEngine.skillHashCode(s.id(), s.level()));
             }
         }
 
         for (SkillLearn s : transformSkillTree.values()) {
-            if (s.getRaces().isEmpty()) {
-                list.add(SkillEngine.skillHashCode(s.getSkillId(), s.getSkillLevel()));
+            if (s.races().isEmpty()) {
+                list.add(SkillEngine.skillHashCode(s.id(), s.level()));
             }
         }
 
-        _allSkillsHashCodes = new long[list.size()];
+        allSkillsHashCodes = new long[list.size()];
         int j = 0;
         for (long hashcode : list) {
-            _allSkillsHashCodes[j++] = hashcode;
+            allSkillsHashCodes[j++] = hashcode;
         }
-        Arrays.sort(_allSkillsHashCodes);
+        Arrays.sort(allSkillsHashCodes);
     }
 
     /**
@@ -710,18 +727,17 @@ public final class SkillTreesData extends GameXmlReader {
             return true;
         }
 
-        return Arrays.binarySearch(_allSkillsHashCodes, hashCode) >= 0;
+        return Arrays.binarySearch(allSkillsHashCodes, hashCode) >= 0;
 
     }
 
     private void report() {
         int classSkillTreeCount = classSkillTrees.values().stream().mapToInt(LongMap::size).sum();
-        var dwarvenOnlyFishingSkillCount = fishingSkillTree.values().stream().filter(s -> s.getRaces().contains(Race.DWARF)).count();
-        var resSkillCount = pledgeSkillTree.values().stream().filter(SkillLearn::isResidencialSkill).count();
+        var dwarvenOnlyFishingSkillCount = fishingSkillTree.values().stream().filter(s -> s.races().contains(Race.DWARF)).count();
 
         LOGGER.info("Loaded {} Class Skills for {} Class Skill Trees",  classSkillTreeCount, classSkillTrees.size());
         LOGGER.info("Loaded {} Fishing Skills, {} Dwarven only Fishing Skills",  fishingSkillTree.size(), dwarvenOnlyFishingSkillCount);
-        LOGGER.info("Loaded {} Pledge Skills, {} for Pledge and {} Residential",  pledgeSkillTree.size(), pledgeSkillTree.size() - resSkillCount, resSkillCount);
+        LOGGER.info("Loaded {} Pledge Skills, {} for Pledge",  pledgeSkillTree.size(), pledgeSkillTree.size());
         LOGGER.info("Loaded {} Transform Skills.", transformSkillTree.size());
         LOGGER.info("Loaded {} Hero Skills.", heroSkillTree.size());
         LOGGER.info("Loaded {} Game Master Skills.", gameMasterSkillTree.size());
