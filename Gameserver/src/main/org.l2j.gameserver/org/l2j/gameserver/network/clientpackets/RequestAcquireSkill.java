@@ -57,7 +57,7 @@ import static org.l2j.gameserver.util.GameUtils.isNpc;
 public final class RequestAcquireSkill extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestAcquireSkill.class);
-    public static final String LEVEL = " level ";
+    public static final String LEVEL_DESC = " level ";
 
     private int id;
     private int level;
@@ -99,7 +99,7 @@ public final class RequestAcquireSkill extends ClientPacket {
 
             if (prevSkillLevel != level - 1) {
                 player.sendPacket(SystemMessageId.THE_PREVIOUS_LEVEL_SKILL_HAS_NOT_BEEN_LEARNED);
-                GameUtils.handleIllegalPlayerAction(player, player + " is requesting skill Id: " + id + LEVEL + level + " without knowing it's previous level!", IllegalActionPunishmentType.NONE);
+                GameUtils.handleIllegalPlayerAction(player, player + " is requesting skill Id: " + id + LEVEL_DESC + level + " without knowing it's previous level!", IllegalActionPunishmentType.NONE);
                 return;
             }
         }
@@ -180,7 +180,7 @@ public final class RequestAcquireSkill extends ClientPacket {
     private boolean checkPlayerSkill(Player player, Npc trainer, SkillLearn skillLearn) {
         if (skillLearn.requiredLevel() > player.getLevel()) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
-            GameUtils.handleIllegalPlayerAction(player, player + ", level " + player.getLevel() + " is requesting skill Id: " + id + LEVEL + level + " without having minimum required level, " + skillLearn.requiredLevel() + "!", IllegalActionPunishmentType.NONE);
+            GameUtils.handleIllegalPlayerAction(player, player + ", level " + player.getLevel() + " is requesting skill Id: " + id + LEVEL_DESC + level + " without having minimum required level, " + skillLearn.requiredLevel() + "!", IllegalActionPunishmentType.NONE);
             return false;
         }
 
@@ -235,7 +235,7 @@ public final class RequestAcquireSkill extends ClientPacket {
             // If the player has all required items, they are consumed.
             for (ItemHolder itemIdCount : skillLearn.requiredItems()) {
                 if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true)) {
-                    GameUtils.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + id + LEVEL + level + "!", IllegalActionPunishmentType.NONE);
+                    GameUtils.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + id + LEVEL_DESC + level + "!", IllegalActionPunishmentType.NONE);
                 }
             }
         }
