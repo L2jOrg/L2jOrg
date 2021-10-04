@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.model.eventengine;
 
+import org.l2j.gameserver.engine.events.IConditionalEventScheduler;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.w3c.dom.Node;
@@ -60,11 +61,11 @@ public abstract class AbstractEventManager<T extends AbstractEvent> extends Abst
     }
 
     public void startConditionalSchedulers() {
-        //@formatter:off
-        conditionalSchedulers.stream()
-                .filter(IConditionalEventScheduler::test)
-                .forEach(IConditionalEventScheduler::run);
-        //@formatter:on
+        for (var scheduler : conditionalSchedulers) {
+            if(scheduler.test()) {
+                scheduler.run();
+            }
+        }
     }
 
     public void config(GameXmlReader reader, Node configNode) {
