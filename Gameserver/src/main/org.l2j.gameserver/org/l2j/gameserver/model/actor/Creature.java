@@ -3099,7 +3099,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         target.reduceCurrentHp(damage, this, skill, isDOT, directlyToHp, critical, reflect, DamageType.ATTACK);
 
-        if (target.hasAI()) {
+        if (target.hasAI() && !target.isDead) {
             target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
         }
 

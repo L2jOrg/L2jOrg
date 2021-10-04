@@ -43,6 +43,7 @@ import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
 import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
@@ -111,6 +112,7 @@ import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
+import org.l2j.gameserver.network.serverpackets.skill.AcquireSkillList;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
@@ -1000,7 +1002,7 @@ public final class Player extends Playable {
                 sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_BECAUSE_YOU_DON_T_HAVE_AN_ELEMENTAL_ORB);
             }
                 sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
-            
+
             return false;
         }
 
@@ -2170,7 +2172,7 @@ public final class Player extends Playable {
     public void rewardSkills() {
         // Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
         if (CharacterSettings.autoLearnSkillEnabled()) {
-            giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled(), true);
+            giveAvailableSkills(true);
         } else {
             giveAvailableAutoGetSkills();
         }
@@ -2186,14 +2188,13 @@ public final class Player extends Playable {
     /**
      * Give all available skills to the player.
      *
-     * @param includedByFs   if {@code true} forgotten scroll skills present in the skill tree will be added
      * @param includeAutoGet if {@code true} auto-get skills present in the skill tree will be added
      * @return the amount of new skills earned
      */
-    public int giveAvailableSkills(boolean includedByFs, boolean includeAutoGet) {
+    public int giveAvailableSkills(boolean includeAutoGet) {
         int skillCounter = 0;
         // Get available skills
-        final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includedByFs, includeAutoGet);
+        final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includeAutoGet);
         final List<Skill> skillsForStore = new ArrayList<>();
 
         for (Skill skill : skills) {
@@ -2231,7 +2232,7 @@ public final class Player extends Playable {
         final SkillEngine st = SkillEngine.getInstance();
         Skill skill;
         for (SkillLearn s : autoGetSkills) {
-            skill = st.getSkill(s.getSkillId(), s.getSkillLevel());
+            skill = st.getSkill(s.id(), s.level());
             if (skill != null) {
                 addSkill(skill, true);
             } else {
@@ -7559,7 +7560,7 @@ public final class Player extends Playable {
             learn = SkillTreesData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
             if (learn != null) {
                 final int lvlDiff = e.getKey() == CommonSkill.EXPERTISE.getId() ? 0 : 9;
-                if (getLevel() < (learn.getGetLevel() - lvlDiff)) {
+                if (getLevel() < (learn.requiredLevel() - lvlDiff)) {
                     decreaseSkillLevel(e.getValue(), lvlDiff);
                 }
             }
@@ -7570,8 +7571,8 @@ public final class Player extends Playable {
         int nextLevel = -1;
         final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(getClassId());
         for (SkillLearn sl : skillTree.values()) {
-            if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.getGetLevel() - lvlDiff))) {
-                nextLevel = sl.getSkillLevel(); // next possible skill level
+            if ((sl.id() == skill.getId()) && (nextLevel < sl.level()) && (getLevel() >= (sl.requiredLevel() - lvlDiff))) {
+                nextLevel = sl.level(); // next possible skill level
             }
         }
 

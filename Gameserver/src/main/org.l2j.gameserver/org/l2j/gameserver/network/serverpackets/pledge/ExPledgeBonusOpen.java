@@ -28,66 +28,50 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class ExPledgeBonusOpen extends ServerPacket {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ExPledgeBonusOpen.class);
 
-    private final Player player;
+    private final ClanRewardBonus highestMembersOnlineBonus;
+    private final ClanRewardBonus highestHuntingBonus;
+    private final ClanRewardBonus membersOnlineBonus;
+    private final ClanRewardBonus huntingBonus;
+    private final Clan clan;
+    private final boolean canClainHuntingBonus;
+    private final boolean canClainMembersOnline;
 
     public ExPledgeBonusOpen(Player player) {
-        this.player = player;
+        clan = player.getClan();
+        var rewardManager = ClanRewardManager.getInstance();
+        highestMembersOnlineBonus = rewardManager.getHighestReward(ClanRewardType.MEMBERS_ONLINE);
+        highestHuntingBonus = rewardManager.getHighestReward(ClanRewardType.HUNTING_MONSTERS);
+        membersOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(clan);
+        huntingBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(clan);
+
+        canClainMembersOnline = clan.canClaimBonusReward(player, ClanRewardType.MEMBERS_ONLINE);
+        canClainHuntingBonus = clan.canClaimBonusReward(player, ClanRewardType.HUNTING_MONSTERS);
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) throws InvalidDataPacketException {
-        final Clan clan = player.getClan();
-        if (clan == null) {
-            LOGGER.warn("Player: {} attempting to write to a null clan!", player);
-            throw new InvalidDataPacketException();
-        }
-
-        final ClanRewardBonus highestMembersOnlineBonus = ClanRewardManager.getInstance().getHighestReward(ClanRewardType.MEMBERS_ONLINE);
-        final ClanRewardBonus highestHuntingBonus = ClanRewardManager.getInstance().getHighestReward(ClanRewardType.HUNTING_MONSTERS);
-        final ClanRewardBonus membersOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(clan);
-        final ClanRewardBonus huntingBonus = ClanRewardType.HUNTING_MONSTERS.getAvailableBonus(clan);
-
-        if (highestMembersOnlineBonus == null) {
-            LOGGER.warn("Couldn't find highest available clan members online bonus!!");
-            throw new InvalidDataPacketException();
-        } else if (highestHuntingBonus == null) {
-            LOGGER.warn("Couldn't find highest available clan hunting bonus!!");
-            throw new InvalidDataPacketException();
-        } else if (highestMembersOnlineBonus.skill() == null) {
-            LOGGER.warn("Couldn't find skill reward for highest available members online bonus!!");
-            throw new InvalidDataPacketException();
-        } else if (highestHuntingBonus.item() == null) {
-            LOGGER.warn("Couldn't find item reward for highest available hunting bonus!!");
-            throw new InvalidDataPacketException();
-        }
-
-        // General OP Code
         writeId(ServerExPacketId.EX_PLEDGE_BONUS_UI_OPEN, buffer );
 
-        // Members online bonus
         buffer.writeInt(highestMembersOnlineBonus.requiredAmount());
         buffer.writeInt(clan.getMaxOnlineMembers());
-        buffer.writeByte( 0x00); // progress ?
+        buffer.writeByte( 0x00);
         buffer.writeInt(membersOnlineBonus != null ? highestMembersOnlineBonus.skill().getId() : 0x00);
-        buffer.writeByte((membersOnlineBonus != null ? membersOnlineBonus.level() : 0x00));
-        buffer.writeByte((membersOnlineBonus != null ? 0x01 : 0x00));
+        buffer.writeByte(membersOnlineBonus != null ? membersOnlineBonus.level() : 0x00);
+        buffer.writeByte(canClainMembersOnline);
 
-        // Hunting bonus
         buffer.writeInt(highestHuntingBonus.requiredAmount());
         buffer.writeInt(clan.getHuntingPoints());
-        buffer.writeByte(0x00); // progress
+        buffer.writeByte(0x01);
         buffer.writeInt(huntingBonus != null ? highestHuntingBonus.item().getId() : 0x00);
-        buffer.writeByte((huntingBonus != null ? huntingBonus.level() : 0x00));
-        buffer.writeByte((huntingBonus != null ? 0x01 : 0x00));
+        buffer.writeByte(huntingBonus != null ? huntingBonus.level() : 0x00);
+        buffer.writeByte(canClainHuntingBonus);
     }
 
 }

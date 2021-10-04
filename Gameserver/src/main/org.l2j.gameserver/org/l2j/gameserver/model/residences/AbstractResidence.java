@@ -23,7 +23,7 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.ResidenceDAO;
 import org.l2j.gameserver.data.database.data.ResidenceFunctionData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.events.ListenersContainer;
@@ -33,7 +33,6 @@ import org.l2j.gameserver.world.zone.type.ResidenceZone;
 import java.util.Collection;
 import java.util.List;
 
-import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.*;
 
@@ -70,13 +69,12 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
     }
 
     private boolean checkSocialStatus(SocialStatus socialClass, SkillLearn skillLearn) {
-        SocialStatus skillSocialClass =  skillLearn.getSocialClass();
-        return isNull(skillSocialClass) || socialClass.compareTo(skillSocialClass) >= 0;
+        return socialClass.compareTo(skillLearn.socialStatus()) >= 0;
     }
 
     public void removeResidentialSkills(Player player) {
         if(!isNullOrEmpty(residentialSkills)) {
-            residentialSkills.forEach(skill -> player.removeSkill(skill.getSkillId(), false));
+            residentialSkills.forEach(skill -> player.removeSkill(skill.id(), false));
         }
     }
 

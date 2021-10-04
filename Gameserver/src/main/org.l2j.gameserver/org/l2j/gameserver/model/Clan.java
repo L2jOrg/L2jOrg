@@ -34,6 +34,7 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -691,7 +692,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     private boolean hasSocialStatusRequirements(SocialStatus socialStatus, SkillLearn skillLearn) {
-        return skillLearn == null || skillLearn.getSocialClass() == null || socialStatus.compareTo(skillLearn.getSocialClass()) >= 0;
+        return skillLearn == null  || socialStatus.compareTo(skillLearn.socialStatus()) >= 0;
     }
 
     public void removeSkillEffects(Player player) {

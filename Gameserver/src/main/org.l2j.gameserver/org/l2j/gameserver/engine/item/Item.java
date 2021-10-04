@@ -753,11 +753,7 @@ public final class Item extends WorldObject {
         enchantOptions.clear();
     }
 
-    /**
-     * Clears and applies all the enchant bonuses if item is enchanted and containing bonuses for enchant value.
-     */
-    public void applyEnchantStats() {
-        final Player player = getActingPlayer();
+    public void applyEnchantStats(Player player) {
         if (!isEquipped() || (player == null) || (getEnchantOptions() == DEFAULT_ENCHANT_OPTIONS)) {
             return;
         }
@@ -771,6 +767,10 @@ public final class Item extends WorldObject {
                 LOGGER.info("applyEnchantStats: Couldn't find option: " + id);
             }
         }
+    }
+
+    public void applyEnchantStats() {
+        applyEnchantStats(getActingPlayer());
     }
 
     public void deleteMe() {
