@@ -22,7 +22,6 @@ package org.l2j.gameserver.engine.events;
 import org.l2j.gameserver.data.database.dao.EventDAO;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.EventScheduler;
-import org.l2j.gameserver.engine.events.IConditionalEventScheduler;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;

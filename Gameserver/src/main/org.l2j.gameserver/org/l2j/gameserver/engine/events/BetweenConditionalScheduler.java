@@ -45,6 +45,6 @@ public record BetweenConditionalScheduler(AbstractEventManager<?> eventManager, 
     public void run() {
         final EventScheduler mainScheduler = eventManager.getScheduler(name);
         mainScheduler.run();
-        LOGGER.info("Event " + eventManager.getClass().getSimpleName() + " will resume because is within the event period");
+        LOGGER.info("Event {} will resume because is within the event period", eventManager.getName());
     }
 }
