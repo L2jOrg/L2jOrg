@@ -1,5 +1,4 @@
 /*
- * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -17,13 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.eventengine;
+package org.l2j.gameserver.engine.events;
 
 /**
- * @author UnAfraid
+ * @author JoeAlisson
  */
-public interface IConditionalEventScheduler {
-    boolean test();
-
-    void run();
+public enum ConditionalSchedulerType {
+    HAS_NOT_RUN,
+    BETWEEN
 }
