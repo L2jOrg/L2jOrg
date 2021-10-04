@@ -486,4 +486,23 @@ public class XmlParser {
         }
         return Util.INT_ARRAY_EMPTY;
     }
+
+    public short[] parseShortArray(NamedNodeMap attrs, String name) {
+        return parseShortArray(attrs.getNamedItem(name));
+    }
+
+    public short[] parseShortArray(Node node ) {
+        if(nonNull(node)) {
+            var nodeValue = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
+            var values = nodeValue.split("\\s");
+            short[] array = new short[values.length];
+            for (int i = 0; i < array.length; i++) {
+                if(Util.isInteger(values[i])) {
+                    array[i] = Short.parseShort(values[i]);
+                }
+            }
+            return array;
+        }
+        return Util.SHORT_ARRAY_EMPTY;
+    }
 }

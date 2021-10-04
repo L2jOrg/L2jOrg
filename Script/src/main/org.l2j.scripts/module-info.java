@@ -38,6 +38,22 @@ import org.l2j.scripts.quests.tutorial.fighter.Q201_Tutorial;
 import org.l2j.scripts.quests.tutorial.kamael.Q10960_Tutorial;
 import org.l2j.scripts.quests.tutorial.mage.Q202_Tutorial;
 import org.l2j.scripts.quests.tutorial.orc.Q205_Tutorial;
+import org.l2j.scripts.village.master.alliance.Alliance;
+import org.l2j.scripts.village.master.clan.Clan;
+import org.l2j.scripts.village.master.job.darkelf.first.DarkElfChange1;
+import org.l2j.scripts.village.master.job.darkelf.second.DarkElfChange2;
+import org.l2j.scripts.village.master.job.dwarf.blacksmith.first.DwarfBlacksmithChange1;
+import org.l2j.scripts.village.master.job.dwarf.blacksmith.second.DwarfBlacksmithChange2;
+import org.l2j.scripts.village.master.job.dwarf.warehouse.first.DwarfWarehouseChange1;
+import org.l2j.scripts.village.master.job.dwarf.warehouse.second.DwarfWarehouseChange2;
+import org.l2j.scripts.village.master.job.cleric.second.ElfHumanClericChange2;
+import org.l2j.scripts.village.master.job.fighter.first.ElfHumanFighterChange1;
+import org.l2j.scripts.village.master.job.fighter.second.ElfHumanFighterChange2;
+import org.l2j.scripts.village.master.job.wizard.first.ElfHumanWizardChange1;
+import org.l2j.scripts.village.master.job.wizard.second.ElfHumanWizardChange2;
+import org.l2j.scripts.village.master.job.first.FirstClassTransferTalk;
+import org.l2j.scripts.village.master.job.orc.first.OrcChange1;
+import org.l2j.scripts.village.master.job.orc.second.OrcChange2;
 
 open module org.l2j.scripts {
 
@@ -402,22 +418,22 @@ open module org.l2j.scripts {
             org.l2j.scripts.ai.others.SiegeGuards,
             org.l2j.scripts.ai.others.TimakOrcTroopLeader,
 
-            org.l2j.scripts.master.Alliance.Alliance,
-            org.l2j.scripts.master.Clan.Clan,
-            org.l2j.scripts.master.DarkElfChange1.DarkElfChange1,
-            org.l2j.scripts.master.OrcChange2.OrcChange2,
-            org.l2j.scripts.master.OrcChange1.OrcChange1,
-            org.l2j.scripts.master.FirstClassTransferTalk.FirstClassTransferTalk,
-            org.l2j.scripts.master.ElfHumanWizardChange2.ElfHumanWizardChange2,
-            org.l2j.scripts.master.ElfHumanWizardChange1.ElfHumanWizardChange1,
-            org.l2j.scripts.master.ElfHumanFighterChange2.ElfHumanFighterChange2,
-            org.l2j.scripts.master.ElfHumanFighterChange1.ElfHumanFighterChange1,
-            org.l2j.scripts.master.ElfHumanClericChange2.ElfHumanClericChange2,
-            org.l2j.scripts.master.DwarfWarehouseChange2.DwarfWarehouseChange2,
-            org.l2j.scripts.master.DwarfWarehouseChange1.DwarfWarehouseChange1,
-            org.l2j.scripts.master.DwarfBlacksmithChange2.DwarfBlacksmithChange2,
-            org.l2j.scripts.master.DwarfBlacksmithChange1.DwarfBlacksmithChange1,
-            org.l2j.scripts.master.DarkElfChange2.DarkElfChange2,
+                Alliance,
+                Clan,
+                DarkElfChange1,
+                OrcChange2,
+                OrcChange1,
+                FirstClassTransferTalk,
+                ElfHumanWizardChange2,
+                ElfHumanWizardChange1,
+                ElfHumanFighterChange2,
+                ElfHumanFighterChange1,
+                ElfHumanClericChange2,
+                DwarfWarehouseChange2,
+                DwarfWarehouseChange1,
+                DwarfBlacksmithChange2,
+                DwarfBlacksmithChange1,
+                DarkElfChange2,
 
             //  custom
             org.l2j.scripts.custom.NpcLocationInfo.NpcLocationInfo;

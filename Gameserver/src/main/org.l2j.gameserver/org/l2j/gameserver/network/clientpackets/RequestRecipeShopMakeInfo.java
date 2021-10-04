@@ -19,37 +19,25 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.enums.PrivateStoreType;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.RecipeShopItemInfo;
 import org.l2j.gameserver.world.World;
 
-/**
- * This class ... cdd
- *
- * @version $Revision: 1.1.2.1.2.2 $ $Date: 2005/03/27 15:29:30 $
- */
 public final class RequestRecipeShopMakeInfo extends ClientPacket {
-    private int _playerObjectId;
-    private int _recipeId;
+    private int makerObjectId;
+    private int recipeId;
 
     @Override
     public void readImpl() {
-        _playerObjectId = readInt();
-        _recipeId = readInt();
+        makerObjectId = readInt();
+        recipeId = readInt();
     }
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        if (player == null) {
+        var shop = World.getInstance().findPlayer(makerObjectId);
+        if (shop == null || shop.getPrivateStoreType() != PrivateStoreType.MANUFACTURE) {
             return;
         }
-
-        final Player shop = World.getInstance().findPlayer(_playerObjectId);
-        if ((shop == null) || (shop.getPrivateStoreType() != PrivateStoreType.MANUFACTURE)) {
-            return;
-        }
-
-        client.sendPacket(new RecipeShopItemInfo(shop, _recipeId));
+        client.sendPacket(new RecipeShopItemInfo(shop, recipeId));
     }
 }

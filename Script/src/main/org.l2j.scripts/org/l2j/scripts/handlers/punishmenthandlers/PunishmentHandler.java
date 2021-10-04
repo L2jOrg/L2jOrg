@@ -21,7 +21,7 @@ package org.l2j.scripts.handlers.punishmenthandlers;
 import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.world.World;
 
 /**
@@ -49,7 +49,7 @@ public abstract class PunishmentHandler implements IPunishmentHandler {
 
     private void punishAccount(PunishmentTask task) {
         var account = String.valueOf(task.getKey());
-        var client = AuthServerCommunication.getInstance().getAuthedClient(account);
+        var client = NetworkService.getInstance().getAuthedClient(-1, account);
         if (client != null) {
             var player = client.getPlayer();
             if (player != null) {
@@ -86,7 +86,7 @@ public abstract class PunishmentHandler implements IPunishmentHandler {
 
     private void stopAccountPunishment(PunishmentTask task) {
         var account = String.valueOf(task.getKey());
-        var client = AuthServerCommunication.getInstance().getAuthedClient(account);
+        var client = NetworkService.getInstance().getAuthedClient(-1, account);
         if (client != null) {
             var player = client.getPlayer();
             if (player != null) {

@@ -67,4 +67,9 @@ public class UnbearableWolvesHowling extends NoviceJewelQuest {
 	protected int scrollEscapeToTrader() {
 		return 91646;
 	}
+
+	@Override
+	protected String nextQuest() {
+		return "SpiderHunt";
+	}
 }

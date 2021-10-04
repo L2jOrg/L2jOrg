@@ -69,4 +69,9 @@ public class DangerousPredators extends NoviceJewelQuest {
 	protected NpcStringId questHuntingProgressName() {
 		return NpcStringId.KILL_WOLVES_AND_BEARDED_KELTIRS_2;
 	}
+
+	@Override
+	protected String nextQuest() {
+		return "PoisonExtraction";
+	}
 }

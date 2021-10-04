@@ -20,7 +20,7 @@ package org.l2j.authserver.controller;
 
 import org.l2j.authserver.data.database.Account;
 import org.l2j.authserver.data.database.dao.AccountDAO;
-import org.l2j.authserver.network.GameServerInfo;
+import org.l2j.authserver.network.ServerInfo;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.auth2client.LoginOk;
 import org.l2j.authserver.network.crypt.AuthCrypt;
@@ -46,7 +46,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import static java.lang.System.currentTimeMillis;
 import static java.util.Objects.isNull;
@@ -59,6 +58,9 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.hash;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
+/**
+ * @author JoeAlisson
+ */
 public class AuthController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
@@ -70,6 +72,7 @@ public class AuthController {
     private final Map<String, AuthClient> authedClients = new ConcurrentHashMap<>();
     private final Map<String, FailedLoginAttempt> bruteForceProtection = new HashMap<>();
     private final BanManager banManager;
+    private final int key;
 
     private KeyGenerator blowfishKeysGenerator;
     private ScheduledFuture<?> scheduledPurge;
@@ -83,6 +86,7 @@ public class AuthController {
         } catch (GeneralSecurityException e) {
             LOGGER.error(e.getMessage(), e);
         }
+        key = Rnd.nextSecureInt();
     }
 
     private void load() throws GeneralSecurityException {
@@ -126,8 +130,8 @@ public class AuthController {
     }
 
     private void assignSessionKeyToClient(AuthClient client) {
-        var key = new SessionKey(Rnd.nextSecureInt(), Rnd.nextSecureInt(), Rnd.nextSecureInt(), Rnd.nextSecureInt());
-        client.setSessionKey(key);
+        var sessionKey = new SessionKey(Rnd.nextSecureInt(), this.key, Rnd.nextSecureInt(), Rnd.nextSecureInt());
+        client.setSessionKey(sessionKey);
         authedClients.put(client.getAccount().getLogin(), client);
     }
 
@@ -188,9 +192,9 @@ public class AuthController {
             result = true;
         }
 
-        for (GameServerInfo gameServer : GameServerManager.getInstance().getRegisteredGameServers().values()) {
-            if(nonNull(gameServer) && gameServer.accountIsConnected(account.getLogin())) {
-                gameServer.sendKickPlayer(account.getLogin());
+        for (var gameServer : GameServerManager.getInstance().getRegisteredGameServers().values()) {
+            if(nonNull(gameServer) && gameServer.isAccountInUse(account.getLogin())) {
+                gameServer.disconnectAccount(account.getLogin());
                 result = true;
             }
         }
@@ -208,7 +212,7 @@ public class AuthController {
     }
 
     private void requestAccountInfo(AuthClient client, Account account) {
-        var gameservers = GameServerManager.getInstance().getRegisteredGameServers().values().stream().filter(GameServerInfo::isAuthed).collect(Collectors.toList());
+        var gameservers = GameServerManager.getInstance().getRegisteredGameServers().values().stream().filter(ServerInfo::isAuthed).toList();
         client.setRequestedServerInfo(gameservers.size());
         gameservers.forEach(gameServer -> gameServer.requestAccountInfo(account.getLogin()));
     }
@@ -251,10 +255,10 @@ public class AuthController {
     }
 
     public boolean isLoginPossible(AuthClient client, int serverId) {
-        GameServerInfo gsi = GameServerManager.getInstance().getRegisteredGameServerById(serverId);
+        var gsi = GameServerManager.getInstance().getRegisteredGameServerById(serverId);
         int access = client.getAccessLevel();
         if (nonNull(gsi) && gsi.isAuthed()) {
-            boolean loginOk = ((gsi.getOnlinePlayersCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access >= AuthServerSettings.gmMinimumLevel());
+            boolean loginOk = ((gsi.onlineAccounts() < gsi.maxAccounts()) && (gsi.status() != ServerStatus.STATUS_GM_ONLY)) || (access >= AuthServerSettings.gmMinimumLevel());
 
             if (loginOk && (client.getLastServer() != serverId)) {
                 if(getDAO(AccountDAO.class).updateLastServer(client.getAccount().getLogin(), serverId) < 1) {
@@ -305,6 +309,10 @@ public class AuthController {
 
     public static AuthController getInstance() {
         return Singleton.INSTANCE;
+    }
+
+    public int getKey() {
+        return key;
     }
 
     private static class Singleton {

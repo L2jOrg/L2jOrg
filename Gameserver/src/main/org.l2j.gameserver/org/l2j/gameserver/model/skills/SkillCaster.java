@@ -259,14 +259,6 @@ public class SkillCaster implements Runnable {
         }
     }
 
-    private static void triggerCast(Creature caster, Skill skill, Creature creature, OptionsSkillInfo holder) {
-        if ((skill.isMagic() && (holder.type() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.type() == OptionsSkillType.ATTACK))) {
-            if (Rnd.chance(holder.chance())) {
-                triggerCast(caster, creature, holder.skill(), null, false);
-            }
-        }
-    }
-
     private static void checkRaidCurse(Creature caster, Skill skill, Creature creature) {
         if (!Config.RAID_DISABLE_CURSE && creature.isRaid() && creature.giveRaidCurse() && (caster.getLevel() >= (creature.getLevel() + 9))) {
             if (skill.isBad() || ((creature.getTarget() == caster) && ((Attackable) creature).getAggroList().containsKey(caster))) {
@@ -280,43 +272,51 @@ public class SkillCaster implements Runnable {
         }
     }
 
-    public static void triggerCast(Creature activeChar, Creature target, Skill skill) {
-        triggerCast(activeChar, target, skill, null, true);
+    private static void triggerCast(Creature caster, Skill skill, Creature creature, OptionsSkillInfo holder) {
+        if ((skill.isMagic() && (holder.type() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.type() == OptionsSkillType.ATTACK))) {
+            if (Rnd.chance(holder.chance())) {
+                triggerCast(caster, creature, holder.skill(), null, false, true);
+            }
+        }
     }
 
-    public static void triggerCast(Creature activeChar, WorldObject target, Skill skill, Item item, boolean ignoreTargetType) {
-        try {
-            if ((activeChar == null) || (skill == null)) {
+    public static void triggerCast(Creature creature, Creature target, Skill skill) {
+        triggerCast(creature, target, skill, null, true, true);
+    }
+
+    public static void triggerCast(Creature creature, WorldObject target, Skill skill, Item item, boolean ignoreTargetType) {
+        triggerCast(creature, target, skill, item, ignoreTargetType, true);
+    }
+
+    public static void triggerCast(Creature creature, WorldObject target, Skill skill, Item item, boolean ignoreTargetType, boolean broadcast) {
+        if (creature == null || skill == null) {
+            return;
+        }
+
+        if (skill.checkCondition(creature, target)) {
+            if (creature.isSkillDisabled(skill)) {
                 return;
             }
 
-            if (skill.checkCondition(activeChar, target)) {
-                if (activeChar.isSkillDisabled(skill)) {
-                    return;
-                }
-
-                if (skill.getReuseDelay() > 0) {
-                    activeChar.disableSkill(skill, skill.getReuseDelay());
-                }
-
-                if (!ignoreTargetType) {
-                    final WorldObject objTarget = skill.getTarget(activeChar, false, false, false);
-                    if (isCreature(objTarget)) {
-                        target = objTarget;
-                    }
-                }
-
-                final WorldObject[] targets = skill.getTargetsAffected(activeChar, target).toArray(new WorldObject[0]);
-
-                if (!skill.isNotBroadcastable()) {
-                    activeChar.broadcastPacket(new MagicSkillUse(activeChar, target, skill, 0));
-                }
-
-                // Launch the magic skill and calculate its effects
-                skill.activateSkill(activeChar, item, targets);
+            if (skill.getReuseDelay() > 0) {
+                creature.disableSkill(skill, skill.getReuseDelay());
             }
-        } catch (Exception e) {
-            LOGGER.warn("Failed simultaneous cast: ", e);
+
+            if (!ignoreTargetType) {
+                final WorldObject objTarget = skill.getTarget(creature, false, false, false);
+                if (isCreature(objTarget)) {
+                    target = objTarget;
+                }
+            }
+
+            final WorldObject[] targets = skill.getTargetsAffected(creature, target).toArray(new WorldObject[0]);
+
+            if (!skill.isNotBroadcastable() && broadcast) {
+                creature.broadcastPacket(new MagicSkillUse(creature, target, skill, 0));
+            }
+
+            // Launch the magic skill and calculate its effects
+            skill.activateSkill(creature, item, targets);
         }
     }
 

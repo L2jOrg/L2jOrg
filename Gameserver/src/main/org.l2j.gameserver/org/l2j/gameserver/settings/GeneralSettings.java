@@ -84,6 +84,18 @@ public class GeneralSettings {
     private static boolean allowPvPInJail;
     private static boolean disableTransactionInJail;
     private static boolean loadCustomNPC;
+    private static boolean itemAuctionEnabled;
+    private static int itemAuctionExpiresAfter;
+    private static long itemAuctionTimeExtendsOnBid;
+    private static int birthdayGift;
+    private static String birthdayMailSubject;
+    private static String birthdayMailText;
+    private static boolean enableBlockCheckerEvent;
+    private static boolean hbceFairPlay;
+    private static boolean botReportEnabled;
+    private static String[] botReportPointsResetHour;
+    private static long botReportDelay;
+    private static boolean allowReportsFromSameClan;
 
     private GeneralSettings() {
         // helper class
@@ -161,6 +173,23 @@ public class GeneralSettings {
         disableTransactionInJail = settingsFile.getBoolean("JailDisableTransaction", false);
 
         loadCustomNPC = settingsFile.getBoolean("CustomNpcData", false);
+
+        itemAuctionEnabled = settingsFile.getBoolean("AltItemAuctionEnabled", true);
+        itemAuctionExpiresAfter = settingsFile.getInt("AltItemAuctionExpiredAfter", 14);
+        itemAuctionTimeExtendsOnBid = settingsFile.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
+
+        birthdayGift = settingsFile.getInt("AltBirthdayGift", 22187);
+        birthdayMailSubject = settingsFile.getString("AltBirthdayMailSubject", "Happy Birthday!");
+        birthdayMailText = settingsFile.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + System.lineSeparator().repeat(2) + "Sincerely, Alegria");
+
+        enableBlockCheckerEvent = settingsFile.getBoolean("EnableBlockCheckerEvent", false);
+        hbceFairPlay = settingsFile.getBoolean("HBCEFairPlay", false);
+
+        botReportEnabled = settingsFile.getBoolean("EnableBotReportButton", false);
+        botReportPointsResetHour = settingsFile.getString("BotReportPointsResetHour", "00:00").split(":");
+        botReportDelay = settingsFile.getInt("BotReportDelay", 30) * 60000L;
+
+        allowReportsFromSameClan = settingsFile.getBoolean("AllowReportsFromSameClanMembers", false);
      }
 
     public static int banChatAdenaAdsReportCount() {
@@ -362,4 +391,53 @@ public class GeneralSettings {
     public static boolean loadCustomNPC() {
         return loadCustomNPC;
     }
+
+    public static boolean itemAuctionEnabled() {
+        return itemAuctionEnabled;
+    }
+
+    public static int itemAuctionExpiresAfter() {
+        return itemAuctionExpiresAfter;
+    }
+
+    public static long itemAuctionTimeExtendsOnBid() {
+        return itemAuctionTimeExtendsOnBid;
+    }
+
+    public static int birthdayGift() {
+        return birthdayGift;
+    }
+
+    public static String birthdayMailSubject() {
+        return birthdayMailSubject;
+    }
+
+    public static String birthdayMailText() {
+        return birthdayMailText;
+    }
+
+    public static boolean enableBlockCheckerEvent() {
+        return enableBlockCheckerEvent;
+    }
+
+    public static boolean hbceFairPlay() {
+        return hbceFairPlay;
+    }
+
+    public static boolean botReportEnabled() {
+        return botReportEnabled;
+    }
+
+    public static String[] botReportPointsResetHour() {
+        return botReportPointsResetHour;
+    }
+
+    public static long botReportDelay() {
+        return botReportDelay;
+    }
+
+    public static boolean allowReportsFromSameClan() {
+        return allowReportsFromSameClan;
+    }
+
 }

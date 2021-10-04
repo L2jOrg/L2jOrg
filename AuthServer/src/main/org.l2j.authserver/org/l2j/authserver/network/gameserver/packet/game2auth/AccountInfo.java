@@ -33,6 +33,6 @@ public class AccountInfo extends GameserverReadablePacket {
 
     @Override
     protected void runImpl()  {
-        AuthController.getInstance().addAccountCharactersInfo(client.getGameServerInfo().getId(), account, players);
+        AuthController.getInstance().addAccountCharactersInfo(client.getGameServerInfo().id(), account, players);
     }
 }

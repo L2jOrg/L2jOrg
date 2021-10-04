@@ -69,6 +69,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
+import static org.l2j.commons.util.Util.doIfNonNull;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
@@ -115,10 +116,6 @@ public class EnterWorld extends ClientPacket {
         restoreInstance(player);
         player.updatePvpTitleAndColor(false);
 
-        if (player.isGM()) {
-            onGameMasterEnter(player);
-        }
-
         if (player.isChatBanned()) {
             player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
         }
@@ -150,9 +147,6 @@ public class EnterWorld extends ClientPacket {
         }
 
         player.sendPacket(new HennaInfo(player));
-        player.sendSkillList();
-        player.sendPacket(new EtcStatusUpdate(player));
-
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExDressRoomUiOpen());
 
@@ -219,6 +213,10 @@ public class EnterWorld extends ClientPacket {
         player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
         restoreItems(player);
         player.onEnter();
+        player.sendPacket(new EtcStatusUpdate(player));
+        if (player.isGM()) {
+            onGameMasterEnter(player);
+        }
         player.spawnMe();
 
         // Fix for equipped item skills
@@ -301,7 +299,7 @@ public class EnterWorld extends ClientPacket {
 
         // Residential skills support
         if (player.getClan().getCastleId() > 0) {
-            CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
+            doIfNonNull(CastleManager.getInstance().getCastleByOwner(clan), c -> c.giveResidentialSkills(player));
         }
 
         showClanNotice = clan.isNoticeEnabled();

@@ -8,13 +8,13 @@
     <xs:element name="servers_list">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="server" type="serverInfo" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="server" type="serverData" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
 
     </xs:element>
 
-    <xs:complexType name="serverInfo">
+    <xs:complexType name="serverData">
         <xs:attribute name="id" type="xs:int" use="required"/>
         <xs:attribute name="name" type="xs:string" use="required"/>
     </xs:complexType>

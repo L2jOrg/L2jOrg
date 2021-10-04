@@ -76,7 +76,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.conditions;
     exports org.l2j.gameserver.model.item.type;
     exports org.l2j.gameserver.model.events.returns;
-    exports org.l2j.gameserver.network.authcomm;
+    exports org.l2j.gameserver.network.auth;
     exports org.l2j.gameserver.model.teleporter;
     exports org.l2j.gameserver.model.buylist;
     exports org.l2j.gameserver.taskmanager;
@@ -204,4 +204,5 @@ module org.l2j.gameserver {
     uses org.l2j.gameserver.model.events.AbstractScript;
     uses org.l2j.gameserver.handler.IParseBoardHandler;
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
+    uses org.l2j.gameserver.network.NetworkServiceProvider;
 }
