@@ -544,6 +544,7 @@ public enum AbnormalType {
     WARRIOR_BANE(-1),
 	MAGE_BANE(-1),
 	DRAGON_FRUIT(-1),
+    ELEMENTAL_SPIRIT(-1),
 	EXP_SP_A(-1),
 	EXP_SP_B(-1),
 	EXP_SP_C(-1),
