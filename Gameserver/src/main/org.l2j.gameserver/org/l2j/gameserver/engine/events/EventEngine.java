@@ -128,9 +128,10 @@ public final class EventEngine extends GameXmlReader {
                 final String name = parseString(eventNode.getAttributes(), "name");
                 var conditionType = parseEnum(eventNode.getAttributes(), ConditionalSchedulerType.class, "if");
 
-                switch (conditionType) {
-                    case BETWEEN -> parseBetweenSchedule(eventManager, conditionalSchedulers, eventNode, name);
-                    case HAS_NOT_RUN -> conditionalSchedulers.add(new HasNotRunConditionalScheduler(eventManager, name));
+                if (conditionType == ConditionalSchedulerType.BETWEEN) {
+                    parseBetweenSchedule(eventManager, conditionalSchedulers, eventNode, name);
+                } else if (conditionType == ConditionalSchedulerType.HAS_NOT_RUN) {
+                    conditionalSchedulers.add(new HasNotRunConditionalScheduler(eventManager, name));
                 }
             }
         }
