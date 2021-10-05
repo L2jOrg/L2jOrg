@@ -294,8 +294,13 @@ public class Attackable extends Npc {
         MapToLong<Player> playersDamage = new HashMapToLong<>();
         var maxDealerInfo = calculateMaxDamageDealer(playersDamage);
 
+        var penaltyModifier = calculateLevelPenalty(maxDealerInfo.player);
+        if(penaltyModifier == 0) {
+            return;
+        }
+
         if (isRaid && !_isRaidMinion) {
-            calculateRaidRewards(lastAttacker, maxDealerInfo.player);
+            calculateRaidRewards(lastAttacker, maxDealerInfo.player, penaltyModifier);
         }
 
         doItemDrop(maxDealerInfo.player, lastAttacker);
@@ -305,6 +310,22 @@ public class Attackable extends Npc {
         }
 
         rewardKillers(maxDealerInfo, playersDamage);
+    }
+
+    private float calculateLevelPenalty(Player player) {
+        var levelDiff = player.getLevel() - getLevel();
+        return switch (levelDiff) {
+            case 1, 2 -> 1f;
+            case 3 -> 0.97f;
+            case 4 -> 0.80f;
+            case 5 -> 0.61f;
+            case 6 -> 0.37f;
+            case 7 -> 0.22f;
+            case 8 -> 0.13f;
+            case 9 -> 0.08f;
+            case 10 -> 0.05f;
+            default -> 0f;
+        };
     }
 
     private void rewardKillers(MaxDamageDealer maxDealerInfo, MapToLong<Player> playersDamage) {
@@ -393,6 +414,10 @@ public class Attackable extends Npc {
         double exp = expSp[0];
         double sp = expSp[1];
 
+        if(exp == 0 && sp == 0) {
+            return;
+        }
+
         if (Config.CHAMPION_ENABLE && _champion) {
             exp *= Config.CHAMPION_REWARDS_EXP_SP;
             sp *= Config.CHAMPION_REWARDS_EXP_SP;
@@ -457,10 +482,10 @@ public class Attackable extends Npc {
         return maxDamageDealer;
     }
 
-    private void calculateRaidRewards(Creature lastAttacker, Player maxDealer) {
+    private void calculateRaidRewards(Creature lastAttacker, Player maxDealer, float penaltyMultiplier) {
         final Player player = (maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker.getActingPlayer();
         broadcastPacket(getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
-        final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS);
+        final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS * penaltyMultiplier);
         final Party party = player.getParty();
 
         if (party != null) {
@@ -754,7 +779,17 @@ public class Attackable extends Npc {
             return;
         }
 
-        npcTemplate.getExtendDrop().stream().map(ExtendDropData.getInstance()::getExtendDropById).filter(Objects::nonNull).forEach(e -> e.reward(player, this));
+        var it = npcTemplate.getExtendDrop().iterator();
+        var dropData = ExtendDropData.getInstance();
+        while(it.hasNext()) {
+            var dropId = it.nextInt();
+            var drop = dropData.getExtendDropById(dropId);
+            if(drop != null) {
+                drop.reward(player, this);
+            } else {
+                LOGGER.warn("Unknown extended drop id {} on npc {}", dropId, this);
+            }
+        }
 
         if (isSpoiled() && !_plundered) {
             _sweepItems.set(npcTemplate.calculateDrops(DropType.SPOIL, this, player));
@@ -979,7 +1014,8 @@ public class Attackable extends Npc {
                 case 7 -> 0.22;
                 case 8 -> 0.13;
                 case 9 -> 0.08;
-                default -> 0.05;
+                case 10 -> 0.05;
+                default -> 0;
             };
             xp *= mul;
             sp *= mul;
