@@ -17,28 +17,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.holders;
+package org.l2j.gameserver.engine.item.drop;
+
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Player;
+
+import java.util.List;
 
 /**
- * @author Sdw
+ * @author JoeAlisson
  */
-public class ExtendDropItemHolder extends ItemHolder {
-    private final long _maxCount;
-    private final double _chance;
+public record ExtendDrop(List<ExtendDropItem> items, List<ExtendDropCondition> conditions) {
 
-    public ExtendDropItemHolder(int id, long count, long maxCount, double chance) {
-        super(id, count);
+    public void reward(Player player, Npc npc) {
+        for (var condition : conditions) {
+            if (!condition.test(player, npc)) {
+                return;
+            }
+        }
 
-        _maxCount = maxCount;
-        _chance = chance;
+        for (var item : items) {
+            if (Rnd.chance(item.getChance())) {
+                player.addItem("ExtendDrop", item.getId(), Rnd.get(item.getCount(), item.getMaxCount()), player, true);
+            }
+        }
     }
-
-    public long getMaxCount() {
-        return _maxCount;
-    }
-
-    public double getChance() {
-        return _chance;
-    }
-
 }

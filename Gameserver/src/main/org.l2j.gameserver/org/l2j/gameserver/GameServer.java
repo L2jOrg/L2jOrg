@@ -41,6 +41,7 @@ import org.l2j.gameserver.engine.events.EventEngine;
 import org.l2j.gameserver.engine.fishing.FishingEngine;
 import org.l2j.gameserver.engine.item.AttendanceEngine;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.drop.ExtendDropEngine;
 import org.l2j.gameserver.engine.item.shop.L2Store;
 import org.l2j.gameserver.engine.item.shop.LCoinShop;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
@@ -155,7 +156,7 @@ public class GameServer {
         CombinationItemsManager.init();
         RankEngine.init();
         BeautyShopData.getInstance();
-        ExtendDropData.getInstance();
+        ExtendDropEngine.init();
         ItemAuctionManager.getInstance();
         SchemeBufferTable.init();
 

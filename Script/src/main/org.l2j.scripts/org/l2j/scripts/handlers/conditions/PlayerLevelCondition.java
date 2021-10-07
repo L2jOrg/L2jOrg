@@ -18,43 +18,39 @@
  */
 package org.l2j.scripts.handlers.conditions;
 
-import org.l2j.gameserver.model.StatsSet;
+import org.l2j.commons.xml.XmlParser;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.ConditionFactory;
-import org.l2j.gameserver.model.conditions.ICondition;
+import org.l2j.gameserver.engine.item.drop.ExtendDropCondition;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
-public class PlayerLevelCondition implements ICondition {
+public record PlayerLevelCondition(int minLevel, int maxLevel) implements ExtendDropCondition {
 
-	private final int _minLevel;
-	private final int _maxLevel;
-	
-	private PlayerLevelCondition(StatsSet params) {
-		_minLevel = params.getInt("minLevel");
-		_maxLevel = params.getInt("maxLevel");
-	}
-	
 	@Override
-	public boolean test(Creature creature, WorldObject object)
-	{
-		return isPlayer(creature) && (creature.getLevel() >= _minLevel) && (creature.getLevel() < _maxLevel);
+	public boolean test(Creature creature, WorldObject object) {
+		return isPlayer(creature) && creature.getLevel() >= minLevel && creature.getLevel() < maxLevel;
 	}
 
-	public static class Factory implements ConditionFactory {
+	public static class Factory extends XmlParser implements ConditionFactory {
 
 		@Override
-		public ICondition create(StatsSet data) {
-			return new PlayerLevelCondition(data);
+		public ExtendDropCondition create(Node data) {
+			var attr = data.getAttributes();
+			var minLevel = parseInt(attr, "min-level");
+			var maxLevel = parseInt(attr, "max-level");
+			return new PlayerLevelCondition(minLevel, maxLevel);
 		}
 
 		@Override
 		public String conditionName() {
-			return "PlayerLevel";
+			return "player-level";
 		}
 	}
 }

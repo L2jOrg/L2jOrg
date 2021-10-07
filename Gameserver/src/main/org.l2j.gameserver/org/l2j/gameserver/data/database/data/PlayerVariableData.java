@@ -48,9 +48,6 @@ public class PlayerVariableData {
     @Column("vitality_items_used")
     private int vitalityItemsUsed;
 
-    @Column("extend_drop")
-    private String extendDrop;
-
     @Column("fortune_telling")
     private int fortuneTelling;
 
@@ -126,14 +123,6 @@ public class PlayerVariableData {
 
     public int getWorldChatUsed() {
         return worldChatUsed;
-    }
-
-    public String getExtendDrop() {
-        return extendDrop;
-    }
-
-    public void setExtendDrop(String extendDrop) {
-        this.extendDrop = extendDrop;
     }
 
     public int getFortuneTelling() {

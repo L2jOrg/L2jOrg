@@ -45,7 +45,7 @@ public class ExtensionBoot {
         ServiceLoader.load(IUserCommandHandler.class).forEach(UserCommandHandler.getInstance()::registerHandler);
         ServiceLoader.load(IVoicedCommandHandler.class).forEach(VoicedCommandHandler.getInstance()::registerHandler);
         ServiceLoader.load(IPlayerActionHandler.class).forEach(PlayerActionHandler.getInstance()::registerHandler);
-        ServiceLoader.load(ConditionFactory.class).forEach(ConditionHandler.getInstance()::registerFactory);
+        ServiceLoader.load(ConditionFactory.class).forEach(ExtendDropConditionHandler.getInstance()::registerFactory);
     }
 
     static void loaders() {

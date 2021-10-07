@@ -56,20 +56,5 @@ public enum CategoryType {
     SUB_GROUP_ORC,
     SUB_GROUP_WARE,
     SUB_GROUP_BLACK,
-    SUB_GROUP_DE;
-
-    /**
-     * Finds category by it's name
-     *
-     * @param categoryName
-     * @return A {@code CategoryType} if category was found, {@code null} if category was not found
-     */
-    public static CategoryType findByName(String categoryName) {
-        for (CategoryType type : values()) {
-            if (type.name().equalsIgnoreCase(categoryName)) {
-                return type;
-            }
-        }
-        return null;
-    }
+    SUB_GROUP_DE
 }
