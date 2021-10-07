@@ -29,7 +29,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.MagicLampData;
-import org.l2j.gameserver.data.xml.impl.ExtendDropData;
+import org.l2j.gameserver.engine.item.drop.ExtendDropEngine;
 import org.l2j.gameserver.datatables.drop.EventDropList;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.ItemTemplate;
@@ -748,7 +748,8 @@ public class Attackable extends Npc {
     }
 
     public void doItemDrop(Player mainDamageDealer, Creature lastAttacker) {
-        doItemDrop(getTemplate(), mainDamageDealer == null || !mainDamageDealer.isOnline() ? lastAttacker : mainDamageDealer);
+        var attacker = mainDamageDealer == null || !mainDamageDealer.isOnline() ? lastAttacker : mainDamageDealer;
+        doItemDrop(getTemplate(), attacker);
         doEventDrop(lastAttacker);
     }
 
@@ -780,7 +781,7 @@ public class Attackable extends Npc {
         }
 
         var it = npcTemplate.getExtendDrop().iterator();
-        var dropData = ExtendDropData.getInstance();
+        var dropData = ExtendDropEngine.getInstance();
         while(it.hasNext()) {
             var dropId = it.nextInt();
             var drop = dropData.getExtendDropById(dropId);

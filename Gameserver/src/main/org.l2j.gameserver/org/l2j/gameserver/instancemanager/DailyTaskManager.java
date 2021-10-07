@@ -96,8 +96,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
     private void resetPlayersData() {
         // TODO block enter world until this method finish
         World.getInstance().forEachPlayer(player -> {
-            player.setExtendDrop("");
-
             player.setRecommendLeft(20);
             player.setRecommend(player.getRecommend() - 20);
             player.sendPacket(new ExVoteSystemInfo(player));

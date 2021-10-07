@@ -28,7 +28,7 @@ import static org.l2j.commons.util.Util.contains;
 /**
  * @author JoeAlisson
  */
-public final class ProtocolVersion extends ClientPacket {
+public final class  ProtocolVersion extends ClientPacket {
     private static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
     private int version;

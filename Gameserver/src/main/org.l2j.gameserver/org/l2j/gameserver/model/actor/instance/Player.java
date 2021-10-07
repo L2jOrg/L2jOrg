@@ -482,10 +482,6 @@ public final class Player extends Playable {
         return variables.getVitalityItemsUsed();
     }
 
-    private String getExtendDrop() {
-        return variables.getExtendDrop();
-    }
-
     public int getFortuneTelling() {
         return variables.getFortuneTelling();
     }
@@ -598,10 +594,6 @@ public final class Player extends Playable {
         variables.setWorldChatUsed(timesUsed);
     }
 
-    public void setExtendDrop(String extendDrop) {
-        variables.setExtendDrop(extendDrop);
-    }
-
     public void setFortuneTelling(int fortuneTelling) {
         variables.setFortuneTelling(fortuneTelling);
     }
@@ -684,38 +676,6 @@ public final class Player extends Playable {
 
     public void resetRevengeData() {
         variables.resetRevengeData();
-    }
-
-    public void updateExtendDrop(int id, long count) {
-        StringBuilder result = new StringBuilder();
-        final String data = getExtendDrop();
-        if (data.isEmpty()) {
-            result = new StringBuilder(id + "," + count);
-        } else if (data.contains(";")) {
-            for (String s : data.split(";")) {
-                final String[] drop = s.split(",");
-                if (drop[0].equals(Integer.toString(id))) {
-                    continue;
-                }
-
-                result.append(";").append(s);
-            }
-            result = new StringBuilder(result.substring(1));
-        } else {
-            result = new StringBuilder(id + "," + count);
-        }
-        variables.setExtendDrop(result.toString());
-    }
-
-    public long getExtendDropCount(int id) {
-        final String data = getExtendDrop();
-        for (String s : data.split(";")) {
-            final String[] drop = s.split(",");
-            if (drop[0].equals(Integer.toString(id))) {
-                return Long.parseLong(drop[1]);
-            }
-        }
-        return 0;
     }
 
     public LocalDate getCreateDate() {

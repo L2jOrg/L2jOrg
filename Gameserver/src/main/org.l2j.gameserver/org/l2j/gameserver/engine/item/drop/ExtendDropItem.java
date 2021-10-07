@@ -1,4 +1,5 @@
 /*
+ * Copyright © 2019 L2J Mobius
  * Copyright © 2019-2021 L2JOrg
  *
  * This file is part of the L2JOrg project.
@@ -16,14 +17,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.conditions;
+package org.l2j.gameserver.engine.item.drop;
 
-import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.holders.ItemHolder;
 
 /**
  * @author Sdw
  */
-public interface ICondition {
-    boolean test(Creature creature, WorldObject object);
+public class ExtendDropItem extends ItemHolder {
+    private final long maxCount;
+    private final double chance;
+
+    public ExtendDropItem(int id, long count, long maxCount, double chance) {
+        super(id, count);
+
+        this.maxCount = maxCount;
+        this.chance = chance;
+    }
+
+    public long getMaxCount() {
+        return maxCount;
+    }
+
+    public double getChance() {
+        return chance;
+    }
+
 }

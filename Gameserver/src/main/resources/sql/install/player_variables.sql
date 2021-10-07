@@ -6,7 +6,6 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
     `hair_accessory_enabled` BOOLEAN DEFAULT TRUE,
     `world_chat_used` INT DEFAULT 0,
 	`vitality_items_used` INT DEFAULT 0,
-	`extend_drop` VARCHAR(255),
 	`fortune_telling` INT DEFAULT 0,
 	`fortune_telling_black_cat` BOOLEAN DEFAULT FALSE,
 	`autocp` INT DEFAULT 0,
