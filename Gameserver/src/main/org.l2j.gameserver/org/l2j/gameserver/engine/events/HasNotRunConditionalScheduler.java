@@ -17,28 +17,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.eventengine.conditions;
+package org.l2j.gameserver.engine.events;
 
 import org.l2j.gameserver.data.database.dao.EventDAO;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.EventScheduler;
-import org.l2j.gameserver.model.eventengine.IConditionalEventScheduler;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
-public class HaventRunConditionalScheduler implements IConditionalEventScheduler {
-
-    private final AbstractEventManager<?> eventManager;
-    private final String name;
-
-    public HaventRunConditionalScheduler(AbstractEventManager<?> eventManager, String name) {
-        this.eventManager = eventManager;
-        this.name = name;
-    }
+public record HasNotRunConditionalScheduler(AbstractEventManager<?> eventManager, String name) implements IConditionalEventScheduler {
 
     @Override
     public boolean test() {
@@ -55,10 +47,6 @@ public class HaventRunConditionalScheduler implements IConditionalEventScheduler
     @Override
     public void run() {
         final EventScheduler mainScheduler = eventManager.getScheduler(name);
-        if (mainScheduler == null) {
-            throw new NullPointerException("Scheduler not found: " + name);
-        }
-
         if (mainScheduler.updateLastRun()) {
             mainScheduler.run();
         }
