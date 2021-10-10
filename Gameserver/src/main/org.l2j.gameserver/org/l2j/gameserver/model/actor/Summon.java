@@ -26,6 +26,7 @@ import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.Item;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.AggroInfo;
@@ -40,7 +41,6 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
-import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.PetInventory;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
@@ -488,7 +488,7 @@ public abstract class Summon extends Playable {
         }
 
         var currentTargetPlayer = target.getActingPlayer();
-        if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(owner)) {
+        if (!forceUse && currentTargetPlayer != null && !currentTargetPlayer.isAutoAttackable(owner) && skill.getTargetType() != TargetType.OWNER_PET) {
             sendPacket(SystemMessageId.INVALID_TARGET);
             return false;
         }

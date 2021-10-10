@@ -18,7 +18,6 @@
  */
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
-import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.ClusterServerInfo;
 import org.l2j.authserver.network.Endpoint;
@@ -31,12 +30,10 @@ import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Array;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import static java.util.Arrays.sort;
 import static org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail.FailReason;
 import static org.l2j.authserver.settings.AuthServerSettings.acceptNewGameServerEnabled;
 
