@@ -2061,34 +2061,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return false;
     }
 
-    private boolean checkCanMoveToDestination(int xPrev, int yPrev, int zPrev, double dx, double dy, double dz) {
-        if (isPlayer(this) && !isFlying) {
-            final double distance = Math.hypot(dx, dy);
-            if (cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
-                    || (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.
-            {
-                final double angle = convertHeadingToDegree(getHeading());
-                final double radian = Math.toRadians(angle);
-                final double course = Math.toRadians(180);
-                final double frontDistance = 10 * (stats.getMoveSpeed() / 100);
-                final int x1 = (int) (Math.cos(Math.PI + radian + course) * frontDistance);
-                final int y1 = (int) (Math.sin(Math.PI + radian + course) * frontDistance);
-                final int x = xPrev + x1;
-                final int y = yPrev + y1;
-                if (!GeoEngine.getInstance().canMoveToTarget(xPrev, yPrev, zPrev, x, y, zPrev, getInstanceWorld())) {
-                    move.onGeodataPathIndex = -1;
-                    stopMove(getActingPlayer().getLastServerPosition());
-                    cursorKeyMovementActive = false;
-                    return false;
-                }
-            }
-            // Prevent player moving on ledges.
-            if ((dz > 180) && (distance < 300)) {
-                move.onGeodataPathIndex = -1;
-                stopMove(getActingPlayer().getLastServerPosition());
-                return false;
-            }
-        }
+    protected boolean checkCanMoveToDestination(int xPrev, int yPrev, int zPrev, double dx, double dy, double dz) {
         return true;
     }
 
@@ -3831,6 +3804,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public void setCursorKeyMovement(boolean value) {
         cursorKeyMovement = value;
+    }
+
+    public boolean isCursorKeyMovement() {
+        return cursorKeyMovement;
     }
 
     public boolean isCursorKeyMovementActive() {

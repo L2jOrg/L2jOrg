@@ -154,6 +154,7 @@ import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
+import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -7933,6 +7934,38 @@ public final class Player extends Playable {
             return MoveType.SITTING;
         }
         return super.getMoveType();
+    }
+
+    @Override
+    protected boolean checkCanMoveToDestination(int xPrev, int yPrev, int zPrev, double dx, double dy, double dz) {
+        if (!isFlying() && !isInWater() ) {
+            final double distance = Math.hypot(dx, dy);
+            if (isCursorKeyMovement() // In case of cursor movement, avoid moving through obstacles.
+                    || (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.
+            {
+                final double angle = convertHeadingToDegree(getHeading());
+                final double radian = Math.toRadians(angle);
+                final double course = Math.toRadians(180);
+                final double frontDistance = 10 * (getStats().getMoveSpeed() / 100);
+                final int x1 = (int) (Math.cos(Math.PI + radian + course) * frontDistance);
+                final int y1 = (int) (Math.sin(Math.PI + radian + course) * frontDistance);
+                final int x = xPrev + x1;
+                final int y = yPrev + y1;
+                if (!GeoEngine.getInstance().canMoveToTarget(xPrev, yPrev, zPrev, x, y, zPrev, getInstanceWorld())) {
+                    move.onGeodataPathIndex = -1;
+                    stopMove(getActingPlayer().getLastServerPosition());
+                    setCursorKeyMovementActive(false);
+                    return false;
+                }
+            }
+            // Prevent player moving on ledges.
+            if ((dz > 180) && (distance < 300)) {
+                move.onGeodataPathIndex = -1;
+                stopMove(getActingPlayer().getLastServerPosition());
+                return false;
+            }
+        }
+        return super.checkCanMoveToDestination(xPrev, yPrev, zPrev, dx, dy, dz);
     }
 
     void startOnlineTimeUpdateTask() {
