@@ -21,14 +21,16 @@ package org.l2j.gameserver.engine.item.drop;
 
 import org.l2j.gameserver.model.holders.ItemHolder;
 
+import java.util.Objects;
+
 /**
  * @author Sdw
  */
 public class ExtendDropItem extends ItemHolder {
     private final long maxCount;
-    private final double chance;
+    private final float chance;
 
-    public ExtendDropItem(int id, long count, long maxCount, double chance) {
+    public ExtendDropItem(int id, long count, long maxCount, float chance) {
         super(id, count);
 
         this.maxCount = maxCount;
@@ -43,4 +45,17 @@ public class ExtendDropItem extends ItemHolder {
         return chance;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        ExtendDropItem that = (ExtendDropItem) o;
+        return maxCount == that.maxCount && Float.compare(that.chance, chance) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(maxCount, chance);
+    }
 }
