@@ -314,8 +314,10 @@ public class Attackable extends Npc {
 
     private float calculateLevelPenalty(Player player) {
         var levelDiff = player.getLevel() - getLevel();
+        if (levelDiff <= 2) {
+            return 1f;
+        }
         return switch (levelDiff) {
-            case 1, 2 -> 1f;
             case 3 -> 0.97f;
             case 4 -> 0.80f;
             case 5 -> 0.61f;
