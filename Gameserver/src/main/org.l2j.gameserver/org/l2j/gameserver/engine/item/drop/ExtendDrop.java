@@ -30,7 +30,7 @@ import java.util.List;
  */
 public record ExtendDrop(List<ExtendDropItem> items, List<ExtendDropCondition> conditions) {
 
-    public void reward(Player player, Npc npc) {
+    public void reward(Player player, Npc npc, float penaltyModifier) {
         for (var condition : conditions) {
             if (!condition.test(player, npc)) {
                 return;
@@ -39,7 +39,7 @@ public record ExtendDrop(List<ExtendDropItem> items, List<ExtendDropCondition> c
 
         for (var item : items) {
             if (Rnd.chance(item.getChance())) {
-                player.addItem("ExtendDrop", item.getId(), Rnd.get(item.getCount(), item.getMaxCount()), player, true);
+                player.addItem("ExtendDrop", item.getId(), (long) (Rnd.get(item.getCount(), item.getMaxCount()) * penaltyModifier), player, true);
             }
         }
     }
