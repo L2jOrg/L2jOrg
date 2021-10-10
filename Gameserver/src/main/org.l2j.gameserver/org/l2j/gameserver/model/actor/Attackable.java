@@ -303,7 +303,7 @@ public class Attackable extends Npc {
             calculateRaidRewards(lastAttacker, maxDealerInfo.player, penaltyModifier);
         }
 
-        doItemDrop(maxDealerInfo.player, lastAttacker);
+        doItemDrop(maxDealerInfo.player, lastAttacker, penaltyModifier);
 
         if (!getMustRewardExpSP()) {
             return;
@@ -747,9 +747,9 @@ public class Attackable extends Npc {
         return ai.getHate();
     }
 
-    public void doItemDrop(Player mainDamageDealer, Creature lastAttacker) {
+    public void doItemDrop(Player mainDamageDealer, Creature lastAttacker, float penaltyModifier) {
         var attacker = mainDamageDealer == null || !mainDamageDealer.isOnline() ? lastAttacker : mainDamageDealer;
-        doItemDrop(getTemplate(), attacker);
+        doItemDrop(getTemplate(), attacker, penaltyModifier);
         doEventDrop(lastAttacker);
     }
 
@@ -768,7 +768,7 @@ public class Attackable extends Npc {
      * If the autoLoot mode is actif and if the Creature that has killed the Attackable is a Player, Give the item(s) to the Player that has killed the Attackable.<br>
      * If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a Player, add this or these item(s) in the world as a visible object at the position where mob was last.
      */
-    public void doItemDrop(NpcTemplate npcTemplate, Creature mainDamageDealer) {
+    protected void doItemDrop(NpcTemplate npcTemplate, Creature mainDamageDealer, float penaltyModifier) {
         if (mainDamageDealer == null) {
             return;
         }
@@ -786,7 +786,7 @@ public class Attackable extends Npc {
             var dropId = it.nextInt();
             var drop = dropData.getExtendDropById(dropId);
             if(drop != null) {
-                drop.reward(player, this);
+                drop.reward(player, this, penaltyModifier);
             } else {
                 LOGGER.warn("Unknown extended drop id {} on npc {}", dropId, this);
             }
