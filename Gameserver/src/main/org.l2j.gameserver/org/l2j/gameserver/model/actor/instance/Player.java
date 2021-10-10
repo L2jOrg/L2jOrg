@@ -154,7 +154,6 @@ import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.*;
-import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
  * This class represents all player characters in the world.<br>

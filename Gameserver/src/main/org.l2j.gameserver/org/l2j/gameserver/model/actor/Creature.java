@@ -376,7 +376,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         revalidateZone(true);
     }
 
-    public synchronized void onTeleported() {
+    public void onTeleported() {
         if (!isTeleporting) {
             return;
         }
