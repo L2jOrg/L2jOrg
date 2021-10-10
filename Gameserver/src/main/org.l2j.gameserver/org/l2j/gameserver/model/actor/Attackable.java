@@ -29,10 +29,10 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.MagicLampData;
-import org.l2j.gameserver.engine.item.drop.ExtendDropEngine;
 import org.l2j.gameserver.datatables.drop.EventDropList;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.drop.ExtendDropEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.DropType;
@@ -408,8 +408,6 @@ public class Attackable extends Npc {
     }
 
     private void rewardSoloKiller(MaxDamageDealer maxDealerInfo, Player attacker, long damage) {
-        float expMultiplier = calculateRewardExpMultiplier(attacker);
-
         final double[] expSp = calculateExpAndSp(attacker.getLevel(), damage, maxDealerInfo.totalDamage);
         double exp = expSp[0];
         double sp = expSp[1];
@@ -418,12 +416,7 @@ public class Attackable extends Npc {
             return;
         }
 
-        if (Config.CHAMPION_ENABLE && _champion) {
-            exp *= Config.CHAMPION_REWARDS_EXP_SP;
-            sp *= Config.CHAMPION_REWARDS_EXP_SP;
-        }
-
-        exp *= expMultiplier;
+        exp *= calculateRewardExpMultiplier(attacker);
 
         if (_overhit && (_overhitAttacker != null) &&  (attacker == _overhitAttacker.getActingPlayer())) {
             attacker.sendPacket(SystemMessageId.OVER_HIT);
@@ -432,25 +425,31 @@ public class Attackable extends Npc {
         }
 
         if (!attacker.isDead()) {
-            exp = attacker.getStats().getValue(Stat.EXPSP_RATE, exp);
-            sp = attacker.getStats().getValue(Stat.EXPSP_RATE, sp);
-
-            attacker.addExpAndSp(exp, sp, useVitalityRate());
-            if (exp > 0) {
-                final Clan clan = attacker.getClan();
-                if (clan != null) {
-                    double finalExp = exp;
-                    if (useVitalityRate()) {
-                        finalExp *= attacker.getStats().getExpBonusMultiplier();
-                    }
-                    clan.addHuntingPoints(finalExp);
-                }
-                attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, isRaid), true);
-                PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
-                MagicLampData.getInstance().addLampExp(attacker, exp, true);
-            }
-            rewardAttributeExp(attacker, damage, maxDealerInfo.totalDamage);
+            rewardKiller(maxDealerInfo, attacker, damage, exp, sp);
         }
+    }
+
+    private void rewardKiller(MaxDamageDealer maxDealerInfo, Player attacker, long damage, double exp, double sp) {
+        exp = attacker.getStats().getValue(Stat.EXPSP_RATE, exp);
+        sp = attacker.getStats().getValue(Stat.EXPSP_RATE, sp);
+
+        attacker.addExpAndSp(exp, sp, useVitalityRate());
+        if(exp <= 0) {
+            return;
+        }
+
+        if (useVitalityRate()) {
+            exp *= attacker.getStats().getExpBonusMultiplier();
+        }
+
+        final Clan clan = attacker.getClan();
+        if (clan != null) {
+            clan.addHuntingPoints(exp);
+        }
+        attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, isRaid), true);
+        PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+        MagicLampData.getInstance().addLampExp(attacker, exp, true);
+        rewardAttributeExp(attacker, damage, maxDealerInfo.totalDamage);
     }
 
     private float calculateRewardExpMultiplier(Player attacker) {
@@ -1020,6 +1019,11 @@ public class Attackable extends Npc {
             };
             xp *= mul;
             sp *= mul;
+
+            if (Config.CHAMPION_ENABLE && _champion) {
+                xp *= Config.CHAMPION_REWARDS_EXP_SP;
+                sp *= Config.CHAMPION_REWARDS_EXP_SP;
+            }
         }
 
         return new double[] { xp, sp };
