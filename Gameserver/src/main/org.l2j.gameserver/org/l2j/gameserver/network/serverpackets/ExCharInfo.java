@@ -116,9 +116,10 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeFloat((float) player.getCollisionRadius());
         buffer.writeFloat((float) player.getCollisionHeight());
 
-        buffer.writeInt(player.getVisualFace());
+
         buffer.writeInt(player.getVisualHair());
         buffer.writeInt(player.getVisualHairColor());
+        buffer.writeInt(player.getVisualFace());
 
         buffer.writeSizedString(appearence.getVisibleTitle());
 
