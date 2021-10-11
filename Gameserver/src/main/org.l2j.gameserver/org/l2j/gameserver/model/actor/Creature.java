@@ -376,7 +376,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         revalidateZone(true);
     }
 
-    public synchronized void onTeleported() {
+    public void onTeleported() {
         if (!isTeleporting) {
             return;
         }
@@ -2062,8 +2062,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         return false;
     }
 
-    private boolean checkCanMoveToDestination(int xPrev, int yPrev, int zPrev, double dx, double dy, double dz) {
-        if (isPlayer(this) && !isFlying) {
+    protected boolean checkCanMoveToDestination(int xPrev, int yPrev, int zPrev, double dx, double dy, double dz) {
+        if (this instanceof  Player player && !isFlying && !player.isInWater() ) {
             final double distance = Math.hypot(dx, dy);
             if (cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
                     || (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.

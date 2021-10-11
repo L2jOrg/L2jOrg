@@ -487,10 +487,6 @@ public final class Player extends Playable {
         return variables.getSayhaGraceItemsUsed();
     }
 
-    private String getExtendDrop() {
-        return variables.getExtendDrop();
-    }
-
     public int getFortuneTelling() {
         return variables.getFortuneTelling();
     }
@@ -603,10 +599,6 @@ public final class Player extends Playable {
         variables.setWorldChatUsed(timesUsed);
     }
 
-    public void setExtendDrop(String extendDrop) {
-        variables.setExtendDrop(extendDrop);
-    }
-
     public void setFortuneTelling(int fortuneTelling) {
         variables.setFortuneTelling(fortuneTelling);
     }
@@ -689,38 +681,6 @@ public final class Player extends Playable {
 
     public void resetRevengeData() {
         variables.resetRevengeData();
-    }
-
-    public void updateExtendDrop(int id, long count) {
-        StringBuilder result = new StringBuilder();
-        final String data = getExtendDrop();
-        if (data.isEmpty()) {
-            result = new StringBuilder(id + "," + count);
-        } else if (data.contains(";")) {
-            for (String s : data.split(";")) {
-                final String[] drop = s.split(",");
-                if (drop[0].equals(Integer.toString(id))) {
-                    continue;
-                }
-
-                result.append(";").append(s);
-            }
-            result = new StringBuilder(result.substring(1));
-        } else {
-            result = new StringBuilder(id + "," + count);
-        }
-        variables.setExtendDrop(result.toString());
-    }
-
-    public long getExtendDropCount(int id) {
-        final String data = getExtendDrop();
-        for (String s : data.split(";")) {
-            final String[] drop = s.split(",");
-            if (drop[0].equals(Integer.toString(id))) {
-                return Long.parseLong(drop[1]);
-            }
-        }
-        return 0;
     }
 
     public LocalDate getCreateDate() {
@@ -1409,7 +1369,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final PlayerStats getStats() {
+    public PlayerStats getStats() {
         return (PlayerStats) super.getStats();
     }
 
@@ -1419,7 +1379,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final PlayerStatus getStatus() {
+    public PlayerStatus getStatus() {
         return (PlayerStatus) super.getStatus();
     }
 
@@ -1428,11 +1388,11 @@ public final class Player extends Playable {
         setStatus(new PlayerStatus(this));
     }
 
-    public final Appearance getAppearance() {
+    public Appearance getAppearance() {
         return appearance;
     }
 
-    public final PlayerTemplate getBaseTemplate() {
+    public PlayerTemplate getBaseTemplate() {
         return PlayerTemplateData.getInstance().getTemplate(data.getBaseClass());
     }
 
@@ -1440,7 +1400,7 @@ public final class Player extends Playable {
      * @return the PlayerTemplate link to the Player.
      */
     @Override
-    public final PlayerTemplate getTemplate() {
+    public PlayerTemplate getTemplate() {
         return (PlayerTemplate) super.getTemplate();
     }
 
@@ -1453,7 +1413,7 @@ public final class Player extends Playable {
      * Return the Level of the Player.
      */
     @Override
-    public final int getLevel() {
+    public int getLevel() {
         return getStats().getLevel();
     }
 
@@ -1615,7 +1575,7 @@ public final class Player extends Playable {
     /**
      * @return a list of QuestStates which registered for notify of death of this Player.
      */
-    public final Set<QuestState> getNotifyQuestOfDeath() {
+    public Set<QuestState> getNotifyQuestOfDeath() {
         if (notifyQuestOfDeathList == null) {
             initNotifyQuestOfDeathList();
         }
@@ -1629,7 +1589,7 @@ public final class Player extends Playable {
         }
     }
 
-    public final boolean isNotifyQuestOfDeathEmpty() {
+    public boolean isNotifyQuestOfDeathEmpty() {
         return (notifyQuestOfDeathList == null) || notifyQuestOfDeathList.isEmpty();
     }
 
@@ -2992,12 +2952,12 @@ public final class Player extends Playable {
         teleportProtectEndTime = protect ? System.currentTimeMillis() + (CharacterSettings.teleportProtection() * 1000L) : 0;
     }
 
-    public final boolean isFakeDeath() {
+    public boolean isFakeDeath() {
         return isAffected(EffectFlag.FAKE_DEATH);
     }
 
     @Override
-    public final boolean isAlikeDead() {
+    public boolean isAlikeDead() {
         return super.isAlikeDead() || isFakeDeath();
     }
 
@@ -3138,7 +3098,7 @@ public final class Player extends Playable {
      * <li>Send a Server->Client packet CharInfo to all Player in _KnownPlayers of the Player (Public data only)</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP,
      * STR, DEX...</B></FONT>
      */
-    public final void broadcastUserInfo() {
+    public void broadcastUserInfo() {
         // Send user info to the current player
         sendPacket(new UserInfo(this));
 
@@ -3146,12 +3106,12 @@ public final class Player extends Playable {
         broadcastCharInfo();
     }
 
-    public final void broadcastUserInfo(UserInfoType... types) {
+    public void broadcastUserInfo(UserInfoType... types) {
         sendPacket(new UserInfo(this, types));
         broadcastCharInfo();
     }
 
-    public final void broadcastCharInfo() {
+    public void broadcastCharInfo() {
         var charInfo = new ExCharInfo(this);
         checkBroadcast(charInfo);
         World.getInstance().forEachVisibleObject(this, Player.class, player -> sendPacketAndUpdateRelation(charInfo, player), this::isVisibleFor);
@@ -3162,13 +3122,13 @@ public final class Player extends Playable {
         updateRelation(player);
     }
 
-    public final void broadcastTitleInfo() {
+    public void broadcastTitleInfo() {
         broadcastUserInfo(UserInfoType.CLAN, UserInfoType.COLOR);
         broadcastPacket(new NicknameChanged(this));
     }
 
     @Override
-    public final void broadcastPacket(ServerPacket packet) {
+    public void broadcastPacket(ServerPacket packet) {
         if (packet instanceof ExCharInfo) {
             throw new IllegalArgumentException("ExCharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
@@ -3441,11 +3401,11 @@ public final class Player extends Playable {
         }
     }
 
-    public final PreparedMultisellList getMultiSell() {
+    public PreparedMultisellList getMultiSell() {
         return currentMultiSell;
     }
 
-    public final void setMultiSell(PreparedMultisellList list) {
+    public void setMultiSell(PreparedMultisellList list) {
         currentMultiSell = list;
     }
 
@@ -6239,7 +6199,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final void onTeleported() {
+    public void onTeleported() {
         super.onTeleported();
 
         setLastServerPosition(getX(), getY(), getZ());
@@ -6970,7 +6930,7 @@ public final class Player extends Playable {
      * @return {@code skill} object referred to this skill id that this player has, {@code null} otherwise.
      */
     @Override
-    public final Skill getKnownSkill(int skillId) {
+    public Skill getKnownSkill(int skillId) {
         Skill skill = null;
         if(nonNull(transformSkills)) {
             skill = transformSkills.get(skillId);
@@ -7031,7 +6991,7 @@ public final class Player extends Playable {
         petTemplate = null;
     }
 
-    public final PetTemplate getPetData(int npcId) {
+    public PetTemplate getPetData(int npcId) {
         if (petTemplate == null) {
             petTemplate = PetDataTable.getInstance().getPetTemplate(npcId);
         }
@@ -7435,18 +7395,18 @@ public final class Player extends Playable {
         return getTransformation().map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
     }
 
-    public final int getClientZ() {
+    public int getClientZ() {
         return clientZ;
     }
 
-    public final void setClientZ(int val) {
+    public void setClientZ(int val) {
         clientZ = val;
     }
 
     /**
      * @return true if character falling now on the start of fall return false for correct coords sync!
      */
-    public final boolean isFalling(int z) {
+    public boolean isFalling(int z) {
         if (isDead() || isFlying() || isFlyingMounted() || isInsideZone(ZoneType.WATER)) {
             return false;
         }

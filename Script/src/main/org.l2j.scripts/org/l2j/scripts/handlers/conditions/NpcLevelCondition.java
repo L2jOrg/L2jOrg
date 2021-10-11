@@ -18,44 +18,38 @@
  */
 package org.l2j.scripts.handlers.conditions;
 
-import org.l2j.gameserver.model.StatsSet;
+import org.l2j.commons.xml.XmlParser;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.conditions.ConditionFactory;
-import org.l2j.gameserver.model.conditions.ICondition;
-
-import static org.l2j.gameserver.util.GameUtils.isNpc;
+import org.l2j.gameserver.engine.item.drop.ExtendDropCondition;
+import org.w3c.dom.Node;
 
 /**
  * @author Sdw
  * @author JoeAlisson
  */
-public class NpcLevelCondition implements ICondition {
-	private final int _minLevel;
-	private final int _maxLevel;
-	
-	private NpcLevelCondition(StatsSet params) {
-		_minLevel = params.getInt("minLevel");
-		_maxLevel = params.getInt("maxLevel");
-	}
-	
+public record NpcLevelCondition(int minLevel, int maxLevel) implements ExtendDropCondition {
+
 	@Override
-	public boolean test(Creature creature, WorldObject object)
-	{
-		return isNpc(object) && (((Creature) object).getLevel() >= _minLevel) && (((Creature) object).getLevel() < _maxLevel);
+	public boolean test(Creature creature, WorldObject object) {
+		return  object instanceof Npc npc && npc.getLevel() >= minLevel && npc.getLevel() < maxLevel;
 	}
 
-	public static class Factory implements ConditionFactory {
+	public static class Factory extends XmlParser implements ConditionFactory {
 
 		@Override
-		public ICondition create(StatsSet data) {
-			return new NpcLevelCondition(data);
+		public ExtendDropCondition create(Node data) {
+			var attr = data.getAttributes();
+			var minLevel = parseInt(attr, "min-level");
+			var maxLevel = parseInt(attr, "max-level");
+			return new NpcLevelCondition(minLevel, maxLevel);
 		}
 
 		@Override
 		public String conditionName() {
-			return "NpcLevel";
+			return "npc-level";
 		}
 	}
-	
 }

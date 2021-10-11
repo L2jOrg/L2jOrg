@@ -409,7 +409,7 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "extenddrop": {
-                                    final List<Integer> extendDrop = new ArrayList<>();
+                                    final IntList extendDrop = new ArrayIntList();
                                     forEach(npcNode, "id", idNode ->
                                     {
                                         extendDrop.add(Integer.parseInt(idNode.getTextContent()));
@@ -517,8 +517,6 @@ public class NpcData extends GameXmlReader {
 
                         template.setClans(clans);
                         template.setIgnoreClanNpcIds(ignoreClanNpcIds);
-
-
 
                         if (dropLists != null) {
                             for (DropHolder dropHolder : dropLists) {

@@ -48,9 +48,6 @@ public class PlayerVariableData {
     @Column("sayha_grace_items_used")
     private int sayhaGraceItemsUsed;
 
-    @Column("extend_drop")
-    private String extendDrop;
-
     @Column("fortune_telling")
     private int fortuneTelling;
 

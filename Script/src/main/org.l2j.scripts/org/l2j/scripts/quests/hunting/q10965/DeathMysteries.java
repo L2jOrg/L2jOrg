@@ -103,7 +103,7 @@ public class DeathMysteries extends MonsterHunting {
 
 		String htmlText = null;
 		switch (event) {
-			case "TELEPORT_TO_MAXIMILLIAN" -> player.teleToLocation(86845, 148626, -3402);
+			case "TELEPORT_TO_MAXIMILIAN" -> player.teleToLocation(86845, 148626, -3402);
 			case "30289-01.htm", "30289-02.htm", "30120-01.html", "30120-02.html" -> htmlText = event;
 			case "30289-03.htm" -> {
 				qs.startQuest();

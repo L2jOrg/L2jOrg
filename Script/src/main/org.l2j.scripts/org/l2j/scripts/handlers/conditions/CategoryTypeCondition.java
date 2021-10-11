@@ -18,44 +18,43 @@
  */
 package org.l2j.scripts.handlers.conditions;
 
+import org.l2j.commons.xml.XmlParser;
 import org.l2j.gameserver.enums.CategoryType;
-import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.ConditionFactory;
-import org.l2j.gameserver.model.conditions.ICondition;
+import org.l2j.gameserver.engine.item.drop.ExtendDropCondition;
+import org.w3c.dom.Node;
 
-import java.util.List;
+import java.util.EnumSet;
 
 /**
  * @author Sdw
  * @author JoeAlisson
  */
-public class CategoryTypeCondition implements ICondition {
+public record CategoryTypeCondition(EnumSet<CategoryType> types) implements ExtendDropCondition {
 
-	private final List<CategoryType> _categoryTypes;
-	
-	private CategoryTypeCondition(StatsSet params)
-	{
-		_categoryTypes = params.getEnumList("category", CategoryType.class);
-	}
-	
 	@Override
-	public boolean test(Creature creature, WorldObject target)
-	{
-		return _categoryTypes.stream().anyMatch(creature::isInCategory);
+	public boolean test(Creature creature, WorldObject target) {
+		for (CategoryType type : types) {
+			if(creature.isInCategory(type)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
-	public static class Factory implements ConditionFactory {
+	public static class Factory extends XmlParser implements ConditionFactory {
 
 		@Override
-		public ICondition create(StatsSet data) {
-			return new CategoryTypeCondition(data);
+		public ExtendDropCondition create(Node data) {
+			var types = parseEnumSet(data.getAttributes(), CategoryType.class, "types");
+			return new CategoryTypeCondition(types);
 		}
 
 		@Override
 		public String conditionName() {
-			return "CategoryType";
+			return "category";
 		}
 	}
 }

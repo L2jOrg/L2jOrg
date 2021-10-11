@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.model.conditions;
+package org.l2j.gameserver.engine.item.drop;
 
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -24,6 +24,6 @@ import org.l2j.gameserver.model.actor.Creature;
 /**
  * @author Sdw
  */
-public interface ICondition {
+public interface ExtendDropCondition {
     boolean test(Creature creature, WorldObject object);
 }
