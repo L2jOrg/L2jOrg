@@ -131,13 +131,6 @@ public class PlayerVariableData {
         this.worldChatUsed = worldChatUsed;
     }
 
-    public String getExtendDrop() {
-        return extendDrop;
-    }
-
-    public void setExtendDrop(String extendDrop) {
-        this.extendDrop = extendDrop;
-    }
 
     public int getFortuneTelling() {
         return fortuneTelling;

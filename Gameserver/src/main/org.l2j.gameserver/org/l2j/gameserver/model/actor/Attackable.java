@@ -458,7 +458,11 @@ public class Attackable extends Npc {
             }
             rewardAttributeExp(attacker, damage, maxDealerInfo.totalDamage);
         }
+
+    public final Set<WeakReference<Creature>> getAttackByList() {
+        return attackByList;
     }
+
 
     private float calculateRewardExpMultiplier(Player attacker) {
         for (var summon : attacker.getServitors().values()) {
@@ -1252,10 +1256,6 @@ public class Attackable extends Npc {
             getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
         }
         super.setTarget(object);
-    }
-
-    public final Set<WeakReference<Creature>> getAttackByList() {
-        return attackByList;
     }
 
     private static class MaxDamageDealer {
