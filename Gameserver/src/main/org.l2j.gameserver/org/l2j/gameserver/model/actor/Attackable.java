@@ -59,6 +59,7 @@ import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.PartySettings;
+import org.l2j.gameserver.settings.SayhaGraceSettings;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
@@ -1171,27 +1172,31 @@ public class Attackable extends Npc {
     /*
      * Return getSayhaGracePoints points decrease (if positive) or increase (if negative) based on damage. Maximum for damage = maxHp.
      */
-    public int getSayhaGracePoints(int level, double exp, boolean isBoss) {
-        if ((getLevel() <= 0) || (getExpReward() <= 0)) {
+    public int getSayhaGracePoints(int level, double exp, boolean isBoss)
+    {
+        if ((getLevel() <= 0) || (getExpReward() <= 0))
+        {
             return 0;
         }
-
         int points;
-        if (level < 85) {
+        if (level < 85)
+        {
             points = Math.max((int) ((exp / 1000) * Math.max(level - getLevel(), 1)), 1);
-        } else {
-            points = Math.max((int) ((exp / (isBoss ? Config.SAYHA_GRACE_CONSUME_BY_BOSS : Config.SAYHA_GRACE_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1)), 1);        }
-
+        }
+        else
+        {
+            points = Math.max((int) ((exp / (isBoss ? SayhaGraceSettings.ConsumeByBoss() : SayhaGraceSettings.ConsumeByMob())) * Math.max(level - getLevel(), 1)), 1);
+        }
         return -points;
     }
 
     /*
      * True if Sayha's Grace rate for exp and sp should be applied
      */
-    public boolean useSayhaGraceRate() {
-        return !_champion || Config.CHAMPION_ENABLE_SAYHA_GRACE;
+    public boolean useSayhaGraceRate()
+    {
+        return SayhaGraceSettings.isEnabled() && (!_champion || SayhaGraceSettings.isChampionEnabled());
     }
-
     /**
      * Return True if the Creature is RaidBoss or his minion.
      */

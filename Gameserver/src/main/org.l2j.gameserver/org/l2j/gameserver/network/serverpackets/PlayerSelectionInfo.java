@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.settings.RateSettings;
+import org.l2j.gameserver.settings.SayhaGraceSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 
 import java.util.List;
@@ -170,7 +171,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeDouble(0x00); // Current pet MP
 
             buffer.writeInt(data.getSayhaGracePoints());
-            buffer.writeInt((int)  Config.RATE_SAYHA_GRACE_EXP_MULTIPLIER * 100); // Vitality Percent
+            buffer.writeInt((int) SayhaGraceSettings.RateExpMul() * 100); // Vitality Percent
             buffer.writeInt(playerInfo.getSayhaGraceItemsUsed()); // Remaining vitality item uses
             buffer.writeInt(data.getAccessLevel() != -100); // Char is active or not
             buffer.writeByte(0x00); // is nobles

@@ -51,6 +51,7 @@ import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.SayhaGraceSettings;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -235,8 +236,9 @@ public class PlayerFactory {
             data.setSp(CharacterSettings.startSP());
         }
 
-        if (Config.ENABLE_SAYHA_GRACE) {
-            data.setSayhaGracePoints(Math.min(Config.STARTING_SAYHA_GRACE_POINTS, PlayerStats.MAX_SAYHA_GRACE_POINTS));
+        if (SayhaGraceSettings.isEnabled())
+        {
+            data.setSayhaGracePoints(Math.min(SayhaGraceSettings.StartingPoints(), PlayerStats.MAX_SAYHA_GRACE_POINTS));
         }
 
         var hp = template.getBaseHpMax(data.getLevel()) * BaseStats.CON.getValue(template.getBaseCON());

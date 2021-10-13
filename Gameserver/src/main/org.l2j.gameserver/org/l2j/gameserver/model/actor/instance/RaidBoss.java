@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.SayhaGraceSettings;
 import org.l2j.gameserver.util.MathUtil;
 
 /**
@@ -95,13 +96,15 @@ public class RaidBoss extends Monster {
     }
 
     @Override
-    public int getSayhaGracePoints(int level, double exp, boolean isBoss) {
+    public int getSayhaGracePoints(int level, double exp, boolean isBoss)
+    {
         return -super.getSayhaGracePoints(level, exp, isBoss);
     }
 
     @Override
-    public boolean useSayhaGraceRate() {
-        return Config.RAIDBOSS_USE_SAYHA_GRACE;
+    public boolean useSayhaGraceRate()
+    {
+        return SayhaGraceSettings.RaidBossUsePoints();
     }
 
     @Override

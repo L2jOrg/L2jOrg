@@ -24,6 +24,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 import org.l2j.gameserver.settings.RateSettings;
+import org.l2j.gameserver.settings.SayhaGraceSettings;
 
 /**
  * @author Sdw
@@ -33,22 +34,22 @@ public class ExVitalityEffectInfo extends ServerPacket {
     private final int _sayhaGraceItemsRemaining;
     private final int _points;
 
-    public ExVitalityEffectInfo(Player cha) {
+    public ExVitalityEffectInfo(Player cha)
+    {
         _points = cha.getSayhaGracePoints();
-        _sayhaGraceBonus = (int) cha.getStats().getSayhaGraceExpBonus() * 100;
-        _sayhaGraceItemsRemaining = Config.SAYHA_GRACE_MAX_ITEMS_ALLOWED - cha.getSayhaGraceItemsUsed();
-
+        _sayhaGraceBonus = (int) (cha.getStats().getSayhaGraceExpBonus() * 100);
+        _sayhaGraceItemsRemaining = SayhaGraceSettings.MaxItemsAllowed() - cha.getSayhaGraceItemsUsed();
     }
 
     @Override
-    public void writeImpl(GameClient client, WritableBuffer buffer) {
-        writeId(ServerExPacketId.EX_VITALITY_EFFECT_INFO, buffer );
-
+    public void writeImpl(GameClient client, WritableBuffer buffer)
+    {
+        writeId(ServerExPacketId.EX_VITALITY_EFFECT_INFO, buffer);
         buffer.writeInt(_points);
         buffer.writeInt(_sayhaGraceBonus); // Vitality Bonus
         buffer.writeShort(0x00); // Vitality additional bonus in %
         buffer.writeShort(_sayhaGraceItemsRemaining); // How much vitality items remaining for use
-        buffer.writeShort(Config.SAYHA_GRACE_MAX_ITEMS_ALLOWED); // Max number of items for use
+        buffer.writeShort(SayhaGraceSettings.MaxItemsAllowed()); // Max number of items for use
     }
 
 }

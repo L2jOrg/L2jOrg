@@ -41,6 +41,7 @@ import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
+import org.l2j.gameserver.settings.SayhaGraceSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.type.TimeRestrictZone.ResetCycle;
@@ -154,13 +155,13 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
     }
 
     @ScheduleTarget
-    private void onSayhaGraceReset() {
-        if (!CharacterSettings.isSayhaGraceEnabled()) {
+    private void onSayhaGraceReset()
+    {
+        if (!SayhaGraceSettings.isEnabled())
+        {
             return;
         }
-
-        World.getInstance().forEachPlayer(player -> player.addSayhaGracePoints(Config.STARTING_SAYHA_GRACE_POINTS, false));
-
+        World.getInstance().forEachPlayer(player -> player.addSayhaGracePoints(SayhaGraceSettings.StartingPoints(), false));
         getDAO(PlayerDAO.class).resetSayhaGrace(PlayerStats.MAX_SAYHA_GRACE_POINTS);
         LOGGER.info("Sayha Grace has been reset");
     }

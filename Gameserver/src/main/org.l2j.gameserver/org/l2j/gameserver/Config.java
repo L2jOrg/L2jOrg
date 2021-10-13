@@ -187,20 +187,8 @@ public final class Config {
     public static int INVENTORY_MAXIMUM_PET;
     public static double PET_HP_REGEN_MULTIPLIER;
     public static double PET_MP_REGEN_MULTIPLIER;
-    public static int SAYHA_GRACE_CONSUME_BY_MOB;
-    public static int SAYHA_GRACE_CONSUME_BY_BOSS;
 
-    // --------------------------------------------------
-    // Sayha's Grace Settings
-    // --------------------------------------------------
-    public static boolean ENABLE_SAYHA_GRACE;
-    public static int STARTING_SAYHA_GRACE_POINTS;
-    public static boolean RAIDBOSS_USE_SAYHA_GRACE;
-    public static float RATE_SAYHA_GRACE_EXP_MULTIPLIER;
-    public static float RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
-    public static int SAYHA_GRACE_MAX_ITEMS_ALLOWED;
-    public static float RATE_SAYHA_GRACE_LOST;
-    public static float RATE_SAYHA_GRACE_GAIN;
+
     // --------------------------------------------------
     // PvP Settings
     // --------------------------------------------------
@@ -697,19 +685,6 @@ public final class Config {
         if (RATE_INSTANCE_PARTY_SP < 0) {
             RATE_INSTANCE_PARTY_SP = RATE_PARTY_SP;
         }
-
-        SAYHA_GRACE_CONSUME_BY_MOB = NPC.getInt("SayhaGraceConsumeByMob", 2250);
-        SAYHA_GRACE_CONSUME_BY_BOSS = NPC.getInt("SayhaGraceConsumeByBoss", 1125);
-        RATE_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateSayhaGraceExpMultiplier", 3);
-        RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
-        SAYHA_GRACE_MAX_ITEMS_ALLOWED = RatesSettings.getInt("SayhaGraceMaxItemsAllowed", 0);
-        if (SAYHA_GRACE_MAX_ITEMS_ALLOWED == 0)
-        {
-            SAYHA_GRACE_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
-        }
-        RATE_SAYHA_GRACE_LOST = RatesSettings.getFloat("RateSayhaGraceLost", 1);
-        RATE_SAYHA_GRACE_GAIN = RatesSettings.getFloat("RateSayhaGraceGain", 1);
-
         RATE_EXTRACTABLE = RatesSettings.getFloat("RateExtractable", 1);
         RATE_DROP_MANOR = RatesSettings.getInt("RateDropManor", 1);
         RATE_QUEST_DROP = RatesSettings.getFloat("RateQuestDrop", 1);
