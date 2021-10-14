@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS l2store_history;
+DROP TABLE IF EXISTS lcoin_shop_history;
 DROP TABLE IF EXISTS `account_data`;
 
 CREATE TABLE IF NOT EXISTS `account_data`
