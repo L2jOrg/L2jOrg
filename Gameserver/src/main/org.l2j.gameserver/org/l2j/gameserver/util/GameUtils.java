@@ -32,9 +32,9 @@ import org.l2j.gameserver.model.actor.instance.*;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.Armor;
-import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Armor;
+import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
 import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.settings.GeneralSettings;
@@ -209,9 +209,6 @@ public final class GameUtils {
                 bypass = bypass.substring(0, firstParameterStart + 1);
             }
 
-            if (Config.HTML_ACTION_CACHE_DEBUG) {
-                LOGGER.info("Cached html bypass(" + scope + "): '" + bypass + "'");
-            }
             player.addHtmlAction(scope, bypass);
             bypassStart = htmlLower.indexOf("=\"bypass ", bypassEnd);
         }
@@ -239,10 +236,6 @@ public final class GameUtils {
                 LOGGER.warn("Html link path is invalid: " + htmlLink);
                 continue;
             }
-
-            if (Config.HTML_ACTION_CACHE_DEBUG) {
-                LOGGER.info("Cached html link(" + scope + "): '" + htmlLink + "'");
-            }
             // let's keep an action cache with "link " lowercase literal kept
             player.addHtmlAction(scope, "link " + htmlLink);
             linkStart = htmlLower.indexOf("=\"link ", linkEnd);
@@ -262,10 +255,6 @@ public final class GameUtils {
     public static void buildHtmlActionCache(Player player, HtmlActionScope scope, int npcObjId, String html) {
         if ((player == null) || (scope == null) || (npcObjId < 0) || (html == null)) {
             throw new IllegalArgumentException();
-        }
-
-        if (Config.HTML_ACTION_CACHE_DEBUG) {
-            LOGGER.info("Set html action npc(" + scope + "): " + npcObjId);
         }
         player.setHtmlActionOriginObjectId(scope, npcObjId);
         buildHtmlBypassCache(player, scope, html);
@@ -526,7 +515,7 @@ public final class GameUtils {
 
     public static boolean canTeleport(Player player) {
         return !( isNull(player) || player.isInDuel() || !player.teleportInBattle() || player.isControlBlocked() || player.isConfused() || player.isFlying() || player.isFlyingMounted() ||
-                player.isInOlympiadMode() || player.isAlikeDead() || player.isOnCustomEvent() || player.getPvpFlag() > 0 || player.isInsideZone(ZoneType.JAIL) || player.isInTimedHuntingZone());
+                player.isInOlympiadMode() || player.isAlikeDead() || player.isOnCustomEvent() || player.getPvpFlag() > 0 || player.isInsideZone(ZoneType.JAIL) || player.isInsideZone(ZoneType.TIMED));
     }
 
     public static boolean canLogout(Player player) {

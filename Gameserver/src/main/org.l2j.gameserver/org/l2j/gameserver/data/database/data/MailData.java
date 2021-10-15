@@ -23,10 +23,9 @@ import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.model.item.container.Attachment;
+import org.l2j.gameserver.engine.mail.Attachment;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -143,34 +142,21 @@ public class MailData {
         return attachment;
     }
 
-    public final void removeAttachments() {
+    public final boolean removeAttachments() {
         if (nonNull(attachment)) {
             attachment = null;
             hasAttachment = false;
-            MailEngine.getInstance().removeAttachmentsInDb(id);
+            return true;
         }
+        return false;
     }
 
     public final void setDeletedByReceiver() {
-        if (!deletedByReceiver) {
-            deletedByReceiver = true;
-            if (deletedBySender) {
-                MailEngine.getInstance().deleteMailInDb(id);
-            } else {
-                MailEngine.getInstance().markAsDeletedByReceiverInDb(id);
-            }
-        }
+        deletedByReceiver = true;
     }
 
     public final void setDeletedBySender() {
-        if (!deletedBySender) {
-            deletedBySender = true;
-            if (deletedByReceiver) {
-                MailEngine.getInstance().deleteMailInDb(id);
-            } else {
-                MailEngine.getInstance().markAsDeletedBySenderInDb(id);
-            }
-        }
+        deletedBySender = true;
     }
 
     public final String getSenderName() {
@@ -225,7 +211,7 @@ public class MailData {
         mail.subject = subject;
         mail.content = content;
         mail.fee = reqAdena;
-        mail.type = MailType.REGULAR;
+        mail.type = type;
         mail.unread = true;
 
         if(isCod) {

@@ -25,19 +25,19 @@ import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemChangeType;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -91,7 +91,7 @@ public abstract class ItemContainer {
         for (Predicate<Item> additionalFilter : filters) {
             filter = filter.and(additionalFilter);
         }
-        List<Item> selected = new LinkedList<>();
+        List<Item> selected = new ArrayList<>();
         for (Item item : items.values()) {
             if(filter.test(item)) {
                 selected.add(item);
@@ -165,13 +165,29 @@ public abstract class ItemContainer {
      * @return the inventory item count
      */
     public long getInventoryItemCount(int itemId, int enchantLevel, boolean includeEquipped) {
+        var item = getItemByItemId(itemId);
+        if(item == null) {
+            return 0;
+        }
+
+        if(item.isStackable()) {
+            if((enchantLevel < 0 || item.getEnchantLevel() == enchantLevel) && (includeEquipped || !item.isEquipped())) {
+                return item.getCount();
+            }
+            return 0;
+        }
+        return getSameItemCount(item, enchantLevel, includeEquipped);
+    }
+
+    long getSameItemCount(Item item, int enchantLevel, boolean includeEquipped) {
+        return getSameItemCount(item, enchantLevel, includeEquipped, items.values());
+    }
+
+    long getSameItemCount(Item item, int enchantLevel, boolean includeEquipped, Collection<Item> items) {
         long count = 0;
 
-        for (Item item : items.values()) {
-            if (item.getId() == itemId && (item.getEnchantLevel() == enchantLevel || enchantLevel < 0) && (includeEquipped || !item.isEquipped())) {
-                if (item.isStackable()) {
-                    return item.getCount();
-                }
+        for (var it : items) {
+            if (it.getId() == item.getId() && (item.getEnchantLevel() == enchantLevel || enchantLevel < 0) && (includeEquipped || !item.isEquipped())) {
                 count++;
             }
         }

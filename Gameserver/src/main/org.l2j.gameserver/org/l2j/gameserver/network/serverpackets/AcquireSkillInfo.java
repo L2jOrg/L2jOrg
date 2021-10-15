@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
@@ -49,14 +49,14 @@ public class AcquireSkillInfo extends ServerPacket {
      * @param skillLearn the skill learn.
      */
     public AcquireSkillInfo(AcquireSkillType skillType, SkillLearn skillLearn) {
-        _id = skillLearn.getSkillId();
-        _level = skillLearn.getSkillLevel();
-        _spCost = skillLearn.getLevelUpSp();
+        _id = skillLearn.id();
+        _level = skillLearn.level();
+        _spCost = skillLearn.sp();
         _type = skillType;
         _reqs = new ArrayList<>();
 
         if ((skillType != AcquireSkillType.PLEDGE) || CharacterSettings.pledgeSkillsItemNeeded()) {
-            for (ItemHolder item : skillLearn.getRequiredItems()) {
+            for (ItemHolder item : skillLearn.requiredItems()) {
                 if (_id == CommonSkill.DIVINE_INSPIRATION.getId() && !CharacterSettings.divineInspirationBookNeeded()) {
                     continue;
                 }
@@ -74,12 +74,12 @@ public class AcquireSkillInfo extends ServerPacket {
      * @param sp         the custom SP amount.
      */
     public AcquireSkillInfo(AcquireSkillType skillType, SkillLearn skillLearn, int sp) {
-        _id = skillLearn.getSkillId();
-        _level = skillLearn.getSkillLevel();
+        _id = skillLearn.id();
+        _level = skillLearn.level();
         _spCost = sp;
         _type = skillType;
         _reqs = new ArrayList<>();
-        for (ItemHolder item : skillLearn.getRequiredItems()) {
+        for (ItemHolder item : skillLearn.requiredItems()) {
             _reqs.add(new Req(99, item.getId(), item.getCount(), 50));
         }
     }

@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.BlockList;
@@ -31,6 +30,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.SendTradeRequest;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.World;
 
 import static java.util.Objects.isNull;
@@ -126,7 +126,7 @@ public final class TradeRequest extends ClientPacket {
             }
         }
 
-        if (Config.JAIL_DISABLE_TRANSACTION && (player.isJailed() || partner.isJailed())) {
+        if (GeneralSettings.disableTransactionInJail() && (player.isJailed() || partner.isJailed())) {
             player.sendMessage("You cannot trade while you are in in Jail.");
             return;
         }

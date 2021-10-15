@@ -314,9 +314,6 @@ public final class SystemMessageId {
     @ClientString(id = 174, message = "That person's inventory is full.")
     public static SystemMessageId THAT_PERSON_S_INVENTORY_IS_FULL;
 
-    @ClientString(id = 179, message = "You cannot discard those items here.")
-    public static SystemMessageId YOU_CANNOT_DISCARD_THOSE_ITEMS_HERE;
-
     @ClientString(id = 180, message = "You have $s1 day(s) left until deletion.  Do you wish to cancel this action?")
     public static SystemMessageId YOU_HAVE_S1_DAY_S_LEFT_UNTIL_DELETION_DO_YOU_WISH_TO_CANCEL_THIS_ACTION;
 
@@ -945,9 +942,6 @@ public final class SystemMessageId {
     @ClientString(id = 557, message = "As your pet is currently out, its summoning item cannot be destroyed.")
     public static SystemMessageId AS_YOUR_PET_IS_CURRENTLY_OUT_ITS_SUMMONING_ITEM_CANNOT_BE_DESTROYED;
 
-    @ClientString(id = 558, message = "As your pet is currently summoned, you cannot discard the summoning item.")
-    public static SystemMessageId AS_YOUR_PET_IS_CURRENTLY_SUMMONED_YOU_CANNOT_DISCARD_THE_SUMMONING_ITEM;
-
     @ClientString(id = 560, message = "You have purchased +$s2 $s3 from $c1.")
     public static SystemMessageId YOU_HAVE_PURCHASED_S2_S3_FROM_C1;
 
@@ -1243,9 +1237,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 728, message = "You cannot apply for dissolution again within seven days after a previous application for dissolution.")
     public static SystemMessageId YOU_CANNOT_APPLY_FOR_DISSOLUTION_AGAIN_WITHIN_SEVEN_DAYS_AFTER_A_PREVIOUS_APPLICATION_FOR_DISSOLUTION;
-
-    @ClientString(id = 729, message = "That item cannot be discarded.")
-    public static SystemMessageId THAT_ITEM_CANNOT_BE_DISCARDED;
 
     @ClientString(id = 731, message = "A petition has been received by the GM on behalf of $s1. The petition code is $s2.")
     public static SystemMessageId A_PETITION_HAS_BEEN_RECEIVED_BY_THE_GM_ON_BEHALF_OF_S1_THE_PETITION_CODE_IS_S2;
@@ -1668,6 +1659,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 934, message = "It is a deleted recipe.")
     public static SystemMessageId IT_IS_A_DELETED_RECIPE;
+
+    @ClientString(id = 935, message = "You do not have enough funds in the clan warehouse for the Manor to operate.")
+    public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE;
 
     @ClientString(id = 936, message = "Use $s1.")
     public static SystemMessageId USE_S1;
@@ -2953,6 +2947,9 @@ public final class SystemMessageId {
     @ClientString(id = 1490, message = "Traded $s2 of $s1 crops.")
     public static SystemMessageId TRADED_S2_OF_S1_CROPS;
 
+    @ClientString(id = 1491, message = "Failed in trading $s2 of $s1 crops.")
+    public static SystemMessageId FAILED_IN_TRADING_S2_OF_S1_CROPS;
+
     @ClientString(id = 1500, message = "$c1 does not meet the participation requirements. Subclasses and Duel Classes cannot participate in the Olympiad.")
     public static SystemMessageId C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASSES_AND_DUEL_CLASSES_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD;
 
@@ -3957,7 +3954,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 2011, message = "The augmented item cannot be discarded.")
     public static SystemMessageId THE_AUGMENTED_ITEM_CANNOT_BE_DISCARDED;
-
 
     @ClientString(id = 2013, message = "Your seed or remaining purchase amount is inadequate.")
     public static SystemMessageId YOUR_SEED_OR_REMAINING_PURCHASE_AMOUNT_IS_INADEQUATE;
@@ -8820,9 +8816,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 4264, message = "You can experiment $s1 times.")
     public static SystemMessageId YOU_CAN_EXPERIMENT_S1_TIMES;
-
-    @ClientString(id = 4265, message = "You must learn the necessary skills first.")
-    public static SystemMessageId YOU_MUST_LEARN_THE_NECESSARY_SKILLS_FIRST;
 
     @ClientString(id = 4266, message = "Experiment failed. Please try again.")
     public static SystemMessageId EXPERIMENT_FAILED_PLEASE_TRY_AGAIN;
@@ -13863,6 +13856,9 @@ public final class SystemMessageId {
     @ClientString(id = 13001, message = "KR Live/Classic new numbers (13001-19000)")
     public static SystemMessageId KR_LIVE_CLASSIC_NEW_NUMBERS_1300119000_;
 
+    @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
+    public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
+
     @ClientString(id = 13003, message = "Register a Potion on the Auto Use slots.")
     public static SystemMessageId REGISTER_A_POTION_ON_THE_AUTO_USE_SLOTS;
 
@@ -13886,9 +13882,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 13010, message = "Cannot move from the current location.")
     public static SystemMessageId CANNOT_MOVE_FROM_THE_CURRENT_LOCATION;
-
-    @ClientString(id = 13011, message = "Timed Hunting Zones have entry level requirements, available times, and entry fees that must be met in order to enter.")
-    public static SystemMessageId TIMED_HUNTING_ZONES_HAVE_ENTRY_LEVEL_REQUIREMENTS_AVAILABLE_TIMES_AND_ENTRY_FEES_THAT_MUST_BE_MET_IN_ORDER_TO_ENTER;
 
     @ClientString(id = 13012, message = "The hunting zone's use time has expired so you were moved outside.")
     public static SystemMessageId THE_HUNTING_ZONE_S_USE_TIME_HAS_EXPIRED_SO_YOU_WERE_MOVED_OUTSIDE;
@@ -14371,6 +14364,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 178, message = "Message acceptance mode.")
     public static SystemMessageId MESSAGE_ACCEPTANCE_MODE;
+
+    @ClientString(id = 179, message = "You cannot discard those items here.")
+    public static SystemMessageId YOU_CANNOT_DISCARD_THOSE_ITEMS_HERE;
 
     @ClientString(id = 181, message = "Cannot see target.")
     public static SystemMessageId CANNOT_SEE_TARGET;
@@ -14868,6 +14864,9 @@ public final class SystemMessageId {
     @ClientString(id = 554, message = "You cannot disperse the clans in your alliance.")
     public static SystemMessageId YOU_CANNOT_DISPERSE_THE_CLANS_IN_YOUR_ALLIANCE;
 
+    @ClientString(id = 558, message = "As your pet is currently summoned, you cannot discard the summoning item.")
+    public static SystemMessageId AS_YOUR_PET_IS_CURRENTLY_SUMMONED_YOU_CANNOT_DISCARD_THE_SUMMONING_ITEM;
+
     @ClientString(id = 559, message = "You have purchased $s2 from $c1.")
     public static SystemMessageId YOU_HAVE_PURCHASED_S2_FROM_C1;
 
@@ -15081,6 +15080,9 @@ public final class SystemMessageId {
     @ClientString(id = 723, message = "The opposing clan is participating in a siege battle.")
     public static SystemMessageId THE_OPPOSING_CLAN_IS_PARTICIPATING_IN_A_SIEGE_BATTLE;
 
+    @ClientString(id = 729, message = "That item cannot be discarded.")
+    public static SystemMessageId THAT_ITEM_CANNOT_BE_DISCARDED;
+
     @ClientString(id = 730, message = "You have submitted $s1 petition(s). \\nYou may submit $s2 more petition(s) today.")
     public static SystemMessageId YOU_HAVE_SUBMITTED_S1_PETITION_S_NYOU_MAY_SUBMIT_S2_MORE_PETITION_S_TODAY;
 
@@ -15272,9 +15274,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 927, message = "The current time is $s1:$s2.")
     public static SystemMessageId THE_CURRENT_TIME_IS_S1_S2;
-
-    @ClientString(id = 935, message = "You do not have enough funds in the clan warehouse for the Manor to operate.")
-    public static SystemMessageId YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE;
 
     @ClientString(id = 938, message = "The community server is currently offline.")
     public static SystemMessageId THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE;
@@ -15653,9 +15652,6 @@ public final class SystemMessageId {
 
     @ClientString(id = 1479, message = "That is the wrong grade of soulshot for that fishing pole.")
     public static SystemMessageId THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE;
-
-    @ClientString(id = 1491, message = "Failed in trading $s2 of $s1 crops.")
-    public static SystemMessageId FAILED_IN_TRADING_S2_OF_S1_CROPS;
 
     @ClientString(id = 1492, message = "You will be moved to the Olympiad Stadium in $s1 second(s).")
     public static SystemMessageId YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S;
@@ -17405,6 +17401,9 @@ public final class SystemMessageId {
     @ClientString(id = 4255, message = "Current location: $s1 / $s2 / $s3 (near Faeron Village)")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_NEAR_FAERON_VILLAGE;
 
+    @ClientString(id = 4265, message = "You must learn the necessary skills first.")
+    public static SystemMessageId YOU_MUST_LEARN_THE_NECESSARY_SKILLS_FIRST;
+
     @ClientString(id = 4271, message = "Current location: $s1 / $s2 / $s3")
     public static SystemMessageId CURRENT_LOCATION_S1_S2_S3;
 
@@ -17732,8 +17731,8 @@ public final class SystemMessageId {
     @ClientString(id = 7323, message = "Learned $s1 Lv. $s2.")
     public static SystemMessageId LEARNED_S1_LV_S2;
 
-    @ClientString(id = 13002, message = "Only characters of level 70 or higher who have completed the 2nd class transfer can use this command.")
-    public static SystemMessageId ONLY_CHARACTERS_OF_LEVEL_70_OR_HIGHER_WHO_HAVE_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_USE_THIS_COMMAND;
+    @ClientString(id = 13011, message = "Timed Hunting Zones have entry level requirements, available times, and entry fees that must be met in order to enter.")
+    public static SystemMessageId TIMED_HUNTING_ZONES_HAVE_ENTRY_LEVEL_REQUIREMENTS_AVAILABLE_TIMES_AND_ENTRY_FEES_THAT_MUST_BE_MET_IN_ORDER_TO_ENTER;
 
     @ClientString(id = 13019, message = "Cannot use timed hunting zones while waiting for the Olympiad.")
     public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;
@@ -17767,6 +17766,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 13280, message = "You cannot use any more Elixirs.")
     public static SystemMessageId YOU_CANNOT_USE_ANY_MORE_ELIXIRS;
+
+    @ClientString(id = 13393, message = "You cannot attack, because you don't have an Elemental Orb.")
+    public static SystemMessageId YOU_CANNOT_ATTACK_BECAUSE_YOU_DON_T_HAVE_AN_ELEMENTAL_ORB;
 
     @ClientString(id = 13406, message = "$s1 Honor Coins have been used.")
     public static        SystemMessageId         HONOR_COINS_USED;

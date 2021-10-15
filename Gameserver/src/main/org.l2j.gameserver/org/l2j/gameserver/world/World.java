@@ -40,7 +40,7 @@ import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -485,13 +485,17 @@ public final class World {
         region.forEachObjectInSurrounding(clazz, action, and(isVisibleInRange(reference, range, false), filter));
     }
 
-    public <T extends WorldObject> void forVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Consumer<T> action) {
+    public <T extends WorldObject> void forVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Consumer<? super T> action) {
+        forVisibleObjectsInRange(reference, clazz, range, maxObjects, false, filter, action);
+    }
+
+    public <T extends WorldObject> void forVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, boolean includeReference, Predicate<T> filter, Consumer<? super T> action) {
         var region = getRegion(reference);
         if(isNull(region)) {
             return;
         }
 
-        region.forEachObjectInSurroundingLimiting(clazz, maxObjects, and(isVisibleInRange(reference, range, false), filter), action);
+        region.forEachObjectInSurroundingLimiting(clazz, maxObjects, and(isVisibleInRange(reference, range, includeReference), filter), action);
     }
 
     public <T extends WorldObject> void forVisibleOrderedObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Comparator<T> comparator, Consumer<? super T> action) {
@@ -618,7 +622,7 @@ public final class World {
     public static void init() {
         getInstance().initRegions();
         MapRegionManager.init();
-        ZoneManager.init();
+        ZoneEngine.init();
         GeoEngine.init();
 
         WorldTimeController.init();

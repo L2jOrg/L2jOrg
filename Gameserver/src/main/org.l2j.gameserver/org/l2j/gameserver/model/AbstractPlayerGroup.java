@@ -71,8 +71,7 @@ public abstract class AbstractPlayerGroup {
      * @param packet the packet to broadcast
      */
     public void broadcastPacket(ServerPacket packet) {
-        checkEachMember(m ->
-        {
+        checkEachMember(m -> {
             if (m != null) {
                 m.sendPacket(packet);
             }

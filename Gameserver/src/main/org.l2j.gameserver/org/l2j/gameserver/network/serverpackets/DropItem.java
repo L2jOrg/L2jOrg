@@ -27,24 +27,24 @@ import static java.util.Objects.nonNull;
 
 public class DropItem extends ServerPacket {
     private final Item item;
-    private final int playerId;
+    private final int dropperId;
 
     /**
      * Constructor of the DropItem server packet
      *
      * @param item        : Item designating the item
-     * @param playerObjId : int designating the player ID who dropped the item
+     * @param dropperId : int designating the player ID who dropped the item
      */
-    public DropItem(Item item, int playerObjId) {
+    public DropItem(Item item, int dropperId) {
         this.item = item;
-        playerId = playerObjId;
+        this.dropperId = dropperId;
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.DROP_ITEM, buffer );
 
-        buffer.writeInt(playerId);
+        buffer.writeInt(dropperId);
         buffer.writeInt(item.getObjectId());
         buffer.writeInt(item.getDisplayId());
 

@@ -21,8 +21,11 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -34,17 +37,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public class NoLandingZone extends Zone {
     private int dismountDelay = 5;
 
-    public NoLandingZone(int id) {
+    private NoLandingZone(int id, int dismountDelay) {
         super(id);
-    }
-
-    @Override
-    public void setParameter(String name, String value) {
-        if (name.equals("dismountDelay")) {
-            dismountDelay = Integer.parseInt(value);
-        } else {
-            super.setParameter(name, value);
-        }
+        this.dismountDelay = dismountDelay;
     }
 
     @Override
@@ -65,6 +60,20 @@ public class NoLandingZone extends Zone {
             if (creature.getActingPlayer().getMountType() == MountType.WYVERN) {
                 creature.getActingPlayer().exitedNoLanding();
             }
+        }
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var dismountDelay = reader.parseInt(zoneNode.getAttributes(), "dismount-delay");
+            return new NoLandingZone(id, dismountDelay);
+        }
+
+        @Override
+        public String type() {
+            return "no-landing";
         }
     }
 }

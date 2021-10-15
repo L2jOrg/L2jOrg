@@ -18,12 +18,11 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
-import org.l2j.gameserver.settings.GeneralSettings;
 
 /**
  * @author mrTJO & UnAfraid
+ * @author JoeAlisson
  */
 public final class RequestExFriendListExtended extends ClientPacket {
     @Override
@@ -33,15 +32,6 @@ public final class RequestExFriendListExtended extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!GeneralSettings.allowMail()) {
-            return;
-        }
-
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
-            return;
-        }
-
-        client.sendPacket(new FriendListPacket(activeChar));
+        client.sendPacket(new FriendListPacket(client.getPlayer()));
     }
 }

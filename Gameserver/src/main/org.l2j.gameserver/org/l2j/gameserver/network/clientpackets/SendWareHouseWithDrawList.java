@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.actor.Npc;
@@ -26,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.item.container.ClanWarehouse;
 import org.l2j.gameserver.model.item.container.ItemContainer;
+import org.l2j.gameserver.model.item.container.PlayerFreight;
 import org.l2j.gameserver.model.item.container.PlayerWarehouse;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -36,11 +36,6 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * This class ... 32 SendWareHouseWithDrawList cd (dd) WootenGil rox :P
- *
- * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/29 23:15:16 $
- */
 public final class SendWareHouseWithDrawList extends ClientPacket {
     private static final Logger LOGGER = LoggerFactory.getLogger(SendWareHouseWithDrawList.class);
     private static final int BATCH_LENGTH = 12; // length of the one item
@@ -68,45 +63,18 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (_items == null) {
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("withdraw")) {
             return;
         }
-
+        
         final Player player = client.getPlayer();
         if (player == null) {
             return;
         }
 
-        if (!client.getFloodProtectors().getTransaction().tryPerformAction("withdraw")) {
-            player.sendMessage("You are withdrawing items too fast.");
-            return;
-        }
-
         final ItemContainer warehouse = player.getActiveWarehouse();
-        if (warehouse == null) {
-            return;
-        }
-
         final Npc manager = player.getLastFolkNPC();
-        if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM()) {
-            return;
-        }
-
-        if (!(warehouse instanceof PlayerWarehouse) && !player.getAccessLevel().allowTransaction()) {
-            player.sendMessage("Transactions are disabled for your Access Level.");
-            return;
-        }
-
-        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse()) {
-            return;
-        }
-
-        if (ClanSettings.canMembersWithdrawFromWarehouse()) {
-            if ((warehouse instanceof ClanWarehouse) && !player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE)) {
-                return;
-            }
-        } else if ((warehouse instanceof ClanWarehouse) && !player.isClanLeader()) {
-            player.sendPacket(SystemMessageId.ITEMS_LEFT_AT_THE_CLAN_HALL_WAREHOUSE_CAN_ONLY_BE_RETRIEVED_BY_THE_CLAN_LEADER_DO_YOU_WANT_TO_CONTINUE);
+        if (!canPlayerWithdraw(player, warehouse, manager)) {
             return;
         }
 
@@ -141,34 +109,59 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        // Proceed to the transfer
-        final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-        for (ItemHolder i : _items) {
-            final Item oldItem = warehouse.getItemByObjectId(i.getId());
-            if ((oldItem == null) || (oldItem.getCount() < i.getCount())) {
-                LOGGER.warn("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");
+        final var playerIU = new InventoryUpdate();
+        for (var holder : _items) {
+            if (!transferItem(player, warehouse, manager, playerIU, holder)) {
                 return;
-            }
-            final Item newItem = warehouse.transferItem(warehouse.getName(), i.getId(), i.getCount(), player.getInventory(), player, manager);
-            if (newItem == null) {
-                LOGGER.warn("Error withdrawing a warehouse object for char " + player.getName() + " (newitem == null)");
-                return;
-            }
-
-            if (playerIU != null) {
-                if (newItem.getCount() > i.getCount()) {
-                    playerIU.addModifiedItem(newItem);
-                } else {
-                    playerIU.addNewItem(newItem);
-                }
             }
         }
+        player.sendInventoryUpdate(playerIU);
+    }
 
-        // Send updated item list to the player
-        if (playerIU != null) {
-            player.sendInventoryUpdate(playerIU);
+    private boolean transferItem(Player player, ItemContainer warehouse, Npc manager, InventoryUpdate playerIU, ItemHolder holder) {
+        final var oldItem = warehouse.getItemByObjectId(holder.getId());
+        if (oldItem == null || oldItem.getCount() < holder.getCount()) {
+            LOGGER.warn("Error withdrawing a warehouse object for {} (olditem == null)", player);
+            return false;
+        }
+        final var newItem = warehouse.transferItem(warehouse.getName(), holder.getId(), holder.getCount(), player.getInventory(), player, manager);
+        if (newItem == null) {
+            LOGGER.warn("Error withdrawing a warehouse object for {}  (newitem == null)", player);
+            return false;
+        }
+
+        if (newItem.getCount() > holder.getCount()) {
+            playerIU.addModifiedItem(newItem);
         } else {
-            player.sendItemList();
+            playerIU.addNewItem(newItem);
         }
+        return true;
+    }
+
+    private boolean canPlayerWithdraw(Player player, ItemContainer warehouse, Npc manager) {
+        if (warehouse == null) {
+            return false;
+        }
+
+        if (!(warehouse instanceof PlayerFreight) &&  ((manager == null || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())) {
+            return false;
+        }
+
+        if (!(warehouse instanceof PlayerWarehouse) && !player.getAccessLevel().allowTransaction()) {
+            player.sendMessage("Transactions are disabled for your Access Level.");
+            return false;
+        }
+
+        if (player.getReputation() < 0 && !CharacterSettings.canPkUseWareHouse()) {
+            return false;
+        }
+
+        if (ClanSettings.canMembersWithdrawFromWarehouse()) {
+            return (!(warehouse instanceof ClanWarehouse)) || player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE);
+        } else if ((warehouse instanceof ClanWarehouse) && !player.isClanLeader()) {
+            player.sendPacket(SystemMessageId.ITEMS_LEFT_AT_THE_CLAN_HALL_WAREHOUSE_CAN_ONLY_BE_RETRIEVED_BY_THE_CLAN_LEADER_DO_YOU_WANT_TO_CONTINUE);
+            return false;
+        }
+        return true;
     }
 }

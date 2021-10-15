@@ -24,24 +24,16 @@ import org.l2j.commons.util.StringUtil;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.FloodProtectorConfig;
-import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.*;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -59,7 +51,6 @@ public final class Config {
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-    private static final String GENERAL_CONFIG_FILE = "config/general.properties";
 
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
@@ -69,7 +60,6 @@ public final class Config {
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
 
     private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-    private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 
     // --------------------------------------------------
     // Custom Config File Definitions
@@ -90,11 +80,9 @@ public final class Config {
     private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
     private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
     private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
-    private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
     private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
-    private static final String TIME_LIMITED_ZONE_CONFIG_FILE = "./config/time-limited-zones.properties";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
     private static final String RANDOM_CRAFT_CONFIG_FILE = "./config/random-craft.properties";
 
@@ -119,12 +107,7 @@ public final class Config {
     public static long CS_SUPPORT_FEE_RATIO;
     public static int CS_SUPPORT1_FEE;
     public static int CS_SUPPORT2_FEE;
-    public static int CASTLE_BUY_TAX_NEUTRAL;
-    public static int CASTLE_BUY_TAX_LIGHT;
-    public static int CASTLE_BUY_TAX_DARK;
-    public static int CASTLE_SELL_TAX_NEUTRAL;
-    public static int CASTLE_SELL_TAX_LIGHT;
-    public static int CASTLE_SELL_TAX_DARK;
+
     public static int OUTER_DOOR_UPGRADE_PRICE2;
     public static int OUTER_DOOR_UPGRADE_PRICE3;
     public static int OUTER_DOOR_UPGRADE_PRICE5;
@@ -143,87 +126,6 @@ public final class Config {
     public static int CASTLE_DEFENDED_POINTS;
 
     // --------------------------------------------------
-    // General Settings
-    // --------------------------------------------------
-
-    public static boolean LOG_ITEM_ENCHANTS;
-
-    public static boolean SKILL_CHECK_ENABLE;
-    public static boolean SKILL_CHECK_REMOVE;
-    public static boolean SKILL_CHECK_GM;
-    public static boolean HTML_ACTION_CACHE_DEBUG;
-    public static boolean DEVELOPER;
-    public static boolean ALT_DEV_NO_SPAWNS;
-    public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
-    public static boolean ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS;
-
-    public static boolean ALLOW_DISCARDITEM;
-
-    public static boolean LAZY_ITEMS_UPDATE;
-    public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
-    public static boolean DESTROY_ALL_ITEMS;
-
-    public static boolean AUTODELETE_INVALID_QUEST_DATA;
-    public static boolean FORCE_INVENTORY_UPDATE;
-
-    public static int MIN_NPC_ANIMATION;
-    public static int MAX_NPC_ANIMATION;
-    public static int MIN_MONSTER_ANIMATION;
-    public static int MAX_MONSTER_ANIMATION;
-    public static boolean ENABLE_FALLING_DAMAGE;
-
-    public static int GRID_NEIGHBOR_TURNON_TIME;
-    public static int GRID_NEIGHBOR_TURNOFF_TIME;
-    public static int PEACE_ZONE_MODE;
-
-    public static boolean WAREHOUSE_CACHE;
-    public static int WAREHOUSE_CACHE_TIME;
-    public static boolean ALLOW_REFUND;
-    public static boolean ALLOW_ATTACHMENTS;
-    public static boolean ALLOW_WEAR;
-    public static int WEAR_DELAY;
-    public static int WEAR_PRICE;
-    public static int INSTANCE_FINISH_TIME;
-    public static boolean RESTORE_PLAYER_INSTANCE;
-    public static int EJECT_DEAD_PLAYER_TIME;
-    public static boolean ALLOW_WATER;
-    public static boolean ALLOW_FISHING;
-    public static boolean ALLOW_BOAT;
-
-    public static boolean ALLOW_MANOR;
-    public static boolean SERVER_NEWS;
-    public static boolean ENABLE_COMMUNITY_BOARD;
-    public static String BBS_DEFAULT;
-
-    public static int WORLD_CHAT_POINTS_PER_DAY;
-
-    public static int ALT_MANOR_REFRESH_TIME;
-    public static int ALT_MANOR_REFRESH_MIN;
-    public static int ALT_MANOR_APPROVE_TIME;
-    public static int ALT_MANOR_APPROVE_MIN;
-    public static int ALT_MANOR_MAINTENANCE_MIN;
-    public static int ALT_MANOR_SAVE_PERIOD_RATE;
-    public static boolean ALT_ITEM_AUCTION_ENABLED;
-    public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
-    public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-
-    public static int DEFAULT_PUNISH_PARAM;
-    public static boolean ONLY_GM_ITEMS_FREE;
-    public static boolean JAIL_IS_PVP;
-    public static boolean JAIL_DISABLE_TRANSACTION;
-    public static boolean CUSTOM_NPC_DATA;
-
-    public static int ALT_BIRTHDAY_GIFT;
-    public static String ALT_BIRTHDAY_MAIL_SUBJECT;
-    public static String ALT_BIRTHDAY_MAIL_TEXT;
-    public static boolean ENABLE_BLOCK_CHECKER_EVENT;
-    public static boolean HBCE_FAIR_PLAY;
-    public static boolean BOTREPORT_ENABLE;
-    public static String[] BOTREPORT_RESETPOINT_HOUR;
-    public static long BOTREPORT_REPORT_DELAY;
-    public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
-
-    // --------------------------------------------------
     // FloodProtector Settings
     // --------------------------------------------------
     public static FloodProtectorConfig FLOOD_PROTECTOR_USE_ITEM;
@@ -237,7 +139,6 @@ public final class Config {
     public static FloodProtectorConfig FLOOD_PROTECTOR_MULTISELL;
     public static FloodProtectorConfig FLOOD_PROTECTOR_TRANSACTION;
     public static FloodProtectorConfig FLOOD_PROTECTOR_MANUFACTURE;
-    public static FloodProtectorConfig FLOOD_PROTECTOR_MANOR;
     public static FloodProtectorConfig FLOOD_PROTECTOR_SENDMAIL;
     public static FloodProtectorConfig FLOOD_PROTECTOR_CHARACTER_SELECT;
     public static FloodProtectorConfig FLOOD_PROTECTOR_ITEM_AUCTION;
@@ -286,20 +187,8 @@ public final class Config {
     public static int INVENTORY_MAXIMUM_PET;
     public static double PET_HP_REGEN_MULTIPLIER;
     public static double PET_MP_REGEN_MULTIPLIER;
-    public static int SAYHA_GRACE_CONSUME_BY_MOB;
-    public static int SAYHA_GRACE_CONSUME_BY_BOSS;
 
-    // --------------------------------------------------
-    // Sayha's Grace Settings
-    // --------------------------------------------------
-    public static boolean ENABLE_SAYHA_GRACE;
-    public static int STARTING_SAYHA_GRACE_POINTS;
-    public static boolean RAIDBOSS_USE_SAYHA_GRACE;
-    public static float RATE_SAYHA_GRACE_EXP_MULTIPLIER;
-    public static float RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
-    public static int SAYHA_GRACE_MAX_ITEMS_ALLOWED;
-    public static float RATE_SAYHA_GRACE_LOST;
-    public static float RATE_SAYHA_GRACE_GAIN;
+
     // --------------------------------------------------
     // PvP Settings
     // --------------------------------------------------
@@ -399,8 +288,6 @@ public final class Config {
     // --------------------------------------------------
     // No classification assigned to the following yet
     // --------------------------------------------------
-    public static List<String> GAME_SERVER_SUBNETS;
-    public static List<String> GAME_SERVER_HOSTS;
     public static int PVP_NORMAL_TIME;
     public static int PVP_PVP_TIME;
     public static int MAX_REPUTATION;
@@ -490,7 +377,6 @@ public final class Config {
     public static double DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
     public static int ALT_CLAN_MEMBERS_FOR_WAR;
 
-    public static boolean DISPLAY_SERVER_TIME;
     public static int BUFFER_MAX_SCHEMES;
     public static int BUFFER_STATIC_BUFF_COST;
     public static boolean WELCOME_MESSAGE_ENABLED;
@@ -548,8 +434,6 @@ public final class Config {
     public static List<Integer> AUTO_CP_ITEM_IDS;
     public static List<Integer> AUTO_HP_ITEM_IDS;
     public static List<Integer> AUTO_MP_ITEM_IDS;
-    public static boolean AUTO_USE_ITEM;
-    public static boolean AUTO_USE_BUFF;
 
     public static boolean ENABLE_DONATION;
     public static boolean CUSTOM_STARTING_LOC;
@@ -620,10 +504,6 @@ public final class Config {
     // --------------------------------------------------
     // HUNTING ZONE
     // --------------------------------------------------
-    public static long TIME_LIMITED_ZONE_INITIAL_TIME;
-    public static long TIME_LIMITED_MAX_ADDED_TIME;
-    public static long TIME_LIMITED_ZONE_RESET_DELAY;
-    public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
     public static float L2_COIN_DROP_RATE;
 
     // --------------------------------------------------
@@ -659,25 +539,12 @@ public final class Config {
         FLOOD_PROTECTOR_MULTISELL = new FloodProtectorConfig("MultiSellFloodProtector");
         FLOOD_PROTECTOR_TRANSACTION = new FloodProtectorConfig("TransactionFloodProtector");
         FLOOD_PROTECTOR_MANUFACTURE = new FloodProtectorConfig("ManufactureFloodProtector");
-        FLOOD_PROTECTOR_MANOR = new FloodProtectorConfig("ManorFloodProtector");
         FLOOD_PROTECTOR_SENDMAIL = new FloodProtectorConfig("SendMailFloodProtector");
         FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
         FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
 
-        // Hosts and Subnets
-        final IPConfigData ipcd = new IPConfigData();
-        GAME_SERVER_SUBNETS = ipcd.getSubnets();
-        GAME_SERVER_HOSTS = ipcd.getHosts();
-
         // Load Feature config file (if exists)
         final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
-
-        CASTLE_BUY_TAX_NEUTRAL = Feature.getInt("BuyTaxForNeutralSide", 15);
-        CASTLE_BUY_TAX_LIGHT = Feature.getInt("BuyTaxForLightSide", 0);
-        CASTLE_BUY_TAX_DARK = Feature.getInt("BuyTaxForDarkSide", 30);
-        CASTLE_SELL_TAX_NEUTRAL = Feature.getInt("SellTaxForNeutralSide", 0);
-        CASTLE_SELL_TAX_LIGHT = Feature.getInt("SellTaxForLightSide", 0);
-        CASTLE_SELL_TAX_DARK = Feature.getInt("SellTaxForDarkSide", 20);
 
         CS_TELE_FEE_RATIO = Feature.getLong("CastleTeleportFunctionFeeRatio", 604800000);
         CS_TELE1_FEE = Feature.getInt("CastleTeleportFunctionFeeLvl1", 1000);
@@ -724,86 +591,6 @@ public final class Config {
         CLAN_EXP_MUL = Feature.getInt("ClanExpMul", 100);
         CLAN_EXP_MONSTER_MUL = Feature.getInt("ClanExpMonsterMul", 1);
         CLAN_EXP_QUEST_MUL = Feature.getInt("ClanExpQuestMul", 100);
-
-        // Load General config file (if exists)
-        final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
-
-        LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
-
-        SKILL_CHECK_ENABLE = General.getBoolean("SkillCheckEnable", false);
-        SKILL_CHECK_REMOVE = General.getBoolean("SkillCheckRemove", false);
-        SKILL_CHECK_GM = General.getBoolean("SkillCheckGM", true);
-        HTML_ACTION_CACHE_DEBUG = General.getBoolean("HtmlActionCacheDebug", false);
-        DEVELOPER = General.getBoolean("Developer", false);
-        ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
-        ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
-        ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
-        ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
-
-        LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
-        UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
-        DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
-        AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
-
-        FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
-
-        MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
-        MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
-        MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
-        MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
-
-        GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
-        GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
-        PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
-
-        WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);
-        WAREHOUSE_CACHE_TIME = General.getInt("WarehouseCacheTime", 15);
-        ALLOW_REFUND = General.getBoolean("AllowRefund", true);
-        ALLOW_ATTACHMENTS = General.getBoolean("AllowAttachments", true);
-        ALLOW_WEAR = General.getBoolean("AllowWear", true);
-        WEAR_DELAY = General.getInt("WearDelay", 5);
-        WEAR_PRICE = General.getInt("WearPrice", 10);
-        INSTANCE_FINISH_TIME = General.getInt("DefaultFinishTime", 5);
-        RESTORE_PLAYER_INSTANCE = General.getBoolean("RestorePlayerInstance", false);
-        EJECT_DEAD_PLAYER_TIME = General.getInt("EjectDeadPlayerTime", 1);
-        ALLOW_WATER = General.getBoolean("AllowWater", true);
-        ALLOW_FISHING = General.getBoolean("AllowFishing", true);
-        ALLOW_MANOR = General.getBoolean("AllowManor", true);
-        ALLOW_BOAT = General.getBoolean("AllowBoat", true);
-        SERVER_NEWS = General.getBoolean("ShowServerNews", false);
-        ENABLE_COMMUNITY_BOARD = General.getBoolean("EnableCommunityBoard", true);
-        BBS_DEFAULT = General.getString("BBSDefault", "_bbshome");
-
-        WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
-        ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
-        ALT_MANOR_REFRESH_MIN = General.getInt("AltManorRefreshMin", 0);
-        ALT_MANOR_APPROVE_TIME = General.getInt("AltManorApproveTime", 4);
-        ALT_MANOR_APPROVE_MIN = General.getInt("AltManorApproveMin", 30);
-        ALT_MANOR_MAINTENANCE_MIN = General.getInt("AltManorMaintenanceMin", 6);
-        ALT_MANOR_SAVE_PERIOD_RATE = General.getInt("AltManorSavePeriodRate", 2);
-        ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
-        ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
-        ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
-
-        DEFAULT_PUNISH_PARAM = General.getInt("DefaultPunishParam", 0);
-        ONLY_GM_ITEMS_FREE = General.getBoolean("OnlyGMItemsFree", true);
-        JAIL_IS_PVP = General.getBoolean("JailIsPvp", false);
-
-        JAIL_DISABLE_TRANSACTION = General.getBoolean("JailDisableTransaction", false);
-        CUSTOM_NPC_DATA = General.getBoolean("CustomNpcData", false);
-
-        ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
-        ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
-        ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + System.lineSeparator().repeat(2) + "Sincerely, Alegria");
-        ENABLE_BLOCK_CHECKER_EVENT = General.getBoolean("EnableBlockCheckerEvent", false);
-
-        HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
-
-        BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
-        BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
-        BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000L;
-        BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
-        ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 
         // Load FloodProtector config file
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
@@ -898,19 +685,6 @@ public final class Config {
         if (RATE_INSTANCE_PARTY_SP < 0) {
             RATE_INSTANCE_PARTY_SP = RATE_PARTY_SP;
         }
-
-        SAYHA_GRACE_CONSUME_BY_MOB = NPC.getInt("SayhaGraceConsumeByMob", 2250);
-        SAYHA_GRACE_CONSUME_BY_BOSS = NPC.getInt("SayhaGraceConsumeByBoss", 1125);
-        RATE_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateSayhaGraceExpMultiplier", 3);
-        RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
-        SAYHA_GRACE_MAX_ITEMS_ALLOWED = RatesSettings.getInt("SayhaGraceMaxItemsAllowed", 0);
-        if (SAYHA_GRACE_MAX_ITEMS_ALLOWED == 0)
-        {
-            SAYHA_GRACE_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
-        }
-        RATE_SAYHA_GRACE_LOST = RatesSettings.getFloat("RateSayhaGraceLost", 1);
-        RATE_SAYHA_GRACE_GAIN = RatesSettings.getFloat("RateSayhaGraceGain", 1);
-
         RATE_EXTRACTABLE = RatesSettings.getFloat("RateExtractable", 1);
         RATE_DROP_MANOR = RatesSettings.getInt("RateDropManor", 1);
         RATE_QUEST_DROP = RatesSettings.getFloat("RateQuestDrop", 1);
@@ -1264,9 +1038,6 @@ public final class Config {
             AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
 
-        AUTO_USE_BUFF = General.getBoolean("EnableAutoBuff", true);
-        AUTO_USE_ITEM = General.getBoolean("EnableAutoItem", true);
-
         final PropertiesParser Donations = new PropertiesParser(CUSTOM_DONATION_CONFIG_FILE);
         ENABLE_DONATION = Donations.getBoolean("EnableDonate", false);
 
@@ -1343,11 +1114,6 @@ public final class Config {
         SELLBUFF_MAX_PRICE = SellBuffs.getLong("MaximalPrice", 100000000);
         SELLBUFF_MAX_BUFFS = SellBuffs.getInt("MaxBuffs", 15);
 
-        // Load ServerTime config file (if exists)
-        final PropertiesParser ServerTime = new PropertiesParser(CUSTOM_SERVER_TIME_CONFIG_FILE);
-
-        DISPLAY_SERVER_TIME = ServerTime.getBoolean("DisplayServerTime", false);
-
         // Load SchemeBuffer config file (if exists)
         final PropertiesParser SchemeBuffer = new PropertiesParser(CUSTOM_SCHEME_BUFFER_CONFIG_FILE);
 
@@ -1402,15 +1168,6 @@ public final class Config {
         HOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("HopzoneDualboxesAllowed", 1);
         ALLOW_HOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowHopzoneGameServerReport", false);
 
-
-        // Load Time Limited Zone config file (if exists)
-        final PropertiesParser timeLimitedZoneSettings = new PropertiesParser(TIME_LIMITED_ZONE_CONFIG_FILE);
-        TIME_LIMITED_ZONE_INITIAL_TIME = timeLimitedZoneSettings.getLong("InitialTime", 3600000);
-        TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
-        TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
-        TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
-
-        // Magic Lamp
         final PropertiesParser magicLampSettings = new PropertiesParser(MAGIC_LAMP_CONFIG_FILE);
         ENABLE_MAGIC_LAMP = magicLampSettings.getBoolean("MagicLampEnabled", false);
         MAGIC_LAMP_MAX_GAME_COUNT = magicLampSettings.getInt("MagicLampMaxGames", 127);
@@ -1454,7 +1211,6 @@ public final class Config {
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MULTISELL, "MultiSell", 1);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_TRANSACTION, "Transaction", 10);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MANUFACTURE, "Manufacture", 3);
-        loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_MANOR, "Manor", 30);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_SENDMAIL, "SendMail", 100);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_CHARACTER_SELECT, "CharacterSelect", 30);
         loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_ITEM_AUCTION, "ItemAuction", 9);
@@ -1488,133 +1244,5 @@ public final class Config {
             ret.put(i++, Float.parseFloat(value));
         }
         return ret;
-    }
-
-    private static class IPConfigData extends GameXmlReader {
-        private static final List<String> _subnets = new ArrayList<>(5);
-        private static final List<String>
-                _hosts = new ArrayList<>(5);
-
-        public IPConfigData() {
-            load();
-        }
-
-        @Override
-        protected Path getSchemaFilePath() {
-            return Path.of("./config/xsd/ipconfig.xsd");
-        }
-
-        @Override
-        public void load() {
-            if (Files.isRegularFile(Path.of(IPCONFIG_FILE))) {
-                LOGGER.info("Network Config: ipconfig.xml exists using manual configuration...");
-                parseFile(IPCONFIG_FILE);
-            } else
-            // Auto configuration...
-            {
-                LOGGER.info("Network Config: ipconfig.xml doesn't exists using automatic configuration...");
-                autoIpConfig();
-            }
-            releaseResources();
-        }
-
-        @Override
-        public void parseDocument(Document doc, File f) {
-            NamedNodeMap attrs;
-            for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
-                if ("gameserver".equalsIgnoreCase(n.getNodeName())) {
-                    for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                        if ("define".equalsIgnoreCase(d.getNodeName())) {
-                            attrs = d.getAttributes();
-                            _subnets.add(attrs.getNamedItem("subnet").getNodeValue());
-                            _hosts.add(attrs.getNamedItem("address").getNodeValue());
-
-                            if (_hosts.size() != _subnets.size()) {
-                                LOGGER.warn("Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
-                            }
-                        }
-                    }
-
-                    final Node att = n.getAttributes().getNamedItem("address");
-                    if (att == null) {
-                        LOGGER.warn("Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
-                        _hosts.add("127.0.0.1");
-                    } else {
-                        _hosts.add(att.getNodeValue());
-                    }
-                    _subnets.add("0.0.0.0/0");
-                }
-            }
-        }
-
-        protected void autoIpConfig() {
-            String externalIp;
-            try {
-                final URL autoIp = new URL("https://api.ipify.org/");
-                try (BufferedReader in = new BufferedReader(new InputStreamReader(autoIp.openStream()))) {
-                    externalIp = in.readLine();
-                }
-            } catch (IOException e) {
-                LOGGER.info("Failed to connect to api.ipify.org please check your internet connection! using 127.0.0.1!");
-                externalIp = "127.0.0.1";
-            }
-
-            try {
-                final Enumeration<NetworkInterface> niList = NetworkInterface.getNetworkInterfaces();
-
-                while (niList.hasMoreElements()) {
-                    final NetworkInterface ni = niList.nextElement();
-
-                    if (!ni.isUp() || ni.isVirtual()) {
-                        continue;
-                    }
-
-                    if (!ni.isLoopback() && ((ni.getHardwareAddress() == null) || (ni.getHardwareAddress().length != 6))) {
-                        continue;
-                    }
-
-                    for (InterfaceAddress ia : ni.getInterfaceAddresses()) {
-                        if (ia.getAddress() instanceof Inet6Address) {
-                            continue;
-                        }
-
-                        final String hostAddress = ia.getAddress().getHostAddress();
-                        final int subnetPrefixLength = ia.getNetworkPrefixLength();
-                        final int subnetMaskInt = IntStream.rangeClosed(1, subnetPrefixLength).reduce((r, e) -> (r << 1) + 1).orElse(0) << (32 - subnetPrefixLength);
-                        final int hostAddressInt = Arrays.stream(hostAddress.split("\\.")).mapToInt(Integer::parseInt).reduce((r, e) -> (r << 8) + e).orElse(0);
-                        final int subnetAddressInt = hostAddressInt & subnetMaskInt;
-                        final String subnetAddress = ((subnetAddressInt >> 24) & 0xFF) + "." + ((subnetAddressInt >> 16) & 0xFF) + "." + ((subnetAddressInt >> 8) & 0xFF) + "." + (subnetAddressInt & 0xFF);
-                        final String subnet = subnetAddress + '/' + subnetPrefixLength;
-                        if (!_subnets.contains(subnet) && !subnet.equals("0.0.0.0/0")) {
-                            _subnets.add(subnet);
-                            _hosts.add(hostAddress);
-                            LOGGER.info("Network Config: Adding new subnet: " + subnet + " address: " + hostAddress);
-                        }
-                    }
-                }
-
-                // External host and subnet
-                _hosts.add(externalIp);
-                _subnets.add("0.0.0.0/0");
-                LOGGER.info("Network Config: Adding new subnet: 0.0.0.0/0 address: " + externalIp);
-            } catch (SocketException e) {
-                LOGGER.info("Network Config: Configuration failed please configure manually using ipconfig.xml", e);
-                System.exit(0);
-            }
-        }
-
-        protected List<String> getSubnets() {
-            if (_subnets.isEmpty()) {
-                return Collections.singletonList("0.0.0.0/0");
-            }
-            return _subnets;
-        }
-
-        protected List<String> getHosts() {
-            if (_hosts.isEmpty()) {
-                return Collections.singletonList("127.0.0.1");
-            }
-            return _hosts;
-        }
     }
 }

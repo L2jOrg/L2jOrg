@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
@@ -30,6 +29,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 
@@ -54,77 +54,18 @@ public final class RequestDestroyItem extends ClientPacket {
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-        if (player == null) {
-            return;
-        }
-
-        if (count <= 0) {
-            if (count < 0) {
-                GameUtils.handleIllegalPlayerAction(player, "[RequestDestroyItem] Player " + player + " tried to destroy item with oid " + objectId + " but has count < 0!");
-            }
-            return;
-        }
-
-        if (!client.getFloodProtectors().getTransaction().tryPerformAction("destroy")) {
-            player.sendMessage("You are destroying items too fast.");
-            return;
-        }
-
-        if (player.isProcessingTransaction() || (player.getPrivateStoreType() != PrivateStoreType.NONE)) {
-            client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
-            return;
-        }
-
-        if (player.hasItemRequest()) {
-            player.sendPacket(SystemMessageId.YOU_CANNOT_DESTROY_OR_CRYSTALLIZE_ITEMS_WHILE_ENCHANTING_ATTRIBUTES);
+        if (!canPlayerDestroyItem(player)) {
             return;
         }
 
         final Item itemToRemove = player.getInventory().getItemByObjectId(objectId);
-
-        // if we can't find the requested item, its actually a cheat
-        if (itemToRemove == null) {
-            // gm can destroy other player items
-            if (player.isGM()) {
-                final WorldObject obj = World.getInstance().findObject(objectId);
-                if (isItem(obj)) {
-                    if (this.count > ((Item) obj).getCount()) {
-                        count = ((Item) obj).getCount();
-                    }
-                    AdminCommandHandler.getInstance().useAdminCommand(player, "admin_delete_item " + objectId + " " + count, true);
-                }
-                return;
-            }
-
-            client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+        if (!canItemBeDestroyed(player, itemToRemove)) {
             return;
         }
+        destroyItem(player, itemToRemove);
+    }
 
-        // Cannot discard item that the skill is consuming
-        if (player.isCastingNow(s -> s.getSkill().getItemConsumeId() == itemToRemove.getId())) {
-            client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-            return;
-        }
-
-        if (!Config.DESTROY_ALL_ITEMS && ((!player.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()))) {
-            if (itemToRemove.isHeroItem()) {
-                client.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
-            } else {
-                client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-            }
-            return;
-        }
-
-        if (!itemToRemove.isStackable() && (count > 1)) {
-            GameUtils.handleIllegalPlayerAction(player, "[RequestDestroyItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to destroy a non-stackable item with oid " + objectId + " but has count > 1!");
-            return;
-        }
-
-        if (player.getInventory().isBlocked(itemToRemove)) {
-            player.sendMessage("You cannot use this item.");
-            return;
-        }
-
+    private void destroyItem(Player player, Item itemToRemove) {
         if (this.count > itemToRemove.getCount()) {
             count = itemToRemove.getCount();
         }
@@ -156,5 +97,90 @@ public final class RequestDestroyItem extends ClientPacket {
             return;
         }
         player.sendInventoryUpdate(new InventoryUpdate(removedItem));
+    }
+
+    private boolean canItemBeDestroyed(Player player, Item itemToRemove) {
+        // if we can't find the requested item, its actually a cheat
+        if (itemToRemove == null) {
+            if (isGmDestroying(player)) {
+                return false;
+            }
+
+            client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+            return false;
+        }
+
+        if (player.isCastingNow(s -> s.getSkill().getItemConsumeId() == itemToRemove.getId())) {
+            client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+            return false;
+        }
+
+        return checkItemRestrictions(player, itemToRemove);
+    }
+
+    private boolean checkItemRestrictions(Player player, Item itemToRemove) {
+        if (!GeneralSettings.destroyAnyItem() && !player.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) {
+            if (itemToRemove.isHeroItem()) {
+                client.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
+            } else {
+                client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+            }
+            return false;
+        }
+
+        if (!itemToRemove.isStackable() && (count > 1)) {
+            GameUtils.handleIllegalPlayerAction(player, "[RequestDestroyItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to destroy a non-stackable item with oid " + objectId + " but has count > 1!");
+            return false;
+        }
+
+        if (player.getInventory().isBlocked(itemToRemove)) {
+            player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isGmDestroying(Player player) {
+        // gm can destroy other player items
+        if (player.isGM()) {
+            final WorldObject obj = World.getInstance().findObject(objectId);
+            if (isItem(obj)) {
+                if (this.count > ((Item) obj).getCount()) {
+                    count = ((Item) obj).getCount();
+                }
+                AdminCommandHandler.getInstance().useAdminCommand(player, "admin_delete_item " + objectId + " " + count, true);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    private boolean canPlayerDestroyItem(Player player) {
+        if (player == null) {
+            return false;
+        }
+
+        if (count <= 0) {
+            if (count < 0) {
+                GameUtils.handleIllegalPlayerAction(player, "[RequestDestroyItem] Player " + player + " tried to destroy item with oid " + objectId + " but has count < 0!");
+            }
+            return false;
+        }
+
+        if (!client.getFloodProtectors().getTransaction().tryPerformAction("destroy")) {
+            player.sendMessage("You are destroying items too fast.");
+            return false;
+        }
+
+        if (player.isProcessingTransaction() || (player.getPrivateStoreType() != PrivateStoreType.NONE)) {
+            client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+            return false;
+        }
+
+        if (player.hasItemRequest()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_DESTROY_OR_CRYSTALLIZE_ITEMS_WHILE_ENCHANTING_ATTRIBUTES);
+            return false;
+        }
+        return true;
     }
 }

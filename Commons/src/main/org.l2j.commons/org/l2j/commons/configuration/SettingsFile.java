@@ -186,9 +186,9 @@ public final class SettingsFile extends Properties {
             return defaultValue;
         }
         try {
-            return Enum.valueOf(enumClass, value);
+            return Enum.valueOf(enumClass, value.toUpperCase());
         } catch (Exception e) {
-            LOGGER.warn("Unknown enum constant {} of type {}", key, enumClass);
+            LOGGER.warn("Unknown enum constant {} of type {} using default value {}", key, enumClass, defaultValue);
         }
         return defaultValue;
     }

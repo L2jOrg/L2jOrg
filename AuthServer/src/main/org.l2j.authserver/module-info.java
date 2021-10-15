@@ -5,7 +5,6 @@ module org.l2j.authserver {
     requires io.github.joealisson.primitive;
     requires java.xml;
     requires jdk.unsupported;
-    requires java.management;
 
     exports org.l2j.authserver;
     opens org.l2j.authserver.settings to org.l2j.commons;

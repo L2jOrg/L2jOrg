@@ -22,9 +22,6 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.eventengine.AbstractEventManager;
 import org.l2j.gameserver.model.eventengine.EventMethodNotification;
 import org.l2j.gameserver.model.eventengine.EventScheduler;
-import org.l2j.gameserver.model.eventengine.IConditionalEventScheduler;
-import org.l2j.gameserver.model.eventengine.conditions.BetweenConditionalScheduler;
-import org.l2j.gameserver.model.eventengine.conditions.HaventRunConditionalScheduler;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -117,34 +114,35 @@ public final class EventEngine extends GameXmlReader {
                 schedulers.add(parseSchedule(eventManager, node));
 
             } else if ("conditionalSchedule".equals(node.getNodeName())) {
-                parseConditinalSchedule(eventManager, conditionalSchedulers, node);
+                parseConditionalSchedule(eventManager, conditionalSchedulers, node);
             }
         }
         eventManager.setSchedulers(schedulers);
         eventManager.setConditionalSchedulers(conditionalSchedulers);
     }
 
-    private void parseConditinalSchedule(AbstractEventManager<?> eventManager, Set<IConditionalEventScheduler> conditionalSchedulers, Node node) {
+    private void parseConditionalSchedule(AbstractEventManager<?> eventManager, Set<IConditionalEventScheduler> conditionalSchedulers, Node node) {
         for (Node eventNode = node.getFirstChild(); nonNull(eventNode); eventNode = eventNode.getNextSibling()) {
 
             if ("run".equals(eventNode.getNodeName())) {
                 final String name = parseString(eventNode.getAttributes(), "name");
-                final String ifType = parseString(eventNode.getAttributes(), "if", "BETWEEN").toUpperCase();
+                var conditionType = parseEnum(eventNode.getAttributes(), ConditionalSchedulerType.class, "if");
 
-                switch (ifType) {
-                    case "BETWEEN" -> parseBetweenSchedule(eventManager, conditionalSchedulers, eventNode, name);
-                    case "HAVENT_RUN" -> conditionalSchedulers.add(new HaventRunConditionalScheduler(eventManager, name));
+                if (conditionType == ConditionalSchedulerType.BETWEEN) {
+                    parseBetweenSchedule(eventManager, conditionalSchedulers, eventNode, name);
+                } else if (conditionType == ConditionalSchedulerType.HAS_NOT_RUN) {
+                    conditionalSchedulers.add(new HasNotRunConditionalScheduler(eventManager, name));
                 }
             }
         }
     }
 
     private void parseBetweenSchedule(AbstractEventManager<?> eventManager, Set<IConditionalEventScheduler> conditionalSchedulers, Node eventNode, String name) {
-        NodeList childs = eventNode.getChildNodes();
-        if(childs.getLength() != 2) {
-            LOGGER.warn("Event: {} has incorrect amount of schedulers expected: 2 found: {}", eventManager.getName(), childs.getLength());
+        NodeList children = eventNode.getChildNodes();
+        if(children.getLength() != 2) {
+            LOGGER.warn("Event: {} has incorrect amount of schedulers expected: 2 found: {}", eventManager.getName(), children.getLength());
         } else {
-            conditionalSchedulers.add(new BetweenConditionalScheduler(eventManager, name, childs.item(0).getTextContent(), childs.item(1).getTextContent()));
+            conditionalSchedulers.add(new BetweenConditionalScheduler(eventManager, name, children.item(0).getTextContent(), children.item(1).getTextContent()));
         }
     }
 

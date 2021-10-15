@@ -19,7 +19,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.network.serverpackets.ExShowContactList;
-import org.l2j.gameserver.settings.GeneralSettings;
 
 /**
  * Format: (ch)
@@ -34,10 +33,6 @@ public final class RequestExShowContactList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!GeneralSettings.allowMail()) {
-            return;
-        }
-
         client.sendPacket(new ExShowContactList());
     }
 }

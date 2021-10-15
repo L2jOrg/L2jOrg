@@ -22,9 +22,8 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BuyListDAO;
 import org.l2j.gameserver.data.database.data.BuyListInfo;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.BodyPart;
-import org.l2j.gameserver.model.item.EquipableItem;
-import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 
 import java.util.Objects;
@@ -146,7 +145,7 @@ public final class Product {
     }
 
     public boolean isEquipable() {
-        return template instanceof EquipableItem;
+        return template.isEquipable();
     }
 
     public int getType2() {

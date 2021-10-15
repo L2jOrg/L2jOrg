@@ -44,11 +44,13 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.npc.*;
+import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
@@ -64,13 +66,14 @@ import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.TaxZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Queue;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -202,7 +205,7 @@ public class Npc extends Creature {
      * @return true if the server allows Random Animation.
      */
     public boolean hasRandomAnimation() {
-        return ((Config.MAX_NPC_ANIMATION > 0) && _isRandomAnimationEnabled && (getAiType() != AIType.CORPSE));
+        return _isRandomAnimationEnabled && GeneralSettings.maxNpcAnimation() > 0  && (getAiType() != AIType.CORPSE);
     }
 
     /**
@@ -212,13 +215,6 @@ public class Npc extends Creature {
      */
     public void setRandomAnimation(boolean val) {
         _isRandomAnimationEnabled = val;
-    }
-
-    /**
-     * @return {@code true}, if random animation is enabled, {@code false} otherwise.
-     */
-    public boolean isRandomAnimationEnabled() {
-        return _isRandomAnimationEnabled;
     }
 
     public void setRandomWalking(boolean enabled) {
@@ -848,7 +844,7 @@ public class Npc extends Creature {
             getSkillChannelized().abortChannelization();
         }
 
-        ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+        ZoneEngine.getInstance().removeFromZones(this);
 
         return super.deleteMe();
     }
@@ -1056,10 +1052,10 @@ public class Npc extends Creature {
             // Randomize drop position.
             final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
             final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
-            final int newZ = getZ() + 20;
+            final int newZ = (int) (getZ() + _currentCollisionHeight + 20);
 
             if (ItemEngine.getInstance().getTemplate(itemId) == null) {
-                LOGGER.error("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
+                LOGGER.error("Item doesn't exist so cannot be dropped. Item ID: {} Quest: {}",  itemId,  getName());
                 return null;
             }
 
@@ -1275,5 +1271,10 @@ public class Npc extends Creature {
     @Override
     public int getReputation() {
         return 0;
+    }
+
+    @Override
+    protected Queue<AbstractEventListener> globalListenerByType(EventType type) {
+        return Listeners.Npcs().getListeners(type);
     }
 }

@@ -20,12 +20,14 @@ package org.l2j.gameserver.world.zone.type;
 
 /**
  * @author xban1x
+ * @author JoeAlisson
  */
 public abstract class ResidenceZone extends SpawnZone {
-    private int residenceId;
+    private final int residenceId;
 
-    ResidenceZone(int id) {
+    ResidenceZone(int id, int residenceId) {
         super(id);
+        this.residenceId = residenceId;
     }
 
     public void banishForeigners(int owningClanId) {
@@ -36,7 +38,4 @@ public abstract class ResidenceZone extends SpawnZone {
         return residenceId;
     }
 
-    void setResidenceId(int residenceId) {
-        this.residenceId = residenceId;
-    }
 }

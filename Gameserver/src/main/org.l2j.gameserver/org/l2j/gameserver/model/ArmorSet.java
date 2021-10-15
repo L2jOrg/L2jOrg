@@ -18,12 +18,12 @@
  */
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
-import io.github.joealisson.primitive.LinkedHashIntSet;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.holders.ArmorsetSkillHolder;
+import org.l2j.gameserver.model.holders.ArmorsetSkillInfo;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.stats.BaseStats;
 
@@ -34,7 +34,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.enums.InventorySlot.*;
 
 /**
- * @author UnAfraid
+ * @author UnAfraidX
  * @author JoeAlisson
  */
 public final class ArmorSet {
@@ -44,9 +44,9 @@ public final class ArmorSet {
     private static final EnumSet<InventorySlot> ARTIFACT_3_SLOTS = EnumSet.of(ARTIFACT9, ARTIFACT10, ARTIFACT11, ARTIFACT12, ARTIFACT15, ARTIFACT18, ARTIFACT21);
 
     private final int minimumPieces;
-    private final IntSet requiredItems = new LinkedHashIntSet();
-    private final IntSet optionalItems = new LinkedHashIntSet();
-    private final List<ArmorsetSkillHolder> skills = new ArrayList<>();
+    private final IntSet requiredItems = new HashIntSet();
+    private final IntSet optionalItems = new HashIntSet();
+    private final List<ArmorsetSkillInfo> skills = new ArrayList<>();
     private final Map<BaseStats, Double> _stats = new LinkedHashMap<>();
 
     public ArmorSet(int minimumPieces) {
@@ -63,7 +63,6 @@ public final class ArmorSet {
     /**
      * Adds an item to the set
      *
-     * @param item
      * @return {@code true} if item was successfully added, {@code false} in case it already exists
      */
     public boolean addRequiredItem(int item) {
@@ -80,7 +79,6 @@ public final class ArmorSet {
     /**
      * Adds an shield to the set
      *
-     * @param item
      * @return {@code true} if shield was successfully added, {@code false} in case it already exists
      */
     public boolean addOptionalItem(int item) {
@@ -96,42 +94,49 @@ public final class ArmorSet {
 
     /**
      * Adds an skill to the set
-     *
-     * @param holder
      */
-    public void addSkill(ArmorsetSkillHolder holder) {
+    public void addSkill(ArmorsetSkillInfo holder) {
         skills.add(holder);
     }
 
     /**
      * The list of skills that are activated when set reaches it's minimal equipped items condition
-     *
-     * @return
      */
-    public List<ArmorsetSkillHolder> getSkills() {
+    public List<ArmorsetSkillInfo> getSkills() {
         return skills;
     }
 
     /**
      * Adds stats bonus to the set activated when set reaches it's minimal equipped items condition
-     *
-     * @param stat
-     * @param value
      */
     public void addStatsBonus(BaseStats stat, double value) {
         _stats.putIfAbsent(stat, value);
     }
 
     /**
-     * @param stat
      * @return the stats bonus value or 0 if doesn't exists
      */
     public double getStatsBonus(BaseStats stat) {
         return _stats.getOrDefault(stat, 0d);
     }
 
+    public int getFullSetLowestEnchant(Player player) {
+        var checked = 0;
+        int lowestEnchant = 0;
+        var inventory = player.getInventory();
+        for (var slot : armorset()) {
+            var item =  inventory.getPaperdollItem(slot);
+            if(item != null && requiredItems.contains(item.getId())) {
+                if(lowestEnchant == 0 || lowestEnchant > item.getEnchantLevel()) {
+                    lowestEnchant = item.getEnchantLevel();
+                }
+                checked++;
+            }
+        }
+        return checked < requiredItems.size() ? 0 : lowestEnchant;
+    }
+
     /**
-     * @param player
      * @return true if all parts of set are enchanted to +6 or more
      */
     public int getLowestSetEnchant(Player player) {
@@ -140,7 +145,7 @@ public final class ArmorSet {
         }
 
         final PlayerInventory inv = player.getInventory();
-        int enchantLevel = Byte.MAX_VALUE;
+        int enchantLevel = Short.MAX_VALUE;
         for (var armorSlot : InventorySlot.armorset()) {
             final Item itemPart = inv.getPaperdollItem(armorSlot);
             if ((itemPart != null) && requiredItems.contains(itemPart.getId())) {
@@ -149,7 +154,7 @@ public final class ArmorSet {
                 }
             }
         }
-        if (enchantLevel == Byte.MAX_VALUE) {
+        if (enchantLevel == Short.MAX_VALUE) {
             enchantLevel = 0;
         }
         return enchantLevel;
@@ -158,8 +163,6 @@ public final class ArmorSet {
     /**
      * Condition for 3 Lv. Set Effect Applied Skill
      *
-     * @param player
-     * @param bookSlot
      * @return total paperdoll(busy) count for 1 of 3 artifact book slots
      */
     public int getArtifactSlotMask(Player player, int bookSlot) {
@@ -187,8 +190,6 @@ public final class ArmorSet {
     }
 
     /**
-     * @param player
-     * @param idProvider
      * @return the amount of set visual items that player has equipped
      */
     public int getPiecesCount(Player player, ToIntFunction<Item> idProvider) {

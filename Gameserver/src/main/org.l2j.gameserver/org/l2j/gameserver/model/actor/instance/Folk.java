@@ -20,7 +20,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.status.FolkStatus;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -48,7 +48,7 @@ public class Folk extends Npc {
      */
     public static void showSkillList(Player player, Npc npc, ClassId classId) {
         // Normal skills, No LearnedByFS, no AutoGet skills.
-        final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false, false);
+        final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false);
         if (skills.isEmpty()) {
             final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(classId);
             final int minLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, skillTree);

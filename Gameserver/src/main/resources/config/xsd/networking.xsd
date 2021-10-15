@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:element name="networks">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="network" type="Network" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="ip-service-discovery" default="https://api.ipify.org/"/>
+            <xs:attribute name="provider-type" type="ProviderType" default="single-networking"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Network">
+        <xs:choice>
+            <xs:element name="auto-discovery"/>
+            <xs:element name="subnet" type="SubNet" maxOccurs="unbounded"/>
+        </xs:choice>
+        <xs:attribute name="port" type="Port" use="required"/>
+        <xs:attribute name="key" type="xs:token" default=""/>
+        <xs:attribute name="auth-server-host" type="IPv4" use="required"/>
+        <xs:attribute name="auth-server-port" type="Port" use="required"/>
+        <xs:attribute name="auth-server-key" type="xs:token" default=""/>
+    </xs:complexType>
+
+    <xs:complexType name="SubNet">
+        <xs:attribute name="address" type="IPv4Mask" use="required"/>
+        <xs:attribute name="host" type="IPv4" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="IPv4Mask">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="((1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])/(1?[0-9]|2?[0-9]|3?[0-1])"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="IPv4">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="#external"/>
+            <xs:pattern value="[a-z0-9.-]+"/>
+            <xs:pattern value="((1[0-9]?[0-9]?|2[0-4][0-9]|25[0-5])\.)((1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.){2}(1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Port">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+            <xs:maxExclusive value="65535"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ProviderType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="single-networking"/>
+            <xs:enumeration value="multi-networking"/>
+            <xs:enumeration value="provided"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -50,7 +50,7 @@ public abstract class AbstractDefenseFinalizer implements IStatsFunction {
     }
 
     protected ToDoubleFunction<Player> baseDefBySlot(InventorySlot slot) {
-        return player -> player.getTransformation().map(t -> t.getBaseDefBySlot(player, slot)).orElseGet(() -> player.getTemplate().getBaseDefBySlot(slot));
+        return player -> player.getTemplate().getBaseDefBySlot(slot);
     }
 
     protected double defaultValue(Creature creature, Stat stat, double baseValue) {

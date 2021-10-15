@@ -21,9 +21,8 @@ package org.l2j.gameserver.model.conditions;
 import io.github.joealisson.primitive.IntList;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 
 /**
  * @author UnAfraid
@@ -41,12 +40,6 @@ public class ConditionPlayerInsideZoneId extends Condition {
         if (effector.getActingPlayer() == null) {
             return false;
         }
-
-        for (Zone zone : ZoneManager.getInstance().getZones(effector)) {
-            if (zones.contains(zone.getId())) {
-                return true;
-            }
-        }
-        return false;
+        return ZoneEngine.getInstance().anyZoneMatches(effector, z -> zones.contains(z.getId()));
     }
 }

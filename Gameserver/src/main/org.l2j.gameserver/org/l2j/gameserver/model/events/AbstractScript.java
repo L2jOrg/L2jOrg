@@ -25,8 +25,10 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
+import org.l2j.gameserver.engine.item.EtcItem;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.scripting.ManagedScript;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.QuestSound;
@@ -67,14 +69,11 @@ import org.l2j.gameserver.model.events.timers.IEventTimerCancel;
 import org.l2j.gameserver.model.events.timers.IEventTimerEvent;
 import org.l2j.gameserver.model.events.timers.TimerHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.IPositionable;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.EtcItem;
-import org.l2j.gameserver.model.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.PlayerInventory;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
@@ -85,7 +84,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.util.MinionList;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -150,97 +149,49 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         final IntSet ids = new HashIntSet();
         for (Method method : getClass().getMethods()) {
             if (method.isAnnotationPresent(RegisterEvent.class) && method.isAnnotationPresent(RegisterType.class)) {
-                final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
-                final RegisterType regType = method.getAnnotation(RegisterType.class);
-
-                final ListenerRegisterType type = regType.value();
-                final EventType eventType = listener.value();
-                if (method.getParameterCount() != 1) {
-                    LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter count is 1 but found: {}", method.getName(), method.getParameterCount());
-                    continue;
-                } else if (!eventType.isEventClass(method.getParameterTypes()[0])) {
-                    LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter to be type of: {}  but found: {}", method.getName(), eventType.getEventClass().getSimpleName(), method.getParameterTypes()[0].getSimpleName());
-                    continue;
-                } else if (!eventType.isReturnClass(method.getReturnType())) {
-                    LOGGER.warn("Non properly defined annotation listener on method: {} expected return type to be one of: {} but found: {}", method.getName(), Arrays.toString(eventType.getReturnClasses()), method.getReturnType().getSimpleName());
-                    continue;
-                }
-
-                int priority = 0;
-                ids.clear();
-
-                for (Annotation annotation : method.getAnnotations()) {
-                    if (annotation instanceof Id npc) {
-                        for (int id : npc.value()) {
-                            ids.add(id);
-                        }
-                    } else if (annotation instanceof Ids npcs) {
-                        for (Id npc : npcs.value()) {
-                            for (int id : npc.value()) {
-                                ids.add(id);
-                            }
-                        }
-                    } else if (annotation instanceof Range range) {
-                        if (range.from() > range.to()) {
-                            LOGGER.warn("Wrong Range: from is higher then to!");
-                            continue;
-                        }
-
-                        for (int id = range.from(); id <= range.to(); id++) {
-                            ids.add(id);
-                        }
-                    } else if (annotation instanceof Ranges ranges) {
-                        for (Range range : ranges.value()) {
-                            if (range.from() > range.to()) {
-                                LOGGER.warn("Wrong Ranges: from is higher then to!");
-                                continue;
-                            }
-
-                            for (int id = range.from(); id <= range.to(); id++) {
-                                ids.add(id);
-                            }
-                        }
-                    } else if (annotation instanceof NpcLevelRange range) {
-                        if (range.from() > range.to()) {
-                            LOGGER.warn("Wrong NpcLevelRange: from is higher then to!");
-                            continue;
-                        } else if (type != ListenerRegisterType.NPC) {
-                            LOGGER.warn("ListenerRegisterType {} for NpcLevelRange, NPC is expected!", type);
-                            continue;
-                        }
-
-                        for (int level = range.from(); level <= range.to(); level++) {
-                            final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
-                            templates.forEach(template -> ids.add(template.getId()));
-                        }
-
-                    } else if (annotation instanceof NpcLevelRanges ranges) {
-                        for (NpcLevelRange range : ranges.value()) {
-                            if (range.from() > range.to()) {
-                                LOGGER.warn(": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
-                                continue;
-                            } else if (type != ListenerRegisterType.NPC) {
-                                LOGGER.warn(": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
-                                continue;
-                            }
-
-                            for (int level = range.from(); level <= range.to(); level++) {
-                                final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
-                                templates.forEach(template -> ids.add(template.getId()));
-                            }
-                        }
-                    } else if (annotation instanceof Priority p) {
-                        priority = p.value();
-                    }
-                }
-
-                if (!ids.isEmpty()) {
-                    _registeredIds.computeIfAbsent(type, k -> CHashIntMap.newKeySet()).addAll(ids);
-                }
-
-                registerAnnotation(method, eventType, type, priority, ids);
+                registerListener(ids, method);
             }
         }
+    }
+
+    private void addNpcLevelRange(IntSet ids, ListenerRegisterType type, NpcLevelRange range) {
+        if (range.from() > range.to()) {
+            LOGGER.warn("Wrong NpcLevelRange: from is higher then to!");
+            return;
+        } else if (type != ListenerRegisterType.NPC) {
+            LOGGER.warn("ListenerRegisterType {} for NpcLevelRange, NPC is expected!", type);
+            return;
+        }
+
+        for (int level = range.from(); level <= range.to(); level++) {
+            final List<NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
+            templates.forEach(template -> ids.add(template.getId()));
+        }
+    }
+
+    private void addIdsRange(IntSet ids, Range range) {
+        if (range.from() > range.to()) {
+            LOGGER.warn("Wrong Range: from is higher then to!");
+            return;
+        }
+
+        for (int id = range.from(); id <= range.to(); id++) {
+            ids.add(id);
+        }
+    }
+
+    private boolean validateMethod(Method method, EventType eventType) {
+        if (method.getParameterCount() != 1) {
+            LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter count is 1 but found: {}", method.getName(), method.getParameterCount());
+            return false;
+        } else if (!eventType.isEventClass(method.getParameterTypes()[0])) {
+            LOGGER.warn("Non properly defined annotation listener on method: {} expected parameter to be type of: {}  but found: {}", method.getName(), eventType.getEventClass().getSimpleName(), method.getParameterTypes()[0].getSimpleName());
+            return false;
+        } else if (!eventType.isReturnClass(method.getReturnType())) {
+            LOGGER.warn("Non properly defined annotation listener on method: {} expected return type to be one of: {} but found: {}", method.getName(), Arrays.toString(eventType.getReturnClasses()), method.getReturnType().getSimpleName());
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -617,8 +568,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Provides instant callback operation when {@link Creature} Enters on a {@link Zone}.
      */
-    protected final List<AbstractEventListener> setCreatureZoneEnterId(Consumer<OnCreatureZoneEnter> callback, int... npcIds) {
-        return registerConsumer(callback, EventType.ON_CREATURE_ZONE_ENTER, ListenerRegisterType.ZONE, npcIds);
+    protected final List<AbstractEventListener> setCreatureZoneEnterId(Consumer<OnCreatureZoneEnter> callback, int... zoneIds) {
+        return registerConsumer(callback, EventType.ON_CREATURE_ZONE_ENTER, ListenerRegisterType.ZONE, zoneIds);
     }
 
     /**
@@ -743,8 +694,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Method that registers Function type of listeners (Listeners that need parameters but doesn't return objects)
      */
-    protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, int... npcIds) {
-        return registerListener((container) -> new ConsumerEventListener(container, type, callback, this), registerType, npcIds);
+    protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, int... ids) {
+        return registerListener((container) -> new ConsumerEventListener(container, type, callback, this), registerType, ids);
     }
 
     /**
@@ -789,25 +740,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return registerListener((container) -> new DummyEventListener(container, type, this), registerType, npcIds);
     }
 
-    /**
-     * Generic listener register method
-     */
-    protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, int... ids) {
-        final List<AbstractEventListener> listeners = new ArrayList<>(ids.length > 0 ? ids.length : 1);
-        if (ids.length > 0) {
-            for (int id : ids) {
-                registerListenrWithId(action, registerType, listeners, id);
-
-                _registeredIds.computeIfAbsent(registerType, k -> CHashIntMap.newKeySet()).add(id);
-            }
-        } else {
-            registerListenerWithoutId(action, registerType, listeners);
-        }
-
-        _listeners.addAll(listeners);
-        return listeners;
-    }
-
     private void registerListenerWithoutId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners) {
         switch (registerType) {
             case OLYMPIAD: {
@@ -842,9 +774,22 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
     }
 
-    /**
-     * Generic listener register method
-     */
+    protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, int... ids) {
+        final List<AbstractEventListener> listeners = new ArrayList<>(ids.length > 0 ? ids.length : 1);
+        if (ids.length > 0) {
+            for (int id : ids) {
+                registerListenrWithId(action, registerType, listeners, id);
+
+                _registeredIds.computeIfAbsent(registerType, k -> CHashIntMap.newKeySet()).add(id);
+            }
+        } else {
+            registerListenerWithoutId(action, registerType, listeners);
+        }
+
+        _listeners.addAll(listeners);
+        return listeners;
+    }
+
     protected final List<AbstractEventListener> registerListener(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, IntCollection ids) {
         final List<AbstractEventListener> listeners = new ArrayList<>(!ids.isEmpty() ? ids.size() : 1);
         if (!ids.isEmpty()) {
@@ -858,6 +803,56 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         return listeners;
     }
 
+    private void registerListener(IntSet ids, Method method) {
+        final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
+        final RegisterType regType = method.getAnnotation(RegisterType.class);
+
+        final ListenerRegisterType type = regType.value();
+        final EventType eventType = listener.value();
+        if(!validateMethod(method, eventType)) {
+            return;
+        }
+
+        int priority = 0;
+        ids.clear();
+
+        for (Annotation annotation : method.getAnnotations()) {
+            priority = registerListenerWithPriority(ids, type, annotation);
+        }
+
+        if (!ids.isEmpty()) {
+            _registeredIds.computeIfAbsent(type, k -> CHashIntMap.newKeySet()).addAll(ids);
+        }
+
+        registerAnnotation(method, eventType, type, priority, ids);
+    }
+
+    private int registerListenerWithPriority(IntSet ids, ListenerRegisterType type, Annotation annotation) {
+        var priority = 0;
+        if (annotation instanceof Id npcId) {
+            ids.addAll(npcId.value());
+        } else if (annotation instanceof Ids npcsIds) {
+            for (Id npc : npcsIds.value()) {
+                ids.addAll(npc.value());
+            }
+        } else if (annotation instanceof Range range) {
+            addIdsRange(ids, range);
+        } else if (annotation instanceof Ranges ranges) {
+            for (Range range : ranges.value()) {
+                addIdsRange(ids, range);
+            }
+        } else if (annotation instanceof NpcLevelRange range) {
+            addNpcLevelRange(ids, type, range);
+        } else if (annotation instanceof NpcLevelRanges ranges) {
+            for (NpcLevelRange range : ranges.value()) {
+                addNpcLevelRange(ids, type, range);
+            }
+        } else if (annotation instanceof Priority p) {
+            priority = p.value();
+        }
+        return priority;
+    }
+
     private void registerListenrWithId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners, int id) {
         switch (registerType) {
             case NPC: {
@@ -868,7 +863,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 break;
             }
             case ZONE: {
-                final Zone template = ZoneManager.getInstance().getZoneById(id);
+                final Zone template = ZoneEngine.getInstance().getZoneById(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }
@@ -1131,16 +1126,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, loc);
     }
 
-    /**
-     * Instantly cast a skill upon the given target.
-     *
-     * @param npc    the caster NPC
-     * @param target the target of the cast
-     * @param skill  the skill to cast
-     */
-    protected void castSkill(Npc npc, Playable target, SkillHolder skill) {
+    protected void castSkill(Npc npc, Playable target, Skill skill) {
         npc.setTarget(target);
-        npc.doCast(skill.getSkill());
+        npc.doCast(skill);
     }
 
     /**
@@ -1555,12 +1543,12 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * Give the specified player a set amount of items if he is lucky enough.<br>
      * Not recommended to use this for non-stacking items.
      * @param limit        the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
-     * @param dropChance   the drop chance as a decimal digit from 0 to 1
+     * @param chance   the drop chance as a decimal digit from 0 to 1
      * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
      * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
      */
-    public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound) {
-        return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
+    public boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double chance, boolean playSound) {
+        return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, chance, playSound);
     }
 
     /**
@@ -1572,10 +1560,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param playSound  if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
      * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
      */
-    public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound) {
+    public boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound) {
         final long currentCount = getQuestItemsCount(player, itemId);
 
-        if ((limit > 0) && (currentCount >= limit)) {
+        if (limit > 0 && currentCount >= limit) {
             return true;
         }
 
@@ -1595,28 +1583,32 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         }
 
         long amountToGive = (minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount);
-        final double random = Rnd.nextDouble();
-        // Inventory slot check (almost useless for non-stacking items)
-        if ((dropChance >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId)) {
-            if ((limit > 0) && ((currentCount + amountToGive) > limit)) {
-                amountToGive = limit - currentCount;
-            }
 
-            // Give the item to player
-            if (player.addItem("Quest", itemId, amountToGive, npc, true) != null) {
-                // limit reached (if there is no limit, this block doesn't execute)
-                if ((currentCount + amountToGive) == limit) {
-                    if (playSound) {
-                        playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-                    }
-                    return true;
-                }
+        if ( amountToGive > 0 && Rnd.chance(dropChance) && player.getInventory().validateCapacityByItemId(itemId)) {
+            return tryGiveItem(player, npc, itemId, limit, currentCount, amountToGive, playSound);
+        }
+        return false;
+    }
 
+    private boolean tryGiveItem(Player player, Npc npc, int itemId, long limit, long currentCount, long amountToGive, boolean playSound) {
+        if ((limit > 0) && ((currentCount + amountToGive) > limit)) {
+            amountToGive = limit - currentCount;
+        }
+
+        // Give the item to player
+        if (player.addItem("Quest", itemId, amountToGive, npc, true) != null) {
+            // limit reached (if there is no limit, this block doesn't execute)
+            if ((currentCount + amountToGive) == limit) {
                 if (playSound) {
-                    playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+                    playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
                 }
-                return limit <= 0;
+                return true;
             }
+
+            if (playSound) {
+                playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+            }
+            return limit <= 0;
         }
         return false;
     }
@@ -1647,20 +1639,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             player.broadcastUserInfo();
         }
         return player.destroyItemByItemId("Quest", itemId, amount, player, true);
-    }
-
-    /**
-     * Take a set amount of a specified item from player's inventory.
-     *
-     * @param player the player whose item to take
-     * @param holder the {@link ItemHolder} object containing the ID and count of the item to take
-     * @return {@code true} if the item was taken, {@code false} otherwise
-     */
-    protected static boolean takeItem(Player player, ItemHolder holder) {
-        if (holder == null) {
-            return false;
-        }
-        return takeItems(player, holder.getId(), holder.getCount());
     }
 
     /**

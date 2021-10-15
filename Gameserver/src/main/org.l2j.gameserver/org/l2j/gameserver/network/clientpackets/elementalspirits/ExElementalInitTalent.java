@@ -27,6 +27,9 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 
+/**
+ * @author JoeAlisson
+ */
 public class ExElementalInitTalent extends ClientPacket {
 
     private byte type;
@@ -48,15 +51,13 @@ public class ExElementalInitTalent extends ClientPacket {
         }
 
        if(player.isInBattle()) {
-           client.sendPacket(SystemMessage.getSystemMessage(CANNOT_RESET_SPIRIT_CHARACTERISTICS_DURING_BATTLE));
-           client.sendPacket(new ElementalSpiritSetTalent(type, false));
+           client.sendPackets(new ElementalSpiritSetTalent(type, false), SystemMessage.getSystemMessage(CANNOT_RESET_SPIRIT_CHARACTERISTICS_DURING_BATTLE));
            return;
        }
 
         if(player.reduceAdena("Talent", ElementalSpiritEngine.TALENT_INIT_FEE, player, true)) {
             spirit.resetCharacteristics();
-            client.sendPacket(SystemMessage.getSystemMessage(RESET_THE_SELECTED_SPIRIT_S_CHARACTERISTICS_SUCCESSFULLY));
-            client.sendPacket(new ElementalSpiritSetTalent(type, true));
+            client.sendPackets(new ElementalSpiritSetTalent(type, true), SystemMessage.getSystemMessage(RESET_THE_SELECTED_SPIRIT_S_CHARACTERISTICS_SUCCESSFULLY));
         } else {
             client.sendPacket(new ElementalSpiritSetTalent(type, false));
         }

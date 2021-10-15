@@ -242,7 +242,7 @@ public class Siege implements Siegable {
 
             SiegeGuardManager.getInstance().deleteTickets(getCastle().getId());
 
-            var zone = castle.getZone();
+            var zone = castle.getSiegeZone();
             zone.setSiegeInstance(this);
             zone.setIsActive(true);
             zone.updateZoneStatusForCharactersInside();
@@ -473,7 +473,7 @@ public class Siege implements Siegable {
             }
             castle.spawnDoor();
 
-            var zone = castle.getZone();
+            var zone = castle.getSiegeZone();
             zone.setIsActive(false);
             zone.updateZoneStatusForCharactersInside();
             zone.setSiegeInstance(null);
@@ -663,7 +663,7 @@ public class Siege implements Siegable {
 
 
     private void teleportSpectatorsInZone(TeleportWhereType teleportWhere) {
-        castle.getZone().forEachPlayer(p -> p.teleToLocation(teleportWhere), p -> !p.isInSiege() && !p.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) && !p.isJailed());
+        castle.getSiegeZone().forEachPlayer(p -> p.teleToLocation(teleportWhere), p -> !p.isInSiege() && !p.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) && !p.isJailed());
     }
 
     private void teleportAttackersInZone(TeleportWhereType teleportWhere) {
@@ -672,7 +672,7 @@ public class Siege implements Siegable {
     }
 
     private void teleportNotOwnerInZone(TeleportWhereType teleportWhere) {
-        castle.getZone().forEachPlayer(p -> p.teleToLocation(teleportWhere),
+        castle.getSiegeZone().forEachPlayer(p -> p.teleToLocation(teleportWhere),
                 p -> !p.isInObserverMode() && (p.getClanId() <= 0 || p.getClanId() != castle.getOwnerId()) && !p.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) && !p.isJailed());
     }
 

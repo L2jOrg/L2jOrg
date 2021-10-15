@@ -24,7 +24,7 @@ import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Fisherman;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -33,8 +33,8 @@ import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.CommonSkill;
+import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.CharacterSettings;
@@ -42,7 +42,10 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Objects;
+
 import static java.util.Objects.isNull;
+import static org.l2j.gameserver.network.SystemMessageId.YOU_MUST_LEARN_THE_NECESSARY_SKILLS_FIRST;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
@@ -54,28 +57,27 @@ import static org.l2j.gameserver.util.GameUtils.isNpc;
 public final class RequestAcquireSkill extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestAcquireSkill.class);
+    public static final String LEVEL_DESC = " level ";
 
     private int id;
     private int level;
     private AcquireSkillType skillType;
 
     @Override
-    public void readImpl() {
+    public void readImpl() throws InvalidDataPacketException {
         id = readInt();
         level = readInt();
         skillType = AcquireSkillType.getAcquireSkillType(readInt()); // if type is sub pledge subType, so read d
 
+        if (level < 1 || level > 1000 || id < 1 || id > 64000) {
+            GameUtils.handleIllegalPlayerAction(client.getPlayer(), "Wrong Packet Data in Acquired Skill");
+            throw new InvalidDataPacketException(String.format("Received Wrong Packet Data in Acquired Skill - id: %d level: %d", id, level));
+        }
     }
 
     @Override
     public void runImpl() {
         final Player player = client.getPlayer();
-
-        if (level < 1 || level > 1000 || id < 1 || id > 64000) {
-            GameUtils.handleIllegalPlayerAction(player, "Wrong Packet Data in Acquired Skill");
-            LOGGER.warn("Received Wrong Packet Data in Acquired Skill - id: {} level: {} from {}", id, level,  player);
-            return;
-        }
 
         final Npc trainer = player.getLastFolkNPC();
         if (skillType != AcquireSkillType.CLASS && ( !isNpc(trainer) || ( !trainer.canInteract(player) && !player.isGM()))) {
@@ -88,7 +90,7 @@ public final class RequestAcquireSkill extends ClientPacket {
             return;
         }
 
-        if ((skillType != AcquireSkillType.SUBPLEDGE)) {
+        if (skillType != AcquireSkillType.SUBPLEDGE) {
             final int prevSkillLevel = player.getSkillLevel(id);
             if (prevSkillLevel == level) {
                 LOGGER.warn("Player {} is trying to learn a skill that already knows {} !", player, skill);
@@ -97,7 +99,7 @@ public final class RequestAcquireSkill extends ClientPacket {
 
             if (prevSkillLevel != level - 1) {
                 player.sendPacket(SystemMessageId.THE_PREVIOUS_LEVEL_SKILL_HAS_NOT_BEEN_LEARNED);
-                GameUtils.handleIllegalPlayerAction(player, "Player " + player + " is requesting skill Id: " + id + " level " + level + " without knowing it's previous level!", IllegalActionPunishmentType.NONE);
+                GameUtils.handleIllegalPlayerAction(player, player + " is requesting skill Id: " + id + LEVEL_DESC + level + " without knowing it's previous level!", IllegalActionPunishmentType.NONE);
                 return;
             }
         }
@@ -107,73 +109,62 @@ public final class RequestAcquireSkill extends ClientPacket {
             return;
         }
 
+        tryAcquireSkill(player, trainer, skill, skillLearn);
+    }
+
+    private void tryAcquireSkill(Player player, Npc trainer, Skill skill, SkillLearn skillLearn) {
         switch (skillType) {
-            case CLASS: {
-                if (checkPlayerSkill(player, trainer, skillLearn)) {
-                    giveSkill(player, trainer, skill);
-                }
-                break;
+            case CLASS, TRANSFORM, FISHING -> acquirePlayerSkill(player, trainer, skill, skillLearn);
+            case PLEDGE -> acquirePledgeSkill(player, trainer, skill, skillLearn);
+            default -> LOGGER.warn("Received Wrong Packet Data in Acquired Skill, unknown skill type: {}", skillType);
+        }
+    }
+
+    private void acquirePlayerSkill(Player player, Npc trainer, Skill skill, SkillLearn skillLearn) {
+        if (checkPlayerSkill(player, trainer, skillLearn)) {
+            for (var replacedSkill : skillLearn.replaceSkills()) {
+                player.removeSkill(replacedSkill, true);
             }
-            case TRANSFORM: {
-                if (checkPlayerSkill(player, trainer, skillLearn)) {
-                    giveSkill(player, trainer, skill);
-                }
-                break;
+            giveSkill(player, trainer, skill);
+        }
+    }
+
+    private void acquirePledgeSkill(Player player, Npc trainer, Skill skill, SkillLearn skillLearn) {
+        if (!player.isClanLeader()) {
+            return;
+        }
+
+        final Clan clan = player.getClan();
+        final int repCost = skillLearn.sp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.sp();
+        if (clan.getReputationScore() >= repCost) {
+            if (!consumeRequiredItems(player, trainer, skillLearn)) {
+                return;
             }
-            case FISHING: {
-                if (checkPlayerSkill(player, trainer, skillLearn)) {
-                    giveSkill(player, trainer, skill);
-                }
-                break;
-            }
-            case PLEDGE: {
-                if (!player.isClanLeader()) {
-                    return;
-                }
 
-                final Clan clan = player.getClan();
-                final int repCost = skillLearn.getLevelUpSp() > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) skillLearn.getLevelUpSp();
-                if (clan.getReputationScore() >= repCost) {
-                    if (CharacterSettings.pledgeSkillsItemNeeded()) {
-                        for (ItemHolder item : skillLearn.getRequiredItems()) {
-                            if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
-                                // Doesn't have required item.
-                                player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
-                                VillageMaster.showPledgeSkillList(player);
-                                return;
-                            }
+            clan.takeReputationScore(repCost, true);
+            player.sendPacket(getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION).addInt(repCost));
+            clan.addNewSkill(skill);
+            clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
+            player.sendPacket(new AcquireSkillDone());
+        } else {
+            player.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
+        }
+        VillageMaster.showPledgeSkillList(player);
+    }
 
-                            final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-                            sm.addItemName(item.getId());
-                            sm.addLong(item.getCount());
-                            player.sendPacket(sm);
-                        }
-                    }
-
-                    clan.takeReputationScore(repCost, true);
-
-                    final SystemMessage cr = getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-                    cr.addInt(repCost);
-                    player.sendPacket(cr);
-
-                    clan.addNewSkill(skill);
-
-                    clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-
-                    player.sendPacket(new AcquireSkillDone());
-
+    private boolean consumeRequiredItems(Player player, Npc trainer, SkillLearn skillLearn) {
+        if (CharacterSettings.pledgeSkillsItemNeeded()) {
+            for (ItemHolder item : skillLearn.requiredItems()) {
+                if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false)) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
                     VillageMaster.showPledgeSkillList(player);
-                } else {
-                    player.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
-                    VillageMaster.showPledgeSkillList(player);
+                    return false;
                 }
-                break;
-            }
-            default: {
-                LOGGER.warn("Received Wrong Packet Data in Acquired Skill, unknown skill type: {}", skillType);
-                break;
+
+                player.sendPacket(getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(item.getId()).addLong(item.getCount()));
             }
         }
+        return true;
     }
 
     /**
@@ -183,90 +174,72 @@ public final class RequestAcquireSkill extends ClientPacket {
      *
      * @param player     the skill learning player.
      * @param trainer    the skills teaching Npc.
-     * @param skillLearn the skill to be learn.
+     * @param skillLearn the skill to be learned.
      * @return {@code true} if all requirements are meet, {@code false} otherwise.
      */
     private boolean checkPlayerSkill(Player player, Npc trainer, SkillLearn skillLearn) {
-        if (skillLearn != null) {
-            if ((skillLearn.getSkillId() == id) && (skillLearn.getSkillLevel() == level)) {
-                // Hack check.
-                if (skillLearn.getGetLevel() > player.getLevel()) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
-                    GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + ", level " + player.getLevel() + " is requesting skill Id: " + id + " level " + level + " without having minimum required level, " + skillLearn.getGetLevel() + "!", IllegalActionPunishmentType.NONE);
-                    return false;
-                }
+        if (skillLearn.requiredLevel() > player.getLevel()) {
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
+            GameUtils.handleIllegalPlayerAction(player, player + ", level " + player.getLevel() + " is requesting skill Id: " + id + LEVEL_DESC + level + " without having minimum required level, " + skillLearn.requiredLevel() + "!", IllegalActionPunishmentType.NONE);
+            return false;
+        }
 
-                // First it checks that the skill require SP and the player has enough SP to learn it.
-                final long levelUpSp = skillLearn.getLevelUpSp();
-                if ((levelUpSp > 0) && (levelUpSp > player.getSp())) {
-                    player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
+        if(!checkSkillRequirements(player, trainer, skillLearn)) {
+            return false;
+        }
+
+        if (skillLearn.sp() > 0) {
+            player.setSp(player.getSp() - skillLearn.sp());
+            player.sendPacket(new UserInfo(player, UserInfoType.CURRENT_HPMPCP_EXP_SP));
+        }
+        return true;
+    }
+
+    private boolean checkSkillRequirements(Player player, Npc trainer, SkillLearn skillLearn) {
+        var levelUpSp = skillLearn.sp();
+        if ((levelUpSp > 0) && (levelUpSp > player.getSp())) {
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
+            showSkillList(trainer, player);
+            return false;
+        }
+
+        for (var skill : skillLearn.replaceSkills()) {
+            if (player.getSkillLevel(skill.getId()) < skill.getLevel()) {
+                player.sendPacket(YOU_MUST_LEARN_THE_NECESSARY_SKILLS_FIRST);
+                return false;
+            }
+        }
+
+        if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !CharacterSettings.divineInspirationBookNeeded()) {
+            return true;
+        }
+
+        return checkItemRequirements(player, trainer, skillLearn);
+    }
+
+    private boolean checkItemRequirements(Player player, Npc trainer, SkillLearn skillLearn) {
+        // Check for required items.
+        if (!skillLearn.requiredItems().isEmpty()) {
+            // Then checks that the player has all the items
+            long reqItemCount;
+            for (ItemHolder item : skillLearn.requiredItems()) {
+                reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
+                if (reqItemCount < item.getCount()) {
+                    // Player doesn't have required item.
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
                     showSkillList(trainer, player);
                     return false;
                 }
+            }
 
-                if (id == CommonSkill.DIVINE_INSPIRATION.getId() && !CharacterSettings.divineInspirationBookNeeded()) {
-                    return true;
+            // If the player has all required items, they are consumed.
+            for (ItemHolder itemIdCount : skillLearn.requiredItems()) {
+                if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true)) {
+                    GameUtils.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + id + LEVEL_DESC + level + "!", IllegalActionPunishmentType.NONE);
                 }
-
-                // Check for required skills.
-                if (!skillLearn.getPreReqSkills().isEmpty()) {
-                    for (SkillHolder skill : skillLearn.getPreReqSkills()) {
-                        if (player.getSkillLevel(skill.getSkillId()) < skill.getLevel()) {
-                            if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId()) {
-                                player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_LEARN_FURTHER_SKILLS);
-                            } else {
-                                player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
-                            }
-                            return false;
-                        }
-                    }
-                }
-
-                // Check for required items.
-                if (!skillLearn.getRequiredItems().isEmpty()) {
-                    // Then checks that the player has all the items
-                    long reqItemCount;
-                    for (ItemHolder item : skillLearn.getRequiredItems()) {
-                        reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
-                        if (reqItemCount < item.getCount()) {
-                            // Player doesn't have required item.
-                            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
-                            showSkillList(trainer, player);
-                            return false;
-                        }
-                    }
-
-                    // If the player has all required items, they are consumed.
-                    for (ItemHolder itemIdCount : skillLearn.getRequiredItems()) {
-                        if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true)) {
-                            GameUtils.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + id + " level " + level + "!", IllegalActionPunishmentType.NONE);
-                        }
-                    }
-                }
-
-                if (!skillLearn.getRemoveSkills().isEmpty()) {
-                    skillLearn.getRemoveSkills().forEach(skillId ->
-                    {
-                        if (player.getSkillLevel(skillId) > 0) {
-                            final Skill skillToRemove = player.getKnownSkill(skillId);
-                            if (skillToRemove != null) {
-                                player.removeSkill(skillToRemove, true);
-                            }
-                        }
-                    });
-                }
-
-                // If the player has SP and all required items then consume SP.
-                if (levelUpSp > 0) {
-                    player.setSp(player.getSp() - levelUpSp);
-                    final UserInfo ui = new UserInfo(player);
-                    ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
-                    player.sendPacket(ui);
-                }
-                return true;
             }
         }
-        return false;
+        return true;
     }
 
     /**
@@ -274,24 +247,11 @@ public final class RequestAcquireSkill extends ClientPacket {
      *
      * @param player  the player acquiring a skill.
      * @param trainer the Npc teaching a skill.
-     * @param skill   the skill to be learn.
+     * @param skill   the skill to be learned.
      */
     private void giveSkill(Player player, Npc trainer, Skill skill) {
-        giveSkill(player, trainer, skill, true);
-    }
-
-    /**
-     * Add the skill to the player and makes proper updates.
-     *
-     * @param player  the player acquiring a skill.
-     * @param trainer the Npc teaching a skill.
-     * @param skill   the skill to be learn.
-     * @param store
-     */
-    private void giveSkill(Player player, Npc trainer, Skill skill, boolean store) {
-        // Send message.
         player.sendPacket(getSystemMessage(SystemMessageId.LEARNED_S1_LV_S2).addSkillName(skill).addInt(skill.getLevel()));
-        player.addSkill(skill, store);
+        player.addSkill(skill, true);
 
         player.sendItemList();
         player.sendPacket(new ExBasicActionList(ExBasicActionList.DEFAULT_ACTION_LIST));
@@ -299,17 +259,11 @@ public final class RequestAcquireSkill extends ClientPacket {
 
         showSkillList(trainer, player);
 
-        // If skill is expand type then sends packet:
-        if ((id >= 1368) && (id <= 1372)) {
+        if (id >= 1368 && id <= 1372) {
             player.sendPacket(new ExStorageMaxCount(player));
         }
 
-        // Notify scripts of the skill learn.
-        if (trainer != null) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, skillType), trainer);
-        } else {
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, skillType), player);
-        }
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, skillType), Objects.requireNonNullElse(trainer, player));
     }
 
     /**

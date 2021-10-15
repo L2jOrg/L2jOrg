@@ -21,8 +21,8 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.item.ItemTemplate;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.Weapon;
 
 /**
  * The Class ConditionChangeWeapon.

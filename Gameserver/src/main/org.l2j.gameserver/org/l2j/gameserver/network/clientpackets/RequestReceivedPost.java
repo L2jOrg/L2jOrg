@@ -19,16 +19,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.engine.mail.MailEngine;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.ExChangePostState;
-import org.l2j.gameserver.network.serverpackets.ExReplyReceivedPost;
-import org.l2j.gameserver.settings.GeneralSettings;
-import org.l2j.gameserver.util.GameUtils;
-import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
  * @author Migi, DS
+ * @author JoeAlisson
  */
 public final class RequestReceivedPost extends ClientPacket {
     private int mailId;
@@ -40,32 +34,7 @@ public final class RequestReceivedPost extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player player = client.getPlayer();
-        if (!GeneralSettings.allowMail()) {
-            return;
-        }
-
-        final var mail = MailEngine.getInstance().getMail(mailId);
-        if (mail == null) {
-            return;
-        }
-
-        if (!player.isInsideZone(ZoneType.PEACE) && mail.hasAttachments()) {
-            client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
-            return;
-        }
-
-        if (mail.getReceiver() != player.getObjectId()) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to receive not own post!");
-            return;
-        }
-
-        if (mail.isDeletedByReceiver()) {
-            return;
-        }
-
-        client.sendPacket(new ExReplyReceivedPost(mail));
-        client.sendPacket(ExChangePostState.reAdded(true, mailId));
-        MailEngine.getInstance().markAsRead(player, mail);
+        final var player = client.getPlayer();
+        MailEngine.getInstance().receiveMail(player, mailId);
     }
 }

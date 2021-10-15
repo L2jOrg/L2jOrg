@@ -22,48 +22,57 @@ import org.l2j.gameserver.engine.clan.clanhall.ClanHall;
 import org.l2j.gameserver.engine.clan.clanhall.ClanHallEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
-import static java.util.Objects.isNull;
+import static org.l2j.commons.util.Util.computeIfNonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * A clan hall zone
  *
  * @author durgus
+ * @author JoeAlisson
  */
 public class ClanHallZone extends ResidenceZone {
 
-    public ClanHallZone(int id) {
-        super(id);
+    private ClanHallZone(int id, int clanHallId) {
+        super(id, clanHallId);
     }
 
     @Override
-    public void setParameter(String name, String value) {
-        if (name.equals("clanHallId")) {
-            setResidenceId(Integer.parseInt(value));
-        } else {
-            super.setParameter(name, value);
+    protected void onEnter(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.CLAN_HALL, true);
         }
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.CLAN_HALL, true);
-        }
-    }
-
-    @Override
-    protected void onExit(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.CLAN_HALL, false);
+    protected void onExit(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.CLAN_HALL, false);
         }
     }
 
     @Override
     public final Location getBanishSpawnLoc() {
-        final ClanHall clanHall = ClanHallEngine.getInstance().getClanHallById(getResidenceId());
-        return isNull(clanHall) ? null : clanHall.getBanishPoint();
+        return computeIfNonNull(ClanHallEngine.getInstance().getClanHallById(getResidenceId()), ClanHall::getBanishPoint);
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var clanHallId = reader.parseInt(zoneNode.getAttributes(), "hall-id");
+            return new ClanHallZone(id, clanHallId);
+        }
+
+        @Override
+        public String type() {
+            return "clan-hall";
+        }
     }
 }

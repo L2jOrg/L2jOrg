@@ -80,7 +80,7 @@ public class ExCharInfo extends ServerPacket {
             buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
         }
 
-        buffer.writeByte(player.getInventory().getArmorMaxEnchant());
+        buffer.writeByte(player.getInventory().getArmorSetEnchant());
 
         buffer.writeShort(0x26); // slot item shape shift mask size
         buffer.writeInt(0x00); // right hand
@@ -116,9 +116,10 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeFloat((float) player.getCollisionRadius());
         buffer.writeFloat((float) player.getCollisionHeight());
 
-        buffer.writeInt(player.getVisualFace());
+
         buffer.writeInt(player.getVisualHair());
         buffer.writeInt(player.getVisualHairColor());
+        buffer.writeInt(player.getVisualFace());
 
         buffer.writeSizedString(appearence.getVisibleTitle());
 
@@ -147,7 +148,7 @@ public class ExCharInfo extends ServerPacket {
         buffer.writeByte(player.getTeam().getId());
 
         buffer.writeInt(appearence.getVisibleClanLargeCrestId());
-        buffer.writeByte(player.isNoble());
+        buffer.writeByte(0x00); // is nobles
         buffer.writeByte((player.isHero() || (player.isGM() && AdminSettings.showAura()) ? 2 : 0));
 
         buffer.writeByte(player.isFishing());
@@ -184,7 +185,7 @@ public class ExCharInfo extends ServerPacket {
 
         buffer.writeByte(0); // pledge game user flag
         buffer.writeByte(player.isHairAccessoryEnabled());
-        buffer.writeByte(player.getAbilityPointsUsed());
+        buffer.writeByte(0x00); // ability points used
         buffer.writeInt(0x00); // cursed weapon equipped id
         buffer.writeInt(0x00); // wait action id
         buffer.writeInt(player.getRank() == 1 ? 1 : player.getRankRace() == 1 ? 2 : 0);

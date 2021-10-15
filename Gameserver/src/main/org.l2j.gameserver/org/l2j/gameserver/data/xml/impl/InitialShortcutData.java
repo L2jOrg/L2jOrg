@@ -29,7 +29,7 @@ import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Macro;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
+import org.l2j.gameserver.network.serverpackets.shortcut.ShortCutRegister;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -193,7 +193,7 @@ public final class InitialShortcutData extends GameXmlReader {
         final ShortcutType shortcutType = parseEnum(attrs, ShortcutType.class, "shortcutType");
         final int shortcutId = parseInt(attrs, "shortcutId");
         final int shortcutLevel = parseInt(attrs, "shortcutLevel", 0);
-        final int characterType = parseInt(attrs, "characterType", 0);
+        final int characterType = parseInt(attrs, "characterType", 1);
         return new Shortcut(Shortcut.pageAndSlotToClientId(pageId, slotId), shortcutType, shortcutId, shortcutLevel, 0, characterType);
     }
 
@@ -271,7 +271,6 @@ public final class InitialShortcutData extends GameXmlReader {
                 }
                 // Register shortcut
                 final Shortcut newShortcut = new Shortcut(shortcut.getClientId(), shortcut.getType(), shortcutId, shortcut.getLevel(), shortcut.getSubLevel(), shortcut.getCharacterType());
-                player.sendPacket(new ShortCutRegister(newShortcut));
                 player.registerShortCut(newShortcut);
             }
         }

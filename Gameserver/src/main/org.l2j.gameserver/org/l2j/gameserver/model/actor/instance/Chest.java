@@ -51,7 +51,7 @@ public final class Chest extends Monster {
     }
 
     @Override
-    public void doItemDrop(NpcTemplate npcTemplate, Creature lastAttacker) {
+    public void doItemDrop(NpcTemplate npcTemplate, Creature lastAttacker, float penaltyModifier) {
         int id = getTemplate().getId();
 
         if (!_specialDrop) {
@@ -71,7 +71,7 @@ public final class Chest extends Monster {
                 id = 21786;
             }
         }
-        super.doItemDrop(NpcData.getInstance().getTemplate(id), lastAttacker);
+        super.doItemDrop(NpcData.getInstance().getTemplate(id), lastAttacker, penaltyModifier);
     }
 
     @Override

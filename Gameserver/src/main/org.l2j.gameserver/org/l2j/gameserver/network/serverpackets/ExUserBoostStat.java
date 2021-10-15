@@ -19,33 +19,58 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
 /**
  * @author JoeAlisson
  */
-public class ExUserBoostStat extends ServerPacket{
-
+public class ExUserBoostStat extends ServerPacket
+{
+    private final Player        _player;
     private final BoostStatType type;
-    private final short percent;
+    private final short         percent;
 
-    public ExUserBoostStat(BoostStatType type, short percent) {
-        this.type =type;
-        this.percent =percent;
+    public ExUserBoostStat(Player player, BoostStatType type, short percent)
+    {
+        _player = player;
+        this.type = type;
+        this.percent = percent;
     }
 
     @Override
-    protected void writeImpl(GameClient client, WritableBuffer buffer)  {
-        writeId(ServerExPacketId.EX_USER_BOOST_STAT, buffer );
+    protected void writeImpl(GameClient client, WritableBuffer buffer)
+    {
+        writeId(ServerExPacketId.EX_USER_BOOST_STAT, buffer);
         buffer.writeByte(type.ordinal() + 1); // type (Server bonus), 2 - (stats bonus) or 3 (Vitality) ?
-        buffer.writeByte(1); // count
-        buffer.writeShort(percent);
+        if (type == BoostStatType.SAYHA)
+        {
+            double sayhaBonus = _player.getStats().getSayhaGraceExpBonus() * 100;
+            if (sayhaBonus == 100)
+            {
+                sayhaBonus = 0;
+            }
+            buffer.writeByte(sayhaBonus > 0 ? 0x01 : 0x00); // Count
+            buffer.writeShort((int) sayhaBonus); // Boost
+        }
+        else if (type == BoostStatType.BUFFS)
+        {
+            buffer.writeByte(_player.getStats().getValue(Stat.BONUS_EXP, 0) > 0 ? 1 : 0); // Count
+            buffer.writeShort((int) _player.getStats().getValue(Stat.BONUS_EXP, 0)); // Boost
+        }
+        else if (type == BoostStatType.PASSIVE)
+        {
+            buffer.writeByte(1); // count
+            buffer.writeShort(percent);
+        }
     }
 
-    public enum BoostStatType {
+    public enum BoostStatType
+    {
         SAYHA,
-        STAT,
+        BUFFS,
         PASSIVE,
     }
 }

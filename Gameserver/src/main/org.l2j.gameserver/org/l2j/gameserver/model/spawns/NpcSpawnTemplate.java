@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 import org.slf4j.Logger;
@@ -117,7 +117,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
 
             final String zoneName = set.getString("zone", null);
             if (zoneName != null) {
-                final SpawnTerritory zone = ZoneManager.getInstance().getSpawnTerritory(zoneName);
+                final SpawnTerritory zone = ZoneEngine.getInstance().getSpawnTerritory(zoneName);
                 if (zone == null) {
                     throw new NullPointerException("Spawn with non existing zone requested " + zoneName);
                 }

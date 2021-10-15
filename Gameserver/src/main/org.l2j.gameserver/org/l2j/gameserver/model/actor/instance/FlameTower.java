@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Tower;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 
 import java.util.List;
 
@@ -58,7 +58,7 @@ public class FlameTower extends Tower {
         if ((_zoneList != null) && (_upgradeLevel != 0)) {
             final int maxIndex = _upgradeLevel * 2;
             for (int i = 0; i < maxIndex; i++) {
-                final Zone zone = ZoneManager.getInstance().getZoneById(_zoneList.get(i));
+                final Zone zone = ZoneEngine.getInstance().getZoneById(_zoneList.get(i));
                 if (zone != null) {
                     zone.setEnabled(state);
                 }

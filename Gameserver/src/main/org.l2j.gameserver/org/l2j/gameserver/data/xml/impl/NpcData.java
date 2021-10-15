@@ -35,6 +35,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.DropHolder;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -87,7 +88,7 @@ public class NpcData extends GameXmlReader {
         parseDatapackDirectory("data/stats/npcs", false);
         LOGGER.info("Loaded {} NPCs.", npcs.size());
 
-        if (Config.CUSTOM_NPC_DATA) {
+        if (GeneralSettings.loadCustomNPC()) {
             final int npcCount = npcs.size();
             parseDatapackDirectory("data/stats/npcs/custom", true);
             LOGGER.info("Loaded {} Custom NPCs", npcs.size() - npcCount);
@@ -408,7 +409,7 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "extenddrop": {
-                                    final List<Integer> extendDrop = new ArrayList<>();
+                                    final IntList extendDrop = new ArrayIntList();
                                     forEach(npcNode, "id", idNode ->
                                     {
                                         extendDrop.add(Integer.parseInt(idNode.getTextContent()));
@@ -516,8 +517,6 @@ public class NpcData extends GameXmlReader {
 
                         template.setClans(clans);
                         template.setIgnoreClanNpcIds(ignoreClanNpcIds);
-
-
 
                         if (dropLists != null) {
                             for (DropHolder dropHolder : dropLists) {

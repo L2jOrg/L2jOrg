@@ -28,7 +28,7 @@ import org.l2j.gameserver.engine.mail.MailEngine;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.L2StoreRequest;
-import org.l2j.gameserver.model.item.container.Attachment;
+import org.l2j.gameserver.engine.mail.Attachment;
 import org.l2j.gameserver.network.serverpackets.ExBRNewIconCashBtnWnd;
 import org.l2j.gameserver.network.serverpackets.store.ExBRBuyProduct;
 import org.l2j.gameserver.network.serverpackets.store.ExBRGamePoint;

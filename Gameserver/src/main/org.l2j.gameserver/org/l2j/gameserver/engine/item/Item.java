@@ -21,7 +21,6 @@ package org.l2j.gameserver.engine.item;
 import io.github.joealisson.primitive.HashIntSet;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.data.database.data.ItemOnGroundData;
@@ -30,7 +29,6 @@ import org.l2j.gameserver.data.xml.impl.BlessedItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
-import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.InventorySlot;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -52,9 +50,10 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerAugment;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemPickup;
 import org.l2j.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2j.gameserver.model.events.impl.item.OnItemTalk;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
+import org.l2j.gameserver.model.holders.ItemSkillInfo;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.item.*;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.item.container.WarehouseType;
 import org.l2j.gameserver.model.item.type.*;
 import org.l2j.gameserver.model.options.BlessedOptions;
@@ -73,6 +72,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
@@ -84,6 +84,8 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.doIfNonNull;
+import static org.l2j.gameserver.network.SystemMessageId.*;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author JoeAlisson
@@ -198,7 +200,7 @@ public final class Item extends WorldObject {
      *
      * @param creature Character that pick up the item
      */
-    public final void pickupMe(Creature creature) {
+    public void pickupMe(Creature creature) {
         final WorldRegion oldRegion = getWorldRegion();
         creature.broadcastPacket(new GetItem(this, creature.getObjectId()));
         synchronized (this) {
@@ -262,17 +264,21 @@ public final class Item extends WorldObject {
         });
     }
 
-    public void giveSkillsToOwner() {
-        if (!hasPassiveSkills()) {
+    public void giveSkillsToPlayer(Player player) {
+        if(!hasPassiveSkills()) {
             return;
         }
 
-        doIfNonNull(getActingPlayer(), player -> template.forEachSkill(ItemSkillType.NORMAL, holder -> {
-            final Skill skill = holder.getSkill();
-            if (skill.isPassive()) {
+        template.forEachSkill(ItemSkillType.NORMAL, holder -> {
+            var skill = holder.skill();
+            if(skill.isPassive()) {
                 player.addSkill(skill, false);
             }
-        }));
+        });
+    }
+
+    public void giveSkillsToOwner() {
+        doIfNonNull(getActingPlayer(), this::giveSkillsToPlayer);
     }
 
     public void changeItemLocation(ItemLocation loc) {
@@ -404,7 +410,7 @@ public final class Item extends WorldObject {
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augment, false), template);
     }
 
-    public final void dropMe(Creature dropper, int x, int y, int z) {
+    public void dropMe(Creature dropper, int x, int y, int z) {
         ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
     }
 
@@ -419,7 +425,7 @@ public final class Item extends WorldObject {
             if (existsInDb) {
                 if (cannotBeStored()) {
                     removeFromDb();
-                } else if (!Config.LAZY_ITEMS_UPDATE || force) {
+                } else if (force) {
                     updateInDb();
                 }
             } else {
@@ -539,11 +545,11 @@ public final class Item extends WorldObject {
     }
 
     private Predicate<Item> hasRemovedSkill(IntSet removedSkills) {
-        return item -> item != this && item.hasPassiveSkills() && item.template.checkAnySkill(ItemSkillType.NORMAL, sk -> removedSkills.contains(sk.getSkillId()) );
+        return item -> item != this && item.hasPassiveSkills() && item.template.checkAnySkill(ItemSkillType.NORMAL, sk -> removedSkills.contains(sk.skill().getId()) );
     }
 
     private boolean hasPassiveSkills() {
-        return (template.getItemType() == EtcItemType.RUNE || template.getItemType() == EtcItemType.NONE) && (data.getLoc() == ItemLocation.INVENTORY) && (data.getOwnerId() > 0) && (template.getSkills(ItemSkillType.NORMAL) != null);
+        return (template.getItemType() == EtcItemType.RUNE || template.getItemType() == EtcItemType.NONE) && (data.getLoc() == ItemLocation.INVENTORY) && (data.getOwnerId() > 0) && (template.hasSkill(ItemSkillType.NORMAL));
     }
 
     public void onBypassFeedback(Player player, String command) {
@@ -619,7 +625,7 @@ public final class Item extends WorldObject {
     private void removeSpecialAbility(EnsoulOption option, EnsoulType type) {
         final Player player = getActingPlayer();
         if (nonNull(player)) {
-            player.removeSkill(option.skill().getSkillId());
+            player.removeSkill(option.skill().getId());
         }
         if (type == EnsoulType.COMMON) {
             getDAO(ItemDAO.class).updateEnsoul(objectId, 0);
@@ -707,7 +713,7 @@ public final class Item extends WorldObject {
         if(isNull(option)) {
             return;
         }
-        final Skill skill = option.toSkill();
+        final Skill skill = option.skill();
         if (skill != null) {
             final Player player = getActingPlayer();
             if (player != null) {
@@ -722,7 +728,7 @@ public final class Item extends WorldObject {
         if(isNull(option)) {
             return;
         }
-        final Skill skill = option.toSkill();
+        final Skill skill = option.skill();
         if (skill != null) {
             final Player player = getActingPlayer();
             if (player != null) {
@@ -747,11 +753,7 @@ public final class Item extends WorldObject {
         enchantOptions.clear();
     }
 
-    /**
-     * Clears and applies all the enchant bonuses if item is enchanted and containing bonuses for enchant value.
-     */
-    public void applyEnchantStats() {
-        final Player player = getActingPlayer();
+    public void applyEnchantStats(Player player) {
         if (!isEquipped() || (player == null) || (getEnchantOptions() == DEFAULT_ENCHANT_OPTIONS)) {
             return;
         }
@@ -767,11 +769,60 @@ public final class Item extends WorldObject {
         }
     }
 
+    public void applyEnchantStats() {
+        applyEnchantStats(getActingPlayer());
+    }
+
     public void deleteMe() {
         if ((lifeTimeTask != null) && !lifeTimeTask.isDone()) {
             lifeTimeTask.cancel(false);
             lifeTimeTask = null;
         }
+    }
+
+    public boolean checkConditions(Player player, boolean sendMessage) {
+        if (isInReuseTime(player)) {
+            return false;
+        }
+        return template.checkCondition(player, player, sendMessage);
+    }
+
+    private boolean isInReuseTime(Player player) {
+        var reuseDelay = template.getReuseDelay();
+        if(reuseDelay > 0) {
+            var reuseTime = player.getItemRemainingReuseTime(objectId);
+            if(reuseTime > 0) {
+                sendReuseMessage(player, reuseTime);
+                return true;
+            }
+        }
+        var reuseGroup = template.getReuseGroup();
+        if(reuseGroup > 0) {
+            var reuseTime = player.getReuseDelayOnGroup(reuseGroup);
+            if(reuseTime > 0) {
+                sendReuseMessage(player, reuseTime);
+                player.sendPacket(new ExUseSharedGroupItem(getId(), reuseGroup, reuseTime, reuseDelay));
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void sendReuseMessage(Player player, long remainingTime) {
+        final int hours = (int) (remainingTime / 3600000);
+        final int minutes = (int) (remainingTime % 3600000) / 60000;
+        final int seconds = (int) ((remainingTime / 1000) % 60);
+        final SystemMessage sm;
+        if (hours > 0) {
+            sm = getSystemMessage(THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME)
+                    .addItemName(this).addInt(hours).addInt(minutes);
+        } else if (minutes > 0) {
+            sm = getSystemMessage(THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addItemName(this).addInt(minutes);
+        } else {
+            sm = getSystemMessage(THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addItemName(this);
+        }
+        sm.addInt(seconds);
+        player.sendPacket(sm);
     }
 
     public int getOwnerId() {
@@ -803,7 +854,7 @@ public final class Item extends WorldObject {
     }
 
     public boolean isEquipable() {
-        return template instanceof EquipableItem;
+        return template.isEquipable();
     }
 
     public boolean isEquipped() {
@@ -869,7 +920,7 @@ public final class Item extends WorldObject {
         return null;
     }
 
-    public final int getCrystalCount() {
+    public int getCrystalCount() {
         return template.getCrystalCount(data.getEnchantLevel());
     }
 
@@ -882,7 +933,7 @@ public final class Item extends WorldObject {
     }
 
     public int getSharedReuseGroup() {
-        return template.getSharedReuseGroup();
+        return template.getReuseGroup();
     }
 
     public ItemChangeType getLastChange() {
@@ -995,7 +1046,7 @@ public final class Item extends WorldObject {
         dropperObjectId = id;
     }
 
-    public final DropProtection getDropProtection() {
+    public DropProtection getDropProtection() {
         return dropProtection;
     }
 
@@ -1029,14 +1080,14 @@ public final class Item extends WorldObject {
     }
 
     public BodyPart getBodyPart() {
-        return template instanceof EquipableItem ? template.getBodyPart() : BodyPart.NONE;
+        return template.getBodyPart();
     }
 
     public int getItemMask() {
         return template.getItemMask();
     }
 
-    public void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action) {
+    public void forEachSkill(ItemSkillType type, Consumer<ItemSkillInfo> action) {
         template.forEachSkill(type, action);
     }
 
@@ -1056,8 +1107,24 @@ public final class Item extends WorldObject {
         return template.getDefaultAction();
     }
 
-    public List<ItemSkillHolder> getSkills(ItemSkillType type) {
+    public List<ItemSkillInfo> getSkills(ItemSkillType type) {
         return template.getSkills(type);
+    }
+
+    public Skill getFirstSkill(ItemSkillType type) {
+        return template.getFirstSkill(type);
+    }
+
+    public Skill getFirstSkill(ItemSkillType type, Comparator<ItemSkillInfo> comparator) {
+        return template.getFirstSkill(type, comparator);
+    }
+
+    public boolean hasSkills(ItemSkillType type) {
+        return template.hasSkill(type);
+    }
+
+    public boolean hasSkills(ItemSkillType type, Predicate<Skill> predicate) {
+        return template.hasSkill(type, predicate);
     }
 
     public boolean isSelfResurrection() {
@@ -1078,6 +1145,10 @@ public final class Item extends WorldObject {
 
     public int getConsumeShotsCount() {
         return template instanceof Weapon weapon ? weapon.getConsumeShotsCount() : 0;
+    }
+
+    public boolean hasCondition() {
+        return template.isConditionAttached();
     }
 
     /**
@@ -1122,14 +1193,13 @@ public final class Item extends WorldObject {
                 setInstance(null); // No dropper? Make it a global item...
             }
 
+            _item.setDropTime(System.currentTimeMillis());
+            _item.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
             synchronized (_item) {
                 // Set the x,y,z position of the Item dropped and update its _worldregion
                 _item.setSpawned(true);
                 _item.setXYZ(_x, _y, _z);
             }
-
-            _item.setDropTime(System.currentTimeMillis());
-            _item.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 
             // Add the Item dropped in the world as a visible object
             World.getInstance().addVisibleObject(_item, _item.getWorldRegion());

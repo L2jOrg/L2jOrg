@@ -20,7 +20,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExConfirmAddingContact;
-import org.l2j.gameserver.settings.GeneralSettings;
 
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -39,10 +38,6 @@ public class RequestExAddContactToContactList extends ClientPacket {
 
     @Override
     public void runImpl() {
-        if (!GeneralSettings.allowMail()) {
-            return;
-        }
-
         if (isNullOrEmpty(name)) {
             return;
         }

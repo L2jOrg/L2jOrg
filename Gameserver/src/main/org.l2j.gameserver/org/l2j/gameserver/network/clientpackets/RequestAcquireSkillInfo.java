@@ -22,12 +22,12 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.model.ClanPrivilege;
-import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.AcquireSkillType;
 import org.l2j.gameserver.network.serverpackets.AcquireSkillInfo;
-import org.l2j.gameserver.network.serverpackets.ExAcquireSkillInfo;
+import org.l2j.gameserver.network.serverpackets.skill.ExAcquireSkillInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -81,7 +81,7 @@ public final class RequestAcquireSkillInfo extends ClientPacket {
 
         switch (_skillType) {
             case TRANSFORM, FISHING -> client.sendPacket(new AcquireSkillInfo(_skillType, s));
-            case CLASS -> client.sendPacket(new ExAcquireSkillInfo(activeChar, s));
+            case CLASS -> client.sendPacket(new ExAcquireSkillInfo(s));
             case PLEDGE -> {
                 if (!activeChar.isClanLeader()) {
                     return;

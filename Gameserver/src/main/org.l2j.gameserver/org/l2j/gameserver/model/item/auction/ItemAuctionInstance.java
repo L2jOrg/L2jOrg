@@ -33,6 +33,7 @@ import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,7 +57,7 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  */
 public final class ItemAuctionInstance {
     public static final String AUCTION_HAS_FINISHED_MSG = "Auction {} has finished. Highest bid by {} for instance {}";
-    protected static final Logger LOGGER = LoggerFactory.getLogger(ItemAuctionInstance.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ItemAuctionInstance.class);
     private static final long START_TIME_SPACE = TimeUnit.MILLISECONDS.convert(1, TimeUnit.MINUTES);
     private static final long FINISH_TIME_SPACE = TimeUnit.MILLISECONDS.convert(10, TimeUnit.MINUTES);
 
@@ -145,7 +146,7 @@ public final class ItemAuctionInstance {
     }
 
     private void addToAuctions(ItemAuctionData data) {
-        if (data.getAuctionState() == ItemAuctionState.FINISHED && data.getStartingTime() < (System.currentTimeMillis() - Duration.ofDays(Config.ALT_ITEM_AUCTION_EXPIRED_AFTER).toMillis())) {
+        if (data.getAuctionState() == ItemAuctionState.FINISHED && data.getStartingTime() < (System.currentTimeMillis() - Duration.ofDays(GeneralSettings.itemAuctionExpiresAfter()).toMillis())) {
             LOGGER.info("Clearing expired auction: {}", data.getAuction());
             getDAO(ItemDAO.class).deleteItemAuction(data.getAuction());
             getDAO(ItemDAO.class).deleteItemAuctionBid(data.getAuction());
@@ -163,15 +164,15 @@ public final class ItemAuctionInstance {
     }
 
 
-    public final ItemAuction getCurrentAuction() {
+    public ItemAuction getCurrentAuction() {
         return _currentAuction;
     }
 
-    public final ItemAuction getNextAuction() {
+    public ItemAuction getNextAuction() {
         return _nextAuction;
     }
 
-    public final void shutdown() {
+    public void shutdown() {
         final ScheduledFuture<?> stateTask = _stateTask;
         if (stateTask != null) {
             stateTask.cancel(false);
@@ -188,7 +189,7 @@ public final class ItemAuctionInstance {
         return null;
     }
 
-    final void checkAndSetCurrentAndNextAuction() {
+    void checkAndSetCurrentAndNextAuction() {
         final ItemAuction[] itemAuctions = this.auctions.values().toArray(new ItemAuction[this.auctions.size()]);
 
         ItemAuction currentAuction = null;
@@ -272,7 +273,7 @@ public final class ItemAuctionInstance {
         }
     }
 
-    public final ItemAuction[] getAuctionsByBidder(int bidderObjId) {
+    public ItemAuction[] getAuctionsByBidder(int bidderObjId) {
         final var itemAuctions = getAuctions();
         final ArrayList<ItemAuction> stack = new ArrayList<>(itemAuctions.size());
         for (ItemAuction auction : getAuctions()) {
@@ -286,7 +287,7 @@ public final class ItemAuctionInstance {
         return stack.toArray(new ItemAuction[stack.size()]);
     }
 
-    public final Collection<ItemAuction> getAuctions() {
+    public Collection<ItemAuction> getAuctions() {
         final Collection<ItemAuction> itemAuctions;
 
         synchronized (this.auctions) {
@@ -296,7 +297,7 @@ public final class ItemAuctionInstance {
         return itemAuctions;
     }
 
-    final void onAuctionFinished(ItemAuction auction) {
+    void onAuctionFinished(ItemAuction auction) {
         auction.broadcastToAllBiddersInternal(SystemMessage.getSystemMessage(SystemMessageId.S1_S_AUCTION_HAS_ENDED).addInt(auction.getAuctionId()));
 
         final ItemAuctionBid bid = auction.getHighestBid();
@@ -324,7 +325,7 @@ public final class ItemAuctionInstance {
         }
     }
 
-    final void setStateTask(ScheduledFuture<?> future) {
+    void setStateTask(ScheduledFuture<?> future) {
         final ScheduledFuture<?> stateTask = _stateTask;
         if (stateTask != null) {
             stateTask.cancel(false);
@@ -351,7 +352,7 @@ public final class ItemAuctionInstance {
         }
 
         @Override
-        public final void run() {
+        public void run() {
             try {
                 runImpl();
             } catch (Exception e) {

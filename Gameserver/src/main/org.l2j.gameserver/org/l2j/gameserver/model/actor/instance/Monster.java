@@ -26,9 +26,13 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.EffectFlag;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
+import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MinionList;
 
+import java.util.Queue;
 import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.nonNull;
@@ -222,5 +226,10 @@ public class Monster extends Attackable {
             return;
         }
         super.doCast(skill, item, ctrlPressed, shiftPressed);
+    }
+
+    @Override
+    protected Queue<AbstractEventListener> globalListenerByType(EventType type) {
+        return Listeners.Monsters().getListeners(type);
     }
 }

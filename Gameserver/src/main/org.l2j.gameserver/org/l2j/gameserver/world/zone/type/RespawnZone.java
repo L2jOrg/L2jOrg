@@ -21,6 +21,10 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
+import org.w3c.dom.Node;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,11 +33,12 @@ import java.util.Map;
  * Respawn zone implementation.
  *
  * @author Nyaran
+ * @author JoeAlisson
  */
 public class RespawnZone extends SpawnZone {
     private final Map<Race, String> raceRespawnPoint = new HashMap<>();
 
-    public RespawnZone(int id) {
+    private RespawnZone(int id) {
         super(id);
     }
 
@@ -55,5 +60,18 @@ public class RespawnZone extends SpawnZone {
 
     public String getRespawnPoint(Player player) {
         return raceRespawnPoint.get(player.getRace());
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            return new RespawnZone(id);
+        }
+
+        @Override
+        public String type() {
+            return "respawn";
+        }
     }
 }

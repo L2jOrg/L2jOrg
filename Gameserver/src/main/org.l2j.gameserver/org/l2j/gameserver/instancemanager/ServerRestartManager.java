@@ -33,11 +33,9 @@ public class ServerRestartManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(ServerRestartManager.class);
     private static boolean running = false;
 
-    private ServerRestartManager() {
+    private ServerRestartManager() { }
 
-    }
-
-    public static synchronized void init() {
+    public static void init() {
         if(running) {
             return;
         }

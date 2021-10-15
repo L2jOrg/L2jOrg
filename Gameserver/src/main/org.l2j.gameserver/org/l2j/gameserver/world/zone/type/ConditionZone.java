@@ -19,54 +19,65 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
+ * @author JoeAlisson
  */
 public class ConditionZone extends Zone {
-    private boolean NO_ITEM_DROP = false;
-    private boolean NO_BOOKMARK = false;
+    private final boolean allowDrop;
+    private final boolean allowBookmark;
 
-    public ConditionZone(int id) {
+    private ConditionZone(int id, boolean allowBookmark, boolean allowDrop) {
         super(id);
+        this.allowBookmark = allowBookmark;
+        this.allowDrop = allowDrop;
     }
 
     @Override
-    public void setParameter(String name, String value) {
-        if (name.equalsIgnoreCase("NoBookmark")) {
-            NO_BOOKMARK = Boolean.parseBoolean(value);
-        } else if (name.equalsIgnoreCase("NoItemDrop")) {
-            NO_ITEM_DROP = Boolean.parseBoolean(value);
-        } else {
-            super.setParameter(name, value);
-        }
-    }
-
-    @Override
-    protected void onEnter(Creature character) {
-        if (isPlayer(character)) {
-            if (NO_BOOKMARK) {
-                character.setInsideZone(ZoneType.NO_BOOKMARK, true);
+    protected void onEnter(Creature creature) {
+        if (isPlayer(creature)) {
+            if (!allowBookmark) {
+                creature.setInsideZone(ZoneType.NO_BOOKMARK, true);
             }
-            if (NO_ITEM_DROP) {
-                character.setInsideZone(ZoneType.NO_ITEM_DROP, true);
+            if (!allowDrop) {
+                creature.setInsideZone(ZoneType.NO_ITEM_DROP, true);
             }
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        if (isPlayer(character)) {
-            if (NO_BOOKMARK) {
-                character.setInsideZone(ZoneType.NO_BOOKMARK, false);
+    protected void onExit(Creature creature) {
+        if (isPlayer(creature)) {
+            if (!allowBookmark) {
+                creature.setInsideZone(ZoneType.NO_BOOKMARK, false);
             }
-            if (NO_ITEM_DROP) {
-                character.setInsideZone(ZoneType.NO_ITEM_DROP, false);
+            if (!allowDrop) {
+                creature.setInsideZone(ZoneType.NO_ITEM_DROP, false);
             }
+        }
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var attr = zoneNode.getAttributes();
+            var allowBookmark = reader.parseBoolean(attr, "allow-bookmark");
+            var allowDrop = reader.parseBoolean(attr, "allow-droop");
+            return new ConditionZone(id, allowBookmark, allowDrop);
+        }
+
+        @Override
+        public String type() {
+            return "condition";
         }
     }
 }

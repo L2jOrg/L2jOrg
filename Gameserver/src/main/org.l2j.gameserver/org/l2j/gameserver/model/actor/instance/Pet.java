@@ -50,7 +50,7 @@ import org.l2j.gameserver.model.actor.stat.PetStats;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PetInventory;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -945,7 +945,7 @@ public class Pet extends Summon {
 
                 broadcastStatusUpdate();
 
-                final List<Integer> foodIds = getPetData().getFood();
+                var foodIds = getPetData().getFood();
                 if (foodIds.isEmpty()) {
                     if (isUncontrollable()) {
                         // Owl Monk remove PK
@@ -961,8 +961,9 @@ public class Pet extends Summon {
                 }
 
                 Item food = null;
-                for (int id : foodIds) {
-                    food = _inventory.getItemByItemId(id);
+                var it = foodIds.iterator();
+                while(it.hasNext()) {
+                    food = _inventory.getItemByItemId(it.nextInt());
                     if (food != null) {
                         break;
                     }
@@ -1004,7 +1005,7 @@ public class Pet extends Summon {
         final Pet pet = restore(control, template, owner);
         // add the pet instance to world
         pet.setTitle(owner.getName());
-        if (petTemplate.isSynchLevel() && (pet.getLevel() != owner.getLevel())) {
+        if (petTemplate.isSyncLevel() && (pet.getLevel() != owner.getLevel())) {
             final byte availableLevel = (byte) Math.min(petTemplate.getMaxLevel(), owner.getLevel());
             pet.getStats().setLevel(availableLevel);
             pet.getStats().setExp(pet.getStats().getExpForLevel(availableLevel));

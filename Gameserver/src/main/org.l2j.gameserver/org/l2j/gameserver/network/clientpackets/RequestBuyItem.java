@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.model.WorldObject;
@@ -148,12 +147,6 @@ public final class RequestBuyItem extends ClientPacket {
             if (price < 0) {
                 LOGGER.warn("ERROR, no price found .. wrong buylist ??");
                 client.sendPacket(ActionFailed.STATIC_PACKET);
-                return;
-            }
-
-            if ((price == 0) && !player.isGM() && Config.ONLY_GM_ITEMS_FREE) {
-                player.sendMessage("Ohh Cheat dont work? You have a problem now!");
-                GameUtils.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried buy item for 0 adena.");
                 return;
             }
 

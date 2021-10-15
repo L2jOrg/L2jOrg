@@ -103,7 +103,7 @@ public interface ItemDAO extends DAO<Object> {
     void deleteItemAuctionBid(int auction);
 
     @Query("SELECT * FROM item_auction_bid WHERE auction = :auction:")
-    List<ItemAuctionBid> findAuctionBids(int auctionId);
+    List<ItemAuctionBid> findAuctionBids(int auction);
 
     @Query("DELETE FROM item_auction_bid WHERE auction = :auction: AND player_id = :playerId:")
     void deleteItemAuctionBid(int auction, int playerId);
@@ -129,4 +129,7 @@ public interface ItemDAO extends DAO<Object> {
 
     @Query("UPDATE items SET is_blessed = :isBlessed: WHERE object_id = :objectId:")
     void updateIsBlessed(int objectId, int isBlessed);
+
+    @Query("SELECT EXISTS (SELECT 1 FROM `items` WHERE `owner_id`=:playerId: AND object_id > 0 AND (`loc`='PET' OR `loc`='PET_EQUIP'))")
+    boolean hasPetItems(int playerId);
 }

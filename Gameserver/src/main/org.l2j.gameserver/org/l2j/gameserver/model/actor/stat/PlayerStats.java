@@ -18,10 +18,11 @@
  */
 package org.l2j.gameserver.model.actor.stat;
 
+import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.LevelData;
-import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.Party;
@@ -29,8 +30,6 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stat;
@@ -38,12 +37,15 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
+import org.l2j.gameserver.network.serverpackets.skill.AcquireSkillList;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.settings.RateSettings;
+import org.l2j.gameserver.settings.SayhaGraceSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;
 
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.Math.round;
@@ -61,6 +63,7 @@ public class PlayerStats extends PlayableStats {
     private final AtomicInteger _talismanSlots = new AtomicInteger();
     private long startingXp;
     private int _sayhaGracePoints = 0;
+    private ScheduledFuture<?> _expBoostInfoTask       = null;
 
     public PlayerStats(Player player) {
         super(player);
@@ -106,21 +109,8 @@ public class PlayerStats extends PlayableStats {
         double bonusSp = 1.;
 
         if (useBonuses) {
-            if (activeChar.isFishing()) {
-                // rod fishing skills
-                final Item rod = activeChar.getActiveWeaponInstance();
-                if ((rod != null) && (rod.getItemType() == WeaponType.FISHING_ROD) && (rod.getTemplate().getAllSkills() != null)) {
-                    for (ItemSkillHolder s : rod.getTemplate().getAllSkills()) {
-                        if (s.getSkill().getId() == FANCY_FISHING_ROD_SKILL) {
-                            bonusExp *= 1.5;
-                            bonusSp *= 1.5;
-                        }
-                    }
-                }
-            } else {
-                bonusExp = getExpBonusMultiplier();
-                bonusSp = getSpBonusMultiplier();
-            }
+            bonusExp = getExpBonusMultiplier();
+            bonusSp = getSpBonusMultiplier();
         }
 
         addToExp *= bonusExp;
@@ -198,7 +188,7 @@ public class PlayerStats extends PlayableStats {
 
     @Override
     public final boolean addLevel(byte value) {
-        if ((getLevel() + value) > LevelData.getInstance().getMaxLevel()) {
+        if (getLevel() + value > LevelData.getInstance().getMaxLevel()) {
             return false;
         }
 
@@ -212,10 +202,8 @@ public class PlayerStats extends PlayableStats {
             player.notifyFriends(FriendStatus.LEVEL);
         }
 
-        // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(player, oldLevel, getLevel()), player);
 
-        // Give AutoGet skills and all normal skills if Auto-Learn is activated.
         player.rewardSkills();
 
         if (player.getClan() != null) {
@@ -225,37 +213,29 @@ public class PlayerStats extends PlayableStats {
             player.getParty().recalculatePartyLevel(); // Recalculate the party level
         }
 
-        // Maybe add some skills when player levels up in transformation.
-        player.getTransformation().ifPresent(transform -> transform.onLevelUp(player));
-
-        // Synchronize level with pet if possible.
-        final Pet sPet = player.getPet();
-        if (sPet != null) {
-            if (sPet.getPetData().isSynchLevel() && (sPet.getLevel() != getLevel())) {
-                final byte availableLevel = (byte) Math.min(sPet.getPetData().getMaxLevel(), getLevel());
-                sPet.getStats().setLevel(availableLevel);
-                sPet.getStats().getExpForLevel(availableLevel);
-                sPet.setCurrentHp(sPet.getMaxHp());
-                sPet.setCurrentMp(sPet.getMaxMp());
-                sPet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
-                sPet.updateAndBroadcastStatus(1);
-            }
-        }
+        syncPetLevel(player);
 
         if (getLevel() >= 40) {
             player.initElementalSpirits();
         }
         player.updateCharacteristicPoints();
         player.broadcastStatusUpdate();
-        // Update the overloaded status of the Player
         player.refreshOverloaded(true);
-        // Send a Server->Client packet UserInfo to the Player
-        player.sendPacket(new UserInfo(player));
-        // Send acquirable skill list
-        player.sendPacket(new AcquireSkillList(player));
-        player.sendPacket(new ExVoteSystemInfo(player));
-        player.sendPacket(new ExOneDayReceiveRewardList(player, true));
+        player.sendPackets(new UserInfo(player), new AcquireSkillList(player), new ExVoteSystemInfo(player), new ExOneDayReceiveRewardList(player, true));
         return levelIncreased;
+    }
+
+    private void syncPetLevel(Player player) {
+        final Pet sPet = player.getPet();
+        if (sPet != null && sPet.getPetData().isSyncLevel() && sPet.getLevel() != getLevel()) {
+            final byte availableLevel = (byte) Math.min(sPet.getPetData().getMaxLevel(), getLevel());
+            sPet.getStats().setLevel(availableLevel);
+            sPet.getStats().getExpForLevel(availableLevel);
+            sPet.setCurrentHp(sPet.getMaxHp());
+            sPet.setCurrentMp(sPet.getMaxMp());
+            sPet.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.LEVEL_UP));
+            sPet.updateAndBroadcastStatus(1);
+        }
     }
 
     @Override
@@ -319,65 +299,76 @@ public class PlayerStats extends PlayableStats {
         return super.getSp();
     }
 
-    public int getSayhaGracePoints() {
-        return Math.min(Math.max(_sayhaGracePoints, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
+    public int getSayhaGracePoints()
+    {
+        return CommonUtil.constrain(_sayhaGracePoints, MIN_SAYHA_GRACE_POINTS, MAX_SAYHA_GRACE_POINTS);
     }
 
-    public void setSayhaGracePoints(int value) {
-        _sayhaGracePoints = Math.min(Math.max(value, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
-       // getActiveChar().sendExpBoostInfo(true);
+    public void setSayhaGracePoints(int value)
+    {
+        _sayhaGracePoints = CommonUtil.constrain(value, MIN_SAYHA_GRACE_POINTS, MAX_SAYHA_GRACE_POINTS);
+        // getActiveChar().sendExpBoostInfo(true);
     }
 
-    public int getBaseSayhaGracePoints() {
-        return Math.min(Math.max(_sayhaGracePoints, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
+    public int getBaseSayhaGracePoints()
+    {
+        return CommonUtil.constrain(_sayhaGracePoints, MIN_SAYHA_GRACE_POINTS, MAX_SAYHA_GRACE_POINTS);
     }
 
-    public double getSayhaGraceExpBonus() {
-        double bonus = (getSayhaGracePoints() > 0) ? getValue(Stat.SAYHA_GRACE_EXP_RATE, Config.RATE_SAYHA_GRACE_EXP_MULTIPLIER) : 1.0;
-        if (bonus == 1)
+    public double getSayhaGraceExpBonus()
+    {
+        if (getSayhaGracePoints() > 0)
         {
-            if (getCreature().getLimitedSayhaGraceEndTime() > System.currentTimeMillis())
-            {
-                return getLimitedSayhaGraceExpBonus();
-            }
+            return getValue(Stat.SAYHA_GRACE_EXP_RATE, SayhaGraceSettings.RateExpMul());
         }
-        return bonus;
+        if (getCreature().getLimitedSayhaGraceEndTime() > System.currentTimeMillis())
+        {
+            return getLimitedSayhaGraceExpBonus();
+        }
+        return 1;
     }
 
     public double getLimitedSayhaGraceExpBonus()
     {
-        return Config.RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
+        return SayhaGraceSettings.RateExpMulLimit();
     }
+
     /*
      * Set current grace points to this value if quiet = true - does not send system messages
      */
-    public void setSayhaGracePoints(int points, boolean quiet) {
-        points = Math.min(Math.max(points, MIN_SAYHA_GRACE_POINTS), MAX_SAYHA_GRACE_POINTS);
-        if (points == getSayhaGracePoints()) {
+    public void setSayhaGracePoints(int points, boolean quiet)
+    {
+        points = CommonUtil.constrain(points, MIN_SAYHA_GRACE_POINTS, MAX_SAYHA_GRACE_POINTS);
+        if (points == getSayhaGracePoints())
+        {
             return;
         }
-
-        if (!quiet) {
-            if (points < getSayhaGracePoints()) {
+        if (!quiet)
+        {
+            if (points < getSayhaGracePoints())
+            {
                 getCreature().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_HAS_DECREASED);
-            } else {
+            }
+            else
+            {
                 getCreature().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_HAS_INCREASED);
             }
         }
-
         setSayhaGracePoints(points);
-
-        if (points == 0) {
+        if (points == 0)
+        {
             getCreature().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_IS_FULLY_EXHAUSTED);
-        } else if (points == MAX_SAYHA_GRACE_POINTS) {
+        }
+        else if (points == MAX_SAYHA_GRACE_POINTS)
+        {
             getCreature().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_IS_AT_MAXIMUM);
         }
-
         final Player player = getCreature();
         player.sendPacket(new ExSayhaGracePointInfo(getSayhaGracePoints()));
         player.broadcastUserInfo(UserInfoType.VITA_FAME);
         final Party party = player.getParty();
-        if (party != null) {
+        if (party != null)
+        {
             final PartySmallWindowUpdate partyWindow = new PartySmallWindowUpdate(player, false);
             partyWindow.addComponentType(PartySmallWindowUpdateType.SAYHA_GRACE_POINTS);
             party.broadcastToPartyMembers(player, partyWindow);
@@ -389,37 +380,41 @@ public class PlayerStats extends PlayableStats {
         setSayhaGracePoints(getSayhaGracePoints() + value, quiet);
     }
 
-    public void updateSayhaGracePoints(int points, boolean useRates, boolean quiet) {
-        if (points == 0 || CharacterSettings.isSayhaGraceEnabled()) {
+    public void updateSayhaGracePoints(int points, boolean useRates, boolean quiet)
+    {
+        if (points == 0 || !SayhaGraceSettings.isEnabled())
+        {
             return;
         }
-
-        if (useRates) {
-            if (getCreature().isLucky()) {
+        if (useRates)
+        {
+            if (getCreature().isLucky())
+            {
                 return;
             }
-
             if (points < 0) // Sayha grace consumed
             {
                 final int stat = (int) getValue(Stat.SAYHA_GRACE_CONSUME_RATE, 1);
-
-                if (stat == 0) {
+                if (stat == 0)
+                {
                     return;
                 }
-                if (stat < 0) {
+                if (stat < 0)
+                {
                     points = -points;
                 }
             }
-
-            if (points > 0) {
+            if (points > 0)
+            {
                 // Sayha's Grace increased
-                points *= Config.RATE_SAYHA_GRACE_GAIN;
-            } else {
+                points *= SayhaGraceSettings.RateGain();
+            }
+            else
+            {
                 // sayha grace decreased
-                points *= Config.RATE_SAYHA_GRACE_LOST;
+                points *= SayhaGraceSettings.RateLoss();
             }
         }
-
         if (points > 0)
         {
             points = Math.min(getSayhaGracePoints() + points, MAX_SAYHA_GRACE_POINTS);
@@ -428,63 +423,55 @@ public class PlayerStats extends PlayableStats {
         {
             points = Math.max(getSayhaGracePoints() + points, MIN_SAYHA_GRACE_POINTS);
         }
-
         if (Math.abs(points - getSayhaGracePoints()) <= 1e-6)
         {
             return;
         }
-
         setSayhaGracePoints(points);
     }
 
-
-    public double getExpBonusMultiplier() {
+    public double getExpBonusMultiplier()
+    {
         double bonus = 1.0;
         double sayhaGrace = 1.0;
         double bonusExp;
-
         // Bonus from Sayha's Grace System
         sayhaGrace = getSayhaGraceExpBonus();
-
         // Bonus exp from skills
         bonusExp = getValue(Stat.BONUS_EXP, 1);
-
         if (sayhaGrace > 1.0)
         {
             bonus += (sayhaGrace - 1);
         }
-
-        if (bonusExp > 1) {
+        if (bonusExp > 1)
+        {
             bonus += (bonusExp - 1);
         }
-
         // Check for abnormal bonuses
         bonus = Math.max(bonus, 1);
-
         return bonus;
     }
 
-    public double getSpBonusMultiplier() {
+    public double getSpBonusMultiplier()
+    {
         double bonus = 1.0;
         double sayhaGrace = 1.0;
         double bonusSp;
-
         // Bonus from Sayha's Grace System
         sayhaGrace = getSayhaGraceExpBonus();
         // Bonus sp from skills
         bonusSp = 1 + (getValue(Stat.BONUS_SP, 0) / 100);
-
         if (sayhaGrace > 1.0)
         {
             bonus += (sayhaGrace - 1);
         }
-
-        if (bonusSp > 1) {
+        if (bonusSp > 1)
+        {
             bonus += (bonusSp - 1);
         }
-
         return Math.max(bonus, 1);
     }
+
 
     /**
      * Gets the maximum brooch jewel count.
@@ -545,7 +532,21 @@ public class PlayerStats extends PlayableStats {
         if (player.hasAbnormalType(AbnormalType.ABILITY_CHANGE) && player.hasServitors()) {
             player.getServitors().values().forEach(servitor -> servitor.getStats().recalculateStats(broadcast));
         }
-        // TODO send only when XP_BONUS change
-        player.sendPacket(new ExUserBoostStat(BoostStatType.STAT, (short) (round(getExpBonusMultiplier() * 100) - 100)));
+        if (_expBoostInfoTask != null)
+        {
+            _expBoostInfoTask.cancel(true);
+            _expBoostInfoTask = null;
+        }
+        _expBoostInfoTask = ThreadPool.schedule(() ->
+        {
+            // TODO send only when XP_BONUS change
+            player.sendPacket(new ExUserBoostStat(player, BoostStatType.SAYHA, (short) (round(getSayhaGraceExpBonus() * 100) - 100)));
+            player.sendPacket(new ExUserBoostStat(player, BoostStatType.BUFFS, (short) (round(getExpBonusMultiplier() * 100) - 100)));
+            player.sendPacket(new ExUserBoostStat(player, BoostStatType.PASSIVE, (short) (round(getExpBonusMultiplier() * 100) - 100)));
+            if (broadcast)
+            {
+                player.sendPacket(new ExVitalityEffectInfo(player));
+            }
+        }, 500);
     }
 }

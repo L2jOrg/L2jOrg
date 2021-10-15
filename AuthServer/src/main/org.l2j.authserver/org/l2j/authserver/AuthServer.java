@@ -27,7 +27,6 @@ import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.AuthPacketHandler;
 import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
 import org.l2j.authserver.network.gameserver.ServerClient;
-import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.configuration.Configurator;
 import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPool;
@@ -79,7 +78,6 @@ public class AuthServer {
 
     public static void main(String[] args) throws Exception {
         configureLogger();
-        configureCaches();
         configureDatabase();
         configureNetworkPackets();
         Configurator.getInstance().load();
@@ -91,10 +89,6 @@ public class AuthServer {
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
-    }
-
-    private static void configureCaches() {
-        CacheFactory.getInstance().initialize("config/ehcache.xml");
     }
 
     private static void configureNetworkPackets() {

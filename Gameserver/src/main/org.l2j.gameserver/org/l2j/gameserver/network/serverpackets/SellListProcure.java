@@ -19,43 +19,36 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.data.database.data.CropProcure;
 import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 
 public class SellListProcure extends ServerPacket {
-    private final long _money;
-    private final Map<Item, Long> _sellList = new HashMap<>();
+    private final long money;
+    private final Map<Item, Long> sellList = Collections.emptyMap();
 
-    public SellListProcure(Player player, int castleId) {
-        _money = player.getAdena();
-        for (CropProcure c : CastleManorManager.getInstance().getCropProcure(castleId, false)) {
-            final Item item = player.getInventory().getItemByItemId(c.getSeedId());
-            if ((item != null) && (c.getAmount() > 0)) {
-                _sellList.put(item, c.getAmount());
-            }
-        }
+    public SellListProcure(Player player) {
+        money = player.getAdena();
     }
 
     @Override
     public void writeImpl(GameClient client, WritableBuffer buffer) {
         writeId(ServerPacketId.SELL_LIST_PROCURE, buffer );
 
-        buffer.writeLong(_money); // money
+        buffer.writeLong(money); // money
         buffer.writeInt(0x00); // lease ?
-        buffer.writeShort(_sellList.size()); // list size
+        buffer.writeShort(sellList.size()); // list size
 
-        for (Item item : _sellList.keySet()) {
+        for (var entry : sellList.entrySet()) {
+            var item = entry.getKey();
             buffer.writeShort(item.getTemplate().getType1());
             buffer.writeInt(item.getObjectId());
             buffer.writeInt(item.getDisplayId());
-            buffer.writeLong(_sellList.get(item)); // count
+            buffer.writeLong(entry.getValue()); // count
             buffer.writeShort(item.getType2());
             buffer.writeShort(0); // unknown
             buffer.writeLong(0); // price, u shouldnt get any adena for crops, only raw materials

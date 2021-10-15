@@ -38,13 +38,13 @@ import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
 import org.l2j.gameserver.engine.geo.GeoEngine;
-import org.l2j.gameserver.engine.item.Item;
-import org.l2j.gameserver.engine.item.ItemChangeType;
-import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.*;
 import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
 import org.l2j.gameserver.engine.olympiad.OlympiadMode;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
+import org.l2j.gameserver.engine.skill.api.SkillLearn;
+import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -60,7 +60,6 @@ import org.l2j.gameserver.model.actor.status.PlayerStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
 import org.l2j.gameserver.model.actor.tasks.player.*;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.SocialStatus;
 import org.l2j.gameserver.model.cubic.CubicInstance;
@@ -71,11 +70,16 @@ import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.entity.Event;
 import org.l2j.gameserver.model.entity.Siege;
 import org.l2j.gameserver.model.events.EventDispatcher;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.impl.character.player.*;
+import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.holders.*;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.ILocational;
-import org.l2j.gameserver.model.item.*;
+import org.l2j.gameserver.model.item.BodyPart;
+import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.model.item.Henna;
 import org.l2j.gameserver.model.item.container.Warehouse;
 import org.l2j.gameserver.model.item.container.*;
 import org.l2j.gameserver.model.item.type.ArmorType;
@@ -97,11 +101,10 @@ import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.gs2as.ChangeAccessLevel;
+import org.l2j.gameserver.network.auth.gs2as.ChangeAccessLevel;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.network.serverpackets.grace.ExVitalExInfo;
@@ -109,7 +112,7 @@ import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.item.ItemList;
 import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
-import org.l2j.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
+import org.l2j.gameserver.network.serverpackets.skill.AcquireSkillList;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.ChatSettings;
@@ -118,11 +121,9 @@ import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.util.*;
-import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.slf4j.Logger;
@@ -139,12 +140,10 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
@@ -155,7 +154,7 @@ import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.model.item.BodyPart.*;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
-import static org.l2j.gameserver.util.GameUtils.isPlayable;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -185,7 +184,6 @@ public final class Player extends Playable {
     private PlayerStatsData statsData;
     private AutoPlaySettings autoPlaySettings;
     private PlayerVariableData variables;
-    private ScheduledFuture<?> _timedHuntingZoneFinishTask;
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection;
     private IntMap<CostumeCollectionData> costumesCollections = Containers.emptyIntMap();
@@ -489,39 +487,12 @@ public final class Player extends Playable {
         return variables.getSayhaGraceItemsUsed();
     }
 
-    private int getAbilityPointsMainClassUsed() {
-        return variables.getAbilityPointsMainClassUsed();
-    }
-
-    private int getRevelationSkillMainClass1() {
-        return variables.getRevelationSkillMainClass1();
-    }
-
-    private int getRevelationSkillMainClass2() {
-        return variables.getRevelationSkillMainClass2();
-    }
-
-    private String getExtendDrop() {
-        return variables.getExtendDrop();
-    }
-
     public int getFortuneTelling() {
         return variables.getFortuneTelling();
     }
 
     public boolean isFortuneTellingBlackCat() {
         return variables.isFortuneTellingBlackCat();
-    }
-
-    public long getHuntingZoneResetTime(int zoneId) {
-        String[] timeZones = variables.getHuntingZoneResetTime().split(";");
-
-        for(int i = 0 ; i < timeZones.length; i = i + 2) {
-            if (timeZones[i].equalsIgnoreCase("" + zoneId))
-                return Long.parseLong(timeZones[i + 1]);
-        }
-
-        return 0;
     }
 
     public int getAutoCp() {
@@ -594,10 +565,6 @@ public final class Player extends Playable {
         return variables.getMonsterReturn();
     }
 
-    public String getUiKeyMapping() {
-        return variables.getUiKeyMapping();
-    }
-
     public void setHairAccessoryEnabled(boolean hairAccessory_Enabled) {
         variables.setHairAccessoryEnabled(hairAccessory_Enabled);
     }
@@ -632,24 +599,12 @@ public final class Player extends Playable {
         variables.setWorldChatUsed(timesUsed);
     }
 
-    public void setExtendDrop(String extendDrop) {
-        variables.setExtendDrop(extendDrop);
-    }
-
     public void setFortuneTelling(int fortuneTelling) {
         variables.setFortuneTelling(fortuneTelling);
     }
 
     public void setFortuneTellingBlackCat(boolean fortuneTellingBlackCat) {
         variables.setFortuneTellingBlackCat(fortuneTellingBlackCat);
-    }
-
-    public void setHuntingZoneResetTime(int zoneId, long huntingZoneResetTime) {
-        if(variables.getHuntingZoneResetTime().equalsIgnoreCase("")) {
-            variables.setHuntingZoneResetTime(zoneId + ";" + huntingZoneResetTime);
-        } else {
-            variables.setHuntingZoneResetTime(variables.getHuntingZoneResetTime() + ";" + zoneId + ";" + huntingZoneResetTime);
-        }
     }
 
     public void setAutoCp(int autoCp) {
@@ -708,10 +663,6 @@ public final class Player extends Playable {
         variables.setMonsterReturn(monsterReturn);
     }
 
-    public void setUiKeyMapping(String uiKeyMapping) {
-        variables.setUiKeyMapping(uiKeyMapping);
-    }
-
     public int getRevengeUsableLocation() {
         return variables.getRevengeLocations();
     }
@@ -730,38 +681,6 @@ public final class Player extends Playable {
 
     public void resetRevengeData() {
         variables.resetRevengeData();
-    }
-
-    public void updateExtendDrop(int id, long count) {
-        StringBuilder result = new StringBuilder();
-        final String data = getExtendDrop();
-        if (data.isEmpty()) {
-            result = new StringBuilder(id + "," + count);
-        } else if (data.contains(";")) {
-            for (String s : data.split(";")) {
-                final String[] drop = s.split(",");
-                if (drop[0].equals(Integer.toString(id))) {
-                    continue;
-                }
-
-                result.append(";").append(s);
-            }
-            result = new StringBuilder(result.substring(1));
-        } else {
-            result = new StringBuilder(id + "," + count);
-        }
-        variables.setExtendDrop(result.toString());
-    }
-
-    public long getExtendDropCount(int id) {
-        final String data = getExtendDrop();
-        for (String s : data.split(";")) {
-            final String[] drop = s.split(",");
-            if (drop[0].equals(Integer.toString(id))) {
-                return Long.parseLong(drop[1]);
-            }
-        }
-        return 0;
     }
 
     public LocalDate getCreateDate() {
@@ -1038,7 +957,12 @@ public final class Player extends Playable {
 
         if (!inventory.findAmmunitionForCurrentWeapon()) {
             getAI().setIntention(AI_INTENTION_ACTIVE);
-            sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+            if (weapon.getItemType().isPistols())
+            {
+                sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_BECAUSE_YOU_DON_T_HAVE_AN_ELEMENTAL_ORB);
+            }
+                sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+
             return false;
         }
 
@@ -1232,7 +1156,7 @@ public final class Player extends Playable {
     private ScheduledFuture<?> taskWater;
     private ScheduledFuture<?> skillListRefreshTask;
 
-    private SkillUseHolder queuedSkill;
+    private SkillUsedInfo queuedSkill;
     private int reviveRequested;
     private double revivePower;
     private boolean revivePet;
@@ -1445,7 +1369,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final PlayerStats getStats() {
+    public PlayerStats getStats() {
         return (PlayerStats) super.getStats();
     }
 
@@ -1455,7 +1379,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final PlayerStatus getStatus() {
+    public PlayerStatus getStatus() {
         return (PlayerStatus) super.getStatus();
     }
 
@@ -1464,11 +1388,11 @@ public final class Player extends Playable {
         setStatus(new PlayerStatus(this));
     }
 
-    public final Appearance getAppearance() {
+    public Appearance getAppearance() {
         return appearance;
     }
 
-    public final PlayerTemplate getBaseTemplate() {
+    public PlayerTemplate getBaseTemplate() {
         return PlayerTemplateData.getInstance().getTemplate(data.getBaseClass());
     }
 
@@ -1476,7 +1400,7 @@ public final class Player extends Playable {
      * @return the PlayerTemplate link to the Player.
      */
     @Override
-    public final PlayerTemplate getTemplate() {
+    public PlayerTemplate getTemplate() {
         return (PlayerTemplate) super.getTemplate();
     }
 
@@ -1489,7 +1413,7 @@ public final class Player extends Playable {
      * Return the Level of the Player.
      */
     @Override
-    public final int getLevel() {
+    public int getLevel() {
         return getStats().getLevel();
     }
 
@@ -1602,18 +1526,17 @@ public final class Player extends Playable {
         return quests.values();
     }
 
-    /**
-     * @return a table containing all Quest in progress from the table _quests.
-     */
     public List<Quest> getAllActiveQuests() {
-        //@formatter:off
-        return quests.values().stream()
-                .filter(QuestState::isStarted)
-                .map(QuestState::getQuest)
-                .filter(Objects::nonNull)
-                .filter(q -> q.getId() > 1)
-                .collect(Collectors.toList());
-        //@formatter:on
+        List<Quest> activeQuests = new ArrayList<>();
+        for (var questState : quests.values()) {
+            if(questState.isStarted()) {
+                var quest = questState.getQuest();
+                if(quest.getId() > 1) {
+                    activeQuests.add(quest);
+                }
+            }
+        }
+        return activeQuests;
     }
 
     public void processQuestEvent(String questName, String event) {
@@ -1652,7 +1575,7 @@ public final class Player extends Playable {
     /**
      * @return a list of QuestStates which registered for notify of death of this Player.
      */
-    public final Set<QuestState> getNotifyQuestOfDeath() {
+    public Set<QuestState> getNotifyQuestOfDeath() {
         if (notifyQuestOfDeathList == null) {
             initNotifyQuestOfDeathList();
         }
@@ -1666,7 +1589,7 @@ public final class Player extends Playable {
         }
     }
 
-    public final boolean isNotifyQuestOfDeathEmpty() {
+    public boolean isNotifyQuestOfDeathEmpty() {
         return (notifyQuestOfDeathList == null) || notifyQuestOfDeathList.isEmpty();
     }
 
@@ -1761,11 +1684,7 @@ public final class Player extends Playable {
         if (su.hasUpdates()) {
             broadcastPacket(su);
         }
-        updateRelations();
-    }
-
-    private void updateRelations() {
-        World.getInstance().forEachVisibleObject(this, Player.class, this::updateRelation);
+        Broadcast.relationChanged(this);
     }
 
     public void updateRelation(Player player) {
@@ -1813,9 +1732,9 @@ public final class Player extends Playable {
             }
         }
 
-        ZoneManager.getInstance().getRegion(this).revalidateZones(this);
+        ZoneEngine.getInstance().getRegion(this).revalidateZones(this);
 
-        if (Config.ALLOW_WATER) {
+        if (GeneralSettings.allowWater()) {
             checkWaterState();
         }
 
@@ -2061,13 +1980,7 @@ public final class Player extends Playable {
                 } else {
                     sm = getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
                 }
-                sm.addItemName(item);
-                sendPacket(sm);
-
-                if (item.getBodyPart().isAnyOf(RIGHT_HAND, TWO_HAND)) {
-                    rechargeShot(ShotType.SOULSHOTS);
-                    rechargeShot(ShotType.SPIRITSHOTS);
-                }
+                sendPacket(sm.addItemName(item));
             } else {
                 sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
             }
@@ -2219,7 +2132,7 @@ public final class Player extends Playable {
     public void rewardSkills() {
         // Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
         if (CharacterSettings.autoLearnSkillEnabled()) {
-            giveAvailableSkills(CharacterSettings.autoLearnSkillFSEnabled(), true);
+            giveAvailableSkills(true);
         } else {
             giveAvailableAutoGetSkills();
         }
@@ -2235,14 +2148,13 @@ public final class Player extends Playable {
     /**
      * Give all available skills to the player.
      *
-     * @param includedByFs   if {@code true} forgotten scroll skills present in the skill tree will be added
      * @param includeAutoGet if {@code true} auto-get skills present in the skill tree will be added
      * @return the amount of new skills earned
      */
-    public int giveAvailableSkills(boolean includedByFs, boolean includeAutoGet) {
+    public int giveAvailableSkills(boolean includeAutoGet) {
         int skillCounter = 0;
         // Get available skills
-        final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includedByFs, includeAutoGet);
+        final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includeAutoGet);
         final List<Skill> skillsForStore = new ArrayList<>();
 
         for (Skill skill : skills) {
@@ -2280,7 +2192,7 @@ public final class Player extends Playable {
         final SkillEngine st = SkillEngine.getInstance();
         Skill skill;
         for (SkillLearn s : autoGetSkills) {
-            skill = st.getSkill(s.getSkillId(), s.getSkillLevel());
+            skill = st.getSkill(s.id(), s.level());
             if (skill != null) {
                 addSkill(skill, true);
             } else {
@@ -2424,7 +2336,7 @@ public final class Player extends Playable {
                 }
             }
         }
-        if (Config.WAREHOUSE_CACHE) {
+        if (GeneralSettings.cacheWarehouse()) {
             WarehouseCacheManager.getInstance().addCacheTask(this);
         }
         return warehouse;
@@ -2438,6 +2350,10 @@ public final class Player extends Playable {
             warehouse.deleteMe();
         }
         warehouse = null;
+
+        if (GeneralSettings.cacheWarehouse()) {
+            WarehouseCacheManager.getInstance().remCacheTask(this);
+        }
     }
 
     public PlayerFreight getFreight() {
@@ -2448,7 +2364,7 @@ public final class Player extends Playable {
      * @return true if refund list is not empty
      */
     public boolean hasRefund() {
-        return (refund != null) && (refund.getSize() > 0) && Config.ALLOW_REFUND;
+        return refund != null && refund.getSize() > 0 && GeneralSettings.allowRefund();
     }
 
     /**
@@ -2532,19 +2448,10 @@ public final class Player extends Playable {
                 return false;
             }
 
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(adenaItem);
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
+            sendInventoryUpdate(new InventoryUpdate(adenaItem));
 
             if (sendMessage) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
-                sm.addLong(count);
-                sendPacket(sm);
+                sendPacket(getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(count));
             }
         }
 
@@ -2574,14 +2481,7 @@ public final class Player extends Playable {
                 return false;
             }
 
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(beautyTickets);
-                sendInventoryUpdate(iu);
-            } else {
-                sendItemList();
-            }
+            sendInventoryUpdate(new InventoryUpdate(beautyTickets));
 
             if (sendMessage) {
                 final SystemMessage sm;
@@ -2595,6 +2495,22 @@ public final class Player extends Playable {
         }
         return true;
     }
+
+
+    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
+        return addItem(process, itemId, count, enchant, reference, sendMessage, true);
+    }
+
+    /**
+     * @param process     the process name
+     * @param item        the item holder
+     * @param reference   the reference object
+     * @param sendMessage if {@code true} a system message will be sent
+     */
+    public Item addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
+        return addItem(process, item.getId(), item.getCount(), item.getEnchantment(), reference, sendMessage);
+    }
+
 
     /**
      * Adds item to inventory and send a Server->Client InventoryUpdate packet to the Player.
@@ -2654,60 +2570,62 @@ public final class Player extends Playable {
             }
 
             if(template.hasExImmediateEffect()) {
-                final var handler = ItemHandler.getInstance().getHandler(template instanceof EtcItem etcItem ? etcItem : null);
-
-                if (handler == null) {
-                    LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
-                } else {
-                    handler.useItem(this, ItemEngine.getInstance().createTempItem(itemId), false);
-                }
+                useAutoConsumeItem(template);
             } else {
-                item = inventory.addItem(process, itemId, count, this, reference, sendUpdate);
-                if(enchant > 0) {
-                    item.changeEnchantLevel(enchant);
-                }
-
-                // If over capacity, drop the item
-                if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, template.isQuestItem()) && item.isDropable()
-                        && (!item.isStackable() || (item.getLastChange() != ItemChangeType.MODIFIED))) {
-
-                    dropItem("InvDrop", item, null);
-                }
+                item = addItemToInventory(process, itemId, count, enchant, reference, sendUpdate, template);
             }
 
             if (sendMessage) {
-                if (count > 1) {
-                    if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                        sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(template).addLong(count) );
-                    } else {
-                        sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_S2_S1).addItemName(template).addLong(count) );
-                    }
-                } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
-                    sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(template) );
-                } else if(enchant > 0) {
-                    sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_A_S1_S2).addItemName(template).addInt(enchant));
-                } else {
-                    sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(template) );
-                }
+                sendObtainItemMessage(process, count, enchant, template);
             }
         }
         return item;
     }
 
-    public Item addItem(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendMessage) {
-        return addItem(process, itemId, count, enchant, reference, sendMessage, true);
+    private Item addItemToInventory(String process, int itemId, long count, int enchant, WorldObject reference, boolean sendUpdate, ItemTemplate template) {
+        Item item;
+        item = inventory.addItem(process, itemId, count, this, reference, sendUpdate);
+        if(enchant > 0) {
+            item.changeEnchantLevel(enchant);
+        }
+
+        // If over capacity, drop the item
+        if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !inventory.validateCapacity(0, template.isQuestItem()) && item.isDropable()
+                && (!item.isStackable() || (item.getLastChange() != ItemChangeType.MODIFIED))) {
+
+            dropItem("InvDrop", item, null);
+        }
+        return item;
     }
 
+    private void useAutoConsumeItem(ItemTemplate template) {
+        final var handler = ItemHandler.getInstance().getHandler(template instanceof EtcItem etcItem ? etcItem : null);
 
+        if (handler == null) {
+            LOGGER.warn("No item handler registered for immediate item id {}!",  template.getId());
+        } else {
+            handler.useItem(this, ItemEngine.getInstance().createTempItem(template), true);
+        }
+    }
 
-    /**
-     * @param process     the process name
-     * @param item        the item holder
-     * @param reference   the reference object
-     * @param sendMessage if {@code true} a system message will be sent
-     */
-    public Item addItem(String process, ItemHolder item, WorldObject reference, boolean sendMessage) {
-        return addItem(process, item.getId(), item.getCount(), item.getEnchantment(), reference, sendMessage);
+    private void sendObtainItemMessage(String process, long count, int enchant, ItemTemplate template) {
+        SystemMessage message = null;
+        if (count > 1) {
+            SystemMessageId messageId;
+            if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
+                messageId = SystemMessageId.YOU_HAVE_EARNED_S2_S1_S;
+            } else {
+                messageId = YOU_HAVE_OBTAINED_S2_S1;
+            }
+            message = getSystemMessage(messageId).addItemName(template).addLong(count);
+        } else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest")) {
+            sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(template) );
+        } else if(enchant > 0) {
+            sendPacket( getSystemMessage(YOU_HAVE_OBTAINED_A_S1_S2).addItemName(template).addInt(enchant));
+        } else {
+            sendPacket( getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(template) );
+        }
+        sendPacket(message);
     }
 
     /**
@@ -2856,38 +2774,27 @@ public final class Player extends Playable {
             return null;
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
+        var playerIU = new InventoryUpdate();
 
-            if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
-                playerIU.addModifiedItem(oldItem);
-            } else {
-                playerIU.addRemovedItem(oldItem);
-            }
-
-            sendInventoryUpdate(playerIU);
+        if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
+            playerIU.addModifiedItem(oldItem);
         } else {
-            sendItemList();
+            playerIU.addRemovedItem(oldItem);
         }
+
+        sendInventoryUpdate(playerIU);
 
         // Send target update packet
         if (target instanceof PlayerInventory) {
             final Player targetPlayer = ((PlayerInventory) target).getOwner();
+            playerIU = new InventoryUpdate();
 
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                final InventoryUpdate playerIU = new InventoryUpdate();
-
-                if (newItem.getCount() > count) {
-                    playerIU.addModifiedItem(newItem);
-                } else {
-                    playerIU.addNewItem(newItem);
-                }
-
-                targetPlayer.sendPacket(playerIU);
+            if (newItem.getCount() > count) {
+                playerIU.addModifiedItem(newItem);
             } else {
-                targetPlayer.sendItemList();
+                playerIU.addNewItem(newItem);
             }
+            targetPlayer.sendPacket(playerIU);
         }
         return newItem;
     }
@@ -2922,24 +2829,12 @@ public final class Player extends Playable {
             item.setProtected(true);
         }
 
-        // retail drop protection
         if (protectItem) {
             item.getDropProtection().protect(this);
         }
 
-        // Send inventory update packet
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            final InventoryUpdate playerIU = new InventoryUpdate();
-            playerIU.addItem(item);
-            sendInventoryUpdate(playerIU);
-        } else {
-            sendItemList();
-        }
-
-        // Sends message to client if requested
-        final SystemMessage sm = getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-        sm.addItemName(item);
-        sendPacket(sm);
+        sendInventoryUpdate(new InventoryUpdate(item));
+        sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(item));
     }
 
     private void dropItem(String process, Item item, WorldObject reference) {
@@ -2963,7 +2858,6 @@ public final class Player extends Playable {
      * TODO extract method and remove duplication
      */
     public Item dropItem(String process, int objectId, long count, int x, int y, int z, WorldObject reference, boolean sendMessage, boolean protectItem) {
-        final Item ownedItem = inventory.getItemByObjectId(objectId);
         final Item item = inventory.dropItem(process, objectId, count, this, reference);
 
         if (item == null) {
@@ -2993,7 +2887,7 @@ public final class Player extends Playable {
             item.getDropProtection().protect(this);
         }
 
-        sendInventoryUpdate( new InventoryUpdate(ownedItem));
+        sendInventoryUpdate( new InventoryUpdate(item));
 
         if (sendMessage) {
             sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(item));
@@ -3058,12 +2952,12 @@ public final class Player extends Playable {
         teleportProtectEndTime = protect ? System.currentTimeMillis() + (CharacterSettings.teleportProtection() * 1000L) : 0;
     }
 
-    public final boolean isFakeDeath() {
+    public boolean isFakeDeath() {
         return isAffected(EffectFlag.FAKE_DEATH);
     }
 
     @Override
-    public final boolean isAlikeDead() {
+    public boolean isAlikeDead() {
         return super.isAlikeDead() || isFakeDeath();
     }
 
@@ -3204,7 +3098,7 @@ public final class Player extends Playable {
      * <li>Send a Server->Client packet CharInfo to all Player in _KnownPlayers of the Player (Public data only)</li> <FONT COLOR=#FF0000><B> <U>Caution</U> : DON'T SEND UserInfo packet to other players instead of CharInfo packet. Indeed, UserInfo packet contains PRIVATE DATA as MaxHP,
      * STR, DEX...</B></FONT>
      */
-    public final void broadcastUserInfo() {
+    public void broadcastUserInfo() {
         // Send user info to the current player
         sendPacket(new UserInfo(this));
 
@@ -3212,12 +3106,12 @@ public final class Player extends Playable {
         broadcastCharInfo();
     }
 
-    public final void broadcastUserInfo(UserInfoType... types) {
+    public void broadcastUserInfo(UserInfoType... types) {
         sendPacket(new UserInfo(this, types));
         broadcastCharInfo();
     }
 
-    public final void broadcastCharInfo() {
+    public void broadcastCharInfo() {
         var charInfo = new ExCharInfo(this);
         checkBroadcast(charInfo);
         World.getInstance().forEachVisibleObject(this, Player.class, player -> sendPacketAndUpdateRelation(charInfo, player), this::isVisibleFor);
@@ -3228,13 +3122,13 @@ public final class Player extends Playable {
         updateRelation(player);
     }
 
-    public final void broadcastTitleInfo() {
-        broadcastUserInfo(UserInfoType.CLAN);
+    public void broadcastTitleInfo() {
+        broadcastUserInfo(UserInfoType.CLAN, UserInfoType.COLOR);
         broadcastPacket(new NicknameChanged(this));
     }
 
     @Override
-    public final void broadcastPacket(ServerPacket packet) {
+    public void broadcastPacket(ServerPacket packet) {
         if (packet instanceof ExCharInfo) {
             throw new IllegalArgumentException("ExCharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
         }
@@ -3362,112 +3256,45 @@ public final class Player extends Playable {
      */
     @Override
     public void doPickupItem(WorldObject object) {
-        if (isAlikeDead() || isFakeDeath()) {
+        if (isAlikeDead()) {
             return;
         }
 
-        // Set the AI Intention to AI_INTENTION_IDLE
         getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 
-        // Check if the WorldObject to pick up is a Item
-        if (!GameUtils.isItem(object)) {
-            // dont try to pickup anything that is not an item :)
-            LOGGER.warn(this + " trying to pickup wrong target." + getTarget());
+        if(!(object instanceof Item target)) {
+            LOGGER.warn("{} trying to pickup wrong target {}", this, object);
             return;
         }
 
-        final Item target = (Item) object;
-
-        // Send a Server->Client packet ActionFailed to this Player
-        sendPacket(ActionFailed.STATIC_PACKET);
-
-        // Send a Server->Client packet StopMove to this Player
-        final StopMove sm = new StopMove(this);
-        sendPacket(sm);
-
-        SystemMessage message;
+        sendPacket(new StopMove(this));
         synchronized (target) {
-            // Check if the target to pick up is visible
-            if (!target.isSpawned()) {
-                // Send a Server->Client packet ActionFailed to this Player
+            if (!canPickUpItem(target)) {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
 
-            if (!target.getDropProtection().tryPickUp(this)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                message.addItemName(target);
-                sendPacket(message);
-                return;
-            }
-
-            if ((!isInParty() || (party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS)) && !inventory.validateCapacity(target)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
-                return;
-            }
-
-            if (isInvulnerable() && !canOverrideCond(PcCondOverride.ITEM_CONDITIONS)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                message.addItemName(target);
-                sendPacket(message);
-                return;
-            }
-
-            if ((target.getOwnerId() != 0) && (target.getOwnerId() != getObjectId()) && !isInLooterParty(target.getOwnerId())) {
-                if (target.getId() == CommonItem.ADENA) {
-                    message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
-                    message.addLong(target.getCount());
-                } else if (target.getCount() > 1) {
-                    message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
-                    message.addItemName(target);
-                    message.addLong(target.getCount());
-                } else {
-                    message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                    message.addItemName(target);
-                }
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(message);
-                return;
-            }
-
-            if ((target.getItemLootShedule() != null) && ((target.getOwnerId() == getObjectId()) || isInLooterParty(target.getOwnerId()))) {
+            if (target.getItemLootShedule() != null && (target.getOwnerId() == getObjectId() || isInLooterParty(target.getOwnerId()))) {
                 target.resetOwnerTimer();
             }
 
-            // Remove the Item from the world and send server->client GetItem packets
             target.pickupMe(this);
             if (GeneralSettings.saveDroppedItems()) {
                 ItemsOnGroundManager.getInstance().removeObject(target);
             }
         }
 
-        // Auto use herbs - pick up
+        onPickupItem(target);
+    }
+
+    private void onPickupItem(Item target) {
         if (target.getTemplate().hasExImmediateEffect()) {
-            final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
-            if (handler == null) {
-                LOGGER.warn("No item handler registered for item ID: " + target.getId() + ".");
-            } else {
-                handler.useItem(this, target, false);
-            }
-            ItemEngine.getInstance().destroyItem("Consume", target, this, null);
+            pickUpAutoConsumeItem(target);
         } else {
-            if ((target.getItemType() instanceof ArmorType) || (target.getItemType() instanceof WeaponType)) {
-                if (target.getEnchantLevel() > 0) {
-                    message = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3);
-                    message.addPcName(this);
-                    message.addInt(target.getEnchantLevel());
-                } else {
-                    message = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2);
-                    message.addPcName(this);
-                }
-                message.addItemName(target.getId());
-                broadcastPacket(message, 1400);
+            if (target.getItemType() instanceof ArmorType || target.getItemType() instanceof WeaponType) {
+                broadcastPickUpEquipment(target);
             }
 
-            // Check if a Party is in progress
             if (isInParty()) {
                 party.distributeItem(this, target);
             } else if ((target.getId() == CommonItem.ADENA) && (inventory.getAdenaInstance() != null)) {
@@ -3475,19 +3302,77 @@ public final class Player extends Playable {
                 ItemEngine.getInstance().destroyItem("Pickup", target, this, null);
             } else {
                 addItem("Pickup", target, null, true);
-                // Auto-Equip arrows/bolts if player has a bow/crossbow and player picks up arrows/bolts.
-                final Item weapon = inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
-                if (weapon != null) {
-                    final EtcItem etcItem = target.getEtcItem();
-                    if (etcItem != null) {
-                        final EtcItemType itemType = etcItem.getItemType();
-                        if (((weapon.getItemType() == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) || (((weapon.getItemType() == WeaponType.CROSSBOW) || (weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW)) && (itemType == EtcItemType.BOLT))) {
-                            inventory.findAmmunitionForCurrentWeapon();
-                        }
-                    }
+                checkPickupAmmunition(target);
+            }
+        }
+    }
+
+    private void checkPickupAmmunition(Item target) {
+        final Item weapon = inventory.getPaperdollItem(InventorySlot.RIGHT_HAND);
+        if (weapon != null) {
+            final EtcItem etcItem = target.getEtcItem();
+            if (etcItem != null) {
+                final EtcItemType itemType = etcItem.getItemType();
+                if ((weapon.getItemType() == WeaponType.BOW && itemType == EtcItemType.ARROW) || ((weapon.getItemType() == WeaponType.CROSSBOW || weapon.getItemType() == WeaponType.TWO_HAND_CROSSBOW) && itemType == EtcItemType.BOLT) || (weapon.getItemType() == WeaponType.PISTOLS && itemType == EtcItemType.ELEMENTAL_ORB)) {
+                    inventory.findAmmunitionForCurrentWeapon();
                 }
             }
         }
+    }
+
+    private boolean canPickUpItem(Item target) {
+        var canPickup = true;
+        if (!target.isSpawned()) {
+            canPickup = false;
+        } else if(!checkItemOwnerProtection(target)){
+            sendPacket(buildFailedToPickupMessage(target));
+            canPickup = false;
+        }
+        else if ((!isInParty() || party.getDistributionType() == PartyDistributionType.FINDERS_KEEPERS) && !inventory.validateCapacity(target)) {
+            sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+            canPickup = false;
+        }
+        return canPickup;
+    }
+
+    private boolean checkItemOwnerProtection(Item target) {
+        if (!(target.getDropProtection().tryPickUp(this) || isInLooterParty(target.getOwnerId()) )) {
+           return false;
+        }
+        return !isInvulnerable() || canOverrideCond(PcCondOverride.ITEM_CONDITIONS);
+    }
+
+    private void broadcastPickUpEquipment(Item target) {
+        SystemMessage message;
+        if (target.getEnchantLevel() > 0) {
+            message = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3).addPcName(this).addInt(target.getEnchantLevel());
+        } else {
+            message = getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2).addPcName(this);
+        }
+        message.addItemName(target.getId());
+        broadcastPacket(message, 1400);
+    }
+
+    private void pickUpAutoConsumeItem(Item target) {
+        final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
+        if (handler == null) {
+            LOGGER.warn("No item handler registered for item ID: {}.", target.getId());
+        } else {
+            handler.useItem(this, target, true);
+        }
+        ItemEngine.getInstance().destroyItem("Consume", target, this, null);
+    }
+
+    private SystemMessage buildFailedToPickupMessage(Item target) {
+        SystemMessage message;
+        if (target.getId() == CommonItem.ADENA) {
+            message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA).addLong(target.getCount());
+        } else if (target.getCount() > 1) {
+            message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S).addItemName(target).addLong(target.getCount());
+        } else {
+            message = getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(target);
+        }
+        return message;
     }
 
     public boolean canOpenPrivateStore() {
@@ -3516,11 +3401,11 @@ public final class Player extends Playable {
         }
     }
 
-    public final PreparedMultisellList getMultiSell() {
+    public PreparedMultisellList getMultiSell() {
         return currentMultiSell;
     }
 
-    public final void setMultiSell(PreparedMultisellList list) {
+    public void setMultiSell(PreparedMultisellList list) {
         currentMultiSell = list;
     }
 
@@ -3536,6 +3421,44 @@ public final class Player extends Playable {
      */
     @Override
     public void setTarget(WorldObject newTarget) {
+        newTarget = validateNewTarget(newTarget);
+
+        final WorldObject oldTarget = getTarget();
+
+        if (oldTarget != null) {
+            if (oldTarget.equals(newTarget)) {
+                if (newTarget.getObjectId() != getObjectId()) {
+                    sendPacket(new ValidateLocation(newTarget));
+                }
+                return;
+            }
+
+            oldTarget.removeStatusListener(this);
+        }
+
+        if (newTarget instanceof Creature target) {
+            onCreatureTargetSelected(target);
+        }
+
+        if (newTarget == null && getTarget() != null) {
+            broadcastPacket(new TargetUnselected(this));
+        }
+        super.setTarget(newTarget);
+    }
+
+    private void onCreatureTargetSelected(Creature target) {
+        if (target.getObjectId() != getObjectId()) {
+            sendPacket(new ValidateLocation(target));
+        }
+
+        sendPacket(new MyTargetSelected(this, target));
+        target.addStatusListener(this);
+        sendPacket(new StatusUpdate(target).addUpdate(StatusUpdateType.MAX_HP, target.getMaxHp()).addUpdate(StatusUpdateType.CUR_HP, (int) target.getCurrentHp()));
+        Broadcast.toKnownPlayers(this, new TargetSelected(getObjectId(), target.getObjectId(), getX(), getY(), getZ()));
+        sendPacket(new ExAbnormalStatusUpdateFromTarget(target));
+    }
+
+    private WorldObject validateNewTarget(WorldObject newTarget) {
         if (newTarget != null) {
             final boolean isInParty = (GameUtils.isPlayer(newTarget) && isInParty() && party.isMember(newTarget.getActingPlayer()));
 
@@ -3554,58 +3477,7 @@ public final class Player extends Playable {
                 newTarget = null;
             }
         }
-
-        // Get the current target
-        final WorldObject oldTarget = getTarget();
-
-        if (oldTarget != null) {
-            if (oldTarget.equals(newTarget)) // no target change?
-            {
-                // Validate location of the target.
-                if (newTarget.getObjectId() != getObjectId()) {
-                    sendPacket(new ValidateLocation(newTarget));
-                }
-                return;
-            }
-
-            // Remove the target from the status listener.
-            oldTarget.removeStatusListener(this);
-        }
-
-        if (GameUtils.isCreature(newTarget)) {
-            final Creature target = (Creature) newTarget;
-
-            // Validate location of the new target.
-            if (newTarget.getObjectId() != getObjectId()) {
-                sendPacket(new ValidateLocation(target));
-            }
-
-            // Show the client his new target.
-            sendPacket(new MyTargetSelected(this, target));
-
-            // Register target to listen for hp changes.
-            target.addStatusListener(this);
-
-            // Send max/current hp.
-            final StatusUpdate su = new StatusUpdate(target);
-            su.addUpdate(StatusUpdateType.MAX_HP, target.getMaxHp());
-            su.addUpdate(StatusUpdateType.CUR_HP, (int) target.getCurrentHp());
-            sendPacket(su);
-
-            // To others the new target, and not yourself!
-            Broadcast.toKnownPlayers(this, new TargetSelected(getObjectId(), newTarget.getObjectId(), getX(), getY(), getZ()));
-
-            // Send buffs
-            sendPacket(new ExAbnormalStatusUpdateFromTarget(target));
-        }
-
-        // Target was removed?
-        if ((newTarget == null) && (getTarget() != null)) {
-            broadcastPacket(new TargetUnselected(this));
-        }
-
-        // Target the new WorldObject (add the target to the Player _target, _knownObject and Player to _KnownObject of the WorldObject)
-        super.setTarget(newTarget);
+        return newTarget;
     }
 
     /**
@@ -3629,6 +3501,9 @@ public final class Player extends Playable {
         return (Weapon) weapon.getTemplate();
     }
 
+    public Item getSecondaryWeapon() {
+        return inventory.getPaperdollItem(InventorySlot.LEFT_HAND);
+    }
 
     /**
      * Return the secondary ItemTemplate item (always equipped in the left hand).<BR>
@@ -3664,49 +3539,16 @@ public final class Player extends Playable {
                 onKilledByPlayer(pk);
             }
 
-            // Clear resurrect xp calculation
-            data.setExpBeforeDeath(0);
-            Collection<Item> droppedItems = onDieDropItem(killer);
-            sendPacket(new ExDieInfo(lastDamages, droppedItems));
-
-            final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
-
-            if (!insidePvpZone && (pk != null)) {
-                final Clan pkClan = pk.getClan();
-                if (pkClan != null && clan != null) {
-                    final ClanWar clanWar = clan.getWarWith(pkClan.getId());
-                    if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
-                        clanWar.onKill(pk, this);
-                    }
-                }
-            }
-            // If player is Lucky shouldn't get penalized.
-            if (!isLucky() && !insidePvpZone) {
-                calculateDeathExpPenalty(killer);
-            }
+            applyDeathPenalty(killer, pk);
         }
 
-        if (isMounted()) {
-            stopFeed();
-        }
-        synchronized (this) {
-            if (isFakeDeath()) {
-                stopFakeDeath(true);
-            }
+        if (getReputation() < 0) {
+            final int newRep = getReputation() - (getReputation() / 4);
+            setReputation(newRep < -20 ? newRep : 0);
         }
 
-        // Unsummon Cubics
-        if (!cubics.isEmpty()) {
-            cubics.values().forEach(CubicInstance::deactivate);
-            cubics.clear();
-        }
-
-        if (agathionId != 0) {
-            setAgathionId(0);
-        }
-
-        stopRentPet();
-        stopWaterTask();
+        stopCurrentTasks();
+        notifySummons();
 
         if (hasCharmOfCourage) {
             if (isInSiege()) {
@@ -3717,17 +3559,58 @@ public final class Player extends Playable {
         }
 
         doIfNonNull(getInstanceWorld(), instance -> instance.onDeath(this));
-
         AntiFeedManager.getInstance().setLastDeathTime(getObjectId());
-        // FIXME: Karma reduction temp fix.
-        if (getReputation() < 0) {
-            final int newRep = getReputation() - (getReputation() / 4);
-            setReputation(newRep < -20 ? newRep : 0);
+        return true;
+    }
+
+    private void notifySummons() {
+        if (isMounted()) {
+            stopFeed();
         }
+
+        if (!cubics.isEmpty()) {
+            cubics.values().forEach(CubicInstance::deactivate);
+            cubics.clear();
+        }
+
+        if (agathionId != 0) {
+            setAgathionId(0);
+        }
+
+        stopRentPet();
+    }
+
+    private void stopCurrentTasks() {
+        if (isFakeDeath()) {
+            stopFakeDeath(true);
+        }
+
         if(autoPlaySettings.isActive()) {
             AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
-        return true;
+        stopWaterTask();
+    }
+
+    private void applyDeathPenalty(Creature killer, Player pk) {
+        data.setExpBeforeDeath(0);
+        Collection<Item> droppedItems = deathPenaltyDropItems(killer);
+        sendPacket(new ExDieInfo(lastDamages, droppedItems));
+
+        final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
+
+        if (!insidePvpZone && (pk != null)) {
+            final Clan pkClan = pk.getClan();
+            if (pkClan != null && clan != null) {
+                final ClanWar clanWar = clan.getWarWith(pkClan.getId());
+                if ((clanWar != null) && AntiFeedManager.getInstance().check(killer, this)) {
+                    clanWar.onKill(pk, this);
+                }
+            }
+        }
+
+        if (!isLucky() && !insidePvpZone) {
+            calculateDeathExpPenalty(killer);
+        }
     }
 
     private void onKilledByPlayer(Player killer) {
@@ -3767,7 +3650,7 @@ public final class Player extends Playable {
         }
     }
 
-    private Collection<Item> onDieDropItem(Creature killer) {
+    private Collection<Item> deathPenaltyDropItems(Creature killer) {
         if (Event.isParticipant(this) || (killer == null)) {
             return Collections.emptyList();
         }
@@ -3778,106 +3661,117 @@ public final class Player extends Playable {
         }
 
         if ( (!isInsideZone(ZoneType.PVP) || isNull(pk)) && (!isGM() || Config.KARMA_DROP_GM)) {
-            boolean isKarmaDrop = false;
-            int dropEquip = 0;
-            int dropEquipWeapon = 0;
-            int rateDropItem = 0;
-            int dropLimit = 0;
-            double dropPercent = 0;
-
-            // Classic calculation.
-            if (isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= Config.KARMA_PK_LIMIT)) {
-                isKarmaDrop = true;
-                dropPercent = Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
-                dropEquip = Config.KARMA_RATE_DROP_EQUIP;
-                dropEquipWeapon = Config.KARMA_RATE_DROP_EQUIP_WEAPON;
-                rateDropItem = Config.KARMA_RATE_DROP_ITEM;
-                dropLimit = Config.KARMA_DROP_LIMIT;
-            } else if (GameUtils.isNpc(killer)) {
-                dropPercent = Config.PLAYER_RATE_DROP * (killer.isRaid() ? getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_RAID, 1) : getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_MOB, 1));
-                dropEquip = Config.PLAYER_RATE_DROP_EQUIP;
-                dropEquipWeapon = Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
-                rateDropItem = Config.PLAYER_RATE_DROP_ITEM;
-                dropLimit = Config.PLAYER_DROP_LIMIT;
-            }
-
-
-            if (Rnd.chance(dropPercent)) {
-                int dropCount = 0;
-                int itemDropPercent;
-
-                for (Item itemDrop : inventory.getItems()) {
-                    // Don't drop
-                    if (itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
-                            !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
-                            (itemDrop.getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
-                            ((pet != null) && (pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
-                            (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
-                            (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
-                            )) {
-                        continue;
-                    }
-
-                    if (itemDrop.isEquipped()) {
-                        // Set proper chance according to Item type of equipped Item
-                        itemDropPercent = itemDrop.getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
-                        inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
-                    } else {
-                        itemDropPercent = rateDropItem; // Item in inventory
-                    }
-
-                    // NOTE: Each time an item is dropped, the chance of another item being dropped gets lesser (dropCount * 2)
-                    if (Rnd.chance(itemDropPercent)) {
-                        dropItem("DieDrop", itemDrop, killer);
-                        if (isKarmaDrop) {
-                            LOGGER.warn("{} has karma and dropped {} {}", this, itemDrop.getCount(), itemDrop);
-                        } else {
-                            LOGGER.warn("{} dropped {} {}", this, itemDrop.getCount(), itemDrop);
-                        }
-
-                        if (++dropCount >= dropLimit) {
-                            break;
-                        }
-                    }
-                }
-            }
+            return onDieDropItems(killer);
         }
 
         return Collections.emptyList();
     }
 
+    private Collection<Item> onDieDropItems(Creature killer) {
+        var isKarmaDrop = isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= Config.KARMA_PK_LIMIT);
+        var dropPercent = calculateDropPercent(killer, isKarmaDrop);
+
+        if (Rnd.chance(dropPercent)) {
+            int dropEquip = isKarmaDrop ? Config.KARMA_RATE_DROP_EQUIP : Config.PLAYER_RATE_DROP_EQUIP;
+            int dropEquipWeapon = isKarmaDrop ? Config.KARMA_RATE_DROP_EQUIP_WEAPON : Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
+            int rateDropItem = isKarmaDrop ? Config.KARMA_RATE_DROP_ITEM : Config.PLAYER_RATE_DROP_ITEM;
+            int dropLimit = isKarmaDrop ? Config.KARMA_DROP_LIMIT : Config.PLAYER_DROP_LIMIT;
+
+            return dropItems(killer, isKarmaDrop, dropEquip, dropEquipWeapon, rateDropItem, dropLimit);
+        }
+        return Collections.emptyList();
+    }
+
+    private Collection<Item> dropItems(Creature killer, boolean isKarmaDrop, int dropEquip, int dropEquipWeapon, int rateDropItem, int dropLimit) {
+        Collection<Item> droppedItems = new ArrayList<>();
+        int dropCount = 0;
+        int itemDropPercent;
+
+        for (Item itemDrop : inventory.getItems()) {
+            if (isUndropable(itemDrop)) {
+                continue;
+            }
+
+            if (itemDrop.isEquipped()) {
+                itemDropPercent = itemDrop.getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
+                inventory.unEquipItemInSlot(InventorySlot.fromId(itemDrop.getLocationSlot()));
+            } else {
+                itemDropPercent = rateDropItem;
+            }
+
+            if (Rnd.chance(itemDropPercent)) {
+                dropItem("DieDrop", itemDrop, killer);
+                droppedItems.add(itemDrop);
+                LOGGER.info("{} has dropped {} {}. With karma {}", this, itemDrop.getCount(), itemDrop, isKarmaDrop);
+                if (++dropCount >= dropLimit) {
+                    break;
+                }
+            }
+        }
+        return droppedItems;
+    }
+
+    private boolean isUndropable(Item itemDrop) {
+        return itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
+                !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
+                (itemDrop.getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
+                ((pet != null) && (pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
+                (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
+                (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
+                );
+    }
+
+    private double calculateDropPercent(Creature killer, boolean isKarmaDrop) {
+        var dropPercent = 0.;
+        if(isKarmaDrop) {
+            dropPercent =  Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
+        } else if(isNpc(killer)) {
+            var penaltyStat  = killer.isRaid() ? Stat.REDUCE_DEATH_PENALTY_BY_RAID : Stat.REDUCE_DEATH_PENALTY_BY_MOB;
+            dropPercent = Config.PLAYER_RATE_DROP * getStats().getValue(penaltyStat, 1);
+        }
+        return dropPercent;
+    }
+
     public void onPlayeableKill(Playable killedPlayable) {
         final Player killedPlayer = killedPlayable.getActingPlayer();
 
-        // Avoid nulls && check if player != killedPlayer
-        if ((killedPlayer == null) || (this == killedPlayer)) {
+        if (!hasKillReputationGain(killedPlayer)) {
             return;
         }
 
-        // Duel support
-        if (isInDuel() && killedPlayer.isInDuel()) {
-            return;
+        calculatePvPReputation(killedPlayer, isSummon(killedPlayable));
+        sendPacket(new UserInfo(this, UserInfoType.SOCIAL));
+        checkItemRestriction();
+    }
+
+    private boolean hasKillReputationGain(Player killedPlayer) {
+        if (killedPlayer == null || this == killedPlayer) {
+            return false;
         }
 
-        // Do nothing if both players are in PVP zone
-        if (isInsideZone(ZoneType.PVP) && killedPlayer.isInsideZone(ZoneType.PVP)) {
-            return;
+        if ((isInDuel() && killedPlayer.isInDuel()) || killInSiege(killedPlayer)) {
+            return false;
         }
 
-        // If both players are in SIEGE zone just increase siege kills/deaths
+        return !(isInsideZone(ZoneType.PVP) && killedPlayer.isInsideZone(ZoneType.PVP));
+    }
+
+    private boolean killInSiege(Player killedPlayer) {
         if (isInsideZone(ZoneType.SIEGE) && killedPlayer.isInsideZone(ZoneType.SIEGE)) {
-            if (!isSiegeFriend(killedPlayable)) {
+            if (!isSiegeFriend(killedPlayer)) {
                 final Clan targetClan = killedPlayer.getClan();
-                if ((clan != null) && (targetClan != null)) {
+                if (clan != null && targetClan != null) {
                     clan.addSiegeKill();
                     targetClan.addSiegeDeath();
                 }
             }
-            return;
+            return true;
         }
+        return false;
+    }
 
+    private void calculatePvPReputation( Player killedPlayer, boolean isSummon) {
         if (checkIfPvP(killedPlayer)) {
-            // Check if player should get + rep
             if (killedPlayer.getReputation() < 0) {
                 final int levelDiff = killedPlayer.getLevel() - getLevel();
                 if ((getReputation() >= 0) && (levelDiff < 11) && (levelDiff > -11)) // TODO: Time check, same player can't be killed again in 8 hours
@@ -3889,45 +3783,53 @@ public final class Player extends Playable {
             setPvpKills(data.getPvP() + 1);
 
             updatePvpTitleAndColor(true);
-        } else if ((getReputation() > 0) && (data.getPk() == 0)) {
+        } else if (getReputation() > 0 && data.getPk() == 0) {
             setReputation(0);
             setPkKills(1);
         } else {
-            // Calculate new karma and increase pk count
-            setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), GameUtils.isSummon(killedPlayable)));
+            setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), isSummon));
             setPkKills(getPkKills() + 1);
         }
-
-        final UserInfo ui = new UserInfo(this, false);
-        ui.addComponentType(UserInfoType.SOCIAL);
-        sendPacket(ui);
-        checkItemRestriction();
     }
 
-    public void updatePvpTitleAndColor(boolean broadcastInfo) {
-        if (Config.PVP_COLOR_SYSTEM_ENABLED) {
-            final var pvpKills = data.getPvP();
-            if (pvpKills >= Config.PVP_AMOUNT1 && data.getPvP() < Config.PVP_AMOUNT2) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
-            } else if (pvpKills >= Config.PVP_AMOUNT2 && pvpKills < Config.PVP_AMOUNT3) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
-            } else if (pvpKills >= Config.PVP_AMOUNT3 && pvpKills < Config.PVP_AMOUNT4) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
-            } else if (pvpKills >= Config.PVP_AMOUNT4 && pvpKills < Config.PVP_AMOUNT5) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
-            } else if (pvpKills >= Config.PVP_AMOUNT5) {
-                setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
-                appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
-            }
-
-            if (broadcastInfo) {
-                broadcastTitleInfo();
-            }
+    public boolean updatePvpTitleAndColor(boolean broadcastInfo) {
+        if (!Config.PVP_COLOR_SYSTEM_ENABLED) {
+            return false;
         }
+
+        var updated = false;
+        final var pvpKills = data.getPvP();
+
+        if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT1, data.getPvP(), Config.PVP_AMOUNT2, Config.NAME_COLOR_FOR_PVP_AMOUNT1)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT2, pvpKills, Config.PVP_AMOUNT3, Config.NAME_COLOR_FOR_PVP_AMOUNT2)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT3, pvpKills, Config.PVP_AMOUNT4, Config.NAME_COLOR_FOR_PVP_AMOUNT3)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
+            updated = true;
+        } else if (needChangeToAmount(pvpKills, Config.PVP_AMOUNT4, pvpKills, Config.PVP_AMOUNT5, Config.NAME_COLOR_FOR_PVP_AMOUNT4)) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
+            updated = true;
+        } else if (pvpKills >= Config.PVP_AMOUNT5 && appearance.getTitleColor() != Config.NAME_COLOR_FOR_PVP_AMOUNT5) {
+            setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
+            appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
+            updated = true;
+        }
+
+        if (updated && broadcastInfo) {
+            broadcastTitleInfo();
+        }
+        return updated;
+    }
+
+    private boolean needChangeToAmount(int pvpKills, int pvpAmount1, int pvP, int pvpAmount2, int nameColorForPvpAmount1) {
+        return pvpKills >= pvpAmount1 && pvP < pvpAmount2 && appearance.getTitleColor() != nameColorForPvpAmount1;
     }
 
     public void updatePvPStatus() {
@@ -4435,126 +4337,101 @@ public final class Player extends Playable {
         return true;
     }
 
-    public boolean mount(Summon pet) {
-        if (!FeatureSettings.allowRideInSiege() && isInsideZone(ZoneType.SIEGE)) {
-            return false;
+    public boolean mount(Summon summon) {
+        var success = false;
+        if (summon != null && summon.isMountable() && !isMounted() && !isBetrayed()) {
+            success = canMount(summon) && doMount(summon);
+        } else if (isRentedPet()) {
+            stopRentPet();
+            success = true;
+        } else if (isMounted()) {
+            success = canUnMount() && dismount();
         }
+        return success;
+    }
 
+    private boolean mount(int petId, int level, int controlObjectId, boolean useFood) {
         if (!disarmWeapons() || !disarmShield() || isTransformed()) {
             return false;
         }
 
         getEffectList().stopAllToggles();
-        setMount(pet.getId(), pet.getLevel());
-        setMountObjectID(pet.getControlObjectId());
+        setMount(petId, level);
+        setMountObjectID(controlObjectId);
         clearPetData();
-        startFeed(pet.getId());
         broadcastPacket(new Ride(this));
-
-        // Notify self and others about speed change
         broadcastUserInfo();
-
-        pet.unSummon(this);
+        if (useFood) {
+            startFeed(petId);
+        }
         return true;
     }
 
     public boolean mount(int npcId, int controlItemObjId, boolean useFood) {
-        if (!disarmWeapons() || !disarmShield() || isTransformed()) {
+        return mount(npcId, controlItemObjId, getLevel(), useFood);
+    }
+
+    private boolean canUnMount() {
+        if (mountType == MountType.WYVERN && isInsideZone(ZoneType.NO_LANDING)) {
+            sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
             return false;
-        }
-
-        getEffectList().stopAllToggles();
-        setMount(npcId, getLevel());
-        clearPetData();
-        setMountObjectID(controlItemObjId);
-        broadcastPacket(new Ride(this));
-
-        // Notify self and others about speed change
-        broadcastUserInfo();
-        if (useFood) {
-            startFeed(npcId);
+        } else if (isHungry()) {
+            sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
+            return false;
         }
         return true;
     }
 
-    public boolean mountPlayer(Summon pet) {
-        if ((pet != null) && pet.isMountable() && !isMounted() && !isBetrayed()) {
-            if (isDead()) {
-                // A strider cannot be ridden when dead
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHEN_DEAD);
-                return false;
-            } else if (pet.isDead()) {
-                // A dead strider cannot be ridden.
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_DEAD_MOUNT_CANNOT_BE_RIDDEN);
-                return false;
-            } else if (pet.isInCombat() || pet.isRooted()) {
-                // A strider in battle cannot be ridden
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_MOUNT_IN_BATTLE_CANNOT_BE_RIDDEN);
-                return false;
-
-            } else if (isInCombat()) {
-                // A strider cannot be ridden while in battle
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
-                return false;
-            } else if (sitting) {
-                // A strider can be ridden only when standing
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_MOUNT_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
-                return false;
-            } else if (isFishing()) {
-                // You can't mount, dismount, break and drop items while fishing
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
-                return false;
-            } else if (isTransformed()) {
-                // no message needed, player while transformed doesn't have mount action
-                sendPacket(ActionFailed.STATIC_PACKET);
-                return false;
-            } else if (inventory.getItemByItemId(9819) != null) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                // FIXME: Wrong Message
-                sendMessage("You cannot mount a steed while holding a flag.");
-                return false;
-            } else if (pet.isHungry()) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
-                return false;
-            } else if (!GameUtils.checkIfInRange(200, this, pet, true)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOU_ARE_TOO_FAR_AWAY_FROM_YOUR_MOUNT_TO_RIDE);
-                return false;
-            } else if (!pet.isDead() && !isMounted()) {
-                mount(pet);
-            }
-        } else if (isRentedPet()) {
-            stopRentPet();
-        } else if (isMounted()) {
-            if ((mountType == MountType.WYVERN) && isInsideZone(ZoneType.NO_LANDING)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
-                return false;
-            } else if (isHungry()) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
-                return false;
-            } else {
-                dismount();
-            }
+    private boolean canMount(Summon pet) {
+        if (!FeatureSettings.allowRideInSiege() && isInsideZone(ZoneType.SIEGE)) {
+            return false;
         }
-        return true;
+        var canMount = !isTransformed();
+        if (isDead()) {
+            sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHEN_DEAD);
+            canMount = false;
+        } else if (isInCombat()) {
+            sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
+            canMount = false;
+        } else if (sitting) {
+            sendPacket(SystemMessageId.A_MOUNT_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
+            canMount = false;
+        } else if (isFishing()) {
+            sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
+            canMount = false;
+        }
+        return canMount && canBeMounted(pet);
+    }
+
+    private boolean canBeMounted(Summon pet) {
+        var canBeMounted = true;
+        if (pet.isDead()) {
+            sendPacket(SystemMessageId.A_DEAD_MOUNT_CANNOT_BE_RIDDEN);
+            canBeMounted = false;
+        } else if (pet.isInCombat() || pet.isRooted()) {
+            sendPacket(SystemMessageId.A_MOUNT_IN_BATTLE_CANNOT_BE_RIDDEN);
+            canBeMounted = false;
+        }
+        else if (pet.isHungry()) {
+            sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
+            canBeMounted = false;
+        } else if (!GameUtils.checkIfInRange(200, this, pet, true)) {
+            sendPacket(SystemMessageId.YOU_ARE_TOO_FAR_AWAY_FROM_YOUR_MOUNT_TO_RIDE);
+            canBeMounted = false;
+        }
+        return canBeMounted;
+    }
+
+    private boolean doMount(Summon pet) {
+        var mounted = mount(pet.getId(), pet.getLevel(), pet.getControlObjectId(), true);
+        if(mounted) {
+            pet.unSummon(this);
+        }
+        return mounted;
     }
 
     public boolean dismount() {
-        WaterZone water = null;
-        for (Zone zone : ZoneManager.getInstance().getZones(getX(), getY(), getZ() - 300)) {
-            if (zone instanceof WaterZone) {
-                water = (WaterZone) zone;
-            }
-        }
+        WaterZone water = ZoneEngine.getInstance().findFirstZone(getX(), getY(), getZ() - 300, WaterZone.class);
         if (water == null) {
             if (!isInWater() && (getZ() > 10000)) {
                 sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
@@ -4567,8 +4444,7 @@ public final class Player extends Playable {
                 return false;
             }
         } else {
-            ThreadPool.schedule(() ->
-            {
+            ThreadPool.schedule(() -> {
                 if (isInWater()) {
                     broadcastUserInfo();
                 }
@@ -4657,7 +4533,7 @@ public final class Player extends Playable {
 
 
     public void setAccountAccessLevel(int level) {
-        AuthServerCommunication.getInstance().sendPacket(new ChangeAccessLevel(getAccountName(), level, 0));
+        NetworkService.getInstance().sendPacketToAuth(new ChangeAccessLevel(getAccountName(), level, 0));
     }
 
     @Override
@@ -4695,7 +4571,6 @@ public final class Player extends Playable {
      * </ul>
      */
     void restoreCharData() {
-        restoreSkills();
         macros.restoreMe();
         restoreHennas();
         restoreTeleportBookmark();
@@ -4711,12 +4586,6 @@ public final class Player extends Playable {
 
     private void restoreShortCuts() {
         shortcuts.restoreMe();
-        sendPacket(new ShortCutInit());
-        forEachShortcut(s -> {
-            if(s.isActive()) {
-                client.sendPacket(new ExActivateAutoShortcut(s.getClientId(), true));
-            }
-        });
     }
 
     private void restoreRecipeBook() {
@@ -4778,7 +4647,7 @@ public final class Player extends Playable {
         }
 
         storeRecommendations();
-        if (Config.UPDATE_ITEMS_ON_CHAR_STORE) {
+        if (GeneralSettings.updateItemsOnCharStore()) {
             inventory.updateDatabase();
             if(nonNull(warehouse)) {
                 warehouse.updateDatabase();
@@ -4959,12 +4828,10 @@ public final class Player extends Playable {
 
             addSkill(skill);
 
-            if (Config.SKILL_CHECK_ENABLE && (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)) {
+            if (GeneralSettings.skillCheckEnabled() && !canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
                 if (!SkillTreesData.getInstance().isSkillAllowed(this, skill)) {
                     GameUtils.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() + " (" + skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), IllegalActionPunishmentType.BROADCAST);
-                    if (Config.SKILL_CHECK_REMOVE) {
-                        removeSkill(skill);
-                    }
+                    removeSkill(skill);
                 }
             }
         }
@@ -5291,11 +5158,7 @@ public final class Player extends Playable {
      */
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (isNull(attacker)) {
-            return false;
-        }
-
-        if (attacker == this || attacker == pet || attacker.hasServitor(attacker.getObjectId())) {
+        if (isSelfAttacking(attacker)) {
             return false;
         }
 
@@ -5303,91 +5166,108 @@ public final class Player extends Playable {
             return true;
         }
 
-        if(isPlayable(attacker)) {
-            final var attackerPlayer = attacker.getActingPlayer();
-            if(duelState == Duel.DUELSTATE_DUELLING && getDuelId() == attackerPlayer.getDuelId()) {
-                return true;
-            }
+        return checkAttackerInstance(attacker);
+    }
 
-            if(isInParty() && party.isMember(attackerPlayer)) {
-                return false;
-            }
+    private boolean checkAttackerInstance(Creature attacker) {
+        if (attacker instanceof Defender && clan != null) {
+            final Siege siege = SiegeManager.getInstance().getSiege(this);
+            return ((siege != null) && siege.checkIsAttacker(clan));
+        }
 
-            if(attackerPlayer.isInOlympiadMode()) {
-                return isInOlympiadMode() && olympiadStart && attackerPlayer.getOlympiadMatchId() == getOlympiadMatchId();
-            }
-
-            if (isOnCustomEvent && (getTeam() == attacker.getTeam())) {
-                return false;
-            }
-
-            if (isOnEvent()) {
-                return true;
-            }
-
-            if (isInsideZone(ZoneType.PEACE)) {
-                return false;
-            }
-
-            if(nonNull(clan)) {
-                final Siege siege = SiegeManager.getInstance().getSiege(this);
-                final Clan attackerClan = attackerPlayer.getClan();
-                if (nonNull(siege)) {
-                    // Check if a siege is in progress and if attacker and the Player aren't in the Defender clan
-                    if (siege.checkIsDefender(attackerClan) && siege.checkIsDefender(clan)) {
-                        return false;
-                    }
-
-                    // Check if a siege is in progress and if attacker and the Player aren't in the Attacker clan
-                    if (siege.checkIsAttacker(attackerClan) && siege.checkIsAttacker(clan)) {
-                        return false;
-                    }
-                }
-
-                // Check if clan is at war
-                if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace())) {
-                    final ClanWar war = attackerClan.getWarWith(getClanId());
-                    if (nonNull(war) && war.getState() == ClanWarState.MUTUAL) {
-                        return true;
-                    }
-                }
-            }
-
-            // Check if the Player is in an arena, but NOT siege zone. NOTE: This check comes before clan/ally checks, but after party checks.
-            // This is done because in arenas, clan/ally members can auto attack if they arent in party.
-            if ((isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP)) && !(isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE))) {
-                return true;
-            }
-
-            // Check if the attacker is not in the same clan
-            if (nonNull(clan) && clan.isMember(attackerPlayer.getObjectId())) {
-                return false;
-            }
-
-            // Check if the attacker is not in the same ally
-            if (GameUtils.isPlayer(attacker) && (getAllyId() != 0) && (getAllyId() == attackerPlayer.getAllyId())) {
-                return false;
-            }
-
-            // Now check again if the Player is in pvp zone, but this time at siege PvP zone, applying clan/ally checks
-            if (isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP) && isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE)) {
-                return true;
-            }
-
-            if(getPvpFlag() > 0) {
-                return true;
-            }
-        } else if (attacker instanceof Defender) {
-            if (clan != null) {
-                final Siege siege = SiegeManager.getInstance().getSiege(this);
-                return ((siege != null) && siege.checkIsAttacker(clan));
-            }
-        } else if (attacker instanceof Guard || attacker instanceof FriendlyMob) {
+        if (attacker instanceof Guard || attacker instanceof FriendlyMob) {
             return getReputation() < 0; // Guards attack only PK players.
         }
 
-        // Check if the Player has Karma
-        return getReputation() < 0 || pvpFlag > 0;
+        return cabBeAttacked(attacker);
+    }
+
+    private boolean cabBeAttacked(Creature attacker) {
+        var canAttack = getReputation() < 0 || pvpFlag > 0;
+        if(isPlayable(attacker)) {
+            final var attackerPlayer = attacker.getActingPlayer();
+            if(attackerPlayer.isInOlympiadMode()) {
+                canAttack = isInOlympiadMode() && olympiadStart && attackerPlayer.getOlympiadMatchId() == getOlympiadMatchId();
+            } else if(duelState == Duel.DUELSTATE_DUELLING && getDuelId() == attackerPlayer.getDuelId()) {
+                canAttack = true;
+            } else if (isInSameGroup(attacker, attackerPlayer)) {
+                canAttack = false;
+            } else if (isOnEvent()) {
+                canAttack = true;
+            } else if (isInsideZone(ZoneType.PEACE)) {
+                canAttack = false;
+            } else if (isEnemy(attackerPlayer)) {
+                canAttack = true;
+            } else if (isAlly(attacker, attackerPlayer)) {
+                canAttack = false;
+            } else if (isInPvp(attackerPlayer)) {
+                canAttack = true;
+            }
+        }
+        return canAttack;
+    }
+
+    private boolean isEnemy(Player attackerPlayer) {
+        var enemy = false;
+        if(nonNull(clan)) {
+            final Clan attackerClan = attackerPlayer.getClan();
+            enemy =  isOppositeSiegeSide(attackerClan) || isMutualWar(attackerPlayer, attackerClan);
+        }
+        return enemy || isInSingleBattleZone(attackerPlayer);
+    }
+
+    private boolean isInSingleBattleZone(Player attackerPlayer) {
+        return isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP) && !(isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE));
+    }
+
+    private boolean isInSameGroup(Creature attacker, Player attackerPlayer) {
+        if(isInParty() && party.isMember(attackerPlayer)) {
+            return true;
+        }
+
+        return isOnCustomEvent && getTeam() == attacker.getTeam();
+    }
+
+    private boolean isInPvp(Player attackerPlayer) {
+        if (isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP) && isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE)) {
+            return true;
+        }
+
+        return getPvpFlag() > 0;
+    }
+
+    private boolean isAlly(Creature attacker, Player attackerPlayer) {
+        if (nonNull(clan) && clan.isMember(attackerPlayer.getObjectId())) {
+            return true;
+        }
+
+        return GameUtils.isPlayer(attacker) && getAllyId() != 0 && getAllyId() == attackerPlayer.getAllyId();
+    }
+
+    private boolean isMutualWar(Player attackerPlayer, Clan attackerClan) {
+        if (nonNull(attackerClan) && (!wantsPeace()) && (!attackerPlayer.wantsPeace())) {
+            final ClanWar war = attackerClan.getWarWith(getClanId());
+            return nonNull(war) && war.getState() == ClanWarState.MUTUAL;
+        }
+        return false;
+    }
+
+    private boolean isOppositeSiegeSide(Clan attackerClan) {
+        final Siege siege = SiegeManager.getInstance().getSiege(this);
+        if (nonNull(siege)) {
+            if (siege.checkIsDefender(attackerClan) && siege.checkIsAttacker(clan)) {
+                return true;
+            }
+            return siege.checkIsAttacker(attackerClan) && siege.checkIsDefender(clan);
+        }
+        return false;
+    }
+
+    private boolean isSelfAttacking(Creature attacker) {
+        if (isNull(attacker)) {
+            return true;
+        }
+        return attacker == this || attacker == pet || attacker.hasServitor(attacker.getObjectId());
     }
 
     /**
@@ -5468,59 +5348,49 @@ public final class Player extends Playable {
     }
 
     private boolean checkUseSkill(Skill skill, Item item) {
-        if (skill.isPassive() || isDead() || (skill.isToggle() && isMounted())) {
+        if (skill.isPassive() || !hasUseSkillState(skill, item)) {
             return false;
         }
 
-        if (!checkSkillPlayerState(skill, item)) {
+        if (!checkToggleSkill(skill)) {
             return false;
         }
 
-        return checkUseSkillState(skill);
-    }
-
-    private boolean checkUseSkillState(Skill skill) {
         if (isSkillDisabled(skill)) {
             sendSkillReuseTimeMessage(skill);
-            return false;
-        }
-
-        if (skill.isToggle() && stopSkillEffects(true, skill.getId())) {
-            return false;
-        }
-
-        if (isFakeDeath()) {
-            return false;
-        }
-
-        return !isNull(currentSkillWorldPosition) || skill.getTargetType() != TargetType.GROUND;
-    }
-
-    private boolean checkSkillPlayerState(Skill skill, Item item) {
-        if (sitting && item == null) {
-            sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
-            return false;
-        }
-
-        if (inObserverMode) {
-            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-            return false;
-        }
-
-        if (!CharacterSettings.allowPKTeleport() && getReputation() < 0 && skill.hasAnyEffectType(EffectType.TELEPORT)) {
-            return false;
-        }
-
-        if (isFishing() && !skill.hasAnyEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
-            sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
             return false;
         }
 
         if(!SkillCaster.checkSkillConsume(this, skill)) {
             return false;
         }
+        return !isNull(currentSkillWorldPosition) || skill.getTargetType() != TargetType.GROUND;
+    }
 
-        return skill.canCastWhileDisabled() || (!isControlBlocked() && !hasBlockActions());
+    private boolean hasUseSkillState(Skill skill, Item item) {
+        var canUseSkill = true;
+        if (inObserverMode) {
+            sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+            canUseSkill = false;
+        } else if (sitting && item == null) {
+            sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
+            canUseSkill = false;
+        } else if (isFishing() && !skill.hasAnyEffectType(EffectType.FISHING, EffectType.FISHING_START)) {
+            sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
+            canUseSkill = false;
+        } else if (!CharacterSettings.allowPKTeleport() && getReputation() < 0 && skill.hasAnyEffectType(EffectType.TELEPORT)) {
+            canUseSkill = false;
+        } else if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions())) {
+            canUseSkill = false;
+        }
+        return canUseSkill && !isDead();
+    }
+
+    private boolean checkToggleSkill(Skill skill) {
+        if (skill.isToggle() && (isMounted() || stopSkillEffects(true, skill.getId())) ) {
+            return false;
+        }
+        return !isFakeDeath();
     }
 
     private void sendSkillReuseTimeMessage(Skill skill) {
@@ -5586,10 +5456,10 @@ public final class Player extends Playable {
 
     private void setMount(int npcId, int npcLevel) {
         final MountType type = MountType.findByNpcId(npcId);
-        switch (type) {
-            case NONE -> setIsFlying(false);
-            case STRIDER -> addStriderAssaultSkill();
-            case WYVERN -> setIsFlying(true);
+        if (type == MountType.NONE) {
+            setIsFlying(false);
+        } else if (type == MountType.WYVERN) {
+            setIsFlying(true);
         }
 
         mountType = type;
@@ -5597,11 +5467,6 @@ public final class Player extends Playable {
         mountLevel = npcLevel;
     }
 
-    private void addStriderAssaultSkill() {
-        if (isNoble()) {
-            addSkill(CommonSkill.STRIDER_SIEGE_ASSAULT.getSkill(), false);
-        }
-    }
 
     /**
      * @return the type of Pet mounted (0 : none, 1 : Strider, 2 : Wyvern, 3: Wolf).
@@ -5611,13 +5476,13 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final void stopAllEffects() {
+    public void stopAllEffects() {
         super.stopAllEffects();
         updateAndBroadcastStatus();
     }
 
     @Override
-    public final void stopAllEffectsExceptThoseThatLastThroughDeath() {
+    public void stopAllEffectsExceptThoseThatLastThroughDeath() {
         super.stopAllEffectsExceptThoseThatLastThroughDeath();
         updateAndBroadcastStatus();
     }
@@ -5643,6 +5508,7 @@ public final class Player extends Playable {
      */
     @Override
     public void updateAbnormalVisualEffects() {
+        sendPacket(new UserInfo(this, UserInfoType.POSITION));
         sendPacket(new ExUserInfoAbnormalVisualEffect(this));
         broadcastCharInfo();
     }
@@ -5890,13 +5756,9 @@ public final class Player extends Playable {
 
     public void setHero(boolean hero) {
         if (hero && (data.getBaseClass() == data.getClassId())) {
-            for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
-                addSkill(skill, false); // Don't persist hero skills into database
-            }
+            SkillTreesData.getInstance().forEachHeroSkill(s -> addSkill(s, false));
         } else {
-            for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree()) {
-                removeSkill(skill, false, true); // Just remove skills from non-hero players
-            }
+            SkillTreesData.getInstance().forEachHeroSkill(s -> removeSkill(s, false, true));
         }
         this.hero = hero;
         sendSkillList();
@@ -5963,13 +5825,27 @@ public final class Player extends Playable {
      * @return true if the player might join/start a duel.
      */
     public boolean canDuel() {
-
-        if (isInCombat() || isJailed()) {
-            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
+        if (!checkDuelStatus()) {
             return false;
         }
-        if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2d)) || (getCurrentMp() < (getMaxMp() / 2d)))) {
-            noDuelReason = SystemMessageId.C1_S_HP_OR_MP_IS_BELOW_50_AND_CANNOT_DUEL;
+
+        if (privateStoreType != PrivateStoreType.NONE) {
+            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
+            return false;
+        }
+
+        if (isMounted()) {
+            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
+            return false;
+        }
+
+        return checkDuelActivities();
+    }
+
+    private boolean checkDuelActivities() {
+        if (isOnEvent()) // custom event message
+        {
+            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
             return false;
         }
         if (isInDuel || startingDuel) {
@@ -5980,20 +5856,7 @@ public final class Player extends Playable {
             noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS;
             return false;
         }
-        if (isOnEvent()) // custom event message
-        {
-            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
-            return false;
-        }
 
-        if (privateStoreType != PrivateStoreType.NONE) {
-            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
-            return false;
-        }
-        if (isMounted() || isInBoat()) {
-            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
-            return false;
-        }
         if (isFishing()) {
             noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING;
             return false;
@@ -6005,18 +5868,16 @@ public final class Player extends Playable {
         return true;
     }
 
-    public boolean isNoble() {
-        return data.isNobless();
-    }
-
-    public void setNoble(boolean val) {
-        if (val) {
-            SkillTreesData.getInstance().getNobleSkillAutoGetTree().forEach(skill -> addSkill(skill, false));
-        } else {
-            SkillTreesData.getInstance().getNobleSkillTree().forEach(skill -> removeSkill(skill, false, true));
+    private boolean checkDuelStatus() {
+        if (isInCombat() || isJailed()) {
+            noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
+            return false;
         }
-        data.setNobless(val);
-        sendSkillList();
+        if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2d)) || (getCurrentMp() < (getMaxMp() / 2d)))) {
+            noDuelReason = SystemMessageId.C1_S_HP_OR_MP_IS_BELOW_50_AND_CANNOT_DUEL;
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -6157,7 +6018,8 @@ public final class Player extends Playable {
     public void onEnter() {
         startWarnUserTakeBreak();
         restoreItemReuse();
-        restoreShortCuts();
+        restoreSkills();
+        rewardSkills();
         restoreEffects();
 
         // TODO : Need to fix that hack!
@@ -6179,15 +6041,8 @@ public final class Player extends Playable {
         if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS)) {
             checkPlayerSkills();
         }
-
-        try {
-            for (Zone zone : ZoneManager.getInstance().getZones(this)) {
-                zone.onPlayerLoginInside(this);
-            }
-        } catch (Exception e) {
-            LOGGER.error("", e);
-        }
-
+        restoreShortCuts();
+        ZoneEngine.getInstance().forEachZone(this, z -> z.onPlayerLoginInside(this));
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogin(this), this);
     }
 
@@ -6344,7 +6199,7 @@ public final class Player extends Playable {
     }
 
     @Override
-    public final void onTeleported() {
+    public void onTeleported() {
         super.onTeleported();
 
         setLastServerPosition(getX(), getY(), getZ());
@@ -6526,17 +6381,6 @@ public final class Player extends Playable {
         return !isProcessingItem(objectId);
     }
 
-    /**
-     * @return Returns the inBoat.
-     */
-    public boolean isInBoat() {
-        return (vehicle != null) && vehicle.isBoat();
-    }
-
-    public Boat getBoat() {
-        return (Boat) vehicle;
-    }
-
     public boolean isInShuttle() {
         return vehicle instanceof Shuttle;
     }
@@ -6598,118 +6442,117 @@ public final class Player extends Playable {
     @Override
     public boolean deleteMe() {
         AutoPlayEngine.getInstance().stopTasks(this);
-        try {
-            for (Zone zone : ZoneManager.getInstance().getZones(this)) {
-                zone.onPlayerLogoutInside(this);
-            }
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
+        ZoneEngine.getInstance().forEachZone(this, z -> z.onPlayerLogoutInside(this));
+
+        setOnlineStatus(false, true);
+        stopActionsInProgress();
+
+        storeRecommendations();
+
+        if (isGM()) {
+            AdminData.getInstance().deleteGm(this);
         }
 
-        try {
-            if (!isOnline) {
-                LOGGER.error("deleteMe() called on offline player {}", this);
-            }
-            setOnlineStatus(false, true);
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
+        if (inObserverMode) {
+            setLocationInvisible(lastLoc);
         }
 
-        try {
-            if (Config.ENABLE_BLOCK_CHECKER_EVENT && (handysBlockCheckerEventArena != -1)) {
-                HandysBlockCheckerManager.getInstance().onDisconnect(this);
-            }
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        if (vehicle != null) {
+            vehicle.oustPlayer(this);
         }
 
-        try {
-            abortAttack();
-            abortCast();
-            stopMove(null);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        removeFromWorld();
+        cleanUpItems();
+
+        notifyClanLogout();
+        removeSnoop();
+
+        if (Event.isParticipant(this)) {
+            Event.savePlayerEventStatus(this);
         }
 
-        try {
-            if (matchingRoom != null) {
-                matchingRoom.deleteMember(this, false);
-            }
-            MatchingRoomManager.getInstance().removeFromWaitingList(this);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        notifyFriends(FriendStatus.OFFLINE);
+        blockList.playerLogout();
+
+        stopEffects();
+
+        SaveTaskManager.getInstance().remove(this);
+        return super.deleteMe();
+    }
+
+    private void stopEffects() {
+        stopCubics();
+        getEffectList().stopAllToggles();
+        getEffectList().stopAllPassives(false, false);
+        getEffectList().stopAllOptions(false, false);
+    }
+
+    private void removeFromWorld() {
+        ZoneEngine.getInstance().removeFromZones(this);
+        decayMe();
+        leaveParty();
+        unSummonServitors();
+
+        final Instance inst = getInstanceWorld();
+        if (inst != null) {
+            inst.onPlayerLogout(this);
+        }
+    }
+
+    private void cleanUpItems() {
+        inventory.deleteMe();
+        clearWarehouse();
+
+        freight.deleteMe();
+        clearRefund();
+    }
+
+    private void stopActionsInProgress() {
+        if (GeneralSettings.enableBlockCheckerEvent() && (handysBlockCheckerEventArena != -1)) {
+            HandysBlockCheckerManager.getInstance().onDisconnect(this);
         }
 
-        try {
-            if (isFlying()) {
-                removeSkill(SkillEngine.getInstance().getSkill(CommonSkill.WYVERN_BREATH.getId(), 1));
-            }
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+        forgetTarget();
+        stopMove(null);
+        leaveMatchingRoom();
+
+        if (isFlying()) {
+            removeSkill(SkillEngine.getInstance().getSkill(CommonSkill.WYVERN_BREATH.getId(), 1));
         }
 
-        // Recommendations must be saved before task (timer) is canceled
-        try {
-            storeRecommendations();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-        // Stop the HP/MP/CP Regeneration task (scheduled tasks)
-        try {
-            stopAllTimers();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
 
-        try {
-            setIsTeleporting(false);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // Stop crafting, if in progress
-        try {
-            RecipeController.getInstance().requestMakeItemAbort(this);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // Cancel Attack or Cast
-        try {
-            setTarget(null);
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
+        stopAllTimers();
+        setIsTeleporting(false);
+        RecipeController.getInstance().requestMakeItemAbort(this);
 
         if (isChannelized()) {
             getSkillChannelized().abortChannelization();
         }
 
-        // Stop all toggles.
-        getEffectList().stopAllToggles();
+        setActiveRequester(null);
+        cancelActiveTrade();
+    }
 
-        // Remove from world regions zones
-        ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+    private void notifyClanLogout() {
+        if (clan != null) {
+            clan.onMemberLogout(this);
+            clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
+            clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
+        }
+    }
 
-        // Remove the Player from the world
-        try {
-            decayMe();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
+    private void removeSnoop() {
+        for (Player player : snoopedPlayer) {
+            player.removeSnooper(this);
         }
 
-        // If a Party is in progress, leave it (and festival party)
-        if (isInParty()) {
-            try {
-                leaveParty();
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
+        for (Player player : snoopListener) {
+            player.removeSnooped(this);
         }
+    }
 
-        // If the Player has Pet, un summon it
+    private void unSummonServitors() {
         if (hasSummon()) {
-            try {
                 Summon pet = this.pet;
                 if (pet != null) {
                     pet.setRestoreSummon(true);
@@ -6726,121 +6569,14 @@ public final class Player extends Playable {
                     s.setRestoreSummon(true);
                     s.unSummon(this);
                 });
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            } // returns pet to control item
         }
+    }
 
-        if (clan != null) {
-            clan.onMemberLogout(this);
+    private void leaveMatchingRoom() {
+        if (matchingRoom != null) {
+            matchingRoom.deleteMember(this, false);
         }
-
-        if (getActiveRequester() != null) {
-            // deals with sudden exit in the middle of transaction
-            setActiveRequester(null);
-            cancelActiveTrade();
-        }
-
-        // If the Player is a GM, remove it from the GM List
-        if (isGM()) {
-            try {
-                AdminData.getInstance().deleteGm(this);
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
-        }
-
-        try {
-            // Check if the Player is in observer mode to set its position to its position
-            // before entering in observer mode
-            if (inObserverMode) {
-                setLocationInvisible(lastLoc);
-            }
-
-            if (vehicle != null) {
-                vehicle.oustPlayer(this);
-            }
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // remove player from instance
-        final Instance inst = getInstanceWorld();
-        if (inst != null) {
-            try {
-                inst.onPlayerLogout(this);
-            } catch (Exception e) {
-                LOGGER.error("deleteMe()", e);
-            }
-        }
-
-        try {
-            stopCubics();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // Update database with items in its inventory and remove them from the world
-        try {
-            inventory.deleteMe();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        // Update database with items in its warehouse and remove them from the world
-        try {
-            clearWarehouse();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-        if (Config.WAREHOUSE_CACHE) {
-            WarehouseCacheManager.getInstance().remCacheTask(this);
-        }
-
-        try {
-            freight.deleteMe();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        try {
-            clearRefund();
-        } catch (Exception e) {
-            LOGGER.error("deleteMe()", e);
-        }
-
-        if (data.getClanId() > 0) {
-            clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
-            clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
-        }
-
-        for (Player player : snoopedPlayer) {
-            player.removeSnooper(this);
-        }
-
-        for (Player player : snoopListener) {
-            player.removeSnooped(this);
-        }
-
-        // we store all data from players who are disconnected while in an event in order to restore it in the next login
-        if (Event.isParticipant(this)) {
-            Event.savePlayerEventStatus(this);
-        }
-
-        try {
-            notifyFriends(FriendStatus.OFFLINE);
-            blockList.playerLogout();
-        } catch (Exception e) {
-            LOGGER.warn("Exception on deleteMe() notifyFriends: ", e);
-        }
-
-        // Stop all passives and augment options
-        getEffectList().stopAllPassives(false, false);
-        getEffectList().stopAllOptions(false, false);
-
-        SaveTaskManager.getInstance().remove(this);
-
-        return super.deleteMe();
+        MatchingRoomManager.getInstance().removeFromWaitingList(this);
     }
 
     public int getInventoryLimit() {
@@ -6889,7 +6625,7 @@ public final class Player extends Playable {
         mountObjectID = newID;
     }
 
-    public SkillUseHolder getQueuedSkill() {
+    public SkillUsedInfo getQueuedSkill() {
         return queuedSkill;
     }
 
@@ -6898,7 +6634,7 @@ public final class Player extends Playable {
             this.queuedSkill = null;
             return;
         }
-        this.queuedSkill = new SkillUseHolder(queuedSkill, null, ctrlPressed, shiftPressed);
+        this.queuedSkill = new SkillUsedInfo(queuedSkill, null, ctrlPressed, shiftPressed);
     }
 
     /**
@@ -7194,7 +6930,7 @@ public final class Player extends Playable {
      * @return {@code skill} object referred to this skill id that this player has, {@code null} otherwise.
      */
     @Override
-    public final Skill getKnownSkill(int skillId) {
+    public Skill getKnownSkill(int skillId) {
         Skill skill = null;
         if(nonNull(transformSkills)) {
             skill = transformSkills.get(skillId);
@@ -7207,34 +6943,19 @@ public final class Player extends Playable {
      */
     public Collection<Skill> getSkillList() {
         Collection<Skill> currentSkills = getAllSkills();
+        List<Skill> skills = new ArrayList<>(currentSkills.size());
 
-        if (isTransformed()) {
-            if (nonNull(transformSkills)) {
-                // Include transformation skills and those skills that are allowed during transformation.
-                currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
-
-                int revelationSkill = getRevelationSkillMainClass1();
-                if (revelationSkill != 0)
-                {
-                    addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                }
-                revelationSkill = getRevelationSkillMainClass2();
-                if (revelationSkill != 0)
-                {
-                    addSkill(SkillEngine.getInstance().getSkill(revelationSkill, 1), false);
-                }
-
-                // Include transformation skills.
-                currentSkills.addAll(transformSkills.values());
+        for (Skill skill : currentSkills) {
+            if(!skill.isBlockActionUseSkill() && (skill.allowOnTransform() || !isTransformed())) {
+                skills.add(skill);
             }
         }
 
-        //@formatter:off
-        return currentSkills.stream()
-                .filter(Objects::nonNull)
-                .filter(s -> !s.isBlockActionUseSkill()) // Skills that are blocked from player use are not shown in skill list.
-                .collect(Collectors.toList());
-        //@formatter:on
+        if(isTransformed() && transformSkills != null) {
+            skills.addAll(transformSkills.values());
+        }
+
+        return skills;
     }
 
     private void startFeed(int npcId) {
@@ -7270,7 +6991,7 @@ public final class Player extends Playable {
         petTemplate = null;
     }
 
-    public final PetTemplate getPetData(int npcId) {
+    public PetTemplate getPetData(int npcId) {
         if (petTemplate == null) {
             petTemplate = PetDataTable.getInstance().getPetTemplate(npcId);
         }
@@ -7473,7 +7194,7 @@ public final class Player extends Playable {
         } else if ((type == 1) && (isInsideZone(ZoneType.SIEGE) || isInsideZone(ZoneType.CLAN_HALL) || isInsideZone(ZoneType.JAIL) || isInsideZone(ZoneType.CASTLE) || isInsideZone(ZoneType.NO_SUMMON_FRIEND) || isInsideZone(ZoneType.FORT))) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
             valid = false;
-        } else if (isInsideZone(ZoneType.NO_BOOKMARK) || isInBoat()) {
+        } else if (isInsideZone(ZoneType.NO_BOOKMARK)) {
             if (type == 0) {
                 sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_THIS_AREA);
             } else if (type == 1) {
@@ -7545,11 +7266,6 @@ public final class Player extends Playable {
     public void sendInfo(Player player) {
         if(!isInvisible() || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)) {
             player.sendPacket(new ExCharInfo(this));
-        }
-
-        if (isInBoat() && isInvisible()) {
-            setXYZ(getBoat().getLocation());
-            player.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), inVehiclePosition));
         }
 
         updateRelation(player);
@@ -7679,18 +7395,18 @@ public final class Player extends Playable {
         return getTransformation().map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
     }
 
-    public final int getClientZ() {
+    public int getClientZ() {
         return clientZ;
     }
 
-    public final void setClientZ(int val) {
+    public void setClientZ(int val) {
         clientZ = val;
     }
 
     /**
      * @return true if character falling now on the start of fall return false for correct coords sync!
      */
-    public final boolean isFalling(int z) {
+    public boolean isFalling(int z) {
         if (isDead() || isFlying() || isFlyingMounted() || isInsideZone(ZoneType.WATER)) {
             return false;
         }
@@ -7804,7 +7520,7 @@ public final class Player extends Playable {
             learn = SkillTreesData.getInstance().getClassSkill(e.getKey(), e.getValue().getLevel() % 100, getClassId());
             if (learn != null) {
                 final int lvlDiff = e.getKey() == CommonSkill.EXPERTISE.getId() ? 0 : 9;
-                if (getLevel() < (learn.getGetLevel() - lvlDiff)) {
+                if (getLevel() < (learn.requiredLevel() - lvlDiff)) {
                     decreaseSkillLevel(e.getValue(), lvlDiff);
                 }
             }
@@ -7815,8 +7531,8 @@ public final class Player extends Playable {
         int nextLevel = -1;
         final var skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(getClassId());
         for (SkillLearn sl : skillTree.values()) {
-            if ((sl.getSkillId() == skill.getId()) && (nextLevel < sl.getSkillLevel()) && (getLevel() >= (sl.getGetLevel() - lvlDiff))) {
-                nextLevel = sl.getSkillLevel(); // next possible skill level
+            if ((sl.id() == skill.getId()) && (nextLevel < sl.level()) && (getLevel() >= (sl.requiredLevel() - lvlDiff))) {
+                nextLevel = sl.level(); // next possible skill level
             }
         }
 
@@ -7870,8 +7586,9 @@ public final class Player extends Playable {
      * Restore Pet's inventory items from database.
      */
     private void restorePetInventoryItems() {
-    //    setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
+        setPetInvItems(getDAO(ItemDAO.class).hasPetItems(objectId));
     }
+
 
     public String getAdminConfirmCmd() {
         return adminConfirmCmd;
@@ -8086,15 +7803,11 @@ public final class Player extends Playable {
         return nonNull(clan) && nonNull(target.getClan()) && clan.isAtWarWith(target.getClan());
     }
 
-    public int getAbilityPointsUsed() {
-        return getAbilityPointsMainClassUsed();
-    }
-
     /**
      * @return The amount of times player can use world chat
      */
     public int getWorldChatPoints() {
-        return (int) getStats().getValue(Stat.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
+        return (int) getStats().getValue(Stat.WORLD_CHAT_POINTS, GeneralSettings.worldChatPointsPerDay());
     }
 
     /**
@@ -8391,59 +8104,6 @@ public final class Player extends Playable {
         return true;
     }
 
-    public boolean isInTimedHuntingZone()
-    {
-        return isInTimedHuntingZone(2); // Storm Isle
-    }
-
-    public boolean isInTimedHuntingZone(int zoneId)
-    {
-        final int x = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-        final int y = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-
-        if (zoneId == 2) { // Ancient Pirates' Tomb.
-            return (x == 20) && (y == 15);
-        }
-        return false;
-    }
-
-    public void startTimedHuntingZone(int zoneId, long delay)
-    {
-        // Stop previous task.
-        stopTimedHuntingZoneTask();
-
-        // TODO: Delay window.
-        // sendPacket(new TimedHuntingZoneEnter((int) (delay / 60 / 1000)));
-        sendMessage("You have " + (delay / 60 / 1000) + " minutes left for this timed zone.");
-        _timedHuntingZoneFinishTask = ThreadPool.schedule(() ->
-        {
-            if (isOnline() && isInTimedHuntingZone(zoneId))
-            {
-                sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-                abortCast();
-                stopMove(null);
-                teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
-            }
-        }, delay);
-    }
-
-    private void stopTimedHuntingZoneTask()
-    {
-        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone())
-        {
-            _timedHuntingZoneFinishTask.cancel(true);
-            _timedHuntingZoneFinishTask = null;
-        }
-        sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-    }
-
-    public long getTimedHuntingZoneRemainingTime() {
-        if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isCancelled() && !_timedHuntingZoneFinishTask.isDone()) {
-            return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
-        }
-        return 0;
-    }
-
     public void restoreRandomCraft()
     {
         _randomCraft = new PlayerRandomCraft(this);
@@ -8458,5 +8118,10 @@ public final class Player extends Playable {
     public int getHonorCoins()
     {
         return (int) getInventory().getInventoryItemCount(95570, 0);
+    }
+
+    @Override
+    protected Queue<AbstractEventListener> globalListenerByType(EventType type) {
+        return Listeners.players().getListeners(type);
     }
 }

@@ -40,7 +40,7 @@ import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.*;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
-import org.l2j.gameserver.model.holders.ItemSkillHolder;
+import org.l2j.gameserver.model.holders.ItemSkillInfo;
 import org.l2j.gameserver.model.item.*;
 import org.l2j.gameserver.model.item.type.*;
 import org.l2j.gameserver.model.stats.Stat;
@@ -85,6 +85,10 @@ public final class ItemEngine extends GameXmlReader {
         return ServerSettings.dataPackDirectory().resolve("data/items/items.xsd");
     }
 
+    public void reload() {
+        load();
+    }
+
     public void load() {
         items.clear();
         parseDatapackDirectory("data/items", true);
@@ -99,6 +103,7 @@ public final class ItemEngine extends GameXmlReader {
                 case "item" -> parseItem(node);
                 case "armor" -> parseArmor(node);
                 case "weapon" -> parseWeapon(node);
+                default -> LOGGER.warn("Unknown item type {} ", node.getNodeName());
             }
         }));
     }
@@ -120,6 +125,10 @@ public final class ItemEngine extends GameXmlReader {
                 case "condition" -> parseItemCondition(weapon, node);
                 case "stats" -> parseItemStats(weapon, node);
                 case "skills"-> parseItemSkills(weapon, node);
+                case "random_craft" -> {
+                    // ignore
+                }
+                default -> LOGGER.warn("unknown weapon node {}", node.getNodeName());
             }
         });
 
@@ -136,9 +145,9 @@ public final class ItemEngine extends GameXmlReader {
         forEach(node, "skill", skillNode -> {
             var attr = skillNode.getAttributes();
             var type = parseEnum(attr, ItemSkillType.class, "type");
-            item.addSkill(new ItemSkillHolder(parseInt(attr, "id"), parseInt(attr, "level"), type, parseInt(attr, "chance"), parseInt(attr, "value")));
+            var skill = parseSkillInfo(skillNode);
+            item.addSkill(new ItemSkillInfo(skill, type, parseInt(attr, "chance"), parseInt(attr, "value")));
         });
-
     }
 
     private void parseItemStats(ItemTemplate item, Node node) {
@@ -156,6 +165,8 @@ public final class ItemEngine extends GameXmlReader {
 
             var temp = switch (n.getNodeName()) {
                 case "player" -> parsePlayerCondition(n);
+                case "weapon" -> parseWeaponCondition(n);
+                case "restrict-time-recharge" -> parseRestrictTimeZoneCondition(n);
                 default -> condition;
             };
 
@@ -168,7 +179,7 @@ public final class ItemEngine extends GameXmlReader {
             var msgId = parseInt(attr, "msg-id");
             if(nonNull(msg)) {
                 condition.setMessage(msg);
-            } else if(nonNull(msgId)) {
+            } else {
                 condition.setMessageId(msgId);
                 if(parseBoolean(attr, "add-name")) {
                     condition.addName();
@@ -176,6 +187,15 @@ public final class ItemEngine extends GameXmlReader {
             }
             item.attachCondition(condition);
         }
+    }
+
+    private Condition parseRestrictTimeZoneCondition(Node node) {
+        return new ConditionRestrictTimeZoneRecharge(parseInt(node.getAttributes(), "zone"));
+    }
+
+    private Condition parseWeaponCondition(Node node) {
+        var types = parseEnumSet(node.getAttributes(), WeaponType.class, "types");
+        return new ConditionWeaponTypes(types);
     }
 
     private Condition parsePlayerCondition(Node playerNode) {
@@ -271,6 +291,10 @@ public final class ItemEngine extends GameXmlReader {
                 case "condition" -> parseItemCondition(armor, node);
                 case "stats" -> parseItemStats(armor, node);
                 case "skills"-> parseItemSkills(armor, node);
+                case "random_craft" -> {
+                    // ignore
+                }
+                default -> LOGGER.warn("unknown armor node {}", node.getNodeName());
             }
         } );
 
@@ -300,11 +324,20 @@ public final class ItemEngine extends GameXmlReader {
                 case "skill-reducer" -> parseSkillReducer(item, node);
                 case "extract" -> parseItemExtract(item, node);
                 case "transformation-book" -> parseTransformationBook(item, node);
+                case "equip" -> parseItemEquip(item, node);
                 case "condition" -> parseItemCondition(item, node);
+                case "random_craft" -> {
+                    // ignore
+                }
+                default -> LOGGER.warn("Unknown node {}", node.getNodeName());
             }
         } );
         item.fillType2();
         items.put(item.getId(), item);
+    }
+
+    private void parseItemEquip(EtcItem item, Node node) {
+        item.setBodyPart(parseEnum(node.getAttributes(), BodyPart.class, "body-part"));
     }
 
     private void parseItemCrystal(EtcItem item, Node node) {
@@ -313,7 +346,8 @@ public final class ItemEngine extends GameXmlReader {
 
     private void parseTransformationBook(EtcItem item, Node node) {
         item.setHandler("TransformationBook");
-        item.addSkill(new ItemSkillHolder(parseInt(node.getAttributes(), "skill"), 1, ItemSkillType.NORMAL, 100, 0));
+        var skill = parseSkillInfo(node, "skill", "level");
+        item.addSkill(new ItemSkillInfo(skill, ItemSkillType.NORMAL, 100, 0));
     }
 
     private void parseItemExtract(EtcItem item, Node node) {
@@ -374,9 +408,7 @@ public final class ItemEngine extends GameXmlReader {
         return items.get(id);
     }
 
-    public Item createTempItem(int itemId) {
-        var template = items.get(itemId);
-        requireNonNull(template, "The itemId should be a existent template id");
+    public Item createTempItem(ItemTemplate template) {
         var item = new Item(0, template);
         item.setCount(1);
         return item;
@@ -401,24 +433,7 @@ public final class ItemEngine extends GameXmlReader {
 
         final Item item = new Item(IdFactory.getInstance().getNextId(), template);
 
-        // TODO Extract this block
-        if (process.equalsIgnoreCase("loot") && !CharacterSettings.isAutoLoot(itemId)) {
-            ScheduledFuture<?> itemLootShedule;
-            if ((reference instanceof Attackable) && ((Attackable) reference).isRaid()) // loot privilege for raids
-            {
-                final Attackable raid = (Attackable) reference;
-                // if in CommandChannel and was killing a World/RaidBoss
-                if ((raid.getFirstCommandChannelAttacked() != null) && !CharacterSettings.autoLootRaid()) {
-                    item.changeOwner(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), CharacterSettings.raidLootPrivilegeTime());
-                    item.setItemLootShedule(itemLootShedule);
-                }
-            } else if (!CharacterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
-                item.changeOwner(actor.getObjectId());
-                itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
-                item.setItemLootShedule(itemLootShedule);
-            }
-        }
+        scheduleDropProtection(process, itemId, actor, reference, item);
 
         World.getInstance().addObject(item);
 
@@ -436,6 +451,23 @@ public final class ItemEngine extends GameXmlReader {
 
         EventDispatcher.getInstance().notifyEventAsync(new OnItemCreate(process, item, actor, reference), item.getTemplate());
         return item;
+    }
+
+    private void scheduleDropProtection(String process, int itemId, Creature actor, Object reference, Item item) {
+        if (process.equalsIgnoreCase("loot") && !CharacterSettings.isAutoLoot(itemId)) {
+            ScheduledFuture<?> itemLootShedule;
+            if ((reference instanceof final Attackable raid) && ((Attackable) reference).isRaid()) { // loot privilege for raids
+                if ((raid.getFirstCommandChannelAttacked() != null) && !CharacterSettings.autoLootRaid()) {
+                    item.changeOwner(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
+                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), CharacterSettings.raidLootPrivilegeTime());
+                    item.setItemLootShedule(itemLootShedule);
+                }
+            } else if (!CharacterSettings.autoLoot() || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
+                item.changeOwner(actor.getObjectId());
+                itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
+                item.setItemLootShedule(itemLootShedule);
+            }
+        }
     }
 
     private void auditGM(String process, int itemId, long count, Creature actor, Object reference, Item item) {
@@ -486,10 +518,6 @@ public final class ItemEngine extends GameXmlReader {
         getDAO(PetDAO.class).deleteByItem(item.getObjectId());
     }
 
-    public void reload() {
-        load();
-    }
-
     public Collection<ItemTemplate> getAllItems() {
         return items.values();
     }
@@ -508,6 +536,8 @@ public final class ItemEngine extends GameXmlReader {
         }
 
     }
+
+
 
     public static void init() {
         ServiceLoader.load(IItemHandler.class).forEach(ItemHandler.getInstance()::registerHandler);

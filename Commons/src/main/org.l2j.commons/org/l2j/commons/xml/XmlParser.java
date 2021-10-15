@@ -18,10 +18,7 @@
  */
 package org.l2j.commons.xml;
 
-import io.github.joealisson.primitive.ArrayIntList;
-import io.github.joealisson.primitive.Containers;
-import io.github.joealisson.primitive.IntList;
-import io.github.joealisson.primitive.IntSet;
+import io.github.joealisson.primitive.*;
 import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
@@ -444,7 +441,14 @@ public class XmlParser {
     public IntSet parseIntSet(Node node) {
         if(nonNull(node)) {
             var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
-            return StreamUtil.collectToSet(Arrays.stream(value.split("\\s")).filter(Util::isInteger).mapToInt(Integer::parseInt));
+            var values = value.split("\\s");
+            var set = new HashIntSet(values.length);
+            for (var v : values) {
+                if(Util.isInteger(v)) {
+                    set.add(Integer.parseInt(v));
+                }
+            }
+            return set;
         }
         return Containers.emptyIntSet();
     }
@@ -454,7 +458,7 @@ public class XmlParser {
             var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
             var values = value.split("\\s");
             var list = new ArrayIntList(values.length);
-            for (String val :  values) {
+            for (var val :  values) {
                 if(Util.isInteger(val)) {
                     list.add(Integer.parseInt(val));
                 }
@@ -481,5 +485,24 @@ public class XmlParser {
             return array;
         }
         return Util.INT_ARRAY_EMPTY;
+    }
+
+    public short[] parseShortArray(NamedNodeMap attrs, String name) {
+        return parseShortArray(attrs.getNamedItem(name));
+    }
+
+    public short[] parseShortArray(Node node ) {
+        if(nonNull(node)) {
+            var nodeValue = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
+            var values = nodeValue.split("\\s");
+            short[] array = new short[values.length];
+            for (int i = 0; i < array.length; i++) {
+                if(Util.isInteger(values[i])) {
+                    array[i] = Short.parseShort(values[i]);
+                }
+            }
+            return array;
+        }
+        return Util.SHORT_ARRAY_EMPTY;
     }
 }

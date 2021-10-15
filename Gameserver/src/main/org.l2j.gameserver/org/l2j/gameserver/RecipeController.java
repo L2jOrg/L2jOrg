@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.RecipeStat;
 import org.l2j.gameserver.model.TempItem;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.stats.Stat;

@@ -82,7 +82,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         flyRunSpd = cha.isFlying() ? runSpd : 0;
         flyWalkSpd = cha.isFlying() ? walkSpd : 0;
         enchantLevel = cha.getInventory().getWeaponEnchant();
-        armorEnchant = cha.getInventory().getArmorMaxEnchant();
+        armorEnchant = cha.getInventory().getArmorSetEnchant();
 
         title = cha.getTitle();
         if (cha.isGM() && cha.isInvisible()) {
@@ -274,7 +274,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeShort(UserInfoType.SOCIAL.getBlockLength());
             buffer.writeByte(player.getPvpFlag());
             buffer.writeInt(player.getReputation()); // Reputation
-            buffer.writeByte(player.isNoble());
+            buffer.writeByte(0x00); // is nobles
             buffer.writeByte(player.isHero() || (player.isGM() && AdminSettings.showAura()) ? 2 : 0); // 152 - Value for enabled changed to 2?
             buffer.writeByte(player.getSocialStatus().ordinal());
             buffer.writeInt(player.getPkKills());

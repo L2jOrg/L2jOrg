@@ -35,6 +35,9 @@ import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpirit
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.network.SystemMessageId.*;
 
+/**
+ * @author JoeAlisson
+ */
 public class ExElementalSpiritEvolution extends ClientPacket {
 
     private byte type;
@@ -58,10 +61,7 @@ public class ExElementalSpiritEvolution extends ClientPacket {
 
         if(canEvolve) {
             spirit.upgrade();
-            client.sendPacket(SystemMessage.getSystemMessage(S1_EVOLVED_TO_S2_STAR).addElementalSpirit(type).addInt(spirit.getStage()));
-            var userInfo = new UserInfo(player);
-            userInfo.addComponentType(UserInfoType.SPIRITS);
-            client.sendPacket(userInfo);
+            client.sendPackets(new UserInfo(player, UserInfoType.SPIRITS), SystemMessage.getSystemMessage(S1_EVOLVED_TO_S2_STAR).addElementalSpirit(type).addInt(spirit.getStage()));
         }
          client.sendPacket(new ElementalSpiritEvolution(type, canEvolve));
     }

@@ -18,11 +18,12 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.engine.item.drop.ExtendDropCondition;
+import org.w3c.dom.Node;
 
 public interface ConditionFactory {
 
-    ICondition create(StatsSet data);
+    ExtendDropCondition create(Node data);
 
     String conditionName();
 

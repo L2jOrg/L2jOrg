@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.item.type.CrystalType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -117,7 +116,7 @@ public class ItemEnsoulEngine extends GameXmlReader {
         final var id = parseInt(attrs, "id");
         final var name = parseString(attrs, "name");
         final var desc = parseString(attrs, "desc");
-        final var skill = new SkillHolder(parseInt(attrs, "skill-id"), parseInt(attrs, "skill-level"));
+        final var skill = parseSkillInfo(ensoulNode, "skill-id", "skill-level");
         var option =  new EnsoulOption(id, name, desc, skill);
         ensoulOptions.put(id, option);
         return option;

@@ -18,27 +18,24 @@
  */
 package org.l2j.gameserver.world.zone.type;
 
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneFactory;
 import org.l2j.gameserver.world.zone.ZoneType;
+import org.w3c.dom.Node;
 
 /**
  * A castle zone
  *
  * @author durgus
+ * @author JoeAlisson
  */
 public final class CastleZone extends ResidenceZone {
 
-    public CastleZone(int id) {
-        super(id);
-    }
-
-    @Override
-    public void setParameter(String name, String value) {
-        if (name.equals("castleId")) {
-            setResidenceId(Integer.parseInt(value));
-        } else {
-            super.setParameter(name, value);
-        }
+    private CastleZone(int id, int castleId) {
+        super(id, castleId);
     }
 
     @Override
@@ -49,5 +46,25 @@ public final class CastleZone extends ResidenceZone {
     @Override
     protected void onExit(Creature creature) {
         creature.setInsideZone(ZoneType.CASTLE, false);
+    }
+
+    public static class Factory implements ZoneFactory {
+
+        @Override
+        public Zone create(int id, Node zoneNode, GameXmlReader reader) {
+            var castleId = reader.parseInt(zoneNode.getAttributes(), "castle-id");
+            var zone = new CastleZone(id, castleId);
+
+            var castle = CastleManager.getInstance().getCastleById(castleId);
+            if(castle != null) {
+                castle.setResidenceZone(zone);
+            }
+            return zone;
+        }
+
+        @Override
+        public String type() {
+            return "castle";
+        }
     }
 }

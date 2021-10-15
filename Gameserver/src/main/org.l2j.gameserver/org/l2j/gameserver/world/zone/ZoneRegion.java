@@ -18,36 +18,39 @@
  */
 package org.l2j.gameserver.world.zone;
 
-import io.github.joealisson.primitive.CHashIntMap;
-import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.world.zone.type.PeaceZone;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Nos
+ * @author JoeAlisson
  */
 public class ZoneRegion {
 
-    private final IntMap<Zone> zones = new CHashIntMap<>();
+    private final List<Zone> zones = new ArrayList<>();
 
-    public IntMap<Zone> getZones() {
+    List<Zone> getZones() {
         return zones;
     }
 
     public void revalidateZones(Creature creature) {
-        // do NOT update the world region while the character is still in the process of teleporting
-        // Once the teleport is COMPLETED, revalidation occurs safely, at that time.
-
         if (creature.isTeleporting()) {
             return;
         }
 
-        zones.values().forEach(z -> z.revalidateInZone(creature));
+        for (Zone zone : zones) {
+            zone.revalidateInZone(creature);
+        }
     }
 
     public void removeFromZones(Creature creature) {
-        zones.values().forEach(z -> z.removeCreature(creature));
+        for (Zone zone : zones) {
+            zone.removeCreature(creature);
+        }
     }
 
     public boolean checkEffectRangeInsidePeaceZone(Skill skill, int x, int y, int z) {
@@ -57,7 +60,7 @@ public class ZoneRegion {
         final int left = x + range;
         final int right = x - range;
 
-        for (Zone e : zones.values()) {
+        for (Zone e : zones) {
             if (e instanceof PeaceZone) {
                 if (e.isInsideZone(x, up, z)) {
                     return false;
@@ -84,10 +87,26 @@ public class ZoneRegion {
     }
 
     public void onDeath(Creature creature) {
-        zones.values().stream().filter(z -> z.isInsideZone(creature)).forEach(z -> z.onDieInside(creature));
+        for (Zone zone : zones) {
+            if(zone.isInsideZone(creature)) {
+                zone.onDieInside(creature);
+            }
+        }
     }
 
     public void onRevive(Creature creature) {
-        zones.values().stream().filter(z -> z.isInsideZone(creature)).forEach(z -> z.onReviveInside(creature));
+        for (Zone zone : zones) {
+            if(zone.isInsideZone(creature)) {
+                zone.onReviveInside(creature);
+            }
+        }
+    }
+
+    void registerZone(Zone zone) {
+        zones.add(zone);
+    }
+
+    void clear() {
+        zones.clear();
     }
 }

@@ -19,101 +19,182 @@
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
 import org.l2j.authserver.controller.GameServerManager;
-import org.l2j.authserver.data.database.dao.GameserverDAO;
-import org.l2j.authserver.network.GameServerInfo;
+import org.l2j.authserver.network.ClusterServerInfo;
+import org.l2j.authserver.network.Endpoint;
+import org.l2j.authserver.network.ServerInfo;
+import org.l2j.authserver.network.SingleServerInfo;
 import org.l2j.authserver.network.gameserver.ServerClientState;
 import org.l2j.authserver.network.gameserver.packet.auth2game.AuthResponse;
+import org.l2j.authserver.settings.AuthServerSettings;
+import org.l2j.commons.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import static java.util.Objects.nonNull;
-import static org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail.*;
+import java.net.UnknownHostException;
+import java.util.Arrays;
+import java.util.Comparator;
+
+import static org.l2j.authserver.network.gameserver.packet.auth2game.GameServerAuthFail.FailReason;
 import static org.l2j.authserver.settings.AuthServerSettings.acceptNewGameServerEnabled;
-import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
+/**
+ * @author JoeAlisson
+ */
 public class AuthRequest extends GameserverReadablePacket {
 
-	private  int desiredId;
-    private  boolean acceptAlternativeId;
-	private  int maxPlayers;
-	private  int port;
-	private  String[] hosts;
-	private  int serverType;
+    private static final Logger LOGGER = LoggerFactory.getLogger("ServerJoinManager");
+
+    private static final Object registerLock = new Object();
+
+	private int desiredId;
+	private int maxPlayers;
+	private String[] hosts;
+	private String[] subnetAddresses;
+	private int type;
     private byte ageLimit;
     private boolean showBrackets;
     private boolean isPvp;
+    private short port;
+    private String authKey;
+    private String key;
 
     @Override
 	protected void readImpl() {
-
 		desiredId = readByte();
-        acceptAlternativeId = readByte() == 0x01;
-        serverType = readInt();
+        key = readSizedString();
+        authKey = readSizedString();
+        type = readInt();
         maxPlayers = readInt();
         ageLimit = readByte();
-        showBrackets = readByte() == 0x01;
-        isPvp = readByte() == 0x01;
+        showBrackets = readBoolean();
+        isPvp = readBoolean();
 
-        hosts = new String[readShort() * 2];
-        for (int i = 0; i < hosts.length; i+=2) {
+        var subnets = readByte();
+        hosts = new String[subnets];
+        subnetAddresses = new String[subnets];
+
+        for (int i = 0; i < hosts.length; i++) {
             hosts[i] =  readString();
-            hosts[i+1] = readString();
+            subnetAddresses[i] = readString();
         }
-
         port = readShort();
     }
 
 	@Override
 	protected void runImpl()  {
-        GameServerManager gameServerManager = GameServerManager.getInstance();
-        GameServerInfo gsi = gameServerManager.getRegisteredGameServerById(desiredId);
-
-        if (nonNull(gsi)) {
-            authenticGameServer(gsi);
-        } else {
-            gsi = processNewGameServer(gameServerManager);
+        if(!AuthServerSettings.acceptKey(authKey)) {
+            client.close(FailReason.NOT_AUTHED);
+            return;
         }
 
-        if(nonNull(gsi) && gsi.isAuthed()) {
-            client.sendPacket(new AuthResponse(gsi.getId()));
+        if(hosts.length < 1) {
+            client.close(FailReason.BAD_DATA);
+            return;
+        }
+
+        if(Util.isNullOrEmpty(key)) {
+            client.close(FailReason.MISSING_KEY);
+            return;
+        }
+
+        var gsi = GameServerManager.getInstance().getRegisteredGameServerById(desiredId);
+
+        if(gsi == null) {
+            gsi = processNewGameServer();
+        } else {
+            authenticGameServer(gsi);
+        }
+
+        if(gsi != null && gsi.isAuthed()) {
+            client.sendPacket(new AuthResponse(gsi.id()));
         }
 	}
 
-    private void authenticGameServer(GameServerInfo gsi) {
-        if (gsi.isAuthed()) {
-            client.close(REASON_ALREADY_LOGGED);
+    private void authenticGameServer(ServerInfo gsi) {
+        if(gsi.key().equals(key)){
+            synchronized (registerLock) {
+                if (gsi.isAuthed()) {
+                    if (gsi.type() != type) {
+                        client.close(FailReason.ID_RESERVED);
+                        return;
+                    }
+                    registerInCluster(gsi);
+                } else {
+                    updateGameServerInfo(gsi);
+                }
+            }
         } else {
-            updateGameServerInfo(gsi);
+            client.close(FailReason.ID_RESERVED);
         }
     }
 
-    private GameServerInfo processNewGameServer(GameServerManager gameServerManager) {
-        if (acceptNewGameServerEnabled() && acceptAlternativeId) {
-            GameServerInfo gsi = new GameServerInfo(desiredId, client);
-            if (gameServerManager.registerWithFirstAvaliableId(gsi)) {
-               updateGameServerInfo(gsi);
-                gameServerManager.registerServerOnDB(gsi);
-                return  gsi;
-            } else {
-                client.close(REASON_NO_FREE_ID);
+    private void registerInCluster(ServerInfo gsi) {
+        var newServer = GameServerManager.getInstance().registerInCluster(gsi, client);
+        updateGameServerInfo(newServer);
+    }
+
+    private ServerInfo processNewGameServer() {
+        if (acceptNewGameServerEnabled()) {
+            synchronized (registerLock) {
+                var gsi = GameServerManager.getInstance().getRegisteredGameServerById(desiredId);
+                if(gsi == null) {
+                    gsi = registerNewGameServer();
+                } else {
+                    authenticGameServer(gsi);
+                }
+                return gsi;
             }
         } else {
-            client.close(NOT_AUTHED);
+            client.close(FailReason.NOT_AUTHED);
         }
         return null;
     }
 
-    private void updateGameServerInfo(GameServerInfo gsi) {
+    private ServerInfo registerNewGameServer() {
+        var gsi = GameServerManager.getInstance().register(key, desiredId, client, type);
+        updateGameServerInfo(gsi);
+        return  gsi;
+    }
+
+    private void updateGameServerInfo(ServerInfo gsi) {
+        switch (gsi) {
+            case SingleServerInfo s -> updateServerInfo(s);
+            case ClusterServerInfo c -> registerInCluster(c);
+        }
+    }
+
+    private void updateServerInfo(SingleServerInfo gsi) {
         client.setGameServerInfo(gsi);
         client.setState(ServerClientState.AUTHED);
         gsi.setClient(client);
-        gsi.setPort(port);
-        gsi.setHosts(hosts);
-        gsi.setMaxPlayers(maxPlayers);
+        gsi.setMaxAccounts(maxPlayers);
         gsi.setAuthed(true);
-        gsi.setServerType(serverType);
-        getDAO(GameserverDAO.class).updateServerType(gsi.getId(), serverType);
+        gsi.setType(type);
         gsi.setAgeLimit(ageLimit);
         gsi.setShowingBrackets(showBrackets);
         gsi.setIsPvp(isPvp);
         gsi.setStatus(ServerStatus.STATUS_AUTO);
+
+        Endpoint[] endpoints = new Endpoint[hosts.length];
+
+        var name = GameServerManager.getInstance().getServerNameById(gsi.id());
+        for (int i = 0; i < hosts.length; i++) {
+            try {
+                endpoints[i] = Endpoint.of(hosts[i], port, subnetAddresses[i]);
+                LOGGER.info("Add new endpoint to {}[{}] [ subnet:{} host:{} port:{}]", name, gsi.id(), subnetAddresses[i], hosts[i], port);
+            } catch (UnknownHostException e) {
+                LOGGER.warn("Could not resolve hostname", e);
+            }
+        }
+        Arrays.sort(endpoints, Comparator.comparingInt(this::mask).reversed());
+        gsi.setEndpoints(endpoints);
+    }
+
+    private int mask(Endpoint e) {
+        int mask = 0;
+        for (var b : e.mask()) {
+            mask += ((int) b) & 0xFF;
+        }
+        return mask;
     }
 }

@@ -18,8 +18,10 @@
  */
 package org.l2j.gameserver.network.clientpackets.l2store;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.gameserver.data.database.dao.L2StoreDAO;
 import org.l2j.gameserver.engine.item.shop.l2store.L2StoreProduct;
+import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -38,19 +40,17 @@ import static org.l2j.gameserver.network.SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_
  */
 public abstract class RequestBuyProduct extends ClientPacket {
 
-    private static final int HERO_COINS = 23805;
-
     protected boolean validatePlayer(L2StoreProduct product, int count, Player player) {
         final long currentTime = System.currentTimeMillis() / 1000;
 
         if (isNull(product)) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_PRODUCT));
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to buy invalid brId from Prime");
             return false;
         }
 
         if (count < 1 || count > 99) {
-            GameUtils.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid item count [" + count + "] from l2 store");
+            GameUtils.handleIllegalPlayerAction(player, player + " tried to buy invalid item count [" + count + "] from l2 store");
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INCORRECT_COUNT));
             return false;
         }
@@ -132,37 +132,62 @@ public abstract class RequestBuyProduct extends ClientPacket {
         };
     }
 
-    protected int validatePaymentId(L2StoreProduct item) {
+    private int validatePaymentId(L2StoreProduct item) {
         return switch (item.getPaymentType()) {
-            case 0 -> 0; // Nc Coin
-            case 1 -> CommonItem.ADENA; // Adenas
-            case 2 -> HERO_COINS;
+            case 1 -> CommonItem.ADENA;
+            case 2, 3 -> CommonItem.GOLD_COIN;
             default ->  -1;
         };
     }
 
     protected boolean processPayment(Player player, L2StoreProduct item, int count) {
-        final int price = Math.multiplyExact(item.getPrice(), count);
-        final int paymentId = validatePaymentId(item);
+        if (item.getPaymentType() > 0) {
+            return pay(player, item, count);
+        }
+        return payNCoin(player, item, count);
+    }
 
-        if (paymentId < 0) {
+    private boolean pay(Player player, L2StoreProduct item, int count) {
+        var paymentId = validatePaymentId(item);
+        if(paymentId < 0) {
             player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
             return false;
-        } else if (paymentId > 0) {
-            if (!player.destroyItemByItemId("PrimeShop", paymentId, price, player, true)) {
-                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-                return false;
-            }
-        } else {
-            if (player.getNCoins() < price) {
-                player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-                player.sendPacket(YOU_DO_NOT_HAVE_ENOUGH_NCOIN);
-                return false;
-            }
-            if(price > 0) {
-                player.updateNCoins(-price);
-                player.updateVipPoints(price);
-            }
+        }
+
+        var price = Math.multiplyExact(item.getPrice(), count);
+        var silverCoins = Math.multiplyExact(item.getSilverCoin(), count);
+
+        if(!hasItems(player, paymentId, price, silverCoins)) {
+            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+            return false;
+        }
+
+        return (price <= 0 || player.destroyItemByItemId("PrimeShop", paymentId, price, player, true)) &&
+                (silverCoins <= 0 || player.destroyItemByItemId("PrimeShop", CommonItem.SILVER_COIN, silverCoins, player, true));
+    }
+
+    private boolean hasItems(Player player, int item, int price, int silverCoins) {
+        var inventory = player.getInventory();
+        try {
+            inventory.setInventoryBlock(IntSet.of(item, CommonItem.SILVER_COIN), InventoryBlockType.BLACKLIST);
+            return (price <= 0 || inventory.getInventoryItemCount(item, -1) >= price) &&
+                    (silverCoins <= 0 || inventory.getInventoryItemCount(CommonItem.SILVER_COIN, -1) >= price);
+        } finally {
+            inventory.unblock();
+        }
+    }
+
+    private boolean payNCoin(Player player, L2StoreProduct item, int count) {
+        var price = Math.multiplyExact(item.getPrice(), count);
+        if (player.getNCoins() < price) {
+            player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+            player.sendPacket(YOU_DO_NOT_HAVE_ENOUGH_NCOIN);
+            return false;
+        }
+
+        if (price > 0) {
+            player.updateNCoins(-price);
+            player.updateVipPoints(price);
         }
         return true;
     }

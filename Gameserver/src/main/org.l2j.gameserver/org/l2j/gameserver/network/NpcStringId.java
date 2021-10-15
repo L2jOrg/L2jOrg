@@ -10590,9 +10590,6 @@ public final class NpcStringId {
 	@ClientString(id = 596710, message = "Talk to Captain Bathis.")
 	public static NpcStringId TALK_TO_CAPTAIN_BATHIS_4;
 
-	@ClientString(id = 596711, message = "Monsters of the Abandoned Camp are killed.\nUse the teleport to get to Bathis in Gludio.")
-	public static NpcStringId MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO;
-
 	@ClientString(id = 596801, message = "|Lv. 37 and higher| About the Magic Lantern")
 	public static NpcStringId LV_37_AND_HIGHER_ABOUT_THE_MAGIC_LANTERN;
 
@@ -21336,24 +21333,6 @@ public final class NpcStringId {
     @ClientString(id = 1803729, message = "Blue has ruined everything.")
     public static NpcStringId BLUE_HAS_RUINED_EVERYTHING;
 
-	@ClientString(id = 1803730, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Armor Merchant Jackson.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ARMOR_MERCHANT_JACKSON;
-
-	@ClientString(id = 1803731, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Grocer Herbiel.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_GROCER_HERBIEL;
-
-	@ClientString(id = 1803732, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Grocer Vollodos.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_GROCER_VOLLODOS;
-
-	@ClientString(id = 1803733, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Accessory Merchant Uska.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ACCESSORY_MERCHANT_USKA;
-
-	@ClientString(id = 1803734, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Head Priest of the Earth Gerald.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_HEAD_PRIEST_OF_THE_EARTH_GERALD;
-
-	@ClientString(id = 1803735, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Captain Bathis in Gludio.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_CAPTAIN_BATHIS_IN_GLUDIO;
-
 	@ClientString(id = 1803736, message = "Do you think a talking cake is a miracle? It's only the beginning!")
 	public static NpcStringId DO_YOU_THINK_A_TALKING_CAKE_IS_A_MIRACLE_IT_S_ONLY_THE_BEGINNING;
 
@@ -21411,9 +21390,6 @@ public final class NpcStringId {
 	@ClientString(id = 1803754, message = "The mission 'Adventurer's Journey IV' is now available.\nClick the yellow question mark in the right bottom corner of your screen to see the quest's info.")
 	public static NpcStringId THE_MISSION_ADVENTURER_S_JOURNEY_IV_IS_NOW_AVAILABLE_NCLICK_THE_YELLOW_QUESTION_MARK_IN_THE_RIGHT_BOTTOM_CORNER_OF_YOUR_SCREEN_TO_SEE_THE_QUEST_S_INFO;
 
-	@ClientString(id = 1803755, message = "You've made the first steps on the adventurer's path.\nReturn to Bathis to get your reward.")
-	public static NpcStringId YOU_VE_MADE_THE_FIRST_STEPS_ON_THE_ADVENTURER_S_PATH_NRETURN_TO_BATHIS_TO_GET_YOUR_REWARD;
-
 	@ClientString(id = 1803756, message = "Who summons me? I don't want to see anybody. Who knows - maybe I'll give a minute of my time, and you'll steal my heart!")
 	public static NpcStringId WHO_SUMMONS_ME_I_DON_T_WANT_TO_SEE_ANYBODY_WHO_KNOWS_MAYBE_I_LL_GIVE_A_MINUTE_OF_MY_TIME_AND_YOU_LL_STEAL_MY_HEART;
 
@@ -21470,9 +21446,6 @@ public final class NpcStringId {
 
 	@ClientString(id = 1803777, message = "Lord Ishka, the Guardian of Dragon Valley, is near.")
 	public static NpcStringId LORD_ISHKA_THE_GUARDIAN_OF_DRAGON_VALLEY_IS_NEAR;
-
-	@ClientString(id = 1803778, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Trader Reahen.")
-	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_TRADER_REAHEN;
 
 	@ClientString(id = 1803779, message = "Reinforced")
 	public static NpcStringId REINFORCED;
@@ -24761,6 +24734,30 @@ public final class NpcStringId {
 
     @ClientString(id = 1803455, message = "Character $s1 has become a hero. Class: $s2. Congratulations!")
     public static NpcStringId CHARACTER_S1_HAS_BECOME_A_HERO_CLASS_S2_CONGRATULATIONS;
+
+    @ClientString(id = 1803730, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Armor Merchant Jackson.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ARMOR_MERCHANT_JACKSON;
+
+    @ClientString(id = 1803731, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Grocer Herbiel.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_GROCER_HERBIEL;
+
+    @ClientString(id = 1803732, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Grocer Vollodos.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_USE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_GROCER_VOLLODOS;
+
+    @ClientString(id = 1803733, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Accessory Merchant Uska.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_USE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ACCESSORY_MERCHANT_USKA;
+
+    @ClientString(id = 1803734, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Head Priest of the Earth Gerald.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_USE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_HEAD_PRIEST_OF_THE_EARTH_GERALD;
+
+    @ClientString(id = 1803735, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Captain Bathis in Gludio.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_USE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_CAPTAIN_BATHIS_IN_GLUDIO;
+
+    @ClientString(id = 1803755, message = "You've made the first steps on the adventurer's path.\nReturn to Bathis to get your reward.")
+    public static NpcStringId YOU_VE_MADE_THE_FIRST_STEPS_ON_THE_ADVENTURER_S_PATH_RETURN_TO_BATHIS_TO_GET_YOUR_REWARD;
+
+    @ClientString(id = 1803778, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Trader Reahen.")
+    public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_TRADER_REAHEN;
 
     @ClientString(id = 1803770, message = "Glory to the heroes who have defeated Lord Ishka!")
     public static NpcStringId GLORY_TO_THE_HEROES_WHO_HAVE_DEFEATED_LORD_ISHKA;

@@ -19,7 +19,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.xml.XmlReader;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.ChanceLocation;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -29,6 +28,7 @@ import org.l2j.gameserver.model.interfaces.ITerritorized;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
@@ -229,7 +229,7 @@ public class SpawnsData extends GameXmlReader {
     }
 
     public void spawnAll() {
-        if (Config.ALT_DEV_NO_SPAWNS) {
+        if (GeneralSettings.noSpawn()) {
             return;
         }
 

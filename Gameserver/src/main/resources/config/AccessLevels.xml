@@ -140,7 +140,6 @@
 	<admin command="admin_summon_setlvl" accessLevel="100" />
 	<admin command="admin_show_pet_inv" accessLevel="100" />
 	<admin command="admin_partyinfo" accessLevel="100" />
-	<admin command="admin_setnoble" accessLevel="100" confirmDlg="true" />
 	<admin command="admin_set_hp" accessLevel="100" />
 	<admin command="admin_set_mp" accessLevel="100" />
 	<admin command="admin_set_cp" accessLevel="100" />
@@ -337,16 +336,12 @@
 	<admin command="admin_server_gm_only" accessLevel="100" />
 	<admin command="admin_server_all" accessLevel="100" />
 	<admin command="admin_server_max_player" accessLevel="100" />
-	<admin command="admin_server_list_type" accessLevel="100" />
 	<admin command="admin_server_list_age" accessLevel="100" />
 	<admin command="admin_server_login" accessLevel="100" />
 
 	<!-- ADMIN MAMMON -->
 	<admin command="admin_mammon_find" accessLevel="100" />
 	<admin command="admin_mammon_respawn" accessLevel="100" />
-
-	<!-- ADMIN MANOR -->
-	<admin command="admin_manor" accessLevel="100" />
 
 	<!-- ADMIN MENU -->
 	<admin command="admin_char_manage" accessLevel="100" />
@@ -468,7 +463,6 @@
 	<admin command="admin_get_skills" accessLevel="100" />
 	<admin command="admin_reset_skills" accessLevel="100" />
 	<admin command="admin_give_all_skills" accessLevel="100" />
-	<admin command="admin_give_all_skills_fs" accessLevel="100" />
 	<admin command="admin_give_clan_skills" accessLevel="100" />
 	<admin command="admin_give_all_clan_skills" accessLevel="100" />
 	<admin command="admin_remove_all_skills" accessLevel="100" />
@@ -568,7 +562,6 @@
 	<!-- ADMIN ZONE -->
 	<admin command="admin_zone_check" accessLevel="100" />
 	<admin command="admin_zone_visual" accessLevel="100" />
-	<admin command="admin_zone_visual_clear" accessLevel="100" />
 
 	<!-- ADMIN SCAN -->
 	<admin command="admin_scan" accessLevel="100" />

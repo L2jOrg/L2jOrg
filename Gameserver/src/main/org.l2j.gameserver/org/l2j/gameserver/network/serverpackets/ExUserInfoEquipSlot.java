@@ -46,12 +46,17 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
         0x00, // 152
     };
 
-    public ExUserInfoEquipSlot(Player cha) {
-        this(cha, true);
+    public ExUserInfoEquipSlot(Player player, InventorySlot... slots) {
+        this(player, false);
+        addComponentType(slots);
     }
 
-    public ExUserInfoEquipSlot(Player cha, boolean addAll) {
-        player = cha;
+    public ExUserInfoEquipSlot(Player player) {
+        this(player, true);
+    }
+
+    private ExUserInfoEquipSlot(Player player, boolean addAll) {
+        this.player = player;
 
         if (addAll) {
             addComponentType(InventorySlot.values());
@@ -68,7 +73,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
         writeId(ServerExPacketId.EX_USER_INFO_EQUIPSLOT, buffer );
 
         buffer.writeInt(player.getObjectId());
-        buffer.writeShort(InventorySlot.values().length); // 152
+        buffer.writeShort(InventorySlot.cachedValues().length); // 152
         buffer.writeBytes(masks);
 
         final PlayerInventory inventory = player.getInventory();
@@ -80,7 +85,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot> {
                 buffer.writeInt(inventory.getPaperdollItemId(slot));
                 buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption1Id));
                 buffer.writeInt(zeroIfNullOrElse(augment, VariationInstance::getOption2Id));
-                buffer.writeInt(inventory.getPaperdollItemDisplayId(slot)); // Visual ID not used on classic
+                buffer.writeInt(0x00); // Visual ID not used on classic
             }
         }
     }

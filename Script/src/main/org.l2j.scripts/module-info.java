@@ -1,4 +1,8 @@
 import org.l2j.scripts.ai.bosses.*;
+import org.l2j.scripts.ai.monster.Nos;
+import org.l2j.scripts.events.squash.common.CommonSquash;
+import org.l2j.scripts.events.squash.watermelon.WatermelonNinja;
+import org.l2j.scripts.events.squash.xmas.MerrySquashmas;
 import org.l2j.scripts.handlers.actionhandlers.*;
 import org.l2j.scripts.handlers.actionshifthandlers.*;
 import org.l2j.scripts.handlers.admincommandhandlers.AdminCoins;
@@ -9,6 +13,24 @@ import org.l2j.scripts.handlers.effecthandlers.*;
 import org.l2j.scripts.handlers.effecthandlers.stat.*;
 import org.l2j.scripts.handlers.itemhandlers.TransformationBook;
 import org.l2j.scripts.handlers.skillconditionhandlers.*;
+import org.l2j.scripts.quests.hunting.q10964.SecretGarden;
+import org.l2j.scripts.quests.hunting.q10965.DeathMysteries;
+import org.l2j.scripts.quests.hunting.q10966.ATripBegins;
+import org.l2j.scripts.quests.hunting.q10967.CulturedAdventurer;
+import org.l2j.scripts.quests.newbie.armor.q10962.NewHorizons;
+import org.l2j.scripts.quests.newbie.armor.q10982.SpiderHunt;
+import org.l2j.scripts.quests.newbie.armor.q10984.CollectSpiderweb;
+import org.l2j.scripts.quests.newbie.armor.q10986.SwampMonster;
+import org.l2j.scripts.quests.newbie.armor.q10988.Conspiracy;
+import org.l2j.scripts.quests.newbie.armor.q10990.PoisonExtraction;
+import org.l2j.scripts.quests.newbie.jewel.q10961.EffectiveTraining;
+import org.l2j.scripts.quests.newbie.jewel.q10981.UnbearableWolvesHowling;
+import org.l2j.scripts.quests.newbie.jewel.q10983.TroubledForest;
+import org.l2j.scripts.quests.newbie.jewel.q10985.CleaningUpTheGround;
+import org.l2j.scripts.quests.newbie.jewel.q10987.PlunderedGraves;
+import org.l2j.scripts.quests.newbie.jewel.q10989.DangerousPredators;
+import org.l2j.scripts.quests.q00620.FourGoblets;
+import org.l2j.scripts.quests.hunting.q10963.ExploringTheAntNest;
 import org.l2j.scripts.quests.tutorial.darkelf.Q204_Tutorial;
 import org.l2j.scripts.quests.tutorial.dwarf.Q206_Tutorial;
 import org.l2j.scripts.quests.tutorial.elf.Q203_Tutorial;
@@ -16,6 +38,22 @@ import org.l2j.scripts.quests.tutorial.fighter.Q201_Tutorial;
 import org.l2j.scripts.quests.tutorial.kamael.Q10960_Tutorial;
 import org.l2j.scripts.quests.tutorial.mage.Q202_Tutorial;
 import org.l2j.scripts.quests.tutorial.orc.Q205_Tutorial;
+import org.l2j.scripts.village.master.alliance.Alliance;
+import org.l2j.scripts.village.master.clan.Clan;
+import org.l2j.scripts.village.master.job.darkelf.first.DarkElfChange1;
+import org.l2j.scripts.village.master.job.darkelf.second.DarkElfChange2;
+import org.l2j.scripts.village.master.job.dwarf.blacksmith.first.DwarfBlacksmithChange1;
+import org.l2j.scripts.village.master.job.dwarf.blacksmith.second.DwarfBlacksmithChange2;
+import org.l2j.scripts.village.master.job.dwarf.warehouse.first.DwarfWarehouseChange1;
+import org.l2j.scripts.village.master.job.dwarf.warehouse.second.DwarfWarehouseChange2;
+import org.l2j.scripts.village.master.job.cleric.second.ElfHumanClericChange2;
+import org.l2j.scripts.village.master.job.fighter.first.ElfHumanFighterChange1;
+import org.l2j.scripts.village.master.job.fighter.second.ElfHumanFighterChange2;
+import org.l2j.scripts.village.master.job.wizard.first.ElfHumanWizardChange1;
+import org.l2j.scripts.village.master.job.wizard.second.ElfHumanWizardChange2;
+import org.l2j.scripts.village.master.job.first.FirstClassTransferTalk;
+import org.l2j.scripts.village.master.job.orc.first.OrcChange1;
+import org.l2j.scripts.village.master.job.orc.second.OrcChange2;
 
 open module org.l2j.scripts {
 
@@ -35,7 +73,6 @@ open module org.l2j.scripts {
                 AcquireCostume.Factory,
                 AcquireRandomCostume.Factory,
                 AddHate.Factory,
-                AddHuntingTime.Factory,
                 AddTeleportBookmarkSlot.Factory,
                 StatModify.Factory,
                 AttackTrait.Factory,
@@ -166,6 +203,7 @@ open module org.l2j.scripts {
                 Relax.Factory,
                 ResistAbnormalByCategory.Factory,
                 ResistDispelByCategory.Factory,
+                TimeRestrictZoneRecharge.Factory,
                 Restoration.Factory,
                 RestorationRandom.Factory,
                 Resurrection.Factory,
@@ -291,11 +329,11 @@ open module org.l2j.scripts {
             org.l2j.scripts.events.EveTheFortuneTeller.EveTheFortuneTeller,
             org.l2j.scripts.events.HappyHours.HappyHours,
             org.l2j.scripts.events.LetterCollector.LetterCollector,
-            org.l2j.scripts.events.MerrySquashmas.MerrySquashmas,
-            org.l2j.scripts.events.SquashEvent.SquashEvent,
+                MerrySquashmas,
+                CommonSquash,
             org.l2j.scripts.events.ThePowerOfLove.ThePowerOfLove,
             org.l2j.scripts.events.TotalRecall.TotalRecall,
-            org.l2j.scripts.events.WatermelonNinja.WatermelonNinja,
+                WatermelonNinja,
 
             // custom
             org.l2j.scripts.custom.events.Elpies.Elpies,
@@ -303,31 +341,28 @@ open module org.l2j.scripts {
             org.l2j.scripts.custom.events.Race.Race,
             org.l2j.scripts.custom.events.TeamVsTeam.TvT,
 
-            org.l2j.scripts.ai.areas.CrumaTower.SummonPc,
-            org.l2j.scripts.ai.areas.DragonValley.CaveMaiden,
-            org.l2j.scripts.ai.areas.DragonValley.LordIshka,
-            org.l2j.scripts.ai.areas.DragonValley.Fellow.Fellow,
-            org.l2j.scripts.ai.areas.DungeonOfAbyss.DungeonOfAbyssZone,
-            org.l2j.scripts.ai.areas.DungeonOfAbyss.SoulTracker.Ingrit,
-            org.l2j.scripts.ai.areas.DungeonOfAbyss.SoulTracker.Iris,
-            org.l2j.scripts.ai.areas.DungeonOfAbyss.SoulTracker.Magrit,
-            org.l2j.scripts.ai.areas.DungeonOfAbyss.SoulTracker.Rosammy,
-            org.l2j.scripts.ai.areas.DungeonOfAbyss.Tores.Tores,
-            org.l2j.scripts.ai.areas.DwarvenVillage.Toma.Toma,
+            org.l2j.scripts.ai.areas.cruma.SummonPc,
+            org.l2j.scripts.ai.areas.dragonvalley.CaveMaiden,
+            org.l2j.scripts.ai.areas.dragonvalley.LordIshka,
+            org.l2j.scripts.ai.areas.dragonvalley.fellow.Fellow,
+            org.l2j.scripts.ai.areas.dungeonofabyss.DungeonOfAbyssZone,
+            org.l2j.scripts.ai.areas.dungeonofabyss.tracker.SoulTracker,
+            org.l2j.scripts.ai.areas.dungeonofabyss.tores.Tores,
+                //Toma,
             org.l2j.scripts.ai.areas.LairOfAntharas.Pytan,
             org.l2j.scripts.ai.areas.TalkingIsland.Roxxy,
             org.l2j.scripts.ai.areas.TowerOfInsolence.Ateld,
             org.l2j.scripts.ai.areas.PlainsOfDion,
             org.l2j.scripts.ai.areas.ImperialTomb.FourSepulchers.FourSepulchers,
-            org.l2j.scripts.ai.areas.CallOfTheSpirits.CallOfTheSpirits,
+            org.l2j.scripts.ai.areas.spirits.CallOfTheSpirits,
             org.l2j.scripts.ai.areas.Varkas.Althars,
             org.l2j.scripts.ai.areas.Ketra.FireCamp,
             org.l2j.scripts.ai.areas.GiantCave.Scout,
             org.l2j.scripts.ai.areas.GiantCave.Batur,
             org.l2j.scripts.ai.areas.GiantCave.EntranceRoom,
             org.l2j.scripts.ai.areas.TowerOfInsolence.TowerOfInsolence,
-            org.l2j.scripts.ai.areas.AligatorIsland.Nos,
-            org.l2j.scripts.ai.areas.ForestOfTheMirrors.Mirrors,
+                Nos,
+            org.l2j.scripts.ai.monster.ForestOfTheMirrors.Mirrors,
             org.l2j.scripts.ai.areas.TowerOfInsolence.HeavenlyRift.Bomb,
             org.l2j.scripts.ai.areas.TowerOfInsolence.HeavenlyRift.DivineAngel,
             org.l2j.scripts.ai.areas.TowerOfInsolence.HeavenlyRift.Tower,
@@ -383,22 +418,22 @@ open module org.l2j.scripts {
             org.l2j.scripts.ai.others.SiegeGuards,
             org.l2j.scripts.ai.others.TimakOrcTroopLeader,
 
-            org.l2j.scripts.village.master.Alliance.Alliance,
-            org.l2j.scripts.village.master.Clan.Clan,
-            org.l2j.scripts.village.master.DarkElfChange1.DarkElfChange1,
-            org.l2j.scripts.village.master.OrcChange2.OrcChange2,
-            org.l2j.scripts.village.master.OrcChange1.OrcChange1,
-            org.l2j.scripts.village.master.FirstClassTransferTalk.FirstClassTransferTalk,
-            org.l2j.scripts.village.master.ElfHumanWizardChange2.ElfHumanWizardChange2,
-            org.l2j.scripts.village.master.ElfHumanWizardChange1.ElfHumanWizardChange1,
-            org.l2j.scripts.village.master.ElfHumanFighterChange2.ElfHumanFighterChange2,
-            org.l2j.scripts.village.master.ElfHumanFighterChange1.ElfHumanFighterChange1,
-            org.l2j.scripts.village.master.ElfHumanClericChange2.ElfHumanClericChange2,
-            org.l2j.scripts.village.master.DwarfWarehouseChange2.DwarfWarehouseChange2,
-            org.l2j.scripts.village.master.DwarfWarehouseChange1.DwarfWarehouseChange1,
-            org.l2j.scripts.village.master.DwarfBlacksmithChange2.DwarfBlacksmithChange2,
-            org.l2j.scripts.village.master.DwarfBlacksmithChange1.DwarfBlacksmithChange1,
-            org.l2j.scripts.village.master.DarkElfChange2.DarkElfChange2,
+                Alliance,
+                Clan,
+                DarkElfChange1,
+                OrcChange2,
+                OrcChange1,
+                FirstClassTransferTalk,
+                ElfHumanWizardChange2,
+                ElfHumanWizardChange1,
+                ElfHumanFighterChange2,
+                ElfHumanFighterChange1,
+                ElfHumanClericChange2,
+                DwarfWarehouseChange2,
+                DwarfWarehouseChange1,
+                DwarfBlacksmithChange2,
+                DwarfBlacksmithChange1,
+                DarkElfChange2,
 
             //  custom
             org.l2j.scripts.custom.NpcLocationInfo.NpcLocationInfo;
@@ -476,7 +511,6 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.admincommandhandlers.AdminKill,
             org.l2j.scripts.handlers.admincommandhandlers.AdminLevel,
             org.l2j.scripts.handlers.admincommandhandlers.AdminLogin,
-            org.l2j.scripts.handlers.admincommandhandlers.AdminManor,
             org.l2j.scripts.handlers.admincommandhandlers.AdminMessages,
             org.l2j.scripts.handlers.admincommandhandlers.AdminMissingHtmls,
             org.l2j.scripts.handlers.admincommandhandlers.AdminMobGroup,
@@ -576,14 +610,12 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.itemhandlers.ExtractableItems,
             org.l2j.scripts.handlers.itemhandlers.FatedSupportBox,
             org.l2j.scripts.handlers.itemhandlers.FishShots,
-            org.l2j.scripts.handlers.itemhandlers.Harvester,
             org.l2j.scripts.handlers.itemhandlers.Maps,
             org.l2j.scripts.handlers.itemhandlers.MercTicket,
             org.l2j.scripts.handlers.itemhandlers.NicknameColor,
             org.l2j.scripts.handlers.itemhandlers.PetFood,
             org.l2j.scripts.handlers.itemhandlers.Recipes,
             org.l2j.scripts.handlers.itemhandlers.RollingDice,
-            org.l2j.scripts.handlers.itemhandlers.Seed,
             org.l2j.scripts.handlers.itemhandlers.SoulShots,
             org.l2j.scripts.handlers.itemhandlers.SpecialXMas,
             org.l2j.scripts.handlers.itemhandlers.SpiritShot,
@@ -742,24 +774,24 @@ open module org.l2j.scripts {
              org.l2j.scripts.quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss,
              org.l2j.scripts.quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend,
              org.l2j.scripts.quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle,
-             org.l2j.scripts.quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining,
-             org.l2j.scripts.quests.Q10962_NewHorizons.Q10962_NewHorizons,
-             org.l2j.scripts.quests.Q10963_ExploringTheAntNest.Q10963_ExploringTheAntNest,
-             org.l2j.scripts.quests.Q10964_SecretGarden.Q10964_SecretGarden,
-             org.l2j.scripts.quests.Q10965_DeathMysteries.Q10965_DeathMysteries,
-             org.l2j.scripts.quests.Q10966_ATripBegins.Q10966_ATripBegins,
-             org.l2j.scripts.quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer,
-             org.l2j.scripts.quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling,
-             org.l2j.scripts.quests.Q10982_SpiderHunt.Q10982_SpiderHunt,
-             org.l2j.scripts.quests.Q10983_TroubledForest.Q10983_TroubledForest,
-             org.l2j.scripts.quests.Q10984_CollectSpiderweb.Q10984_CollectSpiderweb,
-             org.l2j.scripts.quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround,
-             org.l2j.scripts.quests.Q10986_SwampMonster.Q10986_SwampMonster,
-             org.l2j.scripts.quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves,
-             org.l2j.scripts.quests.Q10988_Conspiracy.Q10988_Conspiracy,
-             org.l2j.scripts.quests.Q10989_DangerousPredators.Q10989_DangerousPredators,
-             org.l2j.scripts.quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction,
-             org.l2j.scripts.quests.Q00620_FourGoblets.Q00620_FourGoblets,
+                EffectiveTraining,
+                NewHorizons,
+                ExploringTheAntNest,
+                SecretGarden,
+                DeathMysteries,
+                ATripBegins,
+                CulturedAdventurer,
+                UnbearableWolvesHowling,
+                SpiderHunt,
+                TroubledForest,
+                CollectSpiderweb,
+                CleaningUpTheGround,
+                SwampMonster,
+                PlunderedGraves,
+                Conspiracy,
+                DangerousPredators,
+                PoisonExtraction,
+                FourGoblets,
              org.l2j.scripts.quests.Q00630_PirateTreasureHunt.Q00630_PirateTreasureHunt,
              org.l2j.scripts.quests.Q10871_DeathToThePirateKing.Q10871_DeathToThePirateKing;
 

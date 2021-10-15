@@ -82,12 +82,7 @@ public enum WeaponType implements ItemType {
     }
 
     public boolean isRanged() {
-        return (this == BOW) || (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW)  || (this == PISTOLS);
-    }
-
-    public boolean isCrossbow()
-    {
-        return (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW);
+        return (this == BOW) || (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW) || (this == PISTOLS);
     }
 
     public boolean isPistols()

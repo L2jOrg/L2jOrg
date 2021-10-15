@@ -44,7 +44,7 @@ public class CubicTemplate implements ICubicConditionHolder {
     private final int _useUp;
     private final double _power;
     private final CubicTargetType _targetType;
-    private final List<ICubicCondition> _conditions = new ArrayList<>();
+    private List<ICubicCondition> _conditions = new ArrayList<>();
 
     public CubicTemplate(StatsSet set) {
         _id = set.getInt("id");
@@ -88,12 +88,11 @@ public class CubicTemplate implements ICubicConditionHolder {
     }
 
     @Override
-    public void addCondition(ICubicCondition condition) {
-        _conditions.add(condition);
-    }
-
-    @Override
     public String toString() {
         return "Cubic id: " + _id + " level: " + _level + " slot: " + _slot + " duration: " + _duration + " delay: " + _delay + " maxCount: " + _maxCount + " useUp: " + _useUp + " power: " + _power + System.lineSeparator() + "skills: " + _skills + System.lineSeparator() + "conditions:" + _conditions + System.lineSeparator();
+    }
+
+    public void setConditions(List<ICubicCondition> conditions) {
+        this._conditions = conditions;
     }
 }

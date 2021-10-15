@@ -35,7 +35,6 @@ import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.enums.TaxType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.instancemanager.SiegeManager;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.Npc;
@@ -52,8 +51,9 @@ import org.l2j.gameserver.network.serverpackets.ExCastleState;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.pledge.PledgeShowInfoUpdate;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.ResidenceTeleportZone;
 import org.l2j.gameserver.world.zone.type.SiegeZone;
@@ -67,7 +67,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Objects;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -86,29 +85,26 @@ public final class Castle extends AbstractResidence {
     public static final int FUNC_RESTORE_EXP = 4;
     public static final int FUNC_SUPPORT = 5;
 
-    protected static final Logger LOGGER = LoggerFactory.getLogger(Castle.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Castle.class);
 
     private final IntMap<Door> doors = new HashIntMap<>();
     private final List<Npc> sideNpcs = new ArrayList<>();
     private final List<Artefact> artefacts = new ArrayList<>(1);
     private final IntMap<CastleFunction> functions = new CHashIntMap<>();
 
-    int ownerId = 0;
-    private Siege siege = null;
-    private SiegeZone zone = null;
+    int ownerId;
+    private Siege siege;
+    private SiegeZone siegeZone;
     private ResidenceTeleportZone teleZone;
-    private Clan formerOwner = null;
+    private Clan formerOwner;
 
     private final CastleData data;
 
     public Castle(CastleData data){
         super(data.getId());
         setName(data.getName()); // tempfix
-
         this.data = data;
         load();
-        initResidenceZone();
-        spawnSideNpcs();
     }
 
     private void load() {
@@ -119,17 +115,8 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    private void initResidenceZone() {
-        for (CastleZone zone : ZoneManager.getInstance().getAllZones(CastleZone.class)) {
-            if (zone.getResidenceId() == getId()) {
-                setResidenceZone(zone);
-                break;
-            }
-        }
-    }
-
-    private void spawnSideNpcs() {
-        sideNpcs.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
+    public void spawnSideNpcs() {
+        sideNpcs.forEach(Npc::deleteMe);
         sideNpcs.clear();
 
         for (CastleSpawnHolder holder : getSideSpawns()) {
@@ -230,23 +217,19 @@ public final class Castle extends AbstractResidence {
     }
 
     public boolean checkIfInZone(int x, int y, int z) {
-        return getZone().isInsideZone(x, y, z);
+        return getSiegeZone().isInsideZone(x, y, z);
     }
 
     public boolean checkIfInZone(ILocational loc) {
-        return getZone().isInsideZone(loc);
+        return getSiegeZone().isInsideZone(loc);
     }
 
-    public SiegeZone getZone() {
-        if (isNull(zone)) {
-            for (SiegeZone zone : ZoneManager.getInstance().getAllZones(SiegeZone.class)) {
-                if (zone.getSiegeObjectId() == getId()) {
-                    this.zone = zone;
-                    break;
-                }
-            }
-        }
-        return zone;
+    public SiegeZone getSiegeZone() {
+        return siegeZone;
+    }
+
+    public void setSiegeZone(SiegeZone siegeZone) {
+        this.siegeZone = siegeZone;
     }
 
     @Override
@@ -256,7 +239,7 @@ public final class Castle extends AbstractResidence {
 
     public ResidenceTeleportZone getTeleZone() {
         if (isNull(teleZone)) {
-            for (ResidenceTeleportZone zone : ZoneManager.getInstance().getAllZones(ResidenceTeleportZone.class)) {
+            for (ResidenceTeleportZone zone : ZoneEngine.getInstance().getAllZones(ResidenceTeleportZone.class)) {
                 if (zone.getResidenceId() == getId()) {
                     teleZone = zone;
                     break;
@@ -271,7 +254,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public double getDistance(WorldObject obj) {
-        return getZone().getDistanceToZone(obj);
+        return getSiegeZone().getDistanceToZone(obj);
     }
 
     private void openCloseDoor(Player player, Door door, boolean open) {
@@ -308,10 +291,12 @@ public final class Castle extends AbstractResidence {
             if (CharacterSettings.removeCastleCirclets()) {
                 CastleManager.getInstance().removeCirclet(formerOwner, getId());
             }
-            for (Player member : clan.getOnlineMembers(0)) {
-                removeResidentialSkills(member);
-                member.sendSkillList();
-            }
+
+            clan.forEachOnlineMember(player -> {
+                removeResidentialSkills(player);
+                player.sendSkillList();
+            });
+
             clan.setCastleId(0);
             clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
         }
@@ -430,7 +415,6 @@ public final class Castle extends AbstractResidence {
             ownerId = clan.getId(); // Update owner id property
         } else {
             ownerId = 0; // Remove owner
-            CastleManorManager.getInstance().resetManorData(getId());
         }
 
         var clanDao =getDAO(ClanDAO.class);
@@ -447,24 +431,24 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    public final Door getDoor(int doorId) {
+    public Door getDoor(int doorId) {
         return doors.get(doorId);
     }
 
-    public final Door getDoor(String doorName) {
+    public Door getDoor(String doorName) {
         return doors.values().stream().filter(d -> d.getTemplate().getName().equals(doorName)).findFirst().orElse(null);
     }
 
-    public final Collection<Door> getDoors() {
+    public Collection<Door> getDoors() {
         return doors.values();
     }
 
     @Override
-    public final int getOwnerId() {
+    public int getOwnerId() {
         return ownerId;
     }
 
-    public final Clan getOwner() {
+    public Clan getOwner() {
         return (ownerId != 0) ? ClanEngine.getInstance().getClan(ownerId) : null;
     }
 
@@ -512,14 +496,14 @@ public final class Castle extends AbstractResidence {
         }
     }
 
-    public final Siege getSiege() {
+    public Siege getSiege() {
         if (isNull(siege)) {
             siege = new Siege(this);
         }
         return siege;
     }
 
-    public final LocalDateTime getSiegeDate() {
+    public LocalDateTime getSiegeDate() {
         return data.getSiegeDate();
     }
 
@@ -535,27 +519,23 @@ public final class Castle extends AbstractResidence {
         data.setSiegeTimeRegistrationEnd(date);
     }
 
-    public final int getTaxPercent(TaxType type) {
-        return switch (data.getSide()) {
-            case LIGHT -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_LIGHT : Config.CASTLE_SELL_TAX_LIGHT;
-            case DARK -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_DARK : Config.CASTLE_SELL_TAX_DARK;
-            default -> type == TaxType.BUY ? Config.CASTLE_BUY_TAX_NEUTRAL : Config.CASTLE_SELL_TAX_NEUTRAL;
-        };
+    public int getTaxPercent(TaxType type) {
+        return FeatureSettings.taxFor(data.getSide(), type);
     }
 
-    public final double getTaxRate(TaxType taxType) {
+    public double getTaxRate(TaxType taxType) {
         return getTaxPercent(taxType) / 100.0;
     }
 
-    public final long getTreasury() {
+    public long getTreasury() {
         return data.getTreasury();
     }
 
-    public final boolean isShowNpcCrest() {
+    public boolean isShowNpcCrest() {
         return data.isShowNpcCrest();
     }
 
-    public final void setShowNpcCrest(boolean showNpcCrest) {
+    public void setShowNpcCrest(boolean showNpcCrest) {
         if (data.isShowNpcCrest() != showNpcCrest) {
             data.setShowNpcCrest(showNpcCrest);
             updateShowNpcCrest();

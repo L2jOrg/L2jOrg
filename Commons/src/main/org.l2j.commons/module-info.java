@@ -2,14 +2,14 @@ import org.l2j.commons.database.TypeHandler;
 
 module org.l2j.commons {
     requires java.sql;
-    requires org.slf4j;
     requires com.zaxxer.hikari;
     requires java.management;
     requires java.compiler;
     requires cache.api;
     requires java.desktop;
-    requires io.github.joealisson.primitive;
-    requires io.github.joealisson.mmocore;
+    requires transitive org.slf4j;
+    requires transitive io.github.joealisson.primitive;
+    requires transitive io.github.joealisson.mmocore;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.util.collection;

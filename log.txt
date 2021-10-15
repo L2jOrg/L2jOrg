@@ -1,0 +1,71 @@
+
+> Configure project :
+[versioning] WARNING - the working copy has unstaged or uncommitted changes.
+
+> Task :clean UP-TO-DATE
+> Task :AuthServer:clean
+> Task :Commons:clean
+> Task :Gameserver:clean UP-TO-DATE
+> Task :Script:clean UP-TO-DATE
+> Task :distTar SKIPPED
+> Task :Commons:compileJava
+> Task :Commons:processResources NO-SOURCE
+> Task :Commons:classes
+> Task :Commons:jar
+
+> Task :AuthServer:compileJava
+
+> Task :AuthServer:processResources
+> Task :AuthServer:classes
+> Task :AuthServer:jar
+> Task :AuthServer:startScripts
+> Task :AuthServer:distTar
+> Task :AuthServer:distZip
+> Task :AuthServer:dist
+> Task :AuthServer:assemble
+> Task :AuthServer:compileTestJava NO-SOURCE
+> Task :AuthServer:processTestResources NO-SOURCE
+> Task :AuthServer:testClasses UP-TO-DATE
+> Task :AuthServer:test NO-SOURCE
+> Task :AuthServer:check UP-TO-DATE
+> Task :AuthServer:build
+> Task :Commons:assemble
+> Task :Commons:compileTestJava NO-SOURCE
+> Task :Commons:processTestResources NO-SOURCE
+> Task :Commons:testClasses UP-TO-DATE
+> Task :Commons:test NO-SOURCE
+> Task :Commons:check UP-TO-DATE
+> Task :Commons:build
+
+> Task :Gameserver:compileJava
+
+> Task :Gameserver:processResources
+> Task :Gameserver:createVersionFile
+> Task :Gameserver:classes
+> Task :Gameserver:jar
+
+> Task :Script:compileJava
+
+> Task :Script:processResources NO-SOURCE
+> Task :Script:classes
+> Task :Script:jar
+> Task :Gameserver:startScripts
+> Task :Gameserver:distTar
+> Task :Gameserver:distZip
+> Task :Gameserver:dist
+> Task :Gameserver:assemble
+> Task :Gameserver:compileTestJava NO-SOURCE
+> Task :Gameserver:processTestResources NO-SOURCE
+> Task :Gameserver:testClasses UP-TO-DATE
+> Task :Gameserver:test NO-SOURCE
+> Task :Gameserver:check UP-TO-DATE
+> Task :Gameserver:build
+> Task :Script:assemble
+> Task :Script:compileTestJava NO-SOURCE
+> Task :Script:processTestResources NO-SOURCE
+> Task :Script:testClasses UP-TO-DATE
+> Task :Script:test NO-SOURCE
+> Task :Script:check UP-TO-DATE
+> Task :Script:build
+> Task :distZip FAILED
+25 actionable tasks: 22 executed, 3 up-to-date

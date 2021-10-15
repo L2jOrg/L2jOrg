@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.actor.status.DoorStatus;
 import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.model.item.Weapon;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.DoorStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.OnEventTrigger;
@@ -199,7 +199,7 @@ public final class Door extends Creature {
     }
 
     public boolean isEnemy() {
-        return (getCastle() != null) && (getCastle().getId() > 0) && getCastle().getZone().isActive() && getIsShowHp();
+        return (getCastle() != null) && (getCastle().getId() > 0) && getCastle().getSiegeZone().isActive() && getIsShowHp();
     }
 
     @Override
@@ -216,7 +216,7 @@ public final class Door extends Creature {
         final Player actingPlayer = attacker.getActingPlayer();
 
         // Attackable only during siege by everyone (not owner)
-        final boolean isCastle = ((getCastle() != null) && (getCastle().getId() > 0) && getCastle().getZone().isActive());
+        final boolean isCastle = ((getCastle() != null) && (getCastle().getId() > 0) && getCastle().getSiegeZone().isActive());
 
         if (isCastle) {
             final Clan clan = actingPlayer.getClan();

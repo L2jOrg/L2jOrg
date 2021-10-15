@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.model.actor.templates;
 
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
@@ -33,7 +35,7 @@ import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.util.GameUtils;
@@ -104,7 +106,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private int _mpRewardTicks;
     private MpRewardAffectType _mpRewardAffectType;
 
-    private List<Integer> _extendDrop;
+    private IntList extendDrop;
     private ElementalType elementalType;
     private long attributeExp;
 
@@ -180,7 +182,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _mpRewardTicks = set.getInt("mpRewardTicks", 0);
         _mpRewardAffectType = set.getEnum("mpRewardAffectType", MpRewardAffectType.class, MpRewardAffectType.SOLO);
 
-        _extendDrop = set.getList("extendDrop", Integer.class);
+        extendDrop = set.getObject("extendDrop", IntList.class);
 
         if (Config.ENABLE_NPC_STAT_MULTIPIERS) // Custom NPC Stat Multipliers
         {
@@ -530,7 +532,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
         for (DropHolder dropItem : list) {
 
-            if (dropOccurrenceCounter == 0 && dropItem.getChance() < 100) {
+            if (dropOccurrenceCounter == 0 && dropItem.getChance() < 100 && dropItem.getItemId() != CommonItem.ADENA) {
                 continue;
             }
 
@@ -556,7 +558,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         }
     }
 
-    private void proccessEtcDrop(Collection<ItemHolder> items, Creature victim, Creature killer) {
+    private void processEtcDrop(Collection<ItemHolder> items, Creature victim, Creature killer) {
         final List<DropHolder> dropList = new ArrayList<>();
         if (nonNull(killer.getActingPlayer())) {
             float silverCoinChance = VipEngine.getInstance().getSilverCoinDropChance(killer.getActingPlayer());
@@ -599,7 +601,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     public Collection<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer) {
         Collection<ItemHolder> calculatedDrops = new ArrayList<>();
         if (dropType == DropType.DROP) {
-            proccessEtcDrop(calculatedDrops, victim, killer);
+            processEtcDrop(calculatedDrops, victim, killer);
         }
 
         processDropList(dropType, calculatedDrops, victim, killer);
@@ -718,7 +720,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         return _collisionHeightGrown;
     }
 
-    public List<Integer> getExtendDrop() {
-        return _extendDrop == null ? Collections.emptyList() : _extendDrop;
+    public IntList getExtendDrop() {
+        return extendDrop == null ? Containers.emptyList() : extendDrop;
     }
 }

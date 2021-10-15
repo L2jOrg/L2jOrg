@@ -39,7 +39,7 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDestroy
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemDrop;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerItemTransfer;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.model.item.ItemTemplate;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -51,8 +51,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.gameserver.model.item.type.EtcItemType.ARROW;
-import static org.l2j.gameserver.model.item.type.EtcItemType.BOLT;
+import static org.l2j.gameserver.model.item.type.EtcItemType.*;
 
 /**
  * @author JoeAlisson
@@ -204,7 +203,12 @@ public class PlayerInventory extends Inventory {
     }
 
     public final boolean haveItemForSelfResurrection() {
-        return items.values().stream().anyMatch(Item::isSelfResurrection);
+        for (Item item : items.values()) {
+            if(item.isSelfResurrection()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -380,6 +384,7 @@ public class PlayerInventory extends Inventory {
             itemIdLookup.putIfAbsent(item.getId(), item.getObjectId());
         } else {
             super.addItem(item);
+
         }
     }
 
@@ -390,6 +395,14 @@ public class PlayerInventory extends Inventory {
             return questItems.get(itemIdLookup.get(itemId));
         }
         return item;
+    }
+
+    @Override
+    protected long getSameItemCount(Item item, int enchantLevel, boolean includeEquipped) {
+        if(item.isQuestItem()) {
+            return getSameItemCount(item, enchantLevel, includeEquipped, questItems.values());
+        }
+        return super.getSameItemCount(item, enchantLevel, includeEquipped);
     }
 
     /**
@@ -519,24 +532,6 @@ public class PlayerInventory extends Inventory {
     @Override
     public Item dropItem(String process, Item item, Player actor, WorldObject reference) {
         item = super.dropItem(process, item, actor, reference);
-        handleDropItemUpdate(actor, item);
-        return item;
-    }
-
-    /**
-     * Drop item from inventory by using its <B>objectID</B> and checks _adena and _ancientAdena
-     *
-     * @param process   : String Identifier of process triggering this action
-     * @param objectId  : int Item Instance identifier of the item to be dropped
-     * @param count     : int Quantity of items to be dropped
-     * @param actor     : Player Player requesting the item drop
-     * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
-     * @return Item corresponding to the destroyed item or the updated item in inventory
-     */
-    @Override
-    public Item dropItem(String process, int objectId, long count, Player actor, WorldObject reference) {
-        final Item item = super.dropItem(process, objectId, count, actor, reference);
-
         handleDropItemUpdate(actor, item);
         return item;
     }
@@ -706,6 +701,13 @@ public class PlayerInventory extends Inventory {
         blockItems = items;
     }
 
+    public void addToInventoryBlock(int itemId) {
+        if(blockMode == InventoryBlockType.NONE || blockItems == null) {
+            return;
+        }
+        blockItems.add(itemId);
+    }
+
     /**
      * Unblock blocked itemIds
      */
@@ -752,8 +754,8 @@ public class PlayerInventory extends Inventory {
      */
     public void applyItemSkills() {
         for (Item item : items.values()) {
-            item.giveSkillsToOwner();
-            item.applyEnchantStats();
+            item.giveSkillsToPlayer(owner);
+            item.applyEnchantStats(owner);
             if (item.isEquipped()) {
                 item.applySpecialAbilities();
             }
@@ -836,7 +838,12 @@ public class PlayerInventory extends Inventory {
     }
 
     private Item findAmmunition(Item currentWeapon) {
-        return items.values().stream().filter(i -> matchesAmmunition(i, currentWeapon)).findFirst().orElse(null);
+        for (Item item : items.values()) {
+            if(matchesAmmunition(item, currentWeapon)) {
+                return item;
+            }
+        }
+        return null;
     }
 
     private boolean matchesAmmunition(Item ammunition, Item weapon) {
@@ -847,7 +854,7 @@ public class PlayerInventory extends Inventory {
 
         final var itemType = weapon.getItemType();
 
-        return (ammunition.getItemType() == ARROW && itemType == WeaponType.BOW) ||
+        return (ammunition.getItemType() == ARROW && itemType == WeaponType.BOW )|| ( ammunition.getItemType() == ELEMENTAL_ORB && itemType == WeaponType.PISTOLS) ||
                (ammunition.getItemType() == BOLT && itemType == WeaponType.CROSSBOW || itemType == WeaponType.TWO_HAND_CROSSBOW);
     }
 

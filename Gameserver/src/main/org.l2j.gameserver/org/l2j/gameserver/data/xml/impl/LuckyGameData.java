@@ -70,7 +70,7 @@ public class LuckyGameData extends GameXmlReader {
             forEach(rewardNode, "common_reward", commonRewardNode -> forEach(commonRewardNode, "item", itemNode ->
             {
                 final StatsSet stats = new StatsSet(parseAttributes(itemNode));
-                holder.addCommonReward(new ItemChanceHolder(stats.getInt("id"), stats.getDouble("chance"), stats.getLong("count")));
+                holder.addCommonReward(new ItemChanceHolder(stats.getInt("id"), stats.getFloat("chance"), stats.getLong("count")));
             }));
 
             forEach(rewardNode, "unique_reward", uniqueRewardNode -> forEach(uniqueRewardNode, "item", itemNode ->
@@ -85,7 +85,7 @@ public class LuckyGameData extends GameXmlReader {
                 forEach(uniqueRewardNode, "item", itemNode ->
                 {
                     final StatsSet stats = new StatsSet(parseAttributes(itemNode));
-                    holder.addModifyReward(new ItemChanceHolder(stats.getInt("id"), stats.getDouble("chance"), stats.getLong("count")));
+                    holder.addModifyReward(new ItemChanceHolder(stats.getInt("id"), stats.getFloat("chance"), stats.getLong("count")));
                 });
             });
 
