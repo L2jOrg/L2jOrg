@@ -81,6 +81,7 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.util.MinionList;
 import org.l2j.gameserver.world.zone.Zone;
@@ -742,35 +743,30 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     private void registerListenerWithoutId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners) {
         switch (registerType) {
-            case OLYMPIAD: {
+            case OLYMPIAD -> {
                 /*final OlympiadEngine template = OlympiadEngine.getInstance();
                 listeners.add(template.addListener(action.apply(template)));*/
-                break;
             }
-            case GLOBAL: // Global Listener
-            {
-                final ListenersContainer template = Listeners.Global();
-                listeners.add(template.addListener(action.apply(template)));
-                break;
-            }
-            case GLOBAL_NPCS: // Global Npcs Listener
-            {
-                final ListenersContainer template = Listeners.Npcs();
-                listeners.add(template.addListener(action.apply(template)));
-                break;
-            }
-            case GLOBAL_MONSTERS: // Global Monsters Listener
-            {
-                final ListenersContainer template = Listeners.Monsters();
-                listeners.add(template.addListener(action.apply(template)));
-                break;
-            }
-            case GLOBAL_PLAYERS: // Global Players Listener
-            {
-                final ListenersContainer template = Listeners.players();
-                listeners.add(template.addListener(action.apply(template)));
-                break;
-            }
+            case GLOBAL -> // Global Listener
+                    {
+                        final ListenersContainer template = Listeners.Global();
+                        listeners.add(template.addListener(action.apply(template)));
+                    }
+            case GLOBAL_NPCS -> // Global Npcs Listener
+                    {
+                        final ListenersContainer template = Listeners.Npcs();
+                        listeners.add(template.addListener(action.apply(template)));
+                    }
+            case GLOBAL_MONSTERS -> // Global Monsters Listener
+                    {
+                        final ListenersContainer template = Listeners.Monsters();
+                        listeners.add(template.addListener(action.apply(template)));
+                    }
+            case GLOBAL_PLAYERS -> // Global Players Listener
+                    {
+                        final ListenersContainer template = Listeners.players();
+                        listeners.add(template.addListener(action.apply(template)));
+                    }
         }
     }
 
@@ -855,44 +851,37 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     private void registerListenrWithId(Function<ListenersContainer, AbstractEventListener> action, ListenerRegisterType registerType, List<AbstractEventListener> listeners, int id) {
         switch (registerType) {
-            case NPC: {
+            case NPC -> {
                 final NpcTemplate template = NpcData.getInstance().getTemplate(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }
-                break;
             }
-            case ZONE: {
+            case ZONE -> {
                 final Zone template = ZoneEngine.getInstance().getZoneById(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }
-                break;
             }
-            case ITEM: {
+            case ITEM -> {
                 final ItemTemplate template = ItemEngine.getInstance().getTemplate(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }
-                break;
             }
-            case CASTLE: {
+            case CASTLE -> {
                 final Castle template = CastleManager.getInstance().getCastleById(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }
-                break;
             }
-            case INSTANCE: {
+            case INSTANCE -> {
                 final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }
-                break;
             }
-            default: {
-                LOGGER.warn(": Unhandled register type: " + registerType);
-            }
+            default -> LOGGER.warn("Unhandled register type: {}", registerType);
         }
     }
 
@@ -1435,29 +1424,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             if (itemId == CommonItem.ADENA) {
                 count *= Config.RATE_QUEST_REWARD_ADENA;
             } else if (Config.RATE_QUEST_REWARD_USE_MULTIPLIERS) {
-                if (item instanceof EtcItem) {
-                    switch (((EtcItem) item).getItemType()) {
-                        case POTION: {
-                            count *= Config.RATE_QUEST_REWARD_POTION;
-                            break;
-                        }
-                        case ENCHANT_WEAPON:
-                        case ENCHANT_ARMOR:
-                        case SCROLL: {
-                            count *= Config.RATE_QUEST_REWARD_SCROLL;
-                            break;
-                        }
-                        case RECIPE: {
-                            count *= Config.RATE_QUEST_REWARD_RECIPE;
-                            break;
-                        }
-                        case MATERIAL: {
-                            count *= Config.RATE_QUEST_REWARD_MATERIAL;
-                            break;
-                        }
-                        default: {
-                            count *= Config.RATE_QUEST_REWARD;
-                        }
+                if (item instanceof EtcItem etcItem) {
+                    switch (etcItem.getItemType()) {
+                        case POTION -> count *= Config.RATE_QUEST_REWARD_POTION;
+                        case ENCHANT_WEAPON, ENCHANT_ARMOR, SCROLL -> count *= Config.RATE_QUEST_REWARD_SCROLL;
+                        case RECIPE -> count *= Config.RATE_QUEST_REWARD_RECIPE;
+                        case MATERIAL -> count *= Config.RATE_QUEST_REWARD_MATERIAL;
+                        default -> count *= Config.RATE_QUEST_REWARD;
                     }
                 }
             } else {
@@ -1570,15 +1543,15 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         minAmount *= Config.RATE_QUEST_DROP;
         maxAmount *= Config.RATE_QUEST_DROP;
         dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
-        if ((npc != null) && Config.CHAMPION_ENABLE && npc.isChampion()) {
+        if (npc != null && npc.isChampion()) {
             if (itemId == CommonItem.ADENA) {
-                dropChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
-                minAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
-                maxAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+                dropChance *= ChampionSettings.adenaChanceMultiplier();
+                minAmount *= ChampionSettings.adenaAmountMultiplier();
+                maxAmount *= ChampionSettings.adenaAmountMultiplier();
             } else {
-                dropChance *= Config.CHAMPION_REWARDS_CHANCE;
-                minAmount *= Config.CHAMPION_REWARDS_AMOUNT;
-                maxAmount *= Config.CHAMPION_REWARDS_AMOUNT;
+                dropChance *= ChampionSettings.rewardChanceMultiplier();
+                minAmount *= ChampionSettings.rewardAmountMultiplier();
+                maxAmount *= ChampionSettings.rewardAmountMultiplier();
             }
         }
 

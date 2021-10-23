@@ -22,6 +22,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
+import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -29,6 +30,7 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
+import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MinionList;
 
@@ -50,6 +52,8 @@ public class Monster extends Attackable {
     protected ScheduledFuture<?> _maintenanceTask = null;
     private Monster _master = null;
     private volatile MinionList _minionList = null;
+
+    private boolean isChampion = false;
 
     /**
      * Constructor of Monster (use Creature and Folk constructor).<br>
@@ -77,17 +81,6 @@ public class Monster extends Attackable {
         if (Config.GUARD_ATTACK_AGGRO_MOB && getTemplate().isAggressive() && (attacker instanceof Guard)) {
             return true;
         }
-
-        // Why a Monster should never attack another one ?
-        // Some skills are explicitly telling the oposite
-        // FIXME: This next comment could create a new EPIC bug :p
-        // The purpose of the comments above is to locate quickly this new potential bug
-        // TODO: @JoeAlisson
-        // TODO: @Vicochips
-        // TODO: @Thoss
-        /*if (GameUtils.isMonster(attacker)) {
-            return false;
-        }*/
 
         if(attacker instanceof FriendlyMob && isAggressive() && !getAggroList().isEmpty() && GameUtils.isPlayable(getTarget())) {
             return true;
@@ -123,6 +116,28 @@ public class Monster extends Attackable {
 
         // dynamic script-based minions spawned here, after all preparations.
         super.onSpawn();
+    }
+
+    @Override
+    public void onRespawn() {
+        if(isRandomChampion()) {
+            isChampion = true;
+            if (ChampionSettings.showAura()) {
+                setTeam(Team.RED);
+            }
+        } else {
+            isChampion = false;
+        }
+
+        super.onRespawn();
+    }
+
+    private boolean isRandomChampion() {
+        return ChampionSettings.checkChampionChance(getLevel()) &&
+                !isQuestMonster() &&
+                !getTemplate().isUndying() &&
+                !isRaid() &&
+                !isRaidMinion();
     }
 
     @Override
@@ -229,7 +244,32 @@ public class Monster extends Attackable {
     }
 
     @Override
+    protected double[] calculateExpAndSp(int charLevel, long damage, long totalDamage) {
+        var expAndSp = super.calculateExpAndSp(charLevel, damage, totalDamage);
+        if (isChampion) {
+            expAndSp[0] *= ChampionSettings.expSpMultiplier();
+            expAndSp[1] *= ChampionSettings.expSpMultiplier();
+        }
+        return expAndSp;
+    }
+
+    @Override
     protected Queue<AbstractEventListener> globalListenerByType(EventType type) {
         return Listeners.Monsters().getListeners(type);
+    }
+
+    @Override
+    public boolean isChampion() {
+        return isChampion;
+    }
+
+    @Override
+    public boolean useVitalityRate() {
+        return !isChampion || ChampionSettings.isVitalityEnabled();
+    }
+
+    @Override
+    public String getTitle() {
+        return  isChampion ? ChampionSettings.title() : super.getTitle();
     }
 }

@@ -24,6 +24,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.ChampionSettings;
 
 import java.util.Optional;
 
@@ -47,8 +48,8 @@ public class MAttackFinalizer implements IStatsFunction {
             baseValue += calcEnchantMAtkBonus(creature.getActiveWeaponInstance());
         }
 
-        if (Config.CHAMPION_ENABLE && creature.isChampion()) {
-            baseValue *= Config.CHAMPION_ATK;
+        if (creature.isChampion()) {
+            baseValue *= ChampionSettings.atkMultiplier();
         }
         if (creature.isRaid()) {
             baseValue *= Config.RAID_MATTACK_MULTIPLIER;

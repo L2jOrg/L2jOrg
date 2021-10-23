@@ -19,11 +19,11 @@
  */
 package org.l2j.gameserver.model.stats.finalizers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Optional;
@@ -36,8 +36,8 @@ public class PAttackSpeedFinalizer implements IStatsFunction {
     public double calc(Creature creature, Optional<Double> base, Stat stat) {
         throwIfPresent(base);
         double baseValue = calcWeaponBaseValue(creature, stat);
-        if (Config.CHAMPION_ENABLE && creature.isChampion()) {
-            baseValue *= Config.CHAMPION_SPD_ATK;
+        if (creature.isChampion()) {
+            baseValue *= ChampionSettings.atkSpeedMultiplier();
         }
         final double dexBonus = creature.getDEX() > 0 ? BaseStats.DEX.calcBonus(creature) : 1.;
         baseValue *= dexBonus;

@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.actor.instance.ControllableMob;
 import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
 
@@ -140,9 +141,9 @@ public class AdminKill implements IAdminCommandHandler
 			}
 			target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 		}
-		else if (Config.CHAMPION_ENABLE && target.isChampion())
+		else if (target.isChampion())
 		{
-			target.reduceCurrentHp((target.getMaxHp() * Config.CHAMPION_HP) + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
+			target.reduceCurrentHp(target.getMaxHp() * ChampionSettings.hpMultiplier() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 		}
 		else
 		{

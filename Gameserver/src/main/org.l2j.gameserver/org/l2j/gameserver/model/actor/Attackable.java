@@ -37,7 +37,6 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.PcCafePointsManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.*;
@@ -72,7 +71,6 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-import static org.l2j.commons.util.Util.isBetween;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 import static org.l2j.gameserver.util.GameUtils.checkIfInRange;
@@ -86,8 +84,7 @@ public class Attackable extends Npc {
     // Raid
     private boolean isRaid = false;
     private boolean _isRaidMinion = false;
-    //
-    private boolean _champion = false;
+
     private final Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
 
     private boolean _canReturnToSpawnPoint = true;
@@ -390,11 +387,6 @@ public class Attackable extends Npc {
             final double[] expSp = calculateExpAndSp(partyLvl, partyDmg, maxDealerInfo.totalDamage);
             double exp = expSp[0];
             double sp = expSp[1];
-
-            if (Config.CHAMPION_ENABLE && _champion) {
-                exp *= Config.CHAMPION_REWARDS_EXP_SP;
-                sp *= Config.CHAMPION_REWARDS_EXP_SP;
-            }
 
             exp *= partyMul;
             sp *= partyMul;
@@ -1001,7 +993,7 @@ public class Attackable extends Npc {
      * @param damage      The damages given by the attacker (Player, Servitor or Party)
      * @param totalDamage The total damage done
      */
-    private double[] calculateExpAndSp(int charLevel, long damage, long totalDamage) {
+    protected double[] calculateExpAndSp(int charLevel, long damage, long totalDamage) {
         final int levelDiff = charLevel - getLevel();
         double xp = Math.max(0, (getExpReward() * damage) / totalDamage);
         double sp = Math.max(0, (getSpReward() * damage) / totalDamage);
@@ -1021,11 +1013,6 @@ public class Attackable extends Npc {
             };
             xp *= mul;
             sp *= mul;
-
-            if (Config.CHAMPION_ENABLE && _champion) {
-                xp *= Config.CHAMPION_REWARDS_EXP_SP;
-                sp *= Config.CHAMPION_REWARDS_EXP_SP;
-            }
         }
 
         return new double[] { xp, sp };
@@ -1076,35 +1063,11 @@ public class Attackable extends Npc {
 
     @Override
     public void onRespawn() {
-        // Reset champion state
-        _champion = false;
-
-        if (isRandomChampion()) {
-            _champion = true;
-            if (Config.SHOW_CHAMPION_AURA) {
-                setTeam(Team.RED);
-            }
-        }
-
-        // Start a new AI task
         AttackableThinkTaskManager.getInstance().add(this);
-
-        // Reset the rest of NPC related states
         super.onRespawn();
     }
 
-    private boolean isRandomChampion() {
-        return Config.CHAMPION_ENABLE &&
-                GameUtils.isMonster(this) &&
-                !isQuestMonster() &&
-                !getTemplate().isUndying() &&
-                !isRaid &&
-                !_isRaidMinion &&
-                (Config.CHAMPION_FREQUENCY > 0) &&
-                isBetween(getLevel(), Config.CHAMP_MIN_LVL, Config.CHAMP_MAX_LVL) &&
-                (Config.CHAMPION_ENABLE_IN_INSTANCES || getInstanceId() == 0) &&
-                Rnd.get(100) < Config.CHAMPION_FREQUENCY;
-    }
+
 
     /**
      * Checks if its spoiled.
@@ -1180,7 +1143,7 @@ public class Attackable extends Npc {
      * True if vitality rate for exp and sp should be applied
      */
     public boolean useVitalityRate() {
-        return !_champion || Config.CHAMPION_ENABLE_VITALITY;
+        return true;
     }
 
     /**
@@ -1221,11 +1184,6 @@ public class Attackable extends Npc {
      */
     public Attackable getLeader() {
         return null;
-    }
-
-    @Override
-    public boolean isChampion() {
-        return _champion;
     }
 
     @Override
