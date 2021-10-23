@@ -41,6 +41,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableFactionCal
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableHate;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.skills.SkillCaster;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
@@ -132,9 +133,7 @@ public class AttackableAI extends CreatureAI {
                 });
             }
         } else if (isMonster(me)) {
-            // depending on config, do not allow mobs to attack _new_ players in peacezones,
-            // unless they are already following those players from outside the peacezone.
-            if (!Config.ALT_MOB_AGRO_IN_PEACEZONE && target.isInsideZone(ZoneType.PEACE)) {
+            if (!NpcSettings.allowAggroInPeaceZone() && target.isInsideZone(ZoneType.PEACE)) {
                 return false;
             }
 
