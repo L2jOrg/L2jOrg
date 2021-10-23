@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -27,6 +26,7 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -85,7 +85,7 @@ public final class Action extends ClientPacket {
     }
 
     private void onShiftAction(Player player, WorldObject obj) {
-        if (!player.isGM() && (!(isNpc(obj) && Config.ALT_GAME_VIEWNPC))) {
+        if (!isNpc(obj) || (!player.isGM() && !NpcSettings.allowViewNpc())) {
             obj.onAction(player, false);
         } else {
             obj.onActionShift(player);

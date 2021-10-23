@@ -19,6 +19,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TrapAction;
@@ -57,7 +58,7 @@ public final class Trap extends Npc {
     private final boolean hasLifeTime;
     private boolean _isInArena = false;
     private boolean _isTriggered;
-    private Player _owner;
+    private Player onwer;
     private int _remainingTime;
     // Tasks
     private ScheduledFuture<?> _trapTask = null;
@@ -68,7 +69,7 @@ public final class Trap extends Npc {
         setInstanceById(instanceId);
         setName(template.getName());
         setIsInvul(false);
-        _owner = null;
+        onwer = null;
         _isTriggered = false;
         _skill = getParameters().getObject("trap_skill", SkillHolder.class);
         hasLifeTime = lifeTime >= 0;
@@ -81,7 +82,7 @@ public final class Trap extends Npc {
 
     public Trap(NpcTemplate template, Player owner, int lifeTime) {
         this(template, owner.getInstanceId(), lifeTime);
-        _owner = owner;
+        onwer = owner;
     }
 
     @Override
@@ -115,10 +116,10 @@ public final class Trap extends Npc {
             return true;
         }
 
-        if ((_owner == null) || (cha == null)) {
+        if ((onwer == null) || (cha == null)) {
             return false;
         }
-        if (cha == _owner) {
+        if (cha == onwer) {
             return true;
         }
 
@@ -129,7 +130,7 @@ public final class Trap extends Npc {
             }
 
             // olympiad competitors can't see trap
-            if (_owner.isInOlympiadMode() && ((Player) cha).isInOlympiadMode() && (((Player) cha).getOlympiadSide() != _owner.getOlympiadSide())) {
+            if (onwer.isInOlympiadMode() && ((Player) cha).isInOlympiadMode() && (((Player) cha).getOlympiadSide() != onwer.getOlympiadSide())) {
                 return false;
             }
         }
@@ -138,18 +139,18 @@ public final class Trap extends Npc {
             return true;
         }
 
-        return _owner.isInParty() && cha.isInParty() && (_owner.getParty().getLeaderObjectId() == cha.getParty().getLeaderObjectId());
+        return onwer.isInParty() && cha.isInParty() && (onwer.getParty().getLeaderObjectId() == cha.getParty().getLeaderObjectId());
     }
 
     @Override
     public boolean deleteMe() {
-        _owner = null;
+        onwer = null;
         return super.deleteMe();
     }
 
     @Override
     public Player getActingPlayer() {
-        return _owner;
+        return onwer;
     }
 
     @Override
@@ -159,7 +160,7 @@ public final class Trap extends Npc {
 
     @Override
     public int getReputation() {
-        return _owner != null ? _owner.getReputation() : 0;
+        return onwer != null ? onwer.getReputation() : 0;
     }
 
     /**
@@ -168,12 +169,12 @@ public final class Trap extends Npc {
      * @return the owner
      */
     public Player getOwner() {
-        return _owner;
+        return onwer;
     }
 
     @Override
     public byte getPvpFlag() {
-        return _owner != null ? _owner.getPvpFlag() : 0;
+        return onwer != null ? onwer.getPvpFlag() : 0;
     }
 
     @Override
@@ -214,19 +215,19 @@ public final class Trap extends Npc {
 
     @Override
     public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss) {
-        if (miss || (_owner == null)) {
+        if (miss || (onwer == null)) {
             return;
         }
 
         if (target.isHpBlocked() && !GameUtils.isNpc(target)) {
-            _owner.sendPacket(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
+            onwer.sendPacket(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
         } else {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
             sm.addString(getName());
             sm.addString(target.getName());
             sm.addInt(damage);
             sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
-            _owner.sendPacket(sm);
+            onwer.sendPacket(sm);
         }
     }
 
@@ -263,12 +264,17 @@ public final class Trap extends Npc {
             _trapTask = null;
         }
 
-        _owner = null;
+        onwer = null;
 
         if (isSpawned() && !isDead()) {
             ZoneEngine.getInstance().removeFromZones(this);
             deleteMe();
         }
+    }
+
+    @Override
+    public String getTitle() {
+        return onwer != null ? onwer.getName() : Util.STRING_EMPTY;
     }
 
     public boolean hasLifeTime() {

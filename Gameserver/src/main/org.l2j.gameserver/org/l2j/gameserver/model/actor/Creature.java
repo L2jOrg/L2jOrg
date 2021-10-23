@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.*;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
@@ -45,7 +46,6 @@ import org.l2j.gameserver.model.DamageInfo.DamageType;
 import org.l2j.gameserver.model.actor.instance.FriendlyNpc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.instance.Trap;
 import org.l2j.gameserver.model.actor.stat.CreatureStats;
 import org.l2j.gameserver.model.actor.status.CreatureStatus;
 import org.l2j.gameserver.model.actor.tasks.character.NotifyAITask;
@@ -73,6 +73,7 @@ import org.l2j.gameserver.model.stats.*;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.MapRegionManager;
@@ -1522,27 +1523,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         this.template = template;
     }
 
-    /**
-     * @return the Title of the Creature.
-     */
-    public final String getTitle() {
-        // Champion titles
+    public String getTitle() {
         if (isChampion()) {
             return Config.CHAMP_TITLE;
         }
-        // Custom level titles
-        if (Config.SHOW_NPC_LVL && isMonster(this)) {
-            String t = "Lv " + getLevel() + (((Monster) this).isAggressive() ? "*" : "");
+
+        if (NpcSettings.showNpcLevel() && this instanceof Monster monster) {
+            String t = "Lv " + getLevel() + (monster.isAggressive() ? "*" : "");
             if (title != null) {
                 t += " " + title;
             }
             return t;
         }
-        // Set trap title
-        if (GameUtils.isTrap(this) && (((Trap) this).getOwner() != null)) {
-            title = ((Trap) this).getOwner().getName();
-        }
-        return title != null ? title : "";
+
+        return title != null ? title : STRING_EMPTY;
     }
 
     public final void setTitle(String value) {

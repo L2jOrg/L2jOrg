@@ -59,6 +59,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
@@ -265,7 +266,7 @@ public class Npc extends Creature {
 
     @Override
     public boolean canBeAttacked() {
-        return Config.ALT_ATTACKABLE_NPCS;
+        return NpcSettings.allowAttackNpc();
     }
 
     /**

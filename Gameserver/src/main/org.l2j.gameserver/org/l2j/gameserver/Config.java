@@ -54,7 +54,7 @@ public final class Config {
 
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
-    private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
+    private static final String NPC_CONFIG_FILE = "./config/npc.properties";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
@@ -142,9 +142,6 @@ public final class Config {
     // --------------------------------------------------
     // NPC Settings
     // --------------------------------------------------
-    public static boolean ALT_MOB_AGRO_IN_PEACEZONE;
-    public static boolean ALT_ATTACKABLE_NPCS;
-    public static boolean ALT_GAME_VIEWNPC;
     public static int MAX_DRIFT_RANGE;
     public static boolean SHOW_NPC_LVL;
     public static boolean SHOW_CREST_WITHOUT_QUEST;
@@ -563,10 +560,6 @@ public final class Config {
         // Load NPC config file (if exists)
         final PropertiesParser NPC = new PropertiesParser(NPC_CONFIG_FILE);
 
-        ALT_MOB_AGRO_IN_PEACEZONE = NPC.getBoolean("AltMobAgroInPeaceZone", true);
-        ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);
-        ALT_GAME_VIEWNPC = NPC.getBoolean("AltGameViewNpc", false);
-        SHOW_NPC_LVL = NPC.getBoolean("ShowNpcLevel", false);
         SHOW_CREST_WITHOUT_QUEST = NPC.getBoolean("ShowCrestWithoutQuest", false);
         ENABLE_RANDOM_ENCHANT_EFFECT = NPC.getBoolean("EnableRandomEnchantEffect", false);
         MIN_NPC_LVL_DMG_PENALTY = NPC.getInt("MinNPCLevelForDmgPenalty", 78);
