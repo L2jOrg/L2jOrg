@@ -190,8 +190,6 @@ public class Npc extends Creature {
 
     /**
      * Send a packet SocialAction to all Player in the _KnownPlayers of the Folk and create a new RandomAnimation Task.
-     *
-     * @param animationId
      */
     public void onRandomAnimation(int animationId) {
         // Send a packet SocialAction to all Player in the _KnownPlayers of the Folk
@@ -292,7 +290,6 @@ public class Npc extends Creature {
     }
 
     /**
-     * @param npc
      * @return if both npcs have the same clan by template.
      */
     public boolean isInMyClan(Npc npc) {
@@ -484,7 +481,6 @@ public class Npc extends Creature {
      * <li>Client packet : RequestBypassToServer</li>
      * </ul>
      *
-     * @param player
      * @param command The command string received from client
      */
     public void onBypassFeedback(Player player, String command) {

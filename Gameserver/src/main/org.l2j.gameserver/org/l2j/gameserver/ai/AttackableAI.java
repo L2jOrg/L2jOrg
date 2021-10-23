@@ -397,7 +397,6 @@ public class AttackableAI extends CreatureAI {
 
                 // Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
                 moveTo(x1, y1, leader.getZ());
-                return;
             } else if (Rnd.chance(RANDOM_WALK_RATE)) {
                 for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF)) {
                     target = skillTargetReconsider(sk, true);
@@ -925,18 +924,9 @@ public class AttackableAI extends CreatureAI {
         try {
             // Manage AI thinks of a Attackable
             switch (getIntention()) {
-                case AI_INTENTION_ACTIVE: {
-                    thinkActive();
-                    break;
-                }
-                case AI_INTENTION_ATTACK: {
-                    thinkAttack();
-                    break;
-                }
-                case AI_INTENTION_CAST: {
-                    thinkCast();
-                    break;
-                }
+                case AI_INTENTION_ACTIVE -> thinkActive();
+                case AI_INTENTION_ATTACK -> thinkAttack();
+                case AI_INTENTION_CAST -> thinkCast();
             }
         } catch (Exception e) {
             // LOGGER.warn(": " + this.getActor().getName() + " - onEvtThink() failed!");
