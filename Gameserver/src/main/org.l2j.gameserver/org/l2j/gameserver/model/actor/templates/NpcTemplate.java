@@ -36,6 +36,7 @@ import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
@@ -184,7 +185,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         if (Config.ENABLE_NPC_STAT_MULTIPIERS) // Custom NPC Stat Multipliers
         {
             switch (_type) {
-                case "Monster": {
+                case "Monster" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.MONSTER_HP_MULTIPLIER);
                     _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.MONSTER_MP_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.MONSTER_PATK_MULTIPLIER);
@@ -193,10 +194,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.MONSTER_MDEF_MULTIPLIER);
                     _aggroRange *= Config.MONSTER_AGRRO_RANGE_MULTIPLIER;
                     _clanHelpRange *= Config.MONSTER_CLAN_HELP_RANGE_MULTIPLIER;
-                    break;
                 }
-                case "RaidBoss":
-                case "GrandBoss": {
+                case "RaidBoss", "GrandBoss" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.RAIDBOSS_HP_MULTIPLIER);
                     _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.RAIDBOSS_MP_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.RAIDBOSS_PATK_MULTIPLIER);
@@ -205,9 +204,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.RAIDBOSS_MDEF_MULTIPLIER);
                     _aggroRange *= Config.RAIDBOSS_AGRRO_RANGE_MULTIPLIER;
                     _clanHelpRange *= Config.RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
-                    break;
                 }
-                case "Guard": {
+                case "Guard" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.GUARD_HP_MULTIPLIER);
                     _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.GUARD_MP_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.GUARD_PATK_MULTIPLIER);
@@ -216,9 +214,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.GUARD_MDEF_MULTIPLIER);
                     _aggroRange *= Config.GUARD_AGRRO_RANGE_MULTIPLIER;
                     _clanHelpRange *= Config.GUARD_CLAN_HELP_RANGE_MULTIPLIER;
-                    break;
                 }
-                case "Defender": {
+                case "Defender" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.DEFENDER_HP_MULTIPLIER);
                     _baseValues.put(Stat.MAX_MP, getBaseMpMax() * Config.DEFENDER_MP_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_ATTACK, getBasePAtk() * Config.DEFENDER_PATK_MULTIPLIER);
@@ -227,7 +224,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.DEFENDER_MDEF_MULTIPLIER);
                     _aggroRange *= Config.DEFENDER_AGRRO_RANGE_MULTIPLIER;
                     _clanHelpRange *= Config.DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
-                    break;
                 }
             }
         }
@@ -544,14 +540,9 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         }
 
         if (victim.isChampion()) {
-            if ((victim.getLevel() < killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE)) {
-                return;
+            if(ChampionSettings.canDropItem(killer.getLevel(), victim.getLevel())) {
+                itemsToDrop.add(ChampionSettings.dropItem());
             }
-            if ((victim.getLevel() > killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE)) {
-                return;
-            }
-
-            itemsToDrop.add(new ItemHolder(Config.CHAMPION_REWARD_ID, Config.CHAMPION_REWARD_QTY));
         }
     }
 
@@ -608,16 +599,10 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
     /**
      * All item drop chance calculations are done by this method.
-     *
-     * @param dropItem
-     * @param victim
-     * @param killer
-     * @return ItemHolder
      */
     private ItemHolder calculateDrop(DropHolder dropItem, Creature victim, Creature killer) {
         switch (dropItem.getDropType()) {
-            case DROP:
-            case LUCKY: {
+            case DROP, LUCKY -> {
                 final int itemId = dropItem.getItemId();
                 final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                 final boolean champion = victim.isChampion();
@@ -626,14 +611,14 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                 if (Config.RATE_DROP_CHANCE_BY_ID.get(itemId) != null) {
                     rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
                     if (champion && (itemId == CommonItem.ADENA)) {
-                        rateChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
+                        rateChance *= ChampionSettings.adenaChanceMultiplier();
                     }
                 } else if (item.hasExImmediateEffect()) {
                     rateChance *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
                 } else if (victim.isRaid()) {
                     rateChance *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
                 } else {
-                    rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER * (champion ? Config.CHAMPION_REWARDS_CHANCE : 1);
+                    rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER * (champion ? ChampionSettings.rewardChanceMultiplier() : 1);
                 }
 
                 // bonus drop rate effect
@@ -646,14 +631,14 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     if (Config.RATE_DROP_AMOUNT_BY_ID.get(itemId) != null) {
                         rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(itemId);
                         if (champion && (itemId == CommonItem.ADENA)) {
-                            rateAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+                            rateAmount *= ChampionSettings.adenaAmountMultiplier();
                         }
                     } else if (item.hasExImmediateEffect()) {
                         rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
                     } else if (victim.isRaid()) {
                         rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
                     } else {
-                        rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER * (champion ? Config.CHAMPION_REWARDS_AMOUNT : 1);
+                        rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER * (champion ? ChampionSettings.rewardAmountMultiplier() : 1);
                     }
 
                     // bonus drop amount effect
@@ -662,9 +647,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     // finally
                     return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
                 }
-                break;
             }
-            case SPOIL: {
+            case SPOIL -> {
                 // chance
                 double rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
 
@@ -679,7 +663,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     // finally
                     return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
                 }
-                break;
             }
         }
         return null;

@@ -33,7 +33,9 @@ import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.CastleZone;
@@ -44,26 +46,31 @@ import java.util.Optional;
 
 import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
  * @author UnAfraid
  */
 public class RegenHPFinalizer implements IStatsFunction {
+
     private static double calcSiegeRegenModifier(Player player) {
-        if ((player == null) || (player.getClan() == null)) {
+        if (player == null || player.getClan() == null) {
             return 0;
         }
 
         final Siege siege = SiegeManager.getInstance().getSiege(player);
-        if ((siege == null) || !siege.isInProgress()) {
+        if (siege == null || !siege.isInProgress()) {
             return 0;
         }
 
-        final var siegeClan = siege.getAttackerClan(player.getClan().getId());
-        if ((siegeClan == null) || siegeClan.getFlags().isEmpty() || !GameUtils.checkIfInRange(200, player, siegeClan.getFlags().stream().findAny().get(), true)) {
+        final var siegeClan = siege.getAttackerClan(player.getClanId());
+        if (siegeClan == null) {
             return 0;
         }
-
+        var flagsIt = siegeClan.getFlags().iterator();
+        if(!flagsIt.hasNext() || !isInsideRadius3D(player, flagsIt.next(), 200)) {
+            return 0;
+        }
         return 1.5; // If all is true, then modifier will be 50% more
     }
 
@@ -76,8 +83,8 @@ public class RegenHPFinalizer implements IStatsFunction {
             baseValue *=  Config.RAID_HP_REGEN_MULTIPLIER;
         }
 
-        if (Config.CHAMPION_ENABLE && creature.isChampion()) {
-            baseValue *= Config.CHAMPION_HP_REGEN;
+        if (creature.isChampion()) {
+            baseValue *= ChampionSettings.hpRegenMultiplier();
         }
 
         if (isPlayer(creature)) {

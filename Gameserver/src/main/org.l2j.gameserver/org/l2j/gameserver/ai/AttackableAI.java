@@ -142,10 +142,6 @@ public class AttackableAI extends CreatureAI {
             }
         }
 
-        if (me.isChampion() && Config.CHAMPION_PASSIVE) {
-            return false;
-        }
-
         return target.isAutoAttackable(me) && GeoEngine.getInstance().canSeeTarget(me, target);
     }
 

@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.*;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
@@ -72,6 +71,7 @@ import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.model.stats.*;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
@@ -95,6 +95,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import static java.lang.Math.max;
+import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.*;
@@ -1524,10 +1525,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public String getTitle() {
-        if (isChampion()) {
-            return Config.CHAMP_TITLE;
-        }
-
         if (NpcSettings.showNpcLevel() && this instanceof Monster monster) {
             String t = "Lv " + getLevel() + (monster.isAggressive() ? "*" : "");
             if (title != null) {
@@ -3117,7 +3114,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private void absorbMana(double damage) {
         var absorbPercent = stats.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
         if (absorbPercent > 0) {
-            int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, stats.getMaxRecoverableMp() - status.getCurrentMp());
+            int absorbDamage = (int) min((absorbPercent / 100.) * damage, stats.getMaxRecoverableMp() - status.getCurrentMp());
             if (absorbDamage > 0) {
                 setCurrentMp(status.getCurrentMp() + absorbDamage);
             }
@@ -3127,8 +3124,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     private void absorbHP(double damage, Creature target) {
         double absorbPercent = getStats().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStats().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
         if (absorbPercent > 0 && Rnd.nextDouble() < stats.getValue(Stat.ABSORB_DAMAGE_CHANCE)) {
-            int absorbDamage = (int) Math.min(absorbPercent * damage, stats.getMaxRecoverableHp() - status.getCurrentHp());
-            absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+            int absorbDamage = (int) min(absorbPercent * damage, stats.getMaxRecoverableHp() - status.getCurrentHp());
+            absorbDamage = min(absorbDamage, (int) target.getCurrentHp());
             if (absorbDamage > 0) {
                 setCurrentHp(status.getCurrentHp() + absorbDamage);
             }
@@ -3143,16 +3140,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (reflectPercent > 0)
         {
             reflectedDamage = (int) ((reflectPercent / 100.) * damage);
-            reflectedDamage = Math.min(reflectedDamage, target.getMaxHp());
+            reflectedDamage = min(reflectedDamage, target.getMaxHp());
 
             // Reflected damage is limited by P.Def/M.Def
             if ((skill != null) && skill.isMagic())
             {
-                reflectedDamage = (int) Math.min(reflectedDamage, target.getStats().getMDef() * 1.5);
+                reflectedDamage = (int) min(reflectedDamage, target.getStats().getMDef() * 1.5);
             }
             else
             {
-                reflectedDamage = Math.min(reflectedDamage, target.getStats().getPDef());
+                reflectedDamage = min(reflectedDamage, target.getStats().getPDef());
             }
         }
         return reflectedDamage;
@@ -3220,13 +3217,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     private double applyDamageLimiters(double value) {
-        if(Config.CHAMPION_ENABLE && isChampion() && Config.CHAMPION_HP > 0) {
-            value /= Config.CHAMPION_HP;
+        if(isChampion()) {
+            value /= min(1, ChampionSettings.hpMultiplier());
         }
 
         final double damageCap = stats.getValue(Stat.DAMAGE_LIMIT);
         if (damageCap > 0) {
-            value = Math.min(value, damageCap);
+            value = min(value, damageCap);
         }
 
         value = max(0, value);

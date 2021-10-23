@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -77,7 +78,9 @@ public class AdminMenu implements IAdminCommandHandler {
 				final String targetName = command.substring(23);
 				final Player player = World.getInstance().findPlayer(targetName);
 				teleportCharacter(player, playerGM.getLocation(), playerGM, "Admin is teleporting you.");
-			} catch (StringIndexOutOfBoundsException e) { }
+			} catch (StringIndexOutOfBoundsException e) {
+				LOGGER.warn(e.getMessage(), e);
+			}
 		} else if (command.startsWith("admin_recall_party_menu")) {
 			try {
 				final String targetName = command.substring(24);
@@ -150,7 +153,9 @@ public class AdminMenu implements IAdminCommandHandler {
 				final Player player = World.getInstance().findPlayer(command.substring(21));
 				teleportToCharacter(playerGM, player);
 			}
-			catch (StringIndexOutOfBoundsException e) {}
+			catch (StringIndexOutOfBoundsException e) {
+				LOGGER.warn(e.getMessage(), e);
+			}
 		} else if (command.equals("admin_kill_menu")) {
 			handleKill(playerGM);
 		} else if (command.startsWith("admin_kick_menu")) {
@@ -211,8 +216,8 @@ public class AdminMenu implements IAdminCommandHandler {
 			if (isPlayer(target)) {
 				target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 				filename = "charmanage.htm";
-			} else if (Config.CHAMPION_ENABLE && target.isChampion()) {
-				target.reduceCurrentHp((target.getMaxHp() * Config.CHAMPION_HP) + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
+			} else if (target.isChampion()) {
+				target.reduceCurrentHp(target.getMaxHp() * ChampionSettings.hpMultiplier() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 			} else {
 				target.reduceCurrentHp(target.getMaxHp() + 1d, activeChar, null, DamageInfo.DamageType.OTHER);
 			}
@@ -248,10 +253,7 @@ public class AdminMenu implements IAdminCommandHandler {
 	}
 	
 	private void spawnMonster(Player gm, Player target, int monsterId, int respawnTime, int mobCount) {
-		final NpcTemplate template1;
-		final int monsterTemplate = monsterId;
-
-		template1 = NpcData.getInstance().getTemplate(monsterTemplate);
+		var template1 = NpcData.getInstance().getTemplate(monsterId);
 
 		try {
 			final Spawn spawn = new Spawn(template1);
@@ -275,9 +277,6 @@ public class AdminMenu implements IAdminCommandHandler {
 		}
 	}
 
-	/**
-	 * @param activeChar
-	 */
 	private void showMainPage(Player activeChar) {
 		AdminHtml.showAdminHtml(activeChar, "charmanage.htm");
 	}

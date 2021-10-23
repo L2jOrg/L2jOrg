@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver;
 
-import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
 import org.l2j.gameserver.model.Location;
@@ -27,13 +26,9 @@ import org.l2j.gameserver.util.FloodProtectorConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -59,30 +54,27 @@ public final class Config {
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
 
-    private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-
     // --------------------------------------------------
     // Custom Config File Definitions
     // --------------------------------------------------
-    private static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
-    private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
-    private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
-    private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
-    private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
-    private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
-    private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
-    private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
-    private static final String CUSTOM_DONATION_CONFIG_FILE = "./config/Custom/Donate.ini";
+    private static final String CUSTOM_BANKING_CONFIG_FILE = "config/custom/Banking.ini";
+    private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "config/custom/CommunityBoard.ini";
+    private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "config/custom/DualboxCheck.ini";
+    private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "config/custom/MultilingualSupport.ini";
+    private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "config/custom/NpcStatMultipliers.ini";
+    private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "config/custom/PcCafe.ini";
+    private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "config/custom/AutoPotions.ini";
+    private static final String CUSTOM_DONATION_CONFIG_FILE = "config/custom/Donate.ini";
 
-    private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
-    private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
-    private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
-    private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
-    private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
-    private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
-    private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
-    private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
-    private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
+    private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "config/custom/PvpAnnounce.ini";
+    private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "config/custom/PvpRewardItem.ini";
+    private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "config/custom/PvpTitleColor.ini";
+    private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "config/custom/RandomSpawns.ini";
+    private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "config/custom/ScreenWelcomeMessage.ini";
+    private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "config/custom/SellBuffs.ini";
+    private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "config/custom/ShemeBuffer.ini";
+    private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "config/custom/StartingLocation.ini";
+    private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "config/custom/VoteReward.ini";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
     // --------------------------------------------------
@@ -293,33 +285,10 @@ public final class Config {
     public static int ZAKEN_SPAWN_INTERVAL;
     public static int ZAKEN_SPAWN_RANDOM;
 
-    // chatfilter
-    public static List<String> FILTER_LIST;
-
     // --------------------------------------------------
     // Custom Settings
     // --------------------------------------------------
-    public static boolean CHAMPION_ENABLE;
-    public static boolean CHAMPION_PASSIVE;
-    public static int CHAMPION_FREQUENCY;
-    public static String CHAMP_TITLE;
-    public static boolean SHOW_CHAMPION_AURA;
-    public static int CHAMP_MIN_LVL;
-    public static int CHAMP_MAX_LVL;
-    public static int CHAMPION_HP;
-    public static float CHAMPION_REWARDS_EXP_SP;
-    public static float CHAMPION_REWARDS_CHANCE;
-    public static float CHAMPION_REWARDS_AMOUNT;
-    public static float CHAMPION_ADENAS_REWARDS_CHANCE;
-    public static float CHAMPION_ADENAS_REWARDS_AMOUNT;
-    public static float CHAMPION_HP_REGEN;
-    public static float CHAMPION_ATK;
-    public static float CHAMPION_SPD_ATK;
-    public static int CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE;
-    public static int CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE;
-    public static int CHAMPION_REWARD_ID;
-    public static int CHAMPION_REWARD_QTY;
-    public static boolean CHAMPION_ENABLE_VITALITY;
+
     public static boolean CHAMPION_ENABLE_IN_INSTANCES;
     public static int BANKING_SYSTEM_GOLDBARS;
     public static int BANKING_SYSTEM_ADENA;
@@ -791,17 +760,6 @@ public final class Config {
         ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 168);
         ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 48);
 
-        try(var lines = Files.lines(FileUtil.resolvePath(CHAT_FILTER_FILE), StandardCharsets.UTF_8)) {
-            //@formatter:off
-            FILTER_LIST = lines.map(String::trim)
-                    .filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
-                    .collect(Collectors.toList());
-            //@formatter:on
-            LOGGER.info("Loaded {} Filter Words.", FILTER_LIST.size());
-        } catch (IOException e) {
-            LOGGER.warn("Error while loading chat filter words!", e);
-        }
-
         // Load Banking config file (if exists)
         final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
 
@@ -844,32 +802,6 @@ public final class Config {
         DEFENDER_MDEF_MULTIPLIER = BoostNpcStats.getDouble("DefenderMDef", 1.0);
         DEFENDER_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("DefenderAggroRange", 1.0);
         DEFENDER_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("DefenderClanHelpRange", 1.0);
-
-        // Load ChampionMonster config file (if exists)
-        final PropertiesParser ChampionMonster = new PropertiesParser(CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE);
-
-        CHAMPION_ENABLE = ChampionMonster.getBoolean("ChampionEnable", false);
-        CHAMPION_PASSIVE = ChampionMonster.getBoolean("ChampionPassive", false);
-        CHAMPION_FREQUENCY = ChampionMonster.getInt("ChampionFrequency", 0);
-        CHAMP_TITLE = ChampionMonster.getString("ChampionTitle", "Champion");
-        SHOW_CHAMPION_AURA = ChampionMonster.getBoolean("ChampionAura", true);
-        CHAMP_MIN_LVL = ChampionMonster.getInt("ChampionMinLevel", 20);
-        CHAMP_MAX_LVL = ChampionMonster.getInt("ChampionMaxLevel", 60);
-        CHAMPION_HP = ChampionMonster.getInt("ChampionHp", 7);
-        CHAMPION_HP_REGEN = ChampionMonster.getFloat("ChampionHpRegen", 1);
-        CHAMPION_REWARDS_EXP_SP = ChampionMonster.getFloat("ChampionRewardsExpSp", 8);
-        CHAMPION_REWARDS_CHANCE = ChampionMonster.getFloat("ChampionRewardsChance", 8);
-        CHAMPION_REWARDS_AMOUNT = ChampionMonster.getFloat("ChampionRewardsAmount", 1);
-        CHAMPION_ADENAS_REWARDS_CHANCE = ChampionMonster.getFloat("ChampionAdenasRewardsChance", 1);
-        CHAMPION_ADENAS_REWARDS_AMOUNT = ChampionMonster.getFloat("ChampionAdenasRewardsAmount", 1);
-        CHAMPION_ATK = ChampionMonster.getFloat("ChampionAtk", 1);
-        CHAMPION_SPD_ATK = ChampionMonster.getFloat("ChampionSpdAtk", 1);
-        CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardLowerLvlItemChance", 0);
-        CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardHigherLvlItemChance", 0);
-        CHAMPION_REWARD_ID = ChampionMonster.getInt("ChampionRewardItemID", 6393);
-        CHAMPION_REWARD_QTY = ChampionMonster.getInt("ChampionRewardItemQty", 1);
-        CHAMPION_ENABLE_VITALITY = ChampionMonster.getBoolean("ChampionEnableVitality", false);
-        CHAMPION_ENABLE_IN_INSTANCES = ChampionMonster.getBoolean("ChampionEnableInInstances", false);
 
 
         // Load CommunityBoard config file (if exists)
