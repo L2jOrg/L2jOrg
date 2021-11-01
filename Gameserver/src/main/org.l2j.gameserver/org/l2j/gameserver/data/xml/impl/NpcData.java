@@ -322,7 +322,7 @@ public class NpcData extends GameXmlReader {
                                     break;
                                 }
                                 case "corpsetime": {
-                                    set.set("corpseTime", parseInt(npcNode, Config.DEFAULT_CORPSE_TIME));
+                                    set.set("corpseTime", parseInt(npcNode, 7));
                                     break;
                                 }
                                 case "excrteffect": {

@@ -18,9 +18,7 @@
  */
 package org.l2j.commons.configuration;
 
-import io.github.joealisson.primitive.Containers;
-import io.github.joealisson.primitive.HashIntSet;
-import io.github.joealisson.primitive.IntSet;
+import io.github.joealisson.primitive.*;
 import org.l2j.commons.util.FileUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
@@ -220,5 +218,20 @@ public final class SettingsFile extends Properties {
 
     public Duration parseDuration(String key, String defaultValue) {
         return Duration.parse(getString(key, defaultValue));
+    }
+
+    public IntDoubleMap getPositionalValueMap(String key, String defaultValue) {
+        var value = getProperty(key);
+        if(isNullOrEmpty(value)) {
+            value = defaultValue;
+        }
+        var values = value.split(DEFAULT_DELIMITER);
+        IntDoubleMap map = new HashIntDoubleMap(values.length);
+        for (int i = 0; i < values.length; i++) {
+            if(Util.isFloat(values[i])) {
+                map.put(i, Double.parseDouble(values[i]));
+            }
+        }
+        return map;
     }
 }

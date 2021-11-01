@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.util.MathUtil;
 
 /**
@@ -88,7 +89,7 @@ public class RaidBoss extends Monster {
         final int spawnZ = spawn.getZ();
 
         if (!isInCombat() && !isMovementDisabled()) {
-            if (!MathUtil.isInsideRadius3D(this, spawnX, spawnY, spawnZ, Math.max(Config.MAX_DRIFT_RANGE, 200))) {
+            if (!MathUtil.isInsideRadius3D(this, spawnX, spawnY, spawnZ, Math.max(NpcSettings.maxDriftRange(), 200))) {
                 teleToLocation(spawnX, spawnY, spawnZ);
             }
         }

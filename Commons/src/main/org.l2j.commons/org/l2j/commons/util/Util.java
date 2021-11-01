@@ -163,7 +163,7 @@ public class Util {
         return isNumeric(value, false);
     }
 
-    public static boolean isNumeric(final String value, boolean includePoint) {
+    private static boolean isNumeric(final String value, boolean includePoint) {
         if(isNullOrEmpty(value)) {
             return false;
         }
