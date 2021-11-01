@@ -923,7 +923,7 @@ public class Attackable extends Npc {
      * @return {@code true} if the corpse is too old
      */
     public boolean isOldCorpse(Player attacker, int remainingTime, boolean sendMessage) {
-        if (isDead() && (DecayTaskManager.getInstance().getRemainingTime(this) < remainingTime)) {
+        if (isDead() && DecayTaskManager.getInstance().getRemainingTime(this) < remainingTime * 1000L) {
             if (sendMessage && (attacker != null)) {
                 attacker.sendPacket(SystemMessageId.THE_CORPSE_IS_TOO_OLD_THE_SKILL_CANNOT_BE_USED);
             }

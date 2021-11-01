@@ -29,6 +29,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.NpcSettings;
 
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isMonster;
@@ -47,15 +48,11 @@ public final class Spoil extends AbstractEffect {
     public boolean calcSuccess(Creature effector, Creature effected, Skill skill) {
         final int lvlDifference = (effected.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : effector.getLevel()));
         final double lvlModifier = Math.pow(1.3, lvlDifference);
-        float targetModifier = 1;
+        double targetModifier = 1;
 
-        if (isAttackable(effected) && !effected.isRaid() && !effected.isRaidMinion() && (effected.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (effector.getActingPlayer() != null) && ((effected.getLevel() - effector.getActingPlayer().getLevel()) >= 3)) {
+        if (isAttackable(effected) && !effected.isRaid() && !effected.isRaidMinion() && (effector.getActingPlayer() != null) && ((effected.getLevel() - effector.getActingPlayer().getLevel()) >= 3)) {
             final int lvlDiff = effected.getLevel() - effector.getActingPlayer().getLevel() - 2;
-            if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size()) {
-                targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
-            } else {
-                targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(lvlDiff);
-            }
+            targetModifier = NpcSettings.pveSkillChancePenaltyOf(lvlDiff);
         }
         return Rnd.get(100) < (100 - Math.round((float) (lvlModifier * targetModifier)));
     }

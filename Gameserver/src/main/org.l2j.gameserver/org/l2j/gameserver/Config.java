@@ -134,24 +134,7 @@ public final class Config {
     // --------------------------------------------------
     // NPC Settings
     // --------------------------------------------------
-    public static int MAX_DRIFT_RANGE;
     public static boolean SHOW_NPC_LVL;
-    public static boolean SHOW_CREST_WITHOUT_QUEST;
-    public static boolean ENABLE_RANDOM_ENCHANT_EFFECT;
-    public static int MIN_NPC_LVL_DMG_PENALTY;
-    public static Map<Integer, Float> NPC_DMG_PENALTY;
-    public static Map<Integer, Float> NPC_CRIT_DMG_PENALTY;
-    public static Map<Integer, Float> NPC_SKILL_DMG_PENALTY;
-    public static int MIN_NPC_LVL_MAGIC_PENALTY;
-    public static Map<Integer, Float> NPC_SKILL_CHANCE_PENALTY;
-    public static int DEFAULT_CORPSE_TIME;
-    public static int SPOILED_CORPSE_EXTEND_TIME;
-    public static int CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY;
-    public static boolean AGGRO_DISTANCE_CHECK_ENABLED;
-    public static int AGGRO_DISTANCE_CHECK_RANGE;
-    public static boolean AGGRO_DISTANCE_CHECK_RAIDS;
-    public static boolean AGGRO_DISTANCE_CHECK_INSTANCES;
-    public static boolean AGGRO_DISTANCE_CHECK_RESTORE_LIFE;
     public static boolean GUARD_ATTACK_AGGRO_MOB;
     public static double RAID_HP_REGEN_MULTIPLIER;
     public static double RAID_MP_REGEN_MULTIPLIER;
@@ -529,23 +512,6 @@ public final class Config {
         // Load NPC config file (if exists)
         final PropertiesParser NPC = new PropertiesParser(NPC_CONFIG_FILE);
 
-        SHOW_CREST_WITHOUT_QUEST = NPC.getBoolean("ShowCrestWithoutQuest", false);
-        ENABLE_RANDOM_ENCHANT_EFFECT = NPC.getBoolean("EnableRandomEnchantEffect", false);
-        MIN_NPC_LVL_DMG_PENALTY = NPC.getInt("MinNPCLevelForDmgPenalty", 78);
-        NPC_DMG_PENALTY = parseConfigLine(NPC.getString("DmgPenaltyForLvLDifferences", "0.7, 0.6, 0.6, 0.55"));
-        NPC_CRIT_DMG_PENALTY = parseConfigLine(NPC.getString("CritDmgPenaltyForLvLDifferences", "0.75, 0.65, 0.6, 0.58"));
-        NPC_SKILL_DMG_PENALTY = parseConfigLine(NPC.getString("SkillDmgPenaltyForLvLDifferences", "0.8, 0.7, 0.65, 0.62"));
-        MIN_NPC_LVL_MAGIC_PENALTY = NPC.getInt("MinNPCLevelForMagicPenalty", 78);
-        NPC_SKILL_CHANCE_PENALTY = parseConfigLine(NPC.getString("SkillChancePenaltyForLvLDifferences", "2.5, 3.0, 3.25, 3.5"));
-        DEFAULT_CORPSE_TIME = NPC.getInt("DefaultCorpseTime", 7);
-        SPOILED_CORPSE_EXTEND_TIME = NPC.getInt("SpoiledCorpseExtendTime", 10);
-        CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY = NPC.getInt("CorpseConsumeSkillAllowedTimeBeforeDecay", 2000);
-        MAX_DRIFT_RANGE = NPC.getInt("MaxDriftRange", 300);
-        AGGRO_DISTANCE_CHECK_ENABLED = NPC.getBoolean("AggroDistanceCheckEnabled", true);
-        AGGRO_DISTANCE_CHECK_RANGE = NPC.getInt("AggroDistanceCheckRange", 1500);
-        AGGRO_DISTANCE_CHECK_RAIDS = NPC.getBoolean("AggroDistanceCheckRaids", false);
-        AGGRO_DISTANCE_CHECK_INSTANCES = NPC.getBoolean("AggroDistanceCheckInstances", false);
-        AGGRO_DISTANCE_CHECK_RESTORE_LIFE = NPC.getBoolean("AggroDistanceCheckRestoreLife", true);
         GUARD_ATTACK_AGGRO_MOB = NPC.getBoolean("GuardAttackAggroMob", false);
         RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
         RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;
@@ -1111,19 +1077,5 @@ public final class Config {
         config.PUNISHMENT_LIMIT = properties.getInt("FloodProtector" + configString + "PunishmentLimit", 0);
         config.PUNISHMENT_TYPE = properties.getString("FloodProtector" + configString + "PunishmentType", "none");
         config.PUNISHMENT_TIME = properties.getInt("FloodProtector" + configString + "PunishmentTime", 0) * 60000L;
-    }
-
-    /**
-     * @param line the string line to parse
-     * @return a parsed float map
-     */
-    private static Map<Integer, Float> parseConfigLine(String line) {
-        final String[] propertySplit = line.split(",");
-        final Map<Integer, Float> ret = new HashMap<>(propertySplit.length);
-        int i = 0;
-        for (String value : propertySplit) {
-            ret.put(i++, Float.parseFloat(value));
-        }
-        return ret;
     }
 }

@@ -49,6 +49,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
@@ -554,18 +555,14 @@ public final class Formulas {
             mAccModifier = 90;
         }
 
-        float targetModifier = 1;
-        if (isAttackable(target) && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3)) {
-            final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
-            if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size()) {
-                targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
-            } else {
-                targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(lvlDiff);
-            }
+        double chanceModifier = 1;
+        if (isAttackable(target) && !target.isRaid() && !target.isRaidMinion()  && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3)) {
+            final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
+            chanceModifier = NpcSettings.pveSkillChancePenaltyOf(levelDiff);
         }
         // general magic resist
         final double resModifier = target.getStats().getValue(Stat.MAGIC_SUCCESS_RES, 1);
-        final int rate = 100 - Math.round((float) (mAccModifier * targetModifier * resModifier));
+        final int rate = 100 - Math.round((float) (mAccModifier * chanceModifier * resModifier));
 
         return (Rnd.get(100) < rate);
     }
@@ -1032,17 +1029,10 @@ public final class Formulas {
     }
 
     public static double calcPveDamagePenalty(Creature attacker, Creature target, Skill skill, boolean crit) {
-        if (isAttackable(target) && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) > 1)) {
-            final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
-            if (skill != null) {
-                return Config.NPC_SKILL_DMG_PENALTY.get(Math.min(lvlDiff, Config.NPC_SKILL_DMG_PENALTY.size() - 1));
-            } else if (crit) {
-                return Config.NPC_CRIT_DMG_PENALTY.get(Math.min(lvlDiff, Config.NPC_CRIT_DMG_PENALTY.size() - 1));
-            }
-
-            return Config.NPC_DMG_PENALTY.get(Math.min(lvlDiff, Config.NPC_DMG_PENALTY.size() - 1));
+        if (isAttackable(target) && attacker.getActingPlayer() != null && target.getLevel() - attacker.getActingPlayer().getLevel() > 1) {
+            final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+            return NpcSettings.pveDamagePenaltyOf(levelDiff);
         }
-
         return 1.0;
     }
 

@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.NpcSettings;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -64,7 +65,7 @@ public class ConditionPlayerCanSweep extends Condition {
                             if (target.isSpoiled()) {
                                 canSweep.set(target.checkSpoilOwner(sweeper, true));
                                 if (canSweep.get()) {
-                                    canSweep.set(!target.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true));
+                                    canSweep.set(!target.isOldCorpse(sweeper, NpcSettings.corpseConsumeAllowedTimeBeforeDecay(), true));
                                 }
                                 if (canSweep.get()) {
                                     canSweep.set(sweeper.getInventory().checkInventorySlotsAndWeight(target.getSpoilLootItems(), true, true));

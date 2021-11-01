@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.w3c.dom.Node;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -63,7 +64,7 @@ public class OpSweeperSkillCondition implements SkillCondition {
 								canSweep.set(a.checkSpoilOwner(sweeper, true));
 								if (canSweep.get())
 								{
-									canSweep.set(!a.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true));
+									canSweep.set(!a.isOldCorpse(sweeper, NpcSettings.corpseConsumeAllowedTimeBeforeDecay(), true));
 								}
 								if (canSweep.get())
 								{

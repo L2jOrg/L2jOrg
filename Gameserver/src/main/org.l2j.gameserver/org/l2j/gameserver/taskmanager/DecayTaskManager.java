@@ -23,6 +23,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.settings.NpcSettings;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -68,15 +69,14 @@ public final class DecayTaskManager {
         if (character.getTemplate() instanceof NpcTemplate) {
             delay = ((NpcTemplate) character.getTemplate()).getCorpseTime();
         } else {
-            delay = Config.DEFAULT_CORPSE_TIME;
+            delay = 7;
         }
 
         if (character instanceof Attackable attackable && attackable.isSpoiled()) {
-            delay += Config.SPOILED_CORPSE_EXTEND_TIME;
+            delay += NpcSettings.spoiledCorpseExtendTime();
         }
 
-		// Add to decay schedules.
-		DECAY_SCHEDULES.put(character, System.currentTimeMillis() + (delay * 1000));
+		DECAY_SCHEDULES.put(character, System.currentTimeMillis() + delay * 1000);
     }
 
     /**

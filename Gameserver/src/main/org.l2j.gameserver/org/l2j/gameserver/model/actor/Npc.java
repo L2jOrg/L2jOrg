@@ -100,7 +100,7 @@ public class Npc extends Creature {
     private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
 
     private final boolean _isQuestMonster = getTemplate().isQuestMonster();
-    private final int currentEnchant;
+
     /**
      * The Spawn object that manage this Folk
      */
@@ -174,7 +174,6 @@ public class Npc extends Creature {
         // initialize the "current" equipment
         _currentLHandId = getTemplate().getLHandId();
         _currentRHandId = getTemplate().getRHandId();
-        currentEnchant = Config.ENABLE_RANDOM_ENCHANT_EFFECT ? Rnd.get(4, 21) : getTemplate().getWeaponEnchant();
 
         // initialize the "current" collisions
         _currentCollisionHeight = getTemplate().getfCollisionHeight();
@@ -369,7 +368,7 @@ public class Npc extends Creature {
     }
 
     public int getEnchantEffect() {
-        return currentEnchant;
+        return getTemplate().getWeaponEnchant();
     }
 
     /**
@@ -731,8 +730,11 @@ public class Npc extends Creature {
             WalkingManager.getInstance().onSpawn(this);
         }
 
-        if (isInsideZone(ZoneType.TAX) && (getCastle() != null) && (Config.SHOW_CREST_WITHOUT_QUEST || getCastle().isShowNpcCrest()) && (getCastle().getOwnerId() != 0)) {
-            setClanId(getCastle().getOwnerId());
+        if(isInsideZone(ZoneType.TAX)) {
+            var castle = getCastle();
+            if(castle.isShowNpcCrest() && castle.getOwnerId() != 0) {
+                setClanId(castle.getOwnerId());
+            }
         }
     }
 

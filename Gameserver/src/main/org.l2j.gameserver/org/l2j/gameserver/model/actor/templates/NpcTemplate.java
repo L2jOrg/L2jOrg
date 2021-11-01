@@ -153,7 +153,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _canMove = set.getBoolean("canMove", true);
         _canBeCrt = set.getBoolean("exCrtEffect", true);
 
-        _corpseTime = set.getInt("corpseTime", Config.DEFAULT_CORPSE_TIME);
+        _corpseTime = set.getInt("corpseTime", 7);
 
         _aiType = set.getEnum("aiType", AIType.class, AIType.FIGHTER);
         _aggroRange = set.getInt("aggroRange", 0);
