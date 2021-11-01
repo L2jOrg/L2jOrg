@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.ArrayIntList;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.engine.item.ItemEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
@@ -123,162 +122,41 @@ public class NpcData extends GameXmlReader {
                         for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling()) {
                             attrs = npcNode.getAttributes();
                             switch (npcNode.getNodeName().toLowerCase()) {
-                                case "parameters": {
+                                case "parameters" -> {
                                     if (parameters == null) {
                                         parameters = new HashMap<>();
                                     }
                                     parameters.putAll(parseParameters(npcNode));
-                                    break;
                                 }
-                                case "race":
-                                case "sex": {
-                                    set.set(npcNode.getNodeName(), npcNode.getTextContent().toUpperCase());
-                                    break;
-                                }
-                                case "equipment": {
+                                case "race", "sex" -> set.set(npcNode.getNodeName(), npcNode.getTextContent().toUpperCase());
+                                case "equipment" -> {
                                     set.set("chestId", parseInt(attrs, "chest"));
                                     set.set("rhandId", parseInt(attrs, "rhand"));
                                     set.set("lhandId", parseInt(attrs, "lhand"));
                                     set.set("weaponEnchant", parseInt(attrs, "weaponEnchant"));
-                                    break;
                                 }
-                                case "acquire": {
+                                case "acquire" -> {
                                     set.set("exp", parseDouble(attrs, "exp"));
                                     set.set("attribute_exp", parseLong(attrs, "attribute_exp"));
                                     set.set("sp", parseDouble(attrs, "sp"));
                                     set.set("raidPoints", parseDouble(attrs, "raidPoints"));
-                                    break;
                                 }
-                                case "mpreward": {
+                                case "mpreward" -> {
                                     set.set("mpRewardValue", parseInt(attrs, "value"));
                                     set.set("mpRewardType", parseEnum(attrs, MpRewardType.class, "type", MpRewardType.DIFF));
                                     set.set("mpRewardTicks", parseInt(attrs, "ticks"));
                                     set.set("mpRewardAffectType", parseEnum(attrs, MpRewardAffectType.class, "affects", MpRewardAffectType.SOLO));
-                                    break;
                                 }
-                                case "stats": {
+                                case "stats" -> {
                                     set.set("baseSTR", parseInt(attrs, "str"));
                                     set.set("baseINT", parseInt(attrs, "int"));
                                     set.set("baseDEX", parseInt(attrs, "dex"));
                                     set.set("baseWIT", parseInt(attrs, "wit"));
                                     set.set("baseCON", parseInt(attrs, "con"));
                                     set.set("baseMEN", parseInt(attrs, "men"));
-                                    for (Node statsNode = npcNode.getFirstChild(); statsNode != null; statsNode = statsNode.getNextSibling()) {
-                                        attrs = statsNode.getAttributes();
-                                        switch (statsNode.getNodeName().toLowerCase()) {
-                                            case "vitals": {
-                                                set.set("baseHpMax", parseDouble(attrs, "hp"));
-                                                set.set("baseHpReg", parseDouble(attrs, "hpRegen"));
-                                                set.set("baseMpMax", parseDouble(attrs, "mp"));
-                                                set.set("baseMpReg", parseDouble(attrs, "mpRegen"));
-                                                break;
-                                            }
-                                            case "attack": {
-                                                set.set("basePAtk", parseDouble(attrs, "physical"));
-                                                set.set("baseMAtk", parseDouble(attrs, "magical"));
-                                                set.set("baseRndDam", parseInt(attrs, "random"));
-                                                set.set("baseCritRate", parseDouble(attrs, "critical"));
-                                                set.set("accuracy", parseFloat(attrs, "accuracy")); // TODO: Implement me
-                                                set.set("basePAtkSpd", parseFloat(attrs, "attackSpeed", 300F));
-                                                set.set("reuseDelay", parseInt(attrs, "reuseDelay")); // TODO: Implement me
-                                                set.set("baseAtkType", parseString(attrs, "type"));
-                                                set.set("baseAtkRange", parseInt(attrs, "range"));
-                                                set.set("distance", parseInt(attrs, "distance")); // TODO: Implement me
-                                                set.set("width", parseInt(attrs, "width")); // TODO: Implement me
-                                                break;
-                                            }
-                                            case "defence": {
-                                                set.set("basePDef", parseDouble(attrs, "physical"));
-                                                set.set("baseMDef", parseDouble(attrs, "magical"));
-                                                set.set("evasion", parseInt(attrs, "evasion")); // TODO: Implement me
-                                                set.set("baseShldDef", parseInt(attrs, "shield"));
-                                                set.set("baseShldRate", parseInt(attrs, "shieldRate"));
-                                                break;
-                                            }
-                                            case "abnormalresist": {
-                                                set.set("physicalAbnormalResist", parseDouble(attrs, "physical", 10));
-                                                set.set("magicAbnormalResist", parseDouble(attrs, "magic", 10));
-                                                break;
-                                            }
-                                            case "attribute": {
-                                                for (Node attribute_node = statsNode.getFirstChild(); attribute_node != null; attribute_node = attribute_node.getNextSibling()) {
-                                                    attrs = attribute_node.getAttributes();
-                                                    switch (attribute_node.getNodeName().toLowerCase()) {
-                                                        case "attack": {
-                                                            final String attackAttributeType = parseString(attrs, "type");
-                                                            switch (attackAttributeType.toUpperCase()) {
-                                                                case "FIRE": {
-                                                                    set.set("baseFire", parseInt(attrs, "value"));
-                                                                    break;
-                                                                }
-                                                                case "WATER": {
-                                                                    set.set("baseWater", parseInt(attrs, "value"));
-                                                                    break;
-                                                                }
-                                                                case "WIND": {
-                                                                    set.set("baseWind", parseInt(attrs, "value"));
-                                                                    break;
-                                                                }
-                                                                case "EARTH": {
-                                                                    set.set("baseEarth", parseInt(attrs, "value"));
-                                                                    break;
-                                                                }
-                                                                case "DARK": {
-                                                                    set.set("baseDark", parseInt(attrs, "value"));
-                                                                    break;
-                                                                }
-                                                                case "HOLY": {
-                                                                    set.set("baseHoly", parseInt(attrs, "value"));
-                                                                    break;
-                                                                }
-                                                            }
-                                                            break;
-                                                        }
-                                                        case "defence": {
-                                                            set.set("baseFireRes", parseInt(attrs, "fire"));
-                                                            set.set("baseWaterRes", parseInt(attrs, "water"));
-                                                            set.set("baseWindRes", parseInt(attrs, "wind"));
-                                                            set.set("baseEarthRes", parseInt(attrs, "earth"));
-                                                            set.set("baseHolyRes", parseInt(attrs, "holy"));
-                                                            set.set("baseDarkRes", parseInt(attrs, "dark"));
-                                                            set.set("baseElementRes", parseInt(attrs, "default"));
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                                break;
-                                            }
-                                            case "speed": {
-                                                for (Node speedNode = statsNode.getFirstChild(); speedNode != null; speedNode = speedNode.getNextSibling()) {
-                                                    attrs = speedNode.getAttributes();
-                                                    switch (speedNode.getNodeName().toLowerCase()) {
-                                                        case "walk": {
-                                                            final var ground = parseDouble(attrs, "ground", 50);
-                                                            set.set("baseWalkSpd", ground);
-                                                            set.set("baseSwimWalkSpd", parseDouble(attrs, "swim", ground));
-                                                            set.set("baseFlyWalkSpd", parseDouble(attrs, "fly", ground));
-                                                            break;
-                                                        }
-                                                        case "run": {
-                                                            final var ground = parseDouble(attrs, "ground", 120);
-                                                            set.set("baseRunSpd", ground);
-                                                            set.set("baseSwimRunSpd", parseDouble(attrs, "swim", ground));
-                                                            set.set("baseFlyRunSpd", parseDouble(attrs, "fly", ground));
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                                break;
-                                            }
-                                            case "hittime": {
-                                                set.set("hitTime", parseInt(npcNode, 100));
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    break;
+                                    parseStats(set, npcNode);
                                 }
-                                case "status": {
+                                case "status" -> {
                                     set.set("unique", (Boolean) computeIfNonNull(attrs.getNamedItem("unique"), this::parseBoolean));
                                     set.set("attackable", parseBoolean(attrs, "attackable", true));
                                     set.set("targetable", parseBoolean(attrs, "targetable", true));
@@ -295,9 +173,8 @@ public class NpcData extends GameXmlReader {
                                     set.set("hasSummoner", parseBoolean(attrs, "hasSummoner"));
                                     set.set("canBeSown", parseBoolean(attrs, "canBeSown"));
                                     set.set("isDeathPenalty", parseBoolean(attrs, "isDeathPenalty"));
-                                    break;
                                 }
-                                case "skilllist": {
+                                case "skilllist" -> {
                                     skills = new HashMap<>();
                                     for (Node skillListNode = npcNode.getFirstChild(); skillListNode != null; skillListNode = skillListNode.getNextSibling()) {
                                         if ("skill".equalsIgnoreCase(skillListNode.getNodeName())) {
@@ -312,28 +189,17 @@ public class NpcData extends GameXmlReader {
                                             }
                                         }
                                     }
-                                    break;
                                 }
-                                case "shots": {
+                                case "shots" -> {
                                     set.set("soulShot", parseInt(attrs, "soul"));
                                     set.set("spiritShot", parseInt(attrs, "spirit"));
                                     set.set("shotShotChance", parseInt(attrs, "shotChance"));
                                     set.set("spiritShotChance", parseInt(attrs, "spiritChance"));
-                                    break;
                                 }
-                                case "corpsetime": {
-                                    set.set("corpseTime", parseInt(npcNode, 7));
-                                    break;
-                                }
-                                case "excrteffect": {
-                                    set.set("exCrtEffect", parseBoolean(npcNode, true));
-                                    break;
-                                }
-                                case "snpcprophprate": {
-                                    set.set("sNpcPropHpRate", npcNode.getTextContent()); // TODO: Implement me default 1 type double
-                                    break;
-                                }
-                                case "ai": {
+                                case "corpsetime" -> set.set("corpseTime", parseInt(npcNode, 7));
+                                case "excrteffect" -> set.set("exCrtEffect", parseBoolean(npcNode, true));
+                                case "snpcprophprate" -> set.set("sNpcPropHpRate", npcNode.getTextContent()); // TODO: Implement me default 1 type double
+                                case "ai" -> {
                                     set.set("aiType", parseString(attrs, "type", null));
                                     set.set("aggroRange", parseInt(attrs, "aggroRange"));
                                     set.set("clanHelpRange", parseInt(attrs, "clanHelpRange"));
@@ -343,7 +209,7 @@ public class NpcData extends GameXmlReader {
                                     for (Node aiNode = npcNode.getFirstChild(); aiNode != null; aiNode = aiNode.getNextSibling()) {
                                         attrs = aiNode.getAttributes();
                                         switch (aiNode.getNodeName().toLowerCase()) {
-                                            case "skill": {
+                                            case "skill" -> {
                                                 set.set("minSkillChance", parseInt(attrs, "minChance", 7));
                                                 set.set("maxSkillChance", parseInt(attrs, "maxChance", 15));
                                                 set.set("primarySkillId", parseInt(attrs, "primaryId"));
@@ -351,40 +217,36 @@ public class NpcData extends GameXmlReader {
                                                 set.set("shortRangeSkillChance", parseInt(attrs, "shortRangeChance"));
                                                 set.set("longRangeSkillId", parseInt(attrs, "longRangeId"));
                                                 set.set("longRangeSkillChance", parseInt(attrs, "longRangeChance"));
-                                                break;
                                             }
-                                            case "clanlist": {
+                                            case "clanlist" -> {
                                                 for (Node clanListNode = aiNode.getFirstChild(); clanListNode != null; clanListNode = clanListNode.getNextSibling()) {
                                                     switch (clanListNode.getNodeName().toLowerCase()) {
-                                                        case "clan": {
+                                                        case "clan" -> {
                                                             if (clans == null) {
                                                                 clans = new HashSet<>(1);
                                                             }
                                                             clans.add(getOrCreateClanId(clanListNode.getTextContent()));
-                                                            break;
                                                         }
-                                                        case "ignorenpcid": {
+                                                        case "ignorenpcid" -> {
                                                             if (ignoreClanNpcIds == null) {
                                                                 ignoreClanNpcIds = new HashSet<>(1);
                                                             }
                                                             ignoreClanNpcIds.add(Integer.parseInt(clanListNode.getTextContent()));
-                                                            break;
                                                         }
                                                     }
                                                 }
-                                                break;
                                             }
                                         }
                                     }
-                                    break;
                                 }
-                                case "droplists": {
+                                case "droplists" -> {
                                     for (Node drop_lists_node = npcNode.getFirstChild(); drop_lists_node != null; drop_lists_node = drop_lists_node.getNextSibling()) {
                                         DropType dropType = null;
 
                                         try {
                                             dropType = Enum.valueOf(DropType.class, drop_lists_node.getNodeName().toUpperCase());
                                         } catch (Exception e) {
+                                            LOGGER.warn(e.getMessage(), e);
                                         }
 
                                         if (dropType != null) {
@@ -406,34 +268,26 @@ public class NpcData extends GameXmlReader {
                                             }
                                         }
                                     }
-                                    break;
                                 }
-                                case "extenddrop": {
+                                case "extenddrop" -> {
                                     final IntList extendDrop = new ArrayIntList();
-                                    forEach(npcNode, "id", idNode ->
-                                    {
-                                        extendDrop.add(Integer.parseInt(idNode.getTextContent()));
-                                    });
+                                    forEach(npcNode, "id", idNode -> extendDrop.add(Integer.parseInt(idNode.getTextContent())));
                                     set.set("extendDrop", extendDrop);
-                                    break;
                                 }
-                                case "collision": {
+                                case "collision" -> {
                                     for (Node collisionNode = npcNode.getFirstChild(); collisionNode != null; collisionNode = collisionNode.getNextSibling()) {
                                         attrs = collisionNode.getAttributes();
                                         switch (collisionNode.getNodeName().toLowerCase()) {
-                                            case "radius": {
+                                            case "radius" -> {
                                                 set.set("collision_radius", parseDouble(attrs, "normal"));
                                                 set.set("collisionRadiusGrown", parseDouble(attrs, "grown"));
-                                                break;
                                             }
-                                            case "height": {
+                                            case "height" -> {
                                                 set.set("collision_height", parseDouble(attrs, "normal"));
                                                 set.set("collisionHeightGrown", parseDouble(attrs, "grown"));
-                                                break;
                                             }
                                         }
                                     }
-                                    break;
                                 }
                             }
                         }
@@ -521,16 +375,8 @@ public class NpcData extends GameXmlReader {
                         if (dropLists != null) {
                             for (DropHolder dropHolder : dropLists) {
                                 switch (dropHolder.getDropType()) {
-                                    case DROP:
-                                    case LUCKY: // TODO: Luck is added to death drops.
-                                    {
-                                        template.addDrop(dropHolder);
-                                        break;
-                                    }
-                                    case SPOIL: {
-                                        template.addSpoil(dropHolder);
-                                        break;
-                                    }
+                                    case DROP, LUCKY -> template.addDrop(dropHolder); // TODO: Luck is added to death drops.
+                                    case SPOIL -> template.addSpoil(dropHolder);
                                 }
                             }
                         }
@@ -542,6 +388,92 @@ public class NpcData extends GameXmlReader {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    private void parseStats(StatsSet set, Node npcNode) {
+        NamedNodeMap attrs;
+        for (Node statsNode = npcNode.getFirstChild(); statsNode != null; statsNode = statsNode.getNextSibling()) {
+            attrs = statsNode.getAttributes();
+            switch (statsNode.getNodeName().toLowerCase()) {
+                case "vitals" -> {
+                    set.set("baseHpMax", parseDouble(attrs, "hp"));
+                    set.set("baseHpReg", parseDouble(attrs, "hpRegen"));
+                    set.set("baseMpMax", parseDouble(attrs, "mp"));
+                    set.set("baseMpReg", parseDouble(attrs, "mpRegen"));
+                }
+                case "attack" -> {
+                    set.set("basePAtk", parseDouble(attrs, "physical"));
+                    set.set("baseMAtk", parseDouble(attrs, "magical"));
+                    set.set("baseRndDam", parseInt(attrs, "random"));
+                    set.set("baseCritRate", parseDouble(attrs, "critical"));
+                    set.set("accuracy", parseFloat(attrs, "accuracy")); // TODO: Implement me
+                    set.set("basePAtkSpd", parseFloat(attrs, "attackSpeed", 300F));
+                    set.set("reuseDelay", parseInt(attrs, "reuseDelay")); // TODO: Implement me
+                    set.set("baseAtkType", parseString(attrs, "type"));
+                    set.set("baseAtkRange", parseInt(attrs, "range"));
+                    set.set("distance", parseInt(attrs, "distance")); // TODO: Implement me
+                    set.set("width", parseInt(attrs, "width")); // TODO: Implement me
+                }
+                case "defence" -> {
+                    set.set("basePDef", parseDouble(attrs, "physical"));
+                    set.set("baseMDef", parseDouble(attrs, "magical"));
+                    set.set("evasion", parseInt(attrs, "evasion")); // TODO: Implement me
+                    set.set("baseShldDef", parseInt(attrs, "shield"));
+                    set.set("baseShldRate", parseInt(attrs, "shieldRate"));
+                }
+                case "abnormalresist" -> {
+                    set.set("physicalAbnormalResist", parseDouble(attrs, "physical", 10));
+                    set.set("magicAbnormalResist", parseDouble(attrs, "magic", 10));
+                }
+                case "attribute" -> {
+                    for (Node attribute_node = statsNode.getFirstChild(); attribute_node != null; attribute_node = attribute_node.getNextSibling()) {
+                        attrs = attribute_node.getAttributes();
+                        switch (attribute_node.getNodeName().toLowerCase()) {
+                            case "attack" -> {
+                                final String attackAttributeType = parseString(attrs, "type");
+                                switch (attackAttributeType.toUpperCase()) {
+                                    case "FIRE" -> set.set("baseFire", parseInt(attrs, "value"));
+                                    case "WATER" -> set.set("baseWater", parseInt(attrs, "value"));
+                                    case "WIND" -> set.set("baseWind", parseInt(attrs, "value"));
+                                    case "EARTH" -> set.set("baseEarth", parseInt(attrs, "value"));
+                                    case "DARK" -> set.set("baseDark", parseInt(attrs, "value"));
+                                    case "HOLY" -> set.set("baseHoly", parseInt(attrs, "value"));
+                                }
+                            }
+                            case "defence" -> {
+                                set.set("baseFireRes", parseInt(attrs, "fire"));
+                                set.set("baseWaterRes", parseInt(attrs, "water"));
+                                set.set("baseWindRes", parseInt(attrs, "wind"));
+                                set.set("baseEarthRes", parseInt(attrs, "earth"));
+                                set.set("baseHolyRes", parseInt(attrs, "holy"));
+                                set.set("baseDarkRes", parseInt(attrs, "dark"));
+                                set.set("baseElementRes", parseInt(attrs, "default"));
+                            }
+                        }
+                    }
+                }
+                case "speed" -> {
+                    for (Node speedNode = statsNode.getFirstChild(); speedNode != null; speedNode = speedNode.getNextSibling()) {
+                        attrs = speedNode.getAttributes();
+                        switch (speedNode.getNodeName().toLowerCase()) {
+                            case "walk" -> {
+                                final var ground = parseDouble(attrs, "ground", 50);
+                                set.set("baseWalkSpd", ground);
+                                set.set("baseSwimWalkSpd", parseDouble(attrs, "swim", ground));
+                                set.set("baseFlyWalkSpd", parseDouble(attrs, "fly", ground));
+                            }
+                            case "run" -> {
+                                final var ground = parseDouble(attrs, "ground", 120);
+                                set.set("baseRunSpd", ground);
+                                set.set("baseSwimRunSpd", parseDouble(attrs, "swim", ground));
+                                set.set("baseFlyRunSpd", parseDouble(attrs, "fly", ground));
+                            }
+                        }
+                    }
+                }
+                case "hittime" -> set.set("hitTime", parseInt(npcNode, 100));
             }
         }
     }
@@ -615,7 +547,6 @@ public class NpcData extends GameXmlReader {
     /**
      * Gets all templates matching the filter.
      *
-     * @param filter
      * @return the template list for the given filter
      */
     public List<NpcTemplate> getTemplates(Predicate<NpcTemplate> filter) {
@@ -627,23 +558,17 @@ public class NpcData extends GameXmlReader {
     }
 
     /**
-     * Gets the all of level.
+     * Gets the all the level.
      *
-     * @param lvls of all the templates to get.
+     * @param levels of all the templates to get.
      * @return the template list for the given level.
      */
-    public List<NpcTemplate> getAllOfLevel(int... lvls) {
-        return getTemplates(template -> contains(lvls, template.getLevel()));
+    public List<NpcTemplate> getAllOfLevel(int... levels) {
+        return getTemplates(template -> contains(levels, template.getLevel()));
     }
 
-    /**
-     * Gets the all monsters of level.
-     *
-     * @param lvls of all the monster templates to get.
-     * @return the template list for the given level.
-     */
-    public List<NpcTemplate> getAllMonstersOfLevel(int... lvls) {
-        return getTemplates(template -> contains(lvls, template.getLevel()) && template.isType("Monster"));
+    public List<NpcTemplate> getAllMonstersOfLevel(int... levels) {
+        return getTemplates(template -> contains(levels, template.getLevel()) && template.isType("Monster"));
     }
 
     /**
