@@ -117,7 +117,7 @@ public final class PhysicalSoulAttack extends AbstractEffect {
             final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTrait(), true);
             final double weaknessMod = Formulas.calcWeaknessBonus(effector, effected, skill.getTrait());
             final double attributeMod = Formulas.calcAttributeBonus(effector, effected, skill);
-            final double pvpPveMod = Formulas.calculatePvpPveBonus(effector, effected, skill, true);
+            final double pvpPveMod = Formulas.calculatePvpPveBonus(effector, effected, skill);
             final double randomMod = effector.getRandomDamageMultiplier();
 
             // Skill specific mods.

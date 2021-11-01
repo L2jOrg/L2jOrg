@@ -115,7 +115,7 @@ public final class EnergyAttack extends AbstractEffect {
 			final double generalTraitMod = Formulas.calcGeneralTraitBonus(attacker, effected, skill.getTrait(), true);
 			final double weaknessMod = Formulas.calcWeaknessBonus(attacker, effected, skill.getTrait());
 			final double attributeMod = Formulas.calcAttributeBonus(attacker, effected, skill);
-			final double pvpPveMod = Formulas.calculatePvpPveBonus(attacker, effected, skill, true);
+			final double pvpPveMod = Formulas.calculatePvpPveBonus(attacker, effected, skill);
 			
 			// Skill specific mods.
 			final double energyChargesBoost = 1 + (charge * 0.1); // 10% bonus damage for each charge used.

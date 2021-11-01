@@ -28,7 +28,6 @@ import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -478,12 +477,10 @@ public class AttackableAI extends CreatureAI {
         }
 
         if (_attackTimeout < WorldTimeController.getInstance().getGameTicks()) {
-            // Set the AI Intention to AI_INTENTION_ACTIVE
             setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 
             npc.setWalking();
 
-            // Monster teleport to spawn
             if (isMonster(npc) && (npc.getSpawn() != null) && !npc.isInInstance() && (npc.isInCombat() || !World.getInstance().hasVisiblePlayer(npc))) {
                 npc.teleToLocation(npc.getSpawn(), false);
             }

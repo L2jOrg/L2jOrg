@@ -34,8 +34,6 @@ import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.settings.ChampionSettings;
-import org.l2j.gameserver.util.GameUtils;
-import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.CastleZone;

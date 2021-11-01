@@ -20,7 +20,6 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -88,10 +87,8 @@ public class RaidBoss extends Monster {
         final int spawnY = spawn.getY();
         final int spawnZ = spawn.getZ();
 
-        if (!isInCombat() && !isMovementDisabled()) {
-            if (!MathUtil.isInsideRadius3D(this, spawnX, spawnY, spawnZ, Math.max(NpcSettings.maxDriftRange(), 200))) {
-                teleToLocation(spawnX, spawnY, spawnZ);
-            }
+        if (!isInCombat() && !isMovementDisabled() && !MathUtil.isInsideRadius3D(this, spawnX, spawnY, spawnZ, Math.max(NpcSettings.maxDriftRange(), 200))) {
+            teleToLocation(spawnX, spawnY, spawnZ);
         }
     }
 
