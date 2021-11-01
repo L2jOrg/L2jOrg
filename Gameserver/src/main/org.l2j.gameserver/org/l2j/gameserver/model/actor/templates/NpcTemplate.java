@@ -193,7 +193,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.MONSTER_PDEF_MULTIPLIER);
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.MONSTER_MDEF_MULTIPLIER);
                     _aggroRange *= Config.MONSTER_AGRRO_RANGE_MULTIPLIER;
-                    _clanHelpRange *= Config.MONSTER_CLAN_HELP_RANGE_MULTIPLIER;
+                    _clanHelpRange = (int)  (_clanHelpRange * Config.MONSTER_CLAN_HELP_RANGE_MULTIPLIER);
                 }
                 case "RaidBoss", "GrandBoss" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.RAIDBOSS_HP_MULTIPLIER);
@@ -203,7 +203,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.RAIDBOSS_PDEF_MULTIPLIER);
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.RAIDBOSS_MDEF_MULTIPLIER);
                     _aggroRange *= Config.RAIDBOSS_AGRRO_RANGE_MULTIPLIER;
-                    _clanHelpRange *= Config.RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
+                    _clanHelpRange = (int) (_clanHelpRange * Config.RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER);
                 }
                 case "Guard" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.GUARD_HP_MULTIPLIER);
@@ -213,7 +213,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.GUARD_PDEF_MULTIPLIER);
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.GUARD_MDEF_MULTIPLIER);
                     _aggroRange *= Config.GUARD_AGRRO_RANGE_MULTIPLIER;
-                    _clanHelpRange *= Config.GUARD_CLAN_HELP_RANGE_MULTIPLIER;
+                    _clanHelpRange = (int) (_clanHelpRange * Config.GUARD_CLAN_HELP_RANGE_MULTIPLIER);
                 }
                 case "Defender" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.DEFENDER_HP_MULTIPLIER);
@@ -223,7 +223,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.DEFENDER_PDEF_MULTIPLIER);
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.DEFENDER_MDEF_MULTIPLIER);
                     _aggroRange *= Config.DEFENDER_AGRRO_RANGE_MULTIPLIER;
-                    _clanHelpRange *= Config.DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
+                    _clanHelpRange = (int) (_clanHelpRange * Config.DEFENDER_CLAN_HELP_RANGE_MULTIPLIER);
                 }
             }
         }
@@ -539,10 +539,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
             }
         }
 
-        if (victim.isChampion()) {
-            if(ChampionSettings.canDropItem(killer.getLevel(), victim.getLevel())) {
-                itemsToDrop.add(ChampionSettings.dropItem());
-            }
+        if (victim.isChampion() && ChampionSettings.canDropItem(killer.getLevel(), victim.getLevel())) {
+            itemsToDrop.add(ChampionSettings.dropItem());
         }
     }
 

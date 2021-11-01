@@ -106,7 +106,7 @@ public final class Formulas {
         final var weaknessMod = calcWeaknessBonus(attacker, target, skill.getTrait());
         final var attributeMod = calcAttributeBonus(attacker, target, skill);
         final var randomMod = attacker.getRandomDamageMultiplier();
-        final var pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
+        final var pvpPveMod = calculatePvpPveBonus(attacker, target, skill);
 
         // Initial damage
         final var ssmod = attacker.chargedShotBonus(ShotType.SOULSHOTS); // + 0.04 for dual weapon?
@@ -131,7 +131,7 @@ public final class Formulas {
         final double weaknessMod = calcWeaknessBonus(attacker, target, skill.getTrait());
         final double attributeMod = calcAttributeBonus(attacker, target, skill);
         final double randomMod = attacker.getRandomDamageMultiplier();
-        final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
+        final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill);
 
         // MDAM Formula.
         double damage = ( (77 *  attacker.getStats().getValue(Stat.MAGICAL_SKILL_POWER, power)  * Math.sqrt(mAtk) ) / mDef) * shotsBonus;
@@ -584,7 +584,7 @@ public final class Formulas {
 
         double damage = (Math.sqrt(mAtk) * power * (mp / 97)) / mDef;
         damage *= calcGeneralTraitBonus(attacker, target, skill.getTrait(), false);
-        damage *= calculatePvpPveBonus(attacker, target, skill, mcrit);
+        damage *= calculatePvpPveBonus(attacker, target, skill);
 
         // Failure calculation
         if (CharacterSettings.magicFailureAllowed() && !calcMagicSuccess(attacker, target)) {
@@ -1013,7 +1013,7 @@ public final class Formulas {
         double damage = attack / defence;
         damage *= calcAttackTraitBonus(attacker, target);
         damage *= calcAttributeBonus(attacker, target, null);
-        damage *= calculatePvpPveBonus(attacker, target, null, crit);
+        damage *= calculatePvpPveBonus(attacker, target, null);
 
         damage = max(0, damage);
 
@@ -1028,7 +1028,7 @@ public final class Formulas {
         };
     }
 
-    public static double calcPveDamagePenalty(Creature attacker, Creature target, Skill skill, boolean crit) {
+    public static double calcPveDamagePenalty(Creature attacker, Creature target) {
         if (isAttackable(target) && attacker.getActingPlayer() != null && target.getLevel() - attacker.getActingPlayer().getLevel() > 1) {
             final int levelDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
             return NpcSettings.pveDamagePenaltyOf(levelDiff);
@@ -1109,7 +1109,7 @@ public final class Formulas {
         return reuse * creature.getStats().getWeaponReuseModifier();
     }
 
-    public static double calculatePvpPveBonus(Creature attacker, Creature target, Skill skill, boolean crit) {
+    public static double calculatePvpPveBonus(Creature attacker, Creature target, Skill skill) {
         // PvP bonus
         if (isPlayable(attacker) && isPlayable(target)) {
             double pvpAttack;
@@ -1138,7 +1138,7 @@ public final class Formulas {
             final double pveDefense;
             final double pveRaidDefense;
             final double pveRaidAttack;
-            final double pvePenalty = calcPveDamagePenalty(attacker, target, skill, crit);
+            final double pvePenalty = calcPveDamagePenalty(attacker, target);
 
             if (skill != null) {
                 if (skill.isMagic()) {

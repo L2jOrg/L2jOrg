@@ -18,7 +18,6 @@
  */
 package org.l2j.scripts.handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;

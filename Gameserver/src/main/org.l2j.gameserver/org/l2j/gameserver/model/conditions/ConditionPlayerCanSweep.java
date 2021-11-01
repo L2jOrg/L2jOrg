@@ -18,12 +18,11 @@
  */
 package org.l2j.gameserver.model.conditions;
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.NpcSettings;
 

@@ -265,7 +265,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} talk to {@link Npc}.
-     *
      */
     protected final List<AbstractEventListener> setNpcTalkId(IntCollection npcIds) {
         checkNpcIds(npcIds, EventType.ON_NPC_TALK);
@@ -472,7 +471,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when Attackable is under attack to other clan mates.
-     *
      */
     protected final List<AbstractEventListener> setAttackableFactionIdId(Consumer<OnAttackableFactionCall> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_ATTACKABLE_FACTION_CALL, ListenerRegisterType.NPC, npcIds);
@@ -480,7 +478,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when Attackable is attacked from a player.
-     *
      */
     protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, int... npcIds) {
         for (int id : npcIds) {
@@ -493,7 +490,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when Attackable is attacked from a player.
-     *
      */
     protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, IntCollection npcIds) {
         checkNpcIds(npcIds, EventType.ON_ATTACKABLE_ATTACK);
@@ -502,7 +498,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} enters in {@link Attackable}'s aggressive range.
-     *
      */
     protected final List<AbstractEventListener> setAttackableAggroRangeEnterId(Consumer<OnAttackableAggroRangeEnter> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_ATTACKABLE_AGGRO_RANGE_ENTER, ListenerRegisterType.NPC, npcIds);
@@ -510,7 +505,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} enters in {@link Attackable}'s aggressive range.
-     *
      */
     protected final List<AbstractEventListener> setAttackableAggroRangeEnterId(Consumer<OnAttackableAggroRangeEnter> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_ATTACKABLE_AGGRO_RANGE_ENTER, ListenerRegisterType.NPC, npcIds);
@@ -518,7 +512,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} learn's a {@link Skill}.
-     *
      */
     protected final List<AbstractEventListener> setPlayerSkillLearnId(Consumer<OnPlayerSkillLearn> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SKILL_LEARN, ListenerRegisterType.NPC, npcIds);
@@ -526,7 +519,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} learn's a {@link Skill}.
-     *
      */
     protected final List<AbstractEventListener> setPlayerSkillLearnId(Consumer<OnPlayerSkillLearn> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SKILL_LEARN, ListenerRegisterType.NPC, npcIds);
@@ -534,7 +526,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} summons a servitor or a pet
-     *
      */
     protected final List<AbstractEventListener> setPlayerSummonSpawnId(Consumer<OnPlayerSummonSpawn> callback, int... npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_SPAWN, ListenerRegisterType.NPC, npcIds);
@@ -542,7 +533,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Provides instant callback operation when {@link Player} summons a servitor or a pet
-     *
      */
     protected final List<AbstractEventListener> setPlayerSummonSpawnId(Consumer<OnPlayerSummonSpawn> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_SPAWN, ListenerRegisterType.NPC, npcIds);
@@ -561,7 +551,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     protected final List<AbstractEventListener> setPlayerSummonTalkId(Consumer<OnPlayerSummonSpawn> callback, IntCollection npcIds) {
         return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_TALK, ListenerRegisterType.NPC, npcIds);
     }
-    
+
     protected final List<AbstractEventListener> setPlayerLoginId(Consumer<OnPlayerLogin> callback) {
         return registerConsumer(callback, EventType.ON_PLAYER_LOGIN, ListenerRegisterType.GLOBAL);
     }
@@ -805,7 +795,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         final ListenerRegisterType type = regType.value();
         final EventType eventType = listener.value();
-        if(!validateMethod(method, eventType)) {
+        if (!validateMethod(method, eventType)) {
             return;
         }
 
@@ -984,6 +974,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Execute a procedure for each player depending on the parameters.
+     *
      * @param includeCommandChannel if {@code true}, {@link #actionForEachPlayer(Player, Npc, boolean)} will be called with the player's command channel members
      * @see #actionForEachPlayer(Player, Npc, boolean)
      */
@@ -1144,7 +1135,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Show an on screen message to the player.
-     * @param params    values of parameters to replace in the NPC String (like S1, C1 etc.)
+     *
+     * @param params values of parameters to replace in the NPC String (like S1, C1 etc.)
      */
     public static void showOnScreenMsg(Player player, NpcStringId npcString, int position, int time, String... params) {
         player.sendPacket(new ExShowScreenMessage(npcString, position, time, params));
@@ -1165,6 +1157,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC. the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+     *
      * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
      * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
      */
@@ -1174,6 +1167,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
+     *
      * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
      * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
      * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
@@ -1184,6 +1178,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
+     *
      * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
      * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
      * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
@@ -1195,6 +1190,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
+     *
      * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
      * @param instanceId    the ID of the instance to spawn the NPC in (0 - the open world)
      * @return the {@link Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
@@ -1210,6 +1206,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
+     *
      * @param heading      the heading of the NPC
      * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
      * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
@@ -1223,6 +1220,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
+     *
      * @param heading       the heading of the NPC
      * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
      * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
@@ -1237,6 +1235,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
+     *
      * @param heading       the heading of the NPC
      * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
      * @param despawnDelay  time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
@@ -1253,6 +1252,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
     /**
      * Add a temporary spawn of the specified NPC.
+     *
      * @param z             the Z coordinate (height) of the spawn location
      * @param heading       the heading of the NPC
      * @param randomOffset  if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
@@ -1425,13 +1425,13 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 count *= Config.RATE_QUEST_REWARD_ADENA;
             } else if (Config.RATE_QUEST_REWARD_USE_MULTIPLIERS) {
                 if (item instanceof EtcItem etcItem) {
-                    switch (etcItem.getItemType()) {
-                        case POTION -> count *= Config.RATE_QUEST_REWARD_POTION;
-                        case ENCHANT_WEAPON, ENCHANT_ARMOR, SCROLL -> count *= Config.RATE_QUEST_REWARD_SCROLL;
-                        case RECIPE -> count *= Config.RATE_QUEST_REWARD_RECIPE;
-                        case MATERIAL -> count *= Config.RATE_QUEST_REWARD_MATERIAL;
-                        default -> count *= Config.RATE_QUEST_REWARD;
-                    }
+                    count = (int) switch (etcItem.getItemType()) {
+                        case POTION -> count * Config.RATE_QUEST_REWARD_POTION;
+                        case ENCHANT_WEAPON, ENCHANT_ARMOR, SCROLL -> count * Config.RATE_QUEST_REWARD_SCROLL;
+                        case RECIPE -> count * Config.RATE_QUEST_REWARD_RECIPE;
+                        case MATERIAL -> count * Config.RATE_QUEST_REWARD_MATERIAL;
+                        default -> count * Config.RATE_QUEST_REWARD;
+                    };
                 }
             } else {
                 count *= Config.RATE_QUEST_REWARD;
@@ -1440,7 +1440,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             count = Long.MAX_VALUE;
         }
 
-        // Add items to player's inventory
         final Item itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
         if (itemInstance == null) {
             return;
@@ -1515,9 +1514,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Give the specified player a set amount of items if he is lucky enough.<br>
      * Not recommended to use this for non-stacking items.
-     * @param limit        the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
-     * @param chance   the drop chance as a decimal digit from 0 to 1
-     * @param playSound    if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
+     *
+     * @param limit     the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
+     * @param chance    the drop chance as a decimal digit from 0 to 1
+     * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
      * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
      */
     public boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double chance, boolean playSound) {
@@ -1527,6 +1527,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     /**
      * Give the specified player a random amount of items if he is lucky enough.<br>
      * Not recommended to use this for non-stacking items.
+     *
      * @param maxAmount  the maximum amount of items to give (will give a random amount between min/maxAmount multiplied by quest rates)
      * @param limit      the maximum amount of items the player can have. Won't give more if this limit is reached. 0 - no limit.
      * @param dropChance the drop chance as a decimal digit from 0 to 1
@@ -1546,18 +1547,18 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
         if (npc != null && npc.isChampion()) {
             if (itemId == CommonItem.ADENA) {
                 dropChance *= ChampionSettings.adenaChanceMultiplier();
-                minAmount *= ChampionSettings.adenaAmountMultiplier();
-                maxAmount *= ChampionSettings.adenaAmountMultiplier();
+                minAmount = (long) (minAmount * ChampionSettings.adenaAmountMultiplier());
+                maxAmount = (long) (maxAmount * ChampionSettings.adenaAmountMultiplier());
             } else {
                 dropChance *= ChampionSettings.rewardChanceMultiplier();
-                minAmount *= ChampionSettings.rewardAmountMultiplier();
-                maxAmount *= ChampionSettings.rewardAmountMultiplier();
+                minAmount = (long) (minAmount * ChampionSettings.rewardAmountMultiplier());
+                maxAmount = (long) (maxAmount * ChampionSettings.rewardAmountMultiplier());
             }
         }
 
         long amountToGive = (minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount);
 
-        if ( amountToGive > 0 && Rnd.chance(dropChance) && player.getInventory().validateCapacityByItemId(itemId)) {
+        if (amountToGive > 0 && Rnd.chance(dropChance) && player.getInventory().validateCapacityByItemId(itemId)) {
             return tryGiveItem(player, npc, itemId, limit, currentCount, amountToGive, playSound);
         }
         return false;

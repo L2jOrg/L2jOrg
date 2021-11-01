@@ -283,7 +283,7 @@ public final class Config {
     public static double MONSTER_PDEF_MULTIPLIER;
     public static double MONSTER_MDEF_MULTIPLIER;
     public static double MONSTER_AGRRO_RANGE_MULTIPLIER;
-    public static double MONSTER_CLAN_HELP_RANGE_MULTIPLIER;
+    public static float MONSTER_CLAN_HELP_RANGE_MULTIPLIER;
     public static double RAIDBOSS_HP_MULTIPLIER;
     public static double RAIDBOSS_MP_MULTIPLIER;
     public static double RAIDBOSS_PATK_MULTIPLIER;
@@ -291,7 +291,7 @@ public final class Config {
     public static double RAIDBOSS_PDEF_MULTIPLIER;
     public static double RAIDBOSS_MDEF_MULTIPLIER;
     public static double RAIDBOSS_AGRRO_RANGE_MULTIPLIER;
-    public static double RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
+    public static float RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
     public static int RAIDBOSS_LIMIT_BARRIER;
     public static double GUARD_HP_MULTIPLIER;
     public static double GUARD_MP_MULTIPLIER;
@@ -300,7 +300,7 @@ public final class Config {
     public static double GUARD_PDEF_MULTIPLIER;
     public static double GUARD_MDEF_MULTIPLIER;
     public static double GUARD_AGRRO_RANGE_MULTIPLIER;
-    public static double GUARD_CLAN_HELP_RANGE_MULTIPLIER;
+    public static float GUARD_CLAN_HELP_RANGE_MULTIPLIER;
     public static double DEFENDER_HP_MULTIPLIER;
     public static double DEFENDER_MP_MULTIPLIER;
     public static double DEFENDER_PATK_MULTIPLIER;
@@ -308,7 +308,7 @@ public final class Config {
     public static double DEFENDER_PDEF_MULTIPLIER;
     public static double DEFENDER_MDEF_MULTIPLIER;
     public static double DEFENDER_AGRRO_RANGE_MULTIPLIER;
-    public static double DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
+    public static float DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
 
     public static int BUFFER_MAX_SCHEMES;
     public static int BUFFER_STATIC_BUFF_COST;
@@ -743,7 +743,7 @@ public final class Config {
         MONSTER_PDEF_MULTIPLIER = BoostNpcStats.getDouble("MonsterPDef", 1.0);
         MONSTER_MDEF_MULTIPLIER = BoostNpcStats.getDouble("MonsterMDef", 1.0);
         MONSTER_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("MonsterAggroRange", 1.0);
-        MONSTER_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("MonsterClanHelpRange", 1.0);
+        MONSTER_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getFloat("MonsterClanHelpRange", 1.0f);
         RAIDBOSS_HP_MULTIPLIER = BoostNpcStats.getDouble("RaidbossHP", 1.0);
         RAIDBOSS_MP_MULTIPLIER = BoostNpcStats.getDouble("RaidbossMP", 1.0);
         RAIDBOSS_PATK_MULTIPLIER = BoostNpcStats.getDouble("RaidbossPAtk", 1.0);
@@ -751,7 +751,7 @@ public final class Config {
         RAIDBOSS_PDEF_MULTIPLIER = BoostNpcStats.getDouble("RaidbossPDef", 1.0);
         RAIDBOSS_MDEF_MULTIPLIER = BoostNpcStats.getDouble("RaidbossMDef", 1.0);
         RAIDBOSS_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("RaidbossAggroRange", 1.0);
-        RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("RaidbossClanHelpRange", 1.0);
+        RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getFloat("RaidbossClanHelpRange", 1.0f);
         GUARD_HP_MULTIPLIER = BoostNpcStats.getDouble("GuardHP", 1.0);
         GUARD_MP_MULTIPLIER = BoostNpcStats.getDouble("GuardMP", 1.0);
         GUARD_PATK_MULTIPLIER = BoostNpcStats.getDouble("GuardPAtk", 1.0);
@@ -759,7 +759,7 @@ public final class Config {
         GUARD_PDEF_MULTIPLIER = BoostNpcStats.getDouble("GuardPDef", 1.0);
         GUARD_MDEF_MULTIPLIER = BoostNpcStats.getDouble("GuardMDef", 1.0);
         GUARD_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("GuardAggroRange", 1.0);
-        GUARD_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("GuardClanHelpRange", 1.0);
+        GUARD_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getFloat("GuardClanHelpRange", 1.0f);
         DEFENDER_HP_MULTIPLIER = BoostNpcStats.getDouble("DefenderHP", 1.0);
         DEFENDER_MP_MULTIPLIER = BoostNpcStats.getDouble("DefenderMP", 1.0);
         DEFENDER_PATK_MULTIPLIER = BoostNpcStats.getDouble("DefenderPAtk", 1.0);
@@ -767,7 +767,7 @@ public final class Config {
         DEFENDER_PDEF_MULTIPLIER = BoostNpcStats.getDouble("DefenderPDef", 1.0);
         DEFENDER_MDEF_MULTIPLIER = BoostNpcStats.getDouble("DefenderMDef", 1.0);
         DEFENDER_AGRRO_RANGE_MULTIPLIER = BoostNpcStats.getDouble("DefenderAggroRange", 1.0);
-        DEFENDER_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getDouble("DefenderClanHelpRange", 1.0);
+        DEFENDER_CLAN_HELP_RANGE_MULTIPLIER = BoostNpcStats.getFloat("DefenderClanHelpRange", 1.0f);
 
 
         // Load CommunityBoard config file (if exists)

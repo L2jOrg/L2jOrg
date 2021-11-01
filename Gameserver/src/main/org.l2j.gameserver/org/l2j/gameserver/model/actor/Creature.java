@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.*;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;

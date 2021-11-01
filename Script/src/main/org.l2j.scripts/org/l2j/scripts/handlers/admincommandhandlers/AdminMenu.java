@@ -19,7 +19,6 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.handler.AdminCommandHandler;
@@ -27,7 +26,6 @@ import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.settings.ChampionSettings;
