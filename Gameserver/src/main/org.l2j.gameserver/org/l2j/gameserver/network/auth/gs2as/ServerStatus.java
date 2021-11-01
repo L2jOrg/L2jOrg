@@ -33,6 +33,9 @@ public class ServerStatus extends SendablePacket {
     public static final int TEST_SERVER = 0x05;
     public static final int SERVER_LIST_TYPE = 0x06;
 
+    public static final int SERVER_STATUS_GM_ONLY = 0x05;
+    public static final int SERVER_STATUS_AUTO = 0x00;
+
     private final IntIntMap status = new HashIntIntMap();
 
     public ServerStatus add(int status, int value) {
@@ -45,5 +48,13 @@ public class ServerStatus extends SendablePacket {
         buffer.writeByte(0x06);
         buffer.writeInt(status.size());
         status.entrySet().forEach(entry ->  { buffer.writeInt(entry.getKey()); buffer.writeInt(entry.getValue()); });
+    }
+
+    public static ServerStatus gmOnly(boolean value) {
+        var packet = new ServerStatus();
+        if(value) {
+            return packet.add(SERVER_LIST_STATUS, SERVER_STATUS_GM_ONLY);
+        }
+        return packet.add(SERVER_LIST_STATUS, SERVER_STATUS_AUTO);
     }
 }
