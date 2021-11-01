@@ -23,8 +23,10 @@ import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.network.auth.GameServerPacketHandler;
 import org.l2j.gameserver.network.auth.SendablePacket;
 import org.l2j.gameserver.network.auth.gs2as.ChangePassword;
+import org.l2j.gameserver.network.auth.gs2as.ServerStatus;
 import org.l2j.gameserver.network.provider.multi.MultiNetworkProvider;
 import org.l2j.gameserver.network.provider.single.SingleNetworkProvider;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -248,6 +250,12 @@ public class NetworkService extends XmlReader {
 
     public static NetworkService getInstance() {
         return Singleton.INSTANCE;
+    }
+
+    public void gmOnlyStatus(boolean value) {
+        AdminSettings.gmOnlyServer(value);
+        sendPacketToAuth(ServerStatus.gmOnly(value));
+        sendPacketToAuth(new ServerStatus().add(ServerStatus.SERVER_LIST_STATUS, ServerStatus.SERVER_STATUS_GM_ONLY));
     }
 
     private static class Singleton {

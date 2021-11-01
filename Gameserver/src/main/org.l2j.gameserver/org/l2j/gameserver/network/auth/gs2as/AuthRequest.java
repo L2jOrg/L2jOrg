@@ -22,6 +22,7 @@ import io.github.joealisson.mmocore.WritableBuffer;
 import org.l2j.gameserver.network.NetworkService;
 import org.l2j.gameserver.network.auth.AuthServerClient;
 import org.l2j.gameserver.network.auth.SendablePacket;
+import org.l2j.gameserver.settings.AdminSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 
 /**
@@ -46,6 +47,7 @@ public class AuthRequest extends SendablePacket {
 
 		buffer.writeByte(ServerSettings.isShowingBrackets());
 		buffer.writeByte(ServerSettings.isPvP());
+		buffer.writeByte(AdminSettings.gmOnlyServer());
 
 		buffer.writeByte(network.subnets().size());
 		for (NetworkService.Subnet subnet : network.subnets()) {

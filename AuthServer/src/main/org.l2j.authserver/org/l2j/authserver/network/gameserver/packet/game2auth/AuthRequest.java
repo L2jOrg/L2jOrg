@@ -57,6 +57,7 @@ public class AuthRequest extends GameserverReadablePacket {
     private short port;
     private String authKey;
     private String key;
+    private boolean gmOnly;
 
     @Override
 	protected void readImpl() {
@@ -68,6 +69,7 @@ public class AuthRequest extends GameserverReadablePacket {
         ageLimit = readByte();
         showBrackets = readBoolean();
         isPvp = readBoolean();
+        gmOnly = readBoolean();
 
         var subnets = readByte();
         hosts = new String[subnets];
@@ -173,7 +175,7 @@ public class AuthRequest extends GameserverReadablePacket {
         gsi.setAgeLimit(ageLimit);
         gsi.setShowingBrackets(showBrackets);
         gsi.setIsPvp(isPvp);
-        gsi.setStatus(ServerStatus.STATUS_AUTO);
+        gsi.setStatus(gmOnly ? ServerStatus.STATUS_GM_ONLY : ServerStatus.STATUS_AUTO);
 
         Endpoint[] endpoints = new Endpoint[hosts.length];
 
