@@ -429,11 +429,11 @@ public final class GameClient extends Client<Connection<GameClient>> {
             return false;
         }
 
+        account.setSecAuthAttempts(0);
         if (!skipAuth) {
             secondaryAuthed = true;
             sendPacket(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_OK, account.getSecAuthAttempts()));
         }
-        account.setSecAuthAttempts(0);
         return true;
     }
 

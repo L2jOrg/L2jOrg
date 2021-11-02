@@ -42,9 +42,6 @@ import org.l2j.gameserver.model.PlayerSelectInfo;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.appearance.Appearance;
 import org.l2j.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2j.gameserver.model.events.EventDispatcher;
-import org.l2j.gameserver.model.events.Listeners;
-import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLoad;
 import org.l2j.gameserver.model.item.PcItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
@@ -122,8 +119,6 @@ public class PlayerFactory {
         if (!GeneralSettings.cacheWarehouse()) {
             player.getWarehouse();
         }
-
-        EventDispatcher.getInstance().notifyEvent(new OnPlayerLoad(player), Listeners.players());
 
         loadStats(playerData, player);
 
