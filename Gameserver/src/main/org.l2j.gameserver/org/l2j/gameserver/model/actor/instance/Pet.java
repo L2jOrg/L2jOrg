@@ -18,8 +18,8 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
+import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.dao.PetDAO;
@@ -32,6 +32,7 @@ import org.l2j.gameserver.data.xml.impl.LevelData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.InstanceType;
@@ -50,7 +51,6 @@ import org.l2j.gameserver.model.actor.stat.PetStats;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.engine.item.Weapon;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.item.container.PetInventory;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -62,7 +62,6 @@ import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
-import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
@@ -78,6 +77,8 @@ import java.util.concurrent.Future;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
+import static org.l2j.gameserver.util.GameUtils.isItem;
 
 
 /**
@@ -239,12 +240,12 @@ public class Pet extends Summon {
 
         if (sendMessage) {
             if (count > 1) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
                 sm.addItemName(item.getId());
                 sm.addLong(count);
                 sendPacket(sm);
             } else {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
                 sm.addItemName(item.getId());
                 sendPacket(sm);
             }
@@ -280,12 +281,12 @@ public class Pet extends Summon {
 
         if (sendMessage) {
             if (count > 1) {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
                 sm.addItemName(item.getId());
                 sm.addLong(count);
                 sendPacket(sm);
             } else {
-                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
                 sm.addItemName(item.getId());
                 sendPacket(sm);
             }
@@ -303,61 +304,24 @@ public class Pet extends Summon {
         getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
         broadcastPacket(new StopMove(this));
 
-        if (!GameUtils.isItem(object)) {
-            // dont try to pickup anything that is not an item :)
-            LOGGER.warn(this + " trying to pickup wrong target." + object);
+        if (!isItem(object)) {
             sendPacket(ActionFailed.STATIC_PACKET);
+            LOGGER.warn("{} trying to pickup wrong target. {}", this, object);
             return;
         }
 
         final boolean follow = getFollowStatus();
         final Item target = (Item) object;
 
-        SystemMessage smsg;
         synchronized (target) {
-            // Check if the target to pick up is visible
-            if (!target.isSpawned()) {
-                // Send a Server->Client packet ActionFailed to this Player
-                sendPacket(ActionFailed.STATIC_PACKET);
+            if (!canPickupItem(target))  {
                 return;
             }
 
-            if (!target.getDropProtection().tryPickUp(this)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                smsg.addItemName(target);
-                sendPacket(smsg);
-                return;
-            }
-
-            if (((isInParty() && (getParty().getDistributionType() == PartyDistributionType.FINDERS_KEEPERS)) || !isInParty()) && !_inventory.validateCapacity(target)) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS);
-                return;
-            }
-
-            if ((target.getOwnerId() != 0) && (target.getOwnerId() != getOwner().getObjectId()) && !getOwner().isInLooterParty(target.getOwnerId())) {
-                if (target.getId() == CommonItem.ADENA) {
-                    smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
-                    smsg.addLong(target.getCount());
-                } else if (target.getCount() > 1) {
-                    smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
-                    smsg.addItemName(target);
-                    smsg.addLong(target.getCount());
-                } else {
-                    smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                    smsg.addItemName(target);
-                }
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(smsg);
-                return;
-            }
-
-            if ((target.getItemLootShedule() != null) && ((target.getOwnerId() == getOwner().getObjectId()) || getOwner().isInLooterParty(target.getOwnerId()))) {
+            if (target.getItemLootShedule() != null && (target.getOwnerId() == getOwner().getObjectId() || getOwner().isInLooterParty(target.getOwnerId()))) {
                 target.resetOwnerTimer();
             }
 
-            // Remove from the ground!
             target.pickupMe(this);
 
             if (GeneralSettings.saveDroppedItems()) {
@@ -365,53 +329,89 @@ public class Pet extends Summon {
             }
         }
 
-        // Herbs
         if (target.getTemplate().hasExImmediateEffect()) {
-            final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
-            if (handler == null) {
-                LOGGER.warn("No item handler registered for item ID: " + target.getId() + ".");
-            } else {
-                handler.useItem(this, target, false);
-            }
-
-            ItemEngine.getInstance().destroyItem("Consume", target, getOwner(), null);
-            broadcastStatusUpdate();
+            onPickUpAutoUseItem(target);
         } else {
-            if (target.getId() == CommonItem.ADENA) {
-                smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_ADENA);
-                smsg.addLong(target.getCount());
-                sendPacket(smsg);
-            } else if (target.getEnchantLevel() > 0) {
-                smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_S2);
-                smsg.addInt(target.getEnchantLevel());
-                smsg.addItemName(target);
-                sendPacket(smsg);
-            } else if (target.getCount() > 1) {
-                smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S2_S1_S);
-                smsg.addLong(target.getCount());
-                smsg.addItemName(target);
-                sendPacket(smsg);
-            } else {
-                smsg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1);
-                smsg.addItemName(target);
-                sendPacket(smsg);
-            }
-
-            // If owner is in party and it isnt finders keepers, distribute the item instead of stealing it -.-
-            if (getOwner().isInParty() && (getOwner().getParty().getDistributionType() != PartyDistributionType.FINDERS_KEEPERS)) {
-                getOwner().getParty().distributeItem(getOwner(), target);
-            } else {
-                final Item item = _inventory.addItem("Pickup", target, getOwner(), this);
-                if (item != null) {
-                    sendItemList();
-                }
-            }
+            onPickupItem(target);
         }
 
         getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 
         if (follow) {
             followOwner();
+        }
+    }
+
+    private void onPickupItem(Item target) {
+        sendPickupMessage(target);
+
+        if (getOwner().isInParty() && getOwner().getParty().getDistributionType() != PartyDistributionType.FINDERS_KEEPERS) {
+            getOwner().getParty().distributeItem(getOwner(), target);
+        } else {
+            var item = _inventory.addItem("Pickup", target, getOwner(), this);
+            if (item != null) {
+                sendItemList();
+            }
+        }
+    }
+
+    private void sendPickupMessage(Item target) {
+        if (target.getId() == CommonItem.ADENA) {
+            sendPacket(getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_ADENA).addLong(target.getCount()));
+        } else if (target.getEnchantLevel() > 0) {
+            sendPacket(getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_S2).addInt(target.getEnchantLevel()).addItemName(target));
+        } else if (target.getCount() > 1) {
+            sendPacket(getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S2_S1_S).addLong(target.getCount()).addItemName(target));
+        } else {
+            sendPacket(getSystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1).addItemName(target));
+        }
+    }
+
+    private void onPickUpAutoUseItem(Item target) {
+        var handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
+        if (handler != null) {
+            handler.useItem(this, target, true);
+        } else {
+            LOGGER.warn("No item handler registered for item: {}",  target.getId());
+        }
+
+        ItemEngine.getInstance().destroyItem("Consume", target, getOwner(), null);
+        broadcastStatusUpdate();
+    }
+
+    private boolean canPickupItem(Item target) {
+        if (!target.isSpawned()) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+
+        if (!target.getDropProtection().tryPickUp(this)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+            sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(target));
+            return false;
+        }
+
+        if (((isInParty() && getParty().getDistributionType() == PartyDistributionType.FINDERS_KEEPERS) || !isInParty()) && !_inventory.validateCapacity(target)) {
+            sendPacket(ActionFailed.STATIC_PACKET);
+            sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS);
+            return false;
+        }
+
+        if (target.getOwnerId() != 0 && target.getOwnerId() != getOwner().getObjectId() && !getOwner().isInLooterParty(target.getOwnerId())) {
+            sendFailedToPickUpMessage(target);
+            sendPacket(ActionFailed.STATIC_PACKET);
+            return false;
+        }
+        return true;
+    }
+
+    private void sendFailedToPickUpMessage(Item target) {
+        if (target.getId() == CommonItem.ADENA) {
+            sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA).addLong(target.getCount()));
+        } else if (target.getCount() > 1) {
+            sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S).addItemName(target).addLong(target.getCount()));
+        } else {
+            sendPacket(getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(target));
         }
     }
 
@@ -519,7 +519,7 @@ public class Pet extends Summon {
             } else {
                 removedItem = owner.getInventory().destroyItem("PetDestroy", _controlObjectId, 1, getOwner(), this);
                 if (removedItem != null) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+                    final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
                     sm.addItemName(removedItem);
                     owner.sendPacket(sm);
                 }
@@ -892,7 +892,7 @@ public class Pet extends Summon {
                 sendInventoryUpdate(iu);
             }
         } else {
-            LOGGER.warn("Pet control item null, for pet: " + toString());
+            LOGGER.warn("Pet control item null, for pet: {}",  this);
         }
         super.setName(name);
     }
@@ -934,58 +934,71 @@ public class Pet extends Summon {
         @Override
         public void run() {
             try {
-                final Summon pet = getOwner().getPet();
-                if (pet == null || pet.getObjectId() != getObjectId()) {
-                    stopFeed();
-                    return;
-                } else if (_curFed > getFeedConsume()) {
-                    setCurrentFed(_curFed - getFeedConsume());
-                } else {
-                    setCurrentFed(0);
-                }
-
-                broadcastStatusUpdate();
-
-                var foodIds = getPetData().getFood();
-                if (foodIds.isEmpty()) {
-                    if (isUncontrollable()) {
-                        // Owl Monk remove PK
-                        if ((getTemplate().getId() == 16050) && (getOwner() != null)) {
-                            getOwner().setPkKills(Math.max(0, getOwner().getPkKills() - Rnd.get(1, 6)));
-                        }
-                        sendPacket(SystemMessageId.THE_PET_IS_NOW_LEAVING);
-                        deleteMe(getOwner());
-                    } else if (isHungry()) {
-                        sendPacket(SystemMessageId.THERE_IS_NOT_MUCH_TIME_REMAINING_UNTIL_THE_PET_LEAVES);
-                    }
+                if (!updateFed()) {
                     return;
                 }
 
-                Item food = null;
-                var it = foodIds.iterator();
-                while(it.hasNext()) {
-                    food = _inventory.getItemByItemId(it.nextInt());
-                    if (food != null) {
-                        break;
-                    }
-                }
-
-                if ((food != null) && isHungry()) {
-                    final IItemHandler handler = ItemHandler.getInstance().getHandler(food.getEtcItem());
-                    if (handler != null) {
-                        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
-                        sm.addItemName(food.getId());
-                        sendPacket(sm);
-                        handler.useItem(Pet.this, food, false);
-                    }
+                if (!giveFood()) {
+                    return;
                 }
 
                 if (isUncontrollable()) {
                     sendPacket(SystemMessageId.YOUR_PET_IS_STARVING_AND_WILL_NOT_OBEY_UNTIL_IT_GETS_IT_S_FOOD_FEED_YOUR_PET);
                 }
             } catch (Exception e) {
-                LOGGER.error("Pet [ObjectId: " + getObjectId() + "] a feed task error has occurred", e);
+                LOGGER.error("{} a feed task error has occurred", Pet.this, e);
             }
+        }
+
+        private boolean giveFood() {
+            var foodIds = getPetData().getFood();
+            if (foodIds.isEmpty()) {
+                if (isUncontrollable()) {
+                    sendPacket(SystemMessageId.THE_PET_IS_NOW_LEAVING);
+                    deleteMe(getOwner());
+                } else if (isHungry()) {
+                    sendPacket(SystemMessageId.THERE_IS_NOT_MUCH_TIME_REMAINING_UNTIL_THE_PET_LEAVES);
+                }
+                return false;
+            }
+
+            Item food = getNextFood(foodIds);
+
+            if (food != null && isHungry()) {
+                final IItemHandler handler = ItemHandler.getInstance().getHandler(food.getEtcItem());
+                if (handler != null) {
+                    sendPacket(getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1).addItemName(food.getId()));
+                    handler.useItem(Pet.this, food, false);
+                }
+            }
+            return true;
+        }
+
+        private Item getNextFood(IntList foodIds) {
+            Item food = null;
+            var it = foodIds.iterator();
+            while(it.hasNext()) {
+                food = _inventory.getItemByItemId(it.nextInt());
+                if (food != null) {
+                    break;
+                }
+            }
+            return food;
+        }
+
+        private boolean updateFed() {
+            final Summon pet = getOwner().getPet();
+            if (pet == null || pet.getObjectId() != getObjectId()) {
+                stopFeed();
+                return false;
+            } else if (_curFed > getFeedConsume()) {
+                setCurrentFed(_curFed - getFeedConsume());
+            } else {
+                setCurrentFed(0);
+            }
+
+            broadcastStatusUpdate();
+            return true;
         }
 
         private int getFeedConsume() {
