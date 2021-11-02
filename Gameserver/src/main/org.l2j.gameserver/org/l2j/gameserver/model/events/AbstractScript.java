@@ -1434,7 +1434,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                     };
                 }
             } else {
-                count *= Config.RATE_QUEST_REWARD;
+                count = (long) (count * Config.RATE_QUEST_REWARD);
             }
         } catch (Exception e) {
             count = Long.MAX_VALUE;

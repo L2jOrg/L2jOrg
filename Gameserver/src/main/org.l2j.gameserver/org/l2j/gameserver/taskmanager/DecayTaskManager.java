@@ -19,7 +19,6 @@
 package org.l2j.gameserver.taskmanager;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;

@@ -81,8 +81,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private boolean _canBeCrt;
     private int _corpseTime;
     private AIType _aiType;
-    private int _aggroRange;
-    private int _clanHelpRange;
+    private int aggroRange;
+    private int clanHelpRange;
     private int _dodge;
     private boolean _isChaos;
     private boolean _isAggressive;
@@ -156,8 +156,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         _corpseTime = set.getInt("corpseTime", 7);
 
         _aiType = set.getEnum("aiType", AIType.class, AIType.FIGHTER);
-        _aggroRange = set.getInt("aggroRange", 0);
-        _clanHelpRange = set.getInt("clanHelpRange", 0);
+        aggroRange = set.getInt("aggroRange", 0);
+        clanHelpRange = set.getInt("clanHelpRange", 0);
         _dodge = set.getInt("dodge", 0);
         _isChaos = set.getBoolean("isChaos", false);
         _isAggressive = set.getBoolean("isAggressive", false);
@@ -192,8 +192,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.MAGIC_ATTACK, getBaseMAtk() * Config.MONSTER_MATK_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.MONSTER_PDEF_MULTIPLIER);
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.MONSTER_MDEF_MULTIPLIER);
-                    _aggroRange *= Config.MONSTER_AGRRO_RANGE_MULTIPLIER;
-                    _clanHelpRange = (int)  (_clanHelpRange * Config.MONSTER_CLAN_HELP_RANGE_MULTIPLIER);
+                    aggroRange = (int) (aggroRange * Config.MONSTER_AGRRO_RANGE_MULTIPLIER);
+                    clanHelpRange = (int)  (clanHelpRange * Config.MONSTER_CLAN_HELP_RANGE_MULTIPLIER);
                 }
                 case "RaidBoss", "GrandBoss" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.RAIDBOSS_HP_MULTIPLIER);
@@ -202,8 +202,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.MAGIC_ATTACK, getBaseMAtk() * Config.RAIDBOSS_MATK_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.RAIDBOSS_PDEF_MULTIPLIER);
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.RAIDBOSS_MDEF_MULTIPLIER);
-                    _aggroRange *= Config.RAIDBOSS_AGRRO_RANGE_MULTIPLIER;
-                    _clanHelpRange = (int) (_clanHelpRange * Config.RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER);
+                    aggroRange = (int) (aggroRange * Config.RAIDBOSS_AGRRO_RANGE_MULTIPLIER);
+                    clanHelpRange = (int) (clanHelpRange * Config.RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER);
                 }
                 case "Guard" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.GUARD_HP_MULTIPLIER);
@@ -212,8 +212,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.MAGIC_ATTACK, getBaseMAtk() * Config.GUARD_MATK_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.GUARD_PDEF_MULTIPLIER);
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.GUARD_MDEF_MULTIPLIER);
-                    _aggroRange *= Config.GUARD_AGRRO_RANGE_MULTIPLIER;
-                    _clanHelpRange = (int) (_clanHelpRange * Config.GUARD_CLAN_HELP_RANGE_MULTIPLIER);
+                    aggroRange = (int) (aggroRange * Config.GUARD_AGRRO_RANGE_MULTIPLIER);
+                    clanHelpRange = (int) (clanHelpRange * Config.GUARD_CLAN_HELP_RANGE_MULTIPLIER);
                 }
                 case "Defender" -> {
                     _baseValues.put(Stat.MAX_HP, getBaseHpMax() * Config.DEFENDER_HP_MULTIPLIER);
@@ -222,8 +222,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
                     _baseValues.put(Stat.MAGIC_ATTACK, getBaseMAtk() * Config.DEFENDER_MATK_MULTIPLIER);
                     _baseValues.put(Stat.PHYSICAL_DEFENCE, getBasePDef() * Config.DEFENDER_PDEF_MULTIPLIER);
                     _baseValues.put(Stat.MAGICAL_DEFENCE, getBaseMDef() * Config.DEFENDER_MDEF_MULTIPLIER);
-                    _aggroRange *= Config.DEFENDER_AGRRO_RANGE_MULTIPLIER;
-                    _clanHelpRange = (int) (_clanHelpRange * Config.DEFENDER_CLAN_HELP_RANGE_MULTIPLIER);
+                    aggroRange = (int) (aggroRange * Config.DEFENDER_AGRRO_RANGE_MULTIPLIER);
+                    clanHelpRange = (int) (clanHelpRange * Config.DEFENDER_CLAN_HELP_RANGE_MULTIPLIER);
                 }
             }
         }
@@ -360,11 +360,11 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     }
 
     public int getAggroRange() {
-        return _aggroRange;
+        return aggroRange;
     }
 
     public int getClanHelpRange() {
-        return _clanHelpRange;
+        return clanHelpRange;
     }
 
     public int getDodge() {
