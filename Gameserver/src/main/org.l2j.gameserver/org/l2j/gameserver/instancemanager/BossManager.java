@@ -35,6 +35,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -174,8 +175,8 @@ public class BossManager {
         if (isNpcDead) {
             npc.setRaidBossStatus(BossStatus.DEAD);
 
-            final int respawnMinDelay = (int) (npc.getSpawn().getRespawnMinDelay() * Config.RAID_MIN_RESPAWN_MULTIPLIER);
-            final int respawnMaxDelay = (int) (npc.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
+            final int respawnMinDelay = (int) (npc.getSpawn().getRespawnMinDelay() * NpcSettings.raidRespawnMultiplier());
+            final int respawnMaxDelay = (int) (npc.getSpawn().getRespawnMaxDelay() * NpcSettings.raidRespawnMultiplier());
             final int respawnDelay = Rnd.get(respawnMinDelay, respawnMaxDelay);
             final long respawnTime = System.currentTimeMillis() + respawnDelay;
 

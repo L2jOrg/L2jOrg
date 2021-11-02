@@ -34,6 +34,7 @@ import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.settings.ChampionSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.CastleZone;
@@ -78,7 +79,7 @@ public class RegenHPFinalizer implements IStatsFunction {
 
         double baseValue = isPlayer(creature) ? creature.getActingPlayer().getTemplate().getBaseHpRegen(creature.getLevel()) : creature.getTemplate().getBaseHpReg();
         if(creature.isRaid()) {
-            baseValue *=  Config.RAID_HP_REGEN_MULTIPLIER;
+            baseValue *= NpcSettings.raidHpRegenMultiplier();
         }
 
         if (creature.isChampion()) {
@@ -142,7 +143,7 @@ public class RegenHPFinalizer implements IStatsFunction {
             // Add CON bonus
             baseValue *= creature.getLevelMod() * BaseStats.CON.calcBonus(creature);
         } else if (isPet(creature)) {
-            baseValue = ((Pet) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
+            baseValue = ((Pet) creature).getPetLevelData().getPetRegenHP() * NpcSettings.petHpRegenMultiplier();
         }
 
         return Stat.defaultValue(creature, stat, baseValue);

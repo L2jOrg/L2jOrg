@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.settings.ChampionSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MinionList;
 
@@ -77,8 +78,7 @@ public class Monster extends Attackable {
      */
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        // Check if the Monster target is aggressive
-        if (Config.GUARD_ATTACK_AGGRO_MOB && getTemplate().isAggressive() && (attacker instanceof Guard)) {
+        if (NpcSettings.allowGuardAttackAggressiveMonster() && isAggressive() && attacker instanceof Guard) {
             return true;
         }
 
@@ -163,7 +163,7 @@ public class Monster extends Attackable {
         }
 
         if (nonNull(_master) && _master.hasMinions()) {
-            final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(getId()) ? Config.MINIONS_RESPAWN_TIME.get(getId()) * 1000 : -1;
+            final int respawnTime = NpcSettings.minionRespawnTimeOf(getId());
             _master.getMinionList().onMinionDie(this, respawnTime);
         }
 

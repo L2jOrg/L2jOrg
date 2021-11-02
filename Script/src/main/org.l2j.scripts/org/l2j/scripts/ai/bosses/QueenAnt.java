@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneEngine;
@@ -324,7 +325,7 @@ public final class QueenAnt extends AbstractNpcAI
 			return null;
 		}
 		
-		if (!Config.RAID_DISABLE_CURSE && ((character.getLevel() - npc.getLevel()) > 8))
+		if (!NpcSettings.disableRaidCurse() && ((character.getLevel() - npc.getLevel()) > 8))
 		{
 			Skill curse = null;
 			if (isMage)

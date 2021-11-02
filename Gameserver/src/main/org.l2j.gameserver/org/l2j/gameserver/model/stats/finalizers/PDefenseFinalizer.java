@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.NpcSettings;
 
 import java.util.Optional;
 
@@ -67,7 +68,7 @@ public class PDefenseFinalizer extends AbstractDefenseFinalizer {
         }
 
         if (creature.isRaid()) {
-            baseValue *= Config.RAID_PDEFENCE_MULTIPLIER;
+            baseValue *= NpcSettings.raidPDefenseMultiplier();
         }
         if (creature.getLevel() > 0) {
             baseValue *= creature.getLevelMod();

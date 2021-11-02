@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 import java.util.Set;
@@ -121,7 +122,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
             addComponentType(NpcInfoType.NAME);
         }
 
-        if (npc.getTemplate().isUsingServerSideTitle() || (Config.SHOW_NPC_LVL && isMonster(npc)) || npc.isChampion() || isTrap(npc)) {
+        if (npc.getTemplate().isUsingServerSideTitle() || (NpcSettings.showNpcLevel() && isMonster(npc)) || npc.isChampion() || isTrap(npc)) {
             addComponentType(NpcInfoType.TITLE);
         }
 

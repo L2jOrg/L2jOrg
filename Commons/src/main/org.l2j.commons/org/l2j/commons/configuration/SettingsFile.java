@@ -234,4 +234,20 @@ public final class SettingsFile extends Properties {
         }
         return map;
     }
+
+    public IntIntMap getIntIntMap(String key, int valueMultiplier) {
+        var value = getProperty(key);
+        if(isNullOrEmpty(value)) {
+            return Containers.emptyIntIntMap();
+        }
+        var values = value.split(";");
+        IntIntMap map = new HashIntIntMap(values.length);
+        for (var s : values) {
+            var pair = s.split(",");
+            if(isInteger(pair[0]) && isInteger(pair[1])) {
+                map.put(Integer.parseInt(pair[0]), Integer.parseInt(pair[1]) * valueMultiplier);
+            }
+        }
+        return map;
+    }
 }

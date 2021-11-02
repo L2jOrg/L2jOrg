@@ -57,6 +57,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.settings.PartySettings;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
@@ -1133,7 +1134,7 @@ public class Attackable extends Npc {
         if (level < 85) {
             points = Math.max((int) ((exp / 1000) * Math.max(level - getLevel(), 1)), 1);
         } else {
-            points = Math.max((int) ((exp / (isBoss ? Config.VITALITY_CONSUME_BY_BOSS : Config.VITALITY_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1)), 1);
+            points = Math.max((int) ((exp / (isBoss ? NpcSettings.vitalityConsumeByBoss() : NpcSettings.vitalityConsumeByMonster())) * Math.max(level - getLevel(), 1)), 1);
         }
 
         return -points;

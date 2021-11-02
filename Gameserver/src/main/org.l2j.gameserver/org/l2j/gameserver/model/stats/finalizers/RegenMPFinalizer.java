@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.CastleZone;
@@ -52,7 +53,7 @@ public class RegenMPFinalizer implements IStatsFunction {
 
         double baseValue = isPlayer(creature) ? creature.getActingPlayer().getTemplate().getBaseMpRegen(creature.getLevel()) : creature.getTemplate().getBaseMpReg();
         if(creature.isRaid()) {
-            baseValue *= Config.RAID_MP_REGEN_MULTIPLIER;
+            baseValue *= NpcSettings.raidMpRegenMultiplier();
         }
 
         if (isPlayer(creature)) {
@@ -107,7 +108,7 @@ public class RegenMPFinalizer implements IStatsFunction {
             // Add MEN bonus
             baseValue *= creature.getLevelMod() * BaseStats.MEN.calcBonus(creature);
         } else if (isPet(creature)) {
-            baseValue = ((Pet) creature).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
+            baseValue = ((Pet) creature).getPetLevelData().getPetRegenMP() * NpcSettings.petMpRegenMultiplier();
         }
 
         return Stat.defaultValue(creature, stat, baseValue);
