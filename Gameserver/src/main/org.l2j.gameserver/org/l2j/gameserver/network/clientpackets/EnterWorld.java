@@ -227,6 +227,9 @@ public class EnterWorld extends ClientPacket {
             Event.restorePlayerEventStatus(player);
         }
         onClanMemberLogin(player);
+        player.getStats().recalculateStats(false);
+        player.refreshOverloaded(false);
+        player.broadcastUserInfo();
     }
 
     private void restoreInstance(Player player) {
