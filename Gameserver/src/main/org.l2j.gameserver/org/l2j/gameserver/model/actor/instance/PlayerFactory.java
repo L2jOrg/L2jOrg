@@ -121,12 +121,6 @@ public class PlayerFactory {
         }
 
         loadStats(playerData, player);
-
-        // Recalculate all stats
-        player.getStats().recalculateStats(false);
-
-        // Update the overloaded status of the Player
-        player.refreshOverloaded(false);
         player.restoreFriendList();
 
         player.loadRecommendations();
