@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.NpcSettings;
 
 import java.util.Optional;
 
@@ -66,7 +67,7 @@ public class MDefenseFinalizer extends AbstractDefenseFinalizer {
         }
 
         if (creature.isRaid()) {
-            baseValue *= Config.RAID_MDEFENCE_MULTIPLIER;
+            baseValue *= NpcSettings.raidMDefenseMultiplier();
         }
 
         final double bonus = creature.getMEN() > 0 ? BaseStats.MEN.calcBonus(creature) : 1.;

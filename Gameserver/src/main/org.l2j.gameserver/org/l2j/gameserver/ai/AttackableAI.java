@@ -55,6 +55,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import static java.lang.Math.min;
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.*;
@@ -582,13 +583,13 @@ public class AttackableAI extends CreatureAI {
         if (npc.isRaid() || npc.isRaidMinion()) {
             chaostime++;
             boolean changeTarget = false;
-            if ((npc instanceof RaidBoss) && (chaostime > Config.RAID_CHAOS_TIME)) {
-                final double multiplier = ((Monster) npc).hasMinions() ? 200 : 100;
+            if (npc instanceof RaidBoss raid && chaostime > NpcSettings.raidChaosTime()) {
+                final double multiplier = raid.hasMinions() ? 200 : 100;
                 changeTarget = Rnd.get(100) <= (100 - ((npc.getCurrentHp() * multiplier) / npc.getMaxHp()));
-            } else if ((npc instanceof GrandBoss) && (chaostime > Config.GRAND_CHAOS_TIME)) {
+            } else if (npc instanceof GrandBoss && chaostime > NpcSettings.grandBossChaosTime()) {
                 final double chaosRate = 100 - ((npc.getCurrentHp() * 300) / npc.getMaxHp());
-                changeTarget = ((chaosRate <= 10) && (Rnd.get(100) <= 10)) || ((chaosRate > 10) && (Rnd.get(100) <= chaosRate));
-            } else if (chaostime > Config.MINION_CHAOS_TIME) {
+                changeTarget =  Rnd.chance(min(10, chaosRate));
+            } else if (chaostime > NpcSettings.minionChaosTime()) {
                 changeTarget = Rnd.get(100) <= (100 - ((npc.getCurrentHp() * 200) / npc.getMaxHp()));
             }
 

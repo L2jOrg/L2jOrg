@@ -18,13 +18,13 @@
  */
 package org.l2j.gameserver.model.stats.finalizers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.settings.ChampionSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 
 import java.util.Optional;
 
@@ -52,7 +52,7 @@ public class MAttackFinalizer implements IStatsFunction {
             baseValue *= ChampionSettings.atkMultiplier();
         }
         if (creature.isRaid()) {
-            baseValue *= Config.RAID_MATTACK_MULTIPLIER;
+            baseValue *= NpcSettings.raidMAttackMultiplier();
         }
 
         // Calculate modifiers Magic Attack

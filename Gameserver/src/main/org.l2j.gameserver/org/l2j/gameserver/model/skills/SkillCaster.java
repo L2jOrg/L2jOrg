@@ -51,6 +51,7 @@ import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
@@ -260,7 +261,7 @@ public class SkillCaster implements Runnable {
     }
 
     private static void checkRaidCurse(Creature caster, Skill skill, Creature creature) {
-        if (!Config.RAID_DISABLE_CURSE && creature.isRaid() && creature.giveRaidCurse() && (caster.getLevel() >= (creature.getLevel() + 9))) {
+        if (!NpcSettings.disableRaidCurse() && creature.isRaid() && creature.giveRaidCurse() && (caster.getLevel() >= (creature.getLevel() + 9))) {
             if (skill.isBad() || ((creature.getTarget() == caster) && ((Attackable) creature).getAggroList().containsKey(caster))) {
                 // Skills such as Summon Battle Scar too can trigger magic silence.
                 final CommonSkill curse = skill.isBad() ? CommonSkill.RAID_CURSE2 : CommonSkill.RAID_CURSE;

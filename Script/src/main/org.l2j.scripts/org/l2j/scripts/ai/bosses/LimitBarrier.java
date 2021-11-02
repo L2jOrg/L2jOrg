@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.SkillCastingType;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 import java.util.Map;
@@ -152,11 +153,11 @@ public final class LimitBarrier extends AbstractNpcAI {
         if ("RESTORE_FULL_HP".equals(event)) {
             final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
             if (!npc.isDead()) {
-                if (hits < Config.RAIDBOSS_LIMIT_BARRIER) {
+                if (hits < NpcSettings.limitBarrier()) {
                     if (player != null)
                         npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_TO_DESTROY_THE_LIMIT_BARRIER_NTHE_RAID_BOSS_FULLY_RECOVERS_ITS_HEALTH, 2, 5000, true));
                     npc.setCurrentHp(npc.getStats().getMaxHp(), true);
-                } else if (hits > Config.RAIDBOSS_LIMIT_BARRIER) {
+                } else if (hits > NpcSettings.limitBarrier()) {
                     if (player != null)
                         npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_DESTROYED_THE_LIMIT_BARRIER, 2, 5000, true));
                 }

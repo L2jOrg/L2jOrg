@@ -60,6 +60,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
@@ -786,13 +787,13 @@ public class Pet extends Summon {
     }
 
     public int getInventoryLimit() {
-        return Config.INVENTORY_MAXIMUM_PET;
+        return NpcSettings.maxSlotsForPet();
     }
 
     public void refreshOverloaded() {
         final int maxLoad = getMaxLoad();
         if (maxLoad > 0) {
-            final long weightproc = (((getCurrentLoad() - getBonusWeightPenalty()) * 1000) / maxLoad);
+            final long weightproc = (((getCurrentLoad() - getBonusWeightPenalty()) * 1000L) / maxLoad);
             int newWeightPenalty;
             if ((weightproc < 500) || getOwner().getDietMode()) {
                 newWeightPenalty = 0;

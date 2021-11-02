@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
+import org.l2j.gameserver.settings.NpcSettings;
 
 import java.util.Collection;
 import java.util.List;
@@ -40,15 +41,15 @@ import static java.util.Objects.nonNull;
  * @author luisantonioa, DS, Mobius
  */
 public class MinionList {
-    protected final Monster _master;
-    private final Collection<Monster> _spawnedMinions = ConcurrentHashMap.newKeySet();
+    protected final Monster master;
+    private final Collection<Monster> spawnedMinions = ConcurrentHashMap.newKeySet();
     private final Collection<ScheduledFuture<?>> _respawnTasks = ConcurrentHashMap.newKeySet();
 
     public MinionList(Monster pMaster) {
         if (pMaster == null) {
             throw new NullPointerException("MinionList: master is null");
         }
-        _master = pMaster;
+        master = pMaster;
     }
 
     /**
@@ -119,7 +120,7 @@ public class MinionList {
      * @return list of the spawned (alive) minions.
      */
     public Collection<Monster> getSpawnedMinions() {
-        return _spawnedMinions;
+        return spawnedMinions;
     }
 
     /**
@@ -134,7 +135,7 @@ public class MinionList {
      * @param minions
      */
     public final void spawnMinions(List<MinionHolder> minions) {
-        if (_master.isAlikeDead() || (minions == null)) {
+        if (master.isAlikeDead() || (minions == null)) {
             return;
         }
 
@@ -160,7 +161,7 @@ public class MinionList {
      * @param minion
      */
     public void onMinionSpawn(Monster minion) {
-        _spawnedMinions.add(minion);
+        spawnedMinions.add(minion);
     }
 
     /**
@@ -169,17 +170,18 @@ public class MinionList {
      * @param force - When true, force delete of the spawned minions. By default minions are deleted only for raidbosses.
      */
     public void onMasterDie(boolean force) {
-        _spawnedMinions.forEach(minion -> {
+        for (var minion : spawnedMinions) {
             if(nonNull(minion)) {
                 minion.setLeader(null);
-                if(_master.isRaid() || force || Config.FORCE_DELETE_MINIONS) {
+                if(master.isRaid() || force) {
                     minion.deleteMe();
                 } else {
-                    minion.scheduleDespawn(Config.DESPAWN_MINION_DELAY);
+                    minion.scheduleDespawn(NpcSettings.minionDespawnDelay());
                 }
             }
-        });
-        _spawnedMinions.clear();
+        }
+
+        spawnedMinions.clear();
 
         _respawnTasks.forEach(task -> {
             if(nonNull(task) && !task.isCancelled() && !task.isDone()) {
@@ -188,7 +190,7 @@ public class MinionList {
         });
         _respawnTasks.clear();
 
-        _master.setMinionList(null);
+        master.setMinionList(null);
     }
 
     /**
@@ -199,10 +201,10 @@ public class MinionList {
      */
     public void onMinionDie(Monster minion, int respawnTime) {
         minion.setLeader(null); // prevent memory leaks
-        _spawnedMinions.remove(minion);
+        spawnedMinions.remove(minion);
 
-        final int time = respawnTime < 0 ? _master.isRaid() ? (int) Config.RAID_MINION_RESPAWN_TIMER : 0 : respawnTime;
-		if ((time > 0) && !_master.isAlikeDead())
+        final int time = respawnTime < 0 ? master.isRaid() ? NpcSettings.minionRespawnTime() : 0 : respawnTime;
+		if ((time > 0) && !master.isAlikeDead())
 		{
 			_respawnTasks.add(ThreadPool.schedule(new MinionRespawnTask(minion), time));
         }
@@ -219,17 +221,17 @@ public class MinionList {
             return;
         }
 
-        if (!_master.isAlikeDead() && !_master.isInCombat()) {
-            _master.addDamageHate(attacker, 0, 1);
+        if (!master.isAlikeDead() && !master.isInCombat()) {
+            master.addDamageHate(attacker, 0, 1);
         }
 
-        final boolean callerIsMaster = caller == _master;
+        final boolean callerIsMaster = caller == master;
         int aggro = callerIsMaster ? 10 : 1;
-        if (_master.isRaid()) {
+        if (master.isRaid()) {
             aggro *= 10;
         }
 
-        for (Monster minion : _spawnedMinions) {
+        for (Monster minion : spawnedMinions) {
             if ((minion != null) && !minion.isDead() && (callerIsMaster || !minion.isInCombat())) {
                 minion.addDamageHate(attacker, 0, aggro);
             }
@@ -241,25 +243,25 @@ public class MinionList {
      */
     public void onMasterTeleported() {
         final int offset = 200;
-        final int minRadius = (int) _master.getCollisionRadius() + 30;
+        final int minRadius = (int) master.getCollisionRadius() + 30;
 
-        for (Monster minion : _spawnedMinions) {
+        for (Monster minion : spawnedMinions) {
             if ((minion != null) && !minion.isDead() && !minion.isMovementDisabled()) {
                 int newX = Rnd.get(minRadius * 2, offset * 2); // x
                 int newY = Rnd.get(newX, offset * 2); // distance
                 newY = (int) Math.sqrt((newY * newY) - (newX * newX)); // y
                 if (newX > (offset + minRadius)) {
-                    newX = (_master.getX() + newX) - offset;
+                    newX = (master.getX() + newX) - offset;
                 } else {
-                    newX = (_master.getX() - newX) + minRadius;
+                    newX = (master.getX() - newX) + minRadius;
                 }
                 if (newY > (offset + minRadius)) {
-                    newY = (_master.getY() + newY) - offset;
+                    newY = (master.getY() + newY) - offset;
                 } else {
-                    newY = (_master.getY() - newY) + minRadius;
+                    newY = (master.getY() - newY) + minRadius;
                 }
 
-                minion.teleToLocation(new Location(newX, newY, _master.getZ()));
+                minion.teleToLocation(new Location(newX, newY, master.getZ()));
             }
         }
     }
@@ -268,12 +270,12 @@ public class MinionList {
         if (minionId == 0) {
             return;
         }
-        spawnMinion(_master, minionId);
+        spawnMinion(master, minionId);
     }
 
     private final int countSpawnedMinionsById(int minionId) {
         int count = 0;
-        for (Monster minion : _spawnedMinions) {
+        for (Monster minion : spawnedMinions) {
             if ((minion != null) && (minion.getId() == minionId)) {
                 count++;
             }
@@ -292,15 +294,15 @@ public class MinionList {
 
         @Override
         public void run() {
-            if (!_master.isAlikeDead() && _master.isSpawned()) {
+            if (!master.isAlikeDead() && master.isSpawned()) {
                 // minion can be already spawned or deleted
                 if (!_minion.isSpawned()) {
                     _minion.refreshID();
-                    initializeNpcInstance(_master, _minion);
+                    initializeNpcInstance(master, _minion);
                 }
 
-                if (!_master.getAggroList().isEmpty()) {
-                    _minion.getAggroList().putAll(_master.getAggroList());
+                if (!master.getAggroList().isEmpty()) {
+                    _minion.getAggroList().putAll(master.getAggroList());
                     _minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _minion.getAggroList().keySet().stream().findFirst().get());
                 }
             }

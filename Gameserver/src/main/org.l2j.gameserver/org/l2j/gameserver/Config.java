@@ -49,7 +49,6 @@ public final class Config {
 
     private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 
-    private static final String NPC_CONFIG_FILE = "./config/npc.properties";
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
@@ -131,32 +130,6 @@ public final class Config {
     public static FloodProtectorConfig FLOOD_PROTECTOR_CHARACTER_SELECT;
     public static FloodProtectorConfig FLOOD_PROTECTOR_ITEM_AUCTION;
 
-    // --------------------------------------------------
-    // NPC Settings
-    // --------------------------------------------------
-    public static boolean SHOW_NPC_LVL;
-    public static boolean GUARD_ATTACK_AGGRO_MOB;
-    public static double RAID_HP_REGEN_MULTIPLIER;
-    public static double RAID_MP_REGEN_MULTIPLIER;
-    public static double RAID_PDEFENCE_MULTIPLIER;
-    public static double RAID_MDEFENCE_MULTIPLIER;
-    public static double RAID_PATTACK_MULTIPLIER;
-    public static double RAID_MATTACK_MULTIPLIER;
-    public static double RAID_MINION_RESPAWN_TIMER;
-    public static Map<Integer, Integer> MINIONS_RESPAWN_TIME;
-    public static float RAID_MIN_RESPAWN_MULTIPLIER;
-    public static float RAID_MAX_RESPAWN_MULTIPLIER;
-    public static boolean RAID_DISABLE_CURSE;
-    public static boolean FORCE_DELETE_MINIONS;
-    public static long DESPAWN_MINION_DELAY;
-    public static int RAID_CHAOS_TIME;
-    public static int GRAND_CHAOS_TIME;
-    public static int MINION_CHAOS_TIME;
-    public static int INVENTORY_MAXIMUM_PET;
-    public static double PET_HP_REGEN_MULTIPLIER;
-    public static double PET_MP_REGEN_MULTIPLIER;
-    public static int VITALITY_CONSUME_BY_MOB;
-    public static int VITALITY_CONSUME_BY_BOSS;
 
     // --------------------------------------------------
     // PvP Settings
@@ -292,7 +265,6 @@ public final class Config {
     public static double RAIDBOSS_MDEF_MULTIPLIER;
     public static double RAIDBOSS_AGRRO_RANGE_MULTIPLIER;
     public static float RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
-    public static int RAIDBOSS_LIMIT_BARRIER;
     public static double GUARD_HP_MULTIPLIER;
     public static double GUARD_MP_MULTIPLIER;
     public static double GUARD_PATK_MULTIPLIER;
@@ -508,50 +480,6 @@ public final class Config {
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
 
         loadFloodProtectorConfigs(FloodProtectors);
-
-        // Load NPC config file (if exists)
-        final PropertiesParser NPC = new PropertiesParser(NPC_CONFIG_FILE);
-
-        GUARD_ATTACK_AGGRO_MOB = NPC.getBoolean("GuardAttackAggroMob", false);
-        RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
-        RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;
-        RAID_PDEFENCE_MULTIPLIER = NPC.getDouble("RaidPDefenceMultiplier", 100) / 100;
-        RAID_MDEFENCE_MULTIPLIER = NPC.getDouble("RaidMDefenceMultiplier", 100) / 100;
-        RAID_PATTACK_MULTIPLIER = NPC.getDouble("RaidPAttackMultiplier", 100) / 100;
-        RAID_MATTACK_MULTIPLIER = NPC.getDouble("RaidMAttackMultiplier", 100) / 100;
-        RAID_MIN_RESPAWN_MULTIPLIER = NPC.getFloat("RaidMinRespawnMultiplier", 1.0f);
-        RAID_MAX_RESPAWN_MULTIPLIER = NPC.getFloat("RaidMaxRespawnMultiplier", 1.0f);
-        RAID_MINION_RESPAWN_TIMER = NPC.getInt("RaidMinionRespawnTime", 300000);
-        RAIDBOSS_LIMIT_BARRIER = NPC.getInt("LimitBarrier", 500);
-        final String[] propertySplit = NPC.getString("CustomMinionsRespawnTime", "").split(";");
-        MINIONS_RESPAWN_TIME = new HashMap<>(propertySplit.length);
-        for (String prop : propertySplit) {
-            final String[] propSplit = prop.split(",");
-            if (propSplit.length != 2) {
-                LOGGER.warn(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", prop, "\""));
-            }
-
-            try {
-                MINIONS_RESPAWN_TIME.put(Integer.valueOf(propSplit[0]), Integer.valueOf(propSplit[1]));
-            } catch (NumberFormatException nfe) {
-                if (!prop.isEmpty()) {
-                    LOGGER.warn(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", propSplit[0], "\"", propSplit[1]));
-                }
-            }
-        }
-        FORCE_DELETE_MINIONS = NPC.getBoolean("ForceDeleteMinions", false);
-        DESPAWN_MINION_DELAY = NPC.getLong("DespawnDelayMinions", 20000);
-
-        RAID_DISABLE_CURSE = NPC.getBoolean("DisableRaidCurse", false);
-        RAID_CHAOS_TIME = NPC.getInt("RaidChaosTime", 10);
-        GRAND_CHAOS_TIME = NPC.getInt("GrandChaosTime", 10);
-        MINION_CHAOS_TIME = NPC.getInt("MinionChaosTime", 10);
-        INVENTORY_MAXIMUM_PET = NPC.getInt("MaximumSlotsForPet", 12);
-        PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
-        PET_MP_REGEN_MULTIPLIER = NPC.getDouble("PetMpRegenMultiplier", 100) / 100;
-
-        VITALITY_CONSUME_BY_MOB = NPC.getInt("VitalityConsumeByMob", 2250);
-        VITALITY_CONSUME_BY_BOSS = NPC.getInt("VitalityConsumeByBoss", 1125);
 
         // Load Rates config file (if exists)
         final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);
