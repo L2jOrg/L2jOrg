@@ -1110,62 +1110,60 @@ public final class Formulas {
     }
 
     public static double calculatePvpPveBonus(Creature attacker, Creature target, Skill skill) {
-        // PvP bonus
         if (isPlayable(attacker) && isPlayable(target)) {
-            double pvpAttack;
-            final double pvpDefense;
-            if (skill != null) {
-                if (skill.isMagic()) {
-                    // Magical Skill PvP
-                    pvpAttack = attacker.getStats().getValue(Stat.PVP_MAGICAL_SKILL_DAMAGE, 1);
-                    pvpDefense = target.getStats().getValue(Stat.PVP_MAGICAL_SKILL_DEFENCE, 1);
-                } else {
-                    // Physical Skill PvP
-                    pvpAttack = attacker.getStats().getValue(Stat.PVP_PHYSICAL_SKILL_DAMAGE, 1);
-                    pvpDefense = target.getStats().getValue(Stat.PVP_PHYSICAL_SKILL_DEFENCE, 1);
-                }
-            } else {
-                // Autoattack PvP
-                pvpAttack = attacker.getStats().getValue(Stat.PVP_PHYSICAL_ATTACK_DAMAGE, 1);
-                pvpDefense = target.getStats().getValue(Stat.PVP_PHYSICAL_ATTACK_DEFENCE, 1);
-            }
-            return max(0.05, 1 + (pvpAttack - pvpDefense));
+            return calculatePvPBonus(attacker, target, skill);
         }
-
-        // PvE Bonus
         if (isAttackable(target) || isAttackable(attacker)) {
-            double pveAttack;
-            final double pveDefense;
-            final double pveRaidDefense;
-            final double pveRaidAttack;
-            final double pvePenalty = calcPveDamagePenalty(attacker, target);
-
-            if (skill != null) {
-                if (skill.isMagic()) {
-                    // Magical Skill PvE
-                    pveAttack = attacker.getStats().getValue(Stat.PVE_MAGICAL_SKILL_DAMAGE, 1);
-                    pveDefense = target.getStats().getValue(Stat.PVE_MAGICAL_SKILL_DEFENCE, 1);
-                    pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DEFENCE, 1) : 1;
-                    pveRaidAttack = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DAMAGE, 1) : 1;
-                } else {
-                    // Physical Skill PvE
-                    pveAttack = attacker.getStats().getValue(Stat.PVE_PHYSICAL_SKILL_DAMAGE, 1);
-                    pveDefense = target.getStats().getValue(Stat.PVE_PHYSICAL_SKILL_DEFENCE, 1);
-                    pveRaidAttack = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DAMAGE, 1) : 1;
-                    pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DEFENCE, 1) : 1;
-                }
-            } else {
-                // Autoattack PvE
-                pveAttack = attacker.getStats().getValue(Stat.PVE_PHYSICAL_ATTACK_DAMAGE, 1);
-                pveDefense = target.getStats().getValue(Stat.PVE_PHYSICAL_ATTACK_DEFENCE, 1);
-                pveRaidAttack = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DAMAGE, 1) : 1;
-                pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
-            }
-            //return max(0.05, (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty);
-            return Math.max(0.05, (1 + ((pveAttack * pveRaidAttack) - (pveDefense * pveRaidDefense))) * pvePenalty); // Bonus should not be negative.
+            return calculatePvEBonus(attacker, target, skill);
         }
 
         return 1;
+    }
+
+    private static double calculatePvEBonus(Creature attacker, Creature target, Skill skill) {
+        double pveAttack;
+        final double pveDefense;
+        final double pveRaidDefense;
+        final double pveRaidAttack;
+        final double pvePenalty = calcPveDamagePenalty(attacker, target);
+
+        if (skill != null) {
+            if (skill.isMagic()) {
+                pveAttack = attacker.getStats().getValue(Stat.PVE_MAGICAL_SKILL_DAMAGE, 1);
+                pveDefense = target.getStats().getValue(Stat.PVE_MAGICAL_SKILL_DEFENCE, 1);
+                pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DEFENCE, 1) : 1;
+                pveRaidAttack = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DAMAGE, 1) : 1;
+            } else {
+                pveAttack = attacker.getStats().getValue(Stat.PVE_PHYSICAL_SKILL_DAMAGE, 1);
+                pveDefense = target.getStats().getValue(Stat.PVE_PHYSICAL_SKILL_DEFENCE, 1);
+                pveRaidAttack = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DAMAGE, 1) : 1;
+                pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DEFENCE, 1) : 1;
+            }
+        } else {
+            pveAttack = attacker.getStats().getValue(Stat.PVE_PHYSICAL_ATTACK_DAMAGE, 1);
+            pveDefense = target.getStats().getValue(Stat.PVE_PHYSICAL_ATTACK_DEFENCE, 1);
+            pveRaidAttack = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DAMAGE, 1) : 1;
+            pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
+        }
+        return Math.max(0.05, (1 + ((pveAttack * pveRaidAttack) - (pveDefense * pveRaidDefense))) * pvePenalty);
+    }
+
+    private static double calculatePvPBonus(Creature attacker, Creature target, Skill skill) {
+        double pvpAttack;
+        final double pvpDefense;
+        if (skill != null) {
+            if (skill.isMagic()) {
+                pvpAttack = attacker.getStats().getValue(Stat.PVP_MAGICAL_SKILL_DAMAGE, 1);
+                pvpDefense = target.getStats().getValue(Stat.PVP_MAGICAL_SKILL_DEFENCE, 1);
+            } else {
+                pvpAttack = attacker.getStats().getValue(Stat.PVP_PHYSICAL_SKILL_DAMAGE, 1);
+                pvpDefense = target.getStats().getValue(Stat.PVP_PHYSICAL_SKILL_DEFENCE, 1);
+            }
+        } else {
+            pvpAttack = attacker.getStats().getValue(Stat.PVP_PHYSICAL_ATTACK_DAMAGE, 1);
+            pvpDefense = target.getStats().getValue(Stat.PVP_PHYSICAL_ATTACK_DEFENCE, 1);
+        }
+        return max(0.05, 1 + (pvpAttack - pvpDefense));
     }
 
     public static double calcSpiritElementalDamage(Creature attacker, Creature target, double baseDamage) {
