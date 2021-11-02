@@ -146,7 +146,6 @@ public enum EventType {
     ON_PLAYER_LEVEL_CHANGED(OnPlayerLevelChanged.class, void.class),
     ON_PLAYER_RESTORE(OnPlayerRestore.class, void.class),
     ON_PLAYER_SELECT(OnPlayerSelect.class, void.class, TerminateReturn.class),
-    ON_PLAYER_LOAD(OnPlayerLoad.class, void.class),
     ON_PLAYER_LOGIN(OnPlayerLogin.class, void.class),
     ON_PLAYER_LOGOUT(OnPlayerLogout.class, void.class),
     ON_PLAYER_PK_CHANGED(OnPlayerPKChanged.class, void.class),

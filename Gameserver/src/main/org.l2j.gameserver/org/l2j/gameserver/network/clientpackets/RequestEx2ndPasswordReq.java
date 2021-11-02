@@ -48,7 +48,7 @@ public class RequestEx2ndPasswordReq extends ClientPacket {
 
         boolean success = false;
 
-        if ((changePass == 0) && !client.hasSecondPassword()) {
+        if (changePass == 0 && !client.hasSecondPassword()) {
             success = client.saveSecondPassword(password);
         } else if ((changePass == 2) && client.hasSecondPassword()) {
             success = client.changeSecondPassword(password, newPassword);
