@@ -143,7 +143,7 @@ public final class MathUtil {
     public static ILocational calculateOffsetLocation(ILocational reference, int offset, int minDistance) {
         int newX = Rnd.get(minDistance << 1, offset << 1);
         int newY = Rnd.get(newX, offset << 1);
-        newY = (int) Math.sqrt((newY * newY) - (newX * newX));
+        newY = (int) Math.sqrt((double) (newY * newY) - (newX * newX));
         if (newX > (offset + minDistance)) {
             newX = (reference.getX() + newX) - offset;
         } else {
