@@ -203,23 +203,10 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
 
     private void calcBlockSize(Npc npc, NpcInfoType type) {
         switch (type) {
-            case ATTACKABLE:
-            case RELATIONS: {
-                _initSize += type.getBlockLength();
-                break;
-            }
-            case TITLE: {
-                _initSize += type.getBlockLength() + (npc.getTitle().length() * 2);
-                break;
-            }
-            case NAME: {
-                _blockSize += type.getBlockLength() + (npc.getName().length() * 2);
-                break;
-            }
-            default: {
-                _blockSize += type.getBlockLength();
-                break;
-            }
+            case ATTACKABLE, RELATIONS -> _initSize += type.getBlockLength();
+            case TITLE -> _initSize += type.getBlockLength() + (npc.getTitle().length() * 2);
+            case NAME -> _blockSize += type.getBlockLength() + (npc.getName().length() * 2);
+            default -> _blockSize += type.getBlockLength();
         }
     }
 
