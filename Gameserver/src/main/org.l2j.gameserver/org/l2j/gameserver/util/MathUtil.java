@@ -18,6 +18,8 @@
  */
 package org.l2j.gameserver.util;
 
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.interfaces.ILocational;
 
 import static java.lang.Math.pow;
@@ -136,6 +138,23 @@ public final class MathUtil {
             angleTarget += 360;
         }
         return angleTarget;
+    }
+
+    public static ILocational calculateOffsetLocation(ILocational reference, int offset, int minDistance) {
+        int newX = Rnd.get(minDistance << 1, offset << 1);
+        int newY = Rnd.get(newX, offset << 1);
+        newY = (int) Math.sqrt((newY * newY) - (newX * newX));
+        if (newX > (offset + minDistance)) {
+            newX = (reference.getX() + newX) - offset;
+        } else {
+            newX = (reference.getX() - newX) + minDistance;
+        }
+        if (newY > (offset + minDistance)) {
+            newY = (reference.getY() + newY) - offset;
+        } else {
+            newY = (reference.getY() - newY) + minDistance;
+        }
+        return new Location(newX, newY, reference.getZ());
     }
 
     public static boolean checkAddOverFlow(long x, long y) {
