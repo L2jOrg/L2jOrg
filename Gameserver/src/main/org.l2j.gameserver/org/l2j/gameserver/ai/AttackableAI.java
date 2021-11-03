@@ -375,23 +375,9 @@ public class AttackableAI extends CreatureAI {
                 npc.setWalking();
             }
 
-            if (!MathUtil.isInsideRadius3D(npc, leader, offset)) {
-                int x1 = Rnd.get(minRadius * 2, offset * 2); // x
-                int y1 = Rnd.get(x1, offset * 2); // distance
-                y1 = (int) Math.sqrt((y1 * y1) - (x1 * x1)); // y
-                if (x1 > (offset + minRadius)) {
-                    x1 = (leader.getX() + x1) - offset;
-                } else {
-                    x1 = (leader.getX() - x1) + minRadius;
-                }
-                if (y1 > (offset + minRadius)) {
-                    y1 = (leader.getY() + y1) - offset;
-                } else {
-                    y1 = (leader.getY() - y1) + minRadius;
-                }
-
-                // Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
-                moveTo(x1, y1, leader.getZ());
+            if (!isInsideRadius3D(npc, leader, offset)) {
+                var location = calculateOffsetLocation(leader, offset, minRadius);
+                moveTo(location);
             } else if (Rnd.chance(RANDOM_WALK_RATE)) {
                 for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF)) {
                     target = skillTargetReconsider(sk, true);

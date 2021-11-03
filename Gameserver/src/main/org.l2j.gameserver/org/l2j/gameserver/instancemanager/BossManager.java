@@ -24,7 +24,6 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BossDAO;
 import org.l2j.gameserver.data.database.data.BossData;
 import org.l2j.gameserver.data.xml.impl.NpcData;

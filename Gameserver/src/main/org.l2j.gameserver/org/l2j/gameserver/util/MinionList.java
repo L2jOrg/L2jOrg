@@ -19,15 +19,13 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
+import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.settings.NpcSettings;
 
 import java.util.Collection;
@@ -36,6 +34,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.util.MathUtil.calculateOffsetLocation;
 
 /**
  * @author luisantonioa, DS, Mobius
@@ -83,36 +82,14 @@ public class MinionList {
         minion.setIsDead(false);
         minion.setDecayed(false);
 
-        // Set the Minion HP, MP and Heading
         minion.setCurrentHpMp(minion.getMaxHp(), minion.getMaxMp());
         minion.setHeading(master.getHeading());
 
-        // Set the Minion leader to this RaidBoss
         minion.setLeader(master);
-
-        // move monster to masters instance
         minion.setInstance(master.getInstanceWorld());
 
-        // Init the position of the Minion and add it in the world as a visible object
-        final int offset = 200;
-        final int minRadius = (int) master.getCollisionRadius() + 30;
-
-        int newX = Rnd.get(minRadius * 2, offset * 2); // x
-        int newY = Rnd.get(newX, offset * 2); // distance
-        newY = (int) Math.sqrt((newY * newY) - (newX * newX)); // y
-        if (newX > (offset + minRadius)) {
-            newX = (master.getX() + newX) - offset;
-        } else {
-            newX = (master.getX() - newX) + minRadius;
-        }
-        if (newY > (offset + minRadius)) {
-            newY = (master.getY() + newY) - offset;
-        } else {
-            newY = (master.getY() - newY) + minRadius;
-        }
-
-        minion.spawnMe(newX, newY, master.getZ());
-
+        var location = calculateLocationRelativeToMaster(master);
+        minion.spawnMe(location.getX(), location.getY(), location.getZ());
         return minion;
     }
 
@@ -203,10 +180,12 @@ public class MinionList {
         minion.setLeader(null); // prevent memory leaks
         spawnedMinions.remove(minion);
 
-        final int time = respawnTime < 0 ? master.isRaid() ? NpcSettings.minionRespawnTime() : 0 : respawnTime;
-		if ((time > 0) && !master.isAlikeDead())
-		{
-			_respawnTasks.add(ThreadPool.schedule(new MinionRespawnTask(minion), time));
+        if(respawnTime < 0 && master.isRaid()) {
+            respawnTime = NpcSettings.minionRespawnTime();
+        }
+
+		if (respawnTime > 0 && !master.isAlikeDead()) {
+			_respawnTasks.add(ThreadPool.schedule(new MinionRespawnTask(minion), respawnTime));
         }
     }
 
@@ -242,38 +221,26 @@ public class MinionList {
      * Called from onTeleported() of the master Alive and able to move minions teleported to master.
      */
     public void onMasterTeleported() {
-        final int offset = 200;
-        final int minRadius = (int) master.getCollisionRadius() + 30;
-
         for (Monster minion : spawnedMinions) {
             if ((minion != null) && !minion.isDead() && !minion.isMovementDisabled()) {
-                int newX = Rnd.get(minRadius * 2, offset * 2); // x
-                int newY = Rnd.get(newX, offset * 2); // distance
-                newY = (int) Math.sqrt((newY * newY) - (newX * newX)); // y
-                if (newX > (offset + minRadius)) {
-                    newX = (master.getX() + newX) - offset;
-                } else {
-                    newX = (master.getX() - newX) + minRadius;
-                }
-                if (newY > (offset + minRadius)) {
-                    newY = (master.getY() + newY) - offset;
-                } else {
-                    newY = (master.getY() - newY) + minRadius;
-                }
-
-                minion.teleToLocation(new Location(newX, newY, master.getZ()));
+                var location = calculateLocationRelativeToMaster(master);
+                minion.teleToLocation(location);
             }
         }
     }
 
-    private final void spawnMinion(int minionId) {
+    private static ILocational calculateLocationRelativeToMaster(Monster master) {
+        return calculateOffsetLocation(master, 200, (int) (master.getCollisionRadius() + 30));
+    }
+
+    private void spawnMinion(int minionId) {
         if (minionId == 0) {
             return;
         }
         spawnMinion(master, minionId);
     }
 
-    private final int countSpawnedMinionsById(int minionId) {
+    private int countSpawnedMinionsById(int minionId) {
         int count = 0;
         for (Monster minion : spawnedMinions) {
             if ((minion != null) && (minion.getId() == minionId)) {
