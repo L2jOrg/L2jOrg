@@ -65,7 +65,6 @@ public class MinionList {
      *
      * @param master   Monster used as master for this minion
      * @param minionId The NpcTemplate Identifier of the Minion to spawn
-     * @return
      */
     public static Monster spawnMinion(Monster master, int minionId) {
         // Get the template of the Minion to spawn
@@ -108,8 +107,6 @@ public class MinionList {
      * <li>Get the Minion data of all Minions that must be spawn</li>
      * <li>For each Minion type, spawn the amount of Minion needed</li><BR>
      * <BR>
-     *
-     * @param minions
      */
     public final void spawnMinions(List<MinionHolder> minions) {
         if (master.isAlikeDead() || (minions == null)) {
@@ -134,8 +131,6 @@ public class MinionList {
 
     /**
      * Called on the minion spawn and added them in the list of the spawned minions.
-     *
-     * @param minion
      */
     public void onMinionSpawn(Monster minion) {
         spawnedMinions.add(minion);
@@ -173,7 +168,6 @@ public class MinionList {
     /**
      * Called on the minion death/delete. Removed minion from the list of the spawned minions and reuse if possible.
      *
-     * @param minion
      * @param respawnTime (ms) enable respawning of this minion while master is alive. -1 - use default value: 0 (disable) for mobs and config value for raids.
      */
     public void onMinionDie(Monster minion, int respawnTime) {
@@ -191,9 +185,6 @@ public class MinionList {
 
     /**
      * Called if master/minion was attacked. Master and all free minions receive aggro against attacker.
-     *
-     * @param caller
-     * @param attacker
      */
     public void onAssist(Creature caller, Creature attacker) {
         if (attacker == null) {
@@ -270,7 +261,10 @@ public class MinionList {
 
                 if (!master.getAggroList().isEmpty()) {
                     _minion.getAggroList().putAll(master.getAggroList());
-                    _minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _minion.getAggroList().keySet().stream().findFirst().get());
+                    var it = master.getAggroList().keySet().iterator();
+                    if(it.hasNext()) {
+                        _minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, it.next());
+                    }
                 }
             }
         }
