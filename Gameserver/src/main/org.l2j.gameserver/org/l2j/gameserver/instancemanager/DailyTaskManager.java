@@ -114,9 +114,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent> {
             player.broadcastUserInfo();
         });
 
-        getDAO(PlayerVariablesDAO.class).resetExtendDrop();
-        LOGGER.info("Daily Extend Drop has been reset.");
-
         getDAO(PlayerDAO.class).resetRecommends();
 
         if (ChatSettings.worldChatEnabled()) {
