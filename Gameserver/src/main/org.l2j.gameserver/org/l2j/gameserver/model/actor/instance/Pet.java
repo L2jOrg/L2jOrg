@@ -224,30 +224,26 @@ public class Pet extends Summon {
     @Override
     public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage) {
         final Item item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
+        return onDestroyItem(count, sendMessage, item);
+    }
 
+    private boolean onDestroyItem(long count, boolean sendMessage, Item item) {
         if (item == null) {
             if (sendMessage) {
                 sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
-
             return false;
         }
 
-        // Send Pet inventory update packet
-        final PetInventoryUpdate petIU = new PetInventoryUpdate();
+        var petIU = new PetInventoryUpdate();
         petIU.addItem(item);
         sendPacket(petIU);
 
         if (sendMessage) {
             if (count > 1) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-                sm.addItemName(item.getId());
-                sm.addLong(count);
-                sendPacket(sm);
+                sendPacket(getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(item.getId()).addLong(count));
             } else {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                sm.addItemName(item.getId());
-                sendPacket(sm);
+                sendPacket(getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(item.getId()));
             }
         }
         return true;
@@ -266,33 +262,7 @@ public class Pet extends Summon {
     @Override
     public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         final Item item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
-
-        if (item == null) {
-            if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
-            }
-            return false;
-        }
-
-        // Send Pet inventory update packet
-        final PetInventoryUpdate petIU = new PetInventoryUpdate();
-        petIU.addItem(item);
-        sendPacket(petIU);
-
-        if (sendMessage) {
-            if (count > 1) {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-                sm.addItemName(item.getId());
-                sm.addLong(count);
-                sendPacket(sm);
-            } else {
-                final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-                sm.addItemName(item.getId());
-                sendPacket(sm);
-            }
-        }
-
-        return true;
+        return onDestroyItem(count, sendMessage, item);
     }
 
     @Override
