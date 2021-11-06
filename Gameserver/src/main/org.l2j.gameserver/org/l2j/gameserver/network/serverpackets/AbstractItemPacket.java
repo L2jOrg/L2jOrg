@@ -91,8 +91,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
         buffer.writeByte(0); // Filler (always 0)
         buffer.writeShort(item.isEquipped());
         buffer.writeLong(item.getBodyPart().getId());
-        buffer.writeByte(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-        buffer.writeByte(0x00);
+        buffer.writeShort(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
         buffer.writeByte(0x00);
         buffer.writeInt(-1); // mana
         buffer.writeInt(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) :-9999);
