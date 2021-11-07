@@ -20,7 +20,9 @@ package org.l2j.gameserver.engine.fishing;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
+import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
+import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -143,6 +145,10 @@ public final class FishingEngine extends GameXmlReader {
         return baits.get(baitItemId);
     }
 
+    public boolean isFishingShot(Item shot) {
+        return shot.getAction() == ActionType.FISHINGSHOT;
+    }
+
     public int getBaitDistanceMin() {
         return baitMinDistance;
     }
@@ -166,7 +172,6 @@ public final class FishingEngine extends GameXmlReader {
     public double getSpRateMax() {
         return spMaxRate;
     }
-
 
     public static void init() {
         getInstance().load();
