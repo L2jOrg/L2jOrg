@@ -20,7 +20,6 @@
 package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ChatType;
@@ -331,9 +330,8 @@ public final class Orfen extends AbstractNpcAI
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");
 		}
-		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == BossStatus.ALIVE) && (npc.getId() == RAIKEL_LEOS))
-		{
-			_minions.remove(npc);
+		else if (GrandBossManager.getInstance().getBossStatus(ORFEN) == BossStatus.ALIVE && npc instanceof Attackable attackable && npc.getId() == RAIKEL_LEOS) {
+			_minions.remove(attackable);
 			startQuestTimer("spawn_minion", 360000, npc, null);
 		}
 		return super.onKill(npc, killer, isSummon);
