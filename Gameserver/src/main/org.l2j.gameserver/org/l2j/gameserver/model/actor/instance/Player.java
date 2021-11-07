@@ -37,6 +37,7 @@ import org.l2j.gameserver.data.sql.impl.PlayerSummonTable;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.autoplay.AutoPlaySettings;
+import org.l2j.gameserver.engine.fishing.FishingEngine;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.engine.item.*;
 import org.l2j.gameserver.engine.item.shop.multisell.PreparedMultisellList;
@@ -702,6 +703,10 @@ public final class Player extends Playable {
         var item = inventory.getItemByItemId(itemId);
 
         if(isNull(item) || shotsCount > item.getCount()) {
+            return false;
+        }
+
+        if(FishingEngine.getInstance().isFishingShot(item) && weapon.getItemType() != WeaponType.FISHING_ROD) {
             return false;
         }
 

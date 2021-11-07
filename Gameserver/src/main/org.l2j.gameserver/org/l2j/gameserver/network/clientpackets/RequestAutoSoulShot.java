@@ -18,12 +18,12 @@
  */
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.engine.fishing.FishingEngine;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.item.type.ActionType;
 import org.l2j.gameserver.model.item.type.EtcItemType;
 import org.l2j.gameserver.model.item.type.WeaponType;
 import org.l2j.gameserver.network.InvalidDataPacketException;
@@ -99,7 +99,7 @@ public final class RequestAutoSoulShot extends ClientPacket {
             } else if(!hasShotCount(player, shot)) {
                 return false;
             }
-        } else if(isFishingShot(shot)) {
+        } else if(FishingEngine.getInstance().isFishingShot(shot)) {
             return weapon != null && weapon.getItemType() == WeaponType.FISHING_ROD;
         }else if(isPlayerShot(shot) && (weapon == null ||  weapon.getItemType() == WeaponType.FISHING_ROD)) {
             return false;
@@ -107,10 +107,6 @@ public final class RequestAutoSoulShot extends ClientPacket {
         //@TEMP_FIX When using blessed soulshots the client doesn't update the count in the UI,
         // but in the inventory it is updated. as a work around we need to force a new ExAutoSoulShot
         return updateType != UPDATE_TYPE_AUTO || !player.tryEnableActualAutoShot(shotType);
-    }
-
-    private boolean isFishingShot(Item shot) {
-        return shot.getAction() == ActionType.FISHINGSHOT;
     }
 
     private boolean hasShotCount(Player player, Item item) {
