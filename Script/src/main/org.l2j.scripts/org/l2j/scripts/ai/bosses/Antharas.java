@@ -21,6 +21,7 @@ package org.l2j.scripts.ai.bosses;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.database.data.GrandBossData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.BossStatus;
@@ -41,6 +42,8 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.NoRestartZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
@@ -49,9 +52,12 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 /**
  * Antharas AI.
  * @author Vicochips
+ * @author JoeAlisson
  */
-public final class Antharas extends AbstractNpcAI
-{
+public final class Antharas extends AbstractNpcAI {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(Antharas.class);
+
     // NPC
 	private static final int ANTHARAS = 29068; // Antharas
 	private static final int BEHEMOTH = 29069; // Behemoth Dragon
@@ -85,8 +91,7 @@ public final class Antharas extends AbstractNpcAI
 	private static int attacker_2_hate = 0;
 	private static int attacker_3_hate = 0;
 	
-	private Antharas()
-	{
+	private Antharas() {
 		addSpawnId(ANTHARAS);
 		addMoveFinishedId(BOMBER);
 		addAggroRangeEnterId(BOMBER);
@@ -96,182 +101,147 @@ public final class Antharas extends AbstractNpcAI
 		
 		final var info = GrandBossManager.getInstance().getBossData(ANTHARAS);
 
-		switch (getStatus())
-		{
-			case ALIVE:
-			{
-				_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
-				_antharas.setCurrentHpMp(info.getHp(), info.getMp());
-				addBoss(_antharas);
-				break;
-			}
-			case FIGHTING:
-			{
-				_antharas = (GrandBoss) addSpawn(ANTHARAS, info.getX(), info.getY(), info.getZ(), info.getHeading(), false, 0);
-				_antharas.setCurrentHpMp(info.getHp(), info.getMp());
-				addBoss(_antharas);
-				_lastAttack = System.currentTimeMillis();
-				startQuestTimer("CHECK_ATTACK", 60000, _antharas, null);
-				startQuestTimer("SPAWN_MINION", 300000, _antharas, null);
-				break;
-			}
-			case DEAD:
-			{
-				final long remain = info.getRespawnTime() - System.currentTimeMillis();
-				if (remain > 0)
-				{
-					startQuestTimer("CLEAR_STATUS", remain, null, null);
-				}
-				else
-				{
-					setStatus(BossStatus.ALIVE);
-					_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
-					addBoss(_antharas);
-				}
-				break;
-			}
+		switch (getStatus()) {
+			case ALIVE -> spawnAntharas(info, 125798, 125390, -3952, 0);
+			case FIGHTING -> startFighting(info);
+			case DEAD -> respawnAntharas(info);
 		}
 	}
-	
+
+	private void respawnAntharas(GrandBossData info) {
+		final long remain = info.getRespawnTime() - System.currentTimeMillis();
+		if (remain > 0) {
+			startQuestTimer("CLEAR_STATUS", remain, null, null);
+		} else {
+			setStatus(BossStatus.ALIVE);
+			_antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
+			addBoss(_antharas);
+		}
+	}
+
+	private void startFighting(GrandBossData info) {
+		spawnAntharas(info, info.getX(), info.getY(), info.getZ(), info.getHeading());
+		_lastAttack = System.currentTimeMillis();
+		startQuestTimer("CHECK_ATTACK", 60000, _antharas, null);
+		startQuestTimer("SPAWN_MINION", 300000, _antharas, null);
+	}
+
+	private void spawnAntharas(GrandBossData info, int x, int y, int z, int heading) {
+		_antharas = (GrandBoss) addSpawn(ANTHARAS, x, y, z, heading, false, 0);
+		_antharas.setCurrentHpMp(info.getHp(), info.getMp());
+		addBoss(_antharas);
+	}
+
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		switch (event)
-		{
-			case "SPAWN_ANTHARAS":
-			{
-				_antharas.teleToLocation(125798, 125390, -3952, 32542);
-				setStatus(BossStatus.FIGHTING);
-				_lastAttack = System.currentTimeMillis();
-				zone.broadcastPacket(PlaySound.sound("BS02_A"));
-				startQuestTimer("CAMERA_1", 23, _antharas, null);
-				break;
-			}
-			case "SOCIAL":
-			{
-				zone.broadcastPacket(new SocialAction(npc.getObjectId(), 2));
-				break;
-			}
-			case "START_MOVE":
-			{
-
-
-				World.getInstance().forAnyVisibleObjectInRange(npc, Player.class, 4000,
-						hero -> zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_YOU_CANNOT_HOPE_TO_DEFEAT_ME_WITH_YOUR_MEAGER_STRENGTH, 2, 4000, hero.getName())),  Player::isHero);
-
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(179011, 114871, -7704));
-				startQuestTimer("CHECK_ATTACK", 60000, npc, null);
-				startQuestTimer("SPAWN_MINION", 300000, npc, null);
-				break;
-			}
-			case "CHECK_ATTACK":
-			{
-				if ((npc != null) && ((_lastAttack + 900000) < System.currentTimeMillis()))
-				{
-					setStatus(BossStatus.ALIVE);
-
-					//oustCreatures();
-
-					cancelQuestTimer("CHECK_ATTACK", npc, null);
-					cancelQuestTimer("SPAWN_MINION", npc, null);
-				}
-				else if (npc != null)
-				{
-					if (attacker_1_hate > 10)
-					{
-						attacker_1_hate -= Rnd.get(10);
-					}
-					if (attacker_2_hate > 10)
-					{
-						attacker_2_hate -= Rnd.get(10);
-					}
-					if (attacker_3_hate > 10)
-					{
-						attacker_3_hate -= Rnd.get(10);
-					}
-					manageSkills(npc);
-					startQuestTimer("CHECK_ATTACK", 60000, npc, null);
-				}
-				break;
-			}
-			case "SPAWN_MINION":
-			{
-				if ((minionMultipler > 1) && (_minionCount < (100 - (minionMultipler * 2))))
-				{
-					for (int i = 0; i < minionMultipler; i++)
-					{
-						addSpawn(BEHEMOTH, npc, true);
-						addSpawn(TERASQUE, npc, true);
-					}
-					_minionCount += minionMultipler * 2;
-				}
-				else if (_minionCount < 98)
-				{
-					addSpawn(BEHEMOTH, npc, true);
-					addSpawn(TERASQUE, npc, true);
-					_minionCount += 2;
-				}
-				else if (_minionCount < 99)
-				{
-					addSpawn(Rnd.nextBoolean() ? BEHEMOTH : TERASQUE, npc, true);
-					_minionCount++;
-				}
-				
-				if ((Rnd.get(100) > 10) && (minionMultipler < 4))
-				{
-					minionMultipler++;
-				}
-				startQuestTimer("SPAWN_MINION", 300000, npc, null);
-				break;
-			}
-			case "CLEAR_STATUS":
-			{
-				_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
-				addBoss(_antharas);
-				Broadcast.toAllOnlinePlayers(new Earthquake(185708, 114298, -8221, 20, 10));
-				setStatus(BossStatus.ALIVE);
-				break;
-			}
-			case "RESPAWN_ANTHARAS":
-			{
-				if (getStatus() == BossStatus.DEAD)
-				{
-					setRespawn(0);
-					cancelQuestTimer("CLEAR_STATUS", null, null);
-					notifyEvent("CLEAR_STATUS", null, null);
-					player.sendMessage(getClass().getSimpleName() + ": Antharas has been respawned.");
-				}
-				else
-				{
-					player.sendMessage(getClass().getSimpleName() + ": You can't respawn antharas while antharas is alive!");
-				}
-				break;
-			}
-			case "DESPAWN_MINIONS":
-			{
-				if (getStatus() == BossStatus.FIGHTING)
-				{
-					_minionCount = 0;
-					zone.forEachCreature(Creature::deleteMe, creature -> isNpc(creature) && (creature.getId() == BEHEMOTH || creature.getId() == TERASQUE));
-
-					if (player != null) // Player dont will be null just when is this event called from GM command
-					{
-						player.sendMessage(getClass().getSimpleName() + ": All minions have been deleted!");
-					}
-				}
-				else if (player != null) // Player dont will be null just when is this event called from GM command
-				{
-					player.sendMessage(getClass().getSimpleName() + ": You can't despawn minions right now!");
-				}
-				break;
-			}
-			case "MANAGE_SKILL":
-			{
-				manageSkills(npc);
-				break;
-			}
+	public String onAdvEvent(String event, Npc npc, Player player) {
+		switch (event) {
+			case "SPAWN_ANTHARAS" -> onSpawnAntharas();
+			case "SOCIAL" -> zone.broadcastPacket(new SocialAction(npc.getObjectId(), 2));
+			case "START_MOVE" -> onStartMove(npc);
+			case "CHECK_ATTACK" -> onCheckAttack(npc);
+			case "SPAWN_MINION" -> onSpawnMinion(npc);
+			case "CLEAR_STATUS" -> onClearStatus();
+			case "RESPAWN_ANTHARAS" -> onRespawnAntharas(player);
+			case "DESPAWN_MINIONS" -> onDespawnMinions(player);
+			case "MANAGE_SKILL" -> manageSkills(npc);
+			default -> LOGGER.warn("Unknown event {}", event);
 		}
 		return super.onAdvEvent(event, npc, player);
+	}
+
+	private void onDespawnMinions(Player player) {
+		if (getStatus() == BossStatus.FIGHTING) {
+			_minionCount = 0;
+			zone.forEachCreature(Creature::deleteMe, creature -> isNpc(creature) && (creature.getId() == BEHEMOTH || creature.getId() == TERASQUE));
+
+			if (player != null) // Player dont will be null just when is this event called from GM command
+			{
+				player.sendMessage(getClass().getSimpleName() + ": All minions have been deleted!");
+			}
+		} else if (player != null) // Player dont will be null just when is this event called from GM command
+		{
+			player.sendMessage(getClass().getSimpleName() + ": You can't despawn minions right now!");
+		}
+	}
+
+	private void onRespawnAntharas(Player player) {
+		if (getStatus() == BossStatus.DEAD) {
+			setRespawn(0);
+			cancelQuestTimer("CLEAR_STATUS", null, null);
+			notifyEvent("CLEAR_STATUS", null, null);
+			player.sendMessage(getClass().getSimpleName() + ": Antharas has been respawned.");
+		} else {
+			player.sendMessage(getClass().getSimpleName() + ": You can't respawn antharas while antharas is alive!");
+		}
+	}
+
+	private void onClearStatus() {
+		_antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+		addBoss(_antharas);
+		Broadcast.toAllOnlinePlayers(new Earthquake(185708, 114298, -8221, 20, 10));
+		setStatus(BossStatus.ALIVE);
+	}
+
+	private void onSpawnMinion(Npc npc) {
+		if ((minionMultipler > 1) && (_minionCount < (100 - (minionMultipler * 2)))) {
+			for (int i = 0; i < minionMultipler; i++) {
+				addSpawn(BEHEMOTH, npc, true);
+				addSpawn(TERASQUE, npc, true);
+			}
+			_minionCount += minionMultipler * 2;
+		} else if (_minionCount < 98) {
+			addSpawn(BEHEMOTH, npc, true);
+			addSpawn(TERASQUE, npc, true);
+			_minionCount += 2;
+		} else if (_minionCount < 99) {
+			addSpawn(Rnd.nextBoolean() ? BEHEMOTH : TERASQUE, npc, true);
+			_minionCount++;
+		}
+
+		if ((Rnd.get(100) > 10) && (minionMultipler < 4)) {
+			minionMultipler++;
+		}
+		startQuestTimer("SPAWN_MINION", 300000, npc, null);
+	}
+
+	private void onCheckAttack(Npc npc) {
+		if ((npc != null) && ((_lastAttack + 900000) < System.currentTimeMillis())) {
+			setStatus(BossStatus.ALIVE);
+
+			//oustCreatures();
+
+			cancelQuestTimer("CHECK_ATTACK", npc, null);
+			cancelQuestTimer("SPAWN_MINION", npc, null);
+		} else if (npc != null) {
+			if (attacker_1_hate > 10) {
+				attacker_1_hate -= Rnd.get(10);
+			}
+			if (attacker_2_hate > 10) {
+				attacker_2_hate -= Rnd.get(10);
+			}
+			if (attacker_3_hate > 10) {
+				attacker_3_hate -= Rnd.get(10);
+			}
+			manageSkills(npc);
+			startQuestTimer("CHECK_ATTACK", 60000, npc, null);
+		}
+	}
+
+	private void onStartMove(Npc npc) {
+		World.getInstance().forAnyVisibleObjectInRange(npc, Player.class, 4000,
+				hero -> zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_YOU_CANNOT_HOPE_TO_DEFEAT_ME_WITH_YOUR_MEAGER_STRENGTH, 2, 4000, hero.getName())), Player::isHero);
+
+		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(179011, 114871, -7704));
+		startQuestTimer("CHECK_ATTACK", 60000, npc, null);
+		startQuestTimer("SPAWN_MINION", 300000, npc, null);
+	}
+
+	private void onSpawnAntharas() {
+		_antharas.teleToLocation(125798, 125390, -3952, 32542);
+		setStatus(BossStatus.FIGHTING);
+		_lastAttack = System.currentTimeMillis();
+		zone.broadcastPacket(PlaySound.sound("BS02_A"));
+		startQuestTimer("CAMERA_1", 23, _antharas, null);
 	}
 
 	@Override
@@ -517,25 +487,11 @@ public final class Antharas extends AbstractNpcAI
 		}
 		if (i2 > 0)
 		{
-			if (Rnd.get(100) < 70)
-			{
-				switch (i1)
-				{
-					case 2:
-					{
-						attacker_1_hate = 500;
-						break;
-					}
-					case 3:
-					{
-						attacker_2_hate = 500;
-						break;
-					}
-					case 4:
-					{
-						attacker_3_hate = 500;
-						break;
-					}
+			if (Rnd.chance(70)) {
+				switch (i1) {
+					case 2 -> attacker_1_hate = 500;
+					case 3 -> attacker_2_hate = 500;
+					case 4 -> attacker_3_hate = 500;
 				}
 			}
 			

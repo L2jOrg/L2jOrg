@@ -19,7 +19,6 @@
 package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.instancemanager.BossStatus;
@@ -42,364 +41,304 @@ import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.scripts.ai.AbstractNpcAI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Queen Ant's AI
+ *
  * @author Emperorc
  */
-public final class QueenAnt extends AbstractNpcAI
-{
-	private static final int QUEEN = 29001;
-	private static final int LARVA = 29002;
-	private static final int NURSE = 29003;
-	private static final int GUARD = 29004;
-	private static final int ROYAL = 29005;
-	
-	private static final int[] MOBS =
-	{
-		QUEEN,
-		LARVA,
-		NURSE,
-		GUARD,
-		ROYAL
-	};
-	
-	private static final Location OUST_LOC_1 = new Location(-19480, 187344, -5600);
-	private static final Location OUST_LOC_2 = new Location(-17928, 180912, -5520);
-	private static final Location OUST_LOC_3 = new Location(-23808, 182368, -5600);
-	
-	private static final int QUEEN_X = -21610;
-	private static final int QUEEN_Y = 181594;
-	private static final int QUEEN_Z = -5734;
-	
-	private static Zone _zone;
-	
-	private static final SkillHolder HEAL1 = new SkillHolder(4020, 1);
-	private static final SkillHolder HEAL2 = new SkillHolder(4024, 1);
-	
-	Monster _queen = null;
-	private Monster _larva = null;
-	private final Set<Monster> _nurses = ConcurrentHashMap.newKeySet();
-	
-	private QueenAnt()
-	{
-		addSpawnId(MOBS);
-		addKillId(MOBS);
-		addAggroRangeEnterId(MOBS);
-		addFactionCallId(NURSE);
-		
-		_zone = ZoneEngine.getInstance().getZoneById(12012);
-		final var info = GrandBossManager.getInstance().getBossData(QUEEN);
-		final var status = GrandBossManager.getInstance().getBossStatus(QUEEN);
-		if (status == BossStatus.DEAD)
-		{
-			// load the unlock date and time for queen ant from DB
-			final long temp = info.getRespawnTime() - System.currentTimeMillis();
-			// if queen ant is locked until a certain time, mark it so and start the unlock timer
-			// the unlock time has not yet expired.
-			if (temp > 0)
-			{
-				startQuestTimer("queen_unlock", temp, null, null);
+public final class QueenAnt extends AbstractNpcAI {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(QueenAnt.class);
+
+    private static final int QUEEN = 29001;
+    private static final int LARVA = 29002;
+    private static final int NURSE = 29003;
+    private static final int GUARD = 29004;
+    private static final int ROYAL = 29005;
+
+    private static final int[] MOBS =
+            {
+                    QUEEN,
+                    LARVA,
+                    NURSE,
+                    GUARD,
+                    ROYAL
+            };
+
+    private static final Location OUST_LOC_1 = new Location(-19480, 187344, -5600);
+    private static final Location OUST_LOC_2 = new Location(-17928, 180912, -5520);
+    private static final Location OUST_LOC_3 = new Location(-23808, 182368, -5600);
+
+    private static final int QUEEN_X = -21610;
+    private static final int QUEEN_Y = 181594;
+    private static final int QUEEN_Z = -5734;
+
+    private static Zone _zone;
+
+    private static final SkillHolder HEAL1 = new SkillHolder(4020, 1);
+    private static final SkillHolder HEAL2 = new SkillHolder(4024, 1);
+
+    Monster _queen = null;
+    private Monster _larva = null;
+    private final Set<Monster> _nurses = ConcurrentHashMap.newKeySet();
+
+    private QueenAnt() {
+        addSpawnId(MOBS);
+        addKillId(MOBS);
+        addAggroRangeEnterId(MOBS);
+        addFactionCallId(NURSE);
+
+        _zone = ZoneEngine.getInstance().getZoneById(12012);
+        final var info = GrandBossManager.getInstance().getBossData(QUEEN);
+        final var status = GrandBossManager.getInstance().getBossStatus(QUEEN);
+        if (status == BossStatus.DEAD) {
+            // load the unlock date and time for queen ant from DB
+            final long temp = info.getRespawnTime() - System.currentTimeMillis();
+            // if queen ant is locked until a certain time, mark it so and start the unlock timer
+            // the unlock time has not yet expired.
+            if (temp > 0) {
+                startQuestTimer("queen_unlock", temp, null, null);
+            } else {
+                // the time has already expired while the server was offline. Immediately spawn queen ant.
+				spawnQueenAnt();
 			}
-			else
-			{
-				// the time has already expired while the server was offline. Immediately spawn queen ant.
-				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.ALIVE);
-				spawnBoss(queen);
-			}
+        } else {
+            int loc_x = info.getX();
+            int loc_y = info.getY();
+            int loc_z = info.getZ();
+            if (!_zone.isInsideZone(loc_x, loc_y, loc_z)) {
+                loc_x = QUEEN_X;
+                loc_y = QUEEN_Y;
+                loc_z = QUEEN_Z;
+            }
+            final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, loc_x, loc_y, loc_z, info.getHeading(), false, 0);
+            queen.setCurrentHpMp(info.getHp(), info.getMp());
+            spawnBoss(queen);
+        }
+    }
+
+    private void spawnBoss(GrandBoss npc) {
+        GrandBossManager.getInstance().addBoss(npc);
+        if (Rnd.get(100) < 33) {
+            _zone.movePlayersTo(OUST_LOC_1);
+        } else if (Rnd.get(100) < 50) {
+            _zone.movePlayersTo(OUST_LOC_2);
+        } else {
+            _zone.movePlayersTo(OUST_LOC_3);
+        }
+        GrandBossManager.getInstance().addBoss(npc);
+        startQuestTimer("action", 10000, npc, null, true);
+        startQuestTimer("heal", 1000, null, null, true);
+        npc.broadcastPacket(PlaySound.music("BS01_A", npc));
+        _queen = npc;
+        _larva = (Monster) addSpawn(LARVA, -21600, 179482, -5846, Rnd.get(360), false, 0);
+    }
+
+    @Override
+    public String onAdvEvent(String event, Npc npc, Player player) {
+		switch (event) {
+			case "heal" -> onHeal();
+			case "action" -> onAction(npc);
+			case "queen_unlock" -> spawnQueenAnt();
+			case "ANT_QUEEN_TASK" -> onQueenTask();
+			default -> LOGGER.warn("unknown event {}", event);
 		}
-		else
-		{
-			int loc_x = info.getX();
-			int loc_y = info.getY();
-			int loc_z = info.getZ();
-			if (!_zone.isInsideZone(loc_x, loc_y, loc_z))
-			{
-				loc_x = QUEEN_X;
-				loc_y = QUEEN_Y;
-				loc_z = QUEEN_Z;
-			}
-			final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, loc_x, loc_y, loc_z, info.getHeading(), false, 0);
-			queen.setCurrentHpMp(info.getHp(), info.getMp());
-			spawnBoss(queen);
-		}
-	}
-	
-	private void spawnBoss(GrandBoss npc)
-	{
-		GrandBossManager.getInstance().addBoss(npc);
-		if (Rnd.get(100) < 33)
-		{
-			_zone.movePlayersTo(OUST_LOC_1);
-		}
-		else if (Rnd.get(100) < 50)
-		{
-			_zone.movePlayersTo(OUST_LOC_2);
-		}
-		else
-		{
-			_zone.movePlayersTo(OUST_LOC_3);
-		}
-		GrandBossManager.getInstance().addBoss(npc);
-		startQuestTimer("action", 10000, npc, null, true);
-		startQuestTimer("heal", 1000, null, null, true);
-		npc.broadcastPacket(PlaySound.music("BS01_A", npc));
-		_queen = npc;
-		_larva = (Monster) addSpawn(LARVA, -21600, 179482, -5846, Rnd.get(360), false, 0);
-	}
-	
-	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
-		switch (event)
-		{
-			case "heal":
-		{
-			boolean notCasting;
-			final boolean larvaNeedHeal = (_larva != null) && (_larva.getCurrentHp() < _larva.getMaxHp());
-			final boolean queenNeedHeal = (_queen != null) && (_queen.getCurrentHp() < _queen.getMaxHp());
-			for (Monster nurse : _nurses)
-			{
-				if ((nurse == null) || nurse.isDead() || nurse.isCastingNow(SkillCaster::isAnyNormalType))
-				{
-					continue;
-				}
-				
-				notCasting = nurse.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST;
-				if (larvaNeedHeal)
-				{
-					if ((nurse.getTarget() != _larva) || notCasting)
-					{
-						nurse.setTarget(_larva);
-						nurse.useMagic(Rnd.nextBoolean() ? HEAL1.getSkill() : HEAL2.getSkill());
-					}
-					continue;
-				}
-				if (queenNeedHeal)
-				{
-					if (nurse.getLeader() == _larva)
-					{
-						continue;
-					}
-					
-					if ((nurse.getTarget() != _queen) || notCasting)
-					{
-						nurse.setTarget(_queen);
-						nurse.useMagic(HEAL1.getSkill());
-					}
-					continue;
-				}
-				// if nurse not casting - remove target
-				if (notCasting && (nurse.getTarget() != null))
-				{
-					nurse.setTarget(null);
-				}
-			}
-				break;
-		}
-			case "action":
-		{
-				if ((npc != null) && (Rnd.get(3) == 0))
-			{
-				if (Rnd.get(2) == 0)
-				{
-					npc.broadcastSocialAction(3);
-				}
-				else
-				{
-					npc.broadcastSocialAction(4);
-				}
-			}
-				break;
-		}
-			case "queen_unlock": {
-				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.ALIVE);
-				spawnBoss(queen);
-				break;
-			}
-			case "ANT_QUEEN_TASK":
-			{
-				if ((_queen == null) || _queen.isDead())
-				{
-					cancelQuestTimers("ANT_QUEEN_TASK");
-				}
-				else if (!MathUtil.isInsideRadius2D(_queen, QUEEN_X, QUEEN_Y, 2000))
-				{
-					_queen.clearAggroList();
-					_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
-				}
-				break;
-			}
-		}
-		return super.onAdvEvent(event, npc, player);
-	}
-	
-	@Override
-	public String onSpawn(Npc npc)
-	{
-		final Monster mob = (Monster) npc;
-		switch (npc.getId())
-		{
-			case LARVA:
-			{
-				mob.setIsImmobilized(true);
-				mob.setUndying(true);
-				mob.setIsRaidMinion(true);
-				break;
-			}
-			case NURSE:
-			{
-				mob.disableCoreAI(true);
-				mob.setIsRaidMinion(true);
-				_nurses.add(mob);
-				break;
-			}
-			case ROYAL:
-			case GUARD:
-			{
-				mob.setIsRaidMinion(true);
-				break;
-			}
-			case QUEEN:
-			{
-				if (mob.getMinionList().getSpawnedMinions().isEmpty())
-				{
-					((Monster) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
-				}
-				cancelQuestTimer("ANT_QUEEN_TASK", npc, null);
-				startQuestTimer("ANT_QUEEN_TASK", 5000, npc, null, true);
-				break;
-			}
-		}
-		
-		return super.onSpawn(npc);
-	}
-	
-	@Override
-	public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon)
-	{
-		if ((caller == null) || (npc == null))
-		{
-			return super.onFactionCall(npc, caller, attacker, isSummon);
-		}
-		
-		if (!npc.isCastingNow(SkillCaster::isAnyNormalType) && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST))
-		{
-			if (caller.getCurrentHp() < caller.getMaxHp())
-			{
-				npc.setTarget(caller);
-				((Attackable) npc).useMagic(HEAL1.getSkill());
-			}
-		}
-		return null;
-	}
-	
-	@Override
-	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
-	{
-		if ((npc == null) || (player.isGM() && player.isInvisible()))
-		{
-			return null;
-		}
-		
-		final boolean isMage;
-		final Playable character;
-		if (isSummon)
-		{
-			isMage = false;
-			character = player.getServitors().values().stream().findFirst().orElse(player.getPet());
-		}
-		else
-		{
-			isMage = player.isMageClass();
-			character = player;
-		}
-		
-		if (character == null)
-		{
-			return null;
-		}
-		
-		if (!NpcSettings.disableRaidCurse() && ((character.getLevel() - npc.getLevel()) > 8))
-		{
-			Skill curse = null;
-			if (isMage)
-			{
-				if (!character.hasAbnormalType(CommonSkill.RAID_CURSE.getSkill().getAbnormalType()) && (Rnd.get(4) == 0))
-				{
-					curse = CommonSkill.RAID_CURSE.getSkill();
-				}
-			}
-			else if (!character.hasAbnormalType(CommonSkill.RAID_CURSE2.getSkill().getAbnormalType()) && (Rnd.get(4) == 0))
-			{
-				curse = CommonSkill.RAID_CURSE2.getSkill();
-			}
-			
-			if (curse != null)
-			{
-				npc.broadcastPacket(new MagicSkillUse(npc, character, curse, 300, 0, -1, SkillCastingType.NORMAL));
-				curse.applyEffects(npc, character);
-			}
-			
-			((Attackable) npc).stopHating(character); // for calling again
-			return null;
-		}
-		
-		return super.onAggroRangeEnter(npc, player, isSummon);
-	}
-	
-	@Override
-	public String onKill(Npc npc, Player killer, boolean isSummon)
-	{
-		final int npcId = npc.getId();
-		if (npcId == QUEEN)
-		{
-			npc.broadcastPacket(PlaySound.music("BS02_D", npc));
-			GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.DEAD);
-			// Calculate Min and Max respawn times randomly.
-			final long respawnTime = NpcSettings.queenAntSpawnInterval();
-			startQuestTimer("queen_unlock", respawnTime, null, null);
-			cancelQuestTimer("action", npc, null);
-			cancelQuestTimer("heal", null, null);
-			// also save the respawn time so that the info is maintained past reboots
-			final var info = GrandBossManager.getInstance().getBossData(QUEEN);
-			info.setRespawnTime(System.currentTimeMillis() + respawnTime);
-			_nurses.clear();
-			_larva.deleteMe();
-			_larva = null;
-			_queen = null;
+        return super.onAdvEvent(event, npc, player);
+    }
+
+	private void onQueenTask() {
+		if ((_queen == null) || _queen.isDead()) {
 			cancelQuestTimers("ANT_QUEEN_TASK");
+		} else if (!MathUtil.isInsideRadius2D(_queen, QUEEN_X, QUEEN_Y, 2000)) {
+			_queen.clearAggroList();
+			_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
 		}
-		else if ((_queen != null) && !_queen.isAlikeDead())
-		{
-			if (npcId == ROYAL)
-			{
-				final Monster mob = (Monster) npc;
-				if (mob.getLeader() != null)
-				{
-					mob.getLeader().getMinionList().onMinionDie(mob, (280 + Rnd.get(40)) * 1000);
-				}
-			}
-			else if (npcId == NURSE)
-			{
-				final Monster mob = (Monster) npc;
-				_nurses.remove(mob);
-				if (mob.getLeader() != null)
-				{
-					mob.getLeader().getMinionList().onMinionDie(mob, 10000);
-				}
-			}
-		}
-		return super.onKill(npc, killer, isSummon);
 	}
 
-	public static AbstractNpcAI provider()
-	{
-		return new QueenAnt();
+	private void spawnQueenAnt() {
+		final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
+		GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.ALIVE);
+		spawnBoss(queen);
 	}
+
+	private void onAction(Npc npc) {
+		if ((npc != null) && (Rnd.get(3) == 0)) {
+			if (Rnd.get(2) == 0) {
+				npc.broadcastSocialAction(3);
+			} else {
+				npc.broadcastSocialAction(4);
+			}
+		}
+	}
+
+	private void onHeal() {
+		boolean notCasting;
+		final boolean larvaNeedHeal = (_larva != null) && (_larva.getCurrentHp() < _larva.getMaxHp());
+		final boolean queenNeedHeal = (_queen != null) && (_queen.getCurrentHp() < _queen.getMaxHp());
+		for (Monster nurse : _nurses) {
+			if ((nurse == null) || nurse.isDead() || nurse.isCastingNow(SkillCaster::isAnyNormalType)) {
+				continue;
+			}
+
+			notCasting = nurse.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST;
+			if (larvaNeedHeal) {
+				if ((nurse.getTarget() != _larva) || notCasting) {
+					nurse.setTarget(_larva);
+					nurse.useMagic(Rnd.nextBoolean() ? HEAL1.getSkill() : HEAL2.getSkill());
+				}
+				continue;
+			}
+			if (queenNeedHeal) {
+				if (nurse.getLeader() == _larva) {
+					continue;
+				}
+
+				if ((nurse.getTarget() != _queen) || notCasting) {
+					nurse.setTarget(_queen);
+					nurse.useMagic(HEAL1.getSkill());
+				}
+				continue;
+			}
+			// if nurse not casting - remove target
+			if (notCasting && (nurse.getTarget() != null)) {
+				nurse.setTarget(null);
+			}
+		}
+	}
+
+	@Override
+    public String onSpawn(Npc npc) {
+        final Monster mob = (Monster) npc;
+		switch (npc.getId()) {
+			case LARVA -> onSpawnLarva(mob);
+			case NURSE -> onSpawnNurse(mob);
+			case ROYAL, GUARD -> mob.setIsRaidMinion(true);
+			case QUEEN -> onSpawnQueen(npc, mob);
+		}
+
+        return super.onSpawn(npc);
+    }
+
+	private void onSpawnQueen(Npc npc, Monster mob) {
+		if (mob.getMinionList().getSpawnedMinions().isEmpty()) {
+			((Monster) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
+		}
+		cancelQuestTimer("ANT_QUEEN_TASK", npc, null);
+		startQuestTimer("ANT_QUEEN_TASK", 5000, npc, null, true);
+	}
+
+	private void onSpawnNurse(Monster mob) {
+		mob.disableCoreAI(true);
+		mob.setIsRaidMinion(true);
+		_nurses.add(mob);
+	}
+
+	private void onSpawnLarva(Monster mob) {
+		mob.setIsImmobilized(true);
+		mob.setUndying(true);
+		mob.setIsRaidMinion(true);
+	}
+
+	@Override
+    public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon) {
+        if ((caller == null) || (npc == null)) {
+            return super.onFactionCall(npc, caller, attacker, isSummon);
+        }
+
+        if (!npc.isCastingNow(SkillCaster::isAnyNormalType) && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST)) {
+            if (caller.getCurrentHp() < caller.getMaxHp()) {
+                npc.setTarget(caller);
+                ((Attackable) npc).useMagic(HEAL1.getSkill());
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon) {
+        if ((npc == null) || (player.isGM() && player.isInvisible())) {
+            return null;
+        }
+
+        final boolean isMage;
+        final Playable character;
+        if (isSummon) {
+            isMage = false;
+            character = player.getServitors().values().stream().findFirst().orElse(player.getPet());
+        } else {
+            isMage = player.isMageClass();
+            character = player;
+        }
+
+        if (character == null) {
+            return null;
+        }
+
+        if (!NpcSettings.disableRaidCurse() && ((character.getLevel() - npc.getLevel()) > 8)) {
+            Skill curse = null;
+            if (isMage) {
+                if (!character.hasAbnormalType(CommonSkill.RAID_CURSE.getSkill().getAbnormalType()) && (Rnd.get(4) == 0)) {
+                    curse = CommonSkill.RAID_CURSE.getSkill();
+                }
+            } else if (!character.hasAbnormalType(CommonSkill.RAID_CURSE2.getSkill().getAbnormalType()) && (Rnd.get(4) == 0)) {
+                curse = CommonSkill.RAID_CURSE2.getSkill();
+            }
+
+            if (curse != null) {
+                npc.broadcastPacket(new MagicSkillUse(npc, character, curse, 300, 0, -1, SkillCastingType.NORMAL));
+                curse.applyEffects(npc, character);
+            }
+
+            ((Attackable) npc).stopHating(character); // for calling again
+            return null;
+        }
+
+        return super.onAggroRangeEnter(npc, player, isSummon);
+    }
+
+    @Override
+    public String onKill(Npc npc, Player killer, boolean isSummon) {
+        final int npcId = npc.getId();
+        if (npcId == QUEEN) {
+            npc.broadcastPacket(PlaySound.music("BS02_D", npc));
+            GrandBossManager.getInstance().setBossStatus(QUEEN, BossStatus.DEAD);
+            // Calculate Min and Max respawn times randomly.
+            final long respawnTime = NpcSettings.queenAntSpawnInterval();
+            startQuestTimer("queen_unlock", respawnTime, null, null);
+            cancelQuestTimer("action", npc, null);
+            cancelQuestTimer("heal", null, null);
+            // also save the respawn time so that the info is maintained past reboots
+            final var info = GrandBossManager.getInstance().getBossData(QUEEN);
+            info.setRespawnTime(System.currentTimeMillis() + respawnTime);
+            _nurses.clear();
+            _larva.deleteMe();
+            _larva = null;
+            _queen = null;
+            cancelQuestTimers("ANT_QUEEN_TASK");
+        } else if ((_queen != null) && !_queen.isAlikeDead()) {
+            if (npcId == ROYAL) {
+                final Monster mob = (Monster) npc;
+                if (mob.getLeader() != null) {
+                    mob.getLeader().getMinionList().onMinionDie(mob, (280 + Rnd.get(40)) * 1000);
+                }
+            } else if (npcId == NURSE) {
+                final Monster mob = (Monster) npc;
+                _nurses.remove(mob);
+                if (mob.getLeader() != null) {
+                    mob.getLeader().getMinionList().onMinionDie(mob, 10000);
+                }
+            }
+        }
+        return super.onKill(npc, killer, isSummon);
+    }
+
+    public static AbstractNpcAI provider() {
+        return new QueenAnt();
+    }
 }

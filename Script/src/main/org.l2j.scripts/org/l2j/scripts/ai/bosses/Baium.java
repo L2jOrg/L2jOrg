@@ -21,6 +21,7 @@ package org.l2j.scripts.ai.bosses;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
+import org.l2j.gameserver.data.database.data.GrandBossData;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.ChatType;
@@ -47,6 +48,8 @@ import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.NoRestartZone;
 import org.l2j.scripts.ai.AbstractNpcAI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -56,8 +59,9 @@ import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
  * Baium AI.
  * @author St3eT
  */
-public final class Baium extends AbstractNpcAI
-{
+public final class Baium extends AbstractNpcAI {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Baium.class);
     // NPCs
     private static final int BAIUM = 29020; // Baium
     private static final int BAIUM_STONE = 29025; // Baium
@@ -116,336 +120,279 @@ public final class Baium extends AbstractNpcAI
 
         final var data = GrandBossManager.getInstance().getBossData(BAIUM);
 
-        switch (getStatus())
-        {
-            case ALIVE:
-            {
-                addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
-                break;
-            }
-            case FIGHTING:
-            {
-                _baium = (GrandBoss) addSpawn(BAIUM, data.getX(), data.getY(), data.getZ(), data.getHeading(), false, 0);
-                _baium.setCurrentHpMp(data.getHp(), data.getMp());
-                _lastAttack = System.currentTimeMillis();
-                addBoss(_baium);
+        switch (getStatus()) {
+            case ALIVE -> addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
+            case FIGHTING -> onFightingStatus(data);
+            case DEAD -> onDeadStatus(data);
+        }
+    }
 
-                for (Location loc : ARCHANGEL_LOC)
-                {
-                    final Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
-                    startQuestTimer("SELECT_TARGET", 5000, archangel, null);
-                }
-                startQuestTimer("CHECK_ATTACK", 60000, _baium, null);
-                break;
+    private void onDeadStatus(GrandBossData data) {
+        final long remain = data.getRespawnTime() - System.currentTimeMillis();
+        if (remain > 0) {
+            startQuestTimer("CLEAR_STATUS", remain, null, null);
+        } else {
+            notifyEvent("CLEAR_STATUS", null, null);
+        }
+    }
+
+    private void onFightingStatus(GrandBossData data) {
+        _baium = (GrandBoss) addSpawn(BAIUM, data.getX(), data.getY(), data.getZ(), data.getHeading(), false, 0);
+        _baium.setCurrentHpMp(data.getHp(), data.getMp());
+        _lastAttack = System.currentTimeMillis();
+        addBoss(_baium);
+
+        for (Location loc : ARCHANGEL_LOC) {
+            final Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
+            startQuestTimer("SELECT_TARGET", 5000, archangel, null);
+        }
+        startQuestTimer("CHECK_ATTACK", 60000, _baium, null);
+    }
+
+    @Override
+    public String onAdvEvent(String event, Npc npc, Player player) {
+        switch (event) {
+            case "31862-04.html" -> {
+                return event;
             }
-            case DEAD:
-            {
-                final long remain = data.getRespawnTime() - System.currentTimeMillis();
-                if (remain > 0)
-                {
-                    startQuestTimer("CLEAR_STATUS", remain, null, null);
+            case "enter" -> {
+                return onEnter(player);
+            }
+            case "teleportOut" -> onTeleportOut(player);
+            case "wakeUp" -> onWakeUp(npc, player);
+            case "WAKEUP_ACTION" -> onWakeupAction(npc);
+            case "MANAGE_EARTHQUAKE" -> onManageEarthquake(npc, player);
+            case "SOCIAL_ACTION" -> onSocialAction(npc, player);
+            case "PLAYER_PORT" -> onPlayerPort(npc, player);
+            case "PLAYER_KILL" -> onPlayerKill(npc, player);
+            case "SPAWN_ARCHANGEL" -> onSpawnArchangel(npc, player);
+            case "SELECT_TARGET" -> onSelectTarget(npc);
+            case "CHECK_ATTACK" -> onCheckAttack(npc);
+            case "CLEAR_STATUS" -> onClearStatus();
+            case "CLEAR_ZONE" -> onClearZone();
+            case "RESPAWN_BAIUM" -> onRespawnBaium(player);
+            case "ABORT_FIGHT" -> onAbortFight(player);
+            case "DESPAWN_MINIONS" -> onDespawnMinions(player);
+            case "MANAGE_SKILLS" -> onManageSkill(npc);
+            default -> LOGGER.warn("Unknown event {}", event);
+        }
+        return super.onAdvEvent(event, npc, player);
+    }
+
+    private void onManageSkill(Npc npc) {
+        if (npc != null) {
+            manageSkills(npc);
+        }
+    }
+
+    private void onDespawnMinions(Player player) {
+        if (getStatus() == BossStatus.FIGHTING) {
+            zone.forEachCreature(Creature::deleteMe, creature -> isNpc(creature) && creature.getId() == ARCHANGEL);
+
+            if (player != null) {
+                player.sendMessage(getClass().getSimpleName() + ": All archangels has been deleted!");
+            }
+        } else if (player != null) {
+            player.sendMessage(getClass().getSimpleName() + ": You cant despawn archangels right now!");
+        }
+    }
+
+    private void onAbortFight(Player player) {
+        if (getStatus() == BossStatus.FIGHTING) {
+            _baium = null;
+            notifyEvent("CLEAR_ZONE", null, null);
+            notifyEvent("CLEAR_STATUS", null, null);
+            player.sendMessage(getClass().getSimpleName() + ": Aborting fight!");
+        } else {
+            player.sendMessage(getClass().getSimpleName() + ": You cant abort attack right now!");
+        }
+        cancelQuestTimers("CHECK_ATTACK");
+        cancelQuestTimers("SELECT_TARGET");
+    }
+
+    private void onRespawnBaium(Player player) {
+        if (getStatus() == BossStatus.DEAD) {
+            setRespawn(0);
+            cancelQuestTimer("CLEAR_STATUS", null, null);
+            notifyEvent("CLEAR_STATUS", null, null);
+        } else {
+            player.sendMessage(getClass().getSimpleName() + ": You cant respawn Baium while Baium is alive!");
+        }
+    }
+
+    private void onClearZone() {
+        zone.forEachCreature(creature -> {
+            if (isNpc(creature)) {
+                creature.deleteMe();
+            } else if (isPlayer(creature)) {
+                notifyEvent("teleportOut", null, (Player) creature);
+            }
+        });
+    }
+
+    private void onClearStatus() {
+        setStatus(BossStatus.ALIVE);
+        addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
+    }
+
+    private void onCheckAttack(Npc npc) {
+        if ((npc != null) && ((_lastAttack + 1800000) < System.currentTimeMillis())) {
+            notifyEvent("CLEAR_ZONE", null, null);
+            addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
+            setStatus(BossStatus.ALIVE);
+        } else if (npc != null) {
+            if (((_lastAttack + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))) {
+                npc.setTarget(npc);
+                npc.doCast(HEAL_OF_BAIUM.getSkill());
+            }
+            startQuestTimer("CHECK_ATTACK", 60000, npc, null);
+        }
+    }
+
+    private void onSelectTarget(Npc npc) {
+        if (npc != null) {
+            final Attackable mob = (Attackable) npc;
+            final Creature mostHated = mob.getMostHated();
+
+            if ((_baium == null) || _baium.isDead()) {
+                mob.deleteMe();
+                return;
+            }
+
+            if (isPlayer(mostHated) && zone.isInsideZone(mostHated)) {
+                if (mob.getTarget() != mostHated) {
+                    mob.clearAggroList();
                 }
-                else
-                {
-                    notifyEvent("CLEAR_STATUS", null, null);
+                addAttackPlayerDesire(mob, (Playable) mostHated);
+            } else {
+                boolean found = World.getInstance().checkAnyVisibleObjectInRange(mob, Playable.class, 1000, playable -> {
+                    if (zone.isInsideZone(playable) && !playable.isDead()) {
+                        if (!playable.equals(mob.getTarget())) {
+                            mob.clearAggroList();
+                        }
+                        addAttackPlayerDesire(mob, playable);
+                        return true;
+                    }
+                    return false;
+                });
+
+
+                if (!found) {
+                    if (isInsideRadius3D(mob, _baium, 40)) {
+                        if (mob.getTarget() != _baium) {
+                            mob.clearAggroList();
+                        }
+                        mob.setRunning();
+                        mob.addDamageHate(_baium, 0, 999);
+                        mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _baium);
+                    } else {
+                        mob.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _baium);
+                    }
                 }
-                break;
+            }
+            startQuestTimer("SELECT_TARGET", 5000, npc, null);
+        }
+    }
+
+    private void onSpawnArchangel(Npc npc, Player player) {
+        _baium.disableCoreAI(false);
+
+        for (Location loc : ARCHANGEL_LOC) {
+            final Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
+            startQuestTimer("SELECT_TARGET", 5000, archangel, null);
+        }
+
+        if ((player != null) && !player.isDead()) {
+            addAttackPlayerDesire(npc, player);
+        } else if ((_standbyPlayer != null) && !_standbyPlayer.isDead()) {
+            addAttackPlayerDesire(npc, _standbyPlayer);
+        } else {
+            World.getInstance().forAnyVisibleObjectInRange(npc, Player.class, 2000, visiblePlayer -> addAttackPlayerDesire(npc, visiblePlayer), visiblePlayer -> zone.isInsideZone(visiblePlayer) && !visiblePlayer.isDead());
+        }
+    }
+
+    private void onPlayerKill(Npc npc, Player player) {
+        if ((player != null) && isInsideRadius3D(player, npc, 16000)) {
+            zone.broadcastPacket(new SocialAction(npc.getObjectId(), 1));
+            npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_DARE_YOU_WAKE_ME_NOW_YOU_SHALL_DIE);
+            npc.setTarget(player);
+            npc.doCast(BAIUM_PRESENT.getSkill());
+        }
+
+        zone.forAnyCreature(creature ->
+                        zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.NOT_EVEN_THE_GODS_THEMSELVES_COULD_TOUCH_ME_BUT_YOU_S1_YOU_DARE_CHALLENGE_ME_IGNORANT_MORTAL, 2, 4000, creature.getName())),
+                creature -> isPlayer(creature) && ((Player) creature).isHero()
+        );
+
+        startQuestTimer("SPAWN_ARCHANGEL", 8000, npc, null);
+    }
+
+    private void onPlayerPort(Npc npc, Player player) {
+        if (npc != null) {
+            if (player != null && isInsideRadius3D(player, npc, 16000)) {
+                player.teleToLocation(BAIUM_GIFT_LOC);
+                startQuestTimer("PLAYER_KILL", 3000, npc, player);
+            } else if ((_standbyPlayer != null) && isInsideRadius3D(_standbyPlayer, npc, 16000)) {
+                _standbyPlayer.teleToLocation(BAIUM_GIFT_LOC);
+                startQuestTimer("PLAYER_KILL", 3000, npc, _standbyPlayer);
             }
         }
     }
 
-    @Override
-    public String onAdvEvent(String event, Npc npc, Player player)
-    {
-        switch (event)
-        {
-            case "31862-04.html":
-            {
-                return event;
-            }
-            case "enter":
-            {
-                String htmltext = null;
-                if (getStatus() == BossStatus.DEAD)
-                {
-                    htmltext = "31862-03.html";
-                }
-                else if (getStatus() == BossStatus.FIGHTING)
-                {
-                    htmltext = "31862-02.html";
-                }
-                else if (!hasQuestItems(player, FABRIC))
-                {
-                    htmltext = "31862-01.html";
-                }
-                else
-                {
-                    takeItems(player, FABRIC, 1);
-                    player.teleToLocation(TELEPORT_IN_LOC);
-                }
-                return htmltext;
-            }
-            case "teleportOut":
-            {
-                final Location destination = TELEPORT_OUT_LOC[Rnd.get(TELEPORT_OUT_LOC.length)];
-                player.teleToLocation(destination.getX() + Rnd.get(100), destination.getY() + Rnd.get(100), destination.getZ());
-                break;
-            }
-            case "wakeUp":
-            {
-                if (getStatus() == BossStatus.ALIVE)
-                {
-
-                    setStatus(BossStatus.FIGHTING);
-                    _baium = (GrandBoss) addSpawn(BAIUM, BAIUM_LOC, false, 0);
-                    _baium.disableCoreAI(true);
-                    addBoss(_baium);
-                    _lastAttack = System.currentTimeMillis();
-                    startQuestTimer("WAKEUP_ACTION", 50, _baium, null);
-                    startQuestTimer("MANAGE_EARTHQUAKE", 2000, _baium, player);
-                    startQuestTimer("CHECK_ATTACK", 60000, _baium, null);
-                    npc.deleteMe();
-                }
-                break;
-            }
-            case "WAKEUP_ACTION":
-            {
-                if (npc != null)
-                {
-                    zone.broadcastPacket(new SocialAction(_baium.getObjectId(), 2));
-                }
-                break;
-            }
-            case "MANAGE_EARTHQUAKE":
-            {
-                if (npc != null)
-                {
-                    zone.broadcastPacket(new Earthquake(npc.getX(), npc.getY(), npc.getZ(), 40, 10));
-                    zone.broadcastPacket(PlaySound.sound("BS02_A"));
-                    startQuestTimer("SOCIAL_ACTION", 8000, npc, player);
-                }
-                break;
-            }
-            case "SOCIAL_ACTION":
-            {
-                if (npc != null)
-                {
-                    zone.broadcastPacket(new SocialAction(npc.getObjectId(), 3));
-                    startQuestTimer("PLAYER_PORT", 6000, npc, player);
-                }
-                break;
-            }
-            case "PLAYER_PORT":
-            {
-                if (npc != null)
-                {
-                    if (player != null && isInsideRadius3D(player, npc, 16000))
-                    {
-                        player.teleToLocation(BAIUM_GIFT_LOC);
-                        startQuestTimer("PLAYER_KILL", 3000, npc, player);
-                    }
-                    else if ((_standbyPlayer != null) && isInsideRadius3D(_standbyPlayer, npc, 16000))
-                    {
-                        _standbyPlayer.teleToLocation(BAIUM_GIFT_LOC);
-                        startQuestTimer("PLAYER_KILL", 3000, npc, _standbyPlayer);
-                    }
-                }
-                break;
-            }
-            case "PLAYER_KILL":
-            {
-                if ((player != null) && isInsideRadius3D(player, npc, 16000))
-                {
-                    zone.broadcastPacket(new SocialAction(npc.getObjectId(), 1));
-                    npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_DARE_YOU_WAKE_ME_NOW_YOU_SHALL_DIE);
-                    npc.setTarget(player);
-                    npc.doCast(BAIUM_PRESENT.getSkill());
-                }
-
-                zone.forAnyCreature(creature ->
-                    zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.NOT_EVEN_THE_GODS_THEMSELVES_COULD_TOUCH_ME_BUT_YOU_S1_YOU_DARE_CHALLENGE_ME_IGNORANT_MORTAL, 2, 4000, creature.getName())),
-                    creature -> isPlayer(creature) && ((Player)creature).isHero()
-                );
-
-                startQuestTimer("SPAWN_ARCHANGEL", 8000, npc, null);
-                break;
-            }
-            case "SPAWN_ARCHANGEL":
-            {
-                _baium.disableCoreAI(false);
-
-                for (Location loc : ARCHANGEL_LOC)
-                {
-                    final Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
-                    startQuestTimer("SELECT_TARGET", 5000, archangel, null);
-                }
-
-                if ((player != null) && !player.isDead())
-                {
-                    addAttackPlayerDesire(npc, player);
-                }
-                else if ((_standbyPlayer != null) && !_standbyPlayer.isDead())
-                {
-                    addAttackPlayerDesire(npc, _standbyPlayer);
-                }
-                else
-                {
-                    World.getInstance().forAnyVisibleObjectInRange(npc, Player.class, 2000, visiblePlayer -> addAttackPlayerDesire(npc, visiblePlayer), visiblePlayer ->  zone.isInsideZone(visiblePlayer) && !visiblePlayer.isDead());
-                }
-                break;
-            }
-            case "SELECT_TARGET":
-            {
-                if (npc != null)
-                {
-                    final Attackable mob = (Attackable) npc;
-                    final Creature mostHated = mob.getMostHated();
-
-                    if ((_baium == null) || _baium.isDead())
-                    {
-                        mob.deleteMe();
-                        break;
-                    }
-
-                    if (isPlayer(mostHated) && zone.isInsideZone(mostHated))
-                    {
-                        if (mob.getTarget() != mostHated)
-                        {
-                            mob.clearAggroList();
-                        }
-                        addAttackPlayerDesire(mob, (Playable) mostHated);
-                    }
-                    else
-                    {
-                        boolean found =  World.getInstance().checkAnyVisibleObjectInRange(mob, Playable.class, 1000, playable -> {
-                            if(zone.isInsideZone(playable) && !playable.isDead()) {
-                                if(!playable.equals(mob.getTarget())) {
-                                    mob.clearAggroList();
-                                }
-                                addAttackPlayerDesire(mob, playable);
-                                return true;
-                            }
-                            return false;
-                        });
-
-
-                        if (!found)
-                        {
-                            if (isInsideRadius3D(mob, _baium, 40))
-                            {
-                                if (mob.getTarget() != _baium)
-                                {
-                                    mob.clearAggroList();
-                                }
-                                mob.setRunning();
-                                mob.addDamageHate(_baium, 0, 999);
-                                mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _baium);
-                            }
-                            else
-                            {
-                                mob.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _baium);
-                            }
-                        }
-                    }
-                    startQuestTimer("SELECT_TARGET", 5000, npc, null);
-                }
-                break;
-            }
-            case "CHECK_ATTACK":
-            {
-                if ((npc != null) && ((_lastAttack + 1800000) < System.currentTimeMillis()))
-                {
-                    notifyEvent("CLEAR_ZONE", null, null);
-                    addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
-                    setStatus(BossStatus.ALIVE);
-                }
-                else if (npc != null)
-                {
-                    if (((_lastAttack + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.75)))
-                    {
-                        npc.setTarget(npc);
-                        npc.doCast(HEAL_OF_BAIUM.getSkill());
-                    }
-                    startQuestTimer("CHECK_ATTACK", 60000, npc, null);
-                }
-                break;
-            }
-            case "CLEAR_STATUS":
-            {
-                setStatus(BossStatus.ALIVE);
-                addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
-                break;
-            }
-            case "CLEAR_ZONE": {
-
-                zone.forEachCreature(creature -> {
-                    if(isNpc(creature)) {
-                        creature.deleteMe();
-                    } else if(isPlayer(creature)) {
-                        notifyEvent("teleportOut", null, (Player) creature);
-                    }
-                });
-                break;
-            }
-            case "RESPAWN_BAIUM":
-            {
-                if (getStatus() == BossStatus.DEAD)
-                {
-                    setRespawn(0);
-                    cancelQuestTimer("CLEAR_STATUS", null, null);
-                    notifyEvent("CLEAR_STATUS", null, null);
-                }
-                else
-                {
-                    player.sendMessage(getClass().getSimpleName() + ": You cant respawn Baium while Baium is alive!");
-                }
-                break;
-            }
-            case "ABORT_FIGHT":
-            {
-                if (getStatus() == BossStatus.FIGHTING)
-                {
-                    _baium = null;
-                    notifyEvent("CLEAR_ZONE", null, null);
-                    notifyEvent("CLEAR_STATUS", null, null);
-                    player.sendMessage(getClass().getSimpleName() + ": Aborting fight!");
-                }
-                else
-                {
-                    player.sendMessage(getClass().getSimpleName() + ": You cant abort attack right now!");
-                }
-                cancelQuestTimers("CHECK_ATTACK");
-                cancelQuestTimers("SELECT_TARGET");
-                break;
-            }
-            case "DESPAWN_MINIONS":
-            {
-                if (getStatus() == BossStatus.FIGHTING) {
-                    zone.forEachCreature(Creature::deleteMe, creature -> isNpc(creature) && creature.getId() == ARCHANGEL);
-
-                    if (player != null)
-                    {
-                        player.sendMessage(getClass().getSimpleName() + ": All archangels has been deleted!");
-                    }
-                }
-                else if (player != null)
-                {
-                    player.sendMessage(getClass().getSimpleName() + ": You cant despawn archangels right now!");
-                }
-                break;
-            }
-            case "MANAGE_SKILLS":
-            {
-                if (npc != null)
-                {
-                    manageSkills(npc);
-                }
-                break;
-            }
-            default:
-                throw new IllegalStateException("Unexpected value: " + event);
+    private void onSocialAction(Npc npc, Player player) {
+        if (npc != null) {
+            zone.broadcastPacket(new SocialAction(npc.getObjectId(), 3));
+            startQuestTimer("PLAYER_PORT", 6000, npc, player);
         }
-        return super.onAdvEvent(event, npc, player);
+    }
+
+    private void onManageEarthquake(Npc npc, Player player) {
+        if (npc != null) {
+            zone.broadcastPacket(new Earthquake(npc.getX(), npc.getY(), npc.getZ(), 40, 10));
+            zone.broadcastPacket(PlaySound.sound("BS02_A"));
+            startQuestTimer("SOCIAL_ACTION", 8000, npc, player);
+        }
+    }
+
+    private void onWakeupAction(Npc npc) {
+        if (npc != null) {
+            zone.broadcastPacket(new SocialAction(_baium.getObjectId(), 2));
+        }
+    }
+
+    private void onWakeUp(Npc npc, Player player) {
+        if (getStatus() == BossStatus.ALIVE) {
+
+            setStatus(BossStatus.FIGHTING);
+            _baium = (GrandBoss) addSpawn(BAIUM, BAIUM_LOC, false, 0);
+            _baium.disableCoreAI(true);
+            addBoss(_baium);
+            _lastAttack = System.currentTimeMillis();
+            startQuestTimer("WAKEUP_ACTION", 50, _baium, null);
+            startQuestTimer("MANAGE_EARTHQUAKE", 2000, _baium, player);
+            startQuestTimer("CHECK_ATTACK", 60000, _baium, null);
+            npc.deleteMe();
+        }
+    }
+
+    private void onTeleportOut(Player player) {
+        final Location destination = TELEPORT_OUT_LOC[Rnd.get(TELEPORT_OUT_LOC.length)];
+        player.teleToLocation(destination.getX() + Rnd.get(100), destination.getY() + Rnd.get(100), destination.getZ());
+    }
+
+    private String onEnter(Player player) {
+        String htmltext = null;
+        if (getStatus() == BossStatus.DEAD) {
+            htmltext = "31862-03.html";
+        } else if (getStatus() == BossStatus.FIGHTING) {
+            htmltext = "31862-02.html";
+        } else if (!hasQuestItems(player, FABRIC)) {
+            htmltext = "31862-01.html";
+        } else {
+            takeItems(player, FABRIC, 1);
+            player.teleToLocation(TELEPORT_IN_LOC);
+        }
+        return htmltext;
     }
 
     @Override
