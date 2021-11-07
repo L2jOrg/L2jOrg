@@ -20,7 +20,6 @@ package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.CategoryType;
@@ -43,6 +42,7 @@ import org.l2j.gameserver.network.serverpackets.Earthquake;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.NoRestartZone;
@@ -522,7 +522,7 @@ public final class Baium extends AbstractNpcAI
             setStatus(BossStatus.DEAD);
             addSpawn(TELE_CUBE, TELEPORT_CUBIC_LOC, false, 900000);
             zone.broadcastPacket(PlaySound.sound("BS01_D"));
-            final long respawnTime = Config.BAIUM_SPAWN_INTERVAL * 3600000L;
+            final long respawnTime = NpcSettings.baiumSpawnInterval();
             setRespawn(respawnTime);
             startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
             startQuestTimer("CLEAR_ZONE", 900000, null, null);

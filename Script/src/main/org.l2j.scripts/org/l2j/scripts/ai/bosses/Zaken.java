@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 /**
@@ -93,7 +94,7 @@ public class Zaken extends AbstractNpcAI
 		npc.broadcastPacket(PlaySound.music("BS02_D", npc));
 		GrandBossManager.getInstance().setBossStatus(ZAKEN, BossStatus.DEAD);
 		// Calculate Min and Max respawn times randomly.
-		final long respawnTime = (Config.ZAKEN_SPAWN_INTERVAL + Rnd.get(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM)) * 3600000L;
+		final long respawnTime = NpcSettings.zakenSpawnInterval();
 		startQuestTimer("zaken_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
 		final var info = GrandBossManager.getInstance().getBossData(ZAKEN);
