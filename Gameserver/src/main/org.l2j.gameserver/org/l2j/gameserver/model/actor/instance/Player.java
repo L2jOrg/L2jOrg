@@ -1033,9 +1033,9 @@ public final class Player extends Playable {
     private final IntSet whispers = CHashIntMap.newKeySet();
     private final IntSet friends = CHashIntMap.newKeySet();
 
-    protected Future<?> mountFeedTask;
-    protected boolean recommendTwoHoursGiven;
-    protected boolean inventoryDisable;
+    private Future<?> mountFeedTask;
+    private boolean recommendTwoHoursGiven;
+    private boolean inventoryDisable;
 
     private volatile boolean isOnline;
 
