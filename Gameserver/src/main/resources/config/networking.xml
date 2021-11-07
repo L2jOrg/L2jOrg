@@ -6,10 +6,11 @@
         <auto-discovery/>
     </network>
 
+    <!--
     <network port="7778" key="982b758c-3a42-4624-a9da-203ac97e00c2" auth-server-host="localhost" auth-server-port="9014" auth-server-key="5ed5aea2-ec7a-4465-9784-421a74478ae9">
         <subnet address="0.0.0.0/0" host="#external"/>
         <subnet address="127.0.0.0/8" host="127.0.0.1"/>
         <subnet address="192.168.100.0/24" host="192.168.100.3" />
-    </network>
+    </network> -->
 
 </networks>
