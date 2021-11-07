@@ -81,16 +81,16 @@ public final class Antharas extends AbstractNpcAI {
 
 	// Misc
 	private GrandBoss _antharas = null;
-	private static long _lastAttack = 0;
-	private static int _minionCount = 0;
-	private static int minionMultipler = 0;
-	private static Player attacker_1 = null;
-	private static Player attacker_2 = null;
-	private static Player attacker_3 = null;
-	private static int attacker_1_hate = 0;
-	private static int attacker_2_hate = 0;
-	private static int attacker_3_hate = 0;
-	
+	private long _lastAttack = 0;
+	private int _minionCount = 0;
+	private int minionMultipler = 0;
+	private Player attacker_1 = null;
+	private Player attacker_2 = null;
+	private Player attacker_3 = null;
+	private int attacker_1_hate = 0;
+	private int attacker_2_hate = 0;
+	private int attacker_3_hate = 0;
+
 	private Antharas() {
 		addSpawnId(ANTHARAS);
 		addMoveFinishedId(BOMBER);
@@ -98,7 +98,7 @@ public final class Antharas extends AbstractNpcAI {
 		addSpellFinishedId(ANTHARAS);
 		addAttackId(ANTHARAS, BOMBER, BEHEMOTH, TERASQUE);
 		addKillId(ANTHARAS, TERASQUE, BEHEMOTH);
-		
+
 		final var info = GrandBossManager.getInstance().getBossData(ANTHARAS);
 
 		switch (getStatus()) {
@@ -251,12 +251,12 @@ public final class Antharas extends AbstractNpcAI {
 		npc.doDie(player);
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
-	
+
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
 		_lastAttack = System.currentTimeMillis();
-		
+
 		if (npc.getId() == BOMBER)
 		{
 			if (isInsideRadius3D(npc,  attacker, 230))
@@ -271,7 +271,7 @@ public final class Antharas extends AbstractNpcAI {
 			{
 				addSkillCastDesire(npc, attacker, ANTH_ANTI_STRIDER.getSkill(), 100);
 			}
-			
+
 			if (skill == null)
 			{
 				refreshAiParams(attacker, damage * 1000);
@@ -296,7 +296,7 @@ public final class Antharas extends AbstractNpcAI {
 		}
 		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
-	
+
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
@@ -324,14 +324,14 @@ public final class Antharas extends AbstractNpcAI {
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
-	
+
 	@Override
 	public void onMoveFinished(Npc npc)
 	{
 		npc.doCast(DISPEL_BOM.getSkill());
 		npc.doDie(null);
 	}
-	
+
 	@Override
 	public String onSpawn(Npc npc)
 	{
@@ -355,7 +355,7 @@ public final class Antharas extends AbstractNpcAI {
 		}
 		return super.onSpawn(npc);
 	}
-	
+
 	@Override
 	public String onSpellFinished(Npc npc, Player player, Skill skill)
 	{
@@ -366,7 +366,7 @@ public final class Antharas extends AbstractNpcAI {
 		startQuestTimer("MANAGE_SKILL", 1000, npc, null);
 		return super.onSpellFinished(npc, player, skill);
 	}
-	
+
 	@Override
 	public boolean unload(boolean removeFromList)
 	{
@@ -377,26 +377,26 @@ public final class Antharas extends AbstractNpcAI {
 		}
 		return super.unload(removeFromList);
 	}
-	
+
 	private BossStatus getStatus() {
 		return GrandBossManager.getInstance().getBossStatus(ANTHARAS);
 	}
-	
+
 	private void addBoss(GrandBoss grandboss)
 	{
 		GrandBossManager.getInstance().addBoss(grandboss);
 	}
-	
+
 	private void setStatus(BossStatus status)
 	{
 		GrandBossManager.getInstance().setBossStatus(ANTHARAS, status);
 	}
-	
+
 	private void setRespawn(long respawnTime)
 	{
 		GrandBossManager.getInstance().getBossData(ANTHARAS).setRespawnTime(System.currentTimeMillis() + respawnTime);
 	}
-	
+
 	private void refreshAiParams(Player attacker, int damage)
 	{
 		if ((attacker_1 != null) && (attacker == attacker_1))
@@ -440,64 +440,52 @@ public final class Antharas extends AbstractNpcAI {
 			}
 		}
 	}
-	
-	private void manageSkills(Npc npc)
-	{
-		if (npc.isCastingNow() || npc.isCoreAIDisabled() || !npc.isInCombat())
-		{
+
+	private void manageSkills(Npc npc) {
+		if (npc.isCastingNow() || npc.isCoreAIDisabled() || !npc.isInCombat()) {
 			return;
 		}
-		
-		int i1 = 0;
+
 		int i2 = 0;
 		Player c2 = null;
-		if ((attacker_1 == null) || !isInsideRadius3D(npc, attacker_1, 9000) || attacker_1.isDead())
-		{
+		if (isUnavailableTarget(npc, attacker_1)) {
 			attacker_1_hate = 0;
 		}
-		
-		if ((attacker_2 == null) || !isInsideRadius3D(npc, attacker_2, 9000) || attacker_2.isDead())
-		{
+
+		if (isUnavailableTarget(npc, attacker_2)) {
 			attacker_2_hate = 0;
 		}
-		
-		if ((attacker_3 == null) || !isInsideRadius3D(npc, attacker_3, 9000) || attacker_3.isDead())
-		{
+
+		if (isUnavailableTarget(npc, attacker_3)) {
 			attacker_3_hate = 0;
 		}
-		
-		if (attacker_1_hate > attacker_2_hate)
-		{
-			i1 = 2;
+
+		if (attacker_1_hate > attacker_2_hate) {
 			i2 = attacker_1_hate;
 			c2 = attacker_1;
-		}
-		else if (attacker_2_hate > 0)
-		{
-			i1 = 3;
+			if(Rnd.chance(70)) {
+				attacker_1_hate = 500;
+			}
+		} else if (attacker_2_hate > 0) {
 			i2 = attacker_2_hate;
 			c2 = attacker_2;
+			if(Rnd.chance(70)) {
+				attacker_2_hate = 500;
+			}
 		}
-		
-		if (attacker_3_hate > i2)
-		{
-			i1 = 4;
+
+		if (attacker_3_hate > i2) {
 			i2 = attacker_3_hate;
 			c2 = attacker_3;
-		}
-		if (i2 > 0)
-		{
-			if (Rnd.chance(70)) {
-				switch (i1) {
-					case 2 -> attacker_1_hate = 500;
-					case 3 -> attacker_2_hate = 500;
-					case 4 -> attacker_3_hate = 500;
-				}
+			if(Rnd.chance(70)) {
+				attacker_3_hate = 500;
 			}
-			
+		}
+
+		if (i2 > 0) {
 			final double distance_c2 = calculateDistance3D(npc, c2);
 			final double direction_c2 = npc.calculateDirectionTo(c2);
-			
+
 			SkillHolder skillToCast;
 			boolean castOnTarget = false;
 			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.25))
@@ -650,7 +638,7 @@ public final class Antharas extends AbstractNpcAI {
 				castOnTarget = true;
 				skillToCast = ANTH_NORM_ATTACK;
 			}
-			
+
 			if ((skillToCast != null) && SkillCaster.checkUseConditions(npc, skillToCast.getSkill()))
 			{
 				if (castOnTarget)
@@ -663,6 +651,10 @@ public final class Antharas extends AbstractNpcAI {
 				}
 			}
 		}
+	}
+
+	private boolean isUnavailableTarget(Npc npc, Player attacker_1) {
+		return attacker_1 == null || !isInsideRadius3D(npc, attacker_1, 9000) || attacker_1.isDead();
 	}
 
 	public static AbstractNpcAI provider()

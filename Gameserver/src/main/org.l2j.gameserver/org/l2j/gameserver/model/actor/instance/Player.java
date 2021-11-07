@@ -3957,11 +3957,19 @@ public final class Player extends Playable {
     }
 
     public Summon getAnyServitor() {
-        return getServitors().values().stream().findAny().orElse(null);
+        if(servitors == null || servitors.isEmpty()) {
+            return null;
+        }
+        var it = servitors.values().iterator();
+        return it.hasNext() ? it.next() : null;
     }
 
-    public Summon getFirstServitor() {
-        return getServitors().values().stream().findFirst().orElse(null);
+    public Summon getAnySummon() {
+        if(servitors == null || servitors.isEmpty()) {
+            return pet;
+        }
+        var it = servitors.values().iterator();
+        return it.hasNext() ? it.next() : null;
     }
 
     @Override

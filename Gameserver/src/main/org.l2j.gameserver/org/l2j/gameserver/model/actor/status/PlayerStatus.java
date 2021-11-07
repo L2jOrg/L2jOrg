@@ -125,7 +125,7 @@ public class PlayerStatus extends PlayableStatus {
 
             // Check and calculate transfered damage
             // TODO move to effect
-            final Summon summon = me.getFirstServitor();
+            final Summon summon = me.getAnyServitor();
             if (nonNull(summon) && isInsideRadius3D(me, summon, 1000)) {
                 tDmg = value * me.getStats().getValue(Stat.TRANSFER_DAMAGE_SUMMON_PERCENT, 0) / 100;
 

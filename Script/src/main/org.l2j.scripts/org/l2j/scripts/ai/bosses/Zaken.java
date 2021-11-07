@@ -19,8 +19,6 @@
  */
 package org.l2j.scripts.ai.bosses;
 
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.BossStatus;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.model.actor.Npc;
