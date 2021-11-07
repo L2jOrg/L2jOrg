@@ -32,6 +32,7 @@ import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
 import java.util.Collection;
@@ -196,7 +197,7 @@ public final class Core extends AbstractNpcAI
 			
 			GrandBossManager.getInstance().setBossStatus(CORE, BossStatus.DEAD);
 			// Calculate Min and Max respawn times randomly.
-			final long respawnTime = (Config.CORE_SPAWN_INTERVAL + Rnd.get(-Config.CORE_SPAWN_RANDOM, Config.CORE_SPAWN_RANDOM)) * 3600000L;
+			final long respawnTime = NpcSettings.coreSpawnInterval();
 			startQuestTimer("core_unlock", respawnTime, null, null);
 			// Also save the respawn time so that the info is maintained past reboots.
 			final var info = GrandBossManager.getInstance().getBossData(CORE);

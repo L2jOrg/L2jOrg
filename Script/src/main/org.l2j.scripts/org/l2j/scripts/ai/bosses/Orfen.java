@@ -38,6 +38,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.scripts.ai.AbstractNpcAI;
@@ -320,7 +321,7 @@ public final class Orfen extends AbstractNpcAI
 			npc.broadcastPacket(PlaySound.music("BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, BossStatus.DEAD);
 			// Calculate Min and Max respawn times randomly.
-			long respawnTime = (Config.ORFEN_SPAWN_INTERVAL + Rnd.get(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM)) * 3600000L;
+			long respawnTime = NpcSettings.orfenSpawnInterval();
 			startQuestTimer("orfen_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final var info = GrandBossManager.getInstance().getBossData(ORFEN);

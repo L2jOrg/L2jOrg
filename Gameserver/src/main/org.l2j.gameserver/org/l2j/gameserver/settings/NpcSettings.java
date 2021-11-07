@@ -21,6 +21,7 @@ package org.l2j.gameserver.settings;
 import io.github.joealisson.primitive.IntDoubleMap;
 import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.commons.configuration.SettingsFile;
+import org.l2j.commons.util.Rnd;
 
 import static java.lang.Math.min;
 
@@ -59,6 +60,17 @@ public class NpcSettings {
     private static int vitalityConsumeByMonster;
     private static int vitalityConsumeByBoss;
     private static int limitBarrier;
+    private static int antharasSpawnInterval;
+    private static int antharasSpawnRandom;
+    private static long baiumSpawnInterval;
+    private static int coreSpawnInterval;
+    private static int coreSpawnRandom;
+    private static int orfenSpawnInterval;
+    private static int orfenSpwanRandom;
+    private static int queenAntSpawnInterval;
+    private static int queenantSpawnRandom;
+    private static int zakenSpawnInterval;
+    private static int zakenSpawnRandom;
 
     private NpcSettings() {
         // Helper class
@@ -100,6 +112,23 @@ public class NpcSettings {
         vitalityConsumeByMonster = settingsFile.getInt("VitalityConsumeByMob", 2250);
         vitalityConsumeByBoss = settingsFile.getInt("VitalityConsumeByBoss", 1125);
         limitBarrier = settingsFile.getInt("LimitBarrier", 500);
+
+        antharasSpawnInterval = settingsFile.getInt("AntharasSpawnInterval", 264);
+        antharasSpawnRandom = settingsFile.getInt("AntharasSpawnRandom", 72);
+
+        baiumSpawnInterval = settingsFile.getInt("BaiumSpawnInterval", 168) * 3600000L;
+
+        coreSpawnInterval = settingsFile.getInt("CoreSpawnInterval", 60);
+        coreSpawnRandom = settingsFile.getInt("CoreSpawnRandom", 24);
+
+        orfenSpawnInterval = settingsFile.getInt("OrfenSpawnInterval", 48);
+        orfenSpwanRandom = settingsFile.getInt("OrfenSpawnRandom", 20);
+
+        queenAntSpawnInterval = settingsFile.getInt("QueenAntSpawnInterval", 36);
+        queenantSpawnRandom  = settingsFile.getInt("QueenAntSpawnRandom", 17);
+
+        zakenSpawnInterval = settingsFile.getInt("ZakenSpawnInterval", 168);
+        zakenSpawnRandom = settingsFile.getInt("ZakenSpawnRandom", 48);
     }
 
     public static boolean allowAggroInPeaceZone() {
@@ -220,5 +249,29 @@ public class NpcSettings {
 
     public static int minionRespawnTimeOf(int id) {
         return customMinionRespawnTime.getOrDefault(id, -1);
+    }
+
+    public static long antharasSpawnInterval() {
+        return (antharasSpawnInterval + Rnd.get(-antharasSpawnRandom, antharasSpawnRandom)) * 3600000L;
+    }
+
+    public static long baiumSpawnInterval() {
+        return baiumSpawnInterval;
+    }
+
+    public static long coreSpawnInterval() {
+        return (coreSpawnInterval + Rnd.get(-coreSpawnRandom, coreSpawnRandom)) * 3600000L;
+    }
+
+    public static long orfenSpawnInterval() {
+        return (orfenSpawnInterval + Rnd.get(-orfenSpwanRandom, orfenSpwanRandom)) * 3600000L;
+    }
+
+    public static long queenAntSpawnInterval() {
+        return (queenAntSpawnInterval + Rnd.get(-queenantSpawnRandom, queenantSpawnRandom)) * 3600000L;
+    }
+
+    public static long zakenSpawnInterval() {
+        return (zakenSpawnInterval + Rnd.get(-zakenSpawnRandom, zakenSpawnRandom)) * 3600000L ;
     }
 }

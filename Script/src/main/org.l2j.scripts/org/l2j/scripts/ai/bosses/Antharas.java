@@ -20,7 +20,6 @@ package org.l2j.scripts.ai.bosses;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.MountType;
@@ -36,6 +35,7 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneEngine;
@@ -338,7 +338,7 @@ public final class Antharas extends AbstractNpcAI
 				notifyEvent("DESPAWN_MINIONS", null, null);
 				zone.broadcastPacket(new SpecialCamera(npc, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
 				zone.broadcastPacket(PlaySound.sound("BS01_D"));
-				final long respawnTime = (Config.ANTHARAS_SPAWN_INTERVAL + Rnd.get(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM)) * 3600000L;
+				final long respawnTime = NpcSettings.antharasSpawnInterval();
 				setRespawn(respawnTime);
 				startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
 				cancelQuestTimer("SET_REGEN", npc, null);

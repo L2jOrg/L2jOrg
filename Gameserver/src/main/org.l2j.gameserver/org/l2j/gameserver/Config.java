@@ -47,8 +47,6 @@ public final class Config {
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
 
-    private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
     private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
@@ -222,24 +220,6 @@ public final class Config {
     public static int PVP_PVP_TIME;
     public static int MAX_REPUTATION;
     public static int REPUTATION_INCREASE;
-
-    // GrandBoss Settings
-    public static int ANTHARAS_SPAWN_INTERVAL;
-    public static int ANTHARAS_SPAWN_RANDOM;
-    // Baium
-    public static int BAIUM_SPAWN_INTERVAL;
-    // Core
-    public static int CORE_SPAWN_INTERVAL;
-    public static int CORE_SPAWN_RANDOM;
-    // Offen
-    public static int ORFEN_SPAWN_INTERVAL;
-    public static int ORFEN_SPAWN_RANDOM;
-    // Queen Ant
-    public static int QUEEN_ANT_SPAWN_INTERVAL;
-    public static int QUEEN_ANT_SPAWN_RANDOM;
-    // Zaken
-    public static int ZAKEN_SPAWN_INTERVAL;
-    public static int ZAKEN_SPAWN_RANDOM;
 
     // --------------------------------------------------
     // Custom Settings
@@ -633,26 +613,6 @@ public final class Config {
         MAX_REPUTATION = PVPSettings.getInt("MaxReputation", 500);
         REPUTATION_INCREASE = PVPSettings.getInt("ReputationIncrease", 100);
         ACTIVATE_PVP_BOSS_FLAG = PVPSettings.getBoolean("ActivatePvPBossFlag", false);
-
-        // Grand bosses
-        final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
-
-        ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
-        ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
-
-        BAIUM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBaiumSpawn", 168);
-
-        CORE_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfCoreSpawn", 60);
-        CORE_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfCoreSpawn", 24);
-
-        ORFEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfOrfenSpawn", 48);
-        ORFEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfOrfenSpawn", 20);
-
-        QUEEN_ANT_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfQueenAntSpawn", 36);
-        QUEEN_ANT_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfQueenAntSpawn", 17);
-
-        ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 168);
-        ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 48);
 
         // Load Banking config file (if exists)
         final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
