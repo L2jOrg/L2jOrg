@@ -54,7 +54,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public final class QueenAnt extends AbstractNpcAI {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(QueenAnt.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(QueenAnt.class);
 
     private static final int QUEEN = 29001;
     private static final int LARVA = 29002;
@@ -78,6 +78,7 @@ public final class QueenAnt extends AbstractNpcAI {
     private static final int QUEEN_X = -21610;
     private static final int QUEEN_Y = 181594;
     private static final int QUEEN_Z = -5734;
+    public static final String ANT_QUEEN_TASK_EVENT = "ANT_QUEEN_TASK";
 
     private static Zone _zone;
 
@@ -146,7 +147,7 @@ public final class QueenAnt extends AbstractNpcAI {
 			case "heal" -> onHeal();
 			case "action" -> onAction(npc);
 			case "queen_unlock" -> spawnQueenAnt();
-			case "ANT_QUEEN_TASK" -> onQueenTask();
+			case ANT_QUEEN_TASK_EVENT -> onQueenTask();
 			default -> LOGGER.warn("unknown event {}", event);
 		}
         return super.onAdvEvent(event, npc, player);
@@ -154,7 +155,7 @@ public final class QueenAnt extends AbstractNpcAI {
 
 	private void onQueenTask() {
 		if ((_queen == null) || _queen.isDead()) {
-			cancelQuestTimers("ANT_QUEEN_TASK");
+			cancelQuestTimers(ANT_QUEEN_TASK_EVENT);
 		} else if (!MathUtil.isInsideRadius2D(_queen, QUEEN_X, QUEEN_Y, 2000)) {
 			_queen.clearAggroList();
 			_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
@@ -178,41 +179,42 @@ public final class QueenAnt extends AbstractNpcAI {
 	}
 
 	private void onHeal() {
-		boolean notCasting;
-		final boolean larvaNeedHeal = (_larva != null) && (_larva.getCurrentHp() < _larva.getMaxHp());
-		final boolean queenNeedHeal = (_queen != null) && (_queen.getCurrentHp() < _queen.getMaxHp());
-		for (Monster nurse : _nurses) {
-			if ((nurse == null) || nurse.isDead() || nurse.isCastingNow(SkillCaster::isAnyNormalType)) {
-				continue;
-			}
-
-			notCasting = nurse.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST;
-			if (larvaNeedHeal) {
-				if ((nurse.getTarget() != _larva) || notCasting) {
-					nurse.setTarget(_larva);
-					nurse.useMagic(Rnd.nextBoolean() ? HEAL1.getSkill() : HEAL2.getSkill());
-				}
-				continue;
-			}
-			if (queenNeedHeal) {
-				if (nurse.getLeader() == _larva) {
-					continue;
-				}
-
-				if ((nurse.getTarget() != _queen) || notCasting) {
-					nurse.setTarget(_queen);
-					nurse.useMagic(HEAL1.getSkill());
-				}
-				continue;
-			}
-			// if nurse not casting - remove target
-			if (notCasting && (nurse.getTarget() != null)) {
-				nurse.setTarget(null);
-			}
-		}
+		final boolean larvaNeedHeal = _larva != null && _larva.getCurrentHp() < _larva.getMaxHp();
+		final boolean queenNeedHeal = _queen != null && _queen.getCurrentHp() < _queen.getMaxHp();
+		for (var nurse : _nurses) {
+            doHeal(larvaNeedHeal, queenNeedHeal, nurse);
+        }
 	}
 
-	@Override
+    private void doHeal(boolean larvaNeedHeal, boolean queenNeedHeal, Monster nurse) {
+        if (nurse == null || nurse.isDead() || nurse.isCastingNow(SkillCaster::isAnyNormalType)) {
+            return;
+        }
+
+        var notCasting = nurse.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST;
+        if (larvaNeedHeal && (nurse.getTarget() != _larva || notCasting)) {
+            nurse.setTarget(_larva);
+            nurse.useMagic(Rnd.nextBoolean() ? HEAL1.getSkill() : HEAL2.getSkill());
+            return;
+        }
+
+        if (queenNeedHeal) {
+            if (nurse.getLeader() == _larva) {
+                return;
+            }
+
+            if ((nurse.getTarget() != _queen) || notCasting) {
+                nurse.setTarget(_queen);
+                nurse.useMagic(HEAL1.getSkill());
+            }
+            return;
+        }
+        if (notCasting && (nurse.getTarget() != null)) {
+            nurse.setTarget(null);
+        }
+    }
+
+    @Override
     public String onSpawn(Npc npc) {
         final Monster mob = (Monster) npc;
 		switch (npc.getId()) {
@@ -220,8 +222,8 @@ public final class QueenAnt extends AbstractNpcAI {
 			case NURSE -> onSpawnNurse(mob);
 			case ROYAL, GUARD -> mob.setIsRaidMinion(true);
 			case QUEEN -> onSpawnQueen(npc, mob);
+            default -> LOGGER.warn("Unknown npc to spawn {}", npc);
 		}
-
         return super.onSpawn(npc);
     }
 
@@ -229,8 +231,8 @@ public final class QueenAnt extends AbstractNpcAI {
 		if (mob.getMinionList().getSpawnedMinions().isEmpty()) {
 			((Monster) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
 		}
-		cancelQuestTimer("ANT_QUEEN_TASK", npc, null);
-		startQuestTimer("ANT_QUEEN_TASK", 5000, npc, null, true);
+		cancelQuestTimer(ANT_QUEEN_TASK_EVENT, npc, null);
+		startQuestTimer(ANT_QUEEN_TASK_EVENT, 5000, npc, null, true);
 	}
 
 	private void onSpawnNurse(Monster mob) {
@@ -247,59 +249,61 @@ public final class QueenAnt extends AbstractNpcAI {
 
 	@Override
     public String onFactionCall(Npc npc, Npc caller, Player attacker, boolean isSummon) {
-        if ((caller == null) || (npc == null)) {
+        if (caller == null || !(npc instanceof Attackable attackable)) {
             return super.onFactionCall(npc, caller, attacker, isSummon);
         }
 
-        if (!npc.isCastingNow(SkillCaster::isAnyNormalType) && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST)) {
-            if (caller.getCurrentHp() < caller.getMaxHp()) {
-                npc.setTarget(caller);
-                ((Attackable) npc).useMagic(HEAL1.getSkill());
-            }
+        if (!npc.isCastingNow(SkillCaster::isAnyNormalType) && attackable.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST && caller.getCurrentHp() < caller.getMaxHp()) {
+            attackable.setTarget(caller);
+            attackable.useMagic(HEAL1.getSkill());
         }
         return null;
     }
 
     @Override
     public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon) {
-        if ((npc == null) || (player.isGM() && player.isInvisible())) {
+        if (npc == null || player.isInvisible()) {
             return null;
         }
 
         final boolean isMage;
-        final Playable character;
+        final Playable creature;
         if (isSummon) {
             isMage = false;
-            character = player.getServitors().values().stream().findFirst().orElse(player.getPet());
+            creature = player.getAnySummon();
         } else {
             isMage = player.isMageClass();
-            character = player;
+            creature = player;
         }
 
-        if (character == null) {
+        if (creature == null) {
             return null;
         }
 
-        if (!NpcSettings.disableRaidCurse() && ((character.getLevel() - npc.getLevel()) > 8)) {
-            Skill curse = null;
-            if (isMage) {
-                if (!character.hasAbnormalType(CommonSkill.RAID_CURSE.getSkill().getAbnormalType()) && (Rnd.get(4) == 0)) {
-                    curse = CommonSkill.RAID_CURSE.getSkill();
-                }
-            } else if (!character.hasAbnormalType(CommonSkill.RAID_CURSE2.getSkill().getAbnormalType()) && (Rnd.get(4) == 0)) {
-                curse = CommonSkill.RAID_CURSE2.getSkill();
-            }
-
-            if (curse != null) {
-                npc.broadcastPacket(new MagicSkillUse(npc, character, curse, 300, 0, -1, SkillCastingType.NORMAL));
-                curse.applyEffects(npc, character);
-            }
-
-            ((Attackable) npc).stopHating(character); // for calling again
+        if (!NpcSettings.disableRaidCurse() && creature.getLevel() - npc.getLevel() > 8) {
+            addRaidCurse(npc, isMage, creature);
             return null;
         }
 
         return super.onAggroRangeEnter(npc, player, isSummon);
+    }
+
+    private void addRaidCurse(Npc npc, boolean isMage, Playable creature) {
+        Skill curse = null;
+        if (isMage) {
+            if (!creature.hasAbnormalType(CommonSkill.RAID_CURSE.getSkill().getAbnormalType()) && (Rnd.get(4) == 0)) {
+                curse = CommonSkill.RAID_CURSE.getSkill();
+            }
+        } else if (!creature.hasAbnormalType(CommonSkill.RAID_CURSE2.getSkill().getAbnormalType()) && (Rnd.get(4) == 0)) {
+            curse = CommonSkill.RAID_CURSE2.getSkill();
+        }
+
+        if (curse != null) {
+            npc.broadcastPacket(new MagicSkillUse(npc, creature, curse, 300, 0, -1, SkillCastingType.NORMAL));
+            curse.applyEffects(npc, creature);
+        }
+
+        ((Attackable) npc).stopHating(creature); // for calling again
     }
 
     @Override
@@ -320,7 +324,7 @@ public final class QueenAnt extends AbstractNpcAI {
             _larva.deleteMe();
             _larva = null;
             _queen = null;
-            cancelQuestTimers("ANT_QUEEN_TASK");
+            cancelQuestTimers(ANT_QUEEN_TASK_EVENT);
         } else if ((_queen != null) && !_queen.isAlikeDead()) {
             if (npcId == ROYAL) {
                 final Monster mob = (Monster) npc;

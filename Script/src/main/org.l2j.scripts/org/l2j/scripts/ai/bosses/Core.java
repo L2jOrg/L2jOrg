@@ -54,6 +54,7 @@ public final class Core extends AbstractNpcAI {
     private static final int SUSCEPTOR = 29011;
 
     private static final IntMap<List<Location>> MINNION_SPAWNS = new HashIntMap<>();
+    public static final String SPAWN_MINION_EVENT = "spawn_minion";
 
     static {
         MINNION_SPAWNS.put(DEATH_KNIGHT, List.of(
@@ -143,7 +144,7 @@ public final class Core extends AbstractNpcAI {
             final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
             GrandBossManager.getInstance().setBossStatus(CORE, BossStatus.ALIVE);
             spawnBoss(core);
-        } else if (event.equalsIgnoreCase("spawn_minion")) {
+        } else if (event.equalsIgnoreCase(SPAWN_MINION_EVENT)) {
             final Attackable mob = (Attackable) addSpawn(npc.getId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
             mob.setIsRaidMinion(true);
             minions.add(mob);
@@ -187,10 +188,10 @@ public final class Core extends AbstractNpcAI {
             final var info = GrandBossManager.getInstance().getBossData(CORE);
             info.setRespawnTime(System.currentTimeMillis() + respawnTime);
             startQuestTimer("despawn_minions", 20000, null, null);
-            cancelQuestTimers("spawn_minion");
+            cancelQuestTimers(SPAWN_MINION_EVENT);
         } else if (GrandBossManager.getInstance().getBossStatus(CORE) == BossStatus.ALIVE && npc instanceof Attackable attackable && minions.contains(attackable)) {
             minions.remove(attackable);
-            startQuestTimer("spawn_minion", 60000, npc, null);
+            startQuestTimer(SPAWN_MINION_EVENT, 60000, npc, null);
         }
         return super.onKill(npc, killer, isSummon);
     }
