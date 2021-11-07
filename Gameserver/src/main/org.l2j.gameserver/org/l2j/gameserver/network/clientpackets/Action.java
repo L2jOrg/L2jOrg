@@ -85,10 +85,10 @@ public final class Action extends ClientPacket {
     }
 
     private void onShiftAction(Player player, WorldObject obj) {
-        if (!isNpc(obj) || (!player.isGM() && !NpcSettings.allowViewNpc())) {
-            obj.onAction(player, false);
-        } else {
+        if(player.isGM() || (isNpc(obj) && NpcSettings.allowViewNpc())) {
             obj.onActionShift(player);
+        } else {
+            obj.onAction(player, false);
         }
     }
 

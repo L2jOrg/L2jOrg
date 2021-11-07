@@ -33,6 +33,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 
 import java.util.Set;
@@ -47,7 +48,7 @@ public class NpcActionShift implements IActionShiftHandler
 	public boolean action(Player player, WorldObject target, boolean interact)
 	{
 
-		if (player.isGM())
+		if (player.isGM() || NpcSettings.allowViewNpc())
 		{
 			player.setTarget(target);
 			
