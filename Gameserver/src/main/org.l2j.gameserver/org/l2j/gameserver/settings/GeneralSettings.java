@@ -174,7 +174,7 @@ public class GeneralSettings {
         itemAuctionExpiresAfter = settingsFile.getInt("AltItemAuctionExpiredAfter", 14);
         itemAuctionTimeExtendsOnBid = settingsFile.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000L;
 
-        birthdayGift = settingsFile.getInt("AltBirthdayGift", 22187);
+        birthdayGift = settingsFile.getInt("AltBirthdayGift", 7541);
         birthdayMailSubject = settingsFile.getString("AltBirthdayMailSubject", "Happy Birthday!");
         birthdayMailText = settingsFile.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + System.lineSeparator().repeat(2) + "Sincerely, Alegria");
 
