@@ -59,10 +59,6 @@ public final class GeoUtils {
                     exsp = new ExServerPrimitive("DebugGrid_" + iPacket, player.getX(), player.getY(), -16000);
                 }
 
-                if (exsp == null) {
-                    throw new IllegalStateException();
-                }
-
                 final int gx = playerGx + dx;
                 final int gy = playerGy + dy;
 
@@ -107,12 +103,6 @@ public final class GeoUtils {
     /**
      * difference between x values: never above 1<br>
      * difference between y values: never above 1
-     *
-     * @param lastX
-     * @param lastY
-     * @param x
-     * @param y
-     * @return
      */
     public static int computeNswe(int lastX, int lastY, int x, int y) {
         if (x > lastX) // east
