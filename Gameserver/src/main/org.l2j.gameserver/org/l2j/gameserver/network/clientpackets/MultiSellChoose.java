@@ -341,7 +341,7 @@ public class MultiSellChoose extends ClientPacket {
     private boolean validateInventoryCapacity(Player player, PreparedMultisellList list, List<MultisellProduct> products) {
         var inventory = player.getInventory();
         int slots = 0;
-        int weight = 0;
+        long weight = 0;
         for (var product : products) {
             if (product.id() < 0) {
                 if (isNull(player.getClan()) && (SpecialItemType.CLAN_REPUTATION.getClientId() == product.id())) {

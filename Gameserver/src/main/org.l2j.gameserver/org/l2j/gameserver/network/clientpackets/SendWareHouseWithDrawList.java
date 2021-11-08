@@ -78,7 +78,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
             return;
         }
 
-        int weight = 0;
+        long weight = 0;
         int slots = 0;
 
         for (ItemHolder i : _items) {
@@ -91,7 +91,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
 
             weight += i.getCount() * item.getTemplate().getWeight();
             if (!item.isStackable()) {
-                slots += i.getCount();
+                slots = (int) (slots +  i.getCount());
             } else if (player.getInventory().getItemByItemId(item.getId()) == null) {
                 slots++;
             }

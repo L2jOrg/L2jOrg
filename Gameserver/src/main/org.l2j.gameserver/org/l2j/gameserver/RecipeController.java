@@ -24,6 +24,7 @@ import org.l2j.gameserver.data.database.data.ManufactureItem;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.StatType;
 import org.l2j.gameserver.enums.StatusUpdateType;
@@ -32,7 +33,6 @@ import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.RecipeStat;
 import org.l2j.gameserver.model.TempItem;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.container.Inventory;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.stats.Stat;
@@ -51,7 +51,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.gameserver.model.DamageInfo.DamageType;
-
 
 public class RecipeController {
     private static final Map<Integer, RecipeItemMaker> _activeMakers = new ConcurrentHashMap<>();
@@ -622,8 +621,8 @@ public class RecipeController {
                     _sp = _exp / 10;
                 }
                 if (itemId == rareProdId) {
-                    _exp *= CharacterSettings.altGameCreationRareXpSpRate();
-                    _sp *= CharacterSettings.altGameCreationRareXpSpRate();
+                    _exp = (long) (_exp * CharacterSettings.altGameCreationRareXpSpRate());
+                    _sp = (long) (_sp *  CharacterSettings.altGameCreationRareXpSpRate());
                 }
 
                 if (_exp < 0) {

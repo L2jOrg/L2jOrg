@@ -60,16 +60,15 @@ public final class Hp extends AbstractEffect {
 			return;
 		}
 
-		int basicAmount = power;
+		double basicAmount = power;
 		if (nonNull(item) && (item.isPotion() || item.isElixir())) {
 			basicAmount += effected.getStats().getValue(Stat.ADDITIONAL_POTION_HP, 0);
 		}
 		
-		double amount = 0;
-		switch (mode) {
-			case DIFF -> amount = Math.min(basicAmount, effected.getMaxRecoverableHp() - effected.getCurrentHp());
-			case PER -> amount = Math.min((effected.getMaxHp() * basicAmount) / 100.0, effected.getMaxRecoverableHp() - effected.getCurrentHp());
-		}
+		double amount = switch (mode) {
+			case DIFF -> Math.min(basicAmount, effected.getMaxRecoverableHp() - effected.getCurrentHp());
+			case PER -> Math.min((effected.getMaxHp() * basicAmount) / 100.0, effected.getMaxRecoverableHp() - effected.getCurrentHp());
+		};
 		
 		if (amount >= 0) {
 			if (amount != 0) {

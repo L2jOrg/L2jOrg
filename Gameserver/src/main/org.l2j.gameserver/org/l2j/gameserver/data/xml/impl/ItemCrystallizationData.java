@@ -136,7 +136,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
             if (chance > 100.) {
                 double countMul = Math.ceil(chance / 100.);
                 chance /= countMul;
-                count *= countMul;
+                count = (long) (count * countMul);
             }
 
             rewards.add(new ItemChanceHolder(reward.getId(), chance, count));

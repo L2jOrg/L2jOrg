@@ -395,8 +395,7 @@ public final class Formulas {
     public static boolean calcHitMiss(Creature attacker, Creature target) {
         int chance = (80 + (2 * (attacker.getAccuracy() - target.getEvasionRate()))) * 10;
 
-        // Get additional bonus from the conditions when you are attacking
-        chance *= HitConditionBonusData.getInstance().getConditionBonus(attacker, target);
+        chance = (int) (chance * HitConditionBonusData.getInstance().getConditionBonus(attacker, target));
 
         chance = max(chance, 200);
         chance = Math.min(chance, 980);
