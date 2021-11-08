@@ -1541,8 +1541,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             return true;
         }
 
-        minAmount *= Config.RATE_QUEST_DROP;
-        maxAmount *= Config.RATE_QUEST_DROP;
+        minAmount = (long) (minAmount *  Config.RATE_QUEST_DROP);
+        maxAmount = (long) (maxAmount * Config.RATE_QUEST_DROP);
         dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
         if (npc != null && npc.isChampion()) {
             if (itemId == CommonItem.ADENA) {

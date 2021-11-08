@@ -74,7 +74,7 @@ public class PetInventory extends Inventory {
     }
 
     public boolean validateWeight(Item item, long count) {
-        int weight = 0;
+        long weight = 0;
         final ItemTemplate template = ItemEngine.getInstance().getTemplate(item.getId());
         if (template == null) {
             return false;

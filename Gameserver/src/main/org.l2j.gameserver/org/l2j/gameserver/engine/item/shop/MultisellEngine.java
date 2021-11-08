@@ -138,7 +138,7 @@ public final class MultisellEngine extends GameXmlReader {
 
     private void checkProductsChance(boolean chanceBased, List<MultisellProduct> products) {
         if(chanceBased) {
-            int  totalChance = 0;
+            double  totalChance = 0;
             for (MultisellProduct product : products) {
                 totalChance += product.chance();
             }

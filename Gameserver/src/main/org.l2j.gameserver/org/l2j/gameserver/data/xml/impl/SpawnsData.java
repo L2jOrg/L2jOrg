@@ -184,7 +184,7 @@ public class SpawnsData extends GameXmlReader {
                 final int y = parseInt(d.getAttributes(), "y");
                 final int z = parseInt(d.getAttributes(), "z");
                 final int heading = parseInt(d.getAttributes(), "heading", 0);
-                final double chance = parseDouble(d.getAttributes(), "chance");
+                final float chance = parseFloat(d.getAttributes(), "chance");
                 npcTemplate.addSpawnLocation(new ChanceLocation(x, y, z, heading, chance));
             }
         }

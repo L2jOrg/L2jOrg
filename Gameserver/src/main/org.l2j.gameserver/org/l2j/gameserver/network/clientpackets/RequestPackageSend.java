@@ -95,7 +95,7 @@ public class RequestPackageSend extends ClientPacket {
             if (item.getId() == CommonItem.ADENA) {
                 currentAdena -= holder.getCount();
             } else if (!item.isStackable()) {
-                slots += holder.getCount();
+                slots = (int) (slots + holder.getCount());
             } else if (warehouse.getItemByItemId(item.getId()) == null) {
                 slots++;
             }
@@ -140,7 +140,7 @@ public class RequestPackageSend extends ClientPacket {
         player.sendInventoryUpdate(playerIU);
     }
 
-    private boolean canDoTransaction(Player player, int fee, long currentAdena, int slots, ItemContainer warehouse) {
+    private boolean canDoTransaction(Player player, int fee, long currentAdena, long slots, ItemContainer warehouse) {
         if (!warehouse.validateCapacity(slots)) {
             player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
             warehouse.deleteMe();

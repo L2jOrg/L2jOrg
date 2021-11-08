@@ -60,7 +60,7 @@ public final class Cp extends AbstractEffect {
             return;
         }
 
-        int basicAmount = power;
+        double basicAmount = power;
         if ( nonNull(item) && (item.isPotion() || item.isElixir())) {
             basicAmount += effected.getStats().getValue(Stat.ADDITIONAL_POTION_CP, 0);
         }

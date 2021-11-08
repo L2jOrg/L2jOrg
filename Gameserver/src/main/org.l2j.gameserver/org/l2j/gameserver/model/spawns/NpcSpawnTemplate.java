@@ -215,7 +215,8 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
             final double locRandom = Rnd.get(100);
             float cumulativeChance = 0;
             for (ChanceLocation loc : locations) {
-                if (locRandom <= (cumulativeChance += loc.getChance())) {
+                cumulativeChance = cumulativeChance + loc.getChance();
+                if (locRandom <= cumulativeChance) {
                     return loc;
                 }
             }
