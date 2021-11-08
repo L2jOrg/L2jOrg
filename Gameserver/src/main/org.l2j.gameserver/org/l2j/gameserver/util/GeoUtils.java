@@ -30,63 +30,6 @@ import java.awt.*;
  * @author HorridoJoho
  */
 public final class GeoUtils {
-    public static void debug2DLine(Player player, int x, int y, int tx, int ty, int z) {
-        final int gx = GeoEngine.getGeoX(x);
-        final int gy = GeoEngine.getGeoY(y);
-
-        final int tgx = GeoEngine.getGeoX(tx);
-        final int tgy = GeoEngine.getGeoY(ty);
-
-        final ExServerPrimitive prim = new ExServerPrimitive("Debug2DLine", x, y, z);
-        prim.addLine(Color.BLUE, GeoEngine.getWorldX(gx), GeoEngine.getWorldY(gy), z, GeoEngine.getWorldX(tgx), GeoEngine.getWorldY(tgy), z);
-
-        final LinePointIterator iter = new LinePointIterator(gx, gy, tgx, tgy);
-
-        while (iter.next()) {
-            final int wx = GeoEngine.getWorldX(iter.x());
-            final int wy = GeoEngine.getWorldY(iter.y());
-
-            prim.addPoint(Color.RED, wx, wy, z);
-        }
-        player.sendPacket(prim);
-    }
-
-    public static void debug3DLine(Player player, int x, int y, int z, int tx, int ty, int tz) {
-        final int gx = GeoEngine.getGeoX(x);
-        final int gy = GeoEngine.getGeoY(y);
-
-        final int tgx = GeoEngine.getGeoX(tx);
-        final int tgy = GeoEngine.getGeoY(ty);
-
-        final ExServerPrimitive prim = new ExServerPrimitive("Debug3DLine", x, y, z);
-        prim.addLine(Color.BLUE, GeoEngine.getWorldX(gx), GeoEngine.getWorldY(gy), z, GeoEngine.getWorldX(tgx), GeoEngine.getWorldY(tgy), tz);
-
-        final LinePointIterator3D iter = new LinePointIterator3D(gx, gy, z, tgx, tgy, tz);
-        iter.next();
-        int prevX = iter.x();
-        int prevY = iter.y();
-        int wx = GeoEngine.getWorldX(prevX);
-        int wy = GeoEngine.getWorldY(prevY);
-        int wz = iter.z();
-        prim.addPoint(Color.RED, wx, wy, wz);
-
-        while (iter.next()) {
-            final int curX = iter.x();
-            final int curY = iter.y();
-
-            if ((curX != prevX) || (curY != prevY)) {
-                wx = GeoEngine.getWorldX(curX);
-                wy = GeoEngine.getWorldY(curY);
-                wz = iter.z();
-
-                prim.addPoint(Color.RED, wx, wy, wz);
-
-                prevX = curX;
-                prevY = curY;
-            }
-        }
-        player.sendPacket(prim);
-    }
 
     private static Color getDirectionColor(int x, int y, int z, int nswe) {
         if ((GeoEngine.getInstance().getNsweNearest(x, y, z) & nswe) == nswe) {
