@@ -105,8 +105,9 @@ public final class Baium extends AbstractNpcAI {
             };
     public static final String PLAYER_KILL_EVENT = "PLAYER_KILL";
     public static final String CLEAR_ZONE_EVENT = "CLEAR_ZONE";
+    public static final String CHECK_ATTACK_EVENT = "CHECK_ATTACK";
     // Misc
-    private GrandBoss baium = null;
+    private GrandBoss boss = null;
     private long lastAttack = 0;
     private Player standbyPlayer = null;
 
@@ -139,16 +140,16 @@ public final class Baium extends AbstractNpcAI {
     }
 
     private void onFightingStatus(GrandBossData data) {
-        baium = (GrandBoss) addSpawn(BAIUM, data.getX(), data.getY(), data.getZ(), data.getHeading(), false, 0);
-        baium.setCurrentHpMp(data.getHp(), data.getMp());
+        boss = (GrandBoss) addSpawn(BAIUM, data.getX(), data.getY(), data.getZ(), data.getHeading(), false, 0);
+        boss.setCurrentHpMp(data.getHp(), data.getMp());
         lastAttack = System.currentTimeMillis();
-        addBoss(baium);
+        addBoss(boss);
 
         for (Location loc : ARCHANGEL_LOC) {
             final Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
             startQuestTimer("SELECT_TARGET", 5000, archangel, null);
         }
-        startQuestTimer("CHECK_ATTACK", 60000, baium, null);
+        startQuestTimer(CHECK_ATTACK_EVENT, 60000, boss, null);
     }
 
     @Override
@@ -169,7 +170,7 @@ public final class Baium extends AbstractNpcAI {
             case PLAYER_KILL_EVENT -> onPlayerKill(npc, player);
             case "SPAWN_ARCHANGEL" -> onSpawnArchangel(npc, player);
             case "SELECT_TARGET" -> onSelectTarget(npc);
-            case "CHECK_ATTACK" -> onCheckAttack(npc);
+            case CHECK_ATTACK_EVENT -> onCheckAttack(npc);
             case "CLEAR_STATUS" -> onClearStatus();
             case CLEAR_ZONE_EVENT -> onClearZone();
             case "RESPAWN_BAIUM" -> onRespawnBaium(player);
@@ -201,14 +202,14 @@ public final class Baium extends AbstractNpcAI {
 
     private void onAbortFight(Player player) {
         if (getStatus() == BossStatus.FIGHTING) {
-            baium = null;
+            boss = null;
             notifyEvent(CLEAR_ZONE_EVENT, null, null);
             notifyEvent("CLEAR_STATUS", null, null);
             player.sendMessage(getClass().getSimpleName() + ": Aborting fight!");
         } else {
             player.sendMessage(getClass().getSimpleName() + ": You cant abort attack right now!");
         }
-        cancelQuestTimers("CHECK_ATTACK");
+        cancelQuestTimers(CHECK_ATTACK_EVENT);
         cancelQuestTimers("SELECT_TARGET");
     }
 
@@ -247,7 +248,7 @@ public final class Baium extends AbstractNpcAI {
                 npc.setTarget(npc);
                 npc.doCast(HEAL_OF_BAIUM.getSkill());
             }
-            startQuestTimer("CHECK_ATTACK", 60000, npc, null);
+            startQuestTimer(CHECK_ATTACK_EVENT, 60000, npc, null);
         }
     }
 
@@ -257,7 +258,7 @@ public final class Baium extends AbstractNpcAI {
         }
 
         final Creature mostHated = mob.getMostHated();
-        if (baium == null || baium.isDead()) {
+        if (boss == null || boss.isDead()) {
             mob.deleteMe();
             return;
         }
@@ -275,15 +276,15 @@ public final class Baium extends AbstractNpcAI {
     }
 
     private void addAttackDesireToBaium(Attackable mob) {
-        if (isInsideRadius3D(mob, baium, 40)) {
-            if (mob.getTarget() != baium) {
+        if (isInsideRadius3D(mob, boss, 40)) {
+            if (mob.getTarget() != boss) {
                 mob.clearAggroList();
             }
             mob.setRunning();
-            mob.addDamageHate(baium, 0, 999);
-            mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, baium);
+            mob.addDamageHate(boss, 0, 999);
+            mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, boss);
         } else {
-            mob.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, baium);
+            mob.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, boss);
         }
     }
 
@@ -305,7 +306,7 @@ public final class Baium extends AbstractNpcAI {
     }
 
     private void onSpawnArchangel(Npc npc, Player player) {
-        baium.disableCoreAI(false);
+        boss.disableCoreAI(false);
 
         for (Location loc : ARCHANGEL_LOC) {
             final Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
@@ -366,7 +367,7 @@ public final class Baium extends AbstractNpcAI {
 
     private void onWakeupAction(Npc npc) {
         if (npc != null) {
-            zone.broadcastPacket(new SocialAction(baium.getObjectId(), 2));
+            zone.broadcastPacket(new SocialAction(boss.getObjectId(), 2));
         }
     }
 
@@ -374,13 +375,13 @@ public final class Baium extends AbstractNpcAI {
         if (getStatus() == BossStatus.ALIVE) {
 
             setStatus(BossStatus.FIGHTING);
-            baium = (GrandBoss) addSpawn(BAIUM, BAIUM_LOC, false, 0);
-            baium.disableCoreAI(true);
-            addBoss(baium);
+            boss = (GrandBoss) addSpawn(BAIUM, BAIUM_LOC, false, 0);
+            boss.disableCoreAI(true);
+            addBoss(boss);
             lastAttack = System.currentTimeMillis();
-            startQuestTimer("WAKEUP_ACTION", 50, baium, null);
-            startQuestTimer("MANAGE_EARTHQUAKE", 2000, baium, player);
-            startQuestTimer("CHECK_ATTACK", 60000, baium, null);
+            startQuestTimer("WAKEUP_ACTION", 50, boss, null);
+            startQuestTimer("MANAGE_EARTHQUAKE", 2000, boss, player);
+            startQuestTimer(CHECK_ATTACK_EVENT, 60000, boss, null);
             npc.deleteMe();
         }
     }
@@ -483,7 +484,7 @@ public final class Baium extends AbstractNpcAI {
             setRespawn(respawnTime);
             startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
             startQuestTimer(CLEAR_ZONE_EVENT, 900000, null, null);
-            cancelQuestTimer("CHECK_ATTACK", npc, null);
+            cancelQuestTimer(CHECK_ATTACK_EVENT, npc, null);
         }
         return super.onKill(npc, killer, isSummon);
     }
@@ -533,9 +534,9 @@ public final class Baium extends AbstractNpcAI {
     {
         startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
 
-        if (!zone.isCreatureInZone(npc) && (baium != null))
+        if (!zone.isCreatureInZone(npc) && (boss != null))
         {
-            baium.teleToLocation(BAIUM_LOC);
+            boss.teleToLocation(BAIUM_LOC);
         }
         return super.onSpellFinished(npc, player, skill);
     }
@@ -543,9 +544,9 @@ public final class Baium extends AbstractNpcAI {
     @Override
     public boolean unload(boolean removeFromList)
     {
-        if (baium != null)
+        if (boss != null)
         {
-            baium.deleteMe();
+            boss.deleteMe();
         }
         return super.unload(removeFromList);
     }

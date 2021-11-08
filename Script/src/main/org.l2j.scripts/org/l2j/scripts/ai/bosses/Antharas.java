@@ -47,6 +47,9 @@ import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
@@ -82,8 +85,10 @@ public final class Antharas extends AbstractNpcAI {
 	private static final AntharasSkill ANTH_MOUTH = new AntharasSkill(4110, 2, true, 30, true, (DistanceInfo) null); // Breath Attack
 
 	private static final NoRestartZone zone = ZoneEngine.getInstance().getZoneById(70050, NoRestartZone.class); // Antharas Nest zone
+	public static final String CHECK_ATTACK_EVENT = "CHECK_ATTACK";
+	public static final String SPAWN_MINION_EVENT = "SPAWN_MINION";
 
-	private GrandBoss antharas = null;
+	private GrandBoss boss = null;
 	private long lastAttack = 0;
 	private int minionCount = 0;
 	private int minionMultipler = 0;
@@ -124,22 +129,22 @@ public final class Antharas extends AbstractNpcAI {
 			startQuestTimer("CLEAR_STATUS", remain, null, null);
 		} else {
 			setStatus(BossStatus.ALIVE);
-			antharas = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
-			addBoss(antharas);
+			boss = (GrandBoss) addSpawn(ANTHARAS, 125798, 125390, -3952, 0, false, 0);
+			addBoss(boss);
 		}
 	}
 
 	private void startFighting(GrandBossData info) {
 		spawnAntharas(info, info.getX(), info.getY(), info.getZ(), info.getHeading());
 		lastAttack = System.currentTimeMillis();
-		startQuestTimer("CHECK_ATTACK", 60000, antharas, null);
-		startQuestTimer("SPAWN_MINION", 300000, antharas, null);
+		startQuestTimer(CHECK_ATTACK_EVENT, 60000, boss, null);
+		startQuestTimer(SPAWN_MINION_EVENT, 300000, boss, null);
 	}
 
 	private void spawnAntharas(GrandBossData info, int x, int y, int z, int heading) {
-		antharas = (GrandBoss) addSpawn(ANTHARAS, x, y, z, heading, false, 0);
-		antharas.setCurrentHpMp(info.getHp(), info.getMp());
-		addBoss(antharas);
+		boss = (GrandBoss) addSpawn(ANTHARAS, x, y, z, heading, false, 0);
+		boss.setCurrentHpMp(info.getHp(), info.getMp());
+		addBoss(boss);
 	}
 
 	@Override
@@ -148,8 +153,8 @@ public final class Antharas extends AbstractNpcAI {
 			case "SPAWN_ANTHARAS" -> onSpawnAntharas();
 			case "SOCIAL" -> zone.broadcastPacket(new SocialAction(npc.getObjectId(), 2));
 			case "START_MOVE" -> onStartMove(npc);
-			case "CHECK_ATTACK" -> onCheckAttack(npc);
-			case "SPAWN_MINION" -> onSpawnMinion(npc);
+			case CHECK_ATTACK_EVENT -> onCheckAttack(npc);
+			case SPAWN_MINION_EVENT -> onSpawnMinion(npc);
 			case "CLEAR_STATUS" -> onClearStatus();
 			case "RESPAWN_ANTHARAS" -> onRespawnAntharas(player);
 			case "DESPAWN_MINIONS" -> onDespawnMinions(player);
@@ -186,8 +191,8 @@ public final class Antharas extends AbstractNpcAI {
 	}
 
 	private void onClearStatus() {
-		antharas = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
-		addBoss(antharas);
+		boss = (GrandBoss) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+		addBoss(boss);
 		Broadcast.toAllOnlinePlayers(new Earthquake(185708, 114298, -8221, 20, 10));
 		setStatus(BossStatus.ALIVE);
 	}
@@ -211,7 +216,7 @@ public final class Antharas extends AbstractNpcAI {
 		if ((Rnd.get(100) > 10) && (minionMultipler < 4)) {
 			minionMultipler++;
 		}
-		startQuestTimer("SPAWN_MINION", 300000, npc, null);
+		startQuestTimer(SPAWN_MINION_EVENT, 300000, npc, null);
 	}
 
 	private void onCheckAttack(Npc npc) {
@@ -220,8 +225,8 @@ public final class Antharas extends AbstractNpcAI {
 
 			//oustCreatures();
 
-			cancelQuestTimer("CHECK_ATTACK", npc, null);
-			cancelQuestTimer("SPAWN_MINION", npc, null);
+			cancelQuestTimer(CHECK_ATTACK_EVENT, npc, null);
+			cancelQuestTimer(SPAWN_MINION_EVENT, npc, null);
 		} else if (npc != null) {
 			if (attacker1Hate > 10) {
 				attacker1Hate -= Rnd.get(10);
@@ -233,7 +238,7 @@ public final class Antharas extends AbstractNpcAI {
 				attacker3Hate -= Rnd.get(10);
 			}
 			manageSkills(npc);
-			startQuestTimer("CHECK_ATTACK", 60000, npc, null);
+			startQuestTimer(CHECK_ATTACK_EVENT, 60000, npc, null);
 		}
 	}
 
@@ -242,16 +247,16 @@ public final class Antharas extends AbstractNpcAI {
 				hero -> zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_YOU_CANNOT_HOPE_TO_DEFEAT_ME_WITH_YOUR_MEAGER_STRENGTH, 2, 4000, hero.getName())), Player::isHero);
 
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(179011, 114871, -7704));
-		startQuestTimer("CHECK_ATTACK", 60000, npc, null);
-		startQuestTimer("SPAWN_MINION", 300000, npc, null);
+		startQuestTimer(CHECK_ATTACK_EVENT, 60000, npc, null);
+		startQuestTimer(SPAWN_MINION_EVENT, 300000, npc, null);
 	}
 
 	private void onSpawnAntharas() {
-		antharas.teleToLocation(125798, 125390, -3952, 32542);
+		boss.teleToLocation(125798, 125390, -3952, 32542);
 		setStatus(BossStatus.FIGHTING);
 		lastAttack = System.currentTimeMillis();
 		zone.broadcastPacket(PlaySound.sound("BS02_A"));
-		startQuestTimer("CAMERA_1", 23, antharas, null);
+		startQuestTimer("CAMERA_1", 23, boss, null);
 	}
 
 	@Override
@@ -314,7 +319,7 @@ public final class Antharas extends AbstractNpcAI {
 		{
 			if (npc.getId() == ANTHARAS)
 			{
-				antharas = null;
+				boss = null;
 				notifyEvent("DESPAWN_MINIONS", null, null);
 				zone.broadcastPacket(new SpecialCamera(npc, 1200, 20, -10, 0, 10000, 13000, 0, 0, 0, 0, 0));
 				zone.broadcastPacket(PlaySound.sound("BS01_D"));
@@ -322,8 +327,8 @@ public final class Antharas extends AbstractNpcAI {
 				setRespawn(respawnTime);
 				startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
 				cancelQuestTimer("SET_REGEN", npc, null);
-				cancelQuestTimer("CHECK_ATTACK", npc, null);
-				cancelQuestTimer("SPAWN_MINION", npc, null);
+				cancelQuestTimer(CHECK_ATTACK_EVENT, npc, null);
+				cancelQuestTimer(SPAWN_MINION_EVENT, npc, null);
 				startQuestTimer("CLEAR_ZONE", 900000, null, null);
 				setStatus(BossStatus.DEAD);
 			}
@@ -380,10 +385,10 @@ public final class Antharas extends AbstractNpcAI {
 	@Override
 	public boolean unload(boolean removeFromList)
 	{
-		if (antharas != null)
+		if (boss != null)
 		{
-			antharas.deleteMe();
-			antharas = null;
+			boss.deleteMe();
+			boss = null;
 		}
 		return super.unload(removeFromList);
 	}
@@ -547,6 +552,33 @@ public final class Antharas extends AbstractNpcAI {
 		public Skill skill() {
 			return SkillEngine.getInstance().getSkill(id, level);
 		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			AntharasSkill that = (AntharasSkill) o;
+			return id == that.id && level == that.level && castOnTarget == that.castOnTarget && baseChance == that.baseChance && fixedChance == that.fixedChance && Arrays.equals(distanceInfo, that.distanceInfo);
+		}
+
+		@Override
+		public int hashCode() {
+			int result = Objects.hash(id, level, castOnTarget, baseChance, fixedChance);
+			result = 31 * result + Arrays.hashCode(distanceInfo);
+			return result;
+		}
+
+		@Override
+		public String toString() {
+			return "AntharasSkill{" +
+					"id=" + id +
+					", level=" + level +
+					", castOnTarget=" + castOnTarget +
+					", baseChance=" + baseChance +
+					", fixedChance=" + fixedChance +
+					", distanceInfo=" + Arrays.toString(distanceInfo) +
+					'}';
+		}
 	}
 
 	private record SkillDecider(float hpMultiplier, double chanceMultiplier, AntharasSkill... skills) {
@@ -563,6 +595,30 @@ public final class Antharas extends AbstractNpcAI {
 				}
 			}
 			return null;
+		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			SkillDecider decider = (SkillDecider) o;
+			return Float.compare(decider.hpMultiplier, hpMultiplier) == 0 && Double.compare(decider.chanceMultiplier, chanceMultiplier) == 0 && Arrays.equals(skills, decider.skills);
+		}
+
+		@Override
+		public int hashCode() {
+			int result = Objects.hash(hpMultiplier, chanceMultiplier);
+			result = 31 * result + Arrays.hashCode(skills);
+			return result;
+		}
+
+		@Override
+		public String toString() {
+			return "SkillDecider{" +
+					"hpMultiplier=" + hpMultiplier +
+					", chanceMultiplier=" + chanceMultiplier +
+					", skills=" + Arrays.toString(skills) +
+					'}';
 		}
 	}
 
