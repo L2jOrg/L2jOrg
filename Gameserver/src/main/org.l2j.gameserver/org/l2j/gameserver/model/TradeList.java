@@ -72,7 +72,6 @@ public class TradeList {
     /**
      * Returns the list of items in inventory available for transaction
      *
-     * @param inventory
      * @return Item : items in inventory
      */
     public Collection<TradeItem> getAvailableItems(PlayerInventory inventory) {
@@ -114,7 +113,6 @@ public class TradeList {
      *
      * @param objectId : int
      * @param count    : int
-     * @return
      */
     public TradeItem addItem(int objectId, long count) {
         return addItem(objectId, count, 0);
@@ -212,12 +210,12 @@ public class TradeList {
 
     private synchronized TradeItem removeItem(int objectId, int itemId, long count) {
         if (locked) {
-            LOGGER.warn(owner.getName() + ": Attempt to modify locked TradeList!");
+            LOGGER.warn("{} Attempt to modify locked TradeList!", owner);
             return null;
         }
 
         if (count < 0) {
-            LOGGER.warn(owner.getName() + ": Attempt to remove " + count + " items from TradeList!");
+            LOGGER.warn("{} Attempt to remove {} items from TradeList!", owner, count);
             return null;
         }
 
@@ -227,14 +225,13 @@ public class TradeList {
                 if (partner != null) {
                     final TradeList partnerList = partner.getActiveTradeList();
                     if (partnerList == null) {
-                        LOGGER.warn(partner.getName() + ": Trading partner (" + partner.getName() + ") is invalid in this trade!");
+                        LOGGER.warn("{} Trading partner ( {} ) is invalid in this trade!", owner, partner);
                         return null;
                     }
                     partnerList.invalidateConfirmation();
                 }
 
-                // Reduce item count or complete item
-                if ((count != -1) && (titem.getCount() > count)) {
+                if (titem.getCount() > count) {
                     titem.setCount(titem.getCount() - count);
                 } else {
                     items.remove(titem);
@@ -352,11 +349,6 @@ public class TradeList {
 
     /**
      * Transfers all TradeItems from inventory to partner
-     *
-     * @param partner
-     * @param ownerIU
-     * @param partnerIU
-     * @return
      */
     private boolean TransferItems(Player partner, InventoryUpdate ownerIU, InventoryUpdate partnerIU) {
         for (TradeItem titem : items) {
@@ -390,7 +382,6 @@ public class TradeList {
     }
 
     /**
-     * @param partner
      * @return item slots count
      */
     private int countItemsSlots(Player partner) {
@@ -434,11 +425,6 @@ public class TradeList {
         return (int) Math.min(weight, Integer.MAX_VALUE);
     }
 
-    /**
-     * Proceeds with trade
-     *
-     * @param partnerList
-     */
     private void doExchange(TradeList partnerList) {
         boolean success = false;
 
@@ -503,7 +489,7 @@ public class TradeList {
             weight += itemRequested.getCount() * template.getWeight();
 
             if (!template.isStackable()) {
-                slots += itemRequested.getCount();
+                slots = (int) (slots + itemRequested.getCount());
             } else if (playerInventory.getItemByItemId(itemRequested.getItemId()) == null) {
                 slots++;
             }
@@ -659,8 +645,6 @@ public class TradeList {
     /**
      * Sell items to this PrivateStore list
      *
-     * @param player
-     * @param requestedItems
      * @return : boolean true if success
      */
     public synchronized boolean privateStoreSell(Player player, ItemRequest[] requestedItems) {

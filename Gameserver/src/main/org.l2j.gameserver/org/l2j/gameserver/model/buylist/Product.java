@@ -74,7 +74,7 @@ public final class Product {
     public long getPrice() {
         long price = this.price;
         if (template.getItemType().equals(EtcItemType.CASTLE_GUARD)) {
-            price *= Config.RATE_SIEGE_GUARDS_PRICE;
+            price = (long) (price * Config.RATE_SIEGE_GUARDS_PRICE);
         }
         return price;
     }

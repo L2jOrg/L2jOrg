@@ -1422,7 +1422,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         try {
             if (itemId == CommonItem.ADENA) {
-                count *= Config.RATE_QUEST_REWARD_ADENA;
+                count = (long) (count *  Config.RATE_QUEST_REWARD_ADENA);
             } else if (Config.RATE_QUEST_REWARD_USE_MULTIPLIERS) {
                 if (item instanceof EtcItem etcItem) {
                     count = (int) switch (etcItem.getItemType()) {
