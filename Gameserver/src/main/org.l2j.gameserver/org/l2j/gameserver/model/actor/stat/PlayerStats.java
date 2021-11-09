@@ -366,10 +366,10 @@ public class PlayerStats extends PlayableStats {
 
             if (points > 0) {
                 // vitality increased
-                points *= RateSettings.rateVitalityGain();
+                points = (int) (points * RateSettings.rateVitalityGain());
             } else {
                 // vitality decreased
-                points *= RateSettings.rateVitalityLoss();
+                points = (int) (points *  RateSettings.rateVitalityLoss());
             }
         }
 

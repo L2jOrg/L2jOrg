@@ -167,7 +167,7 @@ public final class SendWareHouseDepositList extends ClientPacket {
             }
 
             if (!item.isStackable()) {
-                slots += i.getCount();
+                slots = (int) (slots + i.getCount());
             } else if (isNull(warehouse.getItemByItemId(item.getId()))) {
                 slots++;
             }

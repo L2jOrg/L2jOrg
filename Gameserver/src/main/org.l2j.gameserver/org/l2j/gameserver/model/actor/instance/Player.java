@@ -3892,7 +3892,7 @@ public final class Player extends Playable {
 
         var levelData = LevelData.getInstance();
 
-        float percentLost = levelData.getXpPercentLost(getLevel());
+        double percentLost = levelData.getXpPercentLost(getLevel());
 
         if (killer != null) {
             if (killer.isRaid()) {
