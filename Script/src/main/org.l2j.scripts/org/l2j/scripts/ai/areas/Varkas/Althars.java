@@ -19,11 +19,11 @@
 package org.l2j.scripts.ai.areas.Varkas;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.scripts.ai.AbstractNpcAI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,7 +39,7 @@ public class Althars extends AbstractNpcAI {
     private final int altharsID = 18926;
 
     private final boolean[] althars_state = new boolean[12];
-    private final Map<String, Npc> althars = new HashMap<String, Npc>();
+    private final Map<String, Npc> althars = new HashMap<>();
 
     // TODO: set heading of Althars
     private final int[] ALTHARS_1_LOCATION = new int[] {124809, -43595, 3221, 0};
@@ -57,9 +57,7 @@ public class Althars extends AbstractNpcAI {
 
 
     private Althars() {
-        for(int i = 0; i < althars_state.length; i++) {
-            althars_state[i] = false;
-        }
+        Arrays.fill(althars_state, false);
 
         althars.put("althar_1", addSpawn(altharsID, ALTHARS_1_LOCATION[0], ALTHARS_1_LOCATION[1], ALTHARS_1_LOCATION[2], ALTHARS_1_LOCATION[3], false, 0, false, 0));
         althars.put("althar_2", addSpawn(altharsID, ALTHARS_2_LOCATION[0], ALTHARS_2_LOCATION[1], ALTHARS_2_LOCATION[2], ALTHARS_2_LOCATION[3], false, 0, false, 0));
@@ -80,13 +78,12 @@ public class Althars extends AbstractNpcAI {
     @Override
     public String onAdvEvent(String event, Npc npc, Player player) {
         if("ALTHARS_TIMER".equals(event)) {
-            for(int i = 0; i < Config.ALTHARS_MAX_ACTIVE - getAltharsActiveCount() ; i++) {
-                if (Rnd.get(100) < Config.ALTHARS_ACTIVATE_CHANCE_RATE) {
+            for(int i = 0; i < NpcSettings.maxActiveAlthars() - getAltharsActiveCount() ; i++) {
+                if (Rnd.chance(NpcSettings.altharActivationChance())) {
                     int altharsRndIndex = Rnd.get(12 - getAltharsActiveCount());
                     int altharsIndex = getAltharsIndex(altharsRndIndex);
                     spawnMonsters(altharsIndex);
-                    int AltharsDurationCycle = Rnd.get(Config.ALTHARS_MIN_DURATION_CYCLE, Config.ALTHARS_MAX_DURATION_CYCLE);
-                    startQuestTimer("STOP_ALTHARS_" + (altharsIndex + 1), AltharsDurationCycle, null,null);
+                    startQuestTimer("STOP_ALTHARS_" + (altharsIndex + 1), NpcSettings.altharDuration(), null,null);
                 }
             }
             startQuestTimer("ALTHARS_TIMER", _DELAY, null,null);
@@ -100,8 +97,8 @@ public class Althars extends AbstractNpcAI {
 
     private int getAltharsActiveCount() {
         int count = 0;
-        for(int i = 0; i < althars_state.length; i++) {
-            if (althars_state[i] == true) {
+        for (boolean state : althars_state) {
+            if (state) {
                 count++;
             }
         }
@@ -111,7 +108,7 @@ public class Althars extends AbstractNpcAI {
     private int getAltharsIndex(int rndIndex) {
         int virtualIndex = -1;
         for(int realIndex = 0; realIndex < althars_state.length; realIndex++) {
-            if (althars_state[realIndex] == true) {
+            if (althars_state[realIndex]) {
                 continue;
             } else {
                 virtualIndex++;
