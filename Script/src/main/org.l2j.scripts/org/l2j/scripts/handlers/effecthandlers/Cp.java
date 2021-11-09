@@ -39,6 +39,11 @@ public final class Cp extends AbstractVitalEffect {
     }
 
     @Override
+    protected boolean isVitalStatBlocked(Creature effected) {
+        return effected.isHpBlocked();
+    }
+
+    @Override
     protected int maxVitalStat(Creature effected) {
         return effected.getMaxCp();
     }

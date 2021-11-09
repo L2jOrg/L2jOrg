@@ -52,7 +52,7 @@ abstract class AbstractVitalEffect extends AbstractEffect {
 
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item) {
-        if (effected.isDead() || isDoor(effected) || effected.isHpBlocked()) {
+        if (effected.isDead() || isDoor(effected) || isVitalStatBlocked(effected)) {
             return;
         }
 
@@ -79,6 +79,8 @@ abstract class AbstractVitalEffect extends AbstractEffect {
             effector.sendDamageMessage(effected, skill, (int) -amount, 0, false, false);
         }
     }
+
+    protected abstract boolean isVitalStatBlocked(Creature effected);
 
     private SystemMessage healingMessage(Creature effector, Creature effected, int amount) {
         SystemMessage sm;

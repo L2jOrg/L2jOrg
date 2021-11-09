@@ -39,6 +39,11 @@ public final class Hp extends AbstractVitalEffect {
 	}
 
 	@Override
+	protected boolean isVitalStatBlocked(Creature effected) {
+		return effected.isHpBlocked();
+	}
+
+	@Override
 	protected int maxVitalStat(Creature effected) {
 		return effected.getMaxHp();
 	}
