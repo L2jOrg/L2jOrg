@@ -71,6 +71,10 @@ public class NpcSettings {
     private static int queenantSpawnRandom;
     private static int zakenSpawnInterval;
     private static int zakenSpawnRandom;
+    private static int altharActivationChance;
+    private static int maxActiveAlthars;
+    private static int alharMinDuration;
+    private static int altherMaxDuration;
 
     private NpcSettings() {
         // Helper class
@@ -129,6 +133,11 @@ public class NpcSettings {
 
         zakenSpawnInterval = settingsFile.getInt("ZakenSpawnInterval", 168);
         zakenSpawnRandom = settingsFile.getInt("ZakenSpawnRandom", 48);
+
+        altharActivationChance = settingsFile.getInt("AltharsActivationChance", 70);
+        maxActiveAlthars =  settingsFile.getInt("MaxActiveAlthars", 3);
+        alharMinDuration = settingsFile.getInt("AltharsMinDuration", 240000);
+        altherMaxDuration = settingsFile.getInt("AltharsMaxDuration", 480000);
     }
 
     public static boolean allowAggroInPeaceZone() {
@@ -273,5 +282,17 @@ public class NpcSettings {
 
     public static long zakenSpawnInterval() {
         return (zakenSpawnInterval + Rnd.get(-zakenSpawnRandom, zakenSpawnRandom)) * 3600000L ;
+    }
+
+    public static int altharActivationChance() {
+        return altharActivationChance;
+    }
+
+    public static int maxActiveAlthars() {
+        return maxActiveAlthars;
+    }
+
+    public static long altharDuration() {
+        return Rnd.get(alharMinDuration, altherMaxDuration);
     }
 }

@@ -49,7 +49,6 @@ public final class Config {
 
     private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
-    private static final String ALTHARS_CONFIG_FILE = "config/althars.ini";
 
     // --------------------------------------------------
     // Custom Config File Definitions
@@ -390,14 +389,6 @@ public final class Config {
     // HUNTING ZONE
     // --------------------------------------------------
     public static float L2_COIN_DROP_RATE;
-
-    // --------------------------------------------------
-    // ALTHARS ZONE
-    // --------------------------------------------------
-    public static int ALTHARS_ACTIVATE_CHANCE_RATE;
-    public static int ALTHARS_MAX_ACTIVE;
-    public static int ALTHARS_MIN_DURATION_CYCLE;
-    public static int ALTHARS_MAX_DURATION_CYCLE;
 
     /**
      * This class initializes all global variables for configuration.<br>
@@ -919,14 +910,6 @@ public final class Config {
         MAGIC_LAMP_GREATER_REWARD_COUNT = magicLampSettings.getInt("MagicLampGreaterRewardCount", 10);
         MAGIC_LAMP_MAX_LEVEL_EXP = magicLampSettings.getInt("MagicLampMaxLevelExp", 10000000);
         MAGIC_LAMP_CHARGE_RATE = magicLampSettings.getDouble("MagicLampChargeRate", 0.1);
-
-        // Load althars config
-        final PropertiesParser althars = new PropertiesParser(ALTHARS_CONFIG_FILE);
-
-        ALTHARS_ACTIVATE_CHANCE_RATE = althars.getInt("althars_activation_chance_rate", 70);
-        ALTHARS_MAX_ACTIVE = althars.getInt("althars_max_active", 3);
-        ALTHARS_MIN_DURATION_CYCLE = althars.getInt("althars_min_duration_cycle", 240000);
-        ALTHARS_MAX_DURATION_CYCLE = althars.getInt("althars_max_duration_cycle", 480000);
     }
 
     /**
