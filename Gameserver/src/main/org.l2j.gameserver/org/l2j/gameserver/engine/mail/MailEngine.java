@@ -612,7 +612,7 @@ public final class MailEngine {
             return;
         }
 
-        int weight = 0;
+        long weight = 0;
         int slots = 0;
 
         for (var item : attachments.getItems()) {
@@ -622,7 +622,7 @@ public final class MailEngine {
 
             weight += item.getCount() * item.getTemplate().getWeight();
             if (!item.isStackable()) {
-                slots += item.getCount();
+                slots = (int) (slots +  item.getCount());
             } else if (player.getInventory().getItemByItemId(item.getId()) == null) {
                 slots++;
             }
@@ -672,7 +672,7 @@ public final class MailEngine {
         }
     }
 
-    private boolean canReceiveAttachments(Player player, MailData mail, int weight, int slots) {
+    private boolean canReceiveAttachments(Player player, MailData mail, long weight, int slots) {
         if (!player.getInventory().validateCapacity(slots)) {
             player.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
             return false;

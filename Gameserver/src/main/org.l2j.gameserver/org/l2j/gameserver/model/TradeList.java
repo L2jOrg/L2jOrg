@@ -396,7 +396,7 @@ public class TradeList {
                 continue;
             }
             if (!template.isStackable()) {
-                slots += item.getCount();
+                slots = (int) (slots + item.getCount());
             } else if (partner.getInventory().getItemByItemId(item.getItem().getId()) == null) {
                 slots++;
             }
@@ -457,7 +457,7 @@ public class TradeList {
         }
 
         int slots = 0;
-        int weight = 0;
+        long weight = 0;
         long totalPrice = 0;
 
         final PlayerInventory ownerInventory = owner.getInventory();
@@ -543,7 +543,7 @@ public class TradeList {
         return result;
     }
 
-    private boolean checkTransaction(Player player, int slots, int weight, long totalPrice, PlayerInventory playerInventory) {
+    private boolean checkTransaction(Player player, int slots, long weight, long totalPrice, PlayerInventory playerInventory) {
         if (totalPrice > playerInventory.getAdena()) {
             player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             return false;
