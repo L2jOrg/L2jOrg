@@ -50,6 +50,7 @@ import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMe
 public class TradeList {
     private static final Logger LOGGER = LoggerFactory.getLogger(TradeList.class);
     public static final String PRIVATE_STORE = "PrivateStore";
+    public static final String ATTEMPT_TO_MODIFY_LOCKED_TRADE_LIST = "{} Attempt to modify locked TradeList!";
 
     private final Player owner;
     private final Set<TradeItem> items = ConcurrentHashMap.newKeySet();
@@ -120,7 +121,7 @@ public class TradeList {
 
     public synchronized TradeItem addItem(int objectId, long count, long price) {
         if (locked) {
-            LOGGER.warn("{} Attempt to modify locked TradeList!", owner);
+            LOGGER.warn(ATTEMPT_TO_MODIFY_LOCKED_TRADE_LIST, owner);
             return null;
         }
 
@@ -178,7 +179,7 @@ public class TradeList {
 
     public synchronized TradeItem addItemByItemId(int itemId, long count, long price) {
         if (locked) {
-            LOGGER.warn("{} Attempt to modify locked TradeList!", owner);
+            LOGGER.warn(ATTEMPT_TO_MODIFY_LOCKED_TRADE_LIST, owner);
             return null;
         }
 
@@ -210,7 +211,7 @@ public class TradeList {
 
     private synchronized TradeItem removeItem(int objectId, int itemId, long count) {
         if (locked) {
-            LOGGER.warn("{} Attempt to modify locked TradeList!", owner);
+            LOGGER.warn(ATTEMPT_TO_MODIFY_LOCKED_TRADE_LIST, owner);
             return null;
         }
 
