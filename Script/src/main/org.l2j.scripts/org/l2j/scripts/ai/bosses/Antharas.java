@@ -75,14 +75,14 @@ public final class Antharas extends AbstractNpcAI {
 			new DistanceInfo(1423, 172, 188), new DistanceInfo(802, 166, 194)); // Antharas Stun
 
 	private static final AntharasSkill ANTH_METEOR = new AntharasSkill(5093, 1, true, 3, false, (DistanceInfo[]) null); // Antharas Meteor
-	private static final AntharasSkill ANTH_FEAR = new AntharasSkill(4108, 1, true, 5, false, (DistanceInfo) null); // Antharas Terror
-	private static final AntharasSkill ANTH_FEAR_SHORT = new AntharasSkill(5092, 1, true, 5, false, (DistanceInfo) null); // Antharas Terror
-	private static final AntharasSkill ANTH_BREATH = new AntharasSkill(4111, 1, true, 6, false, (DistanceInfo) null); // Antharas Fossilization
-	private static final AntharasSkill ANTH_NORM_ATTACK_EX = new AntharasSkill(4113, 1, true, 50, true, (DistanceInfo) null); // Animal doing ordinary attack
-	private static final AntharasSkill ANTH_NORM_ATTACK = new AntharasSkill(4112, 1, true, 100, true, (DistanceInfo) null); // Ordinary Attack
+	private static final AntharasSkill ANTH_FEAR = new AntharasSkill(4108, 1, true, 5, false, (DistanceInfo[]) null); // Antharas Terror
+	private static final AntharasSkill ANTH_FEAR_SHORT = new AntharasSkill(5092, 1, true, 5, false, (DistanceInfo[]) null); // Antharas Terror
+	private static final AntharasSkill ANTH_BREATH = new AntharasSkill(4111, 1, true, 6, false, (DistanceInfo[]) null); // Antharas Fossilization
+	private static final AntharasSkill ANTH_NORM_ATTACK_EX = new AntharasSkill(4113, 1, true, 50, true, (DistanceInfo[]) null); // Animal doing ordinary attack
+	private static final AntharasSkill ANTH_NORM_ATTACK = new AntharasSkill(4112, 1, true, 100, true, (DistanceInfo[]) null); // Ordinary Attack
 	private static final AntharasSkill ANTH_JUMP = new AntharasSkill(4106, 1, false,  10, true, new DistanceInfo(1100, Integer.MIN_VALUE	,  Integer.MAX_VALUE)); // Antharas Stun
 	private static final AntharasSkill ANTH_DEBUFF = new AntharasSkill(4109, 1, false, 40, true, new DistanceInfo(850, 150, 210), new DistanceInfo(425, 90, 270)); // Curse of Antharas
-	private static final AntharasSkill ANTH_MOUTH = new AntharasSkill(4110, 2, true, 30, true, (DistanceInfo) null); // Breath Attack
+	private static final AntharasSkill ANTH_MOUTH = new AntharasSkill(4110, 2, true, 30, true, (DistanceInfo[]) null); // Breath Attack
 
 	private static final NoRestartZone zone = ZoneEngine.getInstance().getZoneById(70050, NoRestartZone.class); // Antharas Nest zone
 	public static final String CHECK_ATTACK_EVENT = "CHECK_ATTACK";
