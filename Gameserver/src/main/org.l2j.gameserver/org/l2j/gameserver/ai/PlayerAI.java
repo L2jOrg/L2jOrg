@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.ai;
 
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -94,10 +95,10 @@ public class PlayerAI extends PlayableAI {
         if (_nextIntention != null) {
             setIntention(_nextIntention._crtlIntention, _nextIntention._arg0, _nextIntention._arg1);
             _nextIntention = null;
-        } else if(!getActor().getAutoPlaySettings().isAutoPlaying()) {
-            super.onEvtReadyToAct();
+        } else if(getActor().getAutoPlaySettings().isReady()) {
+            AutoPlayEngine.getInstance().doReadyAction(getActor());
         } else {
-            setIntention(CtrlIntention.AI_INTENTION_IDLE);
+            super.onEvtReadyToAct();
         }
     }
 

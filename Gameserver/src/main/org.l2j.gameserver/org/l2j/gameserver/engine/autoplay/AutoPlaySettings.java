@@ -33,6 +33,7 @@ public class AutoPlaySettings {
     private int usableHpPotionPercent;
     private boolean respectFulHunt;
     private final AtomicBoolean autoPlaying = new AtomicBoolean(false);
+    private boolean ready;
     private int usableHpPetPotionPercent;
 
     public AutoPlaySettings(short size, boolean active, boolean pickUp, short nextTargetMode, boolean isNearTarget, int usableHpPotionPercent, int usableHpPetPotionPercent, boolean respectFulHunt) {
@@ -116,5 +117,13 @@ public class AutoPlaySettings {
 
     public int getUsableHpPetPotionPercent() {
         return usableHpPetPotionPercent;
+    }
+
+    public void ready(boolean value) {
+        this.ready = value;
+    }
+
+    public boolean isReady() {
+        return active && ready;
     }
 }
