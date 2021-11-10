@@ -94,7 +94,7 @@ public class PlayerAI extends PlayableAI {
         if (_nextIntention != null) {
             setIntention(_nextIntention._crtlIntention, _nextIntention._arg0, _nextIntention._arg1);
             _nextIntention = null;
-        } else if(!getActor().getAutoPlaySettings().isActive()) {
+        } else if(!getActor().getAutoPlaySettings().isAutoPlaying()) {
             super.onEvtReadyToAct();
         } else {
             setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -182,7 +182,6 @@ public class PlayerAI extends PlayableAI {
      * <li>Set the Intention of this AI to AI_INTENTION_MOVE_TO</li>
      * <li>Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)</li>
      * </ul>
-     * @param loc
      */
     @Override
     protected void onIntentionMoveTo(ILocational loc) {
