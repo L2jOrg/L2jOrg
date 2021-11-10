@@ -189,6 +189,11 @@ public final class AutoPlayEngine {
         }
     }
 
+    public void doReadyAction(Player player) {
+        player.getAutoPlaySettings().ready(false);
+        doAutoPlayTask.doNextAction(player);
+    }
+
     public static AutoPlayEngine getInstance() {
         return Singleton.INSTANCE;
     }
@@ -203,7 +208,11 @@ public final class AutoPlayEngine {
         public void run() {
             for (Player player : players) {
                 if(!player.getAutoPlaySettings().isAutoPlaying() && canDoAutoAction(player)) {
-                    ThreadPool.executeForked(() -> doNextAction(player));
+                    if(player.isAttackingNow()) {
+                        player.getAutoPlaySettings().ready(true);
+                    } else {
+                        ThreadPool.executeForked(() -> doNextAction(player));
+                    }
                 }
             }
         }
@@ -426,7 +435,6 @@ public final class AutoPlayEngine {
                 !player.isAlikeDead() &&
                 !player.isInsideZone(ZoneType.PEACE) &&
                 !player.isInObserverMode() &&
-                !player.isAttackingNow() &&
                 !player.isCastingNow();
     }
 }

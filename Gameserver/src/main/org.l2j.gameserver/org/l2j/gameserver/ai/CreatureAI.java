@@ -183,31 +183,14 @@ public class CreatureAI extends AbstractAI {
 
         // Check if the Intention is already AI_INTENTION_ATTACK
         if (getIntention() == AI_INTENTION_ATTACK) {
-            // Check if the AI already targets the Creature
             if (getTarget() != target) {
-                // Set the AI attack target (change target)
                 setTarget(target);
-
-                // stopFollow();
-
-                // Launch the Think Event
-                notifyEvent(CtrlEvent.EVT_THINK, null);
-
-            } else {
-                clientActionFailed(); // else client freezes until cancel target
             }
         } else {
-            // Set the Intention of this AbstractAI to AI_INTENTION_ATTACK
             changeIntention(AI_INTENTION_ATTACK, target);
-
-            // Set the AI attack target
             setTarget(target);
-
-            // stopFollow();
-
-            // Launch the Think Event
-            notifyEvent(CtrlEvent.EVT_THINK, null);
         }
+        notifyEvent(CtrlEvent.EVT_THINK, null);
     }
 
     /**
