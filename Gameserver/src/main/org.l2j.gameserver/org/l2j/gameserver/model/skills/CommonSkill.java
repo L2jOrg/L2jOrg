@@ -97,6 +97,8 @@ public enum CommonSkill {
     REPUTATION_3(60004),
     TELEPORT(60018);
 
+    public static final int[] SLEEP_SKILLS = { 367, 4111, 4383, 4616, 4578};
+
     private final int id;
     private Skill skill;
 
