@@ -236,7 +236,6 @@ public class CreatureAI extends AbstractAI {
      * <li>Set the Intention of this AI to AI_INTENTION_MOVE_TO</li>
      * <li>Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)</li>
      * </ul>
-     * @param loc
      */
     @Override
     protected void onIntentionMoveTo(ILocational loc) {
@@ -986,9 +985,7 @@ public class CreatureAI extends AbstractAI {
         public boolean cannotMoveOnLand = false;
         public Set<Skill> generalSkills = ConcurrentHashMap.newKeySet();
         public Set<Skill> buffSkills = ConcurrentHashMap.newKeySet();
-        public int lastBuffTick = 0;
         public Set<Skill> debuffSkills = ConcurrentHashMap.newKeySet();
-        public int lastDebuffTick = 0;
         public Set<Skill> cancelSkills = ConcurrentHashMap.newKeySet();
         public Set<Skill> healSkills = ConcurrentHashMap.newKeySet();
         public Set<Skill> generalDisablers = ConcurrentHashMap.newKeySet();
@@ -1006,48 +1003,15 @@ public class CreatureAI extends AbstractAI {
 
         public void init() {
             switch (((NpcTemplate) actor.getTemplate()).getAIType()) {
-                case FIGHTER: {
-                    isFighter = true;
-                    break;
-                }
-                case MAGE: {
-                    isMage = true;
-                    break;
-                }
-                case CORPSE:
-                case BALANCED: {
-                    isBalanced = true;
-                    break;
-                }
-                case ARCHER: {
-                    isArcher = true;
-                    break;
-                }
-                case HEALER: {
-                    isHealer = true;
-                    break;
-                }
-                default: {
-                    isFighter = true;
-                    break;
-                }
+                case MAGE -> isMage = true;
+                case CORPSE, BALANCED -> isBalanced = true;
+                case ARCHER -> isArcher = true;
+                case HEALER -> isHealer = true;
+                default -> isFighter = true;
             }
-            // water movement analysis
-            if (isNpc(actor)) {
-                switch (actor.getId()) {
-                    case 20314: // great white shark
-                    case 20849: // Light Worm
-                    {
-                        cannotMoveOnLand = true;
-                        break;
-                    }
-                    default: {
-                        cannotMoveOnLand = false;
-                        break;
-                    }
-                }
-            }
-            // skill analysis
+
+            cannotMoveOnLand = actor.getId() == 20314 || actor.getId() == 20849;
+
             for (Skill sk : actor.getAllSkills()) {
                 if (sk.isPassive()) {
                     continue;
@@ -1076,18 +1040,8 @@ public class CreatureAI extends AbstractAI {
                     // EffectTemplate... petrification is totally different for
                     // AI than paralyze
                     switch (sk.getId()) {
-                        case 367:
-                        case 4111:
-                        case 4383:
-                        case 4616:
-                        case 4578: {
-                            sleepSkills.add(sk);
-                            break;
-                        }
-                        default: {
-                            generalDisablers.add(sk);
-                            break;
-                        }
+                        case 367, 4111, 4383, 4616, 4578 -> sleepSkills.add(sk);
+                        default -> generalDisablers.add(sk);
                     }
                 } else if (sk.hasAnyEffectType(EffectType.ROOT)) {
                     rootSkills.add(sk);
