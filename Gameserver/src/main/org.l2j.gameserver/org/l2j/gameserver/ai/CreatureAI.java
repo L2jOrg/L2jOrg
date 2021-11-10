@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.item.type.WeaponType;
+import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.AutoAttackStop;
@@ -45,6 +46,7 @@ import org.l2j.gameserver.util.MathUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -1039,9 +1041,10 @@ public class CreatureAI extends AbstractAI {
                     // hardcoding petrification until improvements are made to
                     // EffectTemplate... petrification is totally different for
                     // AI than paralyze
-                    switch (sk.getId()) {
-                        case 367, 4111, 4383, 4616, 4578 -> sleepSkills.add(sk);
-                        default -> generalDisablers.add(sk);
+                    if(Arrays.binarySearch(CommonSkill.SLEEP_SKILLS, sk.getId()) >= 0) {
+                        sleepSkills.add(sk);
+                    } else {
+                        generalDisablers.add(sk);
                     }
                 } else if (sk.hasAnyEffectType(EffectType.ROOT)) {
                     rootSkills.add(sk);
