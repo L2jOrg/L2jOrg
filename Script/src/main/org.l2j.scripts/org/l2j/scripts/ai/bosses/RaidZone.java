@@ -3,6 +3,7 @@ package org.l2j.scripts.ai.bosses;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.scripts.ai.AbstractNpcAI;
 
@@ -102,7 +103,7 @@ public class RaidZone extends AbstractNpcAI {
     };
 
     private RaidZone (){
-        if(Config.ACTIVATE_PVP_BOSS_FLAG) addAttackId(RAID_BOSSES);
+        if(NpcSettings.isRaidBossZoneFlagEnabled()) addAttackId(RAID_BOSSES);
     }
 
     @Override

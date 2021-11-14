@@ -42,12 +42,10 @@ public final class Config {
     // --------------------------------------------------
     // Config File Definitions
     // --------------------------------------------------
-
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
 
-    private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
     private static final String RATES_CONFIG_FILE = "config/rates.properties";
 
     // --------------------------------------------------
@@ -127,22 +125,6 @@ public final class Config {
     public static FloodProtectorConfig FLOOD_PROTECTOR_CHARACTER_SELECT;
     public static FloodProtectorConfig FLOOD_PROTECTOR_ITEM_AUCTION;
 
-
-    // --------------------------------------------------
-    // PvP Settings
-    // --------------------------------------------------
-    public static boolean KARMA_DROP_GM;
-    public static int KARMA_PK_LIMIT;
-    public static String KARMA_NONDROPPABLE_PET_ITEMS;
-    public static String KARMA_NONDROPPABLE_ITEMS;
-    public static int[] KARMA_LIST_NONDROPPABLE_PET_ITEMS;
-    public static int[] KARMA_LIST_NONDROPPABLE_ITEMS;
-    public static boolean ANTIFEED_ENABLE;
-    public static boolean ANTIFEED_DUALBOX;
-    public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
-    public static int ANTIFEED_INTERVAL;
-    public static boolean ACTIVATE_PVP_BOSS_FLAG;
-
     // --------------------------------------------------
     // Rate Settings
     // --------------------------------------------------
@@ -211,14 +193,6 @@ public final class Config {
     public static int MAGIC_LAMP_GREATER_REWARD_COUNT;
     public static int MAGIC_LAMP_MAX_LEVEL_EXP;
     public static double MAGIC_LAMP_CHARGE_RATE;
-
-    // --------------------------------------------------
-    // No classification assigned to the following yet
-    // --------------------------------------------------
-    public static int PVP_NORMAL_TIME;
-    public static int PVP_PVP_TIME;
-    public static int MAX_REPUTATION;
-    public static int REPUTATION_INCREASE;
 
     // --------------------------------------------------
     // Custom Settings
@@ -567,43 +541,6 @@ public final class Config {
         DROP_ITEM_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMinLevelDifference", 5);
         DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
         DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
-
-        // Load PvP config file (if exists)
-        final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
-
-        KARMA_DROP_GM = PVPSettings.getBoolean("CanGMDropEquipment", false);
-        KARMA_PK_LIMIT = PVPSettings.getInt("MinimumPKRequiredToDrop", 4);
-        KARMA_NONDROPPABLE_PET_ITEMS = PVPSettings.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650,9882");
-        KARMA_NONDROPPABLE_ITEMS = PVPSettings.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694,9388,9389,9390");
-
-        String[] karma = KARMA_NONDROPPABLE_PET_ITEMS.split(",");
-        KARMA_LIST_NONDROPPABLE_PET_ITEMS = new int[karma.length];
-
-        for (int i = 0; i < karma.length; i++) {
-            KARMA_LIST_NONDROPPABLE_PET_ITEMS[i] = Integer.parseInt(karma[i]);
-        }
-
-        karma = KARMA_NONDROPPABLE_ITEMS.split(",");
-        KARMA_LIST_NONDROPPABLE_ITEMS = new int[karma.length];
-
-        for (int i = 0; i < karma.length; i++) {
-            KARMA_LIST_NONDROPPABLE_ITEMS[i] = Integer.parseInt(karma[i]);
-        }
-
-        ANTIFEED_ENABLE = PVPSettings.getBoolean("AntiFeedEnable", false);
-        ANTIFEED_DUALBOX = PVPSettings.getBoolean("AntiFeedDualbox", true);
-        ANTIFEED_DISCONNECTED_AS_DUALBOX = PVPSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
-        ANTIFEED_INTERVAL = PVPSettings.getInt("AntiFeedInterval", 120) * 1000;
-
-        // sorting so binarySearch can be used later
-        Arrays.sort(KARMA_LIST_NONDROPPABLE_PET_ITEMS);
-        Arrays.sort(KARMA_LIST_NONDROPPABLE_ITEMS);
-
-        PVP_NORMAL_TIME = PVPSettings.getInt("PvPVsNormalTime", 120000);
-        PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
-        MAX_REPUTATION = PVPSettings.getInt("MaxReputation", 500);
-        REPUTATION_INCREASE = PVPSettings.getInt("ReputationIncrease", 100);
-        ACTIVATE_PVP_BOSS_FLAG = PVPSettings.getBoolean("ActivatePvPBossFlag", false);
 
         // Load Banking config file (if exists)
         final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
