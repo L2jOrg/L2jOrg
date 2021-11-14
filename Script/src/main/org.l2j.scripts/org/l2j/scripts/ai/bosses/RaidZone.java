@@ -1,6 +1,5 @@
 package org.l2j.scripts.ai.bosses;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.settings.NpcSettings;

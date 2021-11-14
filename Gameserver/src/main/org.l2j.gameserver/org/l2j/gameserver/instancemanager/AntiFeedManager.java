@@ -74,10 +74,8 @@ public final class AntiFeedManager {
             return false;
         }
 
-        if (PvpSettings.antiFeedInterval() > 0 && _lastDeathTimes.containsKey(targetPlayer.getObjectId())) {
-            if (System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId()) < PvpSettings.antiFeedInterval()) {
-                return false;
-            }
+        if (PvpSettings.antiFeedInterval() > 0 && _lastDeathTimes.containsKey(targetPlayer.getObjectId()) && System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId()) < PvpSettings.antiFeedInterval()) {
+            return false;
         }
 
         if (PvpSettings.antiFeedDualBox() && attacker != null) {
