@@ -40,6 +40,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.PvpSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
@@ -869,9 +870,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			return;
 		}
 
-		if (newReputation > Config.MAX_REPUTATION) {
-			newReputation = Config.MAX_REPUTATION;
-		}
+		newReputation = Math.min(newReputation, PvpSettings.maxReputation());
 
 		final var oldReputation = targetPlayer.getReputation();
 		if(oldReputation == newReputation) {

@@ -25,6 +25,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
+import org.l2j.gameserver.settings.PvpSettings;
 import org.l2j.gameserver.world.World;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -60,7 +61,7 @@ public final class AntiFeedManager {
      * @return True if kill is non-feeded.
      */
     public boolean check(Creature attacker, Creature target) {
-        if (!Config.ANTIFEED_ENABLE) {
+        if (!PvpSettings.isAntiFeedEnabled()) {
             return true;
         }
 
@@ -73,13 +74,13 @@ public final class AntiFeedManager {
             return false;
         }
 
-        if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId())) {
-            if ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL) {
+        if (PvpSettings.antiFeedInterval() > 0 && _lastDeathTimes.containsKey(targetPlayer.getObjectId())) {
+            if (System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId()) < PvpSettings.antiFeedInterval()) {
                 return false;
             }
         }
 
-        if (Config.ANTIFEED_DUALBOX && (attacker != null)) {
+        if (PvpSettings.antiFeedDualBox() && attacker != null) {
             final Player attackerPlayer = attacker.getActingPlayer();
             if (attackerPlayer == null) {
                 return false;
@@ -87,11 +88,6 @@ public final class AntiFeedManager {
 
             final GameClient targetClient = targetPlayer.getClient();
             final GameClient attackerClient = attackerPlayer.getClient();
-            if ((targetClient == null) || (attackerClient == null)) {
-                // unable to check ip address
-                return !Config.ANTIFEED_DISCONNECTED_AS_DUALBOX;
-            }
-
             return !targetClient.getHostAddress().equals(attackerClient.getHostAddress());
         }
 

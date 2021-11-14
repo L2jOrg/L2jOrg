@@ -104,9 +104,10 @@ public final class SettingsFile extends Properties {
 
         IntSet set = new HashIntSet();
         var values = value.split(delimiter);
-        for (String s : values) {
-            if (Util.isInteger(s)) {
-                set.add(Integer.parseInt(s));
+        for (var s : values) {
+            var v = s.strip();
+            if (Util.isInteger(v)) {
+                set.add(Integer.parseInt(v));
             }
         }
         return set;
@@ -142,11 +143,12 @@ public final class SettingsFile extends Properties {
         var values = property.split(delimiter);
         int[] array = new int[values.length];
         int index = 0;
-        for (String v : values) {
-            if (!isInteger(v)) {
+        for (var v : values) {
+            var value = v.strip();
+            if (!isInteger(value)) {
                 continue;
             }
-            array[index++] = Integer.parseInt(v);
+            array[index++] = Integer.parseInt(value);
         }
         return array;
     }

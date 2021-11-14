@@ -75,6 +75,7 @@ public class NpcSettings {
     private static int maxActiveAlthars;
     private static int alharMinDuration;
     private static int altherMaxDuration;
+    private static boolean isRaidBossZoneFlagEnabled;
 
     private NpcSettings() {
         // Helper class
@@ -138,6 +139,8 @@ public class NpcSettings {
         maxActiveAlthars =  settingsFile.getInt("MaxActiveAlthars", 3);
         alharMinDuration = settingsFile.getInt("AltharsMinDuration", 240000);
         altherMaxDuration = settingsFile.getInt("AltharsMaxDuration", 480000);
+
+        isRaidBossZoneFlagEnabled = settingsFile.getBoolean("EnableRaidBossZoneFlagEnable", false);
     }
 
     public static boolean allowAggroInPeaceZone() {
@@ -294,5 +297,9 @@ public class NpcSettings {
 
     public static long altharDuration() {
         return Rnd.get(alharMinDuration, altherMaxDuration);
+    }
+
+    public static boolean isRaidBossZoneFlagEnabled() {
+        return isRaidBossZoneFlagEnabled;
     }
 }

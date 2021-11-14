@@ -114,10 +114,7 @@ import org.l2j.gameserver.network.serverpackets.pledge.ExPledgeCount;
 import org.l2j.gameserver.network.serverpackets.pvpbook.ExNewPk;
 import org.l2j.gameserver.network.serverpackets.skill.AcquireSkillList;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
-import org.l2j.gameserver.settings.CharacterSettings;
-import org.l2j.gameserver.settings.ChatSettings;
-import org.l2j.gameserver.settings.FeatureSettings;
-import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.*;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.util.*;
@@ -145,6 +142,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static java.lang.Math.max;
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -1849,10 +1847,7 @@ public final class Player extends Playable {
         // Notify to scripts.
         EventDispatcher.getInstance().notifyEventAsync(new OnPlayerReputationChanged(this, getReputation(), reputation), this);
 
-        if (reputation > Config.MAX_REPUTATION) // Max count of positive reputation
-        {
-            reputation = Config.MAX_REPUTATION;
-        }
+        reputation = min(reputation, PvpSettings.maxReputation());
 
         if (getReputation() == reputation) {
             return;
@@ -3650,7 +3645,7 @@ public final class Player extends Playable {
             return Collections.emptyList();
         }
 
-        if ( (!isInsideZone(ZoneType.PVP) || isNull(pk)) && (!isGM() || Config.KARMA_DROP_GM)) {
+        if ( (!isInsideZone(ZoneType.PVP) || isNull(pk)) && (!isGM() || PvpSettings.canGMDrop())) {
             return onDieDropItems(killer);
         }
 
@@ -3658,7 +3653,7 @@ public final class Player extends Playable {
     }
 
     private Collection<Item> onDieDropItems(Creature killer) {
-        var isKarmaDrop = isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= Config.KARMA_PK_LIMIT);
+        var isKarmaDrop = isPlayable(killer) && (getReputation() < 0) && (data.getPk() >= PvpSettings.minPKsToDrop());
         var dropPercent = calculateDropPercent(killer, isKarmaDrop);
 
         if (Rnd.chance(dropPercent)) {
@@ -3706,9 +3701,7 @@ public final class Player extends Playable {
                 !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
                 (itemDrop.getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
                 ((pet != null) && (pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
-                (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
-                (Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
-                );
+                (PvpSettings.isNonDroppable(itemDrop.getId())); // Item listed in the non droppable item list
     }
 
     private double calculateDropPercent(Creature killer, boolean isKarmaDrop) {
@@ -3766,7 +3759,7 @@ public final class Player extends Playable {
                 final int levelDiff = killedPlayer.getLevel() - getLevel();
                 if ((getReputation() >= 0) && (levelDiff < 11) && (levelDiff > -11)) // TODO: Time check, same player can't be killed again in 8 hours
                 {
-                    setReputation(getReputation() + Config.REPUTATION_INCREASE);
+                    setReputation(getReputation() + PvpSettings.reputationIncrease());
                 }
             }
 
@@ -3826,7 +3819,7 @@ public final class Player extends Playable {
         if (isInsideZone(ZoneType.PVP)) {
             return;
         }
-        setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_NORMAL_TIME);
+        setPvpFlagLasts(System.currentTimeMillis() + PvpSettings.flagTime());
 
         if (pvpFlag == 0) {
             startPvPFlag();
@@ -3848,9 +3841,9 @@ public final class Player extends Playable {
         }
         if ((!isInsideZone(ZoneType.PVP) || !player_target.isInsideZone(ZoneType.PVP)) && (player_target.getReputation() >= 0)) {
             if (checkIfPvP(player_target)) {
-                setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_PVP_TIME);
+                setPvpFlagLasts(System.currentTimeMillis() + PvpSettings.flagInPvpTime());
             } else {
-                setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_NORMAL_TIME);
+                setPvpFlagLasts(System.currentTimeMillis() + PvpSettings.flagTime());
             }
             if (pvpFlag == 0) {
                 startPvPFlag();
