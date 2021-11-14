@@ -243,8 +243,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			result = true;
 		}
 		else if (command.startsWith("admin_find_dualbox")) {
-			findDualBox(command, player);
-			result = true;
+			result = findDualBox(command, player);
 		}
 		else if (command.startsWith("admin_strict_find_dualbox")) {
 			strictFindDualBox(command, player);
@@ -1251,69 +1250,33 @@ public class AdminEditChar implements IAdminCommandHandler
 	}
 
 	private boolean findDualBox(String command, Player player) {
-		int multibox = 2;
-		try
-		{
+		int multiBox = 2;
+		try {
 			final String val = command.substring(19);
-			multibox = Integer.parseInt(val);
-			if (multibox < 1)
-			{
+			multiBox = Integer.parseInt(val);
+			if (multiBox < 1) {
 				BuilderUtil.sendSysMessage(player, "Usage: //find_dualbox [number > 0]");
 				return false;
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			LOGGER.warn(e.getMessage(), e);
 		}
-		findDualBox(player, multibox);
+		findDualBox(player, multiBox);
 		return true;
 	}
 
-	private void findDualBox(Player activeChar, int multibox)
-	{
-		final Map<String, List<Player>> ipMap = new HashMap<>();
-		String ip;
-		GameClient client;
-		final Map<String, Integer> dualboxIPs = new HashMap<>();
-
-		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
-		players.sort(Comparator.comparingLong(Player::getUptime));
-		for (Player player : players)
-		{
-			client = player.getClient();
-			if ((client == null))
-			{
-				continue;
-			}
-
-			ip = client.getHostAddress();
-			ipMap.computeIfAbsent(ip, i -> new ArrayList<>()).add(player);
-
-			if (ipMap.get(ip).size() >= multibox)
-			{
-				final Integer count = dualboxIPs.get(ip);
-				if (count == null)
-				{
-					dualboxIPs.put(ip, multibox);
-				}
-				else
-				{
-					dualboxIPs.put(ip, count + 1);
-				}
+	private void findDualBox(Player activeChar, int multibox) {
+		Map<String, Integer> ipCount = new HashMap<>();
+		var results = new StringBuilder();
+		for (var player : World.getInstance().getPlayers()) {
+			var ip = player.getIPAddress();
+			var count = ipCount.merge(player.getIPAddress(), 1, Integer::sum);
+			if(count >= multibox) {
+				results.append("<a action=\"bypass -h admin_find_ip ").append(ip).append("\">").append(ip).append(" (").append(count).append(")</a><br1>");
 			}
 		}
 
-		final List<String> keys = new ArrayList<>(dualboxIPs.keySet());
-		keys.sort(Comparator.comparing(dualboxIPs::get).reversed());
-
-		final StringBuilder results = new StringBuilder();
-		for (String dualboxIP : keys)
-		{
-			results.append("<a action=\"bypass -h admin_find_ip ").append(dualboxIP).append("\">").append(dualboxIP).append(" (").append(dualboxIPs.get(dualboxIP)).append(")</a><br1>");
-		}
-
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
+		var adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/dualbox.htm");
 		adminReply.replace("%multibox%", String.valueOf(multibox));
 		adminReply.replace("%results%", results.toString());
@@ -1323,66 +1286,33 @@ public class AdminEditChar implements IAdminCommandHandler
 
 	private boolean strictFindDualBox(String command, Player player) {
 		int multibox = 2;
-		try
-		{
+		try {
 			final String val = command.substring(26);
 			multibox = Integer.parseInt(val);
-			if (multibox < 1)
-			{
+			if (multibox < 1) {
 				BuilderUtil.sendSysMessage(player, "Usage: //strict_find_dualbox [number > 0]");
 				return false;
 			}
 		}
-		catch (Exception e)
-		{
+		catch (Exception e) {
 			LOGGER.warn(e.getMessage(), e);
 		}
 		findDualBoxStrict(player, multibox);
 		return true;
 	}
 	
-	private void findDualBoxStrict(Player activeChar, int multibox)
-	{
-		final Map<IpPack, List<Player>> ipMap = new HashMap<>();
-		GameClient client;
-		final Map<IpPack, Integer> dualboxIPs = new HashMap<>();
-		
-		final List<Player> players = new ArrayList<>(World.getInstance().getPlayers());
-		players.sort(Comparator.comparingLong(Player::getUptime));
-		for (Player player : players)
-		{
-			client = player.getClient();
-			if (client == null)
-			{
-				continue;
-			}
-			
-			final IpPack pack = new IpPack(client.getHostAddress(), client.getTrace());
-			ipMap.computeIfAbsent(pack, p -> new ArrayList<>()).add(player);
-			
-			if (ipMap.get(pack).size() >= multibox)
-			{
-				final Integer count = dualboxIPs.get(pack);
-				if (count == null)
-				{
-					dualboxIPs.put(pack, multibox);
-				}
-				else
-				{
-					dualboxIPs.put(pack, count + 1);
-				}
+	private void findDualBoxStrict(Player activeChar, int multibox) {
+		Map<IpPack, Integer> ipCount = new HashMap<>();
+		var results = new StringBuilder();
+		for (var player : World.getInstance().getPlayers()) {
+			var client = player.getClient();
+			var ip = new IpPack(client.getHostAddress(), client.getTrace());
+			var count = ipCount.merge(ip, 1, Integer::sum);
+			if(count >= multibox) {
+				results.append("<a action=\"bypass -h admin_find_ip ").append(ip.ip).append("\">").append(ip.ip).append(" (").append(count).append(")</a><br1>");
 			}
 		}
-		
-		final List<IpPack> keys = new ArrayList<>(dualboxIPs.keySet());
-		keys.sort(Comparator.comparing(dualboxIPs::get).reversed());
-		
-		final StringBuilder results = new StringBuilder();
-		for (IpPack dualboxIP : keys)
-		{
-			results.append("<a action=\"bypass -h admin_find_ip ").append(dualboxIP.ip).append("\">").append(dualboxIP.ip).append(" (").append(dualboxIPs.get(dualboxIP)).append(")</a><br1>");
-		}
-		
+
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/dualbox.htm");
 		adminReply.replace("%multibox%", String.valueOf(multibox));
@@ -1391,77 +1321,28 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private final class IpPack
-	{
+	private static final class IpPack {
 		String ip;
 		int[][] tracert;
 		
-		public IpPack(String ip, int[][] tracert)
-		{
+		public IpPack(String ip, int[][] tracert) {
 			this.ip = ip;
 			this.tracert = tracert;
 		}
-		
+
 		@Override
-		public int hashCode()
-		{
-			final int prime = 31;
-			int result = 1;
-			result = (prime * result) + ((ip == null) ? 0 : ip.hashCode());
-			for (int[] array : tracert)
-			{
-				result = (prime * result) + Arrays.hashCode(array);
-			}
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			IpPack ipPack = (IpPack) o;
+			return Objects.equals(ip, ipPack.ip) && Arrays.deepEquals(tracert, ipPack.tracert);
+		}
+
+		@Override
+		public int hashCode() {
+			int result = Objects.hash(ip);
+			result = 31 * result + Arrays.deepHashCode(tracert);
 			return result;
-		}
-		
-		@Override
-		public boolean equals(Object obj)
-		{
-			if (this == obj)
-			{
-				return true;
-			}
-			if (obj == null)
-			{
-				return false;
-			}
-			if (getClass() != obj.getClass())
-			{
-				return false;
-			}
-			final IpPack other = (IpPack) obj;
-			if (!getOuterType().equals(other.getOuterType()))
-			{
-				return false;
-			}
-			if (ip == null)
-			{
-				if (other.ip != null)
-				{
-					return false;
-				}
-			}
-			else if (!ip.equals(other.ip))
-			{
-				return false;
-			}
-			for (int i = 0; i < tracert.length; i++)
-			{
-				for (int o = 0; o < tracert[0].length; o++)
-				{
-					if (tracert[i][o] != other.tracert[i][o])
-					{
-						return false;
-					}
-				}
-			}
-			return true;
-		}
-		
-		private AdminEditChar getOuterType()
-		{
-			return AdminEditChar.this;
 		}
 	}
 	
