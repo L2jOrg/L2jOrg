@@ -102,9 +102,6 @@ public final class AntiFeedManager {
     }
 
     /**
-     * @param eventId
-     * @param player
-     * @param max
      * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
      * False if number of all simultaneous connections from player's IP address higher than max.
      */
@@ -113,9 +110,6 @@ public final class AntiFeedManager {
     }
 
     /**
-     * @param eventId
-     * @param client
-     * @param max
      * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
      * False if number of all simultaneous connections from player's IP address higher than max.
      */
@@ -177,8 +171,6 @@ public final class AntiFeedManager {
 
     /**
      * Clear all entries for this eventId.
-     *
-     * @param eventId
      */
     public void clear(int eventId) {
         final var event = _eventIPs.get(eventId);
