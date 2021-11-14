@@ -18,7 +18,7 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.gameserver.Config;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
@@ -32,6 +32,7 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
+import org.l2j.gameserver.model.base.ClassInfo;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.stats.Stat;
@@ -474,30 +475,22 @@ public class AdminEditChar implements IAdminCommandHandler
 
 	private void summonSetLevel(String command, Player player) {
 		final WorldObject target = player.getTarget();
-		if (isPet(target))
-		{
+		if (isPet(target)) {
 			final Pet pet = (Pet) target;
-			try
-			{
+			try {
 				final String val = command.substring(20);
 				final int level = Integer.parseInt(val);
 				final long oldexp = pet.getStats().getExp();
 				final long newexp = pet.getStats().getExpForLevel(level);
-				if (oldexp > newexp)
-				{
+				if (oldexp > newexp) {
 					pet.getStats().removeExp(oldexp - newexp);
-				}
-				else if (oldexp < newexp)
-				{
+				} else if (oldexp < newexp) {
 					pet.getStats().addExp(newexp - oldexp);
 				}
+			} catch (Exception e) {
+				LOGGER.warn(e.getMessage(), e);
 			}
-			catch (Exception e)
-			{
-			}
-		}
-		else
-		{
+		} else {
 			BuilderUtil.sendSysMessage(player, "Usable only with Pets");
 		}
 	}
@@ -555,17 +548,17 @@ public class AdminEditChar implements IAdminCommandHandler
 			return false;
 		}
 
-		String ip;
+		StringBuilder ip;
 		final int[][] trace = client.getTrace();
 		for (int i = 0; i < trace.length; i++)
 		{
-			ip = "";
+			ip = new StringBuilder();
 			for (int o = 0; o < trace[0].length; o++)
 			{
-				ip = ip + trace[i][o];
+				ip.append(trace[i][o]);
 				if (o != (trace[0].length - 1))
 				{
-					ip = ip + ".";
+					ip.append(".");
 				}
 			}
 			BuilderUtil.sendSysMessage(player, "Hop" + i + ": " + ip);
@@ -1052,8 +1045,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		final PageResult result = PageBuilder.newBuilder(players, 20, "bypass -h admin_show_characters").currentPage(page).bodyHandler((pages, player, sb) ->
 		{
 			sb.append("<tr>");
-			sb.append("<td width=80><a action=\"bypass -h admin_character_info " + player.getName() + "\">" + player.getName() + "</a></td>");
-			sb.append("<td width=110>" + ClassListData.getInstance().getClass(player.getClassId()).getClientCode() + "</td><td width=40>" + player.getLevel() + "</td>");
+			sb.append("<td width=80><a action=\"bypass -h admin_character_info ").append(player.getName()).append("\">").append(player.getName()).append("</a></td>");
+			sb.append("<td width=110>").append(ClassListData.getInstance().getClass(player.getClassId()).getClientCode()).append("</td><td width=40>").append(player.getLevel()).append("</td>");
 			sb.append("</tr>");
 		}).build();
 		
@@ -1088,9 +1081,6 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	/**
 	 * Retrieve and replace player's info in filename htm file, sends it to activeChar as NpcHtmlMessage.
-	 * @param activeChar
-	 * @param player
-	 * @param filename
 	 */
 	private void gatherCharacterInfo(Player activeChar, Player player, String filename)
 	{
@@ -1119,7 +1109,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClientCode());
 		adminReply.replace("%ordinal%", String.valueOf(player.getClassId().getId()));
 		adminReply.replace("%classid%", String.valueOf(player.getClassId()));
-		adminReply.replace("%baseclass%", ClassListData.getInstance().getClass(player.getBaseClass()).getClientCode());
+		adminReply.replace("%baseclass%", Util.emptyIfNullOrElse(ClassListData.getInstance().getClass(player.getBaseClass()), ClassInfo::getClientCode));
 		adminReply.replace("%x%", String.valueOf(player.getX()));
 		adminReply.replace("%y%", String.valueOf(player.getY()));
 		adminReply.replace("%z%", String.valueOf(player.getZ()));
@@ -1274,6 +1264,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			LOGGER.warn(e.getMessage(), e);
 		}
 		findDualBox(player, multibox);
 		return true;
@@ -1314,12 +1305,12 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 
 		final List<String> keys = new ArrayList<>(dualboxIPs.keySet());
-		keys.sort(Comparator.comparing(s -> dualboxIPs.get(s)).reversed());
+		keys.sort(Comparator.comparing(dualboxIPs::get).reversed());
 
 		final StringBuilder results = new StringBuilder();
 		for (String dualboxIP : keys)
 		{
-			results.append("<a action=\"bypass -h admin_find_ip " + dualboxIP + "\">" + dualboxIP + " (" + dualboxIPs.get(dualboxIP) + ")</a><br1>");
+			results.append("<a action=\"bypass -h admin_find_ip ").append(dualboxIP).append("\">").append(dualboxIP).append(" (").append(dualboxIPs.get(dualboxIP)).append(")</a><br1>");
 		}
 
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
@@ -1344,6 +1335,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			LOGGER.warn(e.getMessage(), e);
 		}
 		findDualBoxStrict(player, multibox);
 		return true;
@@ -1383,12 +1375,12 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		final List<IpPack> keys = new ArrayList<>(dualboxIPs.keySet());
-		keys.sort(Comparator.comparing(s -> dualboxIPs.get(s)).reversed());
+		keys.sort(Comparator.comparing(dualboxIPs::get).reversed());
 		
 		final StringBuilder results = new StringBuilder();
 		for (IpPack dualboxIP : keys)
 		{
-			results.append("<a action=\"bypass -h admin_find_ip " + dualboxIP.ip + "\">" + dualboxIP.ip + " (" + dualboxIPs.get(dualboxIP) + ")</a><br1>");
+			results.append("<a action=\"bypass -h admin_find_ip ").append(dualboxIP.ip).append("\">").append(dualboxIP.ip).append(" (").append(dualboxIPs.get(dualboxIP)).append(")</a><br1>");
 		}
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
@@ -1527,8 +1519,8 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				text.append("<tr><td><table width=270 border=0 cellpadding=2><tr><td width=30 align=right>");
 			}
-			text.append(member.getLevel() + "</td><td width=130><a action=\"bypass -h admin_character_info " + member.getName() + "\">" + member.getName() + "</a>");
-			text.append("</td><td width=110 align=right>" + member.getClassId() + "</td></tr></table></td></tr>");
+			text.append(member.getLevel()).append("</td><td width=130><a action=\"bypass -h admin_character_info ").append(member.getName()).append("\">").append(member.getName()).append("</a>");
+			text.append("</td><td width=110 align=right>").append(member.getClassId()).append("</td></tr></table></td></tr>");
 			color = !color;
 		}
 		html.replace("%player%", target.getName());
