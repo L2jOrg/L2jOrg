@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.engine.autoplay;
 
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.FriendlyMob;
@@ -34,7 +35,17 @@ class FriendlyMobFinder extends AbstractAutoPlayTargetFinder {
     }
 
     @Override
+    public boolean canBeTargetAnchored(Location location, Player player, WorldObject target, int range) {
+        return target instanceof FriendlyMob friendly && !friendly.isDead() && super.canBeTargetAnchored(location, player, friendly, range);
+    }
+
+    @Override
     public Creature findNextTarget(Player player, int range) {
         return findNextTarget(player, FriendlyMob.class, range);
+    }
+
+    @Override
+    public Creature findNextTargetAnchored(Location location, Player player, int range) {
+        return findNextTargetAnchored(location, player, FriendlyMob.class, range);
     }
 }

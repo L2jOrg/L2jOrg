@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.engine.autoplay;
 
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Monster;
@@ -34,7 +35,17 @@ class MonsterFinder extends AbstractAutoPlayTargetFinder {
     }
 
     @Override
+    public boolean canBeTargetAnchored(Location location, Player player, WorldObject target, int range) {
+        return  target instanceof Monster monster && !monster.isDead() && (super.canBeTargetAnchored(location, player, monster, range) || monster.getTarget() == player);
+    }
+
+    @Override
     public Creature findNextTarget(Player player, int range) {
         return findNextTarget(player, Monster.class, range);
+    }
+
+    @Override
+    public Creature findNextTargetAnchored(Location location, Player player, int range) {
+        return findNextTargetAnchored(location, player, Monster.class, range);
     }
 }

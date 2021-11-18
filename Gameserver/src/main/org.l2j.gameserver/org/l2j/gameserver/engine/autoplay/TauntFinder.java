@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.engine.autoplay;
 
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -33,7 +34,18 @@ class TauntFinder extends AbstractAutoPlayTargetFinder {
     }
 
     @Override
+    public boolean canBeTargetAnchored(Location location, Player player, WorldObject target, int range) {
+        return target instanceof Creature creature && !creature.isDead() && super.canBeTargetAnchored(location, player, creature, range);
+    }
+
+    @Override
     public Creature findNextTarget(Player player, int range) {
         return findNextTarget(player, Creature.class, range);
+    }
+
+
+    @Override
+    public Creature findNextTargetAnchored(Location location, Player player, int range) {
+        return findNextTargetAnchored(location, player, Creature.class, range);
     }
 }

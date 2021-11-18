@@ -121,12 +121,21 @@ public class AutoHpMpCp extends AbstractScript implements IParseBoardHandler {
         String subCommand = tokens.nextToken();
 
         if(subCommand.equalsIgnoreCase("autocp")) {
+            if (!tokens.hasMoreElements()){
+                return false;
+            }
             processCommand(player, "autocp", tokens);
         }
         else if(subCommand.equalsIgnoreCase("autohp")) {
+            if (!tokens.hasMoreElements()){
+                return false;
+            }
             processCommand(player, "autohp", tokens);
         }
         else if(subCommand.equalsIgnoreCase("automp")) {
+            if (!tokens.hasMoreElements()){
+                return false;
+            }
             processCommand(player, "automp", tokens);
         }
 

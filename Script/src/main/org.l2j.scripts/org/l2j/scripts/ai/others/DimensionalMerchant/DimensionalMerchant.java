@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.ai.others.DimensionalMerchant;
 
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.shop.MultisellEngine;
 import org.l2j.gameserver.handler.BypassHandler;
@@ -100,8 +101,34 @@ public class DimensionalMerchant extends AbstractNpcAI implements IBypassHandler
         }
     }
 
-    private void openHtml(Player player, String html) {
-        player.sendPacket(new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm(player, "data/html/common/dimensional/" + html)));
+    public static void openHtml(Player player, String html) {
+
+        ExPremiumManagerShowHtml html1 = new ExPremiumManagerShowHtml( HtmCache.getInstance().getHtm(player, "data/html/common/dimensional/" + html));
+
+        var closeRange = player.getAutoPlayRangeClose();
+        var longRange = player.getAutoPlayRangeLong();
+        boolean viewRange = player.showAutoPlayRadius();
+        boolean centrePoint = player.isAutoPlayZoneAnchored();
+
+        if (closeRange == 0)
+        {
+            closeRange = Config.AUTO_PLAY_CLOSE_RANGE;
+        }
+        if (longRange == 0)
+        {
+            longRange = Config.AUTO_PLAY_LONG_RANGE;
+        }
+
+        html1.replace("%closeRange%", (closeRange <= 0 || closeRange > 800) ? String.valueOf(Config.AUTO_PLAY_CLOSE_RANGE) : String.valueOf(closeRange));
+        html1.replace("%longRange%", (longRange < 800 || longRange > 2000) ? String.valueOf(Config.AUTO_PLAY_LONG_RANGE) : String.valueOf(longRange));
+        html1.replace("%viewRange%", (viewRange ? "<font color=24a10e> ON </font>" : "<font color=ff0a0a> OFF </font>"));
+        html1.replace("%centered%", (centrePoint ? "<font color=ff0a0a> CENTERED </font>" : "<font color=24a10e> DYNAMIC </font>"));
+        html1.replace("ScloseRange", ("<button value=Set action="+"bypass _bbsautoplay closeRange $closeRange"+" width=85 height=26 back=L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button fore=L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button>"));
+        html1.replace("SlongRange", ("<button value=Set action="+"bypass _bbsautoplay longRange $longRange"+" width=85 height=26 back=L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button fore=L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button>"));
+        html1.replace("SviewRange", (viewRange ? "HIDE" : "SHOW"));
+        html1.replace("Scentered", (centrePoint ? "Switch to Dynamic" : "Center it here"));
+
+        player.sendPacket(html1);
     }
 
     @Override

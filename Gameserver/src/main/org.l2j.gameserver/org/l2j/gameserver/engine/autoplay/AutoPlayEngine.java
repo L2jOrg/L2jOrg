@@ -19,6 +19,7 @@
 package org.l2j.gameserver.engine.autoplay;
 
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.data.Shortcut;
 import org.l2j.gameserver.data.xml.ActionManager;
@@ -27,12 +28,19 @@ import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
+import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExBasicActionList;
+import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
+import org.l2j.gameserver.network.serverpackets.MoveToLocation;
 import org.l2j.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingResponse;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.zone.ZoneType;
 
+import java.awt.*;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -49,11 +57,15 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
  */
 public final class AutoPlayEngine {
 
-    private static final int AUTO_PLAY_INTERVAL = 500;
-    private static final int AUTO_SUPPLY_INTERVAL = 600;
+    private static final int AUTO_PLAY_INTERVAL = Config.AUTO_PLAY_INTERVAL;
+    private static final int AUTO_SUPPLY_INTERVAL = Config.AUTO_SUPPLY_INTERVAL;
     private static final int DEFAULT_ACTION = 2;
 
     private final Set<Player> players = ConcurrentHashMap.newKeySet();
+    public static int centrePointX;
+    public static int centrePointY;
+    public static int centrePointZ;
+
     private final Set<Player> autoSupplyPlayers = ConcurrentHashMap.newKeySet();
 
     private final DoAutoPlay doAutoPlayTask = new DoAutoPlay();
@@ -63,6 +75,7 @@ public final class AutoPlayEngine {
     private final DoAutoSupply doAutoSupply = new DoAutoSupply();
     private final Object autoSupplyTaskLocker = new Object();
     private ScheduledFuture<?> autoSupplyTask;
+    private ScheduledFuture<?> viewRangeCheck;
 
     private final AutoPlayTargetFinder tauntFinder = new TauntFinder();
     private final AutoPlayTargetFinder monsterFinder = new MonsterFinder();
@@ -139,12 +152,43 @@ public final class AutoPlayEngine {
                 autoPlayTask = ThreadPool.scheduleAtFixedDelay(doAutoPlayTask, AUTO_PLAY_INTERVAL, AUTO_PLAY_INTERVAL);
             }
         }
+
         player.getAutoPlaySettings().setActive(true);
         player.sendPacket(new ExAutoPlaySettingResponse());
+
+
+        /* Custom settings variables
+         * do not delete! could be useful
+         */
+        // ExServerPrimitive debug_low = player.getDebugPacket("radiusLow");
+        ExServerPrimitive debug_mid = player.getDebugPacket("radiusMid");
+        // ExServerPrimitive debug_high = player.getDebugPacket("radiusHigh");
+        ExServerPrimitive debug_center = player.getDebugPacket("center");
+
+        if (!player.isAutoPlayZoneAnchored())
+        {
+            if (player.showAutoPlayRadius())
+            {
+                player.setAutoPlayRadius(false);
+                // debug_low.reset();
+                debug_mid.reset();
+                // debug_high.reset();
+                debug_center.reset();
+                player.clearDebugPackets();
+            }
+            player.setAutoPlayAnchorX(0);
+            player.setAutoPlayAnchorY(0);
+            player.setAutoPlayAnchorZ(0);
+        }
+        else {
+            centrePointX = player.getAutoPlayAnchorX();
+            centrePointY = player.getAutoPlayAnchorY();
+            centrePointZ = player.getAutoPlayAnchorZ();
+        }
     }
 
     public void stopAutoPlay(Player player) {
-        if(players.remove(player)) {
+        if (players.remove(player)) {
             synchronized (autoPlayTaskLocker) {
                 if (players.isEmpty() && nonNull(autoPlayTask)) {
                     autoPlayTask.cancel(false);
@@ -155,6 +199,23 @@ public final class AutoPlayEngine {
         player.getAutoPlaySettings().setActive(false);
         player.sendPacket(new ExAutoPlaySettingResponse());
         player.resetNextAutoShortcut();
+
+        //custom settings variables
+        // ExServerPrimitive debug_low = player.getDebugPacket("radiusLow");
+        ExServerPrimitive debug_mid = player.getDebugPacket("radiusMid");
+        // ExServerPrimitive debug_high = player.getDebugPacket("radiusHigh");
+        ExServerPrimitive debug_center = player.getDebugPacket("center");
+
+        if (!player.isAutoPlayZoneAnchored()) {
+            if (player.showAutoPlayRadius()) {
+                player.setAutoPlayRadius(false);
+                // debug_low.reset();
+                debug_mid.reset();
+                // debug_high.reset();
+                debug_center.reset();
+                player.clearDebugPackets();
+            }
+        }
     }
 
     private void startAutoSupply(Player player) {
@@ -221,7 +282,18 @@ public final class AutoPlayEngine {
             var setting = player.getAutoPlaySettings();
             setting.setAutoPlaying(true);
             try {
-                var range = setting.isNearTarget() ? 600 : 1400;
+                var range = 0;
+
+                if (Config.CUSTOM_CB_ENABLED)
+                {
+                    if (Config.AUTO_PLAY_SETTINGS_ENABLED) {
+                        range = setting.isNearTarget() ? player.getAutoPlayRangeClose() : player.getAutoPlayRangeLong();
+                    } else {
+                    range = setting.isNearTarget() ? Config.AUTO_PLAY_CLOSE_RANGE : Config.AUTO_PLAY_LONG_RANGE; }
+                }
+                else {
+                    range = setting.isNearTarget() ? 600 : 1400;
+                }
 
                 if (setting.isAutoPickUpOn()) {
                     var item = World.getInstance().findAnyVisibleObject(player, Item.class, 200, false, it -> nonNull(it.getDropProtection().getOwner()) && it.getDropProtection().tryPickUp(player) && player.getInventory().validateCapacity(it));
@@ -239,15 +311,40 @@ public final class AutoPlayEngine {
 
         private void pickTargetAndAct(Player player, AutoPlaySettings setting, int range) {
             var targetFinder = targetFinderBySettings(setting);
+            Location centrePoint = new Location(player.getAutoPlayAnchorX(), player.getAutoPlayAnchorY(), player.getAutoPlayAnchorZ(), 0);
 
-            if(!targetFinder.canBeTarget(player, player.getTarget(), range)) {
-                player.setTarget(targetFinder.findNextTarget(player, range));
+            if (player.isAutoPlayZoneAnchored()) {
+                if (!targetFinder.canBeTargetAnchored(centrePoint, player, player.getTarget(), range) || (player.getTarget() instanceof Creature && ((Creature) player.getTarget()).isAlikeDead()))
+                {
+                    player.setTarget(targetFinder.findNextTargetAnchored(centrePoint, player, range));
+                }
+            }
+            else
+            {
+                if (!targetFinder.canBeTarget(player, player.getTarget(), range) || (player.getTarget() instanceof Creature
+                    && ((Creature) player.getTarget()).isAlikeDead()))
+                {
+                    player.setTarget(targetFinder.findNextTarget(player, range));
+                }
             }
 
-            if (nonNull(player.getTarget())) {
+            if (nonNull(player.getTarget()) && !((Creature) player.getTarget()).isAlikeDead()) {
                 tryUseAutoShortcut(player);
                 if(player.hasSummon()) {
                     tryUseAutoSummonShortcut(player);
+                }
+                return;
+            }
+
+            /*
+             * Makes it so the player returns to the centre of the farm zone when
+             * the player steps out of the zone to retaliate against a monster
+             * that is attacking him from outside the farm zone.
+             */
+            if (player.isAutoPlayZoneAnchored() && !MathUtil.isInsideRadius3D(centrePoint, player, range)) {
+                if (!player.isMoving() && !player.isAttackingNow() && (player.getTarget() == null || player.getTarget() == player)) {
+                    player.sendMessage("I've gone too far from the farm zone. I better get back!");
+                    player.getAI().moveTo(centrePoint);
                 }
             }
         }

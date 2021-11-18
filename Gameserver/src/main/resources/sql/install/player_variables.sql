@@ -27,7 +27,15 @@ CREATE TABLE IF NOT EXISTS `player_variables` (
 	`lamp_count` INT DEFAULT 0,
 	`soulshot` INT DEFAULT 0,
 	`spiritshot` INT DEFAULT 0,
+	`ap_range_close` INT DEFAULT 600,
+	`ap_range_long` INT DEFAULT 1400,
+	`ap_show_range` BOOLEAN DEFAULT FALSE,
+	`ap_anchored` BOOLEAN DEFAULT FALSE,
+	`ap_anchor_x` INT DEFAULT 0,
+	`ap_anchor_y` INT DEFAULT 0,
+	`ap_anchor_z` INT DEFAULT 0,
     PRIMARY KEY (`player_id`),
     FOREIGN KEY (`player_id`) REFERENCES characters(`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
 

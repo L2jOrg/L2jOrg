@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.engine.autoplay;
 
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -33,7 +34,18 @@ class PlayerFinder extends AbstractAutoPlayTargetFinder {
     }
 
     @Override
+    public boolean canBeTargetAnchored(Location location, Player player, WorldObject target, int range) {
+        Location centrePoint = new Location(player.getAutoPlayAnchorX(), player.getAutoPlayAnchorY(), player.getAutoPlayAnchorZ(), 0);
+        return target instanceof Player playerTarget && !playerTarget.isDead() && super.canBeTargetAnchored(centrePoint, player, playerTarget, range);
+    }
+
+    @Override
     public Creature findNextTarget(Player player, int range) {
         return findNextTarget(player, Player.class, range);
+    }
+
+
+    public Creature findNextTargetAnchored(Location location, Player player, int range) {
+        return findNextTargetAnchored(location, player, Player.class, range);
     }
 }
