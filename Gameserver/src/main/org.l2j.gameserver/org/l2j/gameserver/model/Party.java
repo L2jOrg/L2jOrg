@@ -22,7 +22,6 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.MagicLampData;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.engine.item.ItemEngine;
@@ -538,8 +537,6 @@ public class Party extends AbstractPlayerGroup {
      * @param xpReward        The Experience reward to distribute
      * @param spReward        The SP reward to distribute
      * @param rewardedMembers The list of Player to reward
-     * @param topLvl
-     * @param target
      */
     public void distributeXpAndSp(double xpReward, double spReward, Collection<Player> rewardedMembers, int topLvl, Attackable target) {
 
@@ -606,11 +603,6 @@ public class Party extends AbstractPlayerGroup {
     public void recalculatePartyLevel() {
         int newLevel = 0;
         for (Player member : members) {
-            if (member == null) {
-                members.remove(member);
-                continue;
-            }
-
             if (member.getLevel() > newLevel) {
                 newLevel = member.getLevel();
             }

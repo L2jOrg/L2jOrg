@@ -19,7 +19,6 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ChatType;
@@ -34,20 +33,23 @@ import org.l2j.gameserver.settings.ChatSettings;
 import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
 import static org.l2j.commons.util.Util.isDigit;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
-
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -
  * tradeoff = toggles trade acceptance mode - reload = reloads specified component from multisell|skill|npc|htm|item - set/set_menu/set_mod = alters specified server setting - saveolymp = saves olympiad state manually - manualhero = cycles olympiad and calculate new heroes.
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2007/07/28 10:06:06 $
  */
-public class AdminAdmin implements IAdminCommandHandler
-{
+public class AdminAdmin implements IAdminCommandHandler {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminAdmin.class);
+
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_admin",
@@ -213,41 +215,21 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
-		else if (command.startsWith("admin_setconfig"))
-		{
+		else if (command.startsWith("admin_setconfig")) {
 			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken();
-			try
-			{
+			try {
 				final String pName = st.nextToken();
 				final String pValue = st.nextToken();
-				if (Float.valueOf(pValue) == null)
-				{
-					BuilderUtil.sendSysMessage(activeChar, "Invalid parameter!");
-					return false;
+
+				BuilderUtil.sendSysMessage(activeChar, "Config parameter " + pName + " trying set to " + pValue);
+				switch (pName) {
+					case "RateXp" -> RateSettings.setXp(Float.parseFloat(pValue));
+					case "RateSp" -> RateSettings.sp(Float.parseFloat(pValue));
+					case "RateDropSpoil" -> RateSettings.spoilChance(Float.parseFloat(pValue));
+					default -> BuilderUtil.sendSysMessage(activeChar, "Unknown parameter.");
 				}
-				switch (pName)
-				{
-					case "RateXp":
-					{
-						RateSettings.setXp(Float.parseFloat(pValue));
-						break;
-					}
-					case "RateSp":
-					{
-						RateSettings.sp(Float.parseFloat(pValue));
-						break;
-					}
-					case "RateDropSpoil":
-					{
-						RateSettings.spoilChance(Float.parseFloat(pValue));
-						break;
-					}
-				}
-				BuilderUtil.sendSysMessage(activeChar, "Config parameter " + pName + " set to " + pValue);
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //setconfig <parameter> <value>");
 			}
 			finally
@@ -259,168 +241,120 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // admin_worldchat
-			switch (st.hasMoreTokens() ? st.nextToken() : "")
-			{
-				case "shout":
-				{
-					final StringBuilder sb = new StringBuilder();
-					while (st.hasMoreTokens())
-					{
-						sb.append(st.nextToken());
-						sb.append(" ");
-					}
-					
-					final CreatureSay cs = new CreatureSay(activeChar, ChatType.WORLD, sb.toString());
-					World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
-					break;
-				}
-				case "see":
-				{
-					final WorldObject target = activeChar.getTarget();
-					if (!isPlayer(target))
-					{
-						activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-						break;
-					}
-					final Player targetPlayer = target.getActingPlayer();
-					var worldChatMinLevel = ChatSettings.worldChatMinLevel();
-					if (targetPlayer.getLevel() < worldChatMinLevel)
-					{
-						BuilderUtil.sendSysMessage(activeChar, "Your target's level is below the minimum: " + worldChatMinLevel);
-						break;
-					}
-					BuilderUtil.sendSysMessage(activeChar, targetPlayer.getName() + ": has used world chat " + targetPlayer.getWorldChatUsed() + " times out of maximum " + targetPlayer.getWorldChatPoints() + " times.");
-					break;
-				}
-				case "set":
-				{
-					final WorldObject target = activeChar.getTarget();
-					if (!isPlayer(target)) {
-						activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-						break;
-					}
-					
-					final Player targetPlayer = target.getActingPlayer();
-					var worldChatMinLevel = ChatSettings.worldChatMinLevel();
-					if (targetPlayer.getLevel() < worldChatMinLevel)
-					{
-						BuilderUtil.sendSysMessage(activeChar, "Your target's level is below the minimum: " + worldChatMinLevel);
-						break;
-					}
-					
-					if (!st.hasMoreTokens())
-					{
-						BuilderUtil.sendSysMessage(activeChar, "Incorrect syntax, use: //worldchat set <times used>");
-						break;
-					}
-					
-					final String valueToken = st.nextToken();
-					if (!isDigit(valueToken))
-					{
-						BuilderUtil.sendSysMessage(activeChar, "Incorrect syntax, use: //worldchat set <times used>");
-						break;
-					}
-					
-					BuilderUtil.sendSysMessage(activeChar, targetPlayer.getName() + ": times used changed from " + targetPlayer.getWorldChatPoints() + " to " + valueToken);
-					targetPlayer.setWorldChatUsed(Integer.parseInt(valueToken));
-					if (ChatSettings.worldChatEnabled()) {
-						targetPlayer.sendPacket(new ExWorldChatCnt(targetPlayer));
-					}
-					break;
-				}
-				default:
-				{
-					BuilderUtil.sendSysMessage(activeChar, "Possible commands:");
-					BuilderUtil.sendSysMessage(activeChar, " - Send message: //worldchat shout <text>");
-					BuilderUtil.sendSysMessage(activeChar, " - See your target's points: //worldchat see");
-					BuilderUtil.sendSysMessage(activeChar, " - Change your target's points: //worldchat set <points>");
-					break;
-				}
+			switch (st.hasMoreTokens() ? st.nextToken() : "") {
+				case "shout" -> shout(activeChar, st);
+				case "see" -> see(activeChar);
+				case "set" -> set(activeChar, st);
+				default -> unknownChat(activeChar);
 			}
-		}
-		else if (command.startsWith("admin_gmon"))
-		{
-			// TODO why is this empty?
 		}
 		return true;
 	}
-	
+
+	private void unknownChat(Player activeChar) {
+		BuilderUtil.sendSysMessage(activeChar, "Possible commands:");
+		BuilderUtil.sendSysMessage(activeChar, " - Send message: //worldchat shout <text>");
+		BuilderUtil.sendSysMessage(activeChar, " - See your target's points: //worldchat see");
+		BuilderUtil.sendSysMessage(activeChar, " - Change your target's points: //worldchat set <points>");
+	}
+
+	private void set(Player activeChar, StringTokenizer st) {
+		final WorldObject target = activeChar.getTarget();
+		if (!isPlayer(target)) {
+			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			return;
+		}
+
+		final Player targetPlayer = target.getActingPlayer();
+		var worldChatMinLevel = ChatSettings.worldChatMinLevel();
+		if (targetPlayer.getLevel() < worldChatMinLevel) {
+			BuilderUtil.sendSysMessage(activeChar, "Your target's level is below the minimum: " + worldChatMinLevel);
+			return;
+		}
+
+		if (!st.hasMoreTokens()) {
+			BuilderUtil.sendSysMessage(activeChar, "Incorrect syntax, use: //worldchat set <times used>");
+			return;
+		}
+
+		final String valueToken = st.nextToken();
+		if (!isDigit(valueToken)) {
+			BuilderUtil.sendSysMessage(activeChar, "Incorrect syntax, use: //worldchat set <times used>");
+			return;
+		}
+
+		BuilderUtil.sendSysMessage(activeChar, targetPlayer.getName() + ": times used changed from " + targetPlayer.getWorldChatPoints() + " to " + valueToken);
+		targetPlayer.setWorldChatUsed(Integer.parseInt(valueToken));
+		if (ChatSettings.worldChatEnabled()) {
+			targetPlayer.sendPacket(new ExWorldChatCnt(targetPlayer));
+		}
+	}
+
+	private void shout(Player activeChar, StringTokenizer st) {
+		final StringBuilder sb = new StringBuilder();
+		while (st.hasMoreTokens()) {
+			sb.append(st.nextToken());
+			sb.append(" ");
+		}
+
+		final CreatureSay cs = new CreatureSay(activeChar, ChatType.WORLD, sb.toString());
+		World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
+	}
+
+	private void see(Player activeChar) {
+		final WorldObject target = activeChar.getTarget();
+		if (!isPlayer(target)) {
+			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			return;
+		}
+		final Player targetPlayer = target.getActingPlayer();
+		var worldChatMinLevel = ChatSettings.worldChatMinLevel();
+		if (targetPlayer.getLevel() < worldChatMinLevel) {
+			BuilderUtil.sendSysMessage(activeChar, "Your target's level is below the minimum: " + worldChatMinLevel);
+			return;
+		}
+		BuilderUtil.sendSysMessage(activeChar, targetPlayer.getName() + ": has used world chat " + targetPlayer.getWorldChatUsed() + " times out of maximum " + targetPlayer.getWorldChatPoints() + " times.");
+	}
+
 	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(Player activeChar, String command)
-	{
+	private void showMainPage(Player activeChar, String command) {
 		int mode = 0;
 		String filename;
-		try
-		{
+		try {
 			mode = Integer.parseInt(command.substring(11));
+		} catch (Exception e) {
+			LOGGER.warn(e.getMessage(), e);
 		}
-		catch (Exception e)
-		{
-		}
-		switch (mode)
-		{
-			case 1:
-			{
-				filename = "main";
-				break;
-			}
-			case 2:
-			{
-				filename = "game";
-				break;
-			}
-			case 3:
-			{
-				filename = "effects";
-				break;
-			}
-			case 4:
-			{
-				filename = "server";
-				break;
-			}
-			case 5:
-			{
-				filename = "mods";
-				break;
-			}
-			case 6:
-			{
-				filename = "char";
-				break;
-			}
-			case 7:
-			{
-				filename = "gm";
-				break;
-			}
-			default:
-			{
-				filename = "main";
-				break;
-			}
-		}
+
+		filename = switch (mode) {
+			case 2 -> "game";
+			case 3 -> "effects";
+			case 4 -> "server";
+			case 5 -> "mods";
+			case 6 -> "char";
+			case 7 -> "gm";
+			default -> "main";
+		};
 		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}
 	
 	private void showConfigPage(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		final StringBuilder replyMSG = new StringBuilder("<html><title>L2J :: Config</title><body>");
-		replyMSG.append("<center><table width=270><tr><td width=60><button value=\"Main\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=150>Config Server Panel</td><td width=60><button value=\"Back\" action=\"bypass -h admin_admin4\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></center><br>");
-		replyMSG.append("<center><table width=260><tr><td width=140></td><td width=40></td><td width=40></td></tr>");
-		replyMSG.append("<tr><td><font color=\"00AA00\">Drop:</font></td><td></td><td></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate EXP</font> = ").append(RateSettings.xp()).append("</td><td><edit var=\"param1\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateXp $param1\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate SP</font> = ").append(RateSettings.sp()).append("</td><td><edit var=\"param2\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateSp $param2\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate Drop Spoil</font> = ").append(RateSettings.spoilChance()).append("</td><td><edit var=\"param4\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateDropSpoil $param4\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td width=140></td><td width=40></td><td width=40></td></tr>");
-		replyMSG.append("</table></body></html>");
-		adminReply.setHtml(replyMSG.toString());
+		String replyMSG = "<html><title>L2J :: Config</title><body>" + "<center><table width=270><tr><td width=60><button value=\"Main\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=150>Config Server Panel</td><td width=60><button value=\"Back\" action=\"bypass -h admin_admin4\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></center><br>" +
+				"<center><table width=260><tr><td width=140></td><td width=40></td><td width=40></td></tr>" +
+				"<tr><td><font color=\"00AA00\">Drop:</font></td><td></td><td></td></tr>" +
+				"<tr><td><font color=\"LEVEL\">Rate EXP</font> = " + RateSettings.xp() + "</td><td><edit var=\"param1\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateXp $param1\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>" +
+				"<tr><td><font color=\"LEVEL\">Rate SP</font> = " + RateSettings.sp() + "</td><td><edit var=\"param2\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateSp $param2\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>" +
+				"<tr><td><font color=\"LEVEL\">Rate Drop Spoil</font> = " + RateSettings.spoilChance() + "</td><td><edit var=\"param4\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateDropSpoil $param4\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>" +
+				"<tr><td width=140></td><td width=40></td><td width=40></td></tr>" +
+				"</table></body></html>";
+		adminReply.setHtml(replyMSG);
 		activeChar.sendPacket(adminReply);
 	}
 }

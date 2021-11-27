@@ -20,7 +20,6 @@ package org.l2j.gameserver.model.actor.instance;
 
 import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.database.data.PetData;
@@ -438,7 +437,7 @@ public class Pet extends Summon {
      * @param process   string identifier of process triggering this action
      * @param objectId  Item Identifier of the item to be transfered
      * @param count     Quantity of items to be transfered
-     * @param  target
+     * @param target    the place where the item will be moved
      * @param actor     the player requesting the item transfer
      * @param reference Object referencing current action like NPC selling item or previous item in transformation
      * @return Item corresponding to the new item or the updated item in inventory
@@ -476,7 +475,6 @@ public class Pet extends Summon {
      * Remove the Pet from DB and its associated item from the player inventory
      *
      * @param owner  The owner from whose inventory we should delete the item
-     * @param evolve
      */
     public void destroyControlItem(Player owner, boolean evolve) {
         // remove the pet instance from world
