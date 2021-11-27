@@ -51,7 +51,6 @@ import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.SPACE;
 import static org.l2j.commons.util.Util.parseNextInt;
-import static org.l2j.gameserver.util.GameUtils.doIfIsNpc;
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
@@ -76,49 +75,65 @@ public class NpcViewMod implements IBypassHandler {
         }
 
         final String actualCommand = st.nextToken();
-        switch (actualCommand.toLowerCase()) {
-            case "view": {
-                int objectId = parseNextInt(st, -1);
-                final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
-                doIfIsNpc(target, npc -> sendNpcView(player, npc));
-                break;
-            }
-            case "droplist": {
-                if (st.countTokens() < 2) {
-                    LOGGER.warn("Bypass[NpcViewMod] used without enough parameters.");
-                    return false;
-                }
+        return switch (actualCommand.toLowerCase()) {
+            case "view" -> viewNpc(player, st);
+            case "droplist" -> viewDropList(player, st);
+            case "skills" -> viewSkills(player, st);
+            case "aggrolist" -> viewAggroList(player, st);
+            default -> false;
+        };
+    }
 
-                final String dropListTypeString = st.nextToken();
-                try {
-                    final DropType dropListType = Enum.valueOf(DropType.class, dropListTypeString);
-                    final WorldObject target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+    private boolean viewAggroList(Player player, StringTokenizer st) {
+        final var objectId = parseNextInt(st, -1);
+        final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
+        if(target instanceof Npc npc) {
+            sendAggroListView(player, npc);
+            return true;
+        }
+        return false;
+    }
 
-                    if(!(target instanceof Npc npc)) {
-                        return false;
-                    }
-                    sendNpcDropList(player, npc, dropListType, Util.parseNextInt(st, 0));
-                }
-                catch (IllegalArgumentException e) {
-                    LOGGER.warn("Bypass[NpcViewMod] unknown drop list scope: {}", dropListTypeString);
-                    return false;
-                }
-                break;
+    private boolean viewSkills(Player player, StringTokenizer st) {
+        final var objectId = parseNextInt(st, -1);
+        final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
+        if(target instanceof Npc npc) {
+            sendNpcSkillView(player, npc);
+            return true;
+        }
+        return false;
+    }
+
+    private boolean viewDropList(Player player, StringTokenizer st) {
+        if (st.countTokens() < 2) {
+            LOGGER.warn("Bypass[NpcViewMod] used without enough parameters.");
+            return false;
+        }
+
+        final String dropListTypeString = st.nextToken();
+        try {
+            final DropType dropListType = Enum.valueOf(DropType.class, dropListTypeString);
+            final WorldObject target = World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+
+            if (!(target instanceof Npc npc)) {
+                return false;
             }
-            case "skills": {
-                final var objectId = parseNextInt(st, -1);
-                final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
-                doIfIsNpc(target, npc -> sendNpcSkillView(player, npc));
-                break;
-            }
-            case "aggrolist": {
-                final var objectId = parseNextInt(st, -1);
-                final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
-                doIfIsNpc(target, npc -> sendAggroListView(player, npc));
-                break;
-            }
+            sendNpcDropList(player, npc, dropListType, Util.parseNextInt(st, 0));
+        } catch (IllegalArgumentException e) {
+            LOGGER.warn("Bypass[NpcViewMod] unknown drop list scope: {}", dropListTypeString);
+            return false;
         }
         return true;
+    }
+
+    private boolean viewNpc(Player player, StringTokenizer st) {
+        int objectId = parseNextInt(st, -1);
+        final WorldObject target = objectId > 0 ? World.getInstance().findObject(objectId) : player.getTarget();
+        if(target instanceof Npc npc) {
+            sendNpcView(player, npc);
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -329,7 +344,7 @@ public class NpcViewMod implements IBypassHandler {
             final DropHolder dropItem = dropList.get(i);
             final ItemTemplate item = ItemEngine.getInstance().getTemplate(dropItem.getItemId());
 
-            double rateChance = 1;
+            double rateChance;
             double rateAmount;
             if (dropType == DropType.SPOIL) {
                 rateChance = RateSettings.spoilChance();

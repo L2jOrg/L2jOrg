@@ -35,6 +35,8 @@ import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.settings.RateSettings;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.DecimalFormat;
 import java.util.*;
@@ -42,8 +44,10 @@ import java.util.*;
 /**
  * @author yksdtc
  */
-public class DropSearchBoard implements IParseBoardHandler
-{
+public class DropSearchBoard implements IParseBoardHandler {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(DropSearchBoard.class);
+
 	private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/new/navigation.html";
 	private static final String[] COMMAND =
 	{
@@ -52,7 +56,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		"_bbs_npc_trace"
 	};
 	
-	private class CBDropHolder
+	private static class CBDropHolder
 	{
 		final int itemId;
 		final int npcId;
@@ -115,157 +119,141 @@ public class DropSearchBoard implements IParseBoardHandler
 			}
 		});
 		
-		DROP_INDEX_CACHE.values().stream().forEach(l -> l.sort((d1, d2) -> Byte.valueOf(d1.npcLevel).compareTo(Byte.valueOf(d2.npcLevel))));
+		DROP_INDEX_CACHE.values().forEach(l -> l.sort(Comparator.comparingInt(d -> d.npcLevel)));
 	}
 	
-	private void addToDropList(NpcTemplate npcTemplate, DropHolder dropHolder)
-	{
-		if (BLOCK_ID.contains(dropHolder.getItemId()))
-		{
+	private void addToDropList(NpcTemplate npcTemplate, DropHolder dropHolder) {
+		if (BLOCK_ID.contains(dropHolder.getItemId())) {
 			return;
 		}
-		
-		List<CBDropHolder> dropList = DROP_INDEX_CACHE.get(dropHolder.getItemId());
-		if (dropList == null)
-		{
-			dropList = new ArrayList<>();
-			DROP_INDEX_CACHE.put(dropHolder.getItemId(), dropList);
-		}
-		
+
+		List<CBDropHolder> dropList = DROP_INDEX_CACHE.computeIfAbsent(dropHolder.getItemId(), k -> new ArrayList<>());
 		dropList.add(new CBDropHolder(npcTemplate, dropHolder));
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player player)
-	{
+	public boolean parseCommunityBoardCommand(String command, StringTokenizer tokens, Player player) {
 		final String navigation = HtmCache.getInstance().getHtm(player, NAVIGATION_PATH);
 		String[] params = command.split(" ");
 		String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/dropsearch/main.html");
-		switch (params[0])
-		{
-			case "_bbs_search_item":
-			{
-				String itemName = buildItemName(params);
-				String result = buildItemSearchResult(itemName);
-				html = html.replace("%searchResult%", result);
-				break;
-			}
-			case "_bbs_search_drop":
-			{
-				final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
-				int itemId = Integer.parseInt(params[1]);
-				int page = Integer.parseInt(params[2]);
-				List<CBDropHolder> list = DROP_INDEX_CACHE.get(itemId);
-				int pages = list.size() / 14;
-				if (pages == 0)
-				{
-					pages++;
-				}
-				
-				int start = (page - 1) * 14;
-				int end = Math.min(list.size() - 1, start + 14);
-				StringBuilder builder = new StringBuilder();
-				final double dropAmountEffectBonus = player.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
-				final double dropRateEffectBonus = player.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
-				final double spoilRateEffectBonus = player.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
-				for (int index = start; index <= end; index++)
-				{
-					CBDropHolder cbDropHolder = list.get(index);
-					
-					// real time server rate calculations
-					double rateChance = 1;
-					double rateAmount;
-					if (cbDropHolder.isSpoil)
-					{
-						rateChance = RateSettings.spoilChance();
-						rateAmount = RateSettings.spoilAmount();
-						
-						// bonus spoil rate effect
-						rateChance *= spoilRateEffectBonus;
-					}
-					else
-					{
-						final ItemTemplate item = ItemEngine.getInstance().getTemplate(cbDropHolder.itemId);
-
-						rateChance = RateSettings.dropChanceOf(cbDropHolder.itemId);
-
-						if(rateChance == 1) {
-							if (item.hasExImmediateEffect()) {
-								rateChance *= RateSettings.herbDropChance();
-							} else if (cbDropHolder.isRaid) {
-								rateChance *= RateSettings.raidDropChance();
-							} else {
-								rateChance *= RateSettings.deathDropChance();
-							}
-						}
-
-						rateAmount = RateSettings.dropAmountOf(cbDropHolder.itemId);
-
-						if(rateAmount == 1) {
-							if (cbDropHolder.isRaid) {
-								rateAmount *= RateSettings.raidDropAmount();
-							} else if(!item.hasExImmediateEffect()) {
-								rateAmount *= RateSettings.deathDropAmount();
-							}
-						}
-						
-						// bonus drop amount effect
-						rateAmount *= dropAmountEffectBonus;
-						// bonus drop rate effect
-						rateChance *= dropRateEffectBonus;
-					}
-					
-					builder.append("<tr>");
-					builder.append("<td width=30>").append(cbDropHolder.npcLevel).append("</td>");
-					builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace " + cbDropHolder.npcId + "\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append("</td>");
-					builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append("</td>");
-					builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append("</td>");
-					builder.append("<td width=50 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append("</td>");
-					builder.append("</tr>");
-				}
-				
-				html = html.replace("%searchResult%", builder.toString());
-				builder.setLength(0);
-				
-				builder.append("<tr>");
-				for (page = 1; page <= pages; page++)
-				{
-					builder.append("<td>").append("<a action=\"bypass -h _bbs_search_drop " + itemId + " " + page + " $order $level\">").append(page).append("</a>").append("</td>");
-				}
-				builder.append("</tr>");
-				html = html.replace("%pages%", builder.toString());
-				break;
-			}
-			case "_bbs_npc_trace":
-			{
-				int npcId = Integer.parseInt(params[1]);
-				List<NpcSpawnTemplate> spawnList = SpawnsData.getInstance().getNpcSpawns(npc -> npc.getId() == npcId);
-				if (spawnList.isEmpty())
-				{
-					player.sendMessage("Cannot find any spawn. Maybe dropped by a boss or instance monster.");
-				}
-				else
-				{
-					NpcSpawnTemplate spawn = spawnList.get(Rnd.get(spawnList.size()));
-					player.getRadar().addMarker(spawn.getSpawnLocation().getX(), spawn.getSpawnLocation().getY(), spawn.getSpawnLocation().getZ());
-				}
-				break;
-			}
+		switch (params[0]) {
+			case "_bbs_search_item" -> html = searchItem(params, html);
+			case "_bbs_search_drop" -> html = searchDrop(player, params, html);
+			case "_bbs_npc_trace" -> npcTrace(player, params[1]);
+			default -> LOGGER.warn("Unknown command: {}", params[0]);
 		}
 		
-		if (html != null)
-		{
+		if (html != null) {
 			html = html.replace("%navigation%", navigation);
 			CommunityBoardHandler.separateAndSend(html, player);
 		}
 		
 		return false;
 	}
-	
-	/**
-	 * @param itemName
-	 * @return
-	 */
+
+	private void npcTrace(Player player, String param) {
+		int npcId = Integer.parseInt(param);
+		List<NpcSpawnTemplate> spawnList = SpawnsData.getInstance().getNpcSpawns(npc -> npc.getId() == npcId);
+		if (spawnList.isEmpty()) {
+			player.sendMessage("Cannot find any spawn. Maybe dropped by a boss or instance monster.");
+		} else {
+			NpcSpawnTemplate spawn = spawnList.get(Rnd.get(spawnList.size()));
+			var location = spawn.getSpawnLocation();
+			if(location != null) {
+				player.getRadar().addMarker(location.getX(), location.getY(), location.getZ());
+			} else {
+				player.sendMessage("Cannot find a location in spawn " + spawn.getId());
+			}
+		}
+	}
+
+	private String searchDrop(Player player, String[] params, String html) {
+		final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
+		int itemId = Integer.parseInt(params[1]);
+		int page = Integer.parseInt(params[2]);
+		List<CBDropHolder> list = DROP_INDEX_CACHE.get(itemId);
+		int pages = list.size() / 14;
+		if (pages == 0) {
+			pages++;
+		}
+
+		int start = (page - 1) * 14;
+		int end = Math.min(list.size() - 1, start + 14);
+		StringBuilder builder = new StringBuilder();
+		final double dropAmountEffectBonus = player.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
+		final double dropRateEffectBonus = player.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
+		final double spoilRateEffectBonus = player.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
+		for (int index = start; index <= end; index++) {
+			CBDropHolder cbDropHolder = list.get(index);
+
+			// real time server rate calculations
+			double rateChance;
+			double rateAmount;
+			if (cbDropHolder.isSpoil) {
+				rateChance = RateSettings.spoilChance();
+				rateAmount = RateSettings.spoilAmount();
+
+				// bonus spoil rate effect
+				rateChance *= spoilRateEffectBonus;
+			} else {
+				final ItemTemplate item = ItemEngine.getInstance().getTemplate(cbDropHolder.itemId);
+
+				rateChance = RateSettings.dropChanceOf(cbDropHolder.itemId);
+
+				if (rateChance == 1) {
+					if (item.hasExImmediateEffect()) {
+						rateChance *= RateSettings.herbDropChance();
+					} else if (cbDropHolder.isRaid) {
+						rateChance *= RateSettings.raidDropChance();
+					} else {
+						rateChance *= RateSettings.deathDropChance();
+					}
+				}
+
+				rateAmount = RateSettings.dropAmountOf(cbDropHolder.itemId);
+
+				if (rateAmount == 1) {
+					if (cbDropHolder.isRaid) {
+						rateAmount *= RateSettings.raidDropAmount();
+					} else if (!item.hasExImmediateEffect()) {
+						rateAmount *= RateSettings.deathDropAmount();
+					}
+				}
+
+				// bonus drop amount effect
+				rateAmount *= dropAmountEffectBonus;
+				// bonus drop rate effect
+				rateChance *= dropRateEffectBonus;
+			}
+
+			builder.append("<tr>");
+			builder.append("<td width=30>").append(cbDropHolder.npcLevel).append("</td>");
+			builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace ").append(cbDropHolder.npcId).append("\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append("</td>");
+			builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append("</td>");
+			builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append("</td>");
+			builder.append("<td width=50 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append("</td>");
+			builder.append("</tr>");
+		}
+
+		html = html.replace("%searchResult%", builder.toString());
+		builder.setLength(0);
+
+		builder.append("<tr>");
+		for (page = 1; page <= pages; page++) {
+			builder.append("<td>").append("<a action=\"bypass -h _bbs_search_drop ").append(itemId).append(" ").append(page).append(" $order $level\">").append(page).append("</a>").append("</td>");
+		}
+		builder.append("</tr>");
+		html = html.replace("%pages%", builder.toString());
+		return html;
+	}
+
+	private String searchItem(String[] params, String html) {
+		String itemName = buildItemName(params);
+		String result = buildItemSearchResult(itemName);
+		html = html.replace("%searchResult%", result);
+		return html;
+	}
+
 	private String buildItemSearchResult(String itemName)
 	{
 		int limit = 0;
@@ -342,11 +330,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		
 		return builder.toString();
 	}
-	
-	/**
-	 * @param params
-	 * @return
-	 */
+
 	private String buildItemName(String[] params)
 	{
 		StringJoiner joiner = new StringJoiner(" ");
