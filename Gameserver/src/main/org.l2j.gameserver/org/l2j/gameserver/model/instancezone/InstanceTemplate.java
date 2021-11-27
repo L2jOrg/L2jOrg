@@ -23,7 +23,6 @@ import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.GroupType;
 import org.l2j.gameserver.enums.InstanceReenterType;

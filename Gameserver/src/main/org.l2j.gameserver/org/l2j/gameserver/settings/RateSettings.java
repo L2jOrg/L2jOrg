@@ -75,6 +75,7 @@ public class RateSettings  {
     private static int dropMinLevelDiff;
     private static int dropMaxLevelDiff;
     private static double dropMinLevelGapChance;
+    private static float questDropChance;
 
     private RateSettings() {
         // helper class
@@ -93,6 +94,7 @@ public class RateSettings  {
         extractable = settingsFile.getFloat("RateExtractable", 1);
         dropManor = settingsFile.getInt("RateDropManor", 1);
         questDrop = settingsFile.getFloat("RateQuestDrop", 1);
+        questDropChance = settingsFile.getFloat("RateQuestDropChance", 1);
         questReward = settingsFile.getFloat("RateQuestReward", 1);
         questRewardXp = settingsFile.getFloat("RateQuestRewardXP", 1);
         questRewardSp = settingsFile.getFloat("RateQuestRewardSP", 1);
@@ -186,6 +188,10 @@ public class RateSettings  {
 
     public static float questDrop() {
         return questDrop;
+    }
+
+    public static float questDropChance() {
+        return questDropChance;
     }
 
     public static float questReward() {

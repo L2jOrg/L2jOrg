@@ -25,6 +25,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
@@ -34,15 +35,12 @@ import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.settings.ChampionSettings;
 import org.l2j.gameserver.settings.RateSettings;
-import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
 
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 /**
@@ -505,9 +503,6 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
     private void processDropList(DropType dropType, Collection<ItemHolder> itemsToDrop, Creature victim, Creature killer) {
         var list = getDropList(dropType);
-        if (isNull(list)) {
-            return;
-        }
 
         for (DropHolder dropItem : list) {
             final ItemHolder drop = calculateDropWithLevelGap(dropItem, victim, killer);

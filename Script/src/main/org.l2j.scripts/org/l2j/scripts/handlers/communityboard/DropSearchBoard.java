@@ -184,55 +184,7 @@ public class DropSearchBoard implements IParseBoardHandler {
 		final double dropRateEffectBonus = player.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
 		final double spoilRateEffectBonus = player.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
 		for (int index = start; index <= end; index++) {
-			CBDropHolder cbDropHolder = list.get(index);
-
-			// real time server rate calculations
-			double rateChance;
-			double rateAmount;
-			if (cbDropHolder.isSpoil) {
-				rateChance = RateSettings.spoilChance();
-				rateAmount = RateSettings.spoilAmount();
-
-				// bonus spoil rate effect
-				rateChance *= spoilRateEffectBonus;
-			} else {
-				final ItemTemplate item = ItemEngine.getInstance().getTemplate(cbDropHolder.itemId);
-
-				rateChance = RateSettings.dropChanceOf(cbDropHolder.itemId);
-
-				if (rateChance == 1) {
-					if (item.hasExImmediateEffect()) {
-						rateChance *= RateSettings.herbDropChance();
-					} else if (cbDropHolder.isRaid) {
-						rateChance *= RateSettings.raidDropChance();
-					} else {
-						rateChance *= RateSettings.deathDropChance();
-					}
-				}
-
-				rateAmount = RateSettings.dropAmountOf(cbDropHolder.itemId);
-
-				if (rateAmount == 1) {
-					if (cbDropHolder.isRaid) {
-						rateAmount *= RateSettings.raidDropAmount();
-					} else if (!item.hasExImmediateEffect()) {
-						rateAmount *= RateSettings.deathDropAmount();
-					}
-				}
-
-				// bonus drop amount effect
-				rateAmount *= dropAmountEffectBonus;
-				// bonus drop rate effect
-				rateChance *= dropRateEffectBonus;
-			}
-
-			builder.append("<tr>");
-			builder.append("<td width=30>").append(cbDropHolder.npcLevel).append("</td>");
-			builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace ").append(cbDropHolder.npcId).append("\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append("</td>");
-			builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append("</td>");
-			builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append("</td>");
-			builder.append("<td width=50 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append("</td>");
-			builder.append("</tr>");
+			addDrop(chanceFormat, list, builder, dropAmountEffectBonus, dropRateEffectBonus, spoilRateEffectBonus, index);
 		}
 
 		html = html.replace("%searchResult%", builder.toString());
@@ -245,6 +197,62 @@ public class DropSearchBoard implements IParseBoardHandler {
 		builder.append("</tr>");
 		html = html.replace("%pages%", builder.toString());
 		return html;
+	}
+
+	private void addDrop(DecimalFormat chanceFormat, List<CBDropHolder> list, StringBuilder builder, double dropAmountEffectBonus, double dropRateEffectBonus, double spoilRateEffectBonus, int index) {
+		CBDropHolder cbDropHolder = list.get(index);
+		double rateChance;
+		double rateAmount;
+		if (cbDropHolder.isSpoil) {
+			rateChance = RateSettings.spoilChance();
+			rateAmount = RateSettings.spoilAmount();
+			rateChance *= spoilRateEffectBonus;
+		} else {
+			final ItemTemplate item = ItemEngine.getInstance().getTemplate(cbDropHolder.itemId);
+			rateChance = calculateRateChance(cbDropHolder, item, dropRateEffectBonus);
+			rateAmount = calculateRateAmount(dropAmountEffectBonus, cbDropHolder, item);
+		}
+
+		builder.append("<tr>");
+		builder.append("<td width=30>").append(cbDropHolder.npcLevel).append("</td>");
+		builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace ").append(cbDropHolder.npcId).append("\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append("</td>");
+		builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append("</td>");
+		builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append("</td>");
+		builder.append("<td width=50 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append("</td>");
+		builder.append("</tr>");
+	}
+
+	private double calculateRateAmount(double dropAmountEffectBonus, CBDropHolder cbDropHolder, ItemTemplate item) {
+		double rateAmount;
+		rateAmount = RateSettings.dropAmountOf(cbDropHolder.itemId);
+
+		if (rateAmount == 1) {
+			if (cbDropHolder.isRaid) {
+				rateAmount *= RateSettings.raidDropAmount();
+			} else if (!item.hasExImmediateEffect()) {
+				rateAmount *= RateSettings.deathDropAmount();
+			}
+		}
+
+		// bonus drop amount effect
+		rateAmount *= dropAmountEffectBonus;
+		return rateAmount;
+	}
+
+	private double calculateRateChance(CBDropHolder cbDropHolder, ItemTemplate item, double dropRateEffectBonus) {
+		double rateChance;
+		rateChance = RateSettings.dropChanceOf(cbDropHolder.itemId);
+
+		if (rateChance == 1) {
+			if (item.hasExImmediateEffect()) {
+				rateChance *= RateSettings.herbDropChance();
+			} else if (cbDropHolder.isRaid) {
+				rateChance *= RateSettings.raidDropChance();
+			} else {
+				rateChance *= RateSettings.deathDropChance();
+			}
+		}
+		return rateChance * dropRateEffectBonus;
 	}
 
 	private String searchItem(String[] params, String html) {

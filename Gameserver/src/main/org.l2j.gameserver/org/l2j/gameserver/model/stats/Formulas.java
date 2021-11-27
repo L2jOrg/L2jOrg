@@ -20,7 +20,6 @@ package org.l2j.gameserver.model.stats;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.HitConditionBonusData;
 import org.l2j.gameserver.data.xml.impl.KarmaData;
