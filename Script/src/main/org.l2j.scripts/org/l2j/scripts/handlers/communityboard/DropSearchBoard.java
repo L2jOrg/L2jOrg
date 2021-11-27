@@ -55,7 +55,8 @@ public class DropSearchBoard implements IParseBoardHandler {
 		"_bbs_search_drop",
 		"_bbs_npc_trace"
 	};
-	
+	public static final String TD = "<td>";
+
 	private static class CBDropHolder
 	{
 		final int itemId;
@@ -192,7 +193,7 @@ public class DropSearchBoard implements IParseBoardHandler {
 
 		builder.append("<tr>");
 		for (page = 1; page <= pages; page++) {
-			builder.append("<td>").append("<a action=\"bypass -h _bbs_search_drop ").append(itemId).append(" ").append(page).append(" $order $level\">").append(page).append("</a>").append("</td>");
+			builder.append(TD).append("<a action=\"bypass -h _bbs_search_drop ").append(itemId).append(" ").append(page).append(" $order $level\">").append(page).append("</a>").append("</td>");
 		}
 		builder.append("</tr>");
 		html = html.replace("%pages%", builder.toString());
@@ -309,7 +310,7 @@ public class DropSearchBoard implements IParseBoardHandler {
 				builder.append("<tr>");
 			}
 			
-			builder.append("<td>");
+			builder.append(TD);
 			builder.append("<button value=\".\" action=\"bypass _bbs_search_drop ").append(item.getId()).append(" 1 $order $level\" width=32 height=32  itemtooltip=\"").append(item.getId()).append("\">");
 			builder.append("</td>");
 			builder.append("<td width=200>");
