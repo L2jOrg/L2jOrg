@@ -63,6 +63,7 @@ public class NpcViewMod implements IBypassHandler {
     private static final String[] COMMANDS = { "NpcViewMod" };
 
     private static final int DROP_LIST_ITEMS_PER_PAGE = 8;
+    public static final String CLOSE_TD = "</td>";
 
     @Override
     public boolean useBypass(String command, Player player, Creature bypassOrigin) {
@@ -230,10 +231,10 @@ public class NpcViewMod implements IBypassHandler {
             sb.append("\" width=32 height=32>");
             sb.append("</td><td width=110>");
             sb.append(s.getName());
-            sb.append("</td>");
+            sb.append(CLOSE_TD);
             sb.append("<td width=45 align=center>");
             sb.append(s.getId());
-            sb.append("</td>");
+            sb.append(CLOSE_TD);
             sb.append("<td width=35 align=center>");
             sb.append(s.getLevel());
             sb.append("</td></tr></table>");
@@ -260,10 +261,10 @@ public class NpcViewMod implements IBypassHandler {
                 sb.append("<table width=277 height=32 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
                 sb.append("<tr><td width=110>");
                 sb.append(a.getAttacker() != null ? a.getAttacker().getName() : "NULL");
-                sb.append("</td>");
+                sb.append(CLOSE_TD);
                 sb.append("<td width=60 align=center>");
                 sb.append(a.getHate());
-                sb.append("</td>");
+                sb.append(CLOSE_TD);
                 sb.append("<td width=60 align=center>");
                 sb.append(a.getDamage());
                 sb.append("</td></tr></table>");
@@ -368,7 +369,7 @@ public class NpcViewMod implements IBypassHandler {
         pagesSb.append("<table><tr>");
         for (int i = max(0, page -3); i <= min(pages -1, page +3); i++) {
             if(i == page) {
-                pagesSb.append("<td width=20 height=20 align=CENTER>").append(i + 1).append("</td>");
+                pagesSb.append("<td width=20 height=20 align=CENTER>").append(i + 1).append(CLOSE_TD);
             } else {
                 pagesSb.append("<td><button value=\"").append(i + 1).append("\" width=20 height=20 action=\"bypass NpcViewMod dropList ").append(dropType).append(SPACE).append(npc.getObjectId()).append(SPACE).append(i).append("\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
             }
