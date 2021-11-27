@@ -301,8 +301,7 @@ public class NpcViewMod implements IBypassHandler {
         return sb.toString();
     }
 
-    private void sendNpcDropList(Player player, Npc npc, DropType dropType, int page)
-    {
+    private void sendNpcDropList(Player player, Npc npc, DropType dropType, int page) {
         final var dropList = npc.getTemplate().getDropList(dropType);
         if (isNull(dropList)) {
             return;
@@ -314,15 +313,7 @@ public class NpcViewMod implements IBypassHandler {
         final StringBuilder pagesSb = new StringBuilder();
 
         if (pages > 1) {
-            pagesSb.append("<table><tr>");
-            for (int i = max(0, page-3); i <= min(pages-1, page+3); i++) {
-                if(i == page) {
-                    pagesSb.append("<td width=20 height=20 align=CENTER>").append(i + 1).append("</td>");
-                } else {
-                    pagesSb.append("<td><button value=\"").append(i + 1).append("\" width=20 height=20 action=\"bypass NpcViewMod dropList ").append(dropType).append(SPACE).append(npc.getObjectId()).append(SPACE).append(i).append("\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
-                }
-            }
-            pagesSb.append("</tr></table>");
+            createPagination(npc, dropType, page, pages, pagesSb);
         }
 
         final int start = page > 0 ? page * DROP_LIST_ITEMS_PER_PAGE : 0;
@@ -341,71 +332,13 @@ public class NpcViewMod implements IBypassHandler {
             final StringBuilder sb = new StringBuilder();
 
             int height = 64;
-            final DropHolder dropItem = dropList.get(i);
-            final ItemTemplate item = ItemEngine.getInstance().getTemplate(dropItem.getItemId());
+            addDrop(npc, dropType, dropList, amountFormat, chanceFormat, i, sb);
 
-            double rateChance;
-            double rateAmount;
-            if (dropType == DropType.SPOIL) {
-                rateChance = RateSettings.spoilChance();
-                rateAmount = RateSettings.spoilAmount();
-            } else {
-                rateChance = RateSettings.dropChanceOf(dropItem.getItemId());
-
-                if(rateChance == 1) {
-                    if (item.hasExImmediateEffect()) {
-                        rateChance *= RateSettings.herbDropChance();
-                    } else if (npc.isRaid()) {
-                        rateChance *= RateSettings.raidDropChance();
-                    } else {
-                        rateChance *= RateSettings.deathDropChance();
-                    }
-                }
-
-                rateAmount = RateSettings.dropAmountOf(dropItem.getItemId());
-                if(rateAmount == 1) {
-                    if (npc.isRaid()) {
-                        rateAmount *= RateSettings.raidDropAmount();
-                    } else if(!item.hasExImmediateEffect()) {
-                        rateAmount *= RateSettings.deathDropAmount();
-                    }
-                }
-            }
-
-            sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
-            sb.append("<tr><td width=32 valign=top>");
-            sb.append("<button width=\"32\" height=\"32\" itemtooltip=\"").append(dropItem.getItemId()).append("\"></td>");
-            sb.append("<td><table width=295 cellpadding=0 cellspacing=4>");
-            sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount: </font></td>");
-            sb.append("<td>");
-
-            final long min = (long) (dropItem.getMin() * rateAmount);
-            final long max = (long) (dropItem.getMax() * rateAmount);
-            if (min == max)
-            {
-                sb.append(amountFormat.format(min));
-            }
-            else
-            {
-                sb.append(amountFormat.format(min));
-                sb.append(" - ");
-                sb.append(amountFormat.format(max));
-            }
-
-            sb.append("</td></tr><tr><td width=48 align=right valign=top><font color=\"LEVEL\">Chance:</font></td>");
-            sb.append("<td width=247>");
-            sb.append(chanceFormat.format(min(dropItem.getChance() * rateChance, 100)));
-            sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");
-
-            if ((sb.length() + rightSb.length() + leftSb.length()) < 12000) // limit of 32766?
-            {
-                if (leftHeight >= (rightHeight + height))
-                {
+            if ((sb.length() + rightSb.length() + leftSb.length()) < 12000) { // limit of 32766?
+                if (leftHeight >= (rightHeight + height)) {
                     rightSb.append(sb);
                     rightHeight += height;
-                }
-                else
-                {
+                } else {
                     leftSb.append(sb);
                     leftHeight += height;
                 }
@@ -429,5 +362,75 @@ public class NpcViewMod implements IBypassHandler {
         String bodySb = "<table><tr><td>" + leftSb + "</td><td>" + rightSb + "</td></tr></table>";
         html = html.replaceAll("%items%", bodySb + limitReachedMsg);
         GameUtils.sendCBHtml(player, html);
+    }
+
+    private void createPagination(Npc npc, DropType dropType, int page, int pages, StringBuilder pagesSb) {
+        pagesSb.append("<table><tr>");
+        for (int i = max(0, page -3); i <= min(pages -1, page +3); i++) {
+            if(i == page) {
+                pagesSb.append("<td width=20 height=20 align=CENTER>").append(i + 1).append("</td>");
+            } else {
+                pagesSb.append("<td><button value=\"").append(i + 1).append("\" width=20 height=20 action=\"bypass NpcViewMod dropList ").append(dropType).append(SPACE).append(npc.getObjectId()).append(SPACE).append(i).append("\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+            }
+        }
+        pagesSb.append("</tr></table>");
+    }
+
+    private void addDrop(Npc npc, DropType dropType, List<DropHolder> dropList, DecimalFormat amountFormat, DecimalFormat chanceFormat, int i, StringBuilder sb) {
+        final DropHolder dropItem = dropList.get(i);
+        final ItemTemplate item = ItemEngine.getInstance().getTemplate(dropItem.getItemId());
+
+        double rateChance;
+        double rateAmount;
+        if (dropType == DropType.SPOIL) {
+            rateChance = RateSettings.spoilChance();
+            rateAmount = RateSettings.spoilAmount();
+        } else {
+            rateChance = RateSettings.dropChanceOf(dropItem.getItemId());
+
+            if(rateChance == 1) {
+                if (item.hasExImmediateEffect()) {
+                    rateChance *= RateSettings.herbDropChance();
+                } else if (npc.isRaid()) {
+                    rateChance *= RateSettings.raidDropChance();
+                } else {
+                    rateChance *= RateSettings.deathDropChance();
+                }
+            }
+
+            rateAmount = RateSettings.dropAmountOf(dropItem.getItemId());
+            if(rateAmount == 1) {
+                if (npc.isRaid()) {
+                    rateAmount *= RateSettings.raidDropAmount();
+                } else if(!item.hasExImmediateEffect()) {
+                    rateAmount *= RateSettings.deathDropAmount();
+                }
+            }
+        }
+
+        sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
+        sb.append("<tr><td width=32 valign=top>");
+        sb.append("<button width=\"32\" height=\"32\" itemtooltip=\"").append(dropItem.getItemId()).append("\"></td>");
+        sb.append("<td><table width=295 cellpadding=0 cellspacing=4>");
+        sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount: </font></td>");
+        sb.append("<td>");
+
+        final long min = (long) (dropItem.getMin() * rateAmount);
+        final long max = (long) (dropItem.getMax() * rateAmount);
+        if (min == max)
+        {
+            sb.append(amountFormat.format(min));
+        }
+        else
+        {
+            sb.append(amountFormat.format(min));
+            sb.append(" - ");
+            sb.append(amountFormat.format(max));
+        }
+
+        sb.append("</td></tr><tr><td width=48 align=right valign=top><font color=\"LEVEL\">Chance:</font></td>");
+        sb.append("<td width=247>");
+        sb.append(chanceFormat.format(min(dropItem.getChance() * rateChance, 100)));
+        sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");
     }
 }
