@@ -3657,10 +3657,10 @@ public final class Player extends Playable {
         var dropPercent = calculateDropPercent(killer, isKarmaDrop);
 
         if (Rnd.chance(dropPercent)) {
-            int dropEquip = isKarmaDrop ? Config.KARMA_RATE_DROP_EQUIP : Config.PLAYER_RATE_DROP_EQUIP;
-            int dropEquipWeapon = isKarmaDrop ? Config.KARMA_RATE_DROP_EQUIP_WEAPON : Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
-            int rateDropItem = isKarmaDrop ? Config.KARMA_RATE_DROP_ITEM : Config.PLAYER_RATE_DROP_ITEM;
-            int dropLimit = isKarmaDrop ? Config.KARMA_DROP_LIMIT : Config.PLAYER_DROP_LIMIT;
+            int dropEquip = isKarmaDrop ? RateSettings.karmaDropEquip() : RateSettings.playerDropEquip();
+            int dropEquipWeapon = isKarmaDrop ? RateSettings.karmaDropWeapon() : RateSettings.playerDropWeapon();
+            int rateDropItem = isKarmaDrop ? RateSettings.karmaDropItem() : RateSettings.playerDropItem();
+            int dropLimit = isKarmaDrop ? RateSettings.karmaDropLimit() : RateSettings.playerDropLimit();
 
             return dropItems(killer, isKarmaDrop, dropEquip, dropEquipWeapon, rateDropItem, dropLimit);
         }
@@ -3707,10 +3707,10 @@ public final class Player extends Playable {
     private double calculateDropPercent(Creature killer, boolean isKarmaDrop) {
         var dropPercent = 0.;
         if(isKarmaDrop) {
-            dropPercent =  Config.KARMA_RATE_DROP * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
+            dropPercent =  RateSettings.karmaDrop() * getStats().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
         } else if(isNpc(killer)) {
             var penaltyStat  = killer.isRaid() ? Stat.REDUCE_DEATH_PENALTY_BY_RAID : Stat.REDUCE_DEATH_PENALTY_BY_MOB;
-            dropPercent = Config.PLAYER_RATE_DROP * getStats().getValue(penaltyStat, 1);
+            dropPercent = RateSettings.playerDrop() * getStats().getValue(penaltyStat, 1);
         }
         return dropPercent;
     }
@@ -3898,7 +3898,7 @@ public final class Player extends Playable {
         }
 
         if (getReputation() < 0) {
-            percentLost *= Config.RATE_KARMA_EXP_LOST;
+            percentLost *= RateSettings.karmaXpLost();
         }
 
         // Calculate the Experience loss

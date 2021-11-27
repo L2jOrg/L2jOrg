@@ -50,6 +50,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.NpcSettings;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.ArrayList;
@@ -870,7 +871,7 @@ public final class Formulas {
         final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
         if (finalExp > 0) // Received exp
         {
-            finalExp /= Config.RATE_KARMA_LOST;
+            finalExp /= RateSettings.karmaLost();
         }
         return (int) ((abs(finalExp) / karmaLooseMul) / 30);
     }

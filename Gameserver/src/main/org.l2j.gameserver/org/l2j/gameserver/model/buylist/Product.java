@@ -25,6 +25,7 @@ import org.l2j.gameserver.data.database.data.BuyListInfo;
 import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.item.BodyPart;
 import org.l2j.gameserver.model.item.type.EtcItemType;
+import org.l2j.gameserver.settings.RateSettings;
 
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
@@ -74,7 +75,7 @@ public final class Product {
     public long getPrice() {
         long price = this.price;
         if (template.getItemType().equals(EtcItemType.CASTLE_GUARD)) {
-            price = (long) (price * Config.RATE_SIEGE_GUARDS_PRICE);
+            price = (long) (price * RateSettings.siegeGuardsPrice());
         }
         return price;
     }

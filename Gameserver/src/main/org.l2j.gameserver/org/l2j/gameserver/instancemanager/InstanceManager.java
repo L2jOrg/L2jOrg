@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.model.instancezone.conditions.Condition;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -213,10 +214,10 @@ public final class InstanceManager extends GameXmlReader {
     private void parseRates(InstanceTemplate template, Node innerNode) {
         org.w3c.dom.NamedNodeMap attrs;
         attrs = innerNode.getAttributes();
-        template.setExpRate(parseFloat(attrs, "exp", Config.RATE_INSTANCE_XP));
-        template.setSPRate(parseFloat(attrs, "sp", Config.RATE_INSTANCE_SP));
-        template.setExpPartyRate(parseFloat(attrs, "partyExp", Config.RATE_INSTANCE_PARTY_XP));
-        template.setSPPartyRate(parseFloat(attrs, "partySp", Config.RATE_INSTANCE_PARTY_SP));
+        template.setExpRate(parseFloat(attrs, "exp", RateSettings.xp()));
+        template.setSPRate(parseFloat(attrs, "sp", RateSettings.sp()));
+        template.setExpPartyRate(parseFloat(attrs, "partyExp", RateSettings.partyXp()));
+        template.setSPPartyRate(parseFloat(attrs, "partySp", RateSettings.partySp()));
     }
 
     private void parseMisc(InstanceTemplate template, Node innerNode) {

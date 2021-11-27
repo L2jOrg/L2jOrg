@@ -42,6 +42,7 @@ import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.PartySettings;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 
@@ -630,12 +631,12 @@ public class Party extends AbstractPlayerGroup {
     }
 
     private double getExpBonus(int membersCount, Instance instance) {
-        final float rateMul = instance != null ? instance.getExpPartyRate() : Config.RATE_PARTY_XP;
+        final float rateMul = instance != null ? instance.getExpPartyRate() : RateSettings.partyXp();
         return (membersCount < 2) ? (getBaseExpSpBonus(membersCount)) : (getBaseExpSpBonus(membersCount) * rateMul);
     }
 
     private double getSpBonus(int membersCount, Instance instance) {
-        final float rateMul = instance != null ? instance.getSPPartyRate() : Config.RATE_PARTY_SP;
+        final float rateMul = instance != null ? instance.getSPPartyRate() : RateSettings.partySp();
         return (membersCount < 2) ? (getBaseExpSpBonus(membersCount)) : (getBaseExpSpBonus(membersCount) * rateMul);
     }
 

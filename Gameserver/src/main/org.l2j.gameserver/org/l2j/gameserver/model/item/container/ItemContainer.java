@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model.item.container;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.data.ItemData;
 import org.l2j.gameserver.engine.item.Item;
@@ -31,6 +30,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.item.CommonItem;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
@@ -276,9 +276,8 @@ public abstract class ItemContainer {
         item.changeCount(process, count, actor, reference);
         item.setLastChange(ItemChangeType.MODIFIED);
 
-        final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
-        if ((itemId == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
-
+        var adenaRate = RateSettings.dropAmountOf(CommonItem.ADENA);
+        if (itemId == CommonItem.ADENA && count < 10000 * adenaRate) {
             if ((WorldTimeController.getInstance().getGameTicks() % 5) == 0) {
                 item.updateDatabase();
             }

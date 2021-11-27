@@ -33,6 +33,7 @@ import org.l2j.gameserver.model.holders.RestorationItemHolder;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.settings.RateSettings;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -113,7 +114,7 @@ public final class RestorationRandom extends AbstractEffect {
                 continue;
             }
 
-            long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);
+            long itemCount = (long) (createdItem.getCount() * RateSettings.extractable());
             final Item newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
 
             if (nonNull(newItem) && createdItem.getMaxEnchant() > 0) {

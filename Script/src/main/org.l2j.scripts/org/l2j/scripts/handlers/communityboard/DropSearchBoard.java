@@ -20,11 +20,11 @@
 package org.l2j.scripts.handlers.communityboard;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
@@ -32,9 +32,9 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.item.CommonItem;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.stats.Stat;
+import org.l2j.gameserver.settings.RateSettings;
 
 import java.text.DecimalFormat;
 import java.util.*;
@@ -174,11 +174,11 @@ public class DropSearchBoard implements IParseBoardHandler
 					
 					// real time server rate calculations
 					double rateChance = 1;
-					double rateAmount = 1;
+					double rateAmount;
 					if (cbDropHolder.isSpoil)
 					{
-						rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
-						rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
+						rateChance = RateSettings.spoilChance();
+						rateAmount = RateSettings.spoilAmount();
 						
 						// bonus spoil rate effect
 						rateChance *= spoilRateEffectBonus;
@@ -186,39 +186,27 @@ public class DropSearchBoard implements IParseBoardHandler
 					else
 					{
 						final ItemTemplate item = ItemEngine.getInstance().getTemplate(cbDropHolder.itemId);
-						
-						if (Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
-						{
-							rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId);
+
+						rateChance = RateSettings.dropChanceOf(cbDropHolder.itemId);
+
+						if(rateChance == 1) {
+							if (item.hasExImmediateEffect()) {
+								rateChance *= RateSettings.herbDropChance();
+							} else if (cbDropHolder.isRaid) {
+								rateChance *= RateSettings.raidDropChance();
+							} else {
+								rateChance *= RateSettings.deathDropChance();
+							}
 						}
-						else if (item.hasExImmediateEffect())
-						{
-							rateChance *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
-						}
-						else if (cbDropHolder.isRaid)
-						{
-							rateAmount *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
-						}
-						else
-						{
-							rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
-						}
-						
-						if (Config.RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId) != null)
-						{
-							rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId);
-						}
-						else if (item.hasExImmediateEffect())
-						{
-							rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
-						}
-						else if (cbDropHolder.isRaid)
-						{
-							rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
-						}
-						else
-						{
-							rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
+
+						rateAmount = RateSettings.dropAmountOf(cbDropHolder.itemId);
+
+						if(rateAmount == 1) {
+							if (cbDropHolder.isRaid) {
+								rateAmount *= RateSettings.raidDropAmount();
+							} else if(!item.hasExImmediateEffect()) {
+								rateAmount *= RateSettings.deathDropAmount();
+							}
 						}
 						
 						// bonus drop amount effect

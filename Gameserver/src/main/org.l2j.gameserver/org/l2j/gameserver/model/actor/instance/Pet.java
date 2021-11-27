@@ -61,6 +61,7 @@ import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.NpcSettings;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -690,12 +691,7 @@ public class Pet extends Summon {
 
     @Override
     public void addExpAndSp(double addToExp, double addToSp) {
-        if (getId() == 12564) // TODO: Remove this stupid hardcode.
-        {
-            getStats().addExpAndSp(addToExp * Config.SINEATER_XP_RATE, addToSp);
-        } else {
-            getStats().addExpAndSp(addToExp * Config.PET_XP_RATE, addToSp);
-        }
+        getStats().addExpAndSp(addToExp * RateSettings.petXp(), addToSp);
     }
 
     @Override
