@@ -386,26 +386,8 @@ public class NpcViewMod implements IBypassHandler {
             rateChance = RateSettings.spoilChance();
             rateAmount = RateSettings.spoilAmount();
         } else {
-            rateChance = RateSettings.dropChanceOf(dropItem.getItemId());
-
-            if(rateChance == 1) {
-                if (item.hasExImmediateEffect()) {
-                    rateChance *= RateSettings.herbDropChance();
-                } else if (npc.isRaid()) {
-                    rateChance *= RateSettings.raidDropChance();
-                } else {
-                    rateChance *= RateSettings.deathDropChance();
-                }
-            }
-
-            rateAmount = RateSettings.dropAmountOf(dropItem.getItemId());
-            if(rateAmount == 1) {
-                if (npc.isRaid()) {
-                    rateAmount *= RateSettings.raidDropAmount();
-                } else if(!item.hasExImmediateEffect()) {
-                    rateAmount *= RateSettings.deathDropAmount();
-                }
-            }
+            rateChance = calculateRateChance(npc, dropItem, item);
+            rateAmount = calculateRateAmount(npc, dropItem, item);
         }
 
         sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
@@ -417,12 +399,9 @@ public class NpcViewMod implements IBypassHandler {
 
         final long min = (long) (dropItem.getMin() * rateAmount);
         final long max = (long) (dropItem.getMax() * rateAmount);
-        if (min == max)
-        {
+        if (min == max) {
             sb.append(amountFormat.format(min));
-        }
-        else
-        {
+        } else {
             sb.append(amountFormat.format(min));
             sb.append(" - ");
             sb.append(amountFormat.format(max));
@@ -432,5 +411,34 @@ public class NpcViewMod implements IBypassHandler {
         sb.append("<td width=247>");
         sb.append(chanceFormat.format(min(dropItem.getChance() * rateChance, 100)));
         sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");
+    }
+
+    private double calculateRateAmount(Npc npc, DropHolder dropItem, ItemTemplate item) {
+        double rateAmount;
+        rateAmount = RateSettings.dropAmountOf(dropItem.getItemId());
+        if(rateAmount == 1) {
+            if (npc.isRaid()) {
+                rateAmount *= RateSettings.raidDropAmount();
+            } else if(!item.hasExImmediateEffect()) {
+                rateAmount *= RateSettings.deathDropAmount();
+            }
+        }
+        return rateAmount;
+    }
+
+    private double calculateRateChance(Npc npc, DropHolder dropItem, ItemTemplate item) {
+        double rateChance;
+        rateChance = RateSettings.dropChanceOf(dropItem.getItemId());
+
+        if(rateChance == 1) {
+            if (item.hasExImmediateEffect()) {
+                rateChance *= RateSettings.herbDropChance();
+            } else if (npc.isRaid()) {
+                rateChance *= RateSettings.raidDropChance();
+            } else {
+                rateChance *= RateSettings.deathDropChance();
+            }
+        }
+        return rateChance;
     }
 }
