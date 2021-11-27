@@ -56,6 +56,7 @@ public class DropSearchBoard implements IParseBoardHandler {
 		"_bbs_npc_trace"
 	};
 	public static final String TD = "<td>";
+	public static final String CLOSE_TD = "</td>";
 
 	private static class CBDropHolder
 	{
@@ -193,7 +194,7 @@ public class DropSearchBoard implements IParseBoardHandler {
 
 		builder.append("<tr>");
 		for (page = 1; page <= pages; page++) {
-			builder.append(TD).append("<a action=\"bypass -h _bbs_search_drop ").append(itemId).append(" ").append(page).append(" $order $level\">").append(page).append("</a>").append("</td>");
+			builder.append(TD).append("<a action=\"bypass -h _bbs_search_drop ").append(itemId).append(" ").append(page).append(" $order $level\">").append(page).append("</a>").append(CLOSE_TD);
 		}
 		builder.append("</tr>");
 		html = html.replace("%pages%", builder.toString());
@@ -215,11 +216,11 @@ public class DropSearchBoard implements IParseBoardHandler {
 		}
 
 		builder.append("<tr>");
-		builder.append("<td width=30>").append(cbDropHolder.npcLevel).append("</td>");
-		builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace ").append(cbDropHolder.npcId).append("\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append("</td>");
-		builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append("</td>");
-		builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append("</td>");
-		builder.append("<td width=50 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append("</td>");
+		builder.append("<td width=30>").append(cbDropHolder.npcLevel).append(CLOSE_TD);
+		builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace ").append(cbDropHolder.npcId).append("\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append(CLOSE_TD);
+		builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append(CLOSE_TD);
+		builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append(CLOSE_TD);
+		builder.append("<td width=50 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append(CLOSE_TD);
 		builder.append("</tr>");
 	}
 
@@ -312,10 +313,10 @@ public class DropSearchBoard implements IParseBoardHandler {
 			
 			builder.append(TD);
 			builder.append("<button value=\".\" action=\"bypass _bbs_search_drop ").append(item.getId()).append(" 1 $order $level\" width=32 height=32  itemtooltip=\"").append(item.getId()).append("\">");
-			builder.append("</td>");
+			builder.append(CLOSE_TD);
 			builder.append("<td width=200>");
 			builder.append("&#").append(item.getId()).append(";");
-			builder.append("</td>");
+			builder.append(CLOSE_TD);
 			
 			if (i == 2)
 			{
