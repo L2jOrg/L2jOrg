@@ -19,7 +19,6 @@
 package org.l2j.gameserver.instancemanager;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.InstanceDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;
 import org.l2j.gameserver.data.xml.DoorDataManager;

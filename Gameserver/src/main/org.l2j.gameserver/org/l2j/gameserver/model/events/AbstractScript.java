@@ -20,7 +20,6 @@ package org.l2j.gameserver.model.events;
 
 import io.github.joealisson.primitive.*;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.MagicLampData;
@@ -1544,7 +1543,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         minAmount = (long) (minAmount * RateSettings.questDrop());
         maxAmount = (long) (maxAmount * RateSettings.questDrop());
-        dropChance *= RateSettings.questDrop(); // TODO separate configs for rate and amount
+        dropChance *= RateSettings.questDropChance();
         if (npc != null && npc.isChampion()) {
             if (itemId == CommonItem.ADENA) {
                 dropChance *= ChampionSettings.adenaChanceMultiplier();

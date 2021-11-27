@@ -19,7 +19,6 @@
 package org.l2j.gameserver.model.buylist;
 
 import org.l2j.commons.threading.ThreadPool;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BuyListDAO;
 import org.l2j.gameserver.data.database.data.BuyListInfo;
 import org.l2j.gameserver.engine.item.ItemTemplate;
