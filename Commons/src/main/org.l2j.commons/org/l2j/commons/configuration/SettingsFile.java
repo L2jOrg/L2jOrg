@@ -252,4 +252,20 @@ public final class SettingsFile extends Properties {
         }
         return map;
     }
+
+    public IntDoubleMap getIntDoubleMap(String key, String defaultValue) {
+        var value = getProperty(key);
+        IntDoubleMap map = new HashIntDoubleMap();
+        if(isNullOrEmpty(value)) {
+            value = defaultValue;
+        }
+        var values = value.split(";");
+        for (var s : values) {
+            var pair = s.split(",");
+            if(isInteger(pair[0]) && isFloat(pair[1])) {
+                map.put(Integer.parseInt(pair[0]), Double.parseDouble(pair[1]));
+            }
+        }
+        return map;
+    }
 }

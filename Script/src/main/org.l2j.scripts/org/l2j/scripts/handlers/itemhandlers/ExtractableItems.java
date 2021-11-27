@@ -28,6 +28,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.item.EtcItem;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2j.gameserver.settings.RateSettings;
 
 import java.util.List;
 
@@ -77,8 +78,8 @@ public class ExtractableItems implements IItemHandler {
 			}
 
 			if (Rnd.chance(product.chance())) {
-				final int min = (int) (product.min() * Config.RATE_EXTRACTABLE);
-				final int max = (int) (product.max() * Config.RATE_EXTRACTABLE);
+				final int min = (int) (product.min() * RateSettings.extractable());
+				final int max = (int) (product.max() * RateSettings.extractable());
 
 				int amount = Rnd.get(min, max);
 				if (amount == 0) {

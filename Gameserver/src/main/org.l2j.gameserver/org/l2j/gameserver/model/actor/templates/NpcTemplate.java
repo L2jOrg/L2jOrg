@@ -37,6 +37,7 @@ import org.l2j.gameserver.model.item.CommonItem;
 import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.model.stats.Stat;
 import org.l2j.gameserver.settings.ChampionSettings;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
@@ -502,39 +503,15 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         };
     }
 
-    private double calculateLevelGapChanceToDrop(DropHolder dropItem, int levelDifference) {
-        final double levelGapChanceToDrop;
-        if (dropItem.getItemId() == CommonItem.ADENA) {
-            levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
-        } else {
-            levelGapChanceToDrop = GameUtils.map(levelDifference, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
-        }
-
-        return levelGapChanceToDrop;
-    }
-
     private void processDropList(DropType dropType, Collection<ItemHolder> itemsToDrop, Creature victim, Creature killer) {
         var list = getDropList(dropType);
         if (isNull(list)) {
             return;
         }
 
-        // randomize drop order
-        Collections.shuffle(list);
-
-        int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
         for (DropHolder dropItem : list) {
-
-            if (dropOccurrenceCounter == 0 && dropItem.getChance() < 100 && dropItem.getItemId() != CommonItem.ADENA) {
-                continue;
-            }
-
             final ItemHolder drop = calculateDropWithLevelGap(dropItem, victim, killer);
             if(nonNull(drop)) {
-                if (dropItem.getChance() < 100) {
-                    dropOccurrenceCounter--;
-                }
-
                 itemsToDrop.add(drop);
             }
         }
@@ -576,7 +553,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
     private ItemHolder calculateDropWithLevelGap(DropHolder dropItem, Creature victim, Creature killer) {
         final int levelDifference = victim.getLevel() - killer.getLevel();
-        double levelGapChanceToDrop = calculateLevelGapChanceToDrop(dropItem, levelDifference);
+        double levelGapChanceToDrop = RateSettings.levelGapDropChance(levelDifference);
         if (!Rnd.chance(levelGapChanceToDrop)) {
             return null;
         }
@@ -589,81 +566,76 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
         if (dropType == DropType.DROP) {
             processEtcDrop(calculatedDrops, victim, killer);
         }
-
         processDropList(dropType, calculatedDrops, victim, killer);
-
         return calculatedDrops;
     }
 
-    /**
-     * All item drop chance calculations are done by this method.
-     */
     private ItemHolder calculateDrop(DropHolder dropItem, Creature victim, Creature killer) {
-        switch (dropItem.getDropType()) {
-            case DROP, LUCKY -> {
-                final int itemId = dropItem.getItemId();
-                final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
-                final boolean champion = victim.isChampion();
+        return switch (dropItem.getDropType()) {
+            case DROP, LUCKY -> calculateItemDrop(dropItem, victim, killer);
+            case SPOIL -> calculateSpoil(dropItem, killer);
+        };
+    }
 
-                double rateChance = 1;
-                if (Config.RATE_DROP_CHANCE_BY_ID.get(itemId) != null) {
-                    rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
-                    if (champion && (itemId == CommonItem.ADENA)) {
-                        rateChance *= ChampionSettings.adenaChanceMultiplier();
-                    }
-                } else if (item.hasExImmediateEffect()) {
-                    rateChance *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
-                } else if (victim.isRaid()) {
-                    rateChance *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
-                } else {
-                    rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER * (champion ? ChampionSettings.rewardChanceMultiplier() : 1);
-                }
-
-                // bonus drop rate effect
-                rateChance *= killer.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
-
-                // calculate if item will drop
-                if (Rnd.chance(dropItem.getChance() * rateChance)) {
-                    // amount is calculated after chance returned success
-                    double rateAmount = 1;
-                    if (Config.RATE_DROP_AMOUNT_BY_ID.get(itemId) != null) {
-                        rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(itemId);
-                        if (champion && (itemId == CommonItem.ADENA)) {
-                            rateAmount *= ChampionSettings.adenaAmountMultiplier();
-                        }
-                    } else if (item.hasExImmediateEffect()) {
-                        rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
-                    } else if (victim.isRaid()) {
-                        rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
-                    } else {
-                        rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER * (champion ? ChampionSettings.rewardAmountMultiplier() : 1);
-                    }
-
-                    // bonus drop amount effect
-                    rateAmount *= killer.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
-
-                    // finally
-                    return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
-                }
-            }
-            case SPOIL -> {
-                // chance
-                double rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
-
-                // bonus drop rate effect
-                rateChance *= killer.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
-
-                // calculate if item will be rewarded
-                if (Rnd.chance(dropItem.getChance() * rateChance)) {
-                    // amount is calculated after chance returned success
-                    double rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
-
-                    // finally
-                    return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
-                }
-            }
+    private ItemHolder calculateSpoil(DropHolder dropItem, Creature killer) {
+        double rateChance = RateSettings.spoilChance() * killer.getStats().getValue(Stat.BONUS_SPOIL_RATE, 1);
+        if (Rnd.chance(dropItem.getChance() * rateChance)) {
+            return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * RateSettings.spoilAmount()));
         }
         return null;
+    }
+
+    private ItemHolder calculateItemDrop(DropHolder dropItem, Creature victim, Creature killer) {
+        final int itemId = dropItem.getItemId();
+        final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
+        final boolean champion = victim.isChampion();
+
+        double rateChance = calculateDropChanceMultiplier(dropItem, victim, killer, item);
+
+        if (Rnd.chance(dropItem.getChance() * rateChance)) {
+            double rateAmount = calculateDropAmountMultiplier(victim, killer, item, champion);
+            return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+        }
+        return null;
+    }
+
+    private double calculateDropAmountMultiplier(Creature victim, Creature killer, ItemTemplate item, boolean champion) {
+        double rateAmount = RateSettings.dropAmountOf(item.getId());
+        if(rateAmount != 1) {
+            return rateAmount * killer.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
+        }
+
+        if (victim.isRaid()) {
+            rateAmount *= RateSettings.raidDropAmount();
+        } else if(!item.hasExImmediateEffect()) {
+            rateAmount *= RateSettings.deathDropAmount() * (champion ? ChampionSettings.rewardAmountMultiplier() : 1);
+        }
+
+        if(champion && item.getId() == CommonItem.ADENA) {
+            rateAmount *= ChampionSettings.adenaAmountMultiplier();
+        }
+
+        return rateAmount * killer.getStats().getValue(Stat.BONUS_DROP_AMOUNT, 1);
+    }
+
+    private double calculateDropChanceMultiplier(DropHolder dropItem, Creature victim, Creature killer, ItemTemplate item) {
+        double rateChance = RateSettings.dropChanceOf(dropItem.getItemId());
+
+        if(rateChance != 1) {
+            return rateChance * killer.getStats().getValue(Stat.BONUS_DROP_RATE, 1);
+        }
+
+        if (item.hasExImmediateEffect()) {
+            rateChance *= RateSettings.herbDropChance();
+        } else if (victim.isRaid()) {
+            rateChance *= RateSettings.raidDropChance();
+        } else if(victim.isChampion() && dropItem.getItemId() == CommonItem.ADENA) {
+            rateChance *= ChampionSettings.adenaChanceMultiplier();
+        } else {
+            rateChance *= RateSettings.deathDropChance() * (victim.isChampion() ? ChampionSettings.rewardChanceMultiplier() : 1);
+        }
+
+        return killer.getStats().getValue(Stat.BONUS_DROP_RATE, 1) * rateChance;
     }
 
     public double getCollisionRadiusGrown() {

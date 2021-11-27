@@ -169,7 +169,7 @@ public class PlayerSelectionInfo extends ServerPacket {
             buffer.writeDouble(0x00); // Current pet MP
 
             buffer.writeInt(data.getVitalityPoints());
-            buffer.writeInt((int)  RateSettings.rateVitalityExpMul() * 100); // Vitality Percent
+            buffer.writeInt((int)  RateSettings.vitalityExpMul() * 100); // Vitality Percent
             buffer.writeInt(playerInfo.getVitalityItemsUsed()); // Remaining vitality item uses
             buffer.writeInt(data.getAccessLevel() != -100); // Char is active or not
             buffer.writeByte(0x00); // is nobles

@@ -235,12 +235,12 @@ public class AdminAdmin implements IAdminCommandHandler
 					}
 					case "RateSp":
 					{
-						Config.RATE_SP = Float.valueOf(pValue);
+						RateSettings.sp(Float.parseFloat(pValue));
 						break;
 					}
 					case "RateDropSpoil":
 					{
-						Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER = Float.valueOf(pValue);
+						RateSettings.spoilChance(Float.parseFloat(pValue));
 						break;
 					}
 				}
@@ -416,8 +416,8 @@ public class AdminAdmin implements IAdminCommandHandler
 		replyMSG.append("<center><table width=260><tr><td width=140></td><td width=40></td><td width=40></td></tr>");
 		replyMSG.append("<tr><td><font color=\"00AA00\">Drop:</font></td><td></td><td></td></tr>");
 		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate EXP</font> = ").append(RateSettings.xp()).append("</td><td><edit var=\"param1\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateXp $param1\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate SP</font> = " + Config.RATE_SP + "</td><td><edit var=\"param2\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateSp $param2\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate Drop Spoil</font> = " + Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER + "</td><td><edit var=\"param4\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateDropSpoil $param4\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate SP</font> = ").append(RateSettings.sp()).append("</td><td><edit var=\"param2\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateSp $param2\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate Drop Spoil</font> = ").append(RateSettings.spoilChance()).append("</td><td><edit var=\"param4\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig RateDropSpoil $param4\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 		replyMSG.append("<tr><td width=140></td><td width=40></td><td width=40></td></tr>");
 		replyMSG.append("</table></body></html>");
 		adminReply.setHtml(replyMSG.toString());

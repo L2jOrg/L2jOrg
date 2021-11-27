@@ -628,7 +628,7 @@ public class Npc extends Creature {
      */
     public double getSpReward() {
         final Instance instance = getInstanceWorld();
-        final float rateMul = instance != null ? instance.getSPRate() : Config.RATE_SP;
+        final float rateMul = instance != null ? instance.getSPRate() : RateSettings.sp();
         return getTemplate().getSP() * rateMul;
     }
 

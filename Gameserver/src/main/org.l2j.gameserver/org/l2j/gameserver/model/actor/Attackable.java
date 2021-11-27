@@ -59,6 +59,7 @@ import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.settings.NpcSettings;
 import org.l2j.gameserver.settings.PartySettings;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
@@ -479,7 +480,7 @@ public class Attackable extends Npc {
     private void calculateRaidRewards(Creature lastAttacker, Player maxDealer, float penaltyMultiplier) {
         final Player player = (maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker.getActingPlayer();
         broadcastPacket(getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
-        final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS * penaltyMultiplier);
+        final int raidbossPoints = (int) (getTemplate().getRaidPoints() * RateSettings.raidPointsReward() * penaltyMultiplier);
         final Party party = player.getParty();
 
         if (party != null) {

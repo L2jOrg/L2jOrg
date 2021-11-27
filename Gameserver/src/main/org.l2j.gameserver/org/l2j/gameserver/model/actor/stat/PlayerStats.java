@@ -303,7 +303,7 @@ public class PlayerStats extends PlayableStats {
     }
 
     public double getVitalityExpBonus() {
-        return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, RateSettings.rateVitalityExpMul()) : 1.0;
+        return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, RateSettings.vitalityExpMul()) : 1.0;
     }
 
     /*
@@ -366,10 +366,10 @@ public class PlayerStats extends PlayableStats {
 
             if (points > 0) {
                 // vitality increased
-                points = (int) (points * RateSettings.rateVitalityGain());
+                points = (int) (points * RateSettings.vitalityGain());
             } else {
                 // vitality decreased
-                points = (int) (points *  RateSettings.rateVitalityLoss());
+                points = (int) (points *  RateSettings.vitalityLoss());
             }
         }
 

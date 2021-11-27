@@ -48,6 +48,7 @@ import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.PartySettings;
+import org.l2j.gameserver.settings.RateSettings;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -76,10 +77,10 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
     private int ejectTime = GeneralSettings.instanceEjectDeadTime();
     private boolean isPvP = false;
     private boolean allowPlayerSummon = false;
-    private float expRate = Config.RATE_INSTANCE_XP;
-    private float spRate = Config.RATE_INSTANCE_SP;
-    private float expPartyRate = Config.RATE_INSTANCE_PARTY_XP;
-    private float spPartyRate = Config.RATE_INSTANCE_PARTY_SP;
+    private float expRate = RateSettings.xp();
+    private float spRate = RateSettings.sp();
+    private float expPartyRate = RateSettings.partyXp();
+    private float spPartyRate = RateSettings.partySp();
 
     private InstanceTeleportType enterLocationType = InstanceTeleportType.NONE;
     private List<Location> enterLocations = null;

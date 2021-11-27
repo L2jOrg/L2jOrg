@@ -20,9 +20,9 @@ package org.l2j.scripts.handlers.bypasshandlers;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.engine.item.ItemEngine;
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.IBypassHandler;
@@ -33,8 +33,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.DropHolder;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.HtmlUtil;
 import org.l2j.gameserver.world.World;
@@ -329,48 +329,31 @@ public class NpcViewMod implements IBypassHandler {
             final DropHolder dropItem = dropList.get(i);
             final ItemTemplate item = ItemEngine.getInstance().getTemplate(dropItem.getItemId());
 
-            // real time server rate calculations
             double rateChance = 1;
-            double rateAmount = 1;
-            if (dropType == DropType.SPOIL)
-            {
-                rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
-                rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
-            }
-            else
-            {
-                if (Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId()) != null)
-                {
-                    rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
-                }
-                else if (item.hasExImmediateEffect())
-                {
-                    rateChance *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
-                }
-                else if (npc.isRaid())
-                {
-                    rateChance *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
-                }
-                else
-                {
-                    rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
+            double rateAmount;
+            if (dropType == DropType.SPOIL) {
+                rateChance = RateSettings.spoilChance();
+                rateAmount = RateSettings.spoilAmount();
+            } else {
+                rateChance = RateSettings.dropChanceOf(dropItem.getItemId());
+
+                if(rateChance == 1) {
+                    if (item.hasExImmediateEffect()) {
+                        rateChance *= RateSettings.herbDropChance();
+                    } else if (npc.isRaid()) {
+                        rateChance *= RateSettings.raidDropChance();
+                    } else {
+                        rateChance *= RateSettings.deathDropChance();
+                    }
                 }
 
-                if (Config.RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId()) != null)
-                {
-                    rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId());
-                }
-                else if (item.hasExImmediateEffect())
-                {
-                    rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
-                }
-                else if (npc.isRaid())
-                {
-                    rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
-                }
-                else
-                {
-                    rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
+                rateAmount = RateSettings.dropAmountOf(dropItem.getItemId());
+                if(rateAmount == 1) {
+                    if (npc.isRaid()) {
+                        rateAmount *= RateSettings.raidDropAmount();
+                    } else if(!item.hasExImmediateEffect()) {
+                        rateAmount *= RateSettings.deathDropAmount();
+                    }
                 }
             }
 
@@ -428,7 +411,7 @@ public class NpcViewMod implements IBypassHandler {
         html = html.replaceAll("%name%", npc.getName());
         html = html.replaceAll("%dropListButtons%", getDropListButtons(npc));
         html = html.replaceAll("%pages%", pagesSb.toString());
-        String bodySb = "<table><tr><td>" + leftSb.toString() + "</td><td>" + rightSb.toString() + "</td></tr></table>";
+        String bodySb = "<table><tr><td>" + leftSb + "</td><td>" + rightSb + "</td></tr></table>";
         html = html.replaceAll("%items%", bodySb + limitReachedMsg);
         GameUtils.sendCBHtml(player, html);
     }

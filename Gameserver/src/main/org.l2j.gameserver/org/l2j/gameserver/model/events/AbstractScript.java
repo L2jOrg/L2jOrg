@@ -82,6 +82,7 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.settings.ChampionSettings;
+import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.util.MinionList;
 import org.l2j.gameserver.world.zone.Zone;
@@ -1422,19 +1423,19 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         try {
             if (itemId == CommonItem.ADENA) {
-                count = (long) (count *  Config.RATE_QUEST_REWARD_ADENA);
-            } else if (Config.RATE_QUEST_REWARD_USE_MULTIPLIERS) {
+                count = (long) (count *  RateSettings.questRewardAdena());
+            } else if (RateSettings.isQuestRewardMultipliersEnabled()) {
                 if (item instanceof EtcItem etcItem) {
                     count = (int) switch (etcItem.getItemType()) {
-                        case POTION -> count * Config.RATE_QUEST_REWARD_POTION;
-                        case ENCHANT_WEAPON, ENCHANT_ARMOR, SCROLL -> count * Config.RATE_QUEST_REWARD_SCROLL;
-                        case RECIPE -> count * Config.RATE_QUEST_REWARD_RECIPE;
-                        case MATERIAL -> count * Config.RATE_QUEST_REWARD_MATERIAL;
-                        default -> count * Config.RATE_QUEST_REWARD;
+                        case POTION -> count * RateSettings.questRewardPotion();
+                        case ENCHANT_WEAPON, ENCHANT_ARMOR, SCROLL -> count * RateSettings.questRewardScroll();
+                        case RECIPE -> count * RateSettings.questRewardRecipe();
+                        case MATERIAL -> count * RateSettings.questRewardMaterial();
+                        default -> count * RateSettings.questReward();
                     };
                 }
             } else {
-                count = (long) (count * Config.RATE_QUEST_REWARD);
+                count = (long) (count * RateSettings.questReward());
             }
         } catch (Exception e) {
             count = Long.MAX_VALUE;
@@ -1541,9 +1542,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             return true;
         }
 
-        minAmount = (long) (minAmount *  Config.RATE_QUEST_DROP);
-        maxAmount = (long) (maxAmount * Config.RATE_QUEST_DROP);
-        dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
+        minAmount = (long) (minAmount * RateSettings.questDrop());
+        maxAmount = (long) (maxAmount * RateSettings.questDrop());
+        dropChance *= RateSettings.questDrop(); // TODO separate configs for rate and amount
         if (npc != null && npc.isChampion()) {
             if (itemId == CommonItem.ADENA) {
                 dropChance *= ChampionSettings.adenaChanceMultiplier();
@@ -1656,8 +1657,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
      * @param sp     the amount of SP to give to the player
      */
     public static void addExpAndSp(Player player, long exp, int sp) {
-        player.addExpAndSp((long) player.getStats().getValue(Stat.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStats().getValue(Stat.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
-        PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
+        player.addExpAndSp((long) player.getStats().getValue(Stat.EXPSP_RATE, (exp * RateSettings.questRewardXp())), (int) player.getStats().getValue(Stat.EXPSP_RATE, (sp * RateSettings.questRewardSp())));
+        PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * RateSettings.questRewardXp()));
         MagicLampData.getInstance().addLampExp(player, exp, true);
     }
 

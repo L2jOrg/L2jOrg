@@ -21,7 +21,6 @@ package org.l2j.gameserver;
 import org.l2j.commons.util.PropertiesParser;
 import org.l2j.commons.util.StringUtil;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.settings.RateSettings;
 import org.l2j.gameserver.util.FloodProtectorConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,8 +44,6 @@ public final class Config {
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     private static final String FEATURE_CONFIG_FILE = "config/feature.properties";
     private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-
-    private static final String RATES_CONFIG_FILE = "config/rates.properties";
 
     // --------------------------------------------------
     // Custom Config File Definitions
@@ -124,64 +121,6 @@ public final class Config {
     public static FloodProtectorConfig FLOOD_PROTECTOR_SENDMAIL;
     public static FloodProtectorConfig FLOOD_PROTECTOR_CHARACTER_SELECT;
     public static FloodProtectorConfig FLOOD_PROTECTOR_ITEM_AUCTION;
-
-    // --------------------------------------------------
-    // Rate Settings
-    // --------------------------------------------------
-    public static float RATE_SP;
-    public static float RATE_PARTY_XP;
-    public static float RATE_PARTY_SP;
-    public static float RATE_INSTANCE_XP;
-    public static float RATE_INSTANCE_SP;
-    public static float RATE_INSTANCE_PARTY_XP;
-    public static float RATE_INSTANCE_PARTY_SP;
-    public static float RATE_RAIDBOSS_POINTS;
-    public static float RATE_EXTRACTABLE;
-    public static int RATE_DROP_MANOR;
-    public static float RATE_QUEST_DROP;
-    public static float RATE_QUEST_REWARD;
-    public static float RATE_QUEST_REWARD_XP;
-    public static float RATE_QUEST_REWARD_SP;
-    public static float RATE_QUEST_REWARD_ADENA;
-    public static boolean RATE_QUEST_REWARD_USE_MULTIPLIERS;
-    public static float RATE_QUEST_REWARD_POTION;
-    public static float RATE_QUEST_REWARD_SCROLL;
-    public static float RATE_QUEST_REWARD_RECIPE;
-    public static float RATE_QUEST_REWARD_MATERIAL;
-    public static float RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
-    public static float RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
-    public static float RATE_HERB_DROP_AMOUNT_MULTIPLIER;
-    public static float RATE_RAID_DROP_AMOUNT_MULTIPLIER;
-    public static float RATE_DEATH_DROP_CHANCE_MULTIPLIER;
-    public static float RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
-    public static float RATE_HERB_DROP_CHANCE_MULTIPLIER;
-    public static float RATE_RAID_DROP_CHANCE_MULTIPLIER;
-    public static Map<Integer, Float> RATE_DROP_AMOUNT_BY_ID;
-    public static Map<Integer, Float> RATE_DROP_CHANCE_BY_ID;
-    public static int DROP_MAX_OCCURRENCES_NORMAL;
-    public static int DROP_MAX_OCCURRENCES_RAIDBOSS;
-    public static int DROP_ADENA_MIN_LEVEL_DIFFERENCE;
-    public static int DROP_ADENA_MAX_LEVEL_DIFFERENCE;
-    public static double DROP_ADENA_MIN_LEVEL_GAP_CHANCE;
-    public static int DROP_ITEM_MIN_LEVEL_DIFFERENCE;
-    public static int DROP_ITEM_MAX_LEVEL_DIFFERENCE;
-    public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
-    public static float RATE_KARMA_LOST;
-    public static float RATE_KARMA_EXP_LOST;
-    public static float RATE_SIEGE_GUARDS_PRICE;
-    public static int PLAYER_DROP_LIMIT;
-    public static int PLAYER_RATE_DROP;
-    public static int PLAYER_RATE_DROP_ITEM;
-    public static int PLAYER_RATE_DROP_EQUIP;
-    public static int PLAYER_RATE_DROP_EQUIP_WEAPON;
-    public static float PET_XP_RATE;
-    public static int PET_FOOD_RATE;
-    public static float SINEATER_XP_RATE;
-    public static int KARMA_DROP_LIMIT;
-    public static int KARMA_RATE_DROP;
-    public static int KARMA_RATE_DROP_ITEM;
-    public static int KARMA_RATE_DROP_EQUIP;
-    public static int KARMA_RATE_DROP_EQUIP_WEAPON;
 
     // --------------------------------------------------
     // Magic Lamp
@@ -425,122 +364,6 @@ public final class Config {
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
 
         loadFloodProtectorConfigs(FloodProtectors);
-
-        // Load Rates config file (if exists)
-        final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);
-
-        RATE_SP = RatesSettings.getFloat("RateSp", 1);
-        RATE_PARTY_XP = RatesSettings.getFloat("RatePartyXp", 1);
-        RATE_PARTY_SP = RatesSettings.getFloat("RatePartySp", 1);
-        L2_COIN_DROP_RATE = RatesSettings.getFloat("L2CoinDropRate", 0.1f);
-
-        RATE_INSTANCE_XP = RatesSettings.getFloat("RateInstanceXp", -1);
-        if (RATE_INSTANCE_XP < 0) {
-            RATE_INSTANCE_XP = RateSettings.xp();
-        }
-        RATE_INSTANCE_SP = RatesSettings.getFloat("RateInstanceSp", -1);
-        if (RATE_INSTANCE_SP < 0) {
-            RATE_INSTANCE_SP = RATE_SP;
-        }
-        RATE_INSTANCE_PARTY_XP = RatesSettings.getFloat("RateInstancePartyXp", -1);
-        if (RATE_INSTANCE_PARTY_XP < 0) {
-            RATE_INSTANCE_PARTY_XP = RATE_PARTY_XP;
-        }
-        RATE_INSTANCE_PARTY_SP = RatesSettings.getFloat("RateInstancePartyXp", -1);
-        if (RATE_INSTANCE_PARTY_SP < 0) {
-            RATE_INSTANCE_PARTY_SP = RATE_PARTY_SP;
-        }
-
-        RATE_EXTRACTABLE = RatesSettings.getFloat("RateExtractable", 1);
-        RATE_DROP_MANOR = RatesSettings.getInt("RateDropManor", 1);
-        RATE_QUEST_DROP = RatesSettings.getFloat("RateQuestDrop", 1);
-        RATE_QUEST_REWARD = RatesSettings.getFloat("RateQuestReward", 1);
-        RATE_QUEST_REWARD_XP = RatesSettings.getFloat("RateQuestRewardXP", 1);
-        RATE_QUEST_REWARD_SP = RatesSettings.getFloat("RateQuestRewardSP", 1);
-        RATE_QUEST_REWARD_ADENA = RatesSettings.getFloat("RateQuestRewardAdena", 1);
-        RATE_QUEST_REWARD_USE_MULTIPLIERS = RatesSettings.getBoolean("UseQuestRewardMultipliers", false);
-        RATE_QUEST_REWARD_POTION = RatesSettings.getFloat("RateQuestRewardPotion", 1);
-        RATE_QUEST_REWARD_SCROLL = RatesSettings.getFloat("RateQuestRewardScroll", 1);
-        RATE_QUEST_REWARD_RECIPE = RatesSettings.getFloat("RateQuestRewardRecipe", 1);
-        RATE_QUEST_REWARD_MATERIAL = RatesSettings.getFloat("RateQuestRewardMaterial", 1);
-        RATE_RAIDBOSS_POINTS = RatesSettings.getFloat("RateRaidbossPointsReward", 1);
-
-        RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
-        if (RATE_KARMA_LOST == -1) {
-            RATE_KARMA_LOST = RateSettings.xp();
-        }
-        RATE_KARMA_EXP_LOST = RatesSettings.getFloat("RateKarmaExpLost", 1);
-        RATE_SIEGE_GUARDS_PRICE = RatesSettings.getFloat("RateSiegeGuardsPrice", 1);
-        PLAYER_DROP_LIMIT = RatesSettings.getInt("PlayerDropLimit", 3);
-        PLAYER_RATE_DROP = RatesSettings.getInt("PlayerRateDrop", 5);
-        PLAYER_RATE_DROP_ITEM = RatesSettings.getInt("PlayerRateDropItem", 70);
-        PLAYER_RATE_DROP_EQUIP = RatesSettings.getInt("PlayerRateDropEquip", 25);
-        PLAYER_RATE_DROP_EQUIP_WEAPON = RatesSettings.getInt("PlayerRateDropEquipWeapon", 5);
-        PET_XP_RATE = RatesSettings.getFloat("PetXpRate", 1);
-        PET_FOOD_RATE = RatesSettings.getInt("PetFoodRate", 1);
-        SINEATER_XP_RATE = RatesSettings.getFloat("SinEaterXpRate", 1);
-        KARMA_DROP_LIMIT = RatesSettings.getInt("KarmaDropLimit", 10);
-        KARMA_RATE_DROP = RatesSettings.getInt("KarmaRateDrop", 70);
-        KARMA_RATE_DROP_ITEM = RatesSettings.getInt("KarmaRateDropItem", 50);
-        KARMA_RATE_DROP_EQUIP = RatesSettings.getInt("KarmaRateDropEquip", 40);
-        KARMA_RATE_DROP_EQUIP_WEAPON = RatesSettings.getInt("KarmaRateDropEquipWeapon", 10);
-
-        RATE_DEATH_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("DeathDropAmountMultiplier", 1);
-        RATE_SPOIL_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("SpoilDropAmountMultiplier", 1);
-        RATE_HERB_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("HerbDropAmountMultiplier", 1);
-        RATE_RAID_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("RaidDropAmountMultiplier", 1);
-        RATE_DEATH_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("DeathDropChanceMultiplier", 1);
-        RATE_SPOIL_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("SpoilDropChanceMultiplier", 1);
-        RATE_HERB_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("HerbDropChanceMultiplier", 1);
-        RATE_RAID_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("RaidDropChanceMultiplier", 1);
-
-        final String[] dropAmountMultiplier = RatesSettings.getString("DropAmountMultiplierByItemId", "").split(";");
-        RATE_DROP_AMOUNT_BY_ID = new HashMap<>(dropAmountMultiplier.length);
-        if (!dropAmountMultiplier[0].isEmpty()) {
-            for (String item : dropAmountMultiplier) {
-                final String[] itemSplit = item.split(",");
-                if (itemSplit.length != 2) {
-                    LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
-                } else {
-                    try {
-                        RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
-                    } catch (NumberFormatException nfe) {
-                        if (!item.isEmpty()) {
-                            LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
-                        }
-                    }
-                }
-            }
-        }
-
-        final String[] dropChanceMultiplier = RatesSettings.getString("DropChanceMultiplierByItemId", "").split(";");
-        RATE_DROP_CHANCE_BY_ID = new HashMap<>(dropChanceMultiplier.length);
-        if (!dropChanceMultiplier[0].isEmpty()) {
-            for (String item : dropChanceMultiplier) {
-                final String[] itemSplit = item.split(",");
-                if (itemSplit.length != 2) {
-                    LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
-                } else {
-                    try {
-                        RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
-                    } catch (NumberFormatException nfe) {
-                        if (!item.isEmpty()) {
-                            LOGGER.warn(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
-                        }
-                    }
-                }
-            }
-        }
-
-        DROP_MAX_OCCURRENCES_NORMAL = RatesSettings.getInt("DropMaxOccurrencesNormal", 2);
-        DROP_MAX_OCCURRENCES_RAIDBOSS = RatesSettings.getInt("DropMaxOccurrencesRaidboss", 7);
-
-        DROP_ADENA_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropAdenaMinLevelDifference", 8);
-        DROP_ADENA_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropAdenaMaxLevelDifference", 15);
-        DROP_ADENA_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropAdenaMinLevelGapChance", 10);
-        DROP_ITEM_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMinLevelDifference", 5);
-        DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
-        DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
 
         // Load Banking config file (if exists)
         final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
