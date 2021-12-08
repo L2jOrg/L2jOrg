@@ -77,7 +77,7 @@ public final class Skill implements IIdentifiable {
 
     private AbnormalType abnormalType = AbnormalType.NONE;
     private AbnormalType subordinationAbnormalType = AbnormalType.NONE;
-    private EnumSet<AbnormalVisualEffect>  abnormalVisualEffect;
+    private Set<AbnormalVisualEffect>  abnormalVisualEffect;
     private boolean isAbnormalInstant;
     private int abnormalLvl;
     private int abnormalTime;
@@ -536,17 +536,17 @@ public final class Skill implements IIdentifiable {
         return abnormalTime;
     }
 
-    void setAbnormalVisualEffect(EnumSet<AbnormalVisualEffect> visual) {
+    void setAbnormalVisualEffect(Set<AbnormalVisualEffect> visual) {
         visual.remove(AbnormalVisualEffect.NONE);
         abnormalVisualEffect = visual;
     }
 
-    public EnumSet<AbnormalVisualEffect> getAbnormalVisualEffect() {
+    public Set<AbnormalVisualEffect> getAbnormalVisualEffect() {
         return abnormalVisualEffect;
     }
 
     public boolean hasAbnormalVisualEffect() {
-        return falseIfNullOrElse(abnormalVisualEffect, Predicate.not(AbstractCollection::isEmpty));
+        return abnormalVisualEffect != null && !abnormalVisualEffect.isEmpty();
     }
 
     public int getMagicLevel() {

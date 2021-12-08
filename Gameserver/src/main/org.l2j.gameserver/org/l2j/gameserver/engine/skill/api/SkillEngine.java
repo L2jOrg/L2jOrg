@@ -46,6 +46,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.ServiceLoader;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -59,6 +60,8 @@ import static org.l2j.commons.util.Util.*;
 public class SkillEngine extends EffectParser {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SkillEngine.class);
+    public static final String ATTR_LEVEL = "level";
+    public static final String ATTR_INITIAL = "initial";
 
     private final LongMap<Skill> skills = new HashLongMap<>(36800);
     private IntIntMap skillsTime;
@@ -268,22 +271,26 @@ public class SkillEngine extends EffectParser {
             if(levelInfo.isEmpty()) {
                 addStaticEffect(factory, skill, startLevel, stopLevel, scope, staticStatSet);
             } else {
-                for (var i = startLevel; i <= stopLevel; i++) {
-                    var sk = getOrCloneSkillBasedOnLast(skill.getId(), i, false, true);
-                    var statsSet = levelInfo.computeIfAbsent(i, level -> {
-                        for (int j = level; j > 0; j--) {
-                            if(levelInfo.containsKey(j)) {
-                                return levelInfo.get(j);
-                            }
-                        }
-                        return new StatsSet();
-                    });
-                    statsSet.merge(staticStatSet);
-                    sk.addEffect(scope, factory.apply(statsSet));
-                }
+                parseLevelsInfo(factory, skill, startLevel, stopLevel, scope, staticStatSet, levelInfo);
             }
         } else {
             addStaticEffect(factory, skill, startLevel, stopLevel, scope, staticStatSet);
+        }
+    }
+
+    private void parseLevelsInfo(Function<StatsSet, AbstractEffect> factory, Skill skill, int startLevel, int stopLevel, EffectScope scope, StatsSet staticStatSet, IntMap<StatsSet> levelInfo) {
+        for (var i = startLevel; i <= stopLevel; i++) {
+            var sk = getOrCloneSkillBasedOnLast(skill.getId(), i, false, true);
+            var statsSet = levelInfo.computeIfAbsent(i, level -> {
+                for (int j = level; j > 0; j--) {
+                    if(levelInfo.containsKey(j)) {
+                        return levelInfo.get(j);
+                    }
+                }
+                return new StatsSet();
+            });
+            statsSet.merge(staticStatSet);
+            sk.addEffect(scope, factory.apply(statsSet));
         }
     }
 
@@ -298,7 +305,7 @@ public class SkillEngine extends EffectParser {
     private void parseSkillAbnormal(Node node, Skill skill, int maxLevel) {
         for(var child = node.getFirstChild(); nonNull(child); child = child.getNextSibling()) {
             switch (child.getNodeName()) {
-                case "level" -> parseMappedInt(child, skill, maxLevel, (level, s) -> s.setAbnormalLevel(level));
+                case ATTR_LEVEL -> parseMappedInt(child, skill, maxLevel, (level, s) -> s.setAbnormalLevel(level));
                 case "time" -> parseMappedInt(child, skill, maxLevel, (time, s) -> s.setAbnormalTime(time));
                 case "chance" -> parseMappedInt(child, skill, maxLevel, (chance, s) -> s.setAbnormalChance(chance));
                 case "visual" -> parseMappedAbnormalVisual(child, skill, maxLevel);
@@ -434,7 +441,7 @@ public class SkillEngine extends EffectParser {
     }
 
     private void parseMappedInt(Node node, Skill skill, int maxLevel, IntBiConsumer<Skill> setter)  {
-        int lastValue = parseInt(node.getAttributes(), "initial");
+        int lastValue = parseInt(node.getAttributes(), ATTR_INITIAL);
         var lastLevel = skill.getLevel();
         setter.accept(lastValue, skill);
 
@@ -442,14 +449,8 @@ public class SkillEngine extends EffectParser {
             if (ATTR_VALUE.equals(child.getNodeName())) {
                 var value = Integer.parseInt(child.getTextContent());
                 if (lastValue != value) {
-                    var level = parseInt(child.getAttributes(), "level");
-                    var hash = skillHashCode(skill.getId(), ++lastLevel);
-                    var tmp = skills.get(hash);
-
-                    while (nonNull(tmp) && lastLevel++ < level) {
-                        setter.accept(lastValue, tmp);
-                        tmp = skills.get(++hash);
-                    }
+                    var level = parseInt(child.getAttributes(), ATTR_LEVEL);
+                    lastLevel = setLastValueFromLastLevel(skill, setter, lastValue, lastLevel, level);
 
                     lastValue = value;
                     if (level <= maxLevel) {
@@ -460,7 +461,21 @@ public class SkillEngine extends EffectParser {
                 }
             }
         }
+        setValueUntilMaxLevel(skill, maxLevel, setter, lastValue, lastLevel);
+    }
 
+    private int setLastValueFromLastLevel(Skill skill, IntBiConsumer<Skill> setter, int lastValue, int lastLevel, int level) {
+        var hash = skillHashCode(skill.getId(), ++lastLevel);
+        var tmp = skills.get(hash);
+
+        while (nonNull(tmp) && lastLevel++ < level) {
+            setter.accept(lastValue, tmp);
+            tmp = skills.get(++hash);
+        }
+        return lastLevel;
+    }
+
+    private void setValueUntilMaxLevel(Skill skill, int maxLevel, IntBiConsumer<Skill> setter, int lastValue, int lastLevel) {
         if(lastLevel < maxLevel) {
             var hash = skillHashCode(skill.getId(), ++lastLevel);
             var tmp = skills.get(hash);
@@ -473,7 +488,7 @@ public class SkillEngine extends EffectParser {
     }
 
     private void parseMappedAbnormalVisual(Node node, Skill skill, int maxLevel) {
-        var lastValue = parseEnumSet(node.getAttributes(), AbnormalVisualEffect.class, "initial");
+        var lastValue = parseEnumSet(node.getAttributes(), AbnormalVisualEffect.class, ATTR_INITIAL);
         var lastLevel = skill.getLevel();
         skill.setAbnormalVisualEffect(lastValue);
 
@@ -481,14 +496,8 @@ public class SkillEngine extends EffectParser {
             if(ATTR_VALUE.equals(child.getNodeName())) {
                 var value = parseEnumSet(child, AbnormalVisualEffect.class);
                 if(!Objects.equals(lastValue, value)) {
-                    var level = parseInt(child.getAttributes(), "level");
-                    var hash = skillHashCode(skill.getId(), ++lastLevel);
-                    var tmp = skills.get(hash);
-
-                    while(nonNull(tmp) && lastLevel++ < level) {
-                        tmp.setAbnormalVisualEffect(value);
-                        tmp = skills.get(hash++);
-                    }
+                    var level = parseInt(child.getAttributes(), ATTR_LEVEL);
+                    lastLevel = setLastValueFromlastLevel(skill, lastLevel, value, level);
 
                     lastValue = value;
                     if (level <= maxLevel) {
@@ -500,6 +509,10 @@ public class SkillEngine extends EffectParser {
             }
         }
 
+        setValueUntilMaxLevel(skill, maxLevel, lastValue, lastLevel);
+    }
+
+    private void setValueUntilMaxLevel(Skill skill, int maxLevel, Set<AbnormalVisualEffect> lastValue, int lastLevel) {
         if(lastLevel < maxLevel) {
             var hash = skillHashCode(skill.getId(), ++lastLevel);
             var tmp = skills.get(hash);
@@ -510,8 +523,19 @@ public class SkillEngine extends EffectParser {
         }
     }
 
+    private int setLastValueFromlastLevel(Skill skill, int lastLevel, Set<AbnormalVisualEffect> value, int level) {
+        var hash = skillHashCode(skill.getId(), ++lastLevel);
+        var tmp = skills.get(hash);
+
+        while(nonNull(tmp) && lastLevel++ < level) {
+            tmp.setAbnormalVisualEffect(value);
+            tmp = skills.get(hash++);
+        }
+        return lastLevel;
+    }
+
     private void parseIcon(Node iconNode, Skill skill, int maxLevel) {
-        var lastValue = parseString(iconNode.getAttributes(), "initial");
+        var lastValue = parseString(iconNode.getAttributes(), ATTR_INITIAL);
         skill.setIcon(lastValue);
         for (var node = iconNode.getFirstChild(); nonNull(node); node = node.getNextSibling()) {
             if (ATTR_VALUE.equals(node.getNodeName())) {
@@ -519,7 +543,7 @@ public class SkillEngine extends EffectParser {
                 var value = node.getTextContent();
                 if (!Objects.equals(lastValue, value)) {
                     lastValue = value;
-                    var level = parseInt(node.getAttributes(), "level");
+                    var level = parseInt(node.getAttributes(), ATTR_LEVEL);
                     if(level <= maxLevel) {
                         var newSkill = getOrCloneSkillBasedOnLast(skill.getId(), level);
                         newSkill.setIcon(lastValue);
@@ -534,17 +558,18 @@ public class SkillEngine extends EffectParser {
     }
 
     private Skill getOrCloneSkillBasedOnLast(int id, int level, boolean keepEffects, boolean keepConditions){
-        Skill skill = null;
         var hash = skillHashCode(id, level);
         int currentLevel = level;
-        while (currentLevel > 0) {
+
+        Skill skill;
+        do {
             skill = skills.get(hash);
-            if(nonNull(skill)) {
+            if (skill != null) {
                 break;
             }
             currentLevel--;
             hash--;
-        }
+        } while(currentLevel > 0);
 
         while (nonNull(skill) && currentLevel < level) {
             skill = skill.clone(keepEffects, keepConditions);

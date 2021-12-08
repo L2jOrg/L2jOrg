@@ -21,12 +21,12 @@ package org.l2j.gameserver.engine.item.enchant;
 import org.l2j.gameserver.engine.item.Item;
 import org.l2j.gameserver.model.item.BodyPart;
 
-import java.util.EnumSet;
+import java.util.Set;
 
 /**
  * @author JoeAlisson
  */
-public record EnchantChance(RangedChanceGroup group, EnumSet<BodyPart>slots, Boolean magicWeapon) {
+public record EnchantChance(RangedChanceGroup group, Set<BodyPart> slots, Boolean magicWeapon) {
 
     public boolean isValid(Item item) {
         if(!slots.isEmpty() && !slots.contains(item.getBodyPart())) {

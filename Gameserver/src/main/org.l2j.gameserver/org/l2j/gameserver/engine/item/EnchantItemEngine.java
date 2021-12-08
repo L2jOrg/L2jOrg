@@ -21,7 +21,6 @@ package org.l2j.gameserver.engine.item;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.engine.item.enchant.*;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.InventorySlot;
