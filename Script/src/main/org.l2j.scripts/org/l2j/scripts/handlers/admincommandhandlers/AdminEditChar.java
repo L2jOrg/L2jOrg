@@ -246,12 +246,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			result = findDualBox(command, player);
 		}
 		else if (command.startsWith("admin_strict_find_dualbox")) {
-			strictFindDualBox(command, player);
-			result = true;
+			result = strictFindDualBox(command, player);
 		}
 		else if (command.startsWith("admin_tracert")) {
-			tracert(command, player);
-			result = true;
+			result = tracert(command, player);
 		}
 		else if (command.startsWith("admin_summon_info")) {
 			summonInfo(player);
@@ -1252,36 +1250,43 @@ public class AdminEditChar implements IAdminCommandHandler
 	private boolean findDualBox(String command, Player player) {
 		int multiBox = 2;
 		try {
-			final String val = command.substring(19);
-			multiBox = Integer.parseInt(val);
-			if (multiBox < 1) {
-				BuilderUtil.sendSysMessage(player, "Usage: //find_dualbox [number > 0]");
-				return false;
+			var val = command.substring(18).trim();
+			if(Util.isInteger(val)) {
+				multiBox = Integer.parseInt(val);
+				if (multiBox < 1) {
+					BuilderUtil.sendSysMessage(player, "Usage: //find_dualbox [number > 0]");
+					return false;
+				}
 			}
 		} catch (Exception e) {
-			LOGGER.warn(e.getMessage(), e);
+			LOGGER.debug(e.getMessage(), e);
 		}
 		findDualBox(player, multiBox);
 		return true;
 	}
 
-	private void findDualBox(Player activeChar, int multibox) {
-		Map<String, Integer> ipCount = new HashMap<>();
+	private void findDualBox(Player gm, int multibox) {
+		Map<String, Byte> ipCount = new HashMap<>();
+		Set<String> alreadyUsedIp = new HashSet<>();
 		var results = new StringBuilder();
 		for (var player : World.getInstance().getPlayers()) {
 			var ip = player.getIPAddress();
-			var count = ipCount.merge(player.getIPAddress(), 1, Integer::sum);
+			if(alreadyUsedIp.contains(ip)) {
+				continue;
+			}
+			var count = ipCount.merge(player.getIPAddress(), (byte) 1, (a, b) -> (byte) (a + b));
 			if(count >= multibox) {
+				alreadyUsedIp.add(ip);
 				results.append("<a action=\"bypass -h admin_find_ip ").append(ip).append("\">").append(ip).append(" (").append(count).append(")</a><br1>");
 			}
 		}
 
 		var adminReply = new NpcHtmlMessage(0, 1);
-		adminReply.setFile(activeChar, "data/html/admin/dualbox.htm");
+		adminReply.setFile(gm, "data/html/admin/dualbox.htm");
 		adminReply.replace("%multibox%", String.valueOf(multibox));
 		adminReply.replace("%results%", results.toString());
 		adminReply.replace("%strict%", "");
-		activeChar.sendPacket(adminReply);
+		gm.sendPacket(adminReply);
 	}
 
 	private boolean strictFindDualBox(String command, Player player) {
@@ -1302,14 +1307,19 @@ public class AdminEditChar implements IAdminCommandHandler
 	}
 	
 	private void findDualBoxStrict(Player activeChar, int multibox) {
-		Map<IpPack, Integer> ipCount = new HashMap<>();
+		Map<IpPack, Byte> ipCount = new HashMap<>();
+		Set<IpPack> alreadyUsedIp = new HashSet<>();
 		var results = new StringBuilder();
 		for (var player : World.getInstance().getPlayers()) {
 			var client = player.getClient();
 			var ip = new IpPack(client.getHostAddress(), client.getTrace());
-			var count = ipCount.merge(ip, 1, Integer::sum);
+			if(alreadyUsedIp.contains(ip)) {
+				continue;
+			}
+			var count = ipCount.merge(ip, (byte) 1, (a, b) -> (byte) (a + b));
 			if(count >= multibox) {
 				results.append("<a action=\"bypass -h admin_find_ip ").append(ip.ip).append("\">").append(ip.ip).append(" (").append(count).append(")</a><br1>");
+				alreadyUsedIp.add(ip);
 			}
 		}
 
