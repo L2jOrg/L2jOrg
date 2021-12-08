@@ -464,29 +464,6 @@ public class SkillEngine extends EffectParser {
         setValueUntilMaxLevel(skill, maxLevel, setter, lastValue, lastLevel);
     }
 
-    private int setLastValueFromLastLevel(Skill skill, IntBiConsumer<Skill> setter, int lastValue, int lastLevel, int level) {
-        var hash = skillHashCode(skill.getId(), ++lastLevel);
-        var tmp = skills.get(hash);
-
-        while (nonNull(tmp) && lastLevel++ < level) {
-            setter.accept(lastValue, tmp);
-            tmp = skills.get(++hash);
-        }
-        return lastLevel;
-    }
-
-    private void setValueUntilMaxLevel(Skill skill, int maxLevel, IntBiConsumer<Skill> setter, int lastValue, int lastLevel) {
-        if(lastLevel < maxLevel) {
-            var hash = skillHashCode(skill.getId(), ++lastLevel);
-            var tmp = skills.get(hash);
-
-            while (nonNull(tmp) && lastLevel++ <= maxLevel) {
-                setter.accept(lastValue, tmp);
-                tmp = skills.get(++hash);
-            }
-        }
-    }
-
     private void parseMappedAbnormalVisual(Node node, Skill skill, int maxLevel) {
         var lastValue = parseEnumSet(node.getAttributes(), AbnormalVisualEffect.class, ATTR_INITIAL);
         var lastLevel = skill.getLevel();
@@ -523,6 +500,18 @@ public class SkillEngine extends EffectParser {
         }
     }
 
+    private void setValueUntilMaxLevel(Skill skill, int maxLevel, IntBiConsumer<Skill> setter, int lastValue, int lastLevel) {
+        if(lastLevel < maxLevel) {
+            var hash = skillHashCode(skill.getId(), ++lastLevel);
+            var tmp = skills.get(hash);
+
+            while (nonNull(tmp) && lastLevel++ <= maxLevel) {
+                setter.accept(lastValue, tmp);
+                tmp = skills.get(++hash);
+            }
+        }
+    }
+
     private int setLastValueFromlastLevel(Skill skill, int lastLevel, Set<AbnormalVisualEffect> value, int level) {
         var hash = skillHashCode(skill.getId(), ++lastLevel);
         var tmp = skills.get(hash);
@@ -530,6 +519,17 @@ public class SkillEngine extends EffectParser {
         while(nonNull(tmp) && lastLevel++ < level) {
             tmp.setAbnormalVisualEffect(value);
             tmp = skills.get(hash++);
+        }
+        return lastLevel;
+    }
+
+    private int setLastValueFromLastLevel(Skill skill, IntBiConsumer<Skill> setter, int lastValue, int lastLevel, int level) {
+        var hash = skillHashCode(skill.getId(), ++lastLevel);
+        var tmp = skills.get(hash);
+
+        while (nonNull(tmp) && lastLevel++ < level) {
+            setter.accept(lastValue, tmp);
+            tmp = skills.get(++hash);
         }
         return lastLevel;
     }
