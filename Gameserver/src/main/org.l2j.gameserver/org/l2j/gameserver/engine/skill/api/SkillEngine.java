@@ -474,22 +474,39 @@ public class SkillEngine extends EffectParser {
                 var value = parseEnumSet(child, AbnormalVisualEffect.class);
                 if(!Objects.equals(lastValue, value)) {
                     var level = parseInt(child.getAttributes(), ATTR_LEVEL);
-                    lastLevel = setLastValueFromlastLevel(skill, lastLevel, value, level);
+                    lastLevel = setLastAbnormalVisualFromLastLevel(skill, lastLevel, value, level);
 
                     lastValue = value;
                     if (level <= maxLevel) {
-                        var newSkill = getOrCloneSkillBasedOnLast(skill.getId(), level);
-                        newSkill.setAbnormalVisualEffect(lastValue);
+                        setAbnormalVisualOnLevel(skill, lastValue, level);
                         lastLevel = level;
                     }
                 }
             }
         }
 
-        setValueUntilMaxLevel(skill, maxLevel, lastValue, lastLevel);
+        setAbnormalVisualUntilMaxLevel(skill, maxLevel, lastValue, lastLevel);
     }
 
-    private void setValueUntilMaxLevel(Skill skill, int maxLevel, Set<AbnormalVisualEffect> lastValue, int lastLevel) {
+    private int setLastAbnormalVisualFromLastLevel(Skill skill, int lastLevel, Set<AbnormalVisualEffect> value, int level) {
+        var hash = skillHashCode(skill.getId(), ++lastLevel);
+        var tmp = skills.get(hash);
+
+        while(nonNull(tmp) && lastLevel++ < level) {
+            tmp.setAbnormalVisualEffect(value);
+            tmp = skills.get(hash++);
+        }
+        return lastLevel;
+    }
+
+    private void setAbnormalVisualOnLevel(Skill skill, Set<AbnormalVisualEffect> lastValue, int level) {
+        var newSkill = getOrCloneSkillBasedOnLast(skill.getId(), level);
+        if(newSkill != null) {
+            newSkill.setAbnormalVisualEffect(lastValue);
+        }
+    }
+
+    private void setAbnormalVisualUntilMaxLevel(Skill skill, int maxLevel, Set<AbnormalVisualEffect> lastValue, int lastLevel) {
         if(lastLevel < maxLevel) {
             var hash = skillHashCode(skill.getId(), ++lastLevel);
             var tmp = skills.get(hash);
@@ -510,17 +527,6 @@ public class SkillEngine extends EffectParser {
                 tmp = skills.get(++hash);
             }
         }
-    }
-
-    private int setLastValueFromlastLevel(Skill skill, int lastLevel, Set<AbnormalVisualEffect> value, int level) {
-        var hash = skillHashCode(skill.getId(), ++lastLevel);
-        var tmp = skills.get(hash);
-
-        while(nonNull(tmp) && lastLevel++ < level) {
-            tmp.setAbnormalVisualEffect(value);
-            tmp = skills.get(hash++);
-        }
-        return lastLevel;
     }
 
     private int setLastValueFromLastLevel(Skill skill, IntBiConsumer<Skill> setter, int lastValue, int lastLevel, int level) {
