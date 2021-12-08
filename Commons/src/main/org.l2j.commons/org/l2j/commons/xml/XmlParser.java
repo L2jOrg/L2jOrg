@@ -19,7 +19,6 @@
 package org.l2j.commons.xml;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.commons.util.StreamUtil;
 import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -409,11 +408,11 @@ public class XmlParser {
         return parseEnum(attrs.getNamedItem(name), clazz, defaultValue);
     }
 
-    public  <T extends Enum<T>> EnumSet<T> parseEnumSet(NamedNodeMap attrs, Class<T> enumClass, String name) {
+    public  <T extends Enum<T>> Set<T> parseEnumSet(NamedNodeMap attrs, Class<T> enumClass, String name) {
         return parseEnumSet(attrs.getNamedItem(name), enumClass);
     }
 
-    public  <T extends Enum<T>> EnumSet<T> parseEnumSet(Node node, Class<T> enumClass) {
+    public  <T extends Enum<T>> Set<T> parseEnumSet(Node node, Class<T> enumClass) {
         if(nonNull(node)) {
             var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
             return parseEnumSet(value, enumClass);
@@ -421,7 +420,7 @@ public class XmlParser {
         return EnumSet.noneOf(enumClass);
     }
 
-    public <T extends Enum<T>> EnumSet<T> parseEnumSet(String value, Class<T> enumClass) {
+    public <T extends Enum<T>> Set<T> parseEnumSet(String value, Class<T> enumClass) {
         var set = EnumSet.noneOf(enumClass);
         var enums = value.split("\\s");
         for (var e : enums) {

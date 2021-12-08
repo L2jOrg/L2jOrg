@@ -19,20 +19,20 @@
 package org.l2j.scripts.handlers.conditions;
 
 import org.l2j.commons.xml.XmlParser;
+import org.l2j.gameserver.engine.item.drop.ExtendDropCondition;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.conditions.ConditionFactory;
-import org.l2j.gameserver.engine.item.drop.ExtendDropCondition;
 import org.w3c.dom.Node;
 
-import java.util.EnumSet;
+import java.util.Set;
 
 /**
  * @author Sdw
  * @author JoeAlisson
  */
-public record CategoryTypeCondition(EnumSet<CategoryType> types) implements ExtendDropCondition {
+public record CategoryTypeCondition(Set<CategoryType> types) implements ExtendDropCondition {
 
 	@Override
 	public boolean test(Creature creature, WorldObject target) {

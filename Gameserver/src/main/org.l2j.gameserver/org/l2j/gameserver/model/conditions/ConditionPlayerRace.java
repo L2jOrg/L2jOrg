@@ -19,12 +19,12 @@
  */
 package org.l2j.gameserver.model.conditions;
 
+import org.l2j.gameserver.engine.item.ItemTemplate;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.engine.item.ItemTemplate;
 
-import java.util.EnumSet;
+import java.util.Set;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -34,9 +34,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author JoeAlisson
  */
 public class ConditionPlayerRace extends Condition {
-    private final EnumSet<Race> races;
+    private final Set<Race> races;
 
-    public ConditionPlayerRace(EnumSet<Race> races) {
+    public ConditionPlayerRace(Set<Race> races) {
         this.races = races;
     }
 
