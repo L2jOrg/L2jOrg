@@ -60,7 +60,7 @@ import static org.l2j.gameserver.util.GameUtils.*;
 /**
  * @author JoeAlisson
  */
-public final class Skill implements IIdentifiable, Cloneable {
+public final class Skill implements IIdentifiable {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Skill.class);
 
@@ -1178,20 +1178,88 @@ public final class Skill implements IIdentifiable, Cloneable {
         abnormalTime = time;
     }
 
-    Skill clone(boolean keepEffects, boolean keepConditions) throws CloneNotSupportedException {
-        var clone = clone();
-        if (!keepEffects) {
-            clone.effects = new EnumMap<>(EffectScope.class);
+    Skill clone(boolean keepEffects, boolean keepConditions)  {
+        var clone = newSkillFromThis();
+
+         if (keepEffects) {
+            clone.effects = effects;
         }
-        if(!keepConditions) {
-            clone.conditions = new EnumMap<>(SkillConditionScope.class);
+        if (!keepConditions) {
+            clone.conditions = conditions;
         }
         return clone;
     }
 
-    @Override
-    protected Skill clone() throws CloneNotSupportedException {
-        return (Skill) super.clone();
+    private Skill newSkillFromThis()  {
+        var newSkill = new Skill(id, name, maxLevel, debuff, operateType, type);
+         newSkill.traitType = traitType;
+         newSkill.abnormalType = abnormalType;
+         newSkill.subordinationAbnormalType = subordinationAbnormalType;
+         newSkill.abnormalVisualEffect = abnormalVisualEffect;
+         newSkill.isAbnormalInstant = isAbnormalInstant;
+         newSkill.abnormalLvl = abnormalLvl;
+         newSkill.abnormalTime = abnormalTime;
+         newSkill.activateRate = activateRate;
+         newSkill.attributeType = attributeType;
+         newSkill.attributeValue = attributeValue;
+         newSkill.icon = icon;
+         newSkill.level = level;
+         newSkill.displayId = displayId;
+         newSkill.castRange = castRange;
+         newSkill.effectRange = effectRange;
+         newSkill.coolTime = coolTime;
+         newSkill.hitTime = hitTime;
+         newSkill.hitCancelTime = hitCancelTime;
+         newSkill.staticReuse = staticReuse;
+         newSkill.reuseHashCode = reuseHashCode;
+         newSkill.reuseDelay = reuseDelay;
+         newSkill.magicLevel = magicLevel;
+         newSkill.effectPoint = effectPoint;
+         newSkill.levelBonusRate = levelBonusRate;
+         newSkill.magicCriticalRate = magicCriticalRate;
+         newSkill.targetType = targetType;
+         newSkill.affectScope = affectScope;
+         newSkill.affectObject = affectObject;
+         newSkill.affectRange = affectRange;
+         newSkill.affectMin = affectMin;
+         newSkill.affectRandom = affectRandom;
+         newSkill.manaConsume = manaConsume;
+         newSkill.manaInitialConsume = manaInitialConsume;
+         newSkill.hpConsume = hpConsume;
+         newSkill.soulMaxConsume = soulMaxConsume;
+         newSkill.chargeConsume = chargeConsume;
+         newSkill.itemConsumeId = itemConsumeId;
+         newSkill.itemConsumeCount = itemConsumeCount;
+         newSkill.removedOnAnyActionExceptMove = removedOnAnyActionExceptMove;
+         newSkill.removedOnDamage = removedOnDamage;
+         newSkill.blockedInOlympiad = blockedInOlympiad;
+         newSkill.stayAfterDeath = stayAfterDeath;
+         newSkill.isTriggeredSkill = isTriggeredSkill;
+         newSkill.isSuicideAttack = isSuicideAttack;
+         newSkill.canBeDispelled = canBeDispelled;
+         newSkill.excludedFromCheck = excludedFromCheck;
+         newSkill.withoutAction = withoutAction;
+         newSkill.channelingSkillId = channelingSkillId;
+         newSkill.channelingStart = channelingStart;
+         newSkill.channelingTickInterval = channelingTickInterval;
+         newSkill.mpPerChanneling = mpPerChanneling;
+         newSkill.canCastWhileDisabled = canCastWhileDisabled;
+         newSkill.isSharedWithSummon = isSharedWithSummon;
+         newSkill.deleteAbnormalOnLeave = deleteAbnormalOnLeave;
+         newSkill.irreplacableBuff = irreplacableBuff;
+         newSkill.blockActionUseSkill = blockActionUseSkill;
+         newSkill.abnormalResists = abnormalResists;
+         newSkill.buffType = buffType;
+         newSkill.basicProperty = basicProperty;
+         newSkill.nextAction = nextAction;
+         newSkill.skillAutoUseType = skillAutoUseType;
+         newSkill.fanStartAngle = fanStartAngle;
+         newSkill.fanRadius = fanRadius;
+         newSkill.fanAngle = fanAngle;
+         newSkill.effectsMask = effectsMask;
+         newSkill.useCustomTime = useCustomTime;
+         newSkill.useCustomDelay = useCustomDelay;
+         return newSkill;
     }
 
     @Override
