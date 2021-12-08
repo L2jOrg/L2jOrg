@@ -416,9 +416,18 @@ public class XmlParser {
     public  <T extends Enum<T>> EnumSet<T> parseEnumSet(Node node, Class<T> enumClass) {
         if(nonNull(node)) {
             var value = isNotEmpty(node.getNodeValue()) ? node.getNodeValue() : node.getTextContent();
-            return StreamUtil.collectToEnumSet(enumClass, Arrays.stream(value.split("\\s")).map(e -> Enum.valueOf(enumClass, e)));
+            return parseEnumSet(value, enumClass);
         }
         return EnumSet.noneOf(enumClass);
+    }
+
+    public <T extends Enum<T>> EnumSet<T> parseEnumSet(String value, Class<T> enumClass) {
+        var set = EnumSet.noneOf(enumClass);
+        var enums = value.split("\\s");
+        for (var e : enums) {
+            set.add(Enum.valueOf(enumClass, e));
+        }
+        return set;
     }
 
     /**
