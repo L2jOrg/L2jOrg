@@ -1267,17 +1267,15 @@ public class AdminEditChar implements IAdminCommandHandler
 
 	private void findDualBox(Player gm, int multibox) {
 		Map<String, Byte> ipCount = new HashMap<>();
-		Set<String> alreadyUsedIp = new HashSet<>();
-		var results = new StringBuilder();
 		for (var player : World.getInstance().getPlayers()) {
-			var ip = player.getIPAddress();
-			if(alreadyUsedIp.contains(ip)) {
-				continue;
-			}
-			var count = ipCount.merge(player.getIPAddress(), (byte) 1, (a, b) -> (byte) (a + b));
-			if(count >= multibox) {
-				alreadyUsedIp.add(ip);
-				results.append("<a action=\"bypass -h admin_find_ip ").append(ip).append("\">").append(ip).append(" (").append(count).append(")</a><br1>");
+			ipCount.merge(player.getIPAddress(), (byte) 1, (a, b) -> (byte) (a + b));
+		}
+
+		var results = new StringBuilder();
+		for (var entry : ipCount.entrySet()) {
+			if(entry.getValue() >= multibox) {
+				results.append("<a action=\"bypass -h admin_find_ip ").append(entry.getKey()).append("\">")
+						.append(entry.getKey()).append(" (").append(entry.getValue()).append(")</a><br1>");
 			}
 		}
 
@@ -1308,18 +1306,16 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void findDualBoxStrict(Player activeChar, int multibox) {
 		Map<IpPack, Byte> ipCount = new HashMap<>();
-		Set<IpPack> alreadyUsedIp = new HashSet<>();
-		var results = new StringBuilder();
 		for (var player : World.getInstance().getPlayers()) {
 			var client = player.getClient();
 			var ip = new IpPack(client.getHostAddress(), client.getTrace());
-			if(alreadyUsedIp.contains(ip)) {
-				continue;
-			}
-			var count = ipCount.merge(ip, (byte) 1, (a, b) -> (byte) (a + b));
-			if(count >= multibox) {
-				results.append("<a action=\"bypass -h admin_find_ip ").append(ip.ip).append("\">").append(ip.ip).append(" (").append(count).append(")</a><br1>");
-				alreadyUsedIp.add(ip);
+			ipCount.merge(ip, (byte) 1, (a, b) -> (byte) (a + b));
+		}
+
+		var results = new StringBuilder();
+		for (var entry : ipCount.entrySet()) {
+			if(entry.getValue() >= multibox) {
+				results.append("<a action=\"bypass -h admin_find_ip ").append(entry.getKey().ip).append("\">").append(entry.getKey().ip).append(" (").append(entry.getValue()).append(")</a><br1>");
 			}
 		}
 
