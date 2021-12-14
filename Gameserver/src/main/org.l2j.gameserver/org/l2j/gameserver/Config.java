@@ -61,7 +61,6 @@ public final class Config {
     private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "config/custom/RandomSpawns.ini";
     private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "config/custom/SellBuffs.ini";
     private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "config/custom/ShemeBuffer.ini";
-    private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "config/custom/StartingLocation.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "config/custom/VoteReward.ini";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
@@ -222,10 +221,6 @@ public final class Config {
     public static List<Integer> AUTO_HP_ITEM_IDS;
     public static List<Integer> AUTO_MP_ITEM_IDS;
 
-    public static boolean CUSTOM_STARTING_LOC;
-    public static int CUSTOM_STARTING_LOC_X;
-    public static int CUSTOM_STARTING_LOC_Y;
-    public static int CUSTOM_STARTING_LOC_Z;
     public static boolean ENABLE_RANDOM_MONSTER_SPAWNS;
     public static int MOB_MIN_SPAWN_RANGE;
     public static int MOB_MAX_SPAWN_RANGE;
@@ -587,14 +582,6 @@ public final class Config {
 
         BUFFER_MAX_SCHEMES = SchemeBuffer.getInt("BufferMaxSchemesPerChar", 4);
         BUFFER_STATIC_BUFF_COST = SchemeBuffer.getInt("BufferStaticCostPerBuff", -1);
-
-        // Load StartingLocation config file (if exists)
-        final PropertiesParser StartingLocation = new PropertiesParser(CUSTOM_STARTING_LOCATION_CONFIG_FILE);
-
-        CUSTOM_STARTING_LOC = StartingLocation.getBoolean("CustomStartingLocation", false);
-        CUSTOM_STARTING_LOC_X = StartingLocation.getInt("CustomStartingLocX", 50821);
-        CUSTOM_STARTING_LOC_Y = StartingLocation.getInt("CustomStartingLocY", 186527);
-        CUSTOM_STARTING_LOC_Z = StartingLocation.getInt("CustomStartingLocZ", -3625);
 
         // Load VoteReward config file (if exists)
         final PropertiesParser VoteReward = new PropertiesParser(CUSTOM_VOTE_REWARD_CONFIG_FILE);

@@ -46,6 +46,7 @@ import org.l2j.gameserver.model.item.PcItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.settings.CustomFeatures;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.taskmanager.SaveTaskManager;
 import org.l2j.gameserver.world.World;
@@ -229,10 +230,10 @@ public class PlayerFactory {
         data.setMaxMp(mp);
         data.setMp(mp);
 
-        if (Config.CUSTOM_STARTING_LOC) {
-            data.setX(Config.CUSTOM_STARTING_LOC_X);
-            data.setY(Config.CUSTOM_STARTING_LOC_Y);
-            data.setZ(Config.CUSTOM_STARTING_LOC_Z);
+        if (CustomFeatures.startingLocationEnabled()) {
+            data.setX(CustomFeatures.startingLocationX());
+            data.setY(CustomFeatures.startingLocationY());
+            data.setZ(CustomFeatures.startingLocationZ());
         } else {
             final Location createLoc = template.getCreationPoint();
             data.setX(createLoc.getX());

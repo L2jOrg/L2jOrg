@@ -31,6 +31,10 @@ public class CustomFeatures {
     private static boolean welcomeMessageEnabled;
     private static String welcomeMessageText;
     private static int welcomeMessageTime;
+    private static boolean startingLocationEnabled;
+    private static int startingLocationX;
+    private static int startingLocationY;
+    private static int startingLocationZ;
 
     private CustomFeatures() {
         // Helper Class
@@ -45,6 +49,11 @@ public class CustomFeatures {
         welcomeMessageEnabled =  settingsFile.getBoolean("ScreenWelcomeMessageEnable", false);
         welcomeMessageText = settingsFile.getString("ScreenWelcomeMessageText", "Welcome to our server!");
         welcomeMessageTime = settingsFile.getInt("ScreenWelcomeMessageTime", 10) * 1000;
+
+        startingLocationEnabled = settingsFile.getBoolean("CustomStartingLocation", false);
+        startingLocationX = settingsFile.getInt("CustomStartingLocX", 50821);
+        startingLocationY = settingsFile.getInt("CustomStartingLocY", 186527);
+        startingLocationZ = settingsFile.getInt("CustomStartingLocZ", -3625);
     }
 
     public static int bankingGoldBarCount() {
@@ -69,5 +78,21 @@ public class CustomFeatures {
 
     public static String welcomeMessageText() {
         return welcomeMessageText;
+    }
+
+    public static boolean startingLocationEnabled() {
+        return startingLocationEnabled;
+    }
+
+    public static int startingLocationX() {
+        return startingLocationX;
+    }
+
+    public static int startingLocationY() {
+        return startingLocationY;
+    }
+
+    public static int startingLocationZ() {
+        return startingLocationZ;
     }
 }
