@@ -59,7 +59,6 @@ public final class Config {
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "config/custom/PvpRewardItem.ini";
     private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "config/custom/PvpTitleColor.ini";
     private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "config/custom/RandomSpawns.ini";
-    private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "config/custom/ScreenWelcomeMessage.ini";
     private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "config/custom/SellBuffs.ini";
     private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "config/custom/ShemeBuffer.ini";
     private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "config/custom/StartingLocation.ini";
@@ -170,9 +169,6 @@ public final class Config {
 
     public static int BUFFER_MAX_SCHEMES;
     public static int BUFFER_STATIC_BUFF_COST;
-    public static boolean WELCOME_MESSAGE_ENABLED;
-    public static String WELCOME_MESSAGE_TEXT;
-    public static int WELCOME_MESSAGE_TIME;
     public static boolean ANNOUNCE_PK_PVP;
     public static boolean ANNOUNCE_PK_PVP_NORMAL_MESSAGE;
     public static String ANNOUNCE_PK_MSG;
@@ -575,13 +571,6 @@ public final class Config {
                 MOBS_LIST_NOT_RANDOM.add(Integer.valueOf(id));
             }
         }
-
-        // Load ScreenWelcomeMessage config file (if exists)
-        final PropertiesParser ScreenWelcomeMessage = new PropertiesParser(CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE);
-
-        WELCOME_MESSAGE_ENABLED = ScreenWelcomeMessage.getBoolean("ScreenWelcomeMessageEnable", false);
-        WELCOME_MESSAGE_TEXT = ScreenWelcomeMessage.getString("ScreenWelcomeMessageText", "Welcome to our server!");
-        WELCOME_MESSAGE_TIME = ScreenWelcomeMessage.getInt("ScreenWelcomeMessageTime", 10) * 1000;
 
         // Load SellBuffs config file (if exists)
         final PropertiesParser SellBuffs = new PropertiesParser(CUSTOM_SELL_BUFFS_CONFIG_FILE);

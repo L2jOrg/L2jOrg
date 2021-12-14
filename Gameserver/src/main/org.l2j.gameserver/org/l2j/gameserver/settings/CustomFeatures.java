@@ -28,6 +28,9 @@ public class CustomFeatures {
     private static int bankingGoldBarCount;
     private static int bankingAdenaCount;
     private static boolean donateEnabled;
+    private static boolean welcomeMessageEnabled;
+    private static String welcomeMessageText;
+    private static int welcomeMessageTime;
 
     private CustomFeatures() {
         // Helper Class
@@ -38,6 +41,10 @@ public class CustomFeatures {
         bankingAdenaCount = settingsFile.getInt("BankingAdenaCount", 500000000);
 
         donateEnabled = settingsFile.getBoolean("EnableDonate", false);
+
+        welcomeMessageEnabled =  settingsFile.getBoolean("ScreenWelcomeMessageEnable", false);
+        welcomeMessageText = settingsFile.getString("ScreenWelcomeMessageText", "Welcome to our server!");
+        welcomeMessageTime = settingsFile.getInt("ScreenWelcomeMessageTime", 10) * 1000;
     }
 
     public static int bankingGoldBarCount() {
@@ -50,5 +57,17 @@ public class CustomFeatures {
 
     public static boolean donateEnabled() {
         return donateEnabled;
+    }
+
+    public static boolean welcomeMessageEnabled() {
+        return welcomeMessageEnabled;
+    }
+
+    public static int welcomeMessageTime() {
+        return welcomeMessageTime;
+    }
+
+    public static String welcomeMessageText() {
+        return welcomeMessageText;
     }
 }
