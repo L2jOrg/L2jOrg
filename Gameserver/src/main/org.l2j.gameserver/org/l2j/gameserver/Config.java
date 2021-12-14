@@ -54,7 +54,6 @@ public final class Config {
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "config/custom/NpcStatMultipliers.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "config/custom/PcCafe.ini";
     private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "config/custom/AutoPotions.ini";
-    private static final String CUSTOM_DONATION_CONFIG_FILE = "config/custom/Donate.ini";
 
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "config/custom/PvpAnnounce.ini";
     private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "config/custom/PvpRewardItem.ini";
@@ -227,7 +226,6 @@ public final class Config {
     public static List<Integer> AUTO_HP_ITEM_IDS;
     public static List<Integer> AUTO_MP_ITEM_IDS;
 
-    public static boolean ENABLE_DONATION;
     public static boolean CUSTOM_STARTING_LOC;
     public static int CUSTOM_STARTING_LOC_X;
     public static int CUSTOM_STARTING_LOC_Y;
@@ -521,9 +519,6 @@ public final class Config {
         {
             AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
         }
-
-        final PropertiesParser Donations = new PropertiesParser(CUSTOM_DONATION_CONFIG_FILE);
-        ENABLE_DONATION = Donations.getBoolean("EnableDonate", false);
 
         // Load PvpAnnounce config file (if exists)
         final PropertiesParser PvpAnnounce = new PropertiesParser(CUSTOM_PVP_ANNOUNCE_CONFIG_FILE);

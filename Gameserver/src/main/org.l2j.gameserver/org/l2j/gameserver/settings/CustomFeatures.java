@@ -27,6 +27,7 @@ public class CustomFeatures {
 
     private static int bankingGoldBarCount;
     private static int bankingAdenaCount;
+    private static boolean donateEnabled;
 
     private CustomFeatures() {
         // Helper Class
@@ -35,6 +36,8 @@ public class CustomFeatures {
     public static void load(SettingsFile settingsFile) {
         bankingGoldBarCount = settingsFile.getInt("BankingGoldbarCount", 1);
         bankingAdenaCount = settingsFile.getInt("BankingAdenaCount", 500000000);
+
+        donateEnabled = settingsFile.getBoolean("EnableDonate", false);
     }
 
     public static int bankingGoldBarCount() {
@@ -43,5 +46,9 @@ public class CustomFeatures {
 
     public static int bankingAdenaCount() {
         return bankingAdenaCount;
+    }
+
+    public static boolean donateEnabled() {
+        return donateEnabled;
     }
 }
