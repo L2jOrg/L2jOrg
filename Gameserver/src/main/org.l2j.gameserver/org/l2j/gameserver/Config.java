@@ -48,7 +48,6 @@ public final class Config {
     // --------------------------------------------------
     // Custom Config File Definitions
     // --------------------------------------------------
-    private static final String CUSTOM_BANKING_CONFIG_FILE = "config/custom/Banking.ini";
     private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "config/custom/CommunityBoard.ini";
     private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "config/custom/DualboxCheck.ini";
     private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "config/custom/MultilingualSupport.ini";
@@ -136,10 +135,6 @@ public final class Config {
     // --------------------------------------------------
     // Custom Settings
     // --------------------------------------------------
-
-    public static boolean CHAMPION_ENABLE_IN_INSTANCES;
-    public static int BANKING_SYSTEM_GOLDBARS;
-    public static int BANKING_SYSTEM_ADENA;
     public static boolean ENABLE_NPC_STAT_MULTIPIERS;
     public static double MONSTER_HP_MULTIPLIER;
     public static double MONSTER_MP_MULTIPLIER;
@@ -364,12 +359,6 @@ public final class Config {
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
 
         loadFloodProtectorConfigs(FloodProtectors);
-
-        // Load Banking config file (if exists)
-        final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
-
-        BANKING_SYSTEM_GOLDBARS = Banking.getInt("BankingGoldbarCount", 1);
-        BANKING_SYSTEM_ADENA = Banking.getInt("BankingAdenaCount", 500000000);
 
         // Load BoostNpcStats config file (if exists)
         final PropertiesParser BoostNpcStats = new PropertiesParser(CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE);
