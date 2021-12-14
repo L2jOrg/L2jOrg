@@ -183,8 +183,8 @@ public class EnterWorld extends ClientPacket {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
 
-        if (Config.WELCOME_MESSAGE_ENABLED) {
-            player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
+        if (CustomFeatures.welcomeMessageEnabled()) {
+            player.sendPacket(new ExShowScreenMessage(CustomFeatures.welcomeMessageText(), CustomFeatures.welcomeMessageTime()));
         }
 
         if(player.getActiveElementalSpiritType() >= 0) {
