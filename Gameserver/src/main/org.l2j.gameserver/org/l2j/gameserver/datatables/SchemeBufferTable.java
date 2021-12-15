@@ -19,7 +19,6 @@
 package org.l2j.gameserver.datatables;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.SchemeBufferDAO;
 import org.l2j.gameserver.data.database.data.SchemeBufferData;
 import org.l2j.gameserver.model.holders.BuffSkillHolder;
@@ -46,6 +45,8 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  */
 public class SchemeBufferTable {
     private static final Logger LOGGER = LoggerFactory.getLogger(SchemeBufferTable.class);
+    private static byte maxSchemes = 4;
+    private static int staticCost = -1;
 
     private final IntMap<Map<String, IntList>> schemes = new CHashIntMap<>();
     private final IntMap<BuffSkillHolder> availableBuffs = new LinkedHashIntMap<>();
@@ -64,7 +65,9 @@ public class SchemeBufferTable {
             Document doc = db.parse(ServerSettings.dataPackDirectory().resolve("data/SchemeBufferSkills.xml").toFile());
 
             final Node n = doc.getFirstChild();
-
+            var attr = n.getAttributes();
+            maxSchemes = Byte.parseByte(attr.getNamedItem("max-scheme").getNodeValue());
+            staticCost = Integer.parseInt(attr.getNamedItem("static-cost").getNodeValue());
             for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
                 if (!d.getNodeName().equalsIgnoreCase("category")) {
                     continue;
@@ -144,7 +147,7 @@ public class SchemeBufferTable {
     public void setScheme(int playerId, String schemeName, IntList list) {
         if (!schemes.containsKey(playerId)) {
             schemes.put(playerId, new TreeMap<>(String.CASE_INSENSITIVE_ORDER));
-        } else if (schemes.get(playerId).size() >= Config.BUFFER_MAX_SCHEMES) {
+        } else if (schemes.get(playerId).size() >= maxSchemes) {
             return;
         }
 
@@ -201,6 +204,14 @@ public class SchemeBufferTable {
 
     public BuffSkillHolder getAvailableBuff(int skillId) {
         return availableBuffs.get(skillId);
+    }
+
+    public static byte maxSchemes() {
+        return maxSchemes;
+    }
+
+    public static int staticCost() {
+        return staticCost;
     }
 
     public static void init() {

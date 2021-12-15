@@ -60,7 +60,6 @@ public final class Config {
     private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "config/custom/PvpTitleColor.ini";
     private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "config/custom/RandomSpawns.ini";
     private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "config/custom/SellBuffs.ini";
-    private static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "config/custom/ShemeBuffer.ini";
     private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "config/custom/VoteReward.ini";
     private static final String MAGIC_LAMP_CONFIG_FILE = "./config/magic-lamp.properties";
 
@@ -166,7 +165,6 @@ public final class Config {
     public static double DEFENDER_AGRRO_RANGE_MULTIPLIER;
     public static float DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
 
-    public static int BUFFER_MAX_SCHEMES;
     public static int BUFFER_STATIC_BUFF_COST;
     public static boolean ANNOUNCE_PK_PVP;
     public static boolean ANNOUNCE_PK_PVP_NORMAL_MESSAGE;
@@ -576,12 +574,6 @@ public final class Config {
         SELLBUFF_MIN_PRICE = SellBuffs.getLong("MinimalPrice", 100000);
         SELLBUFF_MAX_PRICE = SellBuffs.getLong("MaximalPrice", 100000000);
         SELLBUFF_MAX_BUFFS = SellBuffs.getInt("MaxBuffs", 15);
-
-        // Load SchemeBuffer config file (if exists)
-        final PropertiesParser SchemeBuffer = new PropertiesParser(CUSTOM_SCHEME_BUFFER_CONFIG_FILE);
-
-        BUFFER_MAX_SCHEMES = SchemeBuffer.getInt("BufferMaxSchemesPerChar", 4);
-        BUFFER_STATIC_BUFF_COST = SchemeBuffer.getInt("BufferStaticCostPerBuff", -1);
 
         // Load VoteReward config file (if exists)
         final PropertiesParser VoteReward = new PropertiesParser(CUSTOM_VOTE_REWARD_CONFIG_FILE);

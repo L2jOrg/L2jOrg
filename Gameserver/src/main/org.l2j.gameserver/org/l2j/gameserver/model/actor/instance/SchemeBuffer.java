@@ -21,7 +21,6 @@ package org.l2j.gameserver.model.actor.instance;
 import io.github.joealisson.primitive.ArrayIntList;
 import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
@@ -152,7 +151,7 @@ public class SchemeBuffer extends Folk {
 
                 final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
                 if (schemes != null) {
-                    if (schemes.size() == Config.BUFFER_MAX_SCHEMES) {
+                    if (schemes.size() == SchemeBufferTable.maxSchemes()) {
                         player.sendMessage("Maximum schemes amount is already reached.");
                         return;
                     }
@@ -224,7 +223,7 @@ public class SchemeBuffer extends Folk {
         final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
         html.setFile(player, getHtmlPath(getId(), 1));
         html.replace("%schemes%", sb.toString());
-        html.replace("%max_schemes%", Config.BUFFER_MAX_SCHEMES);
+        html.replace("%max_schemes%", SchemeBufferTable.maxSchemes());
         html.replace("%objectId%", getObjectId());
         player.sendPacket(html);
     }
@@ -234,8 +233,8 @@ public class SchemeBuffer extends Folk {
      * @return a global fee for all skills contained in list.
      */
     private int getFee(IntList list) {
-        if (Config.BUFFER_STATIC_BUFF_COST > 0) {
-            return list.size() * Config.BUFFER_STATIC_BUFF_COST;
+        if (SchemeBufferTable.staticCost() > 0) {
+            return list.size() * SchemeBufferTable.staticCost();
         }
 
         int fee = 0;

@@ -390,7 +390,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
                 final var schemes = SchemeBufferTable.getInstance().getPlayerSchemes(activeChar.getObjectId());
                 if (schemes != null) {
-                    if (schemes.size() == Config.BUFFER_MAX_SCHEMES) {
+                    if (schemes.size() == SchemeBufferTable.maxSchemes()) {
                         activeChar.sendMessage("Maximum schemes amount is already reached.");
                         canCreateScheme = false;
                     }
@@ -620,7 +620,7 @@ public final class HomeBoard implements IParseBoardHandler {
 
                 final String navigation = HtmCache.getInstance().getHtm(activeChar, NAVIGATION_PATH);
                 returnHtml = returnHtml.replace("%schemes%", getSchemesListAsHtml(schemes));
-                returnHtml = returnHtml.replace("%max_schemes%", Integer.toString(Config.BUFFER_MAX_SCHEMES));
+                returnHtml = returnHtml.replace("%max_schemes%", Integer.toString(SchemeBufferTable.maxSchemes()));
                 returnHtml = returnHtml.replace("%navigation%", navigation);
                 returnHtml = returnHtml.replaceAll("%name%", activeChar.getName());
                 returnHtml = returnHtml.replaceAll("%premium%", "Could not find account setup");
@@ -849,9 +849,9 @@ public final class HomeBoard implements IParseBoardHandler {
      */
     private static int getFee(IntList list)
     {
-        if (Config.BUFFER_STATIC_BUFF_COST > 0)
+        if (SchemeBufferTable.staticCost() > 0)
         {
-            return list.size() * Config.BUFFER_STATIC_BUFF_COST;
+            return list.size() * SchemeBufferTable.staticCost();
         }
 
         int fee = 0;
