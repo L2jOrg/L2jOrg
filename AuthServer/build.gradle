@@ -28,7 +28,7 @@ dependencies {
     implementation project(':Commons')
 
     runtimeOnly 'mysql:mysql-connector-java:8.0.26'
-    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.15.0'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.17.0'
     runtimeOnly 'org.ehcache:ehcache:3.9.6'
 }
 
