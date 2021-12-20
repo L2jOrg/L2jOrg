@@ -105,7 +105,6 @@ public class PlayerData {
     private int vitalityPoints;
 
     private LocalDate createDate;
-    private String language;
     @Column("pccafe_points")
     private int pcCafePoints;
     private boolean online;
@@ -364,14 +363,6 @@ public class PlayerData {
 
     public void setCreateDate(LocalDate date) {
         createDate = date;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String lang) {
-        this.language = lang;
     }
 
     public void setExpBeforeDeath(long exp) {

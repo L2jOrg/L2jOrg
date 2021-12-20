@@ -1037,7 +1037,6 @@ public final class Player extends Playable {
 
     private volatile boolean isOnline;
 
-    private String lang;
     private PetTemplate petTemplate;
     private PetLevelData petLevelData;
     private ScheduledFuture<?> dismountTask;
@@ -4682,7 +4681,6 @@ public final class Player extends Playable {
         data.setName(getName());
         data.setBookMarkSlot(bookmarkSlot);
         data.setVitalityPoints(getStats().getBaseVitalityPoints());
-        data.setLanguage(lang);
 
         if (uptime > 0) {
             data.addOnlineTime((System.currentTimeMillis() - uptime) / 1000);
@@ -7429,23 +7427,6 @@ public final class Player extends Playable {
     @Override
     public boolean isMovementDisabled() {
         return super.isMovementDisabled() || (movieHolder != null) || fishing.isFishing();
-    }
-
-    public boolean setLang(String lang) {
-        boolean result = false;
-        if (Config.MULTILANG_ENABLE) {
-            if (Config.MULTILANG_ALLOWED.contains(lang)) {
-                this.lang = lang;
-                result = true;
-            } else {
-                this.lang = Config.MULTILANG_DEFAULT;
-            }
-
-        } else {
-            this.lang = null;
-        }
-
-        return result;
     }
 
     public int getPcCafePoints() {

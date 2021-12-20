@@ -84,7 +84,6 @@ CREATE TABLE IF NOT EXISTS `characters`
     `bookmarkslot`            SMALLINT UNSIGNED  NOT NULL DEFAULT 0,
     `vitality_points`         MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
     `createDate`              DATE               NOT NULL DEFAULT (CURRENT_DATE),
-    `language`                VARCHAR(2)                  DEFAULT NULL,
     `pccafe_points`           INT                NOT NULL DEFAULT '0',
     PRIMARY KEY (`charId`),
     KEY `account_name` (`account_name`),
