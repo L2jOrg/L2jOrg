@@ -107,7 +107,6 @@ public class PlayerFactory {
         player.setLastServerPosition(playerData.getX(), playerData.getY(), playerData.getZ());
 
         player.setBookMarkSlot(playerData.getBookMarkSlot());
-        player.setLang(playerData.getLanguage());
 
         if (player.isGM()) {
             final long masks = Long.parseLong(player.getCondOverrideKey());

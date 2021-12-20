@@ -641,7 +641,6 @@ open module org.l2j.scripts {
         with org.l2j.scripts.handlers.voicedcommandhandlers.ExperienceGain,
             org.l2j.scripts.handlers.voicedcommandhandlers.SetVCmd,
             org.l2j.scripts.handlers.voicedcommandhandlers.CastleVCmd,
-            org.l2j.scripts.handlers.voicedcommandhandlers.Lang,
             org.l2j.scripts.handlers.voicedcommandhandlers.ChatAdmin,
             org.l2j.scripts.handlers.voicedcommandhandlers.Banking,
             org.l2j.scripts.handlers.voicedcommandhandlers.ChangePassword,

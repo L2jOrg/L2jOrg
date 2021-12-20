@@ -196,10 +196,6 @@ public final class Config {
     public static String TITLE_FOR_PVP_AMOUNT3;
     public static String TITLE_FOR_PVP_AMOUNT4;
     public static String TITLE_FOR_PVP_AMOUNT5;
-    public static boolean MULTILANG_ENABLE;
-    public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
-    public static String MULTILANG_DEFAULT;
-    public static boolean MULTILANG_VOICED_ALLOW;
 
     public static int DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
     public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
@@ -440,19 +436,6 @@ public final class Config {
                 }
             }
         }
-
-        // Load MultilingualSupport config file (if exists)
-        final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
-
-        MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en");
-        MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
-        final String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
-        MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
-        Collections.addAll(MULTILANG_ALLOWED, allowed);
-        if (!MULTILANG_ALLOWED.contains(MULTILANG_DEFAULT)) {
-            LOGGER.warn("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
-        }
-        MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
 
         // Load PcCafe config file (if exists)
         final PropertiesParser PcCafe = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
