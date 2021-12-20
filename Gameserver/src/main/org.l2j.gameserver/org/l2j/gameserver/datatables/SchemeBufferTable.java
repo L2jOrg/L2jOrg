@@ -66,8 +66,8 @@ public class SchemeBufferTable {
 
             final Node n = doc.getFirstChild();
             var attr = n.getAttributes();
-            maxSchemes = Byte.parseByte(attr.getNamedItem("max-scheme").getNodeValue());
-            staticCost = Integer.parseInt(attr.getNamedItem("static-cost").getNodeValue());
+            setMaxSchemas(Byte.parseByte(attr.getNamedItem("max-scheme").getNodeValue()));
+            setStaticCost(Integer.parseInt(attr.getNamedItem("static-cost").getNodeValue()));
             for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
                 if (!d.getNodeName().equalsIgnoreCase("category")) {
                     continue;
@@ -90,6 +90,14 @@ public class SchemeBufferTable {
             LOGGER.warn("SchemeBufferTable: Failed to load buff info", e);
         }
         LOGGER.info("Loaded {} players schemes and {} available buffs.", schemes.size(), availableBuffs.size());
+    }
+
+    private synchronized static void setStaticCost(int value) {
+        staticCost = value;
+    }
+
+    private synchronized static void setMaxSchemas(byte value) {
+        maxSchemes = value;
     }
 
     private void loadBufferSchema(ResultSet resultSet) {
