@@ -18,7 +18,6 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.ItemDAO;
 import org.l2j.gameserver.data.database.dao.PetDAO;
 import org.l2j.gameserver.data.database.dao.PlayerDAO;

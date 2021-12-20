@@ -50,7 +50,6 @@ public final class Config {
     // --------------------------------------------------
     private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "config/custom/CommunityBoard.ini";
     private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "config/custom/DualboxCheck.ini";
-    private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "config/custom/MultilingualSupport.ini";
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "config/custom/NpcStatMultipliers.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "config/custom/PcCafe.ini";
     private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "config/custom/AutoPotions.ini";
