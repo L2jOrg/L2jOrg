@@ -34,6 +34,7 @@ import org.l2j.gameserver.network.clientpackets.shortcut.ExRequestActivateAutoSh
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;
 import org.l2j.gameserver.network.clientpackets.castle.ExCastleWarInfo;
+import org.l2j.gameserver.network.clientpackets.siege.ExPledgeMercenaryRecruitInfoSet;
 import org.l2j.gameserver.network.clientpackets.siege.ExRequestMercenaryCastleWarCastleSiegeAttacker;
 import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeDefender;
 import org.l2j.gameserver.network.clientpackets.castle.ExRequestMercenaryCastleWarCastleSiegeInfo;
@@ -488,7 +489,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_RANKING_CHAR_INFO(ExRankCharInfo::new, ConnectionState.IN_GAME_STATES),
     EX_RANKING_CHAR_HISTORY(ExRequestRankingCharHistory::new, ConnectionState.IN_GAME_STATES),
     EX_RANKING_CHAR_RANKERS(ExRankingCharRankers::new, ConnectionState.IN_GAME_STATES),
-    EX_PLEDGE_MERCENARY_RECRUIT_INFO_SET(null, ConnectionState.IN_GAME_STATES),
+    EX_PLEDGE_MERCENARY_RECRUIT_INFO_SET(ExPledgeMercenaryRecruitInfoSet::new, ConnectionState.IN_GAME_STATES),
     EX_MERCENARY_CASTLEWAR_CASTLE_INFO(ExCastleWarInfo::new, ConnectionState.IN_GAME_STATES),
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(ExRequestMercenaryCastleWarCastleSiegeInfo::new, ConnectionState.IN_GAME_STATES),
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(ExRequestMercenaryCastleWarCastleSiegeAttacker::new, ConnectionState.IN_GAME_STATES),

@@ -19,10 +19,14 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.data.database.data.SiegeClanData;
 import org.l2j.gameserver.engine.siege.Siege;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.ClanPrivilege;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
+import static java.util.Objects.nonNull;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -36,13 +40,16 @@ public abstract class AbstractSiegeClanList extends ServerPacket {
         this.siege = requireNonNull(siege);
     }
 
-    protected void writeHeader(WritableBuffer buffer, int clanAmount) {
-        buffer.writeInt(siege.getCastle().getId());
-        buffer.writeInt(0);
-        buffer.writeInt(1);
-        buffer.writeInt(0);
-        buffer.writeInt(clanAmount);
-        buffer.writeInt(clanAmount);
+    protected void writeHeader(WritableBuffer buffer, int clanAmount, Player player) {
+        final var castle = siege.getCastle();
+        boolean isClanOwner = nonNull(castle.getOwner()) && castle.getOwner() == player.getClan();
+
+        buffer.writeInt(castle.getId());
+        buffer.writeInt(isClanOwner && player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE));
+        buffer.writeInt(1); // total pages
+        buffer.writeInt(0); // page index
+        buffer.writeInt(clanAmount); // total count
+        buffer.writeInt(clanAmount); // count in the page
     }
 
     protected void writeClanInfo(WritableBuffer buffer, Clan clan) {
@@ -50,16 +57,19 @@ public abstract class AbstractSiegeClanList extends ServerPacket {
         buffer.writeString(clan.getName());
         buffer.writeString(clan.getLeaderName());
         buffer.writeInt(clan.getCrestId());
-        buffer.writeInt(0); // register time
+        buffer.writeInt((int) (System.currentTimeMillis() / 1000)); // register time
+    }
+
+    protected void writeMercenaryInfo(WritableBuffer buffer, SiegeClanData siegeClanData) {
+        buffer.writeInt(siegeClanData.isRecruitingMercenary());
+        buffer.writeLong(siegeClanData.getMercenaryReward());
+        buffer.writeInt(0); // mercenary count
     }
 
     protected void writeAllianceInfo(WritableBuffer buffer, Clan clan) {
-        buffer.writeInt(0);
-        buffer.writeLong(0);
-        buffer.writeInt(0);
         buffer.writeInt(clan.getAllyId());
         buffer.writeString(clan.getAllyName());
-        buffer.writeString(""); // ally leader name
+        buffer.writeString("leader name"); // ally leader name
         buffer.writeInt(clan.getAllyCrestId());
     }
 }

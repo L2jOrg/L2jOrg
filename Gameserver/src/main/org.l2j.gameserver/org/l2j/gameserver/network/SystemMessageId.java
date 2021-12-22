@@ -13950,16 +13950,7 @@ public final class SystemMessageId {
     public static SystemMessageId MERCENARY_APPLICATION_APPLICATION_CANCELLATION_IS_BEING_PROCESSED_TRY_AGAIN_AFTER_THE_PROCESS_ENDS;
 
     @ClientString(id = 13035, message = "Your clan’s castle siege task is being processed. Try again after the process ends.")
-    public static SystemMessageId YOUR_CLANS_CASTLE_SIEGE_TASK_IS_BEING_PROCESSED_TRY_AGAIN_AFTER_THE_PROCESS_ENDS;
-
-    @ClientString(id = 13036, message = "It is not a mercenary recruitment period.")
-    public static SystemMessageId IT_IS_NOT_A_MERCENARY_RECRUITMENT_PERIOD;
-
-    @ClientString(id = 13037, message = "To recruit mercenaries, clans must participate in the castle siege.")
-    public static SystemMessageId TO_RECRUIT_MERCENARIES_CLANS_MUST_PARTICIPATE_IN_THE_CASTLE_SIEGE;
-
-    @ClientString(id = 13038, message = "Already recruiting mercenaries.")
-    public static SystemMessageId ALREADY_RECRUITING_MERCENARIES;
+    public static SystemMessageId YOUR_CLANS_CASTLE_SIEGE_TASK_IS_BEING_PROCESSED_TRY_AGAIN_AFTER_THE_PROCESS_ENDS
 
     @ClientString(id = 13039, message = "You cannot apply for mercenary now.")
     public static SystemMessageId YOU_CANNOT_APPLY_FOR_MERCENARY_NOW;
@@ -17737,6 +17728,15 @@ public final class SystemMessageId {
     @ClientString(id = 13019, message = "Cannot use timed hunting zones while waiting for the Olympiad.")
     public static SystemMessageId CANNOT_USE_TIMED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD;
 
+    @ClientString(id = 13036, message = "It is not a mercenary recruitment period.")
+    public static SystemMessageId IT_IS_NOT_A_MERCENARY_RECRUITMENT_PERIOD;
+
+    @ClientString(id = 13037, message = "To recruit mercenaries, clans must participate in the castle siege.")
+    public static SystemMessageId TO_RECRUIT_MERCENARIES_CLANS_MUST_PARTICIPATE_IN_THE_CASTLE_SIEGE;
+
+    @ClientString(id = 13038, message = "Already recruiting mercenaries.")
+    public static SystemMessageId ALREADY_RECRUITING_MERCENARIES;
+
     private static final IntMap<SystemMessageId> VALUES = new HashIntMap<>();
 
     static {
@@ -17797,11 +17797,11 @@ public final class SystemMessageId {
         return VALUES.get(id);
     }
 
-    public final int getId() {
+    public int getId() {
         return _id;
     }
 
-    public final String getName() {
+    public String getName() {
         return _name;
     }
 
@@ -17809,11 +17809,11 @@ public final class SystemMessageId {
         _name = name;
     }
 
-    public final int getParamCount() {
+    public int getParamCount() {
         return _params;
     }
 
-    public final void setParamCount(int params) {
+    public void setParamCount(int params) {
         if (params < 0) {
             throw new IllegalArgumentException("Invalid negative param count: " + params);
         }
@@ -17826,16 +17826,16 @@ public final class SystemMessageId {
         _params = (byte) params;
     }
 
-    public final SystemMessage getStaticSystemMessage() {
+    public SystemMessage getStaticSystemMessage() {
         return _staticSystemMessage;
     }
 
-    public final void setStaticSystemMessage(SystemMessage sm) {
+    public void setStaticSystemMessage(SystemMessage sm) {
         _staticSystemMessage = sm;
     }
 
     @Override
-    public final String toString() {
+    public String toString() {
         return "SM[" + getId() + ": " + getName() + "]";
     }
 }

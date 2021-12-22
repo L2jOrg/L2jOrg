@@ -16,14 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.enums;
+package org.l2j.gameserver.engine.siege;
 
 /**
- * @author St3eT
+ * @author JoeAlisson
  */
-public enum SiegeClanType {
+public enum SiegeClanStatus {
+    ATTACKER,
     OWNER,
-    DEFENDER_PENDING,
-    DEFENDER,
-    ATTACKER
+    WAITING,
+    APPROVED,
+    DECLINED
 }
