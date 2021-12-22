@@ -23,15 +23,14 @@ import org.l2j.gameserver.data.database.dao.SchemeBufferDAO;
 import org.l2j.gameserver.data.database.data.SchemeBufferData;
 import org.l2j.gameserver.model.holders.BuffSkillHolder;
 import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import javax.xml.XMLConstants;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.nio.file.Path;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +42,8 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 /**
  * This class loads available skills and stores players' buff schemes into _schemesTable.
  */
-public class SchemeBufferTable {
+public class SchemeBufferTable extends GameXmlReader {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(SchemeBufferTable.class);
     private static byte maxSchemes = 4;
     private static int staticCost = -1;
@@ -54,50 +54,48 @@ public class SchemeBufferTable {
     private SchemeBufferTable() {
     }
 
-    private void load() {
+    @Override
+    protected Path getSchemaFilePath() {
+        return ServerSettings.dataPackDirectory().resolve("data/xsd/SchemeBufferSkills.xsd");
+    }
+
+    @Override
+    public void load() {
         getDAO(SchemeBufferDAO.class).loadAll(this::loadBufferSchema);
-
-        try {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
-            dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(ServerSettings.dataPackDirectory().resolve("data/SchemeBufferSkills.xml").toFile());
-
-            final Node n = doc.getFirstChild();
-            var attr = n.getAttributes();
-            setMaxSchemas(Byte.parseByte(attr.getNamedItem("max-scheme").getNodeValue()));
-            setStaticCost(Integer.parseInt(attr.getNamedItem("static-cost").getNodeValue()));
-            for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-                if (!d.getNodeName().equalsIgnoreCase("category")) {
-                    continue;
-                }
-
-                final String category = d.getAttributes().getNamedItem("type").getNodeValue();
-
-                for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
-                    if (!c.getNodeName().equalsIgnoreCase("buff")) {
-                        continue;
-                    }
-
-                    final NamedNodeMap attrs = c.getAttributes();
-                    final int skillId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-
-                    availableBuffs.put(skillId, new BuffSkillHolder(skillId, Integer.parseInt(attrs.getNamedItem("price").getNodeValue()), category, attrs.getNamedItem("desc").getNodeValue()));
-                }
-            }
-        } catch (Exception e) {
-            LOGGER.warn("SchemeBufferTable: Failed to load buff info", e);
-        }
+        parseDatapackFile("data/SchemeBufferSkills.xml");
+        releaseResources();
         LOGGER.info("Loaded {} players schemes and {} available buffs.", schemes.size(), availableBuffs.size());
     }
 
-    private synchronized static void setStaticCost(int value) {
-        staticCost = value;
+    @Override
+    protected void parseDocument(Document doc, File f) {
+        var list = doc.getFirstChild();
+        for (var n = list.getFirstChild(); n != null; n = n.getNextSibling()) {
+            if("config".equals(n.getNodeName())) {
+                parseConfig(n);
+            } else if("category".equals(n.getNodeName())) {
+                parseCategory(n);
+            }
+        }
     }
 
-    private synchronized static void setMaxSchemas(byte value) {
-        maxSchemes = value;
+    private void parseCategory(Node node) {
+        var type = parseString(node.getAttributes(), "type");
+        for (var n = node.getFirstChild(); n != null; n = n.getNextSibling()) {
+            if("buff".equals(n.getNodeName())) {
+                var attrs = n.getAttributes();
+                var skillId = parseInt(attrs, "id");
+                var price = parseInt(attrs, "price");
+                var desc = parseString(attrs, "desc");
+                availableBuffs.put(skillId, new BuffSkillHolder(skillId, price, type, desc));
+            }
+        }
+    }
+
+    private void parseConfig(Node node) {
+        var attr = node.getAttributes();
+        setMaxSchemas(parseByte(attr, "max-schemas"));
+        setStaticCost(parseInt(attr, "static-cost"));
     }
 
     private void loadBufferSchema(ResultSet resultSet) {
@@ -190,8 +188,8 @@ public class SchemeBufferTable {
     public List<Integer> getSkillsIdsByType(String groupType) {
         List<Integer> skills = new ArrayList<>();
         for (BuffSkillHolder skill : availableBuffs.values()) {
-            if (skill.getType().equalsIgnoreCase(groupType)) {
-                skills.add(skill.getId());
+            if (skill.type().equalsIgnoreCase(groupType)) {
+                skills.add(skill.id());
             }
         }
         return skills;
@@ -203,8 +201,8 @@ public class SchemeBufferTable {
     public List<String> getSkillTypes() {
         List<String> skillTypes = new ArrayList<>();
         for (BuffSkillHolder skill : availableBuffs.values()) {
-            if (!skillTypes.contains(skill.getType())) {
-                skillTypes.add(skill.getType());
+            if (!skillTypes.contains(skill.type())) {
+                skillTypes.add(skill.type());
             }
         }
         return skillTypes;
@@ -214,10 +212,17 @@ public class SchemeBufferTable {
         return availableBuffs.get(skillId);
     }
 
+    private static synchronized void setMaxSchemas(byte value) {
+        maxSchemes = value;
+    }
+
     public static byte maxSchemes() {
         return maxSchemes;
     }
 
+    private static synchronized void setStaticCost(int value) {
+        staticCost = value;
+    }
     public static int staticCost() {
         return staticCost;
     }

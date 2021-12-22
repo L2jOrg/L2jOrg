@@ -20,34 +20,7 @@
 package org.l2j.gameserver.model.holders;
 
 /**
- * A container used for schemes buffer.
+ * @author JoeAlisson
  */
-public final class BuffSkillHolder {
-    private final int _id;
-    private final int _price;
-    private final String _type;
-    private final String _description;
-
-    public BuffSkillHolder(int id, int price, String type, String description) {
-        _id = id;
-        _price = price;
-        _type = type;
-        _description = description;
-    }
-
-    public int getId() {
-        return _id;
-    }
-
-    public int getPrice() {
-        return _price;
-    }
-
-    public final String getType() {
-        return _type;
-    }
-
-    public final String getDescription() {
-        return _description;
-    }
+public record BuffSkillHolder(int id, int price, String type, String description) {
 }

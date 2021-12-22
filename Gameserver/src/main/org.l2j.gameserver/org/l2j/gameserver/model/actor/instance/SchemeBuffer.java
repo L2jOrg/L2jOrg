@@ -240,7 +240,7 @@ public class SchemeBuffer extends Folk {
         int fee = 0;
         final var it = list.iterator();
         while (it.hasNext()) {
-            fee += SchemeBufferTable.getInstance().getAvailableBuff(it.nextInt()).getPrice();
+            fee += SchemeBufferTable.getInstance().getAvailableBuff(it.nextInt()).price();
         }
 
         return fee;
@@ -336,7 +336,7 @@ public class SchemeBuffer extends Folk {
             final Skill skill = SkillEngine.getInstance().getSkill(skillId, 1);
             sb.append(row++ % 2 == 0 ? "<table width=\"280\" bgcolor=\"000000\"><tr>" : "<table width=\"280\"><tr>")
                 .append("<td height=40 width=40><img src=\"").append(skill.getIcon()).append("\" width=32 height=32></td><td width=190>").append(skill.getName())
-                .append("<br1><font color=\"B09878\">").append(SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription())
+                .append("<br1><font color=\"B09878\">").append(SchemeBufferTable.getInstance().getAvailableBuff(skillId).description())
 
                 .append("</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_").append(schemeSkills.contains(skillId) ? "skillunselect;" :"skillselect;")
 
