@@ -407,7 +407,7 @@ public class MultiSellChoose extends ClientPacket {
     private boolean invalidAugmentation(ItemInfo itemEnchantment) {
         return (itemEnchantment.getAugmentation() == null && (augmentOption1 != 0 || augmentOption2 != 0))
                 || (itemEnchantment.getAugmentation() != null &&
-                    (itemEnchantment.getAugmentation().getOption1Id() != augmentOption1 || itemEnchantment.getAugmentation().getOption2Id() != augmentOption2));
+                    (itemEnchantment.getAugmentation().getNormalId() != augmentOption1 || itemEnchantment.getAugmentation().getRandomId() != augmentOption2));
     }
 
     private boolean validateItem(Player player, MultisellItem entry) {

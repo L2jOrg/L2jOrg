@@ -72,7 +72,7 @@ public class RequestPackageSend extends ClientPacket {
         }
 
         final var player = client.getPlayer();
-        if (player == null || !player.getAccountChars().containsKey(_objectId)) {
+        if (player == null || !player.getAccountPlayers().containsKey(_objectId)) {
             return;
         }
 

@@ -93,10 +93,10 @@ public class DimensionalMerchant extends AbstractNpcAI implements IBypassHandler
     }
 
     private void packageDeposit(Player player) {
-        if (player.getAccountChars().size() < 2) {
+        if (player.getAccountPlayers().size() < 2) {
             player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
         } else {
-            player.sendPacket(new PackageToList(player.getAccountChars()));
+            player.sendPacket(new PackageToList(player.getAccountPlayers()));
         }
     }
 
