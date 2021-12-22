@@ -857,7 +857,7 @@ public final class HomeBoard implements IParseBoardHandler {
         int fee = 0;
         final var it = list.iterator();
         while (it.hasNext()) {
-            fee += SchemeBufferTable.getInstance().getAvailableBuff(it.nextInt()).getPrice();
+            fee += SchemeBufferTable.getInstance().getAvailableBuff(it.nextInt()).price();
         }
 
         return fee;
