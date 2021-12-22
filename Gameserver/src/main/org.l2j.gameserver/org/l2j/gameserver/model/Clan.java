@@ -1379,6 +1379,10 @@ public class Clan implements IIdentifiable, INamable {
         data.setArenaProgress((short) progress);
     }
 
+    public boolean isAlly(Clan clan) {
+        return getAllyId() != 0 && clan.getAllyId() == getAllyId();
+    }
+
     public void onMemberLogout(Player player) {
         var member = members.get(player.getObjectId());
         if(member != null) {

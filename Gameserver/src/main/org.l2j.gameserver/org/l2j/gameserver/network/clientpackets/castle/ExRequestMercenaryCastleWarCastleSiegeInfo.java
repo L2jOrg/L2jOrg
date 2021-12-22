@@ -18,6 +18,7 @@
  */
 package org.l2j.gameserver.network.clientpackets.castle;
 
+import org.l2j.gameserver.engine.siege.SiegeEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.siege.ExMercenaryCastleWarCastleSiegeInfo;
@@ -35,9 +36,6 @@ public class ExRequestMercenaryCastleWarCastleSiegeInfo extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        final var castle = CastleManager.getInstance().getCastleById(castleId);
-        if(nonNull(castle)) {
-            client.sendPacket(new ExMercenaryCastleWarCastleSiegeInfo(castle));
-        }
+        SiegeEngine.getInstance().showSiegeInfo(client.getPlayer(), castleId);
     }
 }

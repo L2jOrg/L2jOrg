@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.model.entity.Castle;
+import org.l2j.gameserver.engine.siege.Siege;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
@@ -28,8 +28,11 @@ import org.l2j.gameserver.network.ServerExPacketId;
  */
 public class ExMercenaryCastleWarCastleSiegeInfo extends AbstractCastleInfo {
 
-    public ExMercenaryCastleWarCastleSiegeInfo(Castle castle) {
-        super(castle);
+    private final Siege siege;
+
+    public ExMercenaryCastleWarCastleSiegeInfo(Siege siege) {
+        super(siege.getCastle());
+        this.siege = siege;
     }
 
     @Override
@@ -38,8 +41,8 @@ public class ExMercenaryCastleWarCastleSiegeInfo extends AbstractCastleInfo {
 
         writeCastleInfo(buffer);
 
-        buffer.writeInt(castle.getSiege().isInProgress()); // siege state
-        buffer.writeInt(castle.getSiege().getAttackerClans().size());
-        buffer.writeInt(castle.getSiege().getDefenderClans().size());
+        buffer.writeInt(siege.getState().ordinal()); // siege state
+        buffer.writeInt(siege.getAttackerClans().size());
+        buffer.writeInt(siege.getDefenderClans().size());
     }
 }

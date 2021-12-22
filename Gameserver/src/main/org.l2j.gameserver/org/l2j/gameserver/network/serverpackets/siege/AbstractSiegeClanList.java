@@ -19,8 +19,8 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.engine.siege.Siege;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import static java.util.Objects.requireNonNull;
@@ -30,14 +30,14 @@ import static java.util.Objects.requireNonNull;
  */
 public abstract class AbstractSiegeClanList extends ServerPacket {
 
-    protected final Castle castle;
+    protected final Siege siege;
 
-    protected AbstractSiegeClanList(Castle castle) {
-        this.castle = requireNonNull(castle);
+    protected AbstractSiegeClanList(Siege siege) {
+        this.siege = requireNonNull(siege);
     }
 
     protected void writeHeader(WritableBuffer buffer, int clanAmount) {
-        buffer.writeInt(castle.getId());
+        buffer.writeInt(siege.getCastle().getId());
         buffer.writeInt(0);
         buffer.writeInt(1);
         buffer.writeInt(0);

@@ -35,6 +35,10 @@ import static java.util.Objects.nonNull;
 class SiegeSettings {
 
     final IntMap<Collection<SiegeSchedule>> siegeSchedules = new HashIntMap<>();
+    int maxSiegesInDay;
+    int minClanLevel;
+    int maxAttackers;
+    int maxDefenders;
 
     private SiegeSettings() {
 
@@ -50,6 +54,11 @@ class SiegeSettings {
                     parseCastleInfo(settings, reader, node);
                 }
             }
+            var attr = siegeConfig.getAttributes();
+            settings.maxSiegesInDay = reader.parseInt(attr, "max-in-day");
+            settings.minClanLevel = reader.parseInt(attr, "min-clan-level");
+            settings.maxAttackers = reader.parseInt(attr, "max-attackers");
+            settings.maxDefenders = reader.parseInt(attr, "max-defenders");
         }
 
         return settings;
