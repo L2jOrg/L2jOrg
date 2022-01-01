@@ -16,43 +16,41 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.engine.siege;
+package org.l2j.gameserver.data.database.data;
 
+import org.l2j.commons.database.annotation.Column;
+import org.l2j.commons.database.annotation.NonUpdatable;
+import org.l2j.commons.database.annotation.Table;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
 
 /**
  * @author JoeAlisson
  */
+@Table("siege_mercenaries")
 public class Mercenary {
 
+    @Column("mercenary")
     private int id;
+    @Column("clan_id")
+    private int clanId;
+    @NonUpdatable
     private String name;
+    @NonUpdatable
     private ClassId classId;
+    @NonUpdatable
     private boolean online;
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public ClassId getClassId() {
         return classId;
-    }
-
-    public void setClassId(ClassId classId) {
-        this.classId = classId;
     }
 
     public void setOnline(boolean online) {
@@ -68,11 +66,12 @@ public class Mercenary {
         this.name = player.getName();
     }
 
-    public static Mercenary of(Player player) {
+    public static Mercenary of(Player player, SiegeParticipant participant) {
         final var mercenary = new Mercenary();
-        mercenary.setId(player.getId());
-        mercenary.setName(player.getName());
-        mercenary.setClassId(player.getClassId());
+        mercenary.id = player.getId();
+        mercenary.name = player.getName();
+        mercenary.classId = player.getClassId();
+        mercenary.clanId = participant.getClanId();
         return mercenary;
     }
 }

@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.database.dao.CastleDAO;
 import org.l2j.gameserver.data.database.dao.SiegeDAO;
+import org.l2j.gameserver.data.database.data.Mercenary;
 import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.UserInfoType;
@@ -179,7 +180,9 @@ public class Siege extends AbstractEvent {
     void joinMercenary(Player player, Clan clan) {
         final var participant = getSiegeParticipant(clan);
         if(nonNull(participant)) {
-            participant.addMercenary(Mercenary.of(player));
+            var mercenary = Mercenary.of(player, participant);
+            participant.addMercenary(mercenary);
+            getDAO(SiegeDAO.class).save(mercenary);
         }
     }
 

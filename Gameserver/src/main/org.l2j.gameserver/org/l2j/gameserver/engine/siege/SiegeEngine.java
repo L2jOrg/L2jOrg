@@ -22,6 +22,7 @@ import io.github.joealisson.primitive.Containers;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.data.database.data.Mercenary;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.ArtifactSpawn;
@@ -207,11 +208,7 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
     }
 
     private boolean hasSiegeManagerRights(Player player, Siege siege, Clan clan) {
-        if(isNull(siege) || isNull(clan)) {
-            return false;
-        }
-
-        if (!player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE)) {
+        if(isNull(siege) || isNull(clan) || !player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE)) {
             player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
             return false;
         }

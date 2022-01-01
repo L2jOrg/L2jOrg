@@ -23,7 +23,6 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.NonUpdatable;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.gameserver.engine.siege.Mercenary;
 import org.l2j.gameserver.engine.siege.SiegeParticipantStatus;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.SiegeFlag;

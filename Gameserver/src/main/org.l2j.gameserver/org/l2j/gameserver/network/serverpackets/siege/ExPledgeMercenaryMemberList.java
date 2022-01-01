@@ -19,7 +19,7 @@
 package org.l2j.gameserver.network.serverpackets.siege;
 
 import io.github.joealisson.mmocore.WritableBuffer;
-import org.l2j.gameserver.engine.siege.Mercenary;
+import org.l2j.gameserver.data.database.data.Mercenary;
 import org.l2j.gameserver.engine.siege.Siege;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.network.GameClient;
