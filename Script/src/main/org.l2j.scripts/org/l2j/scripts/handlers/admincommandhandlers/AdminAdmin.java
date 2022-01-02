@@ -323,15 +323,9 @@ public class AdminAdmin implements IAdminCommandHandler {
 	}
 	
 	private void showMainPage(Player activeChar, String command) {
-		int mode = 0;
-		String filename;
-		try {
-			mode = Integer.parseInt(command.substring(11));
-		} catch (Exception e) {
-			LOGGER.warn(e.getMessage(), e);
-		}
+		int mode = extractMode(command);
 
-		filename = switch (mode) {
+		var filename = switch (mode) {
 			case 2 -> "game";
 			case 3 -> "effects";
 			case 4 -> "server";
@@ -342,7 +336,20 @@ public class AdminAdmin implements IAdminCommandHandler {
 		};
 		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}
-	
+
+	private int extractMode(String command) {
+		command = command.substring(11);
+		int mode = 0;
+		if(!command.isBlank()) {
+			try {
+				mode = Integer.parseInt(command);
+			} catch (Exception e) {
+				LOGGER.debug(e.getMessage(), e);
+			}
+		}
+		return mode;
+	}
+
 	private void showConfigPage(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();

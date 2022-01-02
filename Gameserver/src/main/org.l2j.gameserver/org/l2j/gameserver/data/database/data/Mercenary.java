@@ -34,10 +34,11 @@ public class Mercenary {
     private int id;
     @Column("clan_id")
     private int clanId;
+
+    @NonUpdatable
+    private int classId;
     @NonUpdatable
     private String name;
-    @NonUpdatable
-    private ClassId classId;
     @NonUpdatable
     private boolean online;
 
@@ -49,7 +50,11 @@ public class Mercenary {
         return name;
     }
 
-    public ClassId getClassId() {
+    public int getClanId() {
+        return clanId;
+    }
+
+    public int getClassId() {
         return classId;
     }
 
@@ -62,7 +67,7 @@ public class Mercenary {
     }
 
     public void update(Player player) {
-        this.classId = player.getClassId();
+        this.classId = player.getClassId().getId();
         this.name = player.getName();
     }
 
@@ -70,7 +75,7 @@ public class Mercenary {
         final var mercenary = new Mercenary();
         mercenary.id = player.getId();
         mercenary.name = player.getName();
-        mercenary.classId = player.getClassId();
+        mercenary.classId = player.getClassId().getId();
         mercenary.clanId = participant.getClanId();
         return mercenary;
     }

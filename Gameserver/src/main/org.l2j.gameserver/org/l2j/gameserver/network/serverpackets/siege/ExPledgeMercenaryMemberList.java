@@ -58,7 +58,7 @@ public class ExPledgeMercenaryMemberList extends ServerPacket {
             buffer.writeInt(mercenary.getId() == client.getPlayer().getObjectId());
             buffer.writeInt(nonNull(World.getInstance().findPlayer(mercenary.getId()))); // TODO improve it
             buffer.writeSizedString(mercenary.getName());
-            buffer.writeInt(mercenary.getClassId().getId());
+            buffer.writeInt(mercenary.getClassId());
         }
     }
 }

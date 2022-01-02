@@ -69,6 +69,27 @@ public class Siege extends AbstractEvent {
     public Siege(Castle castle) {
         this.castle = requireNonNull(castle);
         initOwner(castle);
+        loadParticipants();
+    }
+
+    private void loadParticipants() {
+        getDAO(SiegeDAO.class).loadParticipants(castle.getId()).forEach(this::registerParticipant);
+        getDAO(SiegeDAO.class).loadMercenaries(castle.getId()).forEach(this::registerMercenary);
+    }
+
+    private void registerMercenary(Mercenary mercenary) {
+        if(attackers.containsKey(mercenary.getClanId())) {
+            attackers.get(mercenary.getClanId()).addMercenary(mercenary);
+        } else if(defenders.containsKey(mercenary.getClanId())) {
+            defenders.get(mercenary.getClanId()).addMercenary(mercenary);
+        }
+    }
+
+    private void registerParticipant(SiegeParticipant participant) {
+        switch (participant.getStatus()) {
+            case OWNER, APPROVED, WAITING, DECLINED -> defenders.put(participant.getClanId(), participant);
+            case ATTACKER -> attackers.put(participant.getClanId(), participant);
+        }
     }
 
     private void initOwner(Castle castle) {
@@ -86,15 +107,15 @@ public class Siege extends AbstractEvent {
     }
 
     void registerAttacker(Clan clan) {
-        var siegeClan = new SiegeParticipant(clan.getId(), SiegeParticipantStatus.ATTACKER, castle.getId());
-        attackers.put(clan.getId(), siegeClan);
-        getDAO(SiegeDAO.class).save(siegeClan);
+        var participant = new SiegeParticipant(clan.getId(), SiegeParticipantStatus.ATTACKER, castle.getId());
+        attackers.put(clan.getId(), participant);
+        getDAO(SiegeDAO.class).save(participant);
     }
 
     void registerDefender(Clan clan) {
-        var siegeClan = new SiegeParticipant(clan.getId(), SiegeParticipantStatus.WAITING, castle.getId());
-        defenders.put(clan.getId(), siegeClan);
-        getDAO(SiegeDAO.class).save(siegeClan);
+        var participant = new SiegeParticipant(clan.getId(), SiegeParticipantStatus.WAITING, castle.getId());
+        defenders.put(clan.getId(), participant);
+        getDAO(SiegeDAO.class).save(participant);
     }
 
     void removeSiegeClan(Clan clan) {

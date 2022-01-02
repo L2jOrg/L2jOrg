@@ -22,6 +22,8 @@ import io.github.joealisson.primitive.IntKeyIntValue;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 import org.l2j.gameserver.data.database.data.CastleSiegeGuardData;
+import org.l2j.gameserver.data.database.data.Mercenary;
+import org.l2j.gameserver.data.database.data.SiegeParticipant;
 
 import java.util.List;
 
@@ -36,6 +38,7 @@ public interface SiegeDAO extends DAO<Object> {
     @Query("DELETE FROM castle_siege_guards WHERE castleId = :castleId: AND isHired = 1")
     void deleteHiredGuardsOfCastle(int castleId);
 
+
     @Query("SELECT EXISTS(SELECT 1 FROM siege_participants WHERE clan_id=:clanId: AND castle_id=:castleId:)")
     boolean isRegistered(int clanId, int castleId);
 
@@ -47,4 +50,13 @@ public interface SiegeDAO extends DAO<Object> {
 
     @Query("SELECT tower_index, level FROM castle_trap_upgrade WHERE castle_id=:castleId:")
     List<IntKeyIntValue> loadTrapsUpgrade(int castleId);
+
+    @Query("SELECT * FROM siege_participants WHERE castle_id = :castleId:")
+    List<SiegeParticipant> loadParticipants(int castleId);
+
+    @Query("""
+       SELECT sm.*, c.char_name as name, c.classid as classId
+       FROM siege_mercenaries sm JOIN characters c ON sm.mercenary = c.charId
+       WHERE sm.castle_id = :castleId:""")
+    List<Mercenary> loadMercenaries(int castleId);
 }
