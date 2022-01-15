@@ -397,8 +397,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             }
         }
 
-        if (activeChar.isInSiege()) {
-            relation |= 0x80; // In siege
+        var siegeState = activeChar.getSiegeState();
+        if(siegeState > 0) {
+            relation |= 0x80;
+            if(siegeState > 1) {
+                relation |= 0x100;
+            }
         }
 
         return relation;

@@ -132,10 +132,8 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
     @ScheduleTarget
     public void onPreparationStart() {
-        filterScheduledSieges();
-        if(!sieges.isEmpty()) {
-            loginListener = new ConsumerEventListener(null, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
-            Listeners.players().addListener(loginListener);
+        if(filterScheduledSieges()) {
+            listenOnPlayerLogin();
 
             for (var siege: sieges.values()) {
                 siege.setState(SiegeState.PREPARATION);
@@ -146,7 +144,12 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
         }
     }
 
-    private void filterScheduledSieges() {
+    private void listenOnPlayerLogin() {
+        loginListener = new ConsumerEventListener(null, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this);
+        Listeners.players().addListener(loginListener);
+    }
+
+    private boolean filterScheduledSieges() {
         var now = LocalDateTime.now();
         sieges = new HashIntMap<>();
 
@@ -161,6 +164,7 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
                 }
             }
         }
+        return !sieges.isEmpty();
     }
 
     private void onPlayerLogin(OnPlayerLogin event) {
@@ -172,7 +176,14 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
     @ScheduleTarget
     public void onSiegeStart() {
+        if(!hasScheduledSiegesFiltered() && filterScheduledSieges()) {
+            listenOnPlayerLogin();
+        }
         sieges.values().forEach(this::startSiege);
+    }
+
+    private boolean hasScheduledSiegesFiltered() {
+        return !sieges.equals(Containers.emptyIntMap());
     }
 
     private void startSiege(Siege siege) {
@@ -186,10 +197,13 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
 
     @ScheduleTarget
     public void onSiegeStop() {
-        if(nonNull(loginListener)) {
+        if (nonNull(loginListener)) {
             Listeners.players().removeListener(loginListener);
             loginListener = null;
         }
+        sieges.values().forEach(Siege::unregisterParticipants);
+        sieges = Containers.emptyIntMap();
+
     }
 
     public void registerAttacker(Player player, int castleId) {

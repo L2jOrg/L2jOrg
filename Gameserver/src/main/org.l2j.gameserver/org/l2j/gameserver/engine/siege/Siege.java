@@ -32,6 +32,10 @@ import org.l2j.gameserver.model.actor.instance.FlameTower;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
+import org.l2j.gameserver.model.events.EventType;
+import org.l2j.gameserver.model.events.Listeners;
+import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
@@ -43,6 +47,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.function.Consumer;
 
 import static java.util.Objects.*;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
@@ -65,6 +70,7 @@ public class Siege extends AbstractEvent {
 
     private Clan owner;
     private SiegeState state = SiegeState.NONE;
+    private ConsumerEventListener onPlayerLoginListener;
 
     public Siege(Castle castle) {
         this.castle = requireNonNull(castle);
@@ -90,6 +96,14 @@ public class Siege extends AbstractEvent {
             case OWNER, APPROVED, WAITING, DECLINED -> defenders.put(participant.getClanId(), participant);
             case ATTACKER -> attackers.put(participant.getClanId(), participant);
         }
+    }
+
+    public void unregisterParticipants() {
+        defenders.clear();
+        attackers.clear();
+        getDAO(SiegeDAO.class).removeParticipants();
+        Listeners.players().removeListener(onPlayerLoginListener);
+        onPlayerLoginListener = null;
     }
 
     private void initOwner(Castle castle) {
@@ -335,23 +349,38 @@ public class Siege extends AbstractEvent {
     }
 
     private void updateParticipantState() {
-        for (SiegeParticipant participant : attackers.values()) {
-            var clan = ClanEngine.getInstance().getClan(participant.getClanId());
-            clan.forEachOnlineMember(this::setAttackerState);
-        }
-
+        var listeners = Listeners.players();
+        onPlayerLoginListener = new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) e -> onPlayLogin(e.getPlayer()), this);
+        listeners.addListener(onPlayerLoginListener);
         for (SiegeParticipant participant : defenders.values()) {
             var clan = ClanEngine.getInstance().getClan(participant.getClanId());
             clan.forEachOnlineMember(this::setDefenderState);
         }
+
+        for (SiegeParticipant participant : attackers.values()) {
+            var clan = ClanEngine.getInstance().getClan(participant.getClanId());
+            clan.forEachOnlineMember(this::setAttackerState);
+        }
+    }
+
+    private void onPlayLogin(Player player) {
+        var clan = player.getClan();
+        if(clan == null) {
+            return;
+        }
+        if(defenders.containsKey(clan.getId())) {
+            setDefenderState(player);
+        } else if(attackers.containsKey(clan.getId())) {
+            setAttackerState(player);
+        }
     }
 
     private void setDefenderState(Player player) {
-        setSiegeState(player, (byte) 2);
+        setSiegeState(player, (byte) 1);
     }
 
     private void setAttackerState(Player player) {
-        setSiegeState(player, (byte) 1);
+        setSiegeState(player, (byte) 2);
     }
 
     // TODO change magic to enum

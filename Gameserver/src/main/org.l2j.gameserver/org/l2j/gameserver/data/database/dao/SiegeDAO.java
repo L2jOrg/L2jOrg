@@ -59,4 +59,7 @@ public interface SiegeDAO extends DAO<Object> {
        FROM siege_mercenaries sm JOIN characters c ON sm.mercenary = c.charId
        WHERE sm.castle_id = :castleId:""")
     List<Mercenary> loadMercenaries(int castleId);
+
+    @Query("TRUNCATE TABLE siege_participants")
+    void removeParticipants();
 }

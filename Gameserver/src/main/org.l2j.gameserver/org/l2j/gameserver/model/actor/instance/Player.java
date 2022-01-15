@@ -1283,7 +1283,7 @@ public final class Player extends Playable {
                 result |= RelationChanged.RELATION_ALLY;
             }
 
-            if (siegeState == 1) {
+            if (siegeState == 2) {
                 result |= RelationChanged.RELATION_ATTACKER;
             }
         }
