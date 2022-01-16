@@ -20,6 +20,7 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.MountType;
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
@@ -70,6 +71,7 @@ public class SiegeZone extends Zone {
                 final Player player = creature.getActingPlayer();
                 if (player.isRegisteredOnThisSiegeField(castleId)) {
                     player.setIsInSiege(true); // in siege
+                    player.broadcastUserInfo(UserInfoType.RELATION);
                     Siegable siegable;
                     if ((siegable = getSettings().getSiege()).giveFame() && (siegable.getFameFrequency() > 0)) {
                         player.startFameTask(siegable.getFameFrequency() * 1000L, siegable.getFameAmount());
@@ -117,6 +119,7 @@ public class SiegeZone extends Zone {
             final Player player = creature.getActingPlayer();
             player.stopFameTask();
             player.setIsInSiege(false);
+            player.broadcastUserInfo(UserInfoType.RELATION);
         }
     }
 

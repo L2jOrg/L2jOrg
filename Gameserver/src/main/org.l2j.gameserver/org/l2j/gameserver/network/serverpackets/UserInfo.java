@@ -379,10 +379,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
         }
     }
 
-    private int calculateRelation(Player activeChar) {
+    private int calculateRelation(Player player) {
         int relation = 0;
-        final Party party = activeChar.getParty();
-        final Clan clan = activeChar.getClan();
+        final Party party = player.getParty();
+        final Clan clan = player.getClan();
         if (party != null) {
             relation |= 0x08; // Party member
             if (party.getLeader() == this.player) {
@@ -392,19 +392,17 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if (clan != null) {
             relation |= 0x20; // Clan member
-            if (clan.getLeaderId() == activeChar.getObjectId()) {
+            if (clan.getLeaderId() == player.getObjectId()) {
                 relation |= 0x40; // Clan leader
             }
         }
 
-        var siegeState = activeChar.getSiegeState();
-        if(siegeState > 0) {
+        if(player.isInSiege()) {
             relation |= 0x80;
-            if(siegeState > 1) {
-                relation |= 0x100;
+            if(player.getSiegeState() > 1) {
+                relation |= 0x100; // attacker
             }
         }
-
         return relation;
     }
 }
