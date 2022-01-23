@@ -142,7 +142,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import static java.lang.Math.max;
 import static java.lang.Math.min;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -1274,13 +1273,13 @@ public final class Player extends Playable {
 
     private int siegeRelation(Player target) {
         int result = 0;
-        if (siegeState != 0) {
+        if (isInSiege) {
             result |= RelationChanged.RELATION_INSIEGE;
-
-            if (getSiegeState() != target.getSiegeState()) {
-                result |= RelationChanged.RELATION_ENEMY;
-            } else {
+            if(clan.isMember(target.getObjectId()) ||
+                    (target.getClan() != null && clan.isAlly(target.getClan()))) {
                 result |= RelationChanged.RELATION_ALLY;
+            } else {
+                result |= RelationChanged.RELATION_ENEMY;
             }
 
             if (siegeState == 2) {
@@ -1675,12 +1674,16 @@ public final class Player extends Playable {
     }
 
     public void updateRelation(Player player) {
+        updateRelation(player, false);
+    }
+
+    public void updateRelation(Player player, boolean force) {
         if (!isVisibleFor(player)) {
             return;
         }
         int relation = getRelation(player);
         int oldRelation = getKnownRelations().getOrDefault(player.getObjectId(), -1);
-        if (oldRelation == -1 || oldRelation != relation) {
+        if (force || oldRelation == -1 || oldRelation != relation) {
             sendRelationChanged(player, relation);
             getKnownRelations().put(player.getObjectId(), relation);
         }
@@ -7211,8 +7214,8 @@ public final class Player extends Playable {
             player.sendPacket(new ExCharInfo(this));
         }
 
-        updateRelation(player);
-        player.updateRelation(this);
+        updateRelation(player, true);
+        player.updateRelation(this, true);
 
         switch (privateStoreType) {
             case BUY -> player.sendPacket(new PrivateStoreMsgBuy(this));
