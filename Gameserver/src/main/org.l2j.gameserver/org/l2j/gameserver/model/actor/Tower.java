@@ -24,7 +24,6 @@ import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
-import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class is a super-class for ControlTower and FlameTower.
@@ -39,14 +38,21 @@ public abstract class Tower extends Npc {
 
     @Override
     public boolean canBeAttacked() {
-        // Attackable during siege by attacker only
-        return (getCastle() != null) && (getCastle().getId() > 0) && getCastle().getSiege().isInProgress();
+        var castle = getCastle();
+        if(castle == null) {
+            return false;
+        }
+        var siegeZone = castle.getSiegeZone();
+        return siegeZone != null && siegeZone.isActive();
     }
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        // Attackable during siege by attacker only
-        return GameUtils.isPlayer(attacker) && (getCastle() != null) && (getCastle().getId() > 0) && getCastle().getSiege().isInProgress() && getCastle().getSiege().checkIsAttacker(attacker.getClan());
+        if (!canBeAttacked()) {
+            return false;
+        }
+        var castle = getCastle();
+        return attacker instanceof Player player && player.isInSiege(castle.getId());
     }
 
     @Override

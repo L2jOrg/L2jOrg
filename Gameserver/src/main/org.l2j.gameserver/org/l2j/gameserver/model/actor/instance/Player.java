@@ -7007,6 +7007,10 @@ public final class Player extends Playable {
         return isInSiege;
     }
 
+    public boolean isInSiege(int castleId) {
+        return isInSiege && siegeSide == castleId;
+    }
+
     /**
      * @return {@code true} if the player is participating on a Hideout Siege, otherwise {@code false}.
      */

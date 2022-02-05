@@ -40,6 +40,7 @@ class SiegeSettings {
     final IntMap<ArtifactSpawn> castleLords = new HashIntMap<>();
     final IntMap<Collection<ArtifactSpawn>> controlTowers = new HashIntMap<>();
     final IntMap<Collection<ArtifactSpawn>> flameTowers = new HashIntMap<>();
+    final IntMap<Collection<ArtifactSpawn>> holyArtifacts = new HashIntMap<>();
     int maxSiegesInDay;
     int minClanLevel;
     int maxAttackers;
@@ -82,6 +83,7 @@ class SiegeSettings {
                 case "castle-lord" -> parseCastleLord(castleId, reader, node);
                 case "control-tower" -> parseControlTower(castleId, reader, node);
                 case "flame-tower" -> parseFlameTower(castleId, reader, node);
+                case "holy-artifact" -> parseHolyArtifact(castleId, reader, node);
             }
         }
         var days = reader.parseEnumSet(castleNode.getFirstChild(), DayOfWeek.class);
@@ -106,5 +108,11 @@ class SiegeSettings {
         var towerId = reader.parseInt(controlNode.getAttributes(), "id");
         var location = reader.parseLocation(controlNode);
         controlTowers.computeIfAbsent(castleId, id -> new ArrayList<>()).add(new ArtifactSpawn(towerId, location));
+    }
+
+    private void parseHolyArtifact(int castleId, GameXmlReader reader, Node node) {
+        var id = reader.parseInt(node.getAttributes(), "id");
+        var location = reader.parseLocation(node);
+        holyArtifacts.computeIfAbsent(castleId, k -> new ArrayList<>()).add(new ArtifactSpawn(id, location));
     }
 }

@@ -26,7 +26,10 @@ import org.l2j.gameserver.data.database.data.Mercenary;
 import org.l2j.gameserver.data.database.data.SiegeParticipant;
 import org.l2j.gameserver.engine.clan.ClanEngine;
 import org.l2j.gameserver.enums.UserInfoType;
-import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.ArtifactSpawn;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.Spawn;
+import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.ControlTower;
 import org.l2j.gameserver.model.actor.instance.FlameTower;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -34,6 +37,7 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.eventengine.AbstractEvent;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.Listeners;
+import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.interfaces.ILocational;
@@ -71,6 +75,7 @@ public class Siege extends AbstractEvent {
     private Clan owner;
     private SiegeState state = SiegeState.NONE;
     private ConsumerEventListener onPlayerLoginListener;
+    private ConsumerEventListener onCastleLordDie;
 
     public Siege(Castle castle) {
         this.castle = requireNonNull(castle);
@@ -285,7 +290,8 @@ public class Siege extends AbstractEvent {
         spawnSiegeObjects();
         var zone = castle.getSiegeZone();
         zone.setIsActive(true);
-        Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.17"));
+        Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()),
+                PlaySound.sound("systemmsg_eu.17"));
     }
 
     private void spawnSiegeObjects() {
@@ -301,10 +307,33 @@ public class Siege extends AbstractEvent {
             try {
                 var spawn = new Spawn(lord.getId());
                 spawn.setLocation(lord.getLocation());
+                var template = spawn.getTemplate();
+                onCastleLordDie = new ConsumerEventListener(template, EventType.ON_CREATURE_DEATH, (Consumer<OnCreatureDeath>) e -> onCastleLordDie(e), this);
+                spawn.getTemplate().addListener(onCastleLordDie);
                 spawn.doSpawn();
             } catch (ClassNotFoundException | NoSuchMethodException e) {
-                e.printStackTrace();
+                LOGGER.error(e.getMessage(), e);
             }
+        }
+    }
+
+    private void onCastleLordDie(OnCreatureDeath evt) {
+        var castleLord = evt.getTarget();
+        castleLord.getTemplate().removeListener(onCastleLordDie);
+        spawnHolyArtifacts();
+    }
+
+    private void spawnHolyArtifacts() {
+        SiegeEngine.getInstance().holyArtifactsOf(castle).forEach(this::spawnHolyArtifacts);
+    }
+
+    private void spawnHolyArtifacts(ArtifactSpawn artifact) {
+        try {
+            var spawn = new Spawn(artifact.getId());
+            spawn.setLocation(artifact.getLocation());
+            spawn.doSpawn();
+        } catch (ClassNotFoundException | NoSuchMethodException e) {
+            LOGGER.error(e.getMessage(), e);
         }
     }
 

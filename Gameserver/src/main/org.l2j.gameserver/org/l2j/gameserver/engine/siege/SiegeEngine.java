@@ -585,6 +585,10 @@ public class SiegeEngine extends AbstractEventManager<Siege> {
         return settings.flameTowers.getOrDefault(castle.getId(), Collections.emptyList());
     }
 
+    public Collection<ArtifactSpawn> holyArtifactsOf(Castle castle) {
+        return settings.holyArtifacts.getOrDefault(castle.getId(), Collections.emptyList());
+    }
+
     ArtifactSpawn castleLordOf(Castle castle) {
         return settings.castleLords.get(castle.getId());
     }
