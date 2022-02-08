@@ -1155,7 +1155,6 @@ public class Clan implements IIdentifiable, INamable {
      * Change the ally crest. If crest id is 0, crest is removed. New crest id is saved to database.
      *
      * @param crestId      if 0, crest is removed, else new crest id is set and saved to database
-     * @param onlyThisClan
      */
     public void changeAllyCrest(int crestId, boolean onlyThisClan) {
 
@@ -1270,12 +1269,12 @@ public class Clan implements IIdentifiable, INamable {
         return _siegeDeaths.get();
     }
 
-    public int addSiegeKill() {
-        return _siegeKills.incrementAndGet();
+    public void addSiegeKill() {
+        _siegeKills.incrementAndGet();
     }
 
-    public int addSiegeDeath() {
-        return _siegeDeaths.incrementAndGet();
+    public void addSiegeDeath() {
+        _siegeDeaths.incrementAndGet();
     }
 
     public void clearSiegeKills() {
@@ -1405,7 +1404,7 @@ public class Clan implements IIdentifiable, INamable {
             if (player.isClanLeader()) {
                 setLeader(member);
 
-                if(data.getLevel() > 3) {
+                if(data.getLevel() >= 3) {
                     SiegeManager.getInstance().addSiegeSkills(player);
                 }
             }

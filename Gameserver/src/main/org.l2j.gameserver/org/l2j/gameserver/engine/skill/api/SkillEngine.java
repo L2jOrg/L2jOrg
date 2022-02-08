@@ -75,8 +75,7 @@ public class SkillEngine extends EffectParser {
     }
 
     public void addSiegeSkills(Player player) {
-        player.addSkill(CommonSkill.IMPRIT_OF_LIGHT.getSkill(), false);
-        player.addSkill(CommonSkill.IMPRIT_OF_DARKNESS.getSkill(), false);
+        player.addSkill(CommonSkill.SEAL_OF_RULER.getSkill(), false);
         player.addSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill(), false);
         player.addSkill(CommonSkill.BUILD_ADVANCED_HEADQUARTERS.getSkill(), false);
 
@@ -87,8 +86,7 @@ public class SkillEngine extends EffectParser {
     }
 
     public void removeSiegeSkills(Player player) {
-        player.removeSkill(CommonSkill.IMPRIT_OF_LIGHT.getSkill());
-        player.removeSkill(CommonSkill.IMPRIT_OF_DARKNESS.getSkill());
+        player.removeSkill(CommonSkill.SEAL_OF_RULER.getSkill());
         player.removeSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill());
         player.removeSkill(CommonSkill.BUILD_ADVANCED_HEADQUARTERS.getSkill());
         player.removeSkill(CommonSkill.OUTPOST_CONSTRUCTION.getSkill());
