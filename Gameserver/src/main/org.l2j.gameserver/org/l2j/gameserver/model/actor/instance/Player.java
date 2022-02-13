@@ -4255,7 +4255,7 @@ public final class Player extends Playable {
         if (clan == null) {
             return false;
         }
-        return getObjectId() == clan.getLeaderId();
+        return objectId == clan.getLeaderId();
     }
 
     /**

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.world.zone.type;
+package org.l2j.gameserver.engine.siege;
 
 import org.l2j.gameserver.engine.skill.api.SkillEngine;
 import org.l2j.gameserver.enums.MountType;
@@ -24,10 +24,13 @@ import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Artefact;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.transform.Transform;
 import org.l2j.gameserver.model.entity.Siegable;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.settings.FeatureSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
@@ -47,6 +50,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public class SiegeZone extends Zone {
     private static final int DISMOUNT_DELAY = 5;
     private final int castleId;
+    private Siege siege;
 
     public SiegeZone(int id, int castleId) {
         super(id);
@@ -169,20 +173,27 @@ public class SiegeZone extends Zone {
         }
     }
 
-    public int getSiegeObjectId() {
-        return castleId;
-    }
-
     public boolean isActive() {
-        return getSettings().isActiveSiege();
+        return siege != null;
     }
 
-    public void setIsActive(boolean val) {
-        getSettings().setActiveSiege(val);
+    void setSiege(Siege siege) {
+        this.siege = siege;
     }
 
-    public void setSiegeInstance(Siegable siege) {
-        getSettings().setSiege(siege);
+    public boolean isAttacker(Player player) {
+        var clan = player.getClan();
+        return siege != null && clan != null && siege.isAttacker(clan);
+    }
+
+    public boolean hasHolyArtifact(Artefact artifact) {
+        return siege.hasHolyArtifact(artifact);
+    }
+
+    public void broadcastPacketToDefenders(ServerPacket packet) {
+        if(siege != null) {
+            siege.broadcastToDefenders(packet);
+        }
     }
 
     public static final class Settings extends AbstractZoneSettings {

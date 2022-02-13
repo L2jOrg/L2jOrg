@@ -2,6 +2,7 @@ import org.l2j.gameserver.data.database.dao.GlobalVariablesDAO;
 import org.l2j.gameserver.data.database.dao.ReuseInfoDAO;
 import org.l2j.gameserver.data.database.dao.SkillsDAO;
 import org.l2j.gameserver.engine.item.container.listener.WeaponListener;
+import org.l2j.gameserver.engine.siege.SiegeZone;
 import org.l2j.gameserver.world.zone.NaiveZone;
 import org.l2j.gameserver.world.zone.type.*;
 
@@ -133,6 +134,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.engine.mail;
     exports org.l2j.gameserver.network.serverpackets.skill;
     exports org.l2j.gameserver.engine.item.drop;
+    exports org.l2j.gameserver.engine.siege;
 
     uses org.l2j.gameserver.api.item.PlayerInventoryListener;
     provides org.l2j.gameserver.api.item.PlayerInventoryListener

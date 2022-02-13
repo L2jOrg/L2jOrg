@@ -18,64 +18,71 @@
  */
 package org.l2j.scripts.handlers.skillconditionhandlers;
 
+import org.l2j.gameserver.engine.siege.SiegeZone;
 import org.l2j.gameserver.engine.skill.api.Skill;
 import org.l2j.gameserver.engine.skill.api.SkillCondition;
 import org.l2j.gameserver.engine.skill.api.SkillConditionFactory;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.actor.instance.Artefact;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.network.SystemMessageId;
-import org.l2j.gameserver.network.serverpackets.SystemMessage;
-import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.w3c.dom.Node;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static java.lang.Math.abs;
+import static org.l2j.gameserver.network.serverpackets.SystemMessage.getSystemMessage;
 
 /**
  * @author UnAfraid
  * @author JoeAlisson
  */
 public class PossessHolythingSkillCondition implements SkillCondition {
+
 	private PossessHolythingSkillCondition() {
+		// singleton
 	}
 	
 	@Override
-	public boolean canUse(Creature caster, Skill skill, WorldObject target)
-	{
-		if (!isPlayer(caster))
-		{
+	public boolean canUse(Creature caster, Skill skill, WorldObject target) {
+		if(!(caster instanceof Player player) || !checkPlayerConditions(player)) {
 			return false;
 		}
-		
-		final Player player = caster.getActingPlayer();
-		boolean canTakeCastle = true;
-		if (player.isAlikeDead() || !player.isClanLeader())
-		{
-			canTakeCastle = false;
-		}
-		
-		final Castle castle = CastleManager.getInstance().getCastle(player);
-		SystemMessage sm;
-		if ((castle == null) || (castle.getId() <= 0) || !castle.getSiege().isInProgress() || (castle.getSiege().getAttackerClan(player.getClan()) == null))
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addSkillName(skill);
-			player.sendPacket(sm);
-			canTakeCastle = false;
-		}
-		else if (!castle.getArtefacts().contains(target))
-		{
+
+		return checkSiegeConditions(skill, target, player);
+	}
+
+	private boolean checkPlayerConditions(Player player) {
+		return !player.isAlikeDead() && player.isClanLeader();
+	}
+
+	private boolean checkSiegeConditions(Skill skill, WorldObject target, Player player) {
+		var castle = CastleManager.getInstance().getCastle(player);
+		var siegeZone = castle.getSiegeZone();
+
+		if (!checkArtifact(target, siegeZone)) {
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
-			canTakeCastle = false;
+			return false;
 		}
-		else if (!GameUtils.checkIfInRange(skill.getCastRange(), player, target, true) || (Math.abs(player.getZ() - target.getZ()) > 40))
-		{
-			player.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
-			canTakeCastle = false;
+
+		return checkSiegeAttacker(skill, target, player, siegeZone);
+	}
+
+	private boolean checkSiegeAttacker(Skill skill, WorldObject target, Player player, SiegeZone siegeZone) {
+		if (!siegeZone.isAttacker(player)) {
+			player.sendPacket(getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(skill));
+			return false;
 		}
-		return canTakeCastle;
+		return true;
+	}
+
+	private boolean checkArtifact(WorldObject target, SiegeZone siegeZone) {
+		if(!(target instanceof Artefact artefact)) {
+			return false;
+		}
+
+		return siegeZone != null && siegeZone.hasHolyArtifact(artefact);
 	}
 
 	public static final class Factory extends SkillConditionFactory {

@@ -30,6 +30,8 @@ import org.l2j.gameserver.model.ArtifactSpawn;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.TeleportWhereType;
+import org.l2j.gameserver.model.actor.Npc;
+import org.l2j.gameserver.model.actor.instance.Artefact;
 import org.l2j.gameserver.model.actor.instance.ControlTower;
 import org.l2j.gameserver.model.actor.instance.FlameTower;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -43,14 +45,13 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Broadcast;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
 
 import static java.util.Objects.*;
@@ -71,6 +72,7 @@ public class Siege extends AbstractEvent {
     private final IntMap<SiegeParticipant> defenders = new CHashIntMap<>();
     private final List<ControlTower> controlTowers = new ArrayList<>();
     private final List<FlameTower> flameTowers = new ArrayList<>();
+    private final Set<Npc> holyArtifacts = new HashSet<>(1);
 
     private Clan owner;
     private SiegeState state = SiegeState.NONE;
@@ -289,7 +291,7 @@ public class Siege extends AbstractEvent {
 
         spawnSiegeObjects();
         var zone = castle.getSiegeZone();
-        zone.setIsActive(true);
+        zone.setSiege(this);
         Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()),
                 PlaySound.sound("systemmsg_eu.17"));
     }
@@ -307,10 +309,9 @@ public class Siege extends AbstractEvent {
             try {
                 var spawn = new Spawn(lord.getId());
                 spawn.setLocation(lord.getLocation());
-                var template = spawn.getTemplate();
-                onCastleLordDie = new ConsumerEventListener(template, EventType.ON_CREATURE_DEATH, (Consumer<OnCreatureDeath>) e -> onCastleLordDie(e), this);
-                spawn.getTemplate().addListener(onCastleLordDie);
-                spawn.doSpawn();
+                var castleLord = spawn.doSpawn();
+                onCastleLordDie = new ConsumerEventListener(castleLord, EventType.ON_CREATURE_DEATH, (Consumer<OnCreatureDeath>) this::onCastleLordDie, this);
+                castleLord.addListener(onCastleLordDie);
             } catch (ClassNotFoundException | NoSuchMethodException e) {
                 LOGGER.error(e.getMessage(), e);
             }
@@ -319,7 +320,7 @@ public class Siege extends AbstractEvent {
 
     private void onCastleLordDie(OnCreatureDeath evt) {
         var castleLord = evt.getTarget();
-        castleLord.getTemplate().removeListener(onCastleLordDie);
+        castleLord.removeListener(onCastleLordDie);
         spawnHolyArtifacts();
     }
 
@@ -331,7 +332,8 @@ public class Siege extends AbstractEvent {
         try {
             var spawn = new Spawn(artifact.getId());
             spawn.setLocation(artifact.getLocation());
-            spawn.doSpawn();
+            holyArtifacts.add(spawn.doSpawn());
+
         } catch (ClassNotFoundException | NoSuchMethodException e) {
             LOGGER.error(e.getMessage(), e);
         }
@@ -450,5 +452,16 @@ public class Siege extends AbstractEvent {
 
     boolean hasAttackers() {
         return !attackers.isEmpty();
+    }
+
+    boolean hasHolyArtifact(Artefact artifact) {
+        return holyArtifacts.contains(artifact);
+    }
+
+    public void broadcastToDefenders(ServerPacket packet) {
+        for (var defender : defenders.values()) {
+            var clan = ClanEngine.getInstance().getClan(defender.getClanId());
+            clan.forEachOnlineMember(packet::sendTo);
+        }
     }
 }

@@ -56,7 +56,7 @@ import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.zone.ZoneEngine;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.ResidenceTeleportZone;
-import org.l2j.gameserver.world.zone.type.SiegeZone;
+import org.l2j.gameserver.engine.siege.SiegeZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

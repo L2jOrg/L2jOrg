@@ -237,8 +237,6 @@ public class Siege implements Siegable {
             SiegeGuardManager.getInstance().deleteTickets(getCastle().getId());
 
             var zone = castle.getSiegeZone();
-            zone.setSiegeInstance(this);
-            zone.setIsActive(true);
             zone.updateZoneStatusForCharactersInside();
 
             Broadcast.toAllOnlinePlayers(getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED).addCastleId(castle.getId()), PlaySound.sound("systemmsg_eu.17"));
@@ -466,9 +464,7 @@ public class Siege implements Siegable {
             castle.spawnDoor();
 
             var zone = castle.getSiegeZone();
-            zone.setIsActive(false);
             zone.updateZoneStatusForCharactersInside();
-            zone.setSiegeInstance(null);
 
             EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeFinish(this), getCastle());
         }
