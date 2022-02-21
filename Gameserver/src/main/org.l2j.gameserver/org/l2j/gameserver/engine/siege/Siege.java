@@ -325,10 +325,7 @@ public class Siege extends AbstractEvent {
     }
 
     private void spawnHolyArtifacts() {
-        SiegeEngine.getInstance().holyArtifactsOf(castle).forEach(this::spawnHolyArtifacts);
-    }
-
-    private void spawnHolyArtifacts(ArtifactSpawn artifact) {
+        var artifact = SiegeEngine.getInstance().holyArtifactOf(castle);
         try {
             var spawn = new Spawn(artifact.getId());
             spawn.setLocation(artifact.getLocation());

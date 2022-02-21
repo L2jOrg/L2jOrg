@@ -145,11 +145,11 @@ public final class Castle extends AbstractResidence {
         return null;
     }
 
-    public synchronized void engrave(Clan clan, WorldObject target, CastleSide side) {
+    public synchronized void engrave(Clan clan, WorldObject target) {
         if (!(target instanceof Artefact) || !artefacts.contains(target)) {
             return;
         }
-        setSide(side);
+
         setOwner(clan);
         getSiege().announceToPlayer(getSystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCEEDED_IN_S2).addString(clan.getName()).addString(getName()), true);
     }

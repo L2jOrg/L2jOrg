@@ -36,16 +36,13 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author JoeAlisson
  */
 public final class TakeCastle extends AbstractEffect {
-    private final CastleSide side;
 
-    private TakeCastle(StatsSet params)
-    {
-        side = params.getEnum("side", CastleSide.class);
+    private TakeCastle() {
+        //singleton
     }
 
     @Override
-    public boolean isInstant()
-    {
+    public boolean isInstant() {
         return true;
     }
 
@@ -56,19 +53,19 @@ public final class TakeCastle extends AbstractEffect {
         }
 
         final Castle castle = CastleManager.getInstance().getCastle(effector);
-        castle.engrave(effector.getClan(), effected, side);
+        castle.engrave(effector.getClan(), effected);
     }
 
     public static class Factory implements SkillEffectFactory {
 
         @Override
         public AbstractEffect create(StatsSet data) {
-            return new TakeCastle(data);
+            return new TakeCastle();
         }
 
         @Override
         public String effectName() {
-            return "take-castle";
+            return "TakeCastle";
         }
     }
 }

@@ -40,7 +40,7 @@ class SiegeSettings {
     final IntMap<ArtifactSpawn> castleLords = new HashIntMap<>();
     final IntMap<Collection<ArtifactSpawn>> controlTowers = new HashIntMap<>();
     final IntMap<Collection<ArtifactSpawn>> flameTowers = new HashIntMap<>();
-    final IntMap<Collection<ArtifactSpawn>> holyArtifacts = new HashIntMap<>();
+    final IntMap<ArtifactSpawn> holyArtifacts = new HashIntMap<>();
     int maxSiegesInDay;
     int minClanLevel;
     int maxAttackers;
@@ -113,6 +113,6 @@ class SiegeSettings {
     private void parseHolyArtifact(int castleId, GameXmlReader reader, Node node) {
         var id = reader.parseInt(node.getAttributes(), "id");
         var location = reader.parseLocation(node);
-        holyArtifacts.computeIfAbsent(castleId, k -> new ArrayList<>()).add(new ArtifactSpawn(id, location));
+        holyArtifacts.put(castleId, new ArtifactSpawn(id, location));
     }
 }
