@@ -19,6 +19,7 @@
  */
 package org.l2j.scripts.handlers.admincommandhandlers;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.engine.olympiad.Olympiad;
 import org.l2j.gameserver.enums.ChatType;
@@ -39,6 +40,7 @@ import org.slf4j.LoggerFactory;
 import java.util.StringTokenizer;
 
 import static org.l2j.commons.util.Util.isDigit;
+import static org.l2j.commons.util.Util.isInteger;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -75,7 +77,7 @@ public class AdminAdmin implements IAdminCommandHandler {
 		"admin_gmon",
 		"admin_worldchat",
 	};
-	
+
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar)
 	{
@@ -125,7 +127,7 @@ public class AdminAdmin implements IAdminCommandHandler {
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
-			
+
 			final Player target = isPlayer(activeChar.getTarget()) ? activeChar.getTarget().getActingPlayer() : activeChar;
 			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
@@ -136,7 +138,7 @@ public class AdminAdmin implements IAdminCommandHandler {
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
-			
+
 			final Player target = isPlayer(activeChar.getTarget()) ? activeChar.getTarget().getActingPlayer() : activeChar;
 			if (target.isHero()) {
 				BuilderUtil.sendSysMessage(activeChar, "This player has already claimed the hero status.");
@@ -321,28 +323,22 @@ public class AdminAdmin implements IAdminCommandHandler {
 	{
 		return ADMIN_COMMANDS;
 	}
-	
-	private void showMainPage(Player activeChar, String command) {
-		int mode = 0;
-		String filename;
-		try {
-			mode = Integer.parseInt(command.substring(11));
-		} catch (Exception e) {
-			LOGGER.warn(e.getMessage(), e);
-		}
 
-		filename = switch (mode) {
-			case 2 -> "game";
-			case 3 -> "effects";
-			case 4 -> "server";
-			case 5 -> "mods";
-			case 6 -> "char";
-			case 7 -> "gm";
+	private void showMainPage(Player activeChar, String command) {
+		var mode = command.substring(11).trim();
+
+		var filename = switch (mode) {
+			case "2" -> "game";
+			case "3" -> "effects";
+			case "4" -> "server";
+			case "5" -> "mods";
+			case "6" -> "char";
+			case "7" -> "gm";
 			default -> "main";
 		};
 		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}
-	
+
 	private void showConfigPage(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
