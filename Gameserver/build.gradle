@@ -74,8 +74,17 @@ jar {
 run {
     inputs.property("moduleName", moduleName)
     doFirst {
-        def args = jvmArgs
-        args << "--enable-preview" << "-Dfile.encoding=UTF-8" << "-XX:+UseZGC" << "--module-path" << classpath.asPath << '--class-path' << classpath.asPath << '--add-exports' << 'java.base/jdk.internal.misc=io.github.joealisson.primitive' << '--module' << "$moduleName/$mainClassName".toString()
+        def args = []
+        args.addAll(jvmArgs)
+        args.addAll([
+                '--enable-preview',
+                '-Dfile.encoding=UTF-8',
+                '-XX:+UseZGC',
+                '--module-path', classpath.asPath,
+                '--class-path', classpath.asPath,
+                '--add-exports', 'java.base/jdk.internal.misc=io.github.joealisson.primitive',
+                '--module', "$moduleName/$mainClassName"
+        ])
         jvmArgs = args
     }
 }
