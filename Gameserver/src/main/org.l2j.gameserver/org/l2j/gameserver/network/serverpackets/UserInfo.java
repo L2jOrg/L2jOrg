@@ -161,7 +161,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
             buffer.writeInt((int) Math.round(player.getCurrentCp()));
             buffer.writeLong(player.getSp());
             buffer.writeLong(player.getExp());
-            buffer.writeDouble((float) (player.getExp() - LevelData.getInstance().getExpForLevel(player.getLevel())) / (LevelData.getInstance().getExpForLevel(player.getLevel() + 1) - LevelData.getInstance().getExpForLevel(player.getLevel())));
+            buffer.writeDouble(Math.min(0.9999999, (float) (player.getExp() - LevelData.getInstance().getExpForLevel(player.getLevel())) / (LevelData.getInstance().getExpForLevel(player.getLevel() + 1) - LevelData.getInstance().getExpForLevel(player.getLevel()))));
         }
 
         if (containsMask(UserInfoType.ENCHANTLEVEL)) {
