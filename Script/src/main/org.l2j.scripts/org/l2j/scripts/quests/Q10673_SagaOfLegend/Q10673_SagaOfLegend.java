@@ -18,6 +18,7 @@
  */
 package org.l2j.scripts.quests.Q10673_SagaOfLegend;
 
+import org.l2j.gameserver.api.classes.ClassChangeAPI;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestSound;
@@ -34,7 +35,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.network.NpcStringId;
-import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUI;
 import org.l2j.gameserver.settings.CharacterSettings;
 
 import java.util.Collection;
@@ -110,7 +111,7 @@ public class Q10673_SagaOfLegend extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	private static final String KILL_COUNT_VAR = "KillCount";
-	
+
 	public Q10673_SagaOfLegend()
 	{
 		super(10673);
@@ -120,7 +121,7 @@ public class Q10673_SagaOfLegend extends Quest
 		addCondMinLevel(MIN_LEVEL, "30857-00.htm");
 		addCondInCategory(CategoryType.THIRD_CLASS_GROUP, "30857-00.htm");
 	}
-	
+
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
@@ -129,7 +130,7 @@ public class Q10673_SagaOfLegend extends Quest
 		if (isNull(qs)) {
 			return htmltext;
 		}
-		
+
 		switch (event)
 		{
 			case "30857-02.htm":
@@ -166,7 +167,7 @@ public class Q10673_SagaOfLegend extends Quest
 					qs.exitQuest(false, true);
 					if (CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
 					{
-						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+						ClassChangeAPI.showClassChangeNotification(player);
 					}
 					htmltext = event;
 				}
@@ -175,7 +176,7 @@ public class Q10673_SagaOfLegend extends Quest
 		}
 		return htmltext;
 	}
-	
+
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
@@ -228,7 +229,7 @@ public class Q10673_SagaOfLegend extends Quest
 		}
 		return htmltext;
 	}
-	
+
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
@@ -250,7 +251,7 @@ public class Q10673_SagaOfLegend extends Quest
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
-	
+
 	@Override
 	public Collection<NpcLogListHolder> getNpcLogList(Player player)
 	{
@@ -263,7 +264,7 @@ public class Q10673_SagaOfLegend extends Quest
 		}
 		return super.getNpcLogList(player);
 	}
-	
+
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
@@ -272,25 +273,24 @@ public class Q10673_SagaOfLegend extends Quest
 		{
 			return;
 		}
-		
+
 		final Player player = event.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
-		
+
 		if (!CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
 		{
 			return;
 		}
-		
+
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCompleted())
-		{
-			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+		if ((qs != null) && qs.isCompleted()) {
+			ClassChangeAPI.showClassChangeNotification(player);
 		}
 	}
-	
+
 	@RegisterEvent(EventType.ON_PLAYER_PROFESSION_CHANGE)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onProfessionChange(OnPlayerProfessionChange event)
@@ -300,23 +300,23 @@ public class Q10673_SagaOfLegend extends Quest
 		{
 			return;
 		}
-		
+
 		if (!CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
 		{
 			return;
 		}
-		
+
 		// Avoid reward more than once.
 		if (player.isItemsRewarded())
 		{
 			return;
 		}
-		
+
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
 			player.setItemsRewarded(true);
-			
+
 			switch (player.getRace())
 			{
 				case ELF:

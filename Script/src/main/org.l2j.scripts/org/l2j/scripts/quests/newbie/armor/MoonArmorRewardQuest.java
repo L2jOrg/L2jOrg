@@ -19,6 +19,7 @@
 package org.l2j.scripts.quests.newbie.armor;
 
 import io.github.joealisson.primitive.IntCollection;
+import org.l2j.gameserver.api.classes.ClassChangeAPI;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.Location;
@@ -30,7 +31,7 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2j.gameserver.network.serverpackets.classchange.ExRequestClassChangeUI;
 
 import static java.util.Objects.isNull;
 
@@ -116,7 +117,7 @@ public abstract class MoonArmorRewardQuest extends Quest {
         giveCommonRewards(player);
         if (CategoryManager.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId())) {
             showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
-            player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+            ClassChangeAPI.showClassChangeNotification(player);
         }
         qs.exitQuest(false, true);
     }

@@ -27,11 +27,11 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author Mobius
  */
 
-public class ExRequestClassChangeUi extends ServerPacket {
+public class ExRequestClassChangeUI extends ServerPacket {
 
-    public static final ExRequestClassChangeUi STATIC_PACKET = new ExRequestClassChangeUi();
+    public static final ExRequestClassChangeUI STATIC_PACKET = new ExRequestClassChangeUI();
 
-    private ExRequestClassChangeUi() {
+    private ExRequestClassChangeUI() {
     }
 
     @Override

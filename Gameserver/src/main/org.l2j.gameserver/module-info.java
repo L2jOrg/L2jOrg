@@ -22,6 +22,11 @@ module org.l2j.gameserver {
     opens org.l2j.gameserver.engine.geo.settings to org.l2j.commons;
     opens org.l2j.gameserver.data.database.data to org.l2j.commons;
 
+    exports org.l2j.gameserver.api.classes;
+    exports org.l2j.gameserver.api.elemental;
+    exports org.l2j.gameserver.engine.skill.api;
+    exports org.l2j.gameserver.api.item;
+    exports org.l2j.gameserver.api.costume;
     // TODO exports only API classes
     exports org.l2j.gameserver.model.actor;
     exports org.l2j.gameserver.model.actor.appearance;
@@ -108,14 +113,10 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.engine.mission;
     exports org.l2j.gameserver.model.events.impl.character;
     exports org.l2j.gameserver.engine.item;
-    exports org.l2j.gameserver.api.elemental;
-    exports org.l2j.gameserver.engine.skill.api;
     exports org.l2j.gameserver.network.serverpackets.olympiad;
     exports org.l2j.gameserver.network.serverpackets.classchange;
     exports org.l2j.gameserver.network.serverpackets.costume;
-    exports org.l2j.gameserver.api.costume;
     exports org.l2j.gameserver.network.serverpackets.item;
-    exports org.l2j.gameserver.api.item;
     exports org.l2j.gameserver.network.serverpackets.attendance;
     exports org.l2j.gameserver.util.exp4j;
     exports org.l2j.gameserver.engine.olympiad;
