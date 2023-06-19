@@ -266,7 +266,7 @@ public final class Formulas {
             defenceCriticalDamage = target.getStats().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
         }
 
-        return Math.max(1, 2 + (criticalDamage - defenceCriticalDamage));
+        return max(1, 2 + (criticalDamage - defenceCriticalDamage));
     }
 
     /**
@@ -506,7 +506,11 @@ public final class Formulas {
         }
 
         final double targetBasicProperty = getAbnormalResist(skill.getBasicProperty(), target);
-        final double baseMod = ((((((magicLevel - target.getLevel()) + 3) * skill.getLevelBonusRate()) + activateRate) + 30.0) - targetBasicProperty);
+        double levelMod = (magicLevel - target.getLevel()) * 3.0;
+        if (levelMod > 0 && skill.getLevelBonusRate() > 0) {
+            levelMod = levelMod + activateRate * skill.getLevelBonusRate() / 100.0;
+        }
+        final double baseMod = activateRate + levelMod - targetBasicProperty;
         final double elementMod = calcAttributeBonus(attacker, target, skill);
         final double traitMod = calcGeneralTraitBonus(attacker, target, skill.getTrait(), false);
         final double basicPropertyResist = getBasicPropertyResistBonus(skill.getBasicProperty(), target);
@@ -1144,7 +1148,7 @@ public final class Formulas {
             pveRaidAttack = attacker.isRaid() ? attacker.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DAMAGE, 1) : 1;
             pveRaidDefense = attacker.isRaid() ? target.getStats().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
         }
-        return Math.max(0.05, (1 + ((pveAttack * pveRaidAttack) - (pveDefense * pveRaidDefense))) * pvePenalty);
+        return max(0.05, (1 + ((pveAttack * pveRaidAttack) - (pveDefense * pveRaidDefense))) * pvePenalty);
     }
 
     private static double calculatePvPBonus(Creature attacker, Creature target, Skill skill) {
