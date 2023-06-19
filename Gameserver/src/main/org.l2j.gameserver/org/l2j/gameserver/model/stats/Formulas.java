@@ -501,14 +501,14 @@ public final class Formulas {
         }
 
         int magicLevel = skill.getMagicLevel();
-        if (magicLevel <= -1) {
+        if (magicLevel <= 0) {
             magicLevel = attacker.getLevel() + 3;
         }
 
         final double targetBasicProperty = getAbnormalResist(skill.getBasicProperty(), target);
         double levelMod = (magicLevel - target.getLevel()) * 3.0;
         if (levelMod > 0 && skill.getLevelBonusRate() > 0) {
-            levelMod = levelMod + activateRate * skill.getLevelBonusRate() / 100.0;
+            levelMod = levelMod / 2.0 + activateRate * skill.getLevelBonusRate() / 100.0;
         }
         final double baseMod = activateRate + levelMod - targetBasicProperty;
         final double elementMod = calcAttributeBonus(attacker, target, skill);
