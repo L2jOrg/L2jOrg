@@ -181,6 +181,8 @@ public final class Player extends Playable {
     private ElementalSpirit[] spirits;
     private PlayerStatsData statsData;
     private AutoPlaySettings autoPlaySettings;
+    private final Map<String, ExServerPrimitive> _debug = new HashMap<>();
+    private Location _enterWorld;
     private PlayerVariableData variables;
     private IntMap<CostumeData> costumes = Containers.emptyIntMap();
     private CostumeCollectionData activeCostumesCollection;
@@ -500,6 +502,91 @@ public final class Player extends Playable {
     public int getAutoMp() {
         return variables.getAutoMp();
     }
+
+    /**
+     * The beginning of the Custom AutoPlay settings
+     * @author Bru7aLMike
+     */
+    public void setAutoPlayRangeClose(int autoPlayRangeClose) {
+        variables.setAutoPlayRangeClose(autoPlayRangeClose);
+    }
+
+    public void setAutoPlayRangeLong(int autoPlayRangeLong) {
+        variables.setAutoPlayRangeLong(autoPlayRangeLong);
+    }
+
+    public int getAutoPlayRangeClose() {
+        return variables.getAutoPlayRangeClose();
+    }
+
+    public int getAutoPlayRangeLong() {
+        return variables.getAutoPlayRangeLong();
+    }
+
+    public int getAutoPlayAnchorX() {
+        return variables.getAutoPlayAnchorX();
+    }
+
+    public int getAutoPlayAnchorY() {
+        return variables.getAutoPlayAnchorY();
+    }
+
+    public int getAutoPlayAnchorZ() {
+        return variables.getAutoPlayAnchorZ();
+    }
+
+    public void setAutoPlayAnchorX(int autoPlayAnchorX) {
+        variables.setAutoPlayAnchorX(autoPlayAnchorX);
+    }
+
+    public void setAutoPlayAnchorY(int autoPlayAnchorY) {
+        variables.setAutoPlayAnchorY(autoPlayAnchorY);
+    }
+
+    public void setAutoPlayAnchorZ(int autoPlayAnchorZ) {
+        variables.setAutoPlayAnchorZ(autoPlayAnchorZ);
+    }
+
+    public boolean showAutoPlayRadius() {
+        return variables.showAutoPlayRadius();
+    }
+
+    public void setAutoPlayRadius(boolean AutoPlayRadius) {
+        variables.setAutoPlayRadius(AutoPlayRadius);
+    }
+
+    public boolean isAutoPlayZoneAnchored() {
+        return variables.isAutoPlayZoneAnchored();
+    }
+
+    public void setAnchorAutoPlayZone(boolean anchorAutoPlayZone) {
+        variables.setAnchorAutoPlayZone(anchorAutoPlayZone);
+    }
+
+    public final void setEnterWorldLoc(int x, int y, int z)
+    {
+        _enterWorld = new Location(x, y, z);
+    }
+
+    public final ExServerPrimitive getDebugPacket(String name)
+    {
+        ExServerPrimitive esp = _debug.get(name);
+        if (esp == null)
+        {
+            esp = new ExServerPrimitive(name, _enterWorld);
+            _debug.put(name, esp);
+        }
+
+        return esp;
+    }
+
+    public final void clearDebugPackets()
+    {
+        _debug.values().stream().peek(ExServerPrimitive::reset).forEach(esp -> esp.sendTo(this));
+    }
+    /*
+     * end of Custom autoplay section
+     */
 
     public boolean getExpOff() {
         return variables.getExpOff();
@@ -6230,7 +6317,7 @@ public final class Player extends Playable {
         if (movieHolder != null) {
             sendPacket(new ExStartScenePlayer(movieHolder.getMovie()));
         }
-        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive()) {
+        if(nonNull(autoPlaySettings) && autoPlaySettings.isActive() && !getActingPlayer().isInBattle()) {
             AutoPlayEngine.getInstance().stopAutoPlay(this);
         }
     }
@@ -7102,6 +7189,26 @@ public final class Player extends Playable {
         final TeleportBookmark bookmark = teleportBookmarks.get(id);
         if (bookmark != null) {
             destroyItem("Consume", inventory.getItemByItemId(13016).getObjectId(), 1, null, false);
+            teleToLocation(bookmark, false);
+        }
+        sendPacket(new ExGetBookMarkInfoPacket(this));
+    }
+
+    public void teleportBookmarkGo1(int id) {
+        if (!teleportBookmarkCondition(0)) {
+            return;
+        }
+        if (inventory.getInventoryItemCount(90405, 0) == 0) {
+            sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_BECAUSE_YOU_DO_NOT_HAVE_A_TELEPORT_ITEM);
+            return;
+        }
+        final SystemMessage sm = getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+        sm.addItemName(90405);
+        sendPacket(sm);
+
+        final TeleportBookmark bookmark = teleportBookmarks.get(id);
+        if (bookmark != null) {
+            destroyItem("Consume", inventory.getItemByItemId(90405).getObjectId(), 1, null, false);
             teleToLocation(bookmark, false);
         }
         sendPacket(new ExGetBookMarkInfoPacket(this));

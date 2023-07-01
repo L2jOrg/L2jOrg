@@ -97,6 +97,11 @@ public final class Config {
     public static int TAKE_CASTLE_POINTS;
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
+    public static boolean AUTO_PLAY_SETTINGS_ENABLED;
+    public static int AUTO_PLAY_INTERVAL;
+    public static int AUTO_SUPPLY_INTERVAL;
+    public static int AUTO_PLAY_CLOSE_RANGE;
+    public static int AUTO_PLAY_LONG_RANGE;
 
     // --------------------------------------------------
     // FloodProtector Settings
@@ -336,6 +341,15 @@ public final class Config {
         TAKE_CASTLE_POINTS = Feature.getInt("TakeCastlePoints", 1500);
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
+
+        // Custom AutoPlay Settings
+        AUTO_PLAY_SETTINGS_ENABLED = Feature.getBoolean("EnableCustomAutoplaySettings", false);
+
+        AUTO_PLAY_INTERVAL = Feature.getInt("AutoPlayInterval", 500);
+        AUTO_SUPPLY_INTERVAL = Feature.getInt("AutoSupplyInterval", 500);
+
+        AUTO_PLAY_CLOSE_RANGE = Feature.getInt("RangeClose", 600);
+        AUTO_PLAY_LONG_RANGE = Feature.getInt("RangeLong", 1400);
 
         // Load FloodProtector config file
         final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);

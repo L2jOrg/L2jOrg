@@ -583,7 +583,8 @@ open module org.l2j.scripts {
             org.l2j.scripts.handlers.communityboard.MemoBoard,
 
             //custom
-            org.l2j.scripts.handlers.communityboard.AutoHpMpCp;
+            org.l2j.scripts.handlers.communityboard.AutoHpMpCp,
+            org.l2j.scripts.handlers.communityboard.AutoPlaySettings;
 
     provides org.l2j.gameserver.handler.IItemHandler
         with org.l2j.scripts.handlers.itemhandlers.ItemSkillsTemplate,

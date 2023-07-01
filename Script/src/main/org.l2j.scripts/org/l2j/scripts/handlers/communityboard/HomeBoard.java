@@ -62,6 +62,7 @@ import static java.lang.Math.min;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.parseNextInt;
+// import static org.l2j.gameserver.engine.donate.DonateGiverTaskManager.updateCoin;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 
@@ -102,11 +103,13 @@ public final class HomeBoard implements IParseBoardHandler {
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtlevel" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtadena" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtl2coin" : null,
+            Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtl2anucoin" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ?"_cbbsobtvipcoin" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_bbsauction" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtclass" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtgiveskill" : null,
             Config.COMMUNITYBOARD_ENABLE_BETA ? "_cbbsobtremoveskill" : null,
+            Config.AUTO_PLAY_SETTINGS_ENABLED ? "_bbsautoplay" : null,
     };
 
     private static final BiPredicate<String, Player> COMBAT_CHECK = (command, activeChar) -> {
@@ -318,6 +321,10 @@ public final class HomeBoard implements IParseBoardHandler {
             returnHtml = HtmCache.getInstance().getHtm(activeChar, CUSTOM_PATH + page + HTML_EXT);
         } else if (command.startsWith("_bbsheal")) {
             final String page = command.replace("_bbsheal ", "");
+            if (!activeChar.isInsideZone(ZoneType.PEACE)){
+                activeChar.sendMessage("You cannot heal outside peace zone");
+                return false;
+            }
             if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_HEAL_PRICE)) {
                 activeChar.sendMessage("Not enough currency!");
             } else {
@@ -549,6 +556,18 @@ public final class HomeBoard implements IParseBoardHandler {
             CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
             returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
         }
+        else if (command.startsWith("_cbbsobtl2anucoin")) {
+            final StringTokenizer st = new StringTokenizer(command, " ");
+            final var actualCommand = st.nextToken();
+            if (actualCommand.equalsIgnoreCase("_cbbsobtl2anucoin")) {
+                activeChar.getNCoins();
+                // updateCoin(activeChar, 1000000);
+                BuilderUtil.sendSysMessage(activeChar, "You increased AnuCoins of " + activeChar.getName() + " by " + 1000000);
+            }
+            final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/new/" : "";
+            CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
+            returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "openbeta.html");
+        }
         else if (command.startsWith("_cbbsobtvipcoin")) {
             final StringTokenizer st = new StringTokenizer(command, " ");
             final var actualCommand = st.nextToken();
@@ -625,13 +644,37 @@ public final class HomeBoard implements IParseBoardHandler {
                 returnHtml = returnHtml.replaceAll("%name%", activeChar.getName());
                 returnHtml = returnHtml.replaceAll("%premium%", "Could not find account setup");
                 returnHtml = returnHtml.replaceAll("%clan%", (activeChar.getClan() != null) ? activeChar.getClan().getName() : "No clan");
-                returnHtml = returnHtml.replaceAll("%alliance%", "Could not find it");
-                returnHtml = returnHtml.replaceAll("%country%", "Could not found it");
+                returnHtml = returnHtml.replaceAll("%alliance%", (activeChar.getClan() != null && activeChar.getClan().getAllyId() != 0) ? activeChar.getClan().getAllyName() : "No alliance");
+                returnHtml = returnHtml.replaceAll("%country%", "Unknown country.");
                 returnHtml = returnHtml.replaceAll("%class%", activeChar.getBaseTemplate().getClassId().name().replace("_", " "));
                 returnHtml = returnHtml.replaceAll("%exp%", String.valueOf(activeChar.getExp()));
                 returnHtml = returnHtml.replaceAll("%adena%", String.valueOf(activeChar.getAdena()));
                 returnHtml = returnHtml.replaceAll("%online%", String.valueOf(activeChar.getUptime()));
                 returnHtml = returnHtml.replaceAll("%onlinePlayers%", String.valueOf(World.getInstance().getPlayers().size()));
+
+                // custom Autoplay variables
+                var closeRange = activeChar.getAutoPlayRangeClose();
+                var longRange = activeChar.getAutoPlayRangeLong();
+                boolean viewRange = activeChar.showAutoPlayRadius();
+                boolean centrePoint = activeChar.isAutoPlayZoneAnchored();
+
+                if (closeRange == 0)
+                {
+                    closeRange = Config.AUTO_PLAY_CLOSE_RANGE;
+                }
+                if (longRange == 0)
+                {
+                    longRange = Config.AUTO_PLAY_LONG_RANGE;
+                }
+                // custom AutoPlay settings
+                returnHtml = returnHtml.replace("%closeRange%", (closeRange <= 0 || closeRange > 800) ? String.valueOf(Config.AUTO_PLAY_CLOSE_RANGE) : String.valueOf(closeRange));
+                returnHtml = returnHtml.replace("%longRange%", (longRange < 800 || longRange > 2000) ? String.valueOf(Config.AUTO_PLAY_LONG_RANGE) : String.valueOf(longRange));
+                returnHtml = returnHtml.replace("%viewRange%", (viewRange ? "<font color=24a10e> ON </font>" : "<font color=ff0a0a> OFF </font>"));
+                returnHtml = returnHtml.replace("%centered%", (centrePoint ? "Centered" : "Dynamic"));
+                returnHtml = returnHtml.replace("?closeRange?", ("<button value=Set action=bypass _bbsautoplay closeRange $closeRange width=85 height=26 back=L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button fore=L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button>"));
+                returnHtml = returnHtml.replace("?longRange?", ("<button value=Set action=bypass _bbsautoplay longRange $longRange width=85 height=26 back=L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button fore=L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button>"));
+                returnHtml = returnHtml.replace("?viewRange?", (viewRange ? "HIDE" : "SHOW"));
+                returnHtml = returnHtml.replace("?centered?", (centrePoint ? "Change to Dynamic" : "Change to Static"));
             } else {
                 returnHtml = returnHtml.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
                 returnHtml = returnHtml.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));

@@ -60,6 +60,28 @@ public class PlayerVariableData {
 
     private int autoMp;
 
+    // AutoPlay RANGE settings
+    @Column("ap_range_close")
+    private int autoPlayRangeClose;
+
+    @Column("ap_range_long")
+    private int autoPlayRangeLong;
+
+    @Column("ap_show_range")
+    private boolean showAutoPlayRadius;
+
+    @Column("ap_anchored")
+    private boolean anchorAutoPlayZone;
+
+    @Column("ap_anchor_x")
+    private int autoPlayAnchorX;
+
+    @Column("ap_anchor_y")
+    private int autoPlayAnchorY;
+
+    @Column("ap_anchor_z")
+    private int autoPlayAnchorZ;
+
     @Column("exp_off")
     private boolean expOff;
 
@@ -163,6 +185,63 @@ public class PlayerVariableData {
 
     public int getAutoMp() {
         return autoMp;
+    }
+
+    // AutoPlay RANGE settings
+    public void setAutoPlayRangeClose(int autoPlayRangeClose) {
+        this.autoPlayRangeClose = autoPlayRangeClose;
+    }
+
+    public int getAutoPlayRangeClose() {
+        return autoPlayRangeClose;
+    }
+
+    public void setAutoPlayRangeLong(int autoPlayRangeLong) {
+        this.autoPlayRangeLong = autoPlayRangeLong;
+    }
+
+    public int getAutoPlayRangeLong() {
+        return autoPlayRangeLong;
+    }
+
+    public boolean showAutoPlayRadius() {
+        return showAutoPlayRadius;
+    }
+
+    public void setAutoPlayRadius(boolean setAutoPlayRadius) {
+        this.showAutoPlayRadius = setAutoPlayRadius;
+    }
+
+    public boolean isAutoPlayZoneAnchored() {
+        return anchorAutoPlayZone;
+    }
+
+    public int getAutoPlayAnchorX() {
+        return autoPlayAnchorX;
+    }
+
+    public void setAutoPlayAnchorX(int autoPlayAnchorX) {
+        this.autoPlayAnchorX = autoPlayAnchorX;
+    }
+
+    public int getAutoPlayAnchorY() {
+        return autoPlayAnchorY;
+    }
+
+    public void setAutoPlayAnchorY(int autoPlayAnchorY) {
+        this.autoPlayAnchorY = autoPlayAnchorY;
+    }
+
+    public int getAutoPlayAnchorZ() {
+        return autoPlayAnchorZ;
+    }
+
+    public void setAutoPlayAnchorZ(int autoPlayAnchorZ) {
+        this.autoPlayAnchorZ = autoPlayAnchorZ;
+    }
+
+    public void setAnchorAutoPlayZone(boolean anchorAutoPlayZone) {
+        this.anchorAutoPlayZone = anchorAutoPlayZone;
     }
 
     public void setExpOff(boolean expOff) {

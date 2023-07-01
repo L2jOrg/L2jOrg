@@ -19,10 +19,13 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import io.github.joealisson.mmocore.WritableBuffer;
+import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerExPacketId;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +43,9 @@ public class ExServerPrimitive extends ServerPacket {
     private final int _z;
     private final List<Point> _points = new ArrayList<>();
     private final List<Line> _lines = new ArrayList<>();
+
+    private int _size = 0;
+    private ExServerPrimitive _next;
 
     /**
      * @param name A unique name this will be used to replace lines if second packet is sent
@@ -175,6 +181,10 @@ public class ExServerPrimitive extends ServerPacket {
         _lines.add(new Line(name, color, isNameColored, x, y, z, x2, y2, z2));
     }
 
+    public void addLine(String name, int color, boolean isNameColored, int x, int y, int x2, int y2, int z2) {
+        _lines.add(new Line(name, color, isNameColored, x, y, x2, y2, z2));
+    }
+
     /**
      * Adds a line to be displayed on client
      *
@@ -287,6 +297,10 @@ public class ExServerPrimitive extends ServerPacket {
         addLine(name, color.getRGB(), isNameColored, x, y, z, x2, y2, z2);
     }
 
+    public void addLine(String name, Color color, boolean isNameColored, int x, int y, int x2, int y2, int z2) {
+        addLine(name, color.getRGB(), isNameColored, x, y, x2, y2, z2);
+    }
+
     /**
      * Adds a line to be displayed on client
      *
@@ -343,6 +357,10 @@ public class ExServerPrimitive extends ServerPacket {
      */
     public void addLine(Color color, int x, int y, int z, int x2, int y2, int z2) {
         addLine("", color, false, x, y, z, x2, y2, z2);
+    }
+
+    public void addLine(Color color, int x, int y, int x2, int y2, int z2) {
+        addLine("", color, false, x, y, x2, y2, z2);
     }
 
     /**
@@ -494,6 +512,13 @@ public class ExServerPrimitive extends ServerPacket {
             _z2 = z2;
         }
 
+        public Line(String name, int color, boolean isNameColored, int x, int y, int x2, int y2, int z2) {
+            super(name, color, isNameColored, x, y, z2);
+            _x2 = x2;
+            _y2 = y2;
+            _z2 = z2;
+        }
+
         /**
          * @return the x2
          */
@@ -514,5 +539,80 @@ public class ExServerPrimitive extends ServerPacket {
         public int getZ2() {
             return _z2;
         }
+    }
+
+    /* Autoplay testing area:
+     * creates a circle around a point
+     * @author Bru7aLMike
+     */
+    public static ExServerPrimitive createCirclePacket(String name, int x, int y, int z, int radius, Color color, int initX, int initY)
+    {
+        ExServerPrimitive packet = new ExServerPrimitive(name, initX, initY, z + 50);
+        int i = 0;
+
+        for(short MaxDegree = 359; i <= MaxDegree; ++i) {
+            double var1 = Math.toRadians(i);
+            double var2 = Math.toRadians((double)i + (double)1);
+            int newX = (int)(x + radius * Math.cos(var1));
+            int newY = (int)(y + radius * Math.sin(var1));
+            int newXT = (int)(x + radius * Math.cos(var2));
+            int newYT = (int)(y + radius * Math.sin(var2));
+            Location loc = new Location(newX, newY, z);
+            Location locPlus = new Location(newXT, newYT, z);
+            packet.addLine(color, loc, locPlus);
+        }
+
+        return packet;
+    }
+
+    public static void clearCircle(Player player, String circleName) {
+        ExServerPrimitive packet = new ExServerPrimitive(circleName, player);
+        packet.addPoint(Color.WHITE, 0, 0, 0);
+        player.sendPacket(packet);
+    }
+
+    /**
+     * Reset both lines and points {@link List}s.
+     */
+    public void reset()
+    {
+        _lines.clear();
+        _points.clear();
+        _size = 0;
+
+        if (_next != null)
+            _next.reset();
+    }
+
+    /**
+     * Send packet to the {@link Player}. If out of capacity, send more packets.
+     * @param player : The {@link Player} to send packet(s) to.
+     */
+    public void sendTo(Player player)
+    {
+        // Packet is empty, add dummy points (happens at first packet only).
+        if (_size == 0)
+            addPoint(Color.WHITE, _x, _y, 16384);
+
+        // Send packet.
+        player.sendPacket(this);
+
+        // No next packet, return.
+        if (_next == null)
+            return;
+
+        // Check next packet.
+        if (_next._size == 0)
+        {
+            // Next packet is empty, add dummy point.
+            _next.addPoint(Color.WHITE, _x, _y, 16384);
+
+            // Send packet and remove next packet.
+            _next.sendTo(player);
+            _next = null;
+        }
+        else
+            // Next packet is not empty, send packet.
+            _next.sendTo(player);
     }
 }

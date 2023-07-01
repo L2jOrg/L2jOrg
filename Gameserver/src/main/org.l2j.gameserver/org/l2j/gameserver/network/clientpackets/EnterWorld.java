@@ -136,6 +136,9 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExGetBookMarkInfoPacket(player));
         player.sendPacket(ExBasicActionList.STATIC_PACKET);
 
+        // needed for ExServerPrimitive's createCirclePacket
+        player.setEnterWorldLoc(player.getX(), player.getY(), -16000);
+
         for (Castle castle : CastleManager.getInstance().getCastles()) {
             player.sendPacket(new ExCastleState(castle));
         }

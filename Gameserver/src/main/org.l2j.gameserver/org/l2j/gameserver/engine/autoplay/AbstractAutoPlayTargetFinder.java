@@ -19,6 +19,7 @@
 package org.l2j.gameserver.engine.autoplay;
 
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
@@ -31,6 +32,7 @@ import java.util.Comparator;
 
 import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.isGM;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author JoeAlisson
@@ -60,6 +62,21 @@ abstract class AbstractAutoPlayTargetFinder implements AutoPlayTargetFinder {
     protected Creature findNextTarget(Player player, Class<? extends Creature> targetClass, int range) {
         return World.getInstance().findFirstVisibleObject(player, targetClass, range, false,
                 creature -> canBeTarget(player, creature, range),
+                Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
+    }
+
+    /*
+     *  Used by the custom Autoplay settings.
+     */
+    @Override
+    public boolean canBeTargetAnchored(Location location, Player player, WorldObject target, int range) {
+        return !isGM(target) && !player.isTargetingDisabled() && target.isTargetable() && target.isAutoAttackable(player) && checkRespectfulMode(player, target) &&
+                MathUtil.isInsideRadius3D(location, target, range) && GeoEngine.getInstance().canSeeTarget(player, target) && GeoEngine.getInstance().canMoveToTarget(player, target);
+    }
+
+    protected Creature findNextTargetAnchored(Location location, Player player, Class<? extends Creature> targetClass, int range) {
+        return World.getInstance().findFirstVisibleObject(player, targetClass, (range * 2), false,
+                creature -> canBeTargetAnchored(location, player, creature, range),
                 Comparator.comparingDouble(m -> MathUtil.calculateDistanceSq3D(player, m)));
     }
 }
